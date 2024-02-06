@@ -1,0 +1,16 @@
+# robots.txt for http://www.2dea.com
+# $Id: robots.txt, v1.2 2017-12-10 ted Exp $
+
+# For use by *
+User-agent: *
+Disallow: 
+Disallow: 2dea
+Disallow: /2dea
+Disallow: /dev
+Disallow: /etc
+Disallow: /Lab
+Disallow: /love
+Disallow: /luv
+Disallow: /Record
+Disallow: /test
+Sitemap: http://www.2dea.com/sitemap.xml
