@@ -2,9 +2,11 @@
 /* @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.min.css'); */
 
 /* :root  {
-    --typo-sans:        "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    --typo-sans:        'wf-PretendardVAR', 'wf-Pretendard', 'Pretendard Variable', Pretendard, 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  --typo-sans:        "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --typo-sans:        'wf-PretendardVAR', 'wf-Pretendard', 'Pretendard Variable', Pretendard, 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 } */
+
+/* 
 :root  {
     --bold-1:           200;
     --bold-4:           450;
@@ -17,7 +19,7 @@
     --typo-emoji:       'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
     --typo-serif:       'wf-NotoSerifKR', 'Noto Serif KR', 'Noto Serif CJK KR', 'AppleMyungjo', '바탕', 'Batang';
-    --typo-mono:        'wf-D2Mono', 'D2Coding', 'Noto Sans Mono KR', 'Noto Sans Mono CJK KR', 'Consolas', 'Monaco', 'Courier New', 'Lucida Console', 'Courier', '바탕체', 'BatangChe';
+    --typo-mono:        'wf-D2Mono', 'D2Coding', 'Noto Sans Mono KR', 'Noto Sans Mono CJK KR', 'Monaco', 'Consolas', 'Courier New', 'Lucida Console', 'Courier', '바탕체', 'BatangChe';
     --typo-sans:        'wf-PretendardVF', 'wf-Pretendard', 'Pretendard Variable', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
     --typo-sans-latin:  'wf-OpenSans';
 
@@ -37,3 +39,225 @@ pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
 
 th:before  { content: "\2022" "*" "\25CF"; }
 td:before  { content: "\2022" "\25CF" "*"; font-family: var(--typo-password); }
+ */
+
+:root  {
+  --breakpoint-min:       1280px;
+
+
+  /* font-weight: 300;
+    font-weight: 301;
+    font-weight: 350;
+    font-weight: 351;
+    font-weight: 399;
+    font-weight: 400;
+    font-weight: 401;
+    font-weight: 450;
+    font-weight: 451;
+    font-weight: 499;
+    font-weight: 500;
+    font-weight: 501;
+    font-weight: 550;
+    font-weight: 551;
+    font-weight: 599;
+    font-weight: 600;
+    font-weight: 601;
+    font-weight: 650;
+    font-weight: 651;
+    font-weight: 699;
+    font-weight: 700;
+    font-weight: 701;
+    font-weight: 750;
+    font-weight: 751;
+    font-weight: 799;
+    Malgun Gothic ~350=200, 351~549=400, 550~=700
+    Pretendard Static 399=300, 400=400, 401=500 */
+  --bold-10__:            200;
+  --bold-40:            380;
+  --bold-50__:            500;
+  --bold-70:            600;
+  --bold-90__:            900;
+
+  --text-height:        1.5;
+  --text-spacing:       0;
+  --text-shadow-alt:    0 0.1ex 1px;
+
+
+  --font-4xs:           1.0rem;
+  --font-3xs:           1.1rem;
+  --font-2xs:           1.2rem;
+  --font-xs:            1.3rem;
+  --font-s:             1.4rem;
+  --font-sm:            1.5rem;
+  --font-m:             1.6rem;
+  --font-lm:            1.8rem;
+  --font-l:             2.0rem;
+  --font-xl:            2.4rem;
+
+  --line-4xs:           calc(12 / 10);
+  --line-3xs:           calc(14 / 11);
+  --line-2xs:           calc(16 / 12);
+  --line-xs:            calc(16 / 13);
+  --line-s:             calc(18 / 14);
+  --line-sm:            calc(18 / 15);
+  --line-m:             calc(20 / 16);
+  --line-lm:            calc(22 / 18);
+  --line-l:             calc(26 / 20);
+  --line-xl:            calc(30 / 24);
+
+
+  --typo-system:        -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum';
+  --typo-emoji:         'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  --typo-serif:         'wf-NotoSerifKR', 'Noto Serif KR', 'Noto Serif CJK KR', 'AppleMyungjo', '바탕', 'Batang';
+  --typo-mono:          'wf-D2Mono', 'D2Coding', 'Noto Sans Mono KR', 'Noto Sans Mono CJK KR', 'Monaco', 'Consolas', 'Courier New', 'Lucida Console', 'Courier', '바탕체', 'BatangChe';
+  --typo-sans:          'wf-PretendardVF', 'wf-Pretendard', 'Pretendard Variable', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
+  --typo-sans-latin:    'wf-OpenSans';
+
+  --typo-quot:          var(--typo-serif), serif;
+  --typo-code:          var(--typo-mono), monospace;
+  --typo-header:        var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-system), sans-serif;
+  --typo-base:          var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
+
+
+  --color-line1:        #dddddd;
+  --color-line2:        #999999;
+  --color-text1:        #333333;
+  --color-text2:        102,102,102;
+  --color-text3:        #717071;
+  --color-text4:        #999999;
+  --color-point1:       #ff0000;
+  --color-point2:       #d34f12;
+  --color-main1:        #d7191f;
+  --color-link:         #2f648c;
+  --color-valid:        #3b4650;
+  --color-error:        #d7191f;
+  --color-require:      #d7191f;
+  --color-status1:      #ca141d;
+  --color-status2:      #ca141d;
+  --color-status3:      #e6df24;
+  --color-status4:      #5ab530;
+  --color-status5:      #5ab530;
+  --color-ground:       #ffffff;
+  --color-ground1:      #e8e8e8;
+  --color-ground2:      #eeeeee;
+  --color-ground3:      #f8f8f8;
+  --color-disabled:     #f2f2f2;
+  --color-black:        0,0,0;
+  --color-shadow:       64,64,64;
+  --color-white:        #ffffff;
+  --color-dimmed:       1,1,1;
+
+  --alpha-dimmed:       0.7;
+
+
+  --height-window-maximum:      100vh;
+  --height-window-viewport:     var(--height-window-variable, 100dvh);
+
+  --margin-layout-inline:       3rem;
+  --margin-layout-block:        2rem;
+  --margin-layout-block-end:    3.5rem;
+  --height-layout-header:       6rem;
+  --width-layout-nav:           25rem;
+
+  --margin-layer-inline:        3rem;
+  --margin-layer-block:         2rem;
+  --height-layer-header:        5rem;
+
+}
+@media
+  screen and not (-webkit-min-device-pixel-ratio: calc(120 / 96)),
+  screen and not (min-resolution: 120dpi)  {
+    :root  {
+      --bold-40:           450;
+      --bold-70:           650;
+    }
+}
+
+/** Type Selector */
+*,
+  :before,  :after  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@media
+  screen and (prefers-reduced-motion: reduce)  {
+    *,
+      :before,  :after  { scroll-behavior: auto !important; transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
+}
+
+html  {
+    direction: ltr; font: 125% /1.5 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
+    scroll-behavior: smooth;
+    -ms-text-underline-position: below; text-underline-position: under;
+    -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -webkit-font-smoothing: subpixel-antialiased;
+    -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: hsla(0,0%,0%, 0.0);
+}
+body  {
+    font-family: inherit; font-size: 0.8em; line-height: inherit; overflow-y: auto; margin: 0;
+    color: WindowText; background: Transparent;
+    word-wrap: break-word; word-break: break-word; word-break: keep-all; letter-spacing: normal;
+    overscroll-behavior: inherit;
+}
+input,  button,  select,  textarea  { font-family: inherit; font-weight: inherit; font-size: 100%; line-height: 1.25; vertical-align: middle; min-height: 2em; max-height: 100dvh; max-height: 100dvh; color: inherit; text-shadow: inherit; }
+pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code); font-size: 100%; }
+pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
+h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: 100%; }
+address,  em,  cite,  dfn,  var,  optgroup  { font-style: inherit; }
+article,  section,  nav,  aside,  header,  footer,
+  figure,  figcaption,  main,  details,  dialog  { display: block; }
+video,  audio,  progress,  canvas  { display: inline-block; vertical-align: baseline; }
+img,  iframe,  embed,  object,  video,  audio,
+  legend,  input,  button,  select,  textarea,  progress,  canvas  { max-width: 100%; }
+h1,  h2,  h3,  h4,  h5,  h6,
+  p,  hr,  pre,  blockquote,  ul,  ol,  dl,  dd,  figure,
+  form,  fieldset,  input,  button,  select,  textarea  { margin: 0; }
+
+hr  { clear: both; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; height: 0; overflow: visible; border-style: none; }
+pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-wrap: normal; word-break: normal; }
+ul,  ol  { list-style-type: none; padding-left: 0; }
+a  { font-size: 100%; background-color: Transparent; color: inherit; text-decoration: none; }
+small  { font-size: 100%; }
+q:before,  q:after  { content: ""; content: none; }
+abbr[title]  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
+b  { font-weight: bolder; font-weight: var(--bold-70, 600); }
+mark  { background-color: Transparent; color: inherit; }
+br  { letter-spacing: 0 !important; }
+ins,  del  { text-decoration: none; }
+img  { vertical-align: middle; border-style: none; }
+iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; border-style: none; }
+audio:not([controls])  { display: none; height: 0; }
+svg:not(:root)  { overflow: hidden; }
+table  { table-layout: auto; empty-cells: show; border-collapse: collapse; border-spacing: 0; border-width: 0; }
+caption,  th  { text-align: inherit; }
+th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0; border: 0 solid; border-width: 1px; }
+fieldset  { min-width: 0; padding: 0; border-style: none; }
+legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; color: inherit; white-space: normal; }
+label  { display: inline-block; cursor: pointer; }
+input[type="range"],  input[type="color"],  input[type="checkbox"],  input[type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
+input[type="submit"],  input[type="reset"],  input[type="button"],  button  { -webkit-appearance: button; min-width: 4em; overflow: visible; padding: 0.375ex 0.375em; cursor: pointer; text-transform: none; }
+select  { text-transform: none; }
+option  { display: block !important; color: inherit; white-space: nowrap; }
+textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: normal; }
+summary  { display: list-item; }
+dialog  { padding: 0; border-style: none; }
+template  { display: none; }
+
+[hidden]  { display: none !important; }
+[readonly]  { cursor: text; }
+[disabled],
+  [aria-disabled="true"]  {
+    color: GrayText;
+    -webkit-text-fill-color: currentColor;
+    opacity: 0.75;
+    cursor: default;
+    cursor: not-allowed;
+}
+
+
+/** Define Fonts
+ --------------- */
+
+*,
+  :before,  :after  { letter-spacing: var(--text-spacing); }
+html  { font-size: 62.5%; font-size: calc(10em / 16); /* overscroll-behavior: auto none; */ }
+body  { font-family: var(--typo-base); font-weight: var(--bold-40, 380); font-size: var(--font-m); line-height: var(--text-height); color: var(--color-text1); background: var(--color-ground); }
