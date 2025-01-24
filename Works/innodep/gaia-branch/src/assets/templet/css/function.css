@@ -1,0 +1,41 @@
+/** Animation Keyframes
+ ---------------------- */
+
+/** Blink */
+@-webkit-keyframes ANI_blink  {
+  25% {
+    opacity: 0.25;
+  }
+
+} @keyframes ANI_blink  {
+  25% {
+    opacity: 0.25;
+  }
+}
+
+
+/* *,
+  :before,  :after  { transition-duration: inherit; transition-timing-function: inherit; } */
+
+/* body  { transition-duration: 0.05s; } */
+
+:target:before  { content: ""; display: block; height: var(--margin-layout-block); margin-top: calc(-1 * var(--margin-layout-block)); visibility: hidden; }
+
+.o-layer  { -webkit-animation-duration: 0.4s; animation-duration: 0.4s; -webkit-animation-timing-function: var(--timing-func-ease-faster); animation-timing-function: var(--timing-func-ease-faster); -webkit-transition-duration: 0.4s; transition-duration: 0.4s; -webkit-transition-timing-function: var(--timing-func-ease-faster); transition-timing-function: var(--timing-func-ease-faster); }
+/* .o-layer.js_show  { transform: translateZ(0); -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; overflow: hidden; overflow-x: auto; } */
+.o-layer.js_show  { transform: translateZ(0); -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
+.o-layer >*  { -webkit-animation-duration: inherit; animation-duration: inherit; -webkit-animation-timing-function: inherit; animation-timing-function: inherit; -webkit-transition-duration: inherit; transition-duration: inherit; -webkit-transition-timing-function: inherit; transition-timing-function: inherit; }
+html.js_maxvh .o-layer.js_show:not(.js_hiding):not(.js_showing)  { min-height: 100vh; transition-duration: 0.2s; }
+
+.o-layer >.g-overlay  { -webkit-transition-property: opacity; transition-property: opacity; }
+.o-layer >.layer-wrap  { -webkit-transition-property: -webkit-transform; -webkit-transition-property: transform; transition-property: -webkit-transform; transition-property: transform; }
+
+.o-layer:not(.js_hiding):not(.js_showing):not(.js_show),
+  .o-layer:not(.js_hiding):not(.js_showing):not(.js_show) >.g-overlay  { opacity: 0.0; visibility: hidden; pointer-events: none; }
+.o-layer:not(.js_hiding):not(.js_showing):not(.js_show)  { height: 100%; overflow: hidden; }
+
+.o-layer.js_hiding >.g-overlay,
+  .o-layer:not(.js_show) >.g-overlay  { opacity: 0.0 !important; }
+
+.o-layer.js_hiding >.layer-wrap,
+  .o-layer:not(.js_show) >.layer-wrap  { -webkit-transform: translateX(100%) !important; transform: translateX(100%) translateZ(0) !important; }
