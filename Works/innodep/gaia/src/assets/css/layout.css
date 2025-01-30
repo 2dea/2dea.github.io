@@ -8,7 +8,7 @@
   --width-global-scrollbar:     calc(0.6rem + var(--margin-global-scrollbar) * 2);
 }
 
-::-webkit-resizer  { background: var(--object-symbol-resizer-compress) 0 /100%; }
+::-webkit-resizer  { background: var(--object-symbol-arrows-output) 0 /100%; }
 ::-webkit-scrollbar  { width: var(--width-global-scrollbar, 12px); height: var(--width-global-scrollbar, 12px); }
 ::-webkit-scrollbar-corner  { background-color: var(--color-scrollbar-track, Transparent); }
 ::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, Transparent); background-color: WhiteSmoke; border-radius: var(--width-global-scrollbar, 12px); }
