@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<title>[가이드] 전체약관 &middot; 키움예스저축은행</title>
+<link rel="stylesheet" type="text/css" href="../../pub/css/embed.css" />
+<script type="text/javascript" src="../../pub/js/ui/access.js?ver=2.8.3"></script>
+<link rel="stylesheet" type="text/css" id="Global-CSS" href="../../pub/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../../pub/css/common.css" />
+<noscript><link rel="stylesheet" type="text/css" href="../../pub/css/noscript.css" /></noscript>
+<script type="text/javascript" id="Global-JS" src="../../pub/js/ui/ui-common.js?fallback=1&amp;onext=1" async="async"></script>
+<script type="text/javascript" src="../../pub/js/lib/jquery/jquery.js?v=3.5.1"></script>
+<script type="text/javascript" src="../../pub/js/ui/ui-import.js"></script>
+<!-- /* Parsing DEV.Div Scripts -->
+<!-- e.g., <script type="text/javascript" src="../../pub/js/Utiles.js"></script> -->
+<!-- */ Parsing DEV.Div Scripts -->
+<script type="text/javascript" src="../../pub/js/ui/ui-extension.js"></script>
+</head>
+
+<body class="_unload Guide-Page">
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" id="Skip" class="div-skip">
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="node-wrap">
+			<h1 class="div-title">
+				<span class="inner">GUIDE &ndash; 전체약관</span>
+			</h1>
+
+			<div class="div-nav">
+				<span class="item back"><button type="button" title="이전 페이지로 이동" class="back"><i aria-hidden="true"></i><span class="inner">이전</span></button></span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="c-masking" />
+	</header>
+ 
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		전체메뉴
+
+		<hr class="c-masking" />
+	</nav>
+
+	<div role="main" id="Center" class="dom-main">
+		<div class="node-wrap js_show" data-div-step="1">
+			<div class="div-contents">
+
+				<div class="g-section">
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="../../pub/js/ui/ui-defer.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+	/* { UX.Div } `Current-Page` JSs */
+
+	jQuery(function($) {
+		"use strict";
+
+		
+
+	});
+
+//]]>
+</script>
+<!-- <script type="text/javascript">
+//<![CDATA[
+
+	var devpObj = window.devpObj = window.devpObj || {};
+
+	/* devpObj.arrTerms = [
+		'/Ucomp/kiwoom/html/trm/trm_web_b01.html',
+		'/Ucomp/kiwoom/html/trm/trm_web_b02.html',
+		'/Ucomp/kiwoom/html/trm/trm_web_b03.html',
+		'/Ucomp/kiwoom/html/trm/trm_web_b04.html',
+		'/Ucomp/kiwoom/html/trm/trm_web_b05.html',
+		'/Ucomp/kiwoom/html/trm/trm_web_b06.html'
+	]; */
+
+	devpObj.FuncTermsAll = {
+		array: [],
+
+		"ready": function(path) {
+			path = path || '';
+
+			var arrTerms = this.array = [];
+			var $step = ( $('[data-js-layer-index="0"]').length ) ? $('[data-js-layer-index="0"]').find('[data-div-step]') : $('.dom-main').children();
+			var $contain = $step.find('>.div-contents:visible')
+			var $all = $contain.find('.m-check-list .header:has(:checkbox):visible');
+
+			if( $all.length ) {
+				var $view = $('.m-check-list .panel:visible .view');
+
+				$view
+					.each(function(idx) {
+						var node = this, $bind = $(node);
+						var termNum = $bind.attr('data-termno');
+
+						arrTerms.push( path + termNum );
+					})
+				;
+			}
+		},
+
+		"load": function(path) {
+			if( path ) {
+				this.ready(path);
+			}
+
+			// var arrTerms = devpObj.arrTerms;
+			var arrTerms = this.array;
+
+			devpObj.$termsAll = $('<div id="tempTermsAll" />').empty().detach();
+
+			arrTerms.forEach(function(val, idx, arr) {
+				devpObj["$termsTemp" + idx] = $('<div id="tempTermsLoad' + idx + '" class="jsui_temp js_ready" />').appendTo( devpObj.$termsAll );
+				devpObj["$termsTemp" + idx].load(val + ' .m-terms', function() {
+					/* devpObj.$termsAll
+						.append( $(this).find('[id]').removeAttr('id').end().html() )
+					; */
+
+					/* if( idx === arrTerms.length - 1 ) {
+						devpObj.$termsAll
+							.find('[id]')
+								.removeAttr('id')
+								.end()
+								
+						;
+					} */
+
+					$(this).removeClass('js_ready');
+				});
+			});
+		},
+
+		"append": function(_target) {
+			var $terms = devpObj.$termsAll;
+			var termLen = $terms.find('>.jsui_temp.js_ready').length;
+
+			function Exec() {
+				$terms
+					.find('[id]')
+						.removeAttr('id')
+						.end()
+					.find('>.jsui_temp >*')
+						.unwrap('.jsui_temp')
+						.appendTo(_target)
+				;
+
+				// $(_target).html( $terms.html() );
+			}
+
+			$(_target).empty();
+
+			if( termLen ) {
+				alert('전체약관을 불러오는 중입니다.');
+
+				// setTimeout(Exec, 1e3);
+				setTimeout(Exec, termLen * 250);
+
+			} else {
+				Exec();
+			}
+		}
+	};
+
+	jQuery(function($) {
+		devpObj.FuncTermsAll.load('test');
+
+		devpObj.FuncTermsAll.append('.dom-main .g-section:first'); // 호출 중 예시
+
+	});
+
+	$(window).on('load', function(evt) {
+		var $ = jQuery;
+
+		setTimeout(function() {
+			// devpObj.FuncTermsAll.append('body');
+		});
+
+	});
+
+//]]>
+</script> -->
+<script type="text/javascript">
+//<![CDATA[
+
+	var common = window.common = window.common || {};
+
+	common.
+	uiTermsAll = {
+		ext: {},
+
+		array: [],
+
+		"ready": function(path) {
+			path = path || '';
+
+			var arrTerms = this.array = [];
+			var $step = ( $('[data-js-layer-index="0"]').length ) ? $('[data-js-layer-index="0"]').find('[data-div-step]') : $('.dom-main').children();
+			var $contain = $step.find('>.div-contents:visible')
+			var $all = $contain.find('.m-check-list .header:has(:checkbox):visible');
+
+			if( $all.length ) {
+				// var $view = $('.m-check-list .panel:visible .view');
+				var $view = $all.closest('.div-contents').find('.m-check-list .panel:visible .view');
+
+				$view
+					.each(function(idx) {
+						var node = this, $bind = $(node);
+						var termNum = $bind.attr('data-termno');
+
+						arrTerms.push( path + termNum );
+					})
+				;
+			}
+		},
+
+		"load": function(path) {
+			if( path ) {
+				this.ready(path);
+			}
+
+			var arrTerms = this.array;
+
+			common.uiTermsAll.ext.$termsAll = $('<div id="tempTermsAll" />').empty().detach();
+
+			arrTerms.forEach(function(val, idx, arr) {
+				common.uiTermsAll.ext["$termsTemp" + idx] = $('<div id="tempTermsLoad' + idx + '" class="jsui_temp js_ready" />').appendTo( common.uiTermsAll.ext.$termsAll );
+				common.uiTermsAll.ext["$termsTemp" + idx].load(val + ' .m-terms', function() {
+					$(this).removeClass('js_ready');
+				});
+			});
+		},
+
+		"append": function(_target) {
+			var $terms = common.uiTermsAll.ext.$termsAll;
+			var termLen = $terms.find('>.jsui_temp.js_ready').length;
+
+			function Exec() {
+				$terms
+					.find('[id]')
+						.removeAttr('id')
+						.end()
+					.find('>.jsui_temp >*')
+						.unwrap('.jsui_temp')
+						.appendTo(_target)
+				;
+			}
+
+			$(_target).empty();
+
+			if( termLen ) {
+				alert('전체약관을 불러오는 중입니다.');
+
+				setTimeout(Exec, termLen * 250);
+
+			} else {
+				Exec();
+			}
+		}
+	};
+
+	jQuery(function($) {
+		// common.uiTermsAll.load('test');
+
+		common.uiTermsAll.array = [
+			'/Ucomp/kiwoom/html/trm/trm_web_b01.html',
+			'/Ucomp/kiwoom/html/trm/trm_web_b02.html',
+			'/Ucomp/kiwoom/html/trm/trm_web_b03.html',
+			'/Ucomp/kiwoom/html/trm/trm_web_b04.html',
+			'/Ucomp/kiwoom/html/trm/trm_web_b05.html',
+			'/Ucomp/kiwoom/html/trm/trm_web_b06.html'
+		];
+		common.uiTermsAll.load();
+
+		common.uiTermsAll.append('.dom-main .g-section:first'); // 호출 중 예시
+
+	});
+
+	$(window).on('load', function(evt) {
+		var $ = jQuery;
+
+		setTimeout(function() {
+			// common.uiTermsAll.append('body');
+		});
+
+	});
+
+//]]>
+</script>
+</body>
+</html>

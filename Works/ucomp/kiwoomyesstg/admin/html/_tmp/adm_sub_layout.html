@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<title>이벤트 등록 &middot; 키움예스저축은행 관리자</title>
+<link rel="stylesheet" type="text/css" href="../../pub/css/embed.css" />
+<script type="text/javascript" src="../../pub/js/ui/access.js?ver=2.8.3"></script>
+<link rel="stylesheet" type="text/css" id="Global-CSS" href="../../pub/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../../pub/css/common.css" />
+<noscript><link rel="stylesheet" type="text/css" href="../../pub/css/noscript.css" /></noscript>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="../../pub/css/legacy.css" />
+<script type="text/javascript" src="../../pub/js/lib/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../pub/js/ui/ui-common.js?fallback=1&amp;onext=1" async="async"></script>
+<script type="text/javascript" src="../../pub/js/lib/jquery/jquery.js?v=1.12.4"></script>
+<script type="text/javascript" id="Plugin-JS" src="../../pub/js/ui/ui-import.js"></script>
+<!-- /* Parsing DEV.Div Scripts -->
+<!-- e.g., <script type="text/javascript" src="../../pub/js/Utiles.js"></script> -->
+<!-- */ Parsing DEV.Div Scripts -->
+<script type="text/javascript" src="../../pub/js/ui/ui-extension.js"></script>
+</head>
+
+<body class="_unload Common-Page"><!-- BODY.Common-Page { @DEV } -->
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" id="Skip" class="div-skip">
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="node-wrap">
+			<div class="div-logo">
+				<span class="div-wrap">
+					<a href="javascript:" class="root">
+						<span class="logo">키움YES저축은행</span>
+					</a>
+				</span>
+			</div>
+		</div>
+
+		<hr class="c-masking" />
+	</header>
+ 
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="node-wrap">
+			<div class="div-account">
+				<div class="div-wrap">
+					<div class="info">
+						<div class="user">
+							<strong class="name"><span class="value">기예은(리테일영업팀)</span></strong>
+							<span class="log"><span class="head">마지막 접속</span> <span class="data"><span class="date">2020년 8월 24일</span> <span class="time">15:59:02</span></span></span>
+						</div>
+					</div>
+					<div class="binds">
+						<button type="button" title="정보수정" class="o-button _normal modify"><i aria-hidden="true"></i><span class="inner">정보수정</span></button>
+						<button type="button" title="로그아웃" class="o-button _normal signout"><i aria-hidden="true"></i><span class="inner">로그아웃</span></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="div-nav-local">
+				<div class="div-wrap">
+					<ul>
+						<li><a href="javascript:" class="label"><span class="inner">공지 관리</span></a></li>
+						<li><a href="javascript:" class="label" aria-current="true"><span class="inner">이벤트 관리</span></a></li><!-- 현재페이지 '[aria-current="true"]' { @DEV } -->
+						<li><a href="javascript:" class="label"><span class="inner">팝업 관리</span></a></li>
+						<li><a href="javascript:" class="label"><span class="inner">푸시알림 관리</span></a></li>
+						<li><a href="javascript:" class="label"><span class="inner">통계 관리</span></a></li>
+						<li><a href="javascript:" class="label"><span class="inner">앱 버전 관리</span></a></li>
+						<li><a href="javascript:" class="label"><span class="inner">관리자 관리</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<hr class="c-masking" />
+	</nav>
+
+	<div role="main" id="Center" class="dom-main">
+		<div class="node-wrap">
+			<header id="Title" class="div-title">
+				<h1 class="heading1">
+					<span class="wrap">이벤트 등록 <small class="strapline"></small></span>
+				</h1>
+			</header>
+
+			<div class="div-contents">
+
+				<div class="g-section">
+					<div class="m-board type1">
+						<table class="form">
+							<colgroup>
+								<col style="width: 15%; " />
+								<col style="width: auto; " />
+								<col style="width: 15%; " />
+								<col style="width: 35%; " />
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th>제목<em class="required"><span class="inner">(필수입력)</span></em></th>
+									<td colspan="3">
+										<div class="form-group">
+											<div class="row">
+												<span class="o-input">
+													<input type="text" placeholder="" value="" class="enter" />
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>이미지(목록)<em class="required"><span class="inner">(필수입력)</span></em></th>
+									<td colspan="3">
+										<div class="form-group">
+											<div class="row">
+												<span class="o-file" style="width:600px;">
+													<input type="file" class="enter" />
+												</span>
+												<div class="help">(사이즈 640 * 360 / 파일 용량 500M 이내 / 파일 형식 : JPG,PNG)</div>
+											</div>
+										</div>
+										<div class="image-preview">
+											<span class="image"><img src="../../../pub/images/@temp/img_event03.jpg" alt="" /></span>
+											<span class="binds"><button type="button" class="o-button _modify"><span class="inner">삭제</span></button></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>기간 설정<em class="required"><span class="inner">(필수입력)</span></em></th>
+									<td colspan="3">
+										<div class="form-group">
+											<div class="row">
+												<span class="m-dates">
+													<span class="input">
+														<span class="o-input _date">
+															<input type="text" placeholder="" value="" class="enter FN_datepicker" />
+														</span>
+														<span class="string _dash">~</span>
+														<span class="o-input _date">
+															<input type="text" placeholder="" value="" class="enter FN_datepicker" />
+														</span>
+													</span>
+													<span class="binds">
+														<button type="button" class="o-button _modify"><span class="inner">일주일</span></button>
+														<button type="button" class="o-button _modify"><span class="inner">15일</span></button>
+														<button type="button" class="o-button _modify"><span class="inner">3개월</span></button>
+													</span>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>게시 여부<em class="required"><span class="inner">(필수입력)</span></em></th>
+									<td colspan="3">
+										<div class="form-group">
+											<div class="row">
+												<span class="m-checks">
+													<span class="item"><label class="o-check"><input type="radio" name="RADIO_01" value="" checked="checked"><span class="label">YES</span></label></span>
+													<span class="item"><label class="o-check"><input type="radio" name="RADIO_01" value=""><span class="label">NO</span></label></span>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>이미지(상세)<em class="required"><span class="inner">(필수입력)</span></em></th>
+									<td colspan="3">
+										<div class="form-group">
+											<div class="row">
+												<span class="o-file" style="width:600px;">
+													<input type="file" class="enter" />
+												</span>
+												<div class="help">(사이즈 720 * Free)</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>내용<em class="required"><span class="inner">(필수입력)</span></em></th>
+									<td colspan="3">
+										<div class="form-group">
+											<div class="row">
+												<div class="o-input">
+													<textarea rows="5" cols="50" placeholder="" class="enter"></textarea><!-- 에디터 대체 가능 { @DEV } -->
+
+													<div class="g-editor c-initial">
+														<h1>h1 테스트yxoOMQiIl|170~*,.!? /* m:0.67em 0 */</h1>
+														<h2>h2 테스트yxoOMQiIl|170~*,.!? /* m:0.83em 0 */</h2>
+														<h3>h3 테스트yxoOMQiIl|170~*,.!? /* m:1.00em 0 */</h3>
+														<h4>h4 테스트yxoOMQiIl|170~*,.!? /* m:1.33em 0 */</h4>
+														<h5>h5 테스트yxoOMQiIl|170~*,.!? /* m:1.67em 0 */</h5>
+														<h6>h6 테스트yxoOMQiIl|170~*,.!? /* m:2.33em 0 */</h6>
+
+														<blockquote>blockquote 테스트yxoOMQiIl|170~*,.!? /* m:1em 40px */</blockquote>
+
+														<p>p 테스트yxoOMQiIl|170~*,.!? /* m:1em 0 */</p>
+
+														<pre>pre 테스트yxoOMQiIl|170~*,.!? /* m:1em 0 */
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eaque fugiat iusto perferendis animi cumque reiciendis sapiente temporibus consectetur quam facilis explicabo commodi laborum illum possimus fuga saepe doloremque tenetur quasi reprehenderit enim error placeat et ea obcaecati ratione vero earum neque dolore! Error molestiae deleniti odit est quas perspiciatis fugiat reprehenderit quod accusantium iste excepturi sit voluptatum eos voluptatibus ex sed nulla libero praesentium nobis modi at autem consequuntur beatae in eius! Nam vero quis beatae unde labore dolorum aperiam magni sit at doloribus maxime vel totam eaque incidunt inventore natus corrupti autem? Excepturi non laudantium ad quam minus.</pre>
+
+														<ul>
+															<li>li 테스트yxoOMQiIl|170~*,.!?</li>
+															<li>ul /* m:1em 0, pl:40px { ie7 - pl:0, ml:40px? } */</li>
+														</ul>
+
+														<ol>
+															<li>li 테스트yxoOMQiIl|170~*,.!?</li>
+															<li>ol /* m:1em 0, pl:40px { ie7 - pl:0, ml:40px? } */</li>
+														</ol>
+
+														<dl>
+															<dt>dt 테스트yxoOMQiIl|170~*,.!?</dt>
+															<dd>dd 테스트yxoOMQiIl|170~*,.!? /* ml:40px */</dd>
+															<dd>dl /* m:1em 0 */</dd>
+														</dl>
+
+														<!-- <object type="" codebase="" id="Windows Media Player" data="" width="" height="" classid="clsid:6BF52A52-394A-11d3-B153-00C04F79FAA6">
+															<param name="" value="" />
+														</object> -->
+
+														<table class="">
+														<caption>테스트yxoOMQiIl|170~*,.!?</caption>
+														<tbody>
+															<tr>
+																<th>테스트yxoOMQiIl|170~*,.!?</th>
+																<th>테스트yxoOMQiIl|170~*,.!?</th>
+															</tr>
+															<tr>
+																<th>th 테스트yxoOMQiIl|170~*,.!? /* p:1px 1px */</th>
+																<td>td 테스트yxoOMQiIl|170~*,.!? /* p:1px 1px */</td>
+															</tr>
+														</tbody>
+														</table>
+
+														<!-- <iframe name="IFRAME" id="IFRAME" src="/test/" title="Navigator Object" style="width: 100%; height: 50px; ">프레임을 지원하지 않는 브라우저입니다., <a href="/test/" target="_blank" title="[새 창]">페이지 바로가기</a></iframe> -->
+
+														<form>
+															<fieldset>
+																<legend>legend 테스트yxoOMQiIl|170~*,.!? /* p:0 2px */</legend>
+
+																<select>
+																	<option value="" selected="selected">yxoOMQiIl|170~*,.!?테스트</option>
+																	<option value="">테스트yxoOMQiIl|170~*,.!?</option>
+																</select>
+																<input type="text" value="테스트yxoOMQiIl|170~*,.!?" style="width: 60px;" />
+																<button type="button">테스트</button>
+																<button type="button">두자</button>
+																<button type="button">한</button>
+
+																<hr />
+
+																<input type="text" /> input[type=&quot;text&quot;], textarea /* { ie7 - m: 1px 0?; mobile - 0 4px? } */
+																<textarea rows="5" cols="15"></textarea> input[type=&quot;text&quot;], textarea /* { ie7 - m: 1px 0?; mobile - 0 4px? } */
+																<input type="checkbox" /> input[type=&quot;checkbox&quot;] /* m:3px 0.5ex, m:3px 3px 3px 4px, p:1px { mobile - 0 4px? } */
+																<input type="radio" /> input[type=&quot;radio&quot;] /* m:3px 0.5ex, m:3px 3px 0px 5px, p:1px { mobile - 0 4px? } */
+																<select>
+																	<option value="" selected="selected">테스트yxoOMQiIl|170~*,.!?</option>
+																	<option value="">테스트yxoOMQiIl|170~*,.!?</option>
+																</select> select /* { mobile - 0 4px? } */
+																<button type="button">테스트yxoOMQiIl|170~*,.!?</button> button /* { mobile - 0 4px? } */
+																fieldset /* m:0 2px, p:0.35em 0.75em 0.625em */
+															</fieldset>
+															form /* mt:0em { ie7 - m:1em 0? } */
+														</form>
+
+														<figure>
+															<figcaption>figcaption</figcaption>
+
+															figure
+														</figure>
+
+														<picture>
+															<!-- <source media="(min-width: 45em)" srcset="large.jpg">
+															<source media="(min-width: 32em)" srcset="med.jpg"> -->
+															<img src="/banner.gif" alt="Banner from Diary of Hana" />
+														</picture>
+
+														<q class="QUOTE">테스트 <q class="QUOTE">yxoOMQiIl|170</q>~*,.!?</q>
+
+														<details>
+															<summary>summary</summary>
+															<p class="PARAGRAPH">details</p>
+														</details>
+
+														<label>
+															Sex:
+															<input name=sex list=sexes>
+															<datalist id=sexes>
+															<option value="Female">
+															<option value="Male">
+															</datalist>
+														</label>
+
+														<a href="javascript:void(0)" class="anchor">테스트yxoOMQiIl|170~*,.!?</a>
+
+														<var class="vars">테스트yxoOMQiIl|170~*,.!?</var>
+
+														<mark>테스트yxoOMQiIl|170~*,.!?</mark>
+
+														<hr />
+
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>등록일</th>
+									<td>
+										<div class="readonly">2020-08-25 14:25</div>
+									</td>
+
+									<th>등록자</th>
+									<td>
+										<div class="readonly">기예은(리테일영업팀)</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="m-binds">
+							<span class="wrap pos-start">
+								<span class="item"><button type="button" class="o-button _normal"><span class="inner">목록</span></button></span>
+							</span>
+							<span class="wrap pos-center">
+								<span class="item"><button type="button" class="o-button _launch"><span class="inner">전송</span></button></span>
+								<span class="item"><button type="button" disabled="disabled" class="o-button _launch"><span class="inner">비활성</span></button></span>
+								<span class="item"><button type="button" class="o-button _normal"><span class="inner">디폴트</span></button></span>
+							</span>
+							<span class="wrap pos-end">
+								<span class="item"><button type="button" class="o-button _launch"><span class="inner">등록</span></button></span>
+								<span class="item"><button type="button" class="o-button _normal"><span class="inner">취소</span></button></span>
+							</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<footer role="contentinfo" id="Footer" class="dom-footer">
+		<hr class="masking" />
+
+		<div class="node-wrap">
+			<address class="div-info">
+				<span class="wrap-div">
+					<strong class="copyright"><span class="break">Copyright <span class="year">2020</span></span> <span class="company break">키움YES저축은행.</span> <span class="break">All rights reserved.</span></strong>
+				</span>
+			</address>
+		</div>
+	</footer><i aria-hidden="true"></i>
+
+</div>
+
+<script type="text/javascript" src="../../pub/js/ui/ui-defer.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+	/* { UX.Div } `Current-Page` JSs */
+
+	jQuery(function($) {
+		"use strict";
+
+		
+
+	});
+
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/*!
+ **	2dea.com Embedded-Fonts CSS
+ *	Author   :	2dea.Com Front-end UX.Div
+ *	Create   :	2002-06-21 | 2dea; 2ndLAB@2dea.com
+ *	Update   :	2020-08-04 | 2dea
+ *	Comments :	-
+ */
+
+
+/**	Font Type Syntax
+ ---------- */
+
+/**	Korean */
+@font-face  {
+	font-family: 'wf-NotoSansKR';
+	font-weight: 300;
+	src: url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-regular.eot');
+	src: local("★"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-regular.woff2') format("woff2"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-regular.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-NotoSansKR';
+	font-weight: 600;
+	src: url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-500.eot');
+	src: local("★"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-500.woff2') format("woff2"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-500.woff') format("woff");
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<title>[테스트] 커스텀셀렉트(ground-layer) 구동 &middot; 키움예스저축은행</title>
+<link rel="stylesheet" type="text/css" href="../../pub/css/embed.css" />
+<script type="text/javascript" src="../../pub/js/ui/access.js?ver=2.8.3"></script>
+<link rel="stylesheet" type="text/css" id="Global-CSS" href="../../pub/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../../pub/css/common.css" />
+<noscript><link rel="stylesheet" type="text/css" href="../../pub/css/noscript.css" /></noscript>
+<script type="text/javascript" id="Global-JS" src="../../pub/js/ui/ui-common.js?fallback=1&amp;onext=1" async="async"></script>
+<script type="text/javascript" src="../../pub/js/lib/jquery/jquery.js?v=3.5.1"></script>
+<script type="text/javascript" src="../../pub/js/ui/ui-import.js"></script>
+<!-- /* Parsing DEV.Div Scripts -->
+<!-- e.g., <script type="text/javascript" src="../../pub/js/Utiles.js"></script> -->
+<!-- */ Parsing DEV.Div Scripts -->
+<script type="text/javascript" src="../../pub/js/ui/ui-extension.js"></script>
+</head>
+
+<body class="_unload Common-Page"><!-- BODY.Common-Page { @DEV } -->
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" id="Skip" class="div-skip">
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="node-wrap">
+			<h1 class="div-title">
+				<span class="inner">TEST &ndash; 커스텀셀렉트(ground-layer) 구동</span>
+			</h1>
+
+			<div class="div-nav">
+				<span class="item back"><button type="button" title="이전 페이지로 이동" class="back"><i aria-hidden="true"></i><span class="inner">이전</span></button></span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="c-masking" />
+	</header>
+ 
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		전체메뉴
+
+		<hr class="c-masking" />
+	</nav>
+
+	<div role="main" id="Center" class="dom-main">
+		<div class="node-wrap js_show" data-div-step="1">
+			<div class="div-contents">
+
+				<div class="g-section">
+					<fieldset class="m-form-list type1">
+						<legend class="c-hidden">커스텀셀렉트 예시</legend>
+
+						<ul class="m-forms type-global">
+							<li>
+								<div class="col">
+									<span class="form-wrap FN_focusin">
+										<strong class="label">은행</strong>
+										<span class="group">
+											<span class="o-select">
+												<button type="button" data-placeholder="선택" class="obj o-select-button FN_hasPopup FN_placeholder" data-href="#tmp_web_01_0001"><span class="inner">선택</span></button><i aria-hidden="true"></i><!-- .o-select-button.FN_hasPopup[data-href="#DATA_TARGETID"] 레이어팝업 ID 매칭 필요 { @DEV } -->
+											</span>
+										</span>
+									</span>
+
+									<!-- /* [Markup-Comments] { @DEV } -->
+									<small class="g-annot" tabindex="0">JS Func: <samp><code>onExt.fn.$_hasPopup.open(_target, _fire);</code></samp> //상술한 마크업 예시 대신 자바스크립트 함수로도 호출 가능, 파라미터 값은 jQuery 셀렉터 문법을 사용</small>
+									<small class="g-annot" tabindex="0">JS Func: <samp><code>onExt.fn.$_hasPopup.reset(_fire);</code></samp> //선택값을 리셋, 파라미터가 undefined 이면 페이지 내의 모든 $('.FN_hasPopup')에 적용됩니다.</small>
+									<!-- */ [Markup-Comments] { @DEV } -->
+
+									<div class="form-footer">
+										<div class="error">
+											<p role="alert"></p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+				</div>
+
+			</div>
+
+			<div class="div-footer">
+				<div class="m-binds type-end">
+					<span class="wrap">
+						<span class="item"><button type="button" class="o-bind _submit ACT_BTN"><span class="inner">다음</span></button></span>
+					</span>
+				</div>
+			</div><i aria-hidden="true"></i>
+		</div>
+	</div>
+
+	<div class="dom-layer">
+		<div id="tmp_web_01_0001" class="ground-layer type-select case-half">
+			<hr class="c-masking" />
+
+			<div class="layer-wrap">
+				<div class="layer-head">
+					<h3 class="title"><span class="inner">선택</span></h3>
+				</div>
+
+				<div class="layer-body js_show" data-div-step="1">
+				<!-- <div class="layer-body has-done js_show" data-div-step="1"> -->
+					<div class="div-contents">
+						<div class="g-section">
+							<div class="m-listbox type1">
+								<ul>
+									<li>
+										<label class="checks">
+											<input type="radio" name="tmp_web_01_0001" value="" /><i aria-hidden="true"></i>
+											<span class="label">아이템1</span>
+										</label>
+									</li>
+									<li>
+										<label class="checks">
+											<input type="radio" name="tmp_web_01_0001" value="" /><i aria-hidden="true"></i>
+											<span class="label">아이템2</span>
+										</label>
+									</li>
+									<li>
+										<label class="checks">
+											<input type="radio" name="tmp_web_01_0001" value="" /><i aria-hidden="true"></i>
+											<span class="label">아이템3</span>
+										</label>
+									</li>
+									<li>
+										<label class="checks">
+											<input type="radio" name="tmp_web_01_0001" value="" /><i aria-hidden="true"></i>
+											<span class="label">아이템4</span>
+										</label>
+									</li>
+									<li>
+										<label class="checks">
+											<input type="radio" name="tmp_web_01_0001" value="" /><i aria-hidden="true"></i>
+											<span class="label">아이템5</span>
+										</label>
+									</li>
+									<li>
+										<label class="checks">
+											<input type="radio" name="tmp_web_01_0001" value="" /><i aria-hidden="true"></i>
+											<span class="label">아이템6</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="div-footer _done">
+						<div class="m-binds type-end">
+							<span class="wrap">
+								<span class="item"><button type="button" disabled="disabled" class="o-bind _submit ACT_BTN"><span class="inner">완료</span></button></span>
+							</span>
+						</div>
+					</div><i aria-hidden="true"></i> -->
+				</div>
+
+				<div class="layer-tail">
+					<button type="button" title="팝업 닫기" class="close"><i aria-hidden="true"></i><span class="inner">닫기</span></button>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div id="com_web_01_0001" class="ground-layer type-select">
+			<hr class="c-masking" />
+
+			<div class="layer-wrap">
+				<div class="layer-head">
+					<h3 class="title"><span class="inner">선택</span></h3>
+				</div>
+
+				<div class="layer-body js_show" data-div-step="1">
+					<div class="div-contents">
+						<div class="g-section">
+							<div class="xt-select-banklist">
+								<div class="m-tabs type-main">
+									<ul role="tablist" class="lists">
+										<li><a role="tab" href="javascript:" class="bind" aria-selected="true"><span class="inner">은행</span></a></li>
+										<li><a role="tab" href="javascript:" class="bind" aria-selected="false"><span class="inner">증권사</span></a></li>
+									</ul>
+
+									<div class="panels FN_tabpanel" data-tabpanel-id="com_web_01_0001">
+										<div role="tabpanel" class="m-listbox type1" tabindex="0">
+											<ul>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행1</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행2</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행3</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행4</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행5</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행6</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행7</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행8</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행9</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">은행10</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+
+										<div role="tabpanel" class="m-listbox type1" tabindex="0">
+											<ul>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">증권사1</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">증권사2</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">증권사3</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">증권사4</span>
+													</label>
+												</li>
+												<li>
+													<label class="checks">
+														<input type="radio" name="com_web_01_0001" value="" /><i aria-hidden="true"></i>
+														<span class="label">증권사5</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="layer-tail">
+					<button type="button" title="팝업 닫기" class="close"><i aria-hidden="true"></i><span class="inner">닫기</span></button>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
+</div>
+
+<script type="text/javascript" src="../../pub/js/ui/ui-defer.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+	/* { UX.Div } `Current-Page` JSs */
+
+	jQuery(function($) {
+		"use strict";
+
+		
+
+	});
+
+//]]>
+</script>
+</body>
+</html>

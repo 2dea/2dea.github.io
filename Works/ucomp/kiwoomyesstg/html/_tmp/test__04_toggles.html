@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<title>[테스트] 탭(switcher) &amp; 어코디언(collapse) &middot; 키움예스저축은행</title>
+<link rel="stylesheet" type="text/css" href="../../pub/css/embed.css" />
+<script type="text/javascript" src="../../pub/js/ui/access.js?ver=2.8.3"></script>
+<link rel="stylesheet" type="text/css" id="Global-CSS" href="../../pub/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../../pub/css/common.css" />
+<noscript><link rel="stylesheet" type="text/css" href="../../pub/css/noscript.css" /></noscript>
+<script type="text/javascript" id="Global-JS" src="../../pub/js/ui/ui-common.js?fallback=1&amp;onext=1" async="async"></script>
+<script type="text/javascript" src="../../pub/js/lib/jquery/jquery.js?v=3.5.1"></script>
+<script type="text/javascript" src="../../pub/js/ui/ui-import.js"></script>
+<!-- /* Parsing DEV.Div Scripts -->
+<!-- e.g., <script type="text/javascript" src="../../pub/js/Utiles.js"></script> -->
+<!-- */ Parsing DEV.Div Scripts -->
+<script type="text/javascript" src="../../pub/js/ui/ui-extension.js"></script>
+</head>
+
+<body class="_unload Common-Page"><!-- BODY.Common-Page { @DEV } -->
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" id="Skip" class="div-skip">
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="node-wrap">
+			<h1 class="div-title">
+				<span class="inner">TEST &ndash; 탭(switch) &amp; 어코디언(collapse)</span>
+			</h1>
+
+			<div class="div-nav">
+				<span class="item back"><button type="button" title="이전 페이지로 이동" class="back"><i aria-hidden="true"></i><span class="inner">이전</span></button></span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="c-masking" />
+	</header>
+ 
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="node-wrap is-app"><!-- 앱일 경우 .node-wrap.is-app { @DEV } -->
+			<div class="div-account">
+				<div class="info">
+					<div class="user">
+						<p class="welcome"><strong class="name"><span class="value">고객</span><span class="suffix">님</span></strong> 환영합니다.</p><!-- 로그인세션 '.name .value' text(USER_NAME) { @DEV } -->
+
+						<!-- <span class="log"><span class="head">마지막 접속</span> <time class="data"><span class="date">2020-01-07</span> <span class="time">09:00</span></time></span> -->
+					</div>
+				</div>
+				<div class="binds">
+					<!-- /* 로그인세션 출력 { @DEV } -->
+					<button type="button" title="로그아웃" class="signout"><i aria-hidden="true"></i><span class="inner">로그아웃</span></button>
+					<!-- */ 로그인세션 출력 { @DEV } -->
+					<!-- /* 비로그인세션 출력 { @DEV } -->
+					<button type="button" title="로그인" class="signin"><i aria-hidden="true"></i><span class="inner">로그인</span></button>
+					<button type="button" title="간편인증등록" class="signup"><i aria-hidden="true"></i><span class="inner">간편인증등록</span></button>
+					<!-- */ 비로그인세션 출력 { @DEV } -->
+					<a href="javascript:" title="메인페이지로 이동" class="home"><i aria-hidden="true"></i><span class="inner">홈으로</span></a>
+				</div>
+			</div>
+
+			<div class="div-nav">
+				<ul class="nav-global">
+					<li><a href="javascript:" class="label _cert"><span class="inner">인증관리</span></a></li>
+					<li><a href="javascript:" class="label _noti"><span class="inner">알림<strong aria-live="polite" title="1건 이상의 새알림이 있습니다." class="badge _new"><span class="inner c-hidden">[새알림]</span></strong></span></a></li><!-- 새알림 시 '.badge._new' show() { @DEV } -->
+					<li><a href="javascript:" class="label _sets"><span class="inner">설정</span></a></li>
+				</ul>
+
+				<ul role="tablist" class="nav-total depth-size3">
+					<li>
+						<a role="tab" id="nav_app_tab01" aria-controls="nav_app_panel01" aria-selected="true" href="javascript:" class="label"><span class="inner">MY</span></a>
+
+						<div role="tabpanel" id="nav_app_panel01" aria-labelledby="nav_app_tab01">
+							<ul>
+								<li><a href="javascript:" class="label"><span class="inner">대출현황조회</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">대출거래내역조회</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">대출상환계획조회</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">증명서발급</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">전자약정</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">대출기한연장</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">대출철회</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">금리인하요구</span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a role="tab" id="nav_app_tab02" aria-controls="nav_app_panel02" aria-selected="false" href="javascript:" class="label"><span class="inner">상품안내</span></a>
+
+						<div role="tabpanel" id="nav_app_panel02" aria-labelledby="nav_app_tab02">
+							<ul>
+								<li><a href="javascript:" class="label"><span class="inner">상품모아보기</span></a></li>
+								<li>
+									<a href="javascript:" class="label"><span class="inner">신용대출</span></a>
+
+									<ul>
+										<li><a href="javascript:" class="label"><span class="inner">키움YES히어로즈론(중금리)</span></a></li>
+										<li><a href="javascript:" class="label"><span class="inner">아파트플러스론</span></a></li>
+										<li><a href="javascript:" class="label"><span class="inner">햇살론</span></a></li>
+										<li><a href="javascript:" class="label"><span class="inner">사잇돌2(표준)</span></a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:" class="label"><span class="inner">담보대출</span></a>
+
+									<ul>
+										<li><a href="javascript:" class="label"><span class="inner">임대APT보증금대출</span></a></li>
+										<li><a href="javascript:" class="label"><span class="inner">아파트담보대출</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a role="tab" id="nav_app_tab03" aria-controls="nav_app_panel03" aria-selected="false" href="javascript:" class="label"><span class="inner">한도조회</span></a>
+
+						<div role="tabpanel" id="nav_app_panel03" aria-labelledby="nav_app_tab03">
+							<ul>
+								<li>
+									<a href="javascript:" class="label"><span class="inner">사전한도조회</span></a>
+
+									<ul>
+										<li><a href="javascript:" class="label"><span class="inner">휴대폰 간편조회</span></a></li>
+										<li><a href="javascript:" class="label"><span class="inner">공동인증서 상세조회</span></a></li>
+									</ul>
+								</li>
+								<li><a href="javascript:" class="label"><span class="inner">추가대출 한도조회</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">간편상담예약</span></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a role="tab" id="nav_app_tab04" aria-controls="nav_app_panel04" aria-selected="false" href="javascript:" class="label"><span class="inner">고객센터</span></a>
+
+						<div role="tabpanel" id="nav_app_panel04" aria-labelledby="nav_app_tab04">
+							<ul>
+								<li><a href="javascript:" class="label"><span class="inner">공지사항</span></a></li>
+								<li>
+									<a href="javascript:" class="label"><span class="inner">온라인서류제출</span></a>
+
+									<ul>
+										<li><a href="javascript:" class="label"><span class="inner">온라인서류제출 안내</span></a></li>
+										<li><a href="javascript:" class="label"><span class="inner">간편서류제출</span></a></li>
+										<li><a href="javascript:" class="label"><span class="inner">소득서류제출</span></a></li>
+										<li><a href="javascript:" class="label"><span class="inner">신분증촬영</span></a></li>
+									</ul>
+								</li>
+								<li><a href="javascript:" class="label"><span class="inner">대출약관</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">신용정보조회동의</span></a></li>
+								<li><a href="javascript:" class="label"><span class="inner">이벤트</span></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-hide"><a href="#Go-Navigator" title="전체메뉴 숨기기"><i aria-hidden="true"></i><span class="inner">닫기</span></a></span>
+			</div>
+		</div>
+
+		<hr class="c-masking" />
+	</nav>
+
+	<div role="main" id="Center" class="dom-main">
+		<div class="node-wrap js_show" data-div-step="1">
+			<div class="div-contents">
+
+				<div class="g-section">
+					<h2 class="m-heading type-m">기본</h2>
+
+					<ul>
+						<li><button type="button" id="TEST_TOGGLE1" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( '#' + this.getAttribute('aria-controls'), 'slide' );"><span class="inner" data-var-text="보이기/숨기기">Toggle ARIA Button[DEFAULT]</span></button></li>
+						<li>
+							<a href="#TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( this.getAttribute('href'), 'slide' ); return false;" class="o-anchor"><span class="inner" data-var-text="보이기/숨기기">Toggle HREF Anchor</span></a>
+
+							<button type="button" data-href="#TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( this.dataset.href, 'slide' );"><span class="inner" data-var-text="보이기/숨기기">Toggle DATA Button</span></button>
+						</li>
+						<li>
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( '#' + this.getAttribute('aria-controls'), 'none' );"><span class="inner">FX: null|none</span></button>
+
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( '#' + this.getAttribute('aria-controls'), 'both' );"><span class="inner">FX: both</span></button>
+
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( '#' + this.getAttribute('aria-controls'), 'fade' );"><span class="inner">FX: fade</span></button>
+
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( '#' + this.getAttribute('aria-controls'), 'slide' );"><span class="inner">FX: slide</span></button>
+						</li>
+						<li>
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( '#' + this.getAttribute('aria-controls'), 'slide', null );"><span class="inner">SPD: null(250ms)</span></button>
+
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( '#' + this.getAttribute('aria-controls'), 'slide', 0 );"><span class="inner">SPD: 0ms</span></button>
+
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( '#' + this.getAttribute('aria-controls'), 'slide', 2e3 );"><span class="inner">SPD: 2000ms</span></button>
+						</li>
+						<li>
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.show( '#' + this.getAttribute('aria-controls'), 'slide' );"><span class="inner">show()</span></button>
+
+							<button type="button" aria-controls="TEST_PANEL1" onclick="onExt.fn.$_toggle.hide( '#' + this.getAttribute('aria-controls'), 'slide' );"><span class="inner">hide()</span></button>
+
+							<a href="#TEST_PANEL1" onclick="onExt.fn.$_toggle.toggle( this.getAttribute('href'), 'slide' ); return false;" class="o-anchor"><span class="inner" data-var-text="ON/OFF">ON/OFF</span></a>
+						</li>
+					</ul>
+
+					<div id="TEST_PANEL1" aria-labelledby="TEST_TOGGLE1" class="panel js_toggle-hide" hidden="hidden" style="background:Gold;">
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+						TEST_PANEL1
+					</div>
+				</div>
+
+				<div class="g-section">
+					<h2 class="m-heading type-m">Accordion</h2>
+
+					<div class="m-define-list UI_collapse" data-fn-collapse-fold="opened">
+						<div class="item">
+							<div class="header FN_bindsRow">
+								<strong class="label">상품소개</strong>
+								<button type="button" class="o-image-button _toggle FN_toggle" data-js="FN_bindsRow-item"><span class="inner" data-var-text="보이기/숨기기">보이기/숨기기</span></button>
+							</div>
+							<div class="panel" data-fn="FN_toggle-panel">
+								<strong class="m-bullet-tit">상품명</strong>
+								<ul class="m-bullet type-hyphen">
+									<li>키움YES히어로즈론(중금리)</li>
+								</ul>
+							</div>
+						</div>
+						<div class="item">
+							<button type="button" class="header FN_toggle"><span class="inner" data-var-text="열기/닫기">LABELLING BUTTON HEADER</span></button>
+							<div class="panel" data-fn="FN_toggle-panel">
+								Previous element is toggle-button
+							</div>
+						</div>
+						<div class="item">
+							<a href="javascript:" class="header FN_toggle"><span class="inner" data-var-text="보이기/숨기기">LABELLING ANCHOR HEADER</span></a>
+							<div class="panel" data-fn="FN_toggle-panel">
+								Previous element is toggle-anchor
+							</div>
+						</div>
+						<div class="item type-prec">
+							<div class="header FN_bindsRow">
+								<strong class="label">유의사항</strong>
+								<button type="button" class="o-image-button _toggle FN_toggle" data-js="FN_bindsRow-item"><span class="inner" data-var-text="보이기/숨기기">보이기/숨기기</span></button>
+							</div>
+							<div class="panel" data-fn="FN_toggle-panel">
+								<ul class="m-bullet type-hyphen">
+									<li>대출상품 이용시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="m-define-list UI_collapse" data-fn-collapse-autofold="true">
+						<div class="item">
+							<div class="header FN_bindsRow">
+								<strong class="label">상품소개</strong>
+								<button type="button" class="o-image-button _toggle FN_toggle" data-js="FN_bindsRow-item"><span class="inner" data-var-text="보이기/숨기기">보이기/숨기기</span></button>
+							</div>
+							<div class="panel" data-fn="FN_toggle-panel">
+								<strong class="m-bullet-tit">상품명</strong>
+								<ul class="m-bullet type-hyphen">
+									<li>키움YES히어로즈론(중금리)</li>
+								</ul>
+							</div>
+						</div>
+						<div class="item">
+							<button type="button" class="header FN_toggle" style="display:block; min-width:100%; text-align:start;"><span class="inner" data-var-text="열기/닫기">LABELLING BUTTON HEADER</span></button>
+							<div class="panel" data-fn="FN_toggle-panel">
+								Previous element is toggle-button
+							</div>
+						</div>
+						<div class="item">
+							<a href="javascript:" class="header FN_toggle" style="display:block; padding:1em 0;"><span class="inner" data-var-text="보이기/숨기기">LABELLING ANCHOR HEADER</span></a>
+							<div class="panel" data-fn="FN_toggle-panel">
+								Previous element is toggle-anchor
+							</div>
+						</div>
+						<div class="item type-prec">
+							<div class="header FN_bindsRow">
+								<strong class="label">유의사항</strong>
+								<button type="button" class="o-image-button _toggle FN_toggle" data-js="FN_bindsRow-item"><span class="inner" data-var-text="보이기/숨기기">보이기/숨기기</span></button>
+							</div>
+							<div class="panel" data-fn="FN_toggle-panel">
+								<ul class="m-bullet type-hyphen">
+									<li>대출상품 이용시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="m-define-list UI_collapse" data-collapse-id="COLLAPSE_TEST" data-fn-collapse-autofold="true" data-fn-collapse-fxtype="fade" data-fn-collapse-fxspeed="2e3">
+						<div class="item">
+							<div class="header FN_bindsRow">
+								<strong class="label">Group2-1</strong>
+								<button type="button" class="o-image-button _toggle FN_toggle" data-js="FN_bindsRow-item"><span class="inner" data-var-text="보이기/숨기기">보이기/숨기기</span></button>
+							</div>
+							<div class="panel" data-fn="FN_toggle-panel">
+								Group2-1
+							</div>
+						</div>
+						<div class="item">
+							<div id="label1" class="header FN_bindsRow">
+								<strong class="label">CUSTOM ID TEST</strong>
+								<button type="button" class="o-image-button _toggle FN_toggle" data-js="FN_bindsRow-item" aria-controls="panel1"><span class="inner" data-var-text="보이기/숨기기">보이기/숨기기</span></button>
+							</div>
+							<div id="panel1" class="panel" data-fn="FN_toggle-panel" aria-labelledby="label1">
+								CUSTOM ID TEST
+							</div>
+						</div>
+						<div class="item">
+							<div class="header FN_bindsRow">
+								<strong class="label">Group2-2</strong>
+								<button type="button" class="o-image-button _toggle FN_toggle" data-js="FN_bindsRow-item"><span class="inner" data-var-text="보이기/숨기기">보이기/숨기기</span></button>
+							</div>
+							<div class="panel" data-fn="FN_toggle-panel">
+								Group2-2
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="div-footer">
+				<div class="m-binds type-end">
+					<span class="wrap">
+						<span class="item"><button type="button" class="o-bind _submit ACT_BTN"><span class="inner">다음</span></button></span>
+					</span>
+				</div>
+			</div><i aria-hidden="true"></i>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="../../pub/js/ui/ui-defer.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+	/* { UX.Div } `Current-Page` JSs */
+
+	jQuery(function($) {
+		"use strict";
+
+		
+
+	});
+
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/*! 
+ **	KIWOOMYESBANK Local-Contents CSS (*Deprecated)
+ *	Author   :	U:COMPANION Front-end UX.Div
+ *	Create   :	2020-08-04 | 2dea; ego@2dea.com
+ *	Update   :	2020-08-04 | creamchu
+ *	Comments :	-
+ */
+
+
+/**	Local-Contents Stylesheets
+ ----------------------------- */
+
+/* 공통 - 은행선택 */
+.xt-select-banklist .m-tabs >.lists  { position: -webkit-sticky; position: sticky; z-index: 1; left: 0; top: 0; right: 0; }
+
+/* 공통 - 공인인증서 */
+.xt-anchor-cert  { margin-top: 3.5rem; margin-left: -2rem; text-align: center; }
+.xt-anchor-cert .o-anchor  { color: var(--color-text2); font-weight: var(--bold-400); }
+
+.xt-form-cert + .m-step-list  { margin-top: 6rem; }
+.xt-form-cert  { padding-top: 1.5rem; border-top: 1px solid var(--color-line1); }
+.xt-form-cert .group  { display: -moz-box; display: -webkit-box; display: flex; -webkit-align-items: center; align-items: center; }
+.xt-form-cert .group .number  { font-size: var(--font-l); }
+.xt-form-cert .group .string  { width: 1.2rem; height: 0.2rem; margin: 0 1rem; background: var(--color-line1); }
+.xt-form-cert .group .string .inner  { color: Transparent; }
+
+/* 공통 - 휴대폰인증, 카카오 인증 (삭제) */
+.xt-idvertify-choice  { display: -moz-box; display: -webkit-box; display: flex; width: 100%; text-align: center; }
+.xt-idvertify-choice li  { width: 50%; -webkit-flex-grow: 1; flex-grow: 1; }
+.xt-idvertify-choice li:first-child  { margin-right: 0.8rem; }
+.xt-idvertify-choice li a  { display: block; }
+.xt-idvertify-choice li span  { display: block; height: 17.8rem; padding-top: 2.2rem; background: var(--color-ground1); font-size: var(--font-m); font-weight: var(--bold-700); border: 1px solid currentColor; border-radius: 0.4rem; }
+.xt-idvertify-choice li span.tel  { background: #E6F6FF url('../images/asset/bg_idvertify_tel.png') no-repeat 100% 100% /14.5rem; }
+.xt-idvertify-choice li span.kakao  { background: #FFF5E4 url('../images/asset/bg_idvertify_kakao.png') no-repeat 100% 100% /14.5rem; }
+
+/* 공통 - 본인인증 */
+.xt-switchidverify  { margin-top: 0; margin-bottom: 3.5rem; }
+.xt-switchidverify li  { margin: 0 0.3rem 0; }
+.xt-switchidverify label span  { height: 6rem; color: var(--color-text2); font-size: var(--font-m); line-height: 5.8rem; border-color: var(--color-line3); border-radius: 0.4rem; }
+.xt-switchidverify .ico  { display: inline-block; width: 3.6rem; height: 100%; margin-right: 0.6rem; background: url('../images/common/set_idverify.png') no-repeat 0 0 /14.4rem; vertical-align: bottom; }
+.xt-switchidverify .ico.phone  { background-position: 0; }
+.xt-switchidverify .ico.kakao  { background-position: -3.6rem; }
+.xt-switchidverify label input:checked ~ span  { color: var(--color-text1); border-color: currentColor; }
+.xt-switchidverify label input:checked ~ span .ico.phone  { background-position: -7.2rem; }
+.xt-switchidverify label input:checked ~ span .ico.kakao  { background-position: -10.8rem; }
+
+/* 공통 - 신분증 확인 */
+.xt-idvertify .m-bullet  { margin-top: 3.5rem; }
+
+.xt-idcard .m-imagebox  { position: relative; margin-bottom: 1.5rem; }
+.xt-idcard .m-imagebox:empty  { min-height: 19rem; background: var(--color-ground1); }
+.xt-idcard .m-imagebox:empty:before  { content: "주민등록증 영역"; font-weight: var(--bold-700); font-size: var(--font-xl); position: absolute; left: 0; top: 50%; right: 0; -webkit-transform: translateY(-50%); transform: translateY(-50%); color: var(--color-gray); }
+.xt-idcard.type-drive .m-imagebox:empty:before  { content: "운전면허증 영역"; }
+.xt-idcard .m-imagebox +.m-form-list  { margin-top: 3.5rem; }
+
+/* 대출상품선택 */
+.xt-cardbox  { margin-top: -1.5rem; padding: 0 2rem 6rem 4rem; background: var(--color-ground1); }
+.xt-cardbox > dt  { padding-top: 3.5rem; font-size: var(--font-m); font-weight: var(--bold-700); }
+.xt-cardbox > dt small  { color: var(--color-text2); font-size: var(--font-2xs); font-weight: var(--bold-400); }
+.xt-cardbox > dd  { margin-top: 1rem; overflow: hidden; }
+.xt-cardbox .card  { position: relative; padding: 2.3rem 2.5rem 3.1rem; background: var(--color-ground); border: 1px solid var(--color-gray); }
+.xt-cardbox .card label  { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.xt-cardbox .card label input  { position: absolute; width: 1px; height: 1px; border: 0; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; }
+.xt-cardbox .card label input:checked ~ span:before  { border-color: var(--color-point2); }
+.xt-cardbox .card label input:checked ~ span:after  { background-position: 100%; }
+.xt-cardbox .card label span:before  { content: ""; position: absolute; top: -1px; left: -1px; width: calc(100% + 2px); height: calc(100% + 2px); border: 1px solid var(--color-gray); }
+.xt-cardbox .card label span:after  { content: ""; position: absolute; top: -1px; right: -1px; width: 6.4rem; height: 6.4rem; background: url('../images/common/set_card_check.png') no-repeat 0 0; background-size: auto 6.4rem; }
+.xt-cardbox .card .title  { font-size: var(--font-l); font-weight: var(--bold-400); }
+.xt-cardbox .card .desc  { color: var(--color-text2); font-size: var(--font-2xs); }
+.xt-cardbox .card .summary  { display: table; width: 100%; margin-top: 2rem; }
+.xt-cardbox .card .summary li  { display: table-row; font-size: var(--font-s); }
+.xt-cardbox .card .summary li:first-child .head  { padding-top: 0; }
+.xt-cardbox .card .summary li:first-child .data  { padding-top: 0; }
+.xt-cardbox .card .summary .head  { display: table-cell; width: 34%; padding-top: 0.6rem; padding-right: 1.5rem; color: var(--color-text2); font-weight: var(--bold-400); }
+.xt-cardbox .card .summary .data  { display: table-cell; padding-top: 0.6rem; font-weight: var(--bold-700); }
+/* 대출상품선택 (타이틀 없을 경우) */
+.xt-cardbox.type-notitle  { margin-top: 0; background: var(--color-white); }
+.xt-cardbox.type-notitle dt  { position: absolute; padding: 0; }
+.xt-cardbox.type-notitle dt + dd  { margin-top: 0; }
+.xt-cardbox.type-notitle .nodata  { margin-right: -2rem; padding: 3.5rem 2rem 3.5rem 0; border-top: 1px solid var(--color-line1); }
+.xt-cardbox.type-notitle .nodata p  { color: var(--color-text4); font-size: var(--font-m); text-align: center; }
+
+/* 공통 - 운전면허 일련번호 팝업 */
+.xt-drivecard-num .m-dialog-message  { margin-top: 1.5rem; }
+.xt-drivecard-num .m-dialog-message strong  { font-weight: var(--bold-700); }
+
+/* 사전조회안내 */
+.xt-lim-info  { border-top: 1px solid var(--color-line1); padding-top: 3rem; }
+
+/* 사전조회 - 간편조회 */
+.xt-switchperson  { margin-top: 0; margin-bottom: 3.5rem; }
+.xt-switchperson li  { margin: 0 0.3rem 0; }
+.xt-switchperson label span  { height: 6rem; color: var(--color-text2); font-size: var(--font-m); line-height: 5.8rem; border-color: var(--color-line3); border-radius: 0.4rem; }
+.xt-switchperson .ico  { display: inline-block; width: 3rem; height: 100%; margin-right: 0.6rem; background: url('../images/common/set_person.png') no-repeat 0 0 /12rem; vertical-align: bottom; }
+.xt-switchperson .ico.worker  { background-position: 0; }
+.xt-switchperson .ico.bussines  { background-position: -3rem; }
+.xt-switchperson label input:checked ~ span  { color: var(--color-text1); border-color: currentColor; }
+.xt-switchperson label input:checked ~ span .ico.worker  { background-position: -6rem; }
+.xt-switchperson label input:checked ~ span .ico.bussines  { background-position: -9rem; }
+
+/* 사전조회 - 스크래핑 오류 */
+.xt-lim-result  { padding-top: 3.5rem; border-top: 1px solid var(--color-line1); }
+
+/* 대출상품 - 상품목록 */
+.xt-product-main  { max-width: var(--breakpoint-max); max-width: calc(var(--breakpoint-max) - 4rem); margin-left: 0; }
+.xt-product-main img  { width: 100%; }
+.xt-product-main.swiper-container .swiper-controls  { left: 8.1%; top: 82.7%; color: var(--color-text1); }
+.xt-product-main.swiper-container .swiper-pagination  { color: var(--color-text5); }
+.xt-product-main.swiper-container .swiper-pagination .swiper-pagination-current,
+.xt-product-main.swiper-container .swiper-pagination .swiper-pagination-bullet-active  { color: var(--color-text1); }
+.xt-product-main.swiper-container .swiper-pagination-bullet  { border-color: Transparent; background-color: currentColor; }
+.xt-product-main.swiper-container .swiper-pagination-bullet-active  { width: 2.8em; }
+
+/* .xt-product-banner a  { display: block; height: 18rem; padding: 2.5rem; }
+.xt-product-banner strong  { font-size: var(--font-2xl); font-weight: var(--bold-700); }
+.xt-product-banner p  { margin-top: 0.4rem; font-size: var(--font-xs); line-height: 2.1rem; }
+.xt-product-banner [class*="theme"]  { background: var(--color-theme1) url('../images/asset/bg_loan_product01.png') no-repeat 140% 135% /18rem; }
+.xt-product-banner .theme-01  { background-image: none; } */
+
+/* 대출상품 - 상품안내 */
+.xt-product  { position: relative; min-height: 49rem; padding: 5rem 2rem; background: var(--color-theme1); }
+.xt-product .heading  { font-size: var(--font-3xl); font-weight: var(--bold-700); padding-left: 2rem; }
+.xt-product .badge  { font-weight: var(--bold-700); font-size: var(--font-s); position: absolute; top: 0; right: 0; width: 8rem; height: 8rem; overflow: hidden; padding: 1.3rem 0.5rem; text-align: right; }
+/* .xt-product .badge:before  { content: ""; display: block; position: absolute; right: -75%; top: -75%; -webkit-transform: rotate(45deg) translate(-3%, -3%); transform: rotate(45deg) translate(-3%, -3%); width: 150%; height: 150%; background: var(--color-button3); } */
+.xt-product .badge:before  { content: ""; position: absolute; right: 0; top: 0; border: 0 solid; border-width: 8rem 0 0 8rem; border-color: var(--color-button3) Transparent; }
+.xt-product .badge >.inner  { position: relative; color: var(--color-white); }
+.xt-product .badge >.inner .bracket  { display: none; }
+.xt-product .desc  { margin-top: 0.3rem; font-size: var(--font-s); font-weight: var(--bold-400); line-height: 2.2rem; padding-left: 2rem; }
+.xt-product .summary  { display: table; table-layout: fixed; width: 100%; max-width: var(--breakpoint-max); max-width: calc(var(--breakpoint-max) - 4rem); margin: 0 auto; padding-top: 24rem; background: none no-repeat 50% 3.2rem /22.4rem; line-height: 1.8rem; }
+.xt-product .summary ul  { display: table-row; }
+.xt-product .summary li  { display: table-cell; width: 33.6%; padding-left: 2rem; }
+.xt-product .summary li:last-child  { width: auto; }
+.xt-product .summary .head  { color: var(--color-text2); font-size: var(--font-2xs); font-weight: var(--bold-400); }
+.xt-product .summary .data  { display: block; margin-top: 0.5rem; font-size: var(--font-m); font-weight: var(--bold-700); line-height: 1.25; }
+.xt-product .summary .data em { font-size: var(--font-l); }
+
+.Product-Step.type1 .xt-product  { background-color: var(--color-theme1); }
+.Product-Step.type2 .xt-product  { background-color: var(--color-theme2); }
+.Product-Step.type3 .xt-product  { background-color: var(--color-theme3); }
+.Product-Step.type4 .xt-product  { background-color: var(--color-theme4); }
+.Product-Step.type5 .xt-product  { background-color: var(--color-theme5); }
+.Product-Step.type6 .xt-product  { background-color: var(--color-theme6); }
+.Product-Step.type1 .xt-product .summary  { background-image: url('../images/asset/bg_loan_product01.png'); }
+.Product-Step.type2 .xt-product .summary  { background-image: url('../images/asset/bg_loan_product02.png'); }
+.Product-Step.type3 .xt-product .summary  { background-image: url('../images/asset/bg_loan_product03.png'); }
+.Product-Step.type4 .xt-product .summary  { background-image: url('../images/asset/bg_loan_product04.png'); }
+.Product-Step.type5 .xt-product .summary  { background-image: url('../images/asset/bg_loan_product05.png'); }
+.Product-Step.type6 .xt-product .summary  { background-image: url('../images/asset/bg_loan_product06.png'); }
+
+.xt-product-detail + .xt-product-detail  { margin-top: 5rem; padding-top: 5rem; border-top: 1px solid var(--color-line2); }
+.xt-product-detail .heading  { font-size: var(--font-l); font-weight: var(--bold-700); line-height: 2.6rem; }
+.xt-product-detail .heading .break  { display: block; margin-top: 1rem; }
+.xt-product-detail .heading .break + .break  { margin-top: 0; }
+.xt-product-detail .heading .o-icon  { display: block; width: 5.2rem; height: 6rem; background: none no-repeat 0 0 /100%; }
+.xt-product-detail .heading .o-icon.ico-01  { background-image: url('../images/common/ico_product_tit01.png'); }
+.xt-product-detail .heading .o-icon.ico-02  { background-image: url('../images/common/ico_product_tit02.png'); }
+.xt-product-detail .heading .o-icon.ico-03  { background-image: url('../images/common/ico_product_tit03.png'); }
+.xt-product-detail .heading .o-icon.ico-04  { background-image: url('../images/common/ico_product_tit04.png'); }
+.xt-product-detail .m-bullet  { margin-top: 1.5rem; }
+.xt-product-detail .m-step-list  { margin-top: 2.5rem; }
+
+.xt-product-policy  { margin-top: 2rem; }
+.xt-product-policy .m-bullet  { font-size: var(--font-2xs); }
+
+/* 랜딩(앱 다운로드 안내) */
+.Introapp-Step .xt-product  { min-height: 37rem; background: url('../images/asset/bg_guide_product.png') no-repeat 50% 15.9rem /22.4rem; background-color: var(--color-theme1); }
+.Introapp-Step .xt-product .desc  { margin-bottom: 0.6rem; font-size: var(--font-l); font-weight: var(--bold-100); }
+
+/* 대출상품 - 보이스피싱 예방안내 */
+.xt-loan-phishing .m-bullet .c-strong { display: block; margin-top: 1rem; }
+
+/* 대출상품 - 신청안내 */
+.xt-loan-agree  { padding-top: 3.5rem; padding-bottom: 5rem; border-top: 1px solid var(--color-line1); border-bottom: 1px solid var(--color-line2); }
+.xt-loan-agree .m-checks  { padding-right: 2rem; }
+.xt-loan-agree .m-checks.type-terms >li +li  { margin-top: 3rem; }
+.xt-loan-agree .m-checks .label  { font-size: var(--font-s); font-weight: var(--bold-700); }
+.xt-loan-agree .m-checks .term-desc  { margin-top: 0.6rem; margin-left: 3rem; color: var(--color-text2); font-size: var(--font-xs); line-height: 2.1rem; }
+
+/* 대출상품 - 신용대출 약관 탭 */
+.xt-tab-agree .m-tabs .lists  { margin-right: -2rem; }
+.xt-tab-agree .m-tabs >.panels  { padding-top: 3.5rem; }
+.xt-tab-agree .m-tabs >.panels >* >.o-subject  { margin-top: -2rem; }
+.xt-tab-agree .m-tabs >.panels >* >.o-subject +.m-check-list  { margin-top: 3.5rem; }
+.xt-tab-agree .m-tabs + .m-check-list  { margin-top: 2.5rem; margin-right: -2rem; padding-right: 2rem; border-top: 1px solid var(--color-line1); }
+
+/* 대출상품 - 신청정보 입력 */
+.xt-loan-process .m-form-list  { margin-top: 3.5rem; }
+.xt-loan-process .m-tabs .panels .m-summary  { border-top: none; }
+
+/* 대출상품 - 고객정보 입력 */
+.xt-loan-customer .m-binds  { margin-top: 2.5rem; }
+.xt-loan-customer .m-bullet  { margin-top: 2rem; }
+.xt-loan-customer .xt-results  { margin-left: -2rem; text-align: center; }
+.xt-loan-customer .xt-results p  { margin-top: 2rem; padding: 2rem 0 1rem; font-weight: var(--bold-700); }
+.xt-loan-customer .xt-results:last-child p  { padding-bottom: 0; }
+.xt-loan-customer .xt-results p:before  { content: ""; display: inline-block; margin-top: -0.2rem; vertical-align: middle; }
+.xt-loan-customer .xt-results p.is-success  { color: var(--color-point1); }
+.xt-loan-customer .xt-results p.is-success:before  { width: 2.6rem; height: 2.6rem; margin-right: 1rem; background: url('../images/common/ico_check_blue.png') no-repeat 0 0 /100%; }
+.xt-loan-customer .xt-results p.is-error  { padding: 0; color: var(--color-error); }
+.xt-loan-customer .xt-results p.is-error:before  { width: 1.6rem; height: 1.6rem; margin-right: 0.6rem; background: url(../images/common/ico_error.png) no-repeat 0 0 /100%; }
+
+/* 하단 블릿 스타일 */
+.xt-guide-info  { padding-top: 3.5rem; padding-right: 2rem; border-top: 1px solid var(--color-line1); padding-top: 3rem; }
+
+/* 대출상품 - 상환방식 팝업 */
+.xt-repayment dt  { margin-top: 1.5rem; font-size: var(--font-m); }
+.xt-repayment dt:first-child  { margin-top: 0; }
+.xt-repayment dd  { margin-top: 0.4rem; color: var(--color-text2); font-size: var(--font-s); }
+
+/* 대출상품 - 대출결과 */
+.xt-loan-result .m-bullet  { margin-top: 2rem; }
+.xt-loan-result.type2 > ul > li  { margin-top: 3.5rem; }
+.xt-loan-result.type2 > ul > li:first-child  { margin-top: 0; }
+.xt-point-notice + .m-check-list  { margin-top: 2rem; }
+.xt-point-notice  { margin-top: 3.5rem; font-size: var(--font-2xs); line-height: 2rem; }
+.xt-point-notice strong  { color: var(--color-point2); }
+
+/* 고객센터 - 간편서류 제출 */
+.xt-doc-pic .m-imagebox  { padding: 0 4.8rem 0 2.8rem; }
+.xt-doc-pic .m-bullet  { margin-top: 3.5rem; }
+
+.xt-doc-pic.type-form .m-imagebox  { position: relative; padding: 0; }
+.xt-doc-pic.type-form .m-imagebox:empty  { min-height: 19rem; background: var(--color-ground1); }
+.xt-doc-pic.type-form .m-imagebox:empty:before  { content: "촬영 이미지"; position: absolute; top: 50%; left: 0; right: 0; color: var(--color-gray); font-size: var(--font-xl); -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.xt-doc-pic.type-form .m-form-list  { margin-top: 3.5rem; }
+
+.xt-doc-check .m-anchor-list  { border-top: 1px solid var(--color-line1); }
+
+/* 고객센터 - 소득서류 제출, 신분증 촬영 */
+.xt-doc-guide .m-step-list  { padding-top: 3.5rem; padding-right: 2rem; border-top: 1px solid var(--color-line1); }
+
+/* 고객센터 - 이벤트 상세 */
+.xt-event-detail  { clear: both; text-align: center; }
+.xt-event-detail >.inner  { display: inline-block;  vertical-align: middle; position: relative; }
+/* .xt-event-detail .event-image  { display: inline-block; vertical-align: middle; max-width: var(--breakpoint-max-xl); } */
+.xt-event-detail .event-image  { display: inline-block; vertical-align: middle; max-width: var(--breakpoint-max); }
+.xt-event-detail .event-image >img  { display: block; margin: 0 auto; }
+.xt-event-detail .event-anchor  { display: inline-block; vertical-align: middle; position: absolute; overflow: hidden; color: Transparent; user-select: none; white-space: nowrap; }
+/* .xt-event-detail .event-anchor ::selection { color: Transparent; } */
+.xt-event-detail .event-anchor.debug { border: thick solid rgba(255,0,0, 0.5); }
+
+/* 간편인증등록 */
+.xt-simple-cert  { border-top: 1px solid var(--color-line1); }
+.xt-simple-cert .icon-list li  { position: relative; border-bottom: 1px solid var(--color-line2); }
+.xt-simple-cert .icon-list li:first-child  { margin-top: 0; }
+.xt-simple-cert .icon-list label  { display: table; width: 100%; min-height: 12rem; padding: 3rem 0; }
+.xt-simple-cert .icon-list label .label  { display: table-cell; position: static; padding-left: 8rem; color: var(--color-text4); font-size: var(--font-m); font-weight: var(--bold-700); vertical-align: middle; }
+.xt-simple-cert .icon-list label .label:after  { content: ""; position: absolute; top: 50%; left: 0; width: 6rem; height: 6rem; margin-top:-3rem; background: none no-repeat 0 0 /12rem 6rem; vertical-align: middle; }
+.xt-simple-cert .icon-list label.ico-pattern .label:after  { background-image: url('../images/common/ico_pattern.png'); }
+.xt-simple-cert .icon-list label.ico-finger .label:after  { background-image: url('../images/common/ico_finger.png'); }
+.xt-simple-cert .icon-list label.ico-face .label:after  { background-image: url('../images/common/ico_face.png'); }
+.xt-simple-cert .icon-list label input  { position: absolute; width: 1px; height: 1px; border: 0; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; }
+.xt-simple-cert .icon-list label input:checked ~ .label  { color: var(--color-text1); }
+.xt-simple-cert .icon-list label input:checked ~ .label:after  { background-position: 100%; }
+.xt-simple-cert .icon-list label input ~.c-hidden  { position: absolute; margin-left: -1px; }
+.xt-simple-cert .icon-list .o-check >input ~.label:before { right: 2rem; left: auto; top: 50%; width: 2.6rem; height: 2.6rem; margin-top: -1.3rem; margin-right: 0; }
+.xt-simple-cert .m-bullet  { margin-top: 3.5rem; }
+
+/* 설정 - 개인정보변경 */
+.xt-anchor-set  { margin-top: 3.5rem; margin-left: -2rem; text-align: center; }
+.xt-anchor-set .o-anchor  { color: var(--color-text2); font-weight: var(--bold-400); }
+.xt-set-myinfo .m-binds  { margin-top: 2.5rem; }
+.xt-set-myinfo .m-bullet  { margin-top: 1.5rem; }
+
+/* 설정 - 인증관리 */
+.xt-set-cert  { padding: 0 4.8rem 0 2.8rem; }
+.xt-set-login .m-check-list  { padding: 2.5rem 0; border-bottom : 1px solid var(--color-line2); }
+.xt-set-login .m-checks >li  { margin-top: 1.5rem; }
+.xt-set-login .m-checks >li:first-child  { margin-top: 0; }
+.xt-set-login .m-checks .o-check .label  { color: var(--color-text2); }
+.xt-set-login .m-checks .o-check >input:checked ~.label  { color: var(--color-text1); }
+
+/* 설정 - 간편인증등록해지 */
+.xt-set-info  { margin-top: 7rem; border-top: 1px solid var(--color-line1); padding-top: 3rem; }
+
+/* MY - 증명서발급 */
+.xt-my-info .m-bullet  { padding-top: 3.5rem; padding-right: 2rem; border-top: 1px solid var(--color-line1); }
+
+
+
+/**	Sections Margin
+ ------------------ */
+
+.g-section .m-binds  { margin-left: -2rem; }
+.g-section .m-terms  { margin-right: -2rem; padding-right: 2rem; }
+.g-section .m-tabs.type-main >.lists  { width: calc(100% + (2rem * 2)); margin: 0 -2rem 1.5rem; }
+
+.g-section .m-heading  { margin-right: -2rem; }
+.g-section .m-finish  { margin-right: -2rem; }
+.g-section .m-more-button  { margin-left: -4rem; }
+.g-section:last-child .m-more-button  { margin-bottom: -2rem; }
+.g-section .m-summary  { margin-right: -2rem; }
+.g-section .m-tabular  { margin-right: -2rem; }
+.g-section .m-form-list.type1  { padding-right: 0; }
+.g-section .m-form-list.type1 .m-check-list  { padding-right:2rem; }
+.g-section .m-form-list.type2 + .m-check-list.type-end  { margin-right: -2rem; }
+.g-section .m-anchor-list  { margin-right: -2rem; }
+.g-section .m-define-list  { margin-right: -2rem; }
+.g-section .m-define-list > .m-heading  { margin-right: 0; }
+.g-section .m-mark-list  { margin-right: -2rem; }
+.g-section .m-icon-list.type1  { margin-right: -2rem; padding-right: 2rem; }
+.g-section .m-icon-list.type-anchor  { margin-right: -2rem; }
+.g-section .m-icon-list.type-cert  { margin-right: -2rem; }
+.g-section .m-icon-list.type-version  { margin-right: -2rem; }
+.g-section .m-icon-list.type-cash,
+.g-section .m-icon-list.type-cache  { margin-right: -2rem; }
+.g-section .m-product-list  { margin-right: -2rem; }
+.g-section .m-notice  { margin-top: -2.6rem; margin-right: -2rem; padding-right: 2rem; }
+.g-section .m-result-list  { margin-right: -2rem; }
+.g-section .m-result-list + .m-more-button { margin-right: -2rem; }
+.g-section .m-thumb-list  { margin-right: -2rem; }
+.g-section .m-address  { margin-right: -2rem; }
+.g-section .m-board  { margin-right: -2rem; }
+.g-section .xt-form-cert  { margin-right: -2rem; }
+.g-section .xt-lim-info  { margin-right: -2rem; padding-right: 2rem; }
+.g-section .xt-lim-result  { margin-right: -2rem; padding-right: 2rem; }
+.g-section .xt-cardbox  { margin-left: -4rem; margin-right: -2rem; }
+.g-section:last-child .xt-cardbox:last-child { margin-bottom: calc(var(--margin-layout-block-end) * -1); }
+.g-section:last-child .xt-cardbox + .m-bullet { margin: -2.5rem -2rem 0 -4rem; margin-bottom: calc(var(--margin-layout-block-end) * -1); padding: 0 2rem 6rem 4rem; background: var(--color-ground1); }
+.g-section .xt-product-main  { margin-right: -2rem; }
+.g-section .xt-product-banner  { margin-right: -2rem; }
+.g-section .xt-product  { margin-left: -4rem; margin-right: -2rem; }
+.Introapp-Step .g-section:first-child .xt-product,
+.Product-Step .g-section:first-child .xt-product  { margin-top: -3.5rem; }
+.g-section .xt-product-detail  { margin-right: -2rem; padding-right: 2rem; }
+.g-section .xt-loan-agree  { margin-right: -2rem; }
+.g-section .xt-loan-process  { margin-right: -2rem; }
+.g-section .xt-loan-process .m-summary  { margin-right: 0; }
+.g-section .xt-loan-process .m-form-list  { margin-right: 0; }
+.g-section .xt-loan-result  { margin-right: -2rem; }
+.g-section .xt-loan-result .m-summary  { margin-right: 0; }
+.g-section .xt-loan-result.type2  { margin-right: 0; }
+.g-section .xt-loan-phishing  { margin-right: -2rem; }
+.g-section .xt-doc-guide  { margin-right: -2rem; }
+.g-section .xt-event-detail { margin: 0 -2rem; }
+.g-section:first-child .xt-event-detail:first-child { margin-top: calc(var(--margin-layout-block-start) * -1); }
+.g-section:last-child .xt-event-detail:last-child { margin-bottom: calc(var(--margin-layout-block-end) * -1); }
+.g-section .xt-bussines-result  { margin-right: 0; }
+.g-section .xt-simple-cert  { margin-right: -2rem; }
+.g-section .xt-set-info  { margin-right: -2rem; padding-right: 2rem; }
+.g-section .xt-my-info  { margin-right: -2rem; }
+.g-section .xt-guide-info  { margin-right: -2rem; }
