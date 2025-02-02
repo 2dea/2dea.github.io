@@ -63,7 +63,7 @@ table.c-cols-contents  { min-width: 143.1rem; }
  ------------------------ */
 
 /** Default Message Module */
-.m-message  { line-height: var(--text-height, 1.5); clear: both; margin-top: 0.5rem; }
+.m-message  { line-height: var(--text-height-para, calc(18 / 12)); clear: both; margin-top: 0.5rem; }
 
 .m-message >.m-bullets  { font-size: var(--font-s); line-height: var(--line-s); margin-top: 1rem; }
 
@@ -81,7 +81,7 @@ table.c-cols-contents  { min-width: 143.1rem; }
 
 
 /** Bullet-Lists Module */
-/* .m-bullets  { line-height: var(--text-height, 1.5); clear: both; }
+/* .m-bullets  { line-height: var(--text-height-para, calc(18 / 12)); clear: both; }
 .m-bullets >* +*  { margin-top: calc(5 / 14 * 1em); }
 .m-bullets >* *,  .m-bullets >:before,  .m-bullets >:after  { text-indent: 0; }
 
@@ -104,7 +104,7 @@ table.c-cols-contents  { min-width: 143.1rem; }
 .m-bullets.type-prec >*  { text-indent: calc(-2.4rem - 0.285715em); }
 .m-bullets.type-prec >:before  { content: ""; display: inline-block; vertical-align: middle; width: 2.4rem; height: 2.4rem; margin-top: calc(1.5em * -13 / 24); margin-right: 0.285715em; margin-bottom: calc(1.5em * -11 / 24); background: url('../img/common/ico_label_prec.png') no-repeat; } */
 
-.m-bullets  { line-height: var(--text-height, 1.5); clear: both; position: relative; }
+.m-bullets  { line-height: var(--text-height-para, calc(18 / 12)); clear: both; position: relative; }
 .m-bullets >* +*  { margin-top: calc(5 / 14 * 1em); }
 .m-bullets >:before  { position: absolute; text-align: center; }
 .m-bullets >dt.heading:before  { content: none; }

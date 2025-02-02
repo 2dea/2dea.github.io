@@ -145,6 +145,45 @@
       --bold-70:        650;
   }
 
+/* 
+  --font-ss-int:        8;
+  --font-4xs-int:       10;
+  --font-3xs-int:       11;
+  --font-2xs-int:       12;
+  --font-xs-int:        13;
+  --font-s-int:         14;
+  --font-sm-int:        15;
+  --font-m-int:         16;
+  --font-lm-int:        18;
+  --font-l-int:         20;
+  --font-xl-int:        24;
+  --font-20xl-int:      32;
+
+  --font-4xs:           calc(0.1rem * 10);
+  --font-3xs:           calc(0.1rem * 11);
+  --font-2xs:           calc(0.1rem * 12);
+  --font-xs:            calc(0.1rem * 13);
+  --font-s:             calc(0.1rem * 14);
+  --font-sm:            calc(0.1rem * 15);
+  --font-m:             calc(0.1rem * 16);
+  --font-lm:            calc(0.1rem * 18);
+  --font-l:             calc(0.1rem * 20);
+  --font-xl:            calc(0.1rem * 24);
+  --font-20xl:          calc(0.1rem * 32);
+
+  --line-4xs:           calc(12 / 10);
+  --line-3xs:           calc(14 / 11);
+  --line-2xs:           calc(16 / 12);
+  --line-xs:            calc(16 / 13);
+  --line-s:             calc(18 / 14);
+  --line-sm:            calc(20 / 15);
+  --line-m:             calc(20 / 16);
+  --line-lm:            calc(24 / 18);
+  --line-l:             calc(26 / 20);
+  --line-xl:            calc(32 / 24);
+  --line-20xl:          calc(42 / 32);
+ */
+
   --font-ss-int:        8;
   --font-4xs-int:       10;
   --font-2xs-int:       12;
@@ -173,7 +212,9 @@
   --line-20xl:          calc(65 / var(--font-20xl-int));
   --line-30xl:          calc(94 / var(--font-30xl-int));
 
-  --text-height:        var(--line-m, 1.5);
+  --text-size:          var(--font-m, 1.5em);
+  --text-height:        var(--line-m, calc(16 / 12));
+  --text-height-para:   calc(18 / 12);
   --text-spacing:       0;
   --text-shadow-radius: 0 0.1ex 0.1rem;
   --text-shadow-color:  rgba(0,0,0, 0.75);
@@ -449,7 +490,7 @@
 }
 
 html  {
-  direction: ltr; font: 125% /1.5 '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
+  direction: ltr; font: 125% /calc(16 / 12) '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
   -ms-text-underline-position: below; text-underline-position: under;
   -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -webkit-font-smoothing: subpixel-antialiased;
   -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: hsla(0,0%,0%, 0.0);
@@ -460,7 +501,7 @@ body  {
   word-wrap: break-word; word-break: break-word; word-break: keep-all; letter-spacing: normal;
   overscroll-behavior: inherit;
 }
-input,  button,  select,  textarea  { font-family: inherit; font-weight: inherit; font-size: 100%; line-height: 1.25; vertical-align: middle; min-height: 2em; max-height: 100dvh; max-height: 100dvh; color: inherit; text-shadow: inherit; }
+input,  button,  select,  textarea  { font-family: inherit; font-weight: inherit; font-size: 100%; line-height: calc(15 / 12); vertical-align: middle; min-height: 2em; max-height: 100dvh; max-height: 100dvh; color: inherit; text-shadow: inherit; }
 pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code); font-size: 100%; }
 pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
 h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: 100%; }
@@ -583,14 +624,14 @@ caption .g-hidden,  legend .g-hidden,
 .g-debug:after  { content: ""; display: block; position: absolute; z-index: 100; left: 0; top: 0; width: 100px; height: 100px; background: Red; }
 
 /* 
-.g-annot  { font-weight: 350; font-size: 12px; line-height: 1.5; display: block; table-layout: fixed; width: 100%; height: 1.5em; overflow: hidden; padding: 0 0.25em; background: Black; color: Gold; outline: 1px solid White; text-overflow: ellipsis; white-space: nowrap; }
+.g-annot  { font-weight: 350; font-size: 12px; line-height: calc(18 / 12); display: block; table-layout: fixed; width: 100%; height: 1.5em; overflow: hidden; padding: 0 0.25em; background: Black; color: Gold; outline: 1px solid White; text-overflow: ellipsis; white-space: nowrap; }
 .g-annot samp  { font-weight: 650; color: Crimson; }
 .g-annot:hover,  .g-annot:focus  { height: auto; color: Ivory; white-space: normal; word-break: break-all; }
 .g-annot.flow-inline  { display: inline-block; position: absolute; z-index: 2; width: max-content; width: auto; height: auto; overflow: visible; opacity: 0.0; white-space: normal; word-break: break-all; }
 .g-annot.flow-inline:not(:hover >:not(:focus))  { opacity: 1.0; }
  */
 
-.g-annot  { font-weight: 350; font-size: 12px; line-height: 1.5; z-index: 2; padding: 0 0.25em; background: Black; color: Gold; outline: 1px solid White; text-align: justify; text-overflow: ellipsis; word-wrap: break-word; word-break: break-all; }
+.g-annot  { font-weight: 350; font-size: 12px; line-height: calc(18 / 12); z-index: 2; padding: 0 0.25em; background: Black; color: Gold; outline: 1px solid White; text-align: justify; text-overflow: ellipsis; word-wrap: break-word; word-break: break-all; }
 .g-annot samp  { font-weight: 650; color: Crimson; }
 .g-annot:hover,  .g-annot:focus-within  { color: Ivory; cursor: help; word-break: keep-all; }
 .g-annot:not(.flow-block)  { position: absolute; }

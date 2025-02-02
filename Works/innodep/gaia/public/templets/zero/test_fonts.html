@@ -10,8 +10,42 @@
 <link rel="preload" as="font" type="font/woff2" href="../../../public/fonts/MaterialSymbols/MaterialSymbolsOutlined.woff2" crossorigin="anonymous" />
 <link rel="stylesheet" type="text/css" href="../../../src/assets/css/glyph.css" />
 <link rel="stylesheet" type="text/css" href="../../../src/assets/css/basis.css" />
-<link rel="stylesheet" type="text/css" href="../../../src/assets/css/style.css" />
+<link rel="stylesheet" href="../../../src/assets/css/style.css" />
+<script type="text/ecmascript">
+//<![CDATA[
 
+/* 
+function test(param) {
+  let val;
+  // let remainder = !(param % 3) ? 0 : 3 - param % 3;
+
+  // if( remainder == 2 ) {
+  //   val = param + Math.ceil(param / 3) - remainder;
+    
+  // } else if( param == 17 ) {
+  //   val = 22;
+
+  // } else if( param == 18 ) {
+  //   val = 24;
+  // }
+
+  // val = param + Math.ceil(param / 3) - remainder;
+  val = param + Math.ceil(param / 3) - ((param % 3) && 3 - param % 3);
+
+  console.log(`>>>>>> ${val}`);
+}
+
+test(15);
+ */
+
+function calcRelLh(int) {
+  return int = parseInt(int) || 0, int + Math.ceil(int / 3) + ((int % 3) ? int % 3 - 3 : 0);
+}
+
+// console.log( calcRelLh(13.5) );
+
+//]]>
+</script>
 </head>
 
 <body class="_unload page-settings">

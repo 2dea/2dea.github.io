@@ -31,7 +31,7 @@ html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable bot
 *,
   :before,  :after  { letter-spacing: var(--text-spacing); }
 html  { font-size: 62.5%; font-size: calc(10em / 16); font-size: var(--root-em, calc(10em / 16)); }
-body  { font-family: var(--typo-base); font-optical-sizing: auto; font-weight: var(--bold-40, 400); font-size: var(--font-m); line-height: var(--text-height); color: var(--color-text1); background: var(--color-surface, WhiteSmoke); }
+body  { font-family: var(--typo-base); font-optical-sizing: auto; font-weight: var(--bold-40, 400); font-size: var(--text-size); line-height: var(--text-height); color: var(--color-text1); background: var(--color-surface, WhiteSmoke); }
 /* @media
   screen and (not (max-width: 1920px))  {
     html  { font-size: var(--root-em, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
@@ -194,7 +194,7 @@ body  { font-family: var(--typo-base); font-optical-sizing: auto; font-weight: v
  ----------------------- */
 
 /* .layer-wrap  { position: absolute; left: 0; right: 0; bottom: 0; min-width: var(--breakpoint-min); max-height: 100%; margin: auto; background: var(--color-ground); outline: 0; }
-.layer-head  { font-size: 100%; position: absolute; left: 0; top: 0; right: 0; height: var(--height-layer-header); text-align: center; }
+.layer-head  { font-size: inherit; position: absolute; left: 0; top: 0; right: 0; height: var(--height-layer-header); text-align: center; }
 .layer-head .title  { display: table; display: none; table-layout: fixed; border-spacing: 0; position: relative; width: 100%; height: 100%; }
 .layer-head .title >.inner  { display: table-cell; vertical-align: middle; overflow: hidden; padding: 0 4.5rem; text-overflow: ellipsis; white-space: nowrap; }
 .layer-body  { position: absolute; left: 0; right: 0; bottom: 0; background-color: inherit; }
