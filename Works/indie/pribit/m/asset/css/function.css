@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/*! 
+ ** PRIBIT.com Mobile Dynamic-Rules CSS
+ * Author   : PRIBIT Front-end UX.Div
+ * Create   : 2021-03-26 | 2dea; ego@2dea.com
+ * Update   : 2021-03-26 | 2dea
+ * Comments : -
+ */
+
+
+/** Animation Keyframes */
+@-webkit-keyframes ANI_steps  {
+    100% {
+        background-position: 0;
+    }
+
+} @keyframes ANI_steps  {
+    100% {
+        background-position: 0;
+    }
+}
+
+
+.FN_bindsRow  { cursor: pointer; }
+
+html.-ms body >*  { transition: opacity 0.05s; }
+html.-ms body:not(.js_cssVars-error):not(.js_cssVars-complete) >*  { opacity: 0.0; }
+html.-ms body.js_cssVars-error >*  { opacity: 1.0; }
+
+html.js_scrolling .dom-main:before  { content: "scrolling"; background-color: Azure; }
+html.js_pageup .dom-main:before  { content: "pageup"; }
+html.js_pagedown .dom-main:before  { content: "pagedown"; }
+html.js_scrollstop .dom-main:before  { content: "scrollstop"; }
+/* html.js_scrollup .dom-main  { background-color: rgb(0 255 255 /50%); }
+html.js_scrolldown .dom-main  { background-color: rgb(255 215 0 /50%); } */
+
+html[data-js-hash="#Navigator"],
+  html[data-js-hash="#Navigator"] body,
+  html.js_modal,
+  html.js_modal body  { height: 100%; overflow: hidden; }
+.js_viewport,
+  html.js_orientation,
+  html.js_orientation body  { height: 100% !important; height: 100vh !important; }
+
+.dom-wrapper >[class|="dom"]:not(.dom-layer)  { -webkit-transition-duration: 0.4s; transition-duration: 0.4s; -webkit-transition-timing-function: cubic-bezier(0.2,0,0,1); transition-timing-function: cubic-bezier(0.2,0,0,1); }
+html:not([data-js-hash="#Navigator"]) .dom-wrapper >[class|="dom"]:not(.dom-layer)  { -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
+.dom-nav >*,
+  .dom-main >*  { -webkit-transition-duration: inherit; transition-duration: inherit; -webkit-transition-timing-function: inherit; transition-timing-function: inherit; }
+html:not([data-js-hash="#Navigator"]) .dom-nav,
+  html:not([data-js-hash="#Navigator"]) .dom-nav >.g-overlay  { visibility: hidden; pointer-events: none; }
+html:not([data-js-hash="#Navigator"]) .dom-nav >.g-overlay  { opacity: 0.0; }
+html:not([data-js-hash="#Navigator"]) .dom-nav >.nodes  { -webkit-transform: translateX(100%); transform: translateX(100%) translateZ(0); }
+html[data-js-hash="#Navigator"] .dom-wrapper >[class|="dom"]:not(.dom-layer):not(.dom-nav):not(.dom-main),
+  html[data-js-hash="#Navigator"] .dom-main >.nodes.js_show  { -webkit-transform: translateX(-36rem); transform: translateX(-36rem) translateZ(0); }
+/* html[data-js-hash="#Navigator"] body:not(.Index-Page) .dom-header >.g-overlay  { min-height: 100%; background: rgb(var(--color-ground)); opacity: 1.0; } */
+html[data-js-hash="#Navigator"] .dom-header  { position: fixed; }
+html[data-js-hash="#Navigator"] .dom-header >.g-overlay,
+  html[data-js-hash="#Navigator"] .dom-header >* >*  { position: absolute !important; }
+
+.swiper-container .swiper-slide  { -webkit-transform: translateZ(0); transform: translateZ(0); }
+.swiper-container .swiper-slide-duplicate-prev,
+  .swiper-container .swiper-slide-duplicate-next,
+  .swiper-container .swiper-slide-prev,
+  .swiper-container .swiper-slide-next  { filter: blur(1px); }
+.swiper-container .swiper-controls  { font-family: var(--typo-sans-en); font-size: var(--font-s); position: static; top: 0; color: Black; text-align: center; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.swiper-container .swiper-controls *,
+  .swiper-container .swiper-controls :after,
+  .swiper-container .swiper-controls :before  { font-size: 100%; display: inline; position: static; left: auto; top: auto; right: auto; bottom: auto; width: auto; height: auto; margin: 0; padding: 0; color: inherit; opacity: 1; -webkit-transition: inherit; transition: inherit; }
+.swiper-container .swiper-navigation  { font-size: 0.8em; line-height: 1.9; }
+.swiper-container .swiper-navigation [class|="swiper-button"]  { display: inline-block; vertical-align: middle; position: absolute; z-index: 15; top: 0; cursor: pointer; }
+.swiper-container .swiper-navigation .swiper-button-disabled  { opacity: 0.5; }
+.swiper-container .swiper-navigation .swiper-button-prev  { left: 0; }
+.swiper-container .swiper-navigation .swiper-button-next  { right: 0; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle  { font-size: 2.4rem; position: relative; width: 1em; height: 1em; overflow: hidden; border-radius: 0.125em; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle:before,
+  .swiper-container-initialized .swiper-navigation .swiper-button-toggle:after  { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: Red none no-repeat; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle:after  { background-color: Gold; background-position: 100%; opacity: 0.0; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle[aria-pressed="true"]:before  { opacity: 0.0; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle[aria-pressed="true"]:after  { opacity: 1.0; }
+.swiper-container .swiper-pagination  { display: block; position: relative; color: rgba(0,0,0, 0.5); white-space: nowrap; }
+.swiper-container .swiper-pagination .swiper-pagination-current,
+  .swiper-container .swiper-pagination .swiper-pagination-bullet-active  { color: Black; }
+.swiper-container .swiper-pagination-fraction  { padding: 0 1em; }
+.swiper-container .swiper-pagination-bullets  { font-size: 0.5rem; line-height: 0; margin: -1em 0 0 -1em; white-space: normal; }
+.swiper-container .swiper-pagination-bullet  { display: inline-block; vertical-align: middle; width: 1em; height: 1em; margin: 1em 0 0 1em; border: 0.1rem solid currentColor; background: Transparent; border-radius: 2em; }
+.swiper-container .swiper-pagination-bullet-active  { background-color: currentColor; }
+
+
+.o-layer  { -webkit-animation-duration: 0.4s; animation-duration: 0.4s; -webkit-animation-timing-function: cubic-bezier(0.2,0,0,1); animation-timing-function: cubic-bezier(0.2,0,0,1); -webkit-transition-duration: 0.4s; transition-duration: 0.4s; -webkit-transition-timing-function: cubic-bezier(0.2,0,0,1); transition-timing-function: cubic-bezier(0.2,0,0,1); }
+.o-layer.js_show  { transform: translateZ(0); -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; overflow: hidden; overflow-x: auto; }
+.o-layer >*  { -webkit-animation-duration: inherit; animation-duration: inherit; -webkit-animation-timing-function: inherit; animation-timing-function: inherit; -webkit-transition-duration: inherit; transition-duration: inherit; -webkit-transition-timing-function: inherit; transition-timing-function: inherit; }
+html.js_maxvh .o-layer.js_show:not(.js_hiding):not(.js_showing)  { min-height: 100vh; transition-duration: 0.2s; }
+
+.o-layer >.g-overlay  { -webkit-transition-property: opacity; transition-property: opacity; }
+.o-layer >.layer-wrap  { -webkit-transition-property: -webkit-transform; -webkit-transition-property: transform; transition-property: -webkit-transform; transition-property: transform; }
+
+.o-layer:not(.js_hiding):not(.js_showing):not(.js_show),
+  .o-layer:not(.js_hiding):not(.js_showing):not(.js_show) >.g-overlay  { opacity: 0.0; visibility: hidden; pointer-events: none; }
+.o-layer:not(.js_hiding):not(.js_showing):not(.js_show)  { height: 100%; overflow: hidden; }
+
+.o-layer.js_hiding >.g-overlay,
+  .o-layer:not(.js_show) >.g-overlay  { opacity: 0.0 !important; }
+
+.o-layer.js_hiding >.layer-wrap,
+  .o-layer:not(.js_show) >.layer-wrap  { -webkit-transform: translateX(100%) !important; transform: translateX(100%) translateZ(0) !important; }
+
+
+.dom-main:before,
+  html:not(.js_orientation) .dom-header ~.dom-main .div-visual,
+  .dom-header >.g-overlay,
+  .dom-header >* >*  { -webkit-transition: 0.2s; transition: 0.2s; }
+.dom-header ~.dom-main .div-tab  { -webkit-transition: 0.25s; transition: 0.25s; }
+@media
+  screen and (max-height: 428px)  {
+    html.js_scrolldown.js_scrollstart .dom-main:before,
+      html.js_scrolldown.js_scrollstart:not(.js_orientation) .dom-header ~.dom-main .div-visual,
+      html.js_scrolldown.js_scrollstart .dom-header >.g-overlay,
+      html.js_scrolldown.js_scrollstart .dom-header >* >*  { -webkit-transform: translateY(calc(var(--height-layout-header) * -1)); transform: translateY(calc(var(--height-layout-header) * -1)) translateZ(0); -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
+    html.js_scrolldown.js_scrollstart .dom-header  { top: calc(var(--height-layout-header) * -1); -webkit-transition: 0s; transition: 0s; }
+    html.js_scrolldown.js_scrollstart .dom-header ~.dom-main .div-tab  { top: 0; -webkit-transition-duration: 0.15s; transition-duration: 0.15s; }
+}
+
+
+html[data-js-hash="#Navigator"] .dom-header  { z-index: 40; }
+html[data-js-hash="#Navigator"] .dom-nav  { z-index: 40; }

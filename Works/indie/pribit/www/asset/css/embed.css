@@ -1,0 +1,160 @@
+/*!
+ **	2dea.com Embedded-Fonts CSS
+ *	Author   :	2dea.Com Front-end UX.Div
+ *	Create   :	2002-06-21 | 2dea; 2ndLAB@2dea.com
+ *	Update   :	2021-03-10 | 2dea
+ *	Comments :	-
+ */
+
+
+/**	Font Type Syntax
+ ---------- */
+
+/**	Password */
+@font-face  {
+	font-family: 'wf-disc';
+	font-style: normal;
+	font-weight: 400;
+	src: local("★"),
+		url('data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAATsAA8AAAAAB2QAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABWAAAABwAAAAcg9+z70dERUYAAAF0AAAAHAAAAB4AJwANT1MvMgAAAZAAAAA/AAAAYH7AkBhjbWFwAAAB0AAAAFkAAAFqZowMx2N2dCAAAAIsAAAABAAAAAQAIgKIZ2FzcAAAAjAAAAAIAAAACAAAABBnbHlmAAACOAAAALkAAAE0MwNYJ2hlYWQAAAL0AAAAMAAAADYPA2KgaGhlYQAAAyQAAAAeAAAAJAU+ATJobXR4AAADRAAAABwAAAAcCPoA6mxvY2EAAANgAAAAEAAAABAA5gFMbWF4cAAAA3AAAAAaAAAAIAAKAE9uYW1lAAADjAAAARYAAAIgB4hZ03Bvc3QAAASkAAAAPgAAAE5Ojr8ld2ViZgAABOQAAAAGAAAABuK7WtIAAAABAAAAANXulPUAAAAA1viLwQAAAADW+JM4eNpjYGRgYOABYjEgZmJgBEI2IGYB8xgAA+AANXjaY2BifMg4gYGVgYVBAwOeYEAFjMgcp8yiFAYHBl7VP8wx/94wpDDHMIoo2DP8B8kx2TLHACkFBkYA8/IL3QB42mNgYGBmgGAZBkYGEEgB8hjBfBYGDyDNx8DBwMTABmTxMigoKKmeV/3z/z9YJTKf8f/X/4/vP7pldosLag4SYATqhgkyMgEJJnQFECcMOGChndEAfOwRuAAAAAAiAogAAQAB//8AD3jaY2BiUGJgYDRiWsXAzMDOoLeRkUHfZhM7C8Nbo41srHdsNjEzAZkMG5lBwqwg4U3sbIx/bDYxgsSNBRUF1Y0FlZUYBd6dOcO06m+YElMa0DiGJIZUxjuM9xjkGRhU2djZlJXU1UDQ1MTcDASNjcTFQFBUBGjYEkkVMJCU4gcCKRTeHCk+fn4+KSllsJiUJEhMUgrMUQbZk8bgz/iA8SRR9qzAY087FjEYD2QPDDAzMFgyAwC39TCRAAAAeNpjYGRgYADid/fqneL5bb4yyLMwgMC1H90HIfRkCxDN+IBpFZDiYGAC8QBbSwuceNpjYGRgYI7594aBgcmOAQgYHzAwMqACdgBbWQN0AAABdgAiAAAAAAAAAAABFAAAAj4AYgI+AGYB9AAAAAAAKgAqACoAKgBeAJIAmnjaY2BkYGBgZ1BgYGIAAUYGBNADEQAFQQBaAAB42o2PwUrDQBCGvzVV9GAQDx485exBY1CU3PQgVgIFI9prlVqDwcZNC/oSPoKP4HNUfQLfxYN/NytCe5GwO9/88+/MBAh5I8C0VoAtnYYNa8oaXpAn9RxIP/XcIqLreZENnjwvyfPieVVdXj2H7DHxPJH/2/M7sVn3/MGyOfb8SWjOGv4K2DRdctpkmtqhos+D6ISh4kiUUXDj1Fr3Bc/Oc0vPqec6A8aUyu1cdTaPZvyXyqz6Fm5axC7bxHOv/r/dnbSRXCk7+mpVrOqVtFqdp3NKxaHUgeod9cm40rtrzfrt2OyQa8fppCO9tk7d1x0rpiQcuDuRkjjtkHt16ctbuf/radZY52/PnEcphXpZOcofiEZNcQAAeNpjYGIAg///GBgZsAF2BgZGJkZmBmaGdkYWRla29JzKggxD9tK8TAMDAxc2D0MLU2NjENfI1M0ZACUXCrsAAAABWtLiugAA') format("woff");
+}
+
+/**	Latin */
+@font-face  {
+	font-family: 'wf-OpenSans';
+	font-weight: 300;
+	src: url('./embed/open-sans-v17-latin/open-sans-v17-latin-regular.eot');
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-regular.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-regular.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-OpenSans';
+	font-weight: 500;
+	src: url('./embed/open-sans-v17-latin/open-sans-v17-latin-regular.eot');
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-regular.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-regular.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-OpenSans';
+	font-weight: 600;
+	src: url('./embed/open-sans-v17-latin/open-sans-v17-latin-700.eot');
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-700.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-700.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-OpenSans';
+	font-weight: 900;
+	src: url('./embed/open-sans-v17-latin/open-sans-v17-latin-800.eot');
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-800.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-800.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-OpenSans';
+	font-weight: 300;
+	font-style: italic;
+	src: url('./embed/open-sans-v17-latin/open-sans-v17-latin-italic.eot');
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-italic.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-italic.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-OpenSans';
+	font-weight: 500;
+	font-style: italic;
+	src: url('./embed/open-sans-v17-latin/open-sans-v17-latin-italic.eot');
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-italic.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-italic.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-OpenSans';
+	font-weight: 600;
+	font-style: italic;
+	src: url('./embed/open-sans-v17-latin/open-sans-v17-latin-700italic.eot');
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-700italic.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-700italic.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-OpenSans';
+	font-weight: 900;
+	font-style: italic;
+	src: url('./embed/open-sans-v17-latin/open-sans-v17-latin-800italic.eot');
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-800italic.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-800italic.woff') format("woff");
+}
+
+/**	Number */
+/* @font-face  {
+	font-family: 'wf-OpenSansNum';
+	font-weight: 300;
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-regular.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-regular.woff') format("woff");
+	unicode-range: U+002C, U+0030-0039;
+}
+@font-face  {
+	font-family: 'wf-OpenSansNum';
+	font-weight: 600;
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-600.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-600.woff') format("woff");
+	unicode-range: U+002C, U+0030-0039;
+}
+@font-face  {
+	font-family: 'wf-OpenSansNum';
+	font-weight: 300;
+	font-style: italic;
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-italic.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-italic.woff') format("woff");
+	unicode-range: U+002C, U+0030-0039;
+}
+@font-face  {
+	font-family: 'wf-OpenSansNum';
+	font-weight: 600;
+	font-style: italic;
+	src: local("★"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-600italic.woff2') format("woff2"),
+		url('./embed/open-sans-v17-latin/open-sans-v17-latin-600italic.woff') format("woff");
+	unicode-range: U+002C, U+0030-0039;
+} */
+
+/**	Korean */
+@font-face  {
+	font-family: 'wf-NotoSansKR';
+	font-weight: 200;
+	src: url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-100.eot');
+	src: local("★"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-100.woff2') format("woff2"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-100.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-NotoSansKR';
+	font-weight: 300;
+	src: url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-regular.eot');
+	src: local("★"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-regular.woff2') format("woff2"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-regular.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-NotoSansKR';
+	font-weight: 600;
+	src: url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-700.eot');
+	src: local("★"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-700.woff2') format("woff2"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-700.woff') format("woff");
+}
+@font-face  {
+	font-family: 'wf-NotoSansKR';
+	font-weight: 900;
+	src: url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-900.eot');
+	src: local("★"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-900.woff2') format("woff2"),
+	url('./embed/noto-sans-kr-v12-korean_latin/noto-sans-kr-v12-korean_latin-900.woff') format("woff");
+}

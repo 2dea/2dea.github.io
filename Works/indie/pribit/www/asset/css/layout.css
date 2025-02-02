@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/*! 
+ **	PRIBIT.com Common-Layout CSS
+ *	Author   :	PRIBIT Front-end UX.Div
+ *	Create   :	2021-03-10 | 2dea; ego@2dea.com
+ *	Update   :	2021-03-10 | 2dea
+ *	Comments :	-
+ */
+
+
+/* *  { outline: 1px solid Gold; } */
+
+/**	Define Fonts
+ --------------- */
+
+*,  :before,  :after  { letter-spacing: var(--text-spacing); }
+html  { font-size: 62.5%; font-size: calc(10em / 16); }
+/* @media (max-width: 359px)  {
+	html  { font-size: 55%; }
+} @media (orientation: portrait) and (min-width: 768px),  (orientation: landscape) and (min-height: 768px)  {
+	html  { font-size: 125%; }
+} */
+body  { font-family: var(--typo-basic); font-weight: var(--bold-400); font-size: var(--font-l); line-height: var(--line-l); color: var(--color-text1); background: var(--color-ground); }
+
+
+/**	Sectioning-Objects
+ --------------------- */
+
+.o-section:before  { content: ""; display: block; margin: 12rem 0; border: 0.1rem solid var(--color-line1); opacity: 0.1; }
+.o-section:first-child:before  { border-color: Transparent; margin-top: -12.2rem; }
+
+
+/**	Sub-Pages Common Layout
+ -------------------------- */
+
+/** Sectioning-Area */
+.dom-wrapper  { position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; }
+[class|="dom"] >.g-overlay  { min-height: 0; opacity: 0.01; }
+/* [class|="dom"] >.nodes  { min-width: 980px; max-width: none; margin: 0 auto; padding: 0 0; } */
+[class|="div"] >.roles  { display: block; min-width: 1248px; max-width: 124.8rem; margin: 0 auto; padding: 0 var(--padding-layout-inline); }
+
+/** Skip Navigation */
+.dom-header .div-skip  { position: absolute; z-index: 99; left: 0; top: 0; width: 100%; }
+.dom-header .div-skip *  { position: absolute; width: 100%; margin: 0; padding: 0; height: 0; }
+.dom-header .div-skip a  { display: block; z-index: 1; left: -1px; width: 1px; height: 1px; overflow: hidden; text-decoration: none; }
+.dom-header .div-skip a:before  { content: ""; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.dom-header .div-skip a strong  { position: static; }
+.dom-header .div-skip a strong:before  { content: "» "; }
+.dom-header .div-skip a[id]  { text-align: center; font-weight: 700; font-size: 16px; font-family: 'Tahoma', 'Geneva', 'Dotum', 'AppleGothic', sans-serif; font-family: inherit; }
+.dom-header .div-skip a[id]:focus,
+.dom-header .div-skip a[id]:active  { left: 0; top: 0; padding: 0.5em 0; width: 100%; height: auto; color: #ffffff; background: #404040; background-color: var(--color-main1, #404040); }
+/* .dom-header .div-skip .o-ogp *  { display: none; width: auto; height: auto; } */
+.dom-header .div-skip .o-ogp *  { width: auto; }
+
+/** Header */
+.dom-header  { position: relative; color: var(--color-white); text-shadow: var(--text-shadow-alt) rgba(0,0,0, 0.75); }
+.dom-header >.nodes  { position: relative; min-width: 1248px; max-width: 124.8rem; margin: 0 auto; padding: 0 var(--padding-layout-inline); }
+.dom-header .div-logo  { position: absolute; min-height: 10.4rem; padding: 2.4rem 0; white-space: nowrap; }
+.dom-header .div-logo .logo  { font-family: var(--typo-sans-header); font-weight: var(--bold-700); font-size: 3.2rem; line-height: 1; display: inline-block; vertical-align: middle; width: 10.4rem; height: 5.6rem; overflow: hidden; padding: 2.4rem 0.2rem 0; background: url('../img/layout/syms_logo.png') no-repeat; color: Transparent; user-select: none; text-shadow: none; }
+.dom-header .div-bind  { display: none; }
+
+/** Unified Search */
+.dom-search  { position: relative; }
+
+/** Global Navigation */
+.dom-nav  { font-family: var(--typo-sans-en); font-weight: var(--bold-500); font-size: var(--font-2xs); line-height: var(--line-2xs); line-height: calc(var(--line-2xs) * 1em); position: relative; min-width: 1248px; max-width: 124.8rem; margin: 0 auto; padding: 0 var(--padding-layout-inline); color: var(--color-white); text-shadow: var(--text-shadow-alt) rgba(0,0,0, 0.75); text-transform: uppercase; text-align: center; }
+.dom-nav >.nodes  { position: absolute; left: var(--padding-layout-inline); right: var(--padding-layout-inline); min-height: 10.4rem; padding: 4rem 0; }
+.dom-nav >.nodes >*  { float: right; }
+.dom-nav >.nodes >* >.roles  { min-width: 0; max-width: none; padding: 0; }
+.dom-nav >.nodes >* >.roles >*  { margin: -0.8rem 0; padding: 0.8rem 0; }
+.dom-nav >.nodes >* >.roles >:after  { content: ""; display: block; clear: both; height: 0; visibility: hidden; }
+.dom-nav >.nodes >* >.roles >* >*  { float: left; }
+.dom-nav >.nodes >* >.roles >* >* +*  { margin-left: 1.6rem; }
+.dom-nav .label  { display: block; position: relative; min-width: 2em; margin: -0.8rem 0; padding: 0.8rem 0; }
+.dom-nav .label >.inner  { opacity: 0.7; }
+.dom-nav .label[aria-current="page"],
+.dom-nav .label[aria-current="true"],
+.dom-nav .label[aria-selected="true"]  { z-index: 1; }
+.dom-nav .label[aria-current="page"] >.inner,
+.dom-nav .label[aria-current="true"] >.inner,
+.dom-nav .label[aria-selected="true"] >.inner  { opacity: 1.0; }
+.dom-nav .div-nav-local  { font-size: var(--font-s); margin-right: 2rem; }
+.dom-nav .div-nav-local .label  { padding: 0.8rem 2rem; }
+.dom-nav .div-nav-local .label:before  { content: ""; position: absolute; left: 50%; bottom: 0; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 0; height: 2px; overflow: hidden; background: currentColor; -webkit-transition: width 0.15s; transition: width 0.15s; }
+.dom-nav .div-nav-local .label[aria-current="page"]:before,
+.dom-nav .div-nav-local .label[aria-current="true"]:before,
+.dom-nav .div-nav-local .label[aria-selected="true"]:before  { width: 100%; width: calc(100% - 4rem); }
+.dom-nav .div-nav-local >.roles >:hover .label:before  { width: 0; }
+.dom-nav .div-nav-local >.roles >* .label:hover:before,
+.dom-nav .div-nav-local >.roles >* .label:focus:before  { width: 100%; width: calc(100% - 4rem); }
+.dom-nav .div-nav-local >.roles >* >* +*  { margin-left: 0; }
+.dom-nav .div-bind  { display: none; }
+
+/** Container */
+.dom-main  { background: var(--color-ground); }
+.dom-main >*  { background-color: inherit; }
+
+.dom-main .div-visual  { font-size: var(--font-xl); line-height: var(--line-xl); position: fixed; top: 0; width: 100%; min-height: 48rem; padding: 20.8rem 0 2rem; background: #282d31 none no-repeat 50% /192rem; color: var(--color-white); text-shadow: var(--text-shadow-alt) rgba(0,0,0, 0.75); text-align: center; }
+/* html.-ms .dom-main .div-visual  { position: absolute; } */
+.dom-main .div-visual.is-com  { background-image: url('../img/part/bg_visual_sub_01.jpg'); }
+.dom-main .div-visual.is-tec  { background-image: url('../img/part/bg_visual_sub_02.jpg'); }
+.dom-main .div-visual.is-prd  { background-image: url('../img/part/bg_visual_sub_03.jpg'); }
+.dom-main .div-visual.is-nws  { background-image: url('../img/part/bg_visual_sub_04.jpg'); }
+.dom-main .div-visual.is-rcr  { background-image: url('../img/part/bg_visual_sub_05.jpg'); }
+.dom-main .div-visual .headline  { font-family: var(--typo-sans-header); font-weight: var(--bold-900); font-size: var(--font-4xl); line-height: var(--line-4xl); text-transform: uppercase; }
+.dom-main .div-visual .strapline  { margin-top: 2.4rem; }
+.dom-main .div-visual .strapline .words  { display: block; }
+.dom-main .div-visual.is-com .strapline .words  { display: inline; }
+
+.dom-main .div-tab  { font-family: var(--typo-sans-header); font-weight: var(--bold-700); font-size: var(--font-m); line-height: var(--line-m); clear: both; position: relative; position: -webkit-sticky; position: sticky; left: 0; top: 0; right: 0; background: var(--color-ground); box-shadow: 0 0 4px rgba(0,0,0, 0.16); }
+.dom-main .div-tab >.roles  { padding: 0; }
+.dom-main .div-tab .lists  { display: table; table-layout: fixed; width: 100%; text-align: center; }
+.dom-main .div-tab .lists >*  { display: table-cell; vertical-align: middle; }
+.dom-main .div-tab .lists >* >.label  { display: block; position: relative; color: #a2aab2; }
+.dom-main .div-tab .lists >* >.label._selected  { z-index: 1; color: var(--color-text1); }
+.dom-main .div-tab .lists >* >.label >.inner  { display: inline-block; vertical-align: middle; position: relative; padding: 2.8rem 0; }
+.dom-main .div-tab .lists >* >.label >.inner:before  { content: ""; position: absolute; left: 50%; bottom: 0; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 0; height: 2px; overflow: hidden; background: var(--color-main1); -webkit-transition: width 0.15s; transition: width 0.15s; }
+.dom-main .div-tab .lists >* >.label._selected >.inner:before  { width: 100%; }
+.dom-main .div-tab .lists:hover >* >.label >.inner:before  { width: 0; }
+.dom-main .div-tab .lists >* >.label:hover >.inner:before,
+.dom-main .div-tab .lists >* >.label:focus >.inner:before  { width: 100%; }
+
+.dom-main .div-tab.js_sticky  { position: fixed; margin-top: 0; }
+.dom-main .div-tab.js_sticky +.jsui_varStickyLayout-cloned  { display: block !important; visibility: hidden; }
+.dom-main .div-visual +.div-tab.js_sticky +*  { margin-top: 48rem; }
+
+.dom-main .div-section  { position: relative; background-color: inherit; }
+.dom-main .div-section:before,
+.dom-main .div-section:after  { content: ""; display: table; margin-top: 16rem; }
+.dom-main .div-section:before  { margin: 0 0 16rem; }
+
+.dom-main .div-visual +*  { margin-top: 48rem; }
+
+/** Aside */
+.dom-aside  { position: relative; }
+
+/** Footer */
+.dom-footer  { position: absolute; left: 0; right: 0; bottom: 0; background: var(--color-footerback); color: var(--color-footertext); text-align: center; }
+.dom-footer.jsui_varStickyLayout-cloned  { display: block !important; position: static; z-index: auto; visibility: hidden; }
+.dom-footer >.nodes:before,
+.dom-footer >.nodes:after  { content: ""; display: table; margin-top: 8rem; }
+.dom-footer >.nodes:before  { margin: 0 0 8rem; }
+.dom-footer >* >[class|="div"]  { display: block; clear: both; margin: 0.8rem 0; text-align: left; text-align: start; }
+.dom-footer >* >[class|="div"] >.roles br  { display: none; }
+.dom-footer >* >[class|="div"] >.roles >*  { display: block; margin: 0.8rem 0; }
+.dom-footer .div-info  { font-size: var(--font-m); line-height: var(--line-m); }
+.dom-footer .div-info >.roles  { position: relative; padding-left: calc(var(--padding-layout-inline) + 7.2rem + 10.4rem); }
+.dom-footer .div-info >.roles:before  { content: ""; display: block; position: absolute; left: var(--padding-layout-inline); width: 10.4rem; height: 5.6rem; background: url('../img/layout/syms_logo.png') no-repeat 100%; }
+.dom-footer .div-info .author >*  { display: block; }
+.dom-footer .div-info .copyright  { text-transform: capitalize; }
+.dom-footer .div-info .copyright:before  { content: "© "; }
+.dom-footer .div-info .copyright >.words  { white-space: nowrap; }
+.dom-footer .div-info .copyright .copy  { display: none; }
+
+
+/**	Layer-Objects Layout
+ ----------------------- */
+.layer-wrap  { position: relative; width: 87.2rem; margin: auto; padding: 4.8rem 4rem; background: var(--color-ground); outline: 0; border-radius: 1.2rem; box-shadow: 0 2rem 49px 0 rgba(0,0,0, 0.1); }
+/* .layer-wrap:before  { content: ""; display: block; height: 9.6rem; margin-top: -9.6rem; visibility: hidden; } */
+.layer-head  { font-family: var(--typo-sans-header); font-weight: var(--bold-900); font-size: var(--font-2xl); line-height: var(--line-2xl); margin-bottom: 3.2rem; }
+.layer-tail  { font-size: var(--font-m); line-height: 1; position: absolute; top: 0; right: 0; }
+.layer-tail >*  { display: block; position: relative; width: 6.4rem; height: 6.4rem; padding: 1.6rem 1.6rem; border: 0; background: Transparent; }
+.layer-tail >* >i  { display: block; width: 3.2rem; height: 3.2rem; background: none no-repeat 50%; }
+.layer-tail >* >.inner  { position: absolute; left: 50%; bottom: 50%; -webkit-transform: translate(-50%, 50%); transform: translate(-50%, 50%); width: 2em; color: Transparent; user-select: none; }
+.layer-tail .close >i  { background-image: url('../img/layout/btn_close.png'); }
+
+.o-layer  { position: absolute; left: 0; top: 0; right: 0; padding: 52rem var(--padding-layout-inline) 4rem; }
+.o-layer._popup >.g-overlay  { position: fixed; }
+
+
+/**	Sectioning-Area Level
+ ------------------------ */
+
+.dom-header  { z-index: 50; }
+.dom-nav  { z-index: 40; }
+.dom-main .div-visual  { z-index: 0; }
+.dom-main .div-tab  { z-index: 20; }
+.dom-footer  { z-index: 10; }
+
+.layer-head  { z-index: 20; }
+.layer-body .div-footer  { z-index: 10; }
+.layer-tail  { z-index: 20; }
+.o-layer._popup.type-full  { z-index: 100; }

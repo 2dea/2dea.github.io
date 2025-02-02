@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/*! 
+ **	PRIBIT.com Dynamic-Rules CSS
+ *	Author   :	PRIBIT Front-end UX.Div
+ *	Create   :	2021-03-10 | 2dea; ego@2dea.com
+ *	Update   :	2021-03-10 | 2dea
+ *	Comments :	-
+ */
+
+
+/** Animation Keyframes */
+@-webkit-keyframes ANI_steps {
+	100% {
+		background-position: 0;
+	}
+
+} @keyframes ANI_steps {
+	100% {
+		background-position: 0;
+	}
+}
+
+
+.FN_bindsRow  { cursor: pointer; }
+
+html.-ms body >*  { transition: opacity 0.05s; }
+html.-ms body:not(.js_cssVars-error):not(.js_cssVars-complete) >*  { opacity: 0.0; }
+html.-ms body.js_cssVars-error >*  { opacity: 1.0; }
+
+.swiper-container .swiper-slide-duplicate-prev,
+.swiper-container .swiper-slide-duplicate-next,
+.swiper-container .swiper-slide-prev,
+.swiper-container .swiper-slide-next  { filter: blur(1px); }
+.swiper-container .swiper-controls  { font-family: var(--typo-sans-en); font-size: var(--font-s); position: static; top: 0; color: Black; text-align: center; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.swiper-container .swiper-controls :before,
+.swiper-container .swiper-controls :after,
+.swiper-container .swiper-controls *  { font-size: 100%; display: inline; position: static; left: auto; top: auto; right: auto; bottom: auto; width: auto; height: auto; margin: 0; padding: 0; color: inherit; opacity: 1; -webkit-transition: inherit; transition: inherit; }
+.swiper-container .swiper-navigation  { font-size: 0.8em; line-height: 1.9; }
+.swiper-container .swiper-navigation [class|="swiper-button"]  { display: inline-block; vertical-align: middle; position: absolute; z-index: 15; top: 0; cursor: pointer; }
+.swiper-container .swiper-navigation .swiper-button-disabled  { opacity: 0.5; }
+.swiper-container .swiper-navigation .swiper-button-prev  { left: 0; }
+.swiper-container .swiper-navigation .swiper-button-next  { right: 0; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle  { font-size: 2.4rem; position: relative; width: 1em; height: 1em; overflow: hidden; border-radius: 0.125em; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle:before,
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle:after  { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: Red none no-repeat; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle:after  { background-color: Gold; background-position: 100%; opacity: 0.0; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle[aria-pressed="true"]:before  { opacity: 0.0; }
+.swiper-container-initialized .swiper-navigation .swiper-button-toggle[aria-pressed="true"]:after  { opacity: 1.0; }
+.swiper-container .swiper-pagination  { display: block; position: relative; color: rgba(0,0,0, 0.5); white-space: nowrap; }
+.swiper-container .swiper-pagination .swiper-pagination-current,
+.swiper-container .swiper-pagination .swiper-pagination-bullet-active  { color: Black; }
+.swiper-container .swiper-pagination-fraction  { padding: 0 1em; }
+.swiper-container .swiper-pagination-bullets  { font-size: 0.5rem; line-height: 0; margin: -1em 0 0 -1em; white-space: normal; }
+.swiper-container .swiper-pagination-bullet  { display: inline-block; vertical-align: middle; width: 1em; height: 1em; margin: 1em 0 0 1em; border: 0.1rem solid currentColor; background: Transparent; border-radius: 2em; }
+.swiper-container .swiper-pagination-bullet-active  { background-color: currentColor; }
+
+
+.o-layer  { -webkit-animation-duration: 0.4s; animation-duration: 0.4s; -webkit-animation-timing-function: cubic-bezier(0.2,0,0,1); animation-timing-function: cubic-bezier(0.2,0,0,1); -webkit-transition-duration: 0.4s; transition-duration: 0.4s; -webkit-transition-timing-function: cubic-bezier(0.2,0,0,1); transition-timing-function: cubic-bezier(0.2,0,0,1); }
+.o-layer.js_show  { -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; overflow: hidden; overflow-x: auto; }
+.o-layer >*  { -webkit-animation-duration: inherit; animation-duration: inherit; -webkit-animation-timing-function: inherit; animation-timing-function: inherit; -webkit-transition-duration: inherit; transition-duration: inherit; -webkit-transition-timing-function: inherit; transition-timing-function: inherit; }
+
+.o-layer >.g-overlay,
+.o-layer >.layer-wrap  { -webkit-transition-property: opacity; transition-property: opacity; }
+
+.o-layer:not(.js_hiding):not(.js_showing):not(.js_show),
+.o-layer:not(.js_hiding):not(.js_showing):not(.js_show) >*  { opacity: 0.0; visibility: hidden; pointer-events: none; }
+.o-layer:not(.js_hiding):not(.js_showing):not(.js_show)  { height: 100%; overflow: hidden; }
+
+.o-layer.js_hiding >*,
+.o-layer:not(.js_show) >*  { opacity: 0.0 !important; }

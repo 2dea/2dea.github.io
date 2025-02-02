@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/*! 
+ **	PRIBIT.com Index-Page CSS
+ *	Author   :	PRIBIT Front-end UX.Div
+ *	Create   :	2021-03-10 | 2dea; ego@2dea.com
+ *	Update   :	2021-03-10 | 2dea
+ *	Comments :	-
+ */
+
+
+/**	Main-Layout Define
+ --------------------- */
+
+.Index-Page  { background-color: var(--color-footerback); }
+.Index-Page .dom-nav .div-nav-local .label >.inner  { opacity: 1.0; }
+.Index-Page .dom-footer  { position: relative; }
+.Index-Page .dom-footer.jsui_varStickyLayout-cloned  { display: none !important; }
+
+
+/**	Main-Contents Stylesheets
+ ---------------------------- */
+
+.Index-Page .div-main-visual  { font-size: var(--font-xl); line-height: var(--line-xl); /* max-width: 256rem; margin: 0 auto; */ color: var(--color-white); text-shadow: var(--text-shadow-alt) rgba(115,125,134, 0.5); }
+.Index-Page .div-main-visual >.roles  { display: table; table-layout: fixed; width: 100%; min-width: 0; max-width: none; padding: 0; }
+.Index-Page .div-main-visual >* >* >* >.visual  { position: relative; min-height: 80rem; overflow: hidden; padding: 20rem 0 12rem; background: none no-repeat 50%; }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-2) >.visual  { background-image: url('../img/part/bg_visual_main_00.jpg'); }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-1) >.visual  { background-image: url('../img/part/bg_visual_main_01.jpg'); }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-0) >.visual  { background-image: url('../img/part/bg_visual_main_02.jpg'); }
+.Index-Page .div-main-visual .summary  { position: relative; width: 124.8rem; margin: 0 auto; padding: 7.2rem var(--padding-layout-inline); }
+.Index-Page .div-main-visual .summary:after  { content: ""; position: absolute; top: 0; right: var(--padding-layout-inline); width: 48rem; height: 48rem; background: none no-repeat; }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-2) .summary:after  { background-image: url('../img/part/bg_visual_main_00_key.png'); }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-1) .summary:after  { background-image: url('../img/part/bg_visual_main_01_key.png'); }
+.Index-Page .div-main-visual .summary >*  { width: 64rem; }
+.Index-Page .div-main-visual .summary .words  { display: block; }
+.Index-Page .div-main-visual .headline  { font-family: var(--typo-sans-header); font-weight: var(--bold-700); font-size: 7.2rem; line-height: 1.05556; margin: -0.2rem 0; }
+.Index-Page .div-main-visual .strapline  { margin-top: 3.2rem; }
+.Index-Page .div-main-visual .strapline .words  { display: block; }
+
+.Index-Page .div-main-visual .swiper-container .swiper-controls  { position: absolute; left: 50%; top: auto; bottom: 23%; bottom: 0; height: calc(23% + 2.4rem); margin-left: -60.4rem; /* padding-left: 4.8rem; */ color: var(--color-white); }
+.Index-Page .div-main-visual .swiper-container .swiper-controls >*  { float: left; }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination  { color: rgba(255,255,255, 0.4); }
+.Index-Page .div-main-visual .swiper-container .swiper-navigation { margin-right: 2.4rem; }
+/* .Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle  { display: block; position: relative; width: 2.4rem; height: 2.4rem; background: url('../img/common/btns_carousel_toggle.png') no-repeat; }
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle[aria-pressed="true"]  { background-position: 100%; } */
+/* .Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle  { font-size: 2.4rem; display: block; position: relative; width: 1em; height: 1em; overflow: hidden; }
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle:before,
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle:after  { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: url('../img/common/btns_carousel_toggle.png?v=2') no-repeat; }
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle:after  { background-position: 100%; opacity: 0.0; }
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle[aria-pressed="true"]:before  { opacity: 0.0; }
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle[aria-pressed="true"]:after  { opacity: 1.0; } */
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle:before,
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-toggle:after  { background-color: Transparent; background-image: url('../img/common/btns_carousel_toggle.png?v=3'); }
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-prev,
+.Index-Page .div-main-visual .swiper-container .swiper-navigation .swiper-button-next  { display: none; }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination .swiper-pagination-current,
+.Index-Page .div-main-visual .swiper-container .swiper-pagination .swiper-pagination-bullet-active  { color: var(--color-white); }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination-bullets  { margin: 0 0 0 -0.8rem; }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination-bullet  { position: relative; width: 10.4rem; height: 2.4rem; margin: 0 0 0 0.8rem; border-color: Transparent; background: Transparent; border-radius: 0; }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination-bullet:before  { content: ""; position: absolute; left: 0; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; height: 2px; background: currentColor; box-shadow: 0 0 3px rgb(115 125 134 /40%); }

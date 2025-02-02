@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*! 
+ ** PRIBIT.com Mobile Index-Page CSS
+ * Author   : PRIBIT Front-end UX.Div
+ * Create   : 2021-03-26 | 2dea; ego@2dea.com
+ * Update   : 2021-03-26 | 2dea
+ * Comments : -
+ */
+
+
+/** Main-Layout Define
+ --------------------- */
+
+.Index-Page  { background-color: rgb(var(--color-footerback)); }
+.Index-Page [class|="dom"] >.nodes  { max-width: calc(2560 / 2 * 0.1rem); }
+.Index-Page .dom-header >.g-overlay  { box-shadow: none; }
+.Index-Page .dom-header .div-logo  { position: absolute; }
+.Index-Page .dom-header .div-logo .logo:before  { background-position: 50%; }
+.Index-Page .dom-header .div-bind .menu-show >* >i  { background-position: 100%; }
+.Index-Page .dom-nav .div-nav-local .label >.inner  { opacity: 1.0; }
+.Index-Page .dom-header ~.dom-main  { padding-top: 0; }
+/* .Index-Page .dom-main:before  { background-color: Transparent !important; } */
+.Index-Page .dom-main:before  { background-color: rgba(0,0,0, 0.5); }
+.Index-Page .dom-footer  { position: relative; }
+.Index-Page .dom-footer.jsui_varStickyLayout-cloned  { display: none !important; }
+@media
+  all and (orientation: portrait)  {
+    .Index-Page .dom-footer >* >[class|="div"]  { display: inline-block; vertical-align: bottom; }
+    .Index-Page .dom-footer >* >[class|="div"]:first-child  { margin-top: -1.6rem; }
+    .Index-Page .dom-footer >* >[class|="div"]:last-child  { margin-bottom: -1.6rem; }
+}
+
+
+/** Main-Contents Stylesheets
+ ---------------------------- */
+
+.Index-Page .div-main-visual  { font-size: var(--font-m); line-height: var(--line-m); color: rgb(var(--color-white)); text-shadow: var(--text-shadow-alt) rgba(115,125,134, 0.5); }
+.Index-Page .div-main-visual >.roles  { display: table; table-layout: fixed; width: 100%; min-width: 0; max-width: none; padding: 0; }
+.Index-Page .div-main-visual >* >* >* >.visual  { position: relative; min-height: 40rem; overflow: hidden; padding: var(--height-layout-header) var(--padding-layout-inline) 0; background: none no-repeat 50% /auto 100%; }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-2) >.visual  { background-image: url('../img/part/bg_visual_main_00.jpg'); }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-1) >.visual  { background-image: url('../img/part/bg_visual_main_01.jpg'); }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-0) >.visual  { background-image: url('../img/part/bg_visual_main_02.jpg'); }
+.Index-Page .div-main-visual .summary  { padding: 3.2rem 0; }
+.Index-Page .div-main-visual .summary:before  { content: ""; position: absolute; left: 50%; bottom: 8rem; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 32.8rem; max-width: 24rem; height: 24rem; margin-left: calc(20rem - var(--padding-layout-inline)); background: none no-repeat 50% /auto 100%; }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-2) .summary:before  { background-image: url('../img/part/m.bg_visual_main_00_key.png'); background-size: 100%; }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-1) .summary:before  { background-image: url('../img/part/m.bg_visual_main_01_key.png'); }
+.Index-Page .div-main-visual .summary >*  { position: relative; }
+.Index-Page .div-main-visual .headline  { font-family: var(--typo-sans-header); font-weight: var(--bold-700); font-size: 3.2rem; line-height: calc(40 / 32); }
+.Index-Page .div-main-visual .headline .words  { display: block; }
+.Index-Page .div-main-visual .strapline  { max-width: calc(/* 44.8rem */ 41.4rem - var(--padding-layout-inline) * 2); margin-top: 0.8rem; }
+.Index-Page .div-main-visual >* >* >:nth-child(3n-2) .strapline  { max-width: calc(40rem - var(--padding-layout-inline) * 2); }
+@media
+  all and (orientation: portrait),
+  screen and (max-width: 639px),
+  screen and (min-height: 640px) and (max-width: 1279px)  {
+    .Index-Page .div-main-visual >* >* >* >.visual  { min-height: 64rem; }
+    .Index-Page .div-main-visual >* >* >:nth-child(3n-2) >.visual  { background-color: #737d86; background-position: calc(50% - 30rem); }
+    .Index-Page .div-main-visual .summary:before  { max-width: none; margin-left: 0; }
+}
+
+.Index-Page .div-main-visual .swiper-container .swiper-controls  { position: absolute; left: 0; top: auto; right: 0; bottom: 2rem; margin: 0 var(--padding-layout-inline); color: rgb(var(--color-white)); }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination  { color: rgba(var(--color-white), 0.4); }
+/* .Index-Page .div-main-visual .swiper-container .swiper-navigation { display: none; } */
+.Index-Page .div-main-visual .swiper-container .swiper-pagination .swiper-pagination-current,
+  .Index-Page .div-main-visual .swiper-container .swiper-pagination .swiper-pagination-bullet-active  { color: rgb(var(--color-white)); }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination-bullets  { display: -webkit-flex; display: flex; /* min-width: 0; max-width: none; */ max-width: calc(var(--breakpoint-max) - var(--padding-layout-inline) * 2); margin: 0 auto; }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination-bullet  { -webkit-flex: 1; flex: 1; position: relative; width: auto; /* min-width: 10.4rem; */ height: 2.4rem; margin: 0 0 0 0.8rem; border-color: Transparent; background: Transparent; border-radius: 0; }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination-bullet:before  { content: ""; position: absolute; left: 0; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; height: 2px; background: currentColor; box-shadow: 0 0 3px rgb(115 125 134 /40%); }
+.Index-Page .div-main-visual .swiper-container .swiper-pagination-bullet:first-child  { margin-left: 0; }
+
+
+.Index-Page .dom-main:before  { z-index: 0; }

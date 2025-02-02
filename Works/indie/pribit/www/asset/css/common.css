@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*! 
+ **	PRIBIT.com Common-Local CSS
+ *	Author   :	PRIBIT Front-end UX.Div
+ *	Create   :	2021-03-10 | 2dea; ego@2dea.com
+ *	Update   :	2021-03-10 | 2dea
+ *	Comments :	-
+ */
+
+
+/**	Import Rules
+ --------------- */
+
+@import url('./plugins/swiper.css');
+
+@import url('./module.css');
+/* @import url('./popup.css'); */
+@import url('./layout.css');
+@import url('./function.css');
+@import url('./index.css');
+@import url('./content.css');
+@import url('./theme.css');
