@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<title>부산/경남은행 비예금상품 내부통제 관리시스템 &mdash; 디자인 시안</title>
+<link rel="stylesheet" type="text/css" href="./../../src/assets/css/embed.css" />
+<link rel="stylesheet" type="text/css" href="./../../src/assets/css/public.css" />
+<style type="text/css">
+	body  { font-family: var(--typo-basic); font-weight: 300; font-size: 16px; line-height: 1.5; color: #333333; background: #ffffff; }
+
+	.dom-wrapper  { position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; background-color: inherit; }
+	[class|="dom"] >.g-overlay  { min-height: 0; opacity: 0.01; }
+	[class|="dom"] >.roles  { min-width: 1340px; max-width: none; width: 1340px; margin: 0 auto; padding: 0 30px; }
+
+	.dom-header  { font-weight: 500; font-size: 16px; height: 60px; background: #d7191f; color: #ffffff; }
+	.dom-header >.roles  { height: 100%; }
+	.dom-header .div-root  { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; }
+	.dom-header .div-root .logo  { font-size: 22px; line-height: 0.825; display: inline-block; width: 154px; height: 20px; background: url('./images/layout.sym_logo.png') no-repeat; color: Transparent; text-align: right; white-space: nowrap; }
+	.dom-header .div-root .logo  { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAAAUCAYAAAB1RSS/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTkwOEI5RDYyNUE1MTFFQzgzNUFBQTI5OTI3NkEzOTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTkwOEI5RDcyNUE1MTFFQzgzNUFBQTI5OTI3NkEzOTUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBOTA4QjlENDI1QTUxMUVDODM1QUFBMjk5Mjc2QTM5NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBOTA4QjlENTI1QTUxMUVDODM1QUFBMjk5Mjc2QTM5NSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Plias4YAAAc/SURBVHja7Fp5bFZF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'); }
+
+	.dom-main  { padding: 100px 0; }
+
+	.o-image  { display: inline-block; vertical-align: middle; max-width: 100%; }
+
+	.o-display  { position: absolute; z-index: 100; left: 0; top: 0; min-width: 1340px; width: 100%; min-height: 100%; height: 1080px; overflow: hidden; background-color: inherit; -webkit-transition: opacity 0.2s ease-out; transition: opacity 0.2s ease-out; }
+	.o-display:after  { content: ""; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background: #000000; opacity: 0.5; }
+	/* .o-display >img  { position: absolute; z-index: 5; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); max-width: none; } */
+	.o-display >img  { position: absolute; z-index: 5; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: none; }
+	html._noscript .o-display:not(:target)  { height: 0; visibility: hidden; opacity: 0.0; }
+	html._noscript .o-display:target ~.dom-wrapper  { height: 100%; overflow: hidden; }
+	html:not([data-js-hash="#Draft0101"]) #Draft0101,
+	html:not([data-js-hash="#Draft0102"]) #Draft0102,
+	html:not([data-js-hash="#Draft0103"]) #Draft0103,
+	html:not([data-js-hash="#Draft0104"]) #Draft0104,
+	html:not([data-js-hash="#Draft0105"]) #Draft0105,
+	html:not([data-js-hash="#Draft0201"]) #Draft0201,
+	html:not([data-js-hash="#Draft0202"]) #Draft0202,
+	html:not([data-js-hash="#Draft0203"]) #Draft0203,
+	html:not([data-js-hash="#Draft0301"]) #Draft0301,
+	html:not([data-js-hash="#Draft0302"]) #Draft0302,
+	html:not([data-js-hash="#Draft0303"]) #Draft0303,
+	html:not([data-js-hash="#Draft0304"]) #Draft0304,
+	html:not([data-js-hash="#Draft0305"]) #Draft0305,
+	html:not([data-js-hash="#Draft0401"]) #Draft0401,
+	html:not([data-js-hash="#Draft0402"]) #Draft0402,
+	html:not([data-js-hash="#Draft0403"]) #Draft0403,
+	  html:not([data-js-hash*="#Draft"]) .o-display  { height: 0; visibility: hidden; opacity: 0.0; }
+	html[data-js-hash*="#Draft"] .o-display:target ~.dom-wrapper  { height: 100%; overflow: hidden; }
+
+	.dxt-draft  { text-align: center; }
+	.dxt-draft .header  { font-weight: 600; font-size: 20px; margin-bottom: 89px; color: #706350; }
+	.dxt-draft .header .logo  { font-size: 30px; line-height: 0.9; display: block; width: 229px; height: 30px; margin: 0 auto 24px; background: url('./images/part.draft_sym_logo.png') no-repeat; color: Transparent; }
+	.dxt-draft .header .logo  { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOUAAAAeCAYAAADTnNnMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTI2REFFRTYyNUE1MTFFQ0FBRkJFRjIzNkFFQUVBQzgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTI2REFFRTcyNUE1MTFFQ0FBRkJFRjIzNkFFQUVBQzgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFMjZEQUVFNDI1QTUxMUVDQUFGQkVGMjM2QUVBRUFDOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFMjZEQUVFNTI1QTUxMUVDQUFGQkVGMjM2QUVBRUFDOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr5FNosAAAsLSURBVHja7F0LlFdDGJ/Vcy1FiCTtKaLyfsQSbSIHiYQ9dFCSR6HII4/jEVJqKSQibTqH5FV6yKNYPcimqESUYlFCHm2RXn6//rPH3Wnm/u9j7t3739N3zndm/3dmvpk7d775XjOzWWIn7ASL0Kf7+TWQdAR2AuYB9wfWBm4ArgDOBr4ELB46asI2W+1u27atyoxh1hJR9wak1SzQ+h24Cji/hfjzV6+V0P5hSE43ZP8D/Am4EDRXBukU6J+F5BBN1lLQfEtTvguSfTTlP0H5OQH7cCiSFsD9gDWV7GLQXRCQAa5EUsfifFgARikOwZDnIHkSmOuh+CfA69De/AxbdJoiOdciyREYg43OB9WBj9vuOCbhQiRjgKMw4f5MU5wM+ZgHmkuQDAKOBU0/y+I1wPM0zycC39I8fwjYWPN8GHCOjzHg2N4osbFL0fvJDAGH+p40tP0C37E44GTti2SIjyqtgLNQrwCTcpLPtkYiaW9zyqIPZ3sse7iX+eoDioAVmHKXiBaUI4CFwGWYnBdZotlCMvpY0KwmEgzoXw6S6XIMGosqDmCSMzUMSW2JjNoSuDfwWODDwL8dZbKpyqL+wT6brC/H1Rbun6TxrB4xfX6M8Zikt0G6DbZEk+rlV8AHEzxPnwKeGgv/C/FHiPpHWurHAOX3D7QnIX1+cDz7jaYNGPANKY2z5XMuYHcCu2XIGrQIeFPAup28zIvqMb3II2DMz8GY71iidxfoPQd6qxMoJSkRLo+jLR8ql0nChfaOgMaeSI5RTQCFIZ19LkGd0fizp2LC+IFxwM/CdBtYN+CYL2cScKxyvTLloyEdPVzpaPyekobJ2c5hBoN/mPIsWzoL8jWOEQK9edcD707gStrXJW89cAbwR4cdUSwyG/bQPCtNU0fN39MnY4wLuZB0DcqUqEtbdmTAput5Ul8hbfpakhAHInkB2MZQpCXKHIX2PqtoKG73aM4x0CSz04W+ryb7WuQPQP0NCZKSjZBc7KL2tEN/f6liJmWpXGxyHM8KgFMMk5oC4EKNGp4psGvUfgJrjh5Mtu+RdAC6qZRH+6S53EXy7AW8ImEfrLeL1tEjAxjStzoLqbUZyWjl8WVgvoHAbIUhKSlelk4fJzwrdsL/khKr+6sGtZPxxv4+magM9KZLZ4wOdtdIF3rurtOU3Qh6BfIj0pFwoG7hRf1nUG5rAqQk362HIXsm+jg3A+bDzwHr0VFDta6Z49ntHA8w4vsi5YmlFtHW4eAph2nAURnOR92wOBVZY0pgZxdboX8Amo1c8tZonjUX+jjidjUIk3kzJjxtzkJNfjMpnd9MwIe5SpgD+YVJm0XSQaPCdwGdH+tAjz4FelZPUmyozi5VXwR2R/2tGc6U7fH+Qb3gi6TzqAJT2pQWlJBu3qWPA5J+DnifTtICbq5sppQbBXobsr8BTkrgRNLF5gLvrsHEWiMZ8wo5Fm7hFjq7BqPOtAxkwN81zy6RGAQYXhnqlSlrY7LleiBaC3gQ8FKJJpgWdKsc6v2Fvow02JdtkHccysyrxA/VycX4H2ZDvcaEp/p+msU+q57wtcA8tJOnfjcwz2qPjLlV2pejQacJ0hOAB0gn0DogJcLHXuklFOh4nCvfLRqb0iWPja6w1A5tihtC0nhCpOJL1QyrTZdK/FC3GJ6v1ThBgsIxFmnpoJ6BPu3A1WCyhkhvDUF/D2na5IOWHwncJ0kcSccW+t9OpOKs+SK1T7pmCJK/+GFKW7AUeCGkxbIwRFD/O+mUKtDZnsjrhzKlcX8ktHuySO3j1MHTSQrZhIR9XFT0SM3fGNr42ydjMgQ0WGKsktIGlAA7Wtx5U2hgSkrPG0Ou5EHBFLLZJFInJmzBhqCOmJDwj6j6sNHFbFgpYt6/HDVTHg/8EtLkZjBmaNULNEpAizr9yZrsHsjrjzLrYpSStJtMutiL6Msqi2oTtyjmVuLE5WmfiS75TTV26lS5OJXD3ppvN1uaN3FCrTCSMtOZstyWeB4TuB4mqY3QwBADU3LbVHcRcF9iQKDnN8tFqpczL9XbEp9HzhIFWBRWuCxAlChUM9UjTV1Q7w9HGdpg7ytl7kaZD2J+HdWL77Z4/iUXJK+Qo/AVnV/rbDElV7AOHmhwUjYQKc8gA8YHGMoNwuR8GxNzccgBZfhjuVyZVeiNNp5kbDMGKck4X1dD9nvowyJZjmM8XqRO299h1dhK7ZDpaJHk92CQGRbpvY0+NpBMQKfX+speXOTNCDnK45Uui9ERPulPEBXj7oxDHmWLKTdjYnkNiDJ2swQTkMHgmSJ19lFn93ET+bUhVditaOcxg71G9Y7hiVdi+L7XaD7uDlIScIG0Sfqh38vQf5u7VxgmsemRpXpqkylbKRpTEkBnH37qg+m4yDjDIZvAdFN81G8rKm6Gj3bzACbcWkw8ntx43VDkREtNFQEfEPrTBX2jZkq8I13gphDPF5QQBkfQCNRdiXGaXgWdJQ0Mz+nk+1kumLqTGQ1j7mcT5XeZRqV2AzLkG4qt7VxwJimS90elPgWKc2OFr80DQaE0jX1pg/nXY3KPEKk9lzsMGsMUKDM7wg9LD7DptPrQctsR/WitSAuqTq/heR7KfBlR35YK90MBTmgtLNzPJDccqLFabuboyfOTsgwPP5wtNRyntBqOvBkot8pAezckky2Oz37Kb9p8UzWx0yKP+1mzUdfNj9FQyU+7CEXBlOe45NncyTFcpEIgNTR5N0mbOAopmSXMYRDu7R2rOIJ0DqmpoHMCGHNNBF0c6HVztNyvWddCm/eKiieOvgXmy3heuW3GyT8ZbVKTWORQ/dk+45/9XOZomwgX2DoG+l6dTzWF5fjtLjYnK5COj7tcii2w1R4m9E/SeaKDzuhL+4g+4tXCvK9zOPq1UY5HjpQMwmD7TkSZ7Cqiuqpb88Y4GVJxnNCLq15YdorYCZ4kZS4mzX0e6fAQMrcepbsA6SXL/adDxXT1xlR5jKy5pbbag95MqfLpgEH2pxQVmyvo0y729RiUKcjkUIlDBXRCLQ/SxQlbXMr+K1IXpsUNXq8b4eLTwQddHq5oGpQpG0u1xBZMwuT70LJjaSEm9bv48wxNNm0lm9IyHXMXqffd4vcz6B9d6j0NdXjTHz1vNkMlNTyqrlkWzZePgGc5fncH/WE8OaJp92ilLMF4egg0uJOpa4IXpC1+4qx4/7Rhobguzloc4cDeJlL3/NSoxA9D28x09rSPSIWI8g35YUIlOglbiA/fy0Pd3cWOIZ2g8V3elXumwxyi5jQX/eC3mULGkuc3eWjgAeVbceyeyGAtoQ7ejdfgrPVQNkfow4WxMyUdH72i2v7GO38wqXlzwUgR3T22bsAtWgWmLXV4vgn9450084R5m1zQUMlyqTbXVpgt6NWRgTZ2gOlmY2JSVefF3lkOu5mbJrYgr8zgUOLYXYL6pRnEhEs1zy4LQe/ryBw9CjA2QzcwL8q6POr9qFLK0IM20wI5r/bddm8isFW6qzORzztPedV9mYvKyVBJc5/MQHrXS7srLPCMYOCbv9EXhjroef9WY0boGJLaTV6mHXRGfxnKul8EuM9IA88LzS399Jj2sqD6ccXjHkHaVIv9bMRG+y0NNiHv6BnhtyOgxyNG3NbUUEoNUxyuRBfLRH16TJsZ6nBzNRcYruzzPfxLBt27tnXRUBaApu8rJyGJ6stFad8A2k+ZlJBzbfzDHbmNjQsQrwE5UX4HOn7K/8HPLJG6d+kDm//gJ26Qd7jS61xfmPc/m4CL9DzJ4DvAfwIMAMEVPGWspqmSAAAAAElFTkSuQmCC'); }
+	.dxt-draft .heading2  { font-weight: 600; font-size: 24px; margin-bottom: 30px; }
+	.dxt-draft .heading2:after  { content: ""; display: block; width: 40px; height: 4px; margin: 23px auto 0; background: #d7181f; }
+	.dxt-draft .section +.section  { margin-top: 120px; }
+	.dxt-draft .lists  { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: -100px 0 0 -85px; }
+	.dxt-draft .lists:after  { content: ""; flex: auto; }
+	.dxt-draft .lists >*  { width: 370px; margin: 100px 0 0 85px; }
+	.dxt-draft .display  { font-weight: 600; font-size: 16px; display: block; position: relative; min-height: 300px; overflow: hidden; box-shadow: 0 0 5px 0 rgba(0,0,0, 0.4); -webkit-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
+	.dxt-draft .display:before,
+	  .dxt-draft .display:after  { content: ""; position: absolute; z-index: 5; bottom: 0; -webkit-transition: inherit; transition: inherit; }
+	.dxt-draft .display:before  { left: 0; right: 0; height: 60px; background: #000000; opacity: 0.5; }
+	.dxt-draft .display:after  { content: attr(title); left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); min-width: 110px; margin: 13px 5px; padding: 4px 17px; border: 1px solid currentColor; color: #ffffff; border-radius: 4px; text-align: center; }
+	.dxt-draft .display >img  { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: none; /* height: calc(100% - 18px * 2); */ height: 100%; -webkit-transition: inherit; transition: inherit; }
+	.dxt-draft .display:not(:hover):not(:focus):before  { -webkit-transform: translateY(60px); transform: translateY(60px); opacity: 0; }
+	.dxt-draft .display:not(:hover):not(:focus):after  { -webkit-transform: translate(-50%, 60px); transform: translate(-50%, 60px); opacity: 0; }
+	.dxt-draft .display:not(:hover):not(:focus) >img  { -webkit-transform: scale(0.88) translate(-56.75%, -56.75%); transform: scale(0.88) translate(-56.75%, -56.75%); }
+</style>
+<script type="text/ecmascript">
+//<![CDATA[
+
+//	window.addEventListener('hashchange', function(evt) {
+//		if( !location.hash ) {
+//			location.reload();
+//		}
+//	});
+
+	(function(WIN, DOC, _ROOT, undefined) {
+		"use strict";
+
+		var onExt = window.onExt = window.onExt || {};
+
+		onExt.bom = onExt.bom || {};
+
+		onExt.bom.hashHistory = undefined;
+
+		_ROOT.className = _ROOT.className.replace(/(^|\s)_noscript(\s|$)/m, '$1$2').trim();
+
+		WIN.addEventListener('load', function(e) {
+			DOC.body.className = DOC.body.className.replace(/_unload/m, '_onload');
+		}, false);
+
+		WIN.addEventListener('hashchange', function(evt) {
+			var __HASH__ = location.hash;
+
+			onExt.bom.hashHistory = __HASH__;
+
+			_ROOT.setAttribute('data-js-hash', __HASH__);
+
+			if( DOC.fullscreenEnabled ) {
+				if( onExt.bom.hashHistory ) {
+					_ROOT.requestFullscreen()
+						.then(function() { console.log('Document exited from Fullscreen mode.'); })
+						.catch(function(err) { console.log(err); })
+					;
+
+				} else {
+					if( DOC.fullscreen ) {
+						DOC.exitFullscreen();
+					}
+				}
+			}
+		});
+
+		DOC.addEventListener('click', function(evt) {
+			if( location.hash ) {
+				history.go(-1);
+			}
+		});
+
+		onExt.bom.hashchangeEvent = new Event('hashchange');
+
+		WIN.dispatchEvent( onExt.bom.hashchangeEvent );
+
+	}( window, document, document.documentElement ));
+
+//]]>
+</script>
+</head>
+
+<body class="_unload Draft-Page">
+<div id="Draft0101" class="o-display"><img src="./images/img_draft0101.png" alt="로그인 시안1" /></div>
+<div id="Draft0102" class="o-display"><img src="./images/img_draft0102.png" alt="로그인 시안2" /></div>
+<div id="Draft0103" class="o-display"><img src="./images/img_draft0103.png" alt="로그인 시안3" /></div>
+<div id="Draft0104" class="o-display"><img src="./images/img_draft0104.png" alt="로그인 시안4" /></div>
+<div id="Draft0105" class="o-display"><img src="./images/img_draft0105.png" alt="로그인 시안5" /></div>
+
+<div id="Draft0201" class="o-display"><img src="./images/img_draft0201.png" alt="대시보드 시안1" /></div>
+<div id="Draft0202" class="o-display"><img src="./images/img_draft0202.png" alt="대시보드 시안2" /></div>
+<div id="Draft0203" class="o-display"><img src="./images/img_draft0203.png" alt="대시보드 시안3" /></div>
+
+<div id="Draft0301" class="o-display"><img src="./images/img_draft0301.png" alt="서브페이지 시안1" /></div>
+<div id="Draft0302" class="o-display"><img src="./images/img_draft0302.png" alt="서브페이지 시안2" /></div>
+<div id="Draft0303" class="o-display"><img src="./images/img_draft0303.png" alt="서브페이지 시안3" /></div>
+<div id="Draft0304" class="o-display"><img src="./images/img_draft0304.png" alt="서브페이지 시안4" /></div>
+<div id="Draft0305" class="o-display"><img src="./images/img_draft0305.png" alt="서브페이지 시안5" /></div>
+
+<div id="Draft0401" class="o-display"><img src="./images/img_draft0401.png" alt="MY메뉴 시안1" /></div>
+<div id="Draft0402" class="o-display"><img src="./images/img_draft0402.png" alt="MY메뉴 시안2" /></div>
+<div id="Draft0403" class="o-display"><img src="./images/img_draft0403.png" alt="MY메뉴 시안3" /></div>
+
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div class="roles">
+			<div class="div-root">
+				<span class="logo"><span class="inner">BNK 금융그룹</span></span>
+				<strong class="system"><span class="inner">디자인 시안</span></strong>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</header>
+
+	<!-- /* Container { @UX } -->
+	<div role="main" id="Center" class="dom-main">
+		<div class="roles">
+			<!-- /* Contents { @UX } -->
+			<div class="dxt-draft">
+				<div class="header">
+					<div class="logo"><span class="inner">BNK 금융그룹</span></div>
+
+					<h1 class="heading1">부산 / 경남은행 비예금상품 내부통제 관리시스템</h1>
+				</div>
+
+				<div class="group">
+					<div class="section">
+						<h2 class="heading2"><span class="inner">로그인</span></h2>
+
+						<ul class="lists">
+							<li><a href="#Draft0101" title="자세히보기" class="display"><img src="./images/img_draft0101.png" alt="시안1" /></a></li>
+							<li><a href="#Draft0102" title="자세히보기" class="display"><img src="./images/img_draft0102.png" alt="시안2" /></a></li>
+							<li><a href="#Draft0103" title="자세히보기" class="display"><img src="./images/img_draft0103.png" alt="시안3" /></a></li>
+							<li><a href="#Draft0104" title="자세히보기" class="display"><img src="./images/img_draft0104.png" alt="시안4" /></a></li>
+							<li><a href="#Draft0105" title="자세히보기" class="display"><img src="./images/img_draft0105.png" alt="시안5" /></a></li>
+						</ul>
+					</div>
+
+					<div class="section">
+						<h2 class="heading2"><span class="inner">대시보드</span></h2>
+
+						<ul class="lists">
+							<li><a href="#Draft0201" title="자세히보기" class="display"><img src="./images/img_draft0201.png" alt="대시보드1" /></a></li>
+							<li><a href="#Draft0202" title="자세히보기" class="display"><img src="./images/img_draft0202.png" alt="대시보드2" /></a></li>
+							<li><a href="#Draft0203" title="자세히보기" class="display"><img src="./images/img_draft0203.png" alt="대시보드3" /></a></li>
+						</ul>
+					</div>
+
+					<div class="section">
+						<h2 class="heading2"><span class="inner">서브페이지</span></h2>
+
+						<ul class="lists">
+							<li><a href="#Draft0301" title="자세히보기" class="display"><img src="./images/img_draft0301.png" alt="서브페이지1" /></a></li>
+							<li><a href="#Draft0302" title="자세히보기" class="display"><img src="./images/img_draft0302.png" alt="서브페이지2" /></a></li>
+							<li><a href="#Draft0303" title="자세히보기" class="display"><img src="./images/img_draft0303.png" alt="서브페이지3" /></a></li>
+							<li><a href="#Draft0304" title="자세히보기" class="display"><img src="./images/img_draft0304.png" alt="서브페이지4" /></a></li>
+							<li><a href="#Draft0305" title="자세히보기" class="display"><img src="./images/img_draft0305.png" alt="서브페이지5" /></a></li>
+						</ul>
+					</div>
+
+					<div class="section">
+						<h2 class="heading2"><span class="inner">MY메뉴</span></h2>
+
+						<ul class="lists">
+							<li><a href="#Draft0401" title="자세히보기" class="display"><img src="./images/img_draft0401.png" alt="MY메뉴1" /></a></li>
+							<li><a href="#Draft0402" title="자세히보기" class="display"><img src="./images/img_draft0402.png" alt="MY메뉴2" /></a></li>
+							<li><a href="#Draft0403" title="자세히보기" class="display"><img src="./images/img_draft0403.png" alt="MY메뉴3" /></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- */ Contents { @UX } -->
+		</div>
+	</div>
+	<!-- */ Container { @UX } -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*! 
+ ** [BNK 비예금상품 내부통제관리시스템] Dynamic-Rules CSS
+ * Author   : KSASolution Front-end UX.Div
+ * Create   : 2021-08-12 | 2dea; ego@2dea.com
+ * Update   : 2021-08-12 | 2dea
+ * Comments : -
+ */
+
+
+/** Animation Keyframes
+ ---------------------- */
+
+/** Blink */
+@-webkit-keyframes ANI_blink  {
+  25% {
+    opacity: 0.25;
+  }
+
+} @keyframes ANI_blink  {
+  25% {
+    opacity: 0.25;
+  }
+}
+
+
+/** Hovering Elements
+ -------------------- */
+
+/** Buttons */
+/* .o-button,
+  .o-button >.inner  { position: relative; }
+.o-button:after  { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgb(0 0 0 /0.1); opacity: 0.0; -webkit-transition: 0.15s; transition: 0.15s; }
+.o-button:hover:not(:active):after  { opacity: 1.0; } */
+
+button,
+  .o-button-check,
+  .o-button-check >input ~.label,
+  .o-button  { transition: all 0.25s !important; }
+button:before,
+  button *,
+  button:after  { transition: inherit; }
+button:hover,
+  .o-button-check:hover,
+  .o-button-check >input:focus ~.label,
+  .o-button:hover  { box-shadow: 0 0.2rem 5px 0 rgba(0,0,0, 0.3); }
+
+
+/** Dynamic Elements
+ ------------------- */
+
+/** cssVars */
+html.-ms body >*  { transition: opacity 0.05s; }
+html.-ms body:not(.js_cssVars-error):not(.js_cssVars-complete) >*  { opacity: 0.0; }
+html.-ms body.js_cssVars-error >*  { opacity: 1.0; }
+
+
+/** Navigations Motions */
+.dom-nav .div-nav-local >* >* >.label +*  { overflow: hidden; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; }
+.dom-nav .div-nav-local >* >* >.label:not(:only-child)[aria-expanded="false"]:after  { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.dom-nav .div-nav-local >* >* >.label[aria-expanded="false"] +*  { max-height: 0; padding: 0; }
+.dom-nav .div-nav-local >* >* >.label[aria-expanded="true"] +*  { max-height: 60rem; max-height: 80vh; }
+.dom-nav .div-nav-local >* >* >.label[aria-expanded="true"] +:hover  { overflow: auto; }
+
+.dom-nav .label[aria-current="page"],
+  .dom-nav .label[aria-current="true"]  { font-weight: var(--bold-700); color: var(--color-point2); }
+/* .dom-nav .div-root .root[aria-current="true"] >.inner:before  { background-position: 100%; } */
+.dom-nav .div-root .root[aria-current="true"],
+  .dom-nav .div-nav-local >* >* >.label[aria-current="true"]  { background: #2c394b; color: inherit; }
+.dom-nav .div-nav-local >* >* >* >* >.label[aria-current="true"]  { font-weight: var(--bold-500); color: inherit; }
+.dom-nav .div-nav-local >* >* >* >* >.label[aria-current="true"]:before  { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 0.5rem; margin: -0.4rem 0; background: var(--color-main1); }
+
+
+/** Layers Motions */
+.layer-wrap[style*="margin:"] .layer-head .title >.inner  { cursor: move; }
+
+
+/** Dynamic Environments
+ ----------------------- */
+
+/** Motions */
+.o-form.is-error .o-invalid-label  { right: 15px; }
+.o-form._input.is-error input.bind ~.o-invalid-label,
+  .o-form._file.is-error input.bind ~.o-invalid-label  { right: auto; }
+.o-form._input.is-error input.bind  { padding-right: calc(2.4rem + 1px); }
+.mx-datepicker:not(.is-error) ~.o-invalid-label,
+  .mx-datepicker:not(.is-error) .o-invalid-label,
+  .o-form:not(.is-error) .o-invalid-label  { opacity: 0.0; visibility: hidden; transition: opacity 0.3s, visibility 0s 0.3s; }
+
+
+/** Browser Supports
+ ------------------- */
+
+@supports ((position: -webkit-sticky) or (position: sticky)) and (top: 1vh) {
+    /* .dom-wrapper  { display: flex; }
+    .dom-wrapper >:not(.dom-main)  { flex: none; } */
+    .dom-nav  { height: 100%; }
+    .dom-nav >.roles  { position: -webkit-sticky; position: sticky; top: 0; height: calc(100vh - 17px); overflow: hidden; }
+    .dom-nav >.roles::-webkit-scrollbar  { width: 17px; }
+    .dom-nav >.roles::-webkit-scrollbar-thumb  { background: rgba(0,0,0, 25%); }
+    .dom-nav >.roles:hover  { overflow-y: scroll; margin-right: -17px; }
+    .dom-nav .div-nav-local >* >* >.label[aria-expanded="true"] +*  { max-height: 120rem; }
+    .dom-nav .div-nav-local >* >* >.label[aria-expanded="true"] +:hover  { overflow: visible; }
+
+    @media
+      screen and (max-width: 1716px)  {
+        .p-dashboard >.group  { grid-template-columns: 1fr calc(50% - (3rem / 2)) !important; grid-template-areas: "GRID_dashboard1 GRID_dashboard2" "GRID_dashboard3 GRID_dashboard3" "GRID_dashboard4 GRID_dashboard4" "GRID_dashboard5 GRID_dashboard5" "GRID_dashboard6 GRID_dashboard6" !important; }
+    }
+}

@@ -1,0 +1,121 @@
+
+section {
+    display: block;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    color: rgb(49, 70, 89);
+    margin-bottom: 60px;
+    margin-top: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(235, 237, 240);
+    border-image: initial;
+    border-radius: 4px;
+}
+
+.card-title {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 14px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 1000;
+    padding: 0px 10px;
+    background: rgb(255, 255, 255);
+}
+
+.card-sub-title {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 14px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+    padding: 0px 10px;
+    background: rgb(255, 255, 255);
+}
+
+.card-description {
+    padding: 12px 24px;
+}
+
+.card-demo {
+    color: rgb(33, 54, 73);
+    padding: 30px 24px;
+    border-top: 1px solid rgb(235, 237, 240);
+}
+
+.card-demo .box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-demo .box > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 0%;
+}
+
+.box > span {
+    display: contents;
+}
+
+.markdown-body {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.markdown-body p, .markdown-body ul, .markdown-body ol {
+    margin: 10px 0px;
+}
+
+.main p {
+    margin: 10px 0px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.mx-datepicker {
+    position: relative;
+    display: inline-block;
+    width: 210px;
+}
+
+.markdown-body code {
+    font-size: 85%;
+    background-color: rgba(27, 31, 35, 0.05);
+    padding: 0.2em 0.4em;
+    margin: 0px;
+    border-radius: 3px;
+}
+
+code, kbd, samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+.markdown-body ul, .markdown-body ol {
+    padding-left: 30px;
+}
+
+li {
+    list-style: auto;
+}
+
+th { 
+    text-align: center;
+    font-weight: bold;
+    background-color: gainsboro
+}

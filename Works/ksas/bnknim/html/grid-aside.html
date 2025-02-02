@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko" class="noscript">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Untitled &middot; 이데아닷컴</title>
+<style type="text/css">
+:before,  :after,
+  *  { box-sizing: border-box; margin: 0; padding: 0; }
+html  { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+html  { font-size: 62.5%; font-size: calc(10em / 16); }
+@media
+  screen and (pointer: coarse) and (orientation: portrait) and (min-width: 768px),
+  screen and (pointer: coarse) and (orientation: landscape) and (min-height: 640px)  {
+    html  { font-size: 125%; font-size: calc(10em / 16 * 2); }
+}
+/* @media
+  screen and (max-width: 359px),
+  screen and (max-device-height: 359px)  {
+    html  { font-size: 55%; font-size: calc(10em / 16 * 320 / 360); }
+} */
+@media
+  screen and (max-width: 374px),
+  screen and (max-device-height: 374px)  {
+    html  { font-size: 60%; font-size: calc(10em / 16 * 360 / 375); }
+} @media
+  screen and (max-width: 359px),
+  screen and (max-device-height: 359px)  {
+    html  { font-size: 53%; font-size: calc(10em / 16 * 320 / 375); }
+}
+/* @media
+  screen and (max-width: 411px),
+  screen and (max-device-height: 411px)  {
+    html  { font-size: 59%; font-size: calc(10em / 16 * 390 / 412); }
+} @media
+  screen and (max-width: 389px),
+  screen and (max-device-height: 389px)  {
+    html  { font-size: 56%; font-size: calc(10em / 16 * 375 / 412); }
+} @media
+  screen and (max-width: 374px),
+  screen and (max-device-height: 374px)  {
+    html  { font-size: 54%; font-size: calc(10em / 16 * 360 / 412); }
+} @media
+  screen and (max-width: 359px),
+  screen and (max-device-height: 359px)  {
+    html  { font-size: 48%; font-size: calc(10em / 16 * 320 / 412); }
+} */
+body  { font-size: 1.2em; line-height: 1.5; word-wrap: break-word; word-break: keep-all; }
+hr  { display: none; }
+ul  { list-style: none; }
+
+.dom-header .div-skip  { display: none; }
+.dom-footer +i  { display: none; }
+
+.dom-wrapper  { position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; background-color: inherit; }
+.dom-wrapper >*  { display: flex; flex-direction: column; }
+.dom-wrapper >* >.roles  { display: flex; flex-direction: column; min-height: 100%; }
+.dom-wrapper >:not(.dom-nav):not(.dom-main) >.roles  { width: 1260px; margin: 0 auto; padding: 0 30px; background: rgba(0,0,0, 0.1); background: rgb(0 0 0 /10%); }
+/* @media
+  screen and (pointer: fine), (-ms-high-contrast: none), (-ms-high-contrast: active)  {
+    .dom-wrapper >:not(.dom-nav):not(.dom-main) >.roles  { width: 100%; }
+} */
+@media
+  screen and (-ms-high-contrast: none),
+  screen and (-ms-high-contrast: active),
+  screen and (pointer: fine)  {
+    .dom-wrapper:before  { content: "Testing OR Media Queries..."; position: absolute; inset: 0 0 0 0; right: auto; }
+}
+@media
+  screen and (pointer: coarse)  {
+    .dom-wrapper >:not(.dom-nav):not(.dom-main) >.roles  { width: 100%; }
+}
+
+
+/* 
+.dom-wrapper  { display: grid; grid-template-areas: "DOM_header DOM_header DOM_header DOM_header" ". DOM_nav DOM_main ." "DOM_footer DOM_footer DOM_footer DOM_footer"; grid-template-columns: 0 200px 1fr 0; grid-template-rows: minmax(80px, auto) 1fr minmax(120px, auto); }
+.dom-header  { grid-area: DOM_header; }
+.dom-nav  { grid-area: DOM_nav; }
+.dom-main  { grid-area: DOM_main; }
+.dom-footer  { grid-area: DOM_footer; }
+ */
+.dom-wrapper  { display: grid; grid-template-columns: auto 200px 800px auto; grid-template-rows: minmax(80px, auto) 1fr minmax(120px, auto); }
+.dom-wrapper  { grid-template-columns: 0 200px auto 0; }
+.dom-header  { grid-row: 1 /2; grid-column: 1 /span 4; }
+.dom-nav  { grid-row: 2 /3; grid-column: 2 /3; }
+.dom-main  { grid-row: 2 /3; grid-column: 3 /4; /* min-height: 60rem; */ }
+.dom-footer  { grid-row: 3 /4; grid-column: 1 /span 4; }
+
+@media
+  screen and (-ms-high-contrast: none),
+  screen and (-ms-high-contrast: active)  {
+    .dom-wrapper  { display: -ms-grid; -ms-grid-columns: minmax(min-content, 1fr) 200px 800px minmax(min-content, 1fr); -ms-grid-rows: minmax(80px, 100%) minmax(calc(100vh - 200px), 1fr) minmax(120px, 100%); }
+    .dom-wrapper  { -ms-grid-columns: 0 200px minmax(min-content, 100%) 0; }
+    .dom-header  { -ms-grid-row: 1; -ms-grid-column: 1; -ms-grid-column-span: 4; }
+    .dom-nav  { -ms-grid-row: 2; -ms-grid-column: 2; }
+    .dom-main  { -ms-grid-row: 2; -ms-grid-column: 3; }
+    .dom-footer  { -ms-grid-row: 3; -ms-grid-column: 1; -ms-grid-column-span: 4; }
+}
+
+
+.dom-header  { background-color: #ddbbcc; }
+
+
+.dom-nav  { background-color: #bbddcc; }
+/* .dom-nav >.roles  { position: sticky; position: sticky; top: 0; max-height: 100vh; overflow: auto; } */
+.dom-nav >.roles  {  }
+.dom-nav .div-nav-local  { position: absolute; inset: auto 0; background: Gold; }
+.dom-nav .div-nav-local >*  { display: flex; width: 1260px; margin: 0 auto; padding: 0 30px; background: rgba(0,0,0, 0.1); background: rgb(0 0 0 /10%); }
+
+
+.dom-main  { flex-direction: row; background-color: #ccddbb; }
+.dom-main >.roles  { flex: 100%; background-color: #ccddaa; }
+.dom-main .div-contents  { flex: auto; background-color: #ccdd77; }
+
+
+.dom-footer  { background-color: #bbccdd; }
+</style>
+<script type="text/ecmascript">
+//<![CDATA[
+if( window.NodeList && !NodeList.prototype.forEach ) {
+	NodeList.prototype.forEach = function (callback, thisArg) {
+		thisArg = thisArg || window;
+
+		for( var i = 0; i < this.length; i++ ) {
+			callback.call(thisArg, this[i], i, this);
+		}
+	};
+}
+//]]>
+</script>
+</head>
+
+<body>
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" class="div-skip">
+			<span class="o-ogp"><img src="../../../src/assets/img/img_ogp.alt.png" alt="" /></span>
+
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="roles">
+			<div class="div-root">
+				<span class="logo"><span class="inner"><em class="symbol">BNK</em> 금융지주</span></span>
+				<strong class="system"><span class="inner">비예금상품 통합 관리 시스템</span></strong>
+			</div>
+
+			<div class="div-account">
+				<strong class="data">
+					<span class="name">홍길동</span>
+					<span class="div">(<span>WM상품부</span>)</span>
+				</strong>
+				<span class="binds">
+					<button type="button" class="signout"><i aria-hidden="true"></i><span class="inner">로그아웃</span></button>
+				</span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</header>
+
+	<!-- <nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="roles">
+			NAVIGATION
+		</div>
+	
+		<hr class="g-overlay" />
+	</nav> -->
+
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="roles">
+			<div class="div-nav-local">
+				<ul>
+					<li><a href="javascript:"><span class="inner">메뉴</span></a></li>
+					<li><a href="javascript:"><span class="inner">메뉴</span></a></li>
+					<li><a href="javascript:"><span class="inner">메뉴</span></a></li>
+					<li><a href="javascript:"><span class="inner">메뉴</span></a></li>
+				</ul>
+			</div>
+
+			<div class="div-nav-side">
+				<ul>
+					<li><a href="javascript:"><span class="inner">메뉴</span></a></li>
+					<li><a href="javascript:"><span class="inner">메뉴</span></a></li>
+					<li><a href="javascript:"><span class="inner">메뉴</span></a></li>
+					<li><a href="javascript:"><span class="inner">메뉴</span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</nav>
+
+	<!-- /* Container { @DEV } -->
+	<div role="main" id="Center" class="dom-main">
+		<div class="roles">
+			<div class="div-path" aria-label="Breadcrumb trail">
+				<span class="breadcrumb">
+					<span class="item root"><span class="inner">Home</span></span> <span class="sep">&gt;</span>
+					<span class="item subs">DEPTH_LEVEL1</span> <span class="sep">&gt;</span>
+					<span class="item subs">DEPTH_LEVEL2</span> <span class="sep">&gt;</span>
+					<strong class="item page" aria-current="page">PAGE_TITLE</strong>
+				</span>
+			</div>
+
+			<div class="div-title">
+				<h1 class="o-heading1"><span class="inner">녹취현황</span></h1>
+			</div>
+
+			<!-- /* Contents { @DEV } -->
+			<div class="div-contents">
+
+				CONTENTS
+				<!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />CONTENTS -->
+
+			</div>
+
+			<div class="div-footer">
+				<div class="m-binds type-end">
+					<span class="wrap">
+						<span class="item"><button type="button" class="o-button _cancel"><span class="inner">취소</span></button></span>
+						<span class="item"><button type="button" class="o-button _confirm"><span class="inner">확인</span></button></span>
+					</span>
+				</div>
+			</div>
+			<!-- */ Contents { @DEV } -->
+		</div>
+	</div>
+	<!-- */ Container { @DEV } -->
+
+	<footer role="contentinfo" id="Footer" class="dom-footer">
+		<hr class="g-overlay" />
+
+		<div class="roles">
+			FOOTER
+		</div>
+	</footer><i aria-hidden="true"></i>
+
+</div>
+
+<script type="text/ecmascript">
+//<![CDATA[
+
+function getRandomInt(max, min) {
+	max = ( max === 0 ) ? 0 : Math.floor(max) || 1e3;
+	min = ( min === 0 ) ? 0 : Math.ceil(min) || -1e3;
+
+	return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function getRandomColorHSL(hue, sat, lig, alp) {
+	hue = Math.round(getRandomInt(hue || 0, -36e7 + 1) / -1e3) / 1e3;
+
+	return 'hsla( ' + hue + 'deg, 60%, 80%, 1.0 )';
+}
+
+;(function() {
+	"use strict";
+
+	var hueDeg;
+
+	document.querySelectorAll('.dom-wrapper >*')
+		.forEach(function(elem) {
+			var color = getRandomColorHSL(hueDeg || 0);
+
+			// hueDeg = parseFloat( color.split(' ')[1] ) * -1e3 * 1e3;
+
+			console.log( window.getComputedStyle(elem)['background-color'] );
+
+			// elem.style.backgroundColor = color;
+		})
+	;
+
+	alert( '(hover: none) ' + matchMedia('(hover: none)').matches );
+	//alert( '(pointer: coarse) ' + matchMedia('(pointer: coarse)').matches );
+
+}(  ));
+
+//]]>
+</script>
+</body>
+</html>

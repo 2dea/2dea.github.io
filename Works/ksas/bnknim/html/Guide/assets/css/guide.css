@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*! 
+ ** [BNK 비예금상품 내부통제관리시스템] Common-Local CSS
+ * Author   : KSASolution Front-end UX.Div
+ * Create   : 2021-08-12 | 2dea; ego@2dea.com
+ * Update   : 2021-08-12 | 2dea
+ * Comments : -
+ */
+
+
+/** Import Rules
+ --------------- */
+
+@import url('./lib.hljs.css');
+@import url('../../../../src/assets/css/plugins/swiper.css');
+@import url('../../../../src/assets/css/rewrite.css');
+
+@import url('../../../../src/assets/css/module.css');
+@import url('../../../../src/assets/css/layout.css');
+@import url('../../../../src/assets/css/function.css');
+@import url('../../../../src/assets/css/index.css');
+@import url('../../../../src/assets/css/content.css');
+/* @import url('../../../../src/assets/css/theme.css'); */
+
+body  { background: #e2e2e2; }
+
+.dom-header  { background-color: Transparent; }
+.dom-main >.roles  { max-width: 13rem; margin: 0 auto; }
+.dom-main .div-contents  { padding: 0; }
+
+.o-section  { padding: 2rem; border: 1px solid #dddddd; background: var(--color-ground); border-radius: 0.5rem; }
+
+.o-heading2  { padding-bottom: 1rem; border-bottom: 1px solid #dddddd; }
+.o-section:first-child [class|="o-heading2"]:first-child  { margin-top: 0; }
+
+.go-viewsrc  { font-size: 13px; line-height: 1.2; max-height: 50vh; }
+.go-viewsrc .hljs  { display: inline-block; overflow: visible; min-width: 100%; padding: 0.5em 1em; }
+
+
+.gp-colors  { clear: both; }
+.gp-colors >* >*  { display: inline-block; margin: 1.5rem; }
+.gp-colors .color  { display: flex; flex-direction: column; text-align: center; }
+.gp-colors .color >.head  { margin-top: 0.5rem; }
+.gp-colors .color >.data  { order: -1; }
+.gp-colors .color .preview  { font-size: var(--font-s); display: flex; flex-direction: column; justify-content: center; width: 10rem; height: 10rem; background: #f0f0f0; color: #ffffff; border-radius: 50%; text-shadow: 0 0.1ex 1px #404040; }
+
+
+.go-box +.gm-viewsrc  { margin-top: 2rem; }

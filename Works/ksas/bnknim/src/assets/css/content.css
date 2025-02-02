@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/*! 
+ ** [BNK 비예금상품 내부통제관리시스템] Local-Contents CSS (*Deprecated)
+ * Author   : KSASolution Front-end UX.Div
+ * Create   : 2021-08-12 | 2dea; ego@2dea.com
+ * Update   : 2021-08-12 | 2dea
+ * Comments : -
+ */
+
+
+/** Local-Contents Stylesheets
+ ----------------------------- */
+
+/** 마이메뉴 */
+.p-mymenu  { font-size: var(--font-m); line-height: var(--text-height); clear: both; padding: 2rem 0; }
+.p-mymenu button  { position: relative; min-width: 0; min-height: 0; overflow: hidden; padding: 0; border: 0; background: Transparent; border-radius: 50%; }
+.p-mymenu button >.inner  { font-size: var(--font-4xs); line-height: 1; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 2em; color: Transparent; user-select: none; }
+.p-mymenu button:before  { content: ""; display: block; width: 2.4rem; height: 2.4rem; margin: 0 auto; background: none no-repeat 50% /100%; }
+.p-mymenu >*  { display: flex; flex-wrap: wrap; }
+.p-mymenu >* >*  { flex: none; width: calc(100% / 7.000351); border: 1px solid; border-color: Transparent #eeeeee #eeeeee Transparent; }
+.p-mymenu .menu  { position: relative; max-width: none; width: calc(100% + 2px + 1px); height: 15rem; margin: -2px -1px -1px -2px; border-radius: 1rem; }
+.p-mymenu >* >:nth-child(7n)  { border-right-color: Transparent; }
+.p-mymenu >* >:nth-child(n + 15)  { border-bottom-color: Transparent; }
+.p-mymenu >* >:nth-child(n + 15) .menu  { margin-bottom: calc(-2rem - 1px); }
+.p-mymenu >* >:nth-child(-n + 7) .menu  { margin-top: calc(-2rem - 1px); }
+
+.p-mymenu .menu .label  { display: flex; justify-content: center; align-items: center; position: absolute; left: 0; top: 0; right: 0; bottom: 0; padding: 1em 0.5em; text-align: center; border-radius: inherit; transition: all 0.2s; }
+.p-mymenu .menu .label >.inner  { display: inline-block; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; position: relative; max-width: 100%; max-height: calc(var(--text-height) * 4em); overflow: hidden; transition: inherit; text-overflow: ellipsis; }
+
+.p-mymenu .menu .config  { display:flex; position: absolute; right: 1rem; bottom: 1rem; }
+.p-mymenu .menu .config >:hover,
+  .p-mymenu .menu .config >:focus  { background: var(--color-main1); }
+.p-mymenu .menu .config >* +*  { margin-left: 0.6rem; }
+.p-mymenu .menu .config >:before  { background: url('../img/layout/btns_mymenu_config.png') no-repeat 100% /500%; }
+.p-mymenu .menu .config .edit:before  { background-position: 0% 0%; }
+.p-mymenu .menu .config .delete:before  { background-position: 25% 0%; }
+.p-mymenu .menu .add  { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 4rem; height: 4rem; background: var(--color-ground); }
+.p-mymenu .menu .add:before  { background: url('../img/layout/btns_mymenu_add.png') no-repeat 0 /200%; transition: 0s; }
+.p-mymenu .menu .add:hover  { background-color: var(--color-main1); box-shadow: 0 0 20px 0 rgba(0,0,0, 0.3); }
+.p-mymenu .menu .add:hover:before  { background-position: 100% 0%; }
+
+/* ..p-mymenu .button.launch:before  { content: attr(data-label); position: relative; z-index: 5; transition: inherit; }
+.p-mymenu .button.launch >.inner:before  { content: " "; display: inline-block; width: 0.280274em; }
+
+p-mymenu .launch:after  { content: ""; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: var(--color-main1); border-radius: inherit; opacity: 0.0; transition: inherit; }
+.p-mymenu .launch:hover:after  { opacity: 1.0; box-shadow: 0 0 20px 0 rgba(0,0,0, 0.3); } */
+/* .p-mymenu .button:hover ~.launch,
+  .p-mymenu .launch:hover,
+  .p-mymenu .button:focus ~.launch,
+  .p-mymenu .launch:focus  { background: var(--color-main1); color: var(--color-white); box-shadow: 0 0 20px 0 rgba(0,0,0, 0.3); }
+  .p-mymenu .button:hover ~.launch:before,
+  .p-mymenu .launch:hover:before,
+  .p-mymenu .button:focus ~.launch:before,
+  .p-mymenu .launch:focus:before  { transform: translateY(-1rem); } */
+
+.p-mymenu .menu:hover .label  { background: var(--color-main1); color: var(--color-white); box-shadow: 0 0 20px 0 rgba(0,0,0, 0.3); }
+.p-mymenu >:not(:hover) .menu:focus-within .label  { background: var(--color-main1); color: var(--color-white); box-shadow: 0 0 20px 0 rgba(0,0,0, 0.3); }
+.p-mymenu .menu:hover .label >.inner  { transform: translateY(-1rem); }
+.p-mymenu >:not(:hover) .menu:focus-within .label >.inner  { transform: translateY(-1rem); }
+
+
+/** 녹취현황 */
+.p-record-log  { min-height: 78.3rem; margin: calc(var(--margin-layout-block) * -1) calc(var(--margin-layout-inline) * -1) 0; background: url('../img/partial/bg_record_visual.jpg') no-repeat 50%; }
+.p-record-log >.wrap  { position: relative; top: 12rem; min-width: 51.6rem; width: calc(1006 / 1670 * 100%); padding: var(--margin-layout-inline); }
+.p-record-log >.wrap:before  { content: ""; display: block; width: 62.4rem; height: 36.1rem; margin: 0 auto 10rem; background: url('../img/partial/bg_record_recorder.png') no-repeat 50%; }
+.p-record-log .logs  { display: flex; justify-content: center; margin: -1rem 0 0 -1rem; }
+.p-record-log .logs >*  { margin: 1rem 0 0 1rem; }
+.p-record-log .logs .button  { font-size: var(--font-lm); line-height: 1.25; display: inline-flex; justify-content: center; align-items: center; vertical-align: middle; min-width: 22.3rem; min-height: 4.6rem; height: 100%; padding: 0.1rem 0.9em; border: 1px solid Transparent; background: var(--color-valid); color: var(--color-white); border-radius: 2em; text-align: center; }

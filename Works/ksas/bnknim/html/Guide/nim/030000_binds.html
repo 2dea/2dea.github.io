@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<title>Binds &middot; BNK NIM-UI GUIDES</title>
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/embed.css" />
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/guide.css" />
+<script type="text/javascript" src="../assets/js/lib.jquery.js"></script>
+<script type="text/javascript" id="Plugin-JS" src="../../../src/assets/js/ui-import.js"></script>
+<script type="text/javascript" src="../../../src/assets/js/ui-extension.js"></script>
+</head>
+
+<body class="_unload Guide-Page">
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" class="div-skip">
+			<span class="o-ogp"><img src="../../../src/assets/img/img_ogp.alt.png" alt="" /></span>
+
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="roles">
+			<div class="div-root">
+				<span class="logo"><span class="inner">BNK NIM-UI 스타일가이드</span></span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</header>
+
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="roles">
+			<div class="div-nav-local">
+				<ul class="UI_collapse">
+					<li>
+						<a href="../nim/010000_common.html" class="label" aria-expanded="false"><span class="inner">Styles</span></a>
+
+						<ul>
+							<li><a href="../nim/010000_common.html" class="label"><span class="inner">Common</span></a></li>
+							<li><a href="../nim/010010_color.html" class="label"><span class="inner">Color</span></a></li>
+							<li><a href="../nim/010020_text.html" class="label"><span class="inner">Text</span></a></li>
+							<li><a href="../nim/010030_table.html" class="label"><span class="inner">Table</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../nim/020000_button.html" class="label" aria-expanded="false"><span class="inner">Partial</span></a>
+
+						<ul>
+							<li><a href="../nim/020000_button.html" class="label"><span class="inner">Button</span></a></li>
+							<li><a href="../nim/020010_form.html" class="label"><span class="inner">Form</span></a></li>
+							<li><a href="../nim/020020_icon.html" class="label"><span class="inner">Icon</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../nim/030000_binds.html" class="label" aria-expanded="true" aria-current="true"><span class="inner">Component</span></a>
+
+						<ul>
+							<li><a href="../nim/030000_binds.html" class="label" aria-current="true"><span class="inner">Binds</span></a></li>
+							<li><a href="../nim/030010_boxes.html" class="label"><span class="inner">Boxes</span></a></li>
+							<li><a href="../nim/030020_heading.html" class="label"><span class="inner">Heading</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-hide"><a href="#Go-Navigator" title="전체메뉴 숨기기"><i aria-hidden="true"></i><span class="inner">닫기</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</nav>
+
+	<!-- /* Container { @UX } -->
+	<div role="main" id="Center" class="dom-main">
+		<div class="roles">
+			<div class="div-title">
+				<h1 class="o-heading1"><span class="inner">Binds</span></h1>
+			</div>
+
+			<!-- /* Contents { @UX } -->
+			<div class="div-contents">
+
+				<div class="o-section">
+					<h2 class="o-heading2">summary</h2>
+
+					<div class="go-box type-global">
+						summary
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">markup</h2>
+
+					<div class="gm-viewsrc">
+						<pre class="go-viewsrc"><code class="language-twig">&lt;div class="m-binds">
+    &lt;span class="wrap _start">
+        &lt;span class="item">&lt;button type="button" class="o-button _normal">&lt;span class="inner">화면Action&lt;/span>&lt;/button>&lt;/span>
+        &lt;span class="item">&lt;button type="button" class="o-button _normal">&lt;span class="inner">화면Action&lt;/span>&lt;/button>&lt;/span>
+    &lt;/span>
+    &lt;span class="wrap">
+        &lt;span class="item">&lt;button type="button" class="o-button _normal">&lt;span class="inner">서버Action&lt;/span>&lt;/button>&lt;/span>
+        &lt;span class="item">&lt;button type="button" class="o-button _cancel">&lt;span class="inner">서버Action&lt;/span>&lt;/button>&lt;/span>
+        &lt;span class="item">&lt;button type="button" class="o-button _confirm">&lt;span class="inner">서버Action&lt;/span>&lt;/button>&lt;/span>
+        &lt;span class="item">&lt;button type="button" class="o-button _submit">&lt;span class="inner">서버Action&lt;/span>&lt;/button>&lt;/span>
+    &lt;/span>
+&lt;/div&gt;
+
+</code></pre>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">preview</h2>
+
+					<div class="go-box type-global">
+						<div class="m-binds">
+							<span class="wrap _start">
+								<span class="item"><button type="button" class="o-button _normal"><span class="inner">화면Action</span></button></span>
+								<span class="item"><button type="button" class="o-button _normal"><span class="inner">화면Action</span></button></span>
+							</span>
+							<span class="wrap">
+								<span class="item"><button type="button" class="o-button _normal"><span class="inner">서버Action</span></button></span>
+								<span class="item"><button type="button" class="o-button _cancel"><span class="inner">서버Action</span></button></span>
+								<span class="item"><button type="button" class="o-button _confirm"><span class="inner">서버Action</span></button></span>
+								<span class="item"><button type="button" class="o-button _submit"><span class="inner">서버Action</span></button></span>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">description</h2>
+
+					<div class="go-box type-global">
+						description
+					</div>
+				</div>
+
+			</div>
+			<!-- */ Contents { @UX } -->
+		</div>
+	</div>
+	<!-- */ Container { @UX } -->
+
+</div>
+
+<script type="text/javascript" src="../assets/js/lib.highlight.js"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

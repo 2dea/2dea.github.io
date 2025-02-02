@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<title>PAGE_TITLE &middot; BNK NIM-UI GUIDES</title>
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/embed.css" />
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/guide.css" />
+<script type="text/javascript" src="../assets/js/lib.jquery.js"></script>
+<script type="text/javascript" id="Plugin-JS" src="../../../src/assets/js/ui-import.js"></script>
+<script type="text/javascript" src="../../../src/assets/js/ui-extension.js"></script>
+</head>
+
+<body class="_unload Guide-Page">
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" class="div-skip">
+			<span class="o-ogp"><img src="../../../src/assets/img/img_ogp.alt.png" alt="" /></span>
+
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="roles">
+			<div class="div-root">
+				<span class="logo"><span class="inner">BNK NIM-UI 스타일가이드</span></span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</header>
+
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="roles">
+			<div class="div-nav-local">
+				<ul class="UI_collapse">
+					<li>
+						<a href="../nim/010000_common.html" class="label" aria-expanded="false"><span class="inner">Styles</span></a>
+
+						<ul>
+							<li><a href="../nim/010000_common.html" class="label"><span class="inner">Common</span></a></li>
+							<li><a href="../nim/010010_color.html" class="label"><span class="inner">Color</span></a></li>
+							<li><a href="../nim/010020_text.html" class="label"><span class="inner">Text</span></a></li>
+							<li><a href="../nim/010030_table.html" class="label"><span class="inner">Table</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../nim/020000_button.html" class="label" aria-expanded="true" aria-current="true"><span class="inner">Partial</span></a>
+
+						<ul>
+							<li><a href="../nim/020000_button.html" class="label"><span class="inner">Button</span></a></li>
+							<li><a href="../nim/020010_form.html" class="label" aria-current="true"><span class="inner">Form</span></a></li>
+							<li><a href="../nim/020020_icon.html" class="label"><span class="inner">Icon</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../nim/030000_binds.html" class="label" aria-expanded="false"><span class="inner">Component</span></a>
+
+						<ul>
+							<li><a href="../nim/030000_binds.html" class="label"><span class="inner">Binds</span></a></li>
+							<li><a href="../nim/030010_boxes.html" class="label"><span class="inner">Boxes</span></a></li>
+							<li><a href="../nim/030020_heading.html" class="label"><span class="inner">Heading</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-hide"><a href="#Go-Navigator" title="전체메뉴 숨기기"><i aria-hidden="true"></i><span class="inner">닫기</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</nav>
+
+	<!-- /* Container { @UX } -->
+	<div role="main" id="Center" class="dom-main">
+		<div class="roles">
+			<div class="div-title">
+				<h1 class="o-heading1"><span class="inner">PAGE_TITLE</span></h1>
+			</div>
+
+			<!-- /* Contents { @UX } -->
+			<div class="div-contents">
+
+				<div class="o-section">
+					<h2 class="o-heading2">summary</h2>
+
+					<div class="go-box type-global">
+						summary
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">markup</h2>
+
+					<div class="gm-viewsrc">
+						<pre class="go-viewsrc"><code class="language-twig">&lt;div class="m-data-form type-global">
+	&lt;table>
+		&lt;colgroup>
+			&lt;col class="c-form-header is-group" style="width:2%;" />
+			&lt;col class="c-form-header" style="width:10%;" />
+			&lt;col style="width:auto;" />
+		&lt;/colgroup>
+
+		&lt;tbody>
+			&lt;tr>
+				&lt;th rowspan="2">리스크 검토&lt;/th>
+				&lt;th>리스크검토의견&lt;em class="o-require-label">&lt;span class="inner">(필수)&lt;/span>&lt;/em>&lt;/th>
+				&lt;td colspan="3">
+					&lt;div class="m-fields">
+						&lt;div class="item">
+							&lt;span class="o-form _input">
+								&lt;textarea cols="20" rows="5" placeholder="" class="bind">ELF 상품의 경우 발생회사 default 리스크가 중요하며, 발생회사의 안정성을 위해 관련 내규에서 개별 상품에 대한 발행회사의 신용등급을 A이상으로 제한하고 있음&lt;/textarea>&lt;i aria-hidden="true">&lt;/i>
+							&lt;/span>
+						&lt;/div>
+					&lt;/div>
+				&lt;/td>
+			&lt;/tr>
+			&lt;tr>
+				&lt;th>첨부파일&lt;/th>
+				&lt;td colspan="3">
+					&lt;div class="m-fields">
+						&lt;div class="item">
+							&lt;div class="m-attach type-global">
+								&lt;div class="binds">
+									&lt;span class="item">&lt;button type="button" class="o-button">&lt;span class="inner">파일첨부&lt;/span>&lt;/button>&lt;/span>
+									&lt;span class="item">&lt;button type="button" class="o-button">&lt;span class="inner">삭제&lt;/span>&lt;/button>&lt;/span>
+								&lt;/div>
+
+								&lt;div class="cautions">
+									&lt;div class="wrap">
+										&lt;p>&lt;strong>10MB 미만의 파일만 등록 가능합니다.&lt;/strong>&lt;/p>
+									&lt;/div>
+								&lt;/div>
+
+								&lt;dl class="lists">
+									&lt;dt class="row header">
+										&lt;span class="cell select">&lt;label class="o-check">&lt;input type="checkbox" value="" />&lt;span class="label _hidden">전체선택&lt;/span>&lt;/label>&lt;/span>
+										&lt;span class="cell file">파일명&lt;/span>
+										&lt;span class="cell size">용량&lt;/span>
+									&lt;/dt>
+									&lt;!-- /* nodata 예시 { @DEV } -->
+									&lt;dd class="row nodata">
+										&lt;p class="cell">등록된 파일이 없습니다.&lt;/p>
+									&lt;/dd>
+									&lt;!-- */ nodata 예시 { @DEV } -->
+									&lt;dd class="row">
+										&lt;span class="cell select">&lt;label class="o-check">&lt;input type="checkbox" value="" checked="checked" />&lt;span class="label _hidden">선택&lt;/span>&lt;/label>&lt;/span>
+										&lt;strong class="cell file">&lt;span class="inner">붙임_1.【2021-비예금(위)-001】비예금상품 선정위원회 심의_리스크검토.docx&lt;/span>&lt;/strong>
+										&lt;span class="cell size">1.63 MB&lt;/span>
+									&lt;/dd>
+								&lt;/dl>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/td>
+			&lt;/tr>
+		&lt;/tbody>
+	&lt;/table>
+&lt;/div&gt;
+</code></pre>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">preview</h2>
+
+					<div class="go-box type-global">
+						preview
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">description</h2>
+
+					<div class="go-box type-global">
+						description
+					</div>
+				</div>
+
+			</div>
+			<!-- */ Contents { @UX } -->
+		</div>
+	</div>
+	<!-- */ Container { @UX } -->
+
+</div>
+
+<script type="text/javascript" src="../assets/js/lib.highlight.js"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

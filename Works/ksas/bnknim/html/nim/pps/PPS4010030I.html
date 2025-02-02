@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<title>심의결과 등록 &middot; BNK 비예금상품 통합관리시스템</title>
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/embed.css" />
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/common.css" />
+<script type="text/javascript" id="Plugin-JS" src="../../../src/assets/js/ui-import.js"></script>
+<script type="text/javascript" src="../../../src/assets/js/ui-extension.js"></script>
+</head>
+
+<body>
+<div class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" class="div-skip">
+			<span class="o-ogp"><img src="../../../src/assets/img/img_ogp.alt.png" alt="" /></span>
+
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="roles">
+			<div class="div-root">
+				<span class="logo"><span class="inner"><em class="symbol">BNK</em> 금융지주</span></span>
+				<strong class="system"><span class="inner">비예금상품 통합 관리 시스템</span></strong>
+			</div>
+
+			<div class="div-account">
+				<strong class="data">
+					<span class="name">홍길동</span>
+					<span class="div">(<span>WM상품부</span>)</span>
+				</strong>
+				<span class="binds">
+					<button type="button" class="signout"><i aria-hidden="true"></i><span class="inner">로그아웃</span></button>
+				</span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</header>
+
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="roles">
+			<div class="div-root">
+				<a href="#/Dashboard" class="label root" aria-current="true"><span class="inner">Dashboard</span></a><!-- 현재페이지 'a[aria-current="true"]' { @DEV } -->
+			</div>
+
+			<div class="div-nav-local">
+				<ul class="UI_collapse">
+					<li>
+						<a href="../../html/nim/pps/PPS1010010I.html" class="label" aria-expanded="false"><span class="inner">상품기획선정</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPS1010010I.html" class="label"><span class="inner">심의 신청</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPS1010010I.html" class="label"><span class="inner">심의 신청(개별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPS1010020I.html" class="label"><span class="inner">심의 신청(포괄)</span></a></li>
+									<li><a href="../../html/nim/pps/PPS1010030I.html" class="label"><span class="inner">심의 신청(기타)</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPS3010010M.html" class="label"><span class="inner">리스크 검토</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPS2010010M.html" class="label"><span class="inner">심의진행내역 조회</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPS5010010M.html" class="label"><span class="inner">심의결과내역 조회</span></a>
+							<li>
+								<a href="../../html/nim/pps/PPS6010010M.html" class="label"><span class="inner">위원회/협의회 조직 관리</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPS6010010M.html" class="label"><span class="inner">위원회구성원 관리</span></a></li>
+									<li><a href="../../html/nim/pps/PPS6020010M.html" class="label"><span class="inner">협의회구성원 관리</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/pps/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">판매사후관리</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">상품현황</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">조건부승인 관리</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">승인한도 관리</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도(자산운용사)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도(보험사별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도(계열사별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도(신탁세부운용)</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">해피콜/녹취현황</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">해피콜현황</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">녹취현황</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">미스터리쇼핑</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">미스터리쇼핑(지점별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">미스터리쇼핑(직원별)</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">금융투자상품</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">금융투자상품 출시</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">금융투자상품 출시(지점별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">금융투자상품 출시(직원별)</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/pps/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">조기경보</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">조기경보 점검</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">필터링 관리</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">경고등급상품현황</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">스코어링 관리</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/pps/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">(세부)상품관리</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">상품 등록</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">미등록세부상품 관리</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">세부상품현황</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">심의별상품 매핑</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/pps/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">보고서</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">보고서</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">분기보고서</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">반기보고서</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">상시보고서</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/bbs/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">업무지원</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/bbs/BBS1010010M.html" class="label"><span class="inner">알림관리</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/bbs/BBS1010010M.html" class="label"><span class="inner">메신저 알림 관리</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/bbs/PPSDLA01D1.html" class="label"><span class="inner">자격증</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/bbs/PPSDLA01D1.html" class="label"><span class="inner">직원 자격증 관리</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#/sample/Code" class="label"><span class="inner">SAMPLE</span></a>
+
+						<ul>
+							<li>
+								<a href="#/sample/Code" class="label"><span class="inner">SAMPLE_PAGES</span></a>
+
+								<ul>
+									<li><a href="#/sample/Code" class="label"><span class="inner">기본CRUD(팝업창수정)</span></a></li>
+									<li><a href="#/sample/CodeGrid" class="label"><span class="inner">기본CRUD(그리드수정)</span></a></li>
+									<li><a href="#/sample/CodePage" class="label"><span class="inner">기본CRUD (화면전환수정)</span></a></li>
+									<li><a href="#/sample/DatePickerSample" class="label"><span class="inner">DatePicker 샘플</span></a></li>
+									<li><a href="#/sample/CodeListSample" class="label"><span class="inner">CodeList 샘플</span></a></li>
+									<li><a href="#/sample/FileUploadSample" class="label"><span class="inner">파일업로드 샘플</span></a></li>
+									<li><a href="#/sample/PaginationSample" class="label"><span class="inner">Pagination 샘플</span></a></li>
+									<li><a href="#/sample/ValidateSample" class="label"><span class="inner">Validate 샘플</span></a></li>
+									<li><a href="#/sample/WindowPortalSample" class="label"><span class="inner">윈도우팝업창 샘플</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#/sample/Code" class="label"><span class="inner">TEST_PAGES</span></a>
+
+								<ul>
+									<li><a href="#/nim/pps/TestGrid" class="label"><span class="inner">테스트그리드</span></a></li>
+									<li><a href="#/sample/PPSDemo" class="label"><span class="inner">심의진행내역조회</span></a></li>
+									<li><a href="#/nim/pps/RiskRegister" class="label"><span class="inner">리스크 검토의견 등록</span></a></li>
+									<li><a href="#/nim/pps/PPSDLA01D1" class="label"><span class="inner">심의신청</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-hide"><a href="#Go-Navigator" title="전체메뉴 숨기기"><i aria-hidden="true"></i><span class="inner">닫기</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</nav>
+
+
+	<!-- /* Container { @DEV } -->
+	<div role="main" id="Center" class="dom-main">
+		<div class="roles">
+			<div class="div-path" aria-label="Breadcrumb trail">
+				<span class="breadcrumb">
+					<span class="item root"><span class="inner">Home</span></span> <span class="sep">&gt;</span>
+					<span class="item subs">DEPTH_LEVEL1</span> <span class="sep">&gt;</span>
+					<span class="item subs">DEPTH_LEVEL2</span> <span class="sep">&gt;</span>
+					<strong class="item page" aria-current="page">PAGE_TITLE</strong>
+				</span>
+			</div>
+
+			<div class="div-title">
+				<h1 class="o-heading1"><span class="inner">심의결과 등록</span> <span class="binds"><button type="button" title="이전페이지로 이동" class="o-image-button is-back"><span class="inner">이전</span></button></span></h1>
+			</div>
+
+			<!-- /* Contents { @DEV } -->
+			<div class="div-contents">
+				<div class="o-section">
+					<h2 class="o-heading2"><span class="inner">심의결과</span></h2>
+
+					<div class="m-binds">
+						<span class="wrap">
+							<span class="item"><button type="button" class="o-button _cancel"><span class="inner">부결</span></button></span>
+							<span class="item"><button type="button" class="o-button _transmit"><span class="inner">조건부승인</span></button></span>
+							<span class="item"><button type="button" class="o-button _confirm"><span class="inner">가결</span></button></span>
+						</span>
+					</div>
+
+					<div class="m-data-form type-global">
+						<table>
+							<colgroup>
+								<col class="c-form-header is-group" style="width:6%;" />
+								<col class="c-form-header" style="width:6%;" />
+								<col style="width:auto;" />
+								<col class="c-form-header" style="width:12%;" />
+								<col style="width:auto;" />
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th rowspan="2">회의결과</th>
+									<th>결과자료</th>
+									<td colspan="3">
+										<div class="m-attach type-global">
+											<div class="binds">
+												<span class="item"><button type="button" class="o-button"><span class="inner">파일추가</span></button></span>
+												<span class="item"><button type="button" class="o-button"><span class="inner">파일삭제</span></button></span>
+											</div>
+
+											<div class="cautions">
+												<div class="wrap">
+													<p><strong>10MB 미만의 파일만 등록 가능합니다.</strong></p>
+												</div>
+											</div>
+
+											<dl class="lists">
+												<dt class="row header">
+													<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">전체선택</span></label></span>
+													<span class="cell file">파일명</span>
+													<span class="cell size">용량</span>
+												</dt>
+												<!-- /* nodata 예시 { @DEV } -->
+												<dd class="row nodata">
+													<p class="cell">등록된 파일이 없습니다.</p>
+												</dd>
+												<!-- */ nodata 예시 { @DEV } -->
+												<dd class="row">
+													<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+													<strong class="cell file"><a href="javascript:" class="inner">2월4주_소식지.png</a></strong>
+													<span class="cell size">1.63 MB</span>
+												</dd>
+												<dd class="row">
+													<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+													<strong class="cell file"><a href="javascript:" class="inner">esang.jpg</a></strong>
+													<span class="cell size">47.28 KB</span>
+												</dd>
+												<dd class="row">
+													<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+													<strong class="cell file"><a href="javascript:" class="inner">개발환경.txt</a></strong>
+													<span class="cell size">2.87 KB</span>
+												</dd>
+												<dd class="row">
+													<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+													<strong class="cell file"><a href="javascript:" class="inner">bg_login.jpg</a></strong>
+													<span class="cell size">166.82 KB</span>
+												</dd>
+												<dd class="row">
+													<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+													<strong class="cell file"><a href="javascript:" class="inner">test.PNG</a></strong>
+													<span class="cell size">360.02 KB</span>
+												</dd>
+												<dd class="row">
+													<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+													<strong class="cell file"><span class="inner">새로 첨부된 파일.txt</span></strong>
+													<span class="cell size">360.02 KB</span>
+												</dd>
+											</dl>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>결재결과 상세</th>
+									<td colspan="3">
+										<div class="o-section">
+											<h3 class="o-heading3"><span class="inner">위원회 심의 결과</span></h3>
+
+											<div class="m-grid-table type-global">
+												<div class="rg-root rg-grid">
+													<table>
+														<colgroup>
+															<col style="width:18%;" />
+															<col style="width:20%;" />
+															<col style="width:13%;" />
+															<col style="width:auto;" />
+														</colgroup>
+
+														<thead>
+															<tr>
+																<th scope="col">구분</th>
+																<th scope="col">결과</th>
+																<th scope="col">단독거부권</th>
+																<th scope="col">심의 의견</th>
+															</tr>
+														</thead>
+
+														<tbody>
+															<tr>
+																<td>CCO</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" class="bind">
+																			<option value="" disabled="disabled" hidden="hidden" selected="selected">가결/부결/불참</option>
+																			<option value="VALUE">가결</option>
+																			<option value="VALUE">부결</option>
+																			<option value="VALUE">불참</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" disabled="disabled" class="bind">
+																			<option value="VALUE" selected="selected">미사용</option>
+																			<option value="VALUE">사용</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _file g-size1">
+																		<input type="file" required="required" value="" class="bind" /><i aria-hidden="true"></i>
+																		<span class="button delete"><button type="button" title="파일선택 취소" class="o-image-button is-delete"><span class="inner">삭제</span></button></span>
+																	</span>
+																</td>
+															</tr>
+															<tr>
+																<td>리스크관리본부장</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" class="bind">
+																			<option value="" disabled="disabled" hidden="hidden" selected="selected">가결/부결/불참</option>
+																			<option value="VALUE">가결</option>
+																			<option value="VALUE">부결</option>
+																			<option value="VALUE">불참</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" disabled="disabled" class="bind">
+																			<option value="VALUE" selected="selected">미사용</option>
+																			<option value="VALUE">사용</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _file g-size1">
+																		<input type="file" required="required" value="" class="bind" /><i aria-hidden="true"></i>
+																		<span class="button delete"><button type="button" title="파일선택 취소" class="o-image-button is-delete"><span class="inner">삭제</span></button></span>
+																	</span>
+																</td>
+															</tr>
+															<tr>
+																<td>경영기획본부장</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" class="bind">
+																			<option value="" disabled="disabled" hidden="hidden" selected="selected">가결/부결/불참</option>
+																			<option value="VALUE">가결</option>
+																			<option value="VALUE">부결</option>
+																			<option value="VALUE">불참</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" class="bind">
+																			<option value="VALUE">미사용</option>
+																			<option value="VALUE" selected="selected">사용</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _file g-size1">
+																		<input type="file" required="required" value="" class="bind" /><i aria-hidden="true"></i>
+																		<span class="button delete"><button type="button" title="파일선택 취소" class="o-image-button is-delete"><span class="inner">삭제</span></button></span>
+																	</span>
+																</td>
+															</tr>
+															<tr>
+																<td>경영지원본부장</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" class="bind">
+																			<option value="" disabled="disabled" hidden="hidden" selected="selected">가결/부결/불참</option>
+																			<option value="VALUE">가결</option>
+																			<option value="VALUE">부결</option>
+																			<option value="VALUE">불참</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" disabled="disabled" class="bind">
+																			<option value="VALUE" selected="selected">미사용</option>
+																			<option value="VALUE">사용</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _file g-size1">
+																		<input type="file" required="required" value="" class="bind" /><i aria-hidden="true"></i>
+																		<span class="button delete"><button type="button" title="파일선택 취소" class="o-image-button is-delete"><span class="inner">삭제</span></button></span>
+																	</span>
+																</td>
+															</tr>
+															<tr>
+																<td>WM고객본부장</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" class="bind">
+																			<option value="" disabled="disabled" hidden="hidden" selected="selected">가결/부결/불참</option>
+																			<option value="VALUE">가결</option>
+																			<option value="VALUE">부결</option>
+																			<option value="VALUE">불참</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" disabled="disabled" class="bind">
+																			<option value="VALUE" selected="selected">미사용</option>
+																			<option value="VALUE">사용</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _file g-size1">
+																		<input type="file" required="required" value="" class="bind" /><i aria-hidden="true"></i>
+																		<span class="button delete"><button type="button" title="파일선택 취소" class="o-image-button is-delete"><span class="inner">삭제</span></button></span>
+																	</span>
+																</td>
+															</tr>
+															<tr>
+																<td>자금시장본부장</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" class="bind">
+																			<option value="" disabled="disabled" hidden="hidden" selected="selected">가결/부결/불참</option>
+																			<option value="VALUE">가결</option>
+																			<option value="VALUE">부결</option>
+																			<option value="VALUE">불참</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _select g-size1">
+																		<select required="required" disabled="disabled" class="bind">
+																			<option value="VALUE" selected="selected">미사용</option>
+																			<option value="VALUE">사용</option>
+																		</select><i aria-hidden="true"></i>
+																	</span>
+																</td>
+																<td>
+																	<span class="o-form _file g-size1">
+																		<input type="file" required="required" value="" class="bind" /><i aria-hidden="true"></i>
+																		<span class="button delete"><button type="button" title="파일선택 취소" class="o-image-button is-delete"><span class="inner">삭제</span></button></span>
+																	</span>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2">심의결과</th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select">
+													<select required="required" class="bind">
+														<option value="" disabled="disabled" hidden="hidden" selected="selected">가결/조건부승인/부결</option>
+														<option value="VALUE">가결</option>
+														<option value="VALUE">조건부승인</option>
+														<option value="VALUE">부결</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+
+									<th>판매기간</th>
+									<td>
+										<div class="m-fields">
+											<div class="item m-dates">
+												<div class="mx-datepicker">
+													<input type="text" autocomplete="off" placeholder="시작일" value="2021-07-29" maxlength="8" class="mx-input" />
+												</div>
+
+												<div class="mx-datepicker">
+													<input type="text" autocomplete="off" placeholder="종료일" value="2021-09-30" maxlength="8" class="mx-input" />
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2">심의일자</th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item m-dates">
+												<div class="mx-datepicker">
+													<input type="text" autocomplete="off" placeholder="YYYY-MM-DD" value="2021-07-28" maxlength="8" class="mx-input" />
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<th rowspan="3">조건부승인</th>
+									<th>승인한도</th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item has-pass-items">
+												<span class="o-form _input">
+													<input type="tel" placeholder="" value="45,000,000,000" class="bind g-end c-cols-global" /><i aria-hidden="true"></i>
+													<span class="string units">원</span>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>승인조건</th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" class="bind">총 한도금액을 500억에서 450억으로 50억 감액 필요</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>판매방법 (채널,자격등)</th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" class="bind">○ 판매채널 – 대면 판매(전 영업점), 인터넷뱅킹, 모바일뱅킹 홈페이지 內&#13;○ 판매자격 – 펀드투자권유자문인력, 증권투자권유자문인력, 파생상품투자권유자문인력 자격요건 필요</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+
+
+								<tr>
+									<th colspan="2">부결사유</th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" class="bind">1. 판매자격이 부적격&#13;2. 판매한도가 높음</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2"><span class="inner">심의신청내역</span></h2>
+
+					<div class="m-data-form type-global">
+						<table>
+							<colgroup>
+								<col class="c-form-header is-group" style="width:2%;" />
+								<col class="c-form-header" style="width:10%;" />
+								<col style="width:auto;" />
+								<col class="c-form-header" style="width:12%;" />
+								<col style="width:auto;" />
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th colspan="2">신청부서</th>
+									<td>신탁사업단</td>
+
+									<th>신청자</th>
+									<td>홍길동</td>
+								</tr>
+								<tr>
+									<th colspan="2">심의상품명<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<input type="text" placeholder="" value="ELF 상품(원금 비보장)" disabled="disabled" class="bind" /><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2">상품유형<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="" disabled="disabled" hidden="hidden">선택하세요</option>
+														<option value="VALUE">신탁</option>
+														<option value="VALUE" selected="selected">펀드</option>
+														<option value="VALUE">보험</option>
+														<option value="VALUE">기타</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+
+									<th>상품종류<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="" disabled="disabled" hidden="hidden" selected="selected">선택하세요</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2">위험등급<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="VALUE" selected="selected">1등급(매우높은위험)</option>
+														<option value="VALUE">2등급(높은위험)</option>
+														<option value="VALUE">3등급(다소높은위험)</option>
+														<option value="VALUE">4등급(보통위험)</option>
+														<option value="VALUE">5등급(낮은위험)</option>
+														<option value="VALUE">6등급(매우낮은위험)</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+												<span class="o-form _select">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="VALUE" selected="selected">위원회 전결</option>
+														<option value="VALUE">협의회 전결</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+
+									<th>모집방식<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="" disabled="disabled" hidden="hidden">해당사항없음/공모/사모</option>
+														<option value="VALUE" selected="selected">해당사항없음</option>
+														<option value="VALUE">공모</option>
+														<option value="VALUE">사모</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2" title="최대 손실이 20%초과하는 파생결합증권이나 파생상품 내재 상품 또는 손익구조를 투자자가 이해하기 어려운 상품을 의미">고난도상품 해당여부<em class="o-require-label"><span class="inner">(필수)</span></em> <a href="javascript:" class="o-label is-help"><span class="inner">[도움말]</span></a></th>
+									<td>
+										<div class="m-checks type-inline">
+											<span class="item"><label class="o-check"><input type="radio" name="RADIO1" value="" disabled="disabled" checked="checked" /><span class="label">여</span></label></span>
+											<span class="item"><label class="o-check"><input type="radio" name="RADIO1" value="" disabled="disabled" /><span class="label">부</span></label></span>
+										</div>
+									</td>
+
+									<th title="기초자산이 해외에 존재하며, 해외 유가증권 시장에 상장되어 거래되지 않는 부동산 등 非유동성 자산을 의미">해외대체자산 편입여부<em class="o-require-label"><span class="inner">(필수)</span></em>  <a href="javascript:" class="o-label is-help"><span class="inner">[도움말]</span></a></th>
+									<td>
+										<div class="m-checks type-inline">
+											<span class="item"><label class="o-check"><input type="radio" name="RADIO2" value="" disabled="disabled" /><span class="label">여</span></label></span>
+											<span class="item"><label class="o-check"><input type="radio" name="RADIO2" value="" disabled="disabled" checked="checked" /><span class="label">부</span></label></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th rowspan="2">포괄승인</th>
+									<th>포괄승인 기간<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item m-dates">
+												<div class="mx-datepicker">
+													<input type="text" autocomplete="off" placeholder="시작일" value="2021-07-29" maxlength="8" disabled="disabled" class="mx-input" />
+												</div>
+
+												<div class="mx-datepicker">
+													<input type="text" autocomplete="off" placeholder="종료일" value="2021-09-30" maxlength="8" disabled="disabled" class="mx-input" />
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>포괄승인 사유<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="5" placeholder="" disabled="disabled" class="bind">○ 고객의 수익가치 증대를 위해 금융투자상품 가입 NEEDS 충족&#13;○ 안정적인 채권형 상품 적기 제공&#13;○ 특정금전신탁은 계약시 마다 건별로 승인시 시간 지연에 따른 상품 제공 불가하여 고객 NEEDS 충족 및 적기 제공코자 판매한도 포괄승인 신청함</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th rowspan="8">심의사항</th>
+									<th>총 판매한도<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item has-pass-items">
+												<span class="o-form _input">
+													<input type="tel" placeholder="" value="50,000,000,000" disabled="disabled" class="bind g-end c-cols-global" /><i aria-hidden="true"></i>
+													<span class="string units">원</span>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>판매한도 상세<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">○ 총 판매한도 : 500억원 이내&#13;○ 회사별 판매한도 : 25억원 이내&#13;○ 고객 1인당 판매한도 : 신청의견 참조</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>기초자산 등<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">○ KOSPI200, S&P500, EUROSTOXX 50, HSCEI, NIKKEI225 5개 대표 지수 중 3개 이내로 한정</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>수익구조 등<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">○ Step Down형(1회차 베리어 95% 이하, 만기베리어 65% 이하, 만기 3년이내)&#13;○ 리자드 구조(1~4회차 베리어 95% 이하) 추가 가능&#13;○ 노낙인(NO Knock-In)구조 : 낙인 베리어 조건이 없는 구조</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>판매대상고객군<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="2" placeholder="" disabled="disabled" class="bind">○ 공격투자형</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>판매전략<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">○ 旣 가입 고객 만기매칭 상품 공급&#13;○ 신규 투자시 강화된 판매절차에 따라 완전판매절차 준수 후 판매</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>판매절차<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">○ 비예금상품선정위원회 부의·결정(포괄승인) -&gt; 리스크관리부 사전합의 -&gt; 펀드 상품선정위원회 개최 -&gt; 품의문 결재 -&gt; 금융소비자보호부 사전협의 -&gt; 시행문 발송 -&gt;영업점 판매개시</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>판매방법 (채널,자격등)<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">○ 판매채널 – 대면 판매(전 영업점), 인터넷뱅킹, 모바일뱅킹 홈페이지 內&#13;○ 판매자격 – 펀드투자권유자문인력, 증권투자권유자문인력, 파생상품투자권유자문인력 자격요건 필요</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2">신청의견<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="5" placeholder="" disabled="disabled" class="bind">2003년 공모 ELS가 출시된 이후 ELF는 간접투자상품을 대표하는 상품으로, 당행에서는 2004년 부터 현재까지 판매중에 있으며, 고객의 다양한 금융상품 투자 기회 제공 해왔음.&#13;또한, 최근 저금리, 저성장 기조가 지속됨에 따라 고객들의 금융상품에 대한 NEEDS는 더욱더 다양해 지고 있어, 당 부서에서는 다양한 ELF상품의 적기 출시로 고객만족 경영을 실천하고자 함.</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+											<div class="item">
+												<div class="m-attach type-global">
+													<div class="binds">
+														<span class="item"><button type="button" class="o-button"><span class="inner">파일추가</span></button></span>
+														<span class="item"><button type="button" class="o-button"><span class="inner">파일삭제</span></button></span>
+													</div>
+
+													<div class="cautions">
+														<div class="wrap">
+															<p><strong>10MB 미만의 파일만 등록 가능합니다.</strong></p>
+														</div>
+													</div>
+
+													<dl class="lists">
+														<dt class="row header">
+															<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">전체선택</span></label></span>
+															<span class="cell file">파일명</span>
+															<span class="cell size">용량</span>
+														</dt>
+														<!-- /* nodata 예시 { @DEV } -->
+														<dd class="row nodata">
+															<p class="cell">등록된 파일이 없습니다.</p>
+														</dd>
+														<!-- */ nodata 예시 { @DEV } -->
+														<dd class="row">
+															<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+															<strong class="cell file"><a href="javascript:" class="inner">2월4주_소식지.png</a></strong>
+															<span class="cell size">1.63 MB</span>
+														</dd>
+														<dd class="row">
+															<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+															<strong class="cell file"><a href="javascript:" class="inner">esang.jpg</a></strong>
+															<span class="cell size">47.28 KB</span>
+														</dd>
+														<dd class="row">
+															<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+															<strong class="cell file"><a href="javascript:" class="inner">개발환경.txt</a></strong>
+															<span class="cell size">2.87 KB</span>
+														</dd>
+														<dd class="row">
+															<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+															<strong class="cell file"><a href="javascript:" class="inner">bg_login.jpg</a></strong>
+															<span class="cell size">166.82 KB</span>
+														</dd>
+														<dd class="row">
+															<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+															<strong class="cell file"><a href="javascript:" class="inner">test.PNG</a></strong>
+															<span class="cell size">360.02 KB</span>
+														</dd>
+														<dd class="row">
+															<span class="cell select"><label class="o-check"><input type="checkbox" value="" /><span class="label _hidden">선택</span></label></span>
+															<strong class="cell file"><span class="inner">새로 첨부된 파일.txt</span></strong>
+															<span class="cell size">360.02 KB</span>
+														</dd>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2">리스크 측면 검토 의견 (리스크관리부)</th>
+									<td colspan="3">
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _input">
+													<textarea cols="20" rows="5" placeholder="" disabled="disabled" class="bind">첨부파일 참고</textarea><i aria-hidden="true"></i>
+												</span>
+											</div>
+											<div class="item">
+												<div class="m-attach-list type-global">
+													<dl class="lists">
+														<dt>첨부파일</dt>
+														<!-- /* nodata 예시 { @DEV } -->
+														<dd class="nodata"><p>등록된 파일이 없습니다.</p></dd>
+														<!-- */ nodata 예시 { @DEV } -->
+														<dd><a href="javascript:" class="attached">붙임_2.【2021-비예금(위)-001】비예금상품 선정위원회 심의_리스크검토.docx</a></dd>
+														<dd><a href="javascript:" class="attached">2월4주_소식지.png</a></dd>
+														<dd><a href="javascript:" class="attached">esang.jpg</a></dd>
+														<dd><a href="javascript:" class="attached">개발환경.txt</a></dd>
+														<dd><a href="javascript:" class="attached">bg_login.jpg</a></dd>
+														<dd><a href="javascript:" class="attached">test.PNG</a></dd>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="m-binds">
+						<span class="wrap _start">
+							<span class="item"><button type="button" class="o-button _normal"><span class="inner">이전</span></button></span>
+						</span>
+						<span class="wrap">
+							<span class="item"><button type="button" class="o-button _cancel"><span class="inner">부결</span></button></span>
+							<span class="item"><button type="button" class="o-button _transmit"><span class="inner">조건부승인</span></button></span>
+							<span class="item"><button type="button" class="o-button _confirm"><span class="inner">가결</span></button></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- */ Contents { @DEV } -->
+		</div>
+	</div>
+	<!-- */ Container { @DEV } -->
+
+
+</div>
+</body>
+</html>

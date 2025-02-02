@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" class="noscript">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Untitled &middot; 이데아닷컴</title>
+<style type="text/css">
+html, body { height: 100dvh; margin: 0; }
+#container { height: 100%; position: relative; overflow: hidden; }
+section { width: 100%; /* height: 100vh; */ /* block-size: 100%; */ height: 100dvh; position: absolute; }
+.section01 { background: orange; width: 100%; height: 100%; }
+.section02 { background: yellowgreen; block-overflow: ellipsis; max-lines: 2; }
+.section03 { background: firebrick; }
+.section04 { background: cornflowerblue; }
+.section05 { background: seagreen; }
+</style>
+</head>
+
+<body>
+
+<div class="section01"></div>
+<div id="container">
+  <section class="section02">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세 남산위의 저소나무 철갑을 두른듯 바람서리 불변함은 우리기상일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세 가을하늘 공활한데 높고 구름없이 밝은달은 우리가슴 일편단심일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세 이기상과 이맘으로 충성을 다하여 괴로우나 즐거우나 나라사랑하세 무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세</section>
+  <section class="section03"></section>
+  <section class="section04"></section>
+  <section class="section05"></section>
+</div>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script type="text/ecmascript">
+//<![CDATA[
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.defaults({ease: "power1", duration: 3});
+
+const tl = gsap.timeline();
+tl.from(".section03", {xPercent: -100})
+  .from(".section04", {xPercent: 100})
+  .from(".section05", {yPercent: 100});
+
+ScrollTrigger.create({
+  animation: tl,
+  trigger: "#container",
+  start: "top top", 
+  end: "+=4000",
+  pin: true,
+  scrub: true,
+  anticipatePin: 1
+});
+
+//]]>
+</script>
+
+</body>
+</html>

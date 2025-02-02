@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<title>Form &middot; BNK NIM-UI GUIDES</title>
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/embed.css" />
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/guide.css" />
+<script type="text/javascript" src="../assets/js/lib.jquery.js"></script>
+<script type="text/javascript" id="Plugin-JS" src="../../../src/assets/js/ui-import.js"></script>
+<script type="text/javascript" src="../../../src/assets/js/ui-extension.js"></script>
+</head>
+
+<body class="_unload Guide-Page">
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" class="div-skip">
+			<span class="o-ogp"><img src="../../../src/assets/img/img_ogp.alt.png" alt="" /></span>
+
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="roles">
+			<div class="div-root">
+				<span class="logo"><span class="inner">BNK NIM-UI 스타일가이드</span></span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</header>
+
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="roles">
+			<div class="div-nav-local">
+				<ul class="UI_collapse">
+					<li>
+						<a href="../nim/010000_common.html" class="label" aria-expanded="false"><span class="inner">Styles</span></a>
+
+						<ul>
+							<li><a href="../nim/010000_common.html" class="label"><span class="inner">Common</span></a></li>
+							<li><a href="../nim/010010_color.html" class="label"><span class="inner">Color</span></a></li>
+							<li><a href="../nim/010020_text.html" class="label"><span class="inner">Text</span></a></li>
+							<li><a href="../nim/010030_table.html" class="label"><span class="inner">Table</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../nim/020000_button.html" class="label" aria-expanded="true" aria-current="true"><span class="inner">Partial</span></a>
+
+						<ul>
+							<li><a href="../nim/020000_button.html" class="label"><span class="inner">Button</span></a></li>
+							<li><a href="../nim/020010_form.html" class="label" aria-current="true"><span class="inner">Form</span></a></li>
+							<li><a href="../nim/020020_icon.html" class="label"><span class="inner">Icon</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../nim/030000_binds.html" class="label" aria-expanded="false"><span class="inner">Component</span></a>
+
+						<ul>
+							<li><a href="../nim/030000_binds.html" class="label"><span class="inner">Binds</span></a></li>
+							<li><a href="../nim/030010_boxes.html" class="label"><span class="inner">Boxes</span></a></li>
+							<li><a href="../nim/030020_heading.html" class="label"><span class="inner">Heading</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-hide"><a href="#Go-Navigator" title="전체메뉴 숨기기"><i aria-hidden="true"></i><span class="inner">닫기</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</nav>
+
+	<!-- /* Container { @UX } -->
+	<div role="main" id="Center" class="dom-main">
+		<div class="roles">
+			<div class="div-title">
+				<h1 class="o-heading1"><span class="inner">Form</span></h1>
+			</div>
+
+			<!-- /* Contents { @UX } -->
+			<div class="div-contents">
+
+				<div class="o-section">
+					<h2 class="o-heading2">summary</h2>
+
+					<div class="go-box type-global">
+						폼 영역 정의
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">markup</h2>
+
+					<div class="gm-viewsrc">
+						<pre class="go-viewsrc"><code class="language-twig">&lt;div class="m-data-form type-global">
+    &lt;table>
+        &lt;colgroup>
+            &lt;col class="c-form-header" style="width:12%;" />
+            &lt;col style="width:auto;" />
+            &lt;col class="c-form-header" style="width:12%;" />
+            &lt;col style="width:auto;" />
+        &lt;/colgroup>
+
+        &lt;tbody>
+            &lt;tr>
+                &lt;th>보안요청내용&lt;/th>
+                &lt;td colspan="3">
+                    &lt;div class="m-fields">
+                        &lt;div class="item">
+                            &lt;div class="m-checks type-inline">
+                                &lt;span class="item">&lt;label class="o-check">&lt;input type="radio" name="RADIO3" value="" />&lt;span class="label">보완요청없음&lt;/span>&lt;/label>&lt;/span>
+                                &lt;span class="item">&lt;label class="o-check">&lt;input type="radio" name="RADIO3" value="" checked="checked" />&lt;span class="label">보완요청&lt;/span>&lt;/label>&lt;/span>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div class="item">
+                            &lt;span class="o-form _input">
+                                &lt;textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">신청의견의 첨부파일이 누락된 것 같습니다. 첨부파일을 추가하여 재신청 바랍니다.&lt;/textarea>&lt;i aria-hidden="true">&lt;/i>
+                            &lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;th>심의번호&lt;em class="o-require-label">&lt;span class="inner">(필수)&lt;/span>&lt;/em>&lt;/th>
+                &lt;td colspan="3">
+                    &lt;div class="m-fields">
+                        &lt;div class="item has-pass-items">
+                            &lt;span class="o-form _input">
+                                &lt;input type="tel" placeholder="검색 입력" value="" readonly="readonly" class="bind c-cols-global" />&lt;i aria-hidden="true">&lt;/i>
+                                &lt;span class="button">&lt;button type="button" class="o-button _normal">&lt;span class="inner">검색&lt;/span>&lt;/button>&lt;/span>
+                            &lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;th>심의결과&lt;/th>
+                &lt;td>
+                    &lt;div class="m-fields">
+                        &lt;div class="item">
+                            &lt;span class="o-form _select">
+                                &lt;select required="required" disabled="disabled" class="bind">
+                                    &lt;option value="" disabled="disabled" hidden="hidden" selected="selected">승인/조건부승인/부결&lt;/option>
+                                    &lt;option value="VALUE">승인&lt;/option>
+                                    &lt;option value="VALUE">조건부승인&lt;/option>
+                                    &lt;option value="VALUE">부결&lt;/option>
+                                &lt;/select>&lt;i aria-hidden="true">&lt;/i>
+                            &lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+
+                &lt;th>판매기간&lt;/th>
+                &lt;td>
+                    &lt;div class="m-fields">
+                        &lt;div class="item m-dates">
+                            &lt;div class="mx-datepicker">
+                                &lt;input type="text" autocomplete="off" placeholder="시작일" value="2021-07-29" maxlength="8" disabled="disabled" class="mx-input" />
+                            &lt;/div>
+
+                            &lt;div class="mx-datepicker">
+                                &lt;input type="text" autocomplete="off" placeholder="종료일" value="2021-09-30" maxlength="8" disabled="disabled" class="mx-input" />
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;th>심의일자&lt;/th>
+                &lt;td colspan="3">
+                    &lt;div class="m-fields">
+                        &lt;div class="item m-dates">
+                            &lt;div class="mx-datepicker">
+                                &lt;input type="text" autocomplete="off" placeholder="YYYY-MM-DD" value="2021-07-28" maxlength="8" disabled="disabled" class="mx-input" />
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;th>승인한도&lt;/th>
+                &lt;td colspan="3">
+                    &lt;div class="m-fields">
+                        &lt;div class="item has-pass-items">
+                            &lt;span class="o-form _input">
+                                &lt;input type="tel" placeholder="" value="45,000,000,000" disabled="disabled" class="bind g-end c-cols-global" />&lt;i aria-hidden="true">&lt;/i>
+                                &lt;span class="string units">원&lt;/span>
+                            &lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;th>판매채널&lt;/th>
+                &lt;td colspan="3">
+                    &lt;div class="m-fields">
+                        &lt;div class="item">
+                            &lt;span class="o-form _input">
+                                &lt;textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">○ 판매채널 – 대면 판매(전 영업점), 인터넷뱅킹, 모바일뱅킹 홈페이지 內&#13;○ 판매자격 – 펀드투자권유자문인력, 증권투자권유자문인력, 파생상품투자권유자문인력 자격요건 필요&lt;/textarea>&lt;i aria-hidden="true">&lt;/i>
+                            &lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+            &lt;/tr>
+            &lt;tr>
+                &lt;th>최종등급&lt;/th>
+                &lt;td colspan="3">
+                    &lt;div class="m-fields">
+                        &lt;div class="item has-pass-items">
+                            &lt;span class="string">우수/양호/보통&lt;/span>
+                            &lt;span class="o-form _select">
+                                &lt;select required="required" class="bind">
+                                    &lt;option value="VALUE">주의&lt;/option>
+                                    &lt;option value="VALUE" selected="selected">경고&lt;/option>
+                                &lt;/select>&lt;i aria-hidden="true">&lt;/i>
+                            &lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+            &lt;tr>
+                &lt;th>시장요인 지수&lt;/th>
+                &lt;td>
+                    &lt;div class="m-fields">
+                        &lt;div class="item has-pass-items">
+                            &lt;span class="o-form _select">
+                                &lt;select required="required" class="bind c-cols-global">
+                                    &lt;option value="VALUE">최근입력값사용&lt;/option>
+                                    &lt;option value="VALUE" selected="selected">직접입력&lt;/option>
+                                &lt;/select>&lt;i aria-hidden="true">&lt;/i>
+                            &lt;/span>
+
+                            &lt;span class="o-form _input">
+                                &lt;input type="text" placeholder="" value="15.83" class="bind g-end c-cols-percentage">&lt;i aria-hidden="true">&lt;/i>
+                            &lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+
+                &lt;th>투자전략 변동&lt;/th>
+                &lt;td>
+                    &lt;div class="m-fields">
+                        &lt;div class="item has-pass-items">
+                            &lt;span class="o-form _select">
+                                &lt;select required="required" class="bind c-cols-global">
+                                    &lt;option value="VALUE" selected="selected">최근입력값사용&lt;/option>
+                                    &lt;option value="VALUE">직접입력&lt;/option>
+                                &lt;/select>&lt;i aria-hidden="true">&lt;/i>
+                            &lt;/span>
+
+                            &lt;span class="o-form _input">
+                                &lt;input type="text" placeholder="" value="" disabled="disabled" class="bind g-end c-cols-percentage">&lt;i aria-hidden="true">&lt;/i>
+                            &lt;/span>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/td>
+            &lt;/tr>
+        &lt;/tbody>
+    &lt;/table>
+&lt;/div&gt;
+
+</code></pre>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">preview</h2>
+
+					<div class="go-box type-global">
+						<div class="m-data-form type-global">
+							<table>
+								<colgroup>
+									<col class="c-form-header" style="width:12%;" />
+									<col style="width:auto;" />
+									<col class="c-form-header" style="width:12%;" />
+									<col style="width:auto;" />
+								</colgroup>
+
+								<tbody>
+									<tr>
+										<th>보안요청내용</th>
+										<td colspan="3">
+											<div class="m-fields">
+												<div class="item">
+													<div class="m-checks type-inline">
+														<span class="item"><label class="o-check"><input type="radio" name="RADIO3" value="" /><span class="label">보완요청없음</span></label></span>
+														<span class="item"><label class="o-check"><input type="radio" name="RADIO3" value="" checked="checked" /><span class="label">보완요청</span></label></span>
+													</div>
+												</div>
+												<div class="item">
+													<span class="o-form _input">
+														<textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">신청의견의 첨부파일이 누락된 것 같습니다. 첨부파일을 추가하여 재신청 바랍니다.</textarea><i aria-hidden="true"></i>
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>심의번호<em class="o-require-label"><span class="inner">(필수)</span></em></th>
+										<td colspan="3">
+											<div class="m-fields">
+												<div class="item has-pass-items">
+													<span class="o-form _input">
+														<input type="tel" placeholder="검색 입력" value="" readonly="readonly" class="bind c-cols-global" /><i aria-hidden="true"></i>
+														<span class="button"><button type="button" class="o-button _normal"><span class="inner">검색</span></button></span>
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>심의결과</th>
+										<td>
+											<div class="m-fields">
+												<div class="item">
+													<span class="o-form _select">
+														<select required="required" disabled="disabled" class="bind">
+															<option value="" disabled="disabled" hidden="hidden" selected="selected">승인/조건부승인/부결</option>
+															<option value="VALUE">승인</option>
+															<option value="VALUE">조건부승인</option>
+															<option value="VALUE">부결</option>
+														</select><i aria-hidden="true"></i>
+													</span>
+												</div>
+											</div>
+										</td>
+
+										<th>판매기간</th>
+										<td>
+											<div class="m-fields">
+												<div class="item m-dates">
+													<div class="mx-datepicker">
+														<input type="text" autocomplete="off" placeholder="시작일" value="2021-07-29" maxlength="8" disabled="disabled" class="mx-input" />
+													</div>
+
+													<div class="mx-datepicker">
+														<input type="text" autocomplete="off" placeholder="종료일" value="2021-09-30" maxlength="8" disabled="disabled" class="mx-input" />
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>심의일자</th>
+										<td colspan="3">
+											<div class="m-fields">
+												<div class="item m-dates">
+													<div class="mx-datepicker">
+														<input type="text" autocomplete="off" placeholder="YYYY-MM-DD" value="2021-07-28" maxlength="8" disabled="disabled" class="mx-input" />
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>승인한도</th>
+										<td colspan="3">
+											<div class="m-fields">
+												<div class="item has-pass-items">
+													<span class="o-form _input">
+														<input type="tel" placeholder="" value="45,000,000,000" disabled="disabled" class="bind g-end c-cols-global" /><i aria-hidden="true"></i>
+														<span class="string units">원</span>
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>판매채널</th>
+										<td colspan="3">
+											<div class="m-fields">
+												<div class="item">
+													<span class="o-form _input">
+														<textarea cols="20" rows="3" placeholder="" disabled="disabled" class="bind">○ 판매채널 – 대면 판매(전 영업점), 인터넷뱅킹, 모바일뱅킹 홈페이지 內&#13;○ 판매자격 – 펀드투자권유자문인력, 증권투자권유자문인력, 파생상품투자권유자문인력 자격요건 필요</textarea><i aria-hidden="true"></i>
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>최종등급</th>
+										<td colspan="3">
+											<div class="m-fields">
+												<div class="item has-pass-items">
+													<span class="string">우수/양호/보통</span>
+													<span class="o-form _select">
+														<select required="required" class="bind">
+															<option value="VALUE">주의</option>
+															<option value="VALUE" selected="selected">경고</option>
+														</select><i aria-hidden="true"></i>
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>시장요인 지수</th>
+										<td>
+											<div class="m-fields">
+												<div class="item has-pass-items">
+													<span class="o-form _select">
+														<select required="required" class="bind c-cols-global">
+															<option value="VALUE">최근입력값사용</option>
+															<option value="VALUE" selected="selected">직접입력</option>
+														</select><i aria-hidden="true"></i>
+													</span>
+
+													<span class="o-form _input">
+														<input type="text" placeholder="" value="15.83" class="bind g-end c-cols-percentage"><i aria-hidden="true"></i>
+													</span>
+												</div>
+											</div>
+										</td>
+
+										<th>투자전략 변동</th>
+										<td>
+											<div class="m-fields">
+												<div class="item has-pass-items">
+													<span class="o-form _select">
+														<select required="required" class="bind c-cols-global">
+															<option value="VALUE" selected="selected">최근입력값사용</option>
+															<option value="VALUE">직접입력</option>
+														</select><i aria-hidden="true"></i>
+													</span>
+
+													<span class="o-form _input">
+														<input type="text" placeholder="" value="" disabled="disabled" class="bind g-end c-cols-percentage"><i aria-hidden="true"></i>
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">description</h2>
+
+					<div class="go-box type-global">
+						-
+					</div>
+				</div>
+
+			</div>
+			<!-- */ Contents { @UX } -->
+		</div>
+	</div>
+	<!-- */ Container { @UX } -->
+
+</div>
+
+<script type="text/javascript" src="../assets/js/lib.highlight.js"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

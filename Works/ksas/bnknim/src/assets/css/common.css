@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*! 
+ ** [BNK 비예금상품 내부통제관리시스템] Common-Local CSS
+ * Author   : KSASolution Front-end UX.Div
+ * Create   : 2021-08-12 | 2dea; ego@2dea.com
+ * Update   : 2021-08-12 | 2dea
+ * Comments : -
+ */
+
+
+/** Import Rules
+ --------------- */
+
+@import url('./plugins/swiper.css');
+@import url('./plugins/Chart.css');
+@import url('./rewrite.css');
+
+@import url('./module.css');
+@import url('./layout.css');
+@import url('./function.css');
+@import url('./index.css');
+@import url('./content.css');
+/* @import url('./theme.css'); */

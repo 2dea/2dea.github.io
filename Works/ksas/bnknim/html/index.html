@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width" />
+<title>NIM-UI 마크업 리스트</title>
+<script type="text/ecmascript">
+//<![CDATA[
+
+	if( window.NodeList && !NodeList.prototype.forEach ) {
+		NodeList.prototype.forEach = Array.prototype.forEach;
+	}
+
+	if( !location.pathname.match( /\/html\// ) ) {
+		location.replace('/html/index.html');
+	}
+
+//]]>
+</script>
+<style type="text/css">
+*,  :before,  :after  { box-sizing: border-box; margin: 0; padding: 0; }
+
+html  { font-size: calc(10em / 16); }
+body  { font: 1.6em /1.5 '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif; padding: 1rem; color: #333333; word-wrap: break-word; word-break: break-word; word-break: keep-all; }
+table  { border-collapse: collapse; border-spacing: 0; width: 100%; }
+th,  td { box-sizing: content-box; border: 1px solid; text-align: inherit; }
+
+.o-index-table  { font-size: 1.1rem; table-layout: fixed; clear: both; position: relative; min-width: 100%; width: 1600px; }
+.o-index-table a  { color: Blue; text-decoration: underline; -ms-text-underline-position: below; text-underline-position: under; }
+.o-index-table a:hover,
+.o-index-table a:focus  { color: Red; }
+.o-index-table a[target="page"]:not(:empty):after,
+.o-index-table a[target="ONE_UTILE_VIEWER"]:not(:empty):after  { content: ".html"; }
+.o-index-table:before  { content: ""; display: table-caption; position: sticky; left: 0; top: 0; right: 0; height: 1rem; background: White; }
+.o-index-table caption  { font-weight: 700; font-size: 2.4rem; padding: 0.5em; }
+.o-index-table th,
+.o-index-table th,
+.o-index-table td  { padding: 0.5rem; border-color: #cccccc; }
+.o-index-table thead th  { position: static; position: sticky; top: 0.9rem; background: Black; color: White; text-align: center; }
+.o-index-table tbody th  { font-size: 1.2rem; position: static; position: sticky; top: 3.6rem; background: #555555; color: White; }
+.o-index-table tbody tr:hover  { background-color: Ivory; }
+.o-index-table tbody tr.del  { background-color: #ededed; color: #bbbbbb; }
+.o-index-table tbody td:not(:nth-child(-n+5)):not(:nth-child(n+10))  { padding: 0; text-align: center; }
+.o-index-table tbody td:nth-child(6),
+.o-index-table tbody td:nth-child(7)  { font-family: 'wf-D2Mono', 'D2Coding', 'Consolas', 'Monaco', 'Noto Sans Mono CJK KR', 'Courier New', 'Lucida Console', 'Courier', '돋움체', 'DotumChe', monospace; white-space: nowrap; }
+.o-index-table .note p:not(:empty)  { padding-left: 0.7691em; text-indent: -0.7691em; }
+.o-index-table .note p:not(:empty):before,
+.o-index-table .note p:not(:empty) *,
+.o-index-table .note p:not(:empty):after  { text-indent: 0; }
+.o-index-table .note p:not(:empty):before  { content: "• "; }
+.o-index-table .plan  { color: Gray; }
+.o-index-table .modify  { color: Crimson; }
+.o-index-table .modify1  { color: IndianRed; }
+.o-index-table .strong  { color: Coral; }
+.o-index-table .strong1,
+.o-index-table .em  { color: GoldenRod; }
+</style>
+</head>
+
+<body class="_unload">
+
+<table class="o-index-table">
+	<caption>NIM-UI 마크업 리스트</caption>
+
+	<colgroup>
+		<col style="width:15em;" />
+		<col style="width:15em;" />
+		<col style="width:15em;" />
+		<col style="width:3em;" />
+		<col style="width:15em;" />
+		<col style="width:8em;" />
+		<col style="width:10em;" />
+		<col style="width:6em;" />
+		<col style="width:6em;" />
+		<col style="width:auto;" />
+	</colgroup>
+
+	<thead>
+		<tr>
+			<th scope="col">2Depth</th>
+			<th scope="col">3Depth</th>
+			<th scope="col">4Depth</th>
+			<th scope="col"></th>
+			<th scope="col">화면명</th>
+			<th scope="col" class="scid">화면ID</th>
+			<th scope="col" class="file">파일명</th>
+			<th scope="col" class="name">담당자</th>
+			<th scope="col" class="date">완료일</th>
+			<th scope="col" class="note">비고</th>
+		</tr>
+	</thead>
+
+	<tbody id="menu000">
+		<tr>
+			<th scope="rowgroup" colspan="10">템플릿&amp;가이드(공통)</th>
+		</tr>
+
+		<tr class="DEL">
+			<td>템플릿</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>서브레이아웃</td>
+			<td class="scid">sub_layout</td>
+			<td class="file"><a target="page" href="./nim/_tmp/sub_layout.html">sub_layout</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-08-31</td>
+			<td class="note">
+				<p class="modify">[2021-12-06][화면설계서_v1.4] 심의진행상태 표시 요건 마크업 추가(.dom-main .div-steps)</p>
+				<p class="modify">[2021-11-05] [My 메뉴] 버튼 추가('.dom-header .div-bind >.item.mymenu')</p>
+				<p class="modify">[2021-11-04] 폼필드 유효성 검사 인라인메시지('.o-invalid-label' 요소) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>디폴트서브템플릿</td>
+			<td class="scid">sub_default</td>
+			<td class="file"><a target="page" href="./nim/_tmp/sub_default.html">sub_default</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-08-31</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>디폴트팝업템플릿</td>
+			<td class="scid">pop_default</td>
+			<td class="file"><a target="page" href="./nim/_tmp/pop_default.html">pop_default</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-06</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>공통</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>공통 다이얼로그 팝업</td>
+			<td class="scid">pop_dialog</td>
+			<td class="file"><a target="page" href="./nim/_tmp/pop_dialog.html">pop_dialog</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-06</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>시안</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>시안공유 게이트웨이</td>
+			<td class="scid">-</td>
+			<td class="file"><a target="page" href="./Draft/index.html">./Draft/index</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-24</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>가이드</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>NIM-UI 스타일가이드</td>
+			<td class="scid">-</td>
+			<td class="file"><a target="page" href="./Guide/index.html">./Guide/index</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-29</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+	</tbody>
+
+	<tbody id="menu005">
+		<tr>
+			<th scope="rowgroup" colspan="10">공통</th>
+		</tr>
+
+		<!-- <tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>행번/비밀번호 로그인</td>
+			<td class="scid">CMM101010I</td>
+			<td class="file"><a target="page" href="./nim/cmm/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>로그아웃 </td>
+			<td class="scid">CMM201010I</td>
+			<td class="file"><a target="page" href="./nim/cmm/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>메인(대시보드)</td>
+			<td class="scid">CMM301010M</td>
+			<td class="file"><a target="page" href="./nim/cmm/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr> -->
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>행번/비밀번호 로그인</td>
+			<td class="scid">CMM1010010M</td>
+			<td class="file"><a target="page" href="./nim/cmm/CMM1010010M.html">CMM1010010M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-10-14</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>비밀번호 초기화(본인인증)</td>
+			<td class="scid">CMM1010020M</td>
+			<td class="file"><a target="page" href="./nim/cmm/CMM1010020M.html">CMM1010020M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-10-19</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>비밀번호 초기화(비밀번호 변경)</td>
+			<td class="scid">CMM1010021M</td>
+			<td class="file"><a target="page" href="./nim/cmm/CMM1010021M.html">CMM1010021M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-10-19</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>메인(대시보드)</td>
+			<td class="scid">CMM2010010M</td>
+			<td class="file"><a target="page" href="./nim/cmm/CMM2010010M.html">CMM2010010M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-11-10</td>
+			<td class="note">
+				<p class="modify">[2021-11-18] 그리드테이블 영역 선택('js_selected') 예시 추가</p>
+				<p class="modify">[2021-11-17][디자인확정] &quot;절대수익률&quot; 영역 다이어그램 스크립트 추가(&quot;ui-extension.js&quot;에 작성)</p>
+				<p class="modify">[2021-11-17][디자인확정] &quot;절대수익률&quot; 그리드테이블 높이 조정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>퀵메뉴</td>
+			<td class="scid">CMM2010020M</td>
+			<td class="file"><a target="page" href="./nim/cmm/CMM2010020M.html">CMM2010020M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-11-05</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>메뉴 선택</td>
+			<td class="scid">CMM2010020MP01</td>
+			<td class="file"><a target="page" href="./nim/cmm/CMM2010020MP01.html">CMM2010020MP01</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-11-05</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>에러페이지(공통)</td>
+			<td class="scid">CMM3010010M</td>
+			<td class="file"><a target="page" href="./nim/cmm/CMM3010010M.html">CMM3010010M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-12-07</td>
+			<td class="note">
+				<p class="strong">[2021-12-07][화면ID임의생성] 기획파트 화면목록 적용요</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>랜딩페이지</td>
+			<td class="scid">CMM4010010M</td>
+			<td class="file"><a target="page" href="./nim/cmm/CMM4010010M.html">CMM4010010M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-12-08</td>
+			<td class="note">
+				<p class="strong">[2021-12-07][화면ID임의생성] 기획파트 화면목록 적용요</p>
+			</td>
+		</tr>
+	</tbody>
+
+	<tbody id="menu010">
+		<tr>
+			<th scope="rowgroup" colspan="10">상품기획선정</th>
+		</tr>
+
+		<tr class="DEL">
+			<td>심의 신청</td>
+			<td>심의 신청(개별)</td>
+			<td></td>
+			<td></td>
+			<td>심의 신청(개별)</td>
+			<td class="scid">PPS1010010I</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS1010010I.html">PPS1010010I</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-08-31</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] '.m-binds .o-button' 클래스네임 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td>임시저장 불러오기</td>
+			<td></td>
+			<td>임시저장 불러오기 (LP)</td>
+			<td class="scid">PPS1010010IP01</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS1010010IP01.html">PPS1010010IP01</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-06</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 하단 버튼레이블 수정</p>
+				<p class="modify1">[2021-09-27] 그리드테이블 nodata 로우 마크업 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td>심의요청 체크리스트</td>
+			<td></td>
+			<td>심의요청 체크리스트 (LP)</td>
+			<td class="scid">PPS1010010IP02</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS1010010IP02.html">PPS1010010IP02</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-06</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 하단 버튼레이블 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td>심의 신청(포괄)</td>
+			<td></td>
+			<td></td>
+			<td>심의 신청(포괄)</td>
+			<td class="scid">PPS1010020I</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS1010020I.html">PPS1010020I</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-08-31</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] '.m-binds .o-button' 클래스네임 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td>심의 신청(기타)</td>
+			<td></td>
+			<td></td>
+			<td>심의 신청(기타)</td>
+			<td class="scid">PPS1010030I</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS1010030I.html">PPS1010030I</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-08-31</td>
+			<td class="note">
+				<p class="modify">[2021-11-15][단위테스트] &quot;리스크 측면 검토 의견&quot; 컬럼 추가</p>
+				<p class="modify">[2021-10-27][디자인고도화] '.m-binds .o-button' 클래스네임 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>심의진행내역 조회(상품부)</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>심의진행내역 조회</td>
+			<td class="scid">PPS2010010M</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS2010010M.html">PPS2010010M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-08-31</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가</p>
+				<p class="modify">[2021-10-27] 그리드테이블 영역 헤딩(&lt;h2 class="o-heading2" /&gt;) 추가</p>
+				<p class="modify1">[2021-10-12] 화면설계서 변경으로 인한 화면 수정</p>
+			</td>
+		</tr>
+		<tr class="del">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의내역 상세(개별)</td>
+			<td class="scid">PPS2010010D</td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[화면통합] PPS2010020D 화면과 통합</p>
+				<p class="strong">[2021-09-28][화면ID변경] PPS2010020D &rarr; PPS2010010D</p>
+				<del><p class="em">[화면통합] PPS2010030D 화면과 통합</p></del>
+			</td>
+		</tr>
+		<tr class="del">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>보고서출력</td>
+			<td class="scid">PPS2010011R</td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[레포트]</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의내역 상세(포괄)</td>
+			<td class="scid">PPS2010020D</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS2010020D.html">PPS2010020D</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-01</td>
+			<td class="note">
+				<p class="modify">[2021-11-15][단위테스트] &quot;심의결과&quot; 영역 &quot;이행일자&quot; &rarr; &quot;이행예정일자&quot; 컬럼명 수정</p>
+				<p class="strong">[2021-09-28][화면ID변경] PPS2010030D &rarr; PPS2010020D</p>
+				<p class="modify1">[2021-09-02] 화면설계서 변경으로 인한 화면 전체수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의내역 상세(기타)</td>
+			<td class="scid">PPS2010030D</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS2010030D.html">PPS2010030D</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-30</td>
+			<td class="note">
+				<p class="em">[2021-09-28][화면추가]</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의보완</td>
+			<td class="scid">PPS2010040U</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS2010040U.html">PPS2010040U</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-01</td>
+			<td class="note">
+				<p class="modify">[2021-11-16][단위테스트] 버튼 레이블 수정(&quot;심의재신청&quot; &rarr; &quot;심의재요청&quot;)</p>
+				<p class="modify">[2021-11-16][단위테스트] 화면 타이틀 수정(&quot;심의내역 보완요청&quot; &rarr; &quot;심의서류 보완&quot;)</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>이행계획작성</td>
+			<td class="scid">PPS2010050I</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS2010050I.html">PPS2010050I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-02</td>
+			<td class="note">
+				<p class="modify">[2021-11-16][단위테스트] 화면 타이틀 수정(&quot;심의내역 조건부승인&quot; &rarr; &quot;이행계획 작성&quot;)</p>
+			</td>
+		</tr>
+		<tr class="del">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>승인장(가결/조건부승인)</td>
+			<td class="scid">PPS2010051R</td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[레포트]</p>
+			</td>
+		</tr>
+		<tr class="del">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>승인장(부결)</td>
+			<td class="scid">PPS2010052R</td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[레포트]</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>심의진행내역 조회(리스크)</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의진행내역 조회</td>
+			<td class="scid">PPS3010010M</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS3010010M.html">PPS3010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-02</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-12] 화면설계서 변경으로 인한 화면 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>리스크검토의견 작성</td>
+			<td class="scid">PPS3010020I</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS3010020I.html">PPS3010020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-03</td>
+			<td class="note">
+				<p class="modify1">[2021-09-27] 타이틀 및 서브타이틀 수정(&quot;리스크검토의견 등록&quot; &rarr; &quot;리스크검토의견 작성&quot; 등)</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>심의진행내역 조회(금소부)</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의진행내역 조회</td>
+			<td class="scid">PPS4010010M</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS4010010M.html">PPS4010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-03</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-12] 화면설계서 변경으로 인한 화면 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의서류 검토</td>
+			<td class="scid">PPS4010020I</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS4010020I.html">PPS4010020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-03</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] '.m-binds .o-button' 클래스네임 수정</p>
+				<p class="modify1">[2021-09-08][스토리보드 수정사항(2021.09.08).txt] "보안요청" 영역 필드 및 로우 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td>심의번호</td>
+			<td></td>
+			<td>심의번호 검색 (LP)</td>
+			<td class="scid">PPS4010020IP01</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS4010020IP01.html">PPS4010020IP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-07</td>
+			<td class="note">
+				<p class="modify">[2021-10-28][디자인고도화] 하단 버튼레이블 수정</p>
+				<p class="modify1">[2021-09-27] 그리드테이블 nodata 로우 마크업 추가</p>
+				<p class="modify1">[2021-09-08][스토리보드 수정사항(2021.09.08).txt] 등록일시 컬럼 추가, 테이블헤더 띄어쓰기 반영</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의결과 등록</td>
+			<td class="scid">PPS4010030I</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS4010030I.html">PPS4010030I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-03</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] '.m-binds .o-button' 버튼 위치조정, 클래스네임 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>이행계획 검토</td>
+			<td class="scid">PPS4010040U</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS4010040U.html">PPS4010040U</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-03</td>
+			<td class="note">
+				<p class="modify">[2021-11-15][단위테스트] &quot;심의결과&quot; 영역 &quot;이행일자&quot; &rarr; &quot;이행예정일자&quot; 컬럼명 수정</p>
+				<p class="modify">[2021-10-27][디자인고도화] '.m-binds .o-button' 클래스네임 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>심의결과내역 조회</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의결과내역 조회</td>
+			<td class="scid">PPS5010010M</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS5010010M.html">PPS5010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-06</td>
+			<td class="note">
+				<p class="modify">[2021-11-16][단위테스트] 화면설계서 변경으로 인한 수정(&quot;신청구분&quot; 컬럼 추가, 컬럼명 수정) </p>
+				<p class="modify">[2021-11-16][단위테스트] 화면 상단 [엑셀다운로드] 버튼 추가</p>
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의결과내역 수정</td>
+			<td class="scid">PPS5010020U</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS5010020U.html">PPS5010020U</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-06</td>
+			<td class="note">
+				<p class="modify">[2021-11-15][단위테스트] &quot;심의결과&quot; 영역 &quot;이행일자&quot; &rarr; &quot;이행예정일자&quot; 컬럼명 수정</p>
+				<p class="modify">[2021-11-15][단위테스트] 화면 타이틀 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>위원회/협의회 조직 관리</td>
+			<td>위원회 구성원 관리</td>
+			<td></td>
+			<td></td>
+			<td>위원회 구성원 관리</td>
+			<td class="scid">PPS6010010M</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS6010010M.html">PPS6010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-07</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td>직원검색</td>
+			<td></td>
+			<td>직원검색 (LP)</td>
+			<td class="scid">PPS6010010MP01</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS6010010MP01.html">PPS6010010MP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-07</td>
+			<td class="note">
+				<p class="modify1">[2021-09-27] 그리드테이블 nodata 로우 마크업 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>협의회 구성원 관리</td>
+			<td></td>
+			<td></td>
+			<td>협의회 구성원 관리</td>
+			<td class="scid">PPS6020010M</td>
+			<td class="file"><a target="page" href="./nim/pps/PPS6020010M.html">PPS6020010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-08</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+	</tbody>
+
+	<tbody id="menu020">
+		<tr>
+			<th scope="rowgroup" colspan="10">판매사후관리</th>
+		</tr>
+
+		<tr class="DEL">
+			<td>상품현황</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>상품현황</td>
+			<td class="scid">PSM1010010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM1010010M.html">PSM1010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-18</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>상품현황 상세</td>
+			<td class="scid">PSM1010020D</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM1010020D.html">PSM1010020D</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-18</td>
+			<td class="note">
+				<p class="modify">[2021-11-16][단위테스트] 서브타이틀 수정(&quot;심의신청내용&quot; &rarr; &quot;상품정보&quot;)</p>
+				<p class="modify">[2021-11-01] 버튼([승인장조회] &rarr; [승인장출력]) 변경</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>조건부승인 관리</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>조건부승인 관리</td>
+			<td class="scid">PSM2010010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM2010010M.html">PSM2010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-18</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-22][개발요청] 그리드테이블 &quot;지연현황&quot; 컬럼 분리로 모든 셀 요소 마크업 수정</p>
+				<p class="modify1">[2021-10-21] 그리드테이블 &quot;지연현황&quot; 컬럼 상태값(&quot;등록전&quot; &rarr; &quot;이행전&quot;) 변경</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>조건부승인 이행내용 등록</td>
+			<td class="scid">PSM2010020I</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM2010020I.html">PSM2010020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-18</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>승인한도 관리</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>승인한도 관리</td>
+			<td class="scid">PSM3010010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM3010010M.html">PSM3010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-18</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-20] '.c-color-excess' &rarr; '.o-text-strong' 클래스네임 수정</p>
+				<p class="modify1">[2021-10-19] 화면설계서 변경으로 인한 수정(조회영역 컬럼 항목 수정, 그리드테이블 컬럼 순서 변경)</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>기관별 판매한도 관리</td>
+			<td>자산운용사별</td>
+			<td></td>
+			<td></td>
+			<td>자산운용사별</td>
+			<td class="scid">PSM4010010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4010010M.html">PSM4010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-22</td>
+			<td class="note">
+				<p class="modify">[2021-11-30] 화면설계서 변경으로 인한 &quot;자기자본 및 자본금&quot;, &quot;지급여력비율(RBC)&quot; 내용 추가</p>
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>자산운용사별 판매한도 등록</td>
+			<td class="scid">PSM4010020I</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4010020I.html">PSM4010020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-22</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>자산운용사별 판매한도 저장</td>
+			<td></td>
+			<td>자산운용사별 판매한도 저장 (LP)</td>
+			<td class="scid">PSM4010020IP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4010020IP01.html">PSM4010020IP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-26</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>주요재무현황 관리</td>
+			<td class="scid">PSM4010030M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4010030M.html">PSM4010030M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-26</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>엑셀업로드</td>
+			<td></td>
+			<td>엑셀업로드 (LP)</td>
+			<td class="scid">PSM4010030MP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4010030MP01.html">PSM4010030MP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-21</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>자산운용사별 판매한도 저장</td>
+			<td></td>
+			<td>자산운용사별 판매한도 저장 (LP)</td>
+			<td class="scid">PSM4010030MP02</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4010030MP02.html">PSM4010030MP02</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-26</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>보험사별</td>
+			<td></td>
+			<td></td>
+			<td>보험사별</td>
+			<td class="scid">PSM4020010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4020010M.html">PSM4020010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-26</td>
+			<td class="note">
+				<p class="modify">[2021-10-28] 데이터셀 input으로 전환 수정</p>
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>보험사별 판매한도 등록</td>
+			<td class="scid">PSM4020020I</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4020020I.html">PSM4020020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-26</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>보험사별 판매한도 저장</td>
+			<td></td>
+			<td>보험사별 판매한도 저장 (LP)</td>
+			<td class="scid">PSM4020020IP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4020020IP01.html">PSM4020020IP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-26</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>WM채권형</td>
+			<td></td>
+			<td></td>
+			<td>WM채권형</td>
+			<td class="scid">PSM4030010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4030010M.html">PSM4030010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-29</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>WM채권형 자산 잔액 저장</td>
+			<td></td>
+			<td>WM채권형 자산 잔액 저장 (LP)</td>
+			<td class="scid">PSM4030010MP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4030010MP01.html">PSM4030010MP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-29</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>신탁계열별업체별</td>
+			<td></td>
+			<td></td>
+			<td>신탁계열별업체별</td>
+			<td class="scid">PSM4040010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4040010M.html">PSM4040010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-26</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>계열사별한도금액 수정</td>
+			<td></td>
+			<td>계열사별한도금액 수정 (LP)</td>
+			<td class="scid">PSM4040010MP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4040010MP01.html">PSM4040010MP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-29</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>신탁계열별업체별 판매한도 등록</td>
+			<td class="scid">PSM4040020I</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4040020I.html">PSM4040020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-29</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>신탁계열별업체별 판매한도 저장</td>
+			<td></td>
+			<td>신탁계열별업체별 판매한도 저장 (LP)</td>
+			<td class="scid">PSM4040020IP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4040020IP01.html">PSM4040020IP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-29</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>신탁세부운용</td>
+			<td></td>
+			<td></td>
+			<td>신탁세부운용</td>
+			<td class="scid">PSM4050010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM4050010M.html">PSM4050010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-29</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>해피콜/녹취현황</td>
+			<td>해피콜현황</td>
+			<td></td>
+			<td></td>
+			<td>해피콜현황</td>
+			<td class="scid">PSM5010010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM5010010M.html">PSM5010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-22</td>
+			<td class="note">
+				<p class="modify">[2021-11-19][단위테스트] 그리드테이블 &quot;선택&quot; 컬럼 삭제</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>해피콜현황 상세</td>
+			<td></td>
+			<td>해피콜현황 상세 (LP)</td>
+			<td class="scid">PSM5010010MP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM5010010MP01.html">PSM5010010MP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-22</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 하단 버튼 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>녹취현황</td>
+			<td></td>
+			<td></td>
+			<td>녹취현황</td>
+			<td class="scid">PSM5020010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM5020010M.html">PSM5020010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-22</td>
+			<td class="note">
+				<p class="modify">[2021-11-23] 기획 변경으로 인한 전체 디자인(마크업) 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>미스터리쇼핑</td>
+			<td>미스터리쇼핑</td>
+			<td></td>
+			<td></td>
+			<td>미스터리쇼핑</td>
+			<td class="scid">PSM6010010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM6010010M.html">PSM6010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-25</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>미스터리쇼핑 등록</td>
+			<td></td>
+			<td>미스터리쇼핑 등록 (LP)</td>
+			<td class="scid">PSM6010010MP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM6010010MP01.html">PSM6010010MP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-25</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>금융투자상품</td>
+			<td>모니터링 결과(지점별)</td>
+			<td></td>
+			<td></td>
+			<td>모니터링 결과(지점별)</td>
+			<td class="scid">PSM7010010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM7010010M.html">PSM7010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-20</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>모니터링 결과 등록(지점별)</td>
+			<td class="scid">PSM7010020I</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM7010020I.html">PSM7010020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-20</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>엑셀업로드</td>
+			<td></td>
+			<td>엑셀업로드 (LP)</td>
+			<td class="scid">PSM7010020IP01</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM7010020IP01.html">PSM7010020IP01</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-10-20</td>
+			<td class="note">
+				<p class="modify1">[2021-10-21] 컬럼명(&quot;엑셀파일&quot; &rarr; &quot;파일첨부&quot;) 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>모니터링 결과(직원별)</td>
+			<td></td>
+			<td></td>
+			<td>모니터링 결과 등록(직원별)</td>
+			<td class="scid">PSM7020010M</td>
+			<td class="file"><a target="page" href="./nim/psm/PSM7020010M.html">PSM7020010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-20</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+	</tbody>
+
+	<tbody id="menu030">
+		<tr>
+			<th scope="rowgroup" colspan="10">판매 후 모니터링</th>
+		</tr>
+
+		<tr class="DEL">
+			<td>상품별 모니터링</td>
+			<td>실시간 모니터링</td>
+			<td></td>
+			<td></td>
+			<td>실시간 모니터링</td>
+			<td class="scid">WRN1010010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1010010M.html">WRN1010010M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-12][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0002] 그리드테이블 컬럼명(&quot;수익률&quot; &rarr; &quot;수익률 30~60점&quot;) 수정</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0005] 기준일자 데이터피커 disabled 애트리뷰트 삭제</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0003] &quot;손실버퍼&quot; 명칭 통일 수정(e.g. '손실&quot;_&quot;버퍼', '손실&quot;_BUFFER&quot;', '&quot;BUFFER_&quot;값')</p>
+				<p class="modify1">[2021-10-08] &quot;필터링 구분&quot;, &quot;필터링 적출 유무&quot; &rarr; &quot;필터링 적출사유&quot; 문구통일 수정</p>
+				<p class="modify1">[2021-10-06] 그리드테이블 &quot;유형&quot; &rarr; &quot;상품종류&quot; 컬럼명 수정</p>
+				<p class="modify1">[2021-10-06] 그리드테이블 &quot;최종 판정&quot;, &quot;최종 점검 의견&quot; 컬럼 삭제</p>
+				<p class="modify1">[2021-09-28] 그리드테이블 테이블헤더 영역 위치 및 속성 수정</p>
+				<p class="modify1">[2021-09-24] 그리드테이블 영역 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>기준일자 지정</td>
+			<td></td>
+			<td></td>
+			<td>기준일자 지정</td>
+			<td class="scid">WRN1020010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1020010M.html">WRN1020010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify">[2021-11-17][단위테스트] '.m-binds >.wrap' 버튼 위치 재조정(클래스네임('_start') 삭제)</p>
+				<p class="modify">[2021-10-27][디자인고도화] '.m-binds >.wrap' 버튼 위치조정(클래스네임('_start') 추가)</p>
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-12][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0002] 그리드테이블 컬럼명(&quot;수익률&quot; &rarr; &quot;수익률 30~60점&quot;) 수정</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0003] &quot;손실버퍼&quot; 명칭 통일 수정(e.g. '손실&quot;_&quot;버퍼', '손실&quot;_BUFFER&quot;', '&quot;BUFFER_&quot;값')</p>
+				<p class="modify1">[2021-10-07] 서브타이틀 수정(&quot;상품 현황&quot; &rarr; &quot;상품별 현황&quot;)</p>
+				<p class="modify1">[2021-10-06] 그리드테이블 전체 내용 수정</p>
+				<p class="modify1">[2021-10-06] 그리드테이블 &quot;유형&quot; &rarr; &quot;상품종류&quot; 컬럼명 수정</p>
+				<p class="modify1">[2021-09-27] 그리드테이블 nodata 로우 마크업 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>기준일자 지정</td>
+			<td></td>
+			<td>기준일자 지정 (LP)</td>
+			<td class="scid">WRN1020010MP01</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1020010MP01.html">WRN1020010MP01</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-14</td>
+			<td class="note">
+				<p class="modify">[2021-11-22][단위테스트] 하단 버튼레이블 수정(&quot;저장&quot; &rarr; &quot;기준일자 저장&quot;)</p>
+				<p class="modify">[2021-10-27][디자인고도화] 하단 버튼레이블 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>기준지표 작성</td>
+			<td></td>
+			<td></td>
+			<td>기준지표 목록</td>
+			<td class="scid">WRN1030010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1030010M.html">WRN1030010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-08] &quot;첨부파일&quot; &rarr; &quot;파일첨부&quot; 문구통일 수정</p>
+				<p class="modify1">[2021-09-27] 그리드테이블 nodata 로우 마크업 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>첨부파일</td>
+			<td></td>
+			<td>첨부파일 (LP)</td>
+			<td class="scid">WRN1030010MP01</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1030010MP01.html">WRN1030010MP01</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify">[2021-11-09] 하단 [저장] 버튼 추가</p>
+				<p class="modify">[2021-10-27][디자인고도화] '.layer-body' 클래스네임('has-footer') 추가, 하단 버튼 추가</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0009] &quot;첨부파일&quot; &rarr; &quot;파일첨부&quot; 문구통일 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>기준지표 작성</td>
+			<td class="scid">WRN1030020I</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1030020I.html">WRN1030020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-24</td>
+			<td class="note">
+				<p class="modify1">[2021-10-20] [엑셀업로드] / [엑셀다운로드] 버튼 위치 (상호) 이동</p>
+				<p class="modify1">[2021-10-12][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0002] 그리드테이블 컬럼명(&quot;수익률&quot; &rarr; &quot;수익률 30~60점&quot;) 수정</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0010] 조회영역 &quot;등록이력&quot; 컬럼 select option 항목 수정 및 추가</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0003] &quot;손실버퍼&quot; 명칭 통일 수정(e.g. '손실&quot;_&quot;버퍼', '손실&quot;_BUFFER&quot;', '&quot;BUFFER_&quot;값')</p>
+				<p class="modify1">[2021-10-08] &quot;필터링 구분&quot;, &quot;필터링 적출 유무&quot; &rarr; &quot;필터링 적출사유&quot; 문구통일 수정</p>
+				<p class="modify1">[2021-10-08] 타이틀영역 [이전] 버튼 추가</p>
+				<p class="modify1">[2021-10-06] 그리드테이블 &quot;유형&quot; &rarr; &quot;상품종류&quot; 컬럼명 수정</p>
+				<p class="modify1">[2021-09-28] 그리드테이블 테이블헤더 영역 위치 및 속성 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>심의결과내역 상세</td>
+			<td></td>
+			<td>심의결과내역 상세 (LP)</td>
+			<td class="scid">WRN1030020IP04</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1030020IP04.html">WRN1030020IP04</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-28</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0011] &quot;심의신청내역&quot; 섹션 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>등록이력 저장</td>
+			<td></td>
+			<td>등록이력 저장 (LP)</td>
+			<td class="scid">WRN1030020IP01</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1030020IP01.html">WRN1030020IP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-14</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>경고등급 관리</td>
+			<td></td>
+			<td>경고등급 관리 (LP)</td>
+			<td class="scid">WRN1030020IP02</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1030020IP02.html">WRN1030020IP02</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-14</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0013] 폼필드 disabled 애트리뷰트 삭제</p>
+				<p class="modify1">[2021-10-07] 그리드테이블 &quot;비고&quot; &rarr; &quot;삭제&quot; 컬럼명 수정</p>
+				<p class="modify1">[2021-09-27] 그리드테이블 디폴트(추가) 로우 예시 마크업 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>상품 지표 입력({{유형}})</td>
+			<td></td>
+			<td>상품 지표 입력 (LP)</td>
+			<td class="scid">WRN1030020IP03</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1030020IP03.html">WRN1030020IP03</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-23</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0014] 판매현황/절대수익률(평가손익)/신용평가등급 영역 데이터 문자열에서 input으로 대체 수정</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0003] &quot;손실버퍼&quot; 명칭 통일 수정(e.g. '손실&quot;_&quot;버퍼', '손실&quot;_BUFFER&quot;', '&quot;BUFFER_&quot;값')</p>
+				<p class="modify1">[2021-10-08] &quot;필터링 구분&quot;, &quot;필터링 적출 유무&quot; &rarr; &quot;필터링 적출사유&quot; 문구통일 수정</p>
+			</td>
+		</tr>
+		<tr class="del">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>사후관리카드 출력</td>
+			<td class="scid">WRN1030021R</td>
+			<td class="file"><a target="page" href="./nim/wrn/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[레포트]</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>부서별 작성 결과</td>
+			<td></td>
+			<td></td>
+			<td>부서별 작성 결과</td>
+			<td class="scid">WRN1040010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1040010M.html">WRN1040010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-28</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-12][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0015] 타이틀영역 [이전] 버튼 삭제(롤백)</p>
+				<p class="modify1">[2021-10-12][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0002] 그리드테이블 컬럼명(&quot;수익률&quot; &rarr; &quot;수익률 30~60점&quot;) 수정</p>
+				<del><p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0015] 타이틀영역 [이전] 버튼 추가</p></del>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0003] &quot;손실버퍼&quot; 명칭 통일 수정(e.g. '손실&quot;_&quot;버퍼', '손실&quot;_BUFFER&quot;', '&quot;BUFFER_&quot;값')</p>
+				<p class="modify1">[2021-10-08] &quot;필터링 구분&quot;, &quot;필터링 적출 유무&quot; &rarr; &quot;필터링 적출사유&quot; 문구통일 수정</p>
+				<p class="modify1">[2021-10-06] 그리드테이블 &quot;유형&quot; &rarr; &quot;상품종류&quot; 컬럼명 수정</p>
+				<p class="modify1">[2021-10-06] '.m-search-form' &quot;기준일자&quot; 컬럼 삭제</p>
+				<p class="modify1">[2021-09-28] 그리드테이블 테이블헤더 영역 위치 및 속성 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>소송 및 민원 발생 현황</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>소송 및 민원 발생 현황</td>
+			<td class="scid">WRN1015010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1015010M.html">WRN1015010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-06</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-19] 그리드테이블 &quot;사유&quot; &rarr; &quot;주요내용&quot; 컬럼명 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>소송 및 민원 등록</td>
+			<td class="scid">WRN1015020I</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1015020I.html">WRN1015020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-18</td>
+			<td class="note">
+				<p class="modify1">[2021-10-20] &quot;상품잔액&quot; 컬럼 인풋 disabled 애트리뷰트 추가</p>
+				<p class="strong">[2021-10-18][화면생성] 검색필드 등 마크업 추가</p>
+				<del><p class="em">[화면통합] WRN1015030U 화면과 통합</p></del>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>상품선택</td>
+			<td></td>
+			<td>상품선택 (LP)</td>
+			<td class="scid">WRN1015020IP01</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1015020IP01.html">WRN1015020IP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-18</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 하단 버튼레이블 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>소송 및 민원 수정</td>
+			<td class="scid">WRN1015030U</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN1015030U.html">WRN1015030U</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-06</td>
+			<td class="note">
+				<p class="modify1">[2021-10-20] &quot;상품잔액&quot; 컬럼 인풋 disabled 애트리뷰트 추가</p>
+				<p class="modify1">[2021-10-20] &quot;고객명&quot; 컬럼 인풋 제거, 스트링 추가</p>
+				<p class="modify1">[2021-10-18] 화면설계서 변경으로 인한 화면 수정</p>
+			</td>
+		</tr>
+		<tr class="del">
+			<td>-</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>소송 및 민원 발생 보고서 출력</td>
+			<td class="scid">WRN1015040R</td>
+			<td class="file"><a target="page" href="./nim/wrn/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[레포트]</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>필터링상품 조회</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>필터링상품 조회</td>
+			<td class="scid">WRN2010010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN2010010M.html">WRN2010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-30</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-08] &quot;필터링 구분&quot;, &quot;필터링 적출 유무&quot; &rarr; &quot;필터링 적출사유&quot; 문구통일 수정</p>
+				<p class="modify1">[2021-10-06] 그리드테이블 &quot;유형&quot; &rarr; &quot;상품종류&quot; 컬럼명 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>-</td>
+			<td>필터링내용</td>
+			<td></td>
+			<td>필터링내용 (LP)</td>
+			<td class="scid">WRN2010010MP01</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN2010010MP01.html">WRN2010010MP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-16</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08] &quot;필터링 구분&quot;, &quot;필터링 적출 유무&quot; &rarr; &quot;필터링 적출사유&quot; 문구통일 수정</p>
+				<p class="strong">[2021-09-28][화면ID변경] WRN3010010MP01 &rarr; WRN2010010MP01</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>경고등급상품 조회</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>경고등급상품 조회</td>
+			<td class="scid">WRN3010010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN3010010M.html">WRN3010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-30</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-08] &quot;필터링 구분&quot;, &quot;필터링 적출 유무&quot; &rarr; &quot;필터링 적출사유&quot; 문구통일 수정</p>
+				<p class="modify1">[2021-10-06] 그리드테이블 &quot;유형&quot; &rarr; &quot;상품종류&quot; 컬럼명 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>스코어링 관리</td>
+			<td>총 점수 관리</td>
+			<td></td>
+			<td></td>
+			<td>총 점수 관리</td>
+			<td class="scid">WRN4010010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN4010010M.html">WRN4010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-16</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0003] &quot;손실버퍼&quot; 명칭 통일 수정(e.g. '손실&quot;_&quot;버퍼', '손실&quot;_BUFFER&quot;', '&quot;BUFFER_&quot;값')</p>
+				<p class="modify1">[2021-09-28] '.m-grid-table' 테이블헤더명 수정</p>
+				<p class="strong">[2021-09-28][화면ID변경] WRN5010010M &rarr; WRN4010010M</p>
+				<p class="modify1">[2021-09-27] 그리드테이블 디폴트(추가) 로우 예시 마크업 추가, &quot;스코어링 구분&quot; 컬럼 셀렉트 플레이스홀더(선택) 옵션 추가</p>
+				<p class="modify1">[2021-09-24][스토리보드 수정사항(2021.09.24).txt] 설계서 수정사항 반영</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>세부 점수 관리</td>
+			<td></td>
+			<td></td>
+			<td>세부 점수 관리</td>
+			<td class="scid">WRN4020010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN4020010M.html">WRN4020010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-15</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0019] &quot;레버리지&quot; 섹션 삭제</p>
+				<p class="strong">[2021-09-28][화면ID변경] WRN5020010M &rarr; WRN4020010M</p>
+				<p class="modify1">[2021-09-24][스토리보드 수정사항(2021.09.24).txt] 설계서 수정사항 반영</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>운용사(증권사) 관리</td>
+			<td>자산운용사 관리</td>
+			<td></td>
+			<td></td>
+			<td>자산운용사 관리</td>
+			<td class="scid">WRN5010010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN5010010M.html">WRN5010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-28</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-20] [엑셀업로드] / [엑셀다운로드] 버튼 위치 (상호) 이동</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0020] &quot;등록시간&quot; &rarr; &quot;등록일시&quot; 문구 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>증권사 관리</td>
+			<td></td>
+			<td></td>
+			<td>증권사 관리</td>
+			<td class="scid">WRN5020010M</td>
+			<td class="file"><a target="page" href="./nim/wrn/WRN5020010M.html">WRN5020010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-28</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-20] [엑셀업로드] / [엑셀다운로드] 버튼 위치 (상호) 이동</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0021] &quot;등록시간&quot; &rarr; &quot;등록일시&quot; 문구 수정</p>
+			</td>
+		</tr>
+
+		<!-- <tr class="DEL">
+			<td>조기정보 점검</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>필터링 관리</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>경고등급상품현황</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>스코어링 관리</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr> -->
+	</tbody>
+
+	<tbody id="menu040">
+		<tr>
+			<th scope="rowgroup" colspan="10">(세부)상품관리</th>
+		</tr>
+
+		<tr class="DEL">
+			<td>심의별상품 매핑</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의별상품 매핑</td>
+			<td class="scid">DPM1010010M</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM1010010M.html">DPM1010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-10</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0022] &quot;승인일자&quot; 컬럼 시간 삭제</p>
+				<p class="modify1">[2021-10-01] &quot;작성일자&quot;, &quot;승인일시&quot; &rarr; &quot;승인일자&quot; 문구통일 수정</p>
+			</td>
+		<tr class="DEL">
+		</tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>심의별상품 매핑 등록</td>
+			<td class="scid">DPM1010020I</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM1010020I.html">DPM1010020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-10</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0023] &quot;등록상품&quot; 영역 &quot;상품추가&quot; &rarr; &quot;추가&quot; 상단 버튼레이블 수정</p>
+				<p class="modify1">[2021-09-13] 화면설계서 변경으로 인한 컬럼 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td>상품추가</td>
+			<td></td>
+			<td>상품추가 (LP)</td>
+			<td class="scid">DPM1010020IP01</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM1010020IP01.html">DPM1010020IP01</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-10</td>
+			<td class="note">
+				<p class="modify">[2021-10-28][디자인고도화] 하단 버튼레이블 재수정</p>
+				<p class="modify">[2021-10-27][디자인고도화] 하단 버튼레이블 수정</p>
+				<p class="modify1">[2021-09-27] 그리드테이블 nodata 로우 마크업 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>상품현황</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>상품현황</td>
+			<td class="scid">DPM2010010M</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM2010010M.html">DPM2010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-10</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0025] &quot;등록일시&quot; &rarr; &quot;등록일자&quot; 문구 수정</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0025] 그리드테이블 상품종류 컬럼 추가 / 컬럼 순서 변경</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>상품 수정</td>
+			<td class="scid">DPM2010020U</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM2010020U.html">DPM2010020U</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify">[2021-11-09] 화면 타이틀 수정</p>
+				<p class="modify1">[2021-10-21] 화면설계서 변경으로 인한 수정(조회영역 &quot;상품유형&quot;, &quot;상품종류&quot; 컬럼 추가)</p>
+				<p class="modify1">[2021-10-12][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0026] 하단 '.m-binds' 영역 [이전] 버튼 삭제</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0026] &quot;상품정보&quot; 영역 &quot;수정&quot; &rarr; &quot;저장&quot; 상단 버튼레이블 수정</p>
+				<p class="modify1">[2021-09-27] 그리드테이블 nodata 로우 마크업 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>별도상품 관리</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>별도상품 관리</td>
+			<td class="scid">DPM3010010M</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM3010010M.html">DPM3010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify">[2021-11-04] [엑셀업로드] 버튼 삭제</p>
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-20] [엑셀업로드] / [엑셀다운로드] 버튼 위치 (상호) 이동</p>
+				<p class="modify1">[2021-10-12] 화면설계서 변경으로 인한 그리드테이블 컬럼 순서 변경</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0027] &quot;등록일시&quot; &rarr; &quot;등록일자&quot; 문구 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>별도상품 등록</td>
+			<td class="scid">DPM3010020I</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM3010020I.html">DPM3010020I</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify1">[2021-10-12][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0028] 하단 '.m-binds' 영역 [이전] 버튼 삭제</p>
+				<p class="modify1">[2021-10-12] 화면설계서 변경으로 인한 수정(컬럼 추가 및 이동, 필드 수정 등)</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0028] &quot;상품종류&quot;, &quot;판매여부&quot; 컬럼 &quot;선택&quot;옵션 selected 수정</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0028] &quot;상품종류&quot; 컬럼 필수레이블 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>별도상품 수정</td>
+			<td class="scid">DPM3010030U</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM3010030U.html">DPM3010030U</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify1">[2021-10-12][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0029] 하단 '.m-binds' 영역 [이전] 버튼 삭제</p>
+				<p class="modify1">[2021-10-12] 화면설계서 변경으로 인한 수정(컬럼 추가 및 이동, 필드 수정 등)</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0029] &quot;상품기본정보&quot; 영역 &quot;수정&quot; &rarr; &quot;저장&quot; 상단 버튼레이블 수정</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>세부상품 조회</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>세부상품 조회</td>
+			<td class="scid">DPM4010010M</td>
+			<td class="file"><a target="page" href="./nim/dpm/DPM4010010M.html">DPM4010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-13</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0030] &quot;등록일시&quot; &rarr; &quot;등록일자&quot; 문구 수정</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0030] 최상단 [엑셀다운로드] 버튼 추가</p>
+			</td>
+		</tr>
+
+		<!-- <tr class="DEL">
+			<td>상품 등록</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>미등록세부상품 관리</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>세부상품현황</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>심의별상품 매핑</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr> -->
+	</tbody>
+
+	<tbody id="menu050">
+		<tr>
+			<th scope="rowgroup" colspan="10">보고서</th>
+		</tr>
+
+		<tr class="del">
+			<td>분기보고서</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[화면삭제]</p>
+			</td>
+		</tr>
+		<tr class="del">
+			<td>반기보고서</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[화면삭제]</p>
+			</td>
+		</tr>
+		<tr class="del">
+			<td>상시보고서</td>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/pps/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[화면삭제]</p>
+			</td>
+		</tr>
+	</tbody>
+
+	<tbody id="menu060">
+		<tr>
+			<th scope="rowgroup" colspan="10">업무지원</th>
+		</tr>
+
+		<tr class="DEL">
+			<td>알림관리</td>
+			<td>심의진행 알림 관리</td>
+			<td></td>
+			<td></td>
+			<td>심의진행 알림 관리</td>
+			<td class="scid">BBS1010010M</td>
+			<td class="file"><a target="page" href="./nim/bbs/BBS1010010M.html">BBS1010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-08</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0031] 삭제 컬럼 추가</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0031] 그리드테이블 전체 수정</p>
+			</td>
+		</tr>
+		<tr class="del">
+			<td></td>
+			<td></td>
+			<td>직원검색</td>
+			<td></td>
+			<td>직원검색 (LP)</td>
+			<td class="scid"></td>
+			<td class="file"><a target="page" href="./nim/bbs/AAA0000000Z.html">파일명</a></td>
+			<td class="name">담당자</td>
+			<td class="date">완료일</td>
+			<td class="note">
+				<p class="em">[화면통합] PPS6010010MP01 화면과 통합</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td>심의한도 알림 관리</td>
+			<td></td>
+			<td></td>
+			<td>심의한도 알림 관리</td>
+			<td class="scid">BBS1010020M</td>
+			<td class="file"><a target="page" href="./nim/bbs/BBS1010020M.html">BBS1010020M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-08</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0032] 삭제 컬럼 추가</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0032] &quot;시간설정&quot; 섹션 삭제</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td></td>
+			<td>수익률 알림 관리</td>
+			<td></td>
+			<td></td>
+			<td>수익률 알림 관리</td>
+			<td class="scid">BBS1010030M</td>
+			<td class="file"><a target="page" href="./nim/bbs/BBS1010030M.html">BBS1010030M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-09-08</td>
+			<td class="note">
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0033] 삭제 컬럼 추가</p>
+				<p class="modify1">[2021-10-08][퍼블 작업 결과물 기획 검토사항(2021.10.08).xlsx][No0033] &quot;시간설정&quot; 섹션 삭제</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>자격증</td>
+			<td>직원 자격증 관리</td>
+			<td></td>
+			<td></td>
+			<td>직원 자격증 관리</td>
+			<td class="scid">BBS2010010M</td>
+			<td class="file"><a target="page" href="./nim/bbs/BBS2010010M.html">BBS2010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-19</td>
+			<td class="note">
+				<p class="modify">[2021-10-27][디자인고도화] 그리드테이블 영역 '.o-section' 클래스네임('is-views') 추가, '.o-section.is-views .o-heading2 >.inner' 아이콘(&lt;i /&gt; 엘리먼트) 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>체크리스트</td>
+			<td>체크리스트 관리</td>
+			<td></td>
+			<td></td>
+			<td>체크리스트 관리</td>
+			<td class="scid">BBS3010010M</td>
+			<td class="file"><a target="page" href="./nim/bbs/BBS3010010M.html">BBS3010010M</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-09-08</td>
+			<td class="note">
+				<p class="modify1">[2021-10-22] 화면설계서 변경으로 인한 &quot;체크 항목&quot; 컬럼 추가</p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>마이페이지</td>
+			<td>내 정보 관리</td>
+			<td></td>
+			<td></td>
+			<td>내 정보 관리</td>
+			<td class="scid">BBS4010010M</td>
+			<td class="file"><a target="page" href="./nim/bbs/BBS4010010M.html">BBS4010010M</a></td>
+			<td class="name">양다빈</td>
+			<td class="date">2021-10-07</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+		<tr class="DEL">
+			<td>-</td>
+			<td>비밀번호 변경</td>
+			<td></td>
+			<td></td>
+			<td>비밀번호 변경 (LP)</td>
+			<td class="scid">BBS4010010MP01</td>
+			<td class="file"><a target="page" href="./nim/bbs/BBS4010010MP01.html">BBS4010010MP01</a></td>
+			<td class="name">김하나</td>
+			<td class="date">2021-10-25</td>
+			<td class="note">
+				<p class="__CLASSNAME__"></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<script type="text/ecmascript">
+//<![CDATA[
+
+	document.querySelector('.o-index-table').querySelectorAll('td.file, td.name, td.date')
+		.forEach(function(elem) {
+			if( /파일명|담당자|완료일/.test( elem.innerText ) ) {
+				elem.innerText = '';
+			}
+		})
+	;
+
+//]]>
+</script>
+<noscript>
+	
+</noscript>
+</body>
+
+</html>

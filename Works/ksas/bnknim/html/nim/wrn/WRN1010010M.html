@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<title>실시간 모니터링 &middot; BNK 비예금상품 통합관리시스템</title>
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/embed.css" />
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/common.css" />
+<script type="text/javascript" id="Plugin-JS" src="../../../src/assets/js/ui-import.js"></script>
+<script type="text/javascript" src="../../../src/assets/js/ui-extension.js"></script>
+</head>
+
+<body>
+<div class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" class="div-skip">
+			<span class="o-ogp"><img src="../../../src/assets/img/img_ogp.alt.png" alt="" /></span>
+
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="roles">
+			<div class="div-root">
+				<span class="logo"><span class="inner"><em class="symbol">BNK</em> 금융지주</span></span>
+				<strong class="system"><span class="inner">비예금상품 통합 관리 시스템</span></strong>
+			</div>
+
+			<div class="div-account">
+				<strong class="data">
+					<span class="name">홍길동</span>
+					<span class="div">(<span>WM상품부</span>)</span>
+				</strong>
+				<span class="binds">
+					<button type="button" class="signout"><i aria-hidden="true"></i><span class="inner">로그아웃</span></button>
+				</span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</header>
+
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="roles">
+			<div class="div-root">
+				<a href="#/Dashboard" class="label root" aria-current="true"><span class="inner">Dashboard</span></a><!-- 현재페이지 'a[aria-current="true"]' { @DEV } -->
+			</div>
+
+			<div class="div-nav-local">
+				<ul class="UI_collapse">
+					<li>
+						<a href="../../html/nim/pps/PPS1010010I.html" class="label" aria-expanded="false"><span class="inner">상품기획선정</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPS1010010I.html" class="label"><span class="inner">심의 신청</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPS1010010I.html" class="label"><span class="inner">심의 신청(개별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPS1010020I.html" class="label"><span class="inner">심의 신청(포괄)</span></a></li>
+									<li><a href="../../html/nim/pps/PPS1010030I.html" class="label"><span class="inner">심의 신청(기타)</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPS3010010M.html" class="label"><span class="inner">리스크 검토</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPS2010010M.html" class="label"><span class="inner">심의진행내역 조회</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPS5010010M.html" class="label"><span class="inner">심의결과내역 조회</span></a>
+							<li>
+								<a href="../../html/nim/pps/PPS6010010M.html" class="label"><span class="inner">위원회/협의회 조직 관리</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPS6010010M.html" class="label"><span class="inner">위원회구성원 관리</span></a></li>
+									<li><a href="../../html/nim/pps/PPS6020010M.html" class="label"><span class="inner">협의회구성원 관리</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/pps/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">판매사후관리</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">상품현황</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">조건부승인 관리</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">승인한도 관리</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도(자산운용사)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도(보험사별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도(계열사별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">판매한도(신탁세부운용)</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">해피콜/녹취현황</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">해피콜현황</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">녹취현황</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">미스터리쇼핑</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">미스터리쇼핑(지점별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">미스터리쇼핑(직원별)</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">금융투자상품</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">금융투자상품 출시</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">금융투자상품 출시(지점별)</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">금융투자상품 출시(직원별)</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/pps/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">조기경보</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">조기경보 점검</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">필터링 관리</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">경고등급상품현황</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">스코어링 관리</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/pps/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">(세부)상품관리</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">상품 등록</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">미등록세부상품 관리</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">세부상품현황</span></a>
+							</li>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">심의별상품 매핑</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/pps/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">보고서</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">보고서</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">분기보고서</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">반기보고서</span></a></li>
+									<li><a href="../../html/nim/pps/PPSDLA01D1.html" class="label"><span class="inner">상시보고서</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../html/nim/bbs/PPSDLA01D1.html" class="label" aria-expanded="false"><span class="inner">업무지원</span></a>
+
+						<ul>
+							<li>
+								<a href="../../html/nim/bbs/BBS1010010M.html" class="label"><span class="inner">알림관리</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/bbs/BBS1010010M.html" class="label"><span class="inner">메신저 알림 관리</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../html/nim/bbs/PPSDLA01D1.html" class="label"><span class="inner">자격증</span></a>
+
+								<ul>
+									<li><a href="../../html/nim/bbs/PPSDLA01D1.html" class="label"><span class="inner">직원 자격증 관리</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#/sample/Code" class="label"><span class="inner">SAMPLE</span></a>
+
+						<ul>
+							<li>
+								<a href="#/sample/Code" class="label"><span class="inner">SAMPLE_PAGES</span></a>
+
+								<ul>
+									<li><a href="#/sample/Code" class="label"><span class="inner">기본CRUD(팝업창수정)</span></a></li>
+									<li><a href="#/sample/CodeGrid" class="label"><span class="inner">기본CRUD(그리드수정)</span></a></li>
+									<li><a href="#/sample/CodePage" class="label"><span class="inner">기본CRUD (화면전환수정)</span></a></li>
+									<li><a href="#/sample/DatePickerSample" class="label"><span class="inner">DatePicker 샘플</span></a></li>
+									<li><a href="#/sample/CodeListSample" class="label"><span class="inner">CodeList 샘플</span></a></li>
+									<li><a href="#/sample/FileUploadSample" class="label"><span class="inner">파일업로드 샘플</span></a></li>
+									<li><a href="#/sample/PaginationSample" class="label"><span class="inner">Pagination 샘플</span></a></li>
+									<li><a href="#/sample/ValidateSample" class="label"><span class="inner">Validate 샘플</span></a></li>
+									<li><a href="#/sample/WindowPortalSample" class="label"><span class="inner">윈도우팝업창 샘플</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#/sample/Code" class="label"><span class="inner">TEST_PAGES</span></a>
+
+								<ul>
+									<li><a href="#/nim/pps/TestGrid" class="label"><span class="inner">테스트그리드</span></a></li>
+									<li><a href="#/sample/PPSDemo" class="label"><span class="inner">심의진행내역조회</span></a></li>
+									<li><a href="#/nim/pps/RiskRegister" class="label"><span class="inner">리스크 검토의견 등록</span></a></li>
+									<li><a href="#/nim/pps/PPSDLA01D1" class="label"><span class="inner">심의신청</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-hide"><a href="#Go-Navigator" title="전체메뉴 숨기기"><i aria-hidden="true"></i><span class="inner">닫기</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</nav>
+
+
+	<!-- /* Container { @DEV } -->
+	<div role="main" id="Center" class="dom-main">
+		<div class="roles">
+			<div class="div-path" aria-label="Breadcrumb trail">
+				<span class="breadcrumb">
+					<span class="item root"><span class="inner">Home</span></span> <span class="sep">&gt;</span>
+					<span class="item subs">DEPTH_LEVEL1</span> <span class="sep">&gt;</span>
+					<span class="item subs">DEPTH_LEVEL2</span> <span class="sep">&gt;</span>
+					<strong class="item page" aria-current="page">PAGE_TITLE</strong>
+				</span>
+			</div>
+
+			<div class="div-title">
+				<h1 class="o-heading1"><span class="inner">실시간 모니터링</span></h1>
+			</div>
+
+			<div class="div-aside">
+				<div class="m-binds">
+					<span class="wrap">
+						<span class="item"><button type="button" class="o-button _iconic is-excel-download"><span class="inner">엑셀다운로드</span></button></span>
+					</span>
+				</div>
+			</div>
+
+			<!-- /* Contents { @DEV } -->
+			<div class="div-contents">
+
+				<div class="o-section is-search">
+					<div class="m-search-form type-global">
+						<table>
+							<colgroup>
+								<col class="c-form-header" style="width:12%;" />
+								<col style="width:auto;" />
+								<col class="c-form-header" style="width:12%;" />
+								<col style="width:auto;" />
+							</colgroup>
+
+							<tbody>
+								<tr>
+									<th>주관부서</th>
+									<td>
+										<div class="m-fields">
+											<div class="item has-pass-items">
+												<span class="o-form _select c-cols-global">
+													<select required="required" class="bind">
+														<option value="VALUE" selected="selected">전체</option>
+														<option value="VALUE">WM상품부</option>
+														<option value="VALUE">신탁사업단</option>
+														<option value="VALUE">자금운영부</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+
+									<th>기준일자</th>
+									<td>
+										<div class="m-fields">
+											<div class="item m-dates">
+												<div class="mx-datepicker">
+													<input type="text" autocomplete="off" placeholder="YYYY-MM-DD" value="2021-07-28" maxlength="8" class="mx-input" />
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>신탁</th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select g-flex-pass">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="" disabled="disabled" hidden="hidden" selected="selected">선택</option>
+														<option value="VALUE">2021-09-20</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+
+												<span class="o-form _select">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="" disabled="disabled" hidden="hidden" selected="selected">선택</option>
+														<option value="VALUE">2021년 3분기 작성</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+
+									<th>펀드</th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select g-flex-pass">
+													<select required="required" class="bind">
+														<option value="" disabled="disabled" hidden="hidden">선택</option>
+														<option value="VALUE" selected="selected">2021-09-20</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+
+												<span class="o-form _select">
+													<select required="required" class="bind">
+														<option value="" disabled="disabled" hidden="hidden">선택</option>
+														<option value="VALUE" selected="selected">2021년 3분기 작성</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>기타</th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select g-flex-pass">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="" disabled="disabled" hidden="hidden" selected="selected">선택</option>
+														<option value="VALUE">2021-09-20</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+
+												<span class="o-form _select">
+													<select required="required" disabled="disabled" class="bind">
+														<option value="" disabled="disabled" hidden="hidden" selected="selected">선택</option>
+														<option value="VALUE">2021년 3분기 작성</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+
+									<th>방카</th>
+									<td>
+										<div class="m-fields">
+											<div class="item">
+												<span class="o-form _select g-flex-pass">
+													<select required="required" class="bind">
+														<option value="" disabled="disabled" hidden="hidden">선택</option>
+														<option value="VALUE" selected="selected">2021-09-20</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+
+												<span class="o-form _select">
+													<select required="required" class="bind">
+														<option value="" disabled="disabled" hidden="hidden">선택</option>
+														<option value="VALUE" selected="selected">2021년 3분기 작성</option>
+														<option value="VALUE">-</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>등급</th>
+									<td>
+										<div class="m-fields">
+											<div class="item has-pass-items">
+												<span class="o-form _select">
+													<select required="required" class="bind c-cols-global">
+														<option value="VALUE" selected="selected">전체</option>
+														<option value="VALUE">우수</option>
+														<option value="VALUE">양호</option>
+														<option value="VALUE">보통</option>
+														<option value="VALUE">주의</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+
+									<th>필터링적출여부</th>
+									<td>
+										<div class="m-fields">
+											<div class="item has-pass-items">
+												<span class="o-form _select">
+													<select required="required" class="bind c-cols-global">
+														<option value="VALUE" selected="selected">전체</option>
+														<option value="VALUE">예</option>
+														<option value="VALUE">아니오</option>
+													</select><i aria-hidden="true"></i>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="m-binds">
+						<span class="wrap">
+							<span class="item"><button type="button" class="o-button _submit"><span class="inner">조회</span></button></span>
+						</span>
+					</div>
+				</div>
+
+				<div class="o-section is-views">
+					<h2 class="o-heading2"><span class="inner"><i class="o-heading-icon is-views" aria-hidden="true"></i>상품별 현황</span></h2>
+
+					<!-- <div class="m-grid-table type-global">
+						<div class="rg-root rg-grid">
+							<table>
+								<colgroup>
+									<col style="width:8%;">
+									<col style="width:7%;">
+									<col style="width:8%;">
+									<col style="width:9%;">
+									<col style="width:5%;">
+									<col style="width:8%;">
+									<col style="width:8%;">
+									<col style="width:5%;">
+									<col style="width:auto;">
+								</colgroup>
+					
+								<thead>
+									<tr>
+										<th scope="col">상품종류</th>
+										<th scope="col">순번</th>
+										<th scope="col">주관부서</th>
+										<th scope="col">승인번호</th>
+										<th scope="col">상품 기본 정보</th>
+										<th scope="col"><span class="g-nowrap">필터링</span> <span class="g-nowrap">적출사유</span></th>
+										<th scope="col">최종환산점수</th>
+										<th scope="col">등급</th>
+										<th scope="col">판매현황, 절대수익률(평가손익), 업체비중, 상대수익률, 손실버퍼, 운용사(증권사)등급, 시장요인, 레버리지 적용, 신용평가 등급, 투자전략 변동, 환매연기 발생, 소송 및 민원 발생</th>
+									</tr>
+								</thead>
+					
+								<tbody>
+									<tr>
+										<td rowspan="2">일반</td>
+										<td>1</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>소송 및 민원</td>
+										<td>80.0</td>
+										<td>주의</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td></td>
+										<td>-</td>
+										<td></td>
+										<td>-</td>
+										<td>91.2</td>
+										<td>우수</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="4">ELF</td>
+										<td>7</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>-</td>
+										<td>82.0</td>
+										<td>주의</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>환매연기</td>
+										<td>86.0</td>
+										<td>주의</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>-</td>
+										<td>86.8</td>
+										<td>주의</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>-</td>
+										<td>86.4</td>
+										<td>우수</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td rowspan="5">WM채권</td>
+										<td>11</td>
+										<td></td>
+										<td>-</td>
+										<td></td>
+										<td>-</td>
+										<td>76.0</td>
+										<td>양호</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>신용평가 하락</td>
+										<td>88.8</td>
+										<td>주의</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>13</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>-</td>
+										<td><strong class="c-color-error">산정불가</strong></td>
+										<td>-</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>15</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>투자전략 변경</td>
+										<td>82.4</td>
+										<td>주의</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>16</td>
+										<td></td>
+										<td><a href="javascript:">20210005</a></td>
+										<td></td>
+										<td>-</td>
+										<td>84.4</td>
+										<td>우수</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>변액보험</td>
+										<td>19</td>
+										<td></td>
+										<td>-</td>
+										<td></td>
+										<td>-</td>
+										<td>87.2</td>
+										<td>우수</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div> -->
+					<div class="m-grid-table type-global">
+						<div class="rg-root rg-grid">
+							<table style="width:4800px;">
+								<colgroup>
+									<col style="width:80px;" />
+									<col style="width:70px;" />
+									<col style="width:100px;" />
+									<col style="width:90px;" />
+									<col style="width:300px;" />
+									<col style="width:80px;" />
+									<col style="width:140px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:100px;" />
+									<col style="width:100px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:60px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+									<col style="width:80px;" />
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col" rowspan="3">상품종류</th>
+										<th scope="col" rowspan="3">순번</th>
+										<th scope="col" rowspan="3">주관부서</th>
+										<th scope="col" rowspan="3">승인번호</th>
+										<th scope="col" rowspan="3">상품명</th>
+										<th scope="col" colspan="6">상품 기본 정보</th>
+										<th scope="col" colspan="3">점검결과</th>
+										<th scope="col" colspan="6">판매현황</th>
+										<th scope="col" colspan="5">절대수익률</th>
+										<th scope="col" colspan="2">업체 비중</th>
+										<th scope="col" colspan="5">상대수익률</th>
+										<th scope="col" colspan="2">손실버퍼</th>
+										<th scope="col" colspan="2">운용사(증권사) 등급</th>
+										<th scope="col" colspan="2">시장 요인</th>
+										<th scope="col" colspan="4">신용평가 등급</th>
+										<th scope="col" colspan="2">투자전략 변동</th>
+										<th scope="col" colspan="2">환매연기 발생</th>
+										<th scope="col" colspan="2">소송 및 민원 발생</th>
+									</tr>
+									<tr>
+										<th scope="col" rowspan="2">상품번호</th>
+										<th scope="col" rowspan="2">자산운용사명</th>
+										<th scope="col" rowspan="2">모집방식</th>
+										<th scope="col" rowspan="2">위험등급</th>
+										<th scope="col" rowspan="2">설정일</th>
+										<th scope="col" rowspan="2">만기일</th>
+										<th scope="col" rowspan="2">필터링 적출사유</th>
+										<th scope="col" rowspan="2">최종 환산 점수</th>
+										<th scope="col" rowspan="2">등급</th>
+										<th scope="col" colspan="2">법인</th>
+										<th scope="col" colspan="2">개인</th>
+										<th scope="col" colspan="2">판매금액</th>
+										<th scope="col" colspan="5">수익률 30~60점</th>
+										<th scope="col" colspan="2">업체 비중 40점</th>
+										<th scope="col" colspan="5">BM 대비 10점</th>
+										<th scope="col" colspan="2">최종 베리어와의 차이 50점</th>
+										<th scope="col" colspan="2">평가등급/신용등급 등 10점</th>
+										<th scope="col" colspan="2">VIX/환율변동성 10~30점</th>
+										<th scope="col" colspan="4">신용등급 변동 60점</th>
+										<th scope="col" colspan="2">투자전략 변동 5점</th>
+										<th scope="col" colspan="2">환매연기 발생 10점</th>
+										<th scope="col" colspan="2">소송 및 민원 발생 10~20점</th>
+									</tr>
+									<tr>
+										<th scope="col">좌수</th>
+										<th scope="col">금액(초회보험료)</th>
+										<th scope="col">좌수(신계약건수)</th>
+										<th scope="col">금액(수입보험료)</th>
+										<th scope="col">최초(투입보험료)</th>
+										<th scope="col">잔액(계약자적립금)</th>
+										<th scope="col">1년</th>
+										<th scope="col">6개월</th>
+										<th scope="col">3개월</th>
+										<th scope="col">1개월(기준월)</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">업체비중(TRF)</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">1년</th>
+										<th scope="col">6개월</th>
+										<th scope="col">3개월</th>
+										<th scope="col">1개월</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">버퍼값</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">평가등급</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">지수</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">신규시 신용등급</th>
+										<th scope="col">현재 신용등급</th>
+										<th scope="col">신용등급 차이</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">변동횟수</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">발생횟수</th>
+										<th scope="col">환산점수</th>
+										<th scope="col">발생횟수</th>
+										<th scope="col">환산점수</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<!-- /* nodata 예시 { @DEV } -->
+									<tr class="nodata">
+										<td colspan="48"><p>등록된 데이터가 없습니다.</p></td>
+									</tr>
+									<!-- */ nodata 예시 { @DEV } -->
+
+									<!-- 
+									<tr>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"><a href="javascript:">####</a></td>
+										<td class="g-start"><a href="javascript:">####</a></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"><a href="javascript:">####</a></td>
+										<td class="g-center"><em class="o-status-label is-warn"><span class="inner">####</span></em></td>
+										<td class="g-start"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+									</tr>
+									 -->
+									<tr>
+										<td class="g-center">일반</td>
+										<td class="g-center">1</td>
+										<td class="g-center">WM상품부</td>
+										<td class="g-center"><a href="javascript:">20210005</a></td>
+										<td class="g-start"><a href="javascript:">하나UBS 재형 글로벌 멀티에셋 플러스 증권자투자신탁[채권혼합-재간접형]</a></td>
+										<td class="g-center">101302</td>
+										<td class="g-center">하나UBS자산운용</td>
+										<td class="g-center">공모</td>
+										<td class="g-center">4</td>
+										<td class="g-center">2013-03-06</td>
+										<td class="g-center"></td>
+										<td class="g-center">소송 및 민원</td>
+										<td class="g-center">80.0</td>
+										<td class="g-center">주의</td>
+										<td class="g-end">-</td>
+										<td class="g-end">-</td>
+										<td class="g-end">-</td>
+										<td class="g-end">0.1</td>
+										<td class="g-end">0.9</td>
+										<td class="g-end">0.1</td>
+										<td class="g-end">14.0</td>
+										<td class="g-end">4.5</td>
+										<td class="g-end">2.9</td>
+										<td class="g-end">0.9</td>
+										<td class="g-end">32.4</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">7.84</td>
+										<td class="g-end">3.5</td>
+										<td class="g-end">1.11</td>
+										<td class="g-end">0.23</td>
+										<td class="g-end">8.5</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">2</td>
+										<td class="g-end">8.0</td>
+										<td class="g-end">15.83</td>
+										<td class="g-end">9.0</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0</td>
+										<td class="g-end">5.0</td>
+										<td class="g-end">0</td>
+										<td class="g-end">100</td>
+										<td class="g-end">0</td>
+										<td class="g-end">100</td>
+									</tr>
+									<tr>
+										<td class="g-center">일반</td>
+										<td class="g-center">2</td>
+										<td class="g-center">WM상품부</td>
+										<td class="g-center"><a href="javascript:">20210004</a></td>
+										<td class="g-start"><a href="javascript:">미래에셋글로벌인컴증권자투자신탁1호(채권혼합)종류A</a></td>
+										<td class="g-center">101303</td>
+										<td class="g-center">미래에셋자산운용</td>
+										<td class="g-center">공모</td>
+										<td class="g-center">4</td>
+										<td class="g-center">2012-11-01</td>
+										<td class="g-center"></td>
+										<td class="g-center">신용평가 하락</td>
+										<td class="g-center">88.8</td>
+										<td class="g-center">주의</td>
+										<td class="g-end">2</td>
+										<td class="g-end">0</td>
+										<td class="g-end">3.48</td>
+										<td class="g-end">0.1</td>
+										<td class="g-end">6.5</td>
+										<td class="g-end">0.1</td>
+										<td class="g-end">12.6</td>
+										<td class="g-end">4.5</td>
+										<td class="g-end">2.9</td>
+										<td class="g-end">1.2</td>
+										<td class="g-end">32.4</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">3.97</td>
+										<td class="g-end">1.01</td>
+										<td class="g-end">1.13</td>
+										<td class="g-end">0.64</td>
+										<td class="g-end">8.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">2</td>
+										<td class="g-end">8.0</td>
+										<td class="g-end">15.83</td>
+										<td class="g-end">9.0</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0</td>
+										<td class="g-end">5.0</td>
+										<td class="g-end">0</td>
+										<td class="g-end">100</td>
+										<td class="g-end">0</td>
+										<td class="g-end">100</td>
+									</tr>
+									<tr>
+										<td class="g-center">ELF</td>
+										<td class="g-center">1</td>
+										<td class="g-center">WM상품부</td>
+										<td class="g-center"><a href="javascript:">20210003</a></td>
+										<td class="g-start"><a href="javascript:">KB 파워 리자드 지수연계 증권 투자신탁 SHE-36호(ELS-파생형) A</a></td>
+										<td class="g-center">402070</td>
+										<td class="g-center">KB자산운용</td>
+										<td class="g-center">공모</td>
+										<td class="g-center">1</td>
+										<td class="g-center">2020-12-30</td>
+										<td class="g-center">2023-09-19</td>
+										<td class="g-center"></td>
+										<td class="g-center"><strong class="c-color-error">산정불가</strong></td>
+										<td class="g-center">-</td>
+										<td class="g-end">-</td>
+										<td class="g-end">-</td>
+										<td class="g-end">608</td>
+										<td class="g-end">22.2</td>
+										<td class="g-end">36.9</td>
+										<td class="g-end">22.2</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0.3</td>
+										<td class="g-end">30.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">53.9</td>
+										<td class="g-end">50.0</td>
+										<td class="g-end">1</td>
+										<td class="g-end">10.0</td>
+										<td class="g-end">15.83</td>
+										<td class="g-end">9.0</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+									</tr>
+									<tr>
+										<td class="g-center">ELF</td>
+										<td class="g-center">2</td>
+										<td class="g-center">WM상품부</td>
+										<td class="g-center">-</td>
+										<td class="g-start"><a href="javascript:">KB 파워 리자드 지수연계 증권 투자신탁 SHE-36호(ELS-파생형) A-E</a></td>
+										<td class="g-center">402071</td>
+										<td class="g-center">KB자산운용</td>
+										<td class="g-center">공모</td>
+										<td class="g-center">1</td>
+										<td class="g-center">2020-12-30</td>
+										<td class="g-center">2023-09-21</td>
+										<td class="g-center">투자전략 변경</td>
+										<td class="g-center">82.4</td>
+										<td class="g-center">주의</td>
+										<td class="g-end">-</td>
+										<td class="g-end">-</td>
+										<td class="g-end">11</td>
+										<td class="g-end">2.8</td>
+										<td class="g-end">2.8</td>
+										<td class="g-end">2.8</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0.3</td>
+										<td class="g-end">30.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">53.9</td>
+										<td class="g-end">50.0</td>
+										<td class="g-end">1</td>
+										<td class="g-end">10.0</td>
+										<td class="g-end">15.83</td>
+										<td class="g-end">9.0</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+									</tr>
+									<tr>
+										<td class="g-center">WM채권</td>
+										<td class="g-center">1</td>
+										<td class="g-center">WM상품부</td>
+										<td class="g-center">-</td>
+										<td class="g-start"><a href="javascript:">BNK웰스타전문투자형사모투자신탁5호</a></td>
+										<td class="g-center">211947</td>
+										<td class="g-center">BNK자산운용</td>
+										<td class="g-center">사모</td>
+										<td class="g-center">4</td>
+										<td class="g-center">2019-09-30</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center">84.4</td>
+										<td class="g-center">우수</td>
+										<td class="g-end">-</td>
+										<td class="g-end">-</td>
+										<td class="g-end">7</td>
+										<td class="g-end">2</td>
+										<td class="g-end">2</td>
+										<td class="g-end">2</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">2</td>
+										<td class="g-end">8.0</td>
+										<td class="g-end">15.83</td>
+										<td class="g-end">9.0</td>
+										<td class="g-center">BBB+</td>
+										<td class="g-center">BBB+</td>
+										<td class="g-center">하락없음</td>
+										<td class="g-end">60.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0</td>
+										<td class="g-end">10.0</td>
+										<td class="g-end">0</td>
+										<td class="g-end">10.0</td>
+									</tr>
+									<tr>
+										<td class="g-center">WM채권</td>
+										<td class="g-center">2</td>
+										<td class="g-center">WM상품부</td>
+										<td class="g-center"><a href="javascript:">20210002</a></td>
+										<td class="g-start"><a href="javascript:">BNK웰스타전문투자형사모증권투자신탁8호(채권)</a></td>
+										<td class="g-center">212002</td>
+										<td class="g-center">BNK자산운용</td>
+										<td class="g-center">사모</td>
+										<td class="g-center">5</td>
+										<td class="g-center">2020-02-19</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center">60.8</td>
+										<td class="g-center">보통</td>
+										<td class="g-end">6</td>
+										<td class="g-end">37.9</td>
+										<td class="g-end">33</td>
+										<td class="g-end">62.6</td>
+										<td class="g-end">100.5</td>
+										<td class="g-end">100.5</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">2</td>
+										<td class="g-end">8.0</td>
+										<td class="g-end">15.83</td>
+										<td class="g-end">9.0</td>
+										<td class="g-center">A-</td>
+										<td class="g-center">A-</td>
+										<td class="g-center">하락없음</td>
+										<td class="g-end">60.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0</td>
+										<td class="g-end">10.0</td>
+										<td class="g-end">0</td>
+										<td class="g-end">10.0</td>
+									</tr>
+									<tr>
+										<td class="g-center">변액보험</td>
+										<td class="g-center">1</td>
+										<td class="g-center">WM상품부</td>
+										<td class="g-center"><a href="javascript:">20210001</a></td>
+										<td class="g-start"><a href="javascript:">교보생명_미리보는내연금(부)교보First변액연금보험</a></td>
+										<td class="g-center">B00001</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center">76.8</td>
+										<td class="g-center">양호</td>
+										<td class="g-end">2</td>
+										<td class="g-end">32</td>
+										<td class="g-end">15</td>
+										<td class="g-end">18.8</td>
+										<td class="g-end">50.8</td>
+										<td class="g-end">50.8</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">1.0</td>
+										<td class="g-end">44.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">15.83</td>
+										<td class="g-end">25.0</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0</td>
+										<td class="g-end">5.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0</td>
+										<td class="g-end">10.0</td>
+									</tr>
+									<tr>
+										<td class="g-center">변액보험</td>
+										<td class="g-center">2</td>
+										<td class="g-center">WM상품부</td>
+										<td class="g-center">-</td>
+										<td class="g-start"><a href="javascript:">DGB생명_HighFive변액연금보험(무)</a></td>
+										<td class="g-center">B00002</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center">기타</td>
+										<td class="g-center">87.2</td>
+										<td class="g-center">주의</td>
+										<td class="g-end">1</td>
+										<td class="g-end">1.2</td>
+										<td class="g-end">17</td>
+										<td class="g-end">16.1</td>
+										<td class="g-end">17.3</td>
+										<td class="g-end">17.3</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0.8</td>
+										<td class="g-end">44.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">15.83</td>
+										<td class="g-end">25.0</td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-center"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0</td>
+										<td class="g-end">5.0</td>
+										<td class="g-end"></td>
+										<td class="g-end"></td>
+										<td class="g-end">0</td>
+										<td class="g-end">10.0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- */ Contents { @DEV } -->
+		</div>
+	</div>
+	<!-- */ Container { @DEV } -->
+
+
+</div>
+</body>
+</html>

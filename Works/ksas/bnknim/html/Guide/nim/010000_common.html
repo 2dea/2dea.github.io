@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko" class="_noscript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" id="Meta-Viewport" content="width=device-width" />
+<meta name="format-detection" content="telephone=no, email=no, url=no, address=no, date=no" />
+<meta name="theme-color" id="Meta-Theme" content="" />
+<title>Common &middot; BNK NIM-UI GUIDES</title>
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/embed.css" />
+<link rel="stylesheet" type="text/css" href="../../../src/assets/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/guide.css" />
+<script type="text/javascript" src="../assets/js/lib.jquery.js"></script>
+<script type="text/javascript" id="Plugin-JS" src="../../../src/assets/js/ui-import.js"></script>
+<script type="text/javascript" src="../../../src/assets/js/ui-extension.js"></script>
+</head>
+
+<body class="_unload Guide-Page">
+<div id="Document" class="dom-wrapper">
+
+	<header role="banner" id="Header" class="dom-header">
+		<div role="navigation" class="div-skip">
+			<span class="o-ogp"><img src="../../../src/assets/img/img_ogp.alt.png" alt="" /></span>
+
+			<ul>
+				<li><a id="Go-SkipMain" href="#Center"><strong>본문 바로가기</strong></a></li>
+				<li><a id="Go-SkipNav" href="#Navigator">메인메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<div class="roles">
+			<div class="div-root">
+				<span class="logo"><span class="inner">BNK NIM-UI 스타일가이드</span></span>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span class="inner">전체메뉴</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</header>
+
+	<nav role="navigation" id="Navigator" class="dom-nav">
+		<div class="roles">
+			<div class="div-nav-local">
+				<ul class="UI_collapse">
+					<li>
+						<a href="../nim/010000_common.html" class="label" aria-expanded="true" aria-current="true"><span class="inner">Styles</span></a>
+
+						<ul>
+							<li><a href="../nim/010000_common.html" class="label" aria-current="true"><span class="inner">Common</span></a></li>
+							<li><a href="../nim/010010_color.html" class="label"><span class="inner">Color</span></a></li>
+							<li><a href="../nim/010020_text.html" class="label"><span class="inner">Text</span></a></li>
+							<li><a href="../nim/010030_table.html" class="label"><span class="inner">Table</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../nim/020000_button.html" class="label" aria-expanded="false"><span class="inner">Partial</span></a>
+
+						<ul>
+							<li><a href="../nim/020000_button.html" class="label"><span class="inner">Button</span></a></li>
+							<li><a href="../nim/020010_form.html" class="label"><span class="inner">Form</span></a></li>
+							<li><a href="../nim/020020_icon.html" class="label"><span class="inner">Icon</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../nim/030000_binds.html" class="label" aria-expanded="false"><span class="inner">Component</span></a>
+
+						<ul>
+							<li><a href="../nim/030000_binds.html" class="label"><span class="inner">Binds</span></a></li>
+							<li><a href="../nim/030010_boxes.html" class="label"><span class="inner">Boxes</span></a></li>
+							<li><a href="../nim/030020_heading.html" class="label"><span class="inner">Heading</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="div-bind">
+				<span class="item menu-hide"><a href="#Go-Navigator" title="전체메뉴 숨기기"><i aria-hidden="true"></i><span class="inner">닫기</span></a></span>
+			</div>
+		</div>
+
+		<hr class="g-overlay" />
+	</nav>
+
+	<!-- /* Container { @UX } -->
+	<div role="main" id="Center" class="dom-main">
+		<div class="roles">
+			<div class="div-title">
+				<h1 class="o-heading1"><span class="inner">Common</span></h1>
+			</div>
+
+			<!-- /* Contents { @UX } -->
+			<div class="div-contents">
+
+				<div class="o-section">
+					<h2 class="o-heading2">File Specifications</h2>
+
+					<div class="go-box type-global">
+						<h3 class="o-heading3">CSS(선언순서 정렬)</h3>
+
+						<ul class="m-pairs m-bullets type-disc">
+							<li>
+								<strong class="head">embed.css</strong>
+								<span class="data">웹폰트 정의</span>
+							</li>
+							<li>
+								<strong class="head">public.css</strong>
+								<span class="data">리셋 및 기본 타입셀렉터 정의, 공통레벨 스타일시트</span>
+							</li>
+							<li>
+								<strong class="head">plugins/swiper.css</strong>
+								<span class="data">슬라이드 플러그인 스타일시트 (2021-12-08 현재 미사용)</span>
+							</li>
+							<li>
+								<strong class="head">plugins/Chart.css</strong>
+								<span class="data">차트 플러그인 스타일시트</span>
+							</li>
+							<li>
+								<strong class="head">rewrite.css</strong>
+								<span class="data">플러그인 스타일시트 재정의 (VueFinalModal / RealGrid / MxDatepicker / Pagination 등)</span>
+							</li>
+							<li>
+								<strong class="head">module.css</strong>
+								<span class="data">컴포넌트 및 모듈 스타일 정의</span>
+							</li>
+							<li>
+								<strong class="head">layout.css</strong>
+								<span class="data">레이아웃 스타일 정의</span>
+							</li>
+							<li>
+								<strong class="head">function.css</strong>
+								<span class="data">애니메이션/트랜지션 및 동적 생성(JavaScript 등) 스타일 정의</span>
+							</li>
+							<li>
+								<strong class="head">index.css</strong>
+								<span class="data">로그인, 메인 등 주요 페이지 스타일 정의</span>
+							</li>
+							<li>
+								<strong class="head">content.css</strong>
+								<span class="data">부분적인 개별 페이지 스타일 정의</span>
+							</li>
+							<li>
+								<strong class="head">theme.css</strong>
+								<span class="data">다크 테마 등에 대응 스타일시트 (2021-12-08 현재 미사용)</span>
+							</li>
+							<li>
+								<strong class="head">common.css</strong>
+								<span class="data">스타일시트 임포트</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">Class-name Prefixes</h2>
+
+					<div class="go-box type-global">
+						<ul class="m-pairs m-bullets type-disc">
+							<li>
+								<strong class="head">g-</strong>
+								<span class="data">(Global) 공통(public) 모듈 정의 { e.g. g-hidden(Screen-reader Only) 등 }</span>
+							</li>
+							<li>
+								<strong class="head">c-</strong>
+								<span class="data">(Common) 프로젝트 공통(private) 모듈 정의 { 너비, 색상 등 }</span>
+							</li>
+							<li>
+								<strong class="head">o-</strong>
+								<span class="data">(Object) 객체 단위 개별 공통 컴포넌트 { inline 객체 - 레이블, 버튼, 아이콘 등 }, { block 객체 - 섹션, 레이어 등 }</span>
+							</li>
+							<li>
+								<strong class="head">m-</strong>
+								<span class="data">(Module) 영역 단위(대부분 Node를 포함) 공통 컴포넌트 { 테이블, 블릿 등 }</span>
+							</li>
+							<li>
+								<strong class="head">p-</strong>
+								<span class="data">(Partial) 개별 페이지 단위의 모듈 컴포넌트</span>
+							</li>
+							<li>
+								<strong class="head">dom-</strong>
+								<span class="data">(DOM) 레이아웃 요소 섹셔닝 그룹 정의</span>
+							</li>
+							<li>
+								<strong class="head">div-</strong>
+								<span class="data">(DIVision) 섹셔닝 그룹내 그루핑 영역 정의</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">Global Custom-Properties(Vars Function)</h2>
+
+					<div class="gm-viewsrc">
+						<pre class="go-viewsrc"><code class="language-css">:root  {
+    --breakpoint-min:       1280px;
+
+    --bold-100:         100;
+    --bold-400:         300;
+    --bold-500:         500;
+    --bold-700:         600;
+    --bold-900:         900;
+
+    --text-height:      1.5;
+    --text-spacing:     0;
+    --text-shadow-alt:  0 0.1ex 1px;
+
+    --font-4xs:         1.0rem;
+    --font-3xs:         1.1rem;
+    --font-2xs:         1.2rem;
+    --font-xs:          1.3rem;
+    --font-s:           1.4rem;
+    --font-sm:          1.5rem;
+    --font-m:           1.6rem;
+    --font-lm:          1.8rem;
+    --font-l:           2.0rem;
+    --font-xl:          2.4rem;
+
+    --line-4xs:         calc(12 / 10);
+    --line-3xs:         calc(14 / 11);
+    --line-2xs:         calc(16 / 12);
+    --line-xs:          calc(16 / 13);
+    --line-s:           calc(18 / 14);
+    --line-sm:          calc(18 / 15);
+    --line-m:           calc(20 / 16);
+    --line-lm:          calc(22 / 18);
+    --line-l:           calc(26 / 20);
+    --line-xl:          calc(30 / 24);
+
+    --typo-serif:       'wf-NotoSerifKR', 'Noto Serif CJK KR', 'AppleMyungjo', '바탕', 'Batang', serif;
+    --typo-sans:        'wf-NotoSansKR', 'Noto Sans CJK KR', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
+    --typo-mono:        'wf-D2Mono', 'D2Coding', 'Noto Sans Mono CJK KR', 'Consolas', 'Monaco', 'Courier New', 'Lucida Console', 'Courier', '바탕체', 'BatangChe', monospace;
+    --typo-emoji:       -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --typo-basic:       var(--typo-sans);
+    --typo-sans-latin:  var(--typo-basic);
+
+    --color-line1:      #dddddd;
+    --color-line2:      #999999;
+    --color-text1:      #333333;
+    --color-text2:      102,102,102;
+    --color-text3:      #717071;
+    --color-text4:      #999999;
+    --color-point1:     #d34f12;
+    --color-main1:      #d7191f;
+    --color-link:       #2f648c;
+    --color-error:      #d7191f;
+    --color-require:    #d7191f;
+    --color-status1:    #d7191f;
+    --color-status2:    #d7191f;
+    --color-status3:    #999999;
+    --color-status4:    #00ff00;
+    --color-status5:    #00ff00;
+    --color-ground:     #ffffff;
+    --color-ground1:    #e8e8e8;
+    --color-ground2:    #eeeeee;
+    --color-ground3:    #f8f8f8;
+    --color-disabled:   #f2f2f2;
+    --color-black:      0,0,0;
+    --color-shadow:     64,64,64;
+    --color-white:      #ffffff;
+    --color-dimmed:     1,1,1;
+
+    --alpha-dimmed:     0.7;
+
+    --height-window-maximum:    100vh;
+    --height-window-viewport:   var(--height-window-variable, calc(100vh - 80px));
+
+    --margin-layout-inline:     3rem;
+    --margin-layout-block:      3rem;
+    --height-layout-header:     6rem;
+    --width-layout-nav:         25rem;
+
+    --margin-layer-inline:      3rem;
+    --margin-layer-block:       3rem;
+    --height-layer-header:      5rem;
+
+}
+
+</code></pre>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">Font Weights</h2>
+
+					<div class="gm-viewsrc">
+						<pre class="go-viewsrc"><code class="language-css">.g-bolder {
+    font-weight: bolder !important;
+}
+
+.g-lighter {
+    font-weight: lighter !important;
+}
+
+.g-strong, .g-bold {
+    font-weight: var(--bold-700) !important;
+}
+
+.g-light {
+    font-weight: var(--bold-400) !important;
+}
+
+</code></pre>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">Text Alignments</h2>
+
+					<div class="gm-viewsrc">
+						<pre class="go-viewsrc"><code class="language-css">.g-justify {
+    justify-content: space-evenly;
+    text-align: justify;
+}
+
+.g-center {
+    justify-content: center;
+    text-align: center;
+}
+
+.g-end {
+    justify-content: flex-end;
+    text-align: right;
+    text-align: end;
+}
+
+.g-start {
+    justify-content: flex-start;
+    text-align: left;
+    text-align: start;
+}
+
+</code></pre>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">Overlays(Masking Dimmed)</h2>
+
+					<div class="gm-viewsrc">
+						<pre class="go-viewsrc"><code class="language-css">.g-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: var(--breakpoint-min);
+    height: 1px;
+    min-height: 100%;
+    background: Black;
+    background-color: rgb(var(--color-dimmed));
+    opacity: 0.6;
+    opacity: var(--alpha-dimmed);
+}
+
+</code></pre>
+					</div>
+				</div>
+
+				<div class="o-section">
+					<h2 class="o-heading2">Hidden Elements(Only Screen-readers)</h2>
+
+					<div class="gm-viewsrc">
+						<pre class="go-viewsrc"><code class="language-css">.g-hidden {
+    font-size: 1%;
+    font-size: 100%;
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    margin: 0 -1px -1px 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    visibility: visible;
+    white-space: nowrap;
+}
+
+caption .g-hidden, legend .g-hidden, .g-absolute.g-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip: rect(0,0,0,0);
+    clip-path: circle(0);
+    width: auto;
+    margin-right: 0;
+    white-space: inherit;
+}
+
+</code></pre>
+					</div>
+				</div>
+
+			</div>
+			<!-- */ Contents { @UX } -->
+		</div>
+	</div>
+	<!-- */ Container { @UX } -->
+
+</div>
+
+<script type="text/javascript" src="../assets/js/lib.highlight.js"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

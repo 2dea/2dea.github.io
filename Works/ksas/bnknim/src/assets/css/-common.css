@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  .header {
+    height: 5vh;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  /* Create three unequal columns that floats next to each other */
+  .column {
+    height: 95vh;
+    float: left;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  /* Left and right column */
+  .column.side {
+    width: 15%;    
+    border: 1px solid black;
+    overflow-y: auto;
+  }
+  
+  /* Middle column */
+  .column.body {
+    width: 85%;
+    border: 1px solid black;
+    overflow-y: auto;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+  }
+
+  .field {
+    border: 1px solid black;
+  }
+
+  .vfm-container {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vfm-content {
+    width: 35%;
+    max-height: 90%;
+    position: relative;
+    background-color: white;
+    border-radius: 5%;
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.dark-mode div .vfm-content {
+    border-color: #2d3748;
+    background-color: #1a202c;
+}
