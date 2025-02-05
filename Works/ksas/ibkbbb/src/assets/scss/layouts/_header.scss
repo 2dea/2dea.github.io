@@ -1,0 +1,265 @@
+@charset 'utf-8';
+
+// header
+.ibk-sys-header {
+  // min-width: $MIN_WIDTH;
+  z-index: 1003;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: calc(100% - 32px);
+  height: 64px;
+  background-color: $BLUE_FILL;
+  border-radius: 12px;
+
+  &.ibk-sys-header-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    .gnb-depth2 {
+      display: block;
+    }
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .logo {
+    width: 216px;
+    height: 32px;
+
+    a {
+      width: 100%;
+      height: 100%;
+      background-image: url("/public/images/gnb/img_logo.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50%;
+    }
+  }
+
+  .gnb {
+    height: 100%;
+
+    .selected {
+      a {
+        font-weight: 500;
+        color: $FONT_BLUE01 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .gnb-depth1 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    a {
+      flex: 1 0 auto;
+      margin: 0 24px;
+      font-size: 15px;
+      font-weight: 600;
+      color: $FONT_BLUE03;
+
+      &.active {
+        color: $WHITE;
+      }
+    }
+  }
+
+  .gnb-depth2 {
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    min-height: 420px;
+    max-height: calc(100vh - 96px);
+    padding: 35px 40px 40px 40px;
+    background-color: $WHITE;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .gnb-depth2-wrap {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gnb-depth2-col {
+    display: inline-block;
+    width: 200px;
+
+    h2 {
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      color: $FONT_GRAY01 !important;
+    }
+  }
+
+  .gnb-depth2-col-list {
+    display: block;
+    margin-top: 23px;
+
+    li {
+      position: relative;
+
+      +li {
+        margin-top: 16px;
+      }
+
+      a {
+        margin: 0;
+        font-size: 13px;
+        color: $FONT_GRAY01;
+
+        &:hover,
+        &:focus {
+          font-weight: 500;
+          color: $FONT_BLUE01;
+          text-decoration: underline;
+        }
+      }
+
+      .p-togglebutton {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &[data-p-highlight="true"] {
+          +.gnb-depth3 {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .gnb-depth3 {
+    display: none;
+    padding: 14px 0 6px 0;
+
+    a {
+      display: block;
+      position: relative;
+      padding-left: 9px;
+      font-size: 13px;
+      color: $FONT_GRAY02 !important;
+
+      +a {
+        margin-top: 12px;
+      }
+
+
+      &:hover,
+      &:focus {
+        font-weight: 500;
+        color: $FONT_BLUE01 !important;
+        text-decoration: underline;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 3px;
+        height: 3px;
+        background-color: $BGCOLOR_GRAY05;
+        border-radius: 50%;
+      }
+
+      &.selected {
+        font-weight: 500;
+        color: $FONT_BLUE01 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .admin {
+    display: flex;
+    align-items: center;
+
+    >div {
+      flex: 1 0 auto;
+      font-size: 12px;
+      color: $FONT_BLUE03;
+    }
+  }
+
+  .admin-thumb {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+
+  .admin-name {
+    font-weight: 600;
+  }
+
+  .admin-account {
+    margin-left: 2px;
+  }
+
+  .admin-layout {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 12px;
+    padding-left: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -1px;
+      width: 1px;
+      height: 12px;
+      border-left: 1px solid $FONT_BLUE02;
+    }
+  }
+
+  .admin-layout-open {
+
+    .btn-ico {
+      &.split {
+        background-color: $SUB_BLUE;
+      }
+
+      &.full,
+      &.horizontal,
+      &.vertical,
+      &.close {
+        margin-top: 4px;
+      }
+    }
+
+    .admin-layout-list {
+      display: block;
+    }
+  }
+
+  .admin-layout-list {
+    display: none;
+    position: absolute;
+    top: 28px;
+
+    li {
+      +li {
+        margin-top: 4px;
+      }
+    }
+  }
+}
