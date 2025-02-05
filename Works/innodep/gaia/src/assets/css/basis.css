@@ -130,41 +130,38 @@
 
 /* 
   --font-ss-int:        8;
-  --font-4xs-int:       10;
-  --font-3xs-int:       11;
-  --font-2xs-int:       12;
-  --font-xs-int:        13;
-  --font-s-int:         14;
-  --font-sm-int:        15;
-  --font-m-int:         16;
-  --font-lm-int:        18;
-  --font-l-int:         20;
-  --font-xl-int:        24;
-  --font-20xl-int:      32;
+  --font-3xs-int:       10;
+  --font-2xs-int:       11;
+  --font-xs-int:        12;
+  --font-s-int:         13;
+  --font-sm-int:        14;
+  --font-m-int:         15;
+  --font-lm-int:        16;
+  --font-l-int:         18;
+  --font-xl-int:        20;
+  --font-20xl-int:      24;
 
-  --font-4xs:           calc(0.1rem * 10);
-  --font-3xs:           calc(0.1rem * 11);
-  --font-2xs:           calc(0.1rem * 12);
-  --font-xs:            calc(0.1rem * 13);
-  --font-s:             calc(0.1rem * 14);
-  --font-sm:            calc(0.1rem * 15);
-  --font-m:             calc(0.1rem * 16);
-  --font-lm:            calc(0.1rem * 18);
-  --font-l:             calc(0.1rem * 20);
-  --font-xl:            calc(0.1rem * 24);
-  --font-20xl:          calc(0.1rem * 32);
+  --font-3xs:           calc(1rem / var(--root-em-int) * var(--font-3xs-int));
+  --font-2xs:           calc(1rem / var(--root-em-int) * var(--font-2xs-int));
+  --font-xs:            calc(1rem / var(--root-em-int) * var(--font-xs-int));
+  --font-s:             calc(1rem / var(--root-em-int) * var(--font-s-int));
+  --font-sm:            calc(1rem / var(--root-em-int) * var(--font-sm-int));
+  --font-m:             calc(1rem / var(--root-em-int) * var(--font-m-int));
+  --font-lm:            calc(1rem / var(--root-em-int) * var(--font-lm-int));
+  --font-l:             calc(1rem / var(--root-em-int) * var(--font-l-int));
+  --font-xl:            calc(1rem / var(--root-em-int) * var(--font-xl-int));
+  --font-20xl:          calc(1rem / var(--root-em-int) * var(--font-20xl-int));
 
-  --line-4xs:           calc(12 / 10);
-  --line-3xs:           calc(14 / 11);
-  --line-2xs:           calc(16 / 12);
-  --line-xs:            calc(16 / 13);
-  --line-s:             calc(18 / 14);
-  --line-sm:            calc(20 / 15);
-  --line-m:             calc(20 / 16);
-  --line-lm:            calc(24 / 18);
-  --line-l:             calc(26 / 20);
-  --line-xl:            calc(32 / 24);
-  --line-20xl:          calc(42 / 32);
+  --line-3xs:           calc(12 / var(--font-3xs-int));
+  --line-2xs:           calc(14 / var(--font-2xs-int));
+  --line-xs:            calc(16 / var(--font-xs-int));
+  --line-s:             calc(16 / var(--font-s-int));
+  --line-sm:            calc(18 / var(--font-sm-int));
+  --line-m:             calc(20 / var(--font-m-int));
+  --line-lm:            calc(20 / var(--font-lm-int));
+  --line-l:             calc(24 / var(--font-l-int));
+  --line-xl:            calc(26 / var(--font-xl-int));
+  --line-20xl:          calc(32 / var(--font-20xl-int));
  */
 
   --font-ss-int:        8;
@@ -177,14 +174,14 @@
   --font-20xl-int:      50;
   --font-30xl-int:      72;
 
-  --font-4xs:           calc(0.1rem * var(--font-4xs-int));
-  --font-2xs:           calc(0.1rem * var(--font-2xs-int));
-  --font-m:             calc(0.1rem * var(--font-m-int));
-  --font-lm:            calc(0.1rem * var(--font-lm-int));
-  --font-l:             calc(0.1rem * var(--font-l-int));
-  --font-xl:            calc(0.1rem * var(--font-xl-int));
-  --font-20xl:          calc(0.1rem * var(--font-20xl-int));
-  --font-30xl:          calc(0.1rem * var(--font-30xl-int));
+  --font-4xs:           calc(1rem / var(--root-em-int) * var(--font-4xs-int));
+  --font-2xs:           calc(1rem / var(--root-em-int) * var(--font-2xs-int));
+  --font-m:             calc(1rem / var(--root-em-int) * var(--font-m-int));
+  --font-lm:            calc(1rem / var(--root-em-int) * var(--font-lm-int));
+  --font-l:             calc(1rem / var(--root-em-int) * var(--font-l-int));
+  --font-xl:            calc(1rem / var(--root-em-int) * var(--font-xl-int));
+  --font-20xl:          calc(1rem / var(--root-em-int) * var(--font-20xl-int));
+  --font-30xl:          calc(1rem / var(--root-em-int) * var(--font-30xl-int));
 
   --line-4xs:           calc(13 / var(--font-4xs-int));
   --line-2xs:           calc(15 / var(--font-2xs-int));
@@ -525,7 +522,7 @@ a  { font-size: 100%; background-color: Transparent; color: inherit; text-decora
 small  { font-size: 100%; }
 q:before,  q:after  { content: ""; content: none; }
 abbr[title]  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
-b  { font-weight: bolder; font-weight: var(--bold-70, 600); }
+b  { font-weight: bolder; font-weight: var(--bold-70, 650); }
 mark  { background-color: Transparent; color: inherit; }
 br  { letter-spacing: 0 !important; }
 ins,  del  { text-decoration: none; }
@@ -586,8 +583,8 @@ caption .g-hidden,  legend .g-hidden,
 .g-bolder  { font-weight: bolder !important; }
 .g-lighter  { font-weight: lighter !important; }
 .g-strong,
-  .g-bold  { font-weight: var(--bold-70) !important; }
-.g-light  { font-weight: var(--bold-40) !important; }
+  .g-bold  { font-weight: var(--bold-70, 700) !important; }
+.g-light  { font-weight: var(--bold-40, 400) !important; }
 
 .g-color-inherit  { color: inherit !important; }
 
@@ -634,8 +631,8 @@ caption .g-hidden,  legend .g-hidden,
 .g-annot.flow-inline:not(:hover >:not(:focus))  { opacity: 1.0; }
  */
 
-.g-annot  { font-weight: 350; font-size: 12px; line-height: calc(18 / 12); z-index: 2; padding: 0 0.25em; background: Black; color: Gold; outline: 1px solid White; text-align: justify; text-overflow: ellipsis; word-wrap: break-word; word-break: break-all; }
-.g-annot samp  { font-weight: 650; color: Crimson; }
+.g-annot  { font-weight: var(--bold-40, 350); font-size: 12px; line-height: calc(18 / 12); z-index: 2; padding: 0 0.25em; background: Black; color: Gold; outline: 1px solid White; text-align: justify; text-overflow: ellipsis; word-wrap: break-word; word-break: break-all; }
+.g-annot samp  { font-weight: var(--bold-70, 650); color: Crimson; }
 .g-annot:hover,  .g-annot:focus-within  { color: Ivory; cursor: help; word-break: keep-all; }
 .g-annot:not(.flow-block)  { position: absolute; }
 .g-annot:not(.flow-block):hover:not(:focus-within)  { opacity: 0.0; }
