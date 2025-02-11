@@ -4,8 +4,8 @@
  ------------- */
 
 .g-scrollable.width-thin  {
-  --margin-global-scrollbar:    0.1rem;
-  --width-global-scrollbar:     calc(0.6rem + var(--margin-global-scrollbar) * 2);
+  --margin-global-scrollbar:    calc(1rem / var(--root-em-int) * 1);
+  --width-global-scrollbar:     calc(1rem / var(--root-em-int) * 6 + var(--margin-global-scrollbar) * 2);
 }
 
 ::-webkit-resizer  { background: var(--object-symbol-arrows-output) 0 /100%; }
@@ -28,10 +28,10 @@ html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable bot
 /** Define Fonts
  --------------- */
 
-*,
-  :before,  :after  { letter-spacing: var(--text-spacing); }
+*  { letter-spacing: var(--text-spacing); }
+:before,  :after  { border-radius: inherit; letter-spacing: inherit; }
 html  { font-size: 62.5%; font-size: calc(10em / 16); font-size: var(--root-em, calc(10em / 16)); }
-body  { font-family: var(--typo-base); font-optical-sizing: auto; font-weight: var(--bold-40, inherit); font-size: var(--text-size); line-height: var(--text-height); color: var(--color-text1); background: var(--color-surface, WhiteSmoke); }
+body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40, inherit); font-size: var(--text-size); line-height: var(--text-height); color: var(--color-text1); background: var(--color-surface, WhiteSmoke); }
 /* @media
   screen and (not (max-width: 1920px))  {
     html  { font-size: var(--root-em, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
@@ -137,12 +137,12 @@ body  { font-family: var(--typo-base); font-optical-sizing: auto; font-weight: v
 /** Global Navigation */
 .dom-wrapper  { grid-template-columns: 0 0 auto 0; }/* ### */
 .dom-nav  { border-right: var(--e10) solid var(--color-edge2); }
-.dom-nav >.roles  { height: 100vh; height: 100dvh; }
+.dom-nav >.roles  { height: 100vh; height: 100dvh; height: 100vb; }
 
 
 /** Container */
 .dom-main  { flex-direction: row; max-width: 100vw; max-width: 100dvw; background-color: inherit; }
-.dom-main >.roles  { flex: none; min-width: 0; max-width: 100%; height: 100vh; height: 100dvh; }
+.dom-main >.roles  { flex: none; min-width: 0; max-width: 100%; height: 100vh; height: 100dvh; height: 100vb; }
 .dom-main >.roles >*  { flex: none; margin: 0 var(--margin-layout-inline); }
 /* .dom-main >:first-child ~*  { width: 0; }
 .dom-main >.roles >:first-child:before  { content: ""; display: block; margin-bottom: var(--margin-layout-block); } */
