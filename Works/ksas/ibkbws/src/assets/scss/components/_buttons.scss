@@ -1,0 +1,828 @@
+@charset 'utf-8';
+
+// no-button
+.ico {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+
+  &.alert {
+    width: 16px;
+    height: 16px;
+    background-image: url("/public/images/common/ico_alert.svg");
+
+  }
+
+  &.notice {
+    width: 16px;
+    height: 16px;
+    background-image: url("/public/images/common/ico_notice.svg");
+  }
+
+  &.file {
+    width: 16px;
+    height: 16px;
+    background-image: url("/public/images/common/ico_file.svg");
+  }
+}
+
+// buttons
+.btn-ico {
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  &.layout {
+    width: 28px;
+    height: 28px;
+    background-size: 16px;
+    border-radius: 50%;
+
+    &.split {
+      background-image: url("/public/images/gnb/ico_split.svg");
+    }
+
+    &.full,
+    &.horizontal,
+    &.vertical,
+    &.close {
+      background-color: $WHITE;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+
+      &.selected {
+        background-color: $SUB_BLUE;
+      }
+    }
+
+    &.full {
+      background-image: url("/public/images/gnb/ico_full.svg");
+
+      &.selected {
+        background-image: url("/public/images/gnb/ico_full_active.svg");
+      }
+    }
+
+    &.horizontal {
+      background-image: url("/public/images/gnb/ico_horizontal.svg");
+
+      &.selected {
+        background-image: url("/public/images/gnb/ico_horizontal_active.svg");
+      }
+    }
+
+    &.vertical {
+      background-image: url("/public/images/gnb/ico_vertical.svg");
+
+      &.selected {
+        background-image: url("/public/images/gnb/ico_vertical_active.svg");
+      }
+    }
+
+    &.close {
+      background-image: url("/public/images/gnb/ico_close.svg");
+
+      &.selected {
+        background-image: url("/public/images/gnb/ico_close_active.svg");
+      }
+    }
+  }
+
+  &.menu {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+
+    &.toggle {
+      &.p-togglebutton {
+        &[data-p-highlight="true"] {
+          .p-button {
+            background-image: url("/public/images/gnb/ico_menu_close.svg");
+          }
+        }
+
+        .p-button {
+          background-image: url("/public/images/gnb/ico_menu_open.svg");
+        }
+
+      }
+
+      .p-button-label {
+        display: none;
+      }
+    }
+
+    &.lock {
+      background-image: url("/public/images/snb/ico_lock_blue.svg");
+
+      &.change {
+        background-image: url("/public/images/snb/ico_close_white.svg");
+      }
+    }
+  }
+
+  &.tool {
+
+    &.more,
+    &.all {
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+    }
+
+    &.more {
+      background-image: url("/public/images/snb/ico_menu_more.svg");
+    }
+
+    &.all {
+      background-image: url("/public/images/snb/ico_menu_all.svg");
+    }
+  }
+
+  &.clear {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-size: 17px;
+    background-image: url("/public/images/form/ico_reset.svg");
+  }
+
+  &.search {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-size: 17px;
+    background-image: url("/public/images/form/ico_search.svg");
+  }
+
+  &.more {
+    width: 8px;
+    height: 20px;
+    padding: 0;
+    background-image: url("/public/images/common/ico_more_vertical.svg");
+    background-size: cover;
+  }
+
+  &.arrow {
+    width: 27px;
+    height: 27px;
+    background-size: contain;
+
+    &.prev {
+      background-image: url("/public/images/popup/btn_circle_arrow.svg");
+    }
+
+    &.next {
+      background-image: url("/public/images/popup/btn_circle_arrow.svg");
+      transform: rotate(180deg);
+    }
+
+    &.left {
+      background-image: url("/public/images/popup/btn_circle_arrow.svg");
+    }
+
+    &.right {
+      background-image: url("/public/images/popup/btn_circle_arrow.svg");
+      transform: rotate(180deg);
+    }
+
+    &:disabled,
+    &.p-disabled {
+      background-color: transparent !important;
+
+      &.prev {
+        background-image: url("/public/images/popup/btn_circle_arrow_disabled.svg");
+      }
+
+      &.next {
+        background-image: url("/public/images/popup/btn_circle_arrow_disabled.svg");
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.direction {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+
+    &.left {
+      background-image: url("/public/images/form/ico_cal_arrow.svg");
+      transform: rotate(180deg);
+    }
+
+    &.right {
+      background-image: url("/public/images/form/ico_cal_arrow.svg");
+    }
+
+    &.lg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.accordion {
+    width: 20px;
+    height: 20px;
+    background-image: url("/public/images/form/ico_cal_arrow.svg");
+    background-size: contain;
+    transform: rotate(90deg);
+  }
+
+  &.accordion-open {
+    width: 20px;
+    height: 20px;
+    background-image: url("/public/images/form/ico_cal_arrow.svg");
+    background-size: contain;
+    transform: rotate(270deg);
+  }
+
+  &.drag {
+    width: 16px;
+    height: 16px;
+    background-image: url("/public/images/form/btn_drag.svg");
+    background-size: contain;
+  }
+
+  &.waste {
+    width: 16px;
+    height: 16px;
+    background-image: url("/public/images/form/btn_waste.svg");
+    background-size: contain;
+  }
+}
+
+.btn-text {
+  &.primary {
+    height: 32px;
+    padding: 8px 16px;
+
+    span {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &.secondary {
+    padding: 7px 12px;
+    border-radius: 2px !important;
+
+    span {
+      font-size: 11px;
+      font-weight: 600;
+    }
+  }
+
+  &.tertiary {
+    height: 24px;
+    padding: 5px 10px;
+    border-radius: 2px !important;
+
+    span {
+      font-size: 11px;
+      font-weight: 500;
+    }
+  }
+
+  &.default {
+    background-color: $WHITE;
+    border: 1px solid $BORDER_GRAY01;
+
+    span {
+      color: $FONT_GRAY01;
+    }
+
+    &:hover {
+      background-color: $BGCOLOR_GRAY04;
+    }
+
+    &:active {
+      background-color: $GRAY_LINE_PRESSED;
+    }
+
+    &:disabled {
+      background-color: $WHITE !important;
+      border-color: $BORDER_GRAY03;
+
+      span {
+        color: $FONT_GRAY04;
+      }
+    }
+  }
+
+  &.gray-fill {
+    background-color: $GRAY_FILL;
+    border: 1px solid $GRAY_FILL;
+
+    span {
+      color: $WHITE;
+    }
+
+    &:hover {
+      background-color: $GRAY_FILL_HOVER;
+      border-color: $GRAY_FILL_HOVER;
+    }
+
+    &:active {
+      background-color: $GRAY_FILL_PRESSED;
+      border-color: $GRAY_FILL_PRESSED;
+    }
+
+    &:disabled {
+      background-color: $BORDER_GRAY01 !important;
+      border-color: $BORDER_GRAY01;
+
+      span {
+        color: $FONT_GRAY03;
+      }
+    }
+  }
+
+  &.blue-fill {
+    background-color: $BLUE_FILL;
+    border: 1px solid $BLUE_FILL;
+
+    span {
+      color: $WHITE;
+    }
+
+    &:hover {
+      background-color: $BLUE_FILL_HOVER;
+      border-color: $BLUE_FILL_HOVER;
+    }
+
+    &:active {
+      background-color: $BLUE_FILL_PRESSED;
+      border-color: $BLUE_FILL_PRESSED;
+    }
+
+    &:disabled {
+      background-color: $BORDER_GRAY01 !important;
+      border-color: $BORDER_GRAY01;
+
+      span {
+        color: $FONT_GRAY03;
+      }
+    }
+  }
+
+  &.blue-line {
+    background-color: $WHITE;
+    border: 1px solid $BLUE_FILL;
+
+    span {
+      color: $BLUE_FILL;
+    }
+
+    &:hover {
+      background-color: $BLUE_LINE_HOVER;
+    }
+
+    &:active {
+      background-color: $BLUE_LINE_PRESSED;
+    }
+
+    &:disabled {
+      background-color: $WHITE !important;
+      border-color: $BORDER_GRAY03;
+
+      span {
+        color: $FONT_GRAY04;
+      }
+    }
+  }
+
+  &.sub-blue {
+    background-color: $SUBBLUE_FILL;
+    border: 1px solid $SUBBLUE_FILL;
+
+    span {
+      color: $WHITE;
+    }
+
+    &:hover {
+      background-color: $SUBBLUE_HOVER;
+      border-color: $SUBBLUE_HOVER;
+    }
+
+    &:active {
+      background-color: $SUBBLUE_PRESSED;
+      border-color: $SUBBLUE_PRESSED;
+    }
+
+    &:disabled {
+      background-color: $BORDER_GRAY01 !important;
+      border-color: $BORDER_GRAY01;
+
+      span {
+        color: $FONT_GRAY03;
+      }
+    }
+  }
+
+  &.notice {
+    span {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -7px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $NOTICE_ORANGE;
+      }
+    }
+  }
+}
+
+.btn-lock {
+  padding: 12px 16px 11px 16px;
+
+  span {
+    padding-right: 21px;
+    background-image: url("/public/images/snb/ico_lock_blue.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 16px;
+  }
+
+  &.btn-lock-off {
+    span {
+      background-image: url("/public/images/snb/ico_close_blue.svg");
+    }
+  }
+}
+
+.btn-swap {
+  width: 24px;
+  height: 24px;
+  background-image: url("/public/images/common/btn_swap.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+
+  &.lt {
+    transform: rotate(180deg);
+  }
+}
+
+.btn-close {
+  width: 20px;
+  height: 20px;
+  background-image: url("/public/images/common/btn_modal_close.svg");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 50%;
+
+  &.sm {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+  }
+
+  &.lg {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+  }
+}
+
+.btn-up {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: $WHITE;
+  background-image: url("/public/images/common/btn_up.svg");
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: 50%;
+}
+
+.btn-plus {
+  width: 20px;
+  height: 20px;
+  background-image: url("/public/images/gnb/ico_menu_close.svg");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 50%;
+
+  &.sm {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+  }
+}
+
+.btn-minus {
+  width: 20px;
+  height: 20px;
+  background-image: url("/public/images/gnb/ico_menu_open.svg");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 50%;
+
+  &.sm {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+  }
+}
+
+.btn-dashboard {
+  width: 48px;
+  height: 38px;
+  background-image: url("/public/images/snb/ico_dashboard_blue.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 16px;
+}
+
+.btn-call {
+  width: 24px;
+  height: 24px;
+  background-image: url("/public/images/table/btn_call.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+
+.btn-status {
+  @include user-status(talk-clock-, 1);
+  @include user-status(talk-clock-, 2);
+  @include user-status(talk-clock-, 3);
+
+  @include user-status(talk-dish-, 1);
+  @include user-status(talk-dish-, 2);
+  @include user-status(talk-dish-, 3);
+
+  @include user-status(talk-distance-, 1);
+  @include user-status(talk-distance-, 2);
+  @include user-status(talk-distance-, 3);
+
+  @include user-status(talk-house-, 1);
+  @include user-status(talk-house-, 2);
+  @include user-status(talk-house-, 3);
+
+  @include user-status(talk-location-, 1);
+  @include user-status(talk-location-, 2);
+  @include user-status(talk-location-, 3);
+
+  @include user-status(talk-minus-, 1);
+  @include user-status(talk-minus-, 2);
+  @include user-status(talk-minus-, 3);
+
+  @include user-status(talk-offline-, 1);
+  @include user-status(talk-offline-, 2);
+  @include user-status(talk-offline-, 3);
+
+  @include user-status(talk-presentation-, 1);
+  @include user-status(talk-presentation-, 2);
+  @include user-status(talk-presentation-, 3);
+
+  @include user-status(talk-stop-, 1);
+  @include user-status(talk-stop-, 2);
+  @include user-status(talk-stop-, 3);
+
+  @include user-status(talk-stop-, 1);
+  @include user-status(talk-stop-, 2);
+  @include user-status(talk-stop-, 3);
+
+  @include user-status(talk-suitcase-, 1);
+  @include user-status(talk-suitcase-, 2);
+  @include user-status(talk-suitcase-, 3);
+
+  @include user-status(talk-travel-, 1);
+  @include user-status(talk-travel-, 2);
+  @include user-status(talk-travel-, 3);
+
+  @include user-status(talk-user-, 1);
+  @include user-status(talk-user-, 2);
+  @include user-status(talk-user-, 3);
+}
+
+.btn-download {
+  height: 32px;
+  padding: 7px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  font-weight: 500;
+  color: $FONT_GRAY01;
+  background-color: $WHITE;
+  border: 1px solid $BORDER_GRAY01;
+
+  .p-button-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url("/public/images/common/ico_download.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
+
+  &:hover {
+    background-color: $BGCOLOR_GRAY04;
+  }
+
+  &:active {
+    background-color: $GRAY_LINE_PRESSED;
+  }
+}
+
+.btn-download-all {
+  height: 32px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  font-weight: 500;
+  color: $FONT_GRAY01;
+  background-color: $WHITE;
+  border: 1px solid $BORDER_GRAY01;
+
+  .p-button-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-image: url("/public/images/common/ico_download_all.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
+
+  &:hover {
+    background-color: $BGCOLOR_GRAY04;
+  }
+
+  &:active {
+    background-color: $GRAY_LINE_PRESSED;
+  }
+}
+
+.btn-print {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  font-weight: 500;
+  color: $FONT_GRAY01;
+  background-color: $WHITE;
+  border: 1px solid $BORDER_GRAY01;
+
+  .p-button-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    background-image: url("/public/images/common/ico_print.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
+
+  &:hover {
+    background-color: $BGCOLOR_GRAY04;
+  }
+
+  &:active {
+    background-color: $GRAY_LINE_PRESSED;
+  }
+}
+
+.btn-img-print {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  font-weight: 500;
+  color: $FONT_GRAY01;
+  background-color: $WHITE;
+  border: 1px solid $BORDER_GRAY01;
+
+  .p-button-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+    background-image: url("/public/images/common/ico_img_print.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
+
+  &:hover {
+    background-color: $BGCOLOR_GRAY04;
+  }
+
+  &:active {
+    background-color: $GRAY_LINE_PRESSED;
+  }
+}
+
+.btn-download,
+.btn-download-all,
+.btn-print,
+.btn-img-print {
+
+  &.notice {
+    .p-button-label {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -30%;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $NOTICE_ORANGE;
+      }
+    }
+  }
+
+  &:disabled,
+  &.p-disabled {
+    color: $FONT_GRAY04;
+    background-color: $WHITE;
+    border-color: $BORDER_GRAY01;
+
+    .p-button-label {
+      color: $FONT_GRAY04 !important;
+    }
+
+    .p-button-icon {
+      opacity: .4;
+    }
+  }
+}
+
+.btn-underline {
+  border-radius: 0;
+
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    color: $PRIMARY_BLUE !important;
+    border-bottom: 1px solid $PRIMARY_BLUE;
+  }
+
+  &:active {
+    span {
+      color: $FONT_GRAY04 !important;
+      border-color: $FONT_GRAY04;
+    }
+  }
+
+  &:disabled,
+  &.p-disabled {
+    background-color: transparent !important;
+
+    span {
+      color: $FONT_GRAY04 !important;
+      border-color: $FONT_GRAY04;
+    }
+  }
+}
+
+.btn-copy {
+  width: auto;
+  height: 16px;
+  background-image: url("/public/images/table/btn_copy.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+  span {
+    padding-right: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    color: $FONT_GRAY02;
+    text-align: left;
+  }
+
+  &:active {
+    opacity: .6;
+  }
+
+  &:disabled,
+  &.p-disabled {
+    opacity: .6 !important;
+    background-color: transparent !important;
+  }
+}
+
+.btn-text-link {
+  text-align: left;
+
+  &:hover {
+    span {
+      color: $FONT_GRAY01;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    color: $FONT_GRAY02;
+  }
+}
