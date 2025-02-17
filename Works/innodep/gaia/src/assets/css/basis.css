@@ -89,12 +89,13 @@
 }
 
 :root  {
-  --breakpoint-min:     320px;
-  --breakpoint-max:     120rem;
-
-
   --root-em-int:        10;
-  --root-em:            calc(1em * var(--root-em-int, 16) / 16);
+  /* --root-em-int:        16; */
+  --root-em-base:       calc(1em * var(--root-em-int, 16) / 16);
+  --root-em:            1rem / var(--root-em-int);
+
+  --breakpoint-min:     320px;
+  --breakpoint-max:     calc(var(--root-em) * 1200);
 
   /* font-weight: 300;
     font-weight: 301;
@@ -141,16 +142,16 @@
   --font-xl-int:        20;
   --font-20xl-int:      24;
 
-  --font-3xs:           calc(1rem / var(--root-em-int) * var(--font-3xs-int));
-  --font-2xs:           calc(1rem / var(--root-em-int) * var(--font-2xs-int));
-  --font-xs:            calc(1rem / var(--root-em-int) * var(--font-xs-int));
-  --font-s:             calc(1rem / var(--root-em-int) * var(--font-s-int));
-  --font-sm:            calc(1rem / var(--root-em-int) * var(--font-sm-int));
-  --font-m:             calc(1rem / var(--root-em-int) * var(--font-m-int));
-  --font-lm:            calc(1rem / var(--root-em-int) * var(--font-lm-int));
-  --font-l:             calc(1rem / var(--root-em-int) * var(--font-l-int));
-  --font-xl:            calc(1rem / var(--root-em-int) * var(--font-xl-int));
-  --font-20xl:          calc(1rem / var(--root-em-int) * var(--font-20xl-int));
+  --font-3xs:           calc(var(--root-em) * var(--font-3xs-int));
+  --font-2xs:           calc(var(--root-em) * var(--font-2xs-int));
+  --font-xs:            calc(var(--root-em) * var(--font-xs-int));
+  --font-s:             calc(var(--root-em) * var(--font-s-int));
+  --font-sm:            calc(var(--root-em) * var(--font-sm-int));
+  --font-m:             calc(var(--root-em) * var(--font-m-int));
+  --font-lm:            calc(var(--root-em) * var(--font-lm-int));
+  --font-l:             calc(var(--root-em) * var(--font-l-int));
+  --font-xl:            calc(var(--root-em) * var(--font-xl-int));
+  --font-20xl:          calc(var(--root-em) * var(--font-20xl-int));
 
   --line-3xs:           calc(12 / var(--font-3xs-int));
   --line-2xs:           calc(14 / var(--font-2xs-int));
@@ -174,14 +175,14 @@
   --font-20xl-int:      50;
   --font-30xl-int:      72;
 
-  --font-4xs:           calc(1rem / var(--root-em-int) * var(--font-4xs-int));
-  --font-2xs:           calc(1rem / var(--root-em-int) * var(--font-2xs-int));
-  --font-m:             calc(1rem / var(--root-em-int) * var(--font-m-int));
-  --font-lm:            calc(1rem / var(--root-em-int) * var(--font-lm-int));
-  --font-l:             calc(1rem / var(--root-em-int) * var(--font-l-int));
-  --font-xl:            calc(1rem / var(--root-em-int) * var(--font-xl-int));
-  --font-20xl:          calc(1rem / var(--root-em-int) * var(--font-20xl-int));
-  --font-30xl:          calc(1rem / var(--root-em-int) * var(--font-30xl-int));
+  --font-4xs:           calc(var(--root-em) * var(--font-4xs-int));
+  --font-2xs:           calc(var(--root-em) * var(--font-2xs-int));
+  --font-m:             calc(var(--root-em) * var(--font-m-int));
+  --font-lm:            calc(var(--root-em) * var(--font-lm-int));
+  --font-l:             calc(var(--root-em) * var(--font-l-int));
+  --font-xl:            calc(var(--root-em) * var(--font-xl-int));
+  --font-20xl:          calc(var(--root-em) * var(--font-20xl-int));
+  --font-30xl:          calc(var(--root-em) * var(--font-30xl-int));
 
   --line-4xs:           calc(13 / var(--font-4xs-int));
   --line-2xs:           calc(15 / var(--font-2xs-int));
@@ -350,8 +351,8 @@
   --color-scrollbar-thumb:      var(--border-scroll-2);
   --color-scrollbar-thumb-hover:var(--border-scroll-3);
   --color-scrollbar-thumb-active: Gray;
-  --margin-global-scrollbar:    calc(1rem / var(--root-em-int) * 2);
-  --width-global-scrollbar:     calc(1rem / var(--root-em-int) * 8 + var(--margin-global-scrollbar) * 2);
+  --margin-global-scrollbar:    calc(var(--root-em) * 2);
+  --width-global-scrollbar:     calc(var(--root-em) * 8 + var(--margin-global-scrollbar) * 2);
 
   --height-global-form:         3rem;
   --height-global-form-wide:    calc(var(--height-global-form) + 0.4rem);

@@ -4,8 +4,8 @@
  ------------- */
 
 .g-scrollable.width-thin  {
-  --margin-global-scrollbar:    calc(1rem / var(--root-em-int) * 1);
-  --width-global-scrollbar:     calc(1rem / var(--root-em-int) * 6 + var(--margin-global-scrollbar) * 2);
+  --margin-global-scrollbar:    calc(var(--root-em) * 1);
+  --width-global-scrollbar:     calc(var(--root-em) * 6 + var(--margin-global-scrollbar) * 2);
 }
 
 ::-webkit-resizer  { background: var(--object-symbol-arrows-output) 0 /100%; }
@@ -30,11 +30,12 @@ html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable bot
 
 *  { letter-spacing: var(--text-spacing); }
 :before,  :after  { border-radius: inherit; letter-spacing: inherit; }
-html  { font-size: 62.5%; font-size: calc(10em / 16); font-size: var(--root-em, calc(10em / 16)); }
+html  { font-size: 62.5%; font-size: calc(10em / 16); font-size: var(--root-em-base, calc(10em / 16)); }
+/* html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); } */
 body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40, inherit); font-size: var(--text-size); line-height: var(--text-height); color: var(--color-text1); background: var(--color-surface, WhiteSmoke); }
 /* @media
   screen and (not (max-width: 1920px))  {
-    html  { font-size: var(--root-em, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
+    html  { font-size: var(--root-em-base, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
 } */
 /* html  { font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); } */
 
@@ -104,7 +105,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 [class*=" dom-"],
   [class|="dom"]  { display: flex; flex-direction: column; }
 [class*=" dom-"] >.roles,
-  [class|="dom"] >.roles  { display: flex; flex-direction: column; min-height: 100%; background-color: var(--color-ground); }
+  [class|="dom"] >.roles  { display: flex; flex-direction: column; background-color: var(--color-ground); }
 [class*=" dom-"] >.g-overlay,
   [class|="dom"] >.g-overlay  { min-height: 0; opacity: 0.001; }
 
