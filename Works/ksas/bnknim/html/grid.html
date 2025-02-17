@@ -79,24 +79,24 @@ ul  { list-style: none; }
 .dom-main  { grid-area: DOM_main; }
 .dom-footer  { grid-area: DOM_footer; }
  */
-.dom-wrapper  { display: grid; grid-template-columns: auto 200px 800px auto; grid-template-rows: minmax(80px, auto) 1fr minmax(120px, auto); }
-.dom-wrapper  { grid-template-columns: 0 200px auto 0; }
-.dom-header  { grid-row: 1 /2; grid-column: 1 /span 6; }
+.dom-wrapper  { display: grid; grid-template-columns: auto 200px 800px 100px auto; grid-template-rows: minmax(80px, auto) 1fr minmax(120px, auto); }
+.dom-wrapper  { grid-template-columns: 0 200px auto 100px 0; }
+.dom-header  { grid-row: 1 /2; grid-column: 1 /span 5; }
 .dom-nav  { grid-row: 2 /3; grid-column: 2 /3; }
 .dom-main  { grid-row: 2 /3; grid-column: 3 /4; /* min-height: 60rem; */ }
 .dom-aside  { grid-row: 2 /3; grid-column: 4 /5; }
-.dom-footer  { grid-row: 3 /4; grid-column: 1 /span 6; }
+.dom-footer  { grid-row: 3 /4; grid-column: 1 /span 5; }
 
 @media
   screen and (-ms-high-contrast: none),
   screen and (-ms-high-contrast: active)  {
-    .dom-wrapper  { display: -ms-grid; -ms-grid-columns: minmax(min-content, 1fr) 200px 800px minmax(min-content, 1fr); -ms-grid-rows: minmax(80px, 100%) minmax(calc(100vh - 200px), 1fr) minmax(120px, 100%); }
-    .dom-wrapper  { -ms-grid-columns: 0 200px minmax(min-content, 100%) 0; }
-    .dom-header  { -ms-grid-row: 1; -ms-grid-column: 1; -ms-grid-column-span: 6; }
+    .dom-wrapper  { display: -ms-grid; -ms-grid-columns: minmax(min-content, 1fr) 200px 800px 100px minmax(min-content, 1fr); -ms-grid-rows: minmax(80px, 100%) minmax(calc(100vh - 200px), 1fr) minmax(120px, 100%); }
+    .dom-wrapper  { -ms-grid-columns: 0 200px minmax(min-content, 100%) 100px 0; }
+    .dom-header  { -ms-grid-row: 1; -ms-grid-column: 1; -ms-grid-column-span: 5; }
     .dom-nav  { -ms-grid-row: 2; -ms-grid-column: 2; }
     .dom-main  { -ms-grid-row: 2; -ms-grid-column: 3; }
     .dom-aside  { -ms-grid-row: 2; -ms-grid-column: 4; }
-    .dom-footer  { -ms-grid-row: 3; -ms-grid-column: 1; -ms-grid-column-span: 6; }
+    .dom-footer  { -ms-grid-row: 3; -ms-grid-column: 1; -ms-grid-column-span: 5; }
 }
 
 
@@ -106,7 +106,7 @@ ul  { list-style: none; }
 .dom-nav  { background-color: #bbddcc; }
 /* .dom-nav >.roles  { position: sticky; position: sticky; top: 0; max-height: 100vh; overflow: auto; } */
 .dom-nav >.roles  {  }
-.dom-nav .div-nav-local  { position: absolute; inset: auto 0; background: Gold; }
+.dom-nav .div-nav-local  { position: absolute; inset: auto 0; background: Gold; opacity: 0.5; }
 .dom-nav .div-nav-local >*  { display: flex; width: 1260px; margin: 0 auto; padding: 0 30px; background: rgba(0,0,0, 0.1); background: rgb(0 0 0 /10%); }
 
 
@@ -240,12 +240,12 @@ if( window.NodeList && !NodeList.prototype.forEach ) {
 	</div>
 	<!-- */ Container { @DEV } -->
 
-	<aside class="dom-aside">
+	<aside role="complementary" id="Aside" class="dom-aside">
 		<hr class="g-overlay" />
 
 		<div class="roles">
 			ASIDE
-		</div><i aria-hidden="true"></i>
+		</div>
 	</aside>
 
 	<footer role="contentinfo" id="Footer" class="dom-footer">
