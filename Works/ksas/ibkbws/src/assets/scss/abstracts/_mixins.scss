@@ -13,7 +13,7 @@
   }
 }
 
-@mixin text-dot($top-size, $dot-size, $dot-color, $font-color, $pl, $font-size) {
+@mixin text-dot($top-size, $dot-size, $dot-color, $font-color, $pl, $font-size, $line-height) {
   position: relative;
 
   &::before {
@@ -31,6 +31,7 @@
     display: inline-block;
     padding-left: $pl;
     font-size: $font-size;
+    line-height: $line-height;
     color: $font-color;
   }
 }

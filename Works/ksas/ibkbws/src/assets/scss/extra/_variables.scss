@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+:root  {
+  // --font-family: var(--typo-base);
+  // --color-test: #f00;
+}
+
+// $root-em-int: var(--root-em-int, 16);
+$root-em-int: 16;
+// $root-em: var(--root-em, 1rem / 16);
+
+$tp:                      var(--tp);
+$cc:                      var(--cc);
+$ss:                      var(--ss);
+$e10:                     var(--e10);
+$e20:                     var(--e20);
+
+$bold-30: var(--bold-30);
+$bold-40: var(--bold-40);
+$bold-50: var(--bold-50);
+$bold-70: var(--bold-70);
+
+$font-3xs: var(--font-3xs);
+$font-2xs: var(--font-2xs);
+$font-xs:  var(--font-xs);
+$font-s:   var(--font-s);
+$font-sm:  var(--font-sm);
+$font-m:   var(--font-m);
+$font-lm:  var(--font-lm);
+$font-l:   var(--font-l);
+
+$line-3xs: var(--line-3xs);
+$line-2xs: var(--line-2xs);
+$line-xs:  var(--line-xs);
+$line-s:   var(--line-s);
+$line-sm:  var(--line-sm);
+$line-m:   var(--line-m);
+$line-lm:  var(--line-lm);
+$line-l:   var(--line-l);
+
+$text-size: var(--text-size);
+$text-height: var(--text-height);
+
+$color-test: var(--color-test, #f00);
+
+$radius-global-element:   var(--radius-global-element);
+
+
+@function III($int)  {
+  // @return #{($int / $root-em-int)}rem;
+  @return calc(1rem / $root-em-int * $int);
+  // @return calc($root-em * $int);
+}
+
+@mixin setTextStyle($size, $line: null, $wght: null)  {
+  font-weight: #{$wght};
+  font-size: $size;
+  line-height: $line;
+}
+
+:root  {
+  // @include setTextStyle($font-l, $line-l, $wght: $bold-70);
+  // @include setTextStyle($font-l, $wght: $bold-70);
+  // @include setTextStyle($font-lm, $line-lm);
+  // margin-top: III(-1);
+
+  // @debug III(-24);
+}

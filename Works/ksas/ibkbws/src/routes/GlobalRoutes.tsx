@@ -65,6 +65,8 @@ import SYAD4020M01 from '@pages/html/SYAD4020M01'; // SYAD4020M01_06시스템관
 import SYAD6010M01 from '@pages/html/SYAD6010M01'; // SYAD6010M01_06시스템관리_06공휴일관리
 import SYAD8030M01 from '@pages/html/SYAD8030M01'; // SYAD8030M01_06시스템관리_08기타관리_03평가기준관리
 
+import SUBTMPL from '@pages/test/SUBTMPL'; // subtmpl
+
 function GlobalRoutes() {
   return useRoutes([
     {
@@ -126,6 +128,13 @@ function GlobalRoutes() {
         { path: 'SYAD4020M01', element: <SYAD4020M01 /> },
         { path: 'SYAD6010M01', element: <SYAD6010M01 /> },
         { path: 'SYAD8030M01', element: <SYAD8030M01 /> },
+      ],
+    },
+    {
+      path: '/test',
+      // element: <Layout />,
+      children: [
+        { path: 'SUBTMPL', element: <SUBTMPL /> },
       ],
     },
   ]);

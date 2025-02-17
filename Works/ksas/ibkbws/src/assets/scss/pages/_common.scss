@@ -2,19 +2,19 @@
 
 //common 
 
-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: $BGCOLOR_BLUE03;
-}
+// body {
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   background-color: $BGCOLOR_BLUE03;
+// }
 
-#root {
-  height: 100%;
-}
+// #root {
+//   height: 100%;
+// }
 
 .require {
   padding-left: 4px;
-  font-size: 12px;
+  @include setTextStyle($font-xs, $line-xs);
   color: $NOTICE_ORANGE !important;
 }
 
@@ -27,23 +27,23 @@ body {
 }
 
 .ft-11 {
-  font-size: 11px !important;
+  font-size: $font-xs !important;
 }
 
 .ft-13 {
-  font-size: 13px !important;
+  font-size: $font-sm !important;
 }
 
 .ft-bold {
-  font-weight: 600 !important;
+  font-weight: $bold-70 !important;
 }
 
 .ft-medium {
-  font-weight: 500 !important;
+  font-weight: $bold-50 !important;
 }
 
 .ft-default {
-  font-weight: 400 !important;
+  font-weight: inherit !important;
 }
 
 .ft-c3 {
@@ -585,12 +585,12 @@ body {
   margin: 0 auto;
   height: 32px;
   font-size: 28px;
-  font-weight: 100;
+  font-weight: $bold-30;
   color: #333;
 
   span {
     &:first-child {
-      font-weight: 600;
+      font-weight: $bold-70;
     }
   }
 }
@@ -607,8 +607,8 @@ body {
 
   .title {
     margin-bottom: 12px;
-    font-size: 16px;
-    font-weight: 600;
+    @include setTextStyle($font-lm, $line-lm);
+    font-weight: $bold-70;
     color: #333;
   }
 
@@ -628,13 +628,13 @@ body {
     th,
     td {
       padding: 8px;
-      font-size: 12px;
-      font-weight: 400;
+      @include setTextStyle(inherit, inherit);
+      font-weight: inherit;
       text-align: left;
     }
 
     th {
-      font-weight: 600;
+      font-weight: $bold-70;
       color: #5b82b0;
       background-color: #e3eefb;
       text-align: center;
@@ -667,14 +667,14 @@ body {
         color: #0064ee;
 
         &:hover {
-          font-weight: 500;
+          font-weight: $bold-50;
         }
       }
 
       em {
         display: inline-block;
         margin-left: 8px;
-        font-size: 13px;
+        @include setTextStyle($font-sm, $line-sm);
         color: #d60000;
       }
     }
@@ -717,7 +717,7 @@ body {
           color: #333;
 
           &.active {
-            font-weight: 600;
+            font-weight: $bold-70;
             background-color: #fff;
             border-top-left-radius: 12px;
             border-bottom-left-radius: 12px;
@@ -735,7 +735,7 @@ body {
 
     h2 {
       font-size: 32px;
-      font-weight: 600;
+      font-weight: $bold-70;
       color: #333;
       text-transform: uppercase;
     }
@@ -771,7 +771,7 @@ body {
       .title {
         height: 16px;
         margin-bottom: 12px;
-        font-size: 16px;
+        @include setTextStyle($font-lm, $line-lm);
         color: #333;
       }
 

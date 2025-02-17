@@ -7,7 +7,7 @@ import { sassMigratorQuasar } from 'rollup-plugin-sass-migrator';
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), sassMigratorQuasar()],
   server: {
-    port: 3000,
+    port: 3030,
   },
 
   css: {

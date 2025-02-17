@@ -36,9 +36,9 @@ function Alert() {
               content={({ headerRef, contentRef, footerRef, hide, message }) => (
                 <div className="u-alert">
                   <div className="alert-head" ref={headerRef}>
-                    {/* @desc 필요시 주석 해제 후 사용 
-										<h3>타이틀</h3> 
-										*/}
+                    {/* @desc 필요시 주석 해제 후 사용  */}
+                    {/* <h3>타이틀</h3> */}
+
                     <Button
                       icon="pi"
                       className="btn-close"

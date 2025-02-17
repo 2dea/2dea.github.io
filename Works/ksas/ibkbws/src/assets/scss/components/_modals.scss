@@ -12,11 +12,11 @@
     margin: 0 16px;
 
     span {
-      font-size: 12px;
+      @include setTextStyle(inherit, inherit);
       color: $FONT_GRAY02;
 
       &.current {
-        font-weight: 600;
+        font-weight: $bold-70;
         color: $FONT_GRAY01;
       }
 
@@ -28,8 +28,8 @@
 }
 
 .win-title {
-  font-size: 16px;
-  font-weight: 600;
+  @include setTextStyle($font-lm, $line-lm);
+  font-weight: $bold-70;
   color: $FONT_GRAY01;
 }
 

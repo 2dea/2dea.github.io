@@ -12,7 +12,7 @@
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("/public/") format("woff2"), url("/public/fonts/woff/Pretendard-Medium.woff") format("woff");
+  src: local("Pretendard Medium"), url("/public/fonts/woff/Pretendard-Medium.woff2") format("woff2"), url("/public/fonts/woff/Pretendard-Medium.woff") format("woff");
 }
 
 @font-face {

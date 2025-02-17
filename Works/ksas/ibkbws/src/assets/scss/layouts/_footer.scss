@@ -14,7 +14,7 @@
   }
 
   .copyright {
-    font-size: 12px;
+    @include setTextStyle(inherit, inherit);
     color: $FONT_GRAY02;
   }
 
@@ -31,17 +31,17 @@
 
       dt,
       dd {
-        font-size: 12px;
+        @include setTextStyle(inherit, inherit);
       }
 
       dt {
-        font-weight: 600;
+        font-weight: $bold-70;
         color: $FONT_GRAY01;
       }
 
       dd {
         padding-left: 8px;
-        font-weight: 400;
+        font-weight: inherit;
         color: $FONT_GRAY02;
       }
     }

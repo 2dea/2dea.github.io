@@ -9,15 +9,15 @@
 
   h3 {
     margin-bottom: 16px;
-    font-size: 13px;
-    font-weight: 600;
+    @include setTextStyle($font-sm, $line-sm);
+    font-weight: $bold-70;
     color: $FONT_GRAY01;
   }
 
   h4 {
     margin-bottom: 12px;
-    font-size: 12px;
-    font-weight: 600;
+    @include setTextStyle($text-size, $text-height);
+    font-weight: $bold-70;
     color: $FONT_GRAY01;
   }
 
@@ -54,7 +54,7 @@
     width: 68px;
     height: 32px;
     padding: 9px 0;
-    font-size: 12px;
+    @include setTextStyle(inherit, inherit);
     color: $FONT_GRAY01;
   }
 
@@ -82,7 +82,7 @@
   }
 
   p {
-    font-size: 12px;
+    @include setTextStyle(inherit, inherit);
     color: $FONT_GRAY02;
   }
 }
@@ -131,7 +131,7 @@
     li {
       &:last-child {
         .p-menuitem-text {
-          font-weight: 600;
+          font-weight: $bold-70;
           color: $FONT_GRAY01;
         }
       }
@@ -143,7 +143,7 @@
   }
 
   .p-menuitem-text {
-    font-size: 12px;
+    @include setTextStyle(inherit, inherit);
     color: $FONT_GRAY02;
   }
 
@@ -248,7 +248,7 @@
         cursor: pointer;
 
         span {
-          font-size: 12px;
+          @include setTextStyle($font-s, $line-s);
           color: $FONT_BLUE02;
 
           &.result {
@@ -273,7 +273,7 @@
 
         .table-tab-menu {
           span {
-            font-weight: 600;
+            font-weight: $bold-70;
             color: $PRIMARY_BLUE;
           }
         }
@@ -298,12 +298,12 @@
 
     .num {
       left: 0;
-      font-size: 12px;
+      @include setTextStyle(inherit, inherit);
       color: $FONT_GRAY02;
 
       span {
         margin: 0 0 0 3px;
-        font-weight: 600;
+        font-weight: $bold-70;
         color: $FONT_GRAY01;
       }
     }
@@ -337,7 +337,7 @@
 
     +label {
       padding-left: 6px;
-      font-size: 12px;
+      @include setTextStyle($font-s, $line-s);
       color: $FONT_GRAY02;
     }
 
@@ -372,7 +372,7 @@
 
   label {
     padding: 1px 0 0 6px;
-    font-size: 12px;
+    @include setTextStyle($font-s, $line-s);
     color: $FONT_GRAY02;
   }
 
@@ -405,7 +405,7 @@
   align-items: center;
 
   label {
-    font-size: 12px;
+    @include setTextStyle($font-s, $line-s);
     color: $FONT_GRAY02;
   }
 }
@@ -442,13 +442,13 @@
       td {
         height: 40px;
         padding: 0 12px;
-        font-size: 12px;
+        @include setTextStyle(inherit, inherit);
         vertical-align: middle;
       }
 
       th {
         width: 100%;
-        font-weight: 600;
+        font-weight: $bold-70;
         color: $FONT_BLUE02 !important;
         background-color: $BGCOLOR_BLUE02;
         border-left: 1px solid $BORDER_GRAY02;
@@ -481,7 +481,7 @@
 
           span {
             padding: 12px;
-            font-size: 12px;
+            @include setTextStyle(inherit, inherit);
             vertical-align: middle;
             text-align: left;
 
@@ -493,7 +493,7 @@
 
         &.total {
           span {
-            font-weight: 600;
+            font-weight: $bold-70;
             color: $FONT_GRAY01;
           }
         }
@@ -560,7 +560,7 @@
   span {
     display: inline-block !important;
     width: auto !important;
-    font-size: 12px;
+    @include setTextStyle(inherit, inherit);
     color: $FONT_GRAY02;
   }
 }
@@ -723,7 +723,7 @@
     span {
       display: block;
       align-items: center;
-      font-size: 12px;
+      @include setTextStyle(inherit, inherit);
       color: $FONT_GRAY02;
     }
   }
@@ -732,7 +732,7 @@
     flex-shrink: 0;
 
     span {
-      font-weight: 600;
+      font-weight: $bold-70;
       color: $FONT_BLUE02;
     }
   }
@@ -761,12 +761,12 @@
     span {
       margin-top: 6px;
       justify-content: flex-end;
-      font-size: 11px;
-      font-weight: 600;
+      @include setTextStyle($font-xs, $line-xs);
+      font-weight: $bold-70;
       color: #333;
 
       em {
-        font-weight: 400;
+        font-weight: inherit;
         color: #777;
       }
     }
@@ -790,7 +790,7 @@
       span {
         flex: 1;
         padding: 12px 16px;
-        font-size: 12px;
+        @include setTextStyle(inherit, inherit);
         color: $FONT_GRAY02;
 
         +span {
@@ -803,8 +803,8 @@
 
 .u-sub-title {
   margin-top: 12px;
-  font-size: 16px;
-  font-weight: 600;
+  @include setTextStyle($font-lm, $line-lm);
+  font-weight: $bold-70;
   color: $FONT_GRAY01;
 }
 
@@ -817,8 +817,8 @@
   span {
     position: absolute;
     left: 0;
-    font-size: 16px;
-    font-weight: 600;
+    @include setTextStyle($font-lm, $line-lm);
+    font-weight: $bold-70;
     color: $FONT_GRAY01;
   }
 
@@ -863,11 +863,11 @@
   .p-tag-value {
     display: inline-block;
     padding: 0 5px;
-    font-size: 11px;
-    font-weight: 400;
+    font-size: $font-xs;
+    font-weight: inherit;
     color: inherit !important;
     border-radius: 2px;
-    line-height: 18px;
+    line-height: 18px; // ###
   }
 }
 
@@ -900,8 +900,8 @@
 
         th {
           padding: 4px 8px;
-          font-size: 12px;
-          font-weight: 400;
+          @include setTextStyle(inherit, inherit);
+          font-weight: inherit;
           color: $FONT_GRAY01;
           background-color: $BGCOLOR_GRAY04;
 
@@ -926,7 +926,7 @@
           span {
             display: block;
             padding: 4px 8px;
-            font-size: 12px;
+            @include setTextStyle(inherit, inherit);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -970,7 +970,7 @@
 
 .u-dot {
   &.size-3 {
-    @include text-dot(7px, 3px, $BGCOLOR_GRAY05, $FONT_GRAY03, 7px, 11px);
+    @include text-dot(7px, 3px, $BGCOLOR_GRAY05, $FONT_GRAY03, 7px, $font-xs, $line-xs);
   }
 }
 
@@ -1006,7 +1006,7 @@
     .message {
       display: flex;
       align-items: center;
-      font-size: 12px;
+      @include setTextStyle(inherit, inherit);
       color: $FONT_GRAY02;
 
       i {
@@ -1021,10 +1021,11 @@
     justify-content: space-between;
 
     h4 {
-      font-size: 16px;
-      font-weight: 600;
+      font-size: $font-lm;
+      font-weight: $bold-70;
       color: $FONT_GRAY01;
       line-height: 24px;
+      line-height: calc(24em / 16);
     }
   }
 
@@ -1072,11 +1073,11 @@
       position: relative;
       width: 100%;
       padding: 14px 4px;
-      font-size: 12px;
-      font-weight: 600;
+      @include setTextStyle(inherit, inherit);
+      font-weight: $bold-70;
       color: $FONT_GRAY01;
       background-color: $WHITE;
-      line-height: 16px;
+      // line-height: 16px;
       transition: none;
 
       &::after {
@@ -1099,9 +1100,9 @@
       padding: 0 4px 14px 4px;
 
       p {
-        font-size: 12px;
+        @include setTextStyle(inherit, inherit);
         color: $FONT_GRAY02;
-        line-height: 16px;
+        // line-height: 16px;
 
         +p {
           margin-top: 12px;
@@ -1132,7 +1133,7 @@
   .selected-input {
     position: relative;
     padding: 7px 28px 7px 12px;
-    font-size: 12px;
+    @include setTextStyle(inherit, inherit);
     color: $FONT_GRAY02;
     border-radius: 4px;
     border: solid 1px $BORDER_GRAY01;
@@ -1179,7 +1180,7 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       width: 100%;
-      font-size: 12px;
+      @include setTextStyle(inherit, inherit);
       color: $FONT_GRAY02;
     }
   }
@@ -1263,7 +1264,7 @@
 
           .p-treenode-label {
             em {
-              font-size: 12px;
+              @include setTextStyle(inherit, inherit);
               color: $FONT_GRAY02;
               line-height: 16px;
             }
@@ -1391,7 +1392,7 @@
 
     dt,
     dd {
-      font-size: 12px;
+      @include setTextStyle(inherit, inherit);
       line-height: 12px;
     }
 
@@ -1404,7 +1405,7 @@
       color: $FONT_GRAY02;
 
       &.point {
-        font-weight: 600;
+        font-weight: $bold-70;
         color: $PRIMARY_BLUE;
       }
     }
@@ -1428,16 +1429,16 @@
     h3 {
       position: absolute;
       left: 0;
-      font-size: 16px;
-      font-weight: 600;
+      @include setTextStyle($font-lm, $line-lm);;
+      font-weight: $bold-70;
       color: $FONT_GRAY01;
-      line-height: 28px;
+      // line-height: 28px;
     }
   }
 
   .alert-body {
     p {
-      font-size: 12px;
+      @include setTextStyle(inherit, inherit);
     }
   }
 

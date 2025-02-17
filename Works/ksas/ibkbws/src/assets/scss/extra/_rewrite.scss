@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+h1,  h2,  h3,  h4,  h5,  h6,  strong,  th  { font-weight: $bold-70; }
+
+th,
+td  {
+  border-width: 0;
+}
+
+th  {
+  text-align: revert;
+}
+
+// button  {
+//   min-width: 0;
+//   min-height: 0;
+//   padding: 0;
+//   border: 0;
+//   background-color: transparent;
+// }
+
+// theme.css
+// @layer primereact {
+  .p-component  {
+    @include setTextStyle($text-size, $text-height);
+    font-weight: $bold-40;
+    color: $color-test;
+    box-shadow: 1px 1px 2px $color-test, -1px -1px 2px $color-test;
+  // }
+}
+
+// layout.scss

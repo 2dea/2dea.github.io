@@ -48,8 +48,8 @@
       }
 
       span {
-        font-size: 13px;
-        font-weight: 400;
+        @include setTextStyle($font-sm, $line-sm);
+        font-weight: inherit;
         color: #5b82b0;
       }
 
@@ -59,7 +59,7 @@
         border-color: $PRIMARY_BLUE;
 
         span {
-          font-weight: 600;
+          font-weight: $bold-70;
           color: $WHITE;
         }
       }
@@ -125,8 +125,8 @@
     .p-listbox-item {
       width: 100%;
       padding: 9px 6px;
-      font-size: 12px;
-      font-weight: 400;
+      @include setTextStyle(inherit, inherit);
+      font-weight: inherit;
       color: $FONT_GRAY01;
       border-radius: 4px;
 
