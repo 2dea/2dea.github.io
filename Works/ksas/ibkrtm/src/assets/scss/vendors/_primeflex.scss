@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+// override
+.grid {
+  margin-top: 0;
+  margin-right: -8px;
+  margin-left: -8px;
+
+  &.expand {
+    margin-top: 0;
+    margin-right: -16px;
+    margin-left: -16px;
+
+    .col-6 {
+      padding: 0 16px;
+    }
+  }
+}
+
+.col {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      height: 100%;
+      padding: 0 8px !important;
+    }
+  }
+}
+
+.col-fixed {
+  padding: 0 8px !important;
+}
+
+.field {
+  height: 32px;
+  margin-bottom: 0 !important;
+}
+
+.formgroup-inline {
+  align-items: center;
+  position: relative;
+  margin-left: -24px;
+}
+
+@media screen and (min-width: 1600px) {
+  .md:col-12 {
+    width: 100%;
+  }
+}
