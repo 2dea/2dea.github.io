@@ -89,8 +89,8 @@
 }
 
 :root  {
+  --root-em-int:        16;
   --root-em-int:        10;
-  /* --root-em-int:        16; */
   --root-em-base:       calc(1em * var(--root-em-int, 16) / 16);
   --root-em:            1rem / var(--root-em-int);
 
