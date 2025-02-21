@@ -92,9 +92,10 @@
   --root-em-int:        16;
   --root-em-base:       calc(1em * var(--root-em-int, 16) / 16);
   --root-em:            1rem / var(--root-em-int);
+  --rem:                var(--root-em);
 
   --breakpoint-min:     320px;
-  --breakpoint-max:     calc(var(--root-em) * 1200);
+  --breakpoint-max:     calc(var(--rem) * 1200);
 
   --height-window-maximum:      100vh;
   --height-window-viewport:     var(--height-window-variable, 100vb);
@@ -147,16 +148,16 @@
   --font-xl-int:        20;
   --font-20xl-int:      24;
 
-  --font-3xs:           calc(var(--root-em) * var(--font-3xs-int));
-  --font-2xs:           calc(var(--root-em) * var(--font-2xs-int));
-  --font-xs:            calc(var(--root-em) * var(--font-xs-int));
-  --font-s:             calc(var(--root-em) * var(--font-s-int));
-  --font-sm:            calc(var(--root-em) * var(--font-sm-int));
-  --font-m:             calc(var(--root-em) * var(--font-m-int));
-  --font-lm:            calc(var(--root-em) * var(--font-lm-int));
-  --font-l:             calc(var(--root-em) * var(--font-l-int));
-  --font-xl:            calc(var(--root-em) * var(--font-xl-int));
-  --font-20xl:          calc(var(--root-em) * var(--font-20xl-int));
+  --font-3xs:           calc(var(--rem) * var(--font-3xs-int));
+  --font-2xs:           calc(var(--rem) * var(--font-2xs-int));
+  --font-xs:            calc(var(--rem) * var(--font-xs-int));
+  --font-s:             calc(var(--rem) * var(--font-s-int));
+  --font-sm:            calc(var(--rem) * var(--font-sm-int));
+  --font-m:             calc(var(--rem) * var(--font-m-int));
+  --font-lm:            calc(var(--rem) * var(--font-lm-int));
+  --font-l:             calc(var(--rem) * var(--font-l-int));
+  --font-xl:            calc(var(--rem) * var(--font-xl-int));
+  --font-20xl:          calc(var(--rem) * var(--font-20xl-int));
 
   --line-3xs:           calc(12 / var(--font-3xs-int));
   --line-2xs:           calc(14 / var(--font-2xs-int));
@@ -173,8 +174,8 @@
   --tp:                 Transparent;
   --cc:                 currentColor;
   --ss:                 calc(1px * var(--font-ss-int));
-  --e10:                calc(var(--root-em) * 1);
-  --e20:                calc(var(--root-em) * 2);
+  --e10:                calc(var(--rem) * 1);
+  --e20:                calc(var(--rem) * 2);
 
   --typo-system:        -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum';
   --typo-emoji:         'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -254,19 +255,20 @@
   --color-check-checked:    var(--key, #259fff);
 
 
-  --radius-global-element:      calc(var(--root-em) * 4);
+  --radius-global-element:      calc(var(--rem) * 4);
 
-  --color-scrollbar-track:      var(--tp);
+  --color-scrollbar-track:      WhiteSmoke;
+  /* --color-scrollbar-track:      var(--tp); */
   --color-scrollbar-thumb:      var(--border-scroll-2);
   --color-scrollbar-thumb-hover:var(--border-scroll-3);
   --color-scrollbar-thumb-active: Gray;
-  --margin-global-scrollbar:    calc(var(--root-em) * 2);
-  --width-global-scrollbar:     calc(var(--root-em) * 8 + var(--margin-global-scrollbar) * 2);
+  --margin-global-scrollbar:    calc(var(--rem) * 3);
+  --width-global-scrollbar:     calc(var(--rem) * 6 + var(--margin-global-scrollbar) * 2);
 
-  --height-global-form:         calc(var(--root-em) * 26);
+  --height-global-form:         calc(var(--rem) * 26);
   /* --height-global-form-wide:    calc(var(--height-global-form) + 0.4rem);
   --height-global-form-wider:   calc(var(--height-global-form) + 1.4rem); --- */
-  --margin-global-section:      3rem;
+  --margin-global-section:      calc(var(--rem) * 24);
   --margin-global-subset:       1rem;
 
   --gap-global-whitespace:      0.4rem;
@@ -278,8 +280,8 @@
   --margin-layout-inline-prim:  calc(var(--margin-layout-inline) + 1rem);
   --margin-layout-block:        var(--margin-global-section);
   --margin-layout-block-end:    calc(var(--margin-layout-block) * 2);
-  --height-layout-header:       calc(var(--root-em) * 48);
-  --width-layout-nav:           calc(var(--root-em) * 300);
+  --height-layout-header:       calc(var(--rem) * 48);
+  --width-layout-nav:           calc(var(--rem) * 300);
 
   --margin-layer-inline:        var(--margin-layout-inline, 0);
   --margin-layer-block:         2rem;

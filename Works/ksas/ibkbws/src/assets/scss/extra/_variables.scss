@@ -45,6 +45,8 @@ $color-test: var(--color-test, #f00);
 
 $radius-global-element:   var(--radius-global-element);
 
+$height-global-form:   var(--height-global-form);
+
 
 @function III($int)  {
   // @return #{($int / $root-em-int)}rem;
