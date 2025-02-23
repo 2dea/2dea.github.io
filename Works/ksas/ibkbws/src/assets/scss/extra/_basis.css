@@ -288,8 +288,8 @@
   --margin-layer-block-end:     calc(var(--margin-layer-block) + 1rem);
   --height-layer-header:        5rem;
 
-  --width-object-symbol-l:      2.8rem;
-  --width-object-symbol:        2.4rem;
+  --width-object-symbol-l:      calc(var(--rem) * 24);
+  --width-object-symbol:        calc(var(--rem) * 16);
 
   --object-symbol-arrow-left:                   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' color='%23262626'%3E%3Cpath fill='currentColor' d='M560-280 360-480l200-200v400Z'/%3E%3C/svg%3E");
   --object-symbol-arrow-drop-up:                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' color='%23262626'%3E%3Cpath fill='currentColor' d='m280-400 200-200 200 200H280Z'/%3E%3C/svg%3E");
