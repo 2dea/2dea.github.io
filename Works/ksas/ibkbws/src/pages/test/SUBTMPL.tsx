@@ -138,7 +138,16 @@ function SUBTMPL() {
             </ul>
 
             <ul className="controls">
-              <li><button type="button" title="대시보드" className="link type-icon root"><span className="label">대시보드</span></button></li>
+              <li>
+                <span className="link group">
+                  <span className="item">
+                    <button type="button" title="앞으로 스크롤" className="button scroll neg"><span className="label">&larr;</span></button>
+                  </span>
+                  <span className="item">
+                    <button type="button" title="뒤로 스크롤" className="button scroll pos"><span className="label">&rarr;</span></button>
+                  </span>
+                </span>
+              </li>
               <li><button type="button" title="화면목록" className="link type-icon list"><span className="label">화면목록</span></button></li>
               <li><button type="button" title="전체닫기" className="link type-icon close-all"><span className="label">전체닫기</span></button></li>
             </ul>
