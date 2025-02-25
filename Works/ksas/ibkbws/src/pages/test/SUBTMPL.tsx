@@ -97,10 +97,14 @@ function SUBTMPL() {
         </div>
 
         <div className="roles">
-          <div className="div-nav-local">
+          <div className="div-nav-local g-scroll-gutter-stable">
             <ul>
               <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
               <li><a href="javascript:" className="link" aria-current="true"><span className="label">menu</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
             </ul>
