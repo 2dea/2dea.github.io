@@ -262,6 +262,7 @@
   --color-scrollbar-thumb:      rgba(0,0,0, 0.3);
   --color-scrollbar-thumb-hover: rgba(0,0,0, 0.4);
   --color-scrollbar-thumb-active: rgba(0,0,0, 0.5);
+  --color-scrollbar-thumb-edge: rgba(255,255,255, 0.3);
   --margin-global-scrollbar:    calc(var(--rem) * 3);
   --width-global-scrollbar:     calc(var(--rem) * 6 + var(--margin-global-scrollbar) * 2);
 

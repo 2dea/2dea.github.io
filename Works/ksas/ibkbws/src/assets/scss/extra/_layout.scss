@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+@property --color-scrollbar-hidden-track  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
+
+@property --color-scrollbar-hidden-thumb  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
+
+@property --color-scrollbar-hidden-thumb-edge  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
+
 :root  {
   --width-object-symbol-m:      calc(var(--rem) * 16);
   --width-object-symbol-l:      calc(var(--rem) * 20);
@@ -12,12 +30,20 @@ $width-object-symbol-m:      var(--width-object-symbol-m);
 $width-object-symbol-l:      var(--width-object-symbol-l);
 $width-object-symbol:        var(--width-object-symbol);
 
-@mixin setScrollGutterStable($selector: ".g-scroll-gutter-stable", $comb: null)  {
-  #{$selector}:not(:hover):not(:focus-within)#{$comb}::-webkit-scrollbar-track  { background-color: Transparent; }
-  #{$selector}#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.8s; }
-  #{$selector}:not(:hover):not(:focus-within)#{$comb}::-webkit-scrollbar-thumb  { border-color: Transparent; background-color: Transparent; outline-color: Transparent; }
-  #{$selector}:where( :hover, :focus-within )#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
+// @mixin setScrollGutterStable($selector: ".g-scroll-gutter-stable", $comb: null)  {
+//   #{$selector}:not(:hover):not(:focus-within)#{$comb}::-webkit-scrollbar-track  { background-color: Transparent; }
+//   #{$selector}#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.8s; }
+//   #{$selector}:not(:hover):not(:focus-within)#{$comb}::-webkit-scrollbar-thumb  { border-color: Transparent; background-color: Transparent; outline-color: Transparent; }
+//   #{$selector}:where( :hover, :focus-within )#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
+// }
+@mixin setScrollGutterStable($selector: ".g-scroll-gutter-stable", $end: 800, $start: 150)  {
+  #{$selector}  { transition: #{$end}ms --color-scrollbar-hidden-track, #{$end}ms --color-scrollbar-hidden-thumb, #{$end}ms --color-scrollbar-hidden-thumb-edge; }
+  #{$selector}:hover,
+    #{$selector}:focus-within  { --color-scrollbar-hidden-track: var(--color-scrollbar-track); --color-scrollbar-hidden-thumb: var(--color-scrollbar-thumb); --color-scrollbar-hidden-thumb-edge: var(--color-scrollbar-thumb-edge); transition: #{$start}ms --color-scrollbar-hidden-track, #{$start}ms --color-scrollbar-hidden-thumb, #{$start}ms --color-scrollbar-hidden-thumb-edge; }
+  #{$selector}::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-hidden-track); }
+  #{$selector}::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--color-scrollbar-hidden-thumb); outline-color: var(--color-scrollbar-hidden-thumb-edge, Transparent); }
 }
+
 
 @mixin inc-scrollbar-width($margin: 3, $thumb: 6)  {
   --margin-global-scrollbar:    calc(var(--rem) * #{$margin});
@@ -71,26 +97,22 @@ $width-object-symbol:        var(--width-object-symbol);
 ::-webkit-scrollbar  { width: var(--width-global-scrollbar, 12px); height: var(--width-global-scrollbar, 12px); }
 ::-webkit-scrollbar-corner  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid rgba(255,255,255, 0.05); border-radius: 4px; }
 ::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); border-radius: var(--width-global-scrollbar, 12px); }
-::-webkit-scrollbar-thumb  { min-width: 50px; min-height: 50px; border: var(--margin-global-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--color-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid rgba(255,255,255, 0.3); outline-offset: calc(var(--margin-global-scrollbar, 3px) * -1); border-radius: var(--width-global-scrollbar, 12px); }
+::-webkit-scrollbar-thumb  { min-width: 50px; min-height: 50px; border: var(--margin-global-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--color-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--color-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(var(--margin-global-scrollbar, 3px) * -1); border-radius: var(--width-global-scrollbar, 12px); }
 ::-webkit-scrollbar-thumb:hover  { background-color: var(--color-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
 ::-webkit-scrollbar-thumb:active  { background-color: var(--color-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
 
+/* 
 .g-scroll-gutter-stable:not(:hover):not(:focus-within)::-webkit-scrollbar-track  { background-color: Transparent; }
 .g-scroll-gutter-stable::-webkit-scrollbar-thumb  { transition-duration: 0.8s; }
 .g-scroll-gutter-stable:not(:hover):not(:focus-within)::-webkit-scrollbar-thumb  { border-color: Transparent; background-color: Transparent; outline-color: Transparent; }
 .g-scroll-gutter-stable:where( :hover, :focus-within )::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
+ */
 
-// @property --var1 {
-//   syntax: "<color>";
-//   inherits: true;
-//   initial-value: purple;
-// }
-
-// .g-scroll-gutter-stable  { transition: --var1 0.8s; }
-// .g-scroll-gutter-stable:not(:hover):not(:focus-within)  { --var1: Transparent; }
-// .g-scroll-gutter-stable:where( :hover, :focus-within )  { transition-duration: 0.35s; }
-// .g-scroll-gutter-stable::-webkit-scrollbar-track  { background-color: var(--var1); }
-// .g-scroll-gutter-stable::-webkit-scrollbar-thumb  { border-color: var(--var1); background-color: var(--var1); outline-color: var(--var1); }
+.g-scroll-gutter-stable  { transition: 0.8s; transition-property: --color-scrollbar-hidden-track, --color-scrollbar-hidden-thumb, --color-scrollbar-hidden-thumb-edge; }
+.g-scroll-gutter-stable:hover,
+  .g-scroll-gutter-stable:focus-within  { --color-scrollbar-hidden-track: var(--color-scrollbar-track); --color-scrollbar-hidden-thumb: var(--color-scrollbar-thumb); --color-scrollbar-hidden-thumb-edge: var(--color-scrollbar-thumb-edge); transition-duration: 0.15s; }
+.g-scroll-gutter-stable::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-hidden-track); }
+.g-scroll-gutter-stable::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--color-scrollbar-hidden-thumb); outline-color: var(--color-scrollbar-hidden-thumb-edge, Transparent); }
 
 *  { scroll-behavior: inherit; scrollbar-width: inherit; }
 html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable both-edges; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track); overscroll-behavior: auto none; */ }
@@ -181,7 +203,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 .dom-nav .div-nav-local  { flex: 1 0 0; background: gold; overflow: auto scroll; }
-// @include setScrollGutterStable(".dom-nav .div-nav-local", "");
+@include setScrollGutterStable(".dom-nav .div-nav-local", 1000);
 
 
 
