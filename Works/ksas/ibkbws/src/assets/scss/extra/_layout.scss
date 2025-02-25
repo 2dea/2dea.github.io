@@ -12,26 +12,85 @@ $width-object-symbol-m:      var(--width-object-symbol-m);
 $width-object-symbol-l:      var(--width-object-symbol-l);
 $width-object-symbol:        var(--width-object-symbol);
 
+@mixin setScrollGutterStable($selector: ".g-scroll-gutter-stable", $comb: null)  {
+  #{$selector}:not(:hover):not(:focus-within)#{$comb}::-webkit-scrollbar-track  { background-color: Transparent; }
+  #{$selector}#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.8s; }
+  #{$selector}:not(:hover):not(:focus-within)#{$comb}::-webkit-scrollbar-thumb  { border-color: Transparent; background-color: Transparent; outline-color: Transparent; }
+  #{$selector}:where( :hover, :focus-within )#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
+}
+
+@mixin inc-scrollbar-width($margin: 3, $thumb: 6)  {
+  --margin-global-scrollbar:    calc(var(--rem) * #{$margin});
+  --width-global-scrollbar:     calc(var(--rem) * #{$thumb} + var(--margin-global-scrollbar) * 2);
+}
+
+@mixin inc-translate($x: -50%, $y: -50%)  {
+  -webkit-transform: translate($x, $y); transform: translate($x, $y);
+}
+
+@mixin inc-abscenter()  {
+  left: 50%; top: 50%; @include inc-translate();
+}
+
+@mixin inc-sronly($user-select: null)  {
+  font-size: var(--ss); line-height: 1; position: absolute; @include inc-abscenter(); color: Transparent; pointer-events: none; user-select: $user-select; text-shadow: none;
+}
+
+@mixin inc-ellipsis()  {
+  text-overflow: ellipsis; white-space: nowrap;
+}
+
+
+@mixin setSymbolVariationSettings($fill: 0, $wght: 400, $opsz: 24)  {
+  font-variation-settings: 'FILL' $fill, 'wght' $wght, 'GRAD' 0, 'opsz' $opsz;
+}
+
+@mixin setSymbolStyle($fill: 0, $wght: 400, $opsz: 24, $size: $width-object-symbol)  {
+  font-family: 'wf-MaterialSymbolsRounded-Var', sans-serif; @include setSymbolVariationSettings($fill, $wght, $opsz); font-size: $size; display: inline-flex; max-width: 1em; overflow: hidden; text-transform: uppercase;
+}
+
+@mixin inc-symbol($fill: 0, $wght: 400, $opsz: 24, $size: $width-object-symbol)  {
+  direction: ltr; font: normal normal calc(1rem / var(--root-em-int, 16) * 24) /1 'wf-MaterialSymbolsOutlined-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
+  @include setSymbolStyle($fill, $wght, $opsz, $size);
+}
+
 /** Scrollbars
  ------------- */
 
-.g-scrollable.width-thin  {
-  --margin-global-scrollbar:    calc(var(--rem) * 1);
-  --width-global-scrollbar:     calc(var(--rem) * 6 + var(--margin-global-scrollbar) * 2);
+// .g-scroll-gutter-stable  {
+//   /* --margin-global-scrollbar:    calc(var(--rem) * 4); */
+//   --width-global-scrollbar:     calc(var(--rem) * 4 + var(--margin-global-scrollbar) * 2);
+// }
+
+.g-scroll-width-thin  {
+  --margin-global-scrollbar:    calc(var(--rem) * 2);
+  --width-global-scrollbar:     calc(var(--rem) * 4 + var(--margin-global-scrollbar) * 2);
 }
 
-::-webkit-resizer  { background: var(--object-symbol-arrows-output) 0 /100%; }
+::-webkit-resizer  { background: var(--object-symbol-resizer-scrollable) 0 /100%; }
 ::-webkit-scrollbar  { width: var(--width-global-scrollbar, 12px); height: var(--width-global-scrollbar, 12px); }
-::-webkit-scrollbar-corner  { background-color: var(--color-scrollbar-track, Transparent); }
-::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, Transparent); /* background-color: WhiteSmoke; */ border-radius: var(--width-global-scrollbar, 12px); }
-::-webkit-scrollbar-thumb  { min-width: 50px; min-height: 50px; border: var(--margin-global-scrollbar, 2px) solid var(--color-scrollbar-track, Transparent); background-clip: padding-box; background-color: var(--color-scrollbar-thumb, LightGrey); border-radius: var(--width-global-scrollbar, 12px); }
-::-webkit-scrollbar-thumb:hover  { background-color: var(--color-scrollbar-thumb-hover, Silver); }
-::-webkit-scrollbar-thumb:active  { background-color: var(--color-scrollbar-thumb-active, DarkGrey); }
+::-webkit-scrollbar-corner  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid rgba(255,255,255, 0.05); border-radius: 4px; }
+::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); border-radius: var(--width-global-scrollbar, 12px); }
+::-webkit-scrollbar-thumb  { min-width: 50px; min-height: 50px; border: var(--margin-global-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--color-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid rgba(255,255,255, 0.3); outline-offset: calc(var(--margin-global-scrollbar, 3px) * -1); border-radius: var(--width-global-scrollbar, 12px); }
+::-webkit-scrollbar-thumb:hover  { background-color: var(--color-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
+::-webkit-scrollbar-thumb:active  { background-color: var(--color-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
 
-.g-scrollable.gutter-stable::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, Transparent); }
-.g-scrollable.gutter-stable::-webkit-scrollbar-thumb  { background-color: var(--color-scrollbar-track, Transparent); }
-.g-scrollable.gutter-stable:not(:hover):not(:focus-within)::-webkit-scrollbar-thumb  { transition-duration: 1s; }
-.g-scrollable.gutter-stable:where( :hover, :focus-within )::-webkit-scrollbar-thumb  { background-color: var(--color-scrollbar-thumb, LightGrey); transition-duration: 0.15s; }
+.g-scroll-gutter-stable:not(:hover):not(:focus-within)::-webkit-scrollbar-track  { background-color: Transparent; }
+.g-scroll-gutter-stable::-webkit-scrollbar-thumb  { transition-duration: 0.8s; }
+.g-scroll-gutter-stable:not(:hover):not(:focus-within)::-webkit-scrollbar-thumb  { border-color: Transparent; background-color: Transparent; outline-color: Transparent; }
+.g-scroll-gutter-stable:where( :hover, :focus-within )::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
+
+// @property --var1 {
+//   syntax: "<color>";
+//   inherits: true;
+//   initial-value: purple;
+// }
+
+// .g-scroll-gutter-stable  { transition: --var1 0.8s; }
+// .g-scroll-gutter-stable:not(:hover):not(:focus-within)  { --var1: Transparent; }
+// .g-scroll-gutter-stable:where( :hover, :focus-within )  { transition-duration: 0.35s; }
+// .g-scroll-gutter-stable::-webkit-scrollbar-track  { background-color: var(--var1); }
+// .g-scroll-gutter-stable::-webkit-scrollbar-thumb  { border-color: var(--var1); background-color: var(--var1); outline-color: var(--var1); }
 
 *  { scroll-behavior: inherit; scrollbar-width: inherit; }
 html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable both-edges; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track); overscroll-behavior: auto none; */ }
@@ -66,7 +125,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
   [class|="dom"] >.roles  { flex: 1; display: flex; flex-direction: column; background-color: var(--color-ground); }
 [class*=" dom-"] >.g-overlay,
   [class|="dom"] >.g-overlay  { min-height: 0; opacity: 0.001; }
-
+[class*=" dom-"] >.roles >*,
+  [class|="dom"] >.roles >*  { @include inc-scrollbar-width(3, 4); }
 
 .dom-wrapper  { position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; background-color: inherit; }
 
@@ -121,6 +181,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 .dom-nav .div-nav-local  { flex: 1 0 0; background: gold; overflow: auto scroll; }
+// @include setScrollGutterStable(".dom-nav .div-nav-local", "");
+
 
 
 
@@ -141,6 +203,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main >.div-tablist  { font-size: inherit; line-height: inherit; padding: III(4) 0 0; border-bottom: $e10 solid #0B68CB; }
 
 .dom-main .div-header  { display: flex; align-items: center; gap: III(16); }
+.dom-main .div-header >*  { flex: none; min-width: 0; }
+.dom-main .div-header >.o-breadcrumb  { flex: 1 0 0; overflow: hidden; @include inc-ellipsis(); }
 .dom-main .div-header .o-title  { order: -1; }
 .dom-main .div-header .o-title .o-heading1  { display: flex; align-items: center; }
 .dom-main .div-header .m-binds  { margin-left: auto; }
@@ -312,19 +376,6 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 
-@mixin inc-translate($x: -50%, $y: -50%)  {
-  -webkit-transform: translate($x, $y); transform: translate($x, $y);
-}
-
-@mixin inc-abscenter()  {
-  left: 50%; top: 50%; @include inc-translate();
-}
-
-@mixin inc-sronly($user-select: null)  {
-  font-size: var(--ss); line-height: 1; position: absolute; @include inc-abscenter(); color: Transparent; pointer-events: none; user-select: $user-select; text-shadow: none;
-}
-
-
 /** Tooltips */
 .o-tooltip  { position: absolute; z-index: 5; text-align: left; text-align: start; }
 .tooltip-wrap  { padding: 0.6rem 1rem; color: var(--color-white); background: var(--color-ground-tooltip); cursor: auto; border-radius: calc(var(--radius-global-element) / 2); }
@@ -379,18 +430,6 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .o-empty-data:before  { content: ""; display: block; width: 100%; height: 100%; background: var(--object-image-data-empty) no-repeat 50% /100% min(100%, 57rem); background-clip: content-box; }
 
 
-@mixin setSymbolVariationSettings($fill: 0, $wght: 400, $opsz: 24)  {
-  font-variation-settings: 'FILL' $fill, 'wght' $wght, 'GRAD' 0, 'opsz' $opsz;
-}
-
-@mixin setSymbolStyle($fill: 0, $wght: 400, $opsz: 24, $size: $width-object-symbol)  {
-  font-family: 'wf-MaterialSymbolsRounded-Var', sans-serif; @include setSymbolVariationSettings($fill, $wght, $opsz); font-size: $size; display: inline-flex; max-width: 1em; overflow: hidden; text-transform: uppercase;
-}
-
-@mixin inc-symbol($fill: 0, $wght: 400, $opsz: 24, $size: $width-object-symbol)  {
-  direction: ltr; font: normal normal calc(1rem / var(--root-em-int, 16) * 24) /1 'wf-MaterialSymbolsOutlined-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
-  @include setSymbolStyle($fill, $wght, $opsz, $size);
-}
 
 /** Icons
  -------- */
@@ -633,6 +672,10 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .m-mdi .link.close-all:before  { content: "tab_close"; }
 .m-mdi .button.close  { position: absolute; top: 50%; right: III(12); @include inc-translate(0); color: #AEB0B6; }
 .m-mdi .button.close:before  { content: "close"; }
+
+// .m-mdi .link  { transition-duration: 0.8s; background: red; }
+// .m-mdi .link:not(:hover):not(:focus-within)  { background: Transparent; }
+// .m-mdi .link:where( :hover, :focus-within )  { transition-duration: 0.15s; }
 
 .m-mdi:after  { content: none; }
 
