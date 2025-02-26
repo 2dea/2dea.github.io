@@ -292,7 +292,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
   --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head));
   position: relative;
 }
-.o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { z-index: 9; }
+.o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { z-index: 4; }
 .o-section >.main._primary.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-2)); }
 .o-section >.main._primary.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-3)); }
 .o-section >.main._primary.rows-body-5i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head)); }
@@ -312,7 +312,11 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 
-.o-section:not(:first-child)  { margin-top: var(--margin-layout-block); box-shadow: 0 0 0 1px navy; }
+// .o-section:not(:first-child)  { margin-top: var(--margin-layout-block); box-shadow: 0 0 0 1px navy; }
+.o-section:not(:first-child)  { margin-top: var(--margin-layout-block); }
+
+
+
 
 .dom-main .div-header  { z-index: 10; }
 .dom-main .div-footer  { z-index: 10; }
