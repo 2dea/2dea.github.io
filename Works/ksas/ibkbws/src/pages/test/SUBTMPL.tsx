@@ -170,9 +170,10 @@ function SUBTMPL() {
               </span>
             </div>
 
-            <div className="o-title">
-              <h1 className="o-heading1">
-                <span className="inner">Headline</span>
+            <div className="m-title">
+              <h1 className="o-heading level1">
+                <span className="label">Headline</span>
+
                 <label className="o-check type-symbol style-favorite">
                   <input type="checkbox" value="" className="bind" /><i aria-hidden="true"></i>
                   <span className="label _hidden">마이메뉴</span>
@@ -225,7 +226,7 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td>
-                              dddddd
+                              TEST
                             </td>
                           </tr>
                           <tr>
@@ -235,7 +236,7 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td>
-                              dddddd
+                              TEST
                             </td>
                             
                             <th>
@@ -244,7 +245,7 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td>
-                              dddddd
+                              TEST
                             </td>
                           </tr>
                           <tr>
@@ -254,7 +255,7 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td>
-                              dddddd
+                              TEST
                             </td>
                             
                             <th></th>
@@ -271,8 +272,8 @@ function SUBTMPL() {
                 </div>
 
                 <div className="o-section">
-                  <div className="o-header">
-                    title
+                  <div className="m-header">
+                    <h2 className="o-heading level2">열쇠종류내역</h2>
                   </div>
 
                   <div className="main _primary rows-body-5i">

@@ -61,6 +61,6 @@
   :has(.p-datatable-scrollable-table):is(.o-section >.main._primary *):not(:has(>.p-datatable-scrollable-table))  { display: flex; flex-direction: column; }
 :has(.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex: 1 0 0; }
 :has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex-basis: var(--height-section-main); min-width: 100%; min-height: 0; overflow: auto; resize: both; }
-:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"]  { flex-basis: auto; min-height: var(--height-section-main); }
+:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]  { --color-scrollbar-track: #DCDCDC; flex-basis: auto; min-height: var(--height-section-main); }
 
 

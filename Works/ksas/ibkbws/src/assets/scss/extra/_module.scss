@@ -74,6 +74,52 @@ $width-object-symbol:        var(--width-object-symbol);
 
 
 
+// /** Elements Width
+//  ----------------- */
+
+// /** Elements */
+
+// .o-form:has(.c-cols-auto)  { flex: 1; }
+// .o-form:has(.c-cols-100p)  { width: 100%; }
+// .o-form:has(.c-cols-50p)  { width: 50%; }
+// .o-form:has(.c-cols-70)  { width: 30rem; width: calc(1em * 300 / 14); }
+// .o-form:has(.c-cols-50)  { width: 21.1rem; width: calc(1em * 211 / 14); }
+// .o-form:has(.c-cols-40)  { width: 16.8rem; width: calc(1em * 148 / 14); }
+// .o-form:has(.c-cols-30)  { width: 12.6rem; width: calc(1em * 126 / 14); }
+// .o-form:has(.c-cols-10)  { width: 6rem; width: calc(1em * 60 / 14); }
+
+
+/** Text-Level
+ ------------- */
+
+// /** Colors */
+// .c-color-point1  { color: var(--color-point1) !important; }
+// .c-color-gray  { color: var(--color-gray) !important; }
+// .c-color-event  { color: var(--color-state-event) !important; }
+// .c-color-pos  { color: var(--color-state-pos) !important; }
+// .c-color-neut  { color: var(--color-state-neut) !important; }
+// .c-color-neg  { color: var(--color-state-neg) !important; }
+// .c-color-error  { color: var(--color-error) !important; }
+
+
+// /** Texts */
+// .o-text-strong  { font-weight: var(--bold-70); color: var(--color-point1); }
+// .o-text-example  { color: var(--color-text2); }
+// .o-text-example:before  { content: "( "; }
+// .o-text-example:after { content: " )"; }
+// .o-text-error  { font-weight: var(--bold-70); color: var(--color-error); }
+
+
+/** Headings */
+.o-heading  { font-weight: var(--bold-70); display: block; }
+// .o-heading1  { font-weight: var(--bold-70); font-size: var(--font-xl); line-height: var(--line-xl); display: block; }
+// .o-heading2  { font-weight: var(--bold-70); font-size: var(--font-l); line-height: var(--line-l); display: block; }
+// .o-heading3  { font-weight: var(--bold-70); font-size: var(--font-lm); line-height: var(--line-lm); display: flex; align-items: center; }/* ### */
+// .o-heading3:before  { direction: ltr; font: normal normal var(--width-object-symbol) /1 'wf-MaterialSymbolsOutlinedVF', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+// .o-heading3:before  { font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
+// .o-heading3:before  { content: "keyboard_double_arrow_right"; font-size: 100%; }
+
+
 
 
 
