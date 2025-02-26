@@ -6,10 +6,9 @@
 @import "extra/basis";
 @import "abstracts/variables";
 @import "abstracts/mixins";
-@import "extra/variables";
-// @import "extra/vars";
-// @import "extra/mixins";
-// @import "extra/common";
+@import "extra/vars";
+@import "extra/mixins";
+@import "extra/common";
 @import "vendors/primereact";
 @import "vendors/primeflex";
 @import "components/buttons";
@@ -21,9 +20,9 @@
 @import "layouts/footer";
 @import "layouts/layout";
 @import "extra/layout";
-@import "extra/rewrite";
 @import "pages/common";
-// @import "extra/partial";
-// @import "extra/transition";
-// @import "extra/theme";
-// @import "extra/@temp";
+@import "extra/partial";
+@import "extra/theme";
+@import "extra/transition";
+@import "extra/rewrite";
+@import "extra/@dev";
