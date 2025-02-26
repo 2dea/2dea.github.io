@@ -30,3 +30,37 @@
 }
 
 // layout.scss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .o-section >.main._primary:has(.p-datatable-scrollable-table),
+//   .o-section >.main._primary :has(.p-datatable-scrollable-table):not(:has(>.p-datatable-scrollable-table))  { display: flex; flex-direction: column; }
+// .o-section >.main._primary :has(.p-datatable-scrollable-table)  { flex: 1 0 0; }
+// .o-section >.main._primary :has(>.p-datatable-scrollable-table)  { flex-basis: var(--height-section-main); overflow: auto; }
+
+:has(.p-datatable-scrollable-table):is(.o-section >.main._primary),
+  :has(.p-datatable-scrollable-table):is(.o-section >.main._primary *):not(:has(>.p-datatable-scrollable-table))  { display: flex; flex-direction: column; }
+:has(.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex: 1 0 0; }
+:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex-basis: var(--height-section-main); min-width: 100%; min-height: 0; overflow: auto; resize: both; }
+:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"]  { flex-basis: auto; min-height: var(--height-section-main); }
+
+
