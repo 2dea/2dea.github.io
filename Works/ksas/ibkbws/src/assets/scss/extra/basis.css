@@ -158,8 +158,8 @@ iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-beh
 audio:not([controls])  { display: none; height: 0; }
 svg:not(:root)  { overflow: hidden; }
 table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-spacing: 0; border-width: 0; }
-caption,  th  { text-align: inherit; }
-th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0; border: 0 solid; border-width: 1px; }
+table :not(tr > * > *)  { color: inherit; background-color: inherit; text-align: inherit; }
+th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0.125em; border: 0 solid; border-width: 1px; }
 fieldset  { min-width: 0; padding: 0; border-style: none; }
 legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; color: inherit; white-space: normal; }
 label  { display: inline-block; cursor: pointer; }
