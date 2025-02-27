@@ -341,8 +341,8 @@ $width-object-symbol:        var(--width-object-symbol);
 .o-grid-table  { font-family: inherit; font-feature-settings: inherit; font-weight: inherit; font-size: inherit; line-height: inherit; }
 .o-grid-table  { clear: both; width: 100%; }
 .o-grid-table table  { background: var(--color-ground); text-align: center; }
-.o-grid-table :where(table :not(tr >* >*))  { color: inherit; background-color: inherit; text-align: inherit; }
-.o-grid-table tr >*  { height: var(--height-global-cell); padding: var(--margin-global-cell-block); border: 0 solid #EAEBEC; border-width: 0 $e10 $e10 0; }
+// .o-grid-table :where(table :not(tr >* >*))  { color: inherit; background-color: inherit; text-align: inherit; }
+.o-grid-table tr >*  { height: var(--height-global-cell); padding: var(--margin-global-cell-block) III(10); border: 0 solid #EAEBEC; border-width: 0 $e10 $e10 0; }
 // .o-grid-table tr:first-child:not(:first-of-type ~* >*) >*  { border-top-width: $e10; }
 // .o-grid-table tr:first-child:not(thead ~* >*) >*  { border-top-width: $e10; }
 .o-grid-table tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; }
@@ -359,7 +359,7 @@ $width-object-symbol:        var(--width-object-symbol);
 .o-grid-table tbody >tr >*  { min-width: 180px; }
 
 .o-grid-table thead  { position: sticky; z-index: 4; top: 0; }
-.o-grid-table tr >:first-child  { position: sticky; left: 0; border-right-color: #004C9D; background-color: inherit; }
+.o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 3; left: 0; border-right-color: #004C9D; background-color: inherit; }
 
 
 
