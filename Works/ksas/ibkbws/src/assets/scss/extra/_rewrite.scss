@@ -45,6 +45,48 @@
 
 
 
+.p-link  {
+  text-align: left;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+.p-column-filter-menu-button, .p-column-filter-clear-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-datatable .p-column-header-content  {
+  display: flex;
+  align-items: center;
+}
+
+.p-column-filter-menu  {
+  display: inline-flex;
+  margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -61,6 +103,7 @@
   :has(.p-datatable-scrollable-table):is(.o-section >.main._primary *):not(:has(>.p-datatable-scrollable-table))  { display: flex; flex-direction: column; }
 :has(.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex: 1 0 0; }
 :has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex-basis: var(--height-section-main); min-width: 100%; min-height: 0; overflow: auto; resize: both; }
-:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]  { --color-scrollbar-track: #DCDCDC; flex-basis: auto; min-height: var(--height-section-main); }
+:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]  { --color-scrollbar-track: rgba(240,240,240, 0.88); flex-basis: auto; min-height: var(--height-section-main); }
+:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]:hover  { --color-scrollbar-track: var(--color-ground); box-shadow: 0 calc(var(--rem) * 3) 12px rgba(0,0,0, 0.12); }
 
 
