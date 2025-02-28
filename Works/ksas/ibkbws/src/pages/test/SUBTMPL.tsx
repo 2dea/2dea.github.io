@@ -42,6 +42,15 @@ function SUBTMPL() {
             <strong className="system"><span className="inner">업무지원시스템</span></strong>
           </div>
 
+          <div className="div-account">
+            <dl>
+              <dt><span className="label">사용자 정보</span></dt>
+              <dd>
+                dddddsfssf
+              </dd>
+            </dl>
+          </div>
+
           <div className="div-nav-global">
             <ul>
               <li><a href="javascript:" className="link"><span className="label">원화정산</span></a></li>
