@@ -24,7 +24,7 @@
 
 
   --color-scrollbar-track:      rgba(0,0,0, 0.05);
-  /* --color-scrollbar-track:      var(--tp); */
+  --color-scrollbar-track:      var(--tp);
   --color-scrollbar-thumb:      rgba(0,0,0, 0.3);
   --color-scrollbar-thumb-hover: rgba(0,0,0, 0.4);
   --color-scrollbar-thumb-active: rgba(0,0,0, 0.5);
@@ -137,6 +137,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-header .div-root:after  { content: ""; position: absolute; left: III(60); top: 50%; transform: translateY(-50%);  width: III(175); height: III(24); background: var(--object-image-logo) no-repeat; }
 .dom-header .div-root >*  { font-size: III(17); color: $tp; }
 .dom-header .div-root .logo  { font-size: III(20); }
+
+.dom-header .div-account >dl >dt  { @include getGlobalHidden(); }
+
 
 
 .dom-header .div-nav-global  { font-size: $font-lm; line-height: $line-lm; white-space: nowrap; }
