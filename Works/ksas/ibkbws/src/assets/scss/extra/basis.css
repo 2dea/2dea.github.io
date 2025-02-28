@@ -60,26 +60,39 @@
   --typo-serif:         'wf-NotoSerifKR', 'Noto Serif KR', 'Noto Serif CJK KR', 'AppleMyungjo', '바탕', 'Batang';
   --typo-mono:          'wf-D2Coding', 'D2Coding', 'Noto Sans Mono KR', 'Noto Sans Mono CJK KR', 'Monaco', 'Consolas', 'Courier New', 'Lucida Console', 'Courier', '바탕체', 'BatangChe';
   --typo-sans:          'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
+  --typo-mono-latin:    'wf-RobotoMono-Var';
   --typo-sans-latin:    'wf-Inter', 'wf-OpenSans';
 
   --typo-quot:          var(--typo-serif), serif;
   --typo-code:          var(--typo-mono), monospace;
   --typo-header:        var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
-  --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-number:        var(--typo-mono-latin), 'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
   --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-base:          var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
+
 
   --text-feature-base:  normal;
   --text-feature-base:  'case', 'ss01', 'ss02', 'ss03', 'ss05';
   --text-feature-tnum:  'tnum', 'zero', 'cv13', var(--text-feature-base);
   --text-feature:       var(--text-feature-base, normal);
+
   --text-size:          var(--font-sm, 1.5em);
+  --text-size-s:        calc(var(--text-size) - var(--rem) * 2);
+  /* --text-size-s-rel:    calc(1em * 12 / 14); */
+
   --text-height:        var(--line-sm, calc(16 / 12));
+  --text-height-s:      var(--line-xs);
   --text-height-para:   calc(18 / 12);
+
+
   --text-spacing:       0;
+
   --text-shadow-radius: 0 0.1ex calc(var(--rem) * 1);
   --text-shadow-color:  rgba(0,0,0, 0.75);
   --text-shadow:        var(--text-shadow-radius) var(--text-shadow-color);
+
+
+  --radius-abs-10:      2px;
 
 
   @media
@@ -158,7 +171,7 @@ iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-beh
 audio:not([controls])  { display: none; height: 0; }
 svg:not(:root)  { overflow: hidden; }
 table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-spacing: 0; border-width: 0; }
-table :not(tr > * > *)  { color: inherit; background-color: inherit; text-align: inherit; }
+table :not(tr > * *)  { color: inherit; background-color: inherit; text-align: inherit; }
 th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0.125em; border: 0 solid; border-width: 1px; }
 fieldset  { min-width: 0; padding: 0; border-style: none; }
 legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; color: inherit; white-space: normal; }
