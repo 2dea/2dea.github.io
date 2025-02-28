@@ -148,6 +148,8 @@
   --color-check-enabled:    var(--surface-secondary0-opacity60, #00000099);
   --color-check-checked:    var(--key, #259fff);
 
+  --color-point1-alpha-10:  rgb(from var(--color-point1) r g b /0.2);
+
 
   --height-global-form:         calc(var(--rem) * 26);
   /* --height-global-form-wide:    calc(var(--height-global-form) + 0.4rem);
@@ -262,9 +264,9 @@
  ------------------ */
 
 /** Primary-Styles Selector */
-.g-hidden  { font-size: 1%; font-size: 100%; display: inline-block; height: 1px; width: 1px; overflow: hidden; margin: 0 -1px -1px 0; padding: 0; border: 0; background: none; visibility: visible; white-space: nowrap; }
-caption .g-hidden,  legend .g-hidden,
-  .g-absolute.g-hidden  { position: absolute; clip: rect(0 0 0 0); clip: rect(0,0,0,0); clip-path: circle(0); width: auto; margin-right: 0; white-space: inherit; }
+.g-hidden  { width: auto; height: 1px; overflow: hidden; margin: 0 0 -1px; padding: 0; border: 0; background: none; visibility: visible; white-space: inherit; }
+.g-hidden:not(caption):not(legend):not(.flow-inline)  { display: block; position: absolute; clip: rect(0 0 0 0); clip: rect(0,0,0,0); clip-path: circle(0); }
+.g-hidden.flow-inline  { display: inline-block; width: 1px; margin-right: -1px; white-space: nowrap; }
 
 .g-overlay  { position: absolute; left: 0; right: 0; bottom: 0; min-width: 100%; height: 1px; min-height: 100%; background: Black; background-color: var(--color-dimmed, #000); opacity: 0.6; opacity: var(--alpha-dimmed, 0.6); }
 
