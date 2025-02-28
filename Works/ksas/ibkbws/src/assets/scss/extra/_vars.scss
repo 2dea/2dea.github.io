@@ -60,6 +60,16 @@ $height-global-form:   var(--height-global-form);
   line-height: $line;
 }
 
+@mixin getGlobalHidden($inline: null)  {
+  width: auto; height: 1px; overflow: hidden; margin: 0 0 -1px; padding: 0; border: 0; background: none; visibility: visible; white-space: inherit;
+
+  @if ($inline == 1) {
+    display: inline-block; width: 1px; margin-right: -1px; white-space: nowrap;
+  } @else {
+    display: block; position: absolute; clip: rect(0 0 0 0); clip: rect(0,0,0,0); clip-path: circle(0);
+  }
+}
+
 :root  {
   // @include setTextStyle($font-l, $line-l, $wght: $bold-70);
   // @include setTextStyle($font-l, $wght: $bold-70);
