@@ -486,8 +486,8 @@
 }
 
 /** Type Selector */
-*,
-  :before,  :after  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border-spacing: 0; }
+*  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+:before,  :after  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; }
 @media
   screen and (prefers-reduced-motion: reduce)  {
     *,
