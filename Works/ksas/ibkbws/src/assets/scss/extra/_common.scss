@@ -151,29 +151,14 @@
   --color-point1-alpha-10:  rgb(from var(--color-point1) r g b /0.2);
 
 
-  --height-global-form:         calc(var(--rem) * 26);
-  /* --height-global-form-wide:    calc(var(--height-global-form) + 0.4rem);
-  --height-global-form-wider:   calc(var(--height-global-form) + 1.4rem); --- */
-
-  --margin-global-section:      calc(var(--rem) * 24);
-  --margin-global-subset:       1rem;
-
   --gap-global-whitespace:      0.4rem;
   --gap-global-element:         1rem;
   --gap-global-element-narrow:  calc(var(--gap-global-element) / 2);
   --gap-global-element-wide:    calc(var(--gap-global-element) * 2);
 
-  --margin-layout-inline:       var(--margin-global-section);
-  --margin-layout-inline-prim:  calc(var(--margin-layout-inline) + 1rem);
-  --margin-layout-block:        var(--margin-global-section);
-  --margin-layout-block-end:    calc(var(--margin-layout-block) * 2);
-  --height-layout-header:       calc(var(--rem) * 48);
-  --width-layout-nav:           calc(var(--rem) * 300);
-
-  --margin-layer-inline:        var(--margin-layout-inline, 0);
-  --margin-layer-block:         2rem;
-  --margin-layer-block-end:     calc(var(--margin-layer-block) + 1rem);
-  --height-layer-header:        5rem;
+  --height-global-form:         calc(var(--rem) * 26);
+  /* --height-global-form-wide:    calc(var(--height-global-form) + 0.4rem);
+  --height-global-form-wider:   calc(var(--height-global-form) + 1.4rem); --- */
 
   --width-object-symbol-m:      calc(var(--rem) * 16);
   --width-object-symbol-l:      calc(var(--rem) * 20);

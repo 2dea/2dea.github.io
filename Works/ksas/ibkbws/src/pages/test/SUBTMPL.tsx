@@ -46,7 +46,34 @@ function SUBTMPL() {
             <dl>
               <dt><span className="label">사용자 정보</span></dt>
               <dd>
-                dddddsfssf
+                <span className="user">
+                  <span className="name">김기업</span>
+                  <em className="id">04123</em>
+                </span>
+              </dd>
+              <dd>
+                <span className="task">
+                  <span className="prop">
+                    <span className="head">미처리업무</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </span>
+                  <span className="binds">
+                    <button type="button" title="새로고침" className="button close"><span className="label">새로고침</span></button>
+                  </span>
+                </span>
+              </dd>
+              <dd>
+                <span className="contacts">
+                  <button type="button" title="업무별 문의처" className="button contacts"><span className="label">업무별 문의처</span></button>
+                </span>
+              </dd>
+              <dd>
+                <span className="settings">
+                  <button type="button" title="설정" className="button settings"><span className="label">설정</span></button>
+                </span>
               </dd>
             </dl>
           </div>
@@ -214,6 +241,7 @@ function SUBTMPL() {
 
             <div className="o-grid">
               <div className="column">
+
                 <div className="o-section">
                   <form className="m-filter-form">
                     <div className="fieldset">
@@ -226,12 +254,27 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td>
-                              [0810] 프로세스혁신
+                              <div className="m-field">
+                                <div className="field">
+                                  <span className="o-form _input c-wdth-50">
+                                    <input type="text" placeholder="" value="[0810] 프로세스혁신" className="bind" /><i aria-hidden="true"></i>
+                                  </span>
+                                </div>
+                              </div>
                             </td>
                             
                             <th>
                               <span className="o-label">
-                                <span className="label">근무여부</span>
+                                <span className="label">열쇠구분</span>
+                              </span>
+                            </th>
+                            <td>
+                              TEST
+                            </td>
+
+                            <th>
+                              <span className="o-label">
+                                <span className="label">열쇠유형</span>
                               </span>
                             </th>
                             <td>
@@ -245,28 +288,75 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td>
-                              TEST
+                              <div className="m-field">
+                                <div className="field">
+                                  <span className="o-form _input c-wdth-50">
+                                    <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
                             </td>
-                            
+
                             <th>
                               <span className="o-label">
                                 <span className="label">소속부점</span>
                               </span>
                             </th>
                             <td>
-                              TEST
+                              <div className="m-field">
+                                <div className="field">
+                                  <span className="o-form _input c-wdth-50">
+                                    <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
                             </td>
+
+                            <th></th>
+                            <td></td>
                           </tr>
                           <tr>
+                            <th>
+                              <span className="o-label">
+                                <span className="label">사용여부</span>
+                              </span>
+                            </th>
+                            <td>
+                              <div className="m-field">
+                                <div className="field">
+                                  <span className="o-form _select">
+                                    <select className="bind">
+                                      <option value="" disabled hidden selected>선택</option>
+                                      <option value="VALUE">전체</option>
+                                      <option value="VALUE">Y</option>
+                                      <option value="VALUE">N</option>
+                                    </select><i aria-hidden="true"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </td>
+
                             <th>
                               <span className="o-label">
                                 <span className="label">부점변경예정(일정)</span>
                               </span>
                             </th>
                             <td>
-                              TEST
+                              <div className="m-field">
+                                <div className="field">
+                                  <span className="o-form _input c-wdth-50">
+                                    <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
+                                  </span>
+                                </div>
+                              </div>
                             </td>
-                            
+
                             <th></th>
                             <td></td>
                           </tr>
@@ -282,7 +372,23 @@ function SUBTMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level2">열쇠종류내역</h2>
+                    <h2 className="o-heading level2"><span className="label">열쇠종류내역</span></h2>
+
+                    <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
+
+                    <div className="m-binds">
+                      <span className="group">
+                        <span className="item"><button type="button" title="엑셀다운로드" className="o-image-button"><span className="label">엑셀다운로드</span></button></span>
+                        <span className="item"><button type="button" title="컬럼필터" className="o-image-button"><span className="label">컬럼필터</span></button></span>
+                        <span className="item"><button type="button" title="프린트" className="o-image-button"><span className="label">프린트</span></button></span>
+                      </span>
+                    </div>
                   </div>
 
                   <div className="main _primary rows-body-5i">
@@ -413,165 +519,96 @@ function SUBTMPL() {
                   GRID<br />
                   GRID<br />
                 </div>
+
               </div>
 
               <div className="column">
-                SECONDARY CONTENTS
-                <div className="m-search-form type-global">
-                  <table>
-                    <colgroup>
-                      <col className="c-form-header" title="width:12%;" />
-                      <col title="width:auto;" />
-                      <col className="c-form-header" title="width:12%;" />
-                      <col title="width:auto;" />
-                    </colgroup>
 
-                    <tbody>
-                      <tr>
-                        <th>신청구분<em className="o-require-label"><span className="inner">(필수)</span></em></th>
-                        <td>
-                          <div className="m-fields">
-                            <div className="item">
-                              <span className="o-form _select">
-                                <select required="required" className="bind">
-                                  <option value="" disabled="disabled" hidden="hidden" selected="selected">전체/포괄승인/개별승인</option>
-                                  <option value="VALUE">-</option>
-                                </select><i aria-hidden="true"></i>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
+                <div className="o-section">
+                  <div className="m-header">
+                    <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
 
-                        <th>상품종류<em className="o-require-label"><span className="inner">(필수)</span></em></th>
-                        <td>
-                          <div className="m-fields">
-                            <div className="item">
-                              <span className="o-form _select">
-                                <select required="required" className="bind">
-                                  <option value="" disabled="disabled" hidden="hidden" selected="selected">전체/수익증권/신탁</option>
-                                  <option value="VALUE">-</option>
-                                </select><i aria-hidden="true"></i>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>상품명<em className="o-require-label"><span className="inner">(필수)</span></em></th>
-                        <td colspan="3">
-                          <div className="m-fields">
-                            <div className="item">
-                              <span className="o-form _input">
-                                <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>작성일자</th>
-                        <td colspan="3">
-                          <div className="m-fields">
-                            <div className="item m-dates">
-                              <label className="o-button-check"><input type="radio" name="RADIO_DATE_PRESET" value="" checked="checked" /><span className="label">오늘</span></label>
-                              <label className="o-button-check"><input type="radio" name="RADIO_DATE_PRESET" value="" /><span className="label">3일</span></label>
-                              <label className="o-button-check"><input type="radio" name="RADIO_DATE_PRESET" value="" /><span className="label">1주일</span></label>
-                              <label className="o-button-check"><input type="radio" name="RADIO_DATE_PRESET" value="" /><span className="label">1개월</span></label>
-                              <label className="o-button-check"><input type="radio" name="RADIO_DATE_PRESET" value="" /><span className="label">3개월</span></label>
-                              <label className="o-button-check"><input type="radio" name="RADIO_DATE_PRESET" value="" /><span className="label">6개월</span></label>
-                              <label className="o-button-check"><input type="radio" name="RADIO_DATE_PRESET" value="" /><span className="label">12개월</span></label>
-                            </div>
+                    <div className="m-binds">
+                      <span className="group">
+                        <span className="item"><button type="button" className="o-image-button"><span className="label">신규</span></button></span>
+                      </span>
+                    </div>
+                  </div>
 
-                            <div className="item m-dates">
-                              <div className="mx-datepicker">
-                                <input type="text" autocomplete="off" placeholder="시작일" maxlength="8" className="mx-input" />
+                  <div className="main">
+                    <form className="m-data-form">
+                      <table className="table">
+                        <tbody>
+                          <tr>
+                            <th>
+                              <span className="o-label">
+                                <span className="label">
+                                  <em className="o-require-tag"><span className="tag">(필수입력) </span></em>
+                                  열쇠구분
+                                </span>
+                              </span>
+                            </th>
+                            <td>
+                              <div className="m-field">
+                                <div className="field">
+                                  <span className="o-form _input">
+                                    <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                    </span>
+                                  </span>
+                                  <span className="outer-binds">
+                                    <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                  </span>
+                                </div>
                               </div>
+                            </td>
 
-                              <div className="mx-datepicker">
-                                <input type="text" autocomplete="off" placeholder="종료일" maxlength="8" className="mx-input" />
+                            <th>
+                              <span className="o-label">
+                                <span className="label">
+                                  <em className="o-require-tag"><span className="tag">(필수입력) </span></em>
+                                  열쇠유형
+                                </span>
+                              </span>
+                            </th>
+                            <td>
+                              <div className="m-field">
+                                <div className="field">
+                                  <span className="o-form _select">
+                                    <select className="bind type-require">
+                                      <option value="" disabled hidden selected>선택</option>
+                                      <option value="VALUE">전체</option>
+                                      <option value="VALUE">Y</option>
+                                      <option value="VALUE">N</option>
+                                    </select><i aria-hidden="true"></i>
+                                  </span>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Check Invalid (input)</th>
-                        <td colspan="3">
-                          <div className="m-fields">
-                            <div className="item">
-                              <span className="o-form _input is-error">
-                                <input type="text" placeholder="" value="■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" className="bind" /><i aria-hidden="true"></i>
-                                <span role="alert" className="o-invalid-label"><span className="inner">######을(를) 입력하여 주세요.</span></span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <span className="o-label">
+                                <span className="label">
+                                  비고
+                                </span>
                               </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Check Invalid (textarea)</th>
-                        <td colspan="3">
-                          <div className="m-fields">
-                            <div className="item">
-                              <span className="o-form _input is-error">
-                                <textarea cols="20" rows="3" placeholder="" className="bind">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</textarea><i aria-hidden="true"></i>
-                                <span role="alert" className="o-invalid-label"><span className="inner">######을(를) 입력하여 주세요.</span></span>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Check Invalid (file)</th>
-                        <td colspan="3">
-                          <div className="m-fields">
-                            <div className="item">
-                              <span className="o-form _file is-error">
-                                <input type="file" required="required" value="" className="bind" /><i aria-hidden="true"></i>
-                                <span role="alert" className="o-invalid-label"><span className="inner">파일을 선택하여 주세요.</span></span>
-                                <span className="button delete"><button type="button" title="파일선택 취소" className="o-image-button is-delete"><span className="inner">삭제</span></button></span>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Check Invalid (select)</th>
-                        <td colspan="3">
-                          <div className="m-fields">
-                            <div className="item">
-                              <span className="o-form _select is-error">
-                                <select required="required" className="bind">
-                                  <option value="" disabled="disabled" hidden="hidden" selected="selected">승인/조건부승인/부결</option>
-                                  <option value="VALUE">승인</option>
-                                  <option value="VALUE">조건부승인</option>
-                                  <option value="VALUE">부결</option>
-                                </select><i aria-hidden="true"></i>
-                                <span role="alert" className="o-invalid-label"><span className="inner">######을(를) 선택하여 주세요.</span></span>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Check Invalid (date)</th>
-                        <td colspan="3">
-                          <div className="m-fields">
-                            <div className="item m-dates">
-                              <div className="mx-datepicker is-error">
-                                <input type="text" autocomplete="off" placeholder="시작일" maxlength="8" className="mx-input" />
-                                <span role="alert" className="o-invalid-label"><span className="inner">날짜를 입력하여 주세요.</span></span>
+                            </th>
+                            <td colSpan="3">
+                              <div className="m-field">
+                                <div className="field">
+                                  <span className="o-form _input c-wdth-50p">
+                                    <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
+                                  </span>
+                                </div>
                               </div>
-
-                              <div className="mx-datepicker is-error">
-                                <input type="text" autocomplete="off" placeholder="종료일" maxlength="8" className="mx-input" />
-                                <span role="alert" className="o-invalid-label"><span className="inner">날짜를 입력하여 주세요.</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </form>
+                  </div>
                 </div>
 
               </div>
