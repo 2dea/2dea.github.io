@@ -224,8 +224,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main >.div-tablist  { font-size: inherit; line-height: inherit; padding: III(4) 0 0; border-bottom: $e10 solid #0B68CB; }
 
 .dom-main .div-header  { display: flex; align-items: center; gap: III(16); }
-.dom-main .div-header >*  { flex: none; min-width: 0; }
-.dom-main .div-header >.o-breadcrumb  { flex: 1 0 0; overflow: hidden; @include inc-ellipsis(); }
+.dom-main .div-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
+.dom-main .div-header >.o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
 .dom-main .div-header .m-title  { order: -1; }
 .dom-main .div-header .m-title .o-heading  { display: flex; align-items: center; }
 .dom-main .div-header .m-binds  { margin-left: auto; }
@@ -309,8 +309,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .o-grid  { flex: 1; display: flex; gap: $margin-global-section; }
 .o-grid >.column  { flex: 0 0 auto; display: flex; flex-direction: column; min-width: 0; }
-.o-grid >.column:first-child  { flex: 1 0 0; }
-.o-grid >.column:not(:nth-child(1))  { width: calc(100% * 5 / 12); max-width: calc(var(--rem) * 600); }
+.o-grid >.column:first-child  { flex: 1 0 0; /* min-width: calc(var(--rem) * 484); */ }
+.o-grid >.column:not(:nth-child(1))  { width: calc(100% * 5 / 12); min-width: calc(var(--rem) * 384); max-width: calc(var(--rem) * 600); }
 
 
 
