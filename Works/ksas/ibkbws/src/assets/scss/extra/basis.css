@@ -194,7 +194,7 @@ template  { display: none; }
   [disabled]  {
     color: GrayText;
     -webkit-text-fill-color: currentColor;
-    /* opacity: 0.75; */
+    filter: blur(0.5px);
     cursor: default;
     cursor: not-allowed;
 }
