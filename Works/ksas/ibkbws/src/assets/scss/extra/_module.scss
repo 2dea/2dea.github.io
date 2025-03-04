@@ -350,9 +350,131 @@ $width-object-symbol:        var(--width-object-symbol);
 
 
 
-.o-form  { flex: 1 0 0; display: inline-flex; }
-.o-form >*  { flex: 0 1 auto; min-width: 0; }
-.o-form >.bind  { flex: 1; min-height: var(--height-global-form); }
+/** Forms Type Selector */
+.o-form ::-ms-clear,
+  .o-form ::-ms-reveal  { display: none; }
+.o-form ::-webkit-search-cancel-button,
+  .o-form ::-webkit-search-decoration,
+  .o-form ::-webkit-search-results-button,
+  .o-form ::-webkit-search-results-decoration  { display: none; }
+.o-form ::-webkit-inner-spin-button,
+  .o-form ::-webkit-outer-spin-button  { -webkit-appearance: none; margin:0; }
+
+.o-form :-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: start !important; text-align: left; color: var(--color-text-placeholder, #757575) !important; }
+.o-form ::-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: start !important; text-align: left; color: var(--color-text-placeholder, #757575) !important; }
+.o-form ::-moz-placeholder  { font-weight: inherit; font-family: inherit; text-align: start !important; text-align: left; color: var(--color-text-placeholder, #757575); opacity: 1; }
+.o-form ::-webkit-input-placeholder,
+  .o-form ::placeholder  { font-weight: inherit; font-family: inherit; text-align: start !important; text-align: left; color: var(--color-text-placeholder, #757575); }
+
+
+/** Default Forms */
+.o-form  { flex: 1 0 0; display: inline-block; display: inline-flex; position: relative; max-width: 100%; border-radius: 0; transition-duration: 0.05s; }
+.o-form:not(.type-string)  { font-weight: var(--bold-40, inherit); }
+/* .o-form >*  { flex: none; }
+.o-form >.bind  { font-size: inherit; line-height: inherit; flex: 1; width: 100%; min-width: 2.4em; color: currentColor; outline-offset: calc(-1 * var(--e10)); border-radius: inherit; box-shadow: none; transition-duration: 0.05s; }
+.o-form >.bind ~i  { position: absolute; }
+.o-form:where( :not(._file):not(._range) ) >.bind  { min-height: var(--height-global-form, 3rem); padding-left: 0.7rem; padding-left: max(calc(7em / 14), 0.7rem); border: var(--e10) solid var(--color-edge-enabled); background-color: var(--color-ground-enabled); } */
+.o-form >*  { flex: 0 1 auto; box-sizing: border-box; min-width: 0; border-radius: inherit; transition-duration: inherit; }
+.o-form >.bind  { font-size: inherit; line-height: inherit; flex: 1; width: 100%; min-width: 2.4em; color: currentColor; outline: 0; box-shadow: none; }
+.o-form >.bind[disabled]  { opacity: 1.0; -webkit-text-fill-color: currentColor; }
+.o-form >.bind ~i  { position: absolute; inset: 0; border: var(--e10) solid Transparent; outline-offset: calc(-1 * var(--e10)); pointer-events: none; }
+.o-form:where( ._input, ._select )  { background-color: var(--color-ground-enabled); }
+.o-form:where( ._input, ._select ) >.bind  { min-height: var(--height-global-form, 3rem); padding-left: 0.7rem; padding-left: max(calc(7em / 14), 0.7rem); border: var(--e10) solid Transparent; background-color: Transparent; }
+.o-form:where( ._input, ._select ) >.bind ~i  { border-color: var(--color-edge-enabled); }
+
+/* .o-form:where( :not(._file):not(._range) ):hover >.bind:where( :not([readonly]) )  { color: var(--color-text1); background-color: var(--color-ground); outline: var(--e10) solid var(--color-edge5); }
+
+.o-form >.bind:focus  { outline-offset: var(--e10); }
+.o-form:where( :not(._file):not(._range) ) >.bind:focus  { outline: var(--e20) solid var(--color-black); }
+
+.o-form >.bind:where( :not([readonly]) ):focus-visible  { color: var(--color-text1); background-color: var(--color-ground); outline: var(--e20) solid var(--color-edge-selected); outline-width: var(--e20) !important; }
+.o-form:where( :not(._file):not(._range) ) >.bind:where( :not([readonly]) ):focus-visible  { outline-offset: calc(-1 * var(--e10)); }
+
+.o-form >.bind[disabled]  { background-color: var(--color-ground-disabled); opacity: 1.0; outline: 0; } */
+/* .o-form >.bind[disabled] ~i  { cursor: default; cursor: not-allowed; } */
+
+.o-form:has(>.bind[disabled])  { color: currentColor; background-color: var(--color-ground-disabled); }
+
+.o-form:where( ._input, ._select ):has(>.bind:where( :not([disabled]):not([readonly]) )):hover  { color: var(--color-text1); background-color: var(--color-ground); }
+.o-form:where( ._input, ._select ):hover >.bind:where( :not([disabled]):not([readonly]) ) ~i  { outline: var(--e10) solid var(--color-edge5); }
+
+.o-form >.bind:focus ~i  { outline-offset: var(--e10); }
+.o-form:where( ._input, ._select ) >.bind:focus ~i  { outline: var(--e20) solid var(--color-black); }
+
+.o-form:has(>.bind:where( :not([readonly]) ):focus-visible)  { color: var(--color-text1); background-color: var(--color-ground); }
+.o-form >.bind:where( :not([readonly]) ):focus-visible ~i  { outline: var(--e20) solid var(--color-edge-selected); outline-width: var(--e20) !important; }
+.o-form:where( ._input, ._select ) >.bind:where( :not([readonly]) ):focus-visible ~i  { outline-offset: calc(-1 * var(--e10)); }
+
+
+.o-form._select >select  { -webkit-appearance: none; appearance: none; overflow: hidden; padding-right: 1.5em; background: var(--object-symbol-expand-more) no-repeat calc(100% + var(--e10, 1px)) 50% /2rem 100%; text-overflow: ellipsis; white-space: nowrap; }
+.o-form._select >select[required]:invalid  { color: GrayText; }
+.o-form._select >select option  { color: var(--color-text1); }
+
+.o-form._file >input  { min-height: var(--height-global-form, 3rem); padding: calc((var(--height-global-form, 3rem) - 19em / 14 - 6px) / 2) 0; }
+/* .o-form._file >input:not(:valid) ~.button.delete  { display: none; } */
+
+.o-form._range >input  { min-height: var(--height-global-form, 3rem); }
+
+.o-form._input >input  { -webkit-appearance: none; appearance: none; overflow: hidden; padding: calc((var(--height-global-form) - 1lh) / 2) 0.7rem; text-overflow: ellipsis; white-space: nowrap; }
+.o-form._input >input[type="password"]  { font-family: var(--typo-password); }
+/* .o-form._input.has-limit-time >input  { padding-right: 4em; } */
+
+.o-form._input >textarea  { -webkit-appearance: none; appearance: none; line-height: var(--text-height, calc(18 / 12)); padding: 0.6rem 0.7rem; }
+.o-form._input >textarea:not([rows])  { height: calc(1em * var(--text-height, calc(18 / 12)) * 5 + (0.6rem + var(--e10)) * 2); }
+
+.o-form:is(.size-md)  { font-size: var(--font-lm); line-height: var(--line-lm); }
+.o-form:is(.size-md) >.bind  { min-height: var(--height-global-form-wider); }
+/* .o-form:where(.m-forms.type-subject *) >.bind  { min-height: var(--height-global-form-wider); padding: 0.5rem 0.9rem; } */
+.o-form:is(.size-lg)  { font-size: var(--font-xl); line-height: var(--line-xl); }
+.o-form:is(.size-lg, .m-forms.type-subject *) >.bind  { padding: 0.5rem 0.9rem; }
+
+
+/* .o-form >.bind[readonly]:focus  { background: var(--color-disabled); }
+.o-form.type-string >.bind:not(:focus)  { padding-left: 0; padding-right: 0; border-color: Transparent; background-color: Transparent; text-align: inherit; } */
+.o-form._input.type-string  { color: currentColor; background-color: Transparent; }
+.o-form._input.type-string >.bind  { font-size: inherit; line-height: inherit; box-shadow: none; text-align: inherit; }
+.o-form._input.type-string >.bind ~i  { border-color: Transparent; outline: 0; }
+.o-form._input.type-string:not(.style-keep) >.bind  { padding-left: 0; padding-right: 0; }
+
+/* .o-form >.bind.mode-edited  { border-color: var(--color-edge-selected); background-color: var(--color-ground-selected); } */
+.o-form:has(>.bind.mode-edited:not(:focus):where( :not(.o-subset *) ))  { background-color: var(--color-ground-selected); }
+.o-form >.bind.mode-edited:not(:focus):where( :not(.o-subset *) ) ~i  { outline: var(--e10) solid var(--color-edge-selected); outline-offset: calc(-1 * var(--e10)); }
+/* .o-form._range >input.mode-edited:not(:focus):where( :not(.o-subset *) )  { box-shadow: inset 0 0 0 calc(var(--height-global-form) / 2) var(--color-ground-selected); } */
+
+.o-form:has(>.bind.mode-invalid)  { color: var(--color-text1); background-color: var(--color-ground); }
+.o-form >.bind.mode-invalid ~i  { outline: var(--e20) solid var(--color-require); outline-offset: calc(-1 * var(--e10)); }
+
+
+.o-form .inner-strings  { align-self: center; margin-left: var(--gap-global-element-narrow); }
+.o-form .inner-strings._decibel  { min-width: calc(1em * 32 / 14); text-align: right; text-align: end; }
+
+
+/* .o-form:has(>.binds._inner) >.bind  { border-right-color: Transparent; }
+.o-form .binds._inner  { line-height: 1; }
+.o-form .binds._inner button  { font-size: inherit; border-color: var(--color-edge2); border-left-color: Transparent; color: var(--color-icon2); background: Transparent; border-radius: inherit; box-shadow: none; }
+.o-form .binds._inner button >.o-symbol  { font-size: calc(1em * 20 / 14); } */
+/* .o-form:has(>.inner-binds) >.bind  { padding-right: calc(1em * 30 / 14); } */
+.o-form .inner-binds  { display: flex; }
+.o-form .inner-binds >*  { flex: 1; }
+/* .o-form .inner-binds  { line-height: 1; position: absolute; right: 0; } */
+.o-form .inner-binds  { line-height: 1; }
+
+.o-form .inner-binds .o-check >input ~i  { margin: calc((var(--height-global-form) - 1em) / 2); }
+.o-form .inner-binds .o-check >input ~i:before  { font-size: calc(20em / 24); margin: calc((var(--width-object-symbol) - 1em) / 2); }
+/* .o-form .inner-binds .o-check.style-visibility  { font-size: calc(1em * 20 / 14); } */
+/* .o-form .inner-binds .o-check >input ~i:before  { font-size: calc(1em * 20 / 14); font-size: min(calc(1em * 20 / 14), var(--height-global-form-wide)); } */
+.o-form.size-md .inner-binds .o-check >input ~i  { margin: calc((var(--height-global-form-wider) - 1em) / 2); }
+.o-form.size-md .inner-binds .o-check >input ~i:before  { font-size: calc(24em / 24); }
+
+.o-form .inner-binds .o-button  { font-size: inherit; height: calc(44em / 24); border-color: Transparent; color: var(--color-icon2); background: Transparent; border-radius: inherit; box-shadow: none; }
+.o-form .inner-binds .o-button >.o-symbol  { font-size: calc(1em * 20 / 14); font-size: min(calc(1em * 20 / 14), var(--height-global-form-wide)); }
+
+.o-form .inner-binds .o-spins  { margin: 0 0.2rem; }
+.o-form .inner-binds .o-spins .o-button  { height: auto; min-height: 0; }
+.o-form .inner-binds .o-spins .o-button >.o-symbol  { font-size: calc(1em * 15 / 14); color: var(--color-icon1); }
+
+
+
 
 
 
