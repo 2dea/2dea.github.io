@@ -85,6 +85,10 @@
   cursor: row-resize;
 }
 
+.p-datatable .p-sortable-column:not(.p-sortable-disabled):active  {
+  cursor: none;
+}
+
 
 
 
