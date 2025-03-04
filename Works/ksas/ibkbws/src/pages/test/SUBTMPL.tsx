@@ -169,7 +169,7 @@ function SUBTMPL() {
               </li>
               <li>
                 <a href="javascript:" className="link"><span className="label">자금현송명령부관리</span></a>
-                <button type="button" title="닫기" className="button close"><span className="label">닫기</span></button>
+                <button type="button" title="닫기" className="button close" disabled><span className="label">닫기</span></button>
               </li>
               <li>
                 <a href="javascript:" className="link"><span className="label">행내등기 신청제한 미인수내역</span></a>
@@ -245,123 +245,21 @@ function SUBTMPL() {
                 <div className="o-section">
                   <form className="m-filter-form">
                     <div className="fieldset">
-                      <table className="table">
-                        <tbody>
-                          <tr>
-                            <th>
-                              <span className="o-label">
-                                <span className="label">실근무부점</span>
-                              </span>
-                            </th>
-                            <td>
                               <div className="m-field">
-                                <div className="field">
-                                  <span className="o-form _input c-wdth-50">
-                                    <input type="text" placeholder="" value="[0810] 프로세스혁신" className="bind" /><i aria-hidden="true"></i>
+                                <span className="o-label">
+                                  <span className="label">
+                                    열쇠구분
                                   </span>
-                                </div>
-                              </div>
-                            </td>
-                            
-                            <th>
-                              <span className="o-label">
-                                <span className="label">열쇠구분</span>
-                              </span>
-                            </th>
-                            <td>
-                              TEST
-                            </td>
-
-                            <th>
-                              <span className="o-label">
-                                <span className="label">열쇠유형</span>
-                              </span>
-                            </th>
-                            <td>
-                              TEST
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <span className="o-label">
-                                <span className="label">소속직원</span>
-                              </span>
-                            </th>
-                            <td>
-                              <div className="m-field">
+                                </span>
                                 <div className="field">
-                                  <span className="o-form _input c-wdth-50">
-                                    <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
+                                  <span className="o-form _input">
+                                    <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
                                       <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
                                     </span>
                                   </span>
                                 </div>
                               </div>
-                            </td>
-
-                            <th>
-                              <span className="o-label">
-                                <span className="label">소속부점</span>
-                              </span>
-                            </th>
-                            <td>
-                              <div className="m-field">
-                                <div className="field">
-                                  <span className="o-form _input c-wdth-50">
-                                    <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
-                                    <span className="inner-binds">
-                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
-                                    </span>
-                                  </span>
-                                </div>
-                              </div>
-                            </td>
-
-                            <th></th>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <span className="o-label">
-                                <span className="label">사용여부</span>
-                              </span>
-                            </th>
-                            <td>
-                              <div className="m-field">
-                                <div className="field">
-                                  <span className="o-form _select">
-                                    <select className="bind">
-                                      <option value="" disabled hidden selected>선택</option>
-                                      <option value="VALUE">전체</option>
-                                      <option value="VALUE">Y</option>
-                                      <option value="VALUE">N</option>
-                                    </select><i aria-hidden="true"></i>
-                                  </span>
-                                </div>
-                              </div>
-                            </td>
-
-                            <th>
-                              <span className="o-label">
-                                <span className="label">부점변경예정(일정)</span>
-                              </span>
-                            </th>
-                            <td>
-                              <div className="m-field">
-                                <div className="field">
-                                  <span className="o-form _input c-wdth-50">
-                                    <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
-                                  </span>
-                                </div>
-                              </div>
-                            </td>
-
-                            <th></th>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                      </table>
                     </div>
 
                     <div className="binds">
