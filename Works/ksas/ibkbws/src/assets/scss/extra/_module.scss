@@ -161,7 +161,7 @@ $width-object-symbol:        var(--width-object-symbol);
 
 /** Labels */
 .o-label  { display: inline-block; display: inline-flex; align-items: center; gap: 0 var(--gap-global-element); max-width: 100%; }
-.o-label >*  { display: flex; flex: none; min-width: 0; }
+.o-label >*  { display: flex; flex: 0 1 auto; min-width: 0; }
 .o-label >.label  { flex: 1 0 0; font-weight: var(--bold-70); }
 
 // .o-label >.inner-binds  { position: relative; }
@@ -186,8 +186,8 @@ $width-object-symbol:        var(--width-object-symbol);
 .o-length >*  { display: flex; gap: III(2); }
 
 .m-header  { display: flex; justify-content: flex-end; align-items: center; gap: III(8); }
-.m-header >*  { flex: none; min-width: 0; }
-.m-header >.o-heading  { flex: 1 0 0; overflow: hidden; @include inc-ellipsis(); }
+.m-header >*  { flex: 0 1 auto; min-width: 0; @include inc-ellipsis(); }
+.m-header >.o-heading  { flex: 1 0 0; overflow: hidden; }
 
 
 
@@ -351,13 +351,13 @@ $width-object-symbol:        var(--width-object-symbol);
 
 
 .o-form  { flex: 1 0 0; display: inline-flex; }
-.o-form >*  { flex: none; min-width: 0; }
-.o-form >.bind  { flex: 1; }
+.o-form >*  { flex: 0 1 auto; min-width: 0; }
+.o-form >.bind  { flex: 1; min-height: var(--height-global-form); }
 
 
 
 
-.m-field  { display: flex; flex-direction: column; }
+.m-field  { display: flex; flex-direction: column; gap: III(4); }
 .m-field >.field  { display: flex; align-items: center; gap: III(4); margin: 0; }
 .m-field >.field >*  { min-width: 0; }
 
@@ -470,7 +470,7 @@ $width-object-symbol:        var(--width-object-symbol);
 
 .m-binds  { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--gap-global-element); clear: both; }
 .m-binds >*  { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--gap-global-element-narrow); flex: auto; }
-.m-binds >* >*  { flex: none; }
+.m-binds >* >*  { flex: 0 1 auto; }
 
 .m-binds:has(>:nth-child(n+3)) >*  { flex: 1; }
 .m-binds >:not(:only-child):first-child  { justify-content: flex-start; }
@@ -528,21 +528,28 @@ $width-object-symbol:        var(--width-object-symbol);
 
 
 
+// .m-filter-form  { display: flex; justify-content: space-between; align-items: flex-end; gap: III(16); clear: both; padding: III(14); border: $e10 solid navy; background: Ivory; border-radius: $radius-global-element; }
+// .m-filter-form >*  { flex: none; min-width: 0; }
+// .m-filter-form .fieldset  { flex: 0 0 auto; overflow: hidden; }
+// .m-filter-form .fieldset .table  { $l-border-spacing: III(8); border-spacing: 0 $l-border-spacing; width: 100%; margin: calc($l-border-spacing * -1) 0; }
+// .m-filter-form .fieldset .table th,
+//   .m-filter-form .fieldset .table td  { height: $height-global-form; padding: III(0) III(4); white-space: nowrap; }
+// // .m-filter-form .fieldset .table th  { width: 0; }
+// // .m-filter-form .fieldset .table td  { max-width: 0; white-space: nowrap; overflow: hidden; }
+
 .m-filter-form  { display: flex; align-items: flex-end; gap: III(16); clear: both; padding: III(14); border: $e10 solid navy; background: Ivory; border-radius: $radius-global-element; }
+.m-filter-form >*  { flex: 0 1 auto; min-width: 0; }
 .m-filter-form .fieldset  { flex: 1 0 0; }
-.m-filter-form .fieldset .table  { $l-border-spacing: III(8); border-spacing: 0 $l-border-spacing; max-width: 100%; margin: calc($l-border-spacing * -1) 0; }
-.m-filter-form .fieldset .table th,
-  .m-filter-form .fieldset .table td  { height: $height-global-form; padding: III(0) III(4); }
 
 
 
 .m-data-form  { clear: both; }
 .m-data-form table  { table-layout: fixed; width: 100%; background: var(--color-ground); }
-.m-data-form tr >*  { height: var(--height-global-cell); padding: var(--margin-global-cell-block) III(11); border: 0 solid #EAEBEC; border-width: 0 0 $e10; }
+.m-data-form tr >*  { height: var(--height-global-cell); padding: var(--margin-global-cell-block) III(7); border: 0 solid #EAEBEC; border-width: 0 0 $e10; }
 .m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: #0B68CB; }
 .m-data-form tr >:first-child  { border-left-width: $e10; }
 .m-data-form tr >:last-child  { border-right-width: $e10; }
-.m-data-form th  { font-size: var(--text-size-s); line-height: var(--text-height-s); width: III(120); background: #F1F5F9; }
+.m-data-form th  { font-size: var(--text-size-s); line-height: var(--text-height-s); width: 20%; padding: III(1) III(11); color: #1E293B; background: #F1F5F9; }
 .m-data-form th .o-label > .label  { font-weight: inherit; }
 
 
