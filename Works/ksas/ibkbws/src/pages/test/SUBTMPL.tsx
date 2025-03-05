@@ -263,7 +263,7 @@ function SUBTMPL() {
                     </div>
 
                     <div className="binds">
-                      <button type="button" className="o-button _primary size-md"><i className="o-symbol style-outlined" aria-hidden="true">add</i><span className="label">조회</span></button>
+                      <button type="button" className="o-button _primary"><span className="label">조회</span></button>
                     </div>
                   </form>
                 </div>
