@@ -31,6 +31,17 @@
   --font-xl-int:        20;
   --font-20xl-int:      24;
 
+  --line-3xs-int:           12;
+  --line-2xs-int:           14;
+  --line-xs-int:            16;
+  --line-s-int:             16;
+  --line-sm-int:            18;
+  --line-m-int:             20;
+  --line-lm-int:            20;
+  --line-l-int:             24;
+  --line-xl-int:            26;
+  --line-20xl-int:          32;
+
   --font-3xs:           calc(var(--rem) * var(--font-3xs-int));
   --font-2xs:           calc(var(--rem) * var(--font-2xs-int));
   --font-xs:            calc(var(--rem) * var(--font-xs-int));
@@ -42,16 +53,17 @@
   --font-xl:            calc(var(--rem) * var(--font-xl-int));
   --font-20xl:          calc(var(--rem) * var(--font-20xl-int));
 
-  --line-3xs:           calc(12 / var(--font-3xs-int));
-  --line-2xs:           calc(14 / var(--font-2xs-int));
-  --line-xs:            calc(16 / var(--font-xs-int));
-  --line-s:             calc(16 / var(--font-s-int));
-  --line-sm:            calc(18 / var(--font-sm-int));
-  --line-m:             calc(20 / var(--font-m-int));
-  --line-lm:            calc(20 / var(--font-lm-int));
-  --line-l:             calc(24 / var(--font-l-int));
-  --line-xl:            calc(26 / var(--font-xl-int));
-  --line-20xl:          calc(32 / var(--font-20xl-int));
+  --line-ss:            1;
+  --line-3xs:           calc(var(--rem) * var(--line-3xs-int));
+  --line-2xs:           calc(var(--rem) * var(--line-2xs-int));
+  --line-xs:            calc(var(--rem) * var(--line-xs-int));
+  --line-s:             calc(var(--rem) * var(--line-s-int));
+  --line-sm:            calc(var(--rem) * var(--line-sm-int));
+  --line-m:             calc(var(--rem) * var(--line-m-int));
+  --line-lm:            calc(var(--rem) * var(--line-lm-int));
+  --line-l:             calc(var(--rem) * var(--line-l-int));
+  --line-xl:            calc(var(--rem) * var(--line-xl-int));
+  --line-20xl:          calc(var(--rem) * var(--line-20xl-int));
 
 
   --typo-system:        -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum';
@@ -66,8 +78,9 @@
   --typo-quot:          var(--typo-serif), serif;
   --typo-code:          var(--typo-mono), monospace;
   --typo-header:        var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
-  --typo-number:        var(--typo-mono-latin), 'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
   --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-tnum:          var(--typo-mono-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-base:          var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
 
 
@@ -76,12 +89,15 @@
   --text-feature-tnum:  'tnum', 'zero', 'cv13', var(--text-feature-base);
   --text-feature:       var(--text-feature-base, normal);
 
-  --text-size:          var(--font-sm, 1.5em);
-  --text-size-s:        calc(var(--text-size) - var(--rem) * 2);
+  --text-size-int:      var(--font-sm-int,);
+  --text-height-int:    var(--line-sm-int,);
+
+  --text-size:          calc(1em / var(--root-em-int, 16) * var(--text-size-int, 15));
+  --text-size-s:        calc(1em - var(--rem) * 2);
   /* --text-size-s-rel:    calc(1em * 12 / 14); */
 
-  --text-height:        var(--line-sm, calc(16 / 12));
-  --text-height-s:      var(--line-xs);
+  --text-height:        calc(var(--text-height-int, 16) / var(--text-size-int, 12));
+  --text-height-s:      calc(1em + var(--rem) * 4);
   --text-height-para:   calc(18 / 12);
 
 
@@ -141,7 +157,7 @@ body  {
   word-wrap: break-word; word-break: break-word; word-break: keep-all; letter-spacing: normal;
   overscroll-behavior: inherit;
 }
-input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(15 / 12); vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
+input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
 pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
 pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
 h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }
@@ -179,7 +195,7 @@ label  { display: inline-block; cursor: pointer; }
 input[type="range"],  input[type="color"],  input[type="checkbox"],  input[type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
 input[type="submit"],  input[type="reset"],  input[type="button"],  button  { -webkit-appearance: button; min-width: 4em; overflow: visible; padding: 0.375ex 0.375em; cursor: pointer; text-transform: none; }
 select  { text-transform: none; }
-option  { display: block; color: inherit; white-space: nowrap; }
+option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
 textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: normal; }
 summary  { display: list-item; cursor: pointer; }
 dialog  { padding: 0; border-style: none; }
