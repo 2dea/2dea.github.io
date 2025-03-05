@@ -93,6 +93,10 @@
   --root-em-int:        10;
   --root-em-base:       calc(1em * var(--root-em-int, 16) / 16);
   --root-em:            1rem / var(--root-em-int);
+  --rem:                var(--root-em);
+
+  --height-window-maximum:      100vh;
+  --height-window-viewport:     var(--height-window-variable, 100vb);
 
   --breakpoint-min:     320px;
   --breakpoint-max:     calc(var(--root-em) * 1200);
@@ -200,26 +204,39 @@
   --typo-serif:         'wf-NotoSerifKR', 'Noto Serif KR', 'Noto Serif CJK KR', 'AppleMyungjo', '바탕', 'Batang';
   --typo-mono:          'wf-D2Coding', 'D2Coding', 'Noto Sans Mono KR', 'Noto Sans Mono CJK KR', 'Monaco', 'Consolas', 'Courier New', 'Lucida Console', 'Courier', '바탕체', 'BatangChe';
   --typo-sans:          'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
+  --typo-mono-latin:    'wf-RobotoMono-Var';
   --typo-sans-latin:    'wf-Inter', 'wf-OpenSans';
 
   --typo-quot:          var(--typo-serif), serif;
   --typo-code:          var(--typo-mono), monospace;
   --typo-header:        var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
-  --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-number:        var(--typo-mono-latin), 'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
   --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-base:          var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
+
 
   --text-feature-base:  normal;
   --text-feature-base:  'case', 'ss01', 'ss02', 'ss03', 'ss05';
   --text-feature-tnum:  'tnum', 'zero', 'cv13', var(--text-feature-base);
   --text-feature:       var(--text-feature-base, normal);
+
   --text-size:          var(--font-m, 1.5em);
+  --text-size-s:        calc(var(--text-size) - var(--rem) * 2);
+  /* --text-size-s-rel:    calc(1em * 12 / 14); */
+
   --text-height:        var(--line-m, calc(16 / 12));
+  --text-height-s:      var(--line-xs);
   --text-height-para:   calc(18 / 12);
+
+
   --text-spacing:       0;
-  --text-shadow-radius: 0 0.1ex 0.1rem;
+
+  --text-shadow-radius: 0 0.1ex calc(var(--rem) * 1);
   --text-shadow-color:  rgba(0,0,0, 0.75);
   --text-shadow:        var(--text-shadow-radius) var(--text-shadow-color);
+
+
+  --radius-abs-10:      2px;
 
 
   /* --color-edge1:        #BCBCBC;
@@ -460,6 +477,7 @@
   --object-symbol-arrows-output:                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' color='DimGrey'%3E%3Cpath fill='currentColor' d='M140-140v-220h60v117.85l134-134L376.15-334l-134 134H360v60H140Zm460 0v-60h117.85l-134-134L626-376.15l134 134V-360h60v220H600ZM334-583.85l-134-134V-600h-60v-220h220v60H242.15l134 134L334-583.85Zm292 0L583.85-626l134-134H600v-60h220v220h-60v-117.85l-134 134ZM480-413.46q-27.45 0-46.99-19.55-19.55-19.54-19.55-46.99 0-27.45 19.55-46.99 19.54-19.55 46.99-19.55 27.45 0 46.99 19.55 19.55 19.54 19.55 46.99 0 27.45-19.55 46.99-19.54 19.55-46.99 19.55Z'/%3E%3C/svg%3E");
   --object-symbol-resizer-compress:             url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' color='%23262626'%3E%3Cpath fill='currentColor' d='M200-449.23v-40.001h560v40.001H200ZM200-560v-40h560v40H200Zm260 440v-164.923l-84 84-28.308-28.308L480-361.538l132.308 132.307L584-200.923l-84-83.538V-120h-40Zm20-567.692L347.692-820 376-848.308l84 84v-164.923h40v164.923l84-84L612.308-820 480-687.692Z'/%3E%3C/svg%3E");
 
+
   @media
     screen and (-webkit-min-device-pixel-ratio: 1.25),
     screen and (min-resolution: 120dpi)  {
@@ -501,15 +519,15 @@ html  {
   -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: hsla(0,0%,0%, 0.0);
 }
 body  {
-  font-family: inherit; font-size: 0.8em; line-height: inherit; overflow-y: auto; margin: 0;
-  color: WindowText; background: Transparent;
+  font-family: inherit; font-family: var(--typo-base, inherit); font-size: 0.8em; line-height: inherit;
+  overflow-y: auto; margin: 0; color: WindowText; background: Transparent;
   word-wrap: break-word; word-break: break-word; word-break: keep-all; letter-spacing: normal;
   overscroll-behavior: inherit;
 }
-input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: 100%; line-height: calc(15 / 12); vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
-pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code); font-size: 100%; }
+input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(15 / 12); vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
+pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
 pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
-h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: 100%; }
+h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }
 address,  em,  cite,  dfn,  var,  optgroup  { font-style: inherit; }
 article,  section,  nav,  aside,  header,  footer,
   figure,  figcaption,  main,  details,  dialog  { display: block; }
@@ -523,8 +541,8 @@ h1,  h2,  h3,  h4,  h5,  h6,
 hr  { clear: both; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; height: 0; overflow: visible; border-style: none; }
 pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-wrap: normal; word-break: normal; }
 ul,  ol  { list-style-type: none; padding-left: 0; }
-a  { font-size: 100%; background-color: Transparent; color: inherit; text-decoration: none; }
-small  { font-size: 100%; }
+a  { font-size: inherit; background-color: Transparent; color: inherit; text-decoration: none; }
+small  { font-size: inherit; }
 q:before,  q:after  { content: ""; content: none; }
 abbr[title]  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
 b  { font-weight: bolder; font-weight: var(--bold-70, 650); }
@@ -536,15 +554,15 @@ iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-beh
 audio:not([controls])  { display: none; height: 0; }
 svg:not(:root)  { overflow: hidden; }
 table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-spacing: 0; border-width: 0; }
-caption,  th  { text-align: inherit; }
-th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0; border: 0 solid; border-width: 1px; }
+table :not(tr > * *)  { color: inherit; background-color: inherit; text-align: inherit; }
+th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0.125em; border: 0 solid; border-width: 1px; }
 fieldset  { min-width: 0; padding: 0; border-style: none; }
 legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; color: inherit; white-space: normal; }
 label  { display: inline-block; cursor: pointer; }
 input[type="range"],  input[type="color"],  input[type="checkbox"],  input[type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
 input[type="submit"],  input[type="reset"],  input[type="button"],  button  { -webkit-appearance: button; min-width: 4em; overflow: visible; padding: 0.375ex 0.375em; cursor: pointer; text-transform: none; }
 select  { text-transform: none; }
-option  { display: block !important; color: inherit; white-space: nowrap; }
+option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
 textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: normal; }
 summary  { display: list-item; cursor: pointer; }
 dialog  { padding: 0; border-style: none; }
@@ -559,7 +577,8 @@ template  { display: none; }
   [disabled]  {
     color: GrayText;
     -webkit-text-fill-color: currentColor;
-    /* opacity: 0.75; */
+    filter: blur(0.5px);
+    opacity: 1.0;
     cursor: default;
     cursor: not-allowed;
 }
