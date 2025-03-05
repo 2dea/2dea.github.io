@@ -160,9 +160,9 @@
   /* --height-global-form-wide:    calc(var(--height-global-form) + 0.4rem);
   --height-global-form-wider:   calc(var(--height-global-form) + 1.4rem); --- */
 
-  --width-object-symbol-m:      calc(var(--rem) * 16);
-  --width-object-symbol-l:      calc(var(--rem) * 20);
-  --width-object-symbol:        var(--width-object-symbol-m);
+  --height-object-symbol-m:      calc(var(--rem) * 16);
+  --height-object-symbol-l:      calc(var(--rem) * 20);
+  --height-object-symbol:        var(--height-object-symbol-m);
 
 }
 
