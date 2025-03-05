@@ -210,8 +210,9 @@
   --typo-quot:          var(--typo-serif), serif;
   --typo-code:          var(--typo-mono), monospace;
   --typo-header:        var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
-  --typo-number:        var(--typo-mono-latin), 'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
   --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-tnum:          var(--typo-mono-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-base:          var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
 
 
@@ -394,9 +395,6 @@
   --margin-layer-block-end:     calc(var(--margin-layer-block) + 1rem);
   --height-layer-header:        5rem;
 
-  --height-window-maximum:      100vh;
-  --height-window-viewport:     var(--height-window-variable, 100vb);
-
   --width-object-symbol-l:      2.8rem;
   --width-object-symbol:        2.4rem;
 
@@ -524,7 +522,7 @@ body  {
   word-wrap: break-word; word-break: break-word; word-break: keep-all; letter-spacing: normal;
   overscroll-behavior: inherit;
 }
-input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(15 / 12); vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
+input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
 pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
 pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
 h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }
