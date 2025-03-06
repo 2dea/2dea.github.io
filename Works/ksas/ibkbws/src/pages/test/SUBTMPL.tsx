@@ -225,6 +225,8 @@ function SUBTMPL() {
             </div>
           </div>
 
+          <hr className="div-sep" />
+
           <div className="div-nav">
             <div className="m-tab">
               <ul className="lists">
@@ -514,6 +516,8 @@ function SUBTMPL() {
 
           </div>
           {/* <!-- // Contents { @DEV } --> */}
+
+          <hr className="div-sep" />
 
           <div className="div-footer">
             <div className="m-binds type-end">
