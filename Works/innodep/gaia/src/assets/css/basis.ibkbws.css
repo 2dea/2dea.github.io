@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+/** Type Selector
+ ---------------- */
+
+/** Global Custom-Properties */
+:root  {
+  --root-em-int:        16;
+  --root-em-base:       calc(1em * var(--root-em-int, 16) / 16);
+  --root-em:            1rem / var(--root-em-int);
+  --rem:                var(--root-em);
+
+  --height-window-maximum:      100vh;
+  --height-window-viewport:     var(--height-window-variable, 100vb);
+
+
+  --bold-30:            400;
+  --bold-40:            500;
+  --bold-50:            565;
+  --bold-70:            700;
+
+  --font-ss-int:        8;
+  --font-3xs-int:       10;
+  --font-2xs-int:       11;
+  --font-xs-int:        12;
+  --font-s-int:         13;
+  --font-sm-int:        14;
+  --font-m-int:         15;
+  --font-lm-int:        16;
+  --font-l-int:         18;
+  --font-xl-int:        20;
+  --font-20xl-int:      24;
+
+  --line-3xs-int:           12;
+  --line-2xs-int:           14;
+  --line-xs-int:            16;
+  --line-s-int:             16;
+  --line-sm-int:            18;
+  --line-m-int:             20;
+  --line-lm-int:            20;
+  --line-l-int:             24;
+  --line-xl-int:            26;
+  --line-20xl-int:          32;
+
+  --font-3xs:           calc(var(--rem) * var(--font-3xs-int));
+  --font-2xs:           calc(var(--rem) * var(--font-2xs-int));
+  --font-xs:            calc(var(--rem) * var(--font-xs-int));
+  --font-s:             calc(var(--rem) * var(--font-s-int));
+  --font-sm:            calc(var(--rem) * var(--font-sm-int));
+  --font-m:             calc(var(--rem) * var(--font-m-int));
+  --font-lm:            calc(var(--rem) * var(--font-lm-int));
+  --font-l:             calc(var(--rem) * var(--font-l-int));
+  --font-xl:            calc(var(--rem) * var(--font-xl-int));
+  --font-20xl:          calc(var(--rem) * var(--font-20xl-int));
+
+  --line-ss:            1;
+  --line-3xs:           calc(var(--rem) * var(--line-3xs-int));
+  --line-2xs:           calc(var(--rem) * var(--line-2xs-int));
+  --line-xs:            calc(var(--rem) * var(--line-xs-int));
+  --line-s:             calc(var(--rem) * var(--line-s-int));
+  --line-sm:            calc(var(--rem) * var(--line-sm-int));
+  --line-m:             calc(var(--rem) * var(--line-m-int));
+  --line-lm:            calc(var(--rem) * var(--line-lm-int));
+  --line-l:             calc(var(--rem) * var(--line-l-int));
+  --line-xl:            calc(var(--rem) * var(--line-xl-int));
+  --line-20xl:          calc(var(--rem) * var(--line-20xl-int));
+
+
+  --typo-system:        -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum';
+  --typo-emoji:         'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  --typo-serif:         'wf-NotoSerifKR', 'Noto Serif KR', 'Noto Serif CJK KR', 'AppleMyungjo', '바탕', 'Batang';
+  --typo-mono:          'wf-D2Coding', 'D2Coding', 'Noto Sans Mono KR', 'Noto Sans Mono CJK KR', 'Monaco', 'Consolas', 'Courier New', 'Lucida Console', 'Courier', '바탕체', 'BatangChe';
+  --typo-sans:          'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
+  --typo-mono-latin:    'wf-RobotoMono-Var';
+  --typo-sans-latin:    'wf-Inter', 'wf-OpenSans';
+
+  --typo-quot:          var(--typo-serif), serif;
+  --typo-code:          var(--typo-mono), monospace;
+  --typo-header:        var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-tnum:          var(--typo-mono-latin), var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-base:          var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
+
+
+  --text-feature-base:  normal;
+  --text-feature-base:  'case', 'ss01', 'ss02', 'ss03', 'ss05';
+  --text-feature-tnum:  'tnum', 'zero', 'cv13', var(--text-feature-base);
+  --text-feature:       var(--text-feature-base, normal);
+
+  --text-size-int:      var(--font-sm-int,);
+  --text-height-int:    var(--line-sm-int,);
+
+  --text-size:          calc(1em / var(--root-em-int, 16) * var(--text-size-int, 15));
+  --text-size-s:        calc(1em - var(--rem) * 2);
+  /* --text-size-s-rel:    calc(1em * 12 / 14); */
+
+  --text-height:        calc(var(--text-height-int, 16) / var(--text-size-int, 12));
+  --text-height-s:      calc(1em + var(--rem) * 4);
+  --text-height-para:   calc(18 / 12);
+
+
+  --text-spacing:       0;
+
+  --text-shadow-radius: 0 0.1ex calc(var(--rem) * 1);
+  --text-shadow-color:  rgba(0,0,0, 0.75);
+  --text-shadow:        var(--text-shadow-radius) var(--text-shadow-color);
+
+
+  --radius-abs-10:      2px;
+
+
+  @media
+    screen and (-webkit-min-device-pixel-ratio: 1.25),
+    screen and (min-resolution: 120dpi)  {
+      /* --color-ground:   Lime !important; */
+      --bold-30:        365;
+      --bold-40:        450;
+      --bold-50:        535;
+      --bold-70:        675;
+  }
+
+  @media
+    screen and (not (-webkit-max-device-pixel-ratio: 1.5)),
+    screen and (not (max-resolution: 144dpi))  {
+      /* --color-ground:   Gold !important; */
+      --bold-30:        335;
+      --bold-40:        400;
+      --bold-50:        500;
+      --bold-70:        650;
+  }
+
+  @supports (font-variation-settings: 'wght' 700) {
+    --typo-sans:        'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
+  }
+}
+
+/** Type Selector */
+*  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+:before,  :after  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; }
+@media
+  screen and (prefers-reduced-motion: reduce)  {
+    *,
+      :before,  :after  { scroll-behavior: auto !important; transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
+}
+
+html  {
+  direction: ltr; font: 125% /calc(16 / 12) '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
+  -ms-text-underline-position: below; text-underline-position: under;
+  -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -webkit-font-smoothing: subpixel-antialiased;
+  -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: hsla(0,0%,0%, 0.0);
+}
+body  {
+  font-family: inherit; font-family: var(--typo-base, inherit); font-size: 0.8em; line-height: inherit;
+  overflow-y: auto; margin: 0; color: WindowText; background: Transparent;
+  word-wrap: break-word; word-break: break-word; word-break: keep-all; letter-spacing: normal;
+  overscroll-behavior: inherit;
+}
+input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
+pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
+pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
+h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }
+address,  em,  cite,  dfn,  var,  optgroup  { font-style: inherit; }
+article,  section,  nav,  aside,  header,  footer,
+  figure,  figcaption,  main,  details,  dialog  { display: block; }
+video,  audio,  progress,  canvas  { display: inline-block; vertical-align: baseline; }
+img,  iframe,  embed,  object,  video,  audio,
+  legend,  input,  button,  select,  textarea,  progress,  canvas  { max-width: 100%; }
+h1,  h2,  h3,  h4,  h5,  h6,
+  p,  hr,  pre,  blockquote,  ul,  ol,  dl,  dd,  figure,
+  form,  fieldset,  input,  button,  select,  textarea  { margin: 0; }
+
+hr  { clear: both; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; height: 0; overflow: visible; border-style: none; }
+pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-wrap: normal; word-break: normal; }
+ul,  ol  { list-style-type: none; padding-left: 0; }
+a  { font-size: inherit; background-color: Transparent; color: inherit; text-decoration: none; }
+small  { font-size: inherit; }
+q:before,  q:after  { content: ""; content: none; }
+abbr[title]  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
+b  { font-weight: bolder; font-weight: var(--bold-70, 650); }
+mark  { background-color: Transparent; color: inherit; }
+br  { letter-spacing: 0 !important; }
+ins,  del  { text-decoration: none; }
+img,  object  { vertical-align: middle; border-style: none; }
+iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; border-style: none; }
+audio:not([controls])  { display: none; height: 0; }
+svg:not(:root)  { overflow: hidden; }
+table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-spacing: 0; border-width: 0; }
+table :not(tr > * *)  { color: inherit; background-color: inherit; text-align: inherit; }
+th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0.125em; border: 0 solid; border-width: 1px; }
+fieldset  { min-width: 0; padding: 0; border-style: none; }
+legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; color: inherit; white-space: normal; }
+label  { display: inline-block; cursor: pointer; }
+input[type="range"],  input[type="color"],  input[type="checkbox"],  input[type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
+input[type="submit"],  input[type="reset"],  input[type="button"],  button  { -webkit-appearance: button; min-width: 3em; overflow: visible; padding: 0.375ex 0.4em; cursor: pointer; text-transform: none; }
+select  { text-transform: none; }
+option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
+textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: normal; }
+summary  { display: list-item; cursor: pointer; }
+dialog  { padding: 0; border-style: none; }
+template  { display: none; }
+
+[contenteditable=""],
+  [contenteditable="true"],
+  [readonly]  {
+    cursor: text;
+}
+[aria-disabled="true"],
+  [disabled]  {
+    color: GrayText;
+    -webkit-text-fill-color: currentColor;
+    filter: blur(0.5px);
+    opacity: 1.0;
+    cursor: default;
+    cursor: not-allowed;
+}
+[hidden]  { display: none; }
