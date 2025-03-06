@@ -12,8 +12,8 @@ $root-em-int: 16;
 $tp:                      var(--tp);
 $cc:                      var(--cc);
 $ss:                      var(--ss);
-$e10:                     var(--e10);
-$e20:                     var(--e20);
+$e10:                     var(--e10, 1px);
+$e20:                     var(--e20, 2px);
 
 $bold-30: var(--bold-30);
 $bold-40: var(--bold-40);
