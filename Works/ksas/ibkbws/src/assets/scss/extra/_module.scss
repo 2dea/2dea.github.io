@@ -235,24 +235,26 @@ $height-object-symbol:        var(--height-object-symbol);
 .o-button >*,
   .o-action >*  { flex: none; }
 
-.o-button  { font-size: var(--font-sm); line-height: calc(var(--font-sm) + var(--rem) * 2); min-width: 5em; min-height: var(--height-global-form); padding: 0 calc(1em - $e10); border-color: currentColor; border-color: Transparent; color: var(--color-text1); background-color: var(--color-ground, White); border-radius: var(--radius-global-element); box-shadow: var(--elevation-1); white-space: nowrap; }
-.o-button:not([disabled]),  .o-button:not([aria-disabled="true"])  { -webkit-transition: all 0.15s; transition: all 0.15s; -webkit-transition-property: border-color, background-color, color; transition-property: border-color, background-color, color; }
-.o-button[disabled],  .o-button[aria-disabled="true"]  { /* color: rgb(var(--color-gray)) !important; background-color: rgb(var(--color-ground1)) !important; opacity: 1.0; */ opacity: 0.3; box-shadow: none; }
 
-.o-button:not([class*="-button _"])  { border-color: #a8aeb7; background: #EAECEF; background: -webkit-gradient(linear, left top, left bottom, from(white), to(#EAECEF)); background: linear-gradient(to bottom, white, #EAECEF); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='white', endColorstr='#EAECEF', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFEAECEF', EndColorStr='#FFFFFFFF')"; }
-.o-button:not([class*="-button _"]):hover  { border-color: currentColor; background: white; background: -webkit-gradient(linear, left top, left bottom, from(#edeff1), to(white)); background: linear-gradient(to bottom, #edeff1, white); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeff1', endColorstr='white', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFFFF', EndColorStr='#FFEDEFF1')"; }
+.o-button,  .o-button._default  { font-size: var(--font-sm); line-height: var(--line-sm); min-width: calc(4em - $e10 * 2); min-height: calc(var(--height-global-form) - III(2)); padding: III(3) 0.5em; border-color: currentColor; color: var(--color-text1); background-color: var(--color-ground); border-radius: var(--radius-global-element); white-space: nowrap; }
+.o-button:not([disabled], [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color; }
+.o-button:is([disabled], [aria-disabled="true"])  { filter: none; filter: grayscale(1.0) opacity(0.6) brightness(0.9); }
+ _solid
+.o-button:not([class*="-button _"])  { border-color: #A8AEB7; background: #EAECEF; background: -webkit-gradient(linear, left top, left bottom, from(White), to(#EAECEF)); background: linear-gradient(to bottom, White, #EAECEF); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='White', endColorstr='#EAECEF', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFEAECEF', EndColorStr='#FFFFFFFF')"; }
+.o-button:not([class*="-button _"]):not([disabled], [aria-disabled="true"]):hover  { border-color: currentColor; background: White; background: -webkit-gradient(linear, left top, left bottom, from(#EDEFF1), to(White)); background: linear-gradient(to bottom, #EDEFF1, White); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEFF1', endColorstr='White', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFFFF', EndColorStr='#FFEDEFF1')"; }
 
-// .o-button._rawer  { font-size: inherit; line-height: inherit; border-width: 0; background-color: Transparent; box-shadow: none; }
-// .o-button._delete  { color: var(--color-delete); background-color: Transparent; box-shadow: none; }
-// .o-button._delete[disabled],  .o-button._delete[aria-disabled="true"]  { color: var(--color-text1); }
-// .o-button._thertiary  { background-color: Transparent; box-shadow: none; }
-// .o-button._secondary  { border-color: var(--color-edge4); box-shadow: none; }
-// .o-button._primary  { color: var(--color-white); background-color: var(--color-ground-button1); }
-// .o-button._apply  { color: var(--color-white); background-color: var(--color-point1); }
-// .o-button._error  { color: var(--color-white); background-color: var(--state-negative); }
-// .o-button._success  { color: var(--color-white); background-color: var(--state-positive); }
+.o-button[class*="-primary"]  { --l-color-theme: #0B68CB; }
+.o-button[class*="-primary"]:not([disabled], [aria-disabled="true"]):hover  { --l-color-theme: #004C9D; }
+.o-button[class*="-secondary"]  { --l-color-theme: #0092D6; }
+.o-button[class*="-secondary"]:not([disabled], [aria-disabled="true"]):hover  { --l-color-theme: #0C76A7; }
+.o-button[class*=" _filled"]  { --l-color-opacity: 0.12; }
+.o-button[class*=" _solid"]  { font-weight: var(--bold-70); border-color: Transparent; color: var(--color-white); background-color: var(--l-color-theme); }
+.o-button[class*=" _filled"]  { border-color: Transparent; color: var(--l-color-theme); background-color: rgb(from currentColor r g b /var(--l-color-opacity)); }
+.o-button[class*=" _lined"]  { color: var(--l-color-theme); }
 
 // .o-button:is( ._primary, ._error, ._success ):is( [disabled], [aria-disabled="true"] )  { color: var(--color-text1); background-color: #B5B5B5; }
+
+.o-button.style-texted  { border-color: Transparent; background: Transparent; box-shadow: none; }
 
 // .o-button:where( .m-binds:not(.o-subset *).type-end * ),
 //   .o-button.size-md  { font-size: var(--font-m); line-height: var(--line-m); min-height: var(--height-global-form-wide); }
@@ -286,6 +288,8 @@ $height-object-symbol:        var(--height-object-symbol);
 
 
 // /** Image Button */
+.o-image-button  { min-width: 1em; min-height: 1em; padding: 0; border: 0; }
+
 // .o-image-button  { font-weight: var(--bold-40); font-size: var(--height-object-symbol); line-height: 1; display: inline-block; display: inline-flex; justify-content: center; align-items: center; position: relative; min-width: 0; min-height: 0; padding: 0; border: 0; background: Transparent; border-radius: 0.2rem; }
 // /* .o-image-button >.inner  { font-size: var(--font-4xs); line-height: 1; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: Transparent; user-select: none; white-space: nowrap; } */
 // .o-image-button >.label  { font-size: var(--ss); position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: Transparent; pointer-events: none; text-shadow: none; }
@@ -304,10 +308,10 @@ $height-object-symbol:        var(--height-object-symbol);
 
 
 .m-binds  { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--gap-global-element); clear: both; }
-.m-binds >*  { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--gap-global-element-narrow); flex: auto; }
+.m-binds >*  { flex: auto; display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--gap-global-element-narrow); }
 .m-binds >* >*  { flex: 0 1 auto; }
 
-.m-binds:has(>:nth-child(n+3)) >*  { flex: 1; }
+.m-binds:has(>:nth-child(n+3)) >:where(:first-child, :last-child)  { flex: 1; }
 .m-binds >:not(:only-child):first-child  { justify-content: flex-start; }
 .m-binds >:not(:only-child):last-child  { justify-content: flex-end; }
 .m-binds >:only-child  { justify-content: flex-end; }
@@ -458,7 +462,7 @@ $height-object-symbol:        var(--height-object-symbol);
 
 .o-form._range >input  { min-height: var(--height-global-form, 3rem); }
 
-.o-form._input >input  { -webkit-appearance: none; appearance: none; overflow: hidden; padding: calc((var(--height-global-form) - 1lh) / 2) 0.7rem; text-overflow: ellipsis; white-space: nowrap; }
+.o-form._input >input  { -webkit-appearance: none; appearance: none; overflow: hidden; padding: calc((var(--height-global-form) - 1lh - III(2)) / 2) 0.7rem; text-overflow: ellipsis; white-space: nowrap; }
 .o-form._input >input[type="password"]  { font-family: var(--typo-password); }
 
 .o-form._input >textarea  { -webkit-appearance: none; appearance: none; line-height: var(--text-height, calc(18 / 12)); padding: 0.6rem 0.7rem; }
