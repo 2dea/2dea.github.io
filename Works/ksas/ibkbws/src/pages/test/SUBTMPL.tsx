@@ -458,7 +458,7 @@ function SUBTMPL() {
                                     </span>
                                   </span>
                                   <span className="outer-binds">
-                                    <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                    <button type="button" title="검색"><span className="label">검색</span></button>
                                   </span>
                                 </div>
                               </div>
@@ -521,9 +521,31 @@ function SUBTMPL() {
 
           <div className="div-footer">
             <div className="m-binds type-end">
+            <span className="group">
+                <span className="item"><a href="javascript:" className="o-button"><span className="label">앵커</span></a></span>
+                <span className="item"><button type="button" className="o-button"><span className="label">버튼</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal style-texted"><span className="label">텍스트</span></button></span>
+                <span className="item"><button type="button" className="o-button _solid-secondary"><span className="label">조회</span></button></span>
+                <span className="item"><button type="button" className="o-button _lined-secondary"><span className="label">세컨드</span></button></span>
+              </span>
+
               <span className="group">
-                <span className="item"><button type="button" className="o-button"><span className="label">Cancel</span></button></span>
-                <span className="item"><button type="button" className="o-button"><span className="label">Apply</span></button></span>
+                <span className="item"><a href="javascript:" className="o-button" aria-disabled="true"><span className="label">앵커</span></a></span>
+                <span className="item"><button type="button" className="o-button" disabled><span className="label">비활성화</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal style-texted" disabled><span className="label">텍스트</span></button></span>
+                <span className="item"><button type="button" className="o-button _solid-secondary" disabled><span className="label">조회</span></button></span>
+                <span className="item"><button type="button" className="o-button _lined-secondary" disabled><span className="label">세컨드</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal" disabled><span className="label">취소</span></button></span>
+                <span className="item"><button type="button" className="o-button _lined-primary" disabled><span className="label">삭제</span></button></span>
+                <span className="item"><button type="button" className="o-button _filled-primary" disabled><span className="label">필드</span></button></span>
+                <span className="item"><button type="button" className="o-button _solid-primary" disabled><span className="label">저장</span></button></span>
+              </span>
+
+              <span className="group">
+                <span className="item"><button type="button" className="o-button _normal"><span className="label">취소</span></button></span>
+                <span className="item"><button type="button" className="o-button _lined-primary"><span className="label">삭제</span></button></span>
+                <span className="item"><button type="button" className="o-button _filled-primary"><span className="label">필드</span></button></span>
+                <span className="item"><button type="button" className="o-button _solid-primary"><span className="label">저장</span></button></span>
               </span>
             </div>
           </div>
