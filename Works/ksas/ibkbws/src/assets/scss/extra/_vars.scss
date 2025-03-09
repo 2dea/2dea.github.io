@@ -1,13 +1,6 @@
 @charset "UTF-8";
 
-:root  {
-  // --font-family: var(--typo-base);
-  // --color-test: #f00;
-}
-
-// $root-em-int: var(--root-em-int, 16);
 $root-em-int: 16;
-// $root-em: var(--root-em, 1rem / 16);
 
 $bold-30: var(--bold-30);
 $bold-40: var(--bold-40);
@@ -29,78 +22,94 @@ $line-50:           var(--line-50);
 $line-70:           var(--line-70);
 $line-90:           var(--line-90);
 
+$text-shadow:       var(--text-shadow);
+
+$radius-abs-10:     var(--radius-abs-10);
+
 $tp:                      var(--tp);
 $cc:                      var(--cc);
 $ss:                      var(--ss);
 $e10:                     var(--e10, 1px);
 $e20:                     var(--e20, 2px);
 
-$text-shadow:       var(--text-shadow);
+$alpha-dimmed-08:            var(--alpha-dimmed-08);
+$alpha-dimmed-12:            var(--alpha-dimmed-12);
+$alpha-dimmed-65:            var(--alpha-dimmed-65);
+$alpha-dimmed-overlay:       var(--alpha-dimmed-overlay);
 
-$radius-abs-10:     var(--radius-abs-10);
+$color-abs-white:            var(--color-abs-white);
+$color-abs-black:            var(--color-abs-black);
 
+$color-white:                var(--color-white);
+$color-black:                var(--color-black);
 
+$color-dimmed-overlay:       var(--color-dimmed-overlay);
+$color-dimmed-hover:         var(--color-dimmed-hover);
 
+$color-surface:              var(--color-surface);
+$color-surface-overlay:      var(--color-surface-overlay);
 
+$color-ground:               var(--color-ground);
+$color-ground-alpha-00:      var(--color-ground-alpha-00);
+$color-ground-40:            var(--color-ground-40);
 
+$color-text-30:              var(--color-text-30);
+$color-text-40:              var(--color-text-40);
+$color-text-70:              var(--color-text-70);
 
+$color-icon1:                var(--color-icon1);
+$color-icon2:                var(--color-icon2);
+$color-icon-disabled:        var(--color-icon-disabled);
 
+$color-key1-40:              var(--color-key1-40);
+$color-key1-70:              var(--color-key1-70);
+$color-key2-40:              var(--color-key2-40);
+$color-key2-70:              var(--color-key2-70);
 
+$color-point-40:             var(--color-point-40);
 
+$color-status-80:            var(--color-status-80);
+$color-status-50:            var(--color-status-50);
+$color-status-20:            var(--color-status-20);
 
+$color-require:              var(--color-require);
+$color-delete:               var(--color-delete);
+$color-error:                var(--color-error);
 
+$color-form-placeholder:     var(--color-form-placeholder);
+$color-form-disabled:        var(--color-form-disabled);
+$color-form-disabled-ground: var(--color-form-disabled-ground);
+$color-form-required-ground: var(--color-form-required-ground);
 
-$shadow-normal:     var(--shadow-normal);
+$color-edge-30:              var(--color-edge-30);
+$color-edge-40:              var(--color-edge-40);
+$color-edge-70:              var(--color-edge-70);
 
+$color-shadow-normal:        var(--color-shadow-normal);
 
+$color-shadow0-alpha-10:      var(--color-shadow0-alpha-10);
+$color-shadow0-alpha-20:      var(--color-shadow0-alpha-20);
 
+$shadow-normal:               var(--shadow-normal);
 
+$radius-global-element:       calc(var(--rem) * var(--radius-global-element));
 
+$gap-global-whitespace-30:    calc(var(--rem) * var(--gap-global-whitespace-30));
+$gap-global-whitespace-50:    calc(var(--rem) * var(--gap-global-whitespace-50));
 
+$gap-global-element-30:       calc(var(--rem) * var(--gap-global-element-30));
+$gap-global-element-50:       calc(var(--rem) * var(--gap-global-element-50));
+$gap-global-element-70:       calc(var(--rem) * var(--gap-global-element-70));
+$gap-global-element-90:       calc(var(--rem) * var(--gap-global-element-90));
 
+$height-global-form-30:       calc(var(--rem) * var(--height-global-form-30));
+$height-global-form-50:       calc(var(--rem) * var(--height-global-form-50));
+$height-global-form-70:       calc(var(--rem) * var(--height-global-form-70));
 
+$height-object-icon-30:       calc(var(--rem) * var(--height-object-icon-30));
+$height-object-icon-50:       calc(var(--rem) * var(--height-object-icon-50));
+$height-object-icon-70:       calc(var(--rem) * var(--height-object-icon-70));
 
+$timing-func-ease-slower:     var(--timing-func-ease-slower);
+$timing-func-ease-faster:     var(--timing-func-ease-faster);
 
-
-
-$color-test: var(--color-test, #f00);
-
-$radius-global-element:   var(--radius-global-element);
-
-$height-global-form:   var(--height-global-form);
-
-$height-object-symbol-m:      var(--height-object-symbol-m);
-$height-object-symbol-l:      var(--height-object-symbol-l);
-$height-object-symbol:        var(--height-object-symbol);
-
-
-@function III($int)  {
-  // @return #{($int / $root-em-int)}rem;
-  @return calc(1rem / $root-em-int * $int);
-  // @return calc($root-em * $int);
-}
-
-@mixin setTextStyle($size, $line: null, $wght: null)  {
-  font-weight: #{$wght};
-  font-size: $size;
-  line-height: $line;
-}
-
-@mixin getGlobalHidden($inline: null)  {
-  width: auto; height: 1px; overflow: hidden; margin: 0 0 -1px; padding: 0; border: 0; background: none; visibility: visible; white-space: inherit;
-
-  @if ($inline == 1) {
-    display: inline-block; width: 1px; margin-right: -1px; white-space: nowrap;
-  } @else {
-    display: block; position: absolute; clip: rect(0 0 0 0); clip: rect(0,0,0,0); clip-path: circle(0);
-  }
-}
-
-:root  {
-  // @include setTextStyle($font-l, $line-l, $wght: $bold-70);
-  // @include setTextStyle($font-l, $wght: $bold-70);
-  // @include setTextStyle(calc(var(--rem) * var(--font-16px)), calc(var(--rem) * var(--line-16px)));
-  // margin-top: III(-1);
-
-  // @debug III(-24);
-}

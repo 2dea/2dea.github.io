@@ -1,2 +1,83 @@
 @charset "UTF-8";
 
+@function III($int)  {
+  // @return #{($int / $root-em-int)}rem;
+  @return calc(1rem / $root-em-int * $int);
+  // @return calc($root-em * $int);
+}
+
+@mixin setTextStyle($size, $line: null, $wght: null)  {
+  font-weight: #{$wght};
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin getGlobalHidden($inline: null)  {
+  width: auto; height: 1px; overflow: hidden; margin: 0 0 -1px; padding: 0; border: 0; background: none; visibility: visible; white-space: inherit;
+
+  @if ($inline == 1) {
+    display: inline-block; width: 1px; margin-right: -1px; white-space: nowrap;
+  } @else {
+    display: block; position: absolute; clip: rect(0 0 0 0); clip: rect(0,0,0,0); clip-path: circle(0);
+  }
+}
+
+
+// @mixin setScrollGutterStable($selector: ".g-scroll-gutter-stable", $comb: null)  {
+//   #{$selector}:not(:hover):not(:focus-within)#{$comb}::-webkit-scrollbar-track  { background-color: Transparent; }
+//   #{$selector}#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.8s; }
+//   #{$selector}:not(:hover):not(:focus-within)#{$comb}::-webkit-scrollbar-thumb  { border-color: Transparent; background-color: Transparent; outline-color: Transparent; }
+//   #{$selector}:where( :hover, :focus-within )#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
+// }
+@mixin setScrollGutterStable($selector: ".g-scroll-gutter-stable", $end: 800, $start: 150)  {
+  #{$selector}  { transition: #{$end}ms --color-scrollbar-hidden-track, #{$end}ms --color-scrollbar-hidden-thumb, #{$end}ms --color-scrollbar-hidden-thumb-edge; }
+  #{$selector}:hover,
+    #{$selector}:focus-within  { --color-scrollbar-hidden-track: var(--color-scrollbar-track); --color-scrollbar-hidden-thumb: var(--color-scrollbar-thumb); --color-scrollbar-hidden-thumb-edge: var(--color-scrollbar-thumb-edge); transition: #{$start}ms --color-scrollbar-hidden-track, #{$start}ms --color-scrollbar-hidden-thumb, #{$start}ms --color-scrollbar-hidden-thumb-edge; }
+  #{$selector}::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-hidden-track); will-change: background-color; }
+  #{$selector}::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--color-scrollbar-hidden-thumb); outline-color: var(--color-scrollbar-hidden-thumb-edge, Transparent); will-change: background-color, outline-color; }
+}
+
+@mixin inc-scrollbar-width($margin: 3, $thumb: 6)  {
+  --margin-global-scrollbar:    calc(var(--rem) * #{$margin});
+  --width-global-scrollbar:     calc(var(--rem) * #{$thumb} + var(--margin-global-scrollbar) * 2);
+}
+
+@mixin inc-translate($x: -50%, $y: -50%)  {
+  -webkit-transform: translate($x, $y); transform: translate($x, $y);
+}
+
+@mixin inc-abscenter()  {
+  left: 50%; top: 50%; @include inc-translate();
+}
+
+@mixin inc-sronly($user-select: null)  {
+  font-size: $ss; line-height: 1; position: absolute; @include inc-abscenter(); color: Transparent; pointer-events: none; user-select: $user-select; text-shadow: none;
+}
+
+@mixin inc-ellipsis()  {
+  text-overflow: ellipsis; white-space: nowrap;
+}
+
+@mixin setSymbolVariationSettings($fill: 0, $wght: 400, $opsz: 24)  {
+  font-variation-settings: 'FILL' $fill, 'wght' $wght, 'GRAD' 0, 'opsz' $opsz;
+}
+
+@mixin setSymbolStyle($fill: 0, $wght: 400, $opsz: 24, $size: $height-object-icon-50)  {
+  font-family: 'wf-MaterialSymbolsRounded-Var', sans-serif; @include setSymbolVariationSettings($fill, $wght, $opsz); font-size: $size; display: inline-flex; max-width: 1em; overflow: hidden; text-transform: uppercase;
+}
+
+@mixin inc-symbol($fill: 0, $wght: 400, $opsz: 24, $size: $height-object-icon-50)  {
+  direction: ltr; font: normal normal calc(1rem / var(--root-em-int, 16) * 24) /1 'wf-MaterialSymbolsOutlined-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
+  @include setSymbolStyle($fill, $wght, $opsz, $size);
+}
+
+
+
+:root  {
+  // @include setTextStyle($font-l, $line-l, $wght: $bold-70);
+  // @include setTextStyle($font-l, $wght: $bold-70);
+  // @include setTextStyle(calc(var(--rem) * var(--font-16px)), calc(var(--rem) * var(--line-16px)));
+  // margin-top: III(-1);
+
+  // @debug III(-24);
+}
