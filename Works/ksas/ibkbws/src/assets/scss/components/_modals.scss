@@ -28,7 +28,7 @@
 }
 
 .win-title {
-  @include setTextStyle($font-lm, $line-lm);
+  @include setTextStyle(calc(var(--rem) * var(--font-16px)), calc(var(--rem) * var(--line-16px)));
   font-weight: $bold-70;
   color: $FONT_GRAY01;
 }

@@ -265,7 +265,7 @@ function SUBTMPL() {
                     </div>
 
                     <div className="binds">
-                      <button type="button" className="o-button _primary"><span className="label">조회</span></button>
+                      <button type="button" className="o-button _solid-secondary"><span className="label">조회</span></button>
                     </div>
                   </form>
                 </div>
@@ -430,7 +430,7 @@ function SUBTMPL() {
 
                     <div className="m-binds">
                       <span className="group">
-                        <span className="item"><button type="button" className="o-image-button"><span className="label">신규</span></button></span>
+                        <span className="item"><button type="button" className="o-button _lined-primary"><span className="label">신규</span></button></span>
                       </span>
                     </div>
                   </div>
@@ -458,7 +458,7 @@ function SUBTMPL() {
                                     </span>
                                   </span>
                                   <span className="outer-binds">
-                                    <button type="button" title="검색"><span className="label">검색</span></button>
+                                    <button type="button" title="검색" className="o-button"><span className="label">검색</span></button>
                                   </span>
                                 </div>
                               </div>

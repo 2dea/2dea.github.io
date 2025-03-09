@@ -9,43 +9,69 @@
 $root-em-int: 16;
 // $root-em: var(--root-em, 1rem / 16);
 
+$bold-30: var(--bold-30);
+$bold-40: var(--bold-40);
+$bold-50: var(--bold-50);
+$bold-70: var(--bold-70);
+
+$font-30:           var(--font-30);
+$font-50:           var(--font-50);
+$font-70:           var(--font-70);
+$font-90:           var(--font-90);
+
+$line-abs-30:           var(--line-abs-30);
+$line-abs-50:           var(--line-abs-50);
+$line-abs-70:           var(--line-abs-70);
+$line-abs-90:           var(--line-abs-90);
+
+$line-30:           var(--line-30);
+$line-50:           var(--line-50);
+$line-70:           var(--line-70);
+$line-90:           var(--line-90);
+
 $tp:                      var(--tp);
 $cc:                      var(--cc);
 $ss:                      var(--ss);
 $e10:                     var(--e10, 1px);
 $e20:                     var(--e20, 2px);
 
-$bold-30: var(--bold-30);
-$bold-40: var(--bold-40);
-$bold-50: var(--bold-50);
-$bold-70: var(--bold-70);
+$text-shadow:       var(--text-shadow);
 
-$font-3xs: var(--font-3xs);
-$font-2xs: var(--font-2xs);
-$font-xs:  var(--font-xs);
-$font-s:   var(--font-s);
-$font-sm:  var(--font-sm);
-$font-m:   var(--font-m);
-$font-lm:  var(--font-lm);
-$font-xl:   var(--font-xl);
+$radius-abs-10:     var(--radius-abs-10);
 
-$line-3xs: var(--line-3xs);
-$line-2xs: var(--line-2xs);
-$line-xs:  var(--line-xs);
-$line-s:   var(--line-s);
-$line-sm:  var(--line-sm);
-$line-m:   var(--line-m);
-$line-lm:  var(--line-lm);
-$line-xl:   var(--line-xl);
 
-$text-size: var(--text-size);
-$text-height: var(--text-height);
+
+
+
+
+
+
+
+
+
+
+$shadow-normal:     var(--shadow-normal);
+
+
+
+
+
+
+
+
+
+
+
 
 $color-test: var(--color-test, #f00);
 
 $radius-global-element:   var(--radius-global-element);
 
 $height-global-form:   var(--height-global-form);
+
+$height-object-symbol-m:      var(--height-object-symbol-m);
+$height-object-symbol-l:      var(--height-object-symbol-l);
+$height-object-symbol:        var(--height-object-symbol);
 
 
 @function III($int)  {
@@ -73,7 +99,7 @@ $height-global-form:   var(--height-global-form);
 :root  {
   // @include setTextStyle($font-l, $line-l, $wght: $bold-70);
   // @include setTextStyle($font-l, $wght: $bold-70);
-  // @include setTextStyle($font-lm, $line-lm);
+  // @include setTextStyle(calc(var(--rem) * var(--font-16px)), calc(var(--rem) * var(--line-16px)));
   // margin-top: III(-1);
 
   // @debug III(-24);

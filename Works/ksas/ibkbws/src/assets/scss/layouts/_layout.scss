@@ -73,7 +73,7 @@
       border-radius: 6px;
 
       span {
-        @include setTextStyle($font-m, $line-m);
+        @include setTextStyle(calc(var(--rem) * var(--font-15px)), calc(var(--rem) * var(--line-15px)));
       }
     }
   }

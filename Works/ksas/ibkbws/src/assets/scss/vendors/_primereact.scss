@@ -261,7 +261,7 @@
     text-overflow: ellipsis;
     width: calc(100% - 16px);
     height: 20px;
-    @include setTextStyle($font-s, $line-s);;
+    @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));;
     color: $FONT_GRAY02;
     // line-height: 20px;
   }
@@ -278,7 +278,7 @@
 
     .p-multiselect-token-label {
       height: 100%;
-      @include setTextStyle($font-xs, $line-xs);
+      @include setTextStyle(calc(var(--rem) * var(--font-12px)), calc(var(--rem) * var(--line-12px)));
       color: $PRIMARY_BLUE;
     }
 
@@ -357,7 +357,7 @@
   span {
     height: 16px;
     padding: 1px 0 0 6px;
-    @include setTextStyle($font-s, $line-s);
+    @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
     color: $FONT_GRAY02;
   }
 
@@ -476,7 +476,7 @@
 }
 
 .p-dropdown-item-label {
-  @include setTextStyle($font-s, $line-s);
+  @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
   color: $FONT_GRAY02;
 }
 
@@ -571,7 +571,7 @@
 .p-datepicker-month,
 .p-datepicker-year {
   width: auto;
-  @include setTextStyle($font-sm, $line-sm);
+  @include setTextStyle(calc(var(--rem) * var(--font-14px)), calc(var(--rem) * var(--line-14px)));
   font-weight: $bold-70;
   color: $FONT_GRAY01;
 }
@@ -589,7 +589,7 @@
     content: ".";
     position: absolute;
     right: 5px;
-    @include setTextStyle($font-sm, $line-sm);
+    @include setTextStyle(calc(var(--rem) * var(--font-14px)), calc(var(--rem) * var(--line-14px)));
   }
 }
 
@@ -607,7 +607,7 @@
   width: 28px;
   height: 28px;
   margin: 3px 2px;
-  @include setTextStyle($font-s, $line-s);
+  @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
   font-weight: inherit;
   color: $FONT_GRAY02;
 }
@@ -651,7 +651,7 @@
 .p-inputtext {
   width: 100%;
   padding: 8px 12px;
-  @include setTextStyle($font-s, $line-s);
+  @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
   color: $FONT_GRAY02;
   border-radius: 4px;
   border: solid 1px $BORDER_GRAY01;

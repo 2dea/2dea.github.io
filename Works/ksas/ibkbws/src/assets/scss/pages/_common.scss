@@ -14,7 +14,7 @@
 
 .require {
   padding-left: 4px;
-  @include setTextStyle($font-xs, $line-xs);
+  @include setTextStyle(calc(var(--rem) * var(--font-12px)), calc(var(--rem) * var(--line-12px)));
   color: $NOTICE_ORANGE !important;
 }
 
@@ -27,11 +27,11 @@
 }
 
 .ft-11 {
-  font-size: $font-xs !important;
+  font-size: calc(var(--rem) * var(--font-12px)) !important;
 }
 
 .ft-13 {
-  font-size: $font-sm !important;
+  font-size: calc(var(--rem) * var(--font-14px)) !important;
 }
 
 .ft-bold {
@@ -607,7 +607,7 @@
 
   .title {
     margin-bottom: 12px;
-    @include setTextStyle($font-lm, $line-lm);
+    @include setTextStyle(calc(var(--rem) * var(--font-16px)), calc(var(--rem) * var(--line-16px)));
     font-weight: $bold-70;
     color: #333;
   }
@@ -674,7 +674,7 @@
       em {
         display: inline-block;
         margin-left: 8px;
-        @include setTextStyle($font-sm, $line-sm);
+        @include setTextStyle(calc(var(--rem) * var(--font-14px)), calc(var(--rem) * var(--line-14px)));
         color: #d60000;
       }
     }
@@ -771,7 +771,7 @@
       .title {
         height: 16px;
         margin-bottom: 12px;
-        @include setTextStyle($font-lm, $line-lm);
+        @include setTextStyle(calc(var(--rem) * var(--font-16px)), calc(var(--rem) * var(--line-16px)));
         color: #333;
       }
 

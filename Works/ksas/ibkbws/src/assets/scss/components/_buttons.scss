@@ -258,7 +258,7 @@
     padding: 8px 16px;
 
     span {
-      @include setTextStyle($font-s, $line-s);
+      @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
       font-weight: $bold-70;
     }
   }
@@ -268,7 +268,7 @@
     border-radius: 2px !important;
 
     span {
-      @include setTextStyle($font-xs, $line-xs);
+      @include setTextStyle(calc(var(--rem) * var(--font-12px)), calc(var(--rem) * var(--line-12px)));
       font-weight: $bold-70;
     }
   }
@@ -279,7 +279,7 @@
     border-radius: 2px !important;
 
     span {
-      @include setTextStyle($font-xs, $line-xs);
+      @include setTextStyle(calc(var(--rem) * var(--font-12px)), calc(var(--rem) * var(--line-12px)));
       font-weight: $bold-50;
     }
   }
@@ -607,7 +607,7 @@
 .btn-download {
   height: 32px;
   padding: 7px 16px;
-  @include setTextStyle($font-s, $line-s);
+  @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
   font-weight: $bold-70;
   font-weight: $bold-50;
   color: $FONT_GRAY01;
@@ -636,7 +636,7 @@
 .btn-download-all {
   height: 32px;
   padding: 8px 16px;
-  @include setTextStyle($font-s, $line-s);
+  @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
   font-weight: $bold-70;
   font-weight: $bold-50;
   color: $FONT_GRAY01;
@@ -664,7 +664,7 @@
 
 .btn-print {
   padding: 8px 16px;
-  @include setTextStyle($font-s, $line-s);
+  @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
   font-weight: $bold-70;
   font-weight: $bold-50;
   color: $FONT_GRAY01;
@@ -692,7 +692,7 @@
 
 .btn-img-print {
   padding: 8px 16px;
-  @include setTextStyle($font-s, $line-s);
+  @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
   font-weight: $bold-70;
   font-weight: $bold-50;
   color: $FONT_GRAY01;
@@ -760,7 +760,7 @@
   border-radius: 0;
 
   span {
-    @include setTextStyle($font-s, $line-s);
+    @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
     font-weight: inherit;
     color: $PRIMARY_BLUE !important;
     border-bottom: 1px solid $PRIMARY_BLUE;
@@ -794,7 +794,7 @@
 
   span {
     padding-right: 18px;
-    @include setTextStyle($font-s, $line-s);
+    @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
     font-weight: inherit;
     color: $FONT_GRAY02;
     text-align: left;
@@ -821,7 +821,7 @@
   }
 
   span {
-    @include setTextStyle($font-s, $line-s);
+    @include setTextStyle(calc(var(--rem) * var(--font-13px)), calc(var(--rem) * var(--line-13px)));
     font-weight: inherit;
     color: $FONT_GRAY02;
   }

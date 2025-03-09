@@ -64,7 +64,7 @@
     a {
       flex: 1 0 auto;
       margin: 0 24px;
-      @include setTextStyle($font-m, $line-m);
+      @include setTextStyle(calc(var(--rem) * var(--font-15px)), calc(var(--rem) * var(--line-15px)));
       font-weight: $bold-70;
       color: $FONT_BLUE03;
 
@@ -102,8 +102,8 @@
     width: 200px;
 
     h2 {
-      font-size: $font-m !important;
-      line-height: $line-m !important;
+      font-size: calc(var(--rem) * var(--font-15px)) !important;
+      line-height: calc(var(--rem) * var(--line-15px)) !important;
       font-weight: $bold-70 !important;
       color: $FONT_GRAY01 !important;
     }
@@ -122,7 +122,7 @@
 
       a {
         margin: 0;
-        @include setTextStyle($font-sm, $line-sm);
+        @include setTextStyle(calc(var(--rem) * var(--font-14px)), calc(var(--rem) * var(--line-14px)));
         color: $FONT_GRAY01;
 
         &:hover,
@@ -155,7 +155,7 @@
       display: block;
       position: relative;
       padding-left: 9px;
-      @include setTextStyle($font-sm, $line-sm);
+      @include setTextStyle(calc(var(--rem) * var(--font-14px)), calc(var(--rem) * var(--line-14px)));
       color: $FONT_GRAY02 !important;
 
       +a {

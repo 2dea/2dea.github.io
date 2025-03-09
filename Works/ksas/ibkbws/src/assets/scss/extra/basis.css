@@ -7,7 +7,7 @@
 :root  {
   --root-em-int:        16;
   --root-em-base:       calc(1em * var(--root-em-int, 16) / 16);
-  --root-em:            1rem / var(--root-em-int);
+  --root-em:            (1rem / var(--root-em-int));
   --rem:                var(--root-em);
 
   --height-window-maximum:      100vh;
@@ -19,51 +19,49 @@
   --bold-50:            565;
   --bold-70:            700;
 
-  --font-ss-int:        8;
-  --font-3xs-int:       10;
-  --font-2xs-int:       11;
-  --font-xs-int:        12;
-  --font-s-int:         13;
-  --font-sm-int:        14;
-  --font-m-int:         15;
-  --font-lm-int:        16;
-  --font-l-int:         18;
-  --font-xl-int:        20;
-  --font-20xl-int:      24;
 
-  --line-3xs-int:           12;
-  --line-2xs-int:           14;
-  --line-xs-int:            16;
-  --line-s-int:             16;
-  --line-sm-int:            18;
-  --line-m-int:             20;
-  --line-lm-int:            20;
-  --line-l-int:             24;
-  --line-xl-int:            26;
-  --line-20xl-int:          32;
+  --font-10px:          10;
+  --font-11px:          11;
+  --font-12px:          12;
+  --font-13px:          13;
+  --font-14px:          14;
+  --font-15px:          15;
+  --font-16px:          16;
+  --font-20px:          20;
 
-  --font-3xs:           calc(var(--rem) * var(--font-3xs-int));
-  --font-2xs:           calc(var(--rem) * var(--font-2xs-int));
-  --font-xs:            calc(var(--rem) * var(--font-xs-int));
-  --font-s:             calc(var(--rem) * var(--font-s-int));
-  --font-sm:            calc(var(--rem) * var(--font-sm-int));
-  --font-m:             calc(var(--rem) * var(--font-m-int));
-  --font-lm:            calc(var(--rem) * var(--font-lm-int));
-  --font-l:             calc(var(--rem) * var(--font-l-int));
-  --font-xl:            calc(var(--rem) * var(--font-xl-int));
-  --font-20xl:          calc(var(--rem) * var(--font-20xl-int));
+  --line-10px:          12;
+  --line-11px:          14;
+  --line-12px:          16;
+  --line-13px:          16;
+  --line-14px:          18;
+  --line-15px:          20;
+  --line-16px:          20;
+  --line-20px:          26;
 
-  --line-ss:            1;
-  --line-3xs:           calc(var(--rem) * var(--line-3xs-int));
-  --line-2xs:           calc(var(--rem) * var(--line-2xs-int));
-  --line-xs:            calc(var(--rem) * var(--line-xs-int));
-  --line-s:             calc(var(--rem) * var(--line-s-int));
-  --line-sm:            calc(var(--rem) * var(--line-sm-int));
-  --line-m:             calc(var(--rem) * var(--line-m-int));
-  --line-lm:            calc(var(--rem) * var(--line-lm-int));
-  --line-l:             calc(var(--rem) * var(--line-l-int));
-  --line-xl:            calc(var(--rem) * var(--line-xl-int));
-  --line-20xl:          calc(var(--rem) * var(--line-20xl-int));
+  --font-30-int:        var(--font-12px);
+  --font-50-int:        var(--font-14px);
+  --font-70-int:        var(--font-16px);
+  --font-90-int:        var(--font-20px);
+
+  --line-30-int:        var(--line-12px);
+  --line-50-int:        var(--line-14px);
+  --line-70-int:        var(--line-16px);
+  --line-90-int:        var(--line-20px);
+
+  --font-30:            calc(var(--rem) * var(--font-30-int));
+  --font-50:            calc(var(--rem) * var(--font-50-int));
+  --font-70:            calc(var(--rem) * var(--font-70-int));
+  --font-90:            calc(var(--rem) * var(--font-90-int));
+
+  --line-abs-30:        calc(var(--rem) * var(--line-30-int));
+  --line-abs-50:        calc(var(--rem) * var(--line-50-int));
+  --line-abs-70:        calc(var(--rem) * var(--line-70-int));
+  --line-abs-90:        calc(var(--rem) * var(--line-90-int));
+
+  --line-30:            calc(var(--line-30-int) / var(--font-30-int));
+  --line-50:            calc(var(--line-50-int) / var(--font-50-int));
+  --line-70:            calc(var(--line-70-int) / var(--font-70-int));
+  --line-90:            calc(var(--line-90-int) / var(--font-90-int));
 
 
   --typo-system:        -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum';
@@ -89,17 +87,9 @@
   --text-feature-tnum:  'tnum', 'zero', 'cv13', var(--text-feature-base);
   --text-feature:       var(--text-feature-base, normal);
 
-  --text-size-int:      var(--font-sm-int,);
-  --text-height-int:    var(--line-sm-int,);
-
-  --text-size:          calc(1em / var(--root-em-int, 16) * var(--text-size-int, 15));
-  --text-size-s:        calc(1em - var(--rem) * 2);
-  /* --text-size-s-rel:    calc(1em * 12 / 14); */
-
-  --text-height:        calc(var(--text-height-int, 16) / var(--text-size-int, 12));
-  --text-height-s:      calc(1em + var(--rem) * 4);
+  --text-size:          var(--font-50, calc(1em / var(--root-em-int, 16) * 15));
+  --text-height:        var(--line-50, calc(16 / 12));
   --text-height-para:   calc(18 / 12);
-
 
   --text-spacing:       0;
 

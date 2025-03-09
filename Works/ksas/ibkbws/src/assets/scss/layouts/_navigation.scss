@@ -48,7 +48,7 @@
       }
 
       span {
-        @include setTextStyle($font-sm, $line-sm);
+        @include setTextStyle(calc(var(--rem) * var(--font-14px)), calc(var(--rem) * var(--line-14px)));
         font-weight: inherit;
         color: #5b82b0;
       }
