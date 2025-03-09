@@ -144,7 +144,7 @@ html  {
 body  {
   font-family: inherit; font-family: var(--typo-base, inherit); font-size: 0.8em; line-height: inherit;
   overflow-y: auto; margin: 0; color: WindowText; background: Transparent;
-  word-wrap: break-word; word-break: break-word; word-break: keep-all; letter-spacing: normal;
+  word-wrap: break-word; word-break: break-word; word-break: keep-all; overflow-wrap: anywhere; letter-spacing: normal;
   overscroll-behavior: inherit;
 }
 input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }

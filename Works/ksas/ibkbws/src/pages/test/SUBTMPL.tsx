@@ -144,6 +144,13 @@ function SUBTMPL() {
               <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
             </ul>
+
+            <div className="m-binds">
+              <span className="group _center">
+                <span className="item"><button type="button" className="o-button _normal"><span className="label">모두펼침</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal"><span className="label">모두닫힘</span></button></span>
+              </span>
+            </div>
           </div>
         </div>
 
@@ -284,9 +291,15 @@ function SUBTMPL() {
 
                     <div className="m-binds">
                       <span className="group">
+                        <span className="item"><button type="button" className="o-button _normal"><span className="label">행추가</span></button></span>
+                        <span className="item"><button type="button" className="o-button _normal"><span className="label">행삭제</span></button></span>
+                        <span className="item"><button type="button" className="o-button _normal"><span className="label">취소</span></button></span>
+                      </span>
+
+                      <span className="group">
                         <span className="item"><button type="button" title="엑셀다운로드" className="o-image-button"><span className="label">엑셀다운로드</span></button></span>
-                        <span className="item"><button type="button" title="컬럼필터" className="o-image-button"><span className="label">컬럼필터</span></button></span>
-                        <span className="item"><button type="button" title="프린트" className="o-image-button"><span className="label">프린트</span></button></span>
+                        <span className="item"><button type="button" title="열설정" className="o-image-button"><span className="label">열설정</span></button></span>
+                        <span className="item"><button type="button" title="표인쇄" className="o-image-button"><span className="label">표인쇄</span></button></span>
                       </span>
                     </div>
                   </div>

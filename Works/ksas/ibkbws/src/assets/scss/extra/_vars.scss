@@ -63,8 +63,10 @@ $color-icon-disabled:        var(--color-icon-disabled);
 
 $color-key1-40:              var(--color-key1-40);
 $color-key1-70:              var(--color-key1-70);
+$color-key1-90:              var(--color-key1-90);
 $color-key2-40:              var(--color-key2-40);
 $color-key2-70:              var(--color-key2-70);
+$color-key2-90:              var(--color-key2-90);
 
 $color-point-40:             var(--color-point-40);
 
@@ -112,4 +114,6 @@ $height-object-icon-70:       calc(var(--rem) * var(--height-object-icon-70));
 
 $timing-func-ease-slower:     var(--timing-func-ease-slower);
 $timing-func-ease-faster:     var(--timing-func-ease-faster);
+
+$width-scrollbar:     var(--width-scrollbar);
 

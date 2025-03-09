@@ -30,16 +30,16 @@
 //   #{$selector}:where( :hover, :focus-within )#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
 // }
 @mixin setScrollGutterStable($selector: ".g-scroll-gutter-stable", $end: 800, $start: 150)  {
-  #{$selector}  { transition: #{$end}ms --color-scrollbar-hidden-track, #{$end}ms --color-scrollbar-hidden-thumb, #{$end}ms --color-scrollbar-hidden-thumb-edge; }
+  #{$selector}  { transition: --color-scrollbar-hidden-track #{$end}ms, --color-scrollbar-hidden-thumb #{$end}ms, --color-scrollbar-hidden-thumb-edge #{$end}ms; }
   #{$selector}:hover,
-    #{$selector}:focus-within  { --color-scrollbar-hidden-track: var(--color-scrollbar-track); --color-scrollbar-hidden-thumb: var(--color-scrollbar-thumb); --color-scrollbar-hidden-thumb-edge: var(--color-scrollbar-thumb-edge); transition: #{$start}ms --color-scrollbar-hidden-track, #{$start}ms --color-scrollbar-hidden-thumb, #{$start}ms --color-scrollbar-hidden-thumb-edge; }
+    #{$selector}:focus-within  { --color-scrollbar-hidden-track: var(--color-scrollbar-track); --color-scrollbar-hidden-thumb: var(--color-scrollbar-thumb); --color-scrollbar-hidden-thumb-edge: var(--color-scrollbar-thumb-edge); transition: --color-scrollbar-hidden-track #{$start}ms, --color-scrollbar-hidden-thumb #{$start}ms, --color-scrollbar-hidden-thumb-edge #{$start}ms; }
   #{$selector}::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-hidden-track); will-change: background-color; }
   #{$selector}::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--color-scrollbar-hidden-thumb); outline-color: var(--color-scrollbar-hidden-thumb-edge, Transparent); will-change: background-color, outline-color; }
 }
 
 @mixin inc-scrollbar-width($margin: 3, $thumb: 6)  {
-  --margin-global-scrollbar:    calc(var(--rem) * #{$margin});
-  --width-global-scrollbar:     calc(var(--rem) * #{$thumb} + var(--margin-global-scrollbar) * 2);
+  --margin-scrollbar:    calc(var(--rem) * #{$margin});
+  --width-scrollbar:     calc(var(--rem) * #{$thumb} + var(--margin-scrollbar) * 2);
 }
 
 @mixin inc-translate($x: -50%, $y: -50%)  {
