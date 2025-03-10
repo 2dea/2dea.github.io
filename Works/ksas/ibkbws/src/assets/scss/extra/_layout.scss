@@ -29,6 +29,7 @@
   --color-scrollbar-thumb-hover:        rgba(0,0,0, 0.4);
   --color-scrollbar-thumb-active:       rgba(0,0,0, 0.5);
   --color-scrollbar-thumb-edge:         rgba(255,255,255, 0.3);
+
   --margin-scrollbar:                   calc(var(--rem) * 3);
   --width-scrollbar:                    calc(var(--rem) * 6 + var(--margin-scrollbar) * 2);
 
@@ -37,6 +38,7 @@
   --margin-popup-inline:                24;
 
   --height-popup-header:                46;
+
 
   --margin-layout-block:                20;
   --margin-layout-inline:               40;
@@ -57,6 +59,7 @@ $margin-popup-block:                    calc(var(--rem) * var(--margin-popup-blo
 $margin-popup-inline:                   calc(var(--rem) * var(--margin-popup-inline));
 
 $height-popup-header:                   calc(var(--rem) * var(--height-popup-header));
+
 
 $margin-layout-block:                   calc(var(--rem) * var(--margin-layout-block));
 $margin-layout-inline:                  calc(var(--rem) * var(--margin-layout-inline));
@@ -220,7 +223,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-main >.div-tablist  { font-size: inherit; line-height: inherit; padding: III(4) 0 0; border-bottom: $e10 solid #0B68CB; }
 
-.dom-main .div-header  { display: flex; align-items: center; gap: III(16); }
+.dom-main .div-sep  { position: absolute; }
+.dom-main .div-header  { display: flex; align-items: center; gap: $gap-element-90; }
 .dom-main .div-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
 .dom-main .div-header >.o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
 .dom-main .div-header .m-title  { order: -1; }
@@ -318,7 +322,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 
-.o-section  { display: flex; flex-direction: column; }
+.o-section  { display: flex; flex-direction: column; gap: $margin-section-20; }
 .o-section:has(>.main._primary),
   .o-section >.main._primary  { flex: 1 0 0; }
 .o-section >.main._primary  {
@@ -355,8 +359,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 
-// .o-section:not(:first-child)  { margin-top: var(--margin-layout-block); box-shadow: 0 0 0 1px navy; }
-.o-section:not(:first-child)  { margin-top: $margin-section-70; }
+.o-section:not(:first-child)  { margin-top: $margin-section-50; }
 
 
 
