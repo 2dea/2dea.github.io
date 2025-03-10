@@ -62,11 +62,11 @@
   font-variation-settings: 'FILL' $fill, 'wght' $wght, 'GRAD' 0, 'opsz' $opsz;
 }
 
-@mixin setSymbolStyle($fill: 0, $wght: 400, $opsz: 24, $size: $height-object-icon-50)  {
+@mixin setSymbolStyle($fill: 0, $wght: 400, $opsz: 24, $size: $height-icon-50)  {
   font-family: 'wf-MaterialSymbolsRounded-Var', sans-serif; @include setSymbolVariationSettings($fill, $wght, $opsz); font-size: $size; display: inline-flex; max-width: 1em; overflow: hidden; text-transform: uppercase;
 }
 
-@mixin inc-symbol($fill: 0, $wght: 400, $opsz: 24, $size: $height-object-icon-50)  {
+@mixin inc-symbol($fill: 0, $wght: 400, $opsz: 24, $size: $height-icon-50)  {
   direction: ltr; font: normal normal calc(1rem / var(--root-em-int, 16) * 24) /1 'wf-MaterialSymbolsOutlined-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
   @include setSymbolStyle($fill, $wght, $opsz, $size);
 }
