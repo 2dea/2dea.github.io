@@ -1,36 +1,37 @@
 @charset "UTF-8";
 
-$root-em-int: 16;
+$root-em-int:        16;
 
-$bold-30: var(--bold-30);
-$bold-40: var(--bold-40);
-$bold-50: var(--bold-50);
-$bold-70: var(--bold-70);
+$bold-30:            var(--bold-30);
+$bold-40:            var(--bold-40);
+$bold-50:            var(--bold-50);
+$bold-70:            var(--bold-70);
 
-$font-30:           var(--font-30);
-$font-50:           var(--font-50);
-$font-70:           var(--font-70);
-$font-90:           var(--font-90);
+$font-30:            var(--font-30);
+$font-50:            var(--font-50);
+$font-70:            var(--font-70);
+$font-90:            var(--font-90);
 
-$line-abs-30:           var(--line-abs-30);
-$line-abs-50:           var(--line-abs-50);
-$line-abs-70:           var(--line-abs-70);
-$line-abs-90:           var(--line-abs-90);
+$line-abs-30:        var(--line-abs-30);
+$line-abs-50:        var(--line-abs-50);
+$line-abs-70:        var(--line-abs-70);
+$line-abs-90:        var(--line-abs-90);
 
-$line-30:           var(--line-30);
-$line-50:           var(--line-50);
-$line-70:           var(--line-70);
-$line-90:           var(--line-90);
+$line-30:            var(--line-30);
+$line-50:            var(--line-50);
+$line-70:            var(--line-70);
+$line-90:            var(--line-90);
 
-$text-shadow:       var(--text-shadow);
+$text-shadow:        var(--text-shadow);
 
-$radius-abs-10:     var(--radius-abs-10);
+$radius-abs-10:      var(--radius-abs-10);
 
-$tp:                      var(--tp);
-$cc:                      var(--cc);
-$ss:                      var(--ss);
-$e10:                     var(--e10, 1px);
-$e20:                     var(--e20, 2px);
+
+$tp:                         var(--tp);
+$cc:                         var(--cc);
+$ss:                         var(--ss);
+$e10:                        var(--e10, 1px);
+$e20:                        var(--e20, 2px);
 
 $alpha-dimmed-08:            var(--alpha-dimmed-08);
 $alpha-dimmed-12:            var(--alpha-dimmed-12);
@@ -52,10 +53,14 @@ $color-surface-overlay:      var(--color-surface-overlay);
 $color-ground:               var(--color-ground);
 $color-ground-alpha-00:      var(--color-ground-alpha-00);
 $color-ground-40:            var(--color-ground-40);
+$color-ground-disabled:      var(--color-ground-disabled);
+$color-ground-required:      var(--color-ground-required);
 
 $color-text-30:              var(--color-text-30);
 $color-text-40:              var(--color-text-40);
 $color-text-70:              var(--color-text-70);
+$color-text-placeholder:     var(--color-text-placeholder, DarkGrey);
+$color-text-disabled:        var(--color-text-disabled);
 
 $color-icon1:                var(--color-icon1);
 $color-icon2:                var(--color-icon2);
@@ -69,6 +74,7 @@ $color-key2-70:              var(--color-key2-70);
 $color-key2-90:              var(--color-key2-90);
 
 $color-point-40:             var(--color-point-40);
+$color-point-70:             var(--color-point-70);
 
 $color-status-80:            var(--color-status-80);
 $color-status-50:            var(--color-status-50);
@@ -78,42 +84,49 @@ $color-require:              var(--color-require);
 $color-delete:               var(--color-delete);
 $color-error:                var(--color-error);
 
-$color-form-placeholder:     var(--color-form-placeholder);
-$color-form-disabled:        var(--color-form-disabled);
-$color-form-disabled-ground: var(--color-form-disabled-ground);
-$color-form-required-ground: var(--color-form-required-ground);
+$color-button-40:            var(--color-button-40);
+$color-button-70:            var(--color-button-70);
+$color-button-disabled:      var(--color-button-disabled);
 
 $color-edge-30:              var(--color-edge-30);
 $color-edge-40:              var(--color-edge-40);
 $color-edge-70:              var(--color-edge-70);
 
-$color-shadow-normal:        var(--color-shadow-normal);
+$color-shadow:               var(--color-shadow);
 
-$color-shadow0-alpha-10:      var(--color-shadow0-alpha-10);
-$color-shadow0-alpha-20:      var(--color-shadow0-alpha-20);
+$color-shadow-alpha-10:      var(--color-shadow-alpha-10);
+$color-shadow-alpha-20:      var(--color-shadow-alpha-20);
 
-$shadow-normal:               var(--shadow-normal);
+$dropshadow-40:              var(--dropshadow-40);
 
-$radius-global-element:       calc(var(--rem) * var(--radius-global-element));
+$radius-40:                  calc(var(--rem) * var(--radius-40));
 
-$gap-global-whitespace-30:    calc(var(--rem) * var(--gap-global-whitespace-30));
-$gap-global-whitespace-50:    calc(var(--rem) * var(--gap-global-whitespace-50));
+$gap-whitespace-30:          calc(var(--rem) * var(--gap-whitespace-30));
+$gap-whitespace-50:          calc(var(--rem) * var(--gap-whitespace-50));
 
-$gap-global-element-30:       calc(var(--rem) * var(--gap-global-element-30));
-$gap-global-element-50:       calc(var(--rem) * var(--gap-global-element-50));
-$gap-global-element-70:       calc(var(--rem) * var(--gap-global-element-70));
-$gap-global-element-90:       calc(var(--rem) * var(--gap-global-element-90));
+$gap-element-30:             calc(var(--rem) * var(--gap-element-30));
+$gap-element-50:             calc(var(--rem) * var(--gap-element-50));
+$gap-element-70:             calc(var(--rem) * var(--gap-element-70));
+$gap-element-80:             calc(var(--rem) * var(--gap-element-80));
+$gap-element-90:             calc(var(--rem) * var(--gap-element-90));
 
-$height-global-form-30:       calc(var(--rem) * var(--height-global-form-30));
-$height-global-form-50:       calc(var(--rem) * var(--height-global-form-50));
-$height-global-form-70:       calc(var(--rem) * var(--height-global-form-70));
+$margin-section-20:          calc(var(--rem) * var(--margin-section-20));
+$margin-section-30:          calc(var(--rem) * var(--margin-section-30));
+$margin-section-40:          calc(var(--rem) * var(--margin-section-40));
+$margin-section-50:          calc(var(--rem) * var(--margin-section-50));
+$margin-section-70:          calc(var(--rem) * var(--margin-section-70));
 
-$height-object-icon-30:       calc(var(--rem) * var(--height-object-icon-30));
-$height-object-icon-50:       calc(var(--rem) * var(--height-object-icon-50));
-$height-object-icon-70:       calc(var(--rem) * var(--height-object-icon-70));
+$height-form-30:             calc(var(--rem) * var(--height-form-30, 26));
+$height-form-50:             calc(var(--rem) * var(--height-form-50, 30));
+$height-form-70:             calc(var(--rem) * var(--height-form-70, 44));
 
-$timing-func-ease-slower:     var(--timing-func-ease-slower);
-$timing-func-ease-faster:     var(--timing-func-ease-faster);
+$height-icon-30:             calc(var(--rem) * var(--height-icon-30));
+$height-icon-50:             calc(var(--rem) * var(--height-icon-50));
+$height-icon-70:             calc(var(--rem) * var(--height-icon-70));
 
-$width-scrollbar:     var(--width-scrollbar);
+$timing-func-ease-slower:    var(--timing-func-ease-slower);
+$timing-func-ease-faster:    var(--timing-func-ease-faster);
+
+
+$width-scrollbar:            var(--width-scrollbar);
 
