@@ -113,6 +113,6 @@
 :has(.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex: 1 0 0; }
 :has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex-basis: var(--height-section-main); min-width: 100%; min-height: 0; overflow: auto; resize: both; }
 :has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]  { --color-scrollbar-track: rgba(240,240,240, 0.88); flex-basis: auto; min-height: var(--height-section-main); border-radius: $radius-abs-10; }
-:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]:hover  { --color-scrollbar-track: rgba(255,255,255, 0.88); box-shadow: 0 calc(var(--rem) * 3) 12px rgba(0,0,0, 0.12); box-shadow: $shadow-normal; }
+:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]:hover  { --color-scrollbar-track: rgba(255,255,255, 0.88); box-shadow: 0 calc(var(--rem) * 3) 12px rgba(0,0,0, 0.12); box-shadow: $dropshadow-40; }
 
 
