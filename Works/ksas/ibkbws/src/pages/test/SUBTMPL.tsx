@@ -456,8 +456,8 @@ function SUBTMPL() {
                             <th>
                               <span className="o-label">
                                 <span className="label">
-                                  <em className="o-require-tag"><span className="tag">(필수입력) </span></em>
                                   열쇠구분
+                                  <em className="o-require-tag"><span className="tag">(필수입력)</span></em>
                                 </span>
                               </span>
                             </th>
@@ -480,8 +480,8 @@ function SUBTMPL() {
                             <th>
                               <span className="o-label">
                                 <span className="label">
-                                  <em className="o-require-tag"><span className="tag">(필수입력) </span></em>
                                   열쇠유형
+                                  <em className="o-require-tag"><span className="tag">(필수입력)</span></em>
                                 </span>
                               </span>
                             </th>
