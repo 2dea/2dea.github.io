@@ -254,7 +254,71 @@ function SUBTMPL() {
                 <div className="o-section">
                   <form className="m-filter-form">
                     <div className="fieldset">
-                              <div className="m-field">
+                    <div className="o-field">
+                                <span className="o-label">
+                                  <span className="label">
+                                    열쇠구분
+                                  </span>
+                                </span>
+                                <div className="field">
+                                  <span className="o-form _input">
+                                    <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <span className="o-label">
+                                  <span className="label">
+                                    열쇠구분
+                                  </span>
+                                </span>
+                                <div className="field">
+                                  <span className="o-form _input">
+                                    <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <span className="o-label">
+                                  <span className="label">
+                                    열쇠구분
+                                  </span>
+                                </span>
+                                <div className="field">
+                                  <span className="o-form _input">
+                                    <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <span className="o-label">
+                                  <span className="label">
+                                    열쇠구분
+                                  </span>
+                                </span>
+                                <div className="field">
+                                  <span className="o-form _input">
+                                    <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
                                 <span className="o-label">
                                   <span className="label">
                                     열쇠구분
@@ -462,7 +526,7 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td>
-                              <div className="m-field">
+                              <div className="o-field">
                                 <div className="field">
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
@@ -486,7 +550,7 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td>
-                              <div className="m-field">
+                              <div className="o-field">
                                 <div className="field">
                                   <span className="o-form _select">
                                     <select className="bind type-require">
@@ -509,12 +573,57 @@ function SUBTMPL() {
                               </span>
                             </th>
                             <td colSpan="3">
-                              <div className="m-field">
+                              <div className="o-field">
                                 <div className="field">
                                   <span className="o-form _input c-wdth-50p">
                                     <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
                                   </span>
                                 </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </form>
+                  </div>
+                </div>
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h2 className="o-heading level3"><span className="label">Sample</span></h2>
+                  </div>
+
+                  <div className="main">
+                    <form className="m-data-form">
+                      <table className="table">
+                        <tbody>
+                          <tr>
+                            <th>
+                              <span className="o-label">
+                                <span className="label">
+                                  Blank
+                                </span>
+                              </span>
+                            </th>
+                            <td colSpan="3"></td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <span className="o-label">
+                                <span className="label">
+                                  Icons
+                                </span>
+                              </span>
+                            </th>
+                            <td colSpan="3">
+                              <div className="m-flex-list flow-inline">
+                                <i className="o-symbol" aria-hidden="true"></i>
+                                <i className="o-symbol _res-camera-fixed state-normal" aria-hidden="true"></i>
+                                <i className="o-symbol _test wdth-70" aria-hidden="true"></i>
+                                <i className="o-symbol _test type-fill" aria-hidden="true"></i>
+                                <i className="o-symbol _test type-line" aria-hidden="true"></i>
+                                <i className="o-symbol _test type-fill wdth-30" aria-hidden="true"></i>
+                                <i className="o-symbol _test type-line wdth-50" aria-hidden="true"></i>
                               </div>
                             </td>
                           </tr>
