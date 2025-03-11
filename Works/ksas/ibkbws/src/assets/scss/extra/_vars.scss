@@ -24,7 +24,7 @@ $line-90:            var(--line-90);
 
 $text-shadow:        var(--text-shadow);
 
-$radius-abs-10:      var(--radius-abs-10);
+$radius-abs-20:      var(--radius-abs-20);
 
 
 $tp:                         var(--tp);
@@ -98,8 +98,9 @@ $color-shadow-alpha-10:      var(--color-shadow-alpha-10);
 $color-shadow-alpha-20:      var(--color-shadow-alpha-20);
 
 $dropshadow-40:              var(--dropshadow-40);
+$dropshadow-70:              var(--dropshadow-70);
 
-$radius-40:                  calc(var(--rem) * var(--radius-40));
+$radius-50:                  calc(var(--rem) * var(--radius-50));
 
 $gap-whitespace-30:          calc(var(--rem) * var(--gap-whitespace-30));
 $gap-whitespace-50:          calc(var(--rem) * var(--gap-whitespace-50));
@@ -116,13 +117,13 @@ $margin-section-40:          calc(var(--rem) * var(--margin-section-40));
 $margin-section-50:          calc(var(--rem) * var(--margin-section-50));
 $margin-section-70:          calc(var(--rem) * var(--margin-section-70));
 
-$height-form-30:             calc(var(--rem) * var(--height-form-30, 26));
-$height-form-50:             calc(var(--rem) * var(--height-form-50, 30));
-$height-form-70:             calc(var(--rem) * var(--height-form-70, 44));
-
 $height-icon-30:             calc(var(--rem) * var(--height-icon-30));
 $height-icon-50:             calc(var(--rem) * var(--height-icon-50));
 $height-icon-70:             calc(var(--rem) * var(--height-icon-70));
+
+$height-form-30:             calc(var(--rem) * var(--height-form-30, 26));
+$height-form-50:             calc(var(--rem) * var(--height-form-50, 30));
+$height-form-70:             calc(var(--rem) * var(--height-form-70, 44));
 
 $timing-func-ease-slower:    var(--timing-func-ease-slower);
 $timing-func-ease-faster:    var(--timing-func-ease-faster);
