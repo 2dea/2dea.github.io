@@ -224,7 +224,7 @@
   --dropshadow-70:              0 0 4px var(--color-shadow-alpha-10), 0 calc(var(--rem) * 4) 8px var(--color-shadow-alpha-10), 0 calc(var(--rem) * 6) 12px var(--color-shadow-alpha-20);
 
 
-  --radius-40:                  4;
+  --radius-50:                  4;
 
 
   --gap-whitespace-30:          2;
@@ -242,13 +242,13 @@
   --margin-section-50:          16;
   --margin-section-70:          24;
 
-  --height-form-30:             24;
-  --height-form-50:             26;
-  --height-form-70:             30;
-
   --height-icon-30:             16;
   --height-icon-50:             20;
   --height-icon-70:             20;
+
+  --height-form-30:             24;
+  --height-form-50:             26;
+  --height-form-70:             30;
 
 
   --timing-func-ease-slower:    cubic-bezier(0.4,0,0.2,1);
@@ -405,3 +405,7 @@
 .g-annot:not(.flow-block):hover:not(:focus-within)  { opacity: 0.0; }
 .g-annot.flow-block  { display: block; position: relative; }
 .g-annot.flow-block:not(:hover):not(:focus-within)  { height: 1.5em; height: 1lh; overflow: hidden; }
+
+
+.m-flex-list { display: flex; flex-flow: row wrap; align-items: center; gap: 1em; }
+.m-flex-list >* { min-width: 0; outline: 1px solid orange; }
