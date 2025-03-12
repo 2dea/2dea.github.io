@@ -54,7 +54,7 @@
   --icon-secondary-sub:                 #ffffff80;
   --icon-secondary-disabled:            #ffffff4d;
 
-  
+
   --mode-primary-hovered:               #0000000a;
   --mode-primary-selected:              #259FFF1F;
   --mode-secondary-hovered:             #ffffff33;
@@ -133,7 +133,7 @@
   --bold-50:            565;
   --bold-70:            700;
 
-/* 
+/*
   --font-ss-int:        8;
   --font-3xs-int:       10;
   --font-2xs-int:       11;
@@ -519,7 +519,7 @@ html  {
 body  {
   font-family: inherit; font-family: var(--typo-base, inherit); font-size: 0.8em; line-height: inherit;
   overflow-y: auto; margin: 0; color: WindowText; background: Transparent;
-  word-wrap: break-word; word-break: break-word; word-break: keep-all; overflow-wrap: anywhere; letter-spacing: normal;
+  overflow-wrap: anywhere; word-wrap: break-word; word-break: break-word; word-break: keep-all; letter-spacing: normal;
   overscroll-behavior: inherit;
 }
 input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
@@ -645,7 +645,7 @@ template  { display: none; }
 .g-test  { outline: thick solid Red !important; }
 .g-debug:after  { content: ""; display: block; position: absolute; z-index: 100; left: 0; top: 0; width: 100px; height: 100px; background: Red; }
 
-/* 
+/*
 .g-annot  { font-weight: 350; font-size: 12px; line-height: calc(18 / 12); display: block; table-layout: fixed; width: 100%; height: 1.5em; overflow: hidden; padding: 0 0.25em; background: Black; color: Gold; outline: 1px solid White; text-overflow: ellipsis; white-space: nowrap; }
 .g-annot samp  { font-weight: 650; color: Crimson; }
 .g-annot:hover,  .g-annot:focus  { height: auto; color: Ivory; white-space: normal; word-break: break-all; }
