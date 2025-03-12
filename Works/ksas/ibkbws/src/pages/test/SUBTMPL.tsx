@@ -280,7 +280,7 @@ function SUBTMPL() {
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
-                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                      <button type="button" title="검색" className="o-image-button o-icon _search"><span className="label">검색</span></button>
                                     </span>
                                   </span>
                                 </div>
@@ -296,7 +296,7 @@ function SUBTMPL() {
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
-                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                      <button type="button" title="검색" className="o-image-button o-icon _search"><span className="label">검색</span></button>
                                     </span>
                                   </span>
                                 </div>
@@ -312,7 +312,7 @@ function SUBTMPL() {
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
-                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                      <button type="button" title="검색" className="o-image-button o-icon _search"><span className="label">검색</span></button>
                                     </span>
                                   </span>
                                 </div>
@@ -328,7 +328,7 @@ function SUBTMPL() {
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
-                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                      <button type="button" title="검색" className="o-image-button o-icon _search"><span className="label">검색</span></button>
                                     </span>
                                   </span>
                                 </div>
@@ -361,9 +361,9 @@ function SUBTMPL() {
                       </span>
 
                       <span className="group">
-                        <span className="item"><button type="button" title="엑셀다운로드" className="o-image-button"><span className="label">엑셀다운로드</span></button></span>
-                        <span className="item"><button type="button" title="열설정" className="o-image-button"><span className="label">열설정</span></button></span>
-                        <span className="item"><button type="button" title="표인쇄" className="o-image-button"><span className="label">표인쇄</span></button></span>
+                        <span className="item"><button type="button" title="엑셀&#x200B;다운로드" className="o-image-button o-icon _excel-download"><span className="label">엑셀&#x200B;다운로드</span></button></span>
+                        <span className="item"><button type="button" title="열설정" className="o-image-button o-icon _column-toggle"><span className="label">열설정</span></button></span>
+                        <span className="item"><button type="button" title="표인쇄" className="o-image-button o-icon _print"><span className="label">표인쇄</span></button></span>
                       </span>
                     </div>
                   </div>
@@ -531,7 +531,7 @@ function SUBTMPL() {
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
-                                      <button type="button" title="검색" className="o-image-button _search"><span className="label">검색</span></button>
+                                      <button type="button" title="검색" className="o-image-button o-icon _search"><span className="label">검색</span></button>
                                     </span>
                                   </span>
                                   <span className="outer-binds">
@@ -617,13 +617,19 @@ function SUBTMPL() {
                             </th>
                             <td colSpan="3">
                               <div className="m-flex-list flow-inline">
-                                <i className="o-symbol" aria-hidden="true"></i>
-                                <i className="o-symbol _res-camera-fixed state-normal" aria-hidden="true"></i>
-                                <i className="o-symbol _test wdth-70" aria-hidden="true"></i>
-                                <i className="o-symbol _test type-fill" aria-hidden="true"></i>
-                                <i className="o-symbol _test type-line" aria-hidden="true"></i>
-                                <i className="o-symbol _test type-fill wdth-30" aria-hidden="true"></i>
-                                <i className="o-symbol _test type-line wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon" aria-hidden="true"></i>
+                                <i className="o-icon _res-camera-fixed state-normal" aria-hidden="true"></i>
+                                <i className="o-icon _test wdth-70" aria-hidden="true"></i>
+                                <i className="o-icon _test type-fill" aria-hidden="true"></i>
+                                <i className="o-icon _test type-line" aria-hidden="true"></i>
+                                <i className="o-icon _test type-fill wdth-30" aria-hidden="true"></i>
+                                <i className="o-icon _test type-line wdth-50" aria-hidden="true"></i>
+                                <button type="button" title="검색" className="o-image-button"></button>
+                                <button type="button" title="검색" className="o-image-button"><span className="label">검색</span></button>
+                                <button type="button" title="검색" className="o-image-button o-icon _search"><span className="label">검색</span></button>
+                                <button type="button" title="검색" className="o-image-button o-icon _search size-30"><span className="label">검색</span></button>
+                                <button type="button" title="검색" className="o-image-button o-icon _search size-50"><span className="label">검색</span></button>
+                                <button type="button" title="검색" className="o-image-button o-icon _search size-70"><span className="label">검색</span></button>
                               </div>
                             </td>
                           </tr>
