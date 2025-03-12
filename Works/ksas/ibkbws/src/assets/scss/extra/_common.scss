@@ -2,87 +2,88 @@
 
 /** Global Custom-Properties */
 :root  {
-  --palette-gray-000:                   #ffffff;
-  --palette-gray-050:                   #f8fafc;
-  --palette-gray-100:                   #f1f5f9;
-  --palette-gray-200:                   #e2e8f0;
-  --palette-gray-300:                   #cbd5e1;
-  --palette-gray-400:                   #94a3b8;
-  --palette-gray-500:                   #64748b;
+  --palette-gray-000:                   #FFFFFF;
+  --palette-gray-050:                   #F8FAFC;
+  --palette-gray-100:                   #F1F5F9;
+  --palette-gray-200:                   #E2E8F0;
+  --palette-gray-300:                   #CBD5E1;
+  --palette-gray-400:                   #94A3B8;
+  --palette-gray-500:                   #64748B;
   --palette-gray-600:                   #475569;
   --palette-gray-700:                   #334155;
-  --palette-gray-800:                   #1e293b;
-  --palette-gray-900:                   #0f172a;
+  --palette-gray-800:                   #1E293B;
+  --palette-gray-900:                   #0F172A;
 
-  --palette-red-001:                    #fffafa;
-  --palette-red-100:                    #fed5d5;
-  --palette-red-200:                    #ffb5b5;
-  --palette-red-300:                    #ff8c8c;
-  --palette-red-400:                    #ff6363;
-  --palette-red-500:                    #ff4242;
-  --palette-red-600:                    #e52222;
-  --palette-red-700:                    #b00c0c;
+  --palette-red-001:                    #FFFAFA;
+  --palette-red-100:                    #FED5D5;
+  --palette-red-200:                    #FFB5B5;
+  --palette-red-300:                    #FF8C8C;
+  --palette-red-400:                    #FF6363;
+  --palette-red-500:                    #FF4242;
+  --palette-red-600:                    #E52222;
+  --palette-red-700:                    #B00C0C;
   --palette-red-800:                    #730303;
-  --palette-red-900:                    #3b0101;
+  --palette-red-900:                    #3B0101;
 
-  --palette-orange-001:                 #fff8f5;
-  --palette-orange-100:                 #fee2d7;
-  --palette-orange-200:                 #ffc8b2;
-  --palette-orange-300:                 #ffab8a;
-  --palette-orange-400:                 #ff8e61;
-  --palette-orange-500:                 #ff7842;
-  --palette-orange-600:                 #f15a22;
-  --palette-orange-700:                 #b03b0c;
+  --palette-orange-001:                 #FFF8F5;
+  --palette-orange-100:                 #FEE2D7;
+  --palette-orange-200:                 #FFC8B2;
+  --palette-orange-300:                 #FFAB8A;
+  --palette-orange-400:                 #FF8E61;
+  --palette-orange-500:                 #FF7842;
+  --palette-orange-600:                 #F15A22;
+  --palette-orange-700:                 #B03B0C;
   --palette-orange-800:                 #722303;
-  --palette-orange-900:                 #3c1201;
+  --palette-orange-900:                 #3C1201;
 
-  --palette-yellow-001:                 #fffcf0;
-  --palette-yellow-100:                 #fef8d7;
-  --palette-yellow-200:                 #fff2b2;
-  --palette-yellow-300:                 #ffeb8a;
-  --palette-yellow-400:                 #ffe561;
-  --palette-yellow-500:                 #ffde38;
-  --palette-yellow-600:                 #d4b100;
-  --palette-yellow-700:                 #a78d0c;
+  --palette-yellow-001:                 #FFFCF0;
+  --palette-yellow-100:                 #FEF8D7;
+  --palette-yellow-200:                 #FFF2B2;
+  --palette-yellow-300:                 #FFEB8A;
+  --palette-yellow-400:                 #FFE561;
+  --palette-yellow-500:                 #FFDE38;
+  --palette-yellow-600:                 #D4B100;
+  --palette-yellow-700:                 #A78D0C;
   --palette-yellow-800:                 #685703;
-  --palette-yellow-900:                 #3c3201;
+  --palette-yellow-900:                 #3C3201;
 
-  --palette-green-001:                  #f4fdf1;
-  --palette-green-100:                  #e5fbdf;
-  --palette-green-200:                  #c8f6bb;
-  --palette-green-300:                  #a4f08e;
-  --palette-green-400:                  #8eed73;
-  --palette-green-500:                  #62e53d;
-  --palette-green-600:                  #40c61a;
+  --palette-green-001:                  #F4FDF1;
+  --palette-green-100:                  #E5FBDF;
+  --palette-green-200:                  #C8F6BB;
+  --palette-green-300:                  #A4F08E;
+  --palette-green-400:                  #8EED73;
+  --palette-green-500:                  #62E53D;
+  --palette-green-600:                  #40C61A;
   --palette-green-700:                  #329914;
-  --palette-green-800:                  #25710f;
+  --palette-green-800:                  #25710F;
   --palette-green-900:                  #164409;
 
-  --palette-skyblue-001:                #f0faff;
-  --palette-skyblue-100:                #d7f2fe;
-  --palette-skyblue-200:                #b2e7ff;
-  --palette-skyblue-300:                #8ad9ff;
-  --palette-skyblue-400:                #61ccff;
-  --palette-skyblue-500:                #38bfff;
-  --palette-skyblue-600:                #0092d6;
-  --palette-skyblue-700:                #0c76a7;
+  --palette-skyblue-001:                #F0FAFF;
+  --palette-skyblue-100:                #D7F2FE;
+  --palette-skyblue-200:                #B2E7FF;
+  --palette-skyblue-300:                #8AD9FF;
+  --palette-skyblue-400:                #61CCFF;
+  --palette-skyblue-500:                #38BFFF;
+  --palette-skyblue-600:                #0092D6;
+  --palette-skyblue-700:                #0C76A7;
   --palette-skyblue-800:                #034868;
-  --palette-skyblue-900:                #01293c;
+  --palette-skyblue-900:                #01293C;
 
-  --palette-blue-001:                   #f0f7ff;
-  --palette-blue-050:                   #e6f2fe;
-  --palette-blue-100:                   #d7eafe;
-  --palette-blue-200:                   #b2d7ff;
-  --palette-blue-300:                   #8ac2ff;
-  --palette-blue-400:                   #61adff;
-  --palette-blue-500:                   #3898ff;
-  --palette-blue-600:                   #0b68cb;
-  --palette-blue-700:                   #004c9d;
+  --palette-blue-001:                   #F0F7FF;
+  --palette-blue-050:                   #E6F2FE;
+  --palette-blue-100:                   #D7EAFE;
+  --palette-blue-200:                   #B2D7FF;
+  --palette-blue-300:                   #8AC2FF;
+  --palette-blue-400:                   #61ADFF;
+  --palette-blue-500:                   #3898FF;
+  --palette-blue-600:                   #0B68CB;
+  --palette-blue-700:                   #004C9D;
   --palette-blue-800:                   #033468;
-  --palette-blue-900:                   #011e3c;
+  --palette-blue-900:                   #011E3C;
 
   --palette-dimmed-008:                 #33415514;
-  --palette-dimmed-065:                 #000000a6;
+  --palette-dimmed-012:                 #0F172A1F;
+  --palette-dimmed-065:                 #000000A6;
 
 }
 
@@ -133,6 +134,7 @@
   --design-button-normal:               var(--palette-gray-400);
   --design-button-strong:               var(--palette-gray-600);
   --design-button-disabled:             var(--palette-gray-300);
+  --design-button-hover:                var(--palette-dimmed-012);
 
   --design-button1-normal:              var(--design-primary-normal);
   --design-button1-strong:              var(--design-primary-strong);
@@ -150,6 +152,7 @@
   --tp:                         Transparent;
   --cc:                         currentColor;
   --ss:                         8px;
+  --rss:                        calc(1em * 8 / 24);
   --e10:                        calc(var(--rem) * 1);
   --e20:                        calc(var(--rem) * 2);
 
@@ -167,7 +170,7 @@
   --color-black:                var(--design-common-black);
 
   --color-dimmed-overlay:       var(--color-abs-black);
-  --color-dimmed-hover:         var(--design-grid-hover);
+  --color-dimmed-hover:         var(--design-button-hover);
 
   --color-surface:              var(--design-background-normal);
   --color-surface-overlay:      rgb(from var(--color-dimmed-overlay) r g b /var(--alpha-dimmed-overlay));
@@ -184,9 +187,11 @@
   --color-text-placeholder:     var(--design-label-assistive);
   --color-text-disabled:        var(--design-label-disabled);
 
-  --color-icon1:                var(--icon-primary-main);
-  --color-icon2:                var(--icon-primary-sub);
-  --color-icon-disabled:        var(--typography-primary-disabled);
+  --color-icon-00:              var(--design-icon-white);
+  --color-icon-40:              var(--design-icon-normal);
+  --color-icon-70:              var(--design-icon-strong);
+  --color-icon-90:              var(--design-icon-heavy);
+  --color-icon-disabled:        var(--design-line-weak);
 
   --color-key1-40:              var(--design-primary-normal);
   --color-key1-70:              var(--design-primary-strong);
@@ -209,6 +214,8 @@
   --color-button-40:            var(--design-button-normal);
   --color-button-70:            var(--design-button-strong);
   --color-button-disabled:      var(--design-button-disabled);
+
+  --color-grid-hover:           var(--design-grid-hover);
 
   --color-edge-30:              var(--design-line-weak);
   --color-edge-40:              var(--design-line-normal);
@@ -244,7 +251,7 @@
 
   --height-icon-30:             16;
   --height-icon-50:             20;
-  --height-icon-70:             20;
+  --height-icon-70:             24;
 
   --height-form-30:             24;
   --height-form-50:             26;
@@ -408,4 +415,4 @@
 
 
 .m-flex-list { display: flex; flex-flow: row wrap; align-items: center; gap: 1em; }
-.m-flex-list >* { min-width: 0; outline: 1px solid orange; }
+.m-flex-list >* { min-width: 0; outline: 1px solid orange; outline-offset: 1px; }
