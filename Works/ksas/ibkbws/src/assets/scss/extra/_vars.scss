@@ -30,6 +30,7 @@ $radius-abs-20:      var(--radius-abs-20);
 $tp:                         var(--tp);
 $cc:                         var(--cc);
 $ss:                         var(--ss);
+$rss:                        var(--rss);
 $e10:                        var(--e10, 1px);
 $e20:                        var(--e20, 2px);
 
@@ -62,8 +63,10 @@ $color-text-70:              var(--color-text-70);
 $color-text-placeholder:     var(--color-text-placeholder, DarkGrey);
 $color-text-disabled:        var(--color-text-disabled);
 
-$color-icon1:                var(--color-icon1);
-$color-icon2:                var(--color-icon2);
+$color-icon-00:              var(--color-icon-00);
+$color-icon-40:              var(--color-icon-40);
+$color-icon-70:              var(--color-icon-70);
+$color-icon-90:              var(--color-icon-90);
 $color-icon-disabled:        var(--color-icon-disabled);
 
 $color-key1-40:              var(--color-key1-40);
@@ -87,6 +90,8 @@ $color-error:                var(--color-error);
 $color-button-40:            var(--color-button-40);
 $color-button-70:            var(--color-button-70);
 $color-button-disabled:      var(--color-button-disabled);
+
+$color-grid-hover:           var(--color-grid-hover);
 
 $color-edge-30:              var(--color-edge-30);
 $color-edge-40:              var(--color-edge-40);
