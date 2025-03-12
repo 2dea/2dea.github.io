@@ -84,8 +84,8 @@
 /** Require Tags */
 .o-require-tag  { order: -1; position: relative; color: $color-require; white-space: nowrap; }
 .o-require-tag:before  { content: "*"; margin-right: calc(var(--rem) * 2); }
-.o-require-tag >.tag  { font-size: $ss; line-height: 1; vertical-align: super; position: absolute; top: calc(var(--rem) * 4); right: calc(var(--rem) * 3); color: Transparent; pointer-events: none; /* user-select: none; */ }
 .o-require-tag >.tag  { @include inc-sronly(none, 0); vertical-align: super; top: calc(var(--rem) * 4); right: calc(var(--rem) * 3); }
+
 .o-require-tag  { order: 0; }
 .o-require-tag:before  { margin-left: calc(var(--rem) * 2); margin-right: auto; }
 .o-require-tag >.tag  { left: calc(var(--rem) * 3); right: auto; }
@@ -143,15 +143,17 @@
 .o-symbol.wdth-30  { font-size: $height-icon-30; }
 
 .o-icon  { --theme: var(--color-icon-70); font-size: $ss; line-height: 1; display: inline-block; position: relative; min-width: 1em; min-height: 1em; color: var(--theme); background: none; }
+.o-icon:before,  .o-icon:after  { border-radius: 0; }
 .o-icon:not(.o-image-button):only-child  { display: block; width: fit-content; }
 .o-icon:not([class*="-icon _"])  { background-color: Gold; }
 .o-icon:before  { @include inc-symbol(); }
 .o-icon.type-fill:before  { @include setSymbolVariationSettings(1); }
 .o-icon.type-line:before  { @include setSymbolVariationSettings(); }
-.o-icon:before  { content: ""; display: block; width: 1em; height: 1em; }
+.o-icon:before  { content: ""; display: block; width: 1em; height: 1em; background: none no-repeat 0 /500% auto; }
+.o-icon[class*="-icon _"]:before  { background-color: Silver; }
 
-.o-icon:not(:empty):before  { content: none; }
-.o-icon >:is( object, img )  { font-size: $height-icon-30; display: block; width: 1em; height: 1em; color: inherit; }
+.o-icon:has( >object, >img, >svg ):before  { content: none !important; }
+.o-icon >:is( object, img, svg )  { font-size: $height-icon-30; display: block; width: 1em; height: 1em; color: inherit; }
 
 // :is(
 //   .o-image-button.size-50,
@@ -160,7 +162,7 @@
 //   :is(
 //     .o-image-button.size-50,
 //     .o-icon.wdth-50
-//   ) >:is( object, img )  { font-size: $height-icon-50; }
+//   ) >:is( object, img, svg )  { font-size: $height-icon-50; }
 // :is(
 //   .o-image-button.size-70,
 //   .o-icon.wdth-70
@@ -168,7 +170,7 @@
 //   :is(
 //     .o-image-button.size-70,
 //     .o-icon.wdth-70
-//   ) >:is( object, img )  { font-size: $height-icon-70; }
+//   ) >:is( object, img, svg )  { font-size: $height-icon-70; }
 // :is(
 //   .o-image-button.size-30,
 //   .o-icon.wdth-30
@@ -176,38 +178,49 @@
 //   :is(
 //     .o-image-button.size-30,
 //     .o-icon.wdth-30
-//   ) >:is( object, img )  { font-size: $height-icon-30; }
+//   ) >:is( object, img, svg )  { font-size: $height-icon-30; }
 
 // :is(.o-image-button.size-50, .o-icon.wdth-50):before,
-//   :is(.o-image-button.size-50, .o-icon.wdth-50) >:is( object, img )  { font-size: $height-icon-50; }
+//   :is(.o-image-button.size-50, .o-icon.wdth-50) >:is( object, img, svg )  { font-size: $height-icon-50; }
 // :is(.o-image-button.size-70, .o-icon.wdth-70):before,
-//   :is(.o-image-button.size-70, .o-icon.wdth-70) >:is( object, img )  { font-size: $height-icon-70; }
+//   :is(.o-image-button.size-70, .o-icon.wdth-70) >:is( object, img, svg )  { font-size: $height-icon-70; }
 // :is(.o-image-button.size-30, .o-icon.wdth-30):before,
-//   :is(.o-image-button.size-30, .o-icon.wdth-30) >:is( object, img )  { font-size: $height-icon-30; }
+//   :is(.o-image-button.size-30, .o-icon.wdth-30) >:is( object, img, svg )  { font-size: $height-icon-30; }
 
-.o-icon:where(.o-image-button.size-50):before,  .o-icon:where(.o-image-button.size-50) >:is( object, img ),
-  .o-icon:where(.m-header .m-binds .o-image-button):before,  .o-icon:where(.m-header .m-binds .o-image-button) >:is( object, img ),
-  .o-icon.wdth-50:before,  .o-icon.wdth-50 >:is( object, img )  { font-size: $height-icon-50; }
-.o-icon:where(.o-image-button.size-70):before,  .o-icon:where(.o-image-button.size-70) >:is( object, img ),
-  .o-icon.wdth-70:before,  .o-icon.wdth-70 >:is( object, img )  { font-size: $height-icon-70; }
-.o-icon:where(.o-image-button.size-30):before,  .o-icon:where(.o-image-button.size-30) >:is( object, img ),
-  .o-icon.wdth-30:before,  .o-icon.wdth-30 >:is( object, img )  { font-size: $height-icon-30; }
+.o-icon:where(.o-image-button.size-50):before,  .o-icon:where(.o-image-button.size-50) >:is( object, img, svg ),
+  .o-icon:where(.m-header .m-binds .o-image-button):before,  .o-icon:where(.m-header .m-binds .o-image-button) >:is( object, img, svg ),
+  .o-icon.wdth-50:before,  .o-icon.wdth-50 >:is( object, img, svg )  { font-size: $height-icon-50; }
+.o-icon:where(.o-image-button.size-70):before,  .o-icon:where(.o-image-button.size-70) >:is( object, img, svg ),
+  .o-icon.wdth-70:before,  .o-icon.wdth-70 >:is( object, img, svg )  { font-size: $height-icon-70; }
+.o-icon:where(.o-image-button.size-30):before,  .o-icon:where(.o-image-button.size-30) >:is( object, img, svg ),
+  .o-icon.wdth-30:before,  .o-icon.wdth-30 >:is( object, img, svg )  { font-size: $height-icon-30; }
 
-.o-icon  {
-  --test: url('data:image/svg+xml,<svg viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.59995" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%2364748B" stroke-width="1.2"/><path d="M2.36798 6.50665H13.632" stroke="%2364748B" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6319 1.60007V4.55829" stroke="%2364748B" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.368 1.60007V4.55829" stroke="%2364748B" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="17.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%230056A2" stroke-width="1.2"/><path d="M18.368 6.50665H29.632" stroke="%230056A2" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.6319 1.60007V4.55829" stroke="%230056A2" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.368 1.60007V4.55829" stroke="%230056A2" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="33.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%23F15A22" stroke-width="1.2"/><path d="M34.368 6.50665H45.632" stroke="%23F15A22" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6319 1.60007V4.55829" stroke="%23F15A22" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.368 1.60007V4.55829" stroke="%23F15A22" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="49.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%234BAFE3" stroke-width="1.2"/><path d="M50.368 6.50665H61.632" stroke="%234BAFE3" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M53.6319 1.60007V4.55829" stroke="%234BAFE3" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M58.368 1.60007V4.55829" stroke="%234BAFE3" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+.o-icon:where(.o-image-button.size-50):before,
+.o-icon:where(.m-header .m-binds .o-image-button):before,
+.o-icon.wdth-50:before  {
+  --test: url('data:image/svg+xml,<svg viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.59995" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)"/><path d="M2.36798 6.50665H13.632" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6319 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.368 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="17.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)"/><path d="M18.368 6.50665H29.632" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.6319 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.368 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="33.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)"/><path d="M34.368 6.50665H45.632" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6319 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.368 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="49.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)"/><path d="M50.368 6.50665H61.632" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M53.6319 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M58.368 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
 
-.o-icon._test:before  { content: "check_circle"; }
-.o-icon._search:before  { content: "search"; }
-.o-icon._excel-download:before  { content: "download"; }
-.o-icon._column-toggle:before  { content: "tune"; }
-.o-icon._print:before  { content: "print"; }
-.o-icon._test:before  { content: ""; background: var(--test) no-repeat 0 /500% auto; }
+.o-icon:where(.o-image-button.size-70):before,
+.o-icon.wdth-70:before  {
+  --test: url('data:image/svg+xml,<svg viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.59995" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 24)"/><path d="M2.36798 6.50665H13.632" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6319 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.368 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="17.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 24)"/><path d="M18.368 6.50665H29.632" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.6319 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.368 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="33.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 24)"/><path d="M34.368 6.50665H45.632" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6319 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.368 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="49.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 24)"/><path d="M50.368 6.50665H61.632" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M53.6319 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M58.368 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+.o-icon:before  {
+  --test: url('data:image/svg+xml,<svg viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.59995" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 16)"/><path d="M2.36798 6.50665H13.632" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6319 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.368 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="17.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 16)"/><path d="M18.368 6.50665H29.632" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.6319 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.368 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="33.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 16)"/><path d="M34.368 6.50665H45.632" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6319 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.368 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="49.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 16)"/><path d="M50.368 6.50665H61.632" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M53.6319 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M58.368 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 16)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+// .o-icon._test:before  { background-color: $tp; content: "check_circle"; }
+.o-icon._test:before  { background-color: $tp; background-image: var(--test); }
+.o-icon._search:before  { background-color: $tp; content: "search"; }
+.o-icon._excel-download:before  { background-color: $tp; content: "download"; }
+.o-icon._column-toggle:before  { background-color: $tp; content: "tune"; }
+.o-icon._print:before  { background-color: $tp; content: "print"; }
 
 
 /** Default Button */
 .o-button,
-  .o-action  { font-weight: inherit; font-size: inherit; line-height: inherit; display: inline-block; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; position: relative; min-width: calc(4em - $e10 * 2); min-height: 1em; padding: calc($e10 * 2) 0.5em; border: $e10 solid; color: ButtonText; background: ButtonFace; border-radius: 0; box-shadow: none; text-decoration: none; text-align: center; white-space: normal; }
+  .o-action  { font-weight: var(--bold-40, 400); font-size: inherit; line-height: inherit; display: inline-block; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; position: relative; min-width: calc(4em - $e10 * 2); min-height: 1em; padding: calc($e10 * 2) 0.5em; border: $e10 solid; color: ButtonText; background: ButtonFace; border-radius: 0; box-shadow: none; text-decoration: none; text-align: center; white-space: normal; }
 .o-button >*,
   .o-action >*  { flex: none; min-width: 0; }
 
@@ -249,7 +262,7 @@
 
 
 /** Image Button */
-.o-image-button  { font-weight: inherit; font-size: $ss; line-height: 1; display: inline-block; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; position: relative; min-width: 1em; min-height: 1em; padding: 0; border: 0; background: none; border-radius: 0; box-shadow: none; text-decoration: none; text-align: center; white-space: normal; }
+.o-image-button  { font-weight: var(--bold-40, 400); font-size: $ss; line-height: 1; display: inline-block; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; position: relative; min-width: 1em; min-height: 1em; padding: 0; border: 0; background: none; border-radius: 0; box-shadow: none; text-decoration: none; text-align: center; white-space: normal; }
 .o-image-button >*  { flex: none; min-width: 0; }
 
 .o-image-button  { font-size: $height-form-30; width: 1em; height: 1em; overflow: hidden; border-radius: $radius-50; }

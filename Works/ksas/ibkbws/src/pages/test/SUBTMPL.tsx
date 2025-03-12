@@ -626,6 +626,7 @@ function SUBTMPL() {
                                 <i className="o-icon _test type-line wdth-50" aria-hidden="true"></i>
                                 <button type="button" title="검색" className="o-image-button"></button>
                                 <button type="button" title="검색" className="o-image-button"><span className="label">검색</span></button>
+                                <button type="button" title="검색" className="o-image-button o-icon"><span className="label">검색</span></button>
                                 <button type="button" title="검색" className="o-image-button o-icon _search"><span className="label">검색</span></button>
                                 <button type="button" title="검색" className="o-image-button o-icon _search size-30"><span className="label">검색</span></button>
                                 <button type="button" title="검색" className="o-image-button o-icon _search size-50"><span className="label">검색</span></button>
