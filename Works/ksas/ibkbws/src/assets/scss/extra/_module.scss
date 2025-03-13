@@ -195,15 +195,20 @@
 .o-icon:where(.o-image-button.size-30):before,  .o-icon:where(.o-image-button.size-30) >:is( object, img, svg ),
   .o-icon.wdth-30:before,  .o-icon.wdth-30 >:is( object, img, svg )  { font-size: $height-icon-30; }
 
+:root  {
+  @include icon-search();
+}
 .o-icon:where(.o-image-button.size-50):before,
 .o-icon:where(.m-header .m-binds .o-image-button):before,
 .o-icon.wdth-50:before  {
   --test: url('data:image/svg+xml,<svg viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.59995" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)"/><path d="M2.36798 6.50665H13.632" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6319 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.368 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="17.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)"/><path d="M18.368 6.50665H29.632" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.6319 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.368 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="33.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)"/><path d="M34.368 6.50665H45.632" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6319 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.368 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="49.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)"/><path d="M50.368 6.50665H61.632" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M53.6319 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M58.368 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  @include icon-search(20);
 }
 
 .o-icon:where(.o-image-button.size-70):before,
 .o-icon.wdth-70:before  {
   --test: url('data:image/svg+xml,<svg viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.59995" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 24)"/><path d="M2.36798 6.50665H13.632" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6319 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.368 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="17.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 24)"/><path d="M18.368 6.50665H29.632" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.6319 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.368 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="33.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 24)"/><path d="M34.368 6.50665H45.632" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6319 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.368 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="49.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 24)"/><path d="M50.368 6.50665H61.632" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M53.6319 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M58.368 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 24)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  @include icon-search(24);
 }
 
 .o-icon:before  {
@@ -212,10 +217,12 @@
 
 // .o-icon._test:before  { background-color: $tp; content: "check_circle"; }
 .o-icon._test:before  { background-color: $tp; background-image: var(--test); }
-.o-icon._search:before  { background-color: $tp; content: "search"; }
+// .o-icon._search:before  { background-color: $tp; content: "search"; }
 .o-icon._excel-download:before  { background-color: $tp; content: "download"; }
 .o-icon._column-toggle:before  { background-color: $tp; content: "tune"; }
 .o-icon._print:before  { background-color: $tp; content: "print"; }
+
+.o-icon._search:before  { background-color: $tp; background-image: var(--obj-ico-search); }
 
 
 /** Default Button */
@@ -395,82 +402,107 @@
 
 
 /** Default Forms */
-.o-form  { flex: 1 0 0; display: inline-block; display: inline-flex; position: relative; max-width: 100%; border-radius: 0; transition-duration: 0.05s; }
-.o-form:not(.type-string)  { font-weight: var(--bold-40, inherit); }
-.o-form >*  { flex: 0 1 auto; box-sizing: border-box; min-width: 0; border-radius: inherit; transition-duration: inherit; }
-.o-form >.bind  { font-size: inherit; line-height: inherit; flex: 1; width: 100%; min-width: 2.4em; color: inherit; outline: 0; box-shadow: none; }
-.o-form >.bind[disabled]  { opacity: 1.0; -webkit-text-fill-color: currentColor; }
-.o-form >.bind ~i  { position: absolute; inset: 0; border: $e10 solid Transparent; outline-offset: calc(-1 * $e10); pointer-events: none; }
-.o-form:where( ._input, ._select )  { background-color: var(--color-ground-enabled); }
-.o-form:where( ._input, ._select ) >.bind  { min-height: $height-form-50; padding-left: 0.7rem; padding-left: max(calc(7em / 14), 0.7rem); border: $e10 solid Transparent; background-color: Transparent; }
-.o-form:where( ._input, ._select ) >.bind ~i  { border-color: var(--color-edge-40); }
+// .o-form  { flex: 1 0 0; display: inline-block; display: inline-flex; position: relative; max-width: 100%; border-radius: 0; transition-duration: 0.05s; }
+// .o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
+// .o-form >*  { flex: 0 1 auto; box-sizing: border-box; min-width: 0; border-radius: inherit; transition-duration: inherit; }
+// .o-form >.bind  { font-size: inherit; line-height: inherit; flex: 1; width: 100%; min-width: 2.4em; color: inherit; outline: 0; box-shadow: none; }
+// .o-form >.bind[disabled]  { opacity: 1.0; -webkit-text-fill-color: currentColor; }
+// .o-form >.bind ~i  { position: absolute; inset: 0; border: $e10 solid Transparent; outline-offset: calc(-1 * $e10); pointer-events: none; }
+// .o-form:where( ._input, ._select )  { background-color: var(--color-ground-enabled); }
+// .o-form:where( ._input, ._select ) >.bind  { min-height: $height-form-50; padding-left: 0.7rem; padding-left: max(calc(7em / 14), 0.7rem); border: $e10 solid Transparent; background-color: Transparent; }
+// .o-form:where( ._input, ._select ) >.bind ~i  { border-color: var(--color-edge-40); }
 
-.o-form:has(>.bind[disabled])  { color: inherit; background-color: var(--color-ground-disabled); }
+// .o-form:has(>.bind[disabled])  { color: inherit; background-color: var(--color-ground-disabled); }
 
-.o-form:where( ._input, ._select ):has(>.bind:where( :not([disabled]):not([readonly]) )):hover  { color: var(--color-text-40); background-color: var(--color-ground); }
-.o-form:where( ._input, ._select ):hover >.bind:where( :not([disabled]):not([readonly]) ) ~i  { outline: $e10 solid var(--color-edge5); }
+// .o-form:where( ._input, ._select ):has(>.bind:where( :not([disabled]):not([readonly]) )):hover  { color: var(--color-text-40); background-color: var(--color-ground); }
+// .o-form:where( ._input, ._select ):hover >.bind:where( :not([disabled]):not([readonly]) ) ~i  { outline: $e10 solid var(--color-edge5); }
 
-.o-form >.bind:focus ~i  { outline-offset: $e10; }
-.o-form:where( ._input, ._select ) >.bind:focus ~i  { outline: $e20 solid var(--color-black); }
+// .o-form >.bind:focus ~i  { outline-offset: $e10; }
+// .o-form:where( ._input, ._select ) >.bind:focus ~i  { outline: $e20 solid var(--color-black); }
 
-.o-form:has(>.bind:where( :not([readonly]) ):focus-visible)  { color: var(--color-text-40); background-color: var(--color-ground); }
-.o-form >.bind:where( :not([readonly]) ):focus-visible ~i  { outline: $e20 solid var(--color-edge-70); outline-width: $e20 !important; }
-.o-form:where( ._input, ._select ) >.bind:where( :not([readonly]) ):focus-visible ~i  { outline-offset: calc(-1 * $e10); }
-
-
-.o-form._select >select  { -webkit-appearance: none; appearance: none; overflow: hidden; padding-right: 1.5em; background: var(--obj-sym-expand-more) no-repeat calc(100% + $e10) 50% /2rem 100%; text-overflow: ellipsis; white-space: nowrap; }
-.o-form._select >select[required]:invalid  { color: GrayText; }
-.o-form._select >select option  { color: var(--color-text-40); }
-
-.o-form._file >input  { min-height: $height-form-50; padding: calc(($height-form-50 - 19em / 14 - 6px) / 2) 0; }
-
-.o-form._range >input  { min-height: $height-form-50; }
-
-.o-form._input >input  { -webkit-appearance: none; appearance: none; overflow: hidden; padding: calc(($height-form-50 - 1lh - III(2)) / 2) 0.7rem; text-overflow: ellipsis; white-space: nowrap; }
-.o-form._input >input[type="password"]  { font-family: var(--typo-password); }
-
-.o-form._input >textarea  { -webkit-appearance: none; appearance: none; line-height: var(--text-height, calc(18 / 12)); padding: 0.6rem 0.7rem; }
-.o-form._input >textarea:not([rows])  { height: calc(1em * var(--text-height, calc(18 / 12)) * 5 + (0.6rem + $e10) * 2); }
-
-// .o-form:is(.size-md)  { font-size: var(--font-lm); line-height: var(--line-lm); }
-// .o-form:is(.size-md) >.bind  { min-height: $height-form-70; }
-// .o-form:is(.size-lg)  { font-size: var(--font-xl); line-height: var(--line-xl); }
-// .o-form:is(.size-lg, .m-forms.type-subject *) >.bind  { padding: 0.5rem 0.9rem; }
+// .o-form:has(>.bind:where( :not([readonly]) ):focus-visible)  { color: var(--color-text-40); background-color: var(--color-ground); }
+// .o-form >.bind:where( :not([readonly]) ):focus-visible ~i  { outline: $e20 solid var(--color-edge-70); outline-width: $e20 !important; }
+// .o-form:where( ._input, ._select ) >.bind:where( :not([readonly]) ):focus-visible ~i  { outline-offset: calc(-1 * $e10); }
 
 
-.o-form._input.type-string  { color: inherit; background-color: Transparent; }
-.o-form._input.type-string >.bind  { font-size: inherit; line-height: inherit; box-shadow: none; text-align: inherit; }
-.o-form._input.type-string >.bind ~i  { border-color: Transparent; outline: 0; }
-.o-form._input.type-string:not(.style-keep) >.bind  { padding-left: 0; padding-right: 0; }
+// .o-form._select >select  { -webkit-appearance: none; appearance: none; overflow: hidden; padding-right: 1.5em; background: var(--obj-sym-expand-more) no-repeat calc(100% + $e10) 50% /2rem 100%; text-overflow: ellipsis; white-space: nowrap; }
+// .o-form._select >select[required]:invalid  { color: GrayText; }
+// .o-form._select >select option  { color: var(--color-text-40); }
 
-.o-form:has(>.bind.mode-edited:not(:focus):where( :not(.o-subset *) ))  { background-color: var(--color-ground-selected); }
-.o-form >.bind.mode-edited:not(:focus):where( :not(.o-subset *) ) ~i  { outline: $e10 solid var(--color-edge-70); outline-offset: calc(-1 * $e10); }
+// .o-form._file >input  { min-height: $height-form-50; padding: calc(($height-form-50 - 19em / 14 - 6px) / 2) 0; }
 
-.o-form:has(>.bind.mode-invalid)  { color: var(--color-text-40); background-color: var(--color-ground); }
-.o-form >.bind.mode-invalid ~i  { outline: $e20 solid var(--color-require); outline-offset: calc(-1 * $e10); }
+// .o-form._range >input  { min-height: $height-form-50; }
 
+// .o-form._input >input  { -webkit-appearance: none; appearance: none; overflow: hidden; padding: calc(($height-form-50 - 1lh - III(2)) / 2) 0.7rem; text-overflow: ellipsis; white-space: nowrap; }
+// .o-form._input >input[type="password"]  { font-family: var(--typo-password); }
 
-.o-form .inner-strings  { align-self: center; margin-left: var(--gap-element-50-narrow); }
-.o-form .inner-strings._decibel  { min-width: calc(1em * 32 / 14); text-align: right; text-align: end; }
-
-
-.o-form .inner-binds  { display: flex; }
-.o-form .inner-binds >*  { flex: 1; }
-// .o-form .inner-binds  { line-height: 1; }
-
-.o-form .inner-binds .o-check >input ~i  { margin: calc(($height-form-50 - 1em) / 2); }
-.o-form .inner-binds .o-check >input ~i:before  { font-size: calc(20em / 24); margin: calc((var(--height-icon-50) - 1em) / 2); }
-.o-form.size-md .inner-binds .o-check >input ~i  { margin: calc(($height-form-70 - 1em) / 2); }
-.o-form.size-md .inner-binds .o-check >input ~i:before  { font-size: calc(24em / 24); }
-
-.o-form .inner-binds .o-button  { font-size: inherit; height: calc(44em / 24); border-color: Transparent; color: var(--color-icon-40); background: Transparent; border-radius: inherit; box-shadow: none; }
-.o-form .inner-binds .o-button >.o-icon  { font-size: calc(1em * 20 / 14); font-size: min(calc(1em * 20 / 14), $height-form-70); }
-
-.o-form .inner-binds .o-spins  { margin: 0 0.2rem; }
-.o-form .inner-binds .o-spins .o-button  { height: auto; min-height: 0; }
-.o-form .inner-binds .o-spins .o-button >.o-icon  { font-size: calc(1em * 15 / 14); color: var(--color-icon-70); }
+// .o-form._input >textarea  { -webkit-appearance: none; appearance: none; line-height: var(--text-height, calc(18 / 12)); padding: 0.6rem 0.7rem; }
+// .o-form._input >textarea:not([rows])  { height: calc(1em * var(--text-height, calc(18 / 12)) * 5 + (0.6rem + $e10) * 2); }
 
 
+
+// .o-form._input.type-string  { color: inherit; background-color: Transparent; }
+// .o-form._input.type-string >.bind  { font-size: inherit; line-height: inherit; box-shadow: none; text-align: inherit; }
+// .o-form._input.type-string >.bind ~i  { border-color: Transparent; outline: 0; }
+// .o-form._input.type-string:not(.style-keep) >.bind  { padding-left: 0; padding-right: 0; }
+
+// .o-form:has(>.bind.mode-edited:not(:focus):where( :not(.o-subset *) ))  { background-color: var(--color-ground-selected); }
+// .o-form >.bind.mode-edited:not(:focus):where( :not(.o-subset *) ) ~i  { outline: $e10 solid var(--color-edge-70); outline-offset: calc(-1 * $e10); }
+
+// .o-form:has(>.bind.mode-invalid)  { color: var(--color-text-40); background-color: var(--color-ground); }
+// .o-form >.bind.mode-invalid ~i  { outline: $e20 solid var(--color-require); outline-offset: calc(-1 * $e10); }
+
+
+// .o-form .inner-strings  { align-self: center; margin-left: var(--gap-element-50-narrow); }
+// .o-form .inner-strings._decibel  { min-width: calc(1em * 32 / 14); text-align: right; text-align: end; }
+
+
+// .o-form .inner-binds  { display: flex; }
+// .o-form .inner-binds >*  { flex: 1; }
+
+// .o-form .inner-binds .o-check >input ~i  { margin: calc(($height-form-50 - 1em) / 2); }
+// .o-form .inner-binds .o-check >input ~i:before  { font-size: calc(20em / 24); margin: calc((var(--height-icon-50) - 1em) / 2); }
+// .o-form.size-md .inner-binds .o-check >input ~i  { margin: calc(($height-form-70 - 1em) / 2); }
+// .o-form.size-md .inner-binds .o-check >input ~i:before  { font-size: calc(24em / 24); }
+
+// .o-form .inner-binds .o-button  { font-size: inherit; height: calc(44em / 24); border-color: Transparent; color: var(--color-icon-40); background: Transparent; border-radius: inherit; box-shadow: none; }
+// .o-form .inner-binds .o-button >.o-icon  { font-size: calc(1em * 20 / 14); font-size: min(calc(1em * 20 / 14), $height-form-70); }
+
+// .o-form .inner-binds .o-spins  { margin: 0 0.2rem; }
+// .o-form .inner-binds .o-spins .o-button  { height: auto; min-height: 0; }
+// .o-form .inner-binds .o-spins .o-button >.o-icon  { font-size: calc(1em * 15 / 14); color: var(--color-icon-70); }
+
+
+
+
+
+
+
+
+
+.o-form  { display: inline-block; display: inline-flex; align-items: center; position: relative; max-width: 100%; border: $e10 solid; border-radius: 0; transition-duration: 0s; }
+.o-form >*  { flex: 0 1 auto; min-width: 0; background: none; border-radius: inherit; transition-duration: inherit; }
+.o-form >.bind  { font-weight: inherit; font-size: inherit; line-height: inherit; flex: 1 0 0; min-width: 2.4em; height: 100%; min-height: 1em; padding: 0; border: 0; color: inherit; outline: 0; box-shadow: none; }
+
+.o-form  { border-color: $color-edge-40; }
+.o-form  { flex: 1 1 0; min-width: 0; width: 100%; height: $height-form-50; padding: 0 calc($gap-element-70 - $e10); border-radius: $radius-50; transition-duration: 0.05s; }
+.o-form >.o-icon:has(~.bind)  { margin-right: $gap-element-50; }
+.o-form >:last-child:not(.bind, .bind ~i)  { margin-right: calc(-1 * ($gap-element-70 - $e10)); }
+
+.o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
+
+
+.o-form[style*="width:"],
+  .o-form[class*=" wdth-"]  { flex: 0 0 auto; }
+.o-form.wdth-10  { width: calc(var(--rem) * 50); }
+.o-form.wdth-20  { width: calc(var(--rem) * 60); }
+.o-form.wdth-30  { width: calc(var(--rem) * 80); }
+.o-form.wdth-40  { width: calc(var(--rem) * 100); }
+.o-form.wdth-50  { width: calc(var(--rem) * 120); }
+.o-form.wdth-60  { width: calc(var(--rem) * 140); }
+.o-form.wdth-70  { width: calc(var(--rem) * 160); }
+.o-form.wdth-80  { width: calc(var(--rem) * 180); }
+.o-form.wdth-90  { width: calc(var(--rem) * 210); }
 
 
 
@@ -479,8 +511,8 @@
 .o-field  { display: inline-flex; flex-direction: column; gap: $gap-element-30; max-width: 100%; }
 .o-field:only-child  { display: flex; }
 .o-field >*  { min-height: 0; }
-.o-field >.field  { display: flex; align-items: center; gap: $gap-element-30; min-height: 0; margin: 0; }
-.o-field >.field >*  { min-width: 0; }
+.o-field >.fields  { display: flex; align-items: center; gap: $gap-element-30; min-height: 0; margin: 0; }
+.o-field >.fields >*  { min-width: 0; }
 
 
 
