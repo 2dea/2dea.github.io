@@ -107,7 +107,7 @@ function SUBTMPL() {
             <span className="item menu-show"><a id="Go-Navigator" href="#Navigator" title="전체메뉴 보이기"><i aria-hidden="true"></i><span className="inner">전체메뉴</span></a></span>
           </div> */}
 
-          <div className="div-search">
+          {/* <div className="div-search">
             <div className="fields">
               <span className="o-form _input">
                 <input type="text" placeholder="Settings Search" value="" className="bind" /><i aria-hidden="true"></i>
@@ -116,13 +116,24 @@ function SUBTMPL() {
                 </span>
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <hr className="g-overlay" />
       </header>
 
       <nav role="navigation" id="Navigator" className="dom-nav">
+        <div className="div-search">
+          <div className="o-field">
+            <div className="fields">
+              <span className="o-form _input">
+                <i aria-hidden="true" className="o-icon _search"></i>
+                <input type="text" placeholder="메뉴명이나 코드를 검색해주세요" value="" className="bind" /><i aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
         <div className="div-tablist">
           <div className="m-tab">
             <ul className="lists">
@@ -134,16 +145,137 @@ function SUBTMPL() {
 
         <div className="roles">
           <div className="div-nav-local">
-            <ul>
-              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
-              <li><a href="javascript:" className="link" aria-current="true"><span className="label">menu</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">menu</span></a></li>
-            </ul>
+            <div className="lists">
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="대시보드" className="p-accordion-header-link"><span className="p-accordion-header-text">대시보드</span></a>{/* Link { @DEV } */}
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="안전점검의 날 점검표 긴 메뉴명 긴 메뉴명 긴 메뉴명 긴 메뉴명" className="p-accordion-header-link" aria-expanded="false">
+                    <span className="p-accordion-header-text">안전점검의 날 점검표 긴 메뉴명 긴 메뉴명 긴 메뉴명 긴 메뉴명</span>
+                  </a>
+                </div>
+
+                <div className="p-toggleable-content">
+                  <div className="p-accordion-content">
+                    <a href="javascript:" title="menu" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">menu</span>
+                    </a>
+                    <a href="javascript:" title="menu" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">menu</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="보안진단의 날 점검표" className="p-accordion-header-link" aria-expanded="false">
+                    <span className="p-accordion-header-text">보안진단의 날 점검표</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="연간자율보안체계" className="p-accordion-header-link" aria-expanded="false">
+                    <span className="p-accordion-header-text">연간자율보안체계</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="인사이동 조치사항" className="p-accordion-header-link" aria-expanded="false">
+                    <span className="p-accordion-header-text">인사이동 조치사항</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="도급사업 관리" className="p-accordion-header-link" aria-expanded="false">
+                    <span className="p-accordion-header-text">도급사업 관리</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="열쇠관리" className="p-accordion-header-link" aria-expanded="true">{/* .p-accordion-header-link[aria-expanded="true"] */}
+                    <span className="p-accordion-header-text">열쇠관리</span>
+                  </a>
+                </div>
+
+                <div className="p-toggleable-content">
+                  <div className="p-accordion-content">
+                    <a href="javascript:" title="열쇠종류관리" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">열쇠종류관리</span>
+                    </a>
+                    <a href="javascript:" title="가나다라마바사아자차카타파하하(18글자예요)" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">가나다라마바사아자차카타파하하(18글자예요)</span>
+                    </a>
+                    <a href="javascript:" title="열쇠등록관리" className="p-accordion-header-link" aria-current="true">{/* .p-accordion-header-link[aria-current="true"] */}
+                      <span className="p-accordion-header-text">열쇠등록관리</span>
+                    </a>
+                    <a href="javascript:" title="열쇠인수도내역" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">열쇠인수도내역</span>
+                    </a>
+                    <a href="javascript:" title="예비열쇠관리" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">예비열쇠관리</span>
+                    </a>
+                    <a href="javascript:" title="예비열쇠보관확인증" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">예비열쇠보관확인증</span>
+                    </a>
+                    <a href="javascript:" title="관련조회 및 출력" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">관련조회 및 출력</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="소화기대장관리" className="p-accordion-header-link" aria-expanded="false">
+                    <span className="p-accordion-header-text">소화기대장관리</span>
+                  </a>
+                </div>
+
+                <div className="p-toggleable-content">
+                  <div className="p-accordion-content">
+                    <a href="javascript:" title="menu" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">menu</span>
+                    </a>
+                    <a href="javascript:" title="menu" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">menu</span>
+                    </a>
+                    <a href="javascript:" title="menu" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">menu</span>
+                    </a>
+                    <a href="javascript:" title="menu" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">menu</span>
+                    </a>
+                    <a href="javascript:" title="menu" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">menu</span>
+                    </a>
+                    <a href="javascript:" title="menu" className="p-accordion-header-link">
+                      <span className="p-accordion-header-text">menu</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="header">
+                  <a href="javascript:" title="기타관리" className="p-accordion-header-link">{/* Link { @DEV } */}
+                    <span className="p-accordion-header-text">기타관리</span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
             <div className="m-binds">
               <span className="group _center">
@@ -260,7 +392,7 @@ function SUBTMPL() {
                                     열쇠구분
                                   </span>
                                 </span>
-                                <div className="field">
+                                <div className="fields">
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
@@ -276,7 +408,7 @@ function SUBTMPL() {
                                     열쇠구분
                                   </span>
                                 </span>
-                                <div className="field">
+                                <div className="fields">
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
@@ -292,7 +424,7 @@ function SUBTMPL() {
                                     열쇠구분
                                   </span>
                                 </span>
-                                <div className="field">
+                                <div className="fields">
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
@@ -308,7 +440,7 @@ function SUBTMPL() {
                                     열쇠구분
                                   </span>
                                 </span>
-                                <div className="field">
+                                <div className="fields">
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
@@ -324,7 +456,7 @@ function SUBTMPL() {
                                     열쇠구분
                                   </span>
                                 </span>
-                                <div className="field">
+                                <div className="fields">
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
@@ -351,6 +483,18 @@ function SUBTMPL() {
                         <span className="value">8</span>
                         <span className="units">건</span>
                       </em>
+                    </div>
+
+                    <div className="o-field">
+                      <div className="fields">
+                        <span className="o-form _input wdth-70">
+                          <i aria-hidden="true" className="o-icon _search"></i>
+                          <input type="text" placeholder="메뉴ID, 메뉴명 입력" value="" className="bind" /><i aria-hidden="true"></i>
+                          <span className="inner-binds">
+                            <button type="button" title="검색" className="o-image-button o-icon _search"><span className="label">검색</span></button>
+                          </span>
+                        </span>
+                      </div>
                     </div>
 
                     <div className="m-binds">
@@ -527,7 +671,7 @@ function SUBTMPL() {
                             </th>
                             <td>
                               <div className="o-field">
-                                <div className="field">
+                                <div className="fields">
                                   <span className="o-form _input">
                                     <input type="text" placeholder="" value="" className="bind type-require" /><i aria-hidden="true"></i>
                                     <span className="inner-binds">
@@ -551,7 +695,7 @@ function SUBTMPL() {
                             </th>
                             <td>
                               <div className="o-field">
-                                <div className="field">
+                                <div className="fields">
                                   <span className="o-form _select">
                                     <select className="bind type-require">
                                       <option value="" disabled hidden selected>선택</option>
@@ -574,7 +718,7 @@ function SUBTMPL() {
                             </th>
                             <td colSpan="3">
                               <div className="o-field">
-                                <div className="field">
+                                <div className="fields">
                                   <span className="o-form _input c-wdth-50p">
                                     <input type="text" placeholder="" value="" className="bind" /><i aria-hidden="true"></i>
                                   </span>
