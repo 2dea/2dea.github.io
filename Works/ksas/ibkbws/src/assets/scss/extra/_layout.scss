@@ -198,9 +198,11 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-nav  { gap: $gap-element-70; padding-top: $gap-element-70; border-right: $e10 solid $color-edge-40; }
 
-.dom-nav .div-search  { margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); box-shadow: $dropshadow-70; }
+.dom-nav .div-search  { position: relative; margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); box-shadow: $dropshadow-70; }
 .dom-nav .div-search .o-icon._search  { @include icon-search(20); margin-right: $gap-element-70; }
 .dom-nav .div-search .o-icon._search:before  { font-size: $height-icon-50; background-position: 50%; }
+.dom-nav .div-search .o-field  { display: flex; }
+.dom-nav .div-search .result  { display: none; position: absolute; z-index: 9; width: 100%; background: $color-ground; box-shadow: $dropshadow-70; }
 
 
 .dom-nav .div-tablist  { margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); }

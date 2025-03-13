@@ -132,6 +132,18 @@ function SUBTMPL() {
               </span>
             </div>
           </div>
+
+          <div className="result">
+            <ul>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+            </ul>
+          </div>
         </div>
 
         <div className="div-tablist">
