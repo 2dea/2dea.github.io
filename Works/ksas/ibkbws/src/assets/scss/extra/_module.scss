@@ -43,6 +43,16 @@
 .o-text-strong  { font-weight: $bold-70; color: $color-key1-40; }
 
 
+/** Links */
+.o-link  { --theme: #475569; display: inline-flex; align-items: center; color: var(--theme); border-radius: 0; box-shadow: none; text-decoration: none; text-underline-offset: auto; white-space: normal; }
+.o-link:hover  { --theme: #1E293B; text-decoration: underline; }
+
+.o-link._primary  { --theme: #2968F9; }
+.o-link._primary:hover  { --theme: #2149A3; }
+.o-link._normal  { --theme: #475569; }
+.o-link._normal:hover  { --theme: #1E293B; }
+
+
 /** Headings */
 .o-heading  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; display: block; display: flex; align-items: center; color: $color-text-70; }
 .o-heading.level1  { font-size: $font-90; line-height: $line-90; }
@@ -232,7 +242,8 @@
   .o-action >*  { flex: none; min-width: 0; }
 
 
-.o-button,  .o-button._default  { --theme: var(--color-text-40); gap: III(4); min-width: calc(4em - $e10 * 2); min-height: $height-form-30; padding: III(3) 0.5em; border-color: currentColor; color: var(--theme); background-color: var(--color-ground); border-radius: $radius-50; white-space: nowrap; }
+.o-button,  .o-button._default  { --theme: var(--color-text-40);
+  --margin-block: ((var(--rem) * (var(--height-form-30) - var(--height-icon-30)) - var(--e10) * 2) / 2); gap: $gap-whitespace-50; min-width: calc(4em - $e10 * 2); min-height: $height-form-30; padding: calc(var(--margin-block)) 0.5em; border-color: currentColor; color: var(--theme); background-color: $color-ground; border-radius: $radius-50; white-space: nowrap; }
 .o-button:not([disabled], [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color; }
 .o-button:is([disabled], [aria-disabled="true"])  { color: GrayText; -webkit-text-fill-color: currentColor; filter: none; filter: grayscale(1.0) opacity(0.6) brightness(0.9); }
 
@@ -257,14 +268,17 @@
 .o-button.style-texted  { border-color: Transparent; background: Transparent; box-shadow: none; }
 
 
-.o-button:where(.dom-main .div-header .m-binds *),
+.o-button:where(.m-binds.type-start *),
   .o-button:where(.dom-nav .div-nav-local .m-binds *),
   .o-button.size-30  { font-size: $font-30; line-height: $line-30; }
-.o-button:where(.dom-main .div-footer .m-binds *),
-  .o-button.size-70  { font-size: $font-50; line-height: $line-50; min-width: calc(4em + $e10 * 4); padding: calc(III(3) + III(2)) calc(0.5em + 0.25em); }
+.o-button.size-60  { font-size: $font-50; line-height: $line-50; min-width: calc(4em + $e10 * 4); padding: calc(III(3) + III(2)) calc(0.5em + 0.25em); }
+.o-button:where(.m-binds.type-end >.group._primary *),
+  .o-button.size-70  { font-size: $font-50; line-height: $line-50; min-width: calc(5em + $e10 * 2); padding: calc(III(3) + III(2)) calc(0.5em + 0.25em); padding: calc(var(--margin-block) + $e10 * 5) calc(0.5em + 0.25em); }
+/*
 .o-button:where(.m-header .m-binds *),
   .o-button:where(.o-field *),
   .o-button:where(.m-filter-form .binds *),
+ */
   .o-button.size-50  { font-size: $font-50; line-height: $line-50; }
 
 
@@ -287,11 +301,14 @@
 .o-image-button.size-30  { font-size: $height-form-30; }
 
 
-.m-binds  { display: flex; justify-content: space-between; align-items: flex-start; gap: $gap-element-70; clear: both; }
+.m-binds  { display: flex; align-items: center; justify-content: space-between; gap: $gap-element-70 calc($gap-element-80 * 2); clear: both; }
 .m-binds >*  { flex: 0 1 auto; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: $gap-element-50; }
 .m-binds >* >*  { flex: 0 1 auto; }
 
-.m-binds:has(>:nth-child(n+3)) >:where(:first-child, :last-child)  { flex: 1 0 0; }
+.m-binds:has(>._utility)  { flex-wrap: wrap; }
+.m-binds:has(>._utility) >*  { flex-wrap: nowrap; }
+
+.m-binds:not(:has(>._utility)):has(>:nth-child(n+3)) >:where(:first-child, :last-child)  { flex: 1 0 0; }
 .m-binds >:not(:only-child):first-child  { justify-content: flex-start; }
 .m-binds >:not(:only-child):last-child  { justify-content: flex-end; }
 .m-binds >:only-child  { flex: auto; justify-content: flex-end; }
@@ -302,6 +319,8 @@
 .m-binds >._around  { flex: 1; }
 .m-binds >._around >*  { flex: 1; }
 .m-binds >._around >* >*  { width: 100%; }
+
+.m-binds >._utility  { justify-content: flex-end; margin-left: auto; }
 
 
 /** Default Checks */
@@ -482,10 +501,10 @@
 
 .o-form  { display: inline-block; display: inline-flex; align-items: center; position: relative; max-width: 100%; border: $e10 solid; border-radius: 0; transition-duration: 0s; }
 .o-form >*  { flex: 0 1 auto; min-width: 0; background: none; border-radius: inherit; transition-duration: inherit; }
-.o-form >.bind  { font-weight: inherit; font-size: inherit; line-height: inherit; flex: 1 0 0; min-width: 2.4em; height: 100%; min-height: 1em; padding: 0; border: 0; color: inherit; outline: 0; box-shadow: none; }
+.o-form >.bind  { font-weight: inherit; font-size: inherit; line-height: inherit; flex: 1 0 0; height: 100%; min-height: 1em; padding: 0; border: 0; color: inherit; outline: 0; box-shadow: none; }
 
 .o-form  { border-color: $color-edge-40; }
-.o-form  { flex: 1 1 0; min-width: 0; width: 100%; height: $height-form-50; padding: 0 calc($gap-element-70 - $e10); border-radius: $radius-50; transition-duration: 0.05s; }
+.o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; height: $height-form-50; padding: 0 calc($gap-element-70 - $e10); border-radius: $radius-50; transition-duration: 0.05s; }
 .o-form >.o-icon:has(~.bind)  { margin-right: $gap-element-50; }
 .o-form >:last-child:not(.bind, .bind ~i)  { margin-right: calc(-1 * ($gap-element-70 - $e10)); }
 
@@ -512,7 +531,7 @@
 .o-field:only-child  { display: flex; }
 .o-field >*  { min-height: 0; }
 .o-field >.fields  { display: flex; align-items: center; gap: $gap-element-30; min-height: 0; margin: 0; }
-.o-field >.fields >*  { min-width: 0; }
+.o-field >.fields >:not(.o-form)  { min-width: 0; }
 
 
 
@@ -551,7 +570,7 @@
 .m-tab:after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: $e10; background: var(--l-color-point); }
 .m-tab >*  { display: flex; min-width: 0; }
 .m-tab >* >*  { flex: none; position: relative; min-width: 0; }
-.m-tab >* >:not(:first-child)  { margin-left: calc($e10 * -1); }
+.m-tab >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
 .m-tab >.lists  { flex: 1; }
 
 
@@ -577,7 +596,7 @@
 .m-mdi:after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: $e10; background: var(--l-color-point); }
 .m-mdi >*  { display: flex; min-width: 0; }
 .m-mdi >* >*  { flex: none; position: relative; min-width: 0; }
-.m-mdi >* >:not(:first-child)  { margin-left: calc($e10 * -1); }
+.m-mdi >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
 .m-mdi >.lists  { flex: 1; }
 
 
@@ -588,7 +607,7 @@
   --margin-scrollbar: calc(var(--rem) * 0);
   --width-scrollbar: calc(var(--rem) * 1 + var(--margin-scrollbar) * 2);
 }
-.m-mdi  { gap: 0 $gap-whitespace-30; padding: III(0) III(18) 0; }
+.m-mdi  { gap: 0 $gap-whitespace-30; }
 .m-mdi >*  { gap: 0 III(3); }
 .m-mdi .link  { min-width: III(120); height: 100%; min-height: III(32); padding: III(7) III(11); border: $e10 solid #EAEBEC; border-bottom-color: $tp; background: #F7F7F8; }
 .m-mdi .link.root:before  { content: "home"; @include setSymbolVariationSettings(1); color: var(--l-color-point); }
@@ -603,7 +622,7 @@
 
 .m-mdi:after  { content: none; }
 
-.m-mdi >.lists  { overflow: scroll hidden; margin-bottom: calc(var(--width-scrollbar) * -1); }
+.m-mdi >.lists  { overflow: scroll hidden; margin-bottom: calc(-1 * var(--width-scrollbar)); }
 .m-mdi >.lists .link  { padding-right: III(11 + 16 + 4) }
 
 .m-mdi >.controls  { box-shadow: 0 0 5px 5px var(--color-ground); }
@@ -657,7 +676,7 @@
 // .m-filter-form  { display: flex; align-items: flex-end; justify-content: space-between; gap: III(16); clear: both; padding: III(14); border: $e10 solid navy; background: Ivory; border-radius: $radius-50; }
 // .m-filter-form >*  { flex: none; min-width: 0; }
 // .m-filter-form .fieldset  { flex: 0 0 auto; overflow: hidden; }
-// .m-filter-form .fieldset .table  { $l-border-spacing: III(8); border-spacing: 0 $l-border-spacing; width: 100%; margin: calc($l-border-spacing * -1) 0; }
+// .m-filter-form .fieldset .table  { $l-border-spacing: III(8); border-spacing: 0 $l-border-spacing; width: 100%; margin: calc(-1 * $l-border-spacing) 0; }
 // .m-filter-form .fieldset .table th,
 //   .m-filter-form .fieldset .table td  { height: $height-form-50; padding: III(0) III(4); white-space: nowrap; }
 // // .m-filter-form .fieldset .table th  { width: 0; }

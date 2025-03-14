@@ -362,17 +362,17 @@ function SUBTMPL() {
                 <span className="label">Headline</span>
 
                 <label className="o-check type-symbol style-favorite">
-                  <input type="checkbox" value="" className="bind" /><i aria-hidden="true"></i>
-                  <span className="label _hidden">마이메뉴</span>
+                  <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
+                  <span className="label _hidden">마이메뉴 등록</span>
                 </label>
               </h1>
             </div>
 
             <div className="m-binds type-start">
-              <span className="group">
+              <div className="group">
                 <span className="item"><button type="button" className="o-button"><span className="label">화면잠금</span></button></span>
                 <span className="item"><button type="button" className="o-button"><span className="label">도움말</span></button></span>
-              </span>
+              </div>
             </div>
           </div>
 
@@ -510,17 +510,17 @@ function SUBTMPL() {
                     </div>
 
                     <div className="m-binds">
-                      <span className="group">
+                      <div className="group">
                         <span className="item"><button type="button" className="o-button _normal"><span className="label">행추가</span></button></span>
                         <span className="item"><button type="button" className="o-button _normal"><span className="label">행삭제</span></button></span>
                         <span className="item"><button type="button" className="o-button _normal"><span className="label">취소</span></button></span>
-                      </span>
+                      </div>
 
-                      <span className="group">
+                      <div className="group">
                         <span className="item"><button type="button" title="엑셀&#x200B;다운로드" className="o-image-button o-icon _excel-download"><span className="label">엑셀&#x200B;다운로드</span></button></span>
                         <span className="item"><button type="button" title="열설정" className="o-image-button o-icon _column-toggle"><span className="label">열설정</span></button></span>
                         <span className="item"><button type="button" title="표인쇄" className="o-image-button o-icon _print"><span className="label">표인쇄</span></button></span>
-                      </span>
+                      </div>
                     </div>
                   </div>
 
@@ -662,9 +662,9 @@ function SUBTMPL() {
                     <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
 
                     <div className="m-binds">
-                      <span className="group">
+                      <div className="group">
                         <span className="item"><button type="button" className="o-button _lined-primary"><span className="label">신규</span></button></span>
-                      </span>
+                      </div>
                     </div>
                   </div>
 
@@ -790,6 +790,25 @@ function SUBTMPL() {
                               </div>
                             </td>
                           </tr>
+                          <tr>
+                            <th>
+                              <span className="o-label">
+                                <span className="label">
+                                  Link
+                                </span>
+                              </span>
+                            </th>
+                            <td colSpan="3">
+                              <ul>
+                                <li>
+                                  <a href="javascript:" className="o-link">링크</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:" className="o-link _primary">링크</a>
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </form>
@@ -805,33 +824,55 @@ function SUBTMPL() {
           <hr className="div-sep" />
 
           <div className="div-footer">
-            <div className="m-binds type-end">
-            <span className="group">
+            {/* <div className="m-binds type-end">
+              <div className="group">
                 <span className="item"><a href="javascript:" className="o-button"><span className="label">앵커</span></a></span>
                 <span className="item"><button type="button" className="o-button"><span className="label">버튼</span></button></span>
                 <span className="item"><button type="button" className="o-button _normal style-texted"><span className="label">텍스트</span></button></span>
                 <span className="item"><button type="button" className="o-button _solid-secondary"><span className="label">조회</span></button></span>
                 <span className="item"><button type="button" className="o-button _lined-secondary"><span className="label">세컨드</span></button></span>
-              </span>
+              </div>
 
-              <span className="group">
+              <div className="group">
                 <span className="item"><a href="javascript:" className="o-button" aria-disabled="true"><span className="label">앵커</span></a></span>
                 <span className="item"><button type="button" className="o-button" disabled><span className="label">비활성화</span></button></span>
                 <span className="item"><button type="button" className="o-button _normal style-texted" disabled><span className="label">텍스트</span></button></span>
                 <span className="item"><button type="button" className="o-button _solid-secondary" disabled><span className="label">조회</span></button></span>
                 <span className="item"><button type="button" className="o-button _lined-secondary" disabled><span className="label">세컨드</span></button></span>
-                <span className="item"><button type="button" className="o-button _normal" disabled><span className="label">취소</span></button></span>
-                <span className="item"><button type="button" className="o-button _lined-primary" disabled><span className="label">삭제</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal _cancel" disabled><span className="label">취소</span></button></span>
+                <span className="item"><button type="button" className="o-button _lined-primary _delete" disabled><span className="label">삭제</span></button></span>
                 <span className="item"><button type="button" className="o-button _filled-primary" disabled><span className="label">필드</span></button></span>
                 <span className="item"><button type="button" className="o-button _solid-primary" disabled><span className="label">저장</span></button></span>
-              </span>
+              </div>
 
-              <span className="group">
-                <span className="item"><button type="button" className="o-button _normal"><span className="label">취소</span></button></span>
-                <span className="item"><button type="button" className="o-button _lined-primary"><span className="label">삭제</span></button></span>
+              <div className="group _primary">
+                <span className="item"><button type="button" className="o-button _normal _cancel"><span className="label">취소</span></button></span>
+                <span className="item"><button type="button" className="o-button _lined-primary _delete"><span className="label">삭제</span></button></span>
                 <span className="item"><button type="button" className="o-button _filled-primary"><span className="label">필드</span></button></span>
                 <span className="item"><button type="button" className="o-button _solid-primary"><span className="label">저장</span></button></span>
-              </span>
+              </div>
+            </div> */}
+
+            <div className="m-binds type-end">
+              <div className="group">
+                <span className="item"><a href="javascript:" className="o-button"><span className="label">앵커</span></a></span>
+                <span className="item"><button type="button" className="o-button"><span className="label">버튼</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal style-texted"><span className="label">텍스트</span></button></span>
+                <span className="item"><button type="button" className="o-button _solid-secondary"><span className="label">조회</span></button></span>
+                <span className="item"><button type="button" className="o-button _lined-secondary"><span className="label">세컨드</span></button></span>
+              </div>
+
+              <div className="group _utility">
+                <span className="item"><button type="button" className="o-button _filled-primary" disabled><span className="label">필드</span></button></span>
+                <span className="item"><button type="button" className="o-button _solid-primary" disabled><span className="label">저장</span></button></span>
+              </div>
+
+              <div className="group _primary">
+                <span className="item"><button type="button" className="o-button _normal _cancel"><span className="label">취소</span></button></span>
+                <span className="item"><button type="button" className="o-button _lined-primary _delete"><span className="label">삭제</span></button></span>
+                <span className="item"><button type="button" className="o-button _filled-primary"><span className="label">필드</span></button></span>
+                <span className="item"><button type="button" className="o-button _solid-primary"><span className="label">저장</span></button></span>
+              </div>
             </div>
           </div>
         </div>

@@ -137,7 +137,7 @@
 
 html  {
   direction: ltr; font: 125% /calc(16 / 12) '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
-  -ms-text-underline-position: below; text-underline-position: under;
+  -ms-text-underline-position: below; text-underline-position: under; text-underline-offset: auto;
   -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -webkit-font-smoothing: subpixel-antialiased;
   -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: hsla(0,0%,0%, 0.0);
 }
