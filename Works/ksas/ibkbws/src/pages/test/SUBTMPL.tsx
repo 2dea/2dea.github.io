@@ -863,8 +863,12 @@ function SUBTMPL() {
               </div>
 
               <div className="group _utility">
-                <span className="item"><button type="button" className="o-button _filled-primary" disabled><span className="label">필드</span></button></span>
-                <span className="item"><button type="button" className="o-button _solid-primary" disabled><span className="label">저장</span></button></span>
+                <div className="m-print-binds">
+                  <button type="button" className="o-button _normal style-texted"><span className="label">텍스트</span></button>
+                  <button type="button" className="o-button _normal style-texted"><span className="label">텍스트</span></button>
+                  <button type="button" className="o-button _normal style-texted"><span className="label">텍스트</span></button>
+                  <button type="button" className="o-button _normal style-texted"><span className="label">텍스트</span></button>
+                </div>
               </div>
 
               <div className="group _primary">
