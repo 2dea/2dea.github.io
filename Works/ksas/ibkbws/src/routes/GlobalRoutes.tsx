@@ -7,6 +7,13 @@ import React from 'react';
 import { useRoutes } from 'react-router';
 
 // components
+import Decorator from '@layouts/Decorator';
+
+import SUBTMPL from '@pages/test/SUBTMPL'; // subtmpl
+import POPTMPL from '@pages/test/POPTMPL'; // poptmpl
+import TMPL from '@pages/test/TMPL'; // tmpl
+
+
 import Layout from '@layouts/Layout';
 
 // 퍼블리싱
@@ -65,10 +72,24 @@ import SYAD4020M01 from '@pages/html/SYAD4020M01'; // SYAD4020M01_06시스템관
 import SYAD6010M01 from '@pages/html/SYAD6010M01'; // SYAD6010M01_06시스템관리_06공휴일관리
 import SYAD8030M01 from '@pages/html/SYAD8030M01'; // SYAD8030M01_06시스템관리_08기타관리_03평가기준관리
 
-import SUBTMPL from '@pages/test/SUBTMPL'; // subtmpl
 
 function GlobalRoutes() {
   return useRoutes([
+    {
+      path: '/test',
+      // element: <Layout />,
+      children: [
+        { path: 'SUBTMPL', element: <SUBTMPL /> },
+      ],
+    },
+    {
+      path: '/test',
+      element: <Decorator />,
+      children: [
+        { path: 'POPTMPL', element: <POPTMPL /> },
+        { path: 'TMPL', element: <TMPL /> },
+      ],
+    },
     {
       path: '/',
       children: [{ path: 'login', element: <DACM0000M01 /> }],
@@ -128,13 +149,6 @@ function GlobalRoutes() {
         { path: 'SYAD4020M01', element: <SYAD4020M01 /> },
         { path: 'SYAD6010M01', element: <SYAD6010M01 /> },
         { path: 'SYAD8030M01', element: <SYAD8030M01 /> },
-      ],
-    },
-    {
-      path: '/test',
-      // element: <Layout />,
-      children: [
-        { path: 'SUBTMPL', element: <SUBTMPL /> },
       ],
     },
   ]);
