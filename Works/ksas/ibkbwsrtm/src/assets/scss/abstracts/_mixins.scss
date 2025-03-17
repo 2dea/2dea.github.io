@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+// mixins
+@mixin user-status($type, $index) {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+
+  &.#{$type}#{$index} {
+    background-image: url("/public/images/table/ico-24-ibk-#{$type}#{$index}.svg");
+  }
+}
+
+@mixin text-dot($top-size, $dot-size, $dot-color, $font-color, $pl, $font-size, $line-height) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top-size;
+    left: 0;
+    width: $dot-size;
+    height: $dot-size;
+    border-radius: 50%;
+    background-color: $dot-color;
+  }
+
+  span {
+    display: inline-block;
+    padding-left: $pl;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $font-color;
+  }
+}
+
+@mixin table-label-size($width) {
+  .u-dataview-list {
+    dt {
+      width: $width !important;
+    }
+
+    dd {
+      width: calc(100% - $width) !important;
+    }
+  }
+}

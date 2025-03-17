@@ -1,0 +1,98 @@
+@charset 'utf-8';
+
+// layouts
+.ibk-sys-wrap {
+  // min-width: $MIN_WIDTH;
+  height: 100%;
+}
+
+.ibk-sys-cover {
+  overflow: hidden;
+  height: 100%;
+  padding: 16px;
+  // background-color: $BGCOLOR_BLUE03;
+}
+
+.ibk-sys-header {
+  // min-width: $MIN_WIDTH;
+}
+
+.ibk-sys-main {
+  // min-width: $MIN_WIDTH;
+  // overflow-x: auto;
+  height: calc(100% - 124px);
+  margin-top: 80px;
+}
+
+.ibk-sys-footer {
+  // min-width: $MIN_WIDTH;
+}
+
+// @media (max-width: 1600px) {
+//   .ibk-sys-footer {
+//     bottom: 0;
+//   }
+// }
+
+// @media (max-width: 1920px) {
+//   .formgroup-inline {
+//     flex-wrap: nowrap;
+//   }
+// }
+
+.ibk-sys-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: $BGCOLOR_BLUE03;
+
+  .login-logo {
+    width: 320px;
+    height: 46px;
+
+    a {
+      width: 100%;
+      height: 100%;
+      background-image: url("/public/images/common/img_logo_blue.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50%;
+    }
+  }
+
+  .login-sso {
+    width: 420px;
+    margin-top: 40px;
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 6px;
+
+      span {
+        @include setTextStyle(calc(var(--rem) * var(--font-15px)), calc(var(--rem) * var(--line-15px)));
+      }
+    }
+  }
+}
+
+.container {
+  height: 100%;
+
+  >.grid {
+    height: 100%;
+  }
+}
+
+.panel {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  padding: 24px 20px;
+  background-color: $BGCOLOR_WHITE;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}

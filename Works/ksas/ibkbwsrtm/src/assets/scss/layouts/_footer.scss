@@ -1,0 +1,57 @@
+@charset 'utf-8';
+
+// footer
+.ibk-sys-footer {
+  position: absolute;
+  bottom: 16px;
+  width: calc(100% - 32px);
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 28px;
+  }
+
+  .copyright {
+    @include setTextStyle(inherit, inherit);
+    color: $FONT_GRAY02;
+  }
+
+  .cscenter {
+    display: flex;
+
+    dl {
+      display: flex;
+      align-items: center;
+
+      +dl {
+        margin-left: 40px;
+      }
+
+      dt,
+      dd {
+        @include setTextStyle(inherit, inherit);
+      }
+
+      dt {
+        font-weight: $bold-70;
+        color: $FONT_GRAY01;
+      }
+
+      dd {
+        padding-left: 8px;
+        font-weight: inherit;
+        color: $FONT_GRAY02;
+      }
+    }
+  }
+
+  .col-fixed {
+    padding: 0 !important;
+  }
+
+  .p-inputgroup {
+    height: 28px;
+  }
+}
