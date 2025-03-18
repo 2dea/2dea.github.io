@@ -131,9 +131,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 /* .dom-wrapper >:not(.dom-nav):not(.dom-main) >.roles  { width: 1260px; margin: 0 auto; padding: 0 30px; background: rgba(0,0,0, 0.1); background: rgb(0 0 0 /10%); } */
 
 [class*=" dom-"],
-  [class|="dom"]  { display: flex; flex-direction: column; min-width: 0; }
+  [class|="dom"]  { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
 [class*=" dom-"] >.roles,
-  [class|="dom"] >.roles  { flex: 1; display: flex; flex-direction: column; background-color: var(--color-ground); }
+  [class|="dom"] >.roles  { flex: 1; display: flex; flex-direction: column; min-height: 0; background-color: var(--color-ground); }
 [class*=" dom-"] >.g-overlay,
   [class|="dom"] >.g-overlay  { min-height: 0; opacity: 0.001; }
 [class*=" dom-"] >.roles >*,
@@ -249,9 +249,14 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main >*  { padding: 0 $margin-layout-inline; }
 .dom-main >:first-child  { border-top-left-radius: inherit; border-top-right-radius: inherit; }
 .dom-main >:last-child  { border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; }
-.dom-main >.roles  { flex: 1 0 0; gap: $margin-layout-block; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
-.dom-main >.roles >:first-child  { padding-top: $margin-layout-block; }
-.dom-main >.roles >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); }
+// .dom-main >.roles  { flex: 1 0 0; gap: $margin-layout-block; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
+// .dom-main >.roles >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); }
+// .dom-main >.roles >:first-child  { padding-top: $margin-layout-block; }
+.dom-main >.roles  { flex: 1 0 0; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
+.dom-main >.roles :has(:where([class|="div"]) ~[class|="div"])  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
+.dom-main :has(>:where([class|="div"]) ~[class|="div"])  {  }
+.dom-main :has(>:where([class|="div"]) ~[class|="div"]) >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); margin-top: $margin-layout-block; }
+.dom-main :has(>:where([class|="div"]) ~[class|="div"]) >:first-child  { margin-top: 0; padding-top: $margin-layout-block; }
 
 .dom-main >.div-tablist  { font-size: inherit; line-height: inherit; border-bottom: $e10 solid #E2E8F0; }
 .dom-main >.div-tablist .m-mdi  { margin-bottom: calc(-1 * $e10); padding-top: $gap-element-80; }
@@ -268,20 +273,26 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main .div-header  { position: sticky; top: calc($margin-layout-block * -1); margin-top: calc($margin-layout-block * -1); padding-top: $margin-layout-block; background-color: inherit; }
 // .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin-bottom: calc($margin-layout-block * -1); padding-bottom: $margin-layout-block; }
 .dom-main .div-header  { position: sticky; top: 0; background-color: inherit; }
-.dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: 0 0 calc(-1 * $margin-layout-block); background-color: inherit; }
+.dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: 0 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
-.dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+// .dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+.dom-main * ~.div-footer  { margin-top: $gap-element-90; padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
 
-
+// @scope (.dom-main) to (.o-grid)  {
+//   :has(.div-header)  { background-color: gold; }
+// }
 
 
 
 .dom-aside  { display: none; background: Silver; }
 .dom-footer  { display: none; background: Silver; }
 
-
-
-
+/*
+@scope (.roles) to (.div-contents) {
+  >*  { border: 1px solid Red; }
+  // :scope .div-contents { border: 1px solid Red; }
+}
+ */
 
 
 
@@ -318,7 +329,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main >.role-secondary .div-header .navs .fn-close:before  { content: "keyboard_double_arrow_right"; }
 
 
-.dom-main .div-contents  { display: flex; flex-direction: column; flex: 1; margin: 0; /* padding: var(--margin-layout-block) var(--margin-layout-inline) var(--margin-layout-block); */ }
+// .dom-main .div-contents  { display: flex; flex-direction: column; flex: 1; margin: 0; /* padding: var(--margin-layout-block) var(--margin-layout-inline) var(--margin-layout-block); */ }
+.dom-main .div-contents  { flex: 1; display: flex; flex-direction: column; }
+.dom-main .div-contents :has(.o-grid)   { flex: 1; display: flex; flex-direction: column; background-color: inherit; }
 
 // .dom-main .div-contents >.where-cols-even  { width: 100%; min-width: 64rem; max-width: 90rem; margin-left: auto; margin-right: auto; }
 // .dom-main >.role-primary .div-contents >.where-cols-even  { min-width: 84rem; }
