@@ -20,9 +20,7 @@ function Decorator() {
         <Mdi />
 
         {/* <!-- /* Primary { @DEV } --> */}
-        <div className="roles" data-div-role="0">
-          <Outlet />
-        </div>
+        <Outlet />
         {/* <!-- // Primary { @DEV } --> */}
 
       </div>
