@@ -192,6 +192,10 @@ summary:where(.m-details *)::-webkit-details-marker  { display: none; }
 /* :where( .o-button, .o-action ) >:first-child  { margin-left: 0.5em; }
 :where( .o-button, .o-action ) >:last-child  { margin-right: 0.5em; } */
 
+.o-button::-moz-focus-inner  { border-style: none; padding: 0; }
+.o-button:-moz-focusring  { outline: 1px dotted ButtonText; }
+
+
 .o-button  { font-weight: var(--bold-70); font-size: var(--font-2xs); line-height: var(--line-2xs); min-width: 5em; min-height: var(--height-global-form); padding: 0.4rem calc(1em - var(--e10, 1px)); border-color: currentColor; border-color: Transparent; color: var(--color-text1); background-color: var(--color-ground, White); border-radius: var(--radius-global-element); box-shadow: var(--elevation-1); }
 .o-button:not([disabled]),  .o-button:not([aria-disabled="true"])  { -webkit-transition: all 0.15s; transition: all 0.15s; -webkit-transition-property: border-color, background-color, color; transition-property: border-color, background-color, color; }
 .o-button[disabled],  .o-button[aria-disabled="true"]  { /* color: rgb(var(--color-gray)) !important; background-color: rgb(var(--color-ground1)) !important; opacity: 1.0; */ opacity: 0.3; box-shadow: none; }
@@ -296,7 +300,7 @@ summary:where(.m-details *)::-webkit-details-marker  { display: none; }
  -------- */
 
 /** Default Checks */
-/* 
+/*
 .o-check  { display: inline; }
 .o-check >input,
   .o-check >input ~*  { cursor: pointer; }
@@ -403,14 +407,20 @@ summary:where(.m-details *)::-webkit-details-marker  { display: none; }
 
 
 /** Forms Type Selector */
-.o-form ::-ms-clear,
-  .o-form ::-ms-reveal  { display: none; }
+.o-form [type="search"] { -webkit-appearance: textfield; outline-offset: -2px; }
+.o-form ::-webkit-search-decoration { -webkit-appearance: none; }
 .o-form ::-webkit-search-cancel-button,
   .o-form ::-webkit-search-decoration,
   .o-form ::-webkit-search-results-button,
   .o-form ::-webkit-search-results-decoration  { display: none; }
+
+.o-form ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
+
 .o-form ::-webkit-inner-spin-button,
-  .o-form ::-webkit-outer-spin-button  { -webkit-appearance: none; margin:0; }
+  .o-form ::-webkit-outer-spin-button  { -webkit-appearance: none; height: auto; margin:0; }
+
+.o-form ::-ms-clear,
+  .o-form ::-ms-reveal  { display: none; }
 
 .o-form :-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: start !important; text-align: left; color: var(--color-text-placeholder, #757575) !important; }
 .o-form ::-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: start !important; text-align: left; color: var(--color-text-placeholder, #757575) !important; }
