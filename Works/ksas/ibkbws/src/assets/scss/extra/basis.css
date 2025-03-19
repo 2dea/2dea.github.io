@@ -181,10 +181,10 @@ table  { table-layout: auto; empty-cells: show; border-collapse: separate; borde
 table :not(tr > * *)  { color: inherit; background-color: inherit; text-align: inherit; }
 th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0.125em; border: 0 solid; border-width: 1px; }
 fieldset  { min-width: 0; padding: 0; border-style: none; }
-legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; color: inherit; white-space: normal; }
+legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
 label  { display: inline-block; cursor: pointer; }
-input[type="range"],  input[type="color"],  input[type="checkbox"],  input[type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
-input[type="submit"],  input[type="reset"],  input[type="button"],  button  { -webkit-appearance: button; min-width: 3em; overflow: visible; padding: 0.375ex 0.4em; cursor: pointer; text-transform: none; }
+[type="range"],  [type="color"],  [type="checkbox"],  [type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
+[type="submit"],  [type="reset"],  [type="button"],  button  { -webkit-appearance: button; min-width: 3em; overflow: visible; padding: 0.375ex 0.4em; cursor: pointer; text-transform: none; }
 select  { text-transform: none; }
 option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
 textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: normal; }
@@ -206,4 +206,4 @@ template  { display: none; }
     cursor: default;
     cursor: not-allowed;
 }
-[hidden]  { display: none; }
+[hidden]  { display: none !important; }
