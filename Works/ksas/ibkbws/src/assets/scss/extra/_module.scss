@@ -281,6 +281,9 @@
 .o-button >*,
   .o-action >*  { flex: none; min-width: 0; }
 
+.o-button::-moz-focus-inner  { border-style: none; padding: 0; }
+.o-button:-moz-focusring  { outline: 1px dotted ButtonText; }
+
 
 .o-button,  .o-button._default  { --theme: var(--color-text-40); --margin-block: ((var(--rem) * (var(--height-form-30) - var(--height-icon-30)) - var(--e10) * 2) / 2); gap: $gap-whitespace-30; min-width: calc(4em - $e10 * 2); min-height: $height-form-30; padding: calc(var(--margin-block)) 0.5em; border-color: currentColor; color: var(--theme); background-color: $color-ground; border-radius: $radius-50; white-space: nowrap; }
 .o-button:not([disabled], [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color; }
@@ -474,14 +477,20 @@
 
 
 /** Forms Type Selector */
-.o-form ::-ms-clear,
-  .o-form ::-ms-reveal  { display: none; }
+.o-form [type="search"] { -webkit-appearance: textfield; outline-offset: -2px; }
+.o-form ::-webkit-search-decoration { -webkit-appearance: none; }
 .o-form ::-webkit-search-cancel-button,
   .o-form ::-webkit-search-decoration,
   .o-form ::-webkit-search-results-button,
   .o-form ::-webkit-search-results-decoration  { display: none; }
+
+.o-form ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
+
 .o-form ::-webkit-inner-spin-button,
-  .o-form ::-webkit-outer-spin-button  { -webkit-appearance: none; margin:0; }
+  .o-form ::-webkit-outer-spin-button  { -webkit-appearance: none; height: auto; margin:0; }
+
+.o-form ::-ms-clear,
+  .o-form ::-ms-reveal  { display: none; }
 
 .o-form :-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: start !important; text-align: left; color: $color-text-placeholder !important; }
 .o-form ::-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: start !important; text-align: left; color: $color-text-placeholder !important; }
