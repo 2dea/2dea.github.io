@@ -1,5 +1,5 @@
 /**
- * @description SUBTMPL
+ * @description TMPL
  */
 
 // dependency
@@ -17,7 +17,7 @@ import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
 
-function SUBTMPL() {
+function TMPL() {
   // 브레드크럼
   const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한관리' }, { label: '생성관리' }];
 
@@ -476,4 +476,4 @@ function SUBTMPL() {
   );
 }
 
-export default SUBTMPL;
+export default TMPL;
