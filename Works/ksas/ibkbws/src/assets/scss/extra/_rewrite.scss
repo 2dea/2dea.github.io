@@ -19,17 +19,26 @@ button  {
   background-color: transparent;
 }
 
-// theme.css
-// @layer primereact {
-  .p-component  {
-    @include setTextStyle($font-50, $line-50);
-    font-weight: $bold-40;
-    /* color: $color-test;
-    box-shadow: 1px 1px 2px $color-test, -1px -1px 2px $color-test; */
-  // }
+// // theme.css
+// // @layer primereact {
+//   .p-component  {
+//     @include setTextStyle($font-50, $line-50);
+//     font-weight: $bold-40;
+//     /* color: $color-test;
+//     box-shadow: 1px 1px 2px $color-test, -1px -1px 2px $color-test; */
+//   // }
+// }
+
+.p-hidden  {
+  display: none !important;
 }
 
-// layout.scss
+.p-component  {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
 
 
 
@@ -89,7 +98,15 @@ button  {
   cursor: none;
 }
 
-[data-pc-section="sort"],  [data-pc-section="columnfilter"]  { display: none; }
+.p-datatable .p-datatable-table .p-highlight  {
+  background-color: #D9F9DB;
+}
+
+.p-datatable .p-datatable-table .p-x-frozen-last  {
+  position: sticky; z-index: 3; border-right-color: #004C9D; background-color: inherit;
+}
+
+// [data-pc-section="sort"],  [data-pc-section="columnfilter"]  { display: none; }
 
 
 
