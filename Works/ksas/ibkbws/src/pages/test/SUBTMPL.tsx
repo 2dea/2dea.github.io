@@ -6,6 +6,11 @@
 import React, { useState } from 'react';
 
 // components
+import OLabel from '@modules/OLabel';
+import OIcon from '@modules/OIcon';
+import OButton from '@modules/OButton';
+import OImageButton from '@modules/OImageButton';
+
 import CheckBox from '@components/CheckBox';
 import SelectBox from '@components/SelectBox';
 import DatePicker from '@components/DatePicker';
@@ -380,6 +385,11 @@ function SUBTMPL() {
 
             <div className="m-binds type-start">
               <div className="group">
+                <OButton label="test" icon="delete" iconWidth={70} size={30} className="_delete" />
+                <i aria-hidden="true" className="o-icon _help"></i>
+                <OIcon icon="search" width={70} />
+                <i aria-hidden="true" className="o-icon _lock"></i>
+                <OImageButton label="언제까지" icon="close" size={50} />
                 <span className="item"><button type="button" className="o-button _normal"><i aria-hidden="true" className="o-icon _lock"></i><span className="label">화면잠금</span></button></span>
                 <span className="item"><button type="button" className="o-button _normal"><i aria-hidden="true" className="o-icon _help"></i><span className="label">도움말</span></button></span>
               </div>

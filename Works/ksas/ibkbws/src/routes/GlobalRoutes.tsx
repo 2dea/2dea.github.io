@@ -9,6 +9,7 @@ import { useRoutes } from 'react-router';
 // components
 import Decorator from '@layouts/Decorator';
 
+import ING from '@pages/test/ING'; // ing
 import SUBTMPL from '@pages/test/SUBTMPL'; // subtmpl
 import POPTMPL from '@pages/test/POPTMPL'; // poptmpl
 import TMPL from '@pages/test/TMPL'; // tmpl
@@ -88,6 +89,7 @@ function GlobalRoutes() {
       path: '/test',
       element: <Decorator />,
       children: [
+        { path: 'ING', element: <ING /> },
         { path: 'POPTMPL', element: <POPTMPL /> },
         { path: 'TMPL', element: <TMPL /> },
       ],
