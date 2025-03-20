@@ -69,6 +69,17 @@ function TMPL() {
         </div>
       </div>
 
+      <div className="div-nav">
+        <div className="m-tab type1">
+          <ul className="lists">
+            <li role="tab" className="link"><span className="label">메뉴관리</span></li>
+            <li role="tab" className="link" aria-selected="true"><span className="label">화면관리</span></li>{/* 현재탭 .link[aria-selected="true"] { @DEV } */}
+            <li role="tab" className="link"><span className="label">팝업관리</span></li>
+            <li role="tab" className="link"><span className="label">권한관리</span></li>
+          </ul>
+        </div>
+      </div>
+
       {/* <!-- /* Contents { @DEV } --> */}
       <div className="div-contents">
 

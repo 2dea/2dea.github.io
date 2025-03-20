@@ -13,11 +13,12 @@
     "prettier": "^3.4.2",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
-    "primereact": "^10.5.1",
+    "primereact": "^10.9.3",
     "quasar": "^2.17.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.2",
+    "react-tabs": "^6.1.0",
     "sass": "^1.83.0",
     "vite-tsconfig-paths": "^5.1.4"
   },

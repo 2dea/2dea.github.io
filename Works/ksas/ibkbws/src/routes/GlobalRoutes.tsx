@@ -13,6 +13,8 @@ import SUBTMPL from '@pages/test/SUBTMPL'; // subtmpl
 import POPTMPL from '@pages/test/POPTMPL'; // poptmpl
 import TMPL from '@pages/test/TMPL'; // tmpl
 
+import ADMAU0101M from '@pages/adm/ADMAU0101M'; // 관리자 > 권한관리 > 생성관리
+
 
 // import Layout from '@layouts/Layout';
 
@@ -88,6 +90,13 @@ function GlobalRoutes() {
       children: [
         { path: 'POPTMPL', element: <POPTMPL /> },
         { path: 'TMPL', element: <TMPL /> },
+      ],
+    },
+    {
+      path: '/proto',
+      element: <Decorator />,
+      children: [
+        { path: 'ADMAU0101M', element: <ADMAU0101M /> },
       ],
     },
     // {

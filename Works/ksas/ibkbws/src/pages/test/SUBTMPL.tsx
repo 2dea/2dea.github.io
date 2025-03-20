@@ -815,6 +815,7 @@ function SUBTMPL() {
                                 <i className="o-icon _close wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _column-toggle wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _contacts wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _delete wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _filter-alt wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _help wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _home wdth-50" aria-hidden="true"></i>
@@ -858,6 +859,7 @@ function SUBTMPL() {
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _excel-download wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _folder wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _folder-open wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-added wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-edited wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _popup-close wdth-50" aria-hidden="true"></i>
