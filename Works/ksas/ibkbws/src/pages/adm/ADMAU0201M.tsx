@@ -1,5 +1,5 @@
 /**
- * @description (T)메뉴관리 < 생성관리
+ * @description 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
  */
 
 // dependency
@@ -17,9 +17,9 @@ import { InputText } from 'primereact/inputtext';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMAU0101M() {
+function ADMAU0201M() {
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한관리' }, { label: '생성관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한관리' }, { label: '매핑관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -31,7 +31,7 @@ function ADMAU0101M() {
 
         <div className="m-title">
           <h1 className="o-heading level1">
-            <span className="label">생성관리</span>
+            <span className="label">매핑관리</span>
 
             <label className="o-check type-symbol style-favorite">
               <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
@@ -52,10 +52,10 @@ function ADMAU0101M() {
       <Tabs className="div-contents">
         <div className="m-tab type1">
           <TabList className="lists">
-            <Tab className="link"><span className="label">메뉴관리</span></Tab>
-            <Tab className="link" aria-selected="true"><span className="label">화면관리</span></Tab>
-            <Tab className="link"><span className="label">팝업관리</span></Tab>
-            <Tab className="link"><span className="label">권한관리</span></Tab>
+            <Tab className="link"><span className="label">메뉴별 화면관리</span></Tab>
+            <Tab className="link" aria-selected="true"><span className="label">권한별 메뉴/팝업관리</span></Tab>
+            <Tab className="link"><span className="label">부점/부서별 권한관리</span></Tab>
+            <Tab className="link"><span className="label">사용자별 권한관리</span></Tab>
           </TabList>
         </div>
 
@@ -124,7 +124,7 @@ function ADMAU0101M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}>No available options</td>
+                            <td colSpan={6}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -417,6 +417,61 @@ function ADMAU0101M() {
                     <div className="p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
+                          <col style={{ width: '20%', minWidth: 'calc(var(--rem) * 121)' }} />
+                          <col />
+                        </colgroup>
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={2}>매핑된 화면이 없습니다.</td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
+                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>
+                            <td>AABB00001M00</td>
+                            <td className="g-start">
+                              <div className="o-with-bind">
+                                <span className="main">원화현수송신청_관련화면 01</span>
+                                <span className="binds">
+                                  <OImageButton label="삭제" icon="delete" />
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level4"><span className="label">화면매핑정보</span></h2>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <OButton label="화면매핑" className="_normal" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main _primary rows-body-3i">
+                  <DataTable className="o-grid-table g-hidden" />
+                  <div className="o-grid-table p-datatable">
+                    <div className="p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
                           <col style={{ width: 'calc(var(--rem) * 50)' }} />
                           <col style={{ width: '20%', minWidth: 'calc(var(--rem) * 121)' }} />
                           <col />
@@ -431,7 +486,7 @@ function ADMAU0101M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={3}>No available options</td>
+                            <td colSpan={3}>매핑된 관련화면이 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -439,7 +494,7 @@ function ADMAU0101M() {
                           {[...Array(24)].map((e, idx) => (
                           // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
                           <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>
-                            <td>{idx + 1}</td>
+                            <td><OImageButton label="순서 재정렬" icon="sort" className={'g-cursor-grab'} /></td>
                             <td>AABB00001M00</td>
                             <td className="g-start">
                               <div className="o-with-bind">
@@ -470,10 +525,8 @@ function ADMAU0101M() {
           </div>
         </TabPanel>
       </Tabs>
-      {/* <!-- // Contents { @DEV } --> */}
-      {/* </div></div> */}
     </div>
   );
 }
 
-export default ADMAU0101M;
+export default ADMAU0201M;

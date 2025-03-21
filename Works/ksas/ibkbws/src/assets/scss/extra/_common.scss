@@ -153,9 +153,13 @@
   --cc:                         currentColor;
   --ss:                         8px;
   --rss:                        calc(1em * 8 / 24);
-  --e10:                        calc(var(--rem) * 1);
-  --e20:                        calc(var(--rem) * 2);
-  --e30:                        calc(var(--rem) * 3);
+
+  --e10-int:                    1;
+  --e20-int:                    2;
+  --e30-int:                    3;
+  --e10:                        calc(var(--rem) * var(--e10-int));
+  --e20:                        calc(var(--rem) * var(--e20-int));
+  --e30:                        calc(var(--rem) * var(--e30-int));
 
 
   --alpha-dimmed-08:            0.08;
@@ -392,6 +396,16 @@
 .g-word-attr  { word-break: break-word; word-break: keep-all; }
 
 .g-nowrap  { white-space: nowrap; }
+
+.g-cursor-auto  { cursor: auto; }
+.g-cursor-none  { cursor: none; }
+.g-cursor-default  { cursor: default; }
+.g-cursor-text  { cursor: text; }
+.g-cursor-pointer  { cursor: pointer; }
+.g-cursor-grab  { cursor: grab; }
+.g-cursor-grab:active  { cursor: grabbing; }
+.g-cursor-move  { cursor: move; }
+.g-cursor-help  { cursor: help; }
 
 .g-size1  { width: 100%; }
 .g-size2  { width: calc(100% / 2); }

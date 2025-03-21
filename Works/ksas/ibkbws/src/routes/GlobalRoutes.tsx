@@ -14,7 +14,8 @@ import SUBTMPL from '@pages/test/SUBTMPL'; // subtmpl
 import POPTMPL from '@pages/test/POPTMPL'; // poptmpl
 import TMPL from '@pages/test/TMPL'; // tmpl
 
-import ADMAU0101M from '@pages/adm/ADMAU0101M'; // 관리자 > 권한관리 > 생성관리
+import ADMAU0101M from '@pages/adm/ADMAU0101M'; // 관리자 > 권한관리 > 생성관리 > (T)메뉴관리
+import ADMAU0201M from '@pages/adm/ADMAU0201M'; // 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
 
 
 // import Layout from '@layouts/Layout';
@@ -99,6 +100,8 @@ function GlobalRoutes() {
       element: <Decorator />,
       children: [
         { path: 'ADMAU0101M', element: <ADMAU0101M /> },
+
+        { path: 'ADMAU0201M', element: <ADMAU0201M /> },
       ],
     },
     // {

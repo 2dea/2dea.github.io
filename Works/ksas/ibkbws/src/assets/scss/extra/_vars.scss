@@ -28,10 +28,11 @@ $radius-abs-20:      var(--radius-abs-20);
 $radius-abs-999:     var(--radius-abs-999);
 
 
-$tp:                         var(--tp);
-$cc:                         var(--cc);
+$tp:                         var(--tp, Transparent);
+$cc:                         var(--cc, currentColor);
 $ss:                         var(--ss);
 $rss:                        var(--rss);
+
 $e10:                        var(--e10, 1px);
 $e20:                        var(--e20, 2px);
 $e30:                        var(--e30, 3px);

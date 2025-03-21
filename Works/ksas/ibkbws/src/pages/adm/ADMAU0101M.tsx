@@ -1,5 +1,5 @@
 /**
- * @description ADMAU0101M
+ * @description 관리자 > 권한관리 > 생성관리 > (T)메뉴관리
  */
 
 // dependency
@@ -8,25 +8,21 @@ import React, { useState } from 'react';
 // components
 import '@modules/Index';
 import OLabel from '@modules/OLabel';
+import OIcon from '@modules/OIcon';
+import OButton from '@modules/OButton';
+import OImageButton from '@modules/OImageButton';
+import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
+import { InputText } from 'primereact/inputtext';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import CheckBox from '@components/CheckBox';
-import SelectBox from '@components/SelectBox';
-import DatePicker from '@components/DatePicker';
-import PageTitle from '@components/PageTitle';
-import SubNavigation from '@components/SubNavigation';
-import { MenuItem } from 'primereact/menuitem';
-import { InputText } from 'primereact/inputtext';
-import { InputTextarea } from 'primereact/inputtextarea';
-import { Button } from 'primereact/button';
 
 function ADMAU0101M() {
-  // 브레드크럼
+  // BreadCrumb
   const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한관리' }, { label: '생성관리' }];
 
-  // 텍스트박스
-  // const [value, setValue] = useState<string>('');
+  // InputText
+  const [value, setValue] = useState<string>('');
 
   return (
     <div className="roles" data-div-role="0">
@@ -46,8 +42,8 @@ function ADMAU0101M() {
 
         <div className="m-binds type-start">
           <div className="group">
-            <button type="button" className="o-button _normal"><i aria-hidden="true" className="o-icon _lock"></i><span className="label">화면잠금</span></button>
-            <button type="button" className="o-button _normal"><i aria-hidden="true" className="o-icon _help"></i><span className="label">도움말</span></button>
+            <OButton label="화면잠금" icon="lock" className="_normal" />
+            <OButton label="도움말" icon="help" className="_normal" />
           </div>
         </div>
       </div>
@@ -71,9 +67,33 @@ function ADMAU0101M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">메뉴내역</span></h2>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="o-field">
+                    <div className="fields">
+                      <span className="o-form _input wdth-90">
+                        <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <OImageButton label="검색" icon="search" />
+                        </span>
+                        <span className="inner-binds type-spin">
+                          <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                          <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
-                      <button type="button" className="o-button _normal"><span className="label">모두펼침</span></button>
+                      <OButton label="모두펼침" className="_normal" />
                     </div>
                   </div>
                 </div>
@@ -89,7 +109,7 @@ function ADMAU0101M() {
                           <col />
                           <col style={{ width: 'calc(var(--rem) * 64)' }} />
                           <col style={{ width: 'calc(var(--rem) * 64)' }} />
-                          <col style={{ width: 'calc(var(--rem) * 96)' }} />
+                          <col style={{ width: 'calc(var(--rem) * 100)' }} />
                         </colgroup>
                         <thead className="p-datatable-thead">
                           <tr>
@@ -109,27 +129,185 @@ function ADMAU0101M() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                          {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                            <td>{idx + 1}</td>
+                          <tr className="p-highlight">
+                            <td>1</td>
                             <td>AABB00001</td>
                             <td className="g-start">
                               <div className="o-depth level0">
                                 <span className="icons">
-                                  <i className="o-icon _folder-open" aria-hidden="true"></i>
+                                  <OIcon icon="folder-open" />
                                 </span>
                                 <span className="main">홈</span>
                               </div>
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-date">2025-02-03</span></td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level1">
+                                <span className="icons">
+                                  <OIcon icon="file" />
+                                </span>
+                                <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level1">
+                                <span className="icons">
+                                  <OIcon icon="folder" />
+                                </span>
+                                <span className="main">비상계획안전기획</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level1">
+                                <span className="icons">
+                                  <OIcon icon="folder-open" />
+                                </span>
+                                <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level2">
+                                <span className="icons">
+                                  <OIcon icon="file" />
+                                </span>
+                                <span className="main">대시보드</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level2">
+                                <span className="icons">
+                                  <OIcon icon="folder-open" />
+                                </span>
+                                <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level3">
+                                <span className="icons">
+                                  <OIcon icon="file" />
+                                </span>
+                                <span className="main">원화마감시간관리</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level3">
+                                <span className="icons">
+                                  <OIcon icon="file" />
+                                </span>
+                                <span className="main">시재과부족<mark className="o-find-mark" tabIndex={0}>현</mark>황관리</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level3">
+                                <span className="icons">
+                                  <OIcon icon="file" />
+                                </span>
+                                <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송명령부관리</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          {[...Array(23)].map((e, idx) => (
+                          <tr>
+                            <td>{ idx + 10 }</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level1">
+                                <span className="icons">
+                                  <OIcon icon="folder" />
+                                </span>
+                                <span className="main">외화보유<mark className="o-find-mark" tabIndex={0}>현</mark>황</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
                           </tr>
                           ))}
+                          {/* {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>
+                            <td>{idx + 1}</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level0">
+                                <span className="icons">
+                                  <OIcon icon="folder-open" />
+                                </span>
+                                <span className="main">홈</span>
+                              </div>
+                            </td>
+                            <td>Y</td>
+                            <td>Y</td>
+                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                          </tr>
+                          ))} */}
                         </tbody>
                       </table>
                     </div>
                   </div>
+                </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><OIcon icon="page-up" /><em className="g-hidden flow-inline">[이전 탐색]</em> <OIcon icon="page-down" /><em className="g-hidden flow-inline">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
+                  </ul>
                 </div>
               </div>
 
@@ -143,7 +321,7 @@ function ADMAU0101M() {
 
                   {/* <div className="m-binds">
                     <div className="group">
-                      <button type="button" className="o-button _create"><span className="label">신규</span></button>
+                      <OButton label="신규" className="_create" />
                     </div>
                   </div> */}
                 </div>
@@ -213,7 +391,7 @@ function ADMAU0101M() {
                             <OLabel label={`등록​일자`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            <span className="o-date">2025-02-03</span>
+                            <span className="o-figure type-date">2024-09-16</span>
                           </td>
                         </tr>
                       </tbody>
@@ -228,7 +406,7 @@ function ADMAU0101M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <button type="button" className="o-button _normal"><span className="label">화면매핑</span></button>
+                      <OButton label="화면매핑" className="_normal" />
                     </div>
                   </div>
                 </div>
@@ -259,14 +437,15 @@ function ADMAU0101M() {
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={ (idx === 0) && "p-highlight" }>
+                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
+                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>
                             <td>{idx + 1}</td>
                             <td>AABB00001M00</td>
                             <td className="g-start">
                               <div className="o-with-bind">
                                 <span className="main">원화현수송신청_관련화면 01</span>
                                 <span className="binds">
-                                  <button type="button" title="삭제" className="o-image-button o-icon _delete"><span className="label">삭제</span></button>
+                                  <OImageButton label="삭제" icon="delete" />
                                 </span>
                               </div>
                             </td>
@@ -284,34 +463,13 @@ function ADMAU0101M() {
 
           <div className="div-footer">
             <div className="m-binds type-end">
-              <div className="group">
-                <button type="button" className="o-button _lined-secondary"><span className="label">알림전송</span></button>
-                <button type="button" className="o-button _lined-secondary"><span className="label">결재선변경관리</span></button>
-                <button type="button" className="o-button _lined-secondary"><span className="label">결재바로가기</span></button>
-              </div>
-
-              <div className="group _utility">
-                <div className="m-print-binds">
-                  <button type="button" className="o-button _texted"><span className="label">당일결정내역출력</span></button>
-                  <button type="button" className="o-button _texted"><span className="label">결정출력</span></button>
-                  <button type="button" className="o-button _texted"><span className="label">손상권출력</span></button>
-                  <button type="button" className="o-button _texted"><span className="label">신청출력</span></button>
-                  <button type="button" className="o-button _texted"><span className="label">출력</span></button>
-                </div>
-              </div>
-
               <div className="group _primary">
-                <button type="button" className="o-button _lined-primary"><span className="label">업무지원반려</span></button>
-                <button type="button" className="o-button _lined-primary"><span className="label">업무지원결정</span></button>
-                <button type="button" className="o-button _delete"><span className="label">삭제</span></button>
-                <button type="button" className="o-button _solid-primary"><span className="label">결재요청</span></button>
+                <OButton label="저장" className="_solid-primary" />
               </div>
             </div>
           </div>
         </TabPanel>
       </Tabs>
-      {/* <!-- // Contents { @DEV } --> */}
-      {/* </div></div> */}
     </div>
   );
 }

@@ -8,14 +8,15 @@ import React, { useState } from 'react';
 
 interface OLabelProps {
   label: string;
-  require: boolean;
+  require?: boolean;
   className?: string;
+  style?: object;
 }
 
-function OLabel({ label, require, className }: OLabelProps) {
+function OLabel({ label, require, className, style }: OLabelProps) {
   return (
     <>
-      <div className={`o-label${className ? ` ${className}` : ''}`}>
+      <div className={`o-label${className ? ` ${className}` : ''}`} style={style}>
         <span className="label">
           {label}
 

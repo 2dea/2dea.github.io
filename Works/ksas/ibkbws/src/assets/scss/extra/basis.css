@@ -83,12 +83,16 @@
 
 
   --text-feature-base:  normal;
-  --text-feature-base:  'case', 'ss01', 'ss02', 'ss03', 'ss05';
+  --text-feature-base:  'case', 'ss01', 'ss02', 'ss03', 'ss05', 'cv01';
+  --text-feature-base:  'case', 'ss01', 'ss02', 'ss03';
   --text-feature-tnum:  'tnum', 'zero', 'cv13', var(--text-feature-base);
+  --text-feature-tnum:  'tnum', var(--text-feature-base);
   --text-feature:       var(--text-feature-base, normal);
 
-  --text-size:          var(--font-50, calc(1em / var(--root-em-int, 16) * 15));
-  --text-height:        var(--line-50, calc(16 / 12));
+  --text-size-int:      var(--font-50-int);
+  --text-size:          calc(1em / var(--root-em-int, 16) * var(--text-size-int, 15));
+  --text-height-int:    var(--line-50-int);
+  --text-height:        calc(var(--text-height-int, 16) / var(--text-size-int, 12));
   --text-height-para:   calc(18 / 12);
 
   --text-spacing:       0;
