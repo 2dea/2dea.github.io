@@ -1,5 +1,5 @@
 /**
- * @description (T)메뉴관리 < 생성관리
+ * @description 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
  */
 
 // dependency
@@ -14,6 +14,7 @@ import OImageButton from '@modules/OImageButton';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { Dropdown } from 'primereact/dropdown';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -99,7 +100,7 @@ function TMPL() {
                 </div>
 
                 <div className="main _primary">
-                  <DataTable className="o-grid-table g-hidden" />
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
@@ -124,7 +125,7 @@ function TMPL() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}>No available options</td>
+                            <td colSpan={6}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -306,7 +307,7 @@ function TMPL() {
 
                 <div className="m-footer">
                   <ul className="m-bullets type-disc">
-                    <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><OIcon icon="page-up" /><em className="g-hidden flow-inline">[이전 탐색]</em> <OIcon icon="page-down" /><em className="g-hidden flow-inline">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
+                    <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><OIcon icon="page-up" /><em className="g-abshidden">[이전 탐색]</em> <OIcon icon="page-down" /><em className="g-abshidden">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
                   </ul>
                 </div>
               </div>
@@ -412,7 +413,7 @@ function TMPL() {
                 </div>
 
                 <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hidden" />
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
@@ -471,7 +472,6 @@ function TMPL() {
         </TabPanel>
       </Tabs>
       {/* <!-- // Contents { @DEV } --> */}
-      {/* </div></div> */}
     </div>
   );
 }

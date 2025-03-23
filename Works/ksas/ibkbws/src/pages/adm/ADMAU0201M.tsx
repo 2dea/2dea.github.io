@@ -14,6 +14,7 @@ import OImageButton from '@modules/OImageButton';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { Dropdown } from 'primereact/dropdown';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -99,7 +100,7 @@ function ADMAU0201M() {
                 </div>
 
                 <div className="main _primary">
-                  <DataTable className="o-grid-table g-hidden" />
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
@@ -306,7 +307,7 @@ function ADMAU0201M() {
 
                 <div className="m-footer">
                   <ul className="m-bullets type-disc">
-                    <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><OIcon icon="page-up" /><em className="g-hidden flow-inline">[이전 탐색]</em> <OIcon icon="page-down" /><em className="g-hidden flow-inline">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
+                    <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><OIcon icon="page-up" /><em className="g-abshidden">[이전 탐색]</em> <OIcon icon="page-down" /><em className="g-abshidden">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
                   </ul>
                 </div>
               </div>
@@ -457,17 +458,17 @@ function ADMAU0201M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level4"><span className="label">화면매핑정보</span></h2>
+                  <h2 className="o-heading level4"><span className="label">관련화면 매핑정보</span></h2>
 
                   <div className="m-binds">
                     <div className="group">
-                      <OButton label="화면매핑" className="_normal" />
+                      <OButton label="관련화면매핑" className="_normal" />
                     </div>
                   </div>
                 </div>
 
                 <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hidden" />
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">

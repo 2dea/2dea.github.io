@@ -352,19 +352,36 @@
  ------------------ */
 
 /** Primary-Styles Selector */
-.g-hidden  { width: auto; height: 1px; overflow: hidden; margin: 0 0 -1px; padding: 0; border: 0; background: none; visibility: visible; white-space: inherit; }
-.g-hidden:not(caption):not(legend):not(.flow-inline)  { display: block; position: absolute; clip: rect(0 0 0 0); clip: rect(0,0,0,0); clip-path: circle(0); }
-.g-hidden.flow-inline  { display: inline-block; width: 1px; margin-right: -1px; white-space: nowrap; }
+.g-abshidden,
+  .g-hidden  { width: auto; max-width: 100%; height: 1px; overflow: hidden; margin: 0 0 -1px; margin-bottom: calc(-1 * (var(--gap, 0px) + 1px)); padding: 0; border: 0; background: none; visibility: visible; white-space: inherit; }
+.g-hidden.flow-inline  { display: inline-block !important; width: 1px; margin-right: -1px; margin-right: calc(-1 * (var(--gap, 0px) + 1px)); white-space: nowrap; }
+.g-hidden:not(caption):not(legend):not(.flow-inline)  { display: block !important; }
+.g-abshidden  { display: block !important; position: absolute !important; inset: auto; clip: rect(0 0 0 0); clip: rect(0,0,0,0); clip-path: circle(0); }
+:has(>.g-abshidden)  { position: relative; }
 
 .g-overlay  { position: absolute; left: 0; right: 0; bottom: 0; min-width: 100%; height: 1px; min-height: 100%; background: Black; background-color: var(--color-dimmed-overlay, #000); opacity: 0.6; opacity: var(--alpha-dimmed-overlay, 0.6); }
 .g-overlay  { background-color: var(--color-surface-overlay, #000); opacity: 1.0; }
 
 
-.g-inflex  { display: inline-flex !important; align-items: center; }
+.g-hide  { display: none !important; }
+.g-contents  { display: contents !important; }
+.g-intable  { display: inline-table !important; }
+.g-table  { display: table !important; }
+.g-trow  { display: table-row !important; }
+.g-tcell  { display: table-cell !important; }
+.g-inflex  { display: inline-flex !important; }
+.g-flex  { display: flex !important; }
 .g-inblock  { display: inline-block !important; }
+.g-block  { display: block !important; }
+.g-flowroot  { display: flow-root !important; }
+.g-runin  { display: run-in !important; }
+.g-inline  { display: inline !important; }
 
-.g-absolute  { position: absolute !important; }
+.g-static  { position: static !important; }
 .g-relative  { position: relative !important; }
+.g-stick  { position: -webkit-sticky !important; position: sticky !important; }
+.g-fixed  { position: fixed !important; }
+.g-absolute  { position: absolute !important; }
 
 .g-italic  { font-style: italic !important; }
 

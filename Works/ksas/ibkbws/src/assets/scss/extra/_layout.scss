@@ -177,9 +177,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-header .div-root .logo  { font-size: III(20); }
 
 .dom-header .div-account  { font-size: $font-30; line-height: $line-30; display: flex; justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; height: $height-layout-header-account; color: white; background: $color-key1-70; }
-.dom-header .div-account >dl  { display: flex; align-items: center; gap: $e10; }
+.dom-header .div-account >dl  { --gap: var(--e10, 1px); display: flex; align-items: center; gap: var(--gap); }
 .dom-header .div-account >dl >*  { min-width: 0; }
-.dom-header .div-account >dl >dt  { @include getGlobalHidden(); }
+.dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
 .dom-header .div-account >dl >* >*  { display: flex; align-items: center; }
 
 
@@ -270,6 +270,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main .div-header  { display: flex; align-items: center; gap: $gap-element-80; }
 .dom-main .div-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
 .dom-main .div-header >.o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
+.dom-main .div-header >.o-breadcrumb >*  { display: flex; }
 .dom-main .div-header .m-title  { order: -1; }
 .dom-main .div-header .m-title .o-heading  { display: flex; align-items: center; }
 .dom-main .div-header .m-binds  { margin-left: auto; }
