@@ -1,0 +1,450 @@
+@charset "UTF-8";
+
+@property --color-scrollbar-hidden-track  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
+
+@property --color-scrollbar-hidden-thumb  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
+
+@property --color-scrollbar-hidden-thumb-edge  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
+
+:root  {
+  --breakpoint-min:                     320;
+  --breakpoint-max:                     1280;
+
+
+  --color-scrollbar-track:              rgba(0,0,0, 0.05);
+  --color-scrollbar-track:              Transparent;
+  --color-scrollbar-thumb:              rgba(0,0,0, 0.3);
+  --color-scrollbar-thumb-hover:        rgba(0,0,0, 0.4);
+  --color-scrollbar-thumb-active:       rgba(0,0,0, 0.5);
+  --color-scrollbar-thumb-edge:         rgba(255,255,255, 0.3);
+
+  --margin-scrollbar:                   calc(var(--rem) * 3);
+  --width-scrollbar:                    calc(var(--rem) * 6 + var(--margin-scrollbar) * 2);
+
+
+  --margin-popup-block:                 24;
+  --margin-popup-inline:                24;
+
+  --height-popup-header:                46;
+
+
+  --margin-layout-block:                20;
+  --margin-layout-inline:               40;
+
+  --height-layout-header-account:       32;
+  --height-layout-header-sep:           3;
+  --height-layout-header-nav:           50;
+  --height-layout-header:               (var(--height-layout-header-nav) + var(--height-layout-header-sep) + var(--height-layout-header-account));
+  --height-layout-footer:               0;
+  --width-layout-nav:                   300;
+
+
+  --obj-img-logo-light:                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 24" color="%230056A2" fill="none"><path d="M6.33 1.275c-.62.31-1.08.84-1.3 1.5L.89 15.225c-.22.655-.17 1.36.145 1.98.31.615.84 1.075 1.495 1.295l13.59 4.565c.66.22 1.36.165 1.98-.14.62-.31 1.08-.84 1.295-1.5l4.145-12.45a2.597 2.597 0 0 0-1.64-3.28L8.31 1.135a2.57 2.57 0 0 0-1.98.14" fill="%23fff"/><path d="M12.975 13.235a7.1 7.1 0 0 1-2.725 1.9l-.61.24v-5.77l.605.235c1.07.41 1.99 1.07 2.735 1.89.53-.85.855-1.835.925-2.905.17-2.77-1.565-5.305-3.945-6.19L8 1.98a1.677 1.677 0 0 0-2.12 1.075L1.71 15.52c-.295.885.2 1.85 1.09 2.14l9.43 3.15a6.22 6.22 0 0 0 1.675-3.89 6.2 6.2 0 0 0-.935-3.685M7.525 9.26v6.47H6.59V9.26z" fill="%230099DA"/><path d="M21.6 6.525 12.945 3.63a7.16 7.16 0 0 1 1.875 4.815 7.2 7.2 0 0 1-1.25 4.035 7.2 7.2 0 0 1 1.26 4.03c0 1.75-.63 3.36-1.675 4.605l3.25 1.085a1.676 1.676 0 0 0 2.12-1.08l4.16-12.46c.295-.885-.205-1.845-1.09-2.14m-2.29 9.19h-1.17l-2.405-3.23 2.445-3.235h1.18l-2.45 3.24 2.4 3.23z" fill="%230056A2"/><path d="M12.43 12.485a6.3 6.3 0 0 0-1.895-1.515v3.04a6.2 6.2 0 0 0 1.896-1.525" fill="%23F15A22"/><path d="M31.11 5.94h-2.48v14.8h2.48zm3.425 0v14.8h4.505c3.835-.01 5.645-1.36 5.65-4.065 0-1.695-.96-2.985-2.55-3.46l-.145-.045.14-.06c1.475-.625 2.185-1.69 2.185-3.3 0-2.53-1.725-3.865-5.22-3.87h-4.57m4.085 8.255c1.77 0 3.47.285 3.475 2.295 0 .725-.25 1.31-.79 1.645-.54.34-1.35.49-2.485.49H37.01v-4.43h1.6m.82-6.145c.71 0 2.41.245 2.415 1.965 0 .95-.38 1.485-1.005 1.755-.62.28-1.47.31-2.43.315h-1.395V8.05zm19.155-2.11c-.78.815-6.66 7.015-6.66 7.015s6.375 6.92 7.18 7.785H55.65l-5.785-6.67v6.67H47.39V5.94h2.475v5.985S55.08 6.27 55.39 5.94zm9.312.103q.97 0 1.7.238.73.22 1.241.629.51.39.816.935.306.525.425 1.139h2.499V5.89h2.397v7.19q0 .392-.391.579-.375.187-.833.187a1.8 1.8 0 0 1-.816-.187.61.61 0 0 1-.357-.578V10.48h-2.465a3.7 3.7 0 0 1-.408 1.207 3.2 3.2 0 0 1-.833.952q-.51.408-1.258.646-.731.238-1.717.238-1.087 0-1.887-.29-.8-.305-1.326-.815a3.4 3.4 0 0 1-.799-1.19 4.1 4.1 0 0 1-.255-1.445q0-.75.255-1.428a3.4 3.4 0 0 1 .799-1.19q.526-.51 1.326-.816.816-.306 1.887-.306m-1.224 8.653h2.363v2.006h5.593v-2.006h2.329v4.658q0 .645-.408 1.07-.39.425-1.088.68a6.6 6.6 0 0 1-1.598.392q-.918.118-1.938.136-.357 0-.986-.034-.63-.018-1.377-.102-.73-.085-1.496-.221a9 9 0 0 1-1.394-.323zm3.077-4.913q0-1.14-.442-1.7-.442-.561-1.411-.561-1.054 0-1.462.56-.39.562-.391 1.7 0 1.123.391 1.7.409.562 1.462.562.986 0 1.411-.578.442-.579.442-1.683m4.879 8.364h-5.593v1.75q.272.069.663.103.408.05.816.068.408.033.765.034.374.016.612.017.493-.018.969-.051.493-.018.884-.102.39-.069.629-.204.255-.137.255-.357zm6.786-11.611h10.727v3.62q0 .817-.204 1.412a2.15 2.15 0 0 1-.629.986q-.442.374-1.156.56-.714.188-1.734.222h-7.004zM94.2 16.464h-6.205v5.168h-2.448v-5.168H79.92q-.357 0-.544-.221a.77.77 0 0 1-.187-.51q0-.29.187-.51.187-.239.544-.238H94.2zm-4.47-8.45h-5.9v3.843h4.624q.459 0 .714-.153a1 1 0 0 0 .391-.425q.12-.256.136-.544.034-.306.034-.578zm6.037 8.96q1.224-1.005 2.006-2.108a10.6 10.6 0 0 0 1.224-2.227 10 10 0 0 0 .629-2.21q.17-1.089.204-2.074h-2.737q-.375 0-.51-.221a.95.95 0 0 1-.136-.51q0-.29.136-.527.135-.239.51-.238h8.364v1.496h-3.162a19 19 0 0 1-.119 1.717q-.086.9-.374 1.887.476.459 1.037 1.054t1.105 1.258q.56.645 1.054 1.326.492.68.85 1.309l-1.224.952a20 20 0 0 0-1.802-2.023 20 20 0 0 0-1.938-1.717 12.2 12.2 0 0 1-1.53 2.074q-.918 1.036-2.312 2.057zM106.68 5.89h2.397v14.977q0 .39-.374.56-.375.188-.816.188-.443 0-.833-.187-.375-.17-.374-.561zm10.646 6.103q-2.023 0-3.128-.782-1.105-.783-1.105-2.193 0-1.412 1.105-2.193 1.105-.783 3.128-.782 2.005 0 3.111.782 1.122.78 1.122 2.193 0 1.41-1.122 2.193-1.105.781-3.111.782m2.482 3.145h3.366V5.89h2.397v11.628q0 .374-.391.56a1.84 1.84 0 0 1-.833.188q-.442 0-.816-.187-.357-.187-.357-.561v-.901h-3.366zm-4.981 6.256v-4.046h2.448v2.533h5.848q.68 0 1.292-.102a9.4 9.4 0 0 0 1.326-.323l.17 1.343a3 3 0 0 1-.561.238q-.306.118-.646.187-.34.067-.697.102a7 7 0 0 1-.646.068zm.323-4.964a5 5 0 0 0 .459-1.037q.187-.545.289-1.122H112.6q-.34 0-.527-.221a.9.9 0 0 1-.17-.527q0-.29.17-.51.187-.222.527-.221h5.236q.424 0 1.02-.034a19 19 0 0 0 1.275-.153q.68-.102 1.343-.238a10 10 0 0 0 1.207-.357v1.36q-.833.459-2.023.663t-2.414.238q-.102.764-.408 1.445a7.4 7.4 0 0 1-.561 1.037zm2.176-5.865q.935 0 1.411-.34.493-.341.493-1.207t-.493-1.207q-.476-.34-1.411-.34-.934 0-1.428.34-.476.34-.476 1.207t.476 1.207q.494.34 1.428.34m9.999 6.562q1.377-1.344 2.295-2.686a16 16 0 0 0 1.479-2.67q.561-1.325.799-2.6a13.4 13.4 0 0 0 .238-2.465h2.499q0 1.122-.187 2.482-.186 1.342-.816 2.839.476.441 1.037.986.561.543 1.088 1.156.544.612 1.02 1.275.494.645.833 1.275l-1.19.969a30 30 0 0 0-1.853-1.99 16.5 16.5 0 0 0-1.989-1.682 15 15 0 0 1-1.632 2.09 19 19 0 0 1-2.295 2.092zm13.77 3.74q0 .39-.374.56a1.8 1.8 0 0 1-.816.188 1.84 1.84 0 0 1-.833-.187q-.374-.17-.374-.561V5.89h2.397zm11.972-14.178a8.2 8.2 0 0 1-.289 1.632q-.222.747-.578 1.445.561.306 1.326.765.781.459 1.581 1.02.798.543 1.547 1.139.747.578 1.241 1.122l-.969 1.139-1.428-.918a35 35 0 0 0-1.53-.952 27 27 0 0 0-1.564-.85 12 12 0 0 0-1.445-.663 9.7 9.7 0 0 1-1.292 1.258 15 15 0 0 1-1.428 1.02q-.732.442-1.479.765a12 12 0 0 1-1.411.527l-.629-1.377q.9-.323 1.853-.986a9.8 9.8 0 0 0 1.785-1.581 10 10 0 0 0 1.394-2.074q.594-1.156.765-2.431zm5.746 10.506v1.496h-14.28q-.391 0-.561-.221a.88.88 0 0 1 0-1.037q.17-.239.561-.238zm4.712-1.632h10.268v3.502q0 .85-.493 1.343-.493.51-1.292.782a6.8 6.8 0 0 1-1.768.34q-.986.084-1.972.102-.424 0-1.071-.051t-1.326-.17a13 13 0 0 1-1.326-.306q-.629-.171-1.02-.408zm-2.363-9.197h5.933v1.479h-3.553v1.53h2.703v1.479h-2.703v1.683q.29.084.697.119.408.034.85.034.629 0 1.394-.136t1.581-.391v1.41q-.68.255-1.547.426a9.4 9.4 0 0 1-1.666.153q-.357 0-.816-.017a33 33 0 0 1-.952-.085 18 18 0 0 1-.986-.17 8 8 0 0 1-.935-.29zm5.746 2.89h1.853V6.06h2.193v7.922q0 .374-.34.56a1.5 1.5 0 0 1-.765.188 1.5 1.5 0 0 1-.765-.187.61.61 0 0 1-.323-.561V10.82h-1.853zm4.913-3.366h2.227v8.16q0 .374-.34.56a1.54 1.54 0 0 1-.782.188q-.442 0-.782-.187a.61.61 0 0 1-.323-.561zm-.442 11.118h-5.457v2.822a6.5 6.5 0 0 0 1.241.255q.34.05.663.068.323.016.578.017.476 0 1.003-.051.526-.035.969-.153.442-.102.714-.306.29-.204.289-.51z" fill="currentColor"/></svg>');
+  --obj-img-logo-heavy:                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 24" color="%23FFFFFF" fill="none"><path d="M6.33 1.275c-.62.31-1.08.84-1.3 1.5L.89 15.225c-.22.655-.17 1.36.145 1.98.31.615.84 1.075 1.495 1.295l13.59 4.565c.66.22 1.36.165 1.98-.14.62-.31 1.08-.84 1.295-1.5l4.145-12.45a2.597 2.597 0 0 0-1.64-3.28L8.31 1.135a2.57 2.57 0 0 0-1.98.14" fill="%23fff"/><path d="M12.975 13.235a7.1 7.1 0 0 1-2.725 1.9l-.61.24v-5.77l.605.235c1.07.41 1.99 1.07 2.735 1.89.53-.85.855-1.835.925-2.905.17-2.77-1.565-5.305-3.945-6.19L8 1.98a1.677 1.677 0 0 0-2.12 1.075L1.71 15.52c-.295.885.2 1.85 1.09 2.14l9.43 3.15a6.22 6.22 0 0 0 1.675-3.89 6.2 6.2 0 0 0-.935-3.685M7.525 9.26v6.47H6.59V9.26z" fill="%230099DA"/><path d="M21.6 6.525 12.945 3.63a7.16 7.16 0 0 1 1.875 4.815 7.2 7.2 0 0 1-1.25 4.035 7.2 7.2 0 0 1 1.26 4.03c0 1.75-.63 3.36-1.675 4.605l3.25 1.085a1.676 1.676 0 0 0 2.12-1.08l4.16-12.46c.295-.885-.205-1.845-1.09-2.14m-2.29 9.19h-1.17l-2.405-3.23 2.445-3.235h1.18l-2.45 3.24 2.4 3.23z" fill="%230056A2"/><path d="M12.43 12.485a6.3 6.3 0 0 0-1.895-1.515v3.04a6.2 6.2 0 0 0 1.896-1.525" fill="%23F15A22"/><path d="M31.11 5.94h-2.48v14.8h2.48zm3.425 0v14.8h4.505c3.835-.01 5.645-1.36 5.65-4.065 0-1.695-.96-2.985-2.55-3.46l-.145-.045.14-.06c1.475-.625 2.185-1.69 2.185-3.3 0-2.53-1.725-3.865-5.22-3.87h-4.57m4.085 8.255c1.77 0 3.47.285 3.475 2.295 0 .725-.25 1.31-.79 1.645-.54.34-1.35.49-2.485.49H37.01v-4.43h1.6m.82-6.145c.71 0 2.41.245 2.415 1.965 0 .95-.38 1.485-1.005 1.755-.62.28-1.47.31-2.43.315h-1.395V8.05zm19.155-2.11c-.78.815-6.66 7.015-6.66 7.015s6.375 6.92 7.18 7.785H55.65l-5.785-6.67v6.67H47.39V5.94h2.475v5.985S55.08 6.27 55.39 5.94zm9.312.103q.97 0 1.7.238.73.22 1.241.629.51.39.816.935.306.525.425 1.139h2.499V5.89h2.397v7.19q0 .392-.391.579-.375.187-.833.187a1.8 1.8 0 0 1-.816-.187.61.61 0 0 1-.357-.578V10.48h-2.465a3.7 3.7 0 0 1-.408 1.207 3.2 3.2 0 0 1-.833.952q-.51.408-1.258.646-.731.238-1.717.238-1.087 0-1.887-.29-.8-.305-1.326-.815a3.4 3.4 0 0 1-.799-1.19 4.1 4.1 0 0 1-.255-1.445q0-.75.255-1.428a3.4 3.4 0 0 1 .799-1.19q.526-.51 1.326-.816.816-.306 1.887-.306m-1.224 8.653h2.363v2.006h5.593v-2.006h2.329v4.658q0 .645-.408 1.07-.39.425-1.088.68a6.6 6.6 0 0 1-1.598.392q-.918.118-1.938.136-.357 0-.986-.034-.63-.018-1.377-.102-.73-.085-1.496-.221a9 9 0 0 1-1.394-.323zm3.077-4.913q0-1.14-.442-1.7-.442-.561-1.411-.561-1.054 0-1.462.56-.39.562-.391 1.7 0 1.123.391 1.7.409.562 1.462.562.986 0 1.411-.578.442-.579.442-1.683m4.879 8.364h-5.593v1.75q.272.069.663.103.408.05.816.068.408.033.765.034.374.016.612.017.493-.018.969-.051.493-.018.884-.102.39-.069.629-.204.255-.137.255-.357zm6.786-11.611h10.727v3.62q0 .817-.204 1.412a2.15 2.15 0 0 1-.629.986q-.442.374-1.156.56-.714.188-1.734.222h-7.004zM94.2 16.464h-6.205v5.168h-2.448v-5.168H79.92q-.357 0-.544-.221a.77.77 0 0 1-.187-.51q0-.29.187-.51.187-.239.544-.238H94.2zm-4.47-8.45h-5.9v3.843h4.624q.459 0 .714-.153a1 1 0 0 0 .391-.425q.12-.256.136-.544.034-.306.034-.578zm6.037 8.96q1.224-1.005 2.006-2.108a10.6 10.6 0 0 0 1.224-2.227 10 10 0 0 0 .629-2.21q.17-1.089.204-2.074h-2.737q-.375 0-.51-.221a.95.95 0 0 1-.136-.51q0-.29.136-.527.135-.239.51-.238h8.364v1.496h-3.162a19 19 0 0 1-.119 1.717q-.086.9-.374 1.887.476.459 1.037 1.054t1.105 1.258q.56.645 1.054 1.326.492.68.85 1.309l-1.224.952a20 20 0 0 0-1.802-2.023 20 20 0 0 0-1.938-1.717 12.2 12.2 0 0 1-1.53 2.074q-.918 1.036-2.312 2.057zM106.68 5.89h2.397v14.977q0 .39-.374.56-.375.188-.816.188-.443 0-.833-.187-.375-.17-.374-.561zm10.646 6.103q-2.023 0-3.128-.782-1.105-.783-1.105-2.193 0-1.412 1.105-2.193 1.105-.783 3.128-.782 2.005 0 3.111.782 1.122.78 1.122 2.193 0 1.41-1.122 2.193-1.105.781-3.111.782m2.482 3.145h3.366V5.89h2.397v11.628q0 .374-.391.56a1.84 1.84 0 0 1-.833.188q-.442 0-.816-.187-.357-.187-.357-.561v-.901h-3.366zm-4.981 6.256v-4.046h2.448v2.533h5.848q.68 0 1.292-.102a9.4 9.4 0 0 0 1.326-.323l.17 1.343a3 3 0 0 1-.561.238q-.306.118-.646.187-.34.067-.697.102a7 7 0 0 1-.646.068zm.323-4.964a5 5 0 0 0 .459-1.037q.187-.545.289-1.122H112.6q-.34 0-.527-.221a.9.9 0 0 1-.17-.527q0-.29.17-.51.187-.222.527-.221h5.236q.424 0 1.02-.034a19 19 0 0 0 1.275-.153q.68-.102 1.343-.238a10 10 0 0 0 1.207-.357v1.36q-.833.459-2.023.663t-2.414.238q-.102.764-.408 1.445a7.4 7.4 0 0 1-.561 1.037zm2.176-5.865q.935 0 1.411-.34.493-.341.493-1.207t-.493-1.207q-.476-.34-1.411-.34-.934 0-1.428.34-.476.34-.476 1.207t.476 1.207q.494.34 1.428.34m9.999 6.562q1.377-1.344 2.295-2.686a16 16 0 0 0 1.479-2.67q.561-1.325.799-2.6a13.4 13.4 0 0 0 .238-2.465h2.499q0 1.122-.187 2.482-.186 1.342-.816 2.839.476.441 1.037.986.561.543 1.088 1.156.544.612 1.02 1.275.494.645.833 1.275l-1.19.969a30 30 0 0 0-1.853-1.99 16.5 16.5 0 0 0-1.989-1.682 15 15 0 0 1-1.632 2.09 19 19 0 0 1-2.295 2.092zm13.77 3.74q0 .39-.374.56a1.8 1.8 0 0 1-.816.188 1.84 1.84 0 0 1-.833-.187q-.374-.17-.374-.561V5.89h2.397zm11.972-14.178a8.2 8.2 0 0 1-.289 1.632q-.222.747-.578 1.445.561.306 1.326.765.781.459 1.581 1.02.798.543 1.547 1.139.747.578 1.241 1.122l-.969 1.139-1.428-.918a35 35 0 0 0-1.53-.952 27 27 0 0 0-1.564-.85 12 12 0 0 0-1.445-.663 9.7 9.7 0 0 1-1.292 1.258 15 15 0 0 1-1.428 1.02q-.732.442-1.479.765a12 12 0 0 1-1.411.527l-.629-1.377q.9-.323 1.853-.986a9.8 9.8 0 0 0 1.785-1.581 10 10 0 0 0 1.394-2.074q.594-1.156.765-2.431zm5.746 10.506v1.496h-14.28q-.391 0-.561-.221a.88.88 0 0 1 0-1.037q.17-.239.561-.238zm4.712-1.632h10.268v3.502q0 .85-.493 1.343-.493.51-1.292.782a6.8 6.8 0 0 1-1.768.34q-.986.084-1.972.102-.424 0-1.071-.051t-1.326-.17a13 13 0 0 1-1.326-.306q-.629-.171-1.02-.408zm-2.363-9.197h5.933v1.479h-3.553v1.53h2.703v1.479h-2.703v1.683q.29.084.697.119.408.034.85.034.629 0 1.394-.136t1.581-.391v1.41q-.68.255-1.547.426a9.4 9.4 0 0 1-1.666.153q-.357 0-.816-.017a33 33 0 0 1-.952-.085 18 18 0 0 1-.986-.17 8 8 0 0 1-.935-.29zm5.746 2.89h1.853V6.06h2.193v7.922q0 .374-.34.56a1.5 1.5 0 0 1-.765.188 1.5 1.5 0 0 1-.765-.187.61.61 0 0 1-.323-.561V10.82h-1.853zm4.913-3.366h2.227v8.16q0 .374-.34.56a1.54 1.54 0 0 1-.782.188q-.442 0-.782-.187a.61.61 0 0 1-.323-.561zm-.442 11.118h-5.457v2.822a6.5 6.5 0 0 0 1.241.255q.34.05.663.068.323.016.578.017.476 0 1.003-.051.526-.035.969-.153.442-.102.714-.306.29-.204.289-.51z" fill="currentColor"/></svg>');
+}
+
+$margin-popup-block:                    calc(var(--rem) * var(--margin-popup-block));
+$margin-popup-inline:                   calc(var(--rem) * var(--margin-popup-inline));
+
+$height-popup-header:                   calc(var(--rem) * var(--height-popup-header));
+
+
+$margin-layout-block:                   calc(var(--rem) * var(--margin-layout-block));
+$margin-layout-inline:                  calc(var(--rem) * var(--margin-layout-inline));
+
+$height-layout-header-account:          calc(var(--rem) * var(--height-layout-header-account));
+$height-layout-header-sep:              calc(var(--rem) * var(--height-layout-header-sep));
+$height-layout-header-nav:              calc(var(--rem) * var(--height-layout-header-nav));
+$height-layout-header:                  calc(var(--rem) * var(--height-layout-header));
+$height-layout-footer:                  calc(var(--rem) * var(--height-layout-footer));
+$width-layout-nav:                      calc(var(--rem) * var(--width-layout-nav));
+
+
+/** Scrollbars
+ ------------- */
+
+// .g-scroll-gutter-stable  {
+//   /* --margin-scrollbar:    calc(var(--rem) * 4); */
+//   --width-scrollbar:     calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
+// }
+
+.g-scroll-width-thin  {
+  --margin-scrollbar:    calc(var(--rem) * 2);
+  --width-scrollbar:     calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
+}
+
+::-webkit-resizer  { background: var(--obj-sym-resizer-scrollable) 0 /100%; }
+::-webkit-scrollbar  { width: var(--width-scrollbar, 12px); height: var(--width-scrollbar, 12px); }
+::-webkit-scrollbar-corner  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid rgba(255,255,255, 0.05); border-radius: 2px; }
+::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); border-radius: var(--width-scrollbar, 12px); will-change: background-color; }
+::-webkit-scrollbar-thumb  { min-width: 50px; min-height: 50px; border: var(--margin-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--color-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--color-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--margin-scrollbar, 3px)); border-radius: var(--width-scrollbar, 12px); will-change: background-color, outline-color; }
+::-webkit-scrollbar-thumb:hover  { background-color: var(--color-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
+::-webkit-scrollbar-thumb:active  { background-color: var(--color-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
+
+/*
+.g-scroll-gutter-stable:not(:hover):not(:focus-within)::-webkit-scrollbar-track  { background-color: Transparent; }
+.g-scroll-gutter-stable::-webkit-scrollbar-thumb  { transition-duration: 0.8s; }
+.g-scroll-gutter-stable:not(:hover):not(:focus-within)::-webkit-scrollbar-thumb  { border-color: Transparent; background-color: Transparent; outline-color: Transparent; }
+.g-scroll-gutter-stable:where( :hover, :focus-within )::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
+ */
+
+.g-scroll-gutter-stable  { transition: 0.8s; transition-property: --color-scrollbar-hidden-track, --color-scrollbar-hidden-thumb, --color-scrollbar-hidden-thumb-edge; }
+.g-scroll-gutter-stable:hover,
+  .g-scroll-gutter-stable:focus-within  { --color-scrollbar-hidden-track: var(--color-scrollbar-track); --color-scrollbar-hidden-thumb: var(--color-scrollbar-thumb); --color-scrollbar-hidden-thumb-edge: var(--color-scrollbar-thumb-edge); transition-duration: 0.15s; }
+.g-scroll-gutter-stable::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-hidden-track); }
+.g-scroll-gutter-stable::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--color-scrollbar-hidden-thumb); outline-color: var(--color-scrollbar-hidden-thumb-edge, Transparent); }
+
+*  { scroll-behavior: inherit; scrollbar-width: inherit; }
+html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable both-edges; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track); overscroll-behavior: auto none; */ }
+
+
+/** Define Fonts
+ --------------- */
+
+*  { letter-spacing: var(--text-spacing); }
+:before,  :after  { border-radius: inherit; letter-spacing: inherit; animation: inherit; transition: inherit; }
+html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); }
+body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40, inherit); font-size: var(--text-size); line-height: var(--text-height); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); }
+/* @media
+  screen and (not (max-width: 1920px))  {
+    html  { font-size: var(--root-em-base, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
+} */
+/* html  { font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); } */
+
+
+/** Sectioning-Area */
+
+/* .dom-wrapper >*  { display: flex; flex-direction: column; }
+.dom-wrapper >* >.roles  { display: flex; flex-direction: column; min-height: 100%; background-color: var(--color-ground); } */
+/* .dom-wrapper >:not(.dom-nav):not(.dom-main) >.roles  { width: 1260px; margin: 0 auto; padding: 0 30px; background: rgba(0,0,0, 0.1); background: rgb(0 0 0 /10%); } */
+
+[class*=" dom-"],
+  [class|="dom"]  { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+[class*=" dom-"] >.roles,
+  [class|="dom"] >.roles  { flex: 1; display: flex; flex-direction: column; min-height: 0; background-color: var(--color-ground); }
+[class*=" dom-"] >.g-overlay,
+  [class|="dom"] >.g-overlay  { min-height: 0; opacity: 0.001; }
+[class*=" dom-"] >.roles >*,
+  [class|="dom"] >.roles >*  { @include inc-scrollbar-width(3, 4); }
+
+.dom-wrapper  { position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; background-color: inherit; }
+
+
+/** Skip Navigation */
+.dom-header .div-skip  { position: absolute; z-index: 99; left: 0; top: 0; width: 100%; }
+.dom-header .div-skip *  { position: absolute; width: 100%; margin: 0; padding: 0; height: 0; }
+.dom-header .div-skip a  { display: block; z-index: 1; left: -1px; width: 1px; height: 1px; overflow: hidden; text-decoration: none; }
+.dom-header .div-skip a:before  { content: ""; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.dom-header .div-skip a strong  { position: static; }
+.dom-header .div-skip a strong:before  { content: "» "; }
+.dom-header .div-skip a[id]  { text-align: center; font-weight: 700; font-size: 16px; font-family: 'Tahoma', 'Geneva', 'Dotum', 'AppleGothic', sans-serif; font-family: inherit; }
+.dom-header .div-skip a[id]:focus,
+  .dom-header .div-skip a[id]:active  { left: 0; top: 0; padding: 0.5em 0; width: 100%; height: auto; color: #ffffff; background: #404040; background-color: var(--color-point-40, var(--color-key1-40, #404040)); }
+.dom-header .div-skip .o-ogp *  { width: auto; }
+
+/** Layout */
+.dom-wrapper  { display: grid; grid-template-columns: auto 200px 800px auto; grid-template-rows: minmax($height-layout-header, auto) 1fr minmax($height-layout-footer, auto); }
+.dom-wrapper  { grid-template-columns: 0 18.75% 81.25% 0; }
+.dom-wrapper  { grid-template-columns: 0 minmax(24rem, 36rem) auto 0; }
+.dom-header  { position: relative; grid-row: 1 /2; grid-column: 1 /span 5; }
+.dom-nav  { position: relative; grid-row: 2 /3; grid-column: 2 /3; }
+.dom-main  { grid-row: 2 /3; grid-column: 3 /4; }
+.dom-aside  { position: relative; grid-row: 2 /3; grid-column: 4 /5; }
+.dom-footer  { position: relative; grid-row: 3 /4; grid-column: 1 /span 5; }
+
+
+/** Header */
+.dom-header  {  }
+.dom-header >.roles  { flex-direction: row; padding-bottom: $height-layout-header-sep; color: $color-white; background: $color-key1-40; }
+.dom-header >.roles:has(>.div-account)  { padding-top: $height-layout-header-account; }
+.dom-header >.roles:after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: $height-layout-header-sep; background: $color-key2-40; }
+
+.dom-header .div-root  { display: flex; align-items: center; gap: III(6); position: relative; min-width: $width-layout-nav; padding: III(4) 0 0 III(88); }
+.dom-header .div-root:after  { content: ""; position: absolute; left: III(60); top: 50%; transform: translateY(-50%);  width: III(175); height: III(24); background: var(--obj-img-logo-heavy) no-repeat; }
+.dom-header .div-root >*  { font-size: III(17); color: $tp; }
+.dom-header .div-root .logo  { font-size: III(20); }
+
+.dom-header .div-account  { font-size: $font-30; line-height: $line-30; display: flex; justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; height: $height-layout-header-account; color: white; background: $color-key1-70; }
+.dom-header .div-account >dl  { --gap: var(--e10, 1px); display: flex; align-items: center; gap: var(--gap); }
+.dom-header .div-account >dl >*  { min-width: 0; }
+.dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
+.dom-header .div-account >dl >* >*  { display: flex; align-items: center; }
+
+
+
+.dom-header .div-nav-global  { font-size: $font-70; line-height: $line-70; white-space: nowrap; }
+.dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: calc(($height-layout-header-nav - 1lh) / 2) 1em; white-space: nowrap; }
+.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 4; color: $color-white; }
+.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: $color-point-40; }
+
+.dom-header .div-nav-global >*  { display: flex; padding: 0 1em; }
+
+
+/** Global Navigation */
+.dom-wrapper  { grid-template-columns: 0 $width-layout-nav auto 0 0; }/* ### */
+.dom-wrapper  { height: 100%; }/* ### */
+
+
+.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid $color-edge-40; background-color: $color-ground; }
+
+.dom-nav .div-search  { position: relative; z-index: 9; margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; background-color: inherit; border-radius: $radius-70; }
+.dom-nav .div-search .o-form  { border-color: $tp; }
+.dom-nav .div-search .o-icon._search  { @include icon-flexed(20); margin-right: $gap-element-70; }
+.dom-nav .div-search .o-icon._search:before  { font-size: $height-icon-50; background-position: 50%; }
+.dom-nav .div-search .o-field  { display: flex; position: relative; z-index: 4; }
+.dom-nav .div-search .result  { position: absolute; width: 100%; background: inherit; border-radius: 0 0 $radius-70 $radius-70; box-shadow: inherit; }
+.dom-nav .div-search:focus-within  { box-shadow: $dropshadow-40; }
+.dom-nav .div-search:not(:focus-within) .result  { display: none; }
+
+
+.dom-nav .div-tablist  { margin: 0 $gap-element-90; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; }
+
+
+.dom-nav .div-nav-local  { flex: 1 0 0; display: flex; flex-direction: column; position: relative; overflow: auto scroll; margin-top: calc(-1 * $e20); padding: $e20 $gap-element-90 $gap-element-90; padding-right: calc($gap-element-90 - $width-scrollbar - $e10); }
+@include setScrollGutterStable(".dom-nav .div-nav-local", 1000);
+
+
+.dom-nav .div-nav-local .p-accordion-header-link  { display: flex; align-items: center; position: relative; padding: $gap-whitespace-30 0; }
+.dom-nav .div-nav-local .p-accordion-header-link >*  { flex: none; min-width: 0; }
+.dom-nav .div-nav-local .p-accordion-header-text  { @include inc-ellipsis(); flex: 1 0 0; display: block; position: relative; min-height: III(30); overflow: hidden; padding: $gap-element-50 $gap-element-80; }
+
+.dom-nav .div-nav-local .p-accordion-header-link:is(:not([aria-expanded]), [aria-expanded="false"])  { color: $color-text-30; }
+.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded]:after  { @include inc-symbol(); width: 1em; height: 1em; transition: transform 0.25s; }
+.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded]:after  { content: "arrow_drop_down"; margin-left: $gap-element-50; color: #CBD5E1; }
+.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded="true"]:after  { content: "arrow_drop_up"; margin-left: $gap-element-50; color: #64748B; }
+.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded]:after  { content: ""; background: var(--obj-ico-arrow-drop-down) no-repeat 25% /500%; }
+.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded="true"]:after  { content: ""; background-position: 0; transform: rotate(180deg); }
+
+.dom-nav .div-nav-local .header .p-accordion-header-link  { font-weight: $bold-70; }
+.dom-nav .div-nav-local .header .p-accordion-header-text  { padding: $gap-element-50 0; }
+.dom-nav .div-nav-local .p-accordion-content  { position: relative; padding: $gap-element-30 0; }
+.dom-nav .div-nav-local .p-accordion-content:before  { content: ""; position: absolute; top: 0; width: $e20; height: 100%; background: $color-edge-40; }
+.dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text  { border-radius: 0 12px 12px 0; }
+.dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*)  { color: #2968F9; background-color: #E6EDFE; }
+.dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*):before  { content: ""; position: absolute; left: 0; top: 0; width: $e30; height: 100%; background: #2149A3; border-radius: 0; }
+
+.dom-nav .div-nav-local >.m-binds  { position: sticky; bottom: 0; margin-top: auto; }
+
+
+
+
+
+
+
+
+
+.dom-main  { background: var(--color-ground); }
+.dom-main >*  { padding: 0 $margin-layout-inline; }
+.dom-main >:first-child  { border-top-left-radius: inherit; border-top-right-radius: inherit; }
+.dom-main >:last-child  { border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; }
+// .dom-main >.roles  { flex: 1 0 0; gap: $margin-layout-block; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
+// .dom-main >.roles >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); }
+// .dom-main >.roles >:first-child  { padding-top: $margin-layout-block; }
+.dom-main >.roles  { flex: 1 0 0; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
+// .dom-main >.roles :has(:where([class|="div"] ~[class|="div"]))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
+// .dom-main :has(>:where([class|="div"]) ~[class|="div"])  {  }
+// .dom-main :has(>:where([class|="div"]) ~[class|="div"]) >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); margin-top: $margin-layout-block; }
+// .dom-main :has(>:where([class|="div"]) ~[class|="div"]) >:first-child  { margin-top: 0; padding-top: $margin-layout-block; }
+.dom-main >.roles :has(:where(.div-contents))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
+.dom-main :has(:where(.div-contents)) >.div-contents  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); }
+.dom-main :has(:where(.div-contents)) >:has(~.div-contents)  { margin-bottom: $margin-layout-block; }
+.dom-main :has(:where(.div-contents)) >.div-contents ~*  { margin-top: $margin-layout-block; }
+.dom-main :has(:where(.div-contents)) >:first-child  { padding-top: $margin-layout-block; }
+
+.dom-main >.div-tablist  { font-size: inherit; line-height: inherit; border-bottom: $e10 solid #E2E8F0; }
+.dom-main >.div-tablist .m-mdi  { margin-bottom: calc(-1 * $e10); padding-top: $gap-element-80; }
+
+.dom-main .div-sep  { position: absolute; }
+.dom-main .div-header  { display: flex; align-items: center; gap: $gap-element-80; }
+.dom-main .div-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
+.dom-main .div-header >.o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
+.dom-main .div-header >.o-breadcrumb >*  { display: flex; }
+.dom-main .div-header .m-title  { order: -1; }
+.dom-main .div-header .m-title .o-heading  { display: flex; align-items: center; }
+.dom-main .div-header .m-binds  { margin-left: auto; }
+
+
+// .dom-main .div-header  { position: sticky; top: calc($margin-layout-block * -1); margin-top: calc($margin-layout-block * -1); padding-top: $margin-layout-block; background-color: inherit; }
+// .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin-bottom: calc($margin-layout-block * -1); padding-bottom: $margin-layout-block; }
+.dom-main .div-header  { position: sticky; top: 0; background-color: inherit; }
+.dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: 0 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
+.dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
+// .dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+.dom-main * ~.div-footer  { margin-top: $gap-element-90; padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+
+// @scope (.dom-main) to (.o-grid)  {
+//   :has(.div-header)  { background-color: gold; }
+// }
+
+
+
+.dom-aside  { display: none; background: Silver; }
+.dom-footer  { display: none; background: Silver; }
+
+/*
+@scope (.roles) to (.div-contents) {
+  >*  { border: 1px solid Red; }
+  // :scope .div-contents { border: 1px solid Red; }
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Container */
+// .dom-main  { flex-direction: row; background-color: inherit; }
+// .dom-main >.roles  { flex: none; min-width: 0; max-width: 100%; }
+// .dom-main >.roles >*  { flex: none; margin: 0 var(--margin-layout-inline); }
+
+// .dom-main >.role-primary  { flex: auto; }
+// .dom-main >.role-primary >*  { margin: 0 var(--margin-layout-inline-prim); }
+
+
+// .dom-main .div-header:before  { content: ""; display: block; margin-bottom: var(--margin-layout-block); }
+// .dom-main .div-header .o-title >.title  { display: table; table-layout: fixed; width: 100%; white-space: nowrap; }
+// .dom-main .div-header .o-title >.title:not(:has(:first-child)),
+//   .dom-main .div-header .o-title >.title :not(:has(:first-child))  { display: block; overflow: hidden; text-overflow: ellipsis; }
+
+// .dom-main >.role-primary .div-header .o-title  { gap: var(--gap-element-50-wide); border-bottom-width: 0; }
+// .dom-main >.role-primary .div-header .o-title :where( [class^="o-heading"], [class*=" o-heading"] )  { padding: 0 0; }
+
+// .dom-main >.role-secondary .div-header .navs  { order: -1; margin-right: calc(-1 * $gap-element-50 + var(--gap-element-50-narrow)); }
+// .dom-main >.role-secondary .div-header .navs .fn-close  { font-size: var(--width-obj-sym-l); padding: calc(($height-form-70 - 1em) / 2); }
+// .dom-main >.role-secondary .div-header .navs .fn-close:before  { content: "keyboard_double_arrow_right"; }
+
+
+// .dom-main .div-contents  { display: flex; flex-direction: column; flex: 1; margin: 0; /* padding: var(--margin-layout-block) var(--margin-layout-inline) var(--margin-layout-block); */ }
+.dom-main .div-contents  { flex: 1; display: flex; flex-direction: column; }
+.dom-main .div-contents :has(.o-grid)   { flex: 1; display: flex; flex-direction: column; background-color: inherit; }
+
+// .dom-main .div-contents >.where-cols-even  { width: 100%; min-width: 64rem; max-width: 90rem; margin-left: auto; margin-right: auto; }
+// .dom-main >.role-primary .div-contents >.where-cols-even  { min-width: 84rem; }
+
+
+// .dom-main .div-path  { font-size: var(--font-m); line-height: calc(24 / 16 * 1em); display: none; clear: both; margin-bottom: var(--margin-layout-block); }
+// .dom-main .div-path .breadcrumb  { display: block; vertical-align: middle; position: relative; max-width: 100%; overflow: hidden; margin: -0.3rem 0; text-overflow: ellipsis; white-space: nowrap; }
+// .dom-main .div-path .breadcrumb:after  { content: ""; display: block; clear: both; height: 0; visibility: hidden; }
+// .dom-main .div-path .breadcrumb >*  { display: inline; float: left; padding: 0.3rem 0; }
+// .dom-main .div-path .breadcrumb .sep  { width: 2.4rem; min-height: 2.4rem; overflow: hidden; margin: 0.1rem 0.1rem -0.1rem; background: url('../img/layout/icos_path.png') no-repeat 100% 50%; color: Transparent; user-select: none; text-align: center; }
+// .dom-main .div-path .breadcrumb .item  { position: relative; }
+// .dom-main .div-path .breadcrumb .item.root  { margin: 0 -0.6rem; padding: 0.3rem; }
+// .dom-main .div-path .breadcrumb .item.root:before  { content: ""; display: block; width: 2.4rem; height: 2.4rem; background: url('../img/layout/icos_path.png') no-repeat 0; }
+// .dom-main .div-path .breadcrumb .item.root >.inner  { position: absolute; left: 50%; bottom: 50%; -webkit-transform: translate(-50%, 50%); transform: translate(-50%, 50%); color: Transparent; user-select: none; text-shadow: none; }
+
+
+
+
+
+
+
+// .o-grid  { flex: 1; display: flex; }
+// .o-grid >.column  { display: flex; flex-direction: column; }
+// .o-grid >.column:first-child  { flex: 1 0 0; }
+// .o-grid >.column:not(:nth-child(1))  { width: calc(100% * 5 / 12); }
+
+.o-grid  { flex: 1; display: flex; gap: $margin-section-70; }
+.o-grid >.column  { flex: 0 0 auto; display: flex; flex-direction: column; min-width: 0; }
+// .o-grid >.column:first-child  { flex: 1 0 0; /* min-width: calc(var(--rem) * 484); */ }
+// .o-grid >.column:not(:nth-child(1))  { width: calc(100% * 5 / 12); min-width: calc(var(--rem) * 384); max-width: calc(var(--rem) * 600); }
+.o-grid >.column:first-child  { flex: 1 0 0; }
+.o-grid >.column:not(:first-child)  { width: calc(50% - $gap-element-80); }
+.o-grid >.column.views  { width: calc(100% * 5 / 12 - $gap-element-80); min-width: calc(var(--rem) * 384); max-width: calc(var(--rem) * 600); }
+
+
+
+
+
+
+
+
+
+
+.o-section  { display: flex; flex-direction: column; gap: $margin-section-20; }
+.o-section:has(>.main._primary),
+  .o-section >.main._primary  { flex: 1 0 0; }
+.o-section >.main  {
+  --height-section-main-body-10: calc(var(--height-cell) * 10 /* + var(--edge-cell) * 1 */ + var(--width-scrollbar));
+  --height-section-main-body-5: calc(var(--height-cell) * 5 /* + var(--edge-cell) * 1 */ + var(--width-scrollbar));
+  --height-section-main-body-3: calc(var(--height-cell) * 3 /* + var(--edge-cell) * 1 */ + var(--width-scrollbar));
+  --height-section-main-body: var(--height-section-main-body-10);
+
+  --height-section-main-head-1: calc(var(--height-cell-head) * 1);
+  --height-section-main-head-2: calc(var(--height-cell-head) * 2);
+  --height-section-main-head-3: calc(var(--height-cell-head) * 3);
+  --height-section-main-head: var(--height-section-main-head-1);
+
+  --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head));
+  // position: relative;
+}
+// .o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { z-index: 4; }
+// .o-section >.main._primary.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-2)); }
+// .o-section >.main._primary.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-3)); }
+// .o-section >.main._primary.rows-body-5i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head)); }
+// .o-section >.main._primary.rows-body-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head)); }
+// .o-section >.main._primary.rows-body-5i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-2)); }
+// .o-section >.main._primary.rows-body-3i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-2)); }
+// .o-section >.main._primary.rows-body-5i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-3)); }
+// .o-section >.main._primary.rows-body-3i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-3)); }
+// .o-section >.main._primary.rows-auto  { --height-section-main: auto !important; }
+// .o-section >.main._primary:not(:has(.p-datatable-scrollable-table))  { flex-basis: var(--height-section-main); min-height: 0; overflow: auto; }
+.o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 4; }
+.o-section >.main.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-2)); }
+.o-section >.main.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-3)); }
+.o-section >.main.rows-body-5i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head)); }
+.o-section >.main.rows-body-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head)); }
+.o-section >.main.rows-body-5i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-2)); }
+.o-section >.main.rows-body-3i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-2)); }
+.o-section >.main.rows-body-5i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-3)); }
+.o-section >.main.rows-body-3i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-3)); }
+.o-section >.main.rows-auto  { --height-section-main: auto !important; }
+.o-section >.main._primary:not(:has(.p-datatable-scrollable-table))  { flex-basis: var(--height-section-main); min-height: 0; overflow: auto; }
+
+
+
+
+
+
+
+
+
+
+.o-layer .g-overlay  { backdrop-filter: blur(1.5px); }
+
+
+
+
+
+
+
+
+.o-section:not(:first-child)  { margin-top: $margin-section-50; }
+
+
+
+
+.dom-main .div-header  { z-index: 10; }
+.dom-main .div-footer  { z-index: 10; }
+
+.o-layer._popup.type-univ  { z-index: 100; }
