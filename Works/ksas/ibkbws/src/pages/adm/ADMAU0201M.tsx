@@ -413,7 +413,7 @@ function ADMAU0201M() {
                 </div>
 
                 <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hidden" />
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
