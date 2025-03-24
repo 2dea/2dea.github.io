@@ -11,6 +11,7 @@ import OIcon from 'app/shared/modules/OIcon';
 import OLabel from 'app/shared/modules/OLabel';
 import OButton from 'app/shared/modules/OButton';
 import OImageButton from 'app/shared/modules/OImageButton';
+import XDropdown from 'app/shared/modules/XDropdown';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { Dialog } from 'primereact/dialog';

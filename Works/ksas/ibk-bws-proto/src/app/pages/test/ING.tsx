@@ -11,6 +11,7 @@ import OIcon from 'app/shared/modules/OIcon';
 import OLabel from 'app/shared/modules/OLabel';
 import OButton from 'app/shared/modules/OButton';
 import OImageButton from 'app/shared/modules/OImageButton';
+import XDropdown from 'app/shared/modules/XDropdown';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { Dialog } from 'primereact/dialog';
@@ -461,7 +462,7 @@ function ING() {
           <div className="column">
 
             직무분장
-            <Dropdown />
+            <XDropdown />
             {/* <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name" placeholder="Select a City" className="w-full md:w-14rem" checkmark={true}  highlightOnSelect={false} /> */}
 
           </div>
