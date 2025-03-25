@@ -16,6 +16,7 @@ import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -25,6 +26,9 @@ function ING() {
 
   // InputText
   const [value, setValue] = useState<string>('');
+
+  // Checkbox
+  const [checked, setChecked] = useState<boolean>(false);
 
   return (
     <div className="roles" data-div-role="0">
@@ -178,8 +182,10 @@ function ING() {
 
                       <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
-                        <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>
-                          <td>{idx === 1 ? <OIcon icon="grid-edited" /> : idx + 1}</td>
+                          console.log(idx),
+                        <tr key={idx} className={`${idx === 0 && 'p-highlight' || idx === 2 && 'p-x-mode-edited'}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight < $tr.trigger('click') > | 수정된 행 tr.p-x-mode-edited { @DEV } */}
+                          {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
+                          <td>{idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                           <td>0000001</td>
                           <td>홍길동</td>
                           <td>0001</td>

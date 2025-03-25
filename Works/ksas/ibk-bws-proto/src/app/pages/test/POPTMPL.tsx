@@ -16,11 +16,20 @@ import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function POPTMPL() {
+  // Dialog
   const [visible, setVisible] = useState<boolean>(true);
+
+  // InputText
+  const [value, setValue] = useState<string>('');
+
+  // Checkbox
+  const [checked, setChecked] = useState<boolean>(false);
+
   return (
     <Dialog header="Header" visible={visible} style={{ width: '50vw' }} onHide={() => {if (!visible) return; setVisible(false); }}>
       <p className="m-0">

@@ -16,6 +16,7 @@ import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -25,6 +26,9 @@ function ADMAU0201M() {
 
   // InputText
   const [value, setValue] = useState<string>('');
+
+  // Checkbox
+  const [checked, setChecked] = useState<boolean>(false);
 
   return (
     <div className="roles" data-div-role="0">
@@ -445,7 +449,7 @@ function ADMAU0201M() {
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
                           // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>
+                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight < $tr.trigger('click') > { @DEV } */}
                             <td>AABB00001M00</td>
                             <td className="g-start">
                               <div className="o-with-bind">
@@ -503,7 +507,7 @@ function ADMAU0201M() {
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
                           // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>
+                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight < $tr.trigger('click') > { @DEV } */}
                             <td><OImageButton label="순서 재정렬" icon="sort" className={'g-cursor-grab'} /></td>
                             <td>AABB00001M00</td>
                             <td className="g-start">
