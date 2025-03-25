@@ -113,6 +113,7 @@ function TMPL() {
                           <col style={{ width: 'calc(var(--rem) * 64)' }} />
                           <col style={{ width: 'calc(var(--rem) * 100)' }} />
                         </colgroup>
+
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순서</span></div></th>
@@ -329,8 +330,13 @@ function TMPL() {
                 </div>
 
                 <div className="main">
-                  <div className="m-data-form">
+                  <form className="m-data-form">
                     <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
                       <tbody>
                         <tr>
                           <th>
@@ -398,7 +404,7 @@ function TMPL() {
                         </tr>
                       </tbody>
                     </table>
-                  </div>
+                  </form>
                 </div>
               </div>
 
@@ -423,6 +429,7 @@ function TMPL() {
                           <col style={{ width: '20%', minWidth: 'calc(var(--rem) * 121)' }} />
                           <col />
                         </colgroup>
+
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순서</span></div></th>

@@ -6,6 +6,42 @@
   // @return calc($root-em * $int);
 }
 
+@mixin setResetFont()  {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+@mixin setReset($font: 0)  {
+  @if ($font == 1) {
+    @include setResetFont();
+  }
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: $tp;
+  border-radius: 0;
+
+  :before,
+  :after,
+  *  {
+    @if ($font == 1) {
+      @include setResetFont();
+    }
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    border-radius: 0;
+    cursor: inherit;
+    transition: inherit;
+  }
+}
+
 @mixin setTextStyle($size, $line: null, $wght: null)  {
   font-weight: #{$wght};
   font-size: $size;
@@ -120,6 +156,13 @@
   --obj-ico-sort-dec: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.518 3H1.482c-.309-.011-.495.384-.285.614l2.518 2.925a.378.378 0 0 0 .57 0l2.518-2.925c.21-.23.025-.626-.285-.614" fill="%232968F9"/></svg>');
   --obj-ico-user-id: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3 6c-.018 1.823-1.477 3.29-3.3 3.272A3.313 3.313 0 0 1 6.71 6C6.692 4.177 8.177 2.518 10 2.5c1.841-.018 3.318 1.66 3.3 3.5m-.831 5.684h-5c-1.105 0-2.165.44-2.946 1.22-.782.782-1.22 2.658-1.22 3.763a.833.833 0 0 0 .833.833h11.666a.833.833 0 0 0 .834-.833c0-1.105-.44-2.981-1.22-3.763a4.17 4.17 0 0 0-2.947-1.22" fill="%23E6EDFE" stroke="%232968F9" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   --obj-ico-user-pw: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.834 8.333h8.333v-2.18a4.17 4.17 0 0 0-1.22-2.947C11.801 2.06 10.73 1.984 10 1.986a4.167 4.167 0 0 0-4.166 4.166z" stroke="%232968F9" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.833 9.167v2.258a5.99 5.99 0 0 1-5.658 6.075 5.833 5.833 0 0 1-6.009-5.833v-2.5A.833.833 0 0 1 5 8.333h10a.833.833 0 0 1 .833.834M10 14.583v-1.25z" fill="%23E6EDFE"/><path d="M10 14.583v-1.25m5.833-4.166v2.258a5.99 5.99 0 0 1-5.658 6.075 5.833 5.833 0 0 1-6.009-5.833v-2.5A.833.833 0 0 1 5 8.333h10a.833.833 0 0 1 .833.834" stroke="%232968F9" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.994 12.5h.244-.5" stroke="%232968F9" stroke-width="calc(2.5 * 20 / 20)" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+@mixin symbol-bullet($size: 12)  {
+  --obj-sym-heading-level2: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><rect width="12" height="12" rx="4" fill="%23D9D9D9"/></mask><g mask="url(%23a)"><path fill="%232968F9" d="m9.5 12.063 6.062-3.5-7-12.125L2.5-.062z"/><path fill="%2300A4F0" d="m3.437 15.563 6.063-3.5-7-12.125-6.063 3.5z"/></g></svg>');
+  // --obj-sym-heading-level2: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_944_24164" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><rect width="12" height="12" rx="4" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_944_24164)"><rect width="7" height="14" transform="matrix(0.866026 -0.5 -0.5 -0.866026 9.5 12.0625)" fill="%232968F9"/><rect width="7" height="14" transform="matrix(0.866026 -0.5 -0.5 -0.866026 3.4375 15.5625)" fill="%2300A4F0"/></g></svg>');
+  --obj-sym-heading-level3: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12"><circle cx="6" cy="6" r="6" fill="%23D9D9D9"/></mask><g mask="url(%23a)"><path fill="%2300A4F0" d="m14.197 8.196-3-5.196L.804 9l3 5.197z"/><path fill="%232968F9" d="m11.196 3-3-5.196-10.392 6L.804 9z"/></g><circle cx="6" cy="6" r="3.429" fill="%23fff"/></svg>');
+  --obj-sym-heading-level4: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23a)"><path d="M1 6a1.5 1.5 0 0 1 1.5-1.5h7a1.5 1.5 0 0 1 0 3h-7A1.5 1.5 0 0 1 1 6" fill="%232968F9"/><path fill="%2300A4F0" d="M6 4.5h5v3H6z"/></g><defs><clipPath id="a"><path d="M1 6a1.5 1.5 0 0 1 1.5-1.5h7a1.5 1.5 0 0 1 0 3h-7A1.5 1.5 0 0 1 1 6" fill="%23fff"/></clipPath></defs></svg>');
 }
 
 

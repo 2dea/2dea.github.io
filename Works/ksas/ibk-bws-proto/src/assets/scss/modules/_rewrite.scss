@@ -69,28 +69,11 @@ button  {
 
 
 
-.p-breadcrumb  {
-  background: $tp;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
+.o-breadcrumb.p-breadcrumb  {
+  @include setReset();
 
   font-size: $font-30;
   line-height: $line-30;
-
-  :before,
-  :after,
-  *  {
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: inherit;
-    border-radius: 0;
-    cursor: inherit;
-    transition: inherit;
-  }
 
   .p-breadcrumb-list  {
     gap: $gap-whitespace-30;
@@ -117,6 +100,15 @@ button  {
 
 
 
+.o-form >.bind:is(.p-dropdown)  {
+  @include setReset(1);
+
+  .p-dropdown-label  {
+    &.p-placeholder  { color: $color-text-placeholder; }
+  }
+}
+
+
 
 
 
@@ -138,6 +130,14 @@ button  {
   text-decoration: none;
   overflow: hidden;
   position: relative;
+}
+
+.p-datatable  {
+  .p-datatable-emptymessage  {
+    font-size: $font-30;
+    line-height: $line-30;
+    color: $color-text-30;
+  }
 }
 
 .p-datatable .p-column-header-content  {
