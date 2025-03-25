@@ -12,11 +12,10 @@ import OLabel from 'app/shared/modules/OLabel';
 import OButton from 'app/shared/modules/OButton';
 import OImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
+import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
-import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
-import { Dropdown } from 'primereact/dropdown';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -70,7 +69,7 @@ function ING() {
 
                 <div className="o-field">
                   <div className="fields">
-                    <span className="o-form _input wdth-90">
+                    <div className="o-form _input wdth-90">
                       <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                       <i aria-hidden="true"></i>
                       <span className="inner-binds">
@@ -80,7 +79,7 @@ function ING() {
                         <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
                         <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
 
@@ -455,7 +454,125 @@ function ING() {
         </div>
 
         <div className="o-grid">
-          <div className="column"></div>
+          <div className="column">
+
+          <div className="o-section">
+              <div className="m-header">
+                <h2 className="o-heading level2"><span className="label">메뉴내역</span></h2>
+
+                <div className="o-length">
+                  <span className="head">전체</span>
+                  <em className="data">
+                    <span className="value">8</span>
+                    <span className="units">건</span>
+                  </em>
+                </div>
+
+                <div className="o-field">
+                  <div className="fields">
+                    <div className="o-form _input wdth-90">
+                      <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      <i aria-hidden="true"></i>
+                      <span className="inner-binds">
+                        <OImageButton label="검색" icon="search" />
+                      </span>
+                      <span className="inner-binds type-spin">
+                        <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                        <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="m-binds">
+                  <div className="group">
+                    <OButton label="모두펼침" className="_normal" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main">
+                <div className="m-data-form">
+                  <table className="table">
+                    <tbody>
+                      <tr>
+                        <th>
+                          <OLabel label={`상위​메뉴`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="field">
+                              <div className="o-form _select">
+                                <XDropdown className="bind" />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <OLabel label={`메뉴​ID`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          AABB00003
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <OLabel label={`메뉴명`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          원화현수송신청
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <OLabel label={`정렬​순서`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          000
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <OLabel label={`노출​여부`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          Y
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <OLabel label={`사용​여부`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          Y
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <OLabel label={`등록자`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          홍길동
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <OLabel label={`등록​일자`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <span className="o-figure type-date">2024-09-16</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <div className="o-grid">

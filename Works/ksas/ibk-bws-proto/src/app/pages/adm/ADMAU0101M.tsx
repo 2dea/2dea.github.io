@@ -12,11 +12,10 @@ import OLabel from 'app/shared/modules/OLabel';
 import OButton from 'app/shared/modules/OButton';
 import OImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
+import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
-import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
-import { Dropdown } from 'primereact/dropdown';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
@@ -80,7 +79,7 @@ function ADMAU0101M() {
 
                   <div className="o-field">
                     <div className="fields">
-                      <span className="o-form _input wdth-90">
+                      <div className="o-form _input wdth-90">
                         <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
@@ -90,7 +89,7 @@ function ADMAU0101M() {
                           <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
                           <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
                         </span>
-                      </span>
+                      </div>
                     </div>
                   </div>
 

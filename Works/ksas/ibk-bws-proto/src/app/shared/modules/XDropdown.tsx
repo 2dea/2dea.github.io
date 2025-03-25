@@ -8,15 +8,18 @@ import React, { useState } from 'react';
 // components
 import { Dropdown, DropdownChangeEvent } from 'primereact/dropdown';
 
-interface XDropdownProp {
-  name: string;
-  code: string;
+interface XDropdownProps {
+  name?: string;
+  code?: string;
+  className?: string;
+  style?: object;
+  hidden?: boolean;
+  disabled?: boolean;
 }
 
-function XDropdown() {
-  // 셀렉트박스
-  const [DropdownItems, setDropdownItems] = useState<XDropdownProp | null>(null);
-  const items: XDropdownProp[] = [
+function XDropdown({ className, style, hidden, disabled }: XDropdownProps) {
+  const [DropdownItems, setDropdownItems] = useState<XDropdownProps | null>(null);
+  const items: XDropdownProps[] = [
     { name: '전체', code: '0' },
     { name: '항목 1', code: '1' },
     { name: '항목 2', code: '2' },
@@ -31,12 +34,15 @@ function XDropdown() {
 
   return (
     <Dropdown
+      placeholder="선택"
       value={DropdownItems || ''}
-      onChange={(e: DropdownChangeEvent) => setDropdownItems(e.value)}
       options={items}
       optionLabel="name"
-      className="bind"
-      placeholder="선택"
+      onChange={(e: DropdownChangeEvent) => setDropdownItems(e.value)}
+      className={className}
+      style={style}
+      hidden={hidden}
+      disabled={disabled}
     />
   );
 }
