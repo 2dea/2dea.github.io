@@ -765,7 +765,7 @@
 // .m-tab >.lists  { flex: 1; }
 .m-tab  { --point: var(--color-key1-70); display: flex; align-items: flex-start; clear: both; position: relative; border-bottom: $e10 solid var(--point); }
 
-.m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--point); border-bottom-color: $tp; background: var(--color-ground); border-radius: $radius-50 $radius-50 0 0; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
+.m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--point); border-bottom-color: $tp; background: var(--color-ground); border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
 .m-tab .link[aria-selected="true"]  { font-weight: $bold-70; border-color: $tp; color: $color-white; background-color: var(--point); }
 .m-tab .link >*  { min-width: 0; }
 .m-tab .link.o-icon >.label  { @include inc-sronly(); }
@@ -786,7 +786,7 @@
 
 .m-mdi  { --point: var(--color-key1-70); display: flex; align-items: flex-start; clear: both; position: relative; border-bottom: $e10 solid var(--point); }
 
-.m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--point); border-bottom-color: $tp; background: var(--color-ground); border-radius: $radius-50 $radius-50 0 0; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
+.m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--point); border-bottom-color: $tp; background: var(--color-ground); border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
 .m-mdi .link[aria-current]:not([aria-current="false"])  { font-weight: $bold-70; border-color: $tp; color: $color-white; background-color: var(--point); }
 .m-mdi .link >*  { min-width: 0; }
 .m-mdi .link.o-icon >.label  { @include inc-sronly(); }
@@ -882,16 +882,25 @@
 
 .o-grid-table  { @include setResetFont(); }
 .o-grid-table  { clear: both; }
+.o-grid-table :has(>.wdth-auto) >*  { width: 0; }
+.o-grid-table :has(>.wdth-auto) >:where(.wdth-50)  { width: auto; }
+.o-grid-table .wdth-0  { width: 0; min-width: 0; }
+.o-grid-table .wdth-10  { width: calc(var(--rem) * 50); }
+.o-grid-table .wdth-50  { min-width: calc(var(--rem) * 120); }
+.o-grid-table .wdth-auto  { width: auto; }
 .o-grid-table table  { width: 100%; background: var(--color-ground); text-align: center; }
+.o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
+// .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
 .o-grid-table thead  { font-size: $font-30; line-height: $line-30; color: #004C9D; background: #F7F7F8; }
 .o-grid-table th  { font-weight: $bold-70; }
 
-.o-grid-table tr >*  { min-width: calc(var(--rem) * 50); height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid #EAEBEC; border-width: 0 $e10 $e10 0; }
+.o-grid-table tr >*  { min-width: 0; height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid #EAEBEC; border-width: 0 $e10 $e10 0; }
 .o-grid-table tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; }
 .o-grid-table tr >:first-child  { border-left-width: $e10; }
 
 .o-grid-table thead >* >*  { padding-left: III(11); padding-right: III(11); }
 .o-grid-table thead >tr:last-child >*  { border-bottom-color: #004C9D; }
+// .o-grid-table tbody >* >*  { white-space: nowrap; }
 .o-grid-table tbody >tr:nth-child(even)  { background: #F7F7F8; }
 
 .o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient(to bottom, rgba(#334155, 0.08), rgba(#334155, 0.08)); }

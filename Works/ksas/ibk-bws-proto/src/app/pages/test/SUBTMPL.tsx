@@ -521,7 +521,7 @@ function SUBTMPL() {
                       </div>
 
                       <div className="group">
-                        <span className="item"><button type="button" title="엑셀&#x200B;다운로드" className="o-image-button o-icon _excel-download"><span className="label">엑셀&#x200B;다운로드</span></button></span>
+                        <span className="item"><button type="button" title="엑셀&#x200B;다운로드" className="o-image-button o-icon _excel-download"><span className="label">엑셀​다운로드</span></button></span>
                         <span className="item"><button type="button" title="열설정" className="o-image-button o-icon _column-toggle"><span className="label">열설정</span></button></span>
                         <span className="item"><button type="button" title="표인쇄" className="o-image-button o-icon _print"><span className="label">표인쇄</span></button></span>
                       </div>

@@ -130,12 +130,7 @@ function ING() {
                   <div className="p-datatable-wrapper">
                     <table className="p-datatable-table p-datatable-scrollable-table">
                       <colgroup>
-                        {/* <col style={{ width: 'calc(var(--rem) * 50)' }} />
-                        <col style={{ width: '10%', minWidth: 'calc(var(--rem) * 92)' }} />
-                        <col style={{ width: 'calc(var(--rem) * 64)' }} />
-                        <col style={{ width: 'calc(var(--rem) * 64)' }} />
-                        <col style={{ width: 'calc(var(--rem) * 100)' }} /> */}
-                        <col style={{ minWidth: 'calc(var(--rem) * 50)' }} />
+                        <col className="wdth-10" />
                         <col />
                         <col />
                         <col />
@@ -146,11 +141,11 @@ function ING() {
                         <col />
                         <col />
                         <col />
-                        <col style={{ minWidth: 'calc(var(--rem) * 120)' }} />
+                        <col className="wdth-50" />
                         <col />
                         <col />
                         <col />
-                        <col style={{ minWidth: 'calc(var(--rem) * 120)' }} />
+                        <col className="wdth-50" />
                       </colgroup>
 
                       <thead className="p-datatable-thead">
@@ -181,9 +176,8 @@ function ING() {
                       </tbody>
 
                       <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          console.log(idx),
-                        <tr key={idx} className={`${idx === 0 && 'p-highlight' || idx === 2 && 'p-x-mode-edited'}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight < $tr.trigger('click') > | 수정된 행 tr.p-x-mode-edited { @DEV } */}
+                      {[...Array(24)].map((e, idx) => (
+                        <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                           {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
                           <td>{idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                           <td>0000001</td>
@@ -202,7 +196,7 @@ function ING() {
                           <td><span className="o-figure tel">02-729-7610</span></td>
                           <td></td>
                         </tr>
-                        ))}
+                      ))}
                       </tbody>
                     </table>
                   </div>
@@ -218,7 +212,7 @@ function ING() {
 
           <div className="o-section">
               <div className="m-header">
-                <h2 className="o-heading level2"><span className="label">메뉴내역</span></h2>
+                <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
 
                 <div className="o-length">
                   <span className="head">전체</span>
@@ -262,7 +256,7 @@ function ING() {
                     <tbody>
                       <tr>
                         <th>
-                          <OLabel label={`상위​메뉴`} require={false} />
+                          <OLabel label={`상위메뉴`} require={false} />
                         </th>
                         <td colSpan={3}>
                           <div className="o-field">
@@ -277,7 +271,7 @@ function ING() {
                       </tr>
                       <tr>
                         <th>
-                          <OLabel label={`메뉴​ID`} require={false} />
+                          <OLabel label={`메뉴ID`} require={false} />
                         </th>
                         <td colSpan={3}>
                           AABB00003
@@ -293,7 +287,7 @@ function ING() {
                       </tr>
                       <tr>
                         <th>
-                          <OLabel label={`정렬​순서`} require={false} />
+                          <OLabel label={`정렬순서`} require={false} />
                         </th>
                         <td colSpan={3}>
                           000
@@ -301,7 +295,7 @@ function ING() {
                       </tr>
                       <tr>
                         <th>
-                          <OLabel label={`노출​여부`} require={false} />
+                          <OLabel label={`노출여부`} require={false} />
                         </th>
                         <td colSpan={3}>
                           Y
@@ -309,7 +303,7 @@ function ING() {
                       </tr>
                       <tr>
                         <th>
-                          <OLabel label={`사용​여부`} require={false} />
+                          <OLabel label={`사용여부`} require={false} />
                         </th>
                         <td colSpan={3}>
                           Y
@@ -325,7 +319,7 @@ function ING() {
                       </tr>
                       <tr>
                         <th>
-                          <OLabel label={`등록​일자`} require={false} />
+                          <OLabel label={`등록일자`} require={false} />
                         </th>
                         <td colSpan={3}>
                           <span className="o-figure type-date">2024-09-16</span>
@@ -343,15 +337,122 @@ function ING() {
         <div className="o-grid">
           <div className="column">
 
-            직무분장
-            <XDropdown />
-            {/* <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name" placeholder="Select a City" className="w-full md:w-14rem" checkmark={true}  highlightOnSelect={false} /> */}
+            <div className="o-section">
+              <div className="m-header">
+                <h2 className="o-heading level3"><span className="label">직무분장</span></h2>
+
+
+                <div className="m-binds">
+                  <div className="group">
+                    <OButton label="직무분장 관리" className="_normal" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main _primary rows-body-3i">
+                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                <div className="o-grid-table p-datatable">
+                  <div className="p-datatable-wrapper">
+                    <table className="p-datatable-table p-datatable-scrollable-table">
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col className="wdth-auto" />
+                      </colgroup>
+
+                      <thead className="p-datatable-thead">
+                        <tr>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장코드</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장명</span></div></th>
+                        </tr>
+                      </thead>
+
+                      <tbody className="p-datatable-tbody">
+                        <tr className="p-datatable-emptymessage">
+                          <td colSpan={3}>등록된 데이터가 없습니다.</td>
+                        </tr>
+                      </tbody>
+
+                      <tbody className="p-datatable-tbody">
+                      {[...Array(24)].map((e, idx) => (
+                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          <td>{idx + 1}</td>
+                          <td>10080</td>
+                          <td className="g-start">경영정보</td>
+                        </tr>
+                      ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
 
           <div className="column">
 
-            근태정보
+            <div className="o-section">
+              <div className="m-header">
+                <h2 className="o-heading level3"><span className="label">근태정보</span></h2>
+
+
+                <div className="m-binds">
+                  <div className="group">
+                    <OButton label="행추가" className="_normal" />
+                    <OButton label="행삭제" className="_normal" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main _primary rows-body-3i">
+                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                <div className="o-grid-table p-datatable">
+                  <div className="p-datatable-wrapper">
+                    <table className="p-datatable-table p-datatable-scrollable-table">
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col className="wdth-auto" />
+                      </colgroup>
+
+                      <thead className="p-datatable-thead">
+                        <tr>
+                          <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">dddd</span></label></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재직원</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">근태구분</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작시각</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료시각</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직직원</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반차구분</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴가일수</span></div></th>
+                        </tr>
+                      </thead>
+
+                      <tbody className="p-datatable-tbody">
+                        <tr className="p-datatable-emptymessage">
+                          <td colSpan={3}>등록된 데이터가 없습니다.</td>
+                        </tr>
+                      </tbody>
+
+                      <tbody className="p-datatable-tbody">
+                      {[...Array(2)].map((e, idx) => (
+                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          <td>{idx + 1}</td>
+                          <td>10080</td>
+                          <td className="g-start">경영정보</td>
+                        </tr>
+                      ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>

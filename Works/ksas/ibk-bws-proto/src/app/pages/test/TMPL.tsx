@@ -271,7 +271,7 @@ function TMPL() {
                             <td>Y</td>
                             <td><span className="o-figure type-date">2024-09-16</span></td>
                           </tr>
-                          {[...Array(23)].map((e, idx) => (
+                        {[...Array(23)].map((e, idx) => (
                           <tr>
                             <td>{ idx + 10 }</td>
                             <td>AABB00001</td>
@@ -287,9 +287,9 @@ function TMPL() {
                             <td>Y</td>
                             <td><span className="o-figure type-date">2024-09-16</span></td>
                           </tr>
-                          ))}
-                          {/* {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>
+                        ))}
+                        {/* {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
                             <td>{idx + 1}</td>
                             <td>AABB00001</td>
                             <td className="g-start">
@@ -304,7 +304,7 @@ function TMPL() {
                             <td>Y</td>
                             <td><span className="o-figure type-date">2024-09-16</span></td>
                           </tr>
-                          ))} */}
+                        ))} */}
                         </tbody>
                       </table>
                     </div>
@@ -344,7 +344,7 @@ function TMPL() {
                       <tbody>
                         <tr>
                           <th>
-                            <OLabel label={`상위​메뉴`} require={false} />
+                            <OLabel label={`상위메뉴`} require={false} />
                           </th>
                           <td colSpan={3}>
                             원화현수송
@@ -352,7 +352,7 @@ function TMPL() {
                         </tr>
                         <tr>
                           <th>
-                            <OLabel label={`메뉴​ID`} require={false} />
+                            <OLabel label={`메뉴ID`} require={false} />
                           </th>
                           <td colSpan={3}>
                             AABB00003
@@ -368,7 +368,7 @@ function TMPL() {
                         </tr>
                         <tr>
                           <th>
-                            <OLabel label={`정렬​순서`} require={false} />
+                            <OLabel label={`정렬순서`} require={false} />
                           </th>
                           <td colSpan={3}>
                             000
@@ -376,7 +376,7 @@ function TMPL() {
                         </tr>
                         <tr>
                           <th>
-                            <OLabel label={`노출​여부`} require={false} />
+                            <OLabel label={`노출여부`} require={false} />
                           </th>
                           <td colSpan={3}>
                             Y
@@ -384,7 +384,7 @@ function TMPL() {
                         </tr>
                         <tr>
                           <th>
-                            <OLabel label={`사용​여부`} require={false} />
+                            <OLabel label={`사용여부`} require={false} />
                           </th>
                           <td colSpan={3}>
                             Y
@@ -400,7 +400,7 @@ function TMPL() {
                         </tr>
                         <tr>
                           <th>
-                            <OLabel label={`등록​일자`} require={false} />
+                            <OLabel label={`등록일자`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <span className="o-figure type-date">2024-09-16</span>
@@ -449,9 +449,9 @@ function TMPL() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                          {[...Array(24)].map((e, idx) => (
+                        {[...Array(24)].map((e, idx) => (
                           // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                          <tr key={idx} className={`${idx === 0 && 'p-highlight'}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight < $tr.trigger('click') > { @DEV } */}
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
                             <td>AABB00001M00</td>
                             <td className="g-start">
@@ -463,7 +463,7 @@ function TMPL() {
                               </div>
                             </td>
                           </tr>
-                          ))}
+                        ))}
                         </tbody>
                       </table>
                     </div>
