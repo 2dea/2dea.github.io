@@ -413,7 +413,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .o-grid >.column:first-child  { flex: 1 0 0; }
 // .o-grid >.column:not(:nth-child(1))  { width: calc(100% * 5 / 12); }
 
-.o-grid  { flex: 1; display: flex; gap: $margin-section-70; }
+.o-grid  { display: flex; gap: $margin-section-70; }
+.o-grid:has(.o-section >.main._primary)  { flex: 2; }
+.o-grid:has(.o-section >.main._primary):first-child  { flex: 3; }
 .o-grid >.column  { flex: 0 0 auto; display: flex; flex-direction: column; min-width: 0; }
 // .o-grid >.column:first-child  { flex: 1 0 0; /* min-width: calc(var(--rem) * 484); */ }
 // .o-grid >.column:not(:nth-child(1))  { width: calc(100% * 5 / 12); min-width: calc(var(--rem) * 384); max-width: calc(var(--rem) * 600); }

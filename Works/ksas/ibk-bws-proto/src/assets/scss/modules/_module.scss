@@ -270,7 +270,9 @@
 
 
 
-.o-figure  { font-feature-settings: var(--text-feature-tnum); white-space: nowrap; }
+
+.o-figure  { font-feature-settings: var(--text-feature-tnum); }
+.o-figure[class*=" type-"]  { white-space: nowrap; }
 
 
 .o-find-mark  { background-color: #D7E3FE; border-radius: $radius-abs-20; outline: 0; }
@@ -501,10 +503,9 @@
 .o-check >input ~.label._hidden:before  { left: 0; }
  */
 
-.o-check  { display: inline-block; display: inline-flex; align-items: baseline; gap: 1rem; vertical-align: middle; position: relative; max-width: 100%; }
+.o-check  { display: inline-block; display: inline-flex; align-items: baseline; gap: $gap-element-50; vertical-align: middle; position: relative; max-width: 100%; }
 .o-check >*  { vertical-align: inherit; vertical-align: -webkit-baseline-middle; }
 .o-check >input  { font-size: calc(24em / 14); font-size: min(2.4rem, calc(24em / 14)); position: absolute; margin: calc((1em - 13px) / 2); opacity: 0.001; }
-.o-check >input ~.label  { align-self: center; overflow: hidden; }
 .o-check >input ~i  { font-size: calc(24em / 14); font-size: min(2.4rem, calc(24em / 14)); display: inline-block; display: inline-flex; align-items: center; flex: none; position: relative; max-height: 1em; }
 .o-check >input ~i:before  { content: ""; width: 1em; height: 1em; background: none no-repeat 0 /100%; border-radius: 0.2rem; -webkit-transition: background-color 0.15s; transition: background-color 0.15s; }
 .o-check >input ~i:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
@@ -512,13 +513,15 @@
 .o-check >input ~i:before  { content: "check_box_outline_blank"; color: var(--color-check-enabled); }
 .o-check >input[type="radio"]:not(.type-checkbox) ~i:before  { border-radius: 50%; }
 .o-check >input[type="radio"]:not(.type-checkbox) ~i:before  { content: "radio_button_unchecked"; font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
+.o-check >.label  { align-self: center; overflow: hidden; }
 
 .o-check >input[type="checkbox"]:indeterminate ~i:before  { content: "indeterminate_check_box"; color: var(--color-check-checked); }
 .o-check >input:checked ~i:before  { content: "check_box"; color: var(--color-check-checked); }
 .o-check >input[type="radio"]:not(.type-checkbox):checked ~i:before  { content: "radio_button_checked"; }
 
-.o-check >input[disabled] ~.label  { color: var(--color-text-disabled, GrayText); }
 .o-check >input[disabled] ~i:before  { color: var(--color-check-enabled); opacity: 0.35; }
+.o-check >:has(input[disabled]) ~.label,
+  .o-check >input[disabled] ~.label  { color: var(--color-text-disabled, GrayText); }
 
 /* .o-check >input ~i:before  { content: ""; background-image: url('../img/common/btns_form_check.png'); }
 .o-check >input[type="radio"]:not(.type-checkbox) ~i:before  { content: ""; background-image: url('../img/common/btns_form_radio.png'); } */
@@ -530,13 +533,10 @@
 
 .o-check >input ~i  { outline: $e20 solid Transparent; outline-offset: calc(-1 * $e20); border-radius: 0.5rem; transition-duration: 0.05s; }
 .o-check >input[type="radio"]:not(.type-checkbox) ~i  { outline-offset: calc(-1 * $e20 / 2); border-radius: 50%; }
-/* .o-check >input:focus ~.label:not(:hover):before  { background-color: rgba(0,123,255, 0.35); } */
 .o-check:hover >input:not([disabled]):not(:focus) ~i  { box-shadow: 0 0 $e20 var(--color-key1-40); }
 .o-check >input:focus-visible ~i:not(:hover)  { outline: $e20 solid currentColor; }
 
-/* .o-check >input ~.label._hidden  { position: absolute; max-width: 0; overflow: hidden; white-space: nowrap; } */
-/* .o-check >input ~.label._hidden  { font-size: $ss; position: absolute; width: 100%; height: 100%; color: Transparent; } */
-.o-check >input ~.label._hidden  { font-size: $ss; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: Transparent; pointer-events: none; text-shadow: none; }
+.o-check >.label._hidden  { @include inc-sronly; }
 
 .o-check.style-visibility >input ~i:before  { content: "visibility"; color: var(--color-icon-40); }
 .o-check.style-visibility >input:checked ~i:before  { content: "visibility_off"; }
@@ -900,7 +900,8 @@
 
 .o-grid-table thead >* >*  { padding-left: III(11); padding-right: III(11); }
 .o-grid-table thead >tr:last-child >*  { border-bottom-color: #004C9D; }
-// .o-grid-table tbody >* >*  { white-space: nowrap; }
+.o-grid-table tbody >* >*  { white-space: nowrap; }
+.o-grid-table tbody >* >* >*  { white-space: normal; }
 .o-grid-table tbody >tr:nth-child(even)  { background: #F7F7F8; }
 
 .o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient(to bottom, rgba(#334155, 0.08), rgba(#334155, 0.08)); }

@@ -16,6 +16,10 @@ import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { addLocale } from 'primereact/api';
+import { Calendar } from 'primereact/calendar';
+import { Nullable } from 'primereact/ts-helpers';
+import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -26,6 +30,17 @@ function POPTMPL() {
 
   // InputText
   const [value, setValue] = useState<string>('');
+
+  // Calendar
+  addLocale('ko', {
+    firstDayOfWeek: 0,
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+  });
+  const [Date, setDate] = useState<Nullable<Date>>(null);
+
+  // RadioButton
+  const [ingredient, setIngredient] = useState<string>('');
 
   // Checkbox
   const [checked, setChecked] = useState<boolean>(false);

@@ -16,6 +16,10 @@ import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { addLocale } from 'primereact/api';
+import { Calendar } from 'primereact/calendar';
+import { Nullable } from 'primereact/ts-helpers';
+import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -26,6 +30,17 @@ function ING() {
 
   // InputText
   const [value, setValue] = useState<string>('');
+
+  // Calendar
+  addLocale('ko', {
+    firstDayOfWeek: 0,
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+  });
+  const [Date, setDate] = useState<Nullable<Date>>(null);
+
+  // RadioButton
+  const [ingredient, setIngredient] = useState<string>('');
 
   // Checkbox
   const [checked, setChecked] = useState<boolean>(false);
@@ -193,7 +208,7 @@ function ING() {
                           <td className="g-start">BPR지원_일반</td>
                           <td>부점장급</td>
                           <td><span className="o-figure type-date">2024-09-16</span></td>
-                          <td><span className="o-figure tel">02-729-7610</span></td>
+                          <td><span className="o-figure type-tel">02-729-7610</span></td>
                           <td></td>
                         </tr>
                       ))}
@@ -306,7 +321,8 @@ function ING() {
                           <OLabel label={`사용여부`} require={false} />
                         </th>
                         <td colSpan={3}>
-                          Y
+                          <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-1'} /><span className="label">예</span></label>
+                          <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">예</span></label>
                         </td>
                       </tr>
                       <tr>
@@ -314,7 +330,7 @@ function ING() {
                           <OLabel label={`등록자`} require={false} />
                         </th>
                         <td colSpan={3}>
-                          홍길동
+
                         </td>
                       </tr>
                       <tr>
@@ -355,7 +371,7 @@ function ING() {
                   <div className="p-datatable-wrapper">
                     <table className="p-datatable-table p-datatable-scrollable-table">
                       <colgroup>
-                        <col />
+                        <col className="wdth-10" />
                         <col />
                         <col className="wdth-auto" />
                       </colgroup>
@@ -412,14 +428,22 @@ function ING() {
                   <div className="p-datatable-wrapper">
                     <table className="p-datatable-table p-datatable-scrollable-table">
                       <colgroup>
+                        <col className="wdth-10" />
+                        <col className="wdth-10" />
                         <col />
                         <col />
-                        <col className="wdth-auto" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
                       </colgroup>
 
                       <thead className="p-datatable-thead">
                         <tr>
-                          <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">dddd</span></label></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체선택</span></label></div></th>
                           <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                           <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재직원</span></div></th>
                           <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">근태구분</span></div></th>
@@ -435,18 +459,66 @@ function ING() {
 
                       <tbody className="p-datatable-tbody">
                         <tr className="p-datatable-emptymessage">
-                          <td colSpan={3}>등록된 데이터가 없습니다.</td>
+                          <td colSpan={11}>등록된 데이터가 없습니다.</td>
                         </tr>
                       </tbody>
 
                       <tbody className="p-datatable-tbody">
-                      {[...Array(2)].map((e, idx) => (
+                      {[...Array(1)].map((e, idx) => (
                         <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
                           <td>{idx + 1}</td>
-                          <td>10080</td>
-                          <td className="g-start">경영정보</td>
+                          <td>[0000001] 홍길동</td>
+                          <td></td>
+                          <td><span className="o-figure type-date">2024-09-16</span></td>
+                          <td><span className="o-figure type-date">2024-09-16</span></td>
+                          <td><span className="o-figure type-time">00:00</span></td>
+                          <td><span className="o-figure type-time">00:00</span></td>
+                          <td>[0000001] 홍길동</td>
+                          <td></td>
+                          <td></td>
                         </tr>
                       ))}
+                        <tr>
+                          <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                          <td><OIcon icon="grid-added" /></td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select wdth-30">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td><span className="o-figure type-date">2024-09-16</span></td>
+                          <td><span className="o-figure type-date">2024-09-16</span></td>
+                          <td><span className="o-figure type-time">00:00</span></td>
+                          <td><span className="o-figure type-time">00:00</span></td>
+                          <td>[0000001] 홍길동</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>

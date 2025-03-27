@@ -7,6 +7,9 @@ import React from 'react';
 
 // components
 import { InputText } from 'primereact/inputtext';
+import { addLocale } from 'primereact/api';
+import { Calendar } from 'primereact/calendar';
+import { Nullable } from 'primereact/ts-helpers';
 import { Button } from 'primereact/button';
 
 function Footer() {
