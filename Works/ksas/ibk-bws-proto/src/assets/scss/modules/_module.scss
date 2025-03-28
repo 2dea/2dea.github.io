@@ -271,8 +271,8 @@
 
 
 
-.o-figure  { font-feature-settings: var(--text-feature-tnum); }
-.o-figure[class*=" type-"]  { white-space: nowrap; }
+.o-digit  { font-feature-settings: var(--text-feature-tnum); }
+.o-digit[class*=" type-"]  { white-space: nowrap; }
 
 
 .o-find-mark  { background-color: #D7E3FE; border-radius: $radius-abs-20; outline: 0; }

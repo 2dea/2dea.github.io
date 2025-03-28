@@ -17,8 +17,8 @@ import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
 import { addLocale } from 'primereact/api';
-import { Calendar } from 'primereact/calendar';
 import { Nullable } from 'primereact/ts-helpers';
+import { Calendar } from 'primereact/calendar';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
@@ -38,6 +38,7 @@ function ING() {
     monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
   });
   const [Date, setDate] = useState<Nullable<Date>>(null);
+  const [Time, setTime] = useState(null);
 
   // RadioButton
   const [ingredient, setIngredient] = useState<string>('');
@@ -203,12 +204,12 @@ function ING() {
                           <td className="g-start">영업부</td>
                           <td>0001</td>
                           <td className="g-start">동대문個</td>
-                          <td><span className="o-figure type-date">2024-09-16</span></td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
                           <td>팀장</td>
                           <td className="g-start">BPR지원_일반</td>
                           <td>부점장급</td>
-                          <td><span className="o-figure type-date">2024-09-16</span></td>
-                          <td><span className="o-figure type-tel">02-729-7610</span></td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
+                          <td><span className="o-digit type-tel">02-729-7610</span></td>
                           <td></td>
                         </tr>
                       ))}
@@ -229,33 +230,9 @@ function ING() {
               <div className="m-header">
                 <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
 
-                <div className="o-length">
-                  <span className="head">전체</span>
-                  <em className="data">
-                    <span className="value">8</span>
-                    <span className="units">건</span>
-                  </em>
-                </div>
-
-                <div className="o-field">
-                  <div className="fields">
-                    <div className="o-form _input wdth-90">
-                      <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                      <i aria-hidden="true"></i>
-                      <span className="inner-binds">
-                        <OImageButton label="검색" icon="search" />
-                      </span>
-                      <span className="inner-binds type-spin">
-                        <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                        <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="m-binds">
                   <div className="group">
-                    <OButton label="모두펼침" className="_normal" />
+                    <OButton label="변경이력" className="_normal" />
                   </div>
                 </div>
               </div>
@@ -271,13 +248,55 @@ function ING() {
                     <tbody>
                       <tr>
                         <th>
-                          <OLabel label={`상위메뉴`} require={false} />
+                          <OLabel label={`직원`} require={false} />
                         </th>
                         <td colSpan={3}>
                           <div className="o-field">
                             <div className="fields">
-                              <div className="o-form _select">
-                                <XDropdown appendTo={'self'} className="bind" />
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0000001] 홍길동" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th>
+                          <OLabel label={`소속부점`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th>
+                          <OLabel label={`소속팀`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th>
+                          <OLabel label={`실근무점`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
                                 <i aria-hidden="true"></i>
                               </div>
                             </div>
@@ -286,59 +305,55 @@ function ING() {
                       </tr>
                       <tr>
                         <th>
-                          <OLabel label={`메뉴ID`} require={false} />
+                          <OLabel label={`EDW 실근무부점`} require={false} />
                         </th>
                         <td colSpan={3}>
-                          AABB00003
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
                         </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <OLabel label={`메뉴명`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          원화현수송신청
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <OLabel label={`정렬순서`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          000
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <OLabel label={`노출여부`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          Y
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <OLabel label={`사용여부`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-1'} /><span className="label">예</span></label>
-                          <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">예</span></label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <OLabel label={`등록자`} require={false} />
-                        </th>
-                        <td colSpan={3}>
 
-                        </td>
-                      </tr>
-                      <tr>
                         <th>
-                          <OLabel label={`등록일자`} require={false} />
+                          <OLabel label={`직책코드`} require={false} />
                         </th>
                         <td colSpan={3}>
-                          <span className="o-figure type-date">2024-09-16</span>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _select wdth-50">
+                                <XDropdown appendTo={'self'} className="bind" />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th>
+                          <OLabel label={`근부여부`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="m-checks">
+                            <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">예</span></label>
+                            <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">예</span></label>
+                          </div>
+                        </td>
+
+                        <th>
+                          <OLabel label={`부점변경예정 (종료일)`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
+                              <div className="o-form _input type-date wdth-50">
+                                <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon disabled />
+                              </div>
+                            </div>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -470,10 +485,10 @@ function ING() {
                           <td>{idx + 1}</td>
                           <td>[0000001] 홍길동</td>
                           <td></td>
-                          <td><span className="o-figure type-date">2024-09-16</span></td>
-                          <td><span className="o-figure type-date">2024-09-16</span></td>
-                          <td><span className="o-figure type-time">00:00</span></td>
-                          <td><span className="o-figure type-time">00:00</span></td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
+                          <td><span className="o-digit type-time">00:00</span></td>
+                          <td><span className="o-digit type-time">00:00</span></td>
                           <td>[0000001] 홍길동</td>
                           <td></td>
                           <td></td>
@@ -505,17 +520,49 @@ function ING() {
                           <td>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
                                 </div>
                               </div>
                             </div>
                           </td>
-                          <td><span className="o-figure type-date">2024-09-16</span></td>
-                          <td><span className="o-figure type-date">2024-09-16</span></td>
-                          <td><span className="o-figure type-time">00:00</span></td>
-                          <td><span className="o-figure type-time">00:00</span></td>
-                          <td>[0000001] 홍길동</td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-time wdth-30">
+                                  <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-time wdth-30">
+                                  <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
                           <td></td>
                           <td></td>
                         </tr>

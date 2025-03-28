@@ -17,8 +17,8 @@ import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
 import { addLocale } from 'primereact/api';
-import { Calendar } from 'primereact/calendar';
 import { Nullable } from 'primereact/ts-helpers';
+import { Calendar } from 'primereact/calendar';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
@@ -38,6 +38,7 @@ function POPTMPL() {
     monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
   });
   const [Date, setDate] = useState<Nullable<Date>>(null);
+  const [Time, setTime] = useState(null);
 
   // RadioButton
   const [ingredient, setIngredient] = useState<string>('');

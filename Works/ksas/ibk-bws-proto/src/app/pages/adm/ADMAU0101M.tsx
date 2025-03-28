@@ -17,8 +17,8 @@ import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
 import { addLocale } from 'primereact/api';
-import { Calendar } from 'primereact/calendar';
 import { Nullable } from 'primereact/ts-helpers';
+import { Calendar } from 'primereact/calendar';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
@@ -38,6 +38,7 @@ function ADMAU0101M() {
     monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
   });
   const [Date, setDate] = useState<Nullable<Date>>(null);
+  const [Time, setTime] = useState(null);
 
   // RadioButton
   const [ingredient, setIngredient] = useState<string>('');
@@ -164,7 +165,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                           <tr>
                             <td>2</td>
@@ -179,7 +180,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                           <tr>
                             <td>3</td>
@@ -194,7 +195,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                           <tr>
                             <td>4</td>
@@ -209,7 +210,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                           <tr>
                             <td>5</td>
@@ -224,7 +225,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                           <tr>
                             <td>6</td>
@@ -239,7 +240,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                           <tr>
                             <td>7</td>
@@ -254,7 +255,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                           <tr>
                             <td>8</td>
@@ -269,7 +270,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                           <tr>
                             <td>9</td>
@@ -284,7 +285,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                         {[...Array(23)].map((e, idx) => (
                           <tr>
@@ -300,7 +301,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                         ))}
                         {/* {[...Array(24)].map((e, idx) => (
@@ -317,7 +318,7 @@ function ADMAU0101M() {
                             </td>
                             <td>Y</td>
                             <td>Y</td>
-                            <td><span className="o-figure type-date">2024-09-16</span></td>
+                            <td><span className="o-digit type-date">2024-09-16</span></td>
                           </tr>
                         ))} */}
                         </tbody>
@@ -418,7 +419,7 @@ function ADMAU0101M() {
                             <OLabel label={`등록일자`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            <span className="o-figure type-date">2024-09-16</span>
+                            <span className="o-digit type-date">2024-09-16</span>
                           </td>
                         </tr>
                       </tbody>
