@@ -30,8 +30,8 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
     { code: '5', name: '항목 5' },
     { code: '6', name: '항목 6' },
     { code: '7', name: '항목 7' },
-    { code: '8', name: '항목 8' },
-    { code: '9', name: '항목 9' },
+    { code: '8', name: '예' },
+    { code: '9', name: '아니오' },
   ];
 
   return (

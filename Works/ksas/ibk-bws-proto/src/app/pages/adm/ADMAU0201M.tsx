@@ -336,7 +336,7 @@ function ADMAU0201M() {
 
             </div>
 
-            <div className="column views">
+            <div className="column">
 
               <div className="o-section">
                 <div className="m-header">
@@ -359,7 +359,7 @@ function ADMAU0201M() {
 
                       <tbody>
                         <tr>
-                          <th>
+                          <th colSpan={3}>
                             <OLabel label={`상위메뉴`} require={false} />
                           </th>
                           <td colSpan={3}>
@@ -367,7 +367,7 @@ function ADMAU0201M() {
                           </td>
                         </tr>
                         <tr>
-                          <th>
+                          <th colSpan={3}>
                             <OLabel label={`메뉴ID`} require={false} />
                           </th>
                           <td colSpan={3}>
@@ -375,7 +375,7 @@ function ADMAU0201M() {
                           </td>
                         </tr>
                         <tr>
-                          <th>
+                          <th colSpan={3}>
                             <OLabel label={`메뉴명`} require={false} />
                           </th>
                           <td colSpan={3}>
@@ -383,7 +383,7 @@ function ADMAU0201M() {
                           </td>
                         </tr>
                         <tr>
-                          <th>
+                          <th colSpan={3}>
                             <OLabel label={`정렬순서`} require={false} />
                           </th>
                           <td colSpan={3}>
@@ -391,7 +391,7 @@ function ADMAU0201M() {
                           </td>
                         </tr>
                         <tr>
-                          <th>
+                          <th colSpan={3}>
                             <OLabel label={`노출여부`} require={false} />
                           </th>
                           <td colSpan={3}>
@@ -399,7 +399,7 @@ function ADMAU0201M() {
                           </td>
                         </tr>
                         <tr>
-                          <th>
+                          <th colSpan={3}>
                             <OLabel label={`사용여부`} require={false} />
                           </th>
                           <td colSpan={3}>
@@ -407,7 +407,7 @@ function ADMAU0201M() {
                           </td>
                         </tr>
                         <tr>
-                          <th>
+                          <th colSpan={3}>
                             <OLabel label={`등록자`} require={false} />
                           </th>
                           <td colSpan={3}>
@@ -415,7 +415,7 @@ function ADMAU0201M() {
                           </td>
                         </tr>
                         <tr>
-                          <th>
+                          <th colSpan={3}>
                             <OLabel label={`등록일자`} require={false} />
                           </th>
                           <td colSpan={3}>

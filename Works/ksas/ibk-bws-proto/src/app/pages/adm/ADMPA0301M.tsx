@@ -1,0 +1,604 @@
+/**
+ * @description 관리자 > 인사정보 > 직원관리
+ */
+
+// dependency
+import React, { useState } from 'react';
+
+// components
+// import '@modules/Index';
+import OIcon from 'app/shared/modules/OIcon';
+import OLabel from 'app/shared/modules/OLabel';
+import OButton from 'app/shared/modules/OButton';
+import OImageButton from 'app/shared/modules/OImageButton';
+import XDropdown from 'app/shared/modules/XDropdown';
+import { Dialog } from 'primereact/dialog';
+import { MenuItem } from 'primereact/menuitem';
+import { BreadCrumb } from 'primereact/breadcrumb';
+import { InputText } from 'primereact/inputtext';
+import { addLocale } from 'primereact/api';
+import { Nullable } from 'primereact/ts-helpers';
+import { Calendar } from 'primereact/calendar';
+import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
+import { Checkbox } from 'primereact/checkbox';
+import { DataTable } from 'primereact/datatable';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
+function ADMPA0301M() {
+  // BreadCrumb
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '인사정보' }, { label: '직원관리' }];
+
+  // InputText
+  const [value, setValue] = useState<string>('');
+
+  // Calendar
+  addLocale('ko', {
+    firstDayOfWeek: 0,
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+  });
+  const [Date, setDate] = useState<Nullable<Date>>(null);
+  const [Time, setTime] = useState(null);
+
+  // RadioButton
+  const [ingredient, setIngredient] = useState<string>('');
+
+  // Checkbox
+  const [checked, setChecked] = useState<boolean>(false);
+
+  return (
+    <div className="roles" data-div-role="0">
+      <div className="div-header">
+        <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+
+        <div className="m-title">
+          <h1 className="o-heading level1">
+            <span className="label">직원관리</span>
+
+            <label className="o-check type-symbol style-favorite">
+              <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
+              <span className="label _hidden">마이메뉴 등록</span>
+            </label>
+          </h1>
+        </div>
+
+        <div className="m-binds type-start">
+          <div className="group">
+            <OButton label="화면잠금" icon="lock" className="_normal" />
+            <OButton label="도움말" icon="help" className="_normal" />
+          </div>
+        </div>
+      </div>
+
+      {/* <!-- /* Contents { @DEV } --> */}
+      <div className="div-contents">
+        <div className="o-grid">
+          <div className="column">
+
+            <form className="m-filter-form">
+              <div className="fieldset">
+
+                <div className="o-field">
+                  <OLabel label={`소속직원`} />
+                  <div className="fields">
+                    <div className="o-form _input">
+                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      <i aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="o-field">
+                  <OLabel label={`근무여부`} />
+                  <div className="fields">
+                    <div className="o-form _select">
+                      <XDropdown appendTo={'self'} className="bind" />
+                      <i aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="o-field">
+                  <OLabel label={`실근무부점`} />
+                  <div className="fields">
+                    <div className="o-form _input">
+                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      <i aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="o-field">
+                  <OLabel label={`소속부점`} />
+                  <div className="fields">
+                    <div className="o-form _input">
+                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      <i aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="o-field">
+                  <OLabel label={`부점변경 여부`} />
+                  <div className="fields">
+                    <div className="o-form _select">
+                      <XDropdown appendTo={'self'} className="bind" />
+                      <i aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="binds">
+                <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+              </div>
+            </form>
+
+            <div className="o-section">
+              <div className="m-header">
+                <h2 className="o-heading level2"><span className="label">직원내역</span></h2>
+              </div>
+
+              <div className="main _primary">
+                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                <div className="o-grid-table p-datatable">
+                  <div className="p-datatable-wrapper">
+                    <table className="p-datatable-table p-datatable-scrollable-table">
+                      <colgroup>
+                        <col className="wdth-10" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col className="wdth-50" />
+                        <col />
+                        <col />
+                        <col />
+                        <col className="wdth-50" />
+                      </colgroup>
+
+                      <thead className="p-datatable-thead">
+                        <tr>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무점</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무점명</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀코드</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀명</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현소속일자</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직무</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보임</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">퇴직일자</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단말IP</span></div></th>
+                        </tr>
+                      </thead>
+
+                      <tbody className="p-datatable-tbody">
+                        <tr className="p-datatable-emptymessage">
+                          <td colSpan={16}>등록된 데이터가 없습니다.</td>
+                        </tr>
+                      </tbody>
+
+                      <tbody className="p-datatable-tbody">
+                      {[...Array(24)].map((e, idx) => (
+                        <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
+                          <td>{idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
+                          <td>0000001</td>
+                          <td>홍길동</td>
+                          <td>0001</td>
+                          <td className="g-start">영업부</td>
+                          <td>0001</td>
+                          <td className="g-start">영업부</td>
+                          <td>0001</td>
+                          <td className="g-start">동대문個</td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
+                          <td>팀장</td>
+                          <td className="g-start">BPR지원_일반</td>
+                          <td>부점장급</td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
+                          <td><span className="o-digit type-tel">02-729-7610</span></td>
+                          <td></td>
+                        </tr>
+                      ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="o-grid">
+          <div className="column">
+
+          <div className="o-section">
+              <div className="m-header">
+                <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
+
+                <div className="m-binds">
+                  <div className="group">
+                    <OButton label="변경이력" className="_normal" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main">
+                <form className="m-data-form">
+                  <table className="table">
+                    <colgroup>
+                      <col className="head" />
+                      <col className="data" />
+                      <col className="head" />
+                      <col className="data" />
+                      <col className="head" />
+                      <col className="data" />
+                      <col className="head" />
+                      <col className="data" />
+                    </colgroup>
+
+                    <tbody>
+                      <tr>
+                        <th colSpan={3}>
+                          <OLabel label={`직원`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0000001] 홍길동" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th colSpan={3}>
+                          <OLabel label={`소속부점`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th colSpan={3}>
+                          <OLabel label={`소속팀`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th colSpan={3}>
+                          <OLabel label={`실근무점`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th colSpan={3}>
+                          <OLabel label={`EDW 실근무부점`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _input">
+                                <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th colSpan={3}>
+                          <OLabel label={`직책코드`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <div className="o-form _select wdth-50">
+                                <XDropdown appendTo={'self'} className="bind" />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <th colSpan={3}>
+                          <OLabel label={`근부여부`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="m-checks">
+                            <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">근무</span></label>
+                            <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">퇴직</span></label>
+                          </div>
+                        </td>
+
+                        <th colSpan={3}>
+                          <OLabel label={`부점변경예정 (종료일)`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          <div className="o-field">
+                            <div className="fields">
+                              <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
+                              <div className="o-form _input type-date wdth-50">
+                                <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon disabled />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="o-grid">
+          <div className="column">
+
+            <div className="o-section">
+              <div className="m-header">
+                <h2 className="o-heading level3"><span className="label">직무분장</span></h2>
+
+
+                <div className="m-binds">
+                  <div className="group">
+                    <OButton label="직무분장 관리" className="_normal" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main _primary rows-body-3i">
+                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                <div className="o-grid-table p-datatable">
+                  <div className="p-datatable-wrapper">
+                    <table className="p-datatable-table p-datatable-scrollable-table">
+                      <colgroup>
+                        <col className="wdth-10" />
+                        <col />
+                        <col className="wdth-auto" />
+                      </colgroup>
+
+                      <thead className="p-datatable-thead">
+                        <tr>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장코드</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장명</span></div></th>
+                        </tr>
+                      </thead>
+
+                      <tbody className="p-datatable-tbody">
+                        <tr className="p-datatable-emptymessage">
+                          <td colSpan={3}>등록된 데이터가 없습니다.</td>
+                        </tr>
+                      </tbody>
+
+                      <tbody className="p-datatable-tbody">
+                      {[...Array(24)].map((e, idx) => (
+                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          <td>{idx + 1}</td>
+                          <td>10080</td>
+                          <td className="g-start">경영정보</td>
+                        </tr>
+                      ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="column">
+
+            <div className="o-section">
+              <div className="m-header">
+                <h2 className="o-heading level3"><span className="label">근태정보</span></h2>
+
+
+                <div className="m-binds">
+                  <div className="group">
+                    <OButton label="행추가" className="_normal" />
+                    <OButton label="행삭제" className="_normal" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main _primary rows-body-3i">
+                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                <div className="o-grid-table p-datatable">
+                  <div className="p-datatable-wrapper">
+                    <table className="p-datatable-table p-datatable-scrollable-table">
+                      <colgroup>
+                        <col className="wdth-10" />
+                        <col className="wdth-10" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
+
+                      <thead className="p-datatable-thead">
+                        <tr>
+                          <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재직원</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">근태구분</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작시각</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료시각</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직직원</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반차구분</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴가일수</span></div></th>
+                        </tr>
+                      </thead>
+
+                      <tbody className="p-datatable-tbody">
+                        <tr className="p-datatable-emptymessage">
+                          <td colSpan={11}>등록된 데이터가 없습니다.</td>
+                        </tr>
+                      </tbody>
+
+                      <tbody className="p-datatable-tbody">
+                      {[...Array(1)].map((e, idx) => (
+                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                          <td>{idx + 1}</td>
+                          <td>[0000001] 홍길동</td>
+                          <td></td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
+                          <td><span className="o-digit type-time">00:00</span></td>
+                          <td><span className="o-digit type-time">00:00</span></td>
+                          <td>[0000001] 홍길동</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      ))}
+                        <tr>
+                          <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                          <td><OIcon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select wdth-30">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-time wdth-30">
+                                  <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-time wdth-30">
+                                  <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="div-footer">
+          <div className="m-binds type-end">
+            <div className="group _primary">
+              <OButton label="취소" className="_cancel" />
+              <OButton label="저장" className="_solid-primary" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <!-- // Contents { @DEV } --> */}
+    </div>
+  );
+}
+
+export default ADMPA0301M;

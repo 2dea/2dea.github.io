@@ -178,10 +178,10 @@
   --color-dimmed-hover:         var(--design-button-hover);
 
   --color-surface:              var(--design-background-normal);
-  --color-surface-overlay:      rgb(from var(--color-dimmed-overlay) r g b /var(--alpha-dimmed-overlay));
+  --color-surface-overlay:      rgb(from var(--color-dimmed-overlay) r g b / var(--alpha-dimmed-overlay));
 
   --color-ground:               var(--design-common-white);
-  --color-ground-alpha-00:      rgb(from var(--color-ground) r g b /0.0);
+  --color-ground-alpha-00:      rgb(from var(--color-ground) r g b / 0.0);
   --color-ground-40:            var(--design-background-normal);
   --color-ground-disabled:      var(--design-background-normal);
   --color-ground-required:      var(--design-background2-yellow-40);
@@ -228,8 +228,8 @@
 
   --color-shadow:               var(--design-common-black);
 
-  --color-shadow-alpha-10:      rgb(from var(--color-shadow) r g b /var(--alpha-dimmed-08));
-  --color-shadow-alpha-20:      rgb(from var(--color-shadow) r g b /var(--alpha-dimmed-12));
+  --color-shadow-alpha-10:      rgb(from var(--color-shadow) r g b / var(--alpha-dimmed-08));
+  --color-shadow-alpha-20:      rgb(from var(--color-shadow) r g b / var(--alpha-dimmed-12));
 
 
   --dropshadow-40:              0 0 1px var(--color-shadow-alpha-10), 0 calc(var(--rem) * 1) 4px var(--color-shadow-alpha-10), 0 calc(var(--rem) * 2) 8px var(--color-shadow-alpha-20);

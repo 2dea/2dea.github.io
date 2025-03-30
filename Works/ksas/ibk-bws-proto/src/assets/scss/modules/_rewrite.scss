@@ -1,23 +1,23 @@
 @charset "UTF-8";
 
-h1,  h2,  h3,  h4,  h5,  h6,  strong,  th  { font-weight: $bold-70; }
+// h1,  h2,  h3,  h4,  h5,  h6,  strong,  th  { font-weight: $bold-70; }
 
-th,
-td  {
-  border-width: 0;
-}
+// th,
+// td  {
+//   border-width: 0;
+// }
 
-th  {
-  text-align: revert;
-}
+// th  {
+//   text-align: revert;
+// }
 
-button  {
-  min-width: 0;
-  min-height: 0;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-}
+// button  {
+//   min-width: 0;
+//   min-height: 0;
+//   padding: 0;
+//   border: 0;
+//   background-color: transparent;
+// }
 
 // // theme.css
 // // @layer primereact {
@@ -67,6 +67,12 @@ button  {
   min-height: 0;
 }
 
+.p-button  {
+  min-width: 0;
+  min-height: 0;
+  background-color: transparent;
+}
+
 
 
 .o-breadcrumb.p-breadcrumb  {
@@ -99,12 +105,32 @@ button  {
 
 
 
+.p-inputtext  {
 
-.o-form >.bind:is(.p-dropdown)  {
-  @include setReset(1);
+}
 
-  .p-dropdown-label  {
-    &.p-placeholder  { color: $color-text-placeholder; }
+.o-form  {
+  .p-inputtext  {
+    padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+
+    &:not(.bind)  {
+      text-align: inherit;
+    }
+
+    &.p-disabled  { color: $color-text-disabled; background-color: #F1F5F9; filter: none; opacity: 1.0; }
+  }
+
+  >:where(.bind:is(.p-dropdown, .p-calendar))  {
+    @include setReset(1);
+
+    .p-dropdown-label  {
+      &.p-placeholder  { color: $color-text-placeholder; }
+    }
+
+    .p-dropdown-trigger  { width: auto; }
+
+    .p-datepicker-trigger  { width: auto; }
   }
 }
 
