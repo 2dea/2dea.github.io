@@ -923,7 +923,7 @@
 
 
 .o-grid-table  { @include setResetFont(); }
-.o-grid-table  { clear: both; }
+.o-grid-table  { clear: both; border: $e10 solid #EAEBEC; }
 .o-grid-table :has(>.wdth-auto:not(.o-form)) >*  { width: 0; }
 .o-grid-table :has(>.wdth-auto:not(.o-form)) >:where(.wdth-50)  { width: auto; }
 .o-grid-table .wdth-0:not(.o-form)  { width: 0; min-width: 0; }
@@ -941,7 +941,8 @@
 .o-grid-table tr >:first-child  { border-left-width: $e10; }
 
 .o-grid-table thead >* >*  { padding-left: III(11); padding-right: III(11); }
-.o-grid-table thead >tr:last-child >*  { border-bottom-color: #004C9D; }
+// .o-grid-table thead >tr:last-child >*  { border-bottom-color: #004C9D; }
+.o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: #004C9D; }
 .o-grid-table tbody >* >*  { white-space: nowrap; }
 .o-grid-table tbody >* >* >*  { white-space: normal; }
 .o-grid-table tbody >tr:nth-child(even)  { background: #F7F7F8; }
