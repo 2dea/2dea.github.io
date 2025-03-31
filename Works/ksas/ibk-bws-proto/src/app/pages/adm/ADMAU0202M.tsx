@@ -47,515 +47,401 @@ function ADMAU0202M() {
   const [checked, setChecked] = useState<boolean>(false);
 
   return (
-    <div className="roles" data-div-role="0">
-      <div className="div-header">
-        <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+    <>
+      <div className="roles" data-div-role="0">
+        <div className="div-header">
+          <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
-        <div className="m-title">
-          <h1 className="o-heading level1">
-            <span className="label">매핑관리</span>
+          <div className="m-title">
+            <h1 className="o-heading level1">
+              <span className="label">매핑관리</span>
 
-            <label className="o-check type-symbol style-favorite">
-              <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
-              <span className="label _hidden">마이메뉴 등록</span>
-            </label>
-          </h1>
-        </div>
+              <label className="o-check type-symbol style-favorite">
+                <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
+                <span className="label _hidden">마이메뉴 등록</span>
+              </label>
+            </h1>
+          </div>
 
-        <div className="m-binds type-start">
-          <div className="group">
-            <OButton label="화면잠금" icon="lock" className="_normal" />
-            <OButton label="도움말" icon="help" className="_normal" />
+          <div className="m-binds type-start">
+            <div className="group">
+              <OButton label="화면잠금" icon="lock" className="_normal" />
+              <OButton label="도움말" icon="help" className="_normal" />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* <!-- /* Contents { @DEV } --> */}
-      <Tabs className="div-contents">
-        <div className="m-tab type1">
-          <TabList className="lists">
-            <Tab className="link"><span className="label">메뉴별 화면관리</span></Tab>
-            <Tab className="link" aria-selected="true"><span className="label">권한별 메뉴/팝업관리</span></Tab>
-            <Tab className="link"><span className="label">부점/부서별 권한관리</span></Tab>
-            <Tab className="link"><span className="label">사용자별 권한관리</span></Tab>
-          </TabList>
-        </div>
+        {/* <!-- /* Contents { @DEV } --> */}
+        <Tabs className="div-contents">
+          <div className="m-tab type1">
+            <TabList className="lists">
+              <Tab className="link"><span className="label">메뉴별 화면관리</span></Tab>
+              <Tab className="link" aria-selected="true"><span className="label">권한별 메뉴/팝업관리</span></Tab>
+              <Tab className="link"><span className="label">부점/부서별 권한관리</span></Tab>
+              <Tab className="link"><span className="label">사용자별 권한관리</span></Tab>
+            </TabList>
+          </div>
 
-        <TabPanel>
-          <div className="o-grid">
-            <div className="column">
+          <TabPanel>
+            <div className="o-grid">
+              <div className="column">
 
-              <div className="o-section">
-                <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">메뉴내역</span></h2>
+                <form className="m-filter-form">
+                  <div className="fieldset">
 
-                  <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
-                    </em>
+                    <div className="o-field">
+                      <OLabel label={`권한명`} />
+                      <div className="fields">
+                        <div className="o-form _select">
+                          <XDropdown appendTo={'self'} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="o-field">
+                      <OLabel label={`사용여부`} />
+                      <div className="fields">
+                        <div className="o-form _select">
+                          <XDropdown appendTo={'self'} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
 
-                  <div className="o-field">
-                    <div className="fields">
-                      <div className="o-form _input wdth-90">
-                        <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <OImageButton label="검색" icon="search" />
-                        </span>
-                        <span className="inner-binds type-spin">
-                          <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                          <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
-                        </span>
+                  <div className="binds">
+                    <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                  </div>
+                </form>
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h2 className="o-heading level2"><span className="label">권한내역</span></h2>
+
+                    <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
+                  </div>
+
+                  <div className="main _primary">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col />
+                            <col className="wdth-50" />
+                            <col className="wdth-auto" />
+                            <col />
+                          </colgroup>
+
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한코드</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한설명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용여부</span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={5}>매핑된 관련화면이 없습니다.</td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
+                            <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
+                              <td>00000001</td>
+                              <td className="g-start">슈퍼관리자</td>
+                              <td className="g-start"></td>
+                              <td>Y</td>
+                              </tr>
+                          ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="column">
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h2 className="o-heading level3"><span className="label">메뉴권한설정</span></h2>
+
+                    <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
+
+                    <div className="o-field">
+                      <div className="fields">
+                        <div className="o-form _input wdth-90">
+                          <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                          <i aria-hidden="true"></i>
+                          <span className="inner-binds">
+                            <OImageButton label="검색" icon="search" />
+                          </span>
+                          <span className="inner-binds type-spin">
+                            <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                            <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="m-binds">
-                    <div className="group">
-                      <OButton label="모두펼침" className="_normal" />
+                  <div className="main _primary rows-head-2i rows-body-5i">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col />
+                            <col className="wdth-auto" />
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                          </colgroup>
+
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메뉴ID</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메뉴명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전체</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수정</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제</span></div></th>
+                            </tr>
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-highlight">
+                              <td>1</td>
+                              <td>AABB00001</td>
+                              <td className="g-start">
+                                <div className="o-depth level0">
+                                  <span className="icons">
+                                    <OIcon icon="folder-open" />
+                                  </span>
+                                  <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
+                                </div>
+                              </td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>AABB00001</td>
+                              <td className="g-start">
+                                <div className="o-depth level1">
+                                  <span className="icons">
+                                    <OIcon icon="folder-open" />
+                                  </span>
+                                  <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
+                                </div>
+                              </td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>AABB00001</td>
+                              <td className="g-start">
+                                <div className="o-depth level2">
+                                  <span className="icons">
+                                    <OIcon icon="file" />
+                                  </span>
+                                  <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
+                                </div>
+                              </td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                            </tr>
+                          {[...Array(23)].map((e, idx) => (
+                            <tr>
+                              <td>{ idx + 4 }</td>
+                              <td>AABB00001</td>
+                              <td className="g-start">
+                                <div className="o-depth level2">
+                                  <span className="icons">
+                                    <OIcon icon="file" />
+                                  </span>
+                                  <span className="main">원화마감시간관리</span>
+                                </div>
+                              </td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                            </tr>
+                          ))}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="main _primary">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col style={{ width: 'calc(var(--rem) * 50)' }} />
-                          <col style={{ width: '10%', minWidth: 'calc(var(--rem) * 92)' }} />
-                          <col />
-                          <col style={{ width: 'calc(var(--rem) * 64)' }} />
-                          <col style={{ width: 'calc(var(--rem) * 64)' }} />
-                          <col style={{ width: 'calc(var(--rem) * 100)' }} />
-                        </colgroup>
+                <div className="o-section">
+                  <div className="m-header">
+                    <h2 className="o-heading level3"><span className="label">팝업권한설정</span></h2>
 
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순서</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메뉴ID</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메뉴명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노출여부</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용여부</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
-                          </tr>
-                        </thead>
+                    <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
 
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}>등록된 데이터가 없습니다.</td>
-                          </tr>
-                        </tbody>
+                    <div className="o-field">
+                      <div className="fields">
+                        <div className="o-form _input wdth-90">
+                          <InputText placeholder="화면ID, 화면명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                          <i aria-hidden="true"></i>
+                          <span className="inner-binds">
+                            <OImageButton label="검색" icon="search" />
+                          </span>
+                          <span className="inner-binds type-spin">
+                            <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                            <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-highlight">
-                            <td>1</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level0">
-                                <span className="icons">
-                                  <OIcon icon="folder-open" />
-                                </span>
-                                <span className="main">홈</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level1">
-                                <span className="icons">
-                                  <OIcon icon="file" />
-                                </span>
-                                <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level1">
-                                <span className="icons">
-                                  <OIcon icon="folder" />
-                                </span>
-                                <span className="main">비상계획안전기획</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level1">
-                                <span className="icons">
-                                  <OIcon icon="folder-open" />
-                                </span>
-                                <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level2">
-                                <span className="icons">
-                                  <OIcon icon="file" />
-                                </span>
-                                <span className="main">대시보드</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level2">
-                                <span className="icons">
-                                  <OIcon icon="folder-open" />
-                                </span>
-                                <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level3">
-                                <span className="icons">
-                                  <OIcon icon="file" />
-                                </span>
-                                <span className="main">원화마감시간관리</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                          <tr>
-                            <td>8</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level3">
-                                <span className="icons">
-                                  <OIcon icon="file" />
-                                </span>
-                                <span className="main">시재과부족<mark className="o-find-mark" tabIndex={0}>현</mark>황관리</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                          <tr>
-                            <td>9</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level3">
-                                <span className="icons">
-                                  <OIcon icon="file" />
-                                </span>
-                                <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송명령부관리</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                        {[...Array(23)].map((e, idx) => (
-                          <tr>
-                            <td>{ idx + 10 }</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level1">
-                                <span className="icons">
-                                  <OIcon icon="folder" />
-                                </span>
-                                <span className="main">외화보유<mark className="o-find-mark" tabIndex={0}>현</mark>황</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                        ))}
-                        {/* {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
-                            <td>{idx + 1}</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level0">
-                                <span className="icons">
-                                  <OIcon icon="folder-open" />
-                                </span>
-                                <span className="main">홈</span>
-                              </div>
-                            </td>
-                            <td>Y</td>
-                            <td>Y</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                        ))} */}
-                        </tbody>
-                      </table>
+                  <div className="main _primary rows-head-2i rows-body-5i">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col />
+                            <col className="wdth-auto" />
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                          </colgroup>
+
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전체</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수정</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제</span></div></th>
+                            </tr>
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-highlight">
+                              <td>1</td>
+                              <td>AABB00001P01</td>
+                              <td className="g-start">공통<mark className="o-find-mark" tabIndex={0}>팝</mark>업</td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>AABB00001P02</td>
+                              <td className="g-start"><mark className="o-find-mark" tabIndex={0}>팝</mark>업</td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><OIcon icon="page-up" /><em className="g-abshidden">[이전 탐색]</em> <OIcon icon="page-down" /><em className="g-abshidden">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-
-            <div className="column">
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">메뉴정보</span></h2>
-
-                  {/* <div className="m-binds">
-                    <div className="group">
-                      <OButton label="신규" className="_create" />
-                    </div>
-                  </div> */}
-                </div>
-
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
-
-                      <tbody>
-                        <tr>
-                          <th colSpan={3}>
-                            <OLabel label={`상위메뉴`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            원화현수송
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={3}>
-                            <OLabel label={`메뉴ID`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            AABB00003
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={3}>
-                            <OLabel label={`메뉴명`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            원화현수송신청
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={3}>
-                            <OLabel label={`정렬순서`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            000
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={3}>
-                            <OLabel label={`노출여부`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            Y
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={3}>
-                            <OLabel label={`사용여부`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            Y
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={3}>
-                            <OLabel label={`등록자`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            홍길동
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={3}>
-                            <OLabel label={`등록일자`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            <span className="o-digit type-date">2024-09-16</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h2 className="o-heading level4"><span className="label">화면매핑정보</span></h2>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <OButton label="화면매핑" className="_normal" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col style={{ width: '20%', minWidth: 'calc(var(--rem) * 121)' }} />
-                          <col />
-                        </colgroup>
-
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={2}>매핑된 화면이 없습니다.</td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>AABB00001M00</td>
-                            <td className="g-start">
-                              <div className="o-with-bind">
-                                <span className="main">원화현수송신청_관련화면 01</span>
-                                <span className="binds">
-                                  <OImageButton label="삭제" icon="delete" />
-                                </span>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h2 className="o-heading level4"><span className="label">관련화면 매핑정보</span></h2>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <OButton label="관련화면매핑" className="_normal" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col style={{ width: 'calc(var(--rem) * 50)' }} />
-                          <col style={{ width: '20%', minWidth: 'calc(var(--rem) * 121)' }} />
-                          <col />
-                        </colgroup>
-
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순서</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={3}>매핑된 관련화면이 없습니다.</td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><OImageButton label="순서 재정렬" icon="sort" className={'g-cursor-grab'} /></td>
-                            <td>AABB00001M00</td>
-                            <td className="g-start">
-                              <div className="o-with-bind">
-                                <span className="main">원화현수송신청_관련화면 01</span>
-                                <span className="binds">
-                                  <OImageButton label="삭제" icon="delete" />
-                                </span>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="div-footer">
-            <div className="m-binds type-end">
-              <div className="group _primary">
-                <OButton label="저장" className="_solid-primary" />
               </div>
             </div>
-          </div>
-        </TabPanel>
-      </Tabs>
-    </div>
+
+            <div className="div-footer">
+              <div className="m-binds type-end">
+                <div className="group _primary">
+                  <OButton label="저장" className="_solid-primary" />
+                </div>
+              </div>
+            </div>
+          </TabPanel>
+        </Tabs>
+      </div>
+    </>
   );
 }
 

@@ -348,6 +348,59 @@
 }
 
 
+/**	Animation-Codes
+ ------------------ */
+
+/** Animation Keyframes */
+@keyframes ANI_spinner  {
+  from {
+    transform: rotate(0deg);
+
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ANI_steps  {
+  100% {
+    background-position: 0;
+  }
+}
+
+/** Visibility Keyframes */
+@keyframes ANI_blink  {
+  25% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes ANI_fade  {
+  0% {
+    opacity: 0.0;
+
+  } 100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes ANI_slide  {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes ANI_scaleFadeOut  {
+  100% {
+    top: 50%; transform: scale(1.075) translateY(-50%);
+  }
+}
+
+@keyframes ANI_scaleFadeIn  {
+  0% {
+    top: 50%; transform: scale(0.8) translateY(-50%);
+  }
+}
+
 /** Styles Selector
  ------------------ */
 
@@ -446,6 +499,16 @@
 .g-annot.flow-block  { display: block; position: relative; }
 .g-annot.flow-block:not(:hover):not(:focus-within)  { height: 1.5em; height: 1lh; overflow: hidden; }
 
+
+// .o-loading  { --spinner: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23paint0_angular_1665_40740_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0 0.03 -0.03 0 30 30)'%3E%3CforeignObject x='-1026.5' y='-1026.5' width='2052.99' height='2052.99'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg rgba(0  146  214  1) 0deg rgba(0  146  214  1) 63.243deg rgba(255  255  255  0) 360deg)%3Bheight:100%25%3Bwidth:100%25%3Bopacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cpath d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM8.9708 30C8.9708 41.6141 18.3859 51.0292 30 51.0292C41.6141 51.0292 51.0292 41.6141 51.0292 30C51.0292 18.3859 41.6141 8.9708 30 8.9708C18.3859 8.9708 8.9708 18.3859 8.9708 30Z' data-figma-gradient-fill='%7B%26%2334%3Btype%26%2334%3B:%26%2334%3BGRADIENT_ANGULAR%26%2334%3B %26%2334%3Bstops%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3BstopsVar%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3Btransform%26%2334%3B:%7B%26%2334%3Bm00%26%2334%3B:3.6739406106950628e-15 %26%2334%3Bm01%26%2334%3B:-60.0 %26%2334%3Bm02%26%2334%3B:60.0 %26%2334%3Bm10%26%2334%3B:60.0 %26%2334%3Bm11%26%2334%3B:3.6739406106950628e-15 %26%2334%3Bm12%26%2334%3B:-3.6739406106950628e-15%7D %26%2334%3Bopacity%26%2334%3B:1.0 %26%2334%3BblendMode%26%2334%3B:%26%2334%3BNORMAL%26%2334%3B %26%2334%3Bvisible%26%2334%3B:true%7D'/%3E%3Ccircle cx='30.2986' cy='55.5' r='4.5' fill='%230092D6'/%3E%3Cdefs%3E%3CclipPath id='paint0_angular_1665_40740_clip_path'%3E%3Cpath d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM8.9708 30C8.9708 41.6141 18.3859 51.0292 30 51.0292C41.6141 51.0292 51.0292 41.6141 51.0292 30C51.0292 18.3859 41.6141 8.9708 30 8.9708C18.3859 8.9708 8.9708 18.3859 8.9708 30Z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"); }
+// .o-loading  { --spinner: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23paint0_angular_1665_40756_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0.00607143 -0.0264286 -0.0264286 -0.00607143 30 30.0002)'%3E%3CforeignObject x='-1540.61' y='-1540.61' width='3081.21' height='3081.21'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg rgba(0  146  214  1) 0deg rgba(0  146  214  1) 63.243deg rgba(255  255  255  0) 360deg)%3Bheight:100%25%3Bwidth:100%25%3Bopacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M34 7.14307C34 4.93393 32.2092 3.14307 30 3.14307C15.1672 3.14307 3.14289 15.1674 3.14289 30.0002C3.14289 44.833 15.1672 56.8574 30 56.8574C44.8328 56.8574 56.8572 44.833 56.8572 30.0002C56.8572 22.3199 53.6281 15.3873 48.4648 10.4974C46.8608 8.97831 44.3291 9.04716 42.81 10.6511C41.291 12.2551 41.3598 14.7869 42.9638 16.3059C46.5983 19.7479 48.8572 24.607 48.8572 30.0002C48.8572 40.4147 40.4145 48.8574 30 48.8574C19.5855 48.8574 11.1429 40.4147 11.1429 30.0002C11.1429 19.5857 19.5855 11.1431 30 11.1431C32.2092 11.1431 34 9.35221 34 7.14307Z' data-figma-gradient-fill='%7B%26%2334%3Btype%26%2334%3B:%26%2334%3BGRADIENT_ANGULAR%26%2334%3B %26%2334%3Bstops%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3BstopsVar%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3Btransform%26%2334%3B:%7B%26%2334%3Bm00%26%2334%3B:12.142857551574707 %26%2334%3Bm01%26%2334%3B:-52.857143402099609 %26%2334%3Bm02%26%2334%3B:50.3571777343750 %26%2334%3Bm10%26%2334%3B:-52.857143402099609 %26%2334%3Bm11%26%2334%3B:-12.142857551574707 %26%2334%3Bm12%26%2334%3B:62.500209808349609%7D %26%2334%3Bopacity%26%2334%3B:1.0 %26%2334%3BblendMode%26%2334%3B:%26%2334%3BNORMAL%26%2334%3B %26%2334%3Bvisible%26%2334%3B:true%7D'/%3E%3Cdefs%3E%3CclipPath id='paint0_angular_1665_40756_clip_path'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M34 7.14307C34 4.93393 32.2092 3.14307 30 3.14307C15.1672 3.14307 3.14289 15.1674 3.14289 30.0002C3.14289 44.833 15.1672 56.8574 30 56.8574C44.8328 56.8574 56.8572 44.833 56.8572 30.0002C56.8572 22.3199 53.6281 15.3873 48.4648 10.4974C46.8608 8.97831 44.3291 9.04716 42.81 10.6511C41.291 12.2551 41.3598 14.7869 42.9638 16.3059C46.5983 19.7479 48.8572 24.607 48.8572 30.0002C48.8572 40.4147 40.4145 48.8574 30 48.8574C19.5855 48.8574 11.1429 40.4147 11.1429 30.0002C11.1429 19.5857 19.5855 11.1431 30 11.1431C32.2092 11.1431 34 9.35221 34 7.14307Z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"); }
+.o-loading  { --spinner: url('../../../../src/assets/images/layout/sym_loading-spinner.svg'); }
+.o-loading  { font-size: calc(var(--rem) * 60); display: block; width: 1em; height: 1em; background: var(--spinner) no-repeat 0 /100%; animation: ANI_spinner infinite 1s linear; }
+
+.m-loading  { display: flex; flex-direction: column; justify-content: center; }
+.m-loading .caption  { display: none; }
+
+.o-loading-layer  { box-shadow: none; }
 
 .m-flex-list { display: flex; flex-flow: row wrap; align-items: center; gap: 1em; }
 .m-flex-list >* { min-width: 0; outline: 1px solid orange; outline-offset: 1px; }

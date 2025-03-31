@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한관리 > 매핑관리 > (T)권한별 메뉴/팝업관리
+ * @description 관리자 > 권한위임 > 사용자별 권한관리
  */
 
 // dependency
@@ -24,9 +24,9 @@ import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMAU0202M() {
+function ADMAC0201M() {
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한관리' }, { label: '매핑관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한위임' }, { label: '사용자별 권한관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -47,41 +47,32 @@ function ADMAU0202M() {
   const [checked, setChecked] = useState<boolean>(false);
 
   return (
-    <div className="roles" data-div-role="0">
-      <div className="div-header">
-        <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+    <>
+      <div className="roles" data-div-role="0">
+        <div className="div-header">
+          <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
-        <div className="m-title">
-          <h1 className="o-heading level1">
-            <span className="label">매핑관리</span>
+          <div className="m-title">
+            <h1 className="o-heading level1">
+              <span className="label">사용자별 권한관리</span>
 
-            <label className="o-check type-symbol style-favorite">
-              <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
-              <span className="label _hidden">마이메뉴 등록</span>
-            </label>
-          </h1>
-        </div>
+              <label className="o-check type-symbol style-favorite">
+                <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
+                <span className="label _hidden">마이메뉴 등록</span>
+              </label>
+            </h1>
+          </div>
 
-        <div className="m-binds type-start">
-          <div className="group">
-            <OButton label="화면잠금" icon="lock" className="_normal" />
-            <OButton label="도움말" icon="help" className="_normal" />
+          <div className="m-binds type-start">
+            <div className="group">
+              <OButton label="화면잠금" icon="lock" className="_normal" />
+              <OButton label="도움말" icon="help" className="_normal" />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* <!-- /* Contents { @DEV } --> */}
-      <Tabs className="div-contents">
-        <div className="m-tab type1">
-          <TabList className="lists">
-            <Tab className="link"><span className="label">메뉴별 화면관리</span></Tab>
-            <Tab className="link" aria-selected="true"><span className="label">권한별 메뉴/팝업관리</span></Tab>
-            <Tab className="link"><span className="label">부점/부서별 권한관리</span></Tab>
-            <Tab className="link"><span className="label">사용자별 권한관리</span></Tab>
-          </TabList>
-        </div>
-
-        <TabPanel>
+        {/* <!-- /* Contents { @DEV } --> */}
+        <div className="div-contents">
           <div className="o-grid">
             <div className="column">
 
@@ -89,17 +80,17 @@ function ADMAU0202M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <OLabel label={`권한명`} />
+                    <OLabel label={`직원번호/명`} />
                     <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`사용여부`} />
+                    <OLabel label={`권한명`} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -117,7 +108,7 @@ function ADMAU0202M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">권한내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">사용자내역</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -125,6 +116,12 @@ function ADMAU0202M() {
                       <span className="value">8</span>
                       <span className="units">건</span>
                     </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <OImageButton label="엑셀​다운로드" icon="_excel-download" />
+                    </div>
                   </div>
                 </div>
 
@@ -134,45 +131,49 @@ function ADMAU0202M() {
                     <div className="p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
-                          <col style={{ width: 'calc(var(--rem) * 50)' }} />
-                          <col style={{ width: '20%', minWidth: 'calc(var(--rem) * 121)' }} />
+                          <col className="wdth-10" />
                           <col />
+                          <col />
+                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순서</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={3}>매핑된 관련화면이 없습니다.</td>
+                            <td colSpan={5}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
-                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><OImageButton label="순서 재정렬" icon="sort" className={'g-cursor-grab'} /></td>
-                            <td>AABB00001M00</td>
-                            <td className="g-start">
-                              <div className="o-with-bind">
-                                <span className="main">원화현수송신청_관련화면 01</span>
-                                <span className="binds">
-                                  <OImageButton label="삭제" icon="delete" />
-                                </span>
-                              </div>
-                            </td>
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
+                            <td>{idx + 1}</td>
+                            <td>000001</td>
+                            <td>홍길동</td>
+                            <td>부장</td>
+                            <td className="g-start">중요용지용도품관리자, 행내등기관리</td>
                           </tr>
                         ))}
                         </tbody>
                       </table>
                     </div>
                   </div>
+                </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>권한요청문의 : IT금융개발부 / 031-1234-5678</li>
+                  </ul>
                 </div>
               </div>
 
@@ -182,183 +183,52 @@ function ADMAU0202M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">메뉴권한설정</span></h2>
+                  <h2 className="o-heading level3"><span className="label">사용자정보</span></h2>
 
-                  <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
+                  <div className="m-chips">
+                    <em className="o-chip">
+                      <span className="label">[0031] 을지로 6가</span>
                     </em>
-                  </div>
-
-                  <div className="o-field">
-                    <div className="fields">
-                      <div className="o-form _input wdth-90">
-                        <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <OImageButton label="검색" icon="search" />
-                        </span>
-                        <span className="inner-binds type-spin">
-                          <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                          <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
-                        </span>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
-                <div className="main _primary rows-head-2i rows-body-5i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col className="wdth-10" />
-                          <col />
-                          <col className="wdth-auto" />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
-                        </colgroup>
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
 
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메뉴ID</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메뉴명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전체</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수정</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제</span></div></th>
-                          </tr>
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-highlight">
-                            <td>1</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level0">
-                                <span className="icons">
-                                  <OIcon icon="folder-open" />
-                                </span>
-                                <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
-                              </div>
-                            </td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level1">
-                                <span className="icons">
-                                  <OIcon icon="folder-open" />
-                                </span>
-                                <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
-                              </div>
-                            </td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level2">
-                                <span className="icons">
-                                  <OIcon icon="file" />
-                                </span>
-                                <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
-                              </div>
-                            </td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                          </tr>
-                        {[...Array(23)].map((e, idx) => (
-                          <tr>
-                            <td>{ idx + 4 }</td>
-                            <td>AABB00001</td>
-                            <td className="g-start">
-                              <div className="o-depth level2">
-                                <span className="icons">
-                                  <OIcon icon="file" />
-                                </span>
-                                <span className="main">원화마감시간관리</span>
-                              </div>
-                            </td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                      <tbody>
+                        <tr>
+                          <th colSpan={3}>
+                            <OLabel label={`직원번호/명`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            [000001] 홍길동
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={3}>
+                            <OLabel label={`직책`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            부장
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
                 </div>
               </div>
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">팝업권한설정</span></h2>
-
-                  <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
-                    </em>
-                  </div>
-
-                  <div className="o-field">
-                    <div className="fields">
-                      <div className="o-form _input wdth-90">
-                        <InputText placeholder="화면ID, 화면명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <OImageButton label="검색" icon="search" />
-                        </span>
-                        <span className="inner-binds type-spin">
-                          <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                          <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <h2 className="o-heading level3"><span className="label">권한설정</span></h2>
                 </div>
 
-                <div className="main _primary rows-head-2i rows-body-5i">
+                <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="p-datatable-wrapper">
@@ -366,61 +236,40 @@ function ADMAU0202M() {
                         <colgroup>
                           <col className="wdth-10" />
                           <col />
+                          <col />
                           <col className="wdth-auto" />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전체</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수정</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제</span></div></th>
-                          </tr>
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한설명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용여부</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한여부</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={6}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                          <tr className="p-highlight">
-                            <td>1</td>
-                            <td>AABB00001P01</td>
-                            <td className="g-start">공통<mark className="o-find-mark" tabIndex={0}>팝</mark>업</td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>AABB00001P02</td>
-                            <td className="g-start"><mark className="o-find-mark" tabIndex={0}>팝</mark>업</td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td>000000005</td>
+                            <td className="g-start">중요용지용도품관리자</td>
+                            <td className="g-start"></td>
+                            <td>Y</td>
                             <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
                           </tr>
+                        ))}
                         </tbody>
                       </table>
                     </div>
@@ -438,10 +287,10 @@ function ADMAU0202M() {
               </div>
             </div>
           </div>
-        </TabPanel>
-      </Tabs>
-    </div>
+        </div>
+      </div>
+    </>
   );
 }
 
-export default ADMAU0202M;
+export default ADMAC0201M;

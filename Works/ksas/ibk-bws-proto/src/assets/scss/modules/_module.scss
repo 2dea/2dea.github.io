@@ -928,7 +928,7 @@
 .o-grid-table :has(>.wdth-auto:not(.o-form)) >:where(.wdth-50)  { width: auto; }
 .o-grid-table .wdth-0:not(.o-form)  { width: 0; min-width: 0; }
 .o-grid-table .wdth-10:not(.o-form)  { width: calc(var(--rem) * 50); }
-.o-grid-table .wdth-50:not(.o-form)  { min-width: calc(var(--rem) * 120); }
+.o-grid-table .wdth-50:not(.o-form)  { width: calc(var(--rem) * 120); }
 .o-grid-table .wdth-auto:not(.o-form)  { width: auto; }
 .o-grid-table table  { width: 100%; background: var(--color-ground); text-align: center; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }

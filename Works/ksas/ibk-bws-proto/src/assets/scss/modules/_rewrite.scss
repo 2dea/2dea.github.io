@@ -138,7 +138,34 @@
 
 
 
+.p-component-overlay-enter:has(.o-loading-layer) {
+  animation: p-component-overlay-enter-animation-alt 150ms forwards;
+}
+.p-component-overlay-leave:has(.o-loading-layer) {
+  animation: p-component-overlay-leave-animation-alt 150ms forwards;
+}
 
+
+@keyframes p-component-overlay-enter-animation-alt {
+  from {
+    background-color: rgba(255,255,255, 0.0);
+    backdrop-filter: blur(0px);
+  }
+  to {
+    background-color: rgba(192,192,192, 0.35);
+    backdrop-filter: blur(1.5px);
+  }
+}
+@keyframes p-component-overlay-leave-animation-alt {
+  from {
+    background-color: rgba(255,255,255, 0.35);
+    backdrop-filter: blur(1.5px);
+  }
+  to {
+    background-color: rgba(255,255,255, 0.0);
+    backdrop-filter: blur(0px);
+  }
+}
 
 
 
