@@ -256,6 +256,9 @@
 .o-require-tag >.tag  { left: calc(var(--rem) * 3); right: auto; }
 
 
+.o-chip  { font-size: $font-30; line-height: $line-30; display: flex; align-items: center; padding: III(3) III(8); background: #E2E8F0; border-radius: $radius-abs-999; }
+
+
 /** Labels */
 .o-label  { display: inline-block; display: inline-flex; align-items: center; gap: 0 $gap-element-50; max-width: 100%; }
 .o-label >*  { flex: 0 1 auto; display: flex; min-width: 0; height: 100%; }

@@ -120,7 +120,7 @@ function ADMAC0201M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <OImageButton label="엑셀​다운로드" icon="_excel-download" />
+                      <OImageButton label="엑셀​다운로드" icon="excel-download" />
                     </div>
                   </div>
                 </div>
