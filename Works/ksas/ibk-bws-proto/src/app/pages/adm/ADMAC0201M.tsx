@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // components
 // import '@modules/Index';
-import OIcon from 'app/shared/modules/OIcon';
-import OLabel from 'app/shared/modules/OLabel';
-import OButton from 'app/shared/modules/OButton';
-import OImageButton from 'app/shared/modules/OImageButton';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
@@ -65,8 +65,8 @@ function ADMAC0201M() {
 
           <div className="m-binds type-start">
             <div className="group">
-              <OButton label="화면잠금" icon="lock" className="_normal" />
-              <OButton label="도움말" icon="help" className="_normal" />
+              <CommonButton label="화면잠금" icon="lock" className="_normal" />
+              <CommonButton label="도움말" icon="help" className="_normal" />
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ function ADMAC0201M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <OLabel label={`직원번호/명`} />
+                    <Label label={`직원번호/명`} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -90,7 +90,7 @@ function ADMAC0201M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`권한명`} />
+                    <Label label={`권한명`} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -120,7 +120,7 @@ function ADMAC0201M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <OImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
                     </div>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ function ADMAC0201M() {
                       <tbody>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`직원번호/명`} require={false} />
+                            <Label label={`직원번호/명`} require={false} />
                           </th>
                           <td colSpan={3}>
                             [000001] 홍길동
@@ -211,7 +211,7 @@ function ADMAC0201M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`직책`} require={false} />
+                            <Label label={`직책`} require={false} />
                           </th>
                           <td colSpan={3}>
                             부장
@@ -283,7 +283,7 @@ function ADMAC0201M() {
           <div className="div-footer">
             <div className="m-binds type-end">
               <div className="group _primary">
-                <OButton label="저장" className="_solid-primary" />
+                <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
           </div>

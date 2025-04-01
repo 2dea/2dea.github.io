@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // components
 // import '@modules/Index';
-import OIcon from 'app/shared/modules/OIcon';
-import OLabel from 'app/shared/modules/OLabel';
-import OButton from 'app/shared/modules/OButton';
-import OImageButton from 'app/shared/modules/OImageButton';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
@@ -65,8 +65,8 @@ function ADMAU0101M() {
 
           <div className="m-binds type-start">
             <div className="group">
-              <OButton label="화면잠금" icon="lock" className="_normal" />
-              <OButton label="도움말" icon="help" className="_normal" />
+              <CommonButton label="화면잠금" icon="lock" className="_normal" />
+              <CommonButton label="도움말" icon="help" className="_normal" />
             </div>
           </div>
         </div>
@@ -104,11 +104,11 @@ function ADMAU0101M() {
                           <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                           <i aria-hidden="true"></i>
                           <span className="inner-binds">
-                            <OImageButton label="검색" icon="search" />
+                            <ImageButton label="검색" icon="search" />
                           </span>
                           <span className="inner-binds type-spin">
-                            <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                            <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                            <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                            <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
                           </span>
                         </div>
                       </div>
@@ -116,7 +116,7 @@ function ADMAU0101M() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="모두펼침" className="_normal" />
+                        <CommonButton label="모두펼침" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -159,7 +159,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level0">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">홈</span>
                                 </div>
@@ -174,7 +174,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
                                 </div>
@@ -189,7 +189,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="folder" />
+                                    <Icon icon="folder" />
                                   </span>
                                   <span className="main">비상계획안전기획</span>
                                 </div>
@@ -204,7 +204,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
                                 </div>
@@ -219,7 +219,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level2">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">대시보드</span>
                                 </div>
@@ -234,7 +234,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level2">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
                                 </div>
@@ -249,7 +249,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level3">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">원화마감시간관리</span>
                                 </div>
@@ -264,7 +264,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level3">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">시재과부족<mark className="o-find-mark" tabIndex={0}>현</mark>황관리</span>
                                 </div>
@@ -279,7 +279,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level3">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송명령부관리</span>
                                 </div>
@@ -295,7 +295,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="folder" />
+                                    <Icon icon="folder" />
                                   </span>
                                   <span className="main">외화보유<mark className="o-find-mark" tabIndex={0}>현</mark>황</span>
                                 </div>
@@ -312,7 +312,7 @@ function ADMAU0101M() {
                               <td className="g-start">
                                 <div className="o-depth level0">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">홈</span>
                                 </div>
@@ -330,7 +330,7 @@ function ADMAU0101M() {
 
                   <div className="m-footer">
                     <ul className="m-bullets type-disc">
-                      <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><OIcon icon="page-up" /><em className="g-hidden flow-inline">[이전 탐색]</em> <OIcon icon="page-down" /><em className="g-hidden flow-inline">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
+                      <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><Icon icon="page-up" /><em className="g-hidden flow-inline">[이전 탐색]</em> <Icon icon="page-down" /><em className="g-hidden flow-inline">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
                     </ul>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ function ADMAU0101M() {
 
                     {/* <div className="m-binds">
                       <div className="group">
-                        <OButton label="신규" className="_create" />
+                        <CommonButton label="신규" className="_create" />
                       </div>
                     </div> */}
                   </div>
@@ -361,7 +361,7 @@ function ADMAU0101M() {
                         <tbody>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`상위메뉴`} require={false} />
+                              <Label label={`상위메뉴`} require={false} />
                             </th>
                             <td colSpan={3}>
                               원화현수송
@@ -369,7 +369,7 @@ function ADMAU0101M() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`메뉴ID`} require={false} />
+                              <Label label={`메뉴ID`} require={false} />
                             </th>
                             <td colSpan={3}>
                               AABB00003
@@ -377,7 +377,7 @@ function ADMAU0101M() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`메뉴명`} require={false} />
+                              <Label label={`메뉴명`} require={false} />
                             </th>
                             <td colSpan={3}>
                               원화현수송신청
@@ -385,7 +385,7 @@ function ADMAU0101M() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`정렬순서`} require={false} />
+                              <Label label={`정렬순서`} require={false} />
                             </th>
                             <td colSpan={3}>
                               000
@@ -393,7 +393,7 @@ function ADMAU0101M() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`노출여부`} require={false} />
+                              <Label label={`노출여부`} require={false} />
                             </th>
                             <td colSpan={3}>
                               Y
@@ -401,7 +401,7 @@ function ADMAU0101M() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`사용여부`} require={false} />
+                              <Label label={`사용여부`} require={false} />
                             </th>
                             <td colSpan={3}>
                               Y
@@ -409,7 +409,7 @@ function ADMAU0101M() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`등록자`} require={false} />
+                              <Label label={`등록자`} require={false} />
                             </th>
                             <td colSpan={3}>
                               홍길동
@@ -417,7 +417,7 @@ function ADMAU0101M() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`등록일자`} require={false} />
+                              <Label label={`등록일자`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <span className="o-digit type-date">2024-09-16</span>
@@ -435,7 +435,7 @@ function ADMAU0101M() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="화면매핑" className="_normal" />
+                        <CommonButton label="화면매핑" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -475,7 +475,7 @@ function ADMAU0101M() {
                                 <div className="o-with-bind">
                                   <span className="main">원화현수송신청_관련화면 01</span>
                                   <span className="binds">
-                                    <OImageButton label="삭제" icon="delete" />
+                                    <ImageButton label="삭제" icon="delete" />
                                   </span>
                                 </div>
                               </td>
@@ -494,7 +494,7 @@ function ADMAU0101M() {
             <div className="div-footer">
               <div className="m-binds type-end">
                 <div className="group _primary">
-                  <OButton label="저장" className="_solid-primary" />
+                  <CommonButton label="저장" className="_solid-primary" />
                 </div>
               </div>
             </div>

@@ -6,9 +6,9 @@
 // dependency
 import React, { useState } from 'react';
 
-import OIcon from './OIcon';
+import Icon from 'app/shared/modules/OIcon';
 
-interface OButtonProps {
+interface CommonButtonProps {
   label: string;
   icon?: string;
   iconWidth?: number;
@@ -19,15 +19,15 @@ interface OButtonProps {
   disabled?: boolean;
 }
 
-function OButton({ label, icon, iconWidth, size, className, style, hidden, disabled }: OButtonProps) {
+function CommonButton({ label, icon, iconWidth, size, className, style, hidden, disabled }: CommonButtonProps) {
   return (
     <>
       <button type="button" className={`o-button${className ? ` ${className}` : ''}${size === 30 ? ' size-30' : size === 70 ? ' size-70' : size === 50 ? ' size-50' : ''}`} style={style} hidden={hidden} disabled={disabled}>
-        { (icon) && <OIcon icon={icon} width={iconWidth} /> }
+        { (icon) && <Icon icon={icon} width={iconWidth} /> }
         <span className="label">{label}</span>
       </button>
     </>
   );
 }
 
-export default OButton;
+export default CommonButton;

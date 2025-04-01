@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // components
 // import '@modules/Index';
-import OIcon from 'app/shared/modules/OIcon';
-import OLabel from 'app/shared/modules/OLabel';
-import OButton from 'app/shared/modules/OButton';
-import OImageButton from 'app/shared/modules/OImageButton';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 
 function SUBTMPL() {
   return (
@@ -369,11 +369,11 @@ function SUBTMPL() {
 
             <div className="m-binds type-start">
               <div className="group">
-                <OButton label="test" icon="delete" iconWidth={70} size={30} className="_delete" />
+                <CommonButton label="test" icon="delete" iconWidth={70} size={30} className="_delete" />
                 <i aria-hidden="true" className="o-icon _help"></i>
-                <OIcon icon="search" width={70} />
+                <Icon icon="search" width={70} />
                 <i aria-hidden="true" className="o-icon _lock"></i>
-                <OImageButton label="언제까지" icon="close" size={50} />
+                <ImageButton label="언제까지" icon="close" size={50} />
                 <span className="item"><button type="button" className="o-button _normal"><i aria-hidden="true" className="o-icon _lock"></i><span className="label">화면잠금</span></button></span>
                 <span className="item"><button type="button" className="o-button _normal"><i aria-hidden="true" className="o-icon _help"></i><span className="label">도움말</span></button></span>
               </div>

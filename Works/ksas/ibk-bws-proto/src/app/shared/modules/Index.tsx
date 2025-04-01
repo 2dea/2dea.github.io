@@ -1,6 +1,6 @@
 // @ts-nocheck
 /**
- * @description 공통 체크박스 컴포넌트
+ * @description test
  */
 
 // dependency

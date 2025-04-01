@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // components
 // import '@modules/Index';
-import OIcon from 'app/shared/modules/OIcon';
-import OLabel from 'app/shared/modules/OLabel';
-import OButton from 'app/shared/modules/OButton';
-import OImageButton from 'app/shared/modules/OImageButton';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
@@ -65,8 +65,8 @@ function ADMPA0301M() {
 
           <div className="m-binds type-start">
             <div className="group">
-              <OButton label="화면잠금" icon="lock" className="_normal" />
-              <OButton label="도움말" icon="help" className="_normal" />
+              <CommonButton label="화면잠금" icon="lock" className="_normal" />
+              <CommonButton label="도움말" icon="help" className="_normal" />
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ function ADMPA0301M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <OLabel label={`소속직원`} />
+                    <Label label={`소속직원`} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -90,7 +90,7 @@ function ADMPA0301M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`근무여부`} />
+                    <Label label={`근무여부`} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -100,7 +100,7 @@ function ADMPA0301M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`실근무부점`} />
+                    <Label label={`실근무부점`} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -110,7 +110,7 @@ function ADMPA0301M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`소속부점`} />
+                    <Label label={`소속부점`} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -120,7 +120,7 @@ function ADMPA0301M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`부점변경 여부`} />
+                    <Label label={`부점변경 여부`} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -196,7 +196,7 @@ function ADMPA0301M() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
-                            <td>{idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
+                            <td>{idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                             <td>0000001</td>
                             <td>홍길동</td>
                             <td>0001</td>
@@ -233,7 +233,7 @@ function ADMPA0301M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <OButton label="변경이력" className="_normal" />
+                      <CommonButton label="변경이력" className="_normal" />
                     </div>
                   </div>
                 </div>
@@ -255,7 +255,7 @@ function ADMPA0301M() {
                       <tbody>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`직원`} require={false} />
+                            <Label label={`직원`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -269,7 +269,7 @@ function ADMPA0301M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`소속부점`} require={false} />
+                            <Label label={`소속부점`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -283,7 +283,7 @@ function ADMPA0301M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`소속팀`} require={false} />
+                            <Label label={`소속팀`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -297,7 +297,7 @@ function ADMPA0301M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`실근무점`} require={false} />
+                            <Label label={`실근무점`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -312,7 +312,7 @@ function ADMPA0301M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`EDW 실근무부점`} require={false} />
+                            <Label label={`EDW 실근무부점`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -326,7 +326,7 @@ function ADMPA0301M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`직책코드`} require={false} />
+                            <Label label={`직책코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -340,7 +340,7 @@ function ADMPA0301M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`근부여부`} require={false} />
+                            <Label label={`근부여부`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="m-checks">
@@ -350,7 +350,7 @@ function ADMPA0301M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`부점변경예정 (종료일)`} require={false} />
+                            <Label label={`부점변경예정 (종료일)`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -383,7 +383,7 @@ function ADMPA0301M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <OButton label="직무분장 관리" className="_normal" />
+                      <CommonButton label="직무분장 관리" className="_normal" />
                     </div>
                   </div>
                 </div>
@@ -439,8 +439,8 @@ function ADMPA0301M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <OButton label="행추가" className="_normal" />
-                      <OButton label="행삭제" className="_normal" />
+                      <CommonButton label="행추가" className="_normal" />
+                      <CommonButton label="행삭제" className="_normal" />
                     </div>
                   </div>
                 </div>
@@ -504,7 +504,7 @@ function ADMPA0301M() {
                         ))}
                           <tr>
                             <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td><OIcon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
+                            <td><Icon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
                             <td>
                               <div className="o-field">
                                 <div className="fields">
@@ -591,8 +591,8 @@ function ADMPA0301M() {
           <div className="div-footer">
             <div className="m-binds type-end">
               <div className="group _primary">
-                <OButton label="취소" className="_cancel" />
-                <OButton label="저장" className="_solid-primary" />
+                <CommonButton label="취소" className="_cancel" />
+                <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
           </div>

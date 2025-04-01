@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // components
 // import '@modules/Index';
-import OIcon from 'app/shared/modules/OIcon';
-import OLabel from 'app/shared/modules/OLabel';
-import OButton from 'app/shared/modules/OButton';
-import OImageButton from 'app/shared/modules/OImageButton';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
@@ -65,8 +65,8 @@ function ADMCM0101M() {
 
           <div className="m-binds type-start">
             <div className="group">
-              <OButton label="화면잠금" icon="lock" className="_normal" />
-              <OButton label="도움말" icon="help" className="_normal" />
+              <CommonButton label="화면잠금" icon="lock" className="_normal" />
+              <CommonButton label="도움말" icon="help" className="_normal" />
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ function ADMCM0101M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <OLabel label={`코드도메인`} />
+                    <Label label={`코드도메인`} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -90,7 +90,7 @@ function ADMCM0101M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`사용여부`} />
+                    <Label label={`사용여부`} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -100,7 +100,7 @@ function ADMCM0101M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`도메인명`} />
+                    <Label label={`도메인명`} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -122,9 +122,9 @@ function ADMCM0101M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <OButton label="행추가" className="_normal" />
-                      <OButton label="행삭제" className="_normal" />
-                      <OButton label="취소" className="_cancel" />
+                      <CommonButton label="행추가" className="_normal" />
+                      <CommonButton label="행삭제" className="_normal" />
+                      <CommonButton label="취소" className="_cancel" />
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ function ADMCM0101M() {
                         {[...Array(15)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td>{idx === 15 - 1 ? <OIcon icon="grid-added" /> : idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 | 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
+                            <td>{idx === 15 - 1 ? <Icon icon="grid-added" /> : idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 | 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                             <td>
                               {idx === 15 - 1 ?
                               <div className="o-field">
@@ -226,9 +226,9 @@ function ADMCM0101M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <OButton label="행추가" className="_normal" />
-                      <OButton label="행삭제" className="_normal" />
-                      <OButton label="취소" className="_cancel" />
+                      <CommonButton label="행추가" className="_normal" />
+                      <CommonButton label="행삭제" className="_normal" />
+                      <CommonButton label="취소" className="_cancel" />
                     </div>
                   </div>
                 </div>
@@ -272,7 +272,7 @@ function ADMCM0101M() {
                         {[...Array(10)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td>{idx === 10 - 1 ? <OIcon icon="grid-added" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
+                            <td>{idx === 10 - 1 ? <Icon icon="grid-added" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
                             <td>
                               {idx === 10 - 1 ?
                               <div className="o-field">
@@ -352,7 +352,7 @@ function ADMCM0101M() {
           <div className="div-footer">
             <div className="m-binds type-end">
               <div className="group _primary">
-                <OButton label="저장" className="_solid-primary" />
+                <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
           </div>

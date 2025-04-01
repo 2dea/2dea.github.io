@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // components
 // import '@modules/Index';
-import OIcon from 'app/shared/modules/OIcon';
-import OLabel from 'app/shared/modules/OLabel';
-import OButton from 'app/shared/modules/OButton';
-import OImageButton from 'app/shared/modules/OImageButton';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
@@ -65,8 +65,8 @@ function ADMPA0101M() {
 
           <div className="m-binds type-start">
             <div className="group">
-              <OButton label="화면잠금" icon="lock" className="_normal" />
-              <OButton label="도움말" icon="help" className="_normal" />
+              <CommonButton label="화면잠금" icon="lock" className="_normal" />
+              <CommonButton label="도움말" icon="help" className="_normal" />
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ function ADMPA0101M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <OLabel label={`부점코드`} />
+                    <Label label={`부점코드`} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -90,7 +90,7 @@ function ADMPA0101M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`부점상태`} />
+                    <Label label={`부점상태`} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -100,7 +100,7 @@ function ADMPA0101M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`부점구분`} />
+                    <Label label={`부점구분`} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -110,7 +110,7 @@ function ADMPA0101M() {
                   </div>
 
                   <div className="o-field">
-                    <OLabel label={`지역본부`} />
+                    <Label label={`지역본부`} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -228,7 +228,7 @@ function ADMPA0101M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <OButton label="신규" className="_create" />
+                      <CommonButton label="신규" className="_create" />
                     </div>
                   </div>
                 </div>
@@ -250,7 +250,7 @@ function ADMPA0101M() {
                       <tbody>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`부점정보`} require={false} />
+                            <Label label={`부점정보`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -264,7 +264,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`영문부점명`} require={false} />
+                            <Label label={`영문부점명`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -278,7 +278,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`사업자등록번호`} require={false} />
+                            <Label label={`사업자등록번호`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -292,7 +292,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`부점약칭명`} require={false} />
+                            <Label label={`부점약칭명`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -307,7 +307,7 @@ function ADMPA0101M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`부점약칭명2`} require={false} />
+                            <Label label={`부점약칭명2`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -321,7 +321,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`부점구분코드`} require={false} />
+                            <Label label={`부점구분코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -335,7 +335,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`부점소재지코드`} require={false} />
+                            <Label label={`부점소재지코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -349,7 +349,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`부점전화번호`} require={false} />
+                            <Label label={`부점전화번호`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -374,7 +374,7 @@ function ADMPA0101M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`주소`} require={false} />
+                            <Label label={`주소`} require={false} />
                           </th>
                           <td colSpan={9}>
                             <div className="o-field">
@@ -383,7 +383,7 @@ function ADMPA0101M() {
                                   <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
-                                    <OImageButton label="검색" icon="search" />
+                                    <ImageButton label="검색" icon="search" />
                                   </span>
                                 </div>
                                 <div className="o-form _input wdth-90">
@@ -399,7 +399,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`팩스`} require={false} />
+                            <Label label={`팩스`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -418,7 +418,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`온라인번호`} require={false} />
+                            <Label label={`온라인번호`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -433,7 +433,7 @@ function ADMPA0101M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`지도코드`} require={false} />
+                            <Label label={`지도코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -447,7 +447,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`소유구분코드`} require={false} />
+                            <Label label={`소유구분코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -461,7 +461,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`외환부점코드`} require={false} />
+                            <Label label={`외환부점코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -475,7 +475,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`재활모점코드`} require={false} />
+                            <Label label={`재활모점코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -490,7 +490,7 @@ function ADMPA0101M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`모점코드`} require={false} />
+                            <Label label={`모점코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -504,7 +504,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`교환모점코드`} require={false} />
+                            <Label label={`교환모점코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -518,7 +518,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`국고결제모점코드`} require={false} />
+                            <Label label={`국고결제모점코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -532,7 +532,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`한국은행관할​통합부점코드`} require={false} />
+                            <Label label={`한국은행관할​통합부점코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -547,7 +547,7 @@ function ADMPA0101M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`관할사업본부코드`} require={false} />
+                            <Label label={`관할사업본부코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -561,7 +561,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`관할본부코드`} require={false} />
+                            <Label label={`관할본부코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -575,7 +575,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`지역본부코드`} require={false} />
+                            <Label label={`지역본부코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -589,7 +589,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`사무지원센터코드`} require={false} />
+                            <Label label={`사무지원센터코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -604,7 +604,7 @@ function ADMPA0101M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`부점장코드`} require={false} />
+                            <Label label={`부점장코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -618,7 +618,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`부점장부임일`} require={false} />
+                            <Label label={`부점장부임일`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -632,7 +632,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`부점상태코드`} require={false} />
+                            <Label label={`부점상태코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -646,7 +646,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`개점일`} require={false} />
+                            <Label label={`개점일`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -661,7 +661,7 @@ function ADMPA0101M() {
                         </tr>
                         <tr>
                           <th colSpan={3}>
-                            <OLabel label={`폐점일`} require={false} />
+                            <Label label={`폐점일`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -675,7 +675,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`EDW​실제근무​부점코드`} require={false} />
+                            <Label label={`EDW​실제근무​부점코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -689,7 +689,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`계리부점코드`} require={false} />
+                            <Label label={`계리부점코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -703,7 +703,7 @@ function ADMPA0101M() {
                           </td>
 
                           <th colSpan={3}>
-                            <OLabel label={`조직속성코드`} require={false} />
+                            <Label label={`조직속성코드`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -728,8 +728,8 @@ function ADMPA0101M() {
           <div className="div-footer">
             <div className="m-binds type-end">
               <div className="group _primary">
-                <OButton label="삭제" className="_delete" />
-                <OButton label="저장" className="_solid-primary" />
+                <CommonButton label="삭제" className="_delete" />
+                <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
           </div>

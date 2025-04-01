@@ -6,14 +6,14 @@
 // dependency
 import React, { useState } from 'react';
 
-interface OLabelProps {
+interface LabelProps {
   label: string;
   require?: boolean;
   className?: string;
   style?: object;
 }
 
-function OLabel({ label, require, className, style }: OLabelProps) {
+function Label({ label, require, className, style }: LabelProps) {
   return (
     <>
       <div className={`o-label${className ? ` ${className}` : ''}`} style={style}>
@@ -27,4 +27,4 @@ function OLabel({ label, require, className, style }: OLabelProps) {
   );
 }
 
-export default OLabel;
+export default Label;

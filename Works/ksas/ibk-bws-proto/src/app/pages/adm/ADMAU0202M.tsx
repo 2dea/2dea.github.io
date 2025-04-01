@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // components
 // import '@modules/Index';
-import OIcon from 'app/shared/modules/OIcon';
-import OLabel from 'app/shared/modules/OLabel';
-import OButton from 'app/shared/modules/OButton';
-import OImageButton from 'app/shared/modules/OImageButton';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
@@ -65,8 +65,8 @@ function ADMAU0202M() {
 
           <div className="m-binds type-start">
             <div className="group">
-              <OButton label="화면잠금" icon="lock" className="_normal" />
-              <OButton label="도움말" icon="help" className="_normal" />
+              <CommonButton label="화면잠금" icon="lock" className="_normal" />
+              <CommonButton label="도움말" icon="help" className="_normal" />
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@ function ADMAU0202M() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <OLabel label={`권한명`} />
+                      <Label label={`권한명`} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -100,7 +100,7 @@ function ADMAU0202M() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`사용여부`} />
+                      <Label label={`사용여부`} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -162,7 +162,7 @@ function ADMAU0202M() {
                           {[...Array(24)].map((e, idx) => (
                             // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
                             <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td>{idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
+                              <td>{idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                               <td>00000001</td>
                               <td className="g-start">슈퍼관리자</td>
                               <td className="g-start"></td>
@@ -198,11 +198,11 @@ function ADMAU0202M() {
                           <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                           <i aria-hidden="true"></i>
                           <span className="inner-binds">
-                            <OImageButton label="검색" icon="search" />
+                            <ImageButton label="검색" icon="search" />
                           </span>
                           <span className="inner-binds type-spin">
-                            <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                            <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                            <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                            <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
                           </span>
                         </div>
                       </div>
@@ -258,7 +258,7 @@ function ADMAU0202M() {
                               <td className="g-start">
                                 <div className="o-depth level0">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
                                 </div>
@@ -275,7 +275,7 @@ function ADMAU0202M() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
                                 </div>
@@ -292,7 +292,7 @@ function ADMAU0202M() {
                               <td className="g-start">
                                 <div className="o-depth level2">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
                                 </div>
@@ -310,7 +310,7 @@ function ADMAU0202M() {
                               <td className="g-start">
                                 <div className="o-depth level2">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">원화마감시간관리</span>
                                 </div>
@@ -347,11 +347,11 @@ function ADMAU0202M() {
                           <InputText placeholder="화면ID, 화면명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                           <i aria-hidden="true"></i>
                           <span className="inner-binds">
-                            <OImageButton label="검색" icon="search" />
+                            <ImageButton label="검색" icon="search" />
                           </span>
                           <span className="inner-binds type-spin">
-                            <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                            <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                            <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                            <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
                           </span>
                         </div>
                       </div>
@@ -434,7 +434,7 @@ function ADMAU0202M() {
             <div className="div-footer">
               <div className="m-binds type-end">
                 <div className="group _primary">
-                  <OButton label="저장" className="_solid-primary" />
+                  <CommonButton label="저장" className="_solid-primary" />
                 </div>
               </div>
             </div>

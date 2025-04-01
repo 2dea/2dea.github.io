@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // components
 // import '@modules/Index';
-import OIcon from 'app/shared/modules/OIcon';
-import OLabel from 'app/shared/modules/OLabel';
-import OButton from 'app/shared/modules/OButton';
-import OImageButton from 'app/shared/modules/OImageButton';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
 import { MenuItem } from 'primereact/menuitem';
@@ -79,8 +79,8 @@ function TMPL() {
 
           <div className="m-binds type-start">
             <div className="group">
-              <OButton label="화면잠금" icon="lock" className="_normal" />
-              <OButton label="도움말" icon="help" className="_normal" />
+              <CommonButton label="화면잠금" icon="lock" className="_normal" />
+              <CommonButton label="도움말" icon="help" className="_normal" />
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ function TMPL() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <OLabel label={`부점코드`} />
+                      <Label label={`부점코드`} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -114,7 +114,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`부점상태`} />
+                      <Label label={`부점상태`} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -124,7 +124,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`부점구분`} />
+                      <Label label={`부점구분`} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -134,7 +134,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`지역본부`} />
+                      <Label label={`지역본부`} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -252,7 +252,7 @@ function TMPL() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="신규" className="_create" />
+                        <CommonButton label="신규" className="_create" />
                       </div>
                     </div>
                   </div>
@@ -274,7 +274,7 @@ function TMPL() {
                         <tbody>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`부점정보`} require={false} />
+                              <Label label={`부점정보`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -288,7 +288,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`영문부점명`} require={false} />
+                              <Label label={`영문부점명`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -302,7 +302,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`사업자등록번호`} require={false} />
+                              <Label label={`사업자등록번호`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -316,7 +316,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`부점약칭명`} require={false} />
+                              <Label label={`부점약칭명`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -331,7 +331,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`부점약칭명2`} require={false} />
+                              <Label label={`부점약칭명2`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -345,7 +345,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`부점구분코드`} require={false} />
+                              <Label label={`부점구분코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -359,7 +359,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`부점소재지코드`} require={false} />
+                              <Label label={`부점소재지코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -373,7 +373,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`부점전화번호`} require={false} />
+                              <Label label={`부점전화번호`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -398,7 +398,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`주소`} require={false} />
+                              <Label label={`주소`} require={false} />
                             </th>
                             <td colSpan={9}>
                               <div className="o-field">
@@ -407,7 +407,7 @@ function TMPL() {
                                     <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                     <i aria-hidden="true"></i>
                                     <span className="inner-binds">
-                                      <OImageButton label="검색" icon="search" />
+                                      <ImageButton label="검색" icon="search" />
                                     </span>
                                   </div>
                                   <div className="o-form _input wdth-90">
@@ -423,7 +423,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`팩스`} require={false} />
+                              <Label label={`팩스`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -442,7 +442,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`온라인번호`} require={false} />
+                              <Label label={`온라인번호`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -457,7 +457,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`지도코드`} require={false} />
+                              <Label label={`지도코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -471,7 +471,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`소유구분코드`} require={false} />
+                              <Label label={`소유구분코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -485,7 +485,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`외환부점코드`} require={false} />
+                              <Label label={`외환부점코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -499,7 +499,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`재활모점코드`} require={false} />
+                              <Label label={`재활모점코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -514,7 +514,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`모점코드`} require={false} />
+                              <Label label={`모점코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -528,7 +528,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`교환모점코드`} require={false} />
+                              <Label label={`교환모점코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -542,7 +542,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`국고결제모점코드`} require={false} />
+                              <Label label={`국고결제모점코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -556,7 +556,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`한국은행관할​통합부점코드`} require={false} />
+                              <Label label={`한국은행관할​통합부점코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -571,7 +571,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`관할사업본부코드`} require={false} />
+                              <Label label={`관할사업본부코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -585,7 +585,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`관할본부코드`} require={false} />
+                              <Label label={`관할본부코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -599,7 +599,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`지역본부코드`} require={false} />
+                              <Label label={`지역본부코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -613,7 +613,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`사무지원센터코드`} require={false} />
+                              <Label label={`사무지원센터코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -628,7 +628,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`부점장코드`} require={false} />
+                              <Label label={`부점장코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -642,7 +642,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`부점장부임일`} require={false} />
+                              <Label label={`부점장부임일`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -656,7 +656,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`부점상태코드`} require={false} />
+                              <Label label={`부점상태코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -670,7 +670,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`개점일`} require={false} />
+                              <Label label={`개점일`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -685,7 +685,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`폐점일`} require={false} />
+                              <Label label={`폐점일`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -699,7 +699,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`EDW​실제근무​부점코드`} require={false} />
+                              <Label label={`EDW​실제근무​부점코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -713,7 +713,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`계리부점코드`} require={false} />
+                              <Label label={`계리부점코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -727,7 +727,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`조직속성코드`} require={false} />
+                              <Label label={`조직속성코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -756,7 +756,7 @@ function TMPL() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <OLabel label={`소속직원`} />
+                      <Label label={`소속직원`} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -766,7 +766,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`근무여부`} />
+                      <Label label={`근무여부`} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -776,7 +776,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`실근무부점`} />
+                      <Label label={`실근무부점`} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -786,7 +786,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`소속부점`} />
+                      <Label label={`소속부점`} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -796,7 +796,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`부점변경 여부`} />
+                      <Label label={`부점변경 여부`} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -872,7 +872,7 @@ function TMPL() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
-                              <td>{idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
+                              <td>{idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                               <td>0000001</td>
                               <td>홍길동</td>
                               <td>0001</td>
@@ -909,7 +909,7 @@ function TMPL() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="변경이력" className="_normal" />
+                        <CommonButton label="변경이력" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -931,7 +931,7 @@ function TMPL() {
                         <tbody>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`직원`} require={false} />
+                              <Label label={`직원`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -945,7 +945,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`소속부점`} require={false} />
+                              <Label label={`소속부점`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -959,7 +959,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`소속팀`} require={false} />
+                              <Label label={`소속팀`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -973,7 +973,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`실근무점`} require={false} />
+                              <Label label={`실근무점`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -988,7 +988,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`EDW 실근무부점`} require={false} />
+                              <Label label={`EDW 실근무부점`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -1002,7 +1002,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`직책코드`} require={false} />
+                              <Label label={`직책코드`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -1016,7 +1016,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`근부여부`} require={false} />
+                              <Label label={`근부여부`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="m-checks">
@@ -1026,7 +1026,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={3}>
-                              <OLabel label={`부점변경예정 (종료일)`} require={false} />
+                              <Label label={`부점변경예정 (종료일)`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <div className="o-field">
@@ -1059,7 +1059,7 @@ function TMPL() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="직무분장 관리" className="_normal" />
+                        <CommonButton label="직무분장 관리" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -1115,8 +1115,8 @@ function TMPL() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="행추가" className="_normal" />
-                        <OButton label="행삭제" className="_normal" />
+                        <CommonButton label="행추가" className="_normal" />
+                        <CommonButton label="행삭제" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -1180,7 +1180,7 @@ function TMPL() {
                           ))}
                             <tr>
                               <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><OIcon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
+                              <td><Icon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
@@ -1271,7 +1271,7 @@ function TMPL() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <OLabel label={`코드도메인`} />
+                      <Label label={`코드도메인`} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -1281,7 +1281,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`사용여부`} />
+                      <Label label={`사용여부`} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -1291,7 +1291,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <OLabel label={`도메인명`} />
+                      <Label label={`도메인명`} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -1313,9 +1313,9 @@ function TMPL() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="행추가" className="_normal" />
-                        <OButton label="행삭제" className="_normal" />
-                        <OButton label="취소" className="_cancel" />
+                        <CommonButton label="행추가" className="_normal" />
+                        <CommonButton label="행삭제" className="_normal" />
+                        <CommonButton label="취소" className="_cancel" />
                       </div>
                     </div>
                   </div>
@@ -1355,7 +1355,7 @@ function TMPL() {
                           {[...Array(15)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td>{idx === 15 - 1 ? <OIcon icon="grid-added" /> : idx === 2 ? <OIcon icon="grid-edited" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 | 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
+                              <td>{idx === 15 - 1 ? <Icon icon="grid-added" /> : idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 | 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                               <td>
                                 {idx === 15 - 1 ?
                                 <div className="o-field">
@@ -1417,9 +1417,9 @@ function TMPL() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="행추가" className="_normal" />
-                        <OButton label="행삭제" className="_normal" />
-                        <OButton label="취소" className="_cancel" />
+                        <CommonButton label="행추가" className="_normal" />
+                        <CommonButton label="행삭제" className="_normal" />
+                        <CommonButton label="취소" className="_cancel" />
                       </div>
                     </div>
                   </div>
@@ -1463,7 +1463,7 @@ function TMPL() {
                           {[...Array(10)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td>{idx === 10 - 1 ? <OIcon icon="grid-added" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
+                              <td>{idx === 10 - 1 ? <Icon icon="grid-added" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
                               <td>
                                 {idx === 10 - 1 ?
                                 <div className="o-field">
@@ -1561,11 +1561,11 @@ function TMPL() {
                           <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                           <i aria-hidden="true"></i>
                           <span className="inner-binds">
-                            <OImageButton label="검색" icon="search" />
+                            <ImageButton label="검색" icon="search" />
                           </span>
                           <span className="inner-binds type-spin">
-                            <OImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                            <OImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                            <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                            <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
                           </span>
                         </div>
                       </div>
@@ -1573,7 +1573,7 @@ function TMPL() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="모두펼침" className="_normal" />
+                        <CommonButton label="모두펼침" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -1616,7 +1616,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level0">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">홈</span>
                                 </div>
@@ -1631,7 +1631,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
                                 </div>
@@ -1646,7 +1646,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="folder" />
+                                    <Icon icon="folder" />
                                   </span>
                                   <span className="main">비상계획안전기획</span>
                                 </div>
@@ -1661,7 +1661,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
                                 </div>
@@ -1676,7 +1676,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level2">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">대시보드</span>
                                 </div>
@@ -1691,7 +1691,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level2">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
                                 </div>
@@ -1706,7 +1706,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level3">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">원화마감시간관리</span>
                                 </div>
@@ -1721,7 +1721,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level3">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">시재과부족<mark className="o-find-mark" tabIndex={0}>현</mark>황관리</span>
                                 </div>
@@ -1736,7 +1736,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level3">
                                   <span className="icons">
-                                    <OIcon icon="file" />
+                                    <Icon icon="file" />
                                   </span>
                                   <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송명령부관리</span>
                                 </div>
@@ -1752,7 +1752,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level1">
                                   <span className="icons">
-                                    <OIcon icon="folder" />
+                                    <Icon icon="folder" />
                                   </span>
                                   <span className="main">외화보유<mark className="o-find-mark" tabIndex={0}>현</mark>황</span>
                                 </div>
@@ -1769,7 +1769,7 @@ function TMPL() {
                               <td className="g-start">
                                 <div className="o-depth level0">
                                   <span className="icons">
-                                    <OIcon icon="folder-open" />
+                                    <Icon icon="folder-open" />
                                   </span>
                                   <span className="main">홈</span>
                                 </div>
@@ -1787,7 +1787,7 @@ function TMPL() {
 
                   <div className="m-footer">
                     <ul className="m-bullets type-disc">
-                      <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><OIcon icon="page-up" /><em className="g-abshidden">[이전 탐색]</em> <OIcon icon="page-down" /><em className="g-abshidden">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
+                      <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><Icon icon="page-up" /><em className="g-abshidden">[이전 탐색]</em> <Icon icon="page-down" /><em className="g-abshidden">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
                     </ul>
                   </div>
                 </div>
@@ -1802,7 +1802,7 @@ function TMPL() {
 
                     {/* <div className="m-binds">
                       <div className="group">
-                        <OButton label="신규" className="_create" />
+                        <CommonButton label="신규" className="_create" />
                       </div>
                     </div> */}
                   </div>
@@ -1818,7 +1818,7 @@ function TMPL() {
                         <tbody>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`상위메뉴`} require={false} />
+                              <Label label={`상위메뉴`} require={false} />
                             </th>
                             <td colSpan={3}>
                               원화현수송
@@ -1826,7 +1826,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`메뉴ID`} require={false} />
+                              <Label label={`메뉴ID`} require={false} />
                             </th>
                             <td colSpan={3}>
                               AABB00003
@@ -1834,7 +1834,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`메뉴명`} require={false} />
+                              <Label label={`메뉴명`} require={false} />
                             </th>
                             <td colSpan={3}>
                               원화현수송신청
@@ -1842,7 +1842,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`정렬순서`} require={false} />
+                              <Label label={`정렬순서`} require={false} />
                             </th>
                             <td colSpan={3}>
                               000
@@ -1850,7 +1850,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`노출여부`} require={false} />
+                              <Label label={`노출여부`} require={false} />
                             </th>
                             <td colSpan={3}>
                               Y
@@ -1858,7 +1858,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`사용여부`} require={false} />
+                              <Label label={`사용여부`} require={false} />
                             </th>
                             <td colSpan={3}>
                               Y
@@ -1866,7 +1866,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`등록자`} require={false} />
+                              <Label label={`등록자`} require={false} />
                             </th>
                             <td colSpan={3}>
                               홍길동
@@ -1874,7 +1874,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={3}>
-                              <OLabel label={`등록일자`} require={false} />
+                              <Label label={`등록일자`} require={false} />
                             </th>
                             <td colSpan={3}>
                               <span className="o-digit type-date">2024-09-16</span>
@@ -1892,7 +1892,7 @@ function TMPL() {
 
                     <div className="m-binds">
                       <div className="group">
-                        <OButton label="화면매핑" className="_normal" />
+                        <CommonButton label="화면매핑" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -1932,7 +1932,7 @@ function TMPL() {
                                 <div className="o-with-bind">
                                   <span className="main">원화현수송신청_관련화면 01</span>
                                   <span className="binds">
-                                    <OImageButton label="삭제" icon="delete" />
+                                    <ImageButton label="삭제" icon="delete" />
                                   </span>
                                 </div>
                               </td>
@@ -1951,27 +1951,27 @@ function TMPL() {
             <div className="div-footer">
             <div className="m-binds type-end">
                 <div className="group">
-                  <OButton label="알림전송" className="_lined-secondary" />
-                  <OButton label="결재선변경관리" className="_lined-secondary" />
-                  <OButton label="결재바로가기" className="_lined-secondary" />
+                  <CommonButton label="알림전송" className="_lined-secondary" />
+                  <CommonButton label="결재선변경관리" className="_lined-secondary" />
+                  <CommonButton label="결재바로가기" className="_lined-secondary" />
                 </div>
 
                 <div className="group _utility">
                   <div className="m-print-binds">
-                    <OButton label="당일결정내역출력" className="_texted" />
-                    <OButton label="결정출력" className="_texted" />
-                    <OButton label="손상권출력" className="_texted" />
-                    <OButton label="신청출력" className="_texted" />
-                    <OButton label="출력" className="_texted" />
+                    <CommonButton label="당일결정내역출력" className="_texted" />
+                    <CommonButton label="결정출력" className="_texted" />
+                    <CommonButton label="손상권출력" className="_texted" />
+                    <CommonButton label="신청출력" className="_texted" />
+                    <CommonButton label="출력" className="_texted" />
                   </div>
                 </div>
 
                 <div className="group _primary">
-                  <OButton label="업무지원반려" className="_lined-primary" />
-                  <OButton label="업무지원결정" className="_lined-primary" />
-                  <OButton label="삭제" className="_delete" />
-                  <OButton label="취소" className="_cancel" />
-                  <OButton label="결재요청" className="_solid-primary" />
+                  <CommonButton label="업무지원반려" className="_lined-primary" />
+                  <CommonButton label="업무지원결정" className="_lined-primary" />
+                  <CommonButton label="삭제" className="_delete" />
+                  <CommonButton label="취소" className="_cancel" />
+                  <CommonButton label="결재요청" className="_solid-primary" />
                   </div>
               </div>
             </div>
