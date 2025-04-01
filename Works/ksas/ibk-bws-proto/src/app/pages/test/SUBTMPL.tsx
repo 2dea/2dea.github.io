@@ -663,7 +663,7 @@ function SUBTMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
+                    <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
                     <div className="m-binds">
                       <div className="group">
@@ -750,7 +750,7 @@ function SUBTMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">Sample</span></h2>
+                    <h3 className="o-heading level3"><span className="label">Sample</span></h3>
                   </div>
 
                   <div className="main">

@@ -341,7 +341,7 @@ function ADMAU0201M() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">메뉴정보</span></h2>
+                    <h3 className="o-heading level3"><span className="label">메뉴정보</span></h3>
 
                     {/* <div className="m-binds">
                       <div className="group">
@@ -431,7 +431,7 @@ function ADMAU0201M() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level4"><span className="label">화면매핑정보</span></h2>
+                    <h4 className="o-heading level4"><span className="label">화면매핑정보</span></h4>
 
                     <div className="m-binds">
                       <div className="group">
@@ -487,7 +487,7 @@ function ADMAU0201M() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level4"><span className="label">관련화면 매핑정보</span></h2>
+                    <h4 className="o-heading level4"><span className="label">관련화면 매핑정보</span></h4>
 
                     <div className="m-binds">
                       <div className="group">

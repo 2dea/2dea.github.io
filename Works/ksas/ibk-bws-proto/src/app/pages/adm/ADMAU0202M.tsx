@@ -112,7 +112,7 @@ function ADMAU0202M() {
                   </div>
 
                   <div className="binds">
-                    <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                    <CommonButton label="조회" className="_inquire" />
                   </div>
                 </form>
 
@@ -182,7 +182,7 @@ function ADMAU0202M() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">메뉴권한설정</span></h2>
+                    <h3 className="o-heading level3"><span className="label">메뉴권한설정</span></h3>
 
                     <div className="o-length">
                       <span className="head">전체</span>
@@ -331,7 +331,7 @@ function ADMAU0202M() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">팝업권한설정</span></h2>
+                    <h3 className="o-heading level3"><span className="label">팝업권한설정</span></h3>
 
                     <div className="o-length">
                       <span className="head">전체</span>

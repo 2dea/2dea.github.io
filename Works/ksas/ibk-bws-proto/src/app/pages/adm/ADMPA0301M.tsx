@@ -132,7 +132,7 @@ function ADMPA0301M() {
                 </div>
 
                 <div className="binds">
-                  <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                  <CommonButton label="조회" className="_inquire" />
                 </div>
               </form>
 
@@ -229,7 +229,7 @@ function ADMPA0301M() {
 
             <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
+                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
                   <div className="m-binds">
                     <div className="group">
@@ -378,7 +378,7 @@ function ADMPA0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">직무분장</span></h2>
+                  <h3 className="o-heading level3"><span className="label">직무분장</span></h3>
 
 
                   <div className="m-binds">
@@ -434,7 +434,7 @@ function ADMPA0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">근태정보</span></h2>
+                  <h3 className="o-heading level3"><span className="label">근태정보</span></h3>
 
 
                   <div className="m-binds">

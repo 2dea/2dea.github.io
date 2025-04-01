@@ -102,7 +102,7 @@ function ADMAC0201M() {
                 </div>
 
                 <div className="binds">
-                  <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                  <CommonButton label="조회" className="_inquire" />
                 </div>
               </form>
 

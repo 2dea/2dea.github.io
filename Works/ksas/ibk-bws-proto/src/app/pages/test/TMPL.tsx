@@ -146,7 +146,7 @@ function TMPL() {
                   </div>
 
                   <div className="binds">
-                    <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                    <CommonButton label="조회" className="_inquire" />
                   </div>
                 </form>
 
@@ -248,7 +248,7 @@ function TMPL() {
 
               <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
+                    <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
                     <div className="m-binds">
                       <div className="group">
@@ -808,7 +808,7 @@ function TMPL() {
                   </div>
 
                   <div className="binds">
-                    <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                    <CommonButton label="조회" className="_inquire" />
                   </div>
                 </form>
 
@@ -905,7 +905,7 @@ function TMPL() {
 
               <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
+                    <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
                     <div className="m-binds">
                       <div className="group">
@@ -1054,7 +1054,7 @@ function TMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">직무분장</span></h2>
+                    <h3 className="o-heading level3"><span className="label">직무분장</span></h3>
 
 
                     <div className="m-binds">
@@ -1110,7 +1110,7 @@ function TMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">근태정보</span></h2>
+                    <h3 className="o-heading level3"><span className="label">근태정보</span></h3>
 
 
                     <div className="m-binds">
@@ -1303,7 +1303,7 @@ function TMPL() {
                   </div>
 
                   <div className="binds">
-                    <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                    <CommonButton label="조회" className="_inquire" />
                   </div>
                 </form>
 
@@ -1413,7 +1413,7 @@ function TMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">코드도메인 상세내용</span></h2>
+                    <h3 className="o-heading level3"><span className="label">코드도메인 상세내용</span></h3>
 
                     <div className="m-binds">
                       <div className="group">
@@ -1798,7 +1798,7 @@ function TMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level3"><span className="label">메뉴정보</span></h2>
+                    <h3 className="o-heading level3"><span className="label">메뉴정보</span></h3>
 
                     {/* <div className="m-binds">
                       <div className="group">
@@ -1888,7 +1888,7 @@ function TMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level4"><span className="label">화면매핑정보</span></h2>
+                    <h4 className="o-heading level4"><span className="label">화면매핑정보</span></h4>
 
                     <div className="m-binds">
                       <div className="group">

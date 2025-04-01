@@ -102,7 +102,7 @@ function ADMAC0201M() {
                 </div>
 
                 <div className="binds">
-                  <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                  <CommonButton label="조회" className="_inquire" />
                 </div>
               </form>
 
@@ -183,7 +183,7 @@ function ADMAC0201M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">사용자정보</span></h2>
+                  <h3 className="o-heading level3"><span className="label">사용자정보</span></h3>
 
                   <div className="m-chips">
                     <em className="o-chip">
@@ -225,7 +225,7 @@ function ADMAC0201M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">권한설정</span></h2>
+                  <h3 className="o-heading level3"><span className="label">권한설정</span></h3>
                 </div>
 
                 <div className="main _primary">

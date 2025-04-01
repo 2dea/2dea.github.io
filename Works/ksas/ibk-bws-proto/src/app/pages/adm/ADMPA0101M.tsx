@@ -122,7 +122,7 @@ function ADMPA0101M() {
                 </div>
 
                 <div className="binds">
-                  <button type="button" className="o-button _inquire"><span className="label">조회</span></button>
+                  <CommonButton label="조회" className="_inquire" />
                 </div>
               </form>
 
@@ -224,7 +224,7 @@ function ADMPA0101M() {
 
             <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level3"><span className="label">상세정보</span></h2>
+                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
                   <div className="m-binds">
                     <div className="group">

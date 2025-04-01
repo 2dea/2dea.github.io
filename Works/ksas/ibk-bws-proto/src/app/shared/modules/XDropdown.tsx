@@ -15,7 +15,7 @@ interface XDropdownProps {
   placeholder?: string;
   appendTo?: any;
   className?: string;
-  style?: object;
+  style?: React.CSSProperties;
   hidden?: boolean;
   disabled?: boolean;
 }

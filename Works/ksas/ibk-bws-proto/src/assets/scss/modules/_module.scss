@@ -258,6 +258,7 @@
 
 .o-chip  { font-size: $font-30; line-height: $line-30; display: flex; align-items: center; padding: III(3) III(8); background: #E2E8F0; border-radius: $radius-abs-999; }
 
+.m-chips  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-50; }
 
 /** Labels */
 .o-label  { display: inline-block; display: inline-flex; align-items: center; gap: 0 $gap-element-50; max-width: 100%; }
@@ -927,12 +928,12 @@
 
 .o-grid-table  { @include setResetFont(); }
 .o-grid-table  { clear: both; border: $e10 solid #EAEBEC; }
-.o-grid-table :has(>.wdth-auto:not(.o-form)) >*  { width: 0; }
-.o-grid-table :has(>.wdth-auto:not(.o-form)) >:where(.wdth-50)  { width: auto; }
-.o-grid-table .wdth-0:not(.o-form)  { width: 0; min-width: 0; }
-.o-grid-table .wdth-10:not(.o-form)  { width: calc(var(--rem) * 50); }
-.o-grid-table .wdth-50:not(.o-form)  { width: calc(var(--rem) * 120); }
-.o-grid-table .wdth-auto:not(.o-form)  { width: auto; }
+.o-grid-table :has(>.wdth-auto:where(tr >*, col)) >*  { width: 0; }
+.o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }
+.o-grid-table .wdth-0:where(tr >*, col)  { width: 0; min-width: 0; }
+.o-grid-table .wdth-10:where(tr >*, col)  { width: calc(var(--rem) * 50); }
+.o-grid-table .wdth-50:where(tr >*, col)  { width: calc(var(--rem) * 120); }
+.o-grid-table .wdth-auto:where(tr >*, col)  { width: auto; }
 .o-grid-table table  { width: 100%; background: var(--color-ground); text-align: center; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
 // .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }

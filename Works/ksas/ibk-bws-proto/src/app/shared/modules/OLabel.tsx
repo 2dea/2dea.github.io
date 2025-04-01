@@ -10,7 +10,7 @@ interface LabelProps {
   label: string;
   require?: boolean;
   className?: string;
-  style?: object;
+  style?: React.CSSProperties;
 }
 
 function Label({ label, require, className, style }: LabelProps) {

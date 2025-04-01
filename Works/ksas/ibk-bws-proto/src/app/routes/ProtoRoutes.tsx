@@ -13,8 +13,9 @@ import Decorator from 'app/shared/layouts/Decorator';
 import SUBTMPL from 'app/pages/test/SUBTMPL'; // subtmpl
 import POPTMPL from 'app/pages/test/POPTMPL'; // poptmpl
 import TMPL from 'app/pages/test/TMPL'; // tmpl
-import LOADING from 'app/pages/test/LOADING'; // loading
 import ING from 'app/pages/test/ING'; // ing
+
+import LoadingBar from 'app/pages/test/LoadingBar'; // loading
 
 // proto 관리자
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M'; // 관리자 > 코드관리 > 공통코드관리
@@ -34,6 +35,7 @@ function ProtoRoutes() {
       path: '/test',
       children: [
         { path: 'SUBTMPL', element: <SUBTMPL /> },
+        { path: 'LoadingBar', element: <LoadingBar /> },
       ],
     },
     {
@@ -42,7 +44,6 @@ function ProtoRoutes() {
       children: [
         { path: 'POPTMPL', element: <POPTMPL /> },
         { path: 'TMPL', element: <TMPL /> },
-        { path: 'LOADING', element: <LOADING /> },
         { path: 'ING', element: <ING /> },
       ],
     },
