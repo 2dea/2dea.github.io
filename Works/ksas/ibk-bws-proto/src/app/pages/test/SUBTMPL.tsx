@@ -814,10 +814,11 @@ function SUBTMPL() {
                                 <i className="o-icon _filter-alt wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _help wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _home wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _link wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _lock wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-close wdth-50" aria-hidden="true"></i>
-                                <i className="o-icon _menu-alt wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _menu wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _menu-alt wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _page-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _page-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _print wdth-50" aria-hidden="true"></i>
@@ -825,6 +826,8 @@ function SUBTMPL() {
                                 <i className="o-icon _search wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _settings wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _sum-minus wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _sum-plus wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _tel wdth-50" aria-hidden="true"></i>
                               </div>
                             </td>
