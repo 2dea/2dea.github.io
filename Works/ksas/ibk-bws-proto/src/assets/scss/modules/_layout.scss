@@ -80,7 +80,9 @@ $width-layout-nav:                      calc(var(--rem) * var(--width-layout-nav
 //   --width-scrollbar:     calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
 // }
 
-.g-scroll-width-thin  {
+.dom-nav, .o-grid  { @include inc-scrollbar-width(3, 4); }
+.g-scroll-width-thin,
+  :has(> *>[role="listbox"])  {
   --margin-scrollbar:    calc(var(--rem) * 2);
   --width-scrollbar:     calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
 }
@@ -136,8 +138,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
   [class|="dom"] >.roles  { flex: 1; display: flex; flex-direction: column; min-height: 0; background-color: var(--color-ground); }
 [class*=" dom-"] >.g-overlay,
   [class|="dom"] >.g-overlay  { min-height: 0; opacity: 0.001; }
-[class*=" dom-"] >.roles >*,
-  [class|="dom"] >.roles >*  { @include inc-scrollbar-width(3, 4); }
+/* [class*=" dom-"] >.roles >*,
+  [class|="dom"] >.roles >*  { @include inc-scrollbar-width(3, 4); } */
 
 .dom-wrapper  { position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; background-color: inherit; }
 
@@ -444,11 +446,11 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 /* Margin */
 :has(>.o-section) >*  { margin-bottom: $margin-section-50; }
 :has(>.o-section) >.o-section  { margin-bottom: 0; }
-:has(>.o-section) >.o-section ~*  { margin-top: $margin-section-50; }
+:has(>.o-section) >.o-section ~*  { margin-top: $margin-section-50; margin-bottom: 0; }
 
 :has(>.o-grid) >*  { margin-bottom: $margin-section-50; }
 :has(>.o-grid) >.o-grid  { margin-bottom: 0; }
-:has(>.o-grid) >.o-grid ~*  { margin-top: $margin-section-50; }
+:has(>.o-grid) >.o-grid ~*  { margin-top: $margin-section-50; margin-bottom: 0; }
 
 .dom-main * ~.div-footer  { margin-top: $margin-section-50; }
 

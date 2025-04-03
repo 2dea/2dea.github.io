@@ -63,7 +63,7 @@ function POPTMPL() {
               <div className="fieldset">
 
                 <div className="o-field">
-                  <Label label={`부점코드`} />
+                  <Label label={`화면ID`} />
                   <div className="fields">
                     <div className="o-form _input">
                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -73,27 +73,17 @@ function POPTMPL() {
                 </div>
 
                 <div className="o-field">
-                  <Label label={`부점상태`} />
+                  <Label label={`화면명`} />
                   <div className="fields">
-                    <div className="o-form _select">
-                      <XDropdown appendTo={'self'} className="bind" />
+                    <div className="o-form _input">
+                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                       <i aria-hidden="true"></i>
                     </div>
                   </div>
                 </div>
 
                 <div className="o-field">
-                  <Label label={`부점구분`} />
-                  <div className="fields">
-                    <div className="o-form _select">
-                      <XDropdown appendTo={'self'} className="bind" />
-                      <i aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="o-field">
-                  <Label label={`지역본부`} />
+                  <Label label={`매핑여부`} />
                   <div className="fields">
                     <div className="o-form _select">
                       <XDropdown appendTo={'self'} className="bind" />
@@ -111,7 +101,48 @@ function POPTMPL() {
 
             <div className="o-section">
               <div className="m-header">
-                <h2 className="o-heading level2"><span className="label">부점내역</span></h2>
+                <h2 className="o-heading level2"><span className="label">메뉴정보</span></h2>
+              </div>
+
+              <div className="main">
+                <form className="m-data-form">
+                  <table className="table">
+                    <colgroup>
+                      <col className="head" />
+                      <col className="data" />
+                    </colgroup>
+
+                    <tbody>
+                      <tr>
+                        <th colSpan={3}>
+                          <Label label={`상위메뉴`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          원화현수송
+                        </td>
+
+                        <th colSpan={3}>
+                          <Label label={`메뉴ID`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          AABB00003
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="o-grid">
+          <div className="column">
+
+            <div className="o-section">
+              <div className="m-header">
+                <h2 className="o-heading level2"><span className="label">화면내역</span></h2>
               </div>
 
               <div className="main _primary">
@@ -121,81 +152,109 @@ function POPTMPL() {
                     <table className="p-datatable-table p-datatable-scrollable-table">
                       <colgroup>
                         <col className="wdth-10" />
+                        <col className="wdth-10" />
                         <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
+                        <col className="wdth-auto" />
                         <col />
                         <col />
                       </colgroup>
 
                       <thead className="p-datatable-thead">
                         <tr>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선택</span></div></th>
                           <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점상태</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점구분</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지역본부</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팩스</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주소</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상세주소</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">개점일자</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐점일자</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지역구분</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관할본부코드</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계리부점코드</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조직속성코드</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">매핑여부</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                         </tr>
                       </thead>
 
                       <tbody className="p-datatable-tbody">
                         <tr className="p-datatable-emptymessage">
-                          <td colSpan={18}>등록된 데이터가 없습니다.</td>
+                          <td colSpan={6}>등록된 데이터가 없습니다.</td>
                         </tr>
                       </tbody>
 
                       <tbody className="p-datatable-tbody">
                       {[...Array(24)].map((e, idx) => (
                         <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
                           <td>{idx + 1}</td>
-                          <td>0001</td>
-                          <td className="g-start">Box연계시스템</td>
-                          <td>개점</td>
-                          <td className="g-start">본부영업점</td>
-                          <td className="g-start">중부지역본부</td>
-                          <td><span className="o-digit type-number">123-45-67890</span></td>
-                          <td><span className="o-digit type-tel">02-729-7610</span></td>
-                          <td><span className="o-digit type-tel">123-134</span></td>
-                          <td>12345</td>
-                          <td className="g-start">서울특별시 서초구 서초대로 77길 17</td>
-                          <td className="g-start">659-29 삼성쉐르빌퍼스티1층</td>
-                          <td><span className="o-digit type-date">1961-08-01</span></td>
-                          <td><span className="o-digit type-date">9999-12-31</span></td>
-                          <td>서울</td>
-                          <td>1234567</td>
-                          <td>1234567</td>
-                          <td>1234567</td>
+                          <td>AABB00001M00</td>
+                          <td className="g-start">원화현수송신청</td>
+                          <td>N</td>
+                          <td><span className="o-digit type-date">2024-09-16</span></td>
                         </tr>
                       ))}
                       </tbody>
                     </table>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="m-divider">
+              <div className="m-binds">
+                <div className="group">
+                  <CommonButton label="관련화면매핑" icon="du-down" className="_normal" />
+                </div>
+              </div>
+            </div>
+
+            <div className="o-section">
+              <div className="m-header">
+                <h4 className="o-heading level3"><span className="label">관련화면 매핑정보</span></h4>
+              </div>
+
+              <div className="main _primary rows-body-3i">
+                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                <div className="o-grid-table p-datatable">
+                  <div className="p-datatable-wrapper">
+                    <table className="p-datatable-table p-datatable-scrollable-table">
+                      <colgroup>
+                        <col />
+                        <col className="wdth-auto" />
+                      </colgroup>
+
+                      <thead className="p-datatable-thead">
+                        <tr>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
+                        </tr>
+                      </thead>
+
+                      <tbody className="p-datatable-tbody">
+                        <tr className="p-datatable-emptymessage">
+                          <td colSpan={2}>매핑된 화면이 없습니다.</td>
+                        </tr>
+                      </tbody>
+
+                      <tbody className="p-datatable-tbody">
+                      {[...Array(24)].map((e, idx) => (
+                        // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
+                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          <td>AABB00001M00</td>
+                          <td className="g-start">
+                            <div className="o-with-bind">
+                              <span className="main">원화현수송신청_관련화면 01</span>
+                              <span className="binds">
+                                <ImageButton label="삭제" icon="delete" />
+                              </span>
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div className="m-footer">
+                <ul className="m-bullets type-disc">
+                  <li>메뉴에 매핑할 관련화면을 선택해주세요.</li>
+                </ul>
               </div>
             </div>
 

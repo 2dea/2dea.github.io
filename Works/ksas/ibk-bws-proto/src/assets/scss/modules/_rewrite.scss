@@ -105,9 +105,9 @@
 
 
 
-.p-inputtext  {
+// .p-inputtext  {
 
-}
+// }
 
 .o-form  {
   .p-inputtext  {
@@ -133,6 +133,37 @@
     .p-datepicker-trigger  { width: auto; }
   }
 }
+
+
+
+
+
+
+
+.p-dialog  {
+  :has(>&)  {
+    --margin-block: calc(var(--rem) * 40);
+    --margin-inline: calc(var(--rem) * 40);
+
+    justify-content: flex-start;
+    overflow: auto;
+    padding: var(--margin-block) var(--margin-inline);
+  }
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 100%;
+  min-width: 450px;
+  max-height: 100%;
+  margin: auto;
+  pointer-events: auto;
+}
+
+
+
+
+
 
 
 

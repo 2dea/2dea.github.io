@@ -810,6 +810,10 @@ function SUBTMPL() {
                                 <i className="o-icon _column-toggle wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _contacts wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _delete wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du-down wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du-left wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du-right wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _file wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _filter-alt wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _help wdth-50" aria-hidden="true"></i>
@@ -825,7 +829,7 @@ function SUBTMPL() {
                                 <i className="o-icon _refresh wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _search wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _settings wdth-50" aria-hidden="true"></i>
-                                <i className="o-icon _sort wdth-50" aria-hidden="true"></i>
+                                {/* <i className="o-icon _sort wdth-50" aria-hidden="true"></i> */}
                                 <i className="o-icon _sum-minus wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sum-plus wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _tel wdth-50" aria-hidden="true"></i>
@@ -844,6 +848,8 @@ function SUBTMPL() {
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _arrow-drop-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-drop-up wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _move wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _sort wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _star wdth-50" aria-hidden="true"></i>
                               </div>
                             </td>
@@ -863,6 +869,7 @@ function SUBTMPL() {
                                 <i className="o-icon _folder-open wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-added wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-edited wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _popup-close wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-asc wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-dec wdth-50" aria-hidden="true"></i>
