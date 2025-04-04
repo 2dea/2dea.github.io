@@ -71,7 +71,8 @@
   #{$selector}  { transition: --color-scrollbar-hidden-track #{$end}ms, --color-scrollbar-hidden-thumb #{$end}ms, --color-scrollbar-hidden-thumb-edge #{$end}ms; }
   #{$selector}:hover,
     #{$selector}:focus-within  { --color-scrollbar-hidden-track: var(--color-scrollbar-track); --color-scrollbar-hidden-thumb: var(--color-scrollbar-thumb); --color-scrollbar-hidden-thumb-edge: var(--color-scrollbar-thumb-edge); transition: --color-scrollbar-hidden-track #{$start}ms, --color-scrollbar-hidden-thumb #{$start}ms, --color-scrollbar-hidden-thumb-edge #{$start}ms; }
-  #{$selector}::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-hidden-track); will-change: background-color; }
+  #{$selector}::-webkit-scrollbar-corner  { background-color: Transparent; outline-color: Transparent; }
+  #{$selector}::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-hidden-track); border-color: Transparent; will-change: background-color; }
   #{$selector}::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--color-scrollbar-hidden-thumb); outline-color: var(--color-scrollbar-hidden-thumb-edge, Transparent); will-change: background-color, outline-color; }
 }
 

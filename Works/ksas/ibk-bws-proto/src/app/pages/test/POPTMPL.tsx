@@ -49,9 +49,9 @@ function POPTMPL() {
   return (
     <>
       <Dialog
-        className="layer-wrap"
+        className="layer-wrap wdth-40p"
         visible={visible}
-        style={{ width: '520px' }}
+        style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">관련화면매핑</span></h3>}
@@ -275,7 +275,7 @@ function POPTMPL() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)관련화면매핑 [w765]</span>
+              <span className="label">(P)관련화면매핑 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>

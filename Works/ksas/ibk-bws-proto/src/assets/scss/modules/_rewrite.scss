@@ -144,20 +144,82 @@
   :has(>&)  {
     --margin-block: calc(var(--rem) * 40);
     --margin-inline: calc(var(--rem) * 40);
+    --margin-inline: var(--width-scrollbar);
 
-    justify-content: flex-start;
+    --width-90p: 1730;
+    --width-80p: 1540;
+
+    --width-70p: 1340;
+    --width-60p: 1150;
+    --width-50p: 960;
+    --width-40p: 770;
+    --width-25p: 480;
+    --width-20p: 380;
+
+    // justify-content: flex-start;
+    flex-direction: column;
     overflow: auto;
-    padding: var(--margin-block) var(--margin-inline);
+    // padding: var(--margin-block) var(--margin-inline);
+    padding: 0 var(--margin-inline);
   }
+
+  --radius: #{$radius-70};
+
+  $width-70p: calc(var(--rem) * var(--width-70p));
+  $width-60p: calc(var(--rem) * var(--width-60p));
+  $width-50p: calc(var(--rem) * var(--width-50p));
+  $width-40p: calc(var(--rem) * var(--width-40p));
+  $width-25p: calc(var(--rem) * var(--width-25p));
+  $width-20p: calc(var(--rem) * var(--width-20p));
 
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 100%;
-  min-width: 450px;
-  max-height: 100%;
-  margin: auto;
+  width: $width-40p;
+  min-width: calc(1px * var(--breakpoint-min) - var(--margin-inline, 0%) * 2);
+  max-width: calc(100% - var(--margin-inline, 0%) * 2);
+  min-height: 0;
+  max-height: calc(100% - var(--margin-block, 0%) * 2);
+  // margin: auto;
+  margin: var(--margin-block) auto;
+  background: $color-ground;
+  border-radius: var(--radius);
+  box-shadow: $dropshadow-70;
   pointer-events: auto;
+
+  &:is([style*="position:fixed;"], [style*="position: fixed;"])  { position: absolute !important; }
+
+  &.wdth-70p  { min-width: $width-70p; }
+  &.wdth-60p  { min-width: $width-60p; }
+  &.wdth-50p  { min-width: $width-50p; }
+  &.wdth-40p  { min-width: $width-40p; }
+  &.wdth-25p  { width: $width-25p; min-width: $width-25p; }
+  &.wdth-20p  { width: $width-20p; min-width: $width-20p; }
+
+  @at-root html:has(.p-dialog-enter-done)  {
+     overflow: hidden;
+  }
+
+  .p-dialog-header  {
+    @include setReset();
+
+    padding: $margin-section-40 $margin-popup-inline;
+    border-bottom: $e10 solid #CBD5E1;
+    background-color: inherit;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .p-dialog-content  {
+    overflow: auto scroll;
+    padding: $margin-popup-block $margin-popup-inline;
+    padding-right: calc($margin-popup-inline - var(--width-scrollbar));
+    color: inherit;
+    background-color: inherit;
+
+    &:last-of-type  {
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+  }
 }
 
 

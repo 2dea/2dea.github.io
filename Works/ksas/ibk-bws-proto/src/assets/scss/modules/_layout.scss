@@ -23,8 +23,11 @@
   --breakpoint-max:                     1280;
 
 
+  --radius-scrollbar-track:             2px;
   --color-scrollbar-track:              rgba(0,0,0, 0.05);
   --color-scrollbar-track:              Transparent;
+  --color-scrollbar-track-edge:         Transparent;
+  --color-scrollbar-corner-edge:        Transparent;
   --color-scrollbar-thumb:              rgba(0,0,0, 0.3);
   --color-scrollbar-thumb-hover:        rgba(0,0,0, 0.4);
   --color-scrollbar-thumb-active:       rgba(0,0,0, 0.5);
@@ -80,17 +83,28 @@ $width-layout-nav:                      calc(var(--rem) * var(--width-layout-nav
 //   --width-scrollbar:     calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
 // }
 
-.dom-nav, .o-grid  { @include inc-scrollbar-width(3, 4); }
+.g-scroll-width-thin,
+  :has(> *>[role="listbox"]),
+  .o-grid  {
+    --color-scrollbar-track: rgba(240,240,240, 0.52);
+    // --color-scrollbar-track-edge: rgba(240,240,240, 1.0);
+}
+.dom-wrapper >:not(.dom-main),
+  .o-grid  { @include inc-scrollbar-width(3, 4); }
 .g-scroll-width-thin,
   :has(> *>[role="listbox"])  {
-  --margin-scrollbar:    calc(var(--rem) * 2);
-  --width-scrollbar:     calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
+    --color-scrollbar-track-edge: Transparent;
+    --margin-scrollbar:    calc(var(--rem) * 2);
+    --width-scrollbar:     calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
+
+  scroll-behavior: auto;
 }
+
 
 ::-webkit-resizer  { background: var(--obj-sym-resizer-scrollable) 0 /100%; }
 ::-webkit-scrollbar  { width: var(--width-scrollbar, 12px); height: var(--width-scrollbar, 12px); }
-::-webkit-scrollbar-corner  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid rgba(255,255,255, 0.05); border-radius: 2px; }
-::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); border-radius: var(--width-scrollbar, 12px); will-change: background-color; }
+::-webkit-scrollbar-corner  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid var(--color-scrollbar-corner-edge, rgba(255,255,255, 0.05)); border-radius: 2px; }
+::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid var(--color-scrollbar-track-edge, Transparent); border-radius: var(--radius-scrollbar-track, 2px); will-change: background-color; }
 ::-webkit-scrollbar-thumb  { min-width: 50px; min-height: 50px; border: var(--margin-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--color-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--color-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--margin-scrollbar, 3px)); border-radius: var(--width-scrollbar, 12px); will-change: background-color, outline-color; }
 ::-webkit-scrollbar-thumb:hover  { background-color: var(--color-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
 ::-webkit-scrollbar-thumb:active  { background-color: var(--color-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
@@ -186,7 +200,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 
-.dom-header .div-nav-global  { font-size: $font-70; line-height: $line-70; white-space: nowrap; }
+.dom-header .div-nav-global  { font-size: $font-70; line-height: $line-70; overflow-x: auto; white-space: nowrap; }
 .dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: calc(($height-layout-header-nav - 1lh) / 2) 1em; white-space: nowrap; }
 .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 4; color: $color-white; }
 .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: $color-point-40; }
@@ -278,13 +292,13 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main .div-header .m-binds  { margin-left: auto; }
 
 
-// .dom-main .div-header  { position: sticky; top: calc($margin-layout-block * -1); margin-top: calc($margin-layout-block * -1); padding-top: $margin-layout-block; background-color: inherit; }
-// .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin-bottom: calc($margin-layout-block * -1); padding-bottom: $margin-layout-block; }
-.dom-main .div-header  { position: sticky; top: 0; background-color: inherit; }
-.dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: 0 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
-.dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
-// .dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
-.dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+// // .dom-main .div-header  { position: sticky; top: calc($margin-layout-block * -1); margin-top: calc($margin-layout-block * -1); padding-top: $margin-layout-block; background-color: inherit; }
+// // .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin-bottom: calc($margin-layout-block * -1); padding-bottom: $margin-layout-block; }
+// .dom-main .div-header  { position: sticky; top: 0; background-color: inherit; }
+// .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: 0 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
+// .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
+// // .dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+// .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
 
 // @scope (.dom-main) to (.o-grid)  {
 //   :has(.div-header)  { background-color: gold; }
@@ -452,7 +466,12 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 :has(>.o-grid) >.o-grid  { margin-bottom: 0; }
 :has(>.o-grid) >.o-grid ~*  { margin-top: $margin-section-50; margin-bottom: 0; }
 
-.dom-main * ~.div-footer  { margin-top: $margin-section-50; }
+// .dom-main * ~.div-footer  { margin-top: $margin-section-50; }
+.dom-main .div-header  { position: sticky; top: 0; background-color: inherit; }
+.dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
+.dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
+.dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+
 
 
 

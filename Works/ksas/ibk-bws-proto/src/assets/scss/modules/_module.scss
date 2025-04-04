@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
 :root  {
-  --edge-cell: var(--e10, 1px);
-  --margin-cell-block: calc(var(--rem) * 4);
+  --edge-cell-int: 1;
+  --margin-cell-block-int: 4;
+  --edge-cell: calc(var(--rem) * var(--edge-cell-int));
+  --margin-cell-block: calc(var(--rem) * var(--margin-cell-block-int));
   --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
   --height-cell-head: var(--height-cell);
 }
@@ -791,7 +793,7 @@
   }
 }
 
-.o-with-bind  { display: flex; align-items: center; }
+.o-with-bind  { display: flex; align-items: center; gap: $gap-element-30; }
 .o-with-bind >*  { flex: none; display: flex; align-items: center; min-width: 0; }
 .o-with-bind >.main  { flex: 1 0 0; }
 
