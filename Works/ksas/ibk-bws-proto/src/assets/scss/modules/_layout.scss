@@ -37,8 +37,8 @@
   --width-scrollbar:                    calc(var(--rem) * 6 + var(--margin-scrollbar) * 2);
 
 
-  --margin-popup-block:                 24;
-  --margin-popup-inline:                24;
+  --margin-popup-block:                 20;
+  --margin-popup-inline:                20;
 
   --height-popup-header:                46;
 
@@ -472,6 +472,10 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
 .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
 
+.layer-wrap .div-footer  { position: sticky; bottom: 0; background-color: $color-ground; }
+// .layer-wrap .div-footer .m-binds.type-end  { min-height: $height-form-70; }
+// .layer-wrap * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+
 
 
 
@@ -486,5 +490,6 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 /* Z-Index */
 .dom-main .div-header  { z-index: 10; }
 .dom-main .div-footer  { z-index: 10; }
+.layer-wrap .div-footer  { z-index: 10; }
 
 .o-layer._popup.type-univ  { z-index: 100; }

@@ -210,8 +210,10 @@
   }
 
   .p-dialog-content  {
+    display: flex;
+    flex-direction: column;
     overflow: auto scroll;
-    padding: $margin-popup-block $margin-popup-inline;
+    padding: calc($margin-popup-block - $margin-section-10) $margin-popup-inline $margin-popup-block;
     padding-right: calc($margin-popup-inline - var(--width-scrollbar));
     color: inherit;
     background-color: inherit;
