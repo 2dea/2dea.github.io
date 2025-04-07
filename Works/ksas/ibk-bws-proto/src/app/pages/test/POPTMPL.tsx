@@ -101,7 +101,7 @@ function POPTMPL() {
 
             <div className="o-section">
               <div className="m-header">
-                <h2 className="o-heading level2"><span className="label">메뉴정보</span></h2>
+                <h4 className="o-heading level2"><span className="label">메뉴정보</span></h4>
               </div>
 
               <div className="main">
@@ -115,17 +115,17 @@ function POPTMPL() {
                     <tbody>
                       <tr>
                         <th colSpan={3}>
-                          <Label label={`상위메뉴`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          원화현수송
-                        </td>
-
-                        <th colSpan={3}>
                           <Label label={`메뉴ID`} require={false} />
                         </th>
                         <td colSpan={3}>
                           AABB00003
+                        </td>
+
+                        <th colSpan={3}>
+                          <Label label={`메뉴명`} require={false} />
+                        </th>
+                        <td colSpan={3}>
+                          원화현수송신청
                         </td>
                       </tr>
                     </tbody>
@@ -142,10 +142,25 @@ function POPTMPL() {
 
             <div className="o-section">
               <div className="m-header">
-                <h2 className="o-heading level2"><span className="label">화면내역</span></h2>
+                <h4 className="o-heading level2"><span className="label">화면내역</span></h4>
+
+                <div className="o-length">
+                  <span className="head">전체</span>
+                  <em className="data">
+                    <span className="value">8</span>
+                    <span className="units">건</span>
+                  </em>
+                </div>
+
+                <div className="m-binds">
+                  <div className="group">
+                    <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                    <ImageButton label="목록출력" icon="print" />
+                  </div>
+                </div>
               </div>
 
-              <div className="main _primary">
+              <div className="main _primary rows-body-5i">
                 <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                 <div className="o-grid-table p-datatable">
                   <div className="p-datatable-wrapper">
@@ -204,7 +219,7 @@ function POPTMPL() {
 
             <div className="o-section">
               <div className="m-header">
-                <h4 className="o-heading level3"><span className="label">관련화면 매핑정보</span></h4>
+                <h5 className="o-heading level3"><span className="label">관련화면 매핑정보</span></h5>
               </div>
 
               <div className="main _primary rows-body-3i">
@@ -265,7 +280,7 @@ function POPTMPL() {
           <div className="m-binds">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="저장" className="_solid-primary" />
+              <CommonButton label="선택" className="_solid-primary" />
             </div>
           </div>
         </div>

@@ -132,7 +132,7 @@ html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable bot
 *  { letter-spacing: var(--text-spacing); }
 :before,  :after  { border-radius: inherit; letter-spacing: inherit; animation: inherit; transition: inherit; }
 html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); }
-body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40, inherit); font-size: var(--text-size); line-height: var(--text-height); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); }
+body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40); font-size: var(--text-size); line-height: var(--text-height); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); }
 /* @media
   screen and (not (max-width: 1920px))  {
     html  { font-size: var(--root-em-base, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
@@ -473,8 +473,11 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
 
 .layer-wrap .div-footer  { position: sticky; bottom: 0; background-color: $color-ground; }
-// .layer-wrap .div-footer .m-binds.type-end  { min-height: $height-form-70; }
-// .layer-wrap * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+.layer-wrap .div-footer  { margin: $margin-section-50 III(-8) 0; padding: 0 III(8); }
+.layer-wrap .div-footer:before,
+.layer-wrap .div-footer:after  { content: ""; position: absolute; left: 0; right: 0; height: $margin-section-50; background: $color-ground; }
+.layer-wrap .div-footer:before  { bottom: 100%; background: fnLinearGradient(); }
+.layer-wrap .div-footer:after  { top: 100%; height: $margin-popup-block; }
 
 
 

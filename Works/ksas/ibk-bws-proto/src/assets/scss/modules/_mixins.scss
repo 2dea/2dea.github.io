@@ -6,6 +6,10 @@
   // @return calc($root-em * $int);
 }
 
+@function fnLinearGradient($dir: bottom, $start: $color-ground-alpha-00, $end: $color-ground)  {
+  @return linear-gradient(to $dir, $start, $end 75%);
+}
+
 @mixin setResetFont()  {
   font-family: inherit;
   font-feature-settings: inherit;
