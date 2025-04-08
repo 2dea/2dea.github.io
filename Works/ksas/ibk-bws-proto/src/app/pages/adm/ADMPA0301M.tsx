@@ -139,6 +139,21 @@ function ADMPA0301M() {
               <div className="o-section">
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">직원내역</span></h2>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main _primary">
@@ -269,7 +284,7 @@ function ADMPA0301M() {
                           </td>
 
                           <th colSpan={3}>
-                            <Label label={`소속부점`} require={false} />
+                            <Label label={`소속부점/소속팀`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -278,16 +293,7 @@ function ADMPA0301M() {
                                   <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                              </div>
-                            </div>
-                          </td>
 
-                          <th colSpan={3}>
-                            <Label label={`소속팀`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
                                 <div className="o-form _input">
                                   <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
@@ -309,8 +315,7 @@ function ADMPA0301M() {
                               </div>
                             </div>
                           </td>
-                        </tr>
-                        <tr>
+
                           <th colSpan={3}>
                             <Label label={`EDW 실근무부점`} require={false} />
                           </th>
@@ -324,7 +329,8 @@ function ADMPA0301M() {
                               </div>
                             </div>
                           </td>
-
+                        </tr>
+                        <tr>
                           <th colSpan={3}>
                             <Label label={`직책코드`} require={false} />
                           </th>
@@ -352,10 +358,15 @@ function ADMPA0301M() {
                           <th colSpan={3}>
                             <Label label={`부점변경예정 (종료일)`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={9}>
                             <div className="o-field">
                               <div className="fields">
                                 <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon disabled />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <span className="sep type-swung">~</span>
                                 <div className="o-form _input type-date wdth-50">
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon disabled />
                                   <i aria-hidden="true"></i>
@@ -380,10 +391,22 @@ function ADMPA0301M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">직무분장</span></h3>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
 
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="직무분장 관리" className="_normal" />
+                    </div>
+
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>
@@ -436,11 +459,23 @@ function ADMPA0301M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">근태정보</span></h3>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
 
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />
+                    </div>
+
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>

@@ -29,7 +29,7 @@ function TMPL() {
   // const [visible, setVisible] = useState<boolean>(true);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한관리' }, { label: '생성관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품' }, { label: '본부부서조달관리(총무부 외)' }, { label: '(706520)(총무부 외) 중요용지 조달신청 접수' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -68,7 +68,7 @@ function TMPL() {
 
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">생성관리</span>
+              <span className="label">(총무부 외) 중요용지 조달신청 접수</span>
 
               <label className="o-check type-symbol style-favorite">
                 <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
@@ -77,10 +77,45 @@ function TMPL() {
             </h1>
           </div>
 
-          <div className="m-binds type-start">
+          {/* <div className="m-binds type-start">
             <div className="group">
               <CommonButton label="화면잠금" icon="lock" className="_normal" />
               <CommonButton label="도움말" icon="help" className="_normal" />
+            </div>
+          </div> */}
+
+          <div className="binds">
+            <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="알림전송" className="_lined-secondary" />
+                <CommonButton label="공지사항" className="_lined-secondary" />
+                <CommonButton label="결재선변경관리" className="_lined-secondary" />
+                <CommonButton label="결재바로가기" className="_lined-secondary" />
+              </div>
+
+              <div className="group _assistive">
+                <CommonButton label="도움말" icon="help" className="_normal" />
+              </div>
+            </div>
+
+            <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="당일결정내역출력" className="_texted" />
+                  <CommonButton label="결정출력" className="_texted" />
+                  <CommonButton label="손상권출력" className="_texted" />
+                  <CommonButton label="신청출력" className="_texted" />
+                  <CommonButton label="출력" className="_texted" />
+                </div>
+              </div>
+
+              <div className="group _primary">
+                <CommonButton label="업무지원반려" className="_lined-primary" />
+                <CommonButton label="업무지원결정" className="_lined-primary" />
+                <CommonButton label="삭제" className="_delete" />
+                <CommonButton label="취소" className="_cancel" />
+                <CommonButton label="결재요청" className="_solid-primary" />
+                </div>
             </div>
           </div>
         </div>
@@ -2155,8 +2190,8 @@ function TMPL() {
               </div>
             </div>
 
-            <div className="div-footer">
-            <div className="m-binds type-end">
+            {/* <div className="div-footer">
+              <div className="m-binds type-end">
                 <div className="group">
                   <CommonButton label="알림전송" className="_lined-secondary" />
                   <CommonButton label="결재선변경관리" className="_lined-secondary" />
@@ -2181,7 +2216,7 @@ function TMPL() {
                   <CommonButton label="결재요청" className="_solid-primary" />
                   </div>
               </div>
-            </div>
+            </div> */}
           </TabPanel>
         </Tabs>
         {/* <!-- // Contents { @DEV } --> */}

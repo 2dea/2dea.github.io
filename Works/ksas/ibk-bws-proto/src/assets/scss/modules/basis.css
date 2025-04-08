@@ -39,26 +39,31 @@
   --line-20px:          26;
 
   --font-30-int:        var(--font-12px);
+  --font-40-int:        var(--font-13px);
   --font-50-int:        var(--font-14px);
   --font-70-int:        var(--font-16px);
   --font-90-int:        var(--font-20px);
 
   --line-30-int:        var(--line-12px);
+  --line-40-int:        var(--line-13px);
   --line-50-int:        var(--line-14px);
   --line-70-int:        var(--line-16px);
   --line-90-int:        var(--line-20px);
 
   --font-30:            calc(var(--rem) * var(--font-30-int));
+  --font-40:            calc(var(--rem) * var(--font-40-int));
   --font-50:            calc(var(--rem) * var(--font-50-int));
   --font-70:            calc(var(--rem) * var(--font-70-int));
   --font-90:            calc(var(--rem) * var(--font-90-int));
 
   --line-abs-30:        calc(var(--rem) * var(--line-30-int));
+  --line-abs-30:        calc(var(--rem) * var(--line-40-int));
   --line-abs-50:        calc(var(--rem) * var(--line-50-int));
   --line-abs-70:        calc(var(--rem) * var(--line-70-int));
   --line-abs-90:        calc(var(--rem) * var(--line-90-int));
 
   --line-30:            calc(var(--line-30-int) / var(--font-30-int));
+  --line-40:            calc(var(--line-40-int) / var(--font-40-int));
   --line-50:            calc(var(--line-50-int) / var(--font-50-int));
   --line-70:            calc(var(--line-70-int) / var(--font-70-int));
   --line-90:            calc(var(--line-90-int) / var(--font-90-int));
@@ -184,7 +189,7 @@ iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-beh
 audio:not([controls])  { display: none; height: 0; }
 svg:not(:root)  { overflow: hidden; }
 table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-spacing: 0; border-width: 0; }
-table :not(tr > * *)  { color: inherit; background-color: inherit; text-align: inherit; }
+table :not(tr >* *)  { color: inherit; background-color: inherit; text-align: inherit; }
 th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0.125em; border: 0 solid; border-width: 1px; }
 fieldset  { min-width: 0; padding: 0; border-style: none; }
 legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }

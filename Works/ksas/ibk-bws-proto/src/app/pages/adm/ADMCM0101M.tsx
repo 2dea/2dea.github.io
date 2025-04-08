@@ -120,11 +120,24 @@ function ADMCM0101M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">코드도메인</span></h2>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />
                       <CommonButton label="취소" className="_cancel" />
+                    </div>
+
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>
@@ -224,11 +237,24 @@ function ADMCM0101M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">코드도메인 상세내용</span></h3>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />
                       <CommonButton label="취소" className="_cancel" />
+                    </div>
+
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>

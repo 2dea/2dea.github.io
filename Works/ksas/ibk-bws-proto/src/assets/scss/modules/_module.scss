@@ -268,7 +268,7 @@
 .o-require-tag >.tag  { left: calc(var(--rem) * 3); right: auto; }
 
 
-.o-chip  { font-size: $font-30; line-height: $line-30; display: flex; align-items: center; padding: III(3) III(8); background: #E2E8F0; border-radius: $radius-abs-999; }
+.o-chip  { font-size: $font-40; line-height: $line-40; display: flex; align-items: center; padding: III(3) III(8); background: #E2E8F0; border-radius: $radius-abs-999; }
 
 .m-chips  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-50; }
 
@@ -315,8 +315,9 @@
 // .o-empty-data >*  { position: absolute; min-width: max-content; color: Transparent; pointer-events: none; text-shadow: none; }
 // .o-empty-data:before  { content: ""; display: block; width: 100%; height: 100%; background: var(--obj-img-data-empty) no-repeat 50% /100% min(100%, 57rem); background-clip: content-box; }
 
-.o-length  { font-size: $font-30; line-height: $line-30; display: flex; gap: $gap-whitespace-30; }
+.o-length  { font-size: $font-40; line-height: $line-40; display: flex; gap: $gap-whitespace-30; }
 .o-length >*  { display: flex; gap: inherit; }
+.o-length .data .value  { font-weight: $bold-70; color: #FE6D34; }
 
 
 
@@ -347,7 +348,7 @@
 .m-bullets.type-prec >dt.heading  { margin-left: calc(-2.4rem - 0.285715em); }
 // .m-bullets.type-prec >:before  { content: ""; width: 2.4rem; height: 2.4rem; margin-left: calc(-2.4rem - 0.285715em); margin-top: calc(0.785714em - 2.4rem / 2); margin-right: 0.285715em; background: url('../img/common/ico_label_prec.png') no-repeat; }
 
-.m-bullets:where(.m-footer *)  { font-size: $font-30; color: $color-text-30; }
+.m-bullets:where(.m-footer *)  { font-size: $font-40; color: $color-text-30; }
 
 
 
@@ -443,10 +444,11 @@
 
 .o-button:where(.m-binds.type-start *),
   .o-button:where(.dom-nav .div-nav-local .m-binds *),
-  .o-button.size-30  { font-size: $font-30; line-height: $line-30; }
+  .o-button.size-30  { font-size: $font-40; line-height: $line-40; }
 .o-button.size-60  { font-size: $font-50; line-height: $line-50; min-width: calc(4em + $e10 * 4); padding: calc(III(3) + III(2)) calc(0.5em + 0.25em); }
 .o-button:where(.m-binds.type-end >.group._primary *),
-  .o-button.size-70  { font-size: $font-50; line-height: $line-50; gap: $gap-whitespace-50; min-width: calc(5em + $e10 * 2); padding: calc(var(--margin-block) + $e10 * 5) calc(0.5em + 0.25em); }
+  /* .o-button.size-70  { font-size: $font-50; line-height: $line-50; gap: $gap-whitespace-50; min-width: calc(5em + $e10 * 2); padding: calc(var(--margin-block) + $e10 * 5) calc(0.5em + 0.25em); } */
+  .o-button.size-70  { font-size: $font-50; line-height: $line-50; gap: $gap-whitespace-50; min-width: calc(5em - $e10 * 5); padding: calc(var(--margin-block) + $e10 * 2) 0.5em; }
 /*
 .o-button:where(.m-header .m-binds *),
   .o-button:where(.o-field *),
@@ -474,8 +476,8 @@
 .o-image-button.size-30  { font-size: $height-form-30; }
 
 
-.m-binds  { display: flex; align-items: center; justify-content: space-between; gap: $gap-element-70 calc($gap-element-80 * 2); clear: both; }
-.m-binds >*  { flex: 0 1 auto; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: $gap-element-50; }
+.m-binds  { display: flex; align-items: center; justify-content: space-between; gap: $gap-element-70 calc($gap-element-80 * 1); clear: both; }
+.m-binds >*  { flex: 0 1 auto; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: $gap-element-30; }
 .m-binds >* >*  { flex: 0 1 auto; }
 
 .m-binds:has(>._utility)  { flex-wrap: wrap; }
@@ -957,7 +959,7 @@
 .o-grid-table table  { width: 100%; background: var(--color-ground); text-align: center; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
 // .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
-.o-grid-table thead  { font-size: $font-30; line-height: $line-30; color: #004C9D; background: #F7F7F8; }
+.o-grid-table thead  { font-size: $font-40; line-height: $line-40; color: #004C9D; background: #F7F7F8; }
 .o-grid-table th  { font-weight: $bold-70; }
 
 .o-grid-table tr >*  { min-width: 0; height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid #EAEBEC; border-width: 0 $e10 $e10 0; }
@@ -1020,7 +1022,7 @@
   .m-filter-form .fieldset >.colspan-#{$i}  { grid-column: auto /span #{$i}; }
 }
 
-.m-filter-form .fieldset >* >.o-label  { font-size: $font-30; line-height: $line-30; color: #0F172A; }
+.m-filter-form .fieldset >* >.o-label  { font-size: $font-40; line-height: $line-40; color: #0F172A; }
 
 
 
@@ -1030,7 +1032,7 @@
 .m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: #0B68CB; }
 .m-data-form tr >:first-child  { border-left-width: $e10; }
 .m-data-form tr >:last-child  { border-right-width: $e10; }
-.m-data-form th  { font-size: $font-30; line-height: $line-30; width: calc(var(--rem) * 120); padding: III(1) III(11); color: #1E293B; background: #F1F5F9; }
+.m-data-form th  { font-size: $font-40; line-height: $line-40; width: calc(var(--rem) * 120); padding: III(1) III(11); color: #1E293B; background: #F1F5F9; }
 
 
 

@@ -118,6 +118,11 @@ function ADMAU0201M() {
                       <div className="group">
                         <CommonButton label="모두펼침" className="_normal" />
                       </div>
+
+                      <div className="group">
+                        <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                        <ImageButton label="목록출력" icon="print" />
+                      </div>
                     </div>
                   </div>
 
@@ -381,6 +386,14 @@ function ADMAU0201M() {
                             </th>
                             <td colSpan={3}>
                               원화현수송신청
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={3}>
+                              <Label label={`메뉴설명`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              메뉴설명입니다.
                             </td>
                           </tr>
                           <tr>

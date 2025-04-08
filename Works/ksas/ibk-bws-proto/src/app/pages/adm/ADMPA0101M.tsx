@@ -129,6 +129,21 @@ function ADMPA0101M() {
               <div className="o-section">
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">부점내역</span></h2>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main _primary">
@@ -379,7 +394,7 @@ function ADMPA0101M() {
                           <td colSpan={9}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-40">
+                                <div className="o-form _input wdth-30">
                                   <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">

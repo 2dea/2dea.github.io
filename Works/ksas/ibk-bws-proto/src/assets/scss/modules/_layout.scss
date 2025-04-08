@@ -192,7 +192,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-header .div-root >*  { font-size: III(17); color: $tp; }
 .dom-header .div-root .logo  { font-size: III(20); }
 
-.dom-header .div-account  { font-size: $font-30; line-height: $line-30; display: flex; justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; height: $height-layout-header-account; color: white; background: $color-key1-70; }
+.dom-header .div-account  { font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; height: $height-layout-header-account; color: white; background: $color-key1-70; }
 .dom-header .div-account >dl  { --gap: var(--e10, 1px); display: flex; align-items: center; gap: var(--gap); }
 .dom-header .div-account >dl >*  { min-width: 0; }
 .dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
@@ -282,14 +282,24 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main >.div-tablist  { font-size: inherit; line-height: inherit; border-bottom: $e10 solid #E2E8F0; }
 .dom-main >.div-tablist .m-mdi  { margin-bottom: calc(-1 * $e10); padding-top: $margin-section-40; }
 
-.dom-main .div-sep  { position: absolute; }
-.dom-main .div-header  { display: flex; align-items: center; gap: $gap-element-80; }
-.dom-main .div-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
-.dom-main .div-header >.o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
-.dom-main .div-header >.o-breadcrumb >*  { display: flex; }
-.dom-main .div-header .m-title  { order: -1; }
-.dom-main .div-header .m-title .o-heading  { display: flex; align-items: center; }
-.dom-main .div-header .m-binds  { margin-left: auto; }
+// .dom-main .div-sep  { position: absolute; }
+// .dom-main .div-header  { display: flex; align-items: center; gap: $gap-element-80; }
+// .dom-main .div-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
+// .dom-main .div-header >.o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
+// .dom-main .div-header >.o-breadcrumb >*  { display: flex; }
+// .dom-main .div-header .m-title  { order: -1; }
+// .dom-main .div-header .m-title .o-heading  { display: flex; align-items: center; }
+// .dom-main .div-header .m-binds  { margin-left: auto; }
+
+.dom-main .div-header  { display: grid; /* grid-auto-flow: column; */ grid-template-columns: 1fr auto; grid-template-rows: auto auto; align-content: center; gap: $gap-element-30; }
+.dom-main .div-header .o-check  { font-size: 14px; }
+.dom-main .div-header .o-breadcrumb  { align-self: end; }
+.dom-main .div-header >*  { min-width: 0; min-height: 0; @include inc-ellipsis(); }
+.dom-main .div-header .binds  { grid-column: 2 /3; grid-row: 1 /span 2; display: flex; flex-direction: column; justify-content: center; gap: $gap-element-70; }
+.dom-main .div-header .binds .m-binds  { justify-content: flex-end; min-height: 0; }
+.dom-main .div-header .binds .m-binds:not(.type-end)  { gap: $gap-element-70 $gap-element-30; }
+.dom-main .div-header .binds .m-binds >*  { justify-content: inherit; }
+
 
 
 // // .dom-main .div-header  { position: sticky; top: calc($margin-layout-block * -1); margin-top: calc($margin-layout-block * -1); padding-top: $margin-layout-block; background-color: inherit; }
