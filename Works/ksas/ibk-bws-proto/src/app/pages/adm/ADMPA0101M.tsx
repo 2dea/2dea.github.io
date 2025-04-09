@@ -50,23 +50,33 @@ function ADMPA0101M() {
     <>
       <div className="roles" data-div-role="0">
         <div className="div-header">
-          <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+          <div className="main">
+            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
-          <div className="m-title">
-            <h1 className="o-heading level1">
-              <span className="label">부점관리</span>
+            <div className="m-title">
+              <h1 className="o-heading level1">
+                <span className="label">부점관리</span>
 
-              <label className="o-check type-symbol style-favorite">
-                <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
-                <span className="label _hidden">마이메뉴 등록</span>
-              </label>
-            </h1>
+                <label className="o-check type-symbol style-favorite">
+                  <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
+                  <span className="label _hidden">마이메뉴 등록</span>
+                </label>
+              </h1>
+            </div>
           </div>
 
-          <div className="m-binds type-start">
-            <div className="group">
-              <CommonButton label="화면잠금" icon="lock" className="_normal" />
-              <CommonButton label="도움말" icon="help" className="_normal" />
+          <div className="binds">
+            <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="도움말" icon="help" className="_normal" />
+              </div>
+            </div>
+
+            <div className="m-binds type-end">
+              <div className="group _primary">
+                <CommonButton label="삭제" className="_delete" />
+                <CommonButton label="저장" className="_solid-primary" />
+              </div>
             </div>
           </div>
         </div>
@@ -740,14 +750,14 @@ function ADMPA0101M() {
             </div>
           </div>
 
-          <div className="div-footer">
+          {/* <div className="div-footer">
             <div className="m-binds type-end">
               <div className="group _primary">
                 <CommonButton label="삭제" className="_delete" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>

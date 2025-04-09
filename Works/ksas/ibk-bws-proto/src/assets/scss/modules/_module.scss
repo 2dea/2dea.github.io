@@ -263,7 +263,7 @@
 .o-require-tag:before  { content: "*"; margin-right: calc(var(--rem) * 2); }
 .o-require-tag >.tag  { @include inc-sronly(none, 0); vertical-align: super; top: calc(var(--rem) * 4); right: calc(var(--rem) * 3); }
 
-.o-require-tag  { order: 0; }
+.o-require-tag  { order: 0; font-weight: $bold-40; }
 .o-require-tag:before  { margin-left: calc(var(--rem) * 2); margin-right: auto; }
 .o-require-tag >.tag  { left: calc(var(--rem) * 3); right: auto; }
 
@@ -444,7 +444,7 @@
 
 .o-button:where(.m-binds.type-start *),
   .o-button:where(.dom-nav .div-nav-local .m-binds *),
-  .o-button.size-30  { font-size: $font-40; line-height: $line-40; }
+  .o-button.size-30  { font-size: $font-40; line-height: $line-40; min-width: calc(4em - $e10 * 6); padding: calc(var(--margin-block)) calc(0.5em - $e10 * 2); }
 .o-button.size-60  { font-size: $font-50; line-height: $line-50; min-width: calc(4em + $e10 * 4); padding: calc(III(3) + III(2)) calc(0.5em + 0.25em); }
 .o-button:where(.m-binds.type-end >.group._primary *),
   /* .o-button.size-70  { font-size: $font-50; line-height: $line-50; gap: $gap-whitespace-50; min-width: calc(5em + $e10 * 2); padding: calc(var(--margin-block) + $e10 * 5) calc(0.5em + 0.25em); } */

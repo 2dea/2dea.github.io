@@ -24,7 +24,7 @@ import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function POPTMPL() {
+function ADMAU0201P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -309,4 +309,4 @@ function POPTMPL() {
   );
 }
 
-export default POPTMPL;
+export default ADMAU0201P02;

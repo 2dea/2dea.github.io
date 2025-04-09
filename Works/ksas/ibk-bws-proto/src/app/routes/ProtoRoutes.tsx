@@ -17,6 +17,9 @@ import ING from 'app/pages/test/ING'; // ing
 
 import LoadingBar from 'app/pages/test/LoadingBar'; // loading
 
+// proto 공통
+import CMM000401P from 'app/pages/cmm/CMM000401P'; // 공통 ~ (LP)직원조회
+
 // proto 관리자
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M'; // 관리자 > 코드관리 > 공통코드관리
 
@@ -25,6 +28,7 @@ import ADMPA0301M from 'app/pages/adm/ADMPA0301M'; // 관리자 > 인사정보 >
 
 import ADMAU0101M from 'app/pages/adm/ADMAU0101M'; // 관리자 > 권한관리 > 생성관리 > (T)메뉴관리
 import ADMAU0201M from 'app/pages/adm/ADMAU0201M'; // 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
+import ADMAU0201P02 from 'app/pages/adm/ADMAU0201P02'; // 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)관련화면매핑
 import ADMAU0202M from 'app/pages/adm/ADMAU0202M'; // 관리자 > 권한관리 > 매핑관리 > (T)권한별 메뉴/팝업관리
 
 import ADMAC0201M from 'app/pages/adm/ADMAC0201M'; // 관리자 > 권한위임 > 사용자별 권한관리
@@ -51,6 +55,13 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
+        { path: 'CMM000401P', element: <CMM000401P /> },
+      ],
+    },
+    {
+      path: '/proto',
+      element: <Decorator />,
+      children: [
         { path: 'ADMCM0101M', element: <ADMCM0101M /> },
 
         { path: 'ADMPA0101M', element: <ADMPA0101M /> },
@@ -58,6 +69,7 @@ function ProtoRoutes() {
 
         { path: 'ADMAU0101M', element: <ADMAU0101M /> },
         { path: 'ADMAU0201M', element: <ADMAU0201M /> },
+        { path: 'ADMAU0201P02', element: <ADMAU0201P02 /> },
         { path: 'ADMAU0202M', element: <ADMAU0202M /> },
 
         { path: 'ADMAC0201M', element: <ADMAC0201M /> },

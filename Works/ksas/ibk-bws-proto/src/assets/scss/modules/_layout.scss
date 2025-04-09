@@ -21,6 +21,7 @@
 :root  {
   --breakpoint-min:                     320;
   --breakpoint-max:                     1280;
+  --breakpoint-max:                     1272;
 
 
   --radius-scrollbar-track:             2px;
@@ -265,19 +266,19 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main >*  { padding: 0 $margin-layout-inline; }
 .dom-main >:first-child  { border-top-left-radius: inherit; border-top-right-radius: inherit; }
 .dom-main >:last-child  { border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; }
-// .dom-main >.roles  { flex: 1 0 0; gap: $margin-layout-block; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
-// .dom-main >.roles >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); }
-// .dom-main >.roles >:first-child  { padding-top: $margin-layout-block; }
-.dom-main >.roles  { flex: 1 0 0; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
-// .dom-main >.roles :has(:where([class|="div"] ~[class|="div"]))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
-// .dom-main :has(>:where([class|="div"]) ~[class|="div"])  {  }
-// .dom-main :has(>:where([class|="div"]) ~[class|="div"]) >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); margin-top: $margin-layout-block; }
-// .dom-main :has(>:where([class|="div"]) ~[class|="div"]) >:first-child  { margin-top: 0; padding-top: $margin-layout-block; }
-.dom-main >.roles :has(:where(.div-contents))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
-.dom-main :has(:where(.div-contents)) >*  { margin-bottom: $margin-layout-block; }
-.dom-main :has(:where(.div-contents)) >.div-contents  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); margin-bottom: 0;}
-.dom-main :has(:where(.div-contents)) >.div-contents ~*  { margin-top: $margin-layout-block; }
-.dom-main :has(:where(.div-contents)) >:first-child  { padding-top: $margin-layout-block; }
+// // .dom-main >.roles  { flex: 1 0 0; gap: $margin-layout-block; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
+// // .dom-main >.roles >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); }
+// // .dom-main >.roles >:first-child  { padding-top: $margin-layout-block; }
+// .dom-main >.roles  { flex: 1 0 0; overflow: auto scroll; padding-right: calc($margin-layout-inline - $width-scrollbar); padding-bottom: $margin-layout-block; }
+// // .dom-main >.roles :has(:where([class|="div"] ~[class|="div"]))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
+// // .dom-main :has(>:where([class|="div"]) ~[class|="div"])  {  }
+// // .dom-main :has(>:where([class|="div"]) ~[class|="div"]) >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); margin-top: $margin-layout-block; }
+// // .dom-main :has(>:where([class|="div"]) ~[class|="div"]) >:first-child  { margin-top: 0; padding-top: $margin-layout-block; }
+// .dom-main >.roles :has(:where(.div-contents))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
+// .dom-main :has(:where(.div-contents)) >*  { margin-bottom: $margin-layout-block; }
+// .dom-main :has(:where(.div-contents)) >.div-contents  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); margin-bottom: 0;}
+// .dom-main :has(:where(.div-contents)) >.div-contents ~*  { margin-top: $margin-layout-block; }
+// .dom-main :has(:where(.div-contents)) >:first-child  { padding-top: $margin-layout-block; }
 
 .dom-main >.div-tablist  { font-size: inherit; line-height: inherit; border-bottom: $e10 solid #E2E8F0; }
 .dom-main >.div-tablist .m-mdi  { margin-bottom: calc(-1 * $e10); padding-top: $margin-section-40; }
@@ -291,14 +292,14 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main .div-header .m-title .o-heading  { display: flex; align-items: center; }
 // .dom-main .div-header .m-binds  { margin-left: auto; }
 
-.dom-main .div-header  { display: grid; /* grid-auto-flow: column; */ grid-template-columns: 1fr auto; grid-template-rows: auto auto; align-content: center; gap: $gap-element-30; }
-.dom-main .div-header .o-check  { font-size: 14px; }
-.dom-main .div-header .o-breadcrumb  { align-self: end; }
-.dom-main .div-header >*  { min-width: 0; min-height: 0; @include inc-ellipsis(); }
-.dom-main .div-header .binds  { grid-column: 2 /3; grid-row: 1 /span 2; display: flex; flex-direction: column; justify-content: center; gap: $gap-element-70; }
-.dom-main .div-header .binds .m-binds  { justify-content: flex-end; min-height: 0; }
-.dom-main .div-header .binds .m-binds:not(.type-end)  { gap: $gap-element-70 $gap-element-30; }
-.dom-main .div-header .binds .m-binds >*  { justify-content: inherit; }
+// .dom-main .div-header  { display: grid; /* grid-auto-flow: column; */ grid-template-columns: 1fr auto; grid-template-rows: auto auto; align-content: center; gap: $gap-element-30; }
+// .dom-main .div-header .o-check  { font-size: 14px; }
+// .dom-main .div-header .o-breadcrumb  { align-self: end; }
+// .dom-main .div-header >*  { min-width: 0; min-height: 0; @include inc-ellipsis(); }
+// .dom-main .div-header .binds  { grid-column: 2 /3; grid-row: 1 /span 2; display: flex; flex-direction: column; justify-content: center; gap: $gap-element-70; }
+// .dom-main .div-header .binds .m-binds  { justify-content: flex-end; min-height: 0; }
+// .dom-main .div-header .binds .m-binds:not(.type-end)  { gap: $gap-element-70 $gap-element-30; }
+// .dom-main .div-header .binds .m-binds >*  { justify-content: inherit; }
 
 
 
@@ -314,6 +315,28 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 //   :has(.div-header)  { background-color: gold; }
 // }
 
+
+.dom-main >.roles  { flex: 1 0 0; overflow: auto scroll; padding: 0; }
+.dom-main >.roles :has(:where(.div-contents))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
+// .dom-main :has(:where(.div-contents)) >*  { margin-bottom: $margin-layout-block; }
+.dom-main :has(:where(.div-contents)) >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - var(--width-scrollbar)); padding: $margin-layout-block $margin-layout-inline; padding-right: calc($margin-layout-inline - $width-scrollbar); }
+// .dom-main :has(:where(.div-contents)) >.div-contents  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); margin-bottom: 0;}
+// .dom-main :has(:where(.div-contents)) >.div-contents ~*  { margin-top: $margin-layout-block; }
+// .dom-main :has(:where(.div-contents)) >:first-child  { padding-top: $margin-layout-block; }
+
+
+.dom-main .div-header  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; /* min-height: calc($height-form-70 + $height-form-30 + $gap-element-70 + $margin-section-50 * 2 + $e10); */ padding-top: $margin-section-50; padding-bottom: $margin-section-50; border-bottom: $e10 solid #E2E8F0; background-color: #F8FAFC; }
+.dom-main .div-header .o-check  { font-size: 14px; }
+.dom-main .div-header .o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
+.dom-main .div-header .o-breadcrumb >*  { display: flex; }
+
+.dom-main .div-header >*  { display: flex; flex-direction: column; justify-content: center; gap: $gap-element-70; min-width: 0; }
+.dom-main .div-header >.main  { gap: inherit; white-space: nowrap; }
+.dom-main .div-header >.binds  { margin-left: auto }
+.dom-main .div-header >.binds .m-binds  { justify-content: flex-end; flex-wrap: wrap-reverse; min-height: 0; }
+.dom-main .div-header >.binds .m-binds:not(.type-end)  { gap: $gap-element-70 $gap-element-30; }
+.dom-main .div-header >.binds .m-binds.type-end  { min-height: $height-form-70; }
+.dom-main .div-header >.binds .m-binds >*  { justify-content: inherit; }
 
 
 .dom-aside  { display: none; background: Silver; }
@@ -477,7 +500,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 :has(>.o-grid) >.o-grid ~*  { margin-top: $margin-section-50; margin-bottom: 0; }
 
 // .dom-main * ~.div-footer  { margin-top: $margin-section-50; }
-.dom-main .div-header  { position: sticky; top: 0; background-color: inherit; }
+.dom-main .div-header  { position: sticky; top: 0; }
 .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
 .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }

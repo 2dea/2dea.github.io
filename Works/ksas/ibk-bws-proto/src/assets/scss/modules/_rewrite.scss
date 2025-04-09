@@ -119,6 +119,8 @@
     }
 
     &.p-disabled  { color: $color-text-disabled; background-color: #F1F5F9; filter: none; opacity: 1.0; }
+
+    @at-root .o-form.mode-required  { background: #FEF6D7 !important; }
   }
 
   >:where(.bind:is(.p-dropdown, .p-calendar))  {
@@ -207,11 +209,18 @@
     border-bottom: $e10 solid #CBD5E1;
     background-color: inherit;
     border-radius: var(--radius) var(--radius) 0 0;
+
+    .o-heading  {
+      &:before  {
+        background: none;
+      }
+    }
   }
 
   .p-dialog-content  {
     display: flex;
     flex-direction: column;
+    min-height: III(200);
     overflow: auto scroll;
     padding: $margin-section-50 $margin-popup-inline $margin-popup-block;
     padding-right: calc($margin-popup-inline - var(--width-scrollbar));
