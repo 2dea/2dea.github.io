@@ -1078,4 +1078,7 @@
 
 
 
-.m-tab.type1:not(:only-child)  { margin-bottom: $margin-section-50; }
+.m-filter-form:not(:only-child)  { margin-bottom: $margin-section-50; }
+
+.m-tab:not(:only-child).type1  { margin-bottom: $margin-section-50; }
+.m-tab:not(:only-child).type2  { margin-bottom: $margin-section-50; }
