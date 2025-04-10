@@ -70,8 +70,8 @@ function SUBTMPL() {
           <div className="div-nav-global">
             <ul>
               <li><a href="javascript:" className="link"><span className="label">원화정산</span></a></li>
-              <li><a href="javascript:" className="link" aria-current="true"><span className="label">중도용지용도품(영업점)</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">중도용지용도품(본부)</span></a></li>
+              <li><a href="javascript:" className="link" aria-current="true"><span className="label">중요용지용도품(영업점)</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">중요용지용도품(본부)</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">행내등기우편물</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">안전관리</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">비상계획안전기획</span></a></li>

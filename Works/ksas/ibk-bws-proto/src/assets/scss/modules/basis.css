@@ -57,7 +57,7 @@
   --font-90:            calc(var(--rem) * var(--font-90-int));
 
   --line-abs-30:        calc(var(--rem) * var(--line-30-int));
-  --line-abs-30:        calc(var(--rem) * var(--line-40-int));
+  --line-abs-40:        calc(var(--rem) * var(--line-40-int));
   --line-abs-50:        calc(var(--rem) * var(--line-50-int));
   --line-abs-70:        calc(var(--rem) * var(--line-70-int));
   --line-abs-90:        calc(var(--rem) * var(--line-90-int));

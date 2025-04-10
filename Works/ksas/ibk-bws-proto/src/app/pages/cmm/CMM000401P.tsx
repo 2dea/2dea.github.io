@@ -65,7 +65,7 @@ function CMM000401P() {
                 <div className="o-field">
                   <Label label={`직원번호`} require={true} />
                   <div className="fields">
-                    <div className="o-form _input">
+                    <div className="o-form _input mode-required">
                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                       <i aria-hidden="true"></i>
                     </div>

@@ -715,8 +715,8 @@
 }
 
 .o-form:has(>.bind[disabled])  { color: $color-text-disabled; background-color: #F1F5F9; filter: none; }
-.o-form:has(>.bind[readonly]:not(.mode-string))  { background-color: #F1F5F9; }
-
+.o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: #F1F5F9; }
+.o-form.mode-required  { background: #FEF6D7; }
 
 // .o-form  { border-color: $tp; background: $color-ground; }
 // .o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
