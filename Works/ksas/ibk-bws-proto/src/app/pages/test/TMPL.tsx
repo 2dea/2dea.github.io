@@ -13,6 +13,7 @@ import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
+import { OverlayPanel } from 'primereact/overlaypanel';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
@@ -27,6 +28,9 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 function TMPL() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
+
+  // OverlayPanel
+  // const overlayPan = useRef(null);
 
   // BreadCrumb
   const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품' }, { label: '본부부서조달관리(총무부 외)' }, { label: '(706520)(총무부 외) 중요용지 조달신청 접수' }];

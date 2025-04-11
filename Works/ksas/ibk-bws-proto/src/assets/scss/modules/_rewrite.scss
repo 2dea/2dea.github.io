@@ -277,6 +277,11 @@
 
 
 
+.p-column-filter-menu  {
+  display: inline-flex;
+  margin-left: auto;
+}
+
 .p-column-filter-menu-button, .p-column-filter-clear-button {
   display: inline-flex;
   justify-content: center;
@@ -294,43 +299,47 @@
     // height: calc(var(--height-cell) * 3);
     color: $color-text-30;
   }
+
+  .p-column-header-content  {
+    display: flex;
+    align-items: center;
+
+    .p-column-title  {
+      white-space: nowrap;
+
+      >*  {
+        white-space: normal;
+      }
+    }
+  }
+
+  // .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover  {
+  .p-sortable-column:not(.p-sortable-disabled):hover:not(:active)  {
+    background-image: linear-gradient(to bottom, rgba(#334155, 0.08), rgba(#334155, 0.08));
+    cursor: row-resize;
+  }
+
+  .p-sortable-column:not(.p-sortable-disabled):active  {
+    cursor: none;
+  }
+
+  .p-datatable-table  {
+    .p-highlight  {
+      background-color: #D9F9DB;
+    }
+
+    .p-x-frozen-last  {
+      position: sticky; z-index: 3; /* border-right-color: #004C9D; */ border-right: $e30 double #FDD33A; background-color: inherit;
+      // position: sticky; z-index: 3; left: 0;
+    }
+  }
+
+  .p-datatable-scrollable-table >.p-datatable-thead  {
+    z-index: 4;
+  }
+
+  // [data-pc-section="sort"],  [data-pc-section="columnfilter"]  { display: none; }
 }
-
-.p-datatable .p-column-header-content  {
-  display: flex;
-  align-items: center;
-}
-
-.p-column-filter-menu  {
-  display: inline-flex;
-  margin-left: auto;
-}
-
-
-// .p-datatable .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover  {
-.p-datatable .p-sortable-column:not(.p-sortable-disabled):hover:not(:active)  {
-  background-image: linear-gradient(to bottom, rgba(#334155, 0.08), rgba(#334155, 0.08));
-  cursor: row-resize;
-}
-
-.p-datatable .p-sortable-column:not(.p-sortable-disabled):active  {
-  cursor: none;
-}
-
-.p-datatable .p-datatable-table .p-highlight  {
-  background-color: #D9F9DB;
-}
-
-.p-datatable-scrollable-table > .p-datatable-thead  {
-  z-index: 4;
-}
-
-.p-datatable .p-datatable-table .p-x-frozen-last  {
-  position: sticky; z-index: 3; /* border-right-color: #004C9D; */ border-right: $e30 double #FDD33A; background-color: inherit;
-  // position: sticky; z-index: 3; left: 0;
-}
-
-// [data-pc-section="sort"],  [data-pc-section="columnfilter"]  { display: none; }
 
 
 

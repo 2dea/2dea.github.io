@@ -804,8 +804,10 @@ function SUBTMPL() {
                             </th>
                             <td colSpan={3}>
                               <div className="m-flex-list flow-inline">
+                                <i className="o-icon _alert-circle wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-right wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _calendar wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _close wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _column-toggle wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _contacts wdth-50" aria-hidden="true"></i>
@@ -818,11 +820,13 @@ function SUBTMPL() {
                                 <i className="o-icon _filter-alt wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _help wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _home wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _image-upload wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _image wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _link wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _lock wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-close wdth-50" aria-hidden="true"></i>
-                                <i className="o-icon _menu wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _menu-alt wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _menu wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _page-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _page-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _print wdth-50" aria-hidden="true"></i>
@@ -865,8 +869,8 @@ function SUBTMPL() {
                             <td colSpan={3}>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _excel-download wdth-50" aria-hidden="true"></i>
-                                <i className="o-icon _folder wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _folder-open wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _folder wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-added wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-edited wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>

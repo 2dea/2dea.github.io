@@ -184,7 +184,7 @@ b  { font-weight: bolder; font-weight: var(--bold-70, 650); }
 mark  { background-color: Transparent; color: inherit; }
 br  { letter-spacing: 0 !important; }
 ins,  del  { text-decoration: none; }
-img,  object  { vertical-align: middle; border-style: none; }
+img,  object  { image-rendering: -o-crisp-edges; image-rendering: -moz-crisp-edges; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; vertical-align: middle; transform: translateZ(0); backface-visibility: hidden; border-style: none; }
 iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; border-style: none; }
 audio:not([controls])  { display: none; height: 0; }
 svg:not(:root)  { overflow: hidden; }

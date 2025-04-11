@@ -29,7 +29,7 @@
 .o-symbol.wdth-30  { font-size: $height-icon-30; }
 
 .o-icon  { --theme: var(--color-icon-70); font-size: $ss; line-height: 1; display: inline-block; position: relative; min-width: 1em; min-height: 1em; color: var(--theme); background: none; }
-.o-icon:before,  .o-icon:after  { border-radius: 0; }
+.o-icon:before,  .o-icon:after  { image-rendering: pixelated; border-radius: 0; }
 // .o-icon:not(.o-image-button):only-child  { display: block; width: fit-content; }
 .o-icon:not(.o-image-button):only-child  { display: block; width: fit-content; margin: 0 auto; }
 .o-icon:not([class*="-icon _"])  { background-color: Gold; }
@@ -83,11 +83,12 @@
   .o-icon.wdth-30:before,  .o-icon.wdth-30 >:is( object, img, svg )  { font-size: $height-icon-30; }
 
 :root  {
+  @include symbol-common();
+  @include symbol-bullet();
   // @include icon-search();
   @include icon-flexed();
   @include icon-filled();
   @include icon-fixed();
-  @include symbol-bullet();
 }
 .o-icon:where(.o-image-button.size-50):before,
 .o-icon:where(.m-header .m-binds .o-image-button):before,
@@ -116,8 +117,10 @@
 // .o-icon._print:before  { background-color: $tp; content: "print"; }
 
 /* Icon Flexed */
+.o-icon._alert-circle:before  { background-color: $tp; background-image: var(--obj-ico-alert-circle); }
 .o-icon._arrow-left:before  { background-color: $tp; background-image: var(--obj-ico-arrow-left); }
 .o-icon._arrow-right:before  { background-color: $tp; background-image: var(--obj-ico-arrow-right); }
+.o-icon._calendar:before  { background-color: $tp; background-image: var(--obj-ico-calendar); }
 .o-icon._close:before  { background-color: $tp; background-image: var(--obj-ico-close); }
 .o-icon._delete:before  { background-color: $tp; background-image: var(--obj-ico-delete); }
 .o-icon._du-down:before  { background-color: $tp; background-image: var(--obj-ico-du-down); }
@@ -129,11 +132,13 @@
   .o-icon._column-toggle:before  { background-color: $tp; background-image: var(--obj-ico-filter-alt); }
 .o-icon._help:before  { background-color: $tp; background-image: var(--obj-ico-help); }
 .o-icon._home:before  { background-color: $tp; background-image: var(--obj-ico-home); }
+.o-icon._image-upload:before  { background-color: $tp; background-image: var(--obj-ico-image-upload); }
+.o-icon._image:before  { background-color: $tp; background-image: var(--obj-ico-image); }
 .o-icon._link:before  { background-color: $tp; background-image: var(--obj-ico-link); }
 .o-icon._lock:before  { background-color: $tp; background-image: var(--obj-ico-lock); }
 .o-icon._mdi-close:before  { background-color: $tp; background-image: var(--obj-ico-mdi-close); }
-.o-icon._menu:before  { background-color: $tp; background-image: var(--obj-ico-menu); }
 .o-icon._menu-alt:before  { background-color: $tp; background-image: var(--obj-ico-menu-alt); }
+.o-icon._menu:before  { background-color: $tp; background-image: var(--obj-ico-menu); }
 .o-icon._page-down:before  { background-color: $tp; background-image: var(--obj-ico-page-down); }
 .o-icon._page-up:before  { background-color: $tp; background-image: var(--obj-ico-page-up); }
 .o-icon._print:before  { background-color: $tp; background-image: var(--obj-ico-print); }
@@ -156,8 +161,8 @@
 
 /* Icon Fixed */
 .o-icon._excel-download:before  { background-color: $tp; background-image: var(--obj-ico-excel-download); background-size: 100%; }
-.o-icon._folder:before  { background-color: $tp; background-image: var(--obj-ico-folder); background-size: 100%; }
 .o-icon._folder-open:before  { background-color: $tp; background-image: var(--obj-ico-folder-open); background-size: 100%; }
+.o-icon._folder:before  { background-color: $tp; background-image: var(--obj-ico-folder); background-size: 100%; }
 .o-icon._grid-added:before  { background-color: $tp; background-image: var(--obj-ico-grid-added); background-size: 100%; }
 .o-icon._grid-edited:before  { background-color: $tp; background-image: var(--obj-ico-grid-edited); background-size: 100%; }
 .o-icon._mdi-lock:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); }
@@ -951,10 +956,10 @@
 .o-grid-table  { @include setResetFont(); }
 .o-grid-table  { clear: both; border: $e10 solid #EAEBEC; }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >*  { width: 0; }
-.o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }
+.o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }  // ### min-width: 0;
 .o-grid-table .wdth-0:where(tr >*, col)  { width: 0; min-width: 0; }
-.o-grid-table .wdth-10:where(tr >*, col)  { width: calc(var(--rem) * 50); }
-.o-grid-table .wdth-50:where(tr >*, col)  { width: calc(var(--rem) * 120); }
+.o-grid-table .wdth-10:where(tr >*, col)  { width: calc(var(--rem) * 50); }  // ### min-width: ?;
+.o-grid-table .wdth-50:where(tr >*, col)  { width: calc(var(--rem) * 120); }  // ### min-width: ?;
 .o-grid-table .wdth-auto:where(tr >*, col)  { width: auto; }
 .o-grid-table table  { width: 100%; background: var(--color-ground); text-align: center; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
@@ -963,14 +968,16 @@
 .o-grid-table th  { font-weight: $bold-70; }
 
 .o-grid-table tr >*  { min-width: 0; height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid #EAEBEC; border-width: 0 $e10 $e10 0; }
+.o-grid-table tr >*  { white-space: nowrap; }
+.o-grid-table tr >* >*  { white-space: normal; }
 .o-grid-table tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; }
 .o-grid-table tr >:first-child  { border-left-width: $e10; }
 
 .o-grid-table thead >* >*  { padding-left: III(11); padding-right: III(11); }
 // .o-grid-table thead >tr:last-child >*  { border-bottom-color: #004C9D; }
 .o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: #004C9D; }
-.o-grid-table tbody >* >*  { white-space: nowrap; }
-.o-grid-table tbody >* >* >*  { white-space: normal; }
+// .o-grid-table tbody >* >*  { white-space: nowrap; }
+// .o-grid-table tbody >* >* >*  { white-space: normal; }
 .o-grid-table tbody >tr:nth-child(even)  { background: #F7F7F8; }
 
 .o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient(to bottom, rgba(#334155, 0.08), rgba(#334155, 0.08)); }

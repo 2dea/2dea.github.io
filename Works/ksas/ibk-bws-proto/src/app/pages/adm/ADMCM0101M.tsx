@@ -13,6 +13,7 @@ import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
 import { Dialog } from 'primereact/dialog';
+import { OverlayPanel } from 'primereact/overlaypanel';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
@@ -25,6 +26,9 @@ import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function ADMCM0101M() {
+  // OverlayPanel
+  // const overlayPan = useRef(null);
+
   // BreadCrumb
   const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '코드관리' }, { label: '공통코드관리' }];
 
@@ -67,7 +71,7 @@ function ADMCM0101M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-              <div className="group">
+              <div className="group _assistive">
                 <CommonButton label="도움말" icon="help" className="_normal" />
               </div>
             </div>

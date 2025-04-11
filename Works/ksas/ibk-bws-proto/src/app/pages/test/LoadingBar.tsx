@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 
 // components
 import { Dialog } from 'primereact/dialog';
+import { OverlayPanel } from 'primereact/overlaypanel';
 
 function LoadingBar() {
   // Dialog
