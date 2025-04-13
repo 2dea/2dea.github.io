@@ -4,7 +4,7 @@
  */
 
 // dependency
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 interface ImageButtonProps {
   type?: 'submit' | 'reset' | 'button' | undefined;

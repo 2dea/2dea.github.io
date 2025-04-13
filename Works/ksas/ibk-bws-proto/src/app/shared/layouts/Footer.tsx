@@ -7,6 +7,7 @@ import React from 'react';
 
 // components
 import { InputText } from 'primereact/inputtext';
+import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
 import { Calendar } from 'primereact/calendar';

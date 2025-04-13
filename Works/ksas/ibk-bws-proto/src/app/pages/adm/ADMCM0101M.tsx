@@ -3,7 +3,7 @@
  */
 
 // dependency
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 // components
 // import '@modules/Index';
@@ -17,6 +17,7 @@ import { OverlayPanel } from 'primereact/overlaypanel';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
 import { Calendar } from 'primereact/calendar';
@@ -27,7 +28,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function ADMCM0101M() {
   // OverlayPanel
-  // const overlayPan = useRef(null);
+  const overlayPan = useRef(null);
 
   // BreadCrumb
   const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '코드관리' }, { label: '공통코드관리' }];
@@ -35,7 +36,25 @@ function ADMCM0101M() {
   // InputText
   const [value, setValue] = useState<string>('');
 
-  // Calendar
+    // AutoComplete
+  const [AutoCompleteValue, setAutoCompleteValue] = useState('');
+  const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
+  const AutoCompleteSearch = (evt) => {
+    setAutoCompleteItems([...Array(10).keys()].map(item => evt.query + '-' + item));
+  };
+  const itemTemplate = (item) => {
+    return (
+      <>
+        <span className="p-autocomplete-cell">[0031] 을지6가</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">0031</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">[1111] 을지6가</span>
+      </>
+    );
+  };
+
+// Calendar
   addLocale('ko', {
     firstDayOfWeek: 0,
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],

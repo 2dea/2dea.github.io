@@ -3,7 +3,7 @@
  */
 
 // dependency
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 // components
@@ -39,7 +39,7 @@ function Header() {
     <>
       <header role="banner" id="Header" className="dom-header">
         <div role="navigation" className="div-skip">
-          <span className="o-ogp"><img src="/src/assets/images/img_ogp.alt.png" alt="" /></span>
+          <span className="o-ogp"><img src={require("assets/images/img_ogp.alt.png")} alt="" /></span>
 
           <ul>
             <li><a id="Go-SkipMain" href="#Center"><strong>주요 콘텐츠로 이동</strong></a></li>

@@ -235,6 +235,11 @@
 
 
 
+.o-view-image  { background: #E2E8F0 var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
+.o-view-image:before  { display: block; min-width: 100%; min-height: III(96); aspect-ratio: 4 / 3; background: inherit; background-size: calc(100% * 81 / 400) auto; border-radius: $radius-70; }
+.o-view-image:empty:before  { content: ""; }
+
+
 
 
 

@@ -17,6 +17,7 @@ import { OverlayPanel } from 'primereact/overlaypanel';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
 import { Calendar } from 'primereact/calendar';
@@ -38,7 +39,25 @@ function HSPBT0101M() {
   // InputText
   const [value, setValue] = useState<string>('');
 
-  // Calendar
+    // AutoComplete
+  const [AutoCompleteValue, setAutoCompleteValue] = useState('');
+  const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
+  const AutoCompleteSearch = (evt) => {
+    setAutoCompleteItems([...Array(10).keys()].map(item => evt.query + '-' + item));
+  };
+  const itemTemplate = (item) => {
+    return (
+      <>
+        <span className="p-autocomplete-cell">[0031] 을지6가</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">0031</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">[1111] 을지6가</span>
+      </>
+    );
+  };
+
+// Calendar
   addLocale('ko', {
     firstDayOfWeek: 0,
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
@@ -113,7 +132,8 @@ function HSPBT0101M() {
                 <Label label={`인도부점`} require={true} />
                 <div className="fields">
                   <div className="o-form _input mode-required">
-                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                    {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
+                    <AutoComplete value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                     <i aria-hidden="true"></i>
                   </div>
                 </div>
@@ -285,8 +305,15 @@ function HSPBT0101M() {
                                 <td className="g-start">마감 후 000긴급신청</td>
                                 <td>
                                     <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
-                                    <OverlayPanel ref={overlayPan} style={{ width: '900px', height: '200px'}}>
-                                      테스트
+                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                      <div className="layer-head">
+                                        <h3 className="o-heading"><span className="label">이미지보기</span></h3>
+                                      </div>
+                                      <div className="layer-body">
+                                        <div className="o-view-image">
+                                          <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+                                        </div>
+                                      </div>
                                     </OverlayPanel>
                                   </td>
                               </tr>

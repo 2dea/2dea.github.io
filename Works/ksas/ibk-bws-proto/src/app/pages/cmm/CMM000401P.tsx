@@ -3,7 +3,7 @@
  */
 
 // dependency
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 // components
 // import '@modules/Index';
@@ -17,6 +17,7 @@ import { OverlayPanel } from 'primereact/overlaypanel';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
 import { Calendar } from 'primereact/calendar';
@@ -29,10 +30,31 @@ function CMM000401P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
+  // OverlayPanel
+  const overlayPan = useRef(null);
+
   // InputText
   const [value, setValue] = useState<string>('');
 
-  // Calendar
+  // AutoComplete
+  const [AutoCompleteValue, setAutoCompleteValue] = useState('');
+  const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
+  const AutoCompleteSearch = (evt) => {
+    setAutoCompleteItems([...Array(10).keys()].map(item => evt.query + '-' + item));
+  };
+  const itemTemplate = (item) => {
+    return (
+      <>
+        <span className="p-autocomplete-cell">[0031] 을지6가</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">0031</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">[1111] 을지6가</span>
+      </>
+    );
+  };
+
+// Calendar
   addLocale('ko', {
     firstDayOfWeek: 0,
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
@@ -54,6 +76,7 @@ function CMM000401P() {
         visible={visible}
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
+        closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">직원조회</span></h3>}
       >
@@ -64,20 +87,11 @@ function CMM000401P() {
               <div className="fieldset">
 
                 <div className="o-field">
-                  <Label label={`직원번호`} require={true} />
+                  <Label label={`직원`} require={true} />
                   <div className="fields">
                     <div className="o-form _input mode-required">
-                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                      <i aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="o-field">
-                  <Label label={`직원명`} require={true} />
-                  <div className="fields">
-                    <div className="o-form _input mode-required">
-                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
+                      <AutoComplete value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                       <i aria-hidden="true"></i>
                     </div>
                   </div>

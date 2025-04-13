@@ -19,6 +19,8 @@ import LoadingBar from 'app/pages/test/LoadingBar'; // loading
 
 // proto 공통
 import CMM000401P from 'app/pages/cmm/CMM000401P'; // 공통 ~ (LP)직원조회
+import CMM001001P from 'app/pages/cmm/CMM001001P'; // 공통 ~ (LP)이미지보기
+import CMM001301P from 'app/pages/cmm/CMM001301P'; // 공통 ~ (LP)이미지업로드
 
 // proto 관리자
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M'; // 관리자 > 코드관리 > 공통코드관리
@@ -56,6 +58,8 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'CMM000401P', element: <CMM000401P /> },
+        { path: 'CMM001001P', element: <CMM001001P /> },
+        { path: 'CMM001301P', element: <CMM001301P /> },
       ],
     },
     {
