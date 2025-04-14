@@ -79,13 +79,151 @@ function CMM001301P() {
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">이미지업로드</span></h3>}
+        resizable={false}
       >
         <div className="o-grid">
           <div className="column">
 
-            <div className="o-section">
-              <div className="main _primary rows-body-3i">
+            <form className="m-upload-file">
+              <div className="o-attach">
+                <div className="binds">
+                  <CommonButton label="파일선택" size={70} className="_choose" />
+                </div>
+                <div className="summary">
+                  <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                  <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                </div>
+              </div>
+            </form>
 
+            <div className="o-section type-upload-file">
+              <div className="m-header">
+                <div className="m-checks">
+                  <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label">전체선택</span></label>
+                </div>
+
+                <div className="o-limit type-file">
+                  <span className="head">파일용량</span>
+                  <span className="data">
+                    <em className="value">1MB</em>
+                    <span className="sep">/</span>
+                    <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                  </span>
+                </div>
+
+                <div className="m-binds">
+                  <div className="group">
+                    <CommonButton label="파일삭제" className="_normal" />
+                    <CommonButton label="파일다운" className="_normal" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="main">
+                <div className="m-image-list type-upload">
+                  <ul>
+                    <li>
+                      <div className="card">
+                        <label className="o-check">
+                          <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
+                          <span className="label _hidden">선택</span>
+                        </label>
+
+                        <div className="image">
+                          <img src="https://images.unsplash.com/photo-1743001025958-19eca24afd23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                        </div>
+
+                        <div className="caption">
+                          <span className="primary o-file">
+                            <span className="name">image</span>
+                            <span className="ext">.jpg</span>
+                          </span>
+                          <span className="secondary o-limit type-file">
+                            <span className="head">파일용량</span>
+                            <span className="data">
+                              <em className="value">1023KB</em>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="card">
+                        <label className="o-check">
+                          <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
+                          <span className="label _hidden">선택</span>
+                        </label>
+
+                        <div className="image">
+                          <img src="https://images.unsplash.com/photo-1741606552241-fbd67e574f7f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                        </div>
+
+                        <div className="caption">
+                          <span className="primary o-file">
+                            <span className="name">image_긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                            <span className="ext">.jpeg</span>
+                          </span>
+                          <span className="secondary o-limit type-file">
+                            <span className="head">파일용량</span>
+                            <span className="data">
+                              <em className="value">9MB</em>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="card">
+                        <label className="o-check">
+                          <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
+                          <span className="label _hidden">선택</span>
+                        </label>
+
+                        <div className="image"></div>
+
+                        <div className="caption">
+                          <span className="primary o-file">
+                            <span className="name">image</span>
+                            <span className="ext">.jpg</span>
+                          </span>
+                          <span className="secondary o-limit type-file">
+                            <span className="head">파일용량</span>
+                            <span className="data">
+                              <em className="value">1KB</em>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                    {[...Array(4)].map((e, idx) => (
+                    <li key={idx}>
+                      <div className="card">
+                        <label className="o-check">
+                          <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
+                          <span className="label _hidden">선택</span>
+                        </label>
+
+                        <div className="image">
+                          <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+                        </div>
+
+                        <div className="caption">
+                          <span className="primary o-file">
+                            <span className="name">image</span>
+                            <span className="ext">.png</span>
+                          </span>
+                          <span className="secondary o-limit type-file">
+                            <span className="head">파일용량</span>
+                            <span className="data">
+                              <em className="value">1KB</em>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
 

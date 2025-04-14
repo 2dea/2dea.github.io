@@ -61,6 +61,7 @@
     display: block;
   } @else {
     display: block !important; position: absolute !important; inset: auto; clip: rect(0 0 0 0); clip: rect(0,0,0,0); clip-path: circle(0); width: 1px; margin-right: -1px;
+    @at-root :has(>&)  { position: relative; }
   }
 }
 

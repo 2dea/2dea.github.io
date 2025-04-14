@@ -486,7 +486,8 @@
 .g-word-pred  { word-break: break-all; word-break: break-word; }
 .g-word-attr  { word-break: break-word; word-break: keep-all; }
 
-.g-nowrap  { white-space: nowrap; }
+.g-nowrap,
+  .g-wbr  { white-space: nowrap; }
 
 .g-cursor-auto  { cursor: auto; }
 .g-cursor-none  { cursor: none; }
