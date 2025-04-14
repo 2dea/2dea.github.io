@@ -36,7 +36,7 @@ function ADMPA0301M() {
   // InputText
   const [value, setValue] = useState<string>('');
 
-    // AutoComplete
+  // AutoComplete
   const [AutoCompleteValue, setAutoCompleteValue] = useState('');
   const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
   const AutoCompleteSearch = (evt) => {
@@ -54,7 +54,7 @@ function ADMPA0301M() {
     );
   };
 
-// Calendar
+  // Calendar
   addLocale('ko', {
     firstDayOfWeek: 0,
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
@@ -95,12 +95,12 @@ function ADMPA0301M() {
               </div>
             </div>
 
-            <div className="m-binds type-end">
+            {/* <div className="m-binds type-end">
               <div className="group _primary">
                 <CommonButton label="취소" className="_cancel" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -656,14 +656,14 @@ function ADMPA0301M() {
             </div>
           </div>
 
-          {/* <div className="div-footer">
+          <div className="div-footer">
             <div className="m-binds type-end">
               <div className="group _primary">
                 <CommonButton label="취소" className="_cancel" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>

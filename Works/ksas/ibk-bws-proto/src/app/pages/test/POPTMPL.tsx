@@ -36,7 +36,7 @@ function POPTMPL() {
   // InputText
   const [value, setValue] = useState<string>('');
 
-    // AutoComplete
+  // AutoComplete
   const [AutoCompleteValue, setAutoCompleteValue] = useState('');
   const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
   const AutoCompleteSearch = (evt) => {
@@ -54,7 +54,7 @@ function POPTMPL() {
     );
   };
 
-// Calendar
+  // Calendar
   addLocale('ko', {
     firstDayOfWeek: 0,
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],

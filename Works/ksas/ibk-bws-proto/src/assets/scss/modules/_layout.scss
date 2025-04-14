@@ -502,14 +502,17 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 // .dom-main * ~.div-footer  { margin-top: $margin-section-50; }
 .dom-main .div-header  { position: sticky; top: 0; }
-.dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
+// .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
+.dom-main .div-footer  { position: sticky; bottom: 0; margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
 .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+.dom-main * ~.div-footer:before  { content: ""; position: absolute; left: III(-8); right: III(-8); height: $margin-section-50; background: $color-ground; }
+.dom-main * ~.div-footer:before  { bottom: calc(100% + $e10); background: fnLinearGradient(); }
 
 .layer-wrap .div-footer  { position: sticky; bottom: 0; background-color: $color-ground; }
-.layer-wrap .div-footer  { margin: $margin-section-50 III(-8) 0; padding: 0 III(8); }
+.layer-wrap .div-footer  { margin: $margin-section-50 0 0; }
 .layer-wrap .div-footer:before,
-.layer-wrap .div-footer:after  { content: ""; position: absolute; left: 0; right: 0; height: $margin-section-50; background: $color-ground; }
+.layer-wrap .div-footer:after  { content: ""; position: absolute; left: III(-8); right: III(-8); height: $margin-section-50; background: $color-ground; }
 .layer-wrap .div-footer:before  { bottom: 100%; background: fnLinearGradient(); }
 .layer-wrap .div-footer:after  { top: 100%; height: $margin-popup-block; }
 

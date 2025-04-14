@@ -39,7 +39,7 @@ function TMPL() {
   // InputText
   const [value, setValue] = useState<string>('');
 
-    // AutoComplete
+  // AutoComplete
   const [AutoCompleteValue, setAutoCompleteValue] = useState('');
   const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
   const AutoCompleteSearch = (evt) => {
@@ -57,7 +57,7 @@ function TMPL() {
     );
   };
 
-// Calendar
+  // Calendar
   addLocale('ko', {
     firstDayOfWeek: 0,
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
@@ -2230,7 +2230,7 @@ function TMPL() {
               </div>
             </div>
 
-            {/* <div className="div-footer">
+            <div className="div-footer">
               <div className="m-binds type-end">
                 <div className="group">
                   <CommonButton label="알림전송" className="_lined-secondary" />
@@ -2256,7 +2256,7 @@ function TMPL() {
                   <CommonButton label="결재요청" className="_solid-primary" />
                   </div>
               </div>
-            </div> */}
+            </div>
           </TabPanel>
         </Tabs>
         {/* <!-- // Contents { @DEV } --> */}

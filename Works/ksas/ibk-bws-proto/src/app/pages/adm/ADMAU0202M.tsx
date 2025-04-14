@@ -36,7 +36,7 @@ function ADMAU0202M() {
   // InputText
   const [value, setValue] = useState<string>('');
 
-    // AutoComplete
+  // AutoComplete
   const [AutoCompleteValue, setAutoCompleteValue] = useState('');
   const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
   const AutoCompleteSearch = (evt) => {
@@ -54,7 +54,7 @@ function ADMAU0202M() {
     );
   };
 
-// Calendar
+  // Calendar
   addLocale('ko', {
     firstDayOfWeek: 0,
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
@@ -95,11 +95,11 @@ function ADMAU0202M() {
               </div>
             </div>
 
-            <div className="m-binds type-end">
+            {/* <div className="m-binds type-end">
               <div className="group _primary">
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -470,13 +470,13 @@ function ADMAU0202M() {
               </div>
             </div>
 
-            {/* <div className="div-footer">
+            <div className="div-footer">
               <div className="m-binds type-end">
                 <div className="group _primary">
                   <CommonButton label="저장" className="_solid-primary" />
                 </div>
               </div>
-            </div> */}
+            </div>
           </TabPanel>
         </Tabs>
       </div>

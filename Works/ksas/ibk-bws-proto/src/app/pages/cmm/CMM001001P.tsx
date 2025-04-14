@@ -54,7 +54,7 @@ function CMM001001P() {
     );
   };
 
-// Calendar
+  // Calendar
   addLocale('ko', {
     firstDayOfWeek: 0,
     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
