@@ -21,6 +21,9 @@ import LoadingBar from 'app/pages/test/LoadingBar'; // loading
 import CMP000401P from 'app/pages/cmp/CMP000401P'; // 공통 ~ (LP)이미지업로드
 import CMP000501P from 'app/pages/cmp/CMP000501P'; // 공통 ~ (LP)직원조회
 import CMP001101P from 'app/pages/cmp/CMP001101P'; // 공통 ~ (LP)이미지보기
+import CMP001401P from 'app/pages/cmp/CMP001401P'; // 공통 ~ (LP)업체조회
+import CMP001402P from 'app/pages/cmp/CMP001402P'; // 공통 ~ (LP)업체기본정보
+import CMP001502P from 'app/pages/cmp/CMP001502P'; // 공통 ~ (LP)결재상세정보
 
 // proto 관리자
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M'; // 관리자 > 코드관리 > 공통코드관리
@@ -60,6 +63,9 @@ function ProtoRoutes() {
         { path: 'CMP000401P', element: <CMP000401P /> },
         { path: 'CMP000501P', element: <CMP000501P /> },
         { path: 'CMP001101P', element: <CMP001101P /> },
+        { path: 'CMP001401P', element: <CMP001401P /> },
+        { path: 'CMP001402P', element: <CMP001402P /> },
+        { path: 'CMP001502P', element: <CMP001502P /> },
       ],
     },
     {
