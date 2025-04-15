@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)이미지보기
+ * @description TEST > 공통 다이얼로그(얼럿/컨펌)
  */
 
 // dependency
@@ -26,10 +26,50 @@ import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 
-function CMP001101P() {
+function DialogPopup() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
+
+  // ConfirmDialog
+  const accept = () => {
+    alert(1);
+  }
+  const reject = () => {
+    alert(0);
+  }
+  const confirm1 = () => {
+    confirmDialog({
+        className: 'layer-wrap wdth-20p',
+        // group: 'headless',
+        // content: ({ headerRef, contentRef, footerRef, hide, message }) => (
+        //   <>
+        //     {message.message}
+        //   </>
+        // ),
+        header: (
+          <>
+            알림
+          </>
+        ),
+        // message: 'Are you sure you want to proceed?',
+        footer: (
+          <>
+            <div className="m-binds">
+              <div className="group _primary">
+                <CommonButton label="취소" className="_cancel" />
+                <CommonButton label="확인" className="_solid-primary" />
+              </div>
+            </div>
+          </>
+        ),
+        // icon: 'pi pi-exclamation-triangle',
+        // resizable: false,
+        closeIcon: (<Icon icon="popup-close" />),
+        defaultFocus: 'accept'
+    });
+  };
 
   // OverlayPanel
   const overlayPan = useRef(null);
@@ -76,11 +116,13 @@ function CMP001101P() {
 
   return (
     <>
+      <ConfirmDialog />
+
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)이미지보기 [case-viewimage wdth-25p(w480)]</span>
+              <span className="label">공통 다이얼로그(얼럿/컨펌)</span>
             </h1>
           </div>
         </div>
@@ -89,18 +131,7 @@ function CMP001101P() {
         <div className="div-contents">
           <div className="m-binds">
             <div className="group _start">
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={(e) => overlayPan.current.toggle(e)} />
-              <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
-                <div className="layer-head">
-                  <h3 className="o-heading"><span className="label">이미지보기</span></h3>
-                </div>
-                <div className="layer-body">
-                  <div className="o-view-image">
-                    {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg/640px-%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg" alt="" /> */}
-                    <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-                  </div>
-                </div>
-              </OverlayPanel>
+              <CommonButton label="팝업 열기" icon="link" size={70} onClick={confirm1} />
             </div>
           </div>
         </div>
@@ -110,4 +141,4 @@ function CMP001101P() {
   );
 }
 
-export default CMP001101P;
+export default DialogPopup;

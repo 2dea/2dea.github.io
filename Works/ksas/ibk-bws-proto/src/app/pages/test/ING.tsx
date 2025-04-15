@@ -21,6 +21,7 @@ import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
 import { Calendar } from 'primereact/calendar';
+import { InputTextarea } from 'primereact/inputtextarea';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
@@ -48,6 +49,10 @@ function HSPBT0101M() {
   const itemTemplate = (item) => {
     return (
       <>
+        <span className="p-autocomplete-cell">[0001] 홍길동</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">부장</span>
+        <span className="p-autocomplete-cell sep">|</span>
         <span className="p-autocomplete-cell">[0031] 을지6가</span>
         <span className="p-autocomplete-cell sep">|</span>
         <span className="p-autocomplete-cell">0031</span>
@@ -218,6 +223,7 @@ function HSPBT0101M() {
                       <div className="m-binds">
                         <div className="group">
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록필터" icon="column-toggle" />
                           <ImageButton label="목록출력" icon="print" />
                         </div>
                       </div>
@@ -249,7 +255,7 @@ function HSPBT0101M() {
                               <col />
                               <col />
                               <col />
-                              <col />
+                              <col className="wdth-0" />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
@@ -258,7 +264,7 @@ function HSPBT0101M() {
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                                <th className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일시</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도구분</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도상태</span></div></th>
@@ -287,7 +293,7 @@ function HSPBT0101M() {
                                 <td>{idx + 1}</td>
                                 <td>프로세스혁신</td>
                                 <td>BC016</td>
-                                <td className="g-start">나의 알파체크카드(비교통_그린)</td>
+                                <td className="g-start p-x-frozen-last">나의 알파체크카드(비교통_그린)</td>
                                 <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
                                 <td>신청인도</td>
                                 <td>정상</td>
@@ -316,6 +322,136 @@ function HSPBT0101M() {
                                       </div>
                                     </OverlayPanel>
                                   </td>
+                              </tr>
+                            ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </TabPanel>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">삭제내역</span></h2>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록필터" icon="column-toggle" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col className="wdth-10" />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col className="wdth-0" />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col className="wdth-0" />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                                <th className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">도착예정일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일시</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도구분</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수취소일자</span></div></th>
+                                <th className="p-align-center" colSpan={2}><div className="p-column-header-content"><span className="p-column-title">인도취소 사유</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
+                                <th className="p-align-center" colSpan={2}><div className="p-column-header-content"><span className="p-column-title">일반인도 신청 및 수량 변경 사유</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
+                              <tr className="p-datatable-emptymessage">
+                                <td colSpan={16}>등록된 데이터가 없습니다.</td>
+                              </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                            {[...Array(24)].map((e, idx) => (
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                                <td>{idx + 1}</td>
+                                <td>프로세스혁신</td>
+                                <td>BC016</td>
+                                <td className="g-start p-x-frozen-last">나의 알파체크카드(비교통_그린)</td>
+                                <td><span className="o-digit type-date">2024-09-16</span></td>
+                                <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
+                                <td>신청인도</td>
+                                <td><span className="o-digit type-datetime">2024-09-16</span></td>
+                                <td className="g-start">신청자 요청으로 인한 삭제</td>
+                                <td>
+                                  <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
+                                  <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                    <div className="layer-head">
+                                      <h3 className="o-heading"><span className="label">이미지보기</span></h3>
+                                    </div>
+                                    <div className="layer-body">
+                                      <div className="o-view-image">
+                                        <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+                                      </div>
+                                    </div>
+                                  </OverlayPanel>
+                                </td>
+                                <td className="g-end">50</td>
+                                <td className="g-end">0</td>
+                                <td>부산역</td>
+                                <td className="g-start"></td>
+                                <td>
+                                  <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
+                                  <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                    <div className="layer-head">
+                                      <h3 className="o-heading"><span className="label">이미지보기</span></h3>
+                                    </div>
+                                    <div className="layer-body">
+                                      <div className="o-view-image">
+                                        <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+                                      </div>
+                                    </div>
+                                  </OverlayPanel>
+                                </td>
                               </tr>
                             ))}
                             </tbody>

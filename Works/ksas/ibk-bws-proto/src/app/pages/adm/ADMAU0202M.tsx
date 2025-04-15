@@ -21,6 +21,7 @@ import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
 import { Calendar } from 'primereact/calendar';
+import { InputTextarea } from 'primereact/inputtextarea';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
@@ -45,6 +46,10 @@ function ADMAU0202M() {
   const itemTemplate = (item) => {
     return (
       <>
+        <span className="p-autocomplete-cell">[0001] 홍길동</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">부장</span>
+        <span className="p-autocomplete-cell sep">|</span>
         <span className="p-autocomplete-cell">[0031] 을지6가</span>
         <span className="p-autocomplete-cell sep">|</span>
         <span className="p-autocomplete-cell">0031</span>
