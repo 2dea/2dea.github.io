@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)업체기본정보
+ * @description 공통 ~ (LP)결재상세정보
  */
 
 // dependency
@@ -21,6 +21,7 @@ import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
 import { Calendar } from 'primereact/calendar';
+import { InputTextarea } from 'primereact/inputtextarea';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
@@ -45,6 +46,10 @@ function CMP001502P() {
   const itemTemplate = (item) => {
     return (
       <>
+        <span className="p-autocomplete-cell">[0001] 홍길동</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">부장</span>
+        <span className="p-autocomplete-cell sep">|</span>
         <span className="p-autocomplete-cell">[0031] 을지6가</span>
         <span className="p-autocomplete-cell sep">|</span>
         <span className="p-autocomplete-cell">0031</span>
@@ -103,7 +108,7 @@ function CMP001502P() {
                 </div>
               </div>
 
-              <div className="main _primary rows-body-5i">
+              <div className="main _primary rows-head-2i rows-body-5i">
                 <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                 <div className="o-grid-table p-datatable">
                   <div className="p-datatable-wrapper">
@@ -154,8 +159,8 @@ function CMP001502P() {
                         <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                           <td>{idx + 1}</td>
                           <td>0022</td>
-                          <td className="g-start">종로6가</td>
-                          <td>2025-03-20</td>
+                          <td>종로6가</td>
+                          <td><span className="o-digit type-date">2025-03-20</span></td>
                           <td>BO010</td>
                           <td className="g-start">온누리전자상품권10만원권</td>
                           <td className="g-end">10</td>
@@ -175,23 +180,12 @@ function CMP001502P() {
             </div>
 
             <div className="o-section">
-              {/* <div className="m-header">
-                <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
-
-                <div className="m-binds">
-                  <div className="group">
-                    <CommonButton label="변경이력" className="_normal" />
-                  </div>
-                </div>
-              </div> */}
-
               <div className="main">
                 <form className="m-data-form">
                   <table className="table">
                     <colgroup>
                       <col className="head" />
                       <col className="data" />
-
                     </colgroup>
 
                     <tbody>
@@ -203,15 +197,13 @@ function CMP001502P() {
                           <div className="o-field">
                             <div className="fields">
                               <div className="o-form _input mode-required">
-                                <InputText placeholder="내용을 입력해주세요" value="" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                                 <i aria-hidden="true"></i>
                               </div>
                             </div>
                           </div>
                         </td>
-
                       </tr>
-
                     </tbody>
                   </table>
                 </form>
@@ -235,7 +227,7 @@ function CMP001502P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)업체기본정보 [wdth-40p(w770)]</span>
+              <span className="label">(P)결재상세정보 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>

@@ -799,10 +799,10 @@
 // .o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
 
 .o-form  { border-color: $color-edge-40; background: $color-ground; }
-.o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
+.o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; min-height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
 .o-form >:is(input, select)  { padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10); }
 .o-form >:is(input, select)  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.o-form >.bind  { display: flex; align-items: center; text-align: left; text-align: start; }
+.o-form >.bind  { display: flex; align-items: center; text-align: left; text-align: start; height: auto; min-height: 100%; }
 
 .o-form._input.type-time >.bind  { text-align: center; }
 

@@ -15,6 +15,7 @@ import POPTMPL from 'app/pages/test/POPTMPL'; // poptmpl
 import TMPL from 'app/pages/test/TMPL'; // tmpl
 import ING from 'app/pages/test/ING'; // ing
 
+import DialogPopup from 'app/pages/test/DialogPopup'; // dialog
 import LoadingBar from 'app/pages/test/LoadingBar'; // loading
 
 // proto 공통
@@ -24,6 +25,9 @@ import CMP001101P from 'app/pages/cmp/CMP001101P'; // 공통 ~ (LP)이미지보�
 import CMP001401P from 'app/pages/cmp/CMP001401P'; // 공통 ~ (LP)업체조회
 import CMP001402P from 'app/pages/cmp/CMP001402P'; // 공통 ~ (LP)업체기본정보
 import CMP001502P from 'app/pages/cmp/CMP001502P'; // 공통 ~ (LP)결재상세정보
+
+// proto 중요용지·용도품(본부)
+import HSPBT0101M from 'app/pages/hsp/HSPBT0101M'; // 중요용지·용도품(본부) > 영업점 배송관리 > (705010) 중요용지 인도내역조회
 
 // proto 관리자
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M'; // 관리자 > 코드관리 > 공통코드관리
@@ -51,12 +55,13 @@ function ProtoRoutes() {
       path: '/test',
       element: <Decorator />,
       children: [
+        { path: 'DialogPopup', element: <DialogPopup /> },
         { path: 'POPTMPL', element: <POPTMPL /> },
         { path: 'TMPL', element: <TMPL /> },
         { path: 'ING', element: <ING /> },
       ],
     },
-    {
+    { // 공통
       path: '/proto',
       element: <Decorator />,
       children: [
@@ -68,7 +73,14 @@ function ProtoRoutes() {
         { path: 'CMP001502P', element: <CMP001502P /> },
       ],
     },
-    {
+    { // 중요용지·용도품(본부)
+      path: '/proto',
+      element: <Decorator />,
+      children: [
+        { path: 'HSPBT0101M', element: <HSPBT0101M /> },
+      ],
+    },
+    { // 관리자
       path: '/proto',
       element: <Decorator />,
       children: [

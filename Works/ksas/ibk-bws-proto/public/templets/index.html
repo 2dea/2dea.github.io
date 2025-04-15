@@ -124,7 +124,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 .o-index-table tr >.link a  { display: block; }
 .o-index-table tr >.link a:not(#menu-000 *)  { width: calc(1em * 60.48 / var(--text-size-int)); margin: 0 auto; }
 
-.o-index-table tr >.auth:has(~.done .date.done) .name:after  { content: "김하나"; }
+.o-index-table tr >.auth:has(~.done .date.done) .name:empty:after  { content: "김하나"; }
 .o-index-table tr >.done .date:not(.done)  { display: none; }
 
 .o-index-table .note del  { color: Crimson; }
@@ -386,7 +386,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="empty _m">&#x200B;</td>
 			<td class="scnm"><span class="o-flex">공통 다이얼로그(얼럿/컨펌)</span></td>
 			<td class="scid">-</td>
-			<td class="link"><a target="page" href="/test/undefined">undefined</a></td>
+			<td class="link"><a target="page" href="/test/DialogPopup">DialogPopup</a></td>
 			<td class="auth"><sapn class="name DEL"></span></td>
 			<td class="done"><sapn class="date DEL">2025-04-01</span></td>
 			<td class="note">
@@ -3386,9 +3386,9 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="empty _m">&#x200B;</td>
 			<td class="scnm"><span class="o-flex">중요용지인도내역조회</span></td>
 			<td class="scid">HSPBT0101M</td>
-			<td class="link"><a target="page" href="/proto/undefined">HSPBT0101M</a></td>
+			<td class="link"><a target="page" href="/proto/HSPBT0101M">HSPBT0101M</a></td>
 			<td class="auth"><sapn class="name DEL"></span></td>
-			<td class="done"><sapn class="date DEL">2025-04-01</span></td>
+			<td class="done"><sapn class="date done">2025-04-15</span></td>
 			<td class="note">
 				<p class="__CLASSNAME__"></p>
 			</td>
@@ -3417,7 +3417,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 				<p class="__CLASSNAME__"></p>
 			</td>
 		</tr>
-		<tr class="DEL">
+		<tr class="del">
 			<td>&#x200B;</td>
 			<td>HSP</td>
 			<td>&#x200B;</td>
@@ -3438,10 +3438,10 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><sapn class="name DEL"></span></td>
 			<td class="done"><sapn class="date DEL">2025-04-01</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="em">[공통화면] &lt;CMP000401P&gt;</p>
 			</td>
 		</tr>
-		<tr class="DEL">
+		<tr class="del">
 			<td>&#x200B;</td>
 			<td>HSP</td>
 			<td>&#x200B;</td>
@@ -3462,7 +3462,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><sapn class="name DEL"></span></td>
 			<td class="done"><sapn class="date DEL">2025-04-01</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="em">[공통화면] &lt;CMP001101P&gt;</p>
 			</td>
 		</tr>
 		<tr class="DEL">

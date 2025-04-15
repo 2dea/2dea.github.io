@@ -158,7 +158,10 @@
 .o-form  {
   .p-inputtext  {
     padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10);
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+
+    &:not(.p-inputtextarea)  {
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
 
     &:not(.bind)  {
       text-align: inherit;
