@@ -26,7 +26,7 @@ import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function CMM000401P() {
+function CMP000501P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -232,4 +232,4 @@ function CMM000401P() {
   );
 }
 
-export default CMM000401P;
+export default CMP000501P;
