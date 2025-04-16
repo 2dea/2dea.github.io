@@ -78,6 +78,8 @@ function CMP000501P() {
     <>
       <Dialog
         className="layer-wrap wdth-50p"
+        headerClassName="layer-head"
+        contentClassName="layer-body"
         visible={visible}
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
@@ -85,127 +87,129 @@ function CMP000501P() {
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">직원조회</span></h3>}
       >
-        <div className="o-grid">
-          <div className="column">
+        <div className="div-container">
+          <div className="o-grid">
+            <div className="column">
 
-            <form className="m-filter-form">
-              <div className="fieldset">
+              <form className="m-filter-form">
+                <div className="fieldset">
 
-                <div className="o-field">
-                  <Label label={`직원`} require={true} />
-                  <div className="fields">
-                    <div className="o-form _input mode-required">
-                      {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
-                      <AutoComplete value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                      <i aria-hidden="true"></i>
+                  <div className="o-field">
+                    <Label label={`직원`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input mode-required">
+                        {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
+                        <AutoComplete value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`실근무점`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input mode-required wdth-30">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="검색" icon="search" />
+                        </span>
+                      </div>
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`퇴직구분`} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
+                </div>
+              </form>
+
+              <div className="o-section">
+                <div className="main _primary rows-body-3i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무점</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현소속일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오출납여부</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출납책임자여부</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={11}>등록된 데이터가 없습니다.</td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td>016400</td>
+                            <td>이정규</td>
+                            <td>0810</td>
+                            <td>프로세스혁신부</td>
+                            <td>0810</td>
+                            <td>일반</td>
+                            <td>프로세스혁신</td>
+                            <td>2023-07-14</td>
+                            <td>Y</td>
+                            <td>Y</td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
-
-                <div className="o-field">
-                  <Label label={`실근무점`} require={true} />
-                  <div className="fields">
-                    <div className="o-form _input mode-required wdth-30">
-                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                      <i aria-hidden="true"></i>
-                      <span className="inner-binds">
-                        <ImageButton label="검색" icon="search" />
-                      </span>
-                    </div>
-                    <div className="o-form _input">
-                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                      <i aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="o-field">
-                  <Label label={`퇴직구분`} />
-                  <div className="fields">
-                    <div className="o-form _select">
-                      <XDropdown appendTo={'self'} className="bind" />
-                      <i aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-
               </div>
 
-              <div className="binds">
-                <CommonButton label="조회" className="_inquire" />
-              </div>
-            </form>
-
-            <div className="o-section">
-              <div className="main _primary rows-body-3i">
-                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                <div className="o-grid-table p-datatable">
-                  <div className="p-datatable-wrapper">
-                    <table className="p-datatable-table p-datatable-scrollable-table">
-                      <colgroup>
-                        <col className="wdth-10" />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                      </colgroup>
-
-                      <thead className="p-datatable-thead">
-                        <tr>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀코드</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무점</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현소속일자</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오출납여부</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출납책임자여부</span></div></th>
-                        </tr>
-                      </thead>
-
-                      <tbody className="p-datatable-tbody">
-                        <tr className="p-datatable-emptymessage">
-                          <td colSpan={11}>등록된 데이터가 없습니다.</td>
-                        </tr>
-                      </tbody>
-
-                      <tbody className="p-datatable-tbody">
-                      {[...Array(24)].map((e, idx) => (
-                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                          <td>{idx + 1}</td>
-                          <td>016400</td>
-                          <td>이정규</td>
-                          <td>0810</td>
-                          <td>프로세스혁신부</td>
-                          <td>0810</td>
-                          <td>일반</td>
-                          <td>프로세스혁신</td>
-                          <td>2023-07-14</td>
-                          <td>Y</td>
-                          <td>Y</td>
-                        </tr>
-                      ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
             </div>
-
           </div>
         </div>
 
         <div className="div-footer">
-          <div className="m-binds">
+          <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
               <CommonButton label="선택" className="_solid-primary" />

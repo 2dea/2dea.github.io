@@ -7,7 +7,7 @@
 }
 
 @function fnLinearGradient($dir: bottom, $start: $color-ground-alpha-00, $end: $color-ground)  {
-  @return linear-gradient(to $dir, $start, $end 75%);
+  @return linear-gradient(to $dir, $start, $end 65%);
 }
 
 @mixin setResetFont()  {

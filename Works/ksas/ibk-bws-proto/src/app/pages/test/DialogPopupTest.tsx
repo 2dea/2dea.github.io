@@ -26,10 +26,50 @@ import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 
 function DialogPopup() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
+
+  // ConfirmDialog
+  // const accept = () => {
+  //   alert(1);
+  // }
+  // const reject = () => {
+  //   alert(0);
+  // }
+  const confirm1 = () => {
+    confirmDialog({
+        className: 'layer-wrap wdth-20p',
+        // group: 'headless',
+        // content: ({ headerRef, contentRef, footerRef, hide, message }) => (
+        //   <>
+        //     {message.message}
+        //   </>
+        // ),
+        header: (
+          <>
+            알림
+          </>
+        ),
+        // message: 'Are you sure you want to proceed?',
+        footer: (
+          <>
+            <div className="m-binds">
+              <div className="group _primary">
+                <CommonButton label="취소" className="_cancel" />
+                <CommonButton label="확인" className="_solid-primary" />
+              </div>
+            </div>
+          </>
+        ),
+        // icon: 'pi pi-exclamation-triangle',
+        // resizable: false,
+        closeIcon: (<Icon icon="popup-close" />),
+        defaultFocus: 'accept'
+    });
+  };
 
   // OverlayPanel
   const overlayPan = useRef(null);
@@ -76,39 +116,7 @@ function DialogPopup() {
 
   return (
     <>
-      <Dialog
-        className="layer-wrap type-dialog"
-        headerClassName="layer-head"
-        contentClassName="layer-body"
-        visible={visible}
-        style={{}}
-        onHide={() => {if (!visible) return; setVisible(false); }}
-        closeIcon={<Icon icon="popup-close" />}
-        // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">{/* `알림` */``}</span></h3>}
-      >
-        <div className="div-container">
-          <div className="m-dialog-message">
-            <div className="messages">
-              <div className="primary">
-                저장하시겠습니까?
-              </div>
-              {/* <div className="secondary">
-                DIALOG_MESSAGES
-              </div> */}
-            </div>
-          </div>
-        </div>
-
-        <div className="div-footer">
-          <div className="m-binds type-end">
-            <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="확인" className="_solid-secondary" />
-            </div>
-          </div>
-        </div>
-      </Dialog>
+      <ConfirmDialog />
 
       <div className="roles" data-div-role="0">
         <div className="div-header">
@@ -123,7 +131,7 @@ function DialogPopup() {
         <div className="div-contents">
           <div className="m-binds">
             <div className="group _start">
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => setVisible(true)} />
+              <CommonButton label="팝업 열기" icon="link" size={70} onClick={confirm1} />
             </div>
           </div>
         </div>

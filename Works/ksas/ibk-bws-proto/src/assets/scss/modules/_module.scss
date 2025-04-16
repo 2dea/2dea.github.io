@@ -245,7 +245,7 @@
 
 
 .o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(48) III(24); border: $e10 dotted #94A3B8; background: #F8FAFC; border-radius: $radius-50; }
-.o-attach .summary  { font-size: $font-40; line-height: var(--text-height-para); min-height: calc(1.5em * 2); min-height: calc(1lh * 2); margin-top: $margin-section-50; margin-bottom: -1.5em; margin-bottom: -1lh; color: #64748B; text-align: center; }
+.o-attach .summary  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); min-height: calc(1.5em * 2); min-height: calc(1lh * 2); margin-top: $margin-section-50; margin-bottom: -1.5em; margin-bottom: -1lh; color: #64748B; text-align: center; }
 
 
 
@@ -381,11 +381,15 @@
 .o-length .data .value  { font-weight: $bold-70; color: #FE6D34; }
 
 
+.m-dialog-message  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-70; line-height: var(--lh); flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 100%; min-height: calc(1em * var(--text-height) * 1); margin: 0 auto; text-align: center; }
+.m-dialog-message >*  { flex: 1; display: inline-flex; flex-direction: column; justify-content: center; max-width: 100%; text-align: left; text-align: start; }
+
+
 
 
 
 /** Bullet-Lists Module */
-.m-bullets  { line-height: var(--text-height-para); clear: both; position: relative; }
+.m-bullets  { --lh: var(--text-height-para); line-height: var(--lh); clear: both; position: relative; }
 .m-bullets >* +*  { margin-top: calc(5 / 14 * 1em); }
 .m-bullets >:before  { position: absolute; text-align: center; }
 .m-bullets >dt.heading:before  { content: none; }

@@ -78,6 +78,8 @@ function CMP001402P() {
     <>
       <Dialog
         className="layer-wrap wdth-40p"
+        headerClassName="layer-head"
+        contentClassName="layer-body"
         visible={visible}
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
@@ -85,68 +87,68 @@ function CMP001402P() {
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">업체기본정보</span></h3>}
       >
-        <div className="o-grid">
-          <div className="column">
+        <div className="div-container">
+          <div className="o-grid">
+            <div className="column">
 
-            <div className="o-section">
-              <div className="m-header">
-                <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={3}>
+                            <Label label={`업체명`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            (주)앤비앤코퍼레이션
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={3}>
+                            <Label label={`구매담당자`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            홍길동
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={3}>
+                            <Label label={`전화번호`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            01012345678
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={3}>
+                            <Label label={`이메일주소`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            123@naver.com
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
               </div>
 
-
-
-              <div className="main">
-                <form className="m-data-form">
-                  <table className="table">
-                    <colgroup>
-                      <col className="head" />
-                      <col className="data" />
-                    </colgroup>
-
-                    <tbody>
-                      <tr>
-                        <th colSpan={3}>
-                          <Label label={`업체명`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          (주)앤비앤코퍼레이션
-                        </td>
-                      </tr>
-                      <tr>
-                        <th colSpan={3}>
-                          <Label label={`구매담당자`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          홍길동
-                        </td>
-                      </tr>
-                      <tr>
-                        <th colSpan={3}>
-                          <Label label={`전화번호`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          01012345678
-                        </td>
-                      </tr>
-                      <tr>
-                        <th colSpan={3}>
-                          <Label label={`이메일주소`} require={false} />
-                        </th>
-                        <td colSpan={3}>
-                          123@naver.com
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </form>
-              </div>
             </div>
-
           </div>
         </div>
 
         <div className="div-footer">
-          <div className="m-binds">
+          <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="확인" className="_solid-primary" />
             </div>

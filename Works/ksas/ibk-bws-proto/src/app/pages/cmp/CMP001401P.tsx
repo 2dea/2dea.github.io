@@ -78,6 +78,8 @@ function CMP001401P() {
     <>
       <Dialog
         className="layer-wrap wdth-40p"
+        headerClassName="layer-head"
+        contentClassName="layer-body"
         visible={visible}
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
@@ -85,108 +87,111 @@ function CMP001401P() {
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">업체조회</span></h3>}
       >
-        <div className="o-grid">
-          <div className="column">
+        <div className="div-container">
+          <div className="o-grid">
+            <div className="column">
 
-            <form className="m-filter-form">
-              <div className="fieldset">
+              <form className="m-filter-form">
+                <div className="fieldset">
 
-                <div className="o-field">
-                  <Label label={`업체명`} require={true} />
-                  <div className="fields">
-                    <div className="o-form _input mode-required">
-                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                      <i aria-hidden="true"></i>
+                  <div className="o-field">
+                    <Label label={`업체명`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input mode-required">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
+                </div>
+              </form>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">업체목록</span></h4>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
                     </div>
                   </div>
                 </div>
 
-              </div>
+                <div className="main _primary rows-body-5i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
 
-              <div className="binds">
-                <CommonButton label="조회" className="_inquire" />
-              </div>
-            </form>
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                          </tr>
+                        </thead>
 
-            <div className="o-section">
-              <div className="m-header">
-                <h4 className="o-heading level2"><span className="label">업체목록</span></h4>
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                          </tr>
+                        </tbody>
 
-                <div className="o-length">
-                  <span className="head">전체</span>
-                  <em className="data">
-                    <span className="value">8</span>
-                    <span className="units">건</span>
-                  </em>
-                </div>
-
-                <div className="m-binds">
-                  <div className="group">
-                    <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                    <ImageButton label="목록필터" icon="column-toggle" />
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td className="g-start">(주)앤비앤코퍼레이션</td>
+                            <td>홍길동</td>
+                            <td>0220825331</td>
+                            <td className="g-start">hong@email.com</td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="main _primary rows-body-5i">
-                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                <div className="o-grid-table p-datatable">
-                  <div className="p-datatable-wrapper">
-                    <table className="p-datatable-table p-datatable-scrollable-table">
-                      <colgroup>
-                        <col className="wdth-10" />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                      </colgroup>
-
-                      <thead className="p-datatable-thead">
-                        <tr>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                        </tr>
-                      </thead>
-
-                      <tbody className="p-datatable-tbody">
-                        <tr className="p-datatable-emptymessage">
-                          <td colSpan={5}>등록된 데이터가 없습니다.</td>
-                        </tr>
-                      </tbody>
-
-                      <tbody className="p-datatable-tbody">
-                      {[...Array(24)].map((e, idx) => (
-                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                          <td>{idx + 1}</td>
-                          <td className="g-start">(주)앤비앤코퍼레이션</td>
-                          <td>홍길동</td>
-                          <td>0220825331</td>
-                          <td className="g-start">hong@email.com</td>
-                        </tr>
-                      ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
             </div>
-
           </div>
         </div>
 
         <div className="div-footer">
-          <div className="m-binds">
+          <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="확인" className="_solid-primary" />
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="선택" className="_solid-primary" />
             </div>
           </div>
         </div>

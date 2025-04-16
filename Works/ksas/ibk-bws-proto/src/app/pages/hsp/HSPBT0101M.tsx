@@ -79,17 +79,6 @@ function HSPBT0101M() {
 
   return (
     <>
-      {/* <Dialog className="o-loading-layer" baseZIndex={2000} visible={visible} onHide={() => {if (!visible) return; setVisible(false); }} content={({ hide }) => (
-        <>
-          <div className="m-loading">
-            <i className="o-loading style-spinner" aria-hidden="true"></i>
-            <p className="caption">
-              <strong className="label">Loading...</strong>
-            </p>
-          </div>
-        </>
-      )}></Dialog> */}
-
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
