@@ -78,6 +78,8 @@ function POPTMPL() {
     <>
       <Dialog
         className="layer-wrap wdth-40p"
+        headerClassName="layer-head"
+        contentClassName="layer-body"
         visible={visible}
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}

@@ -33,12 +33,12 @@ function DialogPopup() {
   const [visible, setVisible] = useState<boolean>(true);
 
   // ConfirmDialog
-  const accept = () => {
-    alert(1);
-  }
-  const reject = () => {
-    alert(0);
-  }
+  // const accept = () => {
+  //   alert(1);
+  // }
+  // const reject = () => {
+  //   alert(0);
+  // }
   const confirm1 = () => {
     confirmDialog({
         className: 'layer-wrap wdth-20p',
