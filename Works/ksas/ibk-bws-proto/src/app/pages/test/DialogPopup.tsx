@@ -32,7 +32,7 @@ function DialogPopup() {
   const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
-  const overlayPan = useRef(null);
+  const viewimageOverlay0 = useRef(null);
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -85,14 +85,16 @@ function DialogPopup() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">{/* `알림` */``}</span></h3>}
+        header={<h3 className="o-heading"><span className="label">{/* `알림` */``}</span></h3>} // title
       >
         <div className="div-container">
           <div className="m-dialog-message">
             <div className="messages">
               <div className="primary">
+                {/* <message */}
                 저장하시겠습니까?
-              </div>
+                {/* >message */}
+                </div>
               {/* <div className="secondary">
                 DIALOG_MESSAGES
               </div> */}

@@ -32,7 +32,7 @@ function HSPBT0101M() {
   // const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
-  const overlayPan = useRef(null);
+  const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
   const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점 배송관리' }, { label: '(705010) 중요용지 인도내역조회' }];
@@ -310,8 +310,8 @@ function HSPBT0101M() {
                                 <td><span className="o-digit type-datetime">2024-09-16</span></td>
                                 <td className="g-start">마감 후 000긴급신청</td>
                                 <td>
-                                    <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
-                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                    <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
+                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
                                       <div className="layer-head">
                                         <h3 className="o-heading"><span className="label">이미지보기</span></h3>
                                       </div>
@@ -423,8 +423,8 @@ function HSPBT0101M() {
                                 <td><span className="o-digit type-datetime">2024-09-16</span></td>
                                 <td className="g-start">신청자 요청으로 인한 삭제</td>
                                 <td>
-                                  <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
-                                  <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                  <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
+                                  <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
                                     <div className="layer-head">
                                       <h3 className="o-heading"><span className="label">이미지보기</span></h3>
                                     </div>
@@ -440,8 +440,8 @@ function HSPBT0101M() {
                                 <td>부산역</td>
                                 <td className="g-start"></td>
                                 <td>
-                                  <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
-                                  <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                  <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
+                                  <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
                                     <div className="layer-head">
                                       <h3 className="o-heading"><span className="label">이미지보기</span></h3>
                                     </div>

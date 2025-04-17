@@ -166,6 +166,7 @@
 .o-icon._grid-added:before  { background-color: $tp; background-image: var(--obj-ico-grid-added); background-size: 100%; }
 .o-icon._grid-edited:before  { background-color: $tp; background-image: var(--obj-ico-grid-edited); background-size: 100%; }
 .o-icon._mdi-lock:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); }
+.o-icon._mdi-lock-locked:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); background-position: 25%; }
 .o-icon._popup-close:before  { background-color: $tp; background-image: var(--obj-ico-popup-close); background-size: 100%; }
 .o-icon._sort-asc:before  { background-color: $tp; background-image: var(--obj-ico-sort-asc); background-size: 100%; }
 .o-icon._sort-dec:before  { background-color: $tp; background-image: var(--obj-ico-sort-dec); background-size: 100%; }
@@ -937,18 +938,22 @@
 .m-mdi  {
   --height: var(--rem) * 30;
   --gap: calc(var(--rem) * 3);
+  --gap-icon: #{$gap-element-30};
 
   border-bottom-color: $tp;
 }
 .m-mdi .link  { padding: calc((var(--height) - $height-icon-30) / 2) calc($gap-element-80 - $e10); border-color: $color-edge-40; border-bottom-color: $tp; color: $color-text-30; background-color: #F8FAFC; }
-.m-mdi .link:not(.group, .o-icon)  { min-width: III(120); padding-right: calc($gap-element-30 * 2 + $height-form-30); cursor: default; }
+// .m-mdi .link:not(.group, .o-icon)  { min-width: III(120); padding-right: calc($gap-element-30 * 2 + $height-form-30); cursor: default; }
+.m-mdi .link:not(.group, .o-icon)  { min-width: III(120); padding-left: calc($height-form-30 + var(--gap-icon) - $e10); padding-right: calc($height-form-30 + var(--gap-icon) - $e10); cursor: default; }
 .m-mdi .link.group  { padding: calc((var(--height) - $height-form-30) / 2) 0; }
 // .m-mdi .link:after  { content: ""; position: absolute; left: calc(-1 * $e10); right: calc(-1 * $e10); bottom: calc(-2 * $e10);  height: $e10; background: Red; }
 
 .m-mdi .link:not(.group, [aria-current]:not([aria-current="false"])):hover:not(:active)  { background-color: #E2E8F0; }
 
-.m-mdi .o-image-button._close  { position: absolute; right: calc($gap-element-30 + $e10); }
-.m-mdi .o-image-button._close:disabled  { display: none; }
+.m-mdi .o-image-button._mdi-lock,
+.m-mdi .o-image-button._mdi-lock-locked  { position: absolute; left: calc(var(--gap-icon)); }
+.m-mdi .o-image-button._close  { position: absolute; right: calc(var(--gap-icon)); }
+// .m-mdi .o-image-button._close:disabled  { display: none; }
 
 .m-mdi >*  { gap: 0 var(--gap); background: $color-ground; }
 
@@ -963,13 +968,19 @@
 .m-mdi >.controls .link.group >.item  { position: relative; padding: 0 var(--gap); }
 .m-mdi >.controls .link.group >.item:not(:first-child):before  { content: ""; position: absolute; left: calc($e10 - var(--gap)); top: 50%; @include inc-translate(0); width: $e10; height: III(10); background: $color-edge-40; }
 
-.m-mdi .link:not(.group, .o-icon):before  { font-size: $height-icon-30; position: absolute; right: calc(($height-form-30 - $height-icon-30) / 2 + $gap-element-30); width: 1em; height: 1em; background: var(--obj-ico-lock) no-repeat 0 /500%; border-radius: 0; }
-.m-mdi .link:has(~._close:disabled):before  { content: ""; }
+// .m-mdi .link:not(.group, .o-icon):before  { font-size: $height-icon-30; position: absolute; right: calc(($height-form-30 - $height-icon-30) / 2 + $gap-element-30); width: 1em; height: 1em; background: var(--obj-ico-lock) no-repeat 0 /500%; border-radius: 0; }
+// .m-mdi .link:has(~._close:disabled):before  { content: ""; }
+
+.m-mdi .o-image-button._close:where(.o-image-button._mdi-lock-locked ~*)  { visibility: hidden !important; }
+.m-mdi >.lists >:not(:hover, :focus-within) .o-image-button._close  { visibility: hidden; }
 
 .m-mdi >.defaults .link:before  { background-position: 50%; }
 .m-mdi >.defaults .link[aria-current]:not([aria-current="false"]):before,
   .m-mdi .link[aria-current]:not([aria-current="false"]):before,
   .m-mdi .link[aria-current]:not([aria-current="false"]) ~._close:before  { background-position: 75%; }
+
+.m-mdi .link[aria-current]:not([aria-current="false"]) ~._mdi-lock:before  { background-position: 50%; }
+.m-mdi .link[aria-current]:not([aria-current="false"]) ~._mdi-lock-locked:before  { background-position: 75%; }
 
 
 

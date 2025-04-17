@@ -32,7 +32,9 @@ function TMPL() {
   // const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
-  const overlayPan = useRef(null);
+  const viewimageOverlay0 = useRef(null);
+  const viewimageOverlay1 = useRef(null);
+  const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
   const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품' }, { label: '본부부서조달관리(총무부 외)' }, { label: '(706520)(총무부 외) 중요용지 조달신청 접수' }];
@@ -301,10 +303,10 @@ function TMPL() {
                                   <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                                  <th className="p-align-center p-sortable-column p-highlight" aria-sort="ascending"><div className="p-column-header-content"><span className="p-column-title">출급번호</span><span data-pc-section="sort"></span></div></th>
                                   <th className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일시</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도구분</span></div></th>
+                                  <th className="p-align-center p-sortable-column" aria-sort="none"><div className="p-column-header-content"><span className="p-column-title">인도일시</span><span data-pc-section="sort"></span></div></th>
+                                  <th className="p-align-center p-sortable-column" aria-sort="descending"><div className="p-column-header-content"><span className="p-column-title">인도구분<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span><span data-pc-section="sort"></span></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도상태</span></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량</span></div></th>
@@ -348,8 +350,8 @@ function TMPL() {
                                   <td><span className="o-digit type-datetime">2024-09-16</span></td>
                                   <td className="g-start">마감 후 000긴급신청</td>
                                   <td>
-                                      <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
-                                      <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                      <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
+                                      <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
                                         <div className="layer-head">
                                           <h3 className="o-heading"><span className="label">이미지보기</span></h3>
                                         </div>
@@ -461,8 +463,8 @@ function TMPL() {
                                   <td><span className="o-digit type-datetime">2024-09-16</span></td>
                                   <td className="g-start">신청자 요청으로 인한 삭제</td>
                                   <td>
-                                    <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
-                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                    <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay1.current.toggle(e)} />
+                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay1} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
                                       <div className="layer-head">
                                         <h3 className="o-heading"><span className="label">이미지보기</span></h3>
                                       </div>
@@ -478,8 +480,8 @@ function TMPL() {
                                   <td>부산역</td>
                                   <td className="g-start"></td>
                                   <td>
-                                    <ImageButton label="이미지​보기" icon="image" onClick={(e) => overlayPan.current.toggle(e)} />
-                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                                    <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay2.current.toggle(e)} />
+                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay2} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
                                       <div className="layer-head">
                                         <h3 className="o-heading"><span className="label">이미지보기</span></h3>
                                       </div>

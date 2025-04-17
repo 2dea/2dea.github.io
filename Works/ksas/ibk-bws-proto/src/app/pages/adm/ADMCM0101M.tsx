@@ -29,7 +29,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function ADMCM0101M() {
   // OverlayPanel
-  const overlayPan = useRef(null);
+  const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
   const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '코드관리' }, { label: '공통코드관리' }];

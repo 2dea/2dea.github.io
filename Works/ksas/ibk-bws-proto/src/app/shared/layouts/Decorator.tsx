@@ -15,20 +15,22 @@ import Footer from './Footer';
 
 function Decorator() {
   return (
-    <div id="Document" className="dom-wrapper">
-      <Header />
-      {/* <!-- /* Container { @DEV } --> */}
-      <div role="main" id="Center" className="dom-main">
-        <Mdi />
+    <>
+      <div id="Document" className="dom-wrapper">
+        <Header />
+        {/* <!-- /* Container { @DEV } --> */}
+        <div role="main" id="Center" className="dom-main">
+          <Mdi />
 
-        {/* <!-- /* Primary { @DEV } --> */}
-        <Outlet />
-        {/* <!-- // Primary { @DEV } --> */}
+          {/* <!-- /* Primary { @DEV } --> */}
+          <Outlet />
+          {/* <!-- // Primary { @DEV } --> */}
 
+        </div>
+        {/* <!-- // Container { @DEV } --> */}
+        <Footer />
       </div>
-      {/* <!-- // Container { @DEV } --> */}
-      <Footer />
-    </div>
+    </>
   );
 }
 

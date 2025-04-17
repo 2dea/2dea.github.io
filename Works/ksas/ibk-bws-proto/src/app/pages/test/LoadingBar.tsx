@@ -14,7 +14,7 @@ function LoadingBar() {
   const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
-  const overlayPan = useRef(null);
+  const viewimageOverlay0 = useRef(null);
 
   return (
     <>

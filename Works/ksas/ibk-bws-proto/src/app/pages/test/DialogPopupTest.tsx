@@ -72,7 +72,7 @@ function DialogPopup() {
   };
 
   // OverlayPanel
-  const overlayPan = useRef(null);
+  const viewimageOverlay0 = useRef(null);
 
   // InputText
   const [value, setValue] = useState<string>('');

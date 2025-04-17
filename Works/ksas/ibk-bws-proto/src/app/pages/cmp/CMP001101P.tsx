@@ -32,7 +32,7 @@ function CMP001101P() {
   const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
-  const overlayPan = useRef(null);
+  const viewimageOverlay0 = useRef(null);
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -89,8 +89,8 @@ function CMP001101P() {
         <div className="div-contents">
           <div className="m-binds">
             <div className="group _start">
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={(e) => overlayPan.current.toggle(e)} />
-              <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={overlayPan} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+              <CommonButton label="팝업 열기" icon="link" size={70} onClick={(e) => viewimageOverlay0.current.toggle(e)} />
+              <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
                 <div className="layer-head">
                   <h3 className="o-heading"><span className="label">이미지보기</span></h3>
                 </div>

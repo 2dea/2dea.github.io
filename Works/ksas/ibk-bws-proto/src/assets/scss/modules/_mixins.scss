@@ -10,6 +10,24 @@
   @return linear-gradient(to $dir, $start, $end 65%);
 }
 
+@mixin most-outer-selector($new-class) {
+  $current-selector: &;
+  $new-selector: [];
+
+  @each $item in $current-selector {
+    $first-item: nth($item, 1);
+
+    $appended-item: $first-item + $new-class;
+
+    $new-item: set-nth($item, 1, $appended-item);
+    $new-selector: append($new-item, $new-selector);
+  }
+
+  @at-root #{$new-selector} {
+    @content;
+  }
+}
+
 @mixin setResetFont()  {
   font-family: inherit;
   font-feature-settings: inherit;
