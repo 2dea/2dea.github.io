@@ -283,6 +283,18 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main >.div-tablist  { font-size: inherit; line-height: inherit; border-bottom: $e10 solid #E2E8F0; }
 .dom-main >.div-tablist .m-mdi  { margin-bottom: calc(-1 * $e10); padding-top: $margin-section-40; }
 
+.dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) { position: relative; }
+.o-overlaytoggle { /* box-shadow: $dropshadow-40; */ }
+.o-overlaytoggle.case-mdilist { z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid #94A3B8; background: $color-ground; }
+.o-overlaytoggle.case-mdilist { z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid #94A3B8; background: $color-ground; }
+
+
+.m-tabular  { clear: both; }
+
+
+
+
+
 // .dom-main .div-sep  { position: absolute; }
 // .dom-main .div-header  { display: flex; align-items: center; gap: $gap-element-80; }
 // .dom-main .div-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
