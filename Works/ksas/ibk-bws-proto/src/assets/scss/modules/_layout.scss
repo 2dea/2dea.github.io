@@ -93,6 +93,7 @@ $width-layout-nav:                      calc(var(--rem) * var(--width-layout-nav
 .dom-wrapper >:not(.dom-main),
   .o-grid  { @include inc-scrollbar-width(3, 4); }
 .g-scroll-width-thin,
+  .o-overlaytoggle,
   :has(> *>[role="listbox"])  {
     --color-scrollbar-track-edge: Transparent;
     --margin-scrollbar:    calc(var(--rem) * 2);
@@ -284,12 +285,14 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main >.div-tablist .m-mdi  { margin-bottom: calc(-1 * $e10); padding-top: $margin-section-40; }
 
 .dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) { position: relative; }
-.o-overlaytoggle { /* box-shadow: $dropshadow-40; */ }
-.o-overlaytoggle.case-mdilist { z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid #94A3B8; background: $color-ground; }
-.o-overlaytoggle.case-mdilist { z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid #94A3B8; background: $color-ground; }
+.dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link { position: relative; z-index: 12; border-color: #94A3B8; border-bottom-color: Transparent; background-color: $color-ground; }
+.dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link:after { content: ""; position: absolute; left: 0; top: 100%; right: 0; transform: translateY($e10); height: $e10; background-color: inherit; }
 
+.o-overlaytoggle { --radius: #{$radius-50}; }
+.o-overlaytoggle.case-mdilist { font-size: $font-40; line-height: $line-40; z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid #94A3B8; background: $color-ground; }
+.o-overlaytoggle.case-mdilist { --height-row: #{III(28)}; border-radius: var(--radius) 0 var(--radius) var(--radius); }
+.o-overlaytoggle.case-mdilist .layer-body { width: calc(III(300) - $e10 * 2); max-height: calc(var(--height-row) * 5 + III(6) * 2); overflow: hidden auto; padding: III(6) III(4); }
 
-.m-tabular  { clear: both; }
 
 
 

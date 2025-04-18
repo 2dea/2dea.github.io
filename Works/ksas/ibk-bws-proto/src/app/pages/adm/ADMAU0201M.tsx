@@ -519,7 +519,7 @@ function ADMAU0201M() {
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>AABB00001M00</td>
                               <td className="g-start">
-                                <div className="o-with-bind">
+                                <div className="m-with-bind">
                                   <span className="main">원화현수송신청_관련화면 01</span>
                                   <span className="binds">
                                     <ImageButton label="삭제" icon="delete" />
@@ -578,7 +578,7 @@ function ADMAU0201M() {
                               <td><ImageButton label="순서 재정렬" icon="sort" className={'g-cursor-grab'} /></td>
                               <td>AABB00001M00</td>
                               <td className="g-start">
-                                <div className="o-with-bind">
+                                <div className="m-with-bind">
                                   <span className="main">원화현수송신청_관련화면 01</span>
                                   <span className="binds">
                                     <ImageButton label="삭제" icon="delete" />

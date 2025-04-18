@@ -172,6 +172,8 @@ img,  iframe,  embed,  object,  video,  audio,
 h1,  h2,  h3,  h4,  h5,  h6,
   p,  hr,  pre,  blockquote,  ul,  ol,  dl,  dd,  figure,
   form,  fieldset,  input,  button,  select,  textarea  { margin: 0; }
+label,  [type="submit"],  [type="reset"],  [type="button"],  button,  summary,
+  [role="button"],  [role="tab"]  { cursor: pointer; }
 
 hr  { clear: both; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; height: 0; overflow: visible; border-style: none; }
 pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-wrap: normal; word-break: normal; }
@@ -193,13 +195,13 @@ table :not(tr >* *)  { color: inherit; background-color: inherit; text-align: in
 th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0.125em; border: 0 solid; border-width: 1px; }
 fieldset  { min-width: 0; padding: 0; border-style: none; }
 legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
-label  { display: inline-block; cursor: pointer; }
+label  { display: inline-block; }
 [type="range"],  [type="color"],  [type="checkbox"],  [type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
-[type="submit"],  [type="reset"],  [type="button"],  button  { -webkit-appearance: button; min-width: 3em; overflow: visible; padding: 0.375ex 0.4em; cursor: pointer; text-transform: none; }
+[type="submit"],  [type="reset"],  [type="button"],  button  { -webkit-appearance: button; min-width: 3em; overflow: visible; padding: 0.375ex 0.4em; text-transform: none; }
 select  { text-transform: none; }
 option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
 textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: normal; }
-summary  { display: list-item; cursor: pointer; }
+summary  { display: list-item; }
 dialog  { padding: 0; border-style: none; }
 template  { display: none; }
 

@@ -60,30 +60,34 @@ function Mdi() {
             </li>
             <li>
               <button type="button" title="화면목록" className="link o-icon _menu-alt" onClick={(e) => mdilistOverlay0.current.toggle(e)}><span className="label">화면목록</span></button>
-              <OverlayPanel className="o-overlaytoggle case-mdilist" ref={mdilistOverlay0}  unstyled appendTo={'self'} closeIcon={<Icon icon="popup-close" />} /* showCloseIcon */ closeOnEscape dismissable>
+              <OverlayPanel className="o-overlaytoggle case-mdilist" ref={mdilistOverlay0} unstyled appendTo={'self'} closeIcon={<Icon icon="popup-close" />} /* showCloseIcon */ closeOnEscape dismissable>
                 <div className="layer-body">
                   <div className="m-mdi-list">
-                    {/* <div className="data-empty"><p className="messages">열린 화면이 없습니다.</p></div> */}
+                    <div className="data-empty"><p className="messages">열린 화면이 없습니다.</p></div>
 
-                    <ul className="data-lists m-tabular">
+                    <ul className="data-lists m-tabular type-listbox">
                       <li className="row" role="button" tabIndex={0}>
                         <span className="cell scr-number">111111</span>
-                        <span className="cell scr-name">
-                          <span className="primary">행내등기 신청제한-14글자까지 보이도록</span>
-                          <span className="binds">
-                            <ImageButton label="화면잠금" icon="mdi-lock" />
-                            <ImageButton label="닫기" icon="close" />
+                        <span className="cell _main scr-name">
+                          <span className="m-with-bind">
+                            <span className="main">행내등기 신청제한-14글자까지 보이도록</span>
+                            <span className="binds">
+                              <ImageButton label="화면잠금" icon="mdi-lock" />
+                              <ImageButton label="닫기" icon="close" />
+                            </span>
                           </span>
                         </span>
                       </li>
-                      {[...Array(24)].map((e, idx) => (
+                      {[...Array(9)].map((e, idx) => (
                       <li className="row" role="button" tabIndex={0}>
                         <span className="cell scr-number">444444</span>
-                        <span className="cell scr-name">
-                          <span className="primary">원화현수송신청</span>
-                          <span className="binds">
-                            <ImageButton label="화면잠금" icon="mdi-locked" />
-                            <ImageButton label="닫기" icon="close" />
+                        <span className="cell _main scr-name">
+                          <span className="m-with-bind">
+                            <span className="main">원화현수송신청</span>
+                            <span className="binds">
+                              <ImageButton label="화면잠금" icon="mdi-lock-locked" />
+                              <ImageButton label="닫기" icon="close" />
+                            </span>
                           </span>
                         </span>
                       </li>

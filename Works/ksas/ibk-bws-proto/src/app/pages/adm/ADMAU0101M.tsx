@@ -500,7 +500,7 @@ function ADMAU0101M() {
                               <td>{idx + 1}</td>
                               <td>AABB00001M00</td>
                               <td className="g-start">
-                                <div className="o-with-bind">
+                                <div className="m-with-bind">
                                   <span className="main">원화현수송신청_관련화면 01</span>
                                   <span className="binds">
                                     <ImageButton label="삭제" icon="delete" />

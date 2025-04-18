@@ -484,6 +484,8 @@
 .g-end  { justify-content: flex-end; text-align: right; text-align: end; }
 .g-start  { justify-content: flex-start; text-align: left; text-align: start; }
 
+.g-middle  { display: inline-flex; align-items: center; }
+
 .g-word-pred  { word-break: break-all; word-break: break-word; }
 .g-word-attr  { word-break: break-word; word-break: keep-all; }
 
