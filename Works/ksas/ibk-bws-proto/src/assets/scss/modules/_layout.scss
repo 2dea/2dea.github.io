@@ -286,7 +286,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) { position: relative; }
 .dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link { position: relative; z-index: 12; border-color: #94A3B8; border-bottom-color: Transparent; background-color: $color-ground; }
-.dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link:after { content: ""; position: absolute; left: 0; top: 100%; right: 0; transform: translateY($e10); height: $e10; background-color: inherit; }
+.dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link:after { content: ""; position: absolute; left: 0; top: 100%; right: 0; height: $e20; background-color: inherit; }
 
 .o-overlaytoggle { --radius: #{$radius-50}; }
 .o-overlaytoggle.case-mdilist { font-size: $font-40; line-height: $line-40; z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid #94A3B8; background: $color-ground; }

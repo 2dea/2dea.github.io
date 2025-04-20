@@ -111,8 +111,8 @@ function ADMCM0101M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="o-grid">
-            <div className="column">
+          <Splitter gutterSize={0} className="o-grid">
+            <SplitterPanel minSize={17.5} className="column">
 
               <form className="m-filter-form">
                 <div className="fieldset">
@@ -267,9 +267,9 @@ function ADMCM0101M() {
                 </div>
               </div>
 
-            </div>
+            </SplitterPanel>
 
-            <div className="column">
+            <SplitterPanel minSize={17.5} className="column">
 
               <div className="o-section">
                 <div className="m-header">
@@ -410,8 +410,8 @@ function ADMCM0101M() {
                 </div>
               </div>
 
-            </div>
-          </div>
+            </SplitterPanel>
+          </Splitter>
 
           <div className="div-footer">
             <div className="m-binds type-end">
