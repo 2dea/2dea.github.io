@@ -25,6 +25,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
+import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function TMPL() {
@@ -198,7 +199,7 @@ function TMPL() {
                           <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
                           <i aria-hidden="true"></i>
                         </div>
-                        <span className="sep type-swung">~</span>
+                        <span className="sep type-tilde">~</span>
                         <div className="o-form _input type-date mode-required wdth-50">
                           <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
                           <i aria-hidden="true"></i>
@@ -1473,8 +1474,8 @@ function TMPL() {
               </div>
             </div>
 
-            <div className="o-grid">
-              <div className="column">
+            <Splitter  gutterSize={0} className="o-grid">
+              <SplitterPanel minSize={17.5} className="column">
 
                 <div className="o-section">
                   <div className="m-header">
@@ -1528,9 +1529,9 @@ function TMPL() {
                   </div>
                 </div>
 
-              </div>
+              </SplitterPanel>
 
-              <div className="column">
+              <SplitterPanel minSize={17.5} className="column">
 
                 <div className="o-section">
                   <div className="m-header">
@@ -1685,11 +1686,11 @@ function TMPL() {
                   </div>
                 </div>
 
-              </div>
-            </div>
+              </SplitterPanel>
+            </Splitter>
 
-            <div className="o-grid">
-              <div className="column">
+            <Splitter  gutterSize={0} className="o-grid">
+              <SplitterPanel minSize={17.5} className="column">
 
                 <form className="m-filter-form">
                   <div className="fieldset">
@@ -1831,9 +1832,9 @@ function TMPL() {
                   </div>
                 </div>
 
-              </div>
+              </SplitterPanel>
 
-              <div className="column">
+              <SplitterPanel minSize={17.5} className="column">
 
                 <div className="o-section">
                   <div className="m-header">
@@ -1961,11 +1962,11 @@ function TMPL() {
                   </div>
                 </div>
 
-              </div>
-            </div>
+              </SplitterPanel>
+            </Splitter>
 
-            <div className="o-grid">
-              <div className="column">
+            <Splitter  gutterSize={0} className="o-grid">
+              <SplitterPanel minSize={17.5} className="column">
 
                 <div className="o-section">
                   <div className="m-header">
@@ -2216,9 +2217,9 @@ function TMPL() {
                   </div>
                 </div>
 
-              </div>
+              </SplitterPanel>
 
-              <div className="column views">
+              <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
 
                 <div className="o-section">
                   <div className="m-header">
@@ -2369,11 +2370,11 @@ function TMPL() {
                   </div>
                 </div>
 
-              </div>
-            </div>
+              </SplitterPanel>
+            </Splitter>
 
-            <div className="o-grid">
-              <div className="column">
+            <Splitter  gutterSize={0} className="o-grid">
+              <SplitterPanel minSize={17.5} className="column">
 
                 <form className="m-filter-form">
                   <div className="fieldset">
@@ -2476,9 +2477,9 @@ function TMPL() {
                   </div>
                 </div>
 
-              </div>
+              </SplitterPanel>
 
-              <div className="column">
+              <SplitterPanel minSize={17.5} className="column">
 
                 <div className="o-section">
                   <div className="m-header">
@@ -2576,8 +2577,8 @@ function TMPL() {
                   </div>
                 </div>
 
-              </div>
-            </div>
+              </SplitterPanel>
+            </Splitter>
 
             <div className="div-footer">
               <div className="m-binds type-end">

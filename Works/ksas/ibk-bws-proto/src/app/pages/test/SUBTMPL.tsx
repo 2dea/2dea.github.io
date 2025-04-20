@@ -659,7 +659,7 @@ function SUBTMPL() {
 
               </div>
 
-              <div className="column views">
+              <div className="column _views">
 
                 <div className="o-section">
                   <div className="m-header">

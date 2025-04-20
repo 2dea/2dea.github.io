@@ -25,6 +25,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
 import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
+import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function ADMPA0301M() {
@@ -404,7 +405,7 @@ function ADMPA0301M() {
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <span className="sep type-swung">~</span>
+                                <span className="sep type-tilde">~</span>
                                 <div className="o-form _input type-date wdth-50">
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon disabled />
                                   <i aria-hidden="true"></i>

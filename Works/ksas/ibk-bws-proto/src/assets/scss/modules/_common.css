@@ -15,37 +15,37 @@
   --palette-gray-900:                   #0F172A;
 
   --palette-red-001:                    #FFFAFA;
-  --palette-red-100:                    #FED5D5;
-  --palette-red-200:                    #FFB5B5;
-  --palette-red-300:                    #FF8C8C;
-  --palette-red-400:                    #FF6363;
-  --palette-red-500:                    #FF4242;
-  --palette-red-600:                    #E52222;
-  --palette-red-700:                    #B00C0C;
+  --palette-red-100:                    #fedcdc;
+  --palette-red-200:                    #fec3c3;
+  --palette-red-300:                    #fe9f9f;
+  --palette-red-400:                    #fe7777;
+  --palette-red-500:                    #fc4f4f;
+  --palette-red-600:                    #e62d2d;
+  --palette-red-700:                    #b21515;
   --palette-red-800:                    #730303;
   --palette-red-900:                    #3B0101;
 
   --palette-orange-001:                 #FFF8F5;
   --palette-orange-100:                 #FEE2D7;
-  --palette-orange-200:                 #FFC8B2;
-  --palette-orange-300:                 #FFAB8A;
-  --palette-orange-400:                 #FF8E61;
-  --palette-orange-500:                 #FF7842;
-  --palette-orange-600:                 #F15A22;
+  --palette-orange-200:                 #ffcbb8;
+  --palette-orange-300:                 #ffb294;
+  --palette-orange-400:                 #fc8f64;
+  --palette-orange-500:                 #fe6d34;
+  --palette-orange-600:                 #dd460e;
   --palette-orange-700:                 #B03B0C;
   --palette-orange-800:                 #722303;
   --palette-orange-900:                 #3C1201;
 
   --palette-yellow-001:                 #FFFCF0;
-  --palette-yellow-100:                 #FEF8D7;
-  --palette-yellow-200:                 #FFF2B2;
-  --palette-yellow-300:                 #FFEB8A;
-  --palette-yellow-400:                 #FFE561;
-  --palette-yellow-500:                 #FFDE38;
-  --palette-yellow-600:                 #D4B100;
-  --palette-yellow-700:                 #A78D0C;
-  --palette-yellow-800:                 #685703;
-  --palette-yellow-900:                 #3C3201;
+  --palette-yellow-100:                 #fef6d7;
+  --palette-yellow-200:                 #ffeeb2;
+  --palette-yellow-300:                 #ffe68a;
+  --palette-yellow-400:                 #ffdd61;
+  --palette-yellow-500:                 #fdd33a;
+  --palette-yellow-600:                 #cea206;
+  --palette-yellow-700:                 #a7850c;
+  --palette-yellow-800:                 #685203;
+  --palette-yellow-900:                 #3c2f01;
 
   --palette-green-001:                  #F4FDF1;
   --palette-green-100:                  #E5FBDF;
