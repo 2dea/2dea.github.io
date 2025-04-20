@@ -15,74 +15,74 @@
   --palette-gray-900:                   #0F172A;
 
   --palette-red-001:                    #FFFAFA;
-  --palette-red-100:                    #fedcdc;
-  --palette-red-200:                    #fec3c3;
-  --palette-red-300:                    #fe9f9f;
-  --palette-red-400:                    #fe7777;
-  --palette-red-500:                    #fc4f4f;
-  --palette-red-600:                    #e62d2d;
-  --palette-red-700:                    #b21515;
+  --palette-red-100:                    #FEDCDC;
+  --palette-red-200:                    #FEC3C3;
+  --palette-red-300:                    #FE9F9F;
+  --palette-red-400:                    #FE7777;
+  --palette-red-500:                    #FC4F4F;
+  --palette-red-600:                    #E62D2D;
+  --palette-red-700:                    #B21515;
   --palette-red-800:                    #730303;
   --palette-red-900:                    #3B0101;
 
   --palette-orange-001:                 #FFF8F5;
   --palette-orange-100:                 #FEE2D7;
-  --palette-orange-200:                 #ffcbb8;
-  --palette-orange-300:                 #ffb294;
-  --palette-orange-400:                 #fc8f64;
-  --palette-orange-500:                 #fe6d34;
-  --palette-orange-600:                 #dd460e;
+  --palette-orange-200:                 #FFCBB8;
+  --palette-orange-300:                 #FFB294;
+  --palette-orange-400:                 #FC8F64;
+  --palette-orange-500:                 #FE6D34;
+  --palette-orange-600:                 #DD460E;
   --palette-orange-700:                 #B03B0C;
   --palette-orange-800:                 #722303;
   --palette-orange-900:                 #3C1201;
 
   --palette-yellow-001:                 #FFFCF0;
-  --palette-yellow-100:                 #fef6d7;
-  --palette-yellow-200:                 #ffeeb2;
-  --palette-yellow-300:                 #ffe68a;
-  --palette-yellow-400:                 #ffdd61;
-  --palette-yellow-500:                 #fdd33a;
-  --palette-yellow-600:                 #cea206;
-  --palette-yellow-700:                 #a7850c;
+  --palette-yellow-100:                 #FEF6D7;
+  --palette-yellow-200:                 #FFEEB2;
+  --palette-yellow-300:                 #FFE68A;
+  --palette-yellow-400:                 #FFDD61;
+  --palette-yellow-500:                 #FDD33A;
+  --palette-yellow-600:                 #CEA206;
+  --palette-yellow-700:                 #A7850C;
   --palette-yellow-800:                 #685203;
-  --palette-yellow-900:                 #3c2f01;
+  --palette-yellow-900:                 #3C2F01;
 
-  --palette-green-001:                  #F4FDF1;
-  --palette-green-100:                  #E5FBDF;
-  --palette-green-200:                  #C8F6BB;
-  --palette-green-300:                  #A4F08E;
-  --palette-green-400:                  #8EED73;
-  --palette-green-500:                  #62E53D;
-  --palette-green-600:                  #40C61A;
-  --palette-green-700:                  #329914;
-  --palette-green-800:                  #25710F;
-  --palette-green-900:                  #164409;
+  --palette-green-001:                  #F7FDF1;
+  --palette-green-100:                  #E6FAD6;
+  --palette-green-200:                  #D9F4C4;
+  --palette-green-300:                  #B9F08E;
+  --palette-green-400:                  #9FEF62;
+  --palette-green-500:                  #60D605;
+  --palette-green-600:                  #52BB02;
+  --palette-green-700:                  #50A013;
+  --palette-green-800:                  #38710F;
+  --palette-green-900:                  #214409;
 
   --palette-skyblue-001:                #F0FAFF;
   --palette-skyblue-100:                #D7F2FE;
   --palette-skyblue-200:                #B2E7FF;
   --palette-skyblue-300:                #8AD9FF;
-  --palette-skyblue-400:                #61CCFF;
-  --palette-skyblue-500:                #38BFFF;
-  --palette-skyblue-600:                #0092D6;
-  --palette-skyblue-700:                #0C76A7;
-  --palette-skyblue-800:                #034868;
+  --palette-skyblue-400:                #58C9FE;
+  --palette-skyblue-500:                #21B6FD;
+  --palette-skyblue-600:                #00A4F0;
+  --palette-skyblue-700:                #097DB3;
+  --palette-skyblue-800:                #024869;
   --palette-skyblue-900:                #01293C;
 
-  --palette-blue-001:                   #F0F7FF;
-  --palette-blue-050:                   #E6F2FE;
-  --palette-blue-100:                   #D7EAFE;
-  --palette-blue-200:                   #B2D7FF;
-  --palette-blue-300:                   #8AC2FF;
-  --palette-blue-400:                   #61ADFF;
-  --palette-blue-500:                   #3898FF;
-  --palette-blue-600:                   #0B68CB;
-  --palette-blue-700:                   #004C9D;
-  --palette-blue-800:                   #033468;
-  --palette-blue-900:                   #011E3C;
+  --palette-blue-001:                   #F0F4FF;
+  --palette-blue-050:                   #E6EDFE;
+  --palette-blue-100:                   #D7E3FE;
+  --palette-blue-200:                   #B2C9FF;
+  --palette-blue-300:                   #8AADFF;
+  --palette-blue-400:                   #5587FC;
+  --palette-blue-500:                   #2968F9;
+  --palette-blue-600:                   #1850D4;
+  --palette-blue-700:                   #2149A3;
+  --palette-blue-800:                   #032168;
+  --palette-blue-900:                   #01133C;
 
   --palette-dimmed-008:                 #33415514;
-  --palette-dimmed-012:                 #0F172A1F;
+  /* --palette-dimmed-012:                 #0F172A1F; */
   --palette-dimmed-065:                 #000000A6;
 
 }
@@ -91,17 +91,24 @@
   --design-common-white:                var(--palette-gray-000);
   --design-common-black:                var(--palette-gray-900);
 
-  --design-primary-normal:              var(--palette-blue-600);
+  --design-primary-normal:              var(--palette-blue-500);
   --design-primary-strong:              var(--palette-blue-700);
-  --design-primary-heavy:               var(--palette-blue-900);
+  --design-primary-heavy:               var(--palette-blue-800);
 
+/*
   --design-secondary-normal:            var(--palette-skyblue-600);
   --design-secondary-strong:            var(--palette-skyblue-700);
   --design-secondary-heavy:             var(--palette-skyblue-800);
 
   --design-accent-normal:               var(--palette-orange-500);
   --design-accent-strong:               var(--palette-orange-600);
+ */
+  --design-point-skyblue:               var(--palette-skyblue-600);
+  --design-point-orange:                var(--palette-orange-500);
+  --design-point-red:                   var(--palette-red-500);
+  --design-point-yellow:                var(--palette-yellow-500);
 
+  --design-label-white:                 var(--palette-gray-000);
   --design-label-normal:                var(--palette-gray-800);
   --design-label-strong:                var(--palette-gray-900);
   --design-label-alternative:           var(--palette-gray-500);
@@ -113,36 +120,46 @@
   --design-background-strong:           var(--palette-gray-200);
   --design-background-heavy:            var(--palette-gray-300);
 
-  --design-background2-orange-40:       var(--palette-orange-100);
-  --design-background2-yellow-40:       var(--palette-yellow-100);
   --design-background2-blue-30:         var(--palette-blue-050);
   --design-background2-blue-40:         var(--palette-blue-100);
+  --design-background2-orange-40:       var(--palette-orange-100);
+  --design-background2-yellow-40:       var(--palette-yellow-100);
 
   --design-line-weak:                   var(--palette-gray-200);
   --design-line-normal:                 var(--palette-gray-300);
   --design-line-strong:                 var(--palette-gray-400);
+
+  --design-line2-blue-30:               var(--palette-blue-300);
 
   --design-icon-white:                  var(--palette-gray-000);
   --design-icon-normal:                 var(--palette-gray-300);
   --design-icon-strong:                 var(--palette-gray-500);
   --design-icon-heavy:                  var(--palette-gray-700);
 
+/*
   --design-status-success:              var(--palette-green-600);
   --design-status-caution:              var(--palette-yellow-500);
   --design-status-error:                var(--palette-red-500);
+ */
 
-  --design-button-normal:               var(--palette-gray-400);
-  --design-button-strong:               var(--palette-gray-600);
-  --design-button-disabled:             var(--palette-gray-300);
-  --design-button-hover:                var(--palette-dimmed-012);
+  --design-control-normal:              var(--palette-blue-400);
+  --design-control-strong:              var(--palette-blue-600);
 
-  --design-button1-normal:              var(--design-primary-normal);
+  --design-button1-normal:              var(--design-primary-heavy);
   --design-button1-strong:              var(--design-primary-strong);
 
-  --design-button2-normal:              var(--design-secondary-normal);
-  --design-button2-strong:              var(--design-secondary-storng);
+  --design-button2-weak:                var(--design-line2-blue-30);
+  --design-button2-normal:              var(--design-primary-normal);
+  --design-button2-strong:              var(--design-primary-storng);
 
-  --design-grid-selected:               var(--palette-green-100);
+  --design-button3-weak:                var(--design-line-normal);
+  --design-button3-normal:              var(--palette-gray-500);
+  --design-button3-strong:              var(--palette-gray-700);
+
+  --design-button-hover:                var(--palette-dimmed-008);
+
+  --design-grid-selected:               var(--palette-green-200);
+  --design-grid-selected-70:            var(--palette-green-500);
   --design-grid-evenrow:                var(--design-background-weak);
   --design-grid-hover:                  var(--palette-dimmed-008);
 
@@ -218,7 +235,6 @@
 
   --color-button-40:            var(--design-button-normal);
   --color-button-70:            var(--design-button-strong);
-  --color-button-disabled:      var(--design-button-disabled);
 
   --color-grid-hover:           var(--design-grid-hover);
 
@@ -525,7 +541,7 @@
 .g-annot.flow-block:not(:hover):not(:focus-within)  { height: 1.5em; height: 1lh; overflow: hidden; }
 
 
-/* .o-loading  { --spinner: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23paint0_angular_1665_40740_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0 0.03 -0.03 0 30 30)'%3E%3CforeignObject x='-1026.5' y='-1026.5' width='2052.99' height='2052.99'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg rgba(0  146  214  1) 0deg rgba(0  146  214  1) 63.243deg rgba(255  255  255  0) 360deg)%3Bheight:100%25%3Bwidth:100%25%3Bopacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cpath d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM8.9708 30C8.9708 41.6141 18.3859 51.0292 30 51.0292C41.6141 51.0292 51.0292 41.6141 51.0292 30C51.0292 18.3859 41.6141 8.9708 30 8.9708C18.3859 8.9708 8.9708 18.3859 8.9708 30Z' data-figma-gradient-fill='%7B%26%2334%3Btype%26%2334%3B:%26%2334%3BGRADIENT_ANGULAR%26%2334%3B %26%2334%3Bstops%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3BstopsVar%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3Btransform%26%2334%3B:%7B%26%2334%3Bm00%26%2334%3B:3.6739406106950628e-15 %26%2334%3Bm01%26%2334%3B:-60.0 %26%2334%3Bm02%26%2334%3B:60.0 %26%2334%3Bm10%26%2334%3B:60.0 %26%2334%3Bm11%26%2334%3B:3.6739406106950628e-15 %26%2334%3Bm12%26%2334%3B:-3.6739406106950628e-15%7D %26%2334%3Bopacity%26%2334%3B:1.0 %26%2334%3BblendMode%26%2334%3B:%26%2334%3BNORMAL%26%2334%3B %26%2334%3Bvisible%26%2334%3B:true%7D'/%3E%3Ccircle cx='30.2986' cy='55.5' r='4.5' fill='%230092D6'/%3E%3Cdefs%3E%3CclipPath id='paint0_angular_1665_40740_clip_path'%3E%3Cpath d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM8.9708 30C8.9708 41.6141 18.3859 51.0292 30 51.0292C41.6141 51.0292 51.0292 41.6141 51.0292 30C51.0292 18.3859 41.6141 8.9708 30 8.9708C18.3859 8.9708 8.9708 18.3859 8.9708 30Z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"); } */
+/* .o-loading  { --spinner: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23paint0_angular_1665_40740_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0 0.03 -0.03 0 30 30)'%3E%3CforeignObject x='-1026.5' y='-1026.5' width='2052.99' height='2052.99'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg rgba(0  146  214  1) 0deg rgba(0  146  214  1) 63.243deg rgba(255  255  255  0) 360deg)%3Bheight:100%25%3Bwidth:100%25%3Bopacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cpath d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM8.9708 30C8.9708 41.6141 18.3859 51.0292 30 51.0292C41.6141 51.0292 51.0292 41.6141 51.0292 30C51.0292 18.3859 41.6141 8.9708 30 8.9708C18.3859 8.9708 8.9708 18.3859 8.9708 30Z' data-figma-gradient-fill='%7B%26%2334%3Btype%26%2334%3B:%26%2334%3BGRADIENT_ANGULAR%26%2334%3B %26%2334%3Bstops%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3BstopsVar%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3Btransform%26%2334%3B:%7B%26%2334%3Bm00%26%2334%3B:3.6739406106950628e-15 %26%2334%3Bm01%26%2334%3B:-60.0 %26%2334%3Bm02%26%2334%3B:60.0 %26%2334%3Bm10%26%2334%3B:60.0 %26%2334%3Bm11%26%2334%3B:3.6739406106950628e-15 %26%2334%3Bm12%26%2334%3B:-3.6739406106950628e-15%7D %26%2334%3Bopacity%26%2334%3B:1.0 %26%2334%3BblendMode%26%2334%3B:%26%2334%3BNORMAL%26%2334%3B %26%2334%3Bvisible%26%2334%3B:true%7D'/%3E%3Ccircle cx='30.2986' cy='55.5' r='4.5' fill='%2300a4f0'/%3E%3Cdefs%3E%3CclipPath id='paint0_angular_1665_40740_clip_path'%3E%3Cpath d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM8.9708 30C8.9708 41.6141 18.3859 51.0292 30 51.0292C41.6141 51.0292 51.0292 41.6141 51.0292 30C51.0292 18.3859 41.6141 8.9708 30 8.9708C18.3859 8.9708 8.9708 18.3859 8.9708 30Z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"); } */
 /* .o-loading  { --spinner: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23paint0_angular_1665_40756_clip_path)' data-figma-skip-parse='true'%3E%3Cg transform='matrix(0.00607143 -0.0264286 -0.0264286 -0.00607143 30 30.0002)'%3E%3CforeignObject x='-1540.61' y='-1540.61' width='3081.21' height='3081.21'%3E%3Cdiv xmlns='http://www.w3.org/1999/xhtml' style='background:conic-gradient(from 90deg rgba(0  146  214  1) 0deg rgba(0  146  214  1) 63.243deg rgba(255  255  255  0) 360deg)%3Bheight:100%25%3Bwidth:100%25%3Bopacity:1'%3E%3C/div%3E%3C/foreignObject%3E%3C/g%3E%3C/g%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M34 7.14307C34 4.93393 32.2092 3.14307 30 3.14307C15.1672 3.14307 3.14289 15.1674 3.14289 30.0002C3.14289 44.833 15.1672 56.8574 30 56.8574C44.8328 56.8574 56.8572 44.833 56.8572 30.0002C56.8572 22.3199 53.6281 15.3873 48.4648 10.4974C46.8608 8.97831 44.3291 9.04716 42.81 10.6511C41.291 12.2551 41.3598 14.7869 42.9638 16.3059C46.5983 19.7479 48.8572 24.607 48.8572 30.0002C48.8572 40.4147 40.4145 48.8574 30 48.8574C19.5855 48.8574 11.1429 40.4147 11.1429 30.0002C11.1429 19.5857 19.5855 11.1431 30 11.1431C32.2092 11.1431 34 9.35221 34 7.14307Z' data-figma-gradient-fill='%7B%26%2334%3Btype%26%2334%3B:%26%2334%3BGRADIENT_ANGULAR%26%2334%3B %26%2334%3Bstops%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3BstopsVar%26%2334%3B:%5B%7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.0%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:0.0 %26%2334%3Bg%26%2334%3B:0.57254904508590698 %26%2334%3Bb%26%2334%3B:0.83921569585800171 %26%2334%3Ba%26%2334%3B:1.0%7D %26%2334%3Bposition%26%2334%3B:0.17567500472068787%7D %7B%26%2334%3Bcolor%26%2334%3B:%7B%26%2334%3Br%26%2334%3B:1.0 %26%2334%3Bg%26%2334%3B:1.0 %26%2334%3Bb%26%2334%3B:1.0 %26%2334%3Ba%26%2334%3B:0.0%7D %26%2334%3Bposition%26%2334%3B:1.0%7D%5D %26%2334%3Btransform%26%2334%3B:%7B%26%2334%3Bm00%26%2334%3B:12.142857551574707 %26%2334%3Bm01%26%2334%3B:-52.857143402099609 %26%2334%3Bm02%26%2334%3B:50.3571777343750 %26%2334%3Bm10%26%2334%3B:-52.857143402099609 %26%2334%3Bm11%26%2334%3B:-12.142857551574707 %26%2334%3Bm12%26%2334%3B:62.500209808349609%7D %26%2334%3Bopacity%26%2334%3B:1.0 %26%2334%3BblendMode%26%2334%3B:%26%2334%3BNORMAL%26%2334%3B %26%2334%3Bvisible%26%2334%3B:true%7D'/%3E%3Cdefs%3E%3CclipPath id='paint0_angular_1665_40756_clip_path'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M34 7.14307C34 4.93393 32.2092 3.14307 30 3.14307C15.1672 3.14307 3.14289 15.1674 3.14289 30.0002C3.14289 44.833 15.1672 56.8574 30 56.8574C44.8328 56.8574 56.8572 44.833 56.8572 30.0002C56.8572 22.3199 53.6281 15.3873 48.4648 10.4974C46.8608 8.97831 44.3291 9.04716 42.81 10.6511C41.291 12.2551 41.3598 14.7869 42.9638 16.3059C46.5983 19.7479 48.8572 24.607 48.8572 30.0002C48.8572 40.4147 40.4145 48.8574 30 48.8574C19.5855 48.8574 11.1429 40.4147 11.1429 30.0002C11.1429 19.5857 19.5855 11.1431 30 11.1431C32.2092 11.1431 34 9.35221 34 7.14307Z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E"); } */
 .o-loading  { --spinner: url('../../../../src/assets/images/layout/sym_loading-spinner.svg'); }
 .o-loading  { font-size: calc(var(--rem) * 60); display: block; width: 1em; height: 1em; background: var(--spinner) no-repeat 0 /100%; }

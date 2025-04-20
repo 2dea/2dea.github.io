@@ -468,10 +468,10 @@
 .o-button:not([class*="-button _"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { border-color: currentColor; background: White; background: -webkit-gradient(linear, left top, left bottom, from(#EDEFF1), to(White)); background: linear-gradient(to bottom, #EDEFF1, White); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEFF1', endColorstr='White', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFFFF', EndColorStr='#FFEDEFF1')"; }
 
 /*
-.o-button[class*="-primary"]  { --theme: #0B68CB; }
-.o-button[class*="-primary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #004C9D; }
-.o-button[class*="-secondary"]  { --theme: #0092D6; }
-.o-button[class*="-secondary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #0C76A7; }
+.o-button[class*="-primary"]  { --theme: #1850d4; }
+.o-button[class*="-primary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #2149a3; }
+.o-button[class*="-secondary"]  { --theme: #00a4f0; }
+.o-button[class*="-secondary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #097db3; }
 .o-button[class*=" _filled"]  { --fill-opacity: 0.12; border-color: Transparent; background-color: rgb(from currentColor r g b / var(--fill-opacity)); }
 .o-button[class*=" _filled"]:not([disabled], [aria-disabled="true"]):hover  { --fill-opacity: 0.2; }
 .o-button[class*=" _solid"]  { font-weight: var(--bold-70); border-color: Transparent; color: $color-white; background-color: var(--theme); }
@@ -960,11 +960,12 @@
 
 .m-mdi >.defaults  { padding-right: $e10; }
 
-.m-mdi >.lists  { overflow: scroll hidden; scrollbar-width: none; }
+.m-mdi >.lists  { min-width: III(120); overflow: scroll hidden; scrollbar-width: none; }
 .m-mdi >.lists >:first-child  { margin-left: $e10; }
 .m-mdi >.lists >:last-child  { margin-right: $e10; }
 
-.m-mdi >.controls  { padding-left: $e10; }
+.m-mdi >.controls  { position: relative; padding-left: $e10; }
+.m-mdi >.controls:before  { --width: #{III(12)}; content: ""; position: absolute; left: III(-12); width: var(--width); height: 100%; border: 1px solid Red; }
 .m-mdi >.controls .link.group  { gap: 0 var(--gap); }
 .m-mdi >.controls .link.group >.item  { position: relative; padding: 0 var(--gap); }
 .m-mdi >.controls .link.group >.item:not(:first-child):before  { content: ""; position: absolute; left: calc($e10 - var(--gap)); top: 50%; @include inc-translate(0); width: $e10; height: III(10); background: $color-edge-40; }
@@ -1056,7 +1057,7 @@
 .o-grid-table table  { width: 100%; background: var(--color-ground); text-align: center; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
 // .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
-.o-grid-table thead  { font-size: $font-40; line-height: $line-40; color: #004C9D; background: #F7F7F8; }
+.o-grid-table thead  { font-size: $font-40; line-height: $line-40; color: #2149a3; background: #F7F7F8; }
 .o-grid-table th  { font-weight: $bold-70; }
 
 .o-grid-table tr >*  { min-width: 0; height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid #EAEBEC; border-width: 0 $e10 $e10 0; }
@@ -1066,8 +1067,8 @@
 .o-grid-table tr >:first-child  { border-left-width: $e10; }
 
 .o-grid-table thead >* >*  { padding-left: III(11); padding-right: III(11); }
-// .o-grid-table thead >tr:last-child >*  { border-bottom-color: #004C9D; }
-.o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: #004C9D; }
+// .o-grid-table thead >tr:last-child >*  { border-bottom-color: #2149a3; }
+.o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: #2149a3; }
 // .o-grid-table tbody >* >*  { white-space: nowrap; }
 // .o-grid-table tbody >* >* >*  { white-space: normal; }
 .o-grid-table tbody >tr:nth-child(even)  { background: #F7F7F8; }
@@ -1075,15 +1076,15 @@
 .o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient(to bottom, rgba(#334155, 0.08), rgba(#334155, 0.08)); }
 
 .o-grid-table tbody >tr.js_clicked  { background-color: #D9F9DB; }
-.o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 3; border-right-color: #004C9D; background-color: inherit; }
+.o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 3; border-right-color: #2149a3; background-color: inherit; }
 
 // .o-grid-table tbody >tr:is(:nth-child(3), :nth-child(6))  { background-color: #D9F9DB; }
-// .o-grid-table tbody >tr:is(:nth-child(9), :nth-child(12))  { background-color: #D7EAFE; }
+// .o-grid-table tbody >tr:is(:nth-child(9), :nth-child(12))  { background-color: #d7e3fe; }
 
 // .o-grid-table tbody >tr >*  { min-width: 180px; }
 
 // .o-grid-table thead  { position: sticky; z-index: 4; top: 0; }
-// .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 3; left: 0; border-right-color: #004C9D; background-color: inherit; }
+// .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 3; left: 0; border-right-color: #2149a3; background-color: inherit; }
 
 .o-grid-table .o-form:not(tr >:where(.g-start, .g-end) *):only-child  { margin-left: auto; margin-right: auto; }
 .o-grid-table .o-form:is(tr >:where(.g-end) *):only-child  { margin-left: auto; }
@@ -1128,7 +1129,7 @@
 .m-data-form  { clear: both; }
 .m-data-form table  { table-layout: fixed; width: 100%; background: var(--color-ground); }
 .m-data-form tr >*  { height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid #EAEBEC; border-width: 0 0 $e10; }
-.m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: #0B68CB; }
+.m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: #1850d4; }
 .m-data-form tr >:first-child  { border-left-width: $e10; }
 .m-data-form tr >:last-child  { border-right-width: $e10; }
 .m-data-form th  { font-size: $font-40; line-height: $line-40; width: calc(var(--rem) * 120); padding: III(1) III(11); color: #1E293B; background: #F1F5F9; }
