@@ -218,7 +218,7 @@
     .p-datepicker-trigger  { width: auto; }
   }
 
-  &:has(:is(.bind, .p-inputtext).p-disabled)  { color: $color-text-disabled; background-color: #F1F5F9; filter: none; }
+  &:has(:is(.bind, .p-inputtext).p-disabled)  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
 }
 
 
@@ -508,7 +508,7 @@
 
   // .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover  {
   .p-sortable-column:not(.p-sortable-disabled):hover:not(:active)  {
-    background-image: linear-gradient($color-grid-hover);
+    background-image: linear-gradient($color-grid-hover, $color-grid-hover);
     cursor: row-resize;
   }
 
@@ -521,7 +521,7 @@
 
     // &:not(.p-highlight):not(.p-sortable-disabled):hover  {
     &:not(.p-sortable-disabled):hover:not(:active)  {
-      background-image: linear-gradient($color-grid-hover);
+      background-image: linear-gradient($color-grid-hover, $color-grid-hover);
       cursor: row-resize;
     }
 

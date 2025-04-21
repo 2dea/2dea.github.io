@@ -500,13 +500,13 @@
 .o-button:is(._texted-primary):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
 .o-button:is(._solid, ._inquire)  { --theme: #{$color-button3-40}; }
 .o-button:is(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-70}; }
-.o-button:is(._lined-secondary):not(:hover:not(:active))  { border-color: #8AADFF; background-color: #F1F5F9; }
+.o-button:is(._lined-secondary):not(:hover:not(:active))  { border-color: var(--color-button2-30); background-color: var(--color-ground-40); }
 .o-button:is(._normal, ._cancel)  { --theme: #CBD5E1; }
 .o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-40}; }
 .o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]) >.label  { color: var(--color-text-40); }
 
 .o-button:is([class*=" _solid"], ._create, ._choose):not(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
-.o-button:is([class*=" _lined"], ._delete):not(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; background-color: #F1F5F9; }
+.o-button:is([class*=" _lined"], ._delete):not(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; background-color: var(--color-ground-40); }
 
 .o-button:is([disabled], [aria-disabled="true"])  { color: var(--theme); filter: opacity(0.4); }
 
@@ -567,7 +567,7 @@
 .m-binds >._utility  { justify-content: flex-end; margin-left: auto; }
 
 
-.m-print-binds  { display: flex; align-items: center; gap: $e10; padding-left: $gap-element-30; background-color: #F1F5F9; border-radius: $radius-abs-999; }
+.m-print-binds  { display: flex; align-items: center; gap: $e10; padding-left: $gap-element-30; background-color: var(--color-ground-40); border-radius: $radius-abs-999; }
 .m-print-binds:after  { content: ""; font-size: $height-icon-30; width: $height-form-50; height: $height-form-50; border: calc(($height-form-50 - $height-icon-30) / 2) solid #{$color-button3-40}; background: #{$color-button3-40} var(--obj-ico-print) no-repeat 75%/ 5em; }
 .m-print-binds >* +:before  { content: ""; position: absolute; left: calc(-1 * $e10 * 2); width: $e10; height: calc(1em * 12 / 14); background: #CCC; }
 
@@ -783,8 +783,8 @@
   }
 }
 
-.o-form:has(>.bind[disabled])  { color: $color-text-disabled; background-color: #F1F5F9; filter: none; }
-.o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: #F1F5F9; }
+.o-form:has(>.bind[disabled])  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+.o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: var(--color-ground-disabled); }
 .o-form.mode-required  { background: #FEF6D7; }
 
 // .o-form  { border-color: $tp; background: $color-ground; }
@@ -1073,7 +1073,7 @@
 // .o-grid-table tbody >* >* >*  { white-space: normal; }
 .o-grid-table tbody >tr:nth-child(even)  { background: #F7F7F8; }
 
-.o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover); }
+.o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
 .o-grid-table tbody >tr.js_clicked  { background-color: #D9F9DB; }
 .o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 3; border-right: $e30 double #FDD33A; background-color: inherit; }
@@ -1113,7 +1113,7 @@
 // // .m-filter-form .fieldset .table th  { width: 0; }
 // // .m-filter-form .fieldset .table td  { max-width: 0; white-space: nowrap; overflow: hidden; }
 
-.m-filter-form  { display: flex; align-items: flex-end; gap: $gap-element-90; clear: both; padding: calc($gap-element-80 - $e10); border: $e10 solid #00F; background: $color-ground; border-radius: $radius-50; box-shadow: $dropshadow-40; }
+.m-filter-form  { display: flex; align-items: flex-end; gap: $gap-element-90; clear: both; padding: calc($gap-element-80 - $e10); border: $e10 solid var(--color-edge-70); background: $color-ground-30; border-radius: $radius-50; }
 .m-filter-form >*  { flex: 0 1 auto; min-width: 0; min-height: $height-form-50; }
 .m-filter-form .fieldset  { flex: 1 0 0; display: grid; align-items: center; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: $gap-element-80 $gap-element-70; grid-auto-flow: dense; }
 .m-filter-form .fieldset >*  { min-width: 0; min-height: 0; }
@@ -1132,7 +1132,7 @@
 .m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: $color-key1-40; }
 .m-data-form tr >:first-child  { border-left-width: $e10; }
 .m-data-form tr >:last-child  { border-right-width: $e10; }
-.m-data-form th  { font-size: $font-40; line-height: $line-40; width: calc(var(--rem) * 120); padding: III(1) III(11); color: #1E293B; background: #F1F5F9; }
+.m-data-form th  { font-size: $font-40; line-height: $line-40; width: calc(var(--rem) * 120); padding: III(1) III(11); color: #1E293B; background: var(--color-ground-40); }
 
 
 
