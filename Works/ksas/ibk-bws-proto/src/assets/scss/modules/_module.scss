@@ -211,12 +211,12 @@
 
 
 /** Links */
-.o-link  { --theme: #475569; display: inline-flex; align-items: center; color: var(--theme); border-radius: 0; box-shadow: none; text-decoration: none; text-underline-offset: auto; white-space: normal; }
+.o-link  { --theme: #{$color-link1-40}; display: inline-flex; align-items: center; color: var(--theme); border-radius: 0; box-shadow: none; text-decoration: none; text-underline-offset: auto; white-space: normal; }
 .o-link:hover  { --theme: #1E293B; text-decoration: underline; }
 
-.o-link._primary  { --theme: #2968F9; }
+.o-link._primary  { --theme: #{$color-key1-40}; }
 .o-link._primary:hover  { --theme: #2149A3; }
-.o-link._normal  { --theme: #475569; }
+.o-link._normal  { --theme: #{$color-link1-40}; }
 .o-link._normal:hover  { --theme: #1E293B; }
 
 
@@ -469,46 +469,44 @@
 .o-button:not([class*="-button _"])  { border-color: #A8AEB7; background: #EAECEF; background: -webkit-gradient(linear, left top, left bottom, from(White), to(#EAECEF)); background: linear-gradient(to bottom, White, #EAECEF); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='White', endColorstr='#EAECEF', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFEAECEF', EndColorStr='#FFFFFFFF')"; }
 .o-button:not([class*="-button _"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { border-color: currentColor; background: White; background: -webkit-gradient(linear, left top, left bottom, from(#EDEFF1), to(White)); background: linear-gradient(to bottom, #EDEFF1, White); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEFF1', endColorstr='White', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFFFF', EndColorStr='#FFEDEFF1')"; }
 
-/*
-.o-button[class*="-primary"]  { --theme: #1850d4; }
-.o-button[class*="-primary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #2149a3; }
-.o-button[class*="-secondary"]  { --theme: #00a4f0; }
-.o-button[class*="-secondary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #097db3; }
-.o-button[class*=" _filled"]  { --fill-opacity: 0.12; border-color: Transparent; background-color: rgb(from currentColor r g b / var(--fill-opacity)); }
-.o-button[class*=" _filled"]:not([disabled], [aria-disabled="true"]):hover  { --fill-opacity: 0.2; }
-.o-button[class*=" _solid"]  { font-weight: var(--bold-70); border-color: Transparent; color: $color-text-00; background-color: var(--theme); }
-// .o-button[class*=" _lined"]  { color: var(--theme); }
-.o-button._normal  { --theme: #94A3B8; }
-.o-button._normal:not([disabled], [aria-disabled="true"]):hover  { --theme: #475569; }
-.o-button._normal:not([disabled], [aria-disabled="true"]) >.label  { color: #1E293B; }
+// .o-button[class*="-primary"]  { --theme: #{$color-key1-40}; }
+// .o-button[class*="-primary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #{$color-button1-70}; }
+// .o-button[class*="-secondary"]  { --theme: #{$color-point-skyblue}; }
+// .o-button[class*="-secondary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #{$color-key2-70}; }
+// .o-button[class*=" _filled"]  { --fill-opacity: 0.12; border-color: Transparent; background-color: rgb(from currentColor r g b / var(--fill-opacity)); }
+// .o-button[class*=" _filled"]:not([disabled], [aria-disabled="true"]):hover  { --fill-opacity: 0.2; }
+// .o-button[class*=" _solid"]  { font-weight: var(--bold-70); border-color: Transparent; color: $color-text-00; background-color: var(--theme); }
+// // .o-button[class*=" _lined"]  { color: var(--theme); }
+// .o-button._normal  { --theme: #94A3B8; }
+// .o-button._normal:not([disabled], [aria-disabled="true"]):hover  { --theme: #{$color-link1-40}; }
+// .o-button._normal:not([disabled], [aria-disabled="true"]) >.label  { color: #1E293B; }
 
-.o-button.style-texted  { border-color: Transparent; background: Transparent; box-shadow: none; }
-.o-button.style-texted:hover  { text-decoration: underline; }
-.o-button.style-texted:not(.m-print-binds :only-child)  { min-width: 1em; }
+// .o-button.style-texted  { border-color: Transparent; background: Transparent; box-shadow: none; }
+// .o-button.style-texted:hover  { text-decoration: underline; }
+// .o-button.style-texted:not(.m-print-binds :only-child)  { min-width: 1em; }
 
-.o-button:is([class*=" _filled"], [class*=" _solid"]):is([disabled], [aria-disabled="true"])  { color: #64748B; background-color: #CBD5E1; filter: opacity(0.6); }
-.o-button:is([class*=" _lined"], ._normal:not(.style-texted)):is([disabled], [aria-disabled="true"])  { border-color: #CBD5E1; color: #64748B; filter: opacity(0.6); }
- */
-.o-button:is([class*=" _texted"])  { --theme: #475569; border-color: Transparent; background: Transparent; box-shadow: none; }
+// .o-button:is([class*=" _filled"], [class*=" _solid"]):is([disabled], [aria-disabled="true"])  { color: #{$color-button3-40}; background-color: #CBD5E1; filter: opacity(0.6); }
+// .o-button:is([class*=" _lined"], ._normal:not(.style-texted)):is([disabled], [aria-disabled="true"])  { border-color: #CBD5E1; color: #{$color-button3-40}; filter: opacity(0.6); }
+.o-button:is([class*=" _texted"])  { --theme: #{$color-link1-40}; border-color: Transparent; background: Transparent; box-shadow: none; }
 .o-button:is([class*=" _texted"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: var(--color-text-40); text-decoration: underline; }
 .o-button:is([class*=" _texted"]):not(.m-print-binds :only-child)  { min-width: 1em; }
 .o-button:is([class*=" _filled"])  { --fill-opacity: 0.12; border-color: Transparent; background-color: rgb(from currentColor r g b / var(--fill-opacity)); }
 .o-button:is([class*=" _filled"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --fill-opacity: 0.2; }
 .o-button:is([class*=" _solid"], ._create, ._choose, ._inquire)  { font-weight: var(--bold-70); border-color: Transparent; color: $color-text-00 !important; background-color: var(--theme); }
 .o-button:is([class*=" _lined"], ._delete)  { background-color: $color-ground; }
-.o-button:is([class*="-primary"], ._delete)  { --theme: #01133C; }
-.o-button:is([class*="-secondary"], ._create, ._choose)  { --theme: #2968F9; }
-.o-button:is(._texted-primary)  { --theme: #2968F9; }
-.o-button:is(._texted-primary):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #2149A3; }
-.o-button:is(._solid, ._inquire)  { --theme: #64748B; }
-.o-button:is(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #334155; }
+.o-button:is([class*="-primary"], ._delete)  { --theme: #{$color-button1-40}; }
+.o-button:is([class*="-secondary"], ._create, ._choose)  { --theme: #{$color-button2-40}; }
+.o-button:is(._texted-primary)  { --theme: #{$color-button2-40}; }
+.o-button:is(._texted-primary):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
+.o-button:is(._solid, ._inquire)  { --theme: #{$color-button3-40}; }
+.o-button:is(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-70}; }
 .o-button:is(._lined-secondary):not(:hover:not(:active))  { border-color: #8AADFF; background-color: #F1F5F9; }
 .o-button:is(._normal, ._cancel)  { --theme: #CBD5E1; }
-.o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #64748B; }
+.o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-40}; }
 .o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]) >.label  { color: var(--color-text-40); }
 
-.o-button:is([class*=" _solid"], ._create, ._choose):not(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #2149A3; }
-.o-button:is([class*=" _lined"], ._delete):not(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #2149A3; background-color: #F1F5F9; }
+.o-button:is([class*=" _solid"], ._create, ._choose):not(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
+.o-button:is([class*=" _lined"], ._delete):not(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; background-color: #F1F5F9; }
 
 .o-button:is([disabled], [aria-disabled="true"])  { color: var(--theme); filter: opacity(0.4); }
 
@@ -570,7 +568,7 @@
 
 
 .m-print-binds  { display: flex; align-items: center; gap: $e10; padding-left: $gap-element-30; background-color: #F1F5F9; border-radius: $radius-abs-999; }
-.m-print-binds:after  { content: ""; font-size: $height-icon-30; width: $height-form-50; height: $height-form-50; border: calc(($height-form-50 - $height-icon-30) / 2) solid #64748B; background: #64748B var(--obj-ico-print) no-repeat 75%/ 5em; }
+.m-print-binds:after  { content: ""; font-size: $height-icon-30; width: $height-form-50; height: $height-form-50; border: calc(($height-form-50 - $height-icon-30) / 2) solid #{$color-button3-40}; background: #{$color-button3-40} var(--obj-ico-print) no-repeat 75%/ 5em; }
 .m-print-binds >* +:before  { content: ""; position: absolute; left: calc(-1 * $e10 * 2); width: $e10; height: calc(1em * 12 / 14); background: #CCC; }
 
 
@@ -903,10 +901,10 @@
 // .m-tab >* >*  { flex: none; position: relative; min-width: 0; }
 // .m-tab >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
 // .m-tab >.lists  { flex: 1; }
-.m-tab  { --point: #00F; display: flex; align-items: flex-start; clear: both; position: relative; border-bottom: $e10 solid var(--point); }
+.m-tab  { --key: #{$color-key1-70}; display: flex; align-items: flex-start; clear: both; position: relative; border-bottom: $e10 solid var(--key); }
 
-.m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--point); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
-.m-tab .link[aria-selected="true"]  { font-weight: $bold-70; border-color: $tp; color: $color-text-00; background-color: var(--point); }
+.m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
+.m-tab .link[aria-selected="true"]  { font-weight: $bold-70; border-color: $tp; color: $color-text-00; background-color: var(--key); }
 .m-tab .link >*  { min-width: 0; }
 .m-tab .link.o-icon >.label  { @include inc-sronly(); }
 
@@ -924,10 +922,10 @@
 
 
 
-.m-mdi  { --point: #00F; display: flex; align-items: flex-start; clear: both; position: relative; border-bottom: $e10 solid var(--point); }
+.m-mdi  { --key: #{$color-key1-70}; display: flex; align-items: flex-start; clear: both; position: relative; border-bottom: $e10 solid var(--key); }
 
-.m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--point); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
-.m-mdi .link[aria-current]:not([aria-current="false"])  { font-weight: $bold-70; border-color: $tp; color: $color-text-00; background-color: var(--point); }
+.m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
+.m-mdi .link[aria-current]:not([aria-current="false"])  { font-weight: $bold-70; border-color: $tp; color: $color-text-00; background-color: var(--key); }
 .m-mdi .link >*  { min-width: 0; }
 .m-mdi .link.o-icon >.label  { @include inc-sronly(); }
 
@@ -1078,7 +1076,7 @@
 .o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover); }
 
 .o-grid-table tbody >tr.js_clicked  { background-color: #D9F9DB; }
-.o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 3; border-right-color: #2149a3; background-color: inherit; }
+.o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 3; border-right: $e30 double #FDD33A; background-color: inherit; }
 
 // .o-grid-table tbody >tr:is(:nth-child(3), :nth-child(6))  { background-color: #D9F9DB; }
 // .o-grid-table tbody >tr:is(:nth-child(9), :nth-child(12))  { background-color: #d7e3fe; }
@@ -1086,7 +1084,7 @@
 // .o-grid-table tbody >tr >*  { min-width: 180px; }
 
 // .o-grid-table thead  { position: sticky; z-index: 4; top: 0; }
-// .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 3; left: 0; border-right-color: #2149a3; background-color: inherit; }
+// .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 3; left: 0; border-right: $e30 double #FDD33A; background-color: inherit; }
 
 .o-grid-table .o-form:not(tr >:where(.g-start, .g-end) *):only-child  { margin-left: auto; margin-right: auto; }
 .o-grid-table .o-form:is(tr >:where(.g-end) *):only-child  { margin-left: auto; }
@@ -1131,7 +1129,7 @@
 .m-data-form  { clear: both; }
 .m-data-form table  { table-layout: fixed; width: 100%; background: $color-ground; }
 .m-data-form tr >*  { height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid #EAEBEC; border-width: 0 0 $e10; }
-.m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: #1850d4; }
+.m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: $color-key1-40; }
 .m-data-form tr >:first-child  { border-left-width: $e10; }
 .m-data-form tr >:last-child  { border-right-width: $e10; }
 .m-data-form th  { font-size: $font-40; line-height: $line-40; width: calc(var(--rem) * 120); padding: III(1) III(11); color: #1E293B; background: #F1F5F9; }

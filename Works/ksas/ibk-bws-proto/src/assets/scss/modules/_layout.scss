@@ -184,28 +184,39 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 /** Header */
-.dom-header  {  }
-.dom-header >.roles  { flex-direction: row; padding-bottom: $height-layout-header-sep; color: $color-text-00; background: #00F; }
+.dom-wrapper  {
+  --theme-header-ground: #{$color-ground};
+  --theme-header-ground-account: #{$tp};
+
+  --theme-header-text: inherit;
+  --theme-header-text-account: inherit;
+
+  --theme-header-ground: #{$color-key1-70};
+  --theme-header-text: #{$color-text-00};
+
+  --theme-nav-edge-divider: #{$color-edge-40};
+}
+.dom-header  { outline-color: $color-edge-40; }/* ### */
+.dom-header >.roles  { flex-direction: row; padding-bottom: $height-layout-header-sep; color: var(--theme-header-text); background: var(--theme-header-ground); }
 .dom-header >.roles:has(>.div-account)  { padding-top: $height-layout-header-account; }
-.dom-header >.roles:after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: $height-layout-header-sep; background: #00F; }
+.dom-header >.roles:after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: $height-layout-header-sep; }
 
 .dom-header .div-root  { display: flex; align-items: center; gap: III(6); position: relative; min-width: $width-layout-nav; padding: III(4) 0 0 III(88); }
 .dom-header .div-root:after  { content: ""; position: absolute; left: III(60); top: 50%; transform: translateY(-50%);  width: III(175); height: III(24); image-rendering: pixelated; background: var(--obj-img-logo-heavy) no-repeat; }
 .dom-header .div-root >*  { font-size: III(17); color: $tp; }
 .dom-header .div-root .logo  { font-size: III(20); }
 
-.dom-header .div-account  { font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; height: $height-layout-header-account; color: $color-text-00; background: #00F; }
+.dom-header .div-account  { font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; height: $height-layout-header-account; color: var(--theme-header-text-account); background: var(--theme-header-ground-account); }
 .dom-header .div-account >dl  { --gap: var(--e10, 1px); display: flex; align-items: center; gap: var(--gap); }
 .dom-header .div-account >dl >*  { min-width: 0; }
 .dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
 .dom-header .div-account >dl >* >*  { display: flex; align-items: center; }
 
 
-
 .dom-header .div-nav-global  { font-size: $font-70; line-height: $line-70; overflow-x: auto; white-space: nowrap; }
 .dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: calc(($height-layout-header-nav - 1lh) / 2) 1em; white-space: nowrap; }
 .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 4; color: $color-text-00; }
-.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: #F00; }
+.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: $color-point-orange; }
 
 .dom-header .div-nav-global >*  { display: flex; padding: 0 1em; }
 
@@ -215,7 +226,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-wrapper  { height: 100%; }/* ### */
 
 
-.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid #CCC; background-color: $color-ground; }
+.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid var(--theme-nav-edge-divider); background-color: $color-ground; }
 
 .dom-nav .div-search  { position: relative; z-index: 9; margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; background-color: inherit; border-radius: $radius-70; }
 .dom-nav .div-search .o-form  { border-color: $tp; }
@@ -240,17 +251,17 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-nav .div-nav-local .p-accordion-header-link:is(:not([aria-expanded]), [aria-expanded="false"])  { color: $color-text-30; }
 .dom-nav .div-nav-local .p-accordion-header-link[aria-expanded]:after  { @include inc-symbol(); width: 1em; height: 1em; transition: transform 0.25s; }
-.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded]:after  { content: "arrow_drop_down"; margin-left: $gap-element-50; color: #CBD5E1; }
-.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded="true"]:after  { content: "arrow_drop_up"; margin-left: $gap-element-50; color: #64748B; }
+.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded]:after  { content: "arrow_drop_down"; margin-left: $gap-element-50; color: $color-icon-40; }
+.dom-nav .div-nav-local .p-accordion-header-link[aria-expanded="true"]:after  { content: "arrow_drop_up"; margin-left: $gap-element-50; color: $color-icon-70; }
 .dom-nav .div-nav-local .p-accordion-header-link[aria-expanded]:after  { content: ""; image-rendering: pixelated; background: var(--obj-ico-arrow-drop-down) no-repeat 25% /500%; }
 .dom-nav .div-nav-local .p-accordion-header-link[aria-expanded="true"]:after  { content: ""; background-position: 0; transform: rotate(180deg); }
 
 .dom-nav .div-nav-local .header .p-accordion-header-link  { font-weight: $bold-70; }
 .dom-nav .div-nav-local .header .p-accordion-header-text  { padding: $gap-element-50 0; }
 .dom-nav .div-nav-local .p-accordion-content  { position: relative; padding: $gap-element-30 0; }
-.dom-nav .div-nav-local .p-accordion-content:before  { content: ""; position: absolute; top: 0; width: $e20; height: 100%; background: #CCC; }
+.dom-nav .div-nav-local .p-accordion-content:before  { content: ""; position: absolute; top: 0; width: $e20; height: 100%; background: $color-edge-40; }
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text  { border-radius: 0 12px 12px 0; }
-.dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*)  { color: #2968F9; background-color: #E6EDFE; }
+.dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*)  { color: #{$color-key1-40}; background-color: #{$color-ground2-blue-30}; }
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*):before  { content: ""; position: absolute; left: 0; top: 0; width: $e30; height: 100%; background: #2149A3; border-radius: 0; }
 
 .dom-nav .div-nav-local >.m-binds  { position: sticky; bottom: 0; margin-top: auto; }

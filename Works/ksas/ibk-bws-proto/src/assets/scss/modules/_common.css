@@ -145,6 +145,9 @@
   --design-control-normal:              var(--palette-blue-400);
   --design-control-strong:              var(--palette-blue-600);
 
+  --design-link1-normal:                var(--palette-gray-600);
+  --design-link1-strong:                var(--palette-gray-800);
+
   --design-button1-normal:              var(--design-primary-heavy);
   --design-button1-strong:              var(--design-primary-strong);
 
@@ -254,6 +257,9 @@
 
   --color-control-40:           var(--design-control-normal);
   --color-control-70:           var(--design-control-strong);
+
+  --color-link1-40:             var(--design-link1-normal);
+  --color-link1-70:             var(--design-link1-strong);
 
 /*
   --color-button-40:            var(--design-button-normal);
