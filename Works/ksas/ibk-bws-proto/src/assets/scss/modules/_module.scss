@@ -965,7 +965,7 @@
 .m-mdi >.lists >:last-child  { margin-right: $e10; }
 
 .m-mdi >.controls  { position: relative; padding-left: $e10; }
-.m-mdi >.controls:before  { --width: #{III(12)}; content: ""; position: absolute; left: III(-12); width: var(--width); height: 100%; border: 1px solid Red; }
+.m-mdi >.controls:before  { --width: #{III(12)}; content: ""; position: absolute; right: 100%; transform: translateX($e10); width: var(--width); height: 100%; background: fnLinearGradient(right); }
 .m-mdi >.controls .link.group  { gap: 0 var(--gap); }
 .m-mdi >.controls .link.group >.item  { position: relative; padding: 0 var(--gap); }
 .m-mdi >.controls .link.group >.item:not(:first-child):before  { content: ""; position: absolute; left: calc($e10 - var(--gap)); top: 50%; @include inc-translate(0); width: $e10; height: III(10); background: $color-edge-40; }
