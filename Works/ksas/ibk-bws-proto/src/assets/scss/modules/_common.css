@@ -159,7 +159,7 @@
   --design-button-hover:                var(--palette-dimmed-008);
 
   --design-grid-selected:               var(--palette-green-200);
-  --design-grid-selected-70:            var(--palette-green-500);
+  --design-grid-point:                  var(--palette-green-500);
   --design-grid-evenrow:                var(--design-background-weak);
   --design-grid-hover:                  var(--palette-dimmed-008);
 
@@ -199,10 +199,47 @@
 
   --color-ground:               var(--design-common-white);
   --color-ground-alpha-00:      rgb(from var(--color-ground) r g b / 0.0);
+  --color-ground-30:            var(--design-background-weak);
   --color-ground-40:            var(--design-background-normal);
-  --color-ground-disabled:      var(--design-background-normal);
+  --color-ground-70:            var(--design-background-strong);
+  --color-ground-90:            var(--design-background-heavy);
   --color-ground-required:      var(--design-background2-yellow-40);
+  --color-ground-disabled:      var(--design-background-normal);
 
+  --color-ground2-blue-30:      var(--design-background2-blue-30);
+  --color-ground2-blue-40:      var(--design-background2-blue-40);
+  --color-ground2-orange-40:    var(--design-background2-orange-40);
+  --color-ground2-yellow-40:    var(--design-background2-yellow-40);
+
+  --color-key1-40:              var(--design-primary-normal);
+  --color-key1-70:              var(--design-primary-strong);
+  --color-key1-90:              var(--design-primary-heavy);
+/*
+  --color-key2-40:              var(--design-secondary-normal);
+  --color-key2-70:              var(--design-secondary-strong);
+  --color-key2-90:              var(--design-primary-heavy);
+ */
+
+/*
+  --color-point-40:             var(--design-accent-normal);
+  --color-point-70:             var(--design-accent-strong);
+ */
+  --color-point-skyblue:        var(--design-point-skyblue);
+  --color-point-orange:         var(--design-point-orange);
+  --color-point-red:            var(--design-point-red);
+  --color-point-yellow:         var(--design-point-yellow);
+
+  --color-required:             var(--design-point-red);
+  --color-delete:               var(--design-point-red);
+  --color-error:                var(--design-point-red);
+
+/*
+  --color-status-80:            var(--design-status-success);
+  --color-status-50:            var(--design-status-caution);
+  --color-status-20:            var(--design-status-error);
+ */
+
+  --color-text-00:              var(--design-label-white);
   --color-text-30:              var(--design-label-alternative);
   --color-text-40:              var(--design-label-normal);
   --color-text-70:              var(--design-label-strong);
@@ -215,32 +252,34 @@
   --color-icon-90:              var(--design-icon-heavy);
   --color-icon-disabled:        var(--design-line-weak);
 
-  --color-key1-40:              var(--design-primary-normal);
-  --color-key1-70:              var(--design-primary-strong);
-  --color-key1-90:              var(--design-primary-heavy);
-  --color-key2-40:              var(--design-secondary-normal);
-  --color-key2-70:              var(--design-secondary-strong);
-  --color-key2-90:              var(--design-primary-heavy);
+  --color-control-40:           var(--design-control-normal);
+  --color-control-70:           var(--design-control-strong);
 
-  --color-point-40:             var(--design-accent-normal);
-  --color-point-70:             var(--design-accent-strong);
-
-  --color-status-80:            var(--design-status-success);
-  --color-status-50:            var(--design-status-caution);
-  --color-status-20:            var(--design-status-error);
-
-  --color-require:              var(--design-status-error);
-  --color-delete:               var(--design-status-error);
-  --color-error:                var(--design-status-error);
-
+/*
   --color-button-40:            var(--design-button-normal);
   --color-button-70:            var(--design-button-strong);
+ */
+  --color-button1-40:           var(--design-button1-normal);
+  --color-button1-70:           var(--design-button1-strong);
 
+  --color-button2-30:           var(--design-button2-weak);
+  --color-button2-40:           var(--design-button2-normal);
+  --color-button2-70:           var(--design-button2-strong);
+
+  --color-button3-30:           var(--design-button3-weak);
+  --color-button3-40:           var(--design-button3-normal);
+  --color-button3-70:           var(--design-button3-strong);
+
+  --color-grid-selected:        var(--design-grid-selected);
+  --color-grid-point:           var(--design-grid-point);
+  --color-grid-evenrow:         var(--design-grid-evenrow);
   --color-grid-hover:           var(--design-grid-hover);
 
   --color-edge-30:              var(--design-line-weak);
   --color-edge-40:              var(--design-line-normal);
   --color-edge-70:              var(--design-line-strong);
+
+  --color-edge2-blue-30:        var(--design-line2-blue-30);
 
   --color-shadow:               var(--design-common-black);
 

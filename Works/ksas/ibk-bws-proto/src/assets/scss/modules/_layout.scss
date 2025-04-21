@@ -145,13 +145,13 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 /** Sectioning-Area */
 
 /* .dom-wrapper >*  { display: flex; flex-direction: column; }
-.dom-wrapper >* >.roles  { display: flex; flex-direction: column; min-height: 100%; background-color: var(--color-ground); } */
+.dom-wrapper >* >.roles  { display: flex; flex-direction: column; min-height: 100%; background-color: $color-ground; } */
 /* .dom-wrapper >:not(.dom-nav):not(.dom-main) >.roles  { width: 1260px; margin: 0 auto; padding: 0 30px; background: rgba(0,0,0, 0.1); background: rgb(0 0 0 /10%); } */
 
 [class*=" dom-"],
   [class|="dom"]  { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
 [class*=" dom-"] >.roles,
-  [class|="dom"] >.roles  { flex: 1; display: flex; flex-direction: column; min-height: 0; background-color: var(--color-ground); }
+  [class|="dom"] >.roles  { flex: 1; display: flex; flex-direction: column; min-height: 0; background-color: $color-ground; }
 [class*=" dom-"] >.g-overlay,
   [class|="dom"] >.g-overlay  { min-height: 0; opacity: 0.001; }
 /* [class*=" dom-"] >.roles >*,
@@ -185,16 +185,16 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 /** Header */
 .dom-header  {  }
-.dom-header >.roles  { flex-direction: row; padding-bottom: $height-layout-header-sep; color: $color-white; background: $color-key1-40; }
+.dom-header >.roles  { flex-direction: row; padding-bottom: $height-layout-header-sep; color: $color-text-00; background: #00F; }
 .dom-header >.roles:has(>.div-account)  { padding-top: $height-layout-header-account; }
-.dom-header >.roles:after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: $height-layout-header-sep; background: $color-key2-40; }
+.dom-header >.roles:after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: $height-layout-header-sep; background: #00F; }
 
 .dom-header .div-root  { display: flex; align-items: center; gap: III(6); position: relative; min-width: $width-layout-nav; padding: III(4) 0 0 III(88); }
 .dom-header .div-root:after  { content: ""; position: absolute; left: III(60); top: 50%; transform: translateY(-50%);  width: III(175); height: III(24); image-rendering: pixelated; background: var(--obj-img-logo-heavy) no-repeat; }
 .dom-header .div-root >*  { font-size: III(17); color: $tp; }
 .dom-header .div-root .logo  { font-size: III(20); }
 
-.dom-header .div-account  { font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; height: $height-layout-header-account; color: white; background: $color-key1-70; }
+.dom-header .div-account  { font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; position: absolute; left: 0; top: 0; right: 0; height: $height-layout-header-account; color: $color-text-00; background: #00F; }
 .dom-header .div-account >dl  { --gap: var(--e10, 1px); display: flex; align-items: center; gap: var(--gap); }
 .dom-header .div-account >dl >*  { min-width: 0; }
 .dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
@@ -204,8 +204,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-header .div-nav-global  { font-size: $font-70; line-height: $line-70; overflow-x: auto; white-space: nowrap; }
 .dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: calc(($height-layout-header-nav - 1lh) / 2) 1em; white-space: nowrap; }
-.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 4; color: $color-white; }
-.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: $color-point-40; }
+.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 4; color: $color-text-00; }
+.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: #F00; }
 
 .dom-header .div-nav-global >*  { display: flex; padding: 0 1em; }
 
@@ -215,7 +215,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-wrapper  { height: 100%; }/* ### */
 
 
-.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid $color-edge-40; background-color: $color-ground; }
+.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid #CCC; background-color: $color-ground; }
 
 .dom-nav .div-search  { position: relative; z-index: 9; margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; background-color: inherit; border-radius: $radius-70; }
 .dom-nav .div-search .o-form  { border-color: $tp; }
@@ -248,7 +248,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav .div-nav-local .header .p-accordion-header-link  { font-weight: $bold-70; }
 .dom-nav .div-nav-local .header .p-accordion-header-text  { padding: $gap-element-50 0; }
 .dom-nav .div-nav-local .p-accordion-content  { position: relative; padding: $gap-element-30 0; }
-.dom-nav .div-nav-local .p-accordion-content:before  { content: ""; position: absolute; top: 0; width: $e20; height: 100%; background: $color-edge-40; }
+.dom-nav .div-nav-local .p-accordion-content:before  { content: ""; position: absolute; top: 0; width: $e20; height: 100%; background: #CCC; }
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text  { border-radius: 0 12px 12px 0; }
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*)  { color: #2968F9; background-color: #E6EDFE; }
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*):before  { content: ""; position: absolute; left: 0; top: 0; width: $e30; height: 100%; background: #2149A3; border-radius: 0; }
@@ -263,7 +263,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 
-.dom-main  { background: var(--color-ground); }
+.dom-main  { background: $color-ground; }
 .dom-main >*  { padding: 0 $margin-layout-inline; }
 .dom-main >:first-child  { border-top-left-radius: inherit; border-top-right-radius: inherit; }
 .dom-main >:last-child  { border-bottom-left-radius: inherit; border-bottom-right-radius: inherit; }
@@ -323,8 +323,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main .div-header  { position: sticky; top: 0; background-color: inherit; }
 // .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: 0 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 // .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
-// // .dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
-// .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+// // .dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid #BBB; }
+// .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid #BBB; }
 
 // @scope (.dom-main) to (.o-grid)  {
 //   :has(.div-header)  { background-color: gold; }
@@ -533,7 +533,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 .dom-main .div-footer  { position: sticky; bottom: 0; margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
-.dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid $color-edge-70; }
+.dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid #BBB; }
 .dom-main * ~.div-footer:before  { content: ""; position: absolute; left: III(-8); right: III(-8); height: $margin-section-50; background: $color-ground; }
 .dom-main * ~.div-footer:before  { bottom: calc(100% + $e10); background: fnLinearGradient(); }
 

@@ -59,10 +59,47 @@ $color-surface-overlay:      var(--color-surface-overlay);
 
 $color-ground:               var(--color-ground);
 $color-ground-alpha-00:      var(--color-ground-alpha-00);
+$color-ground-30:            var(--color-ground-30);
 $color-ground-40:            var(--color-ground-40);
-$color-ground-disabled:      var(--color-ground-disabled);
+$color-ground-70:            var(--color-ground-70);
+$color-ground-90:            var(--color-ground-90);
 $color-ground-required:      var(--color-ground-required);
+$color-ground-disabled:      var(--color-ground-disabled);
 
+$color-ground2-blue-30:      var(--color-ground2-blue-30);
+$color-ground2-blue-40:      var(--color-ground2-blue-40);
+$color-ground2-orange-40:    var(--color-ground2-orange-40);
+$color-ground2-yellow-40:    var(--color-ground2-yellow-40);
+
+$color-key1-40:              var(--color-key1-40);
+$color-key1-70:              var(--color-key1-70);
+$color-key1-90:              var(--color-key1-90);
+/*
+$color-key2-40:              var(--color-key2-40);
+$color-key2-70:              var(--color-key2-70);
+$color-key2-90:              var(--color-key2-90);
+ */
+
+/*
+$color-point-40:             var(--color-point-40);
+$color-point-70:             var(--color-point-70);
+ */
+$color-point-skyblue:        var(--color-point-skyblue);
+$color-point-orange:         var(--color-point-orange);
+$color-point-red:            var(--color-point-red);
+$color-point-yellow:         var(--color-point-yellow);
+
+$color-required:             var(--color-required);
+$color-delete:               var(--color-delete);
+$color-error:                var(--color-error);
+
+/*
+$color-status-80:            var(--color-status-80);
+$color-status-50:            var(--color-status-50);
+$color-status-20:            var(--color-status-20);
+ */
+
+$color-text-00:              var(--color-text-00);
 $color-text-30:              var(--color-text-30);
 $color-text-40:              var(--color-text-40);
 $color-text-70:              var(--color-text-70);
@@ -75,43 +112,48 @@ $color-icon-70:              var(--color-icon-70);
 $color-icon-90:              var(--color-icon-90);
 $color-icon-disabled:        var(--color-icon-disabled);
 
-$color-key1-40:              var(--color-key1-40);
-$color-key1-70:              var(--color-key1-70);
-$color-key1-90:              var(--color-key1-90);
-$color-key2-40:              var(--color-key2-40);
-$color-key2-70:              var(--color-key2-70);
-$color-key2-90:              var(--color-key2-90);
+$color-control-40:           var(--color-control-40);
+$color-control-70:           var(--color-control-70);
 
-$color-point-40:             var(--color-point-40);
-$color-point-70:             var(--color-point-70);
-
-$color-status-80:            var(--color-status-80);
-$color-status-50:            var(--color-status-50);
-$color-status-20:            var(--color-status-20);
-
-$color-require:              var(--color-require);
-$color-delete:               var(--color-delete);
-$color-error:                var(--color-error);
-
+/*
 $color-button-40:            var(--color-button-40);
 $color-button-70:            var(--color-button-70);
+ */
+$color-button1-40:           var(--color-button1-40);
+$color-button1-70:           var(--color-button1-70);
 
+$color-button2-30:           var(--color-button2-30);
+$color-button2-40:           var(--color-button2-40);
+$color-button2-70:           var(--color-button2-70);
+
+$color-button3-30:           var(--color-button3-30);
+$color-button3-40:           var(--color-button3-40);
+$color-button3-70:           var(--color-button3-70);
+
+$color-grid-selected:        var(--color-grid-selected);
+$color-grid-point:           var(--color-grid-point);
+$color-grid-evenrow:         var(--color-grid-evenrow);
 $color-grid-hover:           var(--color-grid-hover);
 
 $color-edge-30:              var(--color-edge-30);
 $color-edge-40:              var(--color-edge-40);
 $color-edge-70:              var(--color-edge-70);
 
+$color-edge2-blue-30:        var(--color-edge2-blue-30);
+
 $color-shadow:               var(--color-shadow);
 
 $color-shadow-alpha-10:      var(--color-shadow-alpha-10);
 $color-shadow-alpha-20:      var(--color-shadow-alpha-20);
 
+
 $dropshadow-40:              var(--dropshadow-40);
 $dropshadow-70:              var(--dropshadow-70);
 
+
 $radius-50:                  calc(var(--rem) * var(--radius-50));
 $radius-70:                  calc(var(--rem) * var(--radius-70));
+
 
 $gap-whitespace-30:          calc(var(--rem) * var(--gap-whitespace-30));
 $gap-whitespace-50:          calc(var(--rem) * var(--gap-whitespace-50));
