@@ -221,7 +221,7 @@ function CMP001502P() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="반려" className="_outline-primary" />
+              <CommonButton label="반려" className="_lined-primary" />
               <CommonButton label="승인" className="_solid-primary" />
             </div>
           </div>
