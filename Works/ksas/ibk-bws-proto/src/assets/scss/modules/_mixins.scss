@@ -6,8 +6,11 @@
   // @return calc($root-em * $int);
 }
 
-@function fnLinearGradient($dir: bottom, $start: $color-ground-alpha-00, $end: $color-ground)  {
-  @return linear-gradient(to $dir, $start, $end 65%);
+// @function fnLinearGradient($dir: bottom, $start: $color-ground-alpha-00)  {
+//   @return linear-gradient(to $dir, $start, $end);
+// }
+@function fnLinearGradient($deg: 180deg, $start: $color-ground-alpha-00, $end: $color-ground, $start-stop: null, $end-stop: 65%)  {
+  @return linear-gradient($deg, $start $start-stop, $end $end-stop);
 }
 
 @mixin most-outer-selector($new-class) {

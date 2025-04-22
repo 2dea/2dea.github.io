@@ -262,7 +262,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav .div-nav-local .p-accordion-content:before  { content: ""; position: absolute; top: 0; width: $e20; height: 100%; background: $color-edge-40; }
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text  { border-radius: 0 12px 12px 0; }
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*)  { color: #{$color-key1-40}; background-color: #{$color-ground2-blue-30}; }
-.dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*):before  { content: ""; position: absolute; left: 0; top: 0; width: $e30; height: 100%; background: #2149A3; border-radius: 0; }
+.dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*):before  { content: ""; position: absolute; left: 0; top: 0; width: $e30; height: 100%; background: var(--color-key1-70); border-radius: 0; }
 
 .dom-nav .div-nav-local >.m-binds  { position: sticky; bottom: 0; margin-top: auto; }
 
@@ -292,15 +292,15 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main :has(:where(.div-contents)) >.div-contents ~*  { margin-top: $margin-layout-block; }
 // .dom-main :has(:where(.div-contents)) >:first-child  { padding-top: $margin-layout-block; }
 
-.dom-main >.div-tablist  { font-size: inherit; line-height: inherit; border-bottom: $e10 solid #E2E8F0; }
+.dom-main >.div-tablist  { font-size: inherit; line-height: inherit; border-bottom: $e10 solid var(--color-edge-30); }
 .dom-main >.div-tablist .m-mdi  { margin-bottom: calc(-1 * $e10); padding-top: $margin-section-40; }
 
 .dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) { position: relative; }
-.dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link { position: relative; z-index: 12; border-color: #94A3B8; border-bottom-color: Transparent; background-color: $color-ground; }
+.dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link { position: relative; z-index: 12; border-color: var(--color-edge-70); border-bottom-color: Transparent; background-color: $color-ground; }
 .dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link:after { content: ""; position: absolute; left: 0; top: 100%; right: 0; height: $e20; background-color: inherit; }
 
 .o-overlaytoggle { --radius: #{$radius-50}; }
-.o-overlaytoggle.case-mdilist { font-size: $font-40; line-height: $line-40; z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid #94A3B8; background: $color-ground; }
+.o-overlaytoggle.case-mdilist { font-size: $font-40; line-height: $line-40; z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid var(--color-edge-70); background: $color-ground; }
 .o-overlaytoggle.case-mdilist { --height-row: #{III(28)}; border-radius: var(--radius) 0 var(--radius) var(--radius); }
 .o-overlaytoggle.case-mdilist .layer-body { width: calc(III(300) - $e10 * 2); max-height: calc(var(--height-row) * 5 + III(6) * 2); overflow: hidden auto; padding: III(6) III(4); }
 
@@ -334,8 +334,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main .div-header  { position: sticky; top: 0; background-color: inherit; }
 // .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: 0 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 // .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
-// // .dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid #BBB; }
-// .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid #BBB; }
+// // .dom-main * ~.div-footer  { margin-top: calc($gap-element-90 - $margin-layout-block); padding: $gap-element-70 0; border-top: $e10 solid var(--color-edge-70); }
+// .dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid var(--color-edge-70); }
 
 // @scope (.dom-main) to (.o-grid)  {
 //   :has(.div-header)  { background-color: gold; }
@@ -351,7 +351,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main :has(:where(.div-contents)) >:first-child  { padding-top: $margin-layout-block; }
 
 
-.dom-main .div-header  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; /* min-height: calc($height-form-70 + $height-form-30 + $gap-element-70 + $margin-section-50 * 2 + $e10); */ padding-top: $margin-section-50; padding-bottom: $margin-section-50; border-bottom: $e10 solid #E2E8F0; background-color: #F8FAFC; }
+.dom-main .div-header  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; /* min-height: calc($height-form-70 + $height-form-30 + $gap-element-70 + $margin-section-50 * 2 + $e10); */ padding-top: $margin-section-50; padding-bottom: $margin-section-50; border-bottom: $e10 solid var(--color-edge-30); background-color: var(--color-ground-30); }
 .dom-main .div-header .o-check  { font-size: 14px; }
 .dom-main .div-header .o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
 .dom-main .div-header .o-breadcrumb >*  { display: flex; }
@@ -544,7 +544,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main .div-footer  { position: sticky; bottom: calc(-1 * $margin-layout-block); margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 .dom-main .div-footer  { position: sticky; bottom: 0; margin: $margin-section-50 0 calc(-1 * $margin-layout-block); background-color: $color-ground; }
 .dom-main .div-footer .m-binds.type-end  { min-height: $height-form-70; }
-.dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid #BBB; }
+.dom-main * ~.div-footer  { padding: $gap-element-70 0; border-top: $e10 solid var(--color-edge-70); }
 .dom-main * ~.div-footer:before  { content: ""; position: absolute; left: III(-8); right: III(-8); height: $margin-section-50; background: $color-ground; }
 .dom-main * ~.div-footer:before  { bottom: calc(100% + $e10); background: fnLinearGradient(); }
 

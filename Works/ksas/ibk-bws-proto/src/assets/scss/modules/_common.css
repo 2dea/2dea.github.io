@@ -227,10 +227,10 @@
   --color-point-40:             var(--design-accent-normal);
   --color-point-70:             var(--design-accent-strong);
  */
-  --color-point-skyblue:        var(--design-point-skyblue);
-  --color-point-orange:         var(--design-point-orange);
   --color-point-red:            var(--design-point-red);
+  --color-point-orange:         var(--design-point-orange);
   --color-point-yellow:         var(--design-point-yellow);
+  --color-point-skyblue:        var(--design-point-skyblue);
 
   --color-required:             var(--design-point-red);
   --color-delete:               var(--design-point-red);
@@ -243,6 +243,7 @@
  */
 
   --color-text-00:              var(--design-label-white);
+  --color-text-20:              var(--design-label-assistive);
   --color-text-30:              var(--design-label-alternative);
   --color-text-40:              var(--design-label-normal);
   --color-text-70:              var(--design-label-strong);
@@ -284,6 +285,7 @@
   --color-edge-30:              var(--design-line-weak);
   --color-edge-40:              var(--design-line-normal);
   --color-edge-70:              var(--design-line-strong);
+  --color-edge-focus:           var(--design-primary-normal);
 
   --color-edge2-blue-30:        var(--design-line2-blue-30);
 

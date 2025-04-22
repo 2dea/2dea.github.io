@@ -157,7 +157,7 @@
     }
 
     >:not(:last-child)  {
-      color: #64748B;
+      color: var(--color-text-30);
     }
   }
 
@@ -182,7 +182,7 @@
       padding: III(4) III(3);
 
       &.sep  {
-        color: #CBD5E1;
+        color: var(--color-edge-40);
       }
     }
   }
@@ -274,7 +274,7 @@
     .layer-head  {
       padding: calc($margin-section-50 - III(2)) $margin-popup-inline;
       padding-right: calc($height-form-70 + $margin-popup-inline - $margin-section-30);
-      border-bottom: $e10 solid #CBD5E1;
+      border-bottom: $e10 solid var(--color-edge-40);
 
       .o-heading  {
         padding-left: 0;
@@ -372,7 +372,7 @@
 
     padding: $margin-section-40 $margin-popup-inline;
     padding-right: calc($margin-popup-inline - $margin-section-30);
-    border-bottom: $e10 solid #CBD5E1;
+    border-bottom: $e10 solid var(--color-edge-40);
     background-color: inherit;
     border-radius: var(--radius) var(--radius) 0 0;
 
@@ -565,11 +565,16 @@
 
   .p-datatable-table  {
     .p-highlight  {
-      background-color: #D9F9DB;
+      background-color: var(--color-grid-selected);
+    }
+
+    tbody tr.p-highlight  {
+      background-color: var(--color-grid-selected);
+      background: linear-gradient(90deg, var(--color-grid-point) $e30, var(--color-grid-selected) $e30);
     }
 
     .p-x-frozen-last  {
-      position: sticky; z-index: 3; border-right: $e30 double #FDD33A; background-color: inherit;
+      position: sticky; z-index: 3; border-right: $e30 double var(--color-point-yellow); background-color: inherit;
       // position: sticky; z-index: 3; left: 0;
     }
   }
