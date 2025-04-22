@@ -215,7 +215,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-header .div-nav-global  { font-size: $font-70; line-height: $line-70; overflow-x: auto; white-space: nowrap; }
 .dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: calc(($height-layout-header-nav - 1lh) / 2) 1em; white-space: nowrap; }
-.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 4; color: $color-text-00; }
+.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 3; color: $color-text-00; }
 .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: $color-point-orange; }
 
 .dom-header .div-nav-global >*  { display: flex; padding: 0 1em; }
@@ -228,11 +228,11 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid var(--theme-nav-edge-divider); background-color: $color-ground; }
 
-.dom-nav .div-search  { position: relative; z-index: 9; margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; background-color: inherit; border-radius: $radius-70; }
+.dom-nav .div-search  { position: relative; z-index: 7; margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; background-color: inherit; border-radius: $radius-70; }
 .dom-nav .div-search .o-form  { border-color: $tp; }
 .dom-nav .div-search .o-icon._search  { @include icon-flexed(20); margin-right: $gap-element-70; }
 .dom-nav .div-search .o-icon._search:before  { font-size: $height-icon-50; background-position: 50%; }
-.dom-nav .div-search .o-field  { display: flex; position: relative; z-index: 4; }
+.dom-nav .div-search .o-field  { display: flex; position: relative; z-index: 3; }
 .dom-nav .div-search .result  { position: absolute; width: 100%; background: inherit; border-radius: 0 0 $radius-70 $radius-70; box-shadow: inherit; }
 .dom-nav .div-search:focus-within  { box-shadow: $dropshadow-40; }
 .dom-nav .div-search:not(:focus-within) .result  { display: none; }
@@ -440,40 +440,61 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .o-section  { display: flex; flex-direction: column; gap: $margin-section-20; }
 .o-section:has(>.main._primary),
   .o-section >.main._primary  { flex: 1 0 0; }
-.o-section >.main  {
-  --height-section-main-body-10: calc(var(--height-cell) * 10 /* + var(--edge-cell) * 1 */ + var(--width-scrollbar));
-  --height-section-main-body-5: calc(var(--height-cell) * 5 /* + var(--edge-cell) * 1 */ + var(--width-scrollbar));
-  --height-section-main-body-3: calc(var(--height-cell) * 3 /* + var(--edge-cell) * 1 */ + var(--width-scrollbar));
-  --height-section-main-body: var(--height-section-main-body-10);
+.o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 3; }
 
-  --height-section-main-head-1: calc(var(--height-cell-head) * 1);
-  --height-section-main-head-2: calc(var(--height-cell-head) * 2);
-  --height-section-main-head-3: calc(var(--height-cell-head) * 3);
-  --height-section-main-head: var(--height-section-main-head-1);
+// .o-section >.main  {
+//   --height-section-main-body-10: calc(var(--height-cell) * 10 + var(--edge-cell) * 2 + var(--width-scrollbar));
+//   --height-section-main-body-5: calc(var(--height-cell) * 5 + var(--edge-cell) * 2 + var(--width-scrollbar));
+//   --height-section-main-body-3: calc(var(--height-cell) * 3 + var(--edge-cell) * 2 + var(--width-scrollbar));
+//   --height-section-main-body: var(--height-section-main-body-10);
 
-  --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head));
-  // position: relative;
-}
-// .o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { z-index: 4; }
-// .o-section >.main._primary.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-2)); }
-// .o-section >.main._primary.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-3)); }
-// .o-section >.main._primary.rows-body-5i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head)); }
-// .o-section >.main._primary.rows-body-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head)); }
-// .o-section >.main._primary.rows-body-5i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-2)); }
-// .o-section >.main._primary.rows-body-3i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-2)); }
-// .o-section >.main._primary.rows-body-5i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-3)); }
-// .o-section >.main._primary.rows-body-3i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-3)); }
-// .o-section >.main._primary.rows-auto  { --height-section-main: auto !important; }
+//   --height-section-main-head-1: calc(var(--height-cell-head) * 1);
+//   --height-section-main-head-2: calc(var(--height-cell-head) * 2);
+//   --height-section-main-head-3: calc(var(--height-cell-head) * 3);
+//   --height-section-main-head: var(--height-section-main-head-1);
+
+//   --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head));
+//   // position: relative;
+// }
+// // .o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { z-index: 3; }
+// // .o-section >.main._primary.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-2)); }
+// // .o-section >.main._primary.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-3)); }
+// // .o-section >.main._primary.rows-body-5i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head)); }
+// // .o-section >.main._primary.rows-body-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head)); }
+// // .o-section >.main._primary.rows-body-5i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-2)); }
+// // .o-section >.main._primary.rows-body-3i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-2)); }
+// // .o-section >.main._primary.rows-body-5i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-3)); }
+// // .o-section >.main._primary.rows-body-3i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-3)); }
+// // .o-section >.main._primary.rows-auto  { --height-section-main: auto !important; }
+// // .o-section >.main._primary:not(:has(.p-datatable-scrollable-table))  { flex-basis: var(--height-section-main); min-height: 0; overflow: auto; }
+// .o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 3; }
+// .o-section >.main.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-2)); }
+// .o-section >.main.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-3)); }
+// .o-section >.main.rows-body-5i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head)); }
+// .o-section >.main.rows-body-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head)); }
+// .o-section >.main.rows-body-5i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-2)); }
+// .o-section >.main.rows-body-3i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-2)); }
+// .o-section >.main.rows-body-5i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-3)); }
+// .o-section >.main.rows-body-3i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-3)); }
+// .o-section >.main.rows-auto  { --height-section-main: auto !important; }
 // .o-section >.main._primary:not(:has(.p-datatable-scrollable-table))  { flex-basis: var(--height-section-main); min-height: 0; overflow: auto; }
-.o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 4; }
-.o-section >.main.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-2)); }
-.o-section >.main.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head-3)); }
-.o-section >.main.rows-body-5i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head)); }
-.o-section >.main.rows-body-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head)); }
-.o-section >.main.rows-body-5i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-2)); }
-.o-section >.main.rows-body-3i.rows-head-2i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-2)); }
-.o-section >.main.rows-body-5i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-5) + var(--height-section-main-head-3)); }
-.o-section >.main.rows-body-3i.rows-head-3i  { --height-section-main: calc(var(--height-section-main-body-3) + var(--height-section-main-head-3)); }
+
+.o-section >.main  {
+  --height-section-main-body: calc(var(--height-cell) * 10);
+  --height-section-main-head: calc(var(--height-cell-head) * 1);
+
+  --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head) + var(--edge-cell) * 2 + var(--width-scrollbar));
+}
+.o-section >.main:has(.o-grid-table thead >:nth-child(2))  { --height-section-main-head: calc(var(--height-cell-head) * 2); }
+.o-section >.main:has(.o-grid-table thead >:nth-child(3))  { --height-section-main-head: calc(var(--height-cell-head) * 3); }
+@for $i from 4 through 5 {
+  .o-section >.main:has(.o-grid-table thead >:nth-child(#{$i}))  { --height-section-main-head: calc(var(--height-cell-head) * #{$i}); }
+}
+.o-section >.main.rows-body-5i  { --height-section-main-body: calc(var(--height-cell) * 5); }
+.o-section >.main.rows-body-3i  { --height-section-main-body: calc(var(--height-cell) * 3); }
+@for $i from 1 through 30 {
+  .o-section >.main.rows-body-#{$i}i  { --height-section-main-body: calc(var(--height-cell) * #{$i}); }
+}
 .o-section >.main.rows-auto  { --height-section-main: auto !important; }
 .o-section >.main._primary:not(:has(.p-datatable-scrollable-table))  { flex-basis: var(--height-section-main); min-height: 0; overflow: auto; }
 

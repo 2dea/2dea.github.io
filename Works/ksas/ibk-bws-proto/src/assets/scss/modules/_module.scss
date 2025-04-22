@@ -269,7 +269,7 @@
 .m-image-list .card >:first-of-type  { border-radius: var(--radius) var(--radius) 0 0; }
 .m-image-list .card >:last-of-type  { border-radius: 0 0 var(--radius) var(--radius); }
 .m-image-list .card:has(:checked)  { border-color: var(--color-control-40); box-shadow: $dropshadow-40; }
-.m-image-list .card .o-check  { position: absolute; z-index: 4; inset: 0; /* pointer-events: none;  */}
+.m-image-list .card .o-check  { position: absolute; z-index: 3; inset: 0; /* pointer-events: none;  */}
 .m-image-list .card .o-check >i  { visibility: hidden; }
 // .m-image-list .card >.image  { width: 100%; aspect-ratio: 1 / 1; }
 // .m-image-list .card >.image >*  { @include inc-abscenter(); position: relative; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: cover; }
@@ -300,7 +300,7 @@
 
 
 // /** Tooltips */
-// .o-tooltip  { position: absolute; z-index: 5; text-align: left; text-align: start; }
+// .o-tooltip  { position: absolute; z-index: 10; text-align: left; text-align: start; }
 // .tooltip-wrap  { padding: 0.6rem 1rem; color: $color-text-00; background: var(--color-ground-tooltip); cursor: auto; border-radius: calc($radius-50 / 2); }
 // .tooltip-head .heading  { font-weight: var(--bold-70); display: block; margin-bottom: var(--gap-element-50-narrow); padding-bottom: var(--gap-element-50-narrow); border-bottom: $e10 solid var(--color-edge3); }
 // .tooltip-body  { padding-right: var(--gap-element-50-wide); }
@@ -1017,7 +1017,8 @@
 
 
 .o-grid-table  { @include setResetFont(); }
-.o-grid-table  { clear: both; border: $e10 solid var(--color-edge-30); }
+.o-grid-table  { clear: both; }
+:has(>table):where(.o-grid-table, .o-grid-table *)  { border: var(--edge-cell) solid var(--color-edge-40); }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >*  { width: 0; }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }  // ### min-width: 0;
 .o-grid-table .wdth-0:where(tr >*, col)  { width: 0; min-width: 0; }
@@ -1026,35 +1027,39 @@
 .o-grid-table .wdth-auto:where(tr >*, col)  { width: auto; }
 .o-grid-table table  { width: 100%; background: $color-ground; text-align: center; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
-// .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
+// // .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
 .o-grid-table thead  { font-size: $font-40; line-height: $line-40; color: var(--color-key1-70); background: var(--color-ground-40); }
 .o-grid-table th  { font-weight: $bold-70; }
 
-.o-grid-table tr >*  { min-width: 0; height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid var(--color-edge-30); border-width: 0 $e10 $e10 0; }
+// .o-grid-table tr >*  { min-width: 0; height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid var(--color-edge-30); border-width: 0 var(--edge-cell) var(--edge-cell) 0; }
+.o-grid-table tr >*  { min-width: 0; height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid var(--color-edge-30); }
 .o-grid-table tr >*  { white-space: nowrap; }
 .o-grid-table tr >* >*  { white-space: normal; }
-.o-grid-table tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; }
-.o-grid-table tr >:first-child  { border-left-width: $e10; }
+// .o-grid-table tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: var(--edge-cell); }
+// .o-grid-table tr >:first-child  { border-left-width: var(--edge-cell); }
 
-.o-grid-table thead >* >*  { padding-left: III(11); padding-right: III(11); }
-// .o-grid-table thead >tr:last-child >*  { border-bottom-color: var(--color-key1-70); }
-.o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: var(--color-key1-70); }
-// .o-grid-table tbody >* >*  { white-space: nowrap; }
-// .o-grid-table tbody >* >* >*  { white-space: normal; }
+.o-grid-table tr >*  { border-width: 0 var(--edge-cell) var(--edge-cell) 0; }
+.o-grid-table thead:after  { content: ""; display: table-row; position: absolute; z-index: 3; width: calc(100% - var(--edge-cell)); height: var(--edge-cell); margin-top: calc(-1 * var(--edge-cell)); background: var(--color-key1-70); }
+
+.o-grid-table thead >* >*  { padding-left: III(11); padding-right: III(11); border-color: var(--color-edge-40); }
+// // .o-grid-table thead >tr:last-child >*  { border-bottom-color: var(--color-key1-70); }
+// .o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: var(--color-key1-70); }
+// // .o-grid-table tbody >* >*  { white-space: nowrap; }
+// // .o-grid-table tbody >* >* >*  { white-space: normal; }
 .o-grid-table tbody >tr:nth-child(even)  { background: var(--design-grid-evenrow); }
 
 .o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
 .o-grid-table tbody >tr.js_clicked  { background-color: var(--color-grid-selected); background: linear-gradient(90deg, var(--color-grid-point) $e30, var(--color-grid-selected) $e30); }
-.o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 3; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
+.o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 2; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
 
 // .o-grid-table tbody >tr:is(:nth-child(3), :nth-child(6))  { background-color: var(--color-grid-selected); }
 // .o-grid-table tbody >tr:is(:nth-child(9), :nth-child(12))  { background-color: var(--color-ground2-blue-40); }
 
 // .o-grid-table tbody >tr >*  { min-width: 180px; }
 
-// .o-grid-table thead  { position: sticky; z-index: 4; top: 0; }
-// .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 3; left: 0; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
+// .o-grid-table thead  { position: sticky; z-index: 3; top: 0; }
+// .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 2; left: 0; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
 
 .o-grid-table .o-form:not(tr >:where(.g-start, .g-end) *):only-child  { margin-left: auto; margin-right: auto; }
 .o-grid-table .o-form:is(tr >:where(.g-end) *):only-child  { margin-left: auto; }

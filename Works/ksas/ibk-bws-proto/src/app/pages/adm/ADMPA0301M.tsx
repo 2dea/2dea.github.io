@@ -198,7 +198,7 @@ function ADMPA0301M() {
                 <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
-                    <div className="p-datatable-wrapper">
+                    <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
@@ -453,7 +453,7 @@ function ADMPA0301M() {
                 <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
-                    <div className="p-datatable-wrapper">
+                    <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
@@ -522,7 +522,7 @@ function ADMPA0301M() {
                 <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
-                    <div className="p-datatable-wrapper">
+                    <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />

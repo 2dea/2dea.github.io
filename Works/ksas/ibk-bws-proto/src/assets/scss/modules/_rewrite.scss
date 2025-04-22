@@ -574,13 +574,13 @@
     }
 
     .p-x-frozen-last  {
-      position: sticky; z-index: 3; border-right: $e30 double var(--color-point-yellow); background-color: inherit;
-      // position: sticky; z-index: 3; left: 0;
+      position: sticky; z-index: 2; border-right: $e30 double var(--color-point-yellow); background-color: inherit;
+      // position: sticky; z-index: 2; left: 0;
     }
   }
 
   .p-datatable-scrollable-table >.p-datatable-thead  {
-    z-index: 4;
+    z-index: 3;
   }
 
   // [data-pc-section="sort"],  [data-pc-section="columnfilter"]  { display: none; }
