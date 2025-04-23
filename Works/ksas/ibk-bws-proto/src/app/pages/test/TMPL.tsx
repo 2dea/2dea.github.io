@@ -176,7 +176,7 @@ function TMPL() {
                       <div className="fields">
                         <div className="o-form _input mode-required">
                           {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
-                          <AutoComplete value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                          <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                           <i aria-hidden="true"></i>
                         </div>
                       </div>
@@ -233,6 +233,482 @@ function TMPL() {
                     <CommonButton label="조회" className="_inquire" />
                   </div>
                 </form>
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h2 className="o-heading level2"><span className="label">양식샘플</span></h2>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <CommonButton label="신규" className="_create" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="main">
+                    <form className="m-data-form">
+                      <table className="table">
+                        <colgroup>
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                        </colgroup>
+
+                        <tbody>
+                          <tr>
+                            <th colSpan={4}>
+                              <Label label={`InputText`} require={false} />
+                            </th>
+                            <td colSpan={4}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value="Value" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={4}>
+                              <Label label={`Icon(search) + InputText`} require={false} />
+                            </th>
+                            <td colSpan={4}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <Icon icon="search" />
+                                    <InputText placeholder="" value="Value" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={4}>
+                              <Label label={`InputText + Search-ImageButton`} require={false} />
+                            </th>
+                            <td colSpan={4}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="검색" icon="search" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={4}>
+                              <Label label={`InputText + Units`} require={false} />
+                            </th>
+                            <td colSpan={4}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <span className="units">%</span>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={4}>
+                              <Label label={`AutoComplete`} require={false} />
+                            </th>
+                            <td colSpan={4}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="초기화" icon="remove" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={4}>
+                              <Label label={`AutoComplete`} require={false} />
+                            </th>
+                            <td colSpan={4}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-spin wdth-40">
+                                    <InputText placeholder="" value="0" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="증가" icon="sum-plus" />
+                                    </span>
+                                    <span className="inner-binds">
+                                      <ImageButton label="감소" icon="sum-minus" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={3}>
+                              <Label label={`주소`} require={false} />
+                            </th>
+                            <td colSpan={9}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-40">
+                                    <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="검색" icon="search" />
+                                    </span>
+                                  </div>
+                                  <div className="o-form _input wdth-90">
+                                    <InputText placeholder="" value="서울특별시 중구 을지로 79" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="기업은행 본점" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`팩스`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-20">
+                                    <InputText placeholder="" value="729" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <span className="sep type-hyphen">-</span>
+                                  <div className="o-form _input wdth-20">
+                                    <InputText placeholder="" value="0001" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`온라인번호`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0714" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={3}>
+                              <Label label={`지도코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0001" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`소유구분코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _select wdth-50">
+                                    <XDropdown appendTo={'self'} className="bind" />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`외환부점코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0484" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`재활모점코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0714" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={3}>
+                              <Label label={`모점코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`교환모점코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0810" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`국고결제모점코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0001" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`한국은행관할​통합부점코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={3}>
+                              <Label label={`관할사업본부코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`관할본부코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`지역본부코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`사무지원센터코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0810" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={3}>
+                              <Label label={`부점장코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="[021189] 이범건" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`부점장부임일`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-date wdth-50">
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`부점상태코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _select wdth-50">
+                                    <XDropdown appendTo={'self'} className="bind" />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`개점일`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-date wdth-50">
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={3}>
+                              <Label label={`폐점일`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-date wdth-50">
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`EDW​실제근무​부점코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0810" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`계리부점코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value="0001" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={3}>
+                              <Label label={`조직속성코드`} require={false} />
+                            </th>
+                            <td colSpan={3}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </form>
+                  </div>
+                </div>
 
               </div>
             </div>
@@ -671,7 +1147,7 @@ function TMPL() {
             <div className="o-grid">
               <div className="column">
 
-              <div className="o-section">
+                <div className="o-section">
                   <div className="m-header">
                     <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
@@ -1328,7 +1804,7 @@ function TMPL() {
             <div className="o-grid">
               <div className="column">
 
-              <div className="o-section">
+                <div className="o-section">
                   <div className="m-header">
                     <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 

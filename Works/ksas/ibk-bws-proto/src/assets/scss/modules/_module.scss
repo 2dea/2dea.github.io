@@ -168,6 +168,7 @@
 .o-icon._mdi-lock:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); }
 .o-icon._mdi-lock-locked:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); background-position: 25%; }
 .o-icon._popup-close:before  { background-color: $tp; background-image: var(--obj-ico-popup-close); background-size: 100%; }
+.o-icon._remove:before  { background-color: $tp; background-image: var(--obj-ico-remove); background-size: 100%; }
 .o-icon._sort-asc:before  { background-color: $tp; background-image: var(--obj-ico-sort-asc); background-size: 100%; }
 .o-icon._sort-dec:before  { background-color: $tp; background-image: var(--obj-ico-sort-dec); background-size: 100%; }
 .o-icon._user-id:before  { background-color: $tp; background-image: var(--obj-ico-user-id); background-size: 100%; }
@@ -784,9 +785,16 @@
   }
 }
 
+.o-form .inner-binds  { display: inline-flex; align-items: center; height: $height-form-30; }
+
 .o-form:has(>.bind[disabled])  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
 .o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: var(--color-ground-disabled); }
 .o-form.mode-required  { background: var(--color-ground-required); }
+
+.o-form:has(input:where([value=""], :not([value]))) :has(>.o-image-button._remove)  { display: none; }
+.o-form.type-spin input  { text-align: center; }
+.o-form.type-spin .inner-binds:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); background: var(--color-edge-40); }
+.o-form.type-spin :has(>.o-image-button._sum-minus)  { order: -1; flex-direction: row-reverse; }
 
 // .o-form  { border-color: $tp; background: $color-ground; }
 // .o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
@@ -809,6 +817,8 @@
 .o-form >:is(input, select)  { padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10); }
 .o-form >:is(input, select)  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .o-form >.bind  { display: flex; align-items: center; text-align: left; text-align: start; height: auto; min-height: 100%; }
+.o-form :is(input, select)  { flex: 1 0 0; font-weight: inherit; font-size: inherit; line-height: inherit; height: 100%; }
+
 
 .o-form._input.type-time >.bind  { text-align: center; }
 

@@ -106,7 +106,7 @@ $width-layout-nav:                      calc(var(--rem) * var(--width-layout-nav
 ::-webkit-resizer  { image-rendering: pixelated; background: var(--obj-sym-resizer-scrollable) 0 /100%; }
 ::-webkit-scrollbar  { width: var(--width-scrollbar, 12px); height: var(--width-scrollbar, 12px); }
 ::-webkit-scrollbar-corner  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid var(--color-scrollbar-corner-edge, rgba(255,255,255, 0.05)); border-radius: 2px; }
-::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid var(--color-scrollbar-track-edge, Transparent); border-radius: var(--radius-scrollbar-track, 2px); will-change: background-color; }
+::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid; border-color: var(--color-scrollbar-track-edge, Transparent); border-radius: var(--radius-scrollbar-track, 2px); will-change: background-color; }
 ::-webkit-scrollbar-thumb  { min-width: 50px; min-height: 50px; border: var(--margin-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--color-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--color-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--margin-scrollbar, 3px)); border-radius: var(--width-scrollbar, 12px); will-change: background-color, outline-color; }
 ::-webkit-scrollbar-thumb:hover  { background-color: var(--color-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
 ::-webkit-scrollbar-thumb:active  { background-color: var(--color-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
@@ -483,20 +483,21 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .o-section >.main._primary:not(:has(.p-datatable-scrollable-table))  { flex-basis: var(--height-section-main); min-height: 0; overflow: auto; }
 
 .o-section >.main  {
-  --height-section-main-body: calc(var(--height-cell) * 10);
-  --height-section-main-head: calc(var(--height-cell-head) * 1);
+  --remain-section-main: (var(--edge-cell) * 2 + var(--width-scrollbar));
+  --height-section-main-body: (var(--height-cell) * 10);
+  --height-section-main-head: (var(--height-cell-head) * 1);
 
-  --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head) + var(--edge-cell) * 2 + var(--width-scrollbar));
+  --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head) + var(--remain-section-main));
 }
-.o-section >.main:has(.o-grid-table thead >:nth-child(2))  { --height-section-main-head: calc(var(--height-cell-head) * 2); }
-.o-section >.main:has(.o-grid-table thead >:nth-child(3))  { --height-section-main-head: calc(var(--height-cell-head) * 3); }
+.o-section >.main:has(.o-grid-table thead >:nth-child(2))  { --height-section-main-head: (var(--height-cell-head) * 2); }
+.o-section >.main:has(.o-grid-table thead >:nth-child(3))  { --height-section-main-head: (var(--height-cell-head) * 3); }
 @for $i from 4 through 5 {
-  .o-section >.main:has(.o-grid-table thead >:nth-child(#{$i}))  { --height-section-main-head: calc(var(--height-cell-head) * #{$i}); }
+  .o-section >.main:has(.o-grid-table thead >:nth-child(#{$i}))  { --height-section-main-head: (var(--height-cell-head) * #{$i}); }
 }
-.o-section >.main.rows-body-5i  { --height-section-main-body: calc(var(--height-cell) * 5); }
-.o-section >.main.rows-body-3i  { --height-section-main-body: calc(var(--height-cell) * 3); }
+.o-section >.main.rows-body-5i  { --height-section-main-body: (var(--height-cell) * 5); }
+.o-section >.main.rows-body-3i  { --height-section-main-body: (var(--height-cell) * 3); }
 @for $i from 1 through 30 {
-  .o-section >.main.rows-body-#{$i}i  { --height-section-main-body: calc(var(--height-cell) * #{$i}); }
+  .o-section >.main.rows-body-#{$i}i  { --height-section-main-body: (var(--height-cell) * #{$i}); }
 }
 .o-section >.main.rows-auto  { --height-section-main: auto !important; }
 .o-section >.main._primary:not(:has(.p-datatable-scrollable-table))  { flex-basis: var(--height-section-main); min-height: 0; overflow: auto; }

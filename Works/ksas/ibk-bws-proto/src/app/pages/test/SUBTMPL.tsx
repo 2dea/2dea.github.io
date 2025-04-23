@@ -875,6 +875,7 @@ function SUBTMPL() {
                                 <i className="o-icon _grid-edited wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _popup-close wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _remove wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-asc wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-dec wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _user-id wdth-50" aria-hidden="true"></i>
