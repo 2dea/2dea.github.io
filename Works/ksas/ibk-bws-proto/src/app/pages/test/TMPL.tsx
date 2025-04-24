@@ -12,11 +12,13 @@ import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
+import XMultiSelect from 'app/shared/modules/XMultiSelect';
 import { Dialog } from 'primereact/dialog';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { InputNumber } from 'primereact/inputnumber';
 import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
@@ -42,6 +44,9 @@ function TMPL() {
 
   // InputText
   const [value, setValue] = useState<string>('');
+
+  // InputNumber
+  const [InputNumberValue, setInputNumberValue] = useState(0);
 
   // AutoComplete
   const [AutoCompleteValue, setAutoCompleteValue] = useState('');
@@ -341,13 +346,13 @@ function TMPL() {
                             </td>
 
                             <th colSpan={4}>
-                              <Label label={`AutoComplete`} require={false} />
+                              <Label label={`InputNumber`} require={false} />
                             </th>
                             <td colSpan={4}>
-                              <div className="o-field">
+                              {/* <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-spin wdth-40">
-                                    <InputText placeholder="" value="0" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <InputText type="number" placeholder="" value="0" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                     <span className="inner-binds">
                                       <ImageButton label="증가" icon="sum-plus" />
@@ -357,29 +362,27 @@ function TMPL() {
                                     </span>
                                   </div>
                                 </div>
+                              </div> */}
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-spin wdth-40">
+                                    <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={10}
+                                      decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
                               </div>
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={4}>
                               <Label label={`주소`} require={false} />
                             </th>
-                            <td colSpan={9}>
+                            <td colSpan={4}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-40">
-                                    <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                    <i aria-hidden="true"></i>
-                                    <span className="inner-binds">
-                                      <ImageButton label="검색" icon="search" />
-                                    </span>
-                                  </div>
-                                  <div className="o-form _input wdth-90">
-                                    <InputText placeholder="" value="서울특별시 중구 을지로 79" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                  <div className="o-form _input">
-                                    <InputText placeholder="" value="기업은행 본점" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <div className="o-form _select">
+                                    <XMultiSelect appendTo={'self'} className="bind" />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -1120,7 +1123,7 @@ function TMPL() {
                               <td>개점</td>
                               <td className="g-start">본부영업점</td>
                               <td className="g-start">중부지역본부</td>
-                              <td><span className="o-digit type-number">123-45-67890</span></td>
+                              <td><span className="o-digit type-num">123-45-67890</span></td>
                               <td><span className="o-digit type-tel">02-729-7610</span></td>
                               <td><span className="o-digit type-tel">123-134</span></td>
                               <td>12345</td>
@@ -1208,7 +1211,7 @@ function TMPL() {
                             <td colSpan={3}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input type-number">
+                                  <div className="o-form _input type-num">
                                     <InputText placeholder="" value="202-81-00978" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>

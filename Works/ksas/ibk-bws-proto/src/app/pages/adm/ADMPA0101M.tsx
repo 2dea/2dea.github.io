@@ -12,11 +12,13 @@ import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
+import XMultiSelect from 'app/shared/modules/XMultiSelect';
 import { Dialog } from 'primereact/dialog';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { InputNumber } from 'primereact/inputnumber';
 import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
@@ -37,6 +39,9 @@ function ADMPA0101M() {
 
   // InputText
   const [value, setValue] = useState<string>('');
+
+  // InputNumber
+  const [InputNumberValue, setInputNumberValue] = useState(0);
 
   // AutoComplete
   const [AutoCompleteValue, setAutoCompleteValue] = useState('');
@@ -249,7 +254,7 @@ function ADMPA0101M() {
                             <td>개점</td>
                             <td className="g-start">본부영업점</td>
                             <td className="g-start">중부지역본부</td>
-                            <td><span className="o-digit type-number">123-45-67890</span></td>
+                            <td><span className="o-digit type-num">123-45-67890</span></td>
                             <td><span className="o-digit type-tel">02-729-7610</span></td>
                             <td><span className="o-digit type-tel">123-134</span></td>
                             <td>12345</td>
@@ -337,7 +342,7 @@ function ADMPA0101M() {
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input type-number">
+                                <div className="o-form _input type-num">
                                   <InputText placeholder="" value="202-81-00978" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>

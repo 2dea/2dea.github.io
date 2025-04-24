@@ -542,10 +542,16 @@
 .g-fixed-table  { table-layout: fixed; }
 .g-auto-table  { table-layout: auto; }
 
+/*
 .g-justify  { justify-content: space-evenly; text-align: justify; }
 .g-center  { justify-content: center; text-align: center; }
 .g-end  { justify-content: flex-end; text-align: right; text-align: end; }
 .g-start  { justify-content: flex-start; text-align: left; text-align: start; }
+ */
+.g-justify  { text-align: justify !important; }
+.g-center  { text-align: center !important; }
+.g-end  { text-align: right !important; text-align: end !important; }
+.g-start  { text-align: left !important; text-align: start !important; }
 
 .g-middle  { display: inline-flex; align-items: center; }
 

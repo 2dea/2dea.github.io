@@ -12,11 +12,13 @@ import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
 import XDropdown from 'app/shared/modules/XDropdown';
+import XMultiSelect from 'app/shared/modules/XMultiSelect';
 import { Dialog } from 'primereact/dialog';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { InputNumber } from 'primereact/inputnumber';
 import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
 import { Nullable } from 'primereact/ts-helpers';
@@ -37,6 +39,9 @@ function CMP000501P() {
 
   // InputText
   const [value, setValue] = useState<string>('');
+
+  // InputNumber
+  const [InputNumberValue, setInputNumberValue] = useState(0);
 
   // AutoComplete
   const [AutoCompleteValue, setAutoCompleteValue] = useState('');

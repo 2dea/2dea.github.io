@@ -532,12 +532,12 @@
 .o-image-button  { font-weight: var(--bold-40, 400); font-size: $ss; line-height: 1; display: inline-block; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; position: relative; min-width: 1em; min-height: 1em; padding: 0; border: 0; background: none; border-radius: 0; box-shadow: none; text-decoration: none; text-align: center; white-space: normal; }
 .o-image-button >*  { flex: none; min-width: 0; }
 
-.o-image-button  { font-size: $height-form-30; width: 1em; height: 1em; overflow: hidden; border-radius: $radius-50; }
+.o-image-button  { font-size: $height-form-30; width: 1em; height: 1em; /* overflow: hidden; */ border-radius: $radius-50; }
 .o-image-button:not([disabled], [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color; }
 .o-image-button:empty  { background-color: Gold; }
 .o-image-button >.label  { @include inc-sronly(); }
 
-.o-image-button:is([disabled], [aria-disabled="true"])  { filter: opacity(0.3); }
+.o-image-button:is([disabled], [aria-disabled="true"])  { filter: opacity(0.4); }
 
 .o-image-button:not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
 
@@ -645,7 +645,7 @@
 
 
 
-.m-checks  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-70 $gap-element-90; }
+.m-checks  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-70 $gap-element-80; }
 // .m-checks  { display: grid; grid-template-columns: repeat(auto-fill, minmax(III(80), 1fr)); }
 
 
@@ -675,11 +675,17 @@
 .o-form ::-ms-clear,
   .o-form ::-ms-reveal  { display: none; }
 
-.o-form :-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: start !important; text-align: left; color: $color-text-placeholder !important; }
-.o-form ::-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: start !important; text-align: left; color: $color-text-placeholder !important; }
-.o-form ::-moz-placeholder  { font-weight: inherit; font-family: inherit; text-align: start !important; text-align: left; color: $color-text-placeholder; opacity: 1; }
+.o-form :-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: inherit !important; color: $color-text-placeholder !important; }
+.o-form ::-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: inherit !important; color: $color-text-placeholder !important; }
+.o-form ::-moz-placeholder  { font-weight: inherit; font-family: inherit; text-align: inherit !important; color: $color-text-placeholder; opacity: 1; }
 .o-form ::-webkit-input-placeholder,
-  .o-form ::placeholder  { font-weight: inherit; font-family: inherit; text-align: start !important; text-align: left; color: $color-text-placeholder; }
+  .o-form ::placeholder  { font-weight: inherit; font-family: inherit; text-align: inherit !important; color: $color-text-placeholder; }
+
+.o-form.align-placeholder-start :-ms-input-placeholder  { text-align: start !important; text-align: left; }
+.o-form.align-placeholder-start ::-ms-input-placeholder  { text-align: start !important; text-align: left; }
+.o-form.align-placeholder-start ::-moz-placeholder  { text-align: start !important; text-align: left; }
+.o-form.align-placeholder-start ::-webkit-input-placeholder,
+  .o-form.align-placeholder-start ::placeholder  { text-align: start !important; text-align: left; }
 
 
 /** Default Forms */
@@ -766,8 +772,8 @@
 .o-form >*  { flex: 0 1 auto; min-width: 0; background: none; border-radius: inherit; transition-duration: inherit; }
 .o-form >.bind  { flex: 1 0 0; font-weight: inherit; font-size: inherit; line-height: inherit; height: 100%; }
 .o-form [type="password"]  { font-family: var(--typo-password); }
-.o-form:where(.type-number, .type-date, .type-time) .bind  { font-feature-settings: var(--text-feature-tnum); }
-.o-form:where(.type-number, .type-date, .type-time):has(input:focus) .bind  {
+.o-form:where(.type-num, .type-date, .type-time) .bind  { font-feature-settings: var(--text-feature-tnum); }
+.o-form:where(.type-num, .type-date, .type-time):has(input:focus) .bind  {
   --bold-40:        475;
   font-weight: var(--bold-40);
   font-family: var(--typo-tnum);
@@ -792,9 +798,9 @@
 .o-form.mode-required  { background: var(--color-ground-required); }
 
 .o-form:has(input:where([value=""], :not([value]))) :has(>.o-image-button._remove)  { display: none; }
-.o-form.type-spin input  { text-align: center; }
+.o-form.type-spin  { text-align: center; }
 .o-form.type-spin .inner-binds:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); background: var(--color-edge-40); }
-.o-form.type-spin :has(>.o-image-button._sum-minus)  { order: -1; flex-direction: row-reverse; }
+.o-form.type-spin .inner-binds:has(>._sum-minus)  { order: -1; flex-direction: row-reverse; }
 
 // .o-form  { border-color: $tp; background: $color-ground; }
 // .o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
@@ -812,15 +818,16 @@
 
 // .o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
 
-.o-form  { border-color: var(--color-edge-40); background: $color-ground; }
+.o-form  { border-color: var(--color-edge-40); background: $color-ground; text-align: left; text-align: start; }
 .o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; min-height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
 .o-form >:is(input, select)  { padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10); }
 .o-form >:is(input, select)  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.o-form >.bind  { display: flex; align-items: center; text-align: left; text-align: start; height: auto; min-height: 100%; }
+.o-form >.bind  { display: flex; align-items: center; text-align: inherit; height: auto; min-height: 100%; }
 .o-form :is(input, select)  { flex: 1 0 0; font-weight: inherit; font-size: inherit; line-height: inherit; height: 100%; }
+.o-form :is(input, textarea)  { text-align: inherit; }
 
 
-.o-form._input.type-time >.bind  { text-align: center; }
+.o-form._input.type-time  { text-align: center; }
 
 
 .o-form[style*="width:"],
@@ -1049,7 +1056,7 @@
 // .o-grid-table tr >:first-child  { border-left-width: var(--edge-cell); }
 
 .o-grid-table tr >*  { border-width: 0 var(--edge-cell) var(--edge-cell) 0; }
-.o-grid-table thead:after  { content: ""; display: table-row; position: absolute; z-index: 3; width: calc(100% - var(--edge-cell)); height: var(--edge-cell); margin-top: calc(-1 * var(--edge-cell)); background: var(--color-key1-70); }
+.o-grid-table thead:after  { --edge-cell: (var(--rem) * (var(--edge-cell-int) - 0.01)); content: ""; display: table-row; position: absolute; z-index: 3; width: calc(100% - var(--edge-cell)); height: calc(var(--edge-cell)); margin-top: calc(-1 * var(--edge-cell)); background: var(--color-key1-70); }
 
 .o-grid-table thead >* >*  { padding-left: III(11); padding-right: III(11); border-color: var(--color-edge-40); }
 // // .o-grid-table thead >tr:last-child >*  { border-bottom-color: var(--color-key1-70); }
