@@ -365,8 +365,8 @@ function TMPL() {
                               </div> */}
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input type-spin wdth-40">
-                                    <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={10}
+                                  <div className="o-form _input type-spin wdth-50">
+                                    <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -376,7 +376,7 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={4}>
-                              <Label label={`주소`} require={false} />
+                              <Label label={`MultiSelect`} require={false} />
                             </th>
                             <td colSpan={4}>
                               <div className="o-field">

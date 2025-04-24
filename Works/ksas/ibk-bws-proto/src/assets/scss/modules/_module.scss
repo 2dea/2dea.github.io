@@ -602,7 +602,7 @@
 
 .o-check  { display: inline-block; display: inline-flex; align-items: baseline; gap: $gap-element-50; vertical-align: middle; position: relative; max-width: 100%; }
 .o-check >*  { vertical-align: inherit; vertical-align: -webkit-baseline-middle; }
-.o-check >input  { font-size: calc(24em / 14); font-size: min(2.4rem, calc(24em / 14)); position: absolute; margin: calc((1em - 13px) / 2); opacity: 0.001; }
+.o-check >input  { font-size: calc(24em / 14); font-size: min(2.4rem, calc(24em / 14)); position: absolute; z-index: 1; margin: calc((1em - 13px) / 2); opacity: 0.001; }
 .o-check >input ~i  { font-size: calc(24em / 14); font-size: min(2.4rem, calc(24em / 14)); display: inline-block; display: inline-flex; align-items: center; flex: none; position: relative; max-height: 1em; }
 .o-check >input ~i:before  { content: ""; width: 1em; height: 1em; background: none no-repeat 0 /100%; border-radius: 0.2rem; -webkit-transition: background-color 0.15s; transition: background-color 0.15s; }
 .o-check >input ~i:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
@@ -919,10 +919,11 @@
 // .m-tab >* >*  { flex: none; position: relative; min-width: 0; }
 // .m-tab >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
 // .m-tab >.lists  { flex: 1; }
-.m-tab  { --key: #{$color-key1-70}; display: flex; align-items: flex-start; clear: both; position: relative; border-bottom: $e10 solid var(--key); }
+.m-tab  { --key: #{$color-key1-70}; --animation-duration: 0.35s; display: flex; align-items: flex-start; clear: both; border-bottom: $e10 solid var(--key); transition: var(--animation-duration) var(--timing-func-ease-faster); }
+.m-tab *,  .m-tab :before,  .m-tab :after  { transition: inherit; }
 
-.m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
-.m-tab .link[aria-selected="true"]  { font-weight: $bold-70; border-color: $tp; color: $color-text-00; background-color: var(--key); }
+.m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; justify-content: center; gap: $gap-whitespace-50; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
+.m-tab .link:is([aria-selected="true"], [aria-current]:not([aria-current="false"]))  { font-weight: $bold-70; border-color: $tp; color: $color-text-00; background-color: var(--key); }
 .m-tab .link >*  { min-width: 0; }
 .m-tab .link.o-icon >.label  { @include inc-sronly(); }
 
@@ -931,6 +932,7 @@
 .m-tab >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
 .m-tab >* >* >*  { min-width: 0; }
 .m-tab >.lists  { flex: 1; }
+.m-tab >.lists >* >.link  { flex: 1; }
 
 
 
@@ -940,10 +942,11 @@
 
 
 
-.m-mdi  { --key: #{$color-key1-70}; display: flex; align-items: flex-start; clear: both; position: relative; border-bottom: $e10 solid var(--key); }
+.m-mdi  { --key: #{$color-key1-70}; --animation-duration: 0.35s; display: flex; align-items: flex-start; clear: both; border-bottom: $e10 solid var(--key); transition: var(--animation-duration) var(--timing-func-ease-faster); }
+.m-mdi *,  .m-mdi :before,  .m-mdi :after  { transition: inherit; }
 
-.m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
-.m-mdi .link[aria-current]:not([aria-current="false"])  { font-weight: $bold-70; border-color: $tp; color: $color-text-00; background-color: var(--key); }
+.m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; justify-content: center; gap: $gap-whitespace-50; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
+.m-mdi .link:is([aria-selected="true"], [aria-current]:not([aria-current="false"]))  { font-weight: $bold-70; border-color: $tp; color: $color-text-00; background-color: var(--key); }
 .m-mdi .link >*  { min-width: 0; }
 .m-mdi .link.o-icon >.label  { @include inc-sronly(); }
 
@@ -952,6 +955,7 @@
 .m-mdi >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
 .m-mdi >* >* >*  { min-width: 0; }
 .m-mdi >.lists  { flex: 1; }
+.m-mdi >.lists >* >.link  { flex: 1; }
 
 
 .m-mdi  {

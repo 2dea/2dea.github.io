@@ -158,12 +158,21 @@ function Header() {
 
         <div className="div-tablist">
           <div className="m-tab">
-            <ul className="lists">
+          <ul className="lists">
               <li>
                 <a href="javascript:" className="link total" aria-selected="true"><i className="o-icon _menu" aria-hidden="true"></i><span className="label">전체메뉴</span></a>{/* 현재탭 .link[aria-selected="true"] { @DEV } */}
               </li>
               <li>
                 <a href="javascript:" className="link person"><i className="o-icon _favorite" aria-hidden="true"></i><span className="label">마이메뉴</span></a>
+              </li>
+            </ul>
+
+            <ul className="controls">
+              <li>
+                <label className="toggle o-image-button">
+                  <input type="checkbox" title="메뉴영역 축소" value="" className="bind" /><i aria-hidden="true"></i>
+                  <span className="label">메뉴영역 축소</span>
+                </label>
               </li>
             </ul>
           </div>
