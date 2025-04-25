@@ -826,6 +826,7 @@ function SUBTMPL() {
                                 <i className="o-icon _lock wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-close wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _menu-alt wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _menu-toggle wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _menu wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _page-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _page-up wdth-50" aria-hidden="true"></i>

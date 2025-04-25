@@ -45,7 +45,7 @@
 
 
   --margin-layout-block:                20;
-  --margin-layout-inline:               40;
+  --margin-layout-inline:               36;
 
   --height-layout-header-account:       32;
   --height-layout-header-sep:           3;
@@ -230,8 +230,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-wrapper:has(.dom-nav .div-tablist .toggle :checked)  { grid-template-columns: 0 0 auto 0 0; }
 
 
-.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid var(--theme-nav-edge-divider); background-color: $color-ground; }
+.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid var(--theme-nav-edge-divider); background-color: $color-ground; transition: opacity 0.35s; }
 .dom-nav >:not(.div-tablist)  { overflow: hidden; }
+.dom-nav .div-tablist:has(.toggle :checked) .lists  { opacity: 0.0; }
 
 .dom-nav .div-search  { position: relative; z-index: 7; margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; background-color: inherit; border-radius: $radius-70; }
 .dom-nav .div-search .o-form  { border-color: $tp; }
@@ -249,9 +250,10 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav .div-tablist .m-tab .link  { border: $e10 solid $tp; color: var(--color-text-30); background-color: $tp; border-radius: inherit; }
 .dom-nav .div-tablist .m-tab .link .o-icon:before  { background-position: 25%; }
 .dom-nav .div-tablist .m-tab .link:is([aria-selected="true"], [aria-current]:not([aria-current="false"]))  { border-color: $cc; color: var(--key); background-color: $color-ground; }
-.dom-nav .div-tablist .lists  { gap: var(--gap); padding: III(3); border: $e10 solid var(--color-edge-40); background: var(--color-ground-40); border-radius: var(--radius); }
+.dom-nav .div-tablist .m-tab .link:is([aria-selected="true"], [aria-current]:not([aria-current="false"])) .o-icon:before  { background-position: 50%; }
+.dom-nav .div-tablist .lists  { gap: var(--gap); overflow: hidden; padding: III(3); border: $e10 solid var(--color-edge-40); background: var(--color-ground-40); border-radius: var(--radius); }
 .dom-nav .div-tablist .lists >*  { flex: 1; border-radius: inherit; }
-.dom-nav .div-tablist .controls >:has(>.toggle)  { position: absolute; left: 100%; top: 50%; transform: translateY(50%); }
+.dom-nav .div-tablist .controls >:has(>.toggle)  { position: absolute; z-index: 20; left: 100%; top: 50%; transform: translateY(-50%); }
 
 .dom-nav .div-nav-local  { flex: 1 0 0; display: flex; flex-direction: column; position: relative; overflow: auto scroll; margin-top: calc(-1 * $e20); padding: $e20 $gap-element-90 $gap-element-90; padding-right: calc($gap-element-90 - $width-scrollbar - $e10); }
 @include setScrollGutterStable(".dom-nav .div-nav-local", 1000);

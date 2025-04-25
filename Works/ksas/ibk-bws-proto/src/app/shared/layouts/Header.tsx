@@ -169,9 +169,9 @@ function Header() {
 
             <ul className="controls">
               <li>
-                <label className="toggle o-image-button">
-                  <input type="checkbox" title="메뉴영역 축소" value="" className="bind" /><i aria-hidden="true"></i>
-                  <span className="label">메뉴영역 축소</span>
+                <label className="toggle o-image-check _menu-toggle">
+                  <input type="checkbox" title="메뉴영역 확장/축소" value="" className="bind" /><i aria-hidden="true"></i>
+                  <span className="label">메뉴 확장/축소</span>
                 </label>
               </li>
             </ul>
