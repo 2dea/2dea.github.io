@@ -84,6 +84,9 @@
   }
 }
 
+[role="tabpanel"]:not(.react-tabs__tab-panel--selected)  {
+  display: none;
+}
 
 
 .p-splitter-gutter  {

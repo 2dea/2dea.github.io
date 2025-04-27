@@ -15,6 +15,7 @@ import XDropdown from 'app/shared/modules/XDropdown';
 import XMultiSelect from 'app/shared/modules/XMultiSelect';
 import { Dialog } from 'primereact/dialog';
 import { OverlayPanel } from 'primereact/overlaypanel';
+import { Tooltip } from 'primereact/tooltip';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
@@ -581,7 +582,7 @@ function ADMAU0201M() {
                           {[...Array(24)].map((e, idx) => (
                             // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td><ImageButton label="순서 재정렬" icon="sort" className={'g-cursor-grab'} /></td>
+                              <td><ImageButton label="순서 재정렬" icon="move" className={'g-cursor-grab'} /></td>
                               <td>AABB00001M00</td>
                               <td className="g-start">
                                 <div className="m-with-bind">

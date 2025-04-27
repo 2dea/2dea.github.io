@@ -4,11 +4,12 @@
 
 // dependency
 import React, { useRef, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
 
 // components
-import { Button } from 'primereact/button';
-import { ToggleButton } from 'primereact/togglebutton';
+import ImageButton from 'app/shared/modules/OImageButton';
+import { Tooltip } from 'primereact/tooltip';
+import { Accordion, AccordionTab } from 'primereact/accordion';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function Header() {
   // 레이아웃 버튼
@@ -132,7 +133,7 @@ function Header() {
         <hr className="g-overlay" />
       </header>
 
-      <nav role="navigation" id="Navigator" className="dom-nav">
+      <Tabs role="navigation" id="Navigator" className="dom-nav">
         <div className="div-search">
           <div className="o-field">
             <div className="fields">
@@ -158,14 +159,18 @@ function Header() {
 
         <div className="div-tablist">
           <div className="m-tab">
-          <ul className="lists">
+            <TabList className="lists">
+              <Tab className="link _total" aria-selected="true"><i className="o-icon _menu" aria-hidden="true"></i><span className="label">전체메뉴</span></Tab>
+              <Tab className="link _person"><i className="o-icon _favorite" aria-hidden="true"></i><span className="label">마이메뉴</span></Tab>
+            </TabList>
+            {/* <ul className="lists">
               <li>
-                <a href="javascript:" className="link total" aria-selected="true"><i className="o-icon _menu" aria-hidden="true"></i><span className="label">전체메뉴</span></a>{/* 현재탭 .link[aria-selected="true"] { @DEV } */}
+                <a href="javascript:" className="link total" aria-selected="true"><i className="o-icon _menu" aria-hidden="true"></i><span className="label">전체메뉴</span></a>
               </li>
               <li>
                 <a href="javascript:" className="link person"><i className="o-icon _favorite" aria-hidden="true"></i><span className="label">마이메뉴</span></a>
               </li>
-            </ul>
+            </ul> */}
 
             <ul className="controls">
               <li>
@@ -179,7 +184,20 @@ function Header() {
         </div>
 
         <div className="roles">
-          <div className="div-nav-local">
+          <TabPanel className="div-nav-local _total">
+            {/* <Accordion className="lists" multiple activeIndex={[0]}>
+              <AccordionTab unstyled className="item" header="대시보드">
+                <a href="javascript:" title="menu" className="p-accordion-header-link">
+                  <span className="p-accordion-header-text">menu</span>
+                </a>
+                <a href="javascript:" title="menu" className="p-accordion-header-link">
+                  <span className="p-accordion-header-text">menu</span>
+                </a>
+              </AccordionTab>
+              <AccordionTab unstyled className="item" header="Header I">
+                a
+              </AccordionTab>
+            </Accordion> */}
             <div className="lists">
               <div className="item">
                 <div className="header">
@@ -318,11 +336,33 @@ function Header() {
                 <span className="item"><button type="button" className="o-button _normal"><span className="label">모두닫힘</span></button></span>
               </span>
             </div>
-          </div>
+          </TabPanel>
+
+          <TabPanel className="div-nav-local _person">
+            <ul className="lists">
+              <li>
+                {/* <Tooltip target=".custom-target-icon" mouseTrack mouseTrackTop={10} />
+                <Tooltip target="#custom-target-icon" mouseTrack mouseTrackTop={10} />
+                <span className="custom-target-icon" data-pr-tooltip="No notifications" data-pr-position="mouse">순서 재정렬</span>
+                <ImageButton label="순서 재정렬" id="custom-target-icon" title="" icon="move" data-pr-tooltip="No notifications" data-pr-position="top" /> */}
+                <ImageButton label="순서 재정렬" icon="move" className={'g-cursor-grab'} />
+                <ImageButton label="메모작성" icon="memo" />
+              </li>
+            </ul>
+
+            <div className="m-binds">
+              <span className="group _center">
+                <span className="item"><button type="button" className="o-button _normal"><span className="label">위로</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal"><span className="label">아래로</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal"><span className="label">삭제</span></button></span>
+                <span className="item"><button type="button" className="o-button _normal"><span className="label">저장</span></button></span>
+              </span>
+            </div>
+          </TabPanel>
         </div>
 
         <hr className="g-overlay" />
-      </nav>
+      </Tabs>
 
     </>
   );

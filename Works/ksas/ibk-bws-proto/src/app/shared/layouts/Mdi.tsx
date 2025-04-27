@@ -9,6 +9,7 @@ import React, { useRef, useState } from 'react';
 import Icon from 'app/shared/modules/OIcon';
 import ImageButton from '../modules/OImageButton';
 import { OverlayPanel } from 'primereact/overlaypanel';
+import { Tooltip } from 'primereact/tooltip';
 
 function Mdi() {
   // OverlayPanel

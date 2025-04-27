@@ -8,6 +8,7 @@ import React, { useRef, useState } from 'react';
 // components
 import { Dialog } from 'primereact/dialog';
 import { OverlayPanel } from 'primereact/overlaypanel';
+import { Tooltip } from 'primereact/tooltip';
 
 function LoadingBar() {
   // Dialog

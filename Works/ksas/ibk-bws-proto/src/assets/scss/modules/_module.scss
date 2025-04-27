@@ -939,7 +939,7 @@
 // .m-tab >* >*  { flex: none; position: relative; min-width: 0; }
 // .m-tab >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
 // .m-tab >.lists  { flex: 1; }
-.m-tab  { --key: #{$color-key1-70}; --animation-duration: 0.35s; display: flex; align-items: flex-start; clear: both; border-bottom: $e10 solid var(--key); transition: var(--animation-duration) var(--timing-func-ease-faster); }
+.m-tab  { --key: #{$color-key1-70}; --duration: 0.3s; display: flex; align-items: flex-start; clear: both; border-bottom: $e10 solid var(--key); transition: var(--duration) var(--timing-func-ease-faster); }
 .m-tab *,  .m-tab :before,  .m-tab :after  { transition: inherit; }
 
 .m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; justify-content: center; gap: $gap-whitespace-50; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }
@@ -962,7 +962,7 @@
 
 
 
-.m-mdi  { --key: #{$color-key1-70}; --animation-duration: 0.35s; display: flex; align-items: flex-start; clear: both; border-bottom: $e10 solid var(--key); transition: var(--animation-duration) var(--timing-func-ease-faster); }
+.m-mdi  { --key: #{$color-key1-70}; --duration: 0.35s; display: flex; align-items: flex-start; clear: both; border-bottom: $e10 solid var(--key); transition: var(--duration) var(--timing-func-ease-faster); }
 .m-mdi *,  .m-mdi :before,  .m-mdi :after  { transition: inherit; }
 
 .m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; justify-content: center; gap: $gap-whitespace-50; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color; }

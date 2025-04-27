@@ -47,10 +47,11 @@
   --margin-layout-block:                20;
   --margin-layout-inline:               36;
 
-  --height-layout-header-account:       32;
-  --height-layout-header-sep:           3;
-  --height-layout-header-nav:           50;
-  --height-layout-header:               (var(--height-layout-header-nav) + var(--height-layout-header-sep) + var(--height-layout-header-account));
+  // --height-layout-header-account:       32;
+  // --height-layout-header-sep:           3;
+  // --height-layout-header-nav:           50;
+  // --height-layout-header:               (var(--height-layout-header-nav) + var(--height-layout-header-sep) + var(--height-layout-header-account));
+  --height-layout-header:               75;
   --height-layout-footer:               0;
   --width-layout-nav:                   300;
 
@@ -68,9 +69,9 @@ $height-popup-header:                   calc(var(--rem) * var(--height-popup-hea
 $margin-layout-block:                   calc(var(--rem) * var(--margin-layout-block));
 $margin-layout-inline:                  calc(var(--rem) * var(--margin-layout-inline));
 
-$height-layout-header-account:          calc(var(--rem) * var(--height-layout-header-account));
-$height-layout-header-sep:              calc(var(--rem) * var(--height-layout-header-sep));
-$height-layout-header-nav:              calc(var(--rem) * var(--height-layout-header-nav));
+// $height-layout-header-account:          calc(var(--rem) * var(--height-layout-header-account));
+// $height-layout-header-sep:              calc(var(--rem) * var(--height-layout-header-sep));
+// $height-layout-header-nav:              calc(var(--rem) * var(--height-layout-header-nav));
 $height-layout-header:                  calc(var(--rem) * var(--height-layout-header));
 $height-layout-footer:                  calc(var(--rem) * var(--height-layout-footer));
 $width-layout-nav:                      calc(var(--rem) * var(--width-layout-nav));
@@ -185,31 +186,47 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 /** Header */
 .dom-wrapper  {
+  --theme-header-ground: #{$color-key1-70};
+  --theme-header-ground-account: #{$tp};
+
+  --theme-header-text: #{$color-text-00};
+  --theme-header-text-account: inherit;
+
+  --theme-header-logo: var(--obj-img-logo-heavy);
+
+
+  --theme-nav-edge-divider: #{$color-edge-40};
+}
+.dom-wrapper  {
   --theme-header-ground: #{$color-ground};
   --theme-header-ground-account: #{$tp};
 
   --theme-header-text: inherit;
   --theme-header-text-account: inherit;
 
-  --theme-header-ground: #{$color-key1-70};
-  --theme-header-text: #{$color-text-00};
+  --theme-header-logo: var(--obj-img-logo-light);
+
 
   --theme-nav-edge-divider: #{$color-edge-40};
 }
-.dom-header  { outline-color: $color-edge-40; }/* ### */
+.dom-header  {
+  --height-account: 28;
+  --height-divider: 3;
+}
 // .dom-header >.roles  { flex-direction: row; padding-bottom: $height-layout-header-sep; color: var(--theme-header-text); background: var(--theme-header-ground); }
 // .dom-header >.roles:has(>.div-account)  { padding-top: $height-layout-header-account; }
 // .dom-header >.roles:after  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: $height-layout-header-sep; }
 
-.dom-header >.roles  { display: grid; grid-template-columns: fit-content(0); grid-template-columns: max-content; grid-template-columns: minmax(auto, max-content); color: var(--theme-header-text); background: var(--theme-header-ground); }
+.dom-header >.roles  { display: grid; grid-template-columns: fit-content(0); grid-template-columns: max-content; grid-template-columns: minmax(auto, max-content); position: relative; color: var(--theme-header-text); background: var(--theme-header-ground); }
 .dom-header >.roles >*  { min-width: 0; min-height: 0; }
+.dom-header >.roles:before  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: III(3); background: green; }
 
 .dom-header .div-root  { grid-column: 1; grid-row: span 2; display: flex; align-items: center; gap: III(6); position: relative; min-width: $width-layout-nav; padding: III(4) 0 0 III(88); }
-.dom-header .div-root:after  { content: ""; position: absolute; left: III(60); top: 50%; transform: translateY(-50%);  width: III(175); height: III(24); image-rendering: pixelated; background: var(--obj-img-logo-heavy) no-repeat; }
+.dom-header .div-root:after  { content: ""; position: absolute; left: III(60); top: 50%; transform: translateY(-50%);  width: III(175); height: III(24); image-rendering: pixelated; background: var(--theme-header-logo) no-repeat; }
 .dom-header .div-root >*  { font-size: III(17); color: $tp; }
 .dom-header .div-root .logo  { font-size: III(20); }
 
-.dom-header .div-account  { grid-column: 2; font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; /* position: absolute; */ left: 0; top: 0; right: 0; height: $height-layout-header-account; color: var(--theme-header-text-account); background: var(--theme-header-ground-account); }
+.dom-header .div-account  { grid-column: 2; font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; /* position: absolute; */ left: 0; top: 0; right: 0; height: calc(var(--rem) * var(--height-account)); color: var(--theme-header-text-account); background: var(--theme-header-ground-account); }
 .dom-header .div-account >dl  { --gap: var(--e10, 1px); display: flex; align-items: center; gap: var(--gap); }
 .dom-header .div-account >dl >*  { min-width: 0; }
 .dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
@@ -217,20 +234,20 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 .dom-header .div-nav-global  { grid-column: 2; font-size: $font-70; line-height: $line-70; overflow-x: auto; white-space: nowrap; }
-.dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: calc(($height-layout-header-nav - 1lh) / 2) 1em; white-space: nowrap; }
+// .dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: calc(($height-layout-header-nav - 1lh) / 2) 1em; white-space: nowrap; }
 .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 3; color: $color-text-00; }
-.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: $color-point-orange; }
+// .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: $color-point-orange; }
 
 .dom-header .div-nav-global >*  { display: flex; padding: 0 1em; }
 
 
 /** Global Navigation */
-.dom-wrapper  { grid-template-columns: 0 $width-layout-nav auto 0 0; transition: grid-template-columns 0.35s var(--timing-func-ease-faster); }/* ### */
+.dom-wrapper  { --duration-nav-toggle: 0.3s; grid-template-columns: 0 $width-layout-nav auto 0 0; transition: grid-template-columns var(--duration-nav-toggle) var(--timing-func-ease-faster); }/* ### */
 .dom-wrapper  { height: 100%; }/* ### */
 .dom-wrapper:has(.dom-nav .div-tablist .toggle :checked)  { grid-template-columns: 0 0 auto 0 0; }
 
 
-.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid var(--theme-nav-edge-divider); background-color: $color-ground; transition: opacity 0.35s; }
+.dom-nav  { padding-top: $gap-element-70; border-right: $e10 solid var(--theme-nav-edge-divider); background-color: $color-ground; transition: opacity var(--duration-nav-toggle); }
 .dom-nav >:not(.div-tablist)  { overflow: hidden; }
 .dom-nav .div-tablist:has(.toggle :checked) .lists  { opacity: 0.0; }
 
@@ -255,7 +272,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav .div-tablist .lists >*  { flex: 1; border-radius: inherit; }
 .dom-nav .div-tablist .controls >:has(>.toggle)  { position: absolute; z-index: 20; left: 100%; top: 50%; transform: translateY(-50%); }
 
-.dom-nav .div-nav-local  { flex: 1 0 0; display: flex; flex-direction: column; position: relative; overflow: auto scroll; margin-top: calc(-1 * $e20); padding: $e20 $gap-element-90 $gap-element-90; padding-right: calc($gap-element-90 - $width-scrollbar - $e10); }
+.dom-nav .div-nav-local  { flex: 1 0 0; display: flex; flex-direction: column; position: relative; overflow: auto scroll; margin-top: calc(-1 * $e20); padding: $e20 $gap-element-90 0; padding-right: calc($gap-element-90 - $width-scrollbar - $e10); }
 @include setScrollGutterStable(".dom-nav .div-nav-local", 1000);
 
 
@@ -278,7 +295,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*)  { color: #{$color-key1-40}; background-color: #{$color-ground2-blue-30}; }
 .dom-nav .div-nav-local .p-accordion-content .p-accordion-header-text:where([aria-current="true"] >*):before  { content: ""; position: absolute; left: 0; top: 0; width: $e30; height: 100%; background: var(--color-key1-70); border-radius: 0; }
 
-.dom-nav .div-nav-local >.m-binds  { position: sticky; bottom: 0; margin-top: auto; }
+.dom-nav .div-nav-local >.lists  { padding-bottom: $gap-element-90; }
+.dom-nav .div-nav-local._total >.m-binds  { position: sticky; bottom: 0; margin-top: auto; padding-bottom: $gap-element-90; background: $color-ground; }
+.dom-nav .div-nav-local._total >.m-binds:before  { content: ""; position: absolute; left: III(-4); right: III(-4); bottom: 100%; height: $gap-element-90; background: fnLinearGradient(); }
 
 
 
@@ -312,6 +331,11 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) { position: relative; }
 .dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link { position: relative; z-index: 12; border-color: var(--color-edge-70); border-bottom-color: Transparent; background-color: $color-ground; }
 .dom-main >.div-tablist :has(>.o-overlaytoggle.case-mdilist) >.link:after { content: ""; position: absolute; left: 0; top: 100%; right: 0; height: $e20; background-color: inherit; }
+
+
+
+
+
 
 .o-overlaytoggle { --radius: #{$radius-50}; }
 .o-overlaytoggle.case-mdilist { font-size: $font-40; line-height: $line-40; z-index: 11 !important; left: auto !important; top: 100% !important; right: 0; border: $e10 solid var(--color-edge-70); background: $color-ground; }

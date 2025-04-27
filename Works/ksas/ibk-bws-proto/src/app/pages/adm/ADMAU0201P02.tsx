@@ -15,6 +15,7 @@ import XDropdown from 'app/shared/modules/XDropdown';
 import XMultiSelect from 'app/shared/modules/XMultiSelect';
 import { Dialog } from 'primereact/dialog';
 import { OverlayPanel } from 'primereact/overlaypanel';
+import { Tooltip } from 'primereact/tooltip';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
