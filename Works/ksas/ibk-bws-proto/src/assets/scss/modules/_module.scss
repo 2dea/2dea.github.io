@@ -255,9 +255,9 @@
 
 
 .m-file-list  { clear: both; }
-.m-file-list .m-file  { flex: 0 1 auto; gap: $gap-element-50; }
 .m-file-list .card  { display: flex; align-items: center; gap: $gap-element-50; padding: III(3) III(5); border: $e10 solid var(--color-edge-40); background: var(--color-ground-40); border-radius: $radius-50; }
 .m-file-list .card >*  { flex: none; min-width: 0; }
+.m-file-list .m-file  { flex: 0 1 auto; gap: $gap-element-50; }
 
 .m-file-list >* >* +*  { margin-top: $gap-element-50; }
 

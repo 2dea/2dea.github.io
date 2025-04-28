@@ -19,6 +19,7 @@ import DialogPopup from 'app/pages/test/DialogPopup'; // dialog
 import LoadingBar from 'app/pages/test/LoadingBar'; // loading
 
 // proto 공통
+import CMP000201P from 'app/pages/cmp/CMP000201P'; // 공통 ~ (LP)엑셀업로드
 import CMP000301P from 'app/pages/cmp/CMP000301P'; // 공통 ~ (LP)파일업로드
 import CMP000401P from 'app/pages/cmp/CMP000401P'; // 공통 ~ (LP)이미지업로드
 import CMP000501P from 'app/pages/cmp/CMP000501P'; // 공통 ~ (LP)직원조회
@@ -66,6 +67,7 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
+        { path: 'CMP000201P', element: <CMP000201P /> },
         { path: 'CMP000301P', element: <CMP000301P /> },
         { path: 'CMP000401P', element: <CMP000401P /> },
         { path: 'CMP000501P', element: <CMP000501P /> },
