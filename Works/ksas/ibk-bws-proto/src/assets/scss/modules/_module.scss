@@ -37,7 +37,7 @@
 .o-icon.type-fill:before  { @include setSymbolVariationSettings(1); }
 .o-icon.type-line:before  { @include setSymbolVariationSettings(); }
 .o-icon:before  { content: ""; display: block; width: 1em; height: 1em; background: none no-repeat 0 /500% auto; }
-.o-icon[class*="-icon _"]:before  { background-color: Silver; }
+.o-icon[class*="-icon _"]:before  { background-color: Silver; transition: none; }
 
 .o-icon:has( >object, >img, >svg ):before  { content: none !important; }
 .o-icon >:is( object, img, svg )  { font-size: $height-icon-30; display: block; width: 1em; height: 1em; color: inherit; }

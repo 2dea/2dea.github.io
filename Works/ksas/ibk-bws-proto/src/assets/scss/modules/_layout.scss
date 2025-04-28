@@ -210,8 +210,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
   --theme-nav-edge-divider: #{$color-edge-40};
 }
 .dom-header  {
-  --height-account: 28;
-  --height-divider: 3;
+  --height-header-account: 28;
+  --height-header-divider: 3;
 }
 // .dom-header >.roles  { flex-direction: row; padding-bottom: $height-layout-header-sep; color: var(--theme-header-text); background: var(--theme-header-ground); }
 // .dom-header >.roles:has(>.div-account)  { padding-top: $height-layout-header-account; }
@@ -219,24 +219,42 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-header >.roles  { display: grid; grid-template-columns: fit-content(0); grid-template-columns: max-content; grid-template-columns: minmax(auto, max-content); position: relative; color: var(--theme-header-text); background: var(--theme-header-ground); }
 .dom-header >.roles >*  { min-width: 0; min-height: 0; }
-.dom-header >.roles:before  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: III(3); background: green; }
+.dom-header >.roles:before  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: III(var(--height-header-divider)); background: var(--color-key1-40); }
 
-.dom-header .div-root  { grid-column: 1; grid-row: span 2; display: flex; align-items: center; gap: III(6); position: relative; min-width: $width-layout-nav; padding: III(4) 0 0 III(88); }
-.dom-header .div-root:after  { content: ""; position: absolute; left: III(60); top: 50%; transform: translateY(-50%);  width: III(175); height: III(24); image-rendering: pixelated; background: var(--theme-header-logo) no-repeat; }
+.dom-header .div-root  { grid-column: 1; grid-row: span 2; display: flex; align-items: center; justify-content: center; gap: III(6); position: relative; min-width: $width-layout-nav; /* padding: III(4) 0 0 III(88); */ }
+.dom-header .div-root  { background: var(--theme-header-logo) no-repeat 50% calc(50% - III(var(--height-header-divider))) /III(204) III(26); user-select: none; }
+// .dom-header .div-root:after  { @include inc-abscenter(); content: ""; position: absolute; width: III(204); height: III(26); image-rendering: pixelated; background: var(--theme-header-logo) no-repeat; }
 .dom-header .div-root >*  { font-size: III(17); color: $tp; }
 .dom-header .div-root .logo  { font-size: III(20); }
+.dom-header .div-root:before  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: III(var(--height-header-divider)); background: var(--color-point-skyblue); }
 
-.dom-header .div-account  { grid-column: 2; font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; /* position: absolute; */ left: 0; top: 0; right: 0; height: calc(var(--rem) * var(--height-account)); color: var(--theme-header-text-account); background: var(--theme-header-ground-account); }
-.dom-header .div-account >dl  { --gap: var(--e10, 1px); display: flex; align-items: center; gap: var(--gap); }
+.dom-header .div-account  { grid-column: 2; font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; /* position: absolute; */ left: 0; top: 0; right: 0; height: calc(var(--rem) * var(--height-header-account)); color: var(--theme-header-text-account); background: var(--theme-header-ground-account); }
+.dom-header .div-account >dl  { --gap: #{$e10}; display: flex; align-items: center; gap: var(--gap); }
 .dom-header .div-account >dl >*  { min-width: 0; }
-.dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
 .dom-header .div-account >dl >* >*  { display: flex; align-items: center; }
+.dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
+.dom-header .div-account >dl >dd  { display: flex; align-items: center; position: relative; }
+.dom-header .div-account >dl >dd:not(:first-of-type):before  { content: ""; position: absolute; width: $e10; height: calc(1em - III(1)); margin-left: calc(-1 * $e10); background: var(--color-edge-70); }
+.dom-header .div-account >dl >dd >*  { padding: 0 $gap-element-80; }
+.dom-header .div-account >dl >dd >:has(>.o-image-button:only-child)  { padding: 0 $gap-element-70; }
+
+.dom-header .div-account .user  { gap: $gap-whitespace-50; }
+.dom-header .div-account .user .id  { color: var(--color-text-30); }
+.dom-header .div-account .user .id:before  { content: "("; }
+.dom-header .div-account .user .id:after  { content: ")"; }
+.dom-header .div-account .task .binds  { order: -1; }
+.dom-header .div-account .task .prop  { display: flex; gap: $gap-element-70; }
+.dom-header .div-account .task .prop .data  { display: flex; gap: $gap-whitespace-30; color: var(--color-key1-40); }
+.dom-header .div-account .task .prop .data .value  { font-weight: $bold-70; }
+.dom-header .div-account .task .prop .data .units  { color: var(--color-text-30); }
 
 
-.dom-header .div-nav-global  { grid-column: 2; font-size: $font-70; line-height: $line-70; overflow-x: auto; white-space: nowrap; }
-// .dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: calc(($height-layout-header-nav - 1lh) / 2) 1em; white-space: nowrap; }
-.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 3; color: $color-text-00; }
-// .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-layout-header-sep); height: $height-layout-header-sep; background: $color-point-orange; }
+
+.dom-header .div-nav-global  { grid-column: 2; font-weight: $bold-70; font-size: $font-70; line-height: $line-70; overflow-x: auto; white-space: nowrap; }
+.dom-header .div-nav-global .link  { display: flex; align-items: center; position: relative; padding: 0 1em; white-space: nowrap; }
+.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 3; color: $color-key1-40; }
+// .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):after  { content: ""; position: absolute; left: 0; right: 0; bottom: calc(-1 * $height-header-divider); height: $height-layout-header-sep; background: $color-point-orange; }
+.dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):before  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: III(var(--height-header-divider)); background: var(--color-point-orange); }
 
 .dom-header .div-nav-global >*  { display: flex; padding: 0 1em; }
 

@@ -59,7 +59,7 @@ function Header() {
               <dd>
                 <span className="user">
                   <span className="name">김기업</span>
-                  <em className="id">04123</em>
+                  <em className="id" aria-label="아이디">04123</em>
                 </span>
               </dd>
               <dd>
@@ -72,18 +72,18 @@ function Header() {
                     </em>
                   </span>
                   <span className="binds">
-                    <button type="button" title="새로고침" className="o-image-button o-icon _refresh"><span className="label">새로고침</span></button>
+                    <ImageButton label="새로고침" icon="refresh" />
                   </span>
                 </span>
               </dd>
               <dd>
                 <span className="contacts">
-                  <button type="button" title="업무별 문의처" className="o-image-button o-icon _contacts"><span className="label">업무별 문의처</span></button>
+                  <ImageButton label="업무별 문의처" icon="contacts" />
                 </span>
               </dd>
               <dd>
                 <span className="settings">
-                  <button type="button" title="설정" className="o-image-button o-icon _settings"><span className="label">설정</span></button>
+                  <ImageButton label="설정" icon="settings" />
                 </span>
               </dd>
             </dl>
