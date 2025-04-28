@@ -6,6 +6,7 @@
 import React, { useRef, useState } from 'react';
 
 // components
+import CommonButton from '../modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
 import { Tooltip } from 'primereact/tooltip';
 import { Accordion, AccordionTab } from 'primereact/accordion';
@@ -332,8 +333,8 @@ function Header() {
 
             <div className="m-binds">
               <span className="group _center">
-                <span className="item"><button type="button" className="o-button _normal"><span className="label">모두펼침</span></button></span>
-                <span className="item"><button type="button" className="o-button _normal"><span className="label">모두닫힘</span></button></span>
+                <CommonButton label="모두펼침" className="_normal" />
+                <CommonButton label="모두닫힘" className="_normal" />
               </span>
             </div>
           </TabPanel>
@@ -352,10 +353,10 @@ function Header() {
 
             <div className="m-binds">
               <span className="group _center">
-                <span className="item"><button type="button" className="o-button _normal"><span className="label">위로</span></button></span>
-                <span className="item"><button type="button" className="o-button _normal"><span className="label">아래로</span></button></span>
-                <span className="item"><button type="button" className="o-button _normal"><span className="label">삭제</span></button></span>
-                <span className="item"><button type="button" className="o-button _normal"><span className="label">저장</span></button></span>
+                <CommonButton label="위로" className="_normal" />
+                <CommonButton label="아래로" className="_normal" />
+                <CommonButton label="삭제" className="_normal" />
+                <CommonButton label="저장" className="_normal" />
               </span>
             </div>
           </TabPanel>

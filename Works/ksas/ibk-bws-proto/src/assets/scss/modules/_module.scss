@@ -249,9 +249,24 @@
 .o-limit >.data >:not(.value)  { color: var(--color-text-20); }
 
 
+.m-file  { display: flex; align-items: center; }
+.m-file >*  { flex: none; min-width: 0; }
+.m-file >.o-file  { flex: 0 1 auto; }
 
-.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(48) III(24); border: $e10 dotted var(--color-edge-70); background: var(--color-ground-30); border-radius: $radius-50; }
+
+.m-file-list  { clear: both; }
+.m-file-list .m-file  { flex: 0 1 auto; gap: $gap-element-50; }
+.m-file-list .card  { display: flex; align-items: center; gap: $gap-element-50; padding: III(3) III(5); border: $e10 solid var(--color-edge-40); background: var(--color-ground-40); border-radius: $radius-50; }
+.m-file-list .card >*  { flex: none; min-width: 0; }
+
+.m-file-list >* >* +*  { margin-top: $gap-element-50; }
+
+
+
+.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(48) III(24); border: $e10 dotted var(--color-edge-70); background: var(--color-ground-30); border-radius: $radius-50; transition: 0.3s; }
 .o-attach .summary  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); min-height: calc(1.5em * 2); min-height: calc(1lh * 2); margin-top: $margin-section-50; margin-bottom: -1.5em; margin-bottom: -1lh; color: var(--color-text-30); text-align: center; }
+
+.o-attach.js_dragovered  { background-color: var(--color-ground2-blue-30); }
 
 
 
@@ -284,21 +299,21 @@
 .m-image-list .card >.caption >.secondary  { font-size: $font-30; line-height: $line-30; margin-top: $gap-element-30; color: var(--color-text-20); }
 
 // // .layer-wrap .m-image-list >:not(:has(>:nth-child(n+8))) .card  { outline: 1px solid Red; }
-// .layer-wrap:where(:has(.o-section.type-upload-file)) .m-image-list >:not(:has(>:nth-child(n+2)))  { grid-template-columns: 1fr; gap: $gap-element-50; }
-// .layer-wrap:where(:has(.o-section.type-upload-file)) .m-image-list >:not(:has(>:nth-child(n+2))) .card  { flex-direction: row; }
-// .layer-wrap:where(:has(.o-section.type-upload-file)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >:first-of-type  { border-radius: var(--radius) 0 0 var(--radius); }
-// .layer-wrap:where(:has(.o-section.type-upload-file)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >:last-of-type  { border-radius: 0 var(--radius) var(--radius) 0; }
-// .layer-wrap:where(:has(.o-section.type-upload-file)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >.image  { width: III(133); height: III(100); }
-// .layer-wrap:where(:has(.o-section.type-upload-file)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >.caption  { border-width: 0 0 0 $e10; }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) { width: calc(var(--rem) * var(--width-25p)) !important; min-width: calc(var(--rem) * var(--width-25p)) !important; }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) .o-attach .summary .wbr { display: block; }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) :is(.m-checks, .o-limit):where(.o-section.type-upload-file >.m-header *) { visibility: hidden; }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list >* { grid-template-columns: 1fr; gap: $gap-element-50; }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card  { flex-direction: row; }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >:first-of-type  { border-radius: var(--radius) 0 0 var(--radius); }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >:last-of-type  { border-radius: 0 var(--radius) var(--radius) 0; }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >.image  { width: III(133); height: III(100); }
-.layer-wrap:where(:has(.m-upload-file):not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >.caption  { border-width: 0 0 0 $e10; }
+// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2)))  { grid-template-columns: 1fr; gap: $gap-element-50; }
+// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card  { flex-direction: row; }
+// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >:first-of-type  { border-radius: var(--radius) 0 0 var(--radius); }
+// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >:last-of-type  { border-radius: 0 var(--radius) var(--radius) 0; }
+// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >.image  { width: III(133); height: III(100); }
+// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >.caption  { border-width: 0 0 0 $e10; }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) { width: calc(var(--rem) * var(--width-25p)) !important; min-width: calc(var(--rem) * var(--width-25p)) !important; }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .o-attach .summary .wbr { display: block; }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) :is(.m-checks, .o-limit):where(.o-section.type-upload-image >.m-header *) { visibility: hidden; }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list >* { grid-template-columns: 1fr; gap: $gap-element-50; }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card  { flex-direction: row; }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >:first-of-type  { border-radius: var(--radius) 0 0 var(--radius); }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >:last-of-type  { border-radius: 0 var(--radius) var(--radius) 0; }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >.image  { width: III(133); height: III(100); }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >.caption  { border-width: 0 0 0 $e10; }
 
 
 // /** Tooltips */
@@ -682,30 +697,36 @@
 /** Forms Type Selector */
 .o-form [type="search"] { -webkit-appearance: textfield; outline-offset: -2px; }
 .o-form ::-webkit-search-decoration { -webkit-appearance: none; }
-.o-form ::-webkit-search-cancel-button,
-  .o-form ::-webkit-search-decoration,
-  .o-form ::-webkit-search-results-button,
-  .o-form ::-webkit-search-results-decoration  { display: none; }
+.o-form ::-webkit-search-cancel-button  { display: none; }
+.o-form ::-webkit-search-decoration  { display: none; }
+.o-form ::-webkit-search-results-button  { display: none; }
+.o-form ::-webkit-search-results-decoration  { display: none; }
 
 .o-form ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
 
-.o-form ::-webkit-inner-spin-button,
-  .o-form ::-webkit-outer-spin-button  { -webkit-appearance: none; height: auto; margin:0; }
+.o-form ::-webkit-inner-spin-button  { -webkit-appearance: none; height: auto; margin:0; }
+.o-form ::-webkit-outer-spin-button  { -webkit-appearance: none; height: auto; margin:0; }
 
-.o-form ::-ms-clear,
-  .o-form ::-ms-reveal  { display: none; }
+.o-form ::-ms-clear  { display: none; }
+.o-form ::-ms-reveal  { display: none; }
 
 .o-form :-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: inherit !important; color: $color-text-placeholder !important; }
 .o-form ::-ms-input-placeholder  { font-weight: inherit !important; font-family: inherit !important; text-align: inherit !important; color: $color-text-placeholder !important; }
 .o-form ::-moz-placeholder  { font-weight: inherit; font-family: inherit; text-align: inherit !important; color: $color-text-placeholder; opacity: 1; }
-.o-form ::-webkit-input-placeholder,
-  .o-form ::placeholder  { font-weight: inherit; font-family: inherit; text-align: inherit !important; color: $color-text-placeholder; }
+.o-form ::-webkit-input-placeholder  { font-weight: inherit; font-family: inherit; text-align: inherit !important; color: $color-text-placeholder; }
+.o-form ::placeholder  { font-weight: inherit; font-family: inherit; text-align: inherit !important; color: $color-text-placeholder; }
+
+.o-form [disabled]:-ms-input-placeholder  { opacity: 0 !important; }
+.o-form [disabled]::-ms-input-placeholder  { opacity: 0 !important; }
+.o-form [disabled]::-moz-placeholder  { opacity: 0 !important; }
+.o-form [disabled]::-webkit-input-placeholder  { opacity: 0 !important; }
+.o-form [disabled]::placeholder  { opacity: 0 !important; }
 
 .o-form.align-placeholder-start :-ms-input-placeholder  { text-align: start !important; text-align: left; }
 .o-form.align-placeholder-start ::-ms-input-placeholder  { text-align: start !important; text-align: left; }
 .o-form.align-placeholder-start ::-moz-placeholder  { text-align: start !important; text-align: left; }
-.o-form.align-placeholder-start ::-webkit-input-placeholder,
-  .o-form.align-placeholder-start ::placeholder  { text-align: start !important; text-align: left; }
+.o-form.align-placeholder-start ::-webkit-input-placeholder  { text-align: start !important; text-align: left; }
+.o-form.align-placeholder-start ::placeholder  { text-align: start !important; text-align: left; }
 
 
 /** Default Forms */

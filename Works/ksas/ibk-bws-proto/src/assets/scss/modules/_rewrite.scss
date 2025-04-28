@@ -40,51 +40,51 @@
     font-weight: inherit;
     font-size: inherit;
   }
+}
 
-  .p-link  {
-    text-align: left;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    user-select: none;
+.p-link  {
+  text-align: left;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  user-select: none;
 
-    min-width: 0;
-    min-height: 0;
+  min-width: 0;
+  min-height: 0;
 
-    &:has(.o-icon)  {
-      &[aria-label="Close"]  {
-        cursor: pointer;
-        border-radius: $radius-50;
+  &:has(.o-icon)  {
+    &[aria-label="Close"]  {
+      cursor: pointer;
+      border-radius: $radius-50;
 
-        width: $height-form-70;
-        height: $height-form-70;
+      width: $height-form-70;
+      height: $height-form-70;
 
-        .o-icon:before  {
-          font-size: $height-icon-70;
-        }
+      .o-icon:before  {
+        font-size: $height-icon-70;
       }
+    }
 
-      &:not([disabled], [aria-disabled=true])  {
-        transition: all 0.15s;
-        transition-property: border-color, background-color, color;
+    &:not([disabled], [aria-disabled=true])  {
+      transition: all 0.15s;
+      transition-property: border-color, background-color, color;
 
-        &:hover:not(:active)  {
-          background-color: var(--color-dimmed-hover);
-        }
+      &:hover:not(:active)  {
+        background-color: var(--color-dimmed-hover);
       }
     }
   }
-
-  .p-button  {
-    min-width: 0;
-    min-height: 0;
-    background-color: transparent;
-  }
 }
 
-[role="tabpanel"]:not(.react-tabs__tab-panel--selected)  {
+.p-button  {
+  min-width: 0;
+  min-height: 0;
+  background-color: transparent;
+}
+
+[role="tabpanel"]:not(.p-tabview-panel):not(.react-tabs__tab-panel--selected)  {
   display: none;
 }
 
@@ -187,6 +187,13 @@
 
 // }
 
+:-ms-input-placeholder  { color: revert; }
+::-ms-input-placeholder  { color: revert; }
+::-moz-placeholder  { color: revert; }
+::-webkit-input-placeholder  { color: revert; }
+::placeholder  { color: revert; }
+
+
 .o-form  {
   .bind  {
     >*  {
@@ -212,14 +219,17 @@
   >:where(.bind:is(.p-dropdown, .p-calendar))  {
     @include setReset(1);
 
-    .p-dropdown-label  {
-      &.p-placeholder  { color: $color-text-placeholder; }
-    }
+    // .p-dropdown-label  {
+    //   &.p-placeholder:not([disabled])  { color: $color-text-placeholder; }
+    // }
 
     .p-dropdown-trigger  { width: auto; }
 
     .p-datepicker-trigger  { width: auto; }
   }
+
+  .p-placeholder  { color: revert; }
+  .p-placeholder:not([disabled])  { color: var(--color-text-placeholder); }
 
   &:has(:is(.bind, .p-inputtext).p-disabled)  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
 }

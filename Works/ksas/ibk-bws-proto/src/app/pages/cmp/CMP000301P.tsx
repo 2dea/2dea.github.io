@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)이미지업로드
+ * @description 공통 ~ (LP)파일업로드
  */
 
 // dependency
@@ -31,7 +31,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function CMP000401P() {
+function CMP000301P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -84,7 +84,7 @@ function CMP000401P() {
   return (
     <>
       <Dialog
-        className="layer-wrap case-upload-image wdth-40p"
+        className="layer-wrap case-upload-file wdth-40p"
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -92,7 +92,7 @@ function CMP000401P() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">이미지업로드</span></h3>}
+        header={<h3 className="o-heading"><span className="label">파일업로드</span></h3>}
         resizable={false}
       >
         <div className="div-container">
@@ -111,7 +111,7 @@ function CMP000401P() {
                 </div>
               </form>
 
-              <div className="o-section type-upload-image">
+              <div className="o-section">
                 <div className="m-header">
                   <div className="m-checks">
                     <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label">전체선택</span></label>
@@ -135,102 +135,22 @@ function CMP000401P() {
                 </div>
 
                 <div className="main">
-                  <div className="m-image-list type-upload">
+                  <div className="m-file-list type-upload">
                     <ul>
-                      <li>
+                      {[...Array(2)].map((e, idx) => (
+                      <li key={idx}>
                         <div className="card">
-                          <label className="o-check">
-                            <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                            <span className="label _hidden">선택</span>
-                          </label>
+                          <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
 
-                          <div className="image">
-                            <img src="https://images.unsplash.com/photo-1743001025958-19eca24afd23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                          </div>
-
-                          <div className="caption">
-                            <span className="primary o-file">
+                          <div className="m-file">
+                            <span className="o-file">
                               <span className="name">image</span>
                               <span className="ext">.jpg</span>
                             </span>
-                            <span className="secondary o-limit type-file">
+                            <span className="o-limit type-file">
                               <span className="head">파일용량</span>
                               <span className="data">
                                 <em className="value">1023KB</em>
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="card">
-                          <label className="o-check">
-                            <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                            <span className="label _hidden">선택</span>
-                          </label>
-
-                          <div className="image">
-                            <img src="https://images.unsplash.com/photo-1741606552241-fbd67e574f7f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                          </div>
-
-                          <div className="caption">
-                            <span className="primary o-file">
-                              <span className="name">image_긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                              <span className="ext">.jpeg</span>
-                            </span>
-                            <span className="secondary o-limit type-file">
-                              <span className="head">파일용량</span>
-                              <span className="data">
-                                <em className="value">9MB</em>
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="card">
-                          <label className="o-check">
-                            <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                            <span className="label _hidden">선택</span>
-                          </label>
-
-                          <div className="image"></div>
-
-                          <div className="caption">
-                            <span className="primary o-file">
-                              <span className="name">image</span>
-                              <span className="ext">.jpg</span>
-                            </span>
-                            <span className="secondary o-limit type-file">
-                              <span className="head">파일용량</span>
-                              <span className="data">
-                                <em className="value">1KB</em>
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      {[...Array(4)].map((e, idx) => (
-                      <li key={idx}>
-                        <div className="card">
-                          <label className="o-check">
-                            <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                            <span className="label _hidden">선택</span>
-                          </label>
-
-                          <div className="image">
-                            <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-                          </div>
-
-                          <div className="caption">
-                            <span className="primary o-file">
-                              <span className="name">image</span>
-                              <span className="ext">.png</span>
-                            </span>
-                            <span className="secondary o-limit type-file">
-                              <span className="head">파일용량</span>
-                              <span className="data">
-                                <em className="value">1KB</em>
                               </span>
                             </span>
                           </div>
@@ -279,4 +199,4 @@ function CMP000401P() {
   );
 }
 
-export default CMP000401P;
+export default CMP000301P;
