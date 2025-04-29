@@ -35,7 +35,9 @@ import HSPBT0101M from 'app/pages/hsp/HSPBT0101M'; // 중요용지·용도품(�
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M'; // 관리자 > 코드관리 > 공통코드관리
 
 import ADMPA0101M from 'app/pages/adm/ADMPA0101M'; // 관리자 > 인사정보 > 부점관리
+import ADMPA0201M from 'app/pages/adm/ADMPA0201M'; // 관리자 > 인사정보 > 팀정보관리
 import ADMPA0301M from 'app/pages/adm/ADMPA0301M'; // 관리자 > 인사정보 > 직원관리
+import ADMPA0301P01 from 'app/pages/adm/ADMPA0301P01'; // 관리자 > 인사정보 > 직원관리 > (LP)직무분장관리
 
 import ADMAU0101M from 'app/pages/adm/ADMAU0101M'; // 관리자 > 권한관리 > 생성관리 > (T)메뉴관리
 import ADMAU0201M from 'app/pages/adm/ADMAU0201M'; // 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
@@ -91,7 +93,9 @@ function ProtoRoutes() {
         { path: 'ADMCM0101M', element: <ADMCM0101M /> },
 
         { path: 'ADMPA0101M', element: <ADMPA0101M /> },
+        { path: 'ADMPA0201M', element: <ADMPA0201M /> },
         { path: 'ADMPA0301M', element: <ADMPA0301M /> },
+        { path: 'ADMPA0301P01', element: <ADMPA0301P01 /> },
 
         { path: 'ADMAU0101M', element: <ADMAU0101M /> },
         { path: 'ADMAU0201M', element: <ADMAU0201M /> },
