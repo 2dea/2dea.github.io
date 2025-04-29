@@ -210,6 +210,7 @@
 
 
 /** Texts */
+.o-text-error  { color: var(--color-error); }
 .o-text-strong  { font-weight: $bold-70; color: var(--color-point-red); }
 
 
@@ -255,9 +256,10 @@
 
 
 .m-file-list  { clear: both; }
-.m-file-list .card  { display: flex; align-items: center; gap: $gap-element-50; padding: III(3) III(5); border: $e10 solid var(--color-edge-40); background: var(--color-ground-40); border-radius: $radius-50; }
+.m-file-list .card  { display: flex; align-items: center; gap: $gap-element-30; min-height: III(38); padding: calc($gap-element-50 - $e10) calc($gap-element-70 - $e10); border: $e10 solid var(--color-edge-40); background: var(--color-ground-40); border-radius: $radius-50; }
 .m-file-list .card >*  { flex: none; min-width: 0; }
-.m-file-list .m-file  { flex: 0 1 auto; gap: $gap-element-50; }
+.m-file-list .m-file  { flex: 1 0 0; gap: $gap-element-30; }
+.m-file-list .o-limit  { font-size: $font-30; line-height: $line-30; color: var(--color-text-20); }
 
 .m-file-list >* >* +*  { margin-top: $gap-element-50; }
 

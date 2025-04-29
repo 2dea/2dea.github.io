@@ -93,7 +93,7 @@ function CMP000401P() {
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">이미지업로드</span></h3>}
-        resizable={false}
+        resizable={false}/* resizable={false} { @DEV } */
       >
         <div className="div-container">
           <div className="o-grid">

@@ -74,10 +74,10 @@
 }
 
 @mixin getGlobalHidden($inline: null)  {
-  width: auto; max-width: 100%; height: 1px; overflow: hidden; margin: 0 0 -1px; margin-bottom: calc(-1 * (var(--gap, 0px) + 1px)); padding: 0; border: 0; background: none; visibility: visible; white-space: inherit;
+  width: auto; max-width: 100%; height: 1px; overflow: hidden; margin: 0 0 -1px; margin-bottom: calc(-1 * (var(--gap-row, var(--gap, 0px)) + 1px)); padding: 0; border: 0; background: none; visibility: visible; white-space: inherit;
 
   @if ($inline == 1) {
-    display: inline-block; width: 1px; margin-right: -1px; margin-right: calc(-1 * (var(--gap, 0px) + 1px)); white-space: nowrap;
+    display: inline-block; width: 1px; margin-right: -1px; margin-right: calc(-1 * (var(--gap-col, var(--gap, 0px)) + 1px)); white-space: nowrap;
   } @else if ($inline == 0) {
     display: block;
   } @else {

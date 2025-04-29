@@ -152,7 +152,7 @@ function ADMAU0101M() {
                   </div>
 
                   <div className="main _primary">
-                    <DataTable className="o-grid-table g-hidden" />
+                    <DataTable className="o-grid-table g-hide" />
                     <div className="o-grid-table p-datatable">
                       <div className="table-container p-datatable-wrapper">
                         <table className="p-datatable-table p-datatable-scrollable-table">
@@ -471,7 +471,7 @@ function ADMAU0101M() {
                   </div>
 
                   <div className="main _primary rows-body-3i">
-                    <DataTable className="o-grid-table g-hidden" />
+                    <DataTable className="o-grid-table g-hide" />
                     <div className="o-grid-table p-datatable">
                       <div className="table-container p-datatable-wrapper">
                         <table className="p-datatable-table p-datatable-scrollable-table">

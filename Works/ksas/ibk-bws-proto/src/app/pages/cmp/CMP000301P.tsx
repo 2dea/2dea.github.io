@@ -93,7 +93,6 @@ function CMP000301P() {
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">파일업로드</span></h3>}
-        resizable={false}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -144,8 +143,8 @@ function CMP000301P() {
 
                           <div className="m-file">
                             <span className="o-file">
-                              <span className="name">image</span>
-                              <span className="ext">.jpg</span>
+                              <span className="name">파일명</span>
+                              <span className="ext">.ext</span>
                             </span>
                             <span className="o-limit type-file">
                               <span className="head">파일용량</span>

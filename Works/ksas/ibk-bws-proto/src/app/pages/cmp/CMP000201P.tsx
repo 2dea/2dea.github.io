@@ -84,7 +84,7 @@ function CMP000201P() {
   return (
     <>
       <Dialog
-        className="layer-wrap case-upload-file wdth-40p"
+        className="layer-wrap case-upload-excel wdth-40p"
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -92,60 +92,49 @@ function CMP000201P() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">파일업로드</span></h3>}
-        resizable={false}
+        header={<h3 className="o-heading"><span className="label">엑셀업로드</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
-              <form className="m-upload-file">
-                <div className="o-attach js_dragovered">{/* 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                  <div className="binds">
-                    <CommonButton label="파일선택" size={70} className="_choose" />
-                  </div>
-                  <div className="summary">
-                    <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                    <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                  </div>
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">##타이틀##</span></h4>
                 </div>
-              </form>
+
+                <div className="main">
+                  <form className="m-upload-file">
+                    <div className="o-attach js_dragovered">{/* 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                      <div className="binds">
+                        <CommonButton label="파일선택" size={70} className="_choose" />
+                      </div>
+                      <div className="summary">
+                        <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                        <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
 
               <div className="o-section">
                 <div className="m-header">
-                  <div className="m-checks">
-                    <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label">전체선택</span></label>
-                  </div>
-
-                  <div className="o-limit type-file">
-                    <span className="head">파일용량</span>
-                    <span className="data">
-                      <em className="value">1MB</em>
-                      <span className="sep">/</span>
-                      <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                    </span>
-                  </div>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="파일삭제" className="_normal" />
-                      <CommonButton label="파일다운" className="_normal" />
-                    </div>
+                  <div className="o-legend-text style-normal">
+                    <strong>첨부파일의 용량은 10MB 이하입니다.</strong>
                   </div>
                 </div>
 
                 <div className="main">
                   <div className="m-file-list type-upload">
                     <ul>
-                      {[...Array(2)].map((e, idx) => (
+                      {[...Array(1)].map((e, idx) => (
                       <li key={idx}>
                         <div className="card">
-                          <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
-
                           <div className="m-file">
                             <span className="o-file">
-                              <span className="name">image</span>
-                              <span className="ext">.jpg</span>
+                              <span className="name">업무분장관리</span>
+                              <span className="ext">.xlsx</span>
                             </span>
                             <span className="o-limit type-file">
                               <span className="head">파일용량</span>
@@ -154,10 +143,68 @@ function CMP000201P() {
                               </span>
                             </span>
                           </div>
+
+                          <div className="binds">
+                            <ImageButton label="삭제" icon="delete" />
+                          </div>
                         </div>
                       </li>
                       ))}
                     </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level3"><span className="label">처리결과</span></h4>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="검증" className="_solid-secondary" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main _primary rows-body-3i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">HEAD</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">HEAD</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">HEAD</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">HEAD</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={4}>등록된 데이터가 없습니다.</td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx}>
+                            <td>DATA</td>
+                            <td>DATA</td>
+                            {idx === 1 ? <td className="o-text-error">Invalid DATA</td> : <td>DATA</td>}
+                            <td>DATA</td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>

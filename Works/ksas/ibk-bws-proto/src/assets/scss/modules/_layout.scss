@@ -408,9 +408,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 .dom-main >.roles  { flex: 1 0 0; overflow: auto scroll; padding: 0; }
-.dom-main >.roles :has(:where(.div-contents))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
+.dom-main >.roles :where(:has(.div-contents))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
 // .dom-main :has(:where(.div-contents)) >*  { margin-bottom: $margin-layout-block; }
-.dom-main :has(:where(.div-contents)) >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - var(--width-scrollbar)); padding: $margin-layout-block $margin-layout-inline; padding-right: calc($margin-layout-inline - $width-scrollbar); }
+.dom-main :where(:has(>.div-contents)) >*  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - var(--width-scrollbar)); padding: $margin-layout-block $margin-layout-inline; padding-right: calc($margin-layout-inline - $width-scrollbar); }
 // .dom-main :has(:where(.div-contents)) >.div-contents  { min-width: calc(var(--rem) * var(--breakpoint-max) - $width-layout-nav - $margin-layout-inline * 2); margin-bottom: 0;}
 // .dom-main :has(:where(.div-contents)) >.div-contents ~*  { margin-top: $margin-layout-block; }
 // .dom-main :has(:where(.div-contents)) >:first-child  { padding-top: $margin-layout-block; }
