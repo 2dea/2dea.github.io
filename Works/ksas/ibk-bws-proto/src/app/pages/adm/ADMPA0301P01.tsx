@@ -92,7 +92,7 @@ function ADMPA0301P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">직무분장 관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">직무분장관리</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -225,7 +225,7 @@ function ADMPA0301P01() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={3}>매핑된 화면이 없습니다.</td>
+                            <td colSpan={3}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -276,7 +276,7 @@ function ADMPA0301P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)관련화면매핑 [wdth-40p(w770)]</span>
+              <span className="label">(P)직무분장관리 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>

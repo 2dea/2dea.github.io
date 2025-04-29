@@ -120,8 +120,8 @@ function CMP000201P() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <div className="o-legend-text style-normal">
-                    <strong>첨부파일의 용량은 10MB 이하입니다.</strong>
+                  <div className="o-legend type-helper style-normal">
+                    <strong className="label">첨부파일의 용량은 10MB 이하입니다.</strong>
                   </div>
                 </div>
 
@@ -227,7 +227,7 @@ function CMP000201P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)이미지업로드 [wdth-40p(w770)]</span>
+              <span className="label">(P)엑셀업로드 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>

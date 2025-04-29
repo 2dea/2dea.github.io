@@ -76,6 +76,7 @@
 
 .o-icon:where(.o-image-button.size-50):before,  .o-icon:where(.o-image-button.size-50) >:is( object, img, svg ),
   .o-icon:where(.m-header .m-binds .o-image-button):before,  .o-icon:where(.m-header .m-binds .o-image-button) >:is( object, img, svg ),
+  .o-icon:where(.m-file-list .card >.binds .o-image-button):before,  .o-icon:where(.m-file-list .card >.binds .o-image-button) >:is( object, img, svg ),
   .o-icon.wdth-50:before,  .o-icon.wdth-50 >:is( object, img, svg )  { font-size: $height-icon-50; }
 .o-icon:where(.o-image-button.size-70):before,  .o-icon:where(.o-image-button.size-70) >:is( object, img, svg ),
   .o-icon.wdth-70:before,  .o-icon.wdth-70 >:is( object, img, svg )  { font-size: $height-icon-70; }
@@ -92,6 +93,7 @@
 }
 .o-icon:where(.o-image-button.size-50):before,
 .o-icon:where(.m-header .m-binds .o-image-button):before,
+.o-icon:where(.m-file-list .card >.binds .o-image-button):before,
 .o-icon.wdth-50:before  {
   // --test: url('data:image/svg+xml,<svg viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.59995" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)"/><path d="M2.36798 6.50665H13.632" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.6319 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.368 1.60007V4.55829" stroke="%2364748B" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="17.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)"/><path d="M18.368 6.50665H29.632" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.6319 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.368 1.60007V4.55829" stroke="%230056A2" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="33.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)"/><path d="M34.368 6.50665H45.632" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6319 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.368 1.60007V4.55829" stroke="%23F15A22" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><rect x="49.5999" y="2.90146" width="12.8" height="11.3778" rx="2" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)"/><path d="M50.368 6.50665H61.632" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M53.6319 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M58.368 1.60007V4.55829" stroke="%234BAFE3" stroke-width="calc(1.2 * 16 / 20)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   // @include icon-search(20);
@@ -243,6 +245,10 @@
 .o-file >.name { flex: 0 1 auto; }
 .o-file >.ext { margin-left: -0.05em; }
 
+.o-file:is(a):hover { text-decoration: underline; }
+.o-file:is(a):where(.m-file-list *) { color: var(--color-text-70); }
+.o-file:is(a):not(:active):where(.m-file-list *) { opacity: 0.88; }
+
 
 .o-limit  { font-size: $font-40; line-height: $line-40; display: inline-flex; }
 .o-limit >.head  { @include getGlobalHidden(); }
@@ -258,6 +264,7 @@
 .m-file-list  { clear: both; }
 .m-file-list .card  { display: flex; align-items: center; gap: $gap-element-30; min-height: III(38); padding: calc($gap-element-50 - $e10) calc($gap-element-70 - $e10); border: $e10 solid var(--color-edge-40); background: var(--color-ground-40); border-radius: $radius-50; }
 .m-file-list .card >*  { flex: none; min-width: 0; }
+.m-file-list .card .o-check  { margin-right: $gap-element-30; }
 .m-file-list .m-file  { flex: 1 0 0; gap: $gap-element-30; }
 .m-file-list .o-limit  { font-size: $font-30; line-height: $line-30; color: var(--color-text-20); }
 
@@ -269,6 +276,8 @@
 .o-attach .summary  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); min-height: calc(1.5em * 2); min-height: calc(1lh * 2); margin-top: $margin-section-50; margin-bottom: -1.5em; margin-bottom: -1lh; color: var(--color-text-30); text-align: center; }
 
 .o-attach.js_dragovered  { background-color: var(--color-ground2-blue-30); }
+
+.o-attach:where(.layer-wrap.case-upload-excel *)  { padding: III(24) III(24); }
 
 
 
@@ -399,9 +408,16 @@
 // .o-empty-data >*  { position: absolute; min-width: max-content; color: Transparent; pointer-events: none; text-shadow: none; }
 // .o-empty-data:before  { content: ""; display: block; width: 100%; height: 100%; background: var(--obj-img-data-empty) no-repeat 50% /100% min(100%, 57rem); background-clip: content-box; }
 
-.o-length  { font-size: $font-40; line-height: $line-40; display: flex; gap: $gap-whitespace-30; }
+.o-length  { display: flex; gap: $gap-whitespace-30; }
 .o-length >*  { display: flex; gap: inherit; }
 .o-length .data .value  { font-weight: $bold-70; color: var(--color-point-orange); }
+
+.o-length:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
+
+
+.o-legend.type-helper.style-normal  { color: var(--color-text-30); }
+
+.o-legend:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
 
 
 .m-dialog-message  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-70; line-height: var(--lh); flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 100%; min-height: calc(1em * var(--text-height) * 1); margin: 0 auto; text-align: center; }
@@ -560,6 +576,7 @@
 .o-image-button:not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
 
 .o-image-button:where(.m-header .m-binds *),
+  .o-image-button:where(.m-file-list .card .binds *),
   .o-image-button.size-50  { font-size: $height-form-50; }
 .o-image-button.size-70  { font-size: $height-form-70; }
 .o-image-button.size-30  { font-size: $height-form-30; }
@@ -1062,11 +1079,10 @@
 .m-tabular  { display: table; /* table-layout: fixed; */ clear: both; width: 100%; }
 .m-tabular >*  { --radius: #{$radius-50}; display: table-row; vertical-align: top; border-radius: var(--radius); }
 .m-tabular >* >*  { display: table-cell; vertical-align: inherit; padding: III(6) III(3); white-space: nowrap; }
-.m-tabular >* >:first-child  { border-radius: var(--radius) 0 0 var(--radius); }
-.m-tabular >* >:last-child  { border-radius: 0 var(--radius) var(--radius) 0; }
+.m-tabular >* >:first-child  { border-top-left-radius: inherit; border-bottom-left-radius: inherit; }
+.m-tabular >* >:last-child  { border-top-right-radius: inherit; border-bottom-right-radius: inherit; }
 .m-tabular >:has(>._main) >:not(._main)  { width: 0; }
 .m-tabular.type-listbox >:hover:not(:active)  { background: $color-dimmed-hover; }
-
 
 
 

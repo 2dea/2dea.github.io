@@ -21,6 +21,7 @@ import LoadingBar from 'app/pages/test/LoadingBar'; // loading
 // proto 공통
 import CMP000201P from 'app/pages/cmp/CMP000201P'; // 공통 ~ (LP)엑셀업로드
 import CMP000301P from 'app/pages/cmp/CMP000301P'; // 공통 ~ (LP)파일업로드
+import CMP000302P from 'app/pages/cmp/CMP000302P'; // 공통 ~ (LP)첨부파일
 import CMP000401P from 'app/pages/cmp/CMP000401P'; // 공통 ~ (LP)이미지업로드
 import CMP000501P from 'app/pages/cmp/CMP000501P'; // 공통 ~ (LP)직원조회
 import CMP001101P from 'app/pages/cmp/CMP001101P'; // 공통 ~ (LP)이미지보기
@@ -71,6 +72,7 @@ function ProtoRoutes() {
       children: [
         { path: 'CMP000201P', element: <CMP000201P /> },
         { path: 'CMP000301P', element: <CMP000301P /> },
+        { path: 'CMP000302P', element: <CMP000302P /> },
         { path: 'CMP000401P', element: <CMP000401P /> },
         { path: 'CMP000501P', element: <CMP000501P /> },
         { path: 'CMP001101P', element: <CMP001101P /> },

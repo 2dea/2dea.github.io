@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)파일업로드
+ * @description 공통 ~ (LP)첨부파일
  */
 
 // dependency
@@ -31,7 +31,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function CMP000301P() {
+function CMP000302P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -92,14 +92,14 @@ function CMP000301P() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">파일업로드</span></h3>}
+        header={<h3 className="o-heading"><span className="label">첨부파일</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
-              <form className="m-upload-file">
-                <div className="o-attach js_dragovered">{/* 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+              {/* <form className="m-upload-file">
+                <div className="o-attach js_dragovered">
                   <div className="binds">
                     <CommonButton label="파일선택" size={70} className="_choose" />
                   </div>
@@ -108,7 +108,7 @@ function CMP000301P() {
                     <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
                   </div>
                 </div>
-              </form>
+              </form> */}
 
               <div className="o-section">
                 <div className="m-header">
@@ -127,7 +127,7 @@ function CMP000301P() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="파일삭제" className="_normal" />
+                      {/* <CommonButton label="파일삭제" className="_normal" /> */}
                       <CommonButton label="파일다운" className="_normal" />
                     </div>
                   </div>
@@ -168,8 +168,9 @@ function CMP000301P() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="저장" className="_solid-primary" />
+              {/* <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="저장" className="_solid-primary" /> */}
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -179,7 +180,7 @@ function CMP000301P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)파일업로드 [wdth-40p(w770)]</span>
+              <span className="label">(P)첨부파일 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -198,4 +199,4 @@ function CMP000301P() {
   );
 }
 
-export default CMP000301P;
+export default CMP000302P;

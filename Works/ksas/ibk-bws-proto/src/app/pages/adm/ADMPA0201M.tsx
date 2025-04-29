@@ -193,7 +193,6 @@ function ADMAU0201M() {
                           <col />
                           <col />
                           <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">

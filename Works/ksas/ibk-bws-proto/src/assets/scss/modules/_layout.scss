@@ -586,7 +586,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .o-grid >.column.views  { width: calc(100% * 5 / 12 - $margin-section-40); min-width: calc(var(--rem) * 384); max-width: calc(var(--rem) * 600); }
 // .o-grid :has(.o-section >.main._primary):not(.column)   { flex: 1; display: flex; flex-direction: column; background-color: inherit; }
 
-.o-grid  { --gap: #{$margin-section-70}; display: flex; margin: auto calc(-1 * var(--gap) / 2); }
+.o-grid  { --gap: #{$margin-section-70}; display: flex; margin: 0 calc(-1 * var(--gap) / 2) auto; }
 .o-grid:has(.o-section >.main._primary)  { flex: 2; }
 .o-grid:has(.o-section >.main._primary):first-child  { flex: 3; }
 .o-grid >.column  { flex: 1 0 0; display: flex; flex-direction: column; min-width: 0; padding: 0 calc(var(--gap) / 2); }
