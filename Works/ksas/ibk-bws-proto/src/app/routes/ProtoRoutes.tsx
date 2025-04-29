@@ -10,13 +10,14 @@ import { useRoutes } from 'react-router';
 import Decorator from 'app/shared/layouts/Decorator';
 
 // test
-import SUBTMPL from 'app/pages/test/SUBTMPL'; // subtmpl
-import POPTMPL from 'app/pages/test/POPTMPL'; // poptmpl
-import TMPL from 'app/pages/test/TMPL'; // tmpl
-import ING from 'app/pages/test/ING'; // ing
+import SUBTMPL from 'app/pages/test/SUBTMPL'; // SUBTMPL
+import POPTMPL from 'app/pages/test/POPTMPL'; // POPTMPL
+import TMPL from 'app/pages/test/TMPL'; // TMPL
+import ING from 'app/pages/test/ING'; // ING
 
-import DialogPopup from 'app/pages/test/DialogPopup'; // dialog
-import LoadingBar from 'app/pages/test/LoadingBar'; // loading
+import DialogPopup from 'app/pages/test/DialogPopup'; // DialogPopup
+import LoadingBar from 'app/pages/test/LoadingBar'; // LoadingBar
+import FileUploads from 'app/pages/test/FileUploads'; // FileUploads
 
 // proto 공통
 import CMP000201P from 'app/pages/cmp/CMP000201P'; // 공통 ~ (LP)엑셀업로드
@@ -52,14 +53,15 @@ function ProtoRoutes() {
     {
       path: '/test',
       children: [
-        { path: 'SUBTMPL', element: <SUBTMPL /> },
         { path: 'LoadingBar', element: <LoadingBar /> },
+        { path: 'SUBTMPL', element: <SUBTMPL /> },
       ],
     },
     {
       path: '/test',
       element: <Decorator />,
       children: [
+        { path: 'FileUploads', element: <FileUploads /> },
         { path: 'DialogPopup', element: <DialogPopup /> },
         { path: 'POPTMPL', element: <POPTMPL /> },
         { path: 'TMPL', element: <TMPL /> },

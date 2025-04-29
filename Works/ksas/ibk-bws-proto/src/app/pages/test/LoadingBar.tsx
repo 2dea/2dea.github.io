@@ -1,5 +1,5 @@
 /**
- * @description TEST > 로딩
+ * @description TEST > 공통 로딩
  */
 
 // dependency
