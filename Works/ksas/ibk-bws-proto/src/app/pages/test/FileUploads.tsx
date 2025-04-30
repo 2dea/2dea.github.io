@@ -94,7 +94,128 @@ function FileUploads() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          (M)공통 파일업로드
+          <Splitter gutterSize={0} className="o-grid">
+            <SplitterPanel minSize={17.5} className="column">
+
+              컬럼
+
+            </SplitterPanel>
+
+            <SplitterPanel minSize={17.5} className="column">
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">파일업로드 예시</span></h3>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={3}>
+                            <Label label={`HEAD`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            DATA
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={3}>
+                            <Label label={`...`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            ...
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={3}>
+                            <Label label={`파일첨부 예`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+
+                            <div className="o-section">
+                              <div className="m-header">
+                                <div className="o-limit type-file">
+                                  <span className="head">파일용량</span>
+                                  <span className="data">
+                                    <em className="value">1MB</em>
+                                    <span className="sep">/</span>
+                                    <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                                  </span>
+                                </div>
+
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <CommonButton label="파일선택" className="_normal" />
+                                    <CommonButton label="파일삭제" className="_normal" />
+                                    <CommonButton label="파일다운" className="_normal" />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="main rows-body-auto">
+                                <div className="o-grid-table p-datatable">
+                                  <div className="table-container p-datatable-wrapper">
+                                    <table className="p-datatable-table p-datatable-scrollable-table">
+                                      <colgroup>
+                                        <col style={{ width: 'calc(var(--rem) * 50)' }} />
+                                        <col style={{ width: '20%', minWidth: 'calc(var(--rem) * 121)' }} />
+                                        <col />
+                                      </colgroup>
+
+                                      <thead className="p-datatable-thead">
+                                        <tr>
+                                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전체선택</span></div></th>
+                                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일명</span></div></th>
+                                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일크기</span></div></th>
+                                        </tr>
+                                      </thead>
+
+                                      <tbody className="p-datatable-tbody">
+                                        <tr className="p-datatable-emptymessage">
+                                          <td colSpan={3}>매핑된 관련화면이 없습니다.</td>
+                                        </tr>
+                                      </tbody>
+
+                                      <tbody className="p-datatable-tbody">
+                                      {[...Array(24)].map((e, idx) => (
+                                        // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
+                                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                          <td><ImageButton label="순서 재정렬" icon="move" className={'g-cursor-grab'} /></td>
+                                          <td>AABB00001M00</td>
+                                          <td className="g-start">
+                                            <div className="m-with-bind">
+                                              <span className="main">원화현수송신청_관련화면 01</span>
+                                              <span className="binds">
+                                                <ImageButton label="삭제" icon="delete" />
+                                              </span>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      ))}
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+
+            </SplitterPanel>
+          </Splitter>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
