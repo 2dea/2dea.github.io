@@ -137,7 +137,7 @@ function CMP000201P() {
                               <span className="ext">.xlsx</span>
                             </span>
                             <span className="o-limit type-file">
-                              <span className="head">파일용량</span>
+                              <span className="head">파일크기</span>
                               <span className="data">
                                 <em className="value">1023KB</em>
                               </span>

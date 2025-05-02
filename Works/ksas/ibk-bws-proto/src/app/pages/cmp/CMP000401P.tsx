@@ -118,7 +118,7 @@ function CMP000401P() {
                   </div>
 
                   <div className="o-limit type-file">
-                    <span className="head">파일용량</span>
+                    <span className="head">파일크기</span>
                     <span className="data">
                       <em className="value">1MB</em>
                       <span className="sep">/</span>
@@ -154,7 +154,7 @@ function CMP000401P() {
                               <span className="ext">.jpg</span>
                             </span>
                             <span className="secondary o-limit type-file">
-                              <span className="head">파일용량</span>
+                              <span className="head">파일크기</span>
                               <span className="data">
                                 <em className="value">1023KB</em>
                               </span>
@@ -179,7 +179,7 @@ function CMP000401P() {
                               <span className="ext">.jpeg</span>
                             </span>
                             <span className="secondary o-limit type-file">
-                              <span className="head">파일용량</span>
+                              <span className="head">파일크기</span>
                               <span className="data">
                                 <em className="value">9MB</em>
                               </span>
@@ -202,7 +202,7 @@ function CMP000401P() {
                               <span className="ext">.jpg</span>
                             </span>
                             <span className="secondary o-limit type-file">
-                              <span className="head">파일용량</span>
+                              <span className="head">파일크기</span>
                               <span className="data">
                                 <em className="value">1KB</em>
                               </span>
@@ -228,7 +228,7 @@ function CMP000401P() {
                               <span className="ext">.png</span>
                             </span>
                             <span className="secondary o-limit type-file">
-                              <span className="head">파일용량</span>
+                              <span className="head">파일크기</span>
                               <span className="data">
                                 <em className="value">1KB</em>
                               </span>

@@ -117,7 +117,7 @@ function CMP000302P() {
                   </div>
 
                   <div className="o-limit type-file">
-                    <span className="head">파일용량</span>
+                    <span className="head">파일크기</span>
                     <span className="data">
                       <em className="value">1MB</em>
                       <span className="sep">/</span>
@@ -147,7 +147,7 @@ function CMP000302P() {
                               <span className="ext">.ext</span>
                             </a>
                             <span className="o-limit type-file">
-                              <span className="head">파일용량</span>
+                              <span className="head">파일크기</span>
                               <span className="data">
                                 <em className="value">1023KB</em>
                               </span>

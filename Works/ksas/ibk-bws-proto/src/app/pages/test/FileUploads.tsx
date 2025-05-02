@@ -142,7 +142,7 @@ function FileUploads() {
                             <div className="o-section">
                               <div className="m-header">
                                 <div className="o-limit type-file">
-                                  <span className="head">파일용량</span>
+                                  <span className="head">파일크기</span>
                                   <span className="data">
                                     <em className="value">1MB</em>
                                     <span className="sep">/</span>
@@ -159,44 +159,41 @@ function FileUploads() {
                                 </div>
                               </div>
 
-                              <div className="main rows-body-auto">
-                                <div className="o-grid-table p-datatable">
-                                  <div className="table-container p-datatable-wrapper">
-                                    <table className="p-datatable-table p-datatable-scrollable-table">
+                              <div className="main rows-auto">
+                                <div className="o-grid-table type-upload">
+                                  <div className="table-container">
+                                    <table>
                                       <colgroup>
-                                        <col style={{ width: 'calc(var(--rem) * 50)' }} />
-                                        <col style={{ width: '20%', minWidth: 'calc(var(--rem) * 121)' }} />
-                                        <col />
+                                        <col className="wdth-10" />
+                                        <col className="wdth-auto" />
+                                        <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
                                       </colgroup>
 
-                                      <thead className="p-datatable-thead">
+                                      <thead>
                                         <tr>
-                                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전체선택</span></div></th>
-                                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일명</span></div></th>
-                                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일크기</span></div></th>
+                                          <th><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></th>
+                                          <th>파일명</th>
+                                          <th>파일크기</th>
                                         </tr>
                                       </thead>
 
-                                      <tbody className="p-datatable-tbody">
+                                      {/* <tbody>
                                         <tr className="p-datatable-emptymessage">
                                           <td colSpan={3}>매핑된 관련화면이 없습니다.</td>
                                         </tr>
-                                      </tbody>
+                                      </tbody> */}
 
-                                      <tbody className="p-datatable-tbody">
+                                      <tbody>
                                       {[...Array(24)].map((e, idx) => (
-                                        // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                          <td><ImageButton label="순서 재정렬" icon="move" className={'g-cursor-grab'} /></td>
-                                          <td>AABB00001M00</td>
+                                        <tr key={idx}>
+                                          <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
                                           <td className="g-start">
-                                            <div className="m-with-bind">
-                                              <span className="main">원화현수송신청_관련화면 01</span>
-                                              <span className="binds">
-                                                <ImageButton label="삭제" icon="delete" />
-                                              </span>
-                                            </div>
+                                            <span className="o-file">
+                                              <span className="name">업무분장관리</span>
+                                              <span className="ext">.xlsx</span>
+                                            </span>
                                           </td>
+                                          <td className="g-end">1023KB</td>
                                         </tr>
                                       ))}
                                       </tbody>
