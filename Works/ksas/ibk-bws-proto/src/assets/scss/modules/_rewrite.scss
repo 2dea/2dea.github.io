@@ -210,45 +210,94 @@
 ::placeholder  { color: revert; }
 
 
+// .o-form  {
+//   .bind  {
+//     >*  {
+//       min-width: 0;
+//     }
+
+//     .o-image-button:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); margin: 0 -1px; background: var(--color-edge-40); }
+//     .o-image-button:has(._sum-minus)  { order: -1; flex-direction: row-reverse; }
+//   }
+
+//   .p-inputtext  {
+//     padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10);
+
+//     &:not(.p-inputtextarea)  {
+//       overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+//     }
+
+//     &:not(.bind)  {
+//       text-align: inherit;
+//     }
+//   }
+
+//   >:where(.bind:is(.p-dropdown, .p-calendar))  {
+//     @include setReset(1);
+
+//     // .p-dropdown-label  {
+//     //   &.p-placeholder:not([disabled])  { color: $color-text-placeholder; }
+//     // }
+
+//     .p-dropdown-trigger  { width: auto; }
+
+//     .p-datepicker-trigger  { width: auto; }
+//   }
+
+//   .p-placeholder  { color: revert; }
+//   .p-placeholder:not([disabled])  { color: var(--color-text-placeholder); }
+
+//   &:has(:is(.bind, .p-inputtext).p-disabled)  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+// }
+
 .o-form  {
-  .bind  {
-    >*  {
-      min-width: 0;
-    }
-
-    .o-image-button:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); margin: 0 -1px; background: var(--color-edge-40); }
-    .o-image-button:has(._sum-minus)  { order: -1; flex-direction: row-reverse; }
-  }
-
-  .p-inputtext  {
-    padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10);
-
-    &:not(.p-inputtextarea)  {
-      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-    }
-
-    &:not(.bind)  {
-      text-align: inherit;
-    }
-  }
-
-  >:where(.bind:is(.p-dropdown, .p-calendar))  {
-    @include setReset(1);
-
-    // .p-dropdown-label  {
-    //   &.p-placeholder:not([disabled])  { color: $color-text-placeholder; }
-    // }
-
-    .p-dropdown-trigger  { width: auto; }
-
-    .p-datepicker-trigger  { width: auto; }
-  }
-
   .p-placeholder  { color: revert; }
   .p-placeholder:not([disabled])  { color: var(--color-text-placeholder); }
 
   &:has(:is(.bind, .p-inputtext).p-disabled)  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+
+  .bind:where(span, div)  {
+    display: flex;
+    align-items: center;
+
+    >*  {
+      min-width: 0;
+    }
+
+    >:not(input, select, textarea)  {
+      margin: 0;
+
+      font-weight: inherit; font-size: inherit; line-height: inherit; text-align: inherit;
+      min-height: 1em; padding: 0; border: 0 none; color: inherit; /* background: none; */ outline: 0; border-radius: inherit; box-shadow: none; filter: inherit;
+    }
+
+    .p-dropdown-trigger,
+    .p-multiselect-trigger,
+    .p-button.p-button-icon-only  {
+      width: $height-form-30;
+      height: $height-form-30;
+    }
+
+    .p-dropdown-panel,
+    .p-multiselect-panel  {
+      min-width: 100%;
+      margin: 1px 0;
+      border: $e10 solid var(--color-edge-40);
+      box-shadow: $dropshadow-40;
+    }
+  }
+
+  .p-inputtext:not(input, select, textarea),
+  .p-multiselect-label  {
+    @include setReset(1);
+    padding: var(--margin-block) var(--margin-inline);
+    padding-right: 0;
+  }
+
+  .o-image-button:where(.o-form.type-spin *):before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); margin: 0 III(-1); background: var(--color-edge-40); }
+  .o-image-button:where(.o-form.type-spin *):has(._sum-minus)  { order: -1; flex-direction: row-reverse; }
 }
+
 
 
 

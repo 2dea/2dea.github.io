@@ -279,7 +279,7 @@
 .o-attach.js_dragovered  { background-color: var(--color-ground2-blue-30); }
 
 .o-attach:where(.m-upload-file *)  { padding: III(48) III(24); }
-.o-attach:where(.m-upload-file *) .summary  { min-height: calc(1.5em * 2); min-height: calc(1lh * 2); margin-bottom: -1.5em; margin-bottom: -1lh; }
+.o-attach:where(.m-upload-file *) .summary  { min-height: calc(var(--lh) * 2); min-height: calc(1lh * 2); margin-bottom: calc(-1 * var(--lh)); margin-bottom: -1lh; }
 .o-attach:where(.layer-wrap.case-upload-excel .m-upload-file *)  { padding: III(24) III(24); }
 
 .o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: III(100); margin: III(3) auto; }
@@ -427,7 +427,7 @@
 .o-legend:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
 
 
-.m-dialog-message  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-70; line-height: var(--lh); flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 100%; min-height: calc(1em * var(--text-height) * 1); margin: 0 auto; text-align: center; }
+.m-dialog-message  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-70; line-height: var(--lh); flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 100%; min-height: calc(var(--lh) * 1); margin: 0 auto; text-align: center; }
 .m-dialog-message >*  { flex: 1; display: inline-flex; flex-direction: column; justify-content: center; max-width: 100%; text-align: left; text-align: start; }
 
 
@@ -756,77 +756,75 @@
 
 
 /** Default Forms */
-// .o-form  { flex: 1 0 0; display: inline-block; display: inline-flex; position: relative; max-width: 100%; border-radius: 0; transition-duration: 0.05s; }
-// .o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
-// .o-form >*  { flex: 0 1 auto; box-sizing: border-box; min-width: 0; border-radius: inherit; transition-duration: inherit; }
-// .o-form >.bind  { font-size: inherit; line-height: inherit; flex: 1; width: 100%; min-width: 2.4em; color: inherit; outline: 0; box-shadow: none; }
-// .o-form >.bind[disabled]  { opacity: 1.0; -webkit-text-fill-color: currentColor; }
-// .o-form >.bind ~i  { position: absolute; inset: 0; border: $e10 solid Transparent; outline-offset: calc(-1 * $e10); pointer-events: none; }
-// .o-form:where( ._input, ._select )  { background-color: var(--color-ground-enabled); }
-// .o-form:where( ._input, ._select ) >.bind  { min-height: $height-form-50; padding-left: 0.7rem; padding-left: max(calc(7em / 14), 0.7rem); border: $e10 solid Transparent; background-color: Transparent; }
-// .o-form:where( ._input, ._select ) >.bind ~i  { border-color: var(--color-edge-40); }
+// // .o-form  { flex: 1 0 0; display: inline-block; display: inline-flex; position: relative; max-width: 100%; border-radius: 0; transition-duration: 0.05s; }
+// // .o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
+// // .o-form >*  { flex: 0 1 auto; box-sizing: border-box; min-width: 0; border-radius: inherit; transition-duration: inherit; }
+// // .o-form >.bind  { font-size: inherit; line-height: inherit; flex: 1; width: 100%; min-width: 2.4em; color: inherit; outline: 0; box-shadow: none; }
+// // .o-form >.bind[disabled]  { opacity: 1.0; -webkit-text-fill-color: currentColor; }
+// // .o-form >.bind ~i  { position: absolute; inset: 0; border: $e10 solid Transparent; outline-offset: calc(-1 * $e10); pointer-events: none; }
+// // .o-form:where( ._input, ._select )  { background-color: var(--color-ground-enabled); }
+// // .o-form:where( ._input, ._select ) >.bind  { min-height: $height-form-50; padding-left: 0.7rem; padding-left: max(calc(7em / 14), 0.7rem); border: $e10 solid Transparent; background-color: Transparent; }
+// // .o-form:where( ._input, ._select ) >.bind ~i  { border-color: var(--color-edge-40); }
 
-// .o-form:has(>.bind[disabled])  { color: inherit; background-color: var(--color-ground-disabled); }
+// // .o-form:has(>.bind[disabled])  { color: inherit; background-color: var(--color-ground-disabled); }
 
-// .o-form:where( ._input, ._select ):has(>.bind:where( :not([disabled]):not([readonly]) )):hover  { color: var(--color-text-40); background-color: $color-ground; }
-// .o-form:where( ._input, ._select ):hover >.bind:where( :not([disabled]):not([readonly]) ) ~i  { outline: $e10 solid var(--color-edge5); }
+// // .o-form:where( ._input, ._select ):has(>.bind:where( :not([disabled]):not([readonly]) )):hover  { color: var(--color-text-40); background-color: $color-ground; }
+// // .o-form:where( ._input, ._select ):hover >.bind:where( :not([disabled]):not([readonly]) ) ~i  { outline: $e10 solid var(--color-edge5); }
 
-// .o-form >.bind:focus ~i  { outline-offset: $e10; }
-// .o-form:where( ._input, ._select ) >.bind:focus ~i  { outline: $e20 solid var(--color-black); }
+// // .o-form >.bind:focus ~i  { outline-offset: $e10; }
+// // .o-form:where( ._input, ._select ) >.bind:focus ~i  { outline: $e20 solid var(--color-black); }
 
-// .o-form:has(>.bind:where( :not([readonly]) ):focus-visible)  { color: var(--color-text-40); background-color: $color-ground; }
-// .o-form >.bind:where( :not([readonly]) ):focus-visible ~i  { outline: $e20 solid var(--color-edge-70); outline-width: $e20 !important; }
-// .o-form:where( ._input, ._select ) >.bind:where( :not([readonly]) ):focus-visible ~i  { outline-offset: calc(-1 * $e10); }
-
-
-// .o-form._select >select  { -webkit-appearance: none; appearance: none; overflow: hidden; padding-right: 1.5em; background: var(--obj-sym-expand-more) no-repeat calc(100% + $e10) 50% /2rem 100%; text-overflow: ellipsis; white-space: nowrap; }
-// .o-form._select >select[required]:invalid  { color: GrayText; }
-// .o-form._select >select option  { color: var(--color-text-40); }
-
-// .o-form._file >input  { min-height: $height-form-50; padding: calc(($height-form-50 - 19em / 14 - 6px) / 2) 0; }
-
-// .o-form._range >input  { min-height: $height-form-50; }
-
-// .o-form._input >input  { -webkit-appearance: none; appearance: none; overflow: hidden; padding: calc(($height-form-50 - 1lh - III(2)) / 2) 0.7rem; text-overflow: ellipsis; white-space: nowrap; }
-// .o-form._input >input[type="password"]  { font-family: var(--typo-password); }
-
-// .o-form._input >textarea  { -webkit-appearance: none; appearance: none; line-height: var(--text-height, calc(18 / 12)); padding: 0.6rem 0.7rem; }
-// .o-form._input >textarea:not([rows])  { height: calc(1em * var(--text-height, calc(18 / 12)) * 5 + (0.6rem + $e10) * 2); }
+// // .o-form:has(>.bind:where( :not([readonly]) ):focus-visible)  { color: var(--color-text-40); background-color: $color-ground; }
+// // .o-form >.bind:where( :not([readonly]) ):focus-visible ~i  { outline: $e20 solid var(--color-edge-70); outline-width: $e20 !important; }
+// // .o-form:where( ._input, ._select ) >.bind:where( :not([readonly]) ):focus-visible ~i  { outline-offset: calc(-1 * $e10); }
 
 
+// // .o-form._select >select  { -webkit-appearance: none; appearance: none; overflow: hidden; padding-right: 1.5em; background: var(--obj-sym-expand-more) no-repeat calc(100% + $e10) 50% /2rem 100%; text-overflow: ellipsis; white-space: nowrap; }
+// // .o-form._select >select[required]:invalid  { color: GrayText; }
+// // .o-form._select >select option  { color: var(--color-text-40); }
 
-// .o-form._input.type-string  { color: inherit; background-color: Transparent; }
-// .o-form._input.type-string >.bind  { font-size: inherit; line-height: inherit; box-shadow: none; text-align: inherit; }
-// .o-form._input.type-string >.bind ~i  { border-color: Transparent; outline: 0; }
-// .o-form._input.type-string:not(.style-keep) >.bind  { padding-left: 0; padding-right: 0; }
+// // .o-form._file >input  { min-height: $height-form-50; padding: calc(($height-form-50 - 19em / 14 - 6px) / 2) 0; }
 
-// .o-form:has(>.bind.mode-edited:not(:focus):where( :not(.o-subset *) ))  { background-color: var(--color-ground-selected); }
-// .o-form >.bind.mode-edited:not(:focus):where( :not(.o-subset *) ) ~i  { outline: $e10 solid var(--color-edge-70); outline-offset: calc(-1 * $e10); }
+// // .o-form._range >input  { min-height: $height-form-50; }
 
-// .o-form:has(>.bind.mode-invalid)  { color: var(--color-text-40); background-color: $color-ground; }
-// .o-form >.bind.mode-invalid ~i  { outline: $e20 solid $color-required; outline-offset: calc(-1 * $e10); }
+// // .o-form._input >input  { -webkit-appearance: none; appearance: none; overflow: hidden; padding: calc(($height-form-50 - 1lh - III(2)) / 2) 0.7rem; text-overflow: ellipsis; white-space: nowrap; }
+// // .o-form._input >input[type="password"]  { font-family: var(--typo-password); }
 
-
-// .o-form .inner-strings  { align-self: center; margin-left: var(--gap-element-50-narrow); }
-// .o-form .inner-strings._decibel  { min-width: calc(1em * 32 / 14); text-align: right; text-align: end; }
+// // .o-form._input >textarea  { -webkit-appearance: none; appearance: none; line-height: var(--text-height, calc(18 / 12)); padding: 0.6rem 0.7rem; }
+// // .o-form._input >textarea:not([rows])  { height: calc(1em * var(--text-height, calc(18 / 12)) * 5 + (0.6rem + $e10) * 2); }
 
 
-// .o-form .inner-binds  { display: flex; }
-// .o-form .inner-binds >*  { flex: 1; }
 
-// .o-form .inner-binds .o-check >input ~i  { margin: calc(($height-form-50 - 1em) / 2); }
-// .o-form .inner-binds .o-check >input ~i:before  { font-size: calc(20em / 24); margin: calc((var(--height-icon-50) - 1em) / 2); }
-// .o-form.size-md .inner-binds .o-check >input ~i  { margin: calc(($height-form-70 - 1em) / 2); }
-// .o-form.size-md .inner-binds .o-check >input ~i:before  { font-size: calc(24em / 24); }
+// // .o-form._input.type-string  { color: inherit; background-color: Transparent; }
+// // .o-form._input.type-string >.bind  { font-size: inherit; line-height: inherit; box-shadow: none; text-align: inherit; }
+// // .o-form._input.type-string >.bind ~i  { border-color: Transparent; outline: 0; }
+// // .o-form._input.type-string:not(.style-keep) >.bind  { padding-left: 0; padding-right: 0; }
 
-// .o-form .inner-binds .o-button  { font-size: inherit; height: calc(44em / 24); border-color: Transparent; background: Transparent; border-radius: inherit; box-shadow: none; }
-// .o-form .inner-binds .o-button >.o-icon  { font-size: calc(1em * 20 / 14); font-size: min(calc(1em * 20 / 14), $height-form-70); color: var(--color-icon-40); }
+// // .o-form:has(>.bind.mode-edited:not(:focus):where( :not(.o-subset *) ))  { background-color: var(--color-ground-selected); }
+// // .o-form >.bind.mode-edited:not(:focus):where( :not(.o-subset *) ) ~i  { outline: $e10 solid var(--color-edge-70); outline-offset: calc(-1 * $e10); }
 
-// .o-form .inner-binds .o-spins  { margin: 0 0.2rem; }
-// .o-form .inner-binds .o-spins .o-button  { height: auto; min-height: 0; }
-// .o-form .inner-binds .o-spins .o-button >.o-icon  { font-size: calc(1em * 15 / 14); }
+// // .o-form:has(>.bind.mode-invalid)  { color: var(--color-text-40); background-color: $color-ground; }
+// // .o-form >.bind.mode-invalid ~i  { outline: $e20 solid $color-required; outline-offset: calc(-1 * $e10); }
 
 
+// // .o-form .inner-strings  { align-self: center; margin-left: var(--gap-element-50-narrow); }
+// // .o-form .inner-strings._decibel  { min-width: calc(1em * 32 / 14); text-align: right; text-align: end; }
+
+
+// // .o-form .inner-binds  { display: flex; }
+// // .o-form .inner-binds >*  { flex: 1; }
+
+// // .o-form .inner-binds .o-check >input ~i  { margin: calc(($height-form-50 - 1em) / 2); }
+// // .o-form .inner-binds .o-check >input ~i:before  { font-size: calc(20em / 24); margin: calc((var(--height-icon-50) - 1em) / 2); }
+// // .o-form.size-md .inner-binds .o-check >input ~i  { margin: calc(($height-form-70 - 1em) / 2); }
+// // .o-form.size-md .inner-binds .o-check >input ~i:before  { font-size: calc(24em / 24); }
+
+// // .o-form .inner-binds .o-button  { font-size: inherit; height: calc(44em / 24); border-color: Transparent; background: Transparent; border-radius: inherit; box-shadow: none; }
+// // .o-form .inner-binds .o-button >.o-icon  { font-size: calc(1em * 20 / 14); font-size: min(calc(1em * 20 / 14), $height-form-70); color: var(--color-icon-40); }
+
+// // .o-form .inner-binds .o-spins  { margin: 0 0.2rem; }
+// // .o-form .inner-binds .o-spins .o-button  { height: auto; min-height: 0; }
+// // .o-form .inner-binds .o-spins .o-button >.o-icon  { font-size: calc(1em * 15 / 14); }
 
 
 
@@ -834,13 +832,146 @@
 
 
 
+
+
+// .o-form  { display: inline-block; display: inline-flex; align-items: center; position: relative; max-width: 100%; border: $e10 solid; border-radius: 0; transition-duration: 0s; }
+// .o-form :is(input, select, textarea)  { min-height: 1em; padding: 0; border: 0; color: inherit; background-color: inherit; outline: 0; box-shadow: none; filter: inherit; }
+// .o-form >*  { flex: 0 1 auto; min-width: 0; background: none; border-radius: inherit; transition-duration: inherit; }
+// .o-form >.bind  { flex: 1 0 0; font-weight: inherit; font-size: inherit; line-height: inherit; height: 100%; }
+// .o-form [type="password"]  { font-family: var(--typo-password); }
+// .o-form:where(.type-num, .type-date, .type-time) .bind  { font-feature-settings: var(--text-feature-tnum); }
+// .o-form:where(.type-num, .type-date, .type-time):has(input:focus) .bind  {
+//   --bold-40:        475;
+//   font-weight: var(--bold-40);
+//   font-family: var(--typo-tnum);
+
+//   @media
+//     screen and (-webkit-min-device-pixel-ratio: 1.25),
+//     screen and (min-resolution: 120dpi)  {
+//       --bold-40:        425;
+//   }
+
+//   @media
+//     screen and (not (-webkit-max-device-pixel-ratio: 1.5)),
+//     screen and (not (max-resolution: 144dpi))  {
+//       --bold-40:        400;
+//   }
+// }
+
+// .o-form .inner-binds  { display: inline-flex; align-items: center; height: $height-form-30; }
+// .o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); border-top-left-radius: 0; border-bottom-left-radius: 0; }
+
+// .o-form:has(>.bind[disabled])  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+// .o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: var(--color-ground-disabled); }
+// .o-form.mode-required  { background: var(--color-ground-required); }
+
+// .o-form:has(input:where([value=""], :not([value]))) :has(>.o-image-button._remove)  { display: none; }
+// .o-form.type-spin  { text-align: center; }
+// .o-form.type-spin .inner-binds:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); background: var(--color-edge-40); }
+// .o-form.type-spin .inner-binds:has(>._sum-minus)  { order: -1; flex-direction: row-reverse; }
+
+// // .o-form  { border-color: $tp; background: $color-ground; }
+// // .o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
+// // // .o-form >.o-icon:has(~.bind)  { margin-right: $gap-element-50; }
+// // // .o-form >:last-child:not(.bind, .bind ~i)  { margin-right: calc(-1 * ($gap-element-70 - $e10)); }
+// // .o-form >i:not(.o-icon)  { position: absolute; z-index: 1; inset: calc(-1 * $e10); border: $e10 solid var(--color-edge-40); pointer-events: none; }
+// // .o-form >.bind  { display: flex; align-items: center; }
+// // .o-form >.bind *  { text-align: inherit; }
+
+// // .o-form >.bind  { padding-left: calc($gap-element-70 - $e10); text-align: left; text-align: start; }
+// // .o-form >.bind:where(.g-center, .g-end)  { padding-right: calc($gap-element-70 - $e10); }
+// // .o-form >.bind:not(div, textarea)  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+// // .o-form._input.type-time >.bind  { padding-right: calc($gap-element-70 - $e10); text-align: center; }
+
+// // .o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
+
+// .o-form  { border-color: var(--color-edge-40); background: $color-ground; text-align: left; text-align: start; }
+// .o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; min-height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
+// .o-form >:is(input, select)  { padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10); }
+// .o-form >:is(input, select)  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+// .o-form >.bind  { display: flex; align-items: center; text-align: inherit; height: auto; min-height: 100%; }
+// .o-form :is(input, select)  { flex: 1 0 0; font-weight: inherit; font-size: inherit; line-height: inherit; height: 100%; }
+// .o-form :is(input, textarea)  { text-align: inherit; }
+
+
+// .o-form._input.type-time  { text-align: center; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Default Forms */
 .o-form  { display: inline-block; display: inline-flex; align-items: center; position: relative; max-width: 100%; border: $e10 solid; border-radius: 0; transition-duration: 0s; }
-.o-form :is(input, select, textarea)  { min-height: 1em; padding: 0; border: 0; color: inherit; background-color: inherit; outline: 0; box-shadow: none; filter: inherit; }
-.o-form >*  { flex: 0 1 auto; min-width: 0; background: none; border-radius: inherit; transition-duration: inherit; }
-.o-form >.bind  { flex: 1 0 0; font-weight: inherit; font-size: inherit; line-height: inherit; height: 100%; }
+.o-form >*  { flex: 0 1 auto; min-width: 0; transition-duration: inherit; }
+.o-form :where(input, select, textarea, .bind)  { flex: 1 0 0; font-weight: inherit; font-size: inherit; line-height: inherit; text-align: inherit;
+  min-height: 1em; padding: 0; border: 0 none; color: inherit; background: none; outline: 0; border-radius: inherit; box-shadow: none; filter: inherit; }
+
+.o-form:where(.o-field >* >*)  { flex: 1 1 0; min-width: 0; }
+.o-form  {
+  --margin-block: #{III(3)};
+  --margin-inline: #{calc($gap-element-70 - $e10)};
+  --height-icon: #{$height-icon-30};
+  --gap-icon: #{$gap-element-50};
+}
+.o-form  { border-color: var(--color-edge-40); background: $color-ground; text-align: left; text-align: start;
+  width: 100%; min-width: 3.5em; min-height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
+.o-form :is(input:where(.o-form._input *), select, textarea)  { -webkit-appearance: none; appearance: none; padding: var(--margin-block) var(--margin-inline); }
+.o-form :is(input:where(.o-form._input *), select:not([multiple]))  { text-overflow: ellipsis; }
+.o-form:has(.o-image-button, button >.o-icon) input:where(.o-form._input *)  { padding-right: 0; }
+
+.o-form:has(textarea)  { flex-direction: column; }
+.o-form textarea  { --lh: var(--text-height-para); --margin-block: #{calc(III(3) + III(2))}; flex: 1 0 auto; line-height: var(--lh); width: 100%; }
+.o-form textarea:where(:not([rows]), [rows=""])  { height: calc(var(--lh) * 3 + var(--margin-block) * 2); }
+
+.o-form select  { padding-right: 1em; background: var(--obj-sym-expand-more) no-repeat calc(100% + III(1)) 50% /#{III(20)} 100%; text-align: left; text-align: start; }
+
 .o-form [type="password"]  { font-family: var(--typo-password); }
-.o-form:where(.type-num, .type-date, .type-time) .bind  { font-feature-settings: var(--text-feature-tnum); }
-.o-form:where(.type-num, .type-date, .type-time):has(input:focus) .bind  {
+
+
+.o-form >.o-icon:where(:first-child)  { position: absolute; margin-left: var(--margin-inline); pointer-events: none; }
+.o-form >.o-icon:where(:first-child):before  { font-size: var(--height-icon); }
+.o-form:has(>.o-icon:where(:first-child)) :is(input:where(.o-form._input *), select:not([multiple]))  { padding-left: calc(var(--margin-inline) + var(--height-icon) + var(--gap-icon)); }
+
+
+.o-form .inner-binds  { display: inline-flex; align-items: center; }
+.o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); }
+
+.o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { display: none; }
+
+
+.o-form:where(.type-num, .type-date, .type-time) input  { font-feature-settings: var(--text-feature-tnum); }
+.o-form:where(.type-num, .type-date, .type-time):has(input:focus) input  {
   --bold-40:        475;
   font-weight: var(--bold-40);
   font-family: var(--typo-tnum);
@@ -858,44 +989,13 @@
   }
 }
 
-.o-form .inner-binds  { display: inline-flex; align-items: center; height: $height-form-30; }
-.o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); border-top-left-radius: 0; border-bottom-left-radius: 0; }
-
-.o-form:has(>.bind[disabled])  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
-.o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: var(--color-ground-disabled); }
-.o-form.mode-required  { background: var(--color-ground-required); }
-
-.o-form:has(input:where([value=""], :not([value]))) :has(>.o-image-button._remove)  { display: none; }
-.o-form.type-spin  { text-align: center; }
-.o-form.type-spin .inner-binds:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); background: var(--color-edge-40); }
-.o-form.type-spin .inner-binds:has(>._sum-minus)  { order: -1; flex-direction: row-reverse; }
-
-// .o-form  { border-color: $tp; background: $color-ground; }
-// .o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
-// // .o-form >.o-icon:has(~.bind)  { margin-right: $gap-element-50; }
-// // .o-form >:last-child:not(.bind, .bind ~i)  { margin-right: calc(-1 * ($gap-element-70 - $e10)); }
-// .o-form >i:not(.o-icon)  { position: absolute; z-index: 1; inset: calc(-1 * $e10); border: $e10 solid var(--color-edge-40); pointer-events: none; }
-// .o-form >.bind  { display: flex; align-items: center; }
-// .o-form >.bind *  { text-align: inherit; }
-
-// .o-form >.bind  { padding-left: calc($gap-element-70 - $e10); text-align: left; text-align: start; }
-// .o-form >.bind:where(.g-center, .g-end)  { padding-right: calc($gap-element-70 - $e10); }
-// .o-form >.bind:not(div, textarea)  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-// .o-form._input.type-time >.bind  { padding-right: calc($gap-element-70 - $e10); text-align: center; }
-
-// .o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
-
-.o-form  { border-color: var(--color-edge-40); background: $color-ground; text-align: left; text-align: start; }
-.o-form  { flex: 1 1 0; min-width: 0; width: 100%; min-width: 3.5em; min-height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
-.o-form >:is(input, select)  { padding-left: calc($gap-element-70 - $e10); padding-right: calc($gap-element-70 - $e10); }
-.o-form >:is(input, select)  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.o-form >.bind  { display: flex; align-items: center; text-align: inherit; height: auto; min-height: 100%; }
-.o-form :is(input, select)  { flex: 1 0 0; font-weight: inherit; font-size: inherit; line-height: inherit; height: 100%; }
-.o-form :is(input, textarea)  { text-align: inherit; }
-
 
 .o-form._input.type-time  { text-align: center; }
+
+.o-form._input.type-spin  { text-align: center; }
+.o-form._input.type-spin .inner-binds:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); background: var(--color-edge-40); }
+.o-form._input.type-spin .inner-binds:has(>._sum-minus)  { order: -1; flex-direction: row-reverse; }
+.o-form._input.type-spin input  { padding-left: 0; padding-right: 0; }
 
 
 .o-form[style*="width:"],
@@ -909,6 +1009,12 @@
 .o-form.wdth-70  { width: calc(var(--rem) * 160); }
 .o-form.wdth-80  { width: calc(var(--rem) * 180); }
 .o-form.wdth-90  { width: calc(var(--rem) * 210); }
+
+
+.o-form.mode-required  { background: var(--color-ground-required); }
+.o-form:has([disabled]:is(input:where(.o-form._input *), select, textarea))  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+.o-form:not(.mode-required, .mode-string):has([readonly]:is(input:where(.o-form._input *), select, textarea))  { background-color: var(--color-ground-disabled); }
+.o-form:has([readonly]:is(input:where(.o-form._input *), select, textarea)) .o-image-button:before  { background-position: 50%; }
 
 
 

@@ -98,7 +98,7 @@
   --text-size:          calc(1em / var(--root-em-int, 16) * var(--text-size-int, 15));
   --text-height-int:    var(--line-50-int);
   --text-height:        calc(var(--text-height-int, 16) / var(--text-size-int, 12));
-  --text-height-para:   calc(18 / 12);
+  --text-height-para:   calc(1em * 18 / 12);
 
   --text-spacing:       0;
 
@@ -199,6 +199,7 @@ label  { display: inline-block; }
 [type="range"],  [type="color"],  [type="checkbox"],  [type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
 [type="submit"],  [type="reset"],  [type="button"],  button  { -webkit-appearance: button; min-width: 3em; overflow: visible; padding: 0.375ex 0.4em; text-transform: none; }
 select  { text-transform: none; }
+select[multiple]  { padding-right: 0 !important; }
 option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
 textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: normal; }
 summary  { display: list-item; }

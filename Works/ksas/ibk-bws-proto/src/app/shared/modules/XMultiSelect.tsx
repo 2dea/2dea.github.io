@@ -7,6 +7,7 @@
 import React, { useRef, useState } from 'react';
 
 // components
+import Icon from 'app/shared/modules/OIcon';
 import { MultiSelect } from 'primereact/multiselect';
 
 interface XMultiSelectProps {
@@ -40,6 +41,7 @@ function XMultiSelect({ placeholder, onChange, appendTo, className, style, hidde
     <>
       <MultiSelect
         placeholder={placeholder || '선택'}
+        dropdownIcon={<Icon icon="calendar" />}
         value={MultiSelectItems || ''}
         options={items}
         optionLabel="name"

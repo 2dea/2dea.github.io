@@ -202,12 +202,12 @@ function TMPL() {
                       <Label label={`조회기간`} require={true} />
                       <div className="fields">
                         <div className="o-form _input type-date mode-required wdth-50">
-                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                           <i aria-hidden="true"></i>
                         </div>
                         <span className="sep type-tilde">~</span>
                         <div className="o-form _input type-date mode-required wdth-50">
-                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                           <i aria-hidden="true"></i>
                         </div>
                       </div>
@@ -266,6 +266,38 @@ function TMPL() {
                         </colgroup>
 
                         <tbody>
+                          {/* <tr>
+                            <th colSpan={4}>
+                              <Label label={`InputText`} require={false} />
+                            </th>
+                            <td colSpan={4}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <input placeholder="" value="대결대결대결대결대결대결대결대결대결대결대결대결대결대결" className="bind" />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={4}>
+                              <Label label={`InputText`} require={false} />
+                            </th>
+                            <td colSpan={4}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _select wdth-50">
+                                    <select className="bind">
+                                      <option>대결대결대결대결대결대결대결대결대결대결대결대결대결대결</option>
+                                    </select>
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr> */}
                           <tr>
                             <th colSpan={4}>
                               <Label label={`InputText`} require={false} />
@@ -320,7 +352,7 @@ function TMPL() {
                             <td colSpan={4}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-50">
+                                  <div className="o-form _input wdth-50 g-end">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -616,7 +648,7 @@ function TMPL() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -644,7 +676,7 @@ function TMPL() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -659,7 +691,7 @@ function TMPL() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -1553,7 +1585,7 @@ function TMPL() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -1581,7 +1613,7 @@ function TMPL() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -1596,7 +1628,7 @@ function TMPL() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -1938,7 +1970,7 @@ function TMPL() {
                                 <div className="fields">
                                   <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
                                   <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon disabled />
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -2110,7 +2142,7 @@ function TMPL() {
                                 <div className="o-field">
                                   <div className="fields">
                                     <div className="o-form _input type-date wdth-50">
-                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>
@@ -2120,7 +2152,7 @@ function TMPL() {
                                 <div className="o-field">
                                   <div className="fields">
                                     <div className="o-form _input type-date wdth-50">
-                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>

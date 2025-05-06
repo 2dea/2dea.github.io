@@ -7,6 +7,7 @@
 import React, { useRef, useState } from 'react';
 
 // components
+import Icon from 'app/shared/modules/OIcon';
 import { Dropdown, DropdownChangeEvent } from 'primereact/dropdown';
 
 interface XDropdownProps {
@@ -39,6 +40,8 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
     <>
       <Dropdown
         placeholder={placeholder || '선택'}
+        dropdownIcon={<Icon icon="calendar" />}
+        collapseIcon={<Icon icon="search" />}
         value={DropdownItems || ''}
         options={items}
         optionLabel="name"

@@ -165,12 +165,12 @@ function HSPBT0101M() {
                 <Label label={`조회기간`} require={true} />
                 <div className="fields">
                   <div className="o-form _input type-date mode-required wdth-50">
-                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                     <i aria-hidden="true"></i>
                   </div>
                   <span className="sep type-tilde">~</span>
                   <div className="o-form _input type-date mode-required wdth-50">
-                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon />
+                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                     <i aria-hidden="true"></i>
                   </div>
                 </div>

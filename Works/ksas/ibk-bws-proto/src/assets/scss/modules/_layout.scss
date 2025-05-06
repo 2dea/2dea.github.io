@@ -96,12 +96,14 @@ $width-layout-nav:                      calc(var(--rem) * var(--width-layout-nav
 .g-scroll-width-thin,
   .dom-header .div-nav-global,
   .o-overlaytoggle,
-  :has(> *>[role="listbox"])  {
+  :has(>[role="listbox"]),
+  :has(>* >[role="listbox"])  {
     --color-scrollbar-track-edge: Transparent;
     --margin-scrollbar:    calc(var(--rem) * 2);
     --width-scrollbar:     calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
 
   scroll-behavior: auto;
+  overscroll-behavior: contain;
 }
 .dom-header .div-nav-global  { @include inc-scrollbar-width(1, 3); }
 
@@ -278,9 +280,9 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav:has(.div-tablist .toggle :checked) .div-nav-local  { overflow-x: hidden; }
 
 .dom-nav .div-search  { position: relative; z-index: 7; margin: $gap-element-70 $gap-element-90 0; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; background-color: inherit; border-radius: $radius-70; }
-.dom-nav .div-search .o-form  { border-color: $tp; }
-.dom-nav .div-search .o-icon._search  { @include icon-flexed(20); margin-right: $gap-element-70; }
-.dom-nav .div-search .o-icon._search:before  { font-size: $height-icon-50; background-position: 50%; }
+.dom-nav .div-search .o-form  { --height-icon: #{$height-icon-50}; --gap-icon: #{$gap-element-70};border-color: $tp; }
+.dom-nav .div-search .o-form >:where(:first-child)  { @include icon-flexed(20); }
+.dom-nav .div-search .o-form >:where(:first-child):before  { background-position: 50%; }
 .dom-nav .div-search .o-field  { display: flex; position: relative; z-index: 3; }
 .dom-nav .div-search .result  { position: absolute; width: 100%; background: inherit; border-radius: 0 0 $radius-70 $radius-70; box-shadow: inherit; }
 .dom-nav .div-search:focus-within  { box-shadow: $dropshadow-40; }
