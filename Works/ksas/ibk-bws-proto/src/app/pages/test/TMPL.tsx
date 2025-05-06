@@ -2468,7 +2468,7 @@ function TMPL() {
                           <span className="inner-binds">
                             <ImageButton label="검색" icon="search" />
                           </span>
-                          <span className="inner-binds type-spin">
+                          <span className="inner-binds type-find">
                             <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
                             <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
                           </span>

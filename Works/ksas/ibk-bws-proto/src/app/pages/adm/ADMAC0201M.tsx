@@ -230,10 +230,15 @@ function ADMAC0201M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">사용자정보</span></h3>
 
+                  {/*
                   <div className="m-chips">
                     <em className="o-chip">
                       <span className="label">[0031] 을지로 6가</span>
                     </em>
+                  </div>
+                   */}
+                  <div className="o-legend type-branch style-normal">
+                    <strong className="label">[0031] 을지로 6가</strong>
                   </div>
                 </div>
 

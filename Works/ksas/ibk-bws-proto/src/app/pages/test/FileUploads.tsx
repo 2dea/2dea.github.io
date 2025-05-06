@@ -97,7 +97,7 @@ function FileUploads() {
           <Splitter gutterSize={0} className="o-grid">
             <SplitterPanel minSize={17.5} className="column">
 
-              컬럼
+              ...
 
             </SplitterPanel>
 
@@ -159,13 +159,13 @@ function FileUploads() {
                                 </div>
                               </div>
 
-                              <div className="main rows-auto">
-                                <div className="o-grid-table type-upload">
+                              <div className="main rows-body-3i">
+                                <div className="o-grid-table type-upload js_dragovered">{/* 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
                                   <div className="table-container">
                                     <table>
                                       <colgroup>
                                         <col className="wdth-10" />
-                                        <col className="wdth-auto" />
+                                        <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
                                         <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
                                       </colgroup>
 
@@ -177,11 +177,18 @@ function FileUploads() {
                                         </tr>
                                       </thead>
 
-                                      {/* <tbody>
-                                        <tr className="p-datatable-emptymessage">
-                                          <td colSpan={3}>매핑된 관련화면이 없습니다.</td>
+                                      <tbody>
+                                        <tr>
+                                          <td colSpan={3}>
+                                            <div className="o-attach">
+                                              <div className="summary">
+                                                <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                                <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                              </div>
+                                            </div>
+                                          </td>
                                         </tr>
-                                      </tbody> */}
+                                      </tbody>
 
                                       <tbody>
                                       {[...Array(24)].map((e, idx) => (
@@ -189,7 +196,12 @@ function FileUploads() {
                                           <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
                                           <td className="g-start">
                                             <span className="o-file">
-                                              <span className="name">업무분장관리</span>
+                                            {
+                                              idx === 1 ?
+                                              <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                              :
+                                              <span className="name">파일명</span>
+                                            }
                                               <span className="ext">.xlsx</span>
                                             </span>
                                           </td>

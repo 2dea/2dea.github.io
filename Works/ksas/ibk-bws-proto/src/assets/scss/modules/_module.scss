@@ -272,12 +272,18 @@
 
 
 
-.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(48) III(24); border: $e10 dotted var(--color-edge-70); background: var(--color-ground-30); border-radius: $radius-50; transition: 0.3s; }
-.o-attach .summary  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); min-height: calc(1.5em * 2); min-height: calc(1lh * 2); margin-top: $margin-section-50; margin-bottom: -1.5em; margin-bottom: -1lh; color: var(--color-text-30); text-align: center; }
+.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(16) III(16); border: $e10 dotted var(--color-edge-70); background: var(--color-ground-30); border-radius: $radius-50; transition: 0.3s; }
+.o-attach .summary  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); color: var(--color-text-30); text-align: center; }
+.o-attach .binds +.summary  { margin-top: $margin-section-50; }
 
 .o-attach.js_dragovered  { background-color: var(--color-ground2-blue-30); }
 
-.o-attach:where(.layer-wrap.case-upload-excel *)  { padding: III(24) III(24); }
+.o-attach:where(.m-upload-file *)  { padding: III(48) III(24); }
+.o-attach:where(.m-upload-file *) .summary  { min-height: calc(1.5em * 2); min-height: calc(1lh * 2); margin-bottom: -1.5em; margin-bottom: -1lh; }
+.o-attach:where(.layer-wrap.case-upload-excel .m-upload-file *)  { padding: III(24) III(24); }
+
+.o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: III(100); margin: III(3) auto; }
+.o-attach:where(.o-grid-table.type-upload *) .summary .wbr  { display: block; }
 
 
 
@@ -356,7 +362,7 @@
 .o-require-tag:before  { content: "*"; margin-right: calc(var(--rem) * 2); }
 .o-require-tag >.tag  { @include inc-sronly(none, 0); vertical-align: super; top: calc(var(--rem) * 4); right: calc(var(--rem) * 3); }
 
-.o-require-tag  { order: 0; font-weight: $bold-40; }
+.o-require-tag  { order: 0; align-self: flex-end; font-weight: $bold-40; }
 .o-require-tag:before  { margin-left: calc(var(--rem) * 2); margin-right: auto; }
 .o-require-tag >.tag  { left: calc(var(--rem) * 3); right: auto; }
 
@@ -368,7 +374,7 @@
 /** Labels */
 .o-label  { display: inline-block; display: inline-flex; align-items: center; gap: 0 $gap-element-50; max-width: 100%; }
 .o-label >*  { flex: 0 1 auto; display: flex; min-width: 0; height: 100%; }
-.o-label >.label  { flex: 1 0 0; }
+.o-label >.label  { flex: 1 0 0; flex-wrap: wrap; }
 
 // .o-label:where(.m-data-form th *) >.label  { font-weight: inherit; color: inherit; }
 
@@ -415,6 +421,7 @@
 .o-length:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
 
 
+.o-legend.type-branch.style-normal  { color: var(--color-text-30); }
 .o-legend.type-helper.style-normal  { color: var(--color-text-30); }
 
 .o-legend:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
@@ -852,6 +859,7 @@
 }
 
 .o-form .inner-binds  { display: inline-flex; align-items: center; height: $height-form-30; }
+.o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); border-top-left-radius: 0; border-bottom-left-radius: 0; }
 
 .o-form:has(>.bind[disabled])  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
 .o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: var(--color-ground-disabled); }
@@ -1107,7 +1115,6 @@
 .o-grid-table .wdth-50:where(tr >*, col)  { width: calc(var(--rem) * 120); }  // ### min-width: ?;
 .o-grid-table .wdth-auto:where(tr >*, col)  { width: auto; }
 .o-grid-table table  { width: 100%; background: $color-ground; text-align: center; }
-.o-grid-table table:where(.type-upload >* >*)  { table-layout: fixed; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
 // // .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
 .o-grid-table thead  { font-size: $font-40; line-height: $line-40; position: relative; color: var(--color-key1-70); background: var(--color-ground-40); }
@@ -1144,6 +1151,9 @@
 
 // .o-grid-table thead  { position: sticky; z-index: 3; top: 0; }
 // .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 2; left: 0; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
+
+.o-grid-table .table-container:where(.type-upload.js_dragovered >*)  { box-shadow: 0 0 $e10 $e10 var(--color-edge2-blue-30); }
+.o-grid-table table:where(.type-upload >* >*)  { table-layout: fixed; }
 
 .o-grid-table .o-form:not(tr >:where(.g-start, .g-end) *):only-child  { margin-left: auto; margin-right: auto; }
 .o-grid-table .o-form:is(tr >:where(.g-end) *):only-child  { margin-left: auto; }
