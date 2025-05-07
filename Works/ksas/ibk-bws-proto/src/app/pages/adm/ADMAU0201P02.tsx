@@ -153,17 +153,17 @@ function ADMAU0201P02() {
 
                       <tbody>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`메뉴ID`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             AABB00003
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`메뉴명`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             원화현수송신청
                           </td>
                         </tr>

@@ -384,6 +384,8 @@
 
 // .o-label >.outer-binds  { margin-left: auto; }
 
+.o-label:where(.m-data-form th:not(td *) *) >.label  { margin-right: calc(var(--rem) * -2); }
+
 
 
 
@@ -1283,11 +1285,12 @@
 
 .m-data-form  { clear: both; }
 .m-data-form table:not(td *)  { table-layout: fixed; width: 100%; background: $color-ground; }
+.m-data-form col.head:not(td *)  { width: calc(var(--rem) * 120); }
 .m-data-form tr >:not(td *)  { height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
 .m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >:not(td *)  { border-top-width: $e10; border-top-color: $color-key1-40; }
 .m-data-form tr >:first-child:not(td *)  { border-left-width: $e10; }
 .m-data-form tr >:last-child:not(td *)  { border-right-width: $e10; }
-.m-data-form th:not(td *)  { font-size: $font-40; line-height: $line-40; width: calc(var(--rem) * 120); padding: III(1) III(11); color: $color-text-70; background: var(--color-ground-40); }
+.m-data-form th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) III(11); color: $color-text-70; background: var(--color-ground-40); }
 
 
 // .m-filter-form  { display: flex; align-items: flex-end; justify-content: space-between; gap: III(16); clear: both; padding: III(14); border: $e10 solid navy; background: Ivory; border-radius: $radius-50; }

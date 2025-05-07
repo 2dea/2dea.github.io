@@ -267,10 +267,10 @@ function TMPL() {
 
                         <tbody>
                           {/* <tr>
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`InputText`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-50">
@@ -282,10 +282,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`InputText`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select wdth-50">
@@ -299,10 +299,10 @@ function TMPL() {
                             </td>
                           </tr> */}
                           <tr>
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`InputText`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-50">
@@ -313,10 +313,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`Icon(search) + InputText`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-50">
@@ -328,10 +328,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`InputText + Search-ImageButton`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-50">
@@ -346,10 +346,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`InputText + Units`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-50 g-end">
@@ -361,10 +361,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`AutoComplete`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -378,10 +378,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`InputNumber`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               {/* <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-spin wdth-40">
@@ -408,10 +408,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={4}>
+                            <th colSpan={1}>
                               <Label label={`MultiSelect`} require={false} />
                             </th>
-                            <td colSpan={4}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select">
@@ -422,10 +422,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`팩스`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-20">
@@ -441,10 +441,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`온라인번호`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -456,10 +456,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`지도코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -470,10 +470,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`소유구분코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select wdth-50">
@@ -484,10 +484,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`외환부점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -498,10 +498,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`재활모점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -513,10 +513,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`모점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -527,10 +527,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`교환모점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -541,10 +541,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`국고결제모점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -555,10 +555,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`한국은행관할​통합부점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -570,10 +570,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
-                              <Label label={`관할사업본부코드`} require={false} />
+                            <th colSpan={1}>
+                              <Label label={`관할사업본부코드`} require={true} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -584,10 +584,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`관할본부코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -598,10 +598,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`지역본부코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -612,10 +612,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`사무지원센터코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -627,10 +627,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점장코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -641,10 +641,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점장부임일`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
@@ -655,10 +655,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점상태코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select wdth-50">
@@ -669,10 +669,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`개점일`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
@@ -684,10 +684,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`폐점일`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
@@ -698,10 +698,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`EDW​실제근무​부점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -712,10 +712,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`계리부점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -726,10 +726,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`조직속성코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1210,10 +1210,10 @@ function TMPL() {
 
                         <tbody>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점정보`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1224,10 +1224,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`영문부점명`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1238,10 +1238,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`사업자등록번호`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-num">
@@ -1252,10 +1252,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점약칭명`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1267,10 +1267,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점약칭명2`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1281,10 +1281,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점구분코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select wdth-50">
@@ -1295,10 +1295,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점소재지코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select wdth-50">
@@ -1309,10 +1309,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점전화번호`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-20">
@@ -1334,10 +1334,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`주소`} require={false} />
                             </th>
-                            <td colSpan={9}>
+                            <td colSpan={3}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-40">
@@ -1359,10 +1359,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`팩스`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-20">
@@ -1378,10 +1378,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`온라인번호`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1393,10 +1393,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`지도코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1407,10 +1407,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`소유구분코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select wdth-50">
@@ -1421,10 +1421,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`외환부점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1435,10 +1435,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`재활모점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1450,10 +1450,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`모점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1464,10 +1464,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`교환모점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1478,10 +1478,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`국고결제모점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1492,10 +1492,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`한국은행관할​통합부점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1507,10 +1507,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`관할사업본부코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1521,10 +1521,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`관할본부코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1535,10 +1535,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`지역본부코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1549,10 +1549,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`사무지원센터코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1564,10 +1564,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점장코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1578,10 +1578,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점장부임일`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
@@ -1592,10 +1592,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점상태코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select wdth-50">
@@ -1606,10 +1606,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`개점일`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
@@ -1621,10 +1621,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`폐점일`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
@@ -1635,10 +1635,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`EDW​실제근무​부점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1649,10 +1649,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`계리부점코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1663,10 +1663,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`조직속성코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1867,10 +1867,10 @@ function TMPL() {
 
                         <tbody>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`직원`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1881,10 +1881,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`소속부점`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1895,10 +1895,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`소속팀`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1909,10 +1909,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`실근무점`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1924,10 +1924,10 @@ function TMPL() {
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`EDW 실근무부점`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
@@ -1938,10 +1938,10 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`직책코드`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _select wdth-50">
@@ -1952,20 +1952,20 @@ function TMPL() {
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`근부여부`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="m-checks">
                                 <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">근무</span></label>
                                 <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">퇴직</span></label>
                               </div>
                             </td>
 
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`부점변경예정 (종료일)`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
                                   <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
@@ -2754,66 +2754,66 @@ function TMPL() {
 
                         <tbody>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`상위메뉴`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               원화현수송
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`메뉴ID`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               AABB00003
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`메뉴명`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               원화현수송신청
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`정렬순서`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               000
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`노출여부`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               Y
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`사용여부`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               Y
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`등록자`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               홍길동
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`등록일자`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <span className="o-digit type-date">2024-09-16</span>
                             </td>
                           </tr>
@@ -3014,18 +3014,18 @@ function TMPL() {
 
                         <tbody>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`직원번호/명`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               [000001] 홍길동
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`직책`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               부장
                             </td>
                           </tr>

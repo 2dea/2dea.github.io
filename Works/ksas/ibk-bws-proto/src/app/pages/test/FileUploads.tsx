@@ -118,26 +118,26 @@ function FileUploads() {
 
                       <tbody>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`HEAD`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             DATA
                           </td>
                         </tr>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`...`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             ...
                           </td>
                         </tr>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`파일첨부 예`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
 
                             <div className="o-section">
                               <div className="m-header">

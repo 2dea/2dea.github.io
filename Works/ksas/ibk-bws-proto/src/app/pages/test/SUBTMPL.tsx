@@ -765,7 +765,7 @@ function SUBTMPL() {
                                 </span>
                               </span>
                             </th>
-                            <td colSpan={3}></td>
+                            <td></td>
                           </tr>
                           <tr>
                             <th>
@@ -775,7 +775,7 @@ function SUBTMPL() {
                                 </span>
                               </span>
                             </th>
-                            <td colSpan={3}>
+                            <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon" aria-hidden="true"></i>
                                 <i className="o-icon _res-camera-fixed state-normal" aria-hidden="true"></i>
@@ -802,7 +802,7 @@ function SUBTMPL() {
                                 </span>
                               </span>
                             </th>
-                            <td colSpan={3}>
+                            <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _alert-circle wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-down wdth-50" aria-hidden="true"></i>
@@ -851,7 +851,7 @@ function SUBTMPL() {
                                 </span>
                               </span>
                             </th>
-                            <td colSpan={3}>
+                            <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _arrow-drop-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-drop-up wdth-50" aria-hidden="true"></i>
@@ -869,7 +869,7 @@ function SUBTMPL() {
                                 </span>
                               </span>
                             </th>
-                            <td colSpan={3}>
+                            <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _excel-download wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _folder-open wdth-50" aria-hidden="true"></i>
@@ -894,7 +894,7 @@ function SUBTMPL() {
                                 </span>
                               </span>
                             </th>
-                            <td colSpan={3}>
+                            <td>
                               <ul>
                                 <li>
                                   <a href="javascript:" className="o-link">링크</a>

@@ -113,34 +113,34 @@ function CMP001402P() {
 
                       <tbody>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`업체명`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             (주)앤비앤코퍼레이션
                           </td>
                         </tr>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`구매담당자`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             홍길동
                           </td>
                         </tr>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`전화번호`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             01012345678
                           </td>
                         </tr>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`이메일주소`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             123@naver.com
                           </td>
                         </tr>

@@ -262,10 +262,10 @@ function ADMAU0201M() {
 
                       <tbody>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`부점코드`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -276,10 +276,10 @@ function ADMAU0201M() {
                             </div>
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`소속코드`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -292,10 +292,10 @@ function ADMAU0201M() {
                         </tr>
 
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`소속명`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -306,10 +306,10 @@ function ADMAU0201M() {
                             </div>
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`팀코드`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -322,10 +322,10 @@ function ADMAU0201M() {
                         </tr>
 
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`소속팀구분`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _select wdth-50">
@@ -336,10 +336,10 @@ function ADMAU0201M() {
                             </div>
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`지역본부`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">

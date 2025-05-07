@@ -390,66 +390,66 @@ function ADMAU0101M() {
 
                         <tbody>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`상위메뉴`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               원화현수송
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`메뉴ID`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               AABB00003
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`메뉴명`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               원화현수송신청
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`정렬순서`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               000
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`노출여부`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               Y
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`사용여부`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               Y
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`등록자`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               홍길동
                             </td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>
+                            <th colSpan={1}>
                               <Label label={`등록일자`} require={false} />
                             </th>
-                            <td colSpan={3}>
+                            <td colSpan={1}>
                               <span className="o-digit type-date">2024-09-16</span>
                             </td>
                           </tr>

@@ -252,18 +252,18 @@ function ADMAC0201M() {
 
                       <tbody>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`직원번호/명`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             [000001] 홍길동
                           </td>
                         </tr>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`직책`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             부장
                           </td>
                         </tr>

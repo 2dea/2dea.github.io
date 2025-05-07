@@ -314,10 +314,10 @@ function ADMPA0301M() {
 
                       <tbody>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`직원`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -328,10 +328,10 @@ function ADMPA0301M() {
                             </div>
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`소속부점/소속팀`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -347,10 +347,10 @@ function ADMPA0301M() {
                             </div>
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`실근무점`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -361,10 +361,10 @@ function ADMPA0301M() {
                             </div>
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`EDW 실근무부점`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -376,10 +376,10 @@ function ADMPA0301M() {
                           </td>
                         </tr>
                         <tr>
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`직책코드`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _select wdth-50">
@@ -390,20 +390,20 @@ function ADMPA0301M() {
                             </div>
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`근부여부`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="m-checks">
                               <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">근무</span></label>
                               <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">퇴직</span></label>
                             </div>
                           </td>
 
-                          <th colSpan={3}>
+                          <th colSpan={1}>
                             <Label label={`부점변경예정 (종료일)`} require={false} />
                           </th>
-                          <td colSpan={9}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
