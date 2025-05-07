@@ -184,6 +184,9 @@ function TMPL() {
                           {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
                           <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                           <i aria-hidden="true"></i>
+                          <span className="inner-binds">
+                            <ImageButton label="초기화" icon="remove" />
+                          </span>
                         </div>
                       </div>
                     </div>
