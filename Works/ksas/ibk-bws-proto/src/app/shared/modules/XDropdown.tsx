@@ -40,8 +40,8 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
     <>
       <Dropdown
         placeholder={placeholder || '선택'}
-        dropdownIcon={<Icon icon="calendar" />}
-        collapseIcon={<Icon icon="search" />}
+        dropdownIcon={<Icon icon="arrow-down" />}
+        collapseIcon={<Icon icon="arrow-up" />}
         value={DropdownItems || ''}
         options={items}
         optionLabel="name"

@@ -41,7 +41,7 @@ function XMultiSelect({ placeholder, onChange, appendTo, className, style, hidde
     <>
       <MultiSelect
         placeholder={placeholder || '선택'}
-        dropdownIcon={<Icon icon="calendar" />}
+        dropdownIcon={<Icon icon="arrow-down" />}
         value={MultiSelectItems || ''}
         options={items}
         optionLabel="name"
