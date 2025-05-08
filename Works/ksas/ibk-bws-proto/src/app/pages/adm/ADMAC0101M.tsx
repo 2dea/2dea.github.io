@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한위임 > 사용자별 권한관리
+ * @description 관리자 > 권한위임 > 부점별 권한위임
  */
 
 // dependency
@@ -31,12 +31,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMAC0201M() {
+function ADMAC0101M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한위임' }, { label: '사용자별 권한관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한위임' }, { label: '부점별 권한위임' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -90,7 +90,7 @@ function ADMAC0201M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">사용자별 권한관리</span>
+                <span className="label">부점별 권한위임</span>
 
                 <label className="o-check type-symbol style-favorite">
                   <input type="checkbox" title="마이메뉴 등록" value="" className="bind" /><i aria-hidden="true"></i>
@@ -124,7 +124,7 @@ function ADMAC0201M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`직원번호/명`} />
+                    <Label label={`부점코드/명`} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
@@ -155,7 +155,7 @@ function ADMAC0201M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">사용자내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">부점/부서내역</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -182,23 +182,21 @@ function ADMAC0201M() {
                           <col className="wdth-10" />
                           <col />
                           <col />
-                          <col />
                           <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={4}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -206,22 +204,15 @@ function ADMAC0201M() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>000001</td>
-                            <td>홍길동</td>
-                            <td>부장</td>
-                            <td className="g-start">중요용지용도품관리자, 행내등기관리</td>
+                            <td>0810</td>
+                            <td className="g-start">프로세스혁신부</td>
+                            <td className="g-start">영업점 외 3개</td>
                           </tr>
                         ))}
                         </tbody>
                       </table>
                     </div>
                   </div>
-                </div>
-
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li>권한요청문의 : IT금융개발부 / 031-1234-5678</li>
-                  </ul>
                 </div>
               </div>
 
@@ -231,18 +222,7 @@ function ADMAC0201M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">사용자정보</span></h3>
-
-                  {/*
-                  <div className="m-chips">
-                    <em className="o-chip">
-                      <span className="label">[0031] 을지로 6가</span>
-                    </em>
-                  </div>
-                   */}
-                  <div className="o-legend type-branch style-normal">
-                    <strong className="label">[0031] 을지로 6가</strong>
-                  </div>
+                  <h3 className="o-heading level3"><span className="label">부점/부서정보</span></h3>
                 </div>
 
                 <div className="main">
@@ -256,18 +236,10 @@ function ADMAC0201M() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`직원번호/명`} require={false} />
+                            <Label label={`부점코드/명`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [000001] 홍길동
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`직책`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            부장
+                            [0810] 프로세스혁신부
                           </td>
                         </tr>
                       </tbody>
@@ -278,7 +250,7 @@ function ADMAC0201M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">권한설정</span></h3>
+                  <h3 className="o-heading level3"><span className="label">권한위임설정</span></h3>
                 </div>
 
                 <div className="main _primary">
@@ -317,8 +289,8 @@ function ADMAC0201M() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
                             <td>000000005</td>
-                            <td className="g-start">중요용지용도품관리자</td>
-                            <td className="g-start"></td>
+                            <td className="g-start">중요용지용도품</td>
+                            <td className="g-start">권한설명</td>
                             <td>Y</td>
                             <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
                           </tr>
@@ -346,4 +318,4 @@ function ADMAC0201M() {
   );
 }
 
-export default ADMAC0201M;
+export default ADMAC0101M;

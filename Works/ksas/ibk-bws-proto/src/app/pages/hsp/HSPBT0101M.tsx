@@ -202,10 +202,11 @@ function HSPBT0101M() {
 
             </div>
           </div>
-          <Tabs className="m-tabs react-tabs">
+
+          <Tabs className="m-tabs react-tabs" defaultIndex={0}>
             <div className="m-tab type2">
               <TabList className="lists">
-                <Tab className="link" aria-selected="true"><span className="label">인도내역</span></Tab>
+                <Tab className="link"><span className="label">인도내역</span></Tab>
                 <Tab className="link"><span className="label">인도취소내역</span></Tab>
               </TabList>
             </div>

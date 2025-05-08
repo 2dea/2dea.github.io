@@ -134,7 +134,7 @@ function Header() {
         <hr className="g-overlay" />
       </header>
 
-      <Tabs role="navigation" id="Navigator" className="dom-nav">
+      <Tabs role="navigation" id="Navigator" className="dom-nav" defaultIndex={0}>
         <div className="div-search">
           <div className="o-field">
             <div className="fields">
@@ -161,7 +161,7 @@ function Header() {
         <div className="div-tablist">
           <div className="m-tab">
             <TabList className="lists">
-              <Tab className="link _total" aria-selected="true"><i className="o-icon _menu" aria-hidden="true"></i><span className="label">전체메뉴</span></Tab>
+              <Tab className="link _total"><i className="o-icon _menu" aria-hidden="true"></i><span className="label">전체메뉴</span></Tab>
               <Tab className="link _person"><i className="o-icon _favorite" aria-hidden="true"></i><span className="label">마이메뉴</span></Tab>
             </TabList>
             {/* <ul className="lists">

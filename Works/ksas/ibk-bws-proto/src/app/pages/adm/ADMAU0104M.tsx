@@ -116,15 +116,21 @@ function ADMAU0104M() {
         </div>
 
         {/* <!-- /* Contents { @DEV } --> */}
-        <Tabs className="div-contents">
+        <Tabs className="div-contents" defaultIndex={3}>
           <div className="m-tab type1">
             <TabList className="lists">
               <Tab className="link"><span className="label">메뉴관리</span></Tab>
               <Tab className="link"><span className="label">화면관리</span></Tab>
               <Tab className="link"><span className="label">팝업관리</span></Tab>
-              <Tab className="link" aria-selected="true"><span className="label">권한관리</span></Tab>
+              <Tab className="link"><span className="label">권한관리</span></Tab>
             </TabList>
           </div>
+
+          <TabPanel></TabPanel>
+
+          <TabPanel></TabPanel>
+
+          <TabPanel></TabPanel>
 
           <TabPanel>
             <Splitter gutterSize={0} className="o-grid">

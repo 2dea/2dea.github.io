@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)관련화면매핑
+ * @description 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)화면매핑
  */
 
 // dependency
@@ -31,7 +31,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMAU0201P02() {
+function ADMAU0201P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -92,7 +92,7 @@ function ADMAU0201P02() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">관련화면매핑</span></h3>}
+        header={<h3 className="o-heading"><span className="label">화면매핑</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -201,13 +201,12 @@ function ADMAU0201P02() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-10i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
-                          <col className="wdth-10" />
                           <col className="wdth-10" />
                           <col />
                           <col className="wdth-auto" />
@@ -217,7 +216,6 @@ function ADMAU0201P02() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선택</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
@@ -244,7 +242,6 @@ function ADMAU0201P02() {
                               }`
                             }
                           >
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
                             <td>{idx + 1}</td>
                             <td>AABB00001M00</td>
                             <td className="g-start">원화현수송신청</td>
@@ -257,76 +254,10 @@ function ADMAU0201P02() {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="m-divider">
-                <div className="m-binds">
-                  <div className="group">
-                    <CommonButton label="관련화면매핑" icon="du-down" className="_normal" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h6 className="o-heading level4"><span className="label">관련화면 매핑정보</span></h6>
-                </div>
-
-                <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="table-container p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col />
-                          <col className="wdth-auto" />
-                        </colgroup>
-
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면ID</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">화면명</span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={2}>매핑된 화면이 없습니다.</td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr
-                            key={idx}
-                            className={
-                              `${idx === 0 ?
-                              'p-highlight' // 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV }
-                              :
-                              ''
-                              }`
-                            }
-                          >
-                            <td>AABB00001M00</td>
-                            <td className="g-start">
-                              <div className="m-with-bind">
-                                <span className="main">원화현수송신청_관련화면 01</span>
-                                <span className="binds">
-                                  <ImageButton label="삭제" icon="delete" />
-                                </span>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
 
                 <div className="m-footer">
                   <ul className="m-bullets type-disc">
-                    <li>메뉴에 매핑할 관련화면을 선택해주세요.</li>
+                    <li>메뉴에 매핑할 화면을 선택해주세요.</li>
                   </ul>
                 </div>
               </div>
@@ -349,7 +280,7 @@ function ADMAU0201P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)관련화면매핑 [wdth-40p(w770)]</span>
+              <span className="label">(P)화면매핑 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -368,4 +299,4 @@ function ADMAU0201P02() {
   );
 }
 
-export default ADMAU0201P02;
+export default ADMAU0201P01;

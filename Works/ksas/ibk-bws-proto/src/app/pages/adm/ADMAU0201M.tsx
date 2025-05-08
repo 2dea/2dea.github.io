@@ -116,11 +116,11 @@ function ADMAU0201M() {
         </div>
 
         {/* <!-- /* Contents { @DEV } --> */}
-        <Tabs className="div-contents">
+        <Tabs className="div-contents" defaultIndex={0}>
           <div className="m-tab type1">
             <TabList className="lists">
               <Tab className="link"><span className="label">메뉴별 화면관리</span></Tab>
-              <Tab className="link" aria-selected="true"><span className="label">권한별 메뉴/팝업관리</span></Tab>
+              <Tab className="link"><span className="label">권한별 메뉴/팝업관리</span></Tab>
               <Tab className="link"><span className="label">부점/부서별 권한관리</span></Tab>
               <Tab className="link"><span className="label">사용자별 권한관리</span></Tab>
             </TabList>
@@ -613,6 +613,12 @@ function ADMAU0201M() {
               </div>
             </div>
           </TabPanel>
+
+          <TabPanel></TabPanel>
+
+          <TabPanel></TabPanel>
+
+          <TabPanel></TabPanel>
         </Tabs>
       </div>
     </>
