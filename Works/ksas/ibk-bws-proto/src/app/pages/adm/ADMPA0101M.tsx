@@ -418,12 +418,12 @@ function ADMPA0101M() {
                                   <InputText placeholder="" value="02" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <span className="sep type-hyphen">-</span>
+                                <span className="seps type-hyphen">-</span>
                                 <div className="o-form _input wdth-20">
                                   <InputText placeholder="" value="729" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <span className="sep type-hyphen">-</span>
+                                <span className="seps type-hyphen">-</span>
                                 <div className="o-form _input wdth-20">
                                   <InputText placeholder="" value="0000" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
@@ -468,7 +468,7 @@ function ADMPA0101M() {
                                   <InputText placeholder="" value="729" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <span className="sep type-hyphen">-</span>
+                                <span className="seps type-hyphen">-</span>
                                 <div className="o-form _input wdth-20">
                                   <InputText placeholder="" value="0001" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>

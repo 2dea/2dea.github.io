@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 인사정보 > 직원관리 > (LP)변경이력
+ * @description 관리자 > 인사정보 > 직원관리 ~ (LP)변경이력
  */
 
 // dependency

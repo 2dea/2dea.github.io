@@ -416,7 +416,7 @@ function ADMPA0401M() {
 
             </SplitterPanel>
 
-            <SplitterPanel minSize={17.5} className="column">
+            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
 
               <div className="o-section">
                 <div className="m-header">
@@ -488,7 +488,7 @@ function ADMPA0401M() {
           <div className="div-footer">
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="취소" className="_cancel" />
+                <CommonButton label="삭제" className="_delete" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>

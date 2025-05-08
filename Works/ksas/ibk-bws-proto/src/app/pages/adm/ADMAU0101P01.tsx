@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 인사정보 > 직원관리 ~ (LP)직무분장관리
+ * @description 관리자 > 권한관리 > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
  */
 
 // dependency
@@ -31,7 +31,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMPA0301P01() {
+function ADMAU0101P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -92,45 +92,15 @@ function ADMPA0301P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">직무분장관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">상위메뉴선택</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
-              <form className="m-filter-form">
-                <div className="fieldset">
-
-                  <div className="o-field">
-                    <Label label={`사무분장코드`} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`사무분장명`} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
-                </div>
-              </form>
-
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">사무분장 목록</span></h4>
+                  <h4 className="o-heading level2"><span className="label">메뉴내역</span></h4>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -140,71 +110,36 @@ function ADMPA0301P01() {
                     </em>
                   </div>
 
-                </div>
+                  <div className="o-field">
+                    <div className="fields">
+                      <div className="o-form _input wdth-90">
+                        <InputText placeholder="메뉴ID, 메뉴명 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="검색" icon="search" />
+                        </span>
+                        <span className="inner-binds type-find">
+                          <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                          <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
 
-                <div className="main _primary rows-body-5i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="table-container p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
-                          <col />
-                          <col className="wdth-auto" />
-                        </colgroup>
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="모두닫힘" className="_normal" />
+                      <CommonButton label="모두펼침" className="_normal" />
+                    </div>
 
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선택</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장명</span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={4}>등록된 데이터가 없습니다.</td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                            <td>{idx + 1}</td>
-                            <td>10000</td>
-                            <td className="g-start">기획과장</td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>
 
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li>추가할 사무분장을 선택하여 추가해주세요.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="m-divider">
-                <div className="m-binds">
-                  <div className="group">
-                    <CommonButton label="선택항목추가" icon="du-down" className="_normal" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">선택된 사무분장 목록</span></h5>
-                </div>
-
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -217,9 +152,9 @@ function ADMPA0301P01() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순서</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메뉴ID</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메뉴명</span></div></th>
                           </tr>
                         </thead>
 
@@ -230,17 +165,64 @@ function ADMPA0301P01() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>10140</td>
+                          <tr className="p-highlight">
+                            <td>1</td>
+                            <td>AABB00001</td>
                             <td className="g-start">
-                              <div className="m-with-bind">
-                                <span className="main">운영위원회</span>
-                                <span className="binds">
-                                  <ImageButton label="삭제" icon="delete" />
+                              <div className="o-depth level0">
+                                <span className="icons">
+                                  <Icon icon="folder-open" />
                                 </span>
+                                <span className="main">홈</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level1">
+                                <span className="icons">
+                                  <Icon icon="folder" />
+                                </span>
+                                <span className="main">비상계획안전기획</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level1">
+                                <span className="icons">
+                                  <Icon icon="folder-open" />
+                                </span>
+                                <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level2">
+                                <span className="icons">
+                                  <Icon icon="folder-open" />
+                                </span>
+                                <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
+                              </div>
+                            </td>
+                          </tr>
+                        {[...Array(23)].map((e, idx) => (
+                          <tr>
+                            <td>{ idx + 5 }</td>
+                            <td>AABB00001</td>
+                            <td className="g-start">
+                              <div className="o-depth level1">
+                                <span className="icons">
+                                  <Icon icon="folder" />
+                                </span>
+                                <span className="main">외화보유<mark className="o-find-mark" tabIndex={0}>현</mark>황</span>
                               </div>
                             </td>
                           </tr>
@@ -253,7 +235,7 @@ function ADMPA0301P01() {
 
                 <div className="m-footer">
                   <ul className="m-bullets type-disc">
-                    <li>해당 직원의 사무분장을 확인한 후 저장해주세요.</li>
+                    <li>메뉴 검색결과로 위치 이동 시 <span className="o-example type-button"><Icon icon="page-up" /><em className="g-abshidden">[이전 탐색]</em> <Icon icon="page-down" /><em className="g-abshidden">[다음 탐색]</em></span> 버튼을 클릭해주세요.</li>
                   </ul>
                 </div>
               </div>
@@ -266,7 +248,7 @@ function ADMPA0301P01() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="저장" className="_solid-primary" />
+              <CommonButton label="선택" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -276,7 +258,7 @@ function ADMPA0301P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)직무분장관리 [wdth-40p(w770)]</span>
+              <span className="label">(P)상위메뉴선택 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -295,4 +277,4 @@ function ADMPA0301P01() {
   );
 }
 
-export default ADMPA0301P01;
+export default ADMAU0101P01;

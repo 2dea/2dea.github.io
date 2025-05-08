@@ -168,7 +168,7 @@ function HSPBT0101M() {
                     <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                     <i aria-hidden="true"></i>
                   </div>
-                  <span className="sep type-tilde">~</span>
+                  <span className="seps type-tilde">~</span>
                   <div className="o-form _input type-date mode-required wdth-50">
                     <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                     <i aria-hidden="true"></i>

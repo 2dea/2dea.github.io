@@ -411,7 +411,7 @@ function ADMPA0301M() {
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <span className="sep type-tilde">~</span>
+                                <span className="seps type-tilde">~</span>
                                 <div className="o-form _input type-date wdth-50">
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
                                   <i aria-hidden="true"></i>
@@ -430,7 +430,7 @@ function ADMPA0301M() {
           </div>
 
           <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} className="column">
+            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
 
               <div className="o-section">
                 <div className="m-header">

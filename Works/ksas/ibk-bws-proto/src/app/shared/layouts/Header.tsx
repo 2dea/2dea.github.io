@@ -333,8 +333,8 @@ function Header() {
 
             <div className="m-binds">
               <span className="group _center">
-                <CommonButton label="모두펼침" className="_normal" />
                 <CommonButton label="모두닫힘" className="_normal" />
+                <CommonButton label="모두펼침" className="_normal" />
               </span>
             </div>
           </TabPanel>

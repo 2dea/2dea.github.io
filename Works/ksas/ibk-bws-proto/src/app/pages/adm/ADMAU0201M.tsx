@@ -160,6 +160,7 @@ function ADMAU0201M() {
 
                     <div className="m-binds">
                       <div className="group">
+                        <CommonButton label="모두닫힘" className="_normal" />
                         <CommonButton label="모두펼침" className="_normal" />
                       </div>
 
