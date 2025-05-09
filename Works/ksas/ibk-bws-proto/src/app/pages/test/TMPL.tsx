@@ -368,12 +368,16 @@ function TMPL() {
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-90">
-                                    <InputText placeholder="" value="Value" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                  <div className="o-form _input wdth-30">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                     <i aria-hidden="true"></i>
                                     <span className="inner-binds">
                                       <ImageButton label="검색" icon="search" />
                                     </span>
+                                  </div>
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                    <i aria-hidden="true"></i>
                                   </div>
                                 </div>
                               </div>

@@ -123,22 +123,67 @@ function ADMAU0204M() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field">
-                    <Label label={`직원번호/명`} />
+                  <div className="o-field colspan-2">
+                    <Label label={`InputCheck`} />
                     <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
+                      <div className="m-checks">
+                        <label className="o-check type-swoosh">
+                          <input type="checkbox" title="" value="" className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">Default</span>
+                        </label>
+
+                        <label className="o-check type-swoosh">
+                          <input type="checkbox" title="" value="" checked className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">Checked</span>
+                        </label>
+
+                        <label className="o-check type-swoosh">
+                          <input type="checkbox" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">Disabled</span>
+                        </label>
+
+                        <label className="o-check type-swoosh">
+                          <input type="checkbox" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">Disabled+Checked</span>
+                        </label>
+                        {/*
+                        <label className="o-check">
+                          <input type="checkbox" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">체크박스 Disabled+Indeterminate</span>
+                        </label>
+
+                        <label className="o-check">
+                          <input type="checkbox" title="" value="" className="bind" onBlur={(e) => e.target.indeterminate = 'true'} /><i aria-hidden="true"></i>
+                          <span className="label">체크박스 Indeterminate</span>
+                        </label>
+                         */}
                       </div>
                     </div>
                   </div>
 
-                  <div className="o-field">
-                    <Label label={`권한명`} />
+                  <div className="o-field colspan-2">
+                    <Label label={`InputRadio`} />
                     <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
+                      <div className="m-checks">
+                        <label className="o-check type-swoosh">
+                          <input type="radio" name="RADIO:01" title="" value="" className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">Default</span>
+                        </label>
+
+                        <label className="o-check type-swoosh">
+                          <input type="radio" name="RADIO:01" title="" value="" checked className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">Checked</span>
+                        </label>
+
+                        <label className="o-check type-swoosh">
+                          <input type="radio" name="RADIO:02" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">Disabled</span>
+                        </label>
+
+                        <label className="o-check type-swoosh">
+                          <input type="radio" name="RADIO:02" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
+                          <span className="label">Disabled+Checked</span>
+                        </label>
                       </div>
                     </div>
                   </div>
