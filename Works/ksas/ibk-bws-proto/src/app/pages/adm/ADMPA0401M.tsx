@@ -272,7 +272,7 @@ function ADMPA0401M() {
           </div>
 
           <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} className="column">
+            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
 
               <div className="o-section">
                 <div className="m-header">
@@ -416,7 +416,7 @@ function ADMPA0401M() {
 
             </SplitterPanel>
 
-            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
+            <SplitterPanel minSize={17.5} className="column">
 
               <div className="o-section">
                 <div className="m-header">

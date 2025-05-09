@@ -201,7 +201,7 @@ function ADMPA0301M() {
                   </div>
                 </div>
 
-                <div className="main _primary">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -287,7 +287,13 @@ function ADMPA0301M() {
           <div className="o-grid">
             <div className="column">
 
-            <div className="o-section">
+            </div>
+          </div>
+
+          <Splitter gutterSize={0} className="o-grid">
+            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
+
+              <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
@@ -302,12 +308,6 @@ function ADMPA0301M() {
                   <form className="m-data-form">
                     <table className="table">
                       <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
                         <col className="head" />
                         <col className="data" />
                       </colgroup>
@@ -327,9 +327,10 @@ function ADMPA0301M() {
                               </div>
                             </div>
                           </td>
-
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
-                            <Label label={`소속부점/소속팀`} require={false} />
+                            <Label label={`소속부점`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -338,7 +339,17 @@ function ADMPA0301M() {
                                   <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`소속팀`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
                                 <div className="o-form _input">
                                   <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
@@ -346,7 +357,8 @@ function ADMPA0301M() {
                               </div>
                             </div>
                           </td>
-
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`실근무점`} require={false} />
                           </th>
@@ -360,7 +372,8 @@ function ADMPA0301M() {
                               </div>
                             </div>
                           </td>
-
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`EDW 실근무부점`} require={false} />
                           </th>
@@ -389,7 +402,8 @@ function ADMPA0301M() {
                               </div>
                             </div>
                           </td>
-
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`근부여부`} require={false} />
                           </th>
@@ -399,11 +413,12 @@ function ADMPA0301M() {
                               <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">퇴직</span></label>
                             </div>
                           </td>
-
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`부점변경예정 (종료일)`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
@@ -426,11 +441,9 @@ function ADMPA0301M() {
                 </div>
               </div>
 
-            </div>
-          </div>
+            </SplitterPanel>
 
-          <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
+            <SplitterPanel minSize={17.5} className="column">
 
               <div className="o-section">
                 <div className="m-header">
@@ -495,10 +508,6 @@ function ADMPA0301M() {
                   </div>
                 </div>
               </div>
-
-            </SplitterPanel>
-
-            <SplitterPanel minSize={17.5} className="column">
 
               <div className="o-section">
                 <div className="m-header">

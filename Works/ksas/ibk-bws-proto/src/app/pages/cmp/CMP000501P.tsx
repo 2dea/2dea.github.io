@@ -105,7 +105,6 @@ function CMP000501P() {
                     <Label label={`직원`} require={true} />
                     <div className="fields">
                       <div className="o-form _input mode-required">
-                        {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
@@ -118,16 +117,12 @@ function CMP000501P() {
                   <div className="o-field">
                     <Label label={`실근무점`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input mode-required wdth-30">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                      <div className="o-form _input mode-required">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
-                          <ImageButton label="검색" icon="search" />
+                          <ImageButton label="초기화" icon="remove" />
                         </span>
-                      </div>
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
