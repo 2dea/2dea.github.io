@@ -507,7 +507,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .o-section  { display: flex; flex-direction: column; gap: $margin-section-20; }
 .o-section:has(>.main._primary),
   .o-section >.main._primary  { flex: 1 0 0; }
-.o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 3; }
+// .o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 3; }
+.o-section >.main:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 4; }
 
 // .o-section >.main  {
 //   --height-section-main-body-10: calc(var(--height-cell) * 10 + var(--edge-cell) * 2 + var(--width-scrollbar));

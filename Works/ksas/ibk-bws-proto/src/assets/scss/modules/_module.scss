@@ -646,23 +646,24 @@
 .o-check >input ~.label._hidden:before  { left: 0; }
  */
 
+.o-check  { --height: 24; --color-enabled: var(--color-edge-40); --color-enabled-hover: var(--color-edge-70); --color-checked: var(--color-control-40); --color-checked-hover: var(--color-control-70); }
 .o-check  { display: inline-block; display: inline-flex; align-items: baseline; gap: $gap-element-50; vertical-align: middle; position: relative; max-width: 100%; }
 .o-check >*  { vertical-align: inherit; vertical-align: -webkit-baseline-middle; }
-.o-check >input  { font-size: calc(24em / 14); font-size: min(2.4rem, calc(24em / 14)); position: absolute; z-index: 1; margin: calc((1em - 13px) / 2); opacity: 0.001; }
-.o-check >input ~i  { font-size: calc(24em / 14); font-size: min(2.4rem, calc(24em / 14)); display: inline-block; display: inline-flex; align-items: center; flex: none; position: relative; max-height: 1em; }
+.o-check >input  { font-size: calc(1em / var(--text-size-int) * var(--height)); font-size: min(calc(var(--rem) * var(--height)), calc(1em / var(--text-size-int) * var(--height))); line-height: 1; position: absolute; z-index: 1; margin: calc((1em - 13px) / 2); opacity: 0.001; }
+.o-check >input ~i  { font-size: calc(1em / var(--text-size-int) * var(--height)); font-size: min(calc(var(--rem) * var(--height)), calc(1em / var(--text-size-int) * var(--height))); line-height: 1; display: inline-block; display: inline-flex; align-items: center; flex: none; position: relative; max-height: 1em; }
 .o-check >input ~i:before  { content: ""; width: 1em; height: 1em; background: none no-repeat 0 /100%; border-radius: 0.2rem; -webkit-transition: background-color 0.15s; transition: background-color 0.15s; }
 .o-check >input ~i:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 .o-check >input ~i:before  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
-.o-check >input ~i:before  { content: "check_box_outline_blank"; color: var(--color-check-enabled); }
+.o-check >input ~i:before  { content: "check_box_outline_blank"; color: var(--color-enabled); }
 .o-check >input[type="radio"]:not(.type-checkbox) ~i:before  { border-radius: 50%; }
 .o-check >input[type="radio"]:not(.type-checkbox) ~i:before  { content: "radio_button_unchecked"; font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
 .o-check >.label  { align-self: center; overflow: hidden; }
 
-.o-check >input[type="checkbox"]:indeterminate ~i:before  { content: "indeterminate_check_box"; color: var(--color-check-checked); }
-.o-check >input:checked ~i:before  { content: "check_box"; color: var(--color-check-checked); }
+.o-check >input[type="checkbox"]:indeterminate ~i:before  { content: "indeterminate_check_box"; color: var(--color-checked); }
+.o-check >input:checked ~i:before  { content: "check_box"; color: var(--color-checked); }
 .o-check >input[type="radio"]:not(.type-checkbox):checked ~i:before  { content: "radio_button_checked"; }
 
-.o-check >input[disabled] ~i:before  { color: var(--color-check-enabled); opacity: 0.35; }
+.o-check >input[disabled] ~i:before  { color: var(--color-enabled); filter: opacity(0.35); }
 .o-check >:has(input[disabled]) ~.label,
   .o-check >input[disabled] ~.label  { color: var(--color-text-disabled, GrayText); }
 
@@ -687,6 +688,10 @@
 .o-check.style-favorite >input ~i:before  { content: "star" !important; color: var(--color-icon-40); }
 .o-check.style-favorite >input:checked ~i:before  { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; color: var(--color-point-yellow); }
 
+
+.o-check  { --height: var(--text-height-int); }
+.o-check >input  { font-size: 1lh; }
+.o-check >input ~i  { font-size: 1lh; }
 
 
 
