@@ -362,7 +362,22 @@ function ADMAU0204M() {
                             <td className="g-start">중요용지용도품관리자</td>
                             <td className="g-start"></td>
                             <td>Y</td>
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                            <td>
+                              {
+                                idx === 1 ?
+                              <div className="m-checks">
+                                <label className="o-check type-swoosh">
+                                  <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
+                                  <span className="label _hidden">선택</span>
+                                </label>
+                              </div>
+                                :
+                              <label className="o-check type-swoosh">
+                                <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
+                                <span className="label _hidden">선택</span>
+                              </label>
+                              }
+                            </td>
                           </tr>
                         ))}
                         </tbody>
