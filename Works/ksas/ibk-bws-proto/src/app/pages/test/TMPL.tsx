@@ -11,6 +11,8 @@ import Icon from 'app/shared/modules/OIcon';
 import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
+import InputCheck from 'app/shared/modules/OInputCheck';
+import InputRadio from 'app/shared/modules/OInputRadio';
 import XDropdown from 'app/shared/modules/XDropdown';
 import XMultiSelect from 'app/shared/modules/XMultiSelect';
 import { Dialog } from 'primereact/dialog';
@@ -176,6 +178,82 @@ function TMPL() {
 
                 <form className="m-filter-form">
                   <div className="fieldset">
+
+                    <div className="o-field colspan-2">
+                      <Label label={`InputCheck`} />
+                      <div className="fields">
+                        <div className="m-checks">
+                          {/* <label className="o-check type-swoosh">
+                            <input type="checkbox" title="" value="" className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">Default</span>
+                          </label>
+
+                          <label className="o-check type-swoosh">
+                            <input type="checkbox" title="" value="" checked className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">Checked</span>
+                          </label>
+
+                          <label className="o-check type-swoosh">
+                            <input type="checkbox" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">Disabled</span>
+                          </label>
+
+                          <label className="o-check type-swoosh">
+                            <input type="checkbox" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">Disabled+Checked</span>
+                          </label> */}
+                          {/*
+                          <label className="o-check">
+                            <input type="checkbox" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">체크박스 Disabled+Indeterminate</span>
+                          </label>
+
+                          <label className="o-check">
+                            <input type="checkbox" title="" value="" className="bind" onBlur={(e) => e.target.indeterminate = 'true'} /><i aria-hidden="true"></i>
+                            <span className="label">체크박스 Indeterminate</span>
+                          </label>
+                          */}
+
+                          <InputCheck label="Default" />
+                          <InputCheck label="Checked" checked />
+                          <InputCheck label="Disabled" disabled />
+                          <InputCheck label="Disabled+Checked" disabled checked />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="o-field colspan-2">
+                      <Label label={`InputRadio`} />
+                      <div className="fields">
+                        <div className="m-checks">
+                          {/* <label className="o-check type-swoosh">
+                            <input type="radio" name="RADIO:01" title="" value="" className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">Default</span>
+                          </label>
+
+                          <label className="o-check type-swoosh">
+                            <input type="radio" name="RADIO:01" title="" value="" checked className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">Checked</span>
+                          </label>
+
+                          <label className="o-check type-swoosh">
+                            <input type="radio" name="RADIO:02" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">Disabled</span>
+                          </label>
+
+                          <label className="o-check type-swoosh">
+                            <input type="radio" name="RADIO:02" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
+                            <span className="label">Disabled+Checked</span>
+                          </label> */}
+
+                          <InputRadio name="RADIO:01" label="Default" />
+                          <InputRadio name="RADIO:01" label="Checked" checked />
+
+                          <InputRadio name="RADIO:02" label="Disabled" disabled />
+                          <InputRadio name="RADIO:02" label="Disabled+Checked" disabled checked />
+                        </div>
+                      </div>
+                    </div>
 
                     <div className="o-field">
                       <Label label={`인도부점`} require={true} />

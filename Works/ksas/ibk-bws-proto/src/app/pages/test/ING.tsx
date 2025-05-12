@@ -11,6 +11,8 @@ import Icon from 'app/shared/modules/OIcon';
 import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
+import InputCheck from 'app/shared/modules/OInputCheck';
+import InputRadio from 'app/shared/modules/OInputRadio';
 import XDropdown from 'app/shared/modules/XDropdown';
 import XMultiSelect from 'app/shared/modules/XMultiSelect';
 import { Dialog } from 'primereact/dialog';
@@ -127,7 +129,7 @@ function ADMAU0204M() {
                     <Label label={`InputCheck`} />
                     <div className="fields">
                       <div className="m-checks">
-                        <label className="o-check type-swoosh">
+                        {/* <label className="o-check type-swoosh">
                           <input type="checkbox" title="" value="" className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Default</span>
                         </label>
@@ -145,7 +147,7 @@ function ADMAU0204M() {
                         <label className="o-check type-swoosh">
                           <input type="checkbox" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Disabled+Checked</span>
-                        </label>
+                        </label> */}
                         {/*
                         <label className="o-check">
                           <input type="checkbox" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
@@ -157,6 +159,11 @@ function ADMAU0204M() {
                           <span className="label">체크박스 Indeterminate</span>
                         </label>
                          */}
+
+                        <InputCheck label="Default" />
+                        <InputCheck label="Checked" checked />
+                        <InputCheck label="Disabled" disabled />
+                        <InputCheck label="Disabled+Checked" disabled checked />
                       </div>
                     </div>
                   </div>
@@ -165,7 +172,7 @@ function ADMAU0204M() {
                     <Label label={`InputRadio`} />
                     <div className="fields">
                       <div className="m-checks">
-                        <label className="o-check type-swoosh">
+                        {/* <label className="o-check type-swoosh">
                           <input type="radio" name="RADIO:01" title="" value="" className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Default</span>
                         </label>
@@ -183,7 +190,13 @@ function ADMAU0204M() {
                         <label className="o-check type-swoosh">
                           <input type="radio" name="RADIO:02" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Disabled+Checked</span>
-                        </label>
+                        </label> */}
+
+                        <InputRadio name="RADIO:01" label="Default" />
+                        <InputRadio name="RADIO:01" label="Checked" checked />
+
+                        <InputRadio name="RADIO:02" label="Disabled" disabled />
+                        <InputRadio name="RADIO:02" label="Disabled+Checked" disabled checked />
                       </div>
                     </div>
                   </div>

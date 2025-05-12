@@ -11,6 +11,8 @@ import Icon from 'app/shared/modules/OIcon';
 import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
+import InputCheck from 'app/shared/modules/OInputCheck';
+import InputRadio from 'app/shared/modules/OInputRadio';
 import XDropdown from 'app/shared/modules/XDropdown';
 import XMultiSelect from 'app/shared/modules/XMultiSelect';
 import { Dialog } from 'primereact/dialog';
