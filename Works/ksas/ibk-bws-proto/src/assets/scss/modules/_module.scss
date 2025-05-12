@@ -690,7 +690,8 @@
 .o-check >i  { --surface: Transparent; display: flex; align-items: center; border-radius: calc(var(--rem) * 2); }
 .o-check >i:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 .o-check >i:before  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
-.o-check >i:before  { content: ""; font-size: var(--height); position: relative; z-index: 1; width: 1em; height: 1em; background: none no-repeat 0 /100%; }
+.o-check >i:before  { content: ""; font-size: var(--height); position: relative; z-index: 1; width: 1em; height: 1em; }
+.o-check >i:not(.o-icon):before  { background: none no-repeat 0 /100%; }
 
 .o-check >i:before  { content: "check_box_outline_blank"; }
 .o-check:has(:indeterminate) >i:before  { content: "indeterminate_check_box"; }
@@ -703,6 +704,7 @@
 .o-check >i  { --surface: var(--color-ground); color: var(--color-enabled); }
 .o-check:has(:checked) >i  { color: var(--color-checked); }
 .o-check:has([disabled]) >i  { filter: grayscale(0.9) opacity(0.65); }
+.o-check:has(input:not(:hover):focus) >i  { outline: $e10 solid var(--color-edge-focus); }
 
 
 .o-check.type-swoosh  { --height-int: var(--text-height-int); --height: 1lh; }
@@ -715,11 +717,17 @@
 .o-check.type-swoosh:has(input:not([type="radio"])) >i  { border: $e10 solid $tp; }
 .o-check.type-swoosh:has(input:not([type="radio"])) >i:before  { content: "check" !important; max-width: 0; transition: 0.4s var(--timing-func-ease-faster); }
 .o-check.type-swoosh:has(input:not([type="radio"]):checked) >i:before  { max-width: var(--height); transition-property: max-width;}
-.o-check.type-swoosh:has([type="radio"]:not(.mode-checkbox)) >i:before  { --height: calc(1lh * 10 / var(--height-int)); margin: auto; background:  $cc; }
+.o-check.type-swoosh:has([type="radio"]:not(.mode-checkbox)) >i:before  { --height: calc(1lh * 10 / var(--height-int)); margin: auto; background: $cc; }
 
 .o-check.type-swoosh:hover:not(:active) >i  { color: var(--color-enabled-hover); }
 .o-check.type-swoosh:has(:checked):hover:not(:active) >i  { color: var(--color-checked-hover); }
 .o-check.type-swoosh:has([disabled]) >i  { --surface: var(--surface-disabled); color: var(--color-enabled) !important; filter: none; }
+
+
+.o-check.type-icon  { --height-int: 20; }
+.o-check.type-icon >i  { font-size: inherit; line-height: inherit; }
+.o-check.type-icon >i:before  { content: "" !important; }
+.o-check.type-icon:has(:checked) >i:before  { background-position: 100%; }
 
 
 

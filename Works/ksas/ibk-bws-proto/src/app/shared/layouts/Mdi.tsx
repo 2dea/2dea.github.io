@@ -7,7 +7,7 @@ import React, { useRef, useState } from 'react';
 
 // components
 import Icon from 'app/shared/modules/OIcon';
-import ImageButton from '../modules/OImageButton';
+import ImageButton from 'app/shared/modules/OImageButton';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Tooltip } from 'primereact/tooltip';
 

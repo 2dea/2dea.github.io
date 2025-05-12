@@ -858,6 +858,7 @@ function SUBTMPL() {
                                 <i className="o-icon _move wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _star wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _favorite wdth-50" aria-hidden="true"></i>
                               </div>
                             </td>
                           </tr>

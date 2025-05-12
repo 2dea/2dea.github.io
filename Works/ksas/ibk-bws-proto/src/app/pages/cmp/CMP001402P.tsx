@@ -7,6 +7,7 @@ import React, { useRef, useState } from 'react';
 
 // components
 // import '@modules/Index';
+import Favorite from 'app/shared/layouts/Favorite';
 import Icon from 'app/shared/modules/OIcon';
 import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';

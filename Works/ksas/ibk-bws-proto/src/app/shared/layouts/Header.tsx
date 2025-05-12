@@ -6,7 +6,7 @@
 import React, { useRef, useState } from 'react';
 
 // components
-import CommonButton from '../modules/OButton';
+import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
 import { Tooltip } from 'primereact/tooltip';
 import { Accordion, AccordionTab } from 'primereact/accordion';
