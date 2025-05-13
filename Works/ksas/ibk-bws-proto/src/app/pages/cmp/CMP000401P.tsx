@@ -117,7 +117,7 @@ function CMP000401P() {
               <div className="o-section type-upload-image">
                 <div className="m-header">
                   <div className="m-checks">
-                    <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label">전체선택</span></label>
+                    <InputCheck label="전체선택" />
                   </div>
 
                   <div className="o-limit type-file">
@@ -142,10 +142,7 @@ function CMP000401P() {
                     <ul>
                       <li>
                         <div className="card">
-                          <label className="o-check">
-                            <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                            <span className="label _hidden">선택</span>
-                          </label>
+                          <InputCheck label="선택" labelHidden />
 
                           <div className="image">
                             <img src="https://images.unsplash.com/photo-1743001025958-19eca24afd23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="" />
@@ -167,10 +164,7 @@ function CMP000401P() {
                       </li>
                       <li>
                         <div className="card">
-                          <label className="o-check">
-                            <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                            <span className="label _hidden">선택</span>
-                          </label>
+                          <InputCheck label="선택" labelHidden />
 
                           <div className="image">
                             <img src="https://images.unsplash.com/photo-1741606552241-fbd67e574f7f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNHx8fGVufDB8fHx8fA%3D%3D" alt="" />
@@ -192,10 +186,7 @@ function CMP000401P() {
                       </li>
                       <li>
                         <div className="card">
-                          <label className="o-check">
-                            <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                            <span className="label _hidden">선택</span>
-                          </label>
+                          <InputCheck label="선택" labelHidden />
 
                           <div className="image"></div>
 
@@ -216,10 +207,7 @@ function CMP000401P() {
                       {[...Array(4)].map((e, idx) => (
                       <li key={idx}>
                         <div className="card">
-                          <label className="o-check">
-                            <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                            <span className="label _hidden">선택</span>
-                          </label>
+                          <InputCheck label="선택" labelHidden />
 
                           <div className="image">
                             <img src={require("assets/images/common/img_empty-image.png")} alt="" />

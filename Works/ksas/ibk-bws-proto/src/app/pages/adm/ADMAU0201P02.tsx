@@ -247,7 +247,7 @@ function ADMAU0201P02() {
                               }`
                             }
                           >
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                            <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
                             <td>AABB00001M00</td>
                             <td className="g-start">원화현수송신청</td>

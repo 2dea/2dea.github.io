@@ -696,7 +696,7 @@ function TMPL() {
 
                               <thead className="p-datatable-thead">
                                 <tr>
-                                  <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                                  <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
                                   <th className="p-align-center p-sortable-column p-highlight" aria-sort="ascending"><div className="p-column-header-content"><span className="p-column-title">출급번호</span><span data-pc-section="sort"></span></div></th>
@@ -725,7 +725,7 @@ function TMPL() {
                               <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
                                 <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                  <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                                  <td><InputCheck label="선택" labelHidden /></td>
                                   <td>{idx + 1}</td>
                                   <td>프로세스혁신</td>
                                   <td>BC016</td>
@@ -822,7 +822,7 @@ function TMPL() {
 
                               <thead className="p-datatable-thead">
                                 <tr>
-                                  <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                                  <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
@@ -848,7 +848,7 @@ function TMPL() {
                               <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
                                 <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                  <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                                  <td><InputCheck label="선택" labelHidden /></td>
                                   <td>{idx + 1}</td>
                                   <td>프로세스혁신</td>
                                   <td>BC016</td>
@@ -1840,8 +1840,8 @@ function TMPL() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">근무</span></label>
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">퇴직</span></label>
+                                <InputRadio name="RADIO_01" label="근무" checked />
+                                <InputRadio name="RADIO_01" label="퇴직" />
                               </div>
                             </td>
 
@@ -1851,7 +1851,7 @@ function TMPL() {
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
+                                  <InputCheck label="선택" labelHidden />
                                   <div className="o-form _input type-date wdth-50">
                                     <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
                                     <i aria-hidden="true"></i>
@@ -1962,7 +1962,7 @@ function TMPL() {
 
                           <thead className="p-datatable-thead">
                             <tr>
-                              <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재직원</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">근태구분</span></div></th>
@@ -1985,7 +1985,7 @@ function TMPL() {
                           <tbody className="p-datatable-tbody">
                           {[...Array(1)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
                               <td>[0000001] 홍길동</td>
                               <td></td>
@@ -1999,7 +1999,7 @@ function TMPL() {
                             </tr>
                           ))}
                             <tr>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td><Icon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
                               <td>
                                 <div className="o-field">
@@ -2156,7 +2156,7 @@ function TMPL() {
 
                           <thead className="p-datatable-thead">
                             <tr>
-                              <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">코드도메인</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">한글명</span></div></th>
@@ -2174,7 +2174,7 @@ function TMPL() {
                           <tbody className="p-datatable-tbody">
                           {[...Array(15)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx === 15 - 1 ? <Icon icon="grid-added" /> : idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 | 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                               <td>
                                 {idx === 15 - 1 ?
@@ -2262,7 +2262,7 @@ function TMPL() {
 
                           <thead className="p-datatable-thead">
                             <tr>
-                              <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">코드도메인</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인스턴스</span></div></th>
@@ -2282,7 +2282,7 @@ function TMPL() {
                           <tbody className="p-datatable-tbody">
                           {[...Array(10)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx === 10 - 1 ? <Icon icon="grid-added" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
                               <td>
                                 {idx === 10 - 1 ?
@@ -2963,7 +2963,7 @@ function TMPL() {
                               <td className="g-start">중요용지용도품관리자</td>
                               <td className="g-start"></td>
                               <td>Y</td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                             </tr>
                           ))}
                           </tbody>

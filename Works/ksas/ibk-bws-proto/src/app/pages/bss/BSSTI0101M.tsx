@@ -133,9 +133,9 @@ function BSSTI0101M() {
                     <Label label={`구분`} require={false} />
                     <div className="fields">
                       <div className="m-checks">
-                        <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">전체</span></label>
-                        <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">비품</span></label>
-                        <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">소모품</span></label>
+                        <InputRadio name="RADIO_01" label="전체" checked />
+                        <InputRadio name="RADIO_01" label="비품" />
+                        <InputRadio name="RADIO_01" label="소모품" />
                       </div>
                     </div>
                   </div>
@@ -154,8 +154,8 @@ function BSSTI0101M() {
                     <Label label={`상태`} require={false} />
                     <div className="fields">
                       <div className="m-checks">
-                        <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">활동</span></label>
-                        <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">비활동</span></label>
+                        <InputRadio name="RADIO_02" label="활동" checked />
+                        <InputRadio name="RADIO_02" label="비활동" />
                       </div>
                     </div>
                   </div>
@@ -282,8 +282,8 @@ function BSSTI0101M() {
                           </th>
                           <td colSpan={1}>
                             <div className="m-checks">
-                              <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">비품</span></label>
-                              <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">소모품</span></label>
+                              <InputRadio name="RADIO_03" label="비품" checked />
+                              <InputRadio name="RADIO_03" label="소모품" />
                             </div>
                           </td>
                         </tr>
@@ -323,8 +323,8 @@ function BSSTI0101M() {
                           </th>
                           <td colSpan={1}>
                             <div className="m-checks">
-                              <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">활동</span></label>
-                              <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">비활동</span></label>
+                              <InputRadio name="RADIO_04" label="활동" checked />
+                              <InputRadio name="RADIO_04" label="비활동" />
                             </div>
                           </td>
                         </tr>

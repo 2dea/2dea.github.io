@@ -312,8 +312,8 @@ function ADMAU0103M() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">Y</span></label>
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">N</span></label>
+                                <InputRadio name="RADIO_01" label="Y" checked />
+                                <InputRadio name="RADIO_01" label="N" />
                               </div>
                             </td>
                           </tr>

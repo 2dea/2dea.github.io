@@ -132,8 +132,8 @@ function BSSTI0201M() {
                   <Label label={`구분`} require={false} />
                   <div className="fields">
                     <div className="m-checks">
-                      <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">충주연수원</span></label>
-                      <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">기흥연수원</span></label>
+                      <InputRadio name="RADIO_01" label="충주연수원" checked />
+                      <InputRadio name="RADIO_01" label="기흥연수원" />
                     </div>
                   </div>
                 </div>
@@ -142,9 +142,9 @@ function BSSTI0201M() {
                   <Label label={`상태`} require={false} />
                   <div className="fields">
                     <div className="m-checks">
-                      <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-1'} /><span className="label">전체</span></label>
-                      <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">비품</span></label>
-                      <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-2'} /><span className="label">소모품</span></label>
+                      <InputRadio name="RADIO_02" label="전체" checked />
+                      <InputRadio name="RADIO_02" label="비품" />
+                      <InputRadio name="RADIO_02" label="소모품" />
                     </div>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ function BSSTI0201M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">연수원</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
@@ -224,7 +224,7 @@ function BSSTI0201M() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
-                            <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                            <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                             <td>충주연수원</td>
                             <td>소모품</td>

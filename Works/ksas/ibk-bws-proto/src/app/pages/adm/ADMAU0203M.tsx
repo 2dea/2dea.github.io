@@ -296,7 +296,7 @@ function ADMAU0203M() {
                               <td className="g-start">중요용지용도품</td>
                               <td className="g-start">권한설명</td>
                               <td>Y</td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                             </tr>
                           ))}
                           </tbody>

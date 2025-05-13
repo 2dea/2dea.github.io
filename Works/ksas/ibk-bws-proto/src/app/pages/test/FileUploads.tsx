@@ -174,7 +174,7 @@ function FileUploads() {
 
                                       <thead>
                                         <tr>
-                                          <th><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></th>
+                                          <th><InputCheck label="전체​선택" labelHidden /></th>
                                           <th>파일명</th>
                                           <th>파일크기</th>
                                         </tr>
@@ -196,7 +196,7 @@ function FileUploads() {
                                       <tbody>
                                       {[...Array(24)].map((e, idx) => (
                                         <tr key={idx}>
-                                          <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                                          <td><InputCheck label="선택" labelHidden /></td>
                                           <td className="g-start">
                                             <span className="o-file">
                                             {

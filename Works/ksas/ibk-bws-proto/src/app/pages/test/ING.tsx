@@ -162,6 +162,7 @@ function ADMAU0204M() {
                         <InputCheck label="Checked" checked />
                         <InputCheck label="Disabled" disabled />
                         <InputCheck label="Disabled+Checked" disabled checked />
+                        <InputCheck label="선택" labelHidden />
                       </div>
                     </div>
                   </div>

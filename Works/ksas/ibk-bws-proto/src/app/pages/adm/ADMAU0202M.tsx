@@ -290,7 +290,7 @@ function ADMAU0202M() {
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제</span></div></th>
                             </tr>
                             <tr>
-                              <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="선택" labelHidden /></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
@@ -316,7 +316,7 @@ function ADMAU0202M() {
                                   <span className="main">자금<mark className="o-find-mark" tabIndex={0}>현</mark>송</span>
                                 </div>
                               </td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -333,7 +333,7 @@ function ADMAU0202M() {
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송</span>
                                 </div>
                               </td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -350,11 +350,11 @@ function ADMAU0202M() {
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
                                 </div>
                               </td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
                             </tr>
                           {[...Array(23)].map((e, idx) => (
                             <tr>
@@ -368,11 +368,11 @@ function ADMAU0202M() {
                                   <span className="main">원화마감시간관리</span>
                                 </div>
                               </td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                             </tr>
                           ))}
                           </tbody>
@@ -439,7 +439,7 @@ function ADMAU0202M() {
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제</span></div></th>
                             </tr>
                             <tr>
-                              <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="선택" labelHidden /></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
@@ -458,21 +458,21 @@ function ADMAU0202M() {
                               <td>1</td>
                               <td>AABB00001P01</td>
                               <td className="g-start">공통<mark className="o-find-mark" tabIndex={0}>팝</mark>업</td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={true} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden checked /></td>
                             </tr>
                             <tr>
                               <td>2</td>
                               <td>AABB00001P02</td>
                               <td className="g-start"><mark className="o-find-mark" tabIndex={0}>팝</mark>업</td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
-                              <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><InputCheck label="선택" labelHidden /></td>
                             </tr>
                           </tbody>
                         </table>

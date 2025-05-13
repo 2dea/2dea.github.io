@@ -428,8 +428,8 @@ function ADMAU0201M() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-1" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_01-1'} /><span className="label">폴더</span></label>
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_01" value="RADIO_01-2" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_01-2'} /><span className="label">화면</span></label>
+                                <InputRadio name="RADIO_01" label="폴더" />
+                                <InputRadio name="RADIO_01" label="화면" checked />
                               </div>
                             </td>
                           </tr>
@@ -502,8 +502,8 @@ function ADMAU0201M() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_02" value="RADIO_02-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_02-1'} /><span className="label">Y</span></label>
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_02" value="RADIO_02-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_02-2'} /><span className="label">N</span></label>
+                                <InputRadio name="RADIO_02" label="Y" checked />
+                                <InputRadio name="RADIO_02" label="N" />
                               </div>
                             </td>
                           </tr>
@@ -513,8 +513,8 @@ function ADMAU0201M() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_03" value="RADIO_03-1" onChange={(e) => setIngredient(e.value)} checked={true || ingredient === 'RADIO_03-1'} /><span className="label">Y</span></label>
-                                <label className="o-check"><RadioButton inputId="" name="RADIO_03" value="RADIO_03-2" onChange={(e) => setIngredient(e.value)} checked={ingredient === 'RADIO_03-2'} /><span className="label">N</span></label>
+                                <InputRadio name="RADIO_03" label="Y" checked />
+                                <InputRadio name="RADIO_03" label="N" />
                               </div>
                             </td>
                           </tr>

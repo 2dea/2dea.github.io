@@ -675,7 +675,7 @@
 .o-check input  { position: absolute; transform: translateY(-50%); width: var(--height); height: var(--height); top: calc(var(--lh) / 2); top: calc(1lh / 2); }
 .o-check input  { z-index: 1; cursor: inherit; }
 .o-check >.label  { flex: 0 1 auto; align-self: center; overflow: hidden; padding-left: calc(var(--height) + var(--gap-col)); }
-.o-check >.label._hidden  { width: var(--height); padding-left: var(--height); white-space: nowrap; }
+.o-check >.label._hidden  { width: var(--height, var(--height-outer)); padding-left: var(--height-outer, var(--height)); white-space: nowrap; }
 
 .o-check [disabled]  { filter: opacity(0.65); }
 .o-check:has([disabled])  { color: var(--color-text-disabled, GrayText); cursor: default; cursor: not-allowed; }
@@ -684,7 +684,7 @@
 
 
 .o-check  { --height-int: 24; --height: calc(var(--rem) * var(--height-int)); --surface-disabled: var(--color-ground-40); --color-enabled: var(--color-edge-40); --color-enabled-hover: var(--color-edge-70); --color-checked: var(--color-control-40); --color-checked-hover: var(--color-control-70); }
-.o-check  { transition: 0.12s; }
+.o-check  { border-radius: $radius-50; transition: 0.12s; }
 .o-check >*  { transition: inherit; }
 .o-check input  { opacity: 0.001; }
 .o-check >i  { --surface: Transparent; display: flex; align-items: center; border-radius: calc(var(--rem) * 2); }
@@ -703,7 +703,9 @@
 
 .o-check >i  { --surface: var(--color-ground); color: var(--color-enabled); }
 .o-check:has(:checked) >i  { color: var(--color-checked); }
-.o-check:has([disabled]) >i  { filter: grayscale(0.9) opacity(0.65); }
+.o-check:has([disabled]) >i  { filter: opacity(0.5); }
+.o-check:has([disabled]):not(.type-icon) >i  { filter: grayscale(0.9) opacity(0.65); }
+// .o-check:has(input:not(:hover):focus):not(.type-icon) >i  { outline: $e10 solid var(--color-edge-focus); }
 .o-check:has(input:not(:hover):focus) >i  { outline: $e10 solid var(--color-edge-focus); }
 
 
@@ -724,10 +726,15 @@
 .o-check.type-swoosh:has([disabled]) >i  { --surface: var(--surface-disabled); color: var(--color-enabled) !important; filter: none; }
 
 
-.o-check.type-icon  { --height-int: 20; }
-.o-check.type-icon >i  { font-size: inherit; line-height: inherit; }
-.o-check.type-icon >i:before  { content: "" !important; }
-.o-check.type-icon:has(:checked) >i:before  { background-position: 100%; }
+.o-check.type-icon  { --height-int: var(--height-icon-50); --height-outer: calc(var(--rem) * var(--height-form-50)); width: var(--height-outer); height: var(--height-outer); }
+.o-check.type-icon >i,
+.o-check.type-icon input  { font-size: inherit; line-height: inherit; margin: 0 calc((var(--height-outer) - var(--height)) / 2); }
+.o-check.type-icon >i:before  { content: "" !important; background-position: 25%; }
+.o-check.type-icon:has(:checked) >i:before  { background-position: 50%; }
+
+.o-check.type-icon:not(:has([disabled])):hover:not(:active)  { background: $color-dimmed-hover; }
+
+.o-check.type-icon:has(:checked):where(.m-title .style-favorite) >i:before  { background-position: 100%; }
 
 
 
@@ -1180,6 +1187,7 @@
   --height: var(--rem) * 30;
   --gap: calc(var(--rem) * 3);
   --gap-icon: #{$gap-element-30};
+  --width-scroll-shadow: #{III(12)};
 
   border-bottom-color: $tp;
 }
@@ -1200,12 +1208,12 @@
 
 .m-mdi >.defaults  { padding-right: $e10; }
 
-.m-mdi >.lists  { min-width: III(120); overflow: scroll hidden; scrollbar-width: none; }
+.m-mdi >.lists  { min-width: III(120); overflow: scroll hidden; padding-right: calc(var(--width-scroll-shadow) - III(4)); scrollbar-width: none; }
 .m-mdi >.lists >:first-child  { margin-left: $e10; }
 .m-mdi >.lists >:last-child  { margin-right: $e10; }
 
 .m-mdi >.controls  { position: relative; padding-left: $e10; }
-.m-mdi >.controls:before  { --width: #{III(12)}; content: ""; position: absolute; right: 100%; transform: translateX($e10); width: var(--width); height: 100%; background: fnLinearGradient(90deg); }
+.m-mdi >.controls:before  { content: ""; position: absolute; right: 100%; transform: translateX($e10); width: var(--width-scroll-shadow); height: 100%; background: fnLinearGradient(90deg); }
 .m-mdi >.controls .link.group  { gap: 0 var(--gap); }
 .m-mdi >.controls .link.group >.item  { position: relative; padding: 0 var(--gap); }
 .m-mdi >.controls .link.group >.item:not(:first-child):before  { content: ""; position: absolute; left: calc($e10 - var(--gap)); top: 50%; @include inc-translate(0); width: $e10; height: III(10); background: var(--color-edge-40); }

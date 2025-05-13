@@ -267,7 +267,7 @@ function HSPBT0101M() {
 
                             <thead className="p-datatable-thead">
                               <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
@@ -296,7 +296,7 @@ function HSPBT0101M() {
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
                               <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                                <td><InputCheck label="선택" labelHidden /></td>
                                 <td>{idx + 1}</td>
                                 <td>프로세스혁신</td>
                                 <td>BC016</td>
@@ -393,7 +393,7 @@ function HSPBT0101M() {
 
                             <thead className="p-datatable-thead">
                               <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">전체&#x200B;선택</span></label></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
@@ -419,7 +419,7 @@ function HSPBT0101M() {
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
                               <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td><label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label></td>
+                                <td><InputCheck label="선택" labelHidden /></td>
                                 <td>{idx + 1}</td>
                                 <td>프로세스혁신</td>
                                 <td>BC016</td>

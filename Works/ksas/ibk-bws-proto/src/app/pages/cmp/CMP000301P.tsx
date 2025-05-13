@@ -116,7 +116,7 @@ function CMP000301P() {
               <div className="o-section">
                 <div className="m-header">
                   <div className="m-checks">
-                    <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label">전체선택</span></label>
+                    <InputCheck label="전체선택" />
                   </div>
 
                   <div className="o-limit type-file">
@@ -142,7 +142,7 @@ function CMP000301P() {
                       {[...Array(2)].map((e, idx) => (
                       <li key={idx}>
                         <div className="card">
-                          <label className="o-check"><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /><span className="label _hidden">선택</span></label>
+                          <InputCheck label="선택" labelHidden />
 
                           <div className="m-file">
                             <a href="javascript:" className="o-file">
