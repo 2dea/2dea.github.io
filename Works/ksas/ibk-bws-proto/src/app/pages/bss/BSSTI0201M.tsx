@@ -132,8 +132,8 @@ function BSSTI0201M() {
                   <Label label={`구분`} require={false} />
                   <div className="fields">
                     <div className="m-checks">
-                      <InputRadio name="RADIO_01" label="충주연수원" checked />
-                      <InputRadio name="RADIO_01" label="기흥연수원" />
+                      <InputRadio name="RADIO:F_10" label="충주연수원" defaultChecked />
+                      <InputRadio name="RADIO:F_10" label="기흥연수원" />
                     </div>
                   </div>
                 </div>
@@ -142,9 +142,9 @@ function BSSTI0201M() {
                   <Label label={`상태`} require={false} />
                   <div className="fields">
                     <div className="m-checks">
-                      <InputRadio name="RADIO_02" label="전체" checked />
-                      <InputRadio name="RADIO_02" label="비품" />
-                      <InputRadio name="RADIO_02" label="소모품" />
+                      <InputRadio name="RADIO:F_20" label="전체" defaultChecked />
+                      <InputRadio name="RADIO:F_20" label="비품" />
+                      <InputRadio name="RADIO:F_20" label="소모품" />
                     </div>
                   </div>
                 </div>
@@ -223,7 +223,7 @@ function BSSTI0201M() {
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
+                            {/* <td><Checkbox defaultChecked={checked} onChange={e => setChecked(e.checked)} /></td> */}
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                             <td>충주연수원</td>

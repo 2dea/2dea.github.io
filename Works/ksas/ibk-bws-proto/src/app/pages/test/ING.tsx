@@ -133,7 +133,7 @@ function ADMAU0204M() {
                         </label>
 
                         <label className="o-check type-swoosh">
-                          <input type="checkbox" title="" value="" checked className="bind" /><i aria-hidden="true"></i>
+                          <input type="checkbox" title="" value="" defaultChecked className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Checked</span>
                         </label>
 
@@ -143,7 +143,7 @@ function ADMAU0204M() {
                         </label>
 
                         <label className="o-check type-swoosh">
-                          <input type="checkbox" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
+                          <input type="checkbox" title="" value="" disabled defaultChecked className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Disabled+Checked</span>
                         </label> */}
                         {/*
@@ -159,9 +159,9 @@ function ADMAU0204M() {
                          */}
 
                         <InputCheck label="Default" />
-                        <InputCheck label="Checked" checked />
+                        <InputCheck label="Checked" defaultChecked />
                         <InputCheck label="Disabled" disabled />
-                        <InputCheck label="Disabled+Checked" disabled checked />
+                        <InputCheck label="Disabled+Checked" disabled defaultChecked />
                         <InputCheck label="선택" labelHidden />
                       </div>
                     </div>
@@ -172,30 +172,30 @@ function ADMAU0204M() {
                     <div className="fields">
                       <div className="m-checks">
                         {/* <label className="o-check type-swoosh">
-                          <input type="radio" name="RADIO:01" title="" value="" className="bind" /><i aria-hidden="true"></i>
+                          <input type="radio" name="RADIO:10" title="" value="" className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Default</span>
                         </label>
 
                         <label className="o-check type-swoosh">
-                          <input type="radio" name="RADIO:01" title="" value="" checked className="bind" /><i aria-hidden="true"></i>
+                          <input type="radio" name="RADIO:10" title="" value="" defaultChecked className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Checked</span>
                         </label>
 
                         <label className="o-check type-swoosh">
-                          <input type="radio" name="RADIO:02" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
+                          <input type="radio" name="RADIO:20" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Disabled</span>
                         </label>
 
                         <label className="o-check type-swoosh">
-                          <input type="radio" name="RADIO:02" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
+                          <input type="radio" name="RADIO:20" title="" value="" disabled defaultChecked className="bind" /><i aria-hidden="true"></i>
                           <span className="label">Disabled+Checked</span>
                         </label> */}
 
-                        <InputRadio name="RADIO:01" label="Default" />
-                        <InputRadio name="RADIO:01" label="Checked" checked />
+                        <InputRadio name="RADIO:10" label="Default" />
+                        <InputRadio name="RADIO:10" label="Checked" defaultChecked />
 
-                        <InputRadio name="RADIO:02" label="Disabled" disabled />
-                        <InputRadio name="RADIO:02" label="Disabled+Checked" disabled checked />
+                        <InputRadio name="RADIO:20" label="Disabled" disabled />
+                        <InputRadio name="RADIO:20" label="Disabled+Checked" disabled defaultChecked />
                       </div>
                     </div>
                   </div>

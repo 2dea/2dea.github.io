@@ -187,7 +187,7 @@ function TMPL() {
                           </label>
 
                           <label className="o-check type-swoosh">
-                            <input type="checkbox" title="" value="" checked className="bind" /><i aria-hidden="true"></i>
+                            <input type="checkbox" title="" value="" defaultChecked className="bind" /><i aria-hidden="true"></i>
                             <span className="label">Checked</span>
                           </label>
 
@@ -197,7 +197,7 @@ function TMPL() {
                           </label>
 
                           <label className="o-check type-swoosh">
-                            <input type="checkbox" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
+                            <input type="checkbox" title="" value="" disabled defaultChecked className="bind" /><i aria-hidden="true"></i>
                             <span className="label">Disabled+Checked</span>
                           </label> */}
                           {/*
@@ -213,9 +213,9 @@ function TMPL() {
                           */}
 
                           <InputCheck label="Default" />
-                          <InputCheck label="Checked" checked />
+                          <InputCheck label="Checked" defaultChecked />
                           <InputCheck label="Disabled" disabled />
-                          <InputCheck label="Disabled+Checked" disabled checked />
+                          <InputCheck label="Disabled+Checked" disabled defaultChecked />
                         </div>
                       </div>
                     </div>
@@ -225,30 +225,30 @@ function TMPL() {
                       <div className="fields">
                         <div className="m-checks">
                           {/* <label className="o-check type-swoosh">
-                            <input type="radio" name="RADIO:01" title="" value="" className="bind" /><i aria-hidden="true"></i>
+                            <input type="radio" name="RADIO:10" title="" value="" className="bind" /><i aria-hidden="true"></i>
                             <span className="label">Default</span>
                           </label>
 
                           <label className="o-check type-swoosh">
-                            <input type="radio" name="RADIO:01" title="" value="" checked className="bind" /><i aria-hidden="true"></i>
+                            <input type="radio" name="RADIO:10" title="" value="" defaultChecked className="bind" /><i aria-hidden="true"></i>
                             <span className="label">Checked</span>
                           </label>
 
                           <label className="o-check type-swoosh">
-                            <input type="radio" name="RADIO:02" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
+                            <input type="radio" name="RADIO:20" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
                             <span className="label">Disabled</span>
                           </label>
 
                           <label className="o-check type-swoosh">
-                            <input type="radio" name="RADIO:02" title="" value="" disabled checked className="bind" /><i aria-hidden="true"></i>
+                            <input type="radio" name="RADIO:20" title="" value="" disabled defaultChecked className="bind" /><i aria-hidden="true"></i>
                             <span className="label">Disabled+Checked</span>
                           </label> */}
 
-                          <InputRadio name="RADIO:01" label="Default" />
-                          <InputRadio name="RADIO:01" label="Checked" checked />
+                          <InputRadio name="RADIO:10" label="Default" />
+                          <InputRadio name="RADIO:10" label="Checked" defaultChecked />
 
-                          <InputRadio name="RADIO:02" label="Disabled" disabled />
-                          <InputRadio name="RADIO:02" label="Disabled+Checked" disabled checked />
+                          <InputRadio name="RADIO:20" label="Disabled" disabled />
+                          <InputRadio name="RADIO:20" label="Disabled+Checked" disabled defaultChecked />
                         </div>
                       </div>
                     </div>
@@ -1691,7 +1691,7 @@ function TMPL() {
                           <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
+                              {/* <td><Checkbox defaultChecked={checked} onChange={e => setChecked(e.checked)} /></td> */}
                               <td>{idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                               <td>0000001</td>
                               <td>홍길동</td>
@@ -1840,8 +1840,8 @@ function TMPL() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <InputRadio name="RADIO_01" label="근무" checked />
-                                <InputRadio name="RADIO_01" label="퇴직" />
+                                <InputRadio name="RADIO_10" label="근무" defaultChecked />
+                                <InputRadio name="RADIO_10" label="퇴직" />
                               </div>
                             </td>
 

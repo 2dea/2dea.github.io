@@ -27,13 +27,14 @@ interface InputRadioProps {
   hidden?: boolean;
   disabled?: boolean;
   checked?: boolean;
+  defaultChecked?: boolean;
 }
 
-function InputRadio({ name, id, label, labelHidden, title, value, variant='swoosh', className, style, icon, iconWidth, bindClassName, bindStyle, onClick, onChange, hidden, disabled, checked }: InputRadioProps) {
+function InputRadio({ name, id, label, labelHidden, title, value, variant='swoosh', className, style, icon, iconWidth, bindClassName, bindStyle, onClick, onChange, hidden, disabled, checked, defaultChecked }: InputRadioProps) {
   return (
     <>
       <label className={`o-check${variant ? ` type-${variant}` : ''}${className ? ` ${className}` : ''}`} style={style}>
-        <input type="radio" name={name} id={id} title={title || labelHidden && label} value={value} className={`bind${bindClassName ? ` ${bindClassName}` : ''}`} style={bindStyle} onClick={onClick && onClick} onChange={onChange && onChange} hidden={hidden} disabled={disabled} checked={checked} />
+        <input type="radio" name={name} id={id} title={title || labelHidden && label} value={value} className={`bind${bindClassName ? ` ${bindClassName}` : ''}`} style={bindStyle} onClick={onClick && onClick} onChange={onChange && onChange} hidden={hidden} disabled={disabled} checked={checked} defaultChecked={defaultChecked} />
         { (icon) ? <Icon icon={icon} width={iconWidth} /> : <i aria-hidden="true"></i> }
         <span className={`label${labelHidden ? ` _hidden` : ''}`}>{label}</span>
       </label>

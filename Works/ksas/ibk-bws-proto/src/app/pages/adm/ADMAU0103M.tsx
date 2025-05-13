@@ -312,8 +312,8 @@ function ADMAU0103M() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <InputRadio name="RADIO_01" label="Y" checked />
-                                <InputRadio name="RADIO_01" label="N" />
+                                <InputRadio name="RADIO_10" label="Y" defaultChecked />
+                                <InputRadio name="RADIO_10" label="N" />
                               </div>
                             </td>
                           </tr>

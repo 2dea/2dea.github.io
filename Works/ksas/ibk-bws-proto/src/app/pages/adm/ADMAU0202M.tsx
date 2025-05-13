@@ -350,11 +350,11 @@ function ADMAU0202M() {
                                   <span className="main">원화<mark className="o-find-mark" tabIndex={0}>현</mark>수송신청</span>
                                 </div>
                               </td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
                             </tr>
                           {[...Array(23)].map((e, idx) => (
                             <tr>
@@ -458,11 +458,11 @@ function ADMAU0202M() {
                               <td>1</td>
                               <td>AABB00001P01</td>
                               <td className="g-start">공통<mark className="o-find-mark" tabIndex={0}>팝</mark>업</td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
-                              <td><InputCheck label="선택" labelHidden checked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
+                              <td><InputCheck label="선택" labelHidden defaultChecked /></td>
                             </tr>
                             <tr>
                               <td>2</td>

@@ -428,8 +428,8 @@ function ADMAU0201M() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <InputRadio name="RADIO_01" label="폴더" />
-                                <InputRadio name="RADIO_01" label="화면" checked />
+                                <InputRadio name="RADIO_10" label="폴더" />
+                                <InputRadio name="RADIO_10" label="화면" defaultChecked />
                               </div>
                             </td>
                           </tr>
@@ -502,8 +502,8 @@ function ADMAU0201M() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <InputRadio name="RADIO_02" label="Y" checked />
-                                <InputRadio name="RADIO_02" label="N" />
+                                <InputRadio name="RADIO_20" label="Y" defaultChecked />
+                                <InputRadio name="RADIO_20" label="N" />
                               </div>
                             </td>
                           </tr>
@@ -513,8 +513,8 @@ function ADMAU0201M() {
                             </th>
                             <td colSpan={1}>
                               <div className="m-checks">
-                                <InputRadio name="RADIO_03" label="Y" checked />
-                                <InputRadio name="RADIO_03" label="N" />
+                                <InputRadio name="RADIO_30" label="Y" defaultChecked />
+                                <InputRadio name="RADIO_30" label="N" />
                               </div>
                             </td>
                           </tr>

@@ -243,7 +243,7 @@ function ADMPA0401M() {
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            {/* <td><Checkbox checked={checked} onChange={e => setChecked(e.checked)} /></td> */}
+                            {/* <td><Checkbox defaultChecked={checked} onChange={e => setChecked(e.checked)} /></td> */}
                             <td>{idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                             <td>0000001</td>
                             <td>홍길동</td>
@@ -374,8 +374,8 @@ function ADMPA0401M() {
                           </th>
                           <td colSpan={1}>
                             <div className="m-checks">
-                              <InputRadio name="RADIO_01" label="근무" checked />
-                              <InputRadio name="RADIO_01" label="퇴직" />
+                              <InputRadio name="RADIO_10" label="근무" defaultChecked />
+                              <InputRadio name="RADIO_10" label="퇴직" />
                             </div>
                           </td>
                         </tr>
