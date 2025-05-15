@@ -289,13 +289,13 @@ function BSSTI0101M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`품목번호`} require={true} />
+                            <Label label={`품목번호`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} disabled />
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>

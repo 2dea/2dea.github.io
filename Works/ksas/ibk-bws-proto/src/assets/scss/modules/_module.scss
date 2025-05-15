@@ -742,6 +742,7 @@
 
 
 .m-checks  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-70 $gap-element-80; }
+.m-checks  { min-height: $height-form-50; }
 // .m-checks  { display: grid; grid-template-columns: repeat(auto-fill, minmax(III(80), 1fr)); }
 
 
@@ -1077,7 +1078,7 @@
 .o-field  { display: inline-flex; flex-direction: column; gap: $gap-element-30; max-width: 100%; }
 .o-field:only-child  { display: flex; }
 .o-field >*  { min-height: 0; }
-.o-field >.fields  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; min-height: 0; margin: 0; }
+.o-field >.fields  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; min-height: $height-form-50; margin: 0; }
 .o-field >.fields >:not(.o-form)  { min-width: 0; }
 
 
@@ -1355,7 +1356,7 @@
 
 .m-filter-form  { display: flex; align-items: flex-end; gap: $gap-element-90; clear: both; padding: calc($gap-element-80 - $e10); border: $e10 solid var(--color-edge-70); background: $color-ground-30; border-radius: $radius-50; }
 .m-filter-form >*  { flex: 0 1 auto; min-width: 0; min-height: $height-form-50; }
-.m-filter-form .fieldset  { flex: 1 0 0; display: grid; align-items: center; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: $gap-element-80 $gap-element-70; grid-auto-flow: dense; }
+.m-filter-form .fieldset  { flex: 1 0 0; display: grid; align-items: stretch; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: $gap-element-80 $gap-element-70; grid-auto-flow: dense; }
 .m-filter-form .fieldset >*  { min-width: 0; min-height: 0; }
 .m-filter-form .fieldset >.colspan-2  { grid-column: auto /span 2; }
 @for $i from 3 through 9 {
