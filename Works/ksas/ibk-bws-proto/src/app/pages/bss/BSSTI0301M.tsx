@@ -1,5 +1,5 @@
 /**
- * @description 영업지원 > 연수원 > 연수원품목입출고등록
+ * @description 영업지원 > 연수원 > 연수원품목입출고취소
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSSTI0201M() {
+function BSSTI0301M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function BSSTI0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '연수원' }, { label: '연수원품목입출고등록' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '연수원' }, { label: '연수원품목입출고취소' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function BSSTI0201M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">연수원품목입출고등록</span>
+                <span className="label">연수원품목입출고취소</span>
 
                 <Favorite />
               </h1>
@@ -114,8 +114,8 @@ function BSSTI0201M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="저장" className="_solid-primary" />
-                </div>
+                <CommonButton label="삭제" className="_delete" />
+              </div>
             </div>
           </div>
         </div>
@@ -138,22 +138,26 @@ function BSSTI0201M() {
                   </div>
                 </div>
 
-                <div className="o-field colspan-2">
-                  <Label label={`상태`} require={false} />
-                  <div className="fields">
-                    <div className="m-checks">
-                      <InputRadio name="RADIO:F_20" label="전체" defaultChecked />
-                      <InputRadio name="RADIO:F_20" label="비품" />
-                      <InputRadio name="RADIO:F_20" label="소모품" />
-                    </div>
-                  </div>
-                </div>
-
                 <div className="o-field">
                   <Label label={`품목명`} require={false} />
                   <div className="fields">
                     <div className="o-form _input">
                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      <i aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="o-field colspan-2">
+                  <Label label={`거래기간`} require={true} />
+                  <div className="fields">
+                    <div className="o-form _input type-date mode-required wdth-50">
+                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <i aria-hidden="true"></i>
+                    </div>
+                    <span className="seps type-tilde">~</span>
+                    <div className="o-form _input type-date mode-required wdth-50">
+                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                       <i aria-hidden="true"></i>
                     </div>
                   </div>
@@ -202,11 +206,6 @@ function BSSTI0201M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
                           <col className="wdth-auto" />
                         </colgroup>
 
@@ -218,21 +217,16 @@ function BSSTI0201M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">규격</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위당개수</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입출고구분</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입출고수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">담당자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">확인자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입출고일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={15}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={10}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -246,69 +240,10 @@ function BSSTI0201M() {
                             <td>소모품</td>
                             <td>0003</td>
                             <td className="g-start">린스(휴양동)</td>
-                            <td className="g-end">450ML</td>
-                            <td>1박스</td>
-                            <td className="g-end">1</td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _select wdth-30">
-                                    <XDropdown appendTo={document.body} className="bind" />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-20 g-end">
-                                    <InputText placeholder="" value="0" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-30">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-30">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input">
-                                    <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
+                            <td>입고</td>
+                            <td className="g-end">5</td>
+                            <td><span className="o-digit type-date">2013-03-04</span></td>
+                            <td className="g-start">비고 내용을 여기에 입력합니다.</td>
                           </tr>
                         ))}
                         </tbody>
@@ -327,4 +262,4 @@ function BSSTI0201M() {
   );
 }
 
-export default BSSTI0201M;
+export default BSSTI0301M;
