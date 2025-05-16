@@ -173,84 +173,84 @@ function BSSTI0101M() {
           <Splitter  gutterSize={0} className="o-grid">
             <SplitterPanel minSize={17.5} className="column">
 
-            <div className="o-section">
-                  <div className="m-header">
-                    <h2 className="o-heading level2"><span className="label">품목내역</span></h2>
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">품목내역</span></h2>
 
-                    <div className="o-length">
-                      <span className="head">전체</span>
-                      <em className="data">
-                        <span className="value">8</span>
-                        <span className="units">건</span>
-                      </em>
-                    </div>
-
-                    <div className="m-binds">
-                      <div className="group">
-                        <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                        <ImageButton label="목록필터" icon="column-toggle" />
-                        <ImageButton label="목록출력" icon="print" />
-                      </div>
-                    </div>
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
                   </div>
 
-                  <div className="main _primary">
-                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                    <div className="o-grid-table p-datatable">
-                      <div className="table-container p-datatable-wrapper">
-                        <table className="p-datatable-table p-datatable-scrollable-table">
-                          <colgroup>
-                            <col className="wdth-10" />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                          </colgroup>
-
-                          <thead className="p-datatable-thead">
-                            <tr>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목번호</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">규격</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위당개수</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
-                            </tr>
-                          </thead>
-
-                          <tbody className="p-datatable-tbody">
-                            <tr className="p-datatable-emptymessage">
-                              <td colSpan={9}>등록된 데이터가 없습니다.</td>
-                            </tr>
-                          </tbody>
-
-                          <tbody className="p-datatable-tbody">
-                          {[...Array(24)].map((e, idx) => (
-                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td>{idx + 1}</td>
-                              <td>소모품</td>
-                              <td>0003</td>
-                              <td className="g-start">주전자(막걸리용)</td>
-                              <td>비활동</td>
-                              <td className="g-end">450ML</td>
-                              <td>1</td>
-                              <td className="g-end">1</td>
-                              <td><span className="o-digit type-date">2013-03-04</span></td>
-                            </tr>
-                          ))}
-                          </tbody>
-                        </table>
-                      </div>
+                  <div className="m-binds">
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
+                      <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>
+
+                <div className="main _primary">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">규격</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위당개수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={9}>등록된 데이터가 없습니다.</td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td>소모품</td>
+                            <td>0003</td>
+                            <td className="g-start">주전자(막걸리용)</td>
+                            <td>비활동</td>
+                            <td className="g-end">450ML</td>
+                            <td>1</td>
+                            <td className="g-end">1</td>
+                            <td><span className="o-digit type-date">2013-03-04</span></td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </SplitterPanel>
 

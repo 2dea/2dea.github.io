@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지자동배송인도
+ * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지일반인도
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPBT0201M() {
+function HSPBT0401M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function HSPBT0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지자동배송인도' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지일반인도' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function HSPBT0201M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지자동배송인도</span>
+                <span className="label">중요용지일반인도</span>
 
                 <Favorite />
               </h1>
@@ -110,7 +110,6 @@ function HSPBT0201M() {
 
               <div className="group">
                 <CommonButton label="일련번호조회" className="_lined-secondary" />
-                <CommonButton label="중복일련번호 체크" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -138,91 +137,55 @@ function HSPBT0201M() {
           <div className="o-grid">
             <div className="column">
 
-              <form className="m-filter-form">
-                <div className="fieldset">
-
-                  <div className="o-field">
-                      <Label label={`업무지원`} require={false} />
-                      <div className="fields">
-                        <div className="o-form _select">
-                          <XDropdown appendTo={'self'} className="bind" />
-                          <i aria-hidden="true"></i>
-                        </div>
-                      </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`인수부점`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`출급번호분류`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _select mode-required">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`재고기준`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _select mode-required">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div className="o-field">
-                    <Label label={`미인수분 재고포함 여부`} />
-                    <div className="fields">
-                      <div className="m-checks">
-                        <InputCheck label="선택" labelHidden defaultChecked />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`월평균사용량 >=`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
-                </div>
-              </form>
-
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">자동배송인도일자</span></h2>
+                  <h2 className="o-heading level2"><span className="label">일반인도 기본정보</span></h2>
                 </div>
                 <div className="main">
                   <form className="m-data-form">
                     <table className="table">
                         <colgroup>
-                        <col className="head" />
-                        <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
                         </colgroup>
+
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`인도일자`} require={true} />
+                            <Label label={`인도부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            {/* 단순 문구인지 readOnly인지 확인 필요 */}
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value="[0810] 프로세스혁신" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`인수부점`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`인수일자`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -243,7 +206,7 @@ function HSPBT0201M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">자동배송인도대상내역</span></h3>
+                  <h3 className="o-heading level3"><span className="label">일반인도내역</span></h3>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -255,6 +218,9 @@ function HSPBT0201M() {
 
                   <div className="m-binds">
                     <div className="group">
+                      <CommonButton label="행추가" className="_normal" />
+                      <CommonButton label="행삭제" className="_normal" />
+                      <CommonButton label="취소" className="_cancel" />
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
@@ -280,61 +246,55 @@ function HSPBT0201M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
                           <col className="wdth-0" />
                           <col />
                           <col />
+                          <col className="wdth-0" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th colSpan={2} className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종류</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고량</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">월평균사용량</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종인도일시</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종인도량</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도상태</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도한도</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
-                          </tr>
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호/품목명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종류</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현재고량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">월평균사용량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도한도</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={19}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={16}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
+                        {[...Array(3)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td><InputCheck label="선택" labelHidden /></td>
-                            <td>{idx + 1}</td>
-                            <td>0465</td>
-                            <td className="g-start p-x-frozen-last">독산하이테크</td>
-                            <td>10100</td>
-                            <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
+                            <td><Icon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
                             <td></td>
-                            <td className="g-end">300</td>
-                            <td className="g-end">0</td>
-                            <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
-                            <td className="g-end">30</td>
-                            <td>미인수</td>
-                            <td>10000-5000</td>
+                             <td className="g-end">636</td>
+                             <td className="g-end">0</td>
+                            <td className="g-start">11노선</td>
+                            <td>50-100</td>
                             <td>
                               <div className="o-form _input type-spin wdth-50">
                                 <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
@@ -342,6 +302,7 @@ function HSPBT0201M() {
                                 <i aria-hidden="true"></i>
                               </div>
                             </td>
+                            <td>장</td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">
@@ -376,7 +337,19 @@ function HSPBT0201M() {
                                 </div>
                               </div>
                             </td>
-                            <td className="g-start">23노선</td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-80">
+                                    <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <ImageButton label="이미지​​업로드" icon="upload" />
+                            </td>
                           </tr>
                         ))}
                         </tbody>
@@ -395,4 +368,4 @@ function HSPBT0201M() {
   );
 }
 
-export default HSPBT0201M;
+export default HSPBT0401M;

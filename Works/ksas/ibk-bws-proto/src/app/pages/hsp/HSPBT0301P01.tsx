@@ -129,7 +129,7 @@ function HSPBT0301P01() {
                             <Label label={`거래연월일`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <span className="o-digit type-date">2025-01-21</span>
+                            <span className="o-digit type-date">2025-01-21</span>{/* 오늘날짜 */}
                           </td>
                         </tr>
                         <tr>
@@ -238,20 +238,20 @@ function HSPBT0301P01() {
                             <td>{idx + 1}</td>
                             <td><span className="o-digit type-date">2025-05-05</span></td>
                             <td>1234</td>
-                            <td>성수화양</td>
+                            <td className="g-start">성수화양</td>
                             <td>10079</td>
                             <td className="g-start">정액10만원권자기앞수표</td>
-                            <td>1,046</td>
-                            <td>1,046</td>
+                            <td className="g-end">1,046</td>
+                            <td className="g-end">1,046</td>
                             <td>장</td>
-                            <td>5호선</td>
+                            <td className="g-start">5노선</td>
                             <td>홍길동</td>
                             <td>2단계 결재완료</td>
                             <td className="g-start">
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-80">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>

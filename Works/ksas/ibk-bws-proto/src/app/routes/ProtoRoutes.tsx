@@ -34,8 +34,12 @@ import CMP001502P from    'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재�
 // proto 중요용지·용도품(본부)
 import HSPBT0101M from    'app/pages/hsp/HSPBT0101M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역
 import HSPBT0101P01 from  'app/pages/hsp/HSPBT0101P01'; // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역 ~ 인도취소
-// import HSPBT0301M from    'app/pages/hsp/HSPBT0301M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역
+import HSPBT0301M from    'app/pages/hsp/HSPBT0301M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역
 import HSPBT0301P01 from  'app/pages/hsp/HSPBT0301P01'; // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역~ 부분취소
+import HSPBT0201M from    'app/pages/hsp/HSPBT0201M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지자동배송인도
+import HSPBT0401M from    'app/pages/hsp/HSPBT0401M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지일반인도
+import HSPBT0601M from    'app/pages/hsp/HSPBT0601M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지임시저장분인도
+
 
 // proto 영업지원
 import BSSTI0101M from    'app/pages/bss/BSSTI0101M';   // 영업지원 > 연수원 > 연수원품목정보관리
@@ -111,8 +115,12 @@ function ProtoRoutes() {
       children: [
         { path: 'HSPBT0101M',   element: <HSPBT0101M /> },
         { path: 'HSPBT0101P01', element: <HSPBT0101P01 /> },
-        // { path: 'HSPBT0301M',   element: <HSPBT0301M /> },
+        { path: 'HSPBT0301M',   element: <HSPBT0301M /> },
         { path: 'HSPBT0301P01', element: <HSPBT0301P01 /> },
+        { path: 'HSPBT0201M',   element: <HSPBT0201M /> },
+        { path: 'HSPBT0401M',   element: <HSPBT0401M /> },
+        { path: 'HSPBT0601M',   element: <HSPBT0601M /> },
+
       ],
     },
     { // 영업지원
