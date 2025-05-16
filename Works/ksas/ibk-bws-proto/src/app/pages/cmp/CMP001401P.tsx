@@ -137,6 +137,7 @@ function CMP001401P() {
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록필터" icon="column-toggle" />
+                      <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>
@@ -152,21 +153,15 @@ function CMP001401P() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구매담당자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이메일주소</span></div></th>
                           </tr>
                         </thead>
 
@@ -182,7 +177,7 @@ function CMP001401P() {
                             <td>{idx + 1}</td>
                             <td className="g-start">(주)앤비앤코퍼레이션</td>
                             <td>홍길동</td>
-                            <td>0220825331</td>
+                            <td><span className="o-digit type-tel">02-2082-5331</span></td>
                             <td className="g-start">hong@email.com</td>
                           </tr>
                         ))}

@@ -1079,11 +1079,19 @@
 
 
 
-.o-field  { display: inline-flex; flex-direction: column; gap: $gap-element-30; max-width: 100%; }
+.o-field  { display: inline-flex; flex-direction: column; gap: $gap-element-30 $gap-element-50; max-width: 100%; }
 .o-field:only-child  { display: flex; }
 .o-field >*  { min-height: 0; }
 .o-field >.fields  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; min-height: $height-form-50; margin: 0; }
 .o-field >.fields >:not(.o-form)  { min-width: 0; }
+
+.o-field:only-child:where(.m-filter-form .fieldset >*)  { flex-direction: row; align-items: center; gap: $gap-element-30 $gap-element-80; }
+.o-field:only-child:where(.m-filter-form .fieldset >*) >*  { flex: none; }
+.o-field:only-child:where(.m-filter-form .fieldset >*) >.fields  { flex: 1; }
+
+.o-field.axis-cols  { flex-direction: row; align-items: center; }
+.o-field.axis-cols >*  { flex: none; }
+.o-field.axis-cols >.fields  { flex: 1; }
 
 
 
