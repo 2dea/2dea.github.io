@@ -37,6 +37,7 @@ import HSPBT0101M from    'app/pages/hsp/HSPBT0101M';   // 중요용지·용도�
 import BSSTI0101M from    'app/pages/bss/BSSTI0101M';   // 영업지원 > 연수원 > 연수원품목정보관리
 import BSSTI0201M from    'app/pages/bss/BSSTI0201M';   // 영업지원 > 연수원 > 연수원품목입출고등록
 import BSSTI0301M from    'app/pages/bss/BSSTI0301M';   // 영업지원 > 연수원 > 연수원품목입출고취소
+import BSSTI0401M from    'app/pages/bss/BSSTI0401M';   // 영업지원 > 연수원 > 연수원입출고내역조회
 
 // proto 관리자
 import ADMCM0101M from    'app/pages/adm/ADMCM0101M';   // 관리자 > 코드관리 > 공통코드관리
@@ -112,6 +113,7 @@ function ProtoRoutes() {
         { path: 'BSSTI0101M',   element: <BSSTI0101M /> },
         { path: 'BSSTI0201M',   element: <BSSTI0201M /> },
         { path: 'BSSTI0301M',   element: <BSSTI0301M /> },
+        { path: 'BSSTI0401M',   element: <BSSTI0401M /> },
       ],
     },
     { // 관리자

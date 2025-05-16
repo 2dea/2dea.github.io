@@ -615,10 +615,15 @@ function TMPL() {
                                     <i aria-hidden="true"></i>
                                   </div>
 
+                                  <div className="o-form _input type-date wdth-50">
+                                    <Calendar placeholder="" value={Date} locale="ko" view="month" dateFormat="yy-mm" mask="9999-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+
                                   <div className="o-form _input type-time wdth-30">
-                                      <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
-                                      <i aria-hidden="true"></i>
-                                    </div>
+                                    <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                    <i aria-hidden="true"></i>
+                                  </div>
                                 </div>
                               </div>
                             </td>

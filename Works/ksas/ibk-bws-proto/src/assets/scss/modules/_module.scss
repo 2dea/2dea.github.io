@@ -391,6 +391,10 @@
 
 
 .o-digit  { font-feature-settings: var(--text-feature-tnum); }
+.o-digit.type-datetime,
+.o-digit.type-date,
+.o-digit.type-time,
+.o-digit.type-num,
 .o-digit[class*=" type-"]  { white-space: nowrap; }
 
 
