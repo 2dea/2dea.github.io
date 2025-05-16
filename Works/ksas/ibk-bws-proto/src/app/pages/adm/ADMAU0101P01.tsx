@@ -87,7 +87,7 @@ function ADMAU0101P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-40p"
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}

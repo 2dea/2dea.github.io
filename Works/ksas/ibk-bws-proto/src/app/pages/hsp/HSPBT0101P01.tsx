@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 인사정보 > 직원관리 ~ (LP)변경이력
+ * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역 ~ 인도취소
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMPA0301P02() {
+function HSPBT0101P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -95,7 +95,7 @@ function ADMPA0301P02() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">변경이력</span></h3>}
+        header={<h3 className="o-heading"><span className="label">인도취소</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -103,7 +103,68 @@ function ADMPA0301P02() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">직원 변경 이력</span></h4>
+                  <h4 className="o-heading level2"><span className="label">중요용지 인도취소</span></h4>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`거래부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0810] 프로세스혁신
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`거래연월일`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-01-21</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`취소사유`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="일괄적용" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="o-grid">
+            <div className="column">
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3"><span className="label">인도취소 대상내역</span></h5>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -113,6 +174,13 @@ function ADMPA0301P02() {
                     </em>
                   </div>
 
+                  <div className="m-binds">
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main _primary rows-body-5i">
@@ -131,44 +199,32 @@ function ADMPA0301P02() {
                           <col />
                           <col />
                           <col />
+                          <col className="wdth-0" />
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col className="wdth-50" />
-                          <col />
-                          <col />
-                          <col />
-                          <col className="wdth-50" />
+                          <col className="wdth-0" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경일시</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무점</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현소속일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직무</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보임</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">퇴직일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단말IP</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center" colSpan={4}><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
+                            <th className="p-align-center" colSpan={2}><div className="p-column-header-content"><span className="p-column-title">취소사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={19}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={15}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -176,24 +232,31 @@ function ADMPA0301P02() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td><span className="o-digit type-datetime">2025-02-19 24:21:21</span></td>
-                            <td>000006</td>
-                            <td>송용준</td>
-                            <td>000001</td>
-                            <td>홍길동</td>
-                            <td>0001</td>
-                            <td className="g-start">영업부</td>
-                            <td>0001</td>
-                            <td className="g-start">영업부</td>
-                            <td>0001</td>
-                            <td className="g-start">동대문個</td>
-                            <td><span className="o-digit type-date">2024-07-18</span></td>
-                            <td>팀장</td>
-                            <td className="g-start">BPR지원_일반</td>
-                            <td>차장급</td>
-                            <td><span className="o-digit type-date">9999-01-01</span></td>
-                            <td><span className="o-digit type-tel">02-729-7610</span></td>
+                            <td>프로세스혁신</td>
+                            <td>BC016</td>
+                            <td className="g-start">나의 알파체크카드(비교통_그린)</td>
+                            <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
+                            <td>신청인도</td>
+                            <td className="g-end">50</td>
+                            <td className="g-end">0</td>
                             <td></td>
+                            <td>3344785</td>
+                            <td>~</td>
+                            <td>33447900</td>
+                            <td>부산역</td>
+                            <td className="g-start">
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-80">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <ImageButton label="이미지​​업로드" icon="upload" />
+                            </td>
                           </tr>
                         ))}
                         </tbody>
@@ -201,13 +264,8 @@ function ADMPA0301P02() {
                     </div>
                   </div>
                 </div>
-
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li>팝업 내에서 최종 변경일시는 최상단에 노출됩니다.</li>
-                  </ul>
-                </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -215,7 +273,8 @@ function ADMPA0301P02() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="확인" className="_solid-primary" />
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -225,7 +284,7 @@ function ADMPA0301P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)변경이력 [wdth-70p(w1340)]</span>
+              <span className="label">(P)인도취소 [wdth-70p(w1340)]</span>
             </h1>
           </div>
         </div>
@@ -244,4 +303,4 @@ function ADMPA0301P02() {
   );
 }
 
-export default ADMPA0301P02;
+export default HSPBT0101P01;

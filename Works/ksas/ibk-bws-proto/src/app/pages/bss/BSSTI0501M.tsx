@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)직원조회
+ * @description 영업지원 > 연수원 > 연수원품목재고조회
  */
 
 // dependency
@@ -34,12 +34,17 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function CMP000501P() {
+function BSSTI0501M() {
   // Dialog
-  const [visible, setVisible] = useState<boolean>(true);
+  // const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
+  const viewimageOverlay1 = useRef(null);
+  const viewimageOverlay2 = useRef(null);
+
+  // BreadCrumb
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '연수원' }, { label: '연수원품목재고조회' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -86,56 +91,64 @@ function CMP000501P() {
 
   return (
     <>
-      <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
-        headerClassName="layer-head"
-        contentClassName="layer-body"
-        visible={visible}
-        style={{}}
-        onHide={() => {if (!visible) return; setVisible(false); }}
-        closeIcon={<Icon icon="popup-close" />}
-        // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">직원조회</span></h3>}
-      >
-        <div className="div-container">
+      <div className="roles" data-div-role="0">
+        <div className="div-header">
+          <div className="main">
+            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+
+            <div className="m-title">
+              <h1 className="o-heading level1">
+                <span className="label">연수원품목재고조회</span>
+
+                <Favorite />
+              </h1>
+            </div>
+          </div>
+
+          <div className="binds">
+            <div className="m-binds type-start">
+              <div className="group _assistive">
+                <CommonButton label="도움말" icon="help" className="_normal" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <!-- /* Contents { @DEV } --> */}
+        <div className="div-contents">
           <div className="o-grid">
             <div className="column">
 
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field">
-                    <Label label={`직원`} require={true} />
+                  <div className="o-field colspan-2">
+                    <Label label={`거래일자`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="o-field">
-                    <Label label={`실근무점`} require={true} />
+                  <div className="o-field colspan-2">
+                    <Label label={`연수원`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
+                      <div className="m-checks">
+                        <InputRadio name="RADIO:F_10" label="충주연수원" defaultChecked />
+                        <InputRadio name="RADIO:F_10" label="기흥연수원" />
                       </div>
                     </div>
                   </div>
 
-                  <div className="o-field">
-                    <Label label={`퇴직구분`} />
+                  <div className="o-field colspan-2">
+                    <Label label={`구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
+                      <div className="m-checks">
+                        <InputRadio name="RADIO:F_20" label="전체" defaultChecked />
+                        <InputRadio name="RADIO:F_20" label="비품" />
+                        <InputRadio name="RADIO:F_20" label="소모품" />
                       </div>
                     </div>
                   </div>
@@ -148,7 +161,27 @@ function CMP000501P() {
               </form>
 
               <div className="o-section">
-                <div className="main _primary rows-body-3i">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">품목별재고현황</span></h2>
+
+                  <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                        <ImageButton label="목록필터" icon="column-toggle" />
+                        <ImageButton label="목록출력" icon="print" />
+                      </div>
+                    </div>
+                </div>
+
+                <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -158,8 +191,7 @@ function CMP000501P() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
+                          <col className="wdth-auto" />
                           <col />
                           <col />
                           <col />
@@ -170,39 +202,37 @@ function CMP000501P() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무점</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현소속일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오출납여부</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출납책임자여부</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">연수원</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">규격</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목단위</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위당개수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고수량</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={11}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={10}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>016400</td>
-                            <td>이정규</td>
-                            <td>0810</td>
-                            <td>프로세스혁신부</td>
-                            <td>0810</td>
-                            <td>일반</td>
-                            <td>프로세스혁신</td>
-                            <td>2023-07-14</td>
-                            <td>Y</td>
-                            <td>Y</td>
+                            <td>{ idx +1 }</td>
+                            <td>충주연수원</td>
+                            <td>소모품</td>
+                            <td>0003</td>
+                            <td className="g-start">린스(휴양동)</td>
+                            <td>활동</td>
+                            <td className="g-end">450ML</td>
+                            <td>1</td>
+                            <td className="g-end">1</td>
+                            <td className="g-end">24</td>
                           </tr>
                         ))}
                         </tbody>
@@ -215,38 +245,10 @@ function CMP000501P() {
             </div>
           </div>
         </div>
-
-        <div className="div-footer">
-          <div className="m-binds type-end">
-            <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="선택" className="_solid-primary" />
-            </div>
-          </div>
-        </div>
-      </Dialog>
-
-      <div className="roles" data-div-role="0">
-        <div className="div-header">
-          <div className="m-title">
-            <h1 className="o-heading level1">
-              <span className="label">(P)직원조회 [wdth-50p(w960)]</span>
-            </h1>
-          </div>
-        </div>
-
-        {/* <!-- /* Contents { @DEV } --> */}
-        <div className="div-contents">
-          <div className="m-binds">
-            <div className="group _start">
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => setVisible(true)} />
-            </div>
-          </div>
-        </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
     </>
   );
 }
 
-export default CMP000501P;
+export default BSSTI0501M;

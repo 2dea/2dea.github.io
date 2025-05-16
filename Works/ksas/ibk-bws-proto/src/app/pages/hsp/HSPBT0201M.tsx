@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역
+ * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도 > 신청내역
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPBT0101M() {
+function HSPBT0301M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function HSPBT0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지인도내역조회' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지신청분인도' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function HSPBT0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지 인도내역조회</span>
+                <span className="label">중요용지신청분인도</span>
 
                 <Favorite />
               </h1>
@@ -107,21 +107,28 @@ function HSPBT0101M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+
+              <div className="group">
+                <CommonButton label="일련번호조회" className="_lined-secondary" />
+                <CommonButton label="중복일련번호 체크" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" icon="help" className="_normal" />
               </div>
             </div>
 
             <div className="m-binds type-end">
-              <div className="group _utility">
+              {/* <div className="group _utility">
                 <div className="m-print-binds">
                   <CommonButton label="출력" className="_texted" />
                 </div>
-              </div>
+              </div> */}
 
               <div className="group _primary">
-                <CommonButton label="인도취소" className="_solid-primary" />
-                </div>
+                <CommonButton label="임시저장" className="_solid-primary" />
+                <CommonButton label="인도등록" className="_solid-primary" />
+              </div>
             </div>
           </div>
         </div>
@@ -135,42 +142,13 @@ function HSPBT0101M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`인도부점`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input mode-required">
-                        {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
+                      <Label label={`업무지원`} require={false} />
+                      <div className="fields">
+                        <div className="o-form _select">
+                          <XDropdown appendTo={'self'} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field colspan-2">
-                    <Label label={`조회기간`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                      <span className="seps type-tilde">~</span>
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
                   </div>
 
                   <div className="o-field">
@@ -184,10 +162,40 @@ function HSPBT0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`인도구분`} require={false} />
+                    <Label label={`출급번호분류`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select">
+                      <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`재고기준`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div className="o-field">
+                    <Label label={`미인수분 재고포함 여부`} />
+                    <div className="fields">
+                      <div className="m-checks">
+                        <InputCheck label="Checked" defaultChecked />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`월평균사용량 >=`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -206,8 +214,8 @@ function HSPBT0101M() {
           <Tabs className="m-tabs react-tabs" defaultIndex={0}>
             <div className="m-tab type2">
               <TabList className="lists">
-                <Tab className="link"><span className="label">인도내역</span></Tab>
-                <Tab className="link"><span className="label">인도취소내역</span></Tab>
+                <Tab className="link"><span className="label">신청내역</span></Tab>
+                <Tab className="link"><span className="label">본부취소내역</span></Tab>
               </TabList>
             </div>
 
@@ -217,7 +225,7 @@ function HSPBT0101M() {
 
                   <div className="o-section">
                     <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">인도내역</span></h2>
+                      <h2 className="o-heading level2"><span className="label">신청분인도일자</span></h2>
 
                       <div className="o-length">
                         <span className="head">전체</span>
@@ -479,4 +487,4 @@ function HSPBT0101M() {
   );
 }
 
-export default HSPBT0101M;
+export default HSPBT0301M;

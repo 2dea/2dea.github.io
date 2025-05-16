@@ -840,6 +840,7 @@ function SUBTMPL() {
                                 <i className="o-icon _sum-minus wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sum-plus wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _tel wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _upload wdth-50" aria-hidden="true"></i>
                               </div>
                             </td>
                           </tr>

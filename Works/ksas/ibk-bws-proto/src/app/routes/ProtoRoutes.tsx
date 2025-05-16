@@ -13,6 +13,7 @@ import Decorator from     'app/shared/layouts/Decorator';
 import SUBTMPL from       'app/pages/test/SUBTMPL';     // SUBTMPL
 import POPTMPL from       'app/pages/test/POPTMPL';     // POPTMPL
 import TMPL from          'app/pages/test/TMPL';        // TMPL
+import DEX from           'app/pages/test/DEX';         // DEX
 import ING from           'app/pages/test/ING';         // ING
 
 import DialogPopup from   'app/pages/test/DialogPopup'; // DialogPopup
@@ -31,13 +32,17 @@ import CMP001402P from    'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체�
 import CMP001502P from    'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
 
 // proto 중요용지·용도품(본부)
-import HSPBT0101M from    'app/pages/hsp/HSPBT0101M';   // 중요용지·용도품(본부) > 영업점 배송관리 > (705010) 중요용지 인도내역조회
+import HSPBT0101M from    'app/pages/hsp/HSPBT0101M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역
+import HSPBT0101P01 from  'app/pages/hsp/HSPBT0101P01'; // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역 ~ 인도취소
+import HSPBT0301M from    'app/pages/hsp/HSPBT0301M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역
+import HSPBT0301P01 from  'app/pages/hsp/HSPBT0301P01'; // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역~ 부분취소
 
 // proto 영업지원
 import BSSTI0101M from    'app/pages/bss/BSSTI0101M';   // 영업지원 > 연수원 > 연수원품목정보관리
 import BSSTI0201M from    'app/pages/bss/BSSTI0201M';   // 영업지원 > 연수원 > 연수원품목입출고등록
 import BSSTI0301M from    'app/pages/bss/BSSTI0301M';   // 영업지원 > 연수원 > 연수원품목입출고취소
 import BSSTI0401M from    'app/pages/bss/BSSTI0401M';   // 영업지원 > 연수원 > 연수원입출고내역조회
+import BSSTI0501M from    'app/pages/bss/BSSTI0501M';   // 영업지원 > 연수원 > 연수원품목재고조회
 
 // proto 관리자
 import ADMCM0101M from    'app/pages/adm/ADMCM0101M';   // 관리자 > 코드관리 > 공통코드관리
@@ -81,6 +86,7 @@ function ProtoRoutes() {
         { path: 'DialogPopup',  element: <DialogPopup /> },
         { path: 'POPTMPL',      element: <POPTMPL /> },
         { path: 'TMPL',         element: <TMPL /> },
+        { path: 'DEX',          element: <DEX /> },
         { path: 'ING',          element: <ING /> },
       ],
     },
@@ -104,6 +110,9 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'HSPBT0101M',   element: <HSPBT0101M /> },
+        { path: 'HSPBT0101P01', element: <HSPBT0101P01 /> },
+        { path: 'HSPBT0301M',   element: <HSPBT0301M /> },
+        { path: 'HSPBT0301P01', element: <HSPBT0301P01 /> },
       ],
     },
     { // 영업지원
@@ -114,6 +123,7 @@ function ProtoRoutes() {
         { path: 'BSSTI0201M',   element: <BSSTI0201M /> },
         { path: 'BSSTI0301M',   element: <BSSTI0301M /> },
         { path: 'BSSTI0401M',   element: <BSSTI0401M /> },
+        { path: 'BSSTI0501M',   element: <BSSTI0501M /> },
       ],
     },
     { // 관리자
