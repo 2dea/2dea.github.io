@@ -319,6 +319,23 @@ function ADMPA0101M() {
                                   <InputText placeholder="" value="[0001] 영업부" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
+                                <div className="binds">
+                                  <CommonButton label="중복확인" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`한글부점명`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -350,9 +367,10 @@ function ADMPA0101M() {
                               </div>
                             </div>
                           </td>
-
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
-                            <Label label={`부점약칭명`} require={false} />
+                            <Label label={`부점약칭명/부점약칭명2`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -361,17 +379,7 @@ function ADMPA0101M() {
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`부점약칭명2`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
+
                                 <div className="o-form _input">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
