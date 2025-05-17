@@ -293,7 +293,7 @@ function HSPBT0301M() {
                               <col />
                               <col />
                               <col />
-                              <col />
+                              <col className="wdth-50" />
                               <col />
                               <col />
                               <col />

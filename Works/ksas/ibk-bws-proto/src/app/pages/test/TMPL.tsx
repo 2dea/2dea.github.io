@@ -740,7 +740,7 @@ function TMPL() {
                                   <td>프로세스혁신</td>
                                   <td>BC016</td>
                                   <td className="g-start p-x-frozen-last">나의 알파체크카드(비교통_그린)</td>
-                                  <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
+                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
                                   <td>신청인도</td>
                                   <td>정상</td>
                                   <td>부산</td>
@@ -751,9 +751,9 @@ function TMPL() {
                                   <td>~</td>
                                   <td>33447900</td>
                                   <td>부산역</td>
-                                  <td><span className="o-digit type-date">2024-09-16</span></td>
+                                  <td><span className="o-digit type-date">2025-12-25</span></td>
                                   <td>미인수</td>
-                                  <td><span className="o-digit type-date">2024-09-16</span></td>
+                                  <td><span className="o-digit type-date">2025-12-25</span></td>
                                   <td className="g-start">마감 후 000긴급신청</td>
                                   <td>
                                       <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
@@ -863,10 +863,10 @@ function TMPL() {
                                   <td>프로세스혁신</td>
                                   <td>BC016</td>
                                   <td className="g-start p-x-frozen-last">나의 알파체크카드(비교통_그린)</td>
-                                  <td><span className="o-digit type-date">2024-09-16</span></td>
-                                  <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
+                                  <td><span className="o-digit type-date">2025-12-25</span></td>
+                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
                                   <td>신청인도</td>
-                                  <td><span className="o-digit type-date">2024-09-16</span></td>
+                                  <td><span className="o-digit type-date">2025-12-25</span></td>
                                   <td className="g-start">신청자 요청으로 인한 삭제</td>
                                   <td>
                                     <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay1.current.toggle(e)} />
@@ -1711,11 +1711,11 @@ function TMPL() {
                               <td className="g-start">영업부</td>
                               <td>0001</td>
                               <td className="g-start">동대문個</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>팀장</td>
                               <td className="g-start">BPR지원_일반</td>
                               <td>부점장급</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-tel">02-729-7610</span></td>
                               <td></td>
                             </tr>
@@ -1861,10 +1861,12 @@ function TMPL() {
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <InputCheck label="선택" labelHidden />
                                   <div className="o-form _input type-date wdth-50">
                                     <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
                                     <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="m-checks">
+                                    <InputCheck label="선택" labelHidden />
                                   </div>
                                 </div>
                               </div>
@@ -1999,8 +2001,8 @@ function TMPL() {
                               <td>{idx + 1}</td>
                               <td>[0000001] 홍길동</td>
                               <td></td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-time">00:00</span></td>
                               <td><span className="o-digit type-time">00:00</span></td>
                               <td>[0000001] 홍길동</td>
@@ -2454,7 +2456,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                             <tr>
                               <td>2</td>
@@ -2469,7 +2471,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                             <tr>
                               <td>3</td>
@@ -2484,7 +2486,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                             <tr>
                               <td>4</td>
@@ -2499,7 +2501,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                             <tr>
                               <td>5</td>
@@ -2514,7 +2516,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                             <tr>
                               <td>6</td>
@@ -2529,7 +2531,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                             <tr>
                               <td>7</td>
@@ -2544,7 +2546,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                             <tr>
                               <td>8</td>
@@ -2559,7 +2561,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                             <tr>
                               <td>9</td>
@@ -2574,7 +2576,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                           {[...Array(23)].map((e, idx) => (
                             <tr>
@@ -2590,7 +2592,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                           ))}
                           {/* {[...Array(24)].map((e, idx) => (
@@ -2607,7 +2609,7 @@ function TMPL() {
                               </td>
                               <td>Y</td>
                               <td>Y</td>
-                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                           ))} */}
                           </tbody>

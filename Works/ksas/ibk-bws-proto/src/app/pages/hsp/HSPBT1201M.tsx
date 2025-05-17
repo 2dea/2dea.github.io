@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지일반인도
+ * @description 중요용지·용도품(본부) > 영업점배송관리 > 용도품일반인도
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPBT0401M() {
+function HSPBT1201M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function HSPBT0401M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지일반인도' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '용도품일반인도' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function HSPBT0401M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지일반인도</span>
+                <span className="label">용도품일반인도</span>
 
                 <Favorite />
               </h1>
@@ -108,19 +108,13 @@ function HSPBT0401M() {
           <div className="binds">
             <div className="m-binds type-start">
 
-              <div className="group">
-                <CommonButton label="일련번호조회" className="_lined-secondary" />
-              </div>
-
               <div className="group _assistive">
                 <CommonButton label="도움말" icon="help" className="_normal" />
               </div>
             </div>
 
             <div className="m-binds type-end">
-
               <div className="group _primary">
-                <CommonButton label="임시저장" className="_solid-primary" />
                 <CommonButton label="인도등록" className="_solid-primary" />
               </div>
             </div>
@@ -240,13 +234,7 @@ function HSPBT0401M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
                           <col className="wdth-50" />
-                          <col />
-                          <col />
-                          <col />
-                          <col className="wdth-0" />
                           <col />
                           <col />
                           <col className="wdth-0" />
@@ -256,22 +244,19 @@ function HSPBT0401M() {
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호/품목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종류</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현재고량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">월평균사용량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호/품목명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부재고</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도한도</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
-                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={16}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={10}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -293,9 +278,7 @@ function HSPBT0401M() {
                                 </div>
                               </div>
                             </td>
-                            <td></td>
                              <td className="g-end">636</td>
-                             <td className="g-end">0</td>
                             <td className="g-start">11노선</td>
                             <td>50-100</td>
                             <td>
@@ -309,41 +292,7 @@ function HSPBT0401M() {
                                 </div>
                               </div>
                             </td>
-                            <td>장</td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-20">
-                                    {/* 국문 최대 2자리 */}
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-40">
-                                    {/* 숫자 최대 20자 */}
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>~</td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-40">
-                                    {/* 숫자 최대 20자 */}
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
+                            <td>권</td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">
@@ -375,4 +324,4 @@ function HSPBT0401M() {
   );
 }
 
-export default HSPBT0401M;
+export default HSPBT1201M;

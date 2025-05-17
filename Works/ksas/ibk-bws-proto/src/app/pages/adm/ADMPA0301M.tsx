@@ -421,7 +421,6 @@ function ADMPA0301M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <InputCheck label="선택" labelHidden />
                                 <div className="o-form _input type-date wdth-50">
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
                                   <i aria-hidden="true"></i>
@@ -430,6 +429,10 @@ function ADMPA0301M() {
                                 <div className="o-form _input type-date wdth-50">
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
                                   <i aria-hidden="true"></i>
+                                </div>
+
+                                <div className="m-checks">
+                                  <InputCheck label="선택" labelHidden />
                                 </div>
                               </div>
                             </div>

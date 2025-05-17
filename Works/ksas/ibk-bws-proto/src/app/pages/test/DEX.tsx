@@ -116,12 +116,39 @@ function DEX() {
             </div>
           </div>
 
-          {/* <div className="m-binds type-start">
-            <div className="group">
-              <CommonButton label="화면잠금" icon="lock" className="_normal" />
-              <CommonButton label="도움말" icon="help" className="_normal" />
+          {/*
+          test 2025-50-20
+
+          <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+          <td><span className="o-digit type-date">2025-12-25</span></td>
+          <td><span className="o-digit type-time">09:10:62</span></td>
+
+          <div className="fields">
+            <div className="o-form _input">
+              <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+              <i aria-hidden="true"></i>
+              <span className="inner-binds">
+                <ImageButton label="초기화" icon="remove" />
+              </span>
             </div>
-          </div> */}
+          </div>
+
+          p-x-frozen-last
+
+
+          .o-digit.type-datetime,
+            .o-digit.type-date,
+            .o-digit.type-time,
+            .o-digit.type-tel,
+            o-digit.type-num,
+
+
+            노선 : 왼쪽 정렬
+
+
+          public\templets\index.html
+
+          */}
 
           <div className="binds">
             <div className="m-binds type-start">
