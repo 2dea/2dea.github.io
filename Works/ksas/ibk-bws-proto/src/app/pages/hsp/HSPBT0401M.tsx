@@ -289,8 +289,11 @@ function HSPBT0401M() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-50">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="초기화" icon="remove" />
+                                    </span>
                                   </div>
                                 </div>
                               </div>
@@ -301,10 +304,14 @@ function HSPBT0401M() {
                             <td className="g-start">11노선</td>
                             <td>50-100</td>
                             <td>
-                              <div className="o-form _input type-spin wdth-50">
-                                <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
-                                  decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
-                                <i aria-hidden="true"></i>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-spin wdth-50">
+                                    <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                      decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
                               </div>
                             </td>
                             <td>장</td>

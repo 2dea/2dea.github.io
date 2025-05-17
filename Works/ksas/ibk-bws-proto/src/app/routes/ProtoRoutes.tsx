@@ -39,6 +39,9 @@ import HSPBT0301P01 from  'app/pages/hsp/HSPBT0301P01'; // 중요용지·용도�
 import HSPBT0201M from    'app/pages/hsp/HSPBT0201M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지자동배송인도
 import HSPBT0401M from    'app/pages/hsp/HSPBT0401M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지일반인도
 import HSPBT0601M from    'app/pages/hsp/HSPBT0601M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지임시저장분인도
+import HSPBT0701M from    'app/pages/hsp/HSPBT0701M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지배송대상조회
+import HSPBT0801M from    'app/pages/hsp/HSPBT0801M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지배송명령
+import HSPBT1001M from    'app/pages/hsp/HSPBT1001M';   // 중요용지·용도품(본부) > 영업점배송관리 > 용도품인도내역조회
 
 
 // proto 영업지원
@@ -120,6 +123,9 @@ function ProtoRoutes() {
         { path: 'HSPBT0201M',   element: <HSPBT0201M /> },
         { path: 'HSPBT0401M',   element: <HSPBT0401M /> },
         { path: 'HSPBT0601M',   element: <HSPBT0601M /> },
+        { path: 'HSPBT0701M',   element: <HSPBT0701M /> },
+        { path: 'HSPBT0801M',   element: <HSPBT0801M /> },
+        { path: 'HSPBT1001M',   element: <HSPBT1001M /> },
 
       ],
     },
