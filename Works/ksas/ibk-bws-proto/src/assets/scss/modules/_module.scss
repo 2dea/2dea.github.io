@@ -1041,7 +1041,7 @@
 .o-form .inner-binds  { display: inline-flex; align-items: center; }
 .o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); }
 
-.o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { display: none; }
+.o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { visibility: hidden; }
 
 
 .o-form:where(.type-num, .type-date, .type-time) input  { font-feature-settings: var(--text-feature-tnum); }
