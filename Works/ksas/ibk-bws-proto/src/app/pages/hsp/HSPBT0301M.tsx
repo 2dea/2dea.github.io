@@ -190,8 +190,8 @@ function HSPBT0301M() {
                   <div className="o-field">
                     <Label label={`출급번호분류`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
-                        <XDropdown appendTo={'self'} className="bind" />
+                      <div className="o-form _select">
+                        <XMultiSelect appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
