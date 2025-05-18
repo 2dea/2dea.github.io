@@ -628,6 +628,21 @@ function TMPL() {
                               </div>
                             </td>
                           </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`InputTextarea`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required">
+                                    <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </form>
@@ -1943,7 +1958,6 @@ function TMPL() {
                 <div className="o-section">
                   <div className="m-header">
                     <h3 className="o-heading level3"><span className="label">근태정보</span></h3>
-
 
                     <div className="m-binds">
                       <div className="group">
