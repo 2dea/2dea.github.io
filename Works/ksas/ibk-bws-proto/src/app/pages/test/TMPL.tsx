@@ -312,6 +312,20 @@ function TMPL() {
                       </div>
                     </div>
 
+                    <div className="o-field colspan-1">
+                      <Label label={`.wdth-auto ~ .wdth-n`} require={false} />
+                      <div className="fields">
+                        <div className="o-form _select wdth-auto">
+                          <XDropdown appendTo={'self'} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
+                        <div className="o-form _input type-date mode-required wdth-50">
+                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
 
                   <div className="binds">

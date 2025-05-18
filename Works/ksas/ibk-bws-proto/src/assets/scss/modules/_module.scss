@@ -1075,8 +1075,8 @@
 
 // .o-form[style*="width:"],
 //   .o-form[class*=" wdth-"]  { flex: 0 0 auto; }
-.o-form[style*="width:"]:where(:not(.m-filter-form .fieldset :not(.o-field:only-child *))),
-  .o-form[class*=" wdth-"]:where(:not(.m-filter-form .fieldset :not(.o-field:only-child *)))  { flex: 0 0 auto; }
+.o-form[style*="width:"]:where(:not(.m-filter-form .fieldset :not(.o-field:only-child *, .o-field:has(.wdth-auto) *)):not(.wdth-auto)),
+  .o-form[class*=" wdth-"]:where(:not(.m-filter-form .fieldset :not(.o-field:only-child *, .o-field:has(.wdth-auto) *)):not(.wdth-auto))  { flex: 0 0 auto; }
 .o-form.wdth-10  { width: var(--width-10); }
 .o-form.wdth-20  { width: var(--width-20); }
 .o-form.wdth-30  { width: var(--width-30); }
