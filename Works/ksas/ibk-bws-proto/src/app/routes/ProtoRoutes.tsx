@@ -34,7 +34,7 @@ import CMP001502P from    'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재�
 // proto 중요용지·용도품(본부)
 import HSPBT0101M from    'app/pages/hsp/HSPBT0101M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역
 import HSPBT0101P01 from  'app/pages/hsp/HSPBT0101P01'; // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역 ~ 인도취소
-import HSPBT0301M from    'app/pages/hsp/HSPBT0301M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역
+// import HSPBT0301M from    'app/pages/hsp/HSPBT0301M';   // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역
 import HSPBT0301P01 from  'app/pages/hsp/HSPBT0301P01'; // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역~ 부분취소
 
 // proto 영업지원
@@ -111,7 +111,7 @@ function ProtoRoutes() {
       children: [
         { path: 'HSPBT0101M',   element: <HSPBT0101M /> },
         { path: 'HSPBT0101P01', element: <HSPBT0101P01 /> },
-        { path: 'HSPBT0301M',   element: <HSPBT0301M /> },
+        // { path: 'HSPBT0301M',   element: <HSPBT0301M /> },
         { path: 'HSPBT0301P01', element: <HSPBT0301P01 /> },
       ],
     },
