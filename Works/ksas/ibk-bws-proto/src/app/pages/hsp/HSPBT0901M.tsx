@@ -121,7 +121,7 @@ function HSPBT0901M() {
 
               <div className="group _primary">
                 <CommonButton label="결재요청" className="_solid-primary" />
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -185,7 +185,12 @@ function HSPBT0901M() {
 
                   <div className="m-binds">
                     <div className="group">
+                      <CommonButton label="노션별배송부점" className="_normal" icon="excel-download-label" />
+                    </div>
+
+                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
