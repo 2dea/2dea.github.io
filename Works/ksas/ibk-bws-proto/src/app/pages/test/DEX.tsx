@@ -177,7 +177,7 @@ function DEX() {
                 <form className="m-filter-form">
                   <div className="fieldset">
 
-                    <div className="o-field colspan-2">
+                    <div className="o-field colspan-5">
                       <Label label={`InputCheck`} />
                       <div className="fields">
                         <div className="m-checks">
@@ -220,7 +220,7 @@ function DEX() {
                       </div>
                     </div>
 
-                    <div className="o-field colspan-2">
+                    <div className="o-field colspan-5">
                       <Label label={`InputRadio`} />
                       <div className="fields">
                         <div className="m-checks">
@@ -663,6 +663,10 @@ function DEX() {
 
                         <div className="m-binds">
                           <div className="group">
+                            <CommonButton label="표준템플릿" className="_normal" icon="excel-download-label" />
+                          </div>
+
+                          <div className="group">
                             <ImageButton label="엑셀​다운로드" icon="excel-download" />
                             <ImageButton label="목록필터" icon="column-toggle" />
                             <ImageButton label="목록출력" icon="print" />
@@ -746,9 +750,9 @@ function DEX() {
                                   <td>~</td>
                                   <td>33447900</td>
                                   <td>부산역</td>
-                                  <td><span className="o-digit type-datetime">2024-09-16</span></td>
+                                  <td><span className="o-digit type-date">2024-09-16</span></td>
                                   <td>미인수</td>
-                                  <td><span className="o-digit type-datetime">2024-09-16</span></td>
+                                  <td><span className="o-digit type-date">2024-09-16</span></td>
                                   <td className="g-start">마감 후 000긴급신청</td>
                                   <td>
                                       <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
@@ -861,7 +865,7 @@ function DEX() {
                                   <td><span className="o-digit type-date">2024-09-16</span></td>
                                   <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
                                   <td>신청인도</td>
-                                  <td><span className="o-digit type-datetime">2024-09-16</span></td>
+                                  <td><span className="o-digit type-date">2024-09-16</span></td>
                                   <td className="g-start">신청자 요청으로 인한 삭제</td>
                                   <td>
                                     <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay1.current.toggle(e)} />

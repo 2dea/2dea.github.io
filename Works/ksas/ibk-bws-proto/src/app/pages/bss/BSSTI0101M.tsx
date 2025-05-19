@@ -129,13 +129,12 @@ function BSSTI0101M() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field colspan-2">
+                  <div className="o-field">
                     <Label label={`구분`} require={false} />
                     <div className="fields">
-                      <div className="m-checks">
-                        <InputRadio name="RADIO:F_10" label="전체" defaultChecked />
-                        <InputRadio name="RADIO:F_10" label="비품" />
-                        <InputRadio name="RADIO:F_10" label="소모품" />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
@@ -153,9 +152,9 @@ function BSSTI0101M() {
                   <div className="o-field">
                     <Label label={`상태`} require={false} />
                     <div className="fields">
-                      <div className="m-checks">
-                        <InputRadio name="RADIO:F_20" label="활동" defaultChecked />
-                        <InputRadio name="RADIO:F_20" label="비활동" />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>

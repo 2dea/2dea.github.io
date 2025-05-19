@@ -126,6 +126,7 @@
 .o-icon._arrow-up:before  { background-color: $tp; background-image: var(--obj-ico-arrow-up); }
 .o-icon._calendar:before  { background-color: $tp; background-image: var(--obj-ico-calendar); }
 .o-icon._close:before  { background-color: $tp; background-image: var(--obj-ico-close); }
+.o-icon._consult:before  { background-color: $tp; background-image: var(--obj-ico-consult); }
 .o-icon._delete:before  { background-color: $tp; background-image: var(--obj-ico-delete); }
 .o-icon._du-down:before  { background-color: $tp; background-image: var(--obj-ico-du-down); }
 .o-icon._du-left:before  { background-color: $tp; background-image: var(--obj-ico-du-left); }
@@ -167,6 +168,8 @@
 
 /* Icon Fixed */
 .o-icon._excel-download:before  { background-color: $tp; background-image: var(--obj-ico-excel-download); background-size: 100%; }
+.o-icon._excel-download-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-download-label); background-size: 100%; }
+.o-icon._excel-upload:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload); background-size: 100%; }
 .o-icon._folder-open:before  { background-color: $tp; background-image: var(--obj-ico-folder-open); background-size: 100%; }
 .o-icon._folder:before  { background-color: $tp; background-image: var(--obj-ico-folder); background-size: 100%; }
 .o-icon._grid-added:before  { background-color: $tp; background-image: var(--obj-ico-grid-added); background-size: 100%; }
@@ -621,7 +624,7 @@
 .m-binds >._utility  { justify-content: flex-end; margin-left: auto; }
 
 
-.m-print-binds  { display: flex; align-items: center; gap: $e10; padding-left: $gap-element-30; background-color: var(--color-ground-40); border-radius: $radius-abs-999; }
+.m-print-binds  { display: flex; align-items: center; gap: $e10; padding-left: $gap-element-30; background-color: var(--color-ground-70); border-radius: $radius-abs-999; }
 .m-print-binds:after  { content: ""; font-size: $height-icon-30; width: $height-form-50; height: $height-form-50; border: calc(($height-form-50 - $height-icon-30) / 2) solid #{$color-button3-40}; background: #{$color-button3-40} var(--obj-ico-print) no-repeat 75%/ 5em; }
 .m-print-binds >* +:before  { content: ""; position: absolute; left: calc(-1 * $e10 * 2); width: $e10; height: calc(1em * 12 / 14); background: var(--color-edge-40); }
 
@@ -1004,10 +1007,20 @@
   --margin-inline: #{calc($gap-element-70 - $e10)};
   --height-icon: #{$height-icon-30};
   --gap-icon: #{$gap-element-50};
+
+  --width-10: calc(var(--rem) * 50);
+  --width-20: calc(var(--rem) * 60);
+  --width-30: calc(var(--rem) * 80);
+  --width-40: calc(var(--rem) * 100);
+  --width-50: calc(var(--rem) * 120);
+  --width-60: calc(var(--rem) * 140);
+  --width-70: calc(var(--rem) * 160);
+  --width-80: calc(var(--rem) * 180);
+  --width-90: calc(var(--rem) * 210);
 }
 .o-form  { border-color: var(--color-edge-40); background: $color-ground; text-align: left; text-align: start;
   width: 100%; min-width: 3.5em; min-height: $height-form-50; border-radius: $radius-50; transition-duration: 0.05s; }
-.o-form :is(input:where(.o-form._input *), select, textarea)  { -webkit-appearance: none; appearance: none; padding: var(--margin-block) var(--margin-inline); }
+.o-form :is(input:where(.o-form._input *), select, textarea)  { -webkit-appearance: none; appearance: none; width: calc(var(--width-50) - $e10 * 2); padding: var(--margin-block) var(--margin-inline); }
 .o-form :is(input:where(.o-form._input *), select:not([multiple]))  { text-overflow: ellipsis; }
 .o-form:has(.o-image-button, button >.o-icon) input:where(.o-form._input *)  { padding-right: 0; }
 
@@ -1059,17 +1072,17 @@
 .o-form._input.type-spin input  { padding-left: 0; padding-right: 0; }
 
 
-.o-form[style*="width:"],
-  .o-form[class*=" wdth-"]  { flex: 0 0 auto; }
-.o-form.wdth-10  { width: calc(var(--rem) * 50); }
-.o-form.wdth-20  { width: calc(var(--rem) * 60); }
-.o-form.wdth-30  { width: calc(var(--rem) * 80); }
-.o-form.wdth-40  { width: calc(var(--rem) * 100); }
-.o-form.wdth-50  { width: calc(var(--rem) * 120); }
-.o-form.wdth-60  { width: calc(var(--rem) * 140); }
-.o-form.wdth-70  { width: calc(var(--rem) * 160); }
-.o-form.wdth-80  { width: calc(var(--rem) * 180); }
-.o-form.wdth-90  { width: calc(var(--rem) * 210); }
+.o-form[style*="width:"]:not(.m-filter-form .fieldset :not(.o-field:only-child *)),
+  .o-form[class*=" wdth-"]:not(.m-filter-form .fieldset :not(.o-field:only-child *))  { flex: 0 0 auto; }
+.o-form.wdth-10  { width: var(--width-10); }
+.o-form.wdth-20  { width: var(--width-20); }
+.o-form.wdth-30  { width: var(--width-30); }
+.o-form.wdth-40  { width: var(--width-40); }
+.o-form.wdth-50  { width: var(--width-50); }
+.o-form.wdth-60  { width: var(--width-60); }
+.o-form.wdth-70  { width: var(--width-70); }
+.o-form.wdth-80  { width: var(--width-80); }
+.o-form.wdth-90  { width: var(--width-90); }
 
 
 .o-form.mode-required  { background: var(--color-ground-required); }
@@ -1103,14 +1116,77 @@
 .o-field >.fields  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; min-height: $height-form-50; margin: 0; }
 .o-field >.fields >:not(.o-form)  { min-width: 0; }
 
-.o-field:where(.m-filter-form .fieldset >*, .axis-cols)  { flex-direction: column; align-items: normal; }
-.o-field:where(.m-filter-form .fieldset >*, .axis-cols) >*  { min-height: 0; }
+.o-field:where(.m-filter-form .fieldset >:not(:only-child), .axis-cols)  { flex-direction: column; align-items: normal; }
+.o-field:where(.m-filter-form .fieldset >:not(:only-child), .axis-cols) >*  { min-height: 0; }
 
-.o-field:not(.m-filter-form .fieldset >*, .axis-cols)  { align-items: center; }
-.o-field:not(.m-filter-form .fieldset >*, .axis-cols) >*  { min-width: 0; }
-.o-field:not(.m-filter-form .fieldset >*, .axis-cols) >.fields  { flex: 1; }
+.o-field:not(.m-filter-form .fieldset >:not(:only-child), .axis-cols)  { align-items: center; }
+.o-field:not(.m-filter-form .fieldset >:not(:only-child), .axis-cols) >*  { flex: none; min-width: 0; }
+.o-field:not(.m-filter-form .fieldset >:not(:only-child), .axis-cols) >.fields  { flex: 1; }
 
 
+
+
+
+
+
+
+
+
+// // .m-filter-form  { display: flex; align-items: flex-end; justify-content: space-between; gap: III(16); clear: both; padding: III(14); border: $e10 solid navy; background: Ivory; border-radius: $radius-50; }
+// // .m-filter-form >*  { flex: none; min-width: 0; }
+// // .m-filter-form .fieldset  { flex: 0 0 auto; overflow: hidden; }
+// // .m-filter-form .fieldset .table  { $l-border-spacing: III(8); border-spacing: 0 $l-border-spacing; width: 100%; margin: calc(-1 * $l-border-spacing) 0; }
+// // .m-filter-form .fieldset .table th,
+// //   .m-filter-form .fieldset .table td  { height: $height-form-50; padding: III(0) III(4); white-space: nowrap; }
+// // // .m-filter-form .fieldset .table th  { width: 0; }
+// // // .m-filter-form .fieldset .table td  { max-width: 0; white-space: nowrap; overflow: hidden; }
+
+.m-filter-form  { display: flex; align-items: flex-end; gap: $gap-element-90; clear: both; padding: calc($gap-element-80 - $e10); border: $e10 solid var(--color-edge-70); background: $color-ground-30; border-radius: $radius-50; }
+.m-filter-form >*  { flex: 0 1 auto; min-width: 0; min-height: $height-form-50; }
+.m-filter-form .fieldset  { flex: 1 0 0; margin: calc(-1 * $gap-element-50) calc(-1 * $gap-element-70); }
+.m-filter-form .fieldset >*  { min-width: 0; min-height: 0; padding: $gap-element-50 $gap-element-70; }
+// .m-filter-form .fieldset:has(>:nth-child(#{8n + 1}):last-child)  { padding-right: III(60); }
+.m-filter-form .fieldset.align-remain  { padding-right: III(60); }
+
+// .m-filter-form .fieldset.style-grid  { display: grid; align-items: stretch; grid-template-columns: repeat(auto-fill, minmax(III(60), 1fr)); grid-auto-flow: dense; }
+// .m-filter-form .fieldset.style-grid >*  { grid-column: auto /span 3; }
+// .m-filter-form .fieldset.style-grid >.colspan-1  { grid-column: auto /span 4; }
+// .m-filter-form .fieldset.style-grid >.colspan-2  { grid-column: auto /span 5; }
+// @for $i from 3 through 29 {
+//   .m-filter-form .fieldset.style-grid >.colspan-#{$i}  { grid-column: auto /span #{$i + 3}; }
+// }
+
+// .m-filter-form .fieldset:not(.style-grid)  { display: flex; flex-wrap: wrap; }
+// .m-filter-form .fieldset:not(.style-grid) >*  { flex: none; min-width: III(182.75); }
+.m-filter-form .fieldset  { display: grid; align-items: stretch; grid-template-columns: repeat(auto-fill, minmax(III(60), 1fr)); grid-auto-flow: dense; }
+.m-filter-form .fieldset >*  { grid-column: auto /span 3; }
+.m-filter-form .fieldset >.colspan-1  { grid-column: auto /span 4; }
+.m-filter-form .fieldset >.colspan-2  { grid-column: auto /span 5; }
+@for $i from 3 through 29 {
+  .m-filter-form .fieldset >.colspan-#{$i}  { grid-column: auto /span #{$i + 3}; }
+}
+
+.m-filter-form .fieldset >* >.o-label  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-70); }
+.m-filter-form .fieldset >* >.fields >.m-checks  { padding-right: $gap-element-70; }
+
+
+.m-filter-form .fieldset:has(.o-field:only-child)  { display: flex; flex-wrap: nowrap; }
+.m-filter-form .fieldset:has(.o-field:only-child) >*  { flex: 1; gap: $gap-element-30 $gap-element-80; }
+
+
+
+
+
+
+
+.m-data-form  { clear: both; }
+.m-data-form table:not(td *)  { table-layout: fixed; width: 100%; background: $color-ground; }
+.m-data-form col.head:not(td *)  { width: calc(var(--rem) * 120); }
+.m-data-form tr >:not(td *)  { height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
+.m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >:not(td *)  { border-top-width: $e10; border-top-color: $color-key1-40; }
+.m-data-form tr >:first-child:not(td *)  { border-left-width: $e10; }
+.m-data-form tr >:last-child:not(td *)  { border-right-width: $e10; }
+.m-data-form th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) III(11); color: $color-text-70; background: var(--color-ground-40); }
 
 
 
@@ -1357,51 +1433,6 @@
 // .o-grid-table .o-form.wdth-70  { min-width: calc(var(--rem) * 160); }
 // .o-grid-table .o-form.wdth-80  { min-width: calc(var(--rem) * 180); }
 // .o-grid-table .o-form.wdth-90  { min-width: calc(var(--rem) * 210); }
-
-
-
-
-
-.m-data-form  { clear: both; }
-.m-data-form table:not(td *)  { table-layout: fixed; width: 100%; background: $color-ground; }
-.m-data-form col.head:not(td *)  { width: calc(var(--rem) * 120); }
-.m-data-form tr >:not(td *)  { height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
-.m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >:not(td *)  { border-top-width: $e10; border-top-color: $color-key1-40; }
-.m-data-form tr >:first-child:not(td *)  { border-left-width: $e10; }
-.m-data-form tr >:last-child:not(td *)  { border-right-width: $e10; }
-.m-data-form th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) III(11); color: $color-text-70; background: var(--color-ground-40); }
-
-
-
-
-
-
-// .m-filter-form  { display: flex; align-items: flex-end; justify-content: space-between; gap: III(16); clear: both; padding: III(14); border: $e10 solid navy; background: Ivory; border-radius: $radius-50; }
-// .m-filter-form >*  { flex: none; min-width: 0; }
-// .m-filter-form .fieldset  { flex: 0 0 auto; overflow: hidden; }
-// .m-filter-form .fieldset .table  { $l-border-spacing: III(8); border-spacing: 0 $l-border-spacing; width: 100%; margin: calc(-1 * $l-border-spacing) 0; }
-// .m-filter-form .fieldset .table th,
-//   .m-filter-form .fieldset .table td  { height: $height-form-50; padding: III(0) III(4); white-space: nowrap; }
-// // .m-filter-form .fieldset .table th  { width: 0; }
-// // .m-filter-form .fieldset .table td  { max-width: 0; white-space: nowrap; overflow: hidden; }
-
-.m-filter-form  { display: flex; align-items: flex-end; gap: $gap-element-90; clear: both; padding: calc($gap-element-80 - $e10); border: $e10 solid var(--color-edge-70); background: $color-ground-30; border-radius: $radius-50; }
-.m-filter-form >*  { flex: 0 1 auto; min-width: 0; min-height: $height-form-50; }
-.m-filter-form .fieldset  { flex: 1 0 0; margin: calc(-1 * $gap-element-50) calc(-1 * $gap-element-50); }
-.m-filter-form .fieldset >*  { min-width: 0; min-height: 0; padding: $gap-element-50 $gap-element-50; }
-
-.m-filter-form .fieldset.style-grid  { display: grid; align-items: stretch; grid-template-columns: repeat(auto-fill, minmax(III(60), 1fr)); grid-auto-flow: dense; }
-.m-filter-form .fieldset.style-grid >*  { grid-column: auto /span 3; }
-.m-filter-form .fieldset.style-grid >.colspan-2  { grid-column: auto /span 4; }
-@for $i from 3 through 9 {
-  .m-filter-form .fieldset.style-grid >.colspan-#{$i}  { grid-column: auto /span #{$i + 2}; }
-}
-
-.m-filter-form .fieldset:not(.style-grid)  { display: flex; flex-wrap: wrap; }
-.m-filter-form .fieldset:not(.style-grid) >*  { flex: none; min-width: 170px; }
-
-.m-filter-form .fieldset >* >.o-label  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-70); }
-
 
 
 

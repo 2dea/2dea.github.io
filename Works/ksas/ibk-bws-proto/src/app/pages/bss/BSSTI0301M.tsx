@@ -126,44 +126,44 @@ function BSSTI0301M() {
             <div className="column">
 
               <form className="m-filter-form">
-              <div className="fieldset">
+                <div className="fieldset">
 
-                <div className="o-field colspan-2">
-                  <Label label={`구분`} require={false} />
-                  <div className="fields">
-                    <div className="m-checks">
-                      <InputRadio name="RADIO:F_10" label="충주연수원" defaultChecked />
-                      <InputRadio name="RADIO:F_10" label="기흥연수원" />
+                  <div className="o-field">
+                    <Label label={`구분`} require={false} />
+                    <div className="fields">
+                        <div className="o-form _select">
+                          <XDropdown appendTo={'self'} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="o-field">
-                  <Label label={`품목명`} require={false} />
-                  <div className="fields">
-                    <div className="o-form _input">
-                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                      <i aria-hidden="true"></i>
+                  <div className="o-field">
+                    <Label label={`품목명`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="o-field colspan-2">
-                  <Label label={`거래기간`} require={true} />
-                  <div className="fields">
-                    <div className="o-form _input type-date mode-required wdth-50">
-                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                      <i aria-hidden="true"></i>
-                    </div>
-                    <span className="seps type-tilde">~</span>
-                    <div className="o-form _input type-date mode-required wdth-50">
-                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                      <i aria-hidden="true"></i>
+                  <div className="o-field colspan-2">
+                    <Label label={`거래기간`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <span className="seps type-tilde">~</span>
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-              </div>
+                </div>
 
                 <div className="binds">
                   <CommonButton label="조회" className="_inquire" />

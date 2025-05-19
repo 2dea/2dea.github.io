@@ -123,7 +123,7 @@ function ADMAU0204M() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field colspan-2">
+                  <div className="o-field colspan-5">
                     <Label label={`InputCheck`} />
                     <div className="fields">
                       <div className="m-checks">
@@ -167,7 +167,7 @@ function ADMAU0204M() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-2">
+                  <div className="o-field colspan-5">
                     <Label label={`InputRadio`} />
                     <div className="fields">
                       <div className="m-checks">

@@ -141,23 +141,22 @@ function BSSTI0401M() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-2">
+                  <div className="o-field">
                     <Label label={`연수원`} require={false} />
                     <div className="fields">
-                      <div className="m-checks">
-                        <InputRadio name="RADIO:F_10" label="충주연수원" defaultChecked />
-                        <InputRadio name="RADIO:F_10" label="기흥연수원" />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
 
-                  <div className="o-field colspan-2">
+                  <div className="o-field">
                     <Label label={`구분`} require={false} />
                     <div className="fields">
-                      <div className="m-checks">
-                        <InputRadio name="RADIO:F_20" label="전체" defaultChecked />
-                        <InputRadio name="RADIO:F_20" label="비품" />
-                        <InputRadio name="RADIO:F_20" label="소모품" />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>

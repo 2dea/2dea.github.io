@@ -348,7 +348,7 @@ function HSPBT0101M() {
 
                   <div className="o-section">
                     <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">삭제내역</span></h2>
+                      <h2 className="o-heading level2"><span className="label">인도취소내역</span></h2>
 
                       <div className="o-length">
                         <span className="head">전체</span>

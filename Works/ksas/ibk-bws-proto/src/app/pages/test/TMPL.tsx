@@ -177,7 +177,7 @@ function TMPL() {
                 <form className="m-filter-form">
                   <div className="fieldset">
 
-                    <div className="o-field colspan-2">
+                    <div className="o-field colspan-5">
                       <Label label={`InputCheck`} />
                       <div className="fields">
                         <div className="m-checks">
@@ -220,7 +220,7 @@ function TMPL() {
                       </div>
                     </div>
 
-                    <div className="o-field colspan-2">
+                    <div className="o-field colspan-5">
                       <Label label={`InputRadio`} />
                       <div className="fields">
                         <div className="m-checks">
@@ -667,6 +667,7 @@ function TMPL() {
                           </div>
 
                           <div className="group">
+                            <ImageButton label="엑셀​업로드" icon="excel-upload" />
                             <ImageButton label="엑셀​다운로드" icon="excel-download" />
                             <ImageButton label="목록필터" icon="column-toggle" />
                             <ImageButton label="목록출력" icon="print" />
