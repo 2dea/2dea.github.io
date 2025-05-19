@@ -247,6 +247,15 @@ function HSPBT0801M() {
                           </tr>
                         ))}
                         </tbody>
+
+                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                          <tr className="sumtotal-trow">
+                            <td colSpan={6} className="sumtotal-tcell">합계</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell"></td>
+                            <td className="sumtotal-tcell"></td>
+                          </tr>
+                        </tfoot>
                       </table>
                     </div>
                   </div>

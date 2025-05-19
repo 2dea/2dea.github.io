@@ -338,7 +338,7 @@ function HSPHS0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}>허용된 권한이 없습니다.</td>
+                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 

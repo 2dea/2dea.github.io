@@ -235,19 +235,47 @@ function HSPBT0901M() {
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td className="g-start">29노선</td>
-                            <td>0001</td>
-                            <td className="g-start">영업부</td>
-                            <td>0001</td>
-                            <td className="g-start">지폐속박지(가대지)(띠지)</td>
-                            <td className="g-end">10</td>
-                            <td>결재승인</td>
-                            <td className="g-start"></td>
-                          </tr>
+                           <>
+                           {
+                            (idx - 3) % 3 === 0 &&
+                            <tr className="p-rowgroup-header">
+                              <td colSpan={9} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                            </tr>
+                          }
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+
+                              <td className="p-x-cell-span g-start">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                              {
+                                (idx) % 3 === 0 &&
+                                <>29노선</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                              }
+                              </td>
+                              <td>0001</td>
+                              <td className="g-start">영업부</td>
+                              <td>0001</td>
+                              <td className="g-start">지폐속박지(가대지)(띠지)</td>
+                              <td className="g-end">10</td>
+                              <td>결재승인</td>
+                              <td className="g-start"></td>
+                            </tr>
+                            {
+                              (idx - 2) % 3 === 0 &&
+                              <tr className="p-rowgroup-footer">
+                                <td colSpan={9} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                              </tr>
+                            }
+                           </>
                         ))}
                         </tbody>
+                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                          <tr className="sumtotal-trow">
+                            <td colSpan={6} className="sumtotal-tcell">합계</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell"></td>
+                            <td className="sumtotal-tcell"></td>
+                          </tr>
+                        </tfoot>
                       </table>
                     </div>
                   </div>

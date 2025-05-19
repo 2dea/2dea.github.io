@@ -112,6 +112,8 @@ function HSPHS0201P01() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>

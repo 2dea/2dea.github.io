@@ -170,7 +170,7 @@ function HSPBT1601M() {
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
-                      <div className="o-form _input type-date mode-required wdth-50">
+                      <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
@@ -248,7 +248,7 @@ function HSPBT1601M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-0" />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
