@@ -399,8 +399,7 @@ function HSPBT0301M() {
                                 <td className="g-start">경기지역</td>
                                 <td>김영수</td>
                                 <td>
-                                  {/* 통화 */}
-                                  <CommonButton label="통화" className="_normal" />
+                                  <CommonButton label="통화" className="_normal" icon="consult" />
                                 </td>
                                 <td>출납책임자 결재완료</td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
