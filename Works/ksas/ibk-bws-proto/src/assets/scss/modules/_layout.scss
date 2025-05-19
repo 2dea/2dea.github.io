@@ -190,10 +190,10 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 /** Header */
 .dom-wrapper  {
-  --theme-header-ground: #{$color-key1-70};
+  --theme-header-ground: var(--color-key1-70);
   --theme-header-ground-account: #{$tp};
 
-  --theme-header-text: #{$color-text-00};
+  --theme-header-text: var(--color-text-00);
   --theme-header-text-account: inherit;
 
   --theme-header-logo: var(--obj-img-logo-heavy);
