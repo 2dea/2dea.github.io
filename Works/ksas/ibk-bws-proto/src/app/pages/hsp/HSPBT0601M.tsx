@@ -153,8 +153,11 @@ function HSPBT0601M() {
                     <Label label={`인수부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -163,8 +166,11 @@ function HSPBT0601M() {
                     <Label label={`출급번호/품목명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -180,7 +186,7 @@ function HSPBT0601M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`인도 일자`} require={true} />
+                    <Label label={`인도일자`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -283,7 +289,7 @@ function HSPBT0601M() {
                             <td>1275702</td>
                             <td>0022</td>
                             <td className="g-start">종로6가</td>
-                            <td className="g-start">재소 부족으로 수량변경</td>
+                            <td className="g-start">재고 부족으로 수량변경</td>
                             <td>
                               <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
                               <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>

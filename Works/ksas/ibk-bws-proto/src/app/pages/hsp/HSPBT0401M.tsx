@@ -159,15 +159,17 @@ function HSPBT0401M() {
                             <Label label={`인도부점`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            {/* 단순 문구인지 readOnly인지 확인 필요 */}
-                            <div className="o-field">
+                            {/* <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
                                   <InputText placeholder="" value="[0810] 프로세스혁신" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
-                            </div>
+                            </div> */}
+                            {/* (기획확인) 문자열 처리(비활성화 처리 아님) { @DEV } */}
+
+                            [0810] 프로세스혁신
                           </td>
 
                           <th colSpan={1}>
@@ -176,9 +178,12 @@ function HSPBT0401M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <div className="o-form _input mode-required">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
                                 </div>
                               </div>
                             </div>

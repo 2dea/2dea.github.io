@@ -191,6 +191,20 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 
 				evt.currentTarget.classList.add('js_clicked');
 			});
+
+			if( 'onauxclick' in window ) {
+				$el.addEventListener('auxclick', function(evt) {
+					const $relRows = $el.closest('table').querySelectorAll('tbody >tr');
+
+					$relRows.forEach(function($el) {
+						if( $el !== evt.currentTarget ) {
+							$el.classList.remove('js_clicked');
+						}
+					});
+
+					evt.currentTarget.classList.add('js_clicked');
+				});
+			}
 		});
 	}
 
@@ -3491,7 +3505,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><sapn class="name DEL"></span></td>
 			<td class="done"><sapn class="date DEL">2025-05-01</span></td>
 			<td class="note">
-				<p class="em">[동일화면] &lt;CMP000401P&gt;</p>
+				<p class="em">[공통화면] &lt;CMP000401P&gt;</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -3515,7 +3529,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><sapn class="name DEL"></span></td>
 			<td class="done"><sapn class="date DEL">2025-05-01</span></td>
 			<td class="note">
-				<p class="em">[동일화면] &lt;CMP001101P&gt;</p>
+				<p class="em">[공통화면] &lt;CMP001101P&gt;</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -3657,7 +3671,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="scid">HSPBT0401M</td>
 			<td class="link"><a target="page" href="/proto/HSPBT0401M">HSPBT0401M</a></td>
 			<td class="auth"><sapn class="name DEL">김진영</span></td>
-			<td class="done"><sapn class="date done">2025-05-20</span></td>
+			<td class="done"><sapn class="date done">2025-05-19</span></td>
 			<td class="note">
 				<p class="__CLASSNAME__"></p>
 			</td>
@@ -3705,7 +3719,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="scid">HSPBT0601M</td>
 			<td class="link"><a target="page" href="/proto/HSPBT0601M">HSPBT0601M</a></td>
 			<td class="auth"><sapn class="name DEL">김진영</span></td>
-			<td class="done"><sapn class="date done">2025-05-20</span></td>
+			<td class="done"><sapn class="date done">2025-05-19</span></td>
 			<td class="note">
 				<p class="__CLASSNAME__"></p>
 			</td>
@@ -9341,7 +9355,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><sapn class="name DEL"></span></td>
 			<td class="done"><sapn class="date DEL">2025-05-01</span></td>
 			<td class="note">
-				<p class="em">[동일화면] &lt;CMP000301P&gt;</p>
+				<p class="em">[공통화면] &lt;CMP000301P&gt;</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -10013,7 +10027,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><sapn class="name DEL"></span></td>
 			<td class="done"><sapn class="date DEL">2025-05-01</span></td>
 			<td class="note">
-				<p class="em">[동일화면] &lt;CMP000201P&gt;</p>
+				<p class="em">[공통화면] &lt;CMP000201P&gt;</p>
 			</td>
 		</tr>
 		<tr class="DEL">
