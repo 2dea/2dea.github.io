@@ -557,7 +557,7 @@
 .o-button:is(._solid, ._inquire)  { --theme: #{$color-button3-40}; }
 .o-button:is(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-70}; }
 .o-button:is(._lined-secondary):not(:hover:not(:active))  { border-color: var(--color-button2-30); background-color: var(--color-ground-40); }
-.o-button:is(._normal, ._cancel)  { --theme: var(--design-button3-weak); }
+.o-button:is(._normal, ._cancel)  { --theme: var(--color-button3-30); }
 .o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-40}; }
 .o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]) >.label  { color: var(--color-text-40); }
 
@@ -1415,7 +1415,7 @@
 // .o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: var(--color-key1-70); }
 // // .o-grid-table tbody >* >*  { white-space: nowrap; }
 // // .o-grid-table tbody >* >* >*  { white-space: normal; }
-.o-grid-table tbody >tr:nth-child(even)  { background: var(--design-grid-evenrow); }
+.o-grid-table tbody >tr:nth-child(even)  { background: var(--color-grid-evenrow); }
 
 .o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 

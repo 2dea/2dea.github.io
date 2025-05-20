@@ -345,86 +345,99 @@ function HSPBT0301M() {
 
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td><InputCheck label="선택" labelHidden /></td>
-                                <td>{idx + 1}</td>
-                                <td><span className="o-digit type-date">2025-12-25</span></td>
-                                <td>0465</td>
-                                <td className="g-start">독산하이테크</td>
-                                <td>10100</td>
-                                <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                                <td className="g-end">349</td>
-                                <td><span className="o-digit type-datetime">2025-12-25</span></td>
-                                <td>20-100</td>
-                                <td className="g-end">50</td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input type-spin wdth-50">
-                                        <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
-                                          decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
-                                        <i aria-hidden="true"></i>
+                              <>
+                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                  <td><InputCheck label="선택" labelHidden /></td>
+                                  <td>{idx + 1}</td>
+                                  <td>
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <span className="o-digit type-date">2025-12-25</span>
+                                  }
+                                  </td>
+                                  <td>0465</td>
+                                  <td className="g-start">독산하이테크</td>
+                                  <td>10100</td>
+                                  <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
+                                  <td className="g-end">349</td>
+                                  <td><span className="o-digit type-datetime">2025-12-25</span></td>
+                                  <td>20-100</td>
+                                  <td className="g-end">50</td>
+                                  <td>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-spin wdth-50">
+                                          <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                            decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                          <i aria-hidden="true"></i>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                </td>
-                                <td>장</td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input wdth-20">
-                                        {/* 국문 최대 2자리 */}
-                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                        <i aria-hidden="true"></i>
+                                  </td>
+                                  <td>장</td>
+                                  <td>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input wdth-20">
+                                          {/* 국문 최대 2자리 */}
+                                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                          <i aria-hidden="true"></i>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input wdth-40">
-                                        {/* 숫자 최대 20자 */}
-                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                        <i aria-hidden="true"></i>
+                                  </td>
+                                  <td>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input wdth-40">
+                                          {/* 숫자 최대 20자 */}
+                                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                          <i aria-hidden="true"></i>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                </td>
-                                <td>~</td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input wdth-40">
-                                        {/* 숫자 최대 20자 */}
-                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                        <i aria-hidden="true"></i>
+                                  </td>
+                                  <td>~</td>
+                                  <td>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input wdth-40">
+                                          {/* 숫자 최대 20자 */}
+                                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                          <i aria-hidden="true"></i>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                </td>
-                                <td className="g-start">경기지역</td>
-                                <td>김영수</td>
-                                <td>
-                                  <CommonButton label="통화" className="_normal" icon="consult" />
-                                </td>
-                                <td>출납책임자 결재완료</td>
-                                <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
-                                <td>N</td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input wdth-80">
-                                        <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                        <i aria-hidden="true"></i>
+                                  </td>
+                                  <td className="g-start">경기지역</td>
+                                  <td>김영수</td>
+                                  <td>
+                                    <CommonButton label="통화" className="_normal" icon="consult" />
+                                  </td>
+                                  <td>출납책임자 결재완료</td>
+                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                                  <td>N</td>
+                                  <td>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input wdth-80">
+                                          <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                          <i aria-hidden="true"></i>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                </td>
-                                <td>
-                                  <ImageButton label="이미지​​업로드" icon="upload" />
-                                </td>
-                              </tr>
+                                  </td>
+                                  <td>
+                                    <ImageButton label="이미지​​업로드" icon="upload" />
+                                  </td>
+                                </tr>
+                              {
+                                (idx + 1) % 3 === 0 &&
+                                <tr className="p-rowgroup-footer">
+                                  <td colSpan={25} className="p-x-empty-edge"></td>
+                                </tr>
+                              }
+                              </>
                             ))}
                             </tbody>
                           </table>

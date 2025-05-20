@@ -664,6 +664,20 @@
       position: sticky; z-index: 2; border-right: $e30 double var(--color-point-yellow); background-color: inherit;
       // position: sticky; z-index: 2; left: 0;
     }
+
+    .p-rowgroup-footer:has(.p-x-empty-edge)  {
+      position: relative;
+    }
+
+    .p-x-empty-edge  {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 0;
+      padding: 0;
+      border-color: var(--color-edge-70);
+    }
   }
 
   .p-datatable-scrollable-table >.p-datatable-thead  {
