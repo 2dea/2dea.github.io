@@ -7,6 +7,7 @@
   --margin-cell-block: calc(var(--rem) * var(--margin-cell-block-int));
   --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
   --height-cell-head: var(--height-cell);
+  --height-cell-foot: var(--height-cell);
 }
 
 
@@ -1415,7 +1416,14 @@
 // .o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: var(--color-key1-70); }
 // // .o-grid-table tbody >* >*  { white-space: nowrap; }
 // // .o-grid-table tbody >* >* >*  { white-space: normal; }
-.o-grid-table tbody >tr:nth-child(even)  { background: var(--color-grid-evenrow); }
+.o-grid-table tbody >tr:nth-child(even)  { background: var(--color-grid-evenrow); background-color: gold; }
+/* .o-grid-table tbody:first-of-type >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: red; }
+.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: red; }
+.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: inherit; }
+.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: red; }
+.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: inherit; }
+.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: red; }
+.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: inherit; } */
 
 .o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 

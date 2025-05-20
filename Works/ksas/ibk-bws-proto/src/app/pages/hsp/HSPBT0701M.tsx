@@ -114,10 +114,12 @@ function HSPBT0701M() {
             </div>
 
             <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="인수도표 바코드 출력" className="_solid-primary" />
-                <CommonButton label="출급번호별 출력" className="_solid-primary" />
-                <CommonButton label="부점별 출력" className="_solid-primary" />
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="인수도표 바코드 출력" className="_texted" />
+                  <CommonButton label="출급번호별 출력" className="_texted" />
+                  <CommonButton label="부점별 출력" className="_texted" />
+                </div>
               </div>
             </div>
           </div>
@@ -309,6 +311,12 @@ function HSPBT0701M() {
                           </tr>
                         ))}
                         </tbody>
+
+                        <tfoot className="p-datatable-tfoot">
+                          <tr>
+                            <td colSpan={18}>등록된 데이터가 없습니다.</td>
+                          </tr>
+                        </tfoot>
                       </table>
                     </div>
                   </div>

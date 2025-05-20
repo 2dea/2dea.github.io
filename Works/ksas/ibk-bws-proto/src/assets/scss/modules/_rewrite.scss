@@ -665,7 +665,7 @@
       // position: sticky; z-index: 2; left: 0;
     }
 
-    .p-rowgroup-footer:has(.p-x-empty-edge)  {
+    tr:has(>td.p-x-empty-edge)  {
       position: relative;
     }
 
