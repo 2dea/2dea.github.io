@@ -1074,8 +1074,8 @@
 
 // .o-form[style*="width:"],
 //   .o-form[class*=" wdth-"]  { flex: 0 0 auto; }
-.o-form[style*="width:"]:not(.m-filter-form .fieldset :not(.o-field:only-child *)),
-  .o-form[class*=" wdth-"]:not(.m-filter-form .fieldset :not(.o-field:only-child *))  { flex: 0 0 auto; }
+.o-form[style*="width:"]:where(:not(.m-filter-form .fieldset :not(.o-field:only-child *))),
+  .o-form[class*=" wdth-"]:where(:not(.m-filter-form .fieldset :not(.o-field:only-child *)))  { flex: 0 0 auto; }
 .o-form.wdth-10  { width: var(--width-10); }
 .o-form.wdth-20  { width: var(--width-20); }
 .o-form.wdth-30  { width: var(--width-30); }
@@ -1269,15 +1269,17 @@
 .m-tab >.lists >* >.link  { flex: 1; }
 
 
-.m-tab.type1  { --key: var(--color-key1-90); border-color: var(--color-edge-30); }
-.m-tab.type1 >*  { gap: calc($e10 + $gap-element-70); }
-.m-tab.type1 .link  { line-height: inherit; margin-bottom: calc(-1 * $e10); padding: 0 $gap-element-50 $gap-element-50; border-width: 0 0 $e20; border-color: $tp; color: var(--color-text-30); background-color: $tp; }
+.m-tab.type1  { --key: var(--color-key1-90); --margin: #{$gap-element-50}; border-color: var(--color-edge-30); }
+.m-tab.type1 >*  { gap: calc($e10 + $gap-element-70); margin-top: calc(-1 * var(--margin)); }
+.m-tab.type1 .link  { line-height: inherit; margin-bottom: calc(-1 * $e10); padding: 0 $gap-element-50 $gap-element-50; padding-top: var(--margin); border-width: 0 0 $e20; border-color: $tp; color: var(--color-text-30); background-color: $tp; }
 .m-tab.type1 .link:is([aria-selected="true"], [aria-current]:not([aria-current="false"]))  { border-color: currentColor; color: var(--key); background-color: $tp; }
+.m-tab.type1 .link:not([aria-selected="true"], [aria-current]:not([aria-current="false"])):hover  { color: var(--key); }
 
 
 .m-tab.type2  { --key: var(--color-button3-70); border-color: var(--color-edge-40); }
 .m-tab.type2 >*  { gap: calc($e10 + $gap-element-30); }
 .m-tab.type2 .link  { line-height: inherit; padding: calc($gap-element-50 - $e10) calc($gap-element-80 - $e10); border-color: $tp; color: var(--color-text-20); background-color: var(--color-ground-40); }
+.m-tab.type2 .link:not([aria-selected="true"], [aria-current]:not([aria-current="false"])):hover  { color: var(--color-text-30); background-color: var(--color-ground-70);}
 
 
 
