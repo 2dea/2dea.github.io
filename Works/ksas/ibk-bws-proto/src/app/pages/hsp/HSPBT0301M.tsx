@@ -345,7 +345,7 @@ function HSPBT0301M() {
 
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
-                              <>
+                            <>
                               {
                                 (idx - 3) % 3 === 0 &&
                                 <tr className="p-rowgroup-header">
@@ -443,7 +443,7 @@ function HSPBT0301M() {
                                   <td colSpan={25} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
                                 </tr>
                               }
-                              </>
+                            </>
                             ))}
                             </tbody>
                           </table>

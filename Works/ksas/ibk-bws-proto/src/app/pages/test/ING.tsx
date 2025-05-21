@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한관리 > 매핑관리 > (T)사용자별 권한관리
+ * @description 중요용지·용도품(본부) > 대금정산 > 수입인지정산
  */
 
 // dependency
@@ -34,12 +34,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMAU0204M() {
+function HSPPC0201M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한관리' }, { label: '매핑관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '대금정산' }, { label: '수입인지정산' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -93,7 +93,7 @@ function ADMAU0204M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">매핑관리</span>
+                <span className="label">수입인지정산</span>
 
                 <Favorite />
               </h1>
@@ -107,11 +107,17 @@ function ADMAU0204M() {
               </div>
             </div>
 
-            {/* <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="저장" className="_solid-primary" />
+            <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="출력" className="_texted" />
+                </div>
               </div>
-            </div> */}
+
+              <div className="group _primary">
+                <CommonButton label="삭제" className="_delete" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -123,79 +129,17 @@ function ADMAU0204M() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field colspan-5">
-                    <Label label={`InputCheck`} />
+                  <div className="o-field colspan-2">
+                    <Label label={`조회기간`} require={true} />
                     <div className="fields">
-                      <div className="m-checks">
-                        {/* <label className="o-check type-swoosh">
-                          <input type="checkbox" title="" value="" className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">Default</span>
-                        </label>
-
-                        <label className="o-check type-swoosh">
-                          <input type="checkbox" title="" value="" defaultChecked className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">Checked</span>
-                        </label>
-
-                        <label className="o-check type-swoosh">
-                          <input type="checkbox" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">Disabled</span>
-                        </label>
-
-                        <label className="o-check type-swoosh">
-                          <input type="checkbox" title="" value="" disabled defaultChecked className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">Disabled+Checked</span>
-                        </label> */}
-                        {/*
-                        <label className="o-check">
-                          <input type="checkbox" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">체크박스 Disabled+Indeterminate</span>
-                        </label>
-
-                        <label className="o-check">
-                          <input type="checkbox" title="" value="" className="bind" onBlur={(e) => e.target.indeterminate = 'true'} /><i aria-hidden="true"></i>
-                          <span className="label">체크박스 Indeterminate</span>
-                        </label>
-                         */}
-
-                        <InputCheck label="Default" />
-                        <InputCheck label="Checked" defaultChecked />
-                        <InputCheck label="Disabled" disabled />
-                        <InputCheck label="Disabled+Checked" disabled defaultChecked />
-                        <InputCheck label="선택" labelHidden />
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" view="month" dateFormat="yy-mm" mask="9999-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field colspan-5">
-                    <Label label={`InputRadio`} />
-                    <div className="fields">
-                      <div className="m-checks">
-                        {/* <label className="o-check type-swoosh">
-                          <input type="radio" name="RADIO:10" title="" value="" className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">Default</span>
-                        </label>
-
-                        <label className="o-check type-swoosh">
-                          <input type="radio" name="RADIO:10" title="" value="" defaultChecked className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">Checked</span>
-                        </label>
-
-                        <label className="o-check type-swoosh">
-                          <input type="radio" name="RADIO:20" title="" value="" disabled className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">Disabled</span>
-                        </label>
-
-                        <label className="o-check type-swoosh">
-                          <input type="radio" name="RADIO:20" title="" value="" disabled defaultChecked className="bind" /><i aria-hidden="true"></i>
-                          <span className="label">Disabled+Checked</span>
-                        </label> */}
-
-                        <InputRadio name="RADIO:10" label="Default" />
-                        <InputRadio name="RADIO:10" label="Checked" defaultChecked />
-
-                        <InputRadio name="RADIO:20" label="Disabled" disabled />
-                        <InputRadio name="RADIO:20" label="Disabled+Checked" disabled defaultChecked />
+                      <span className="seps type-tilde">~</span>
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" view="month" dateFormat="yy-mm" mask="9999-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
@@ -209,7 +153,7 @@ function ADMAU0204M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">사용자내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">정산내역</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -237,22 +181,26 @@ function ADMAU0204M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-auto" />
+                          <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">생성일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준연월</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선납</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">후납</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={7}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -260,22 +208,18 @@ function ADMAU0204M() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
                             <td>{idx + 1}</td>
-                            <td>000001</td>
-                            <td>홍길동</td>
-                            <td>부장</td>
-                            <td className="g-start">중요용지용도품관리자, 행내등기관리</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12</span></td>
+                            <td className="g-end">58,984,700</td>
+                            <td className="g-end">10,446,400</td>
+                            <td className="g-end">48,538,300</td>
+                            <td>정산대기</td>
                           </tr>
                         ))}
                         </tbody>
                       </table>
                     </div>
                   </div>
-                </div>
-
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li>권한요청문의 : IT금융개발부 / 031-1234-5678</li>
-                  </ul>
                 </div>
               </div>
 
@@ -285,18 +229,7 @@ function ADMAU0204M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">사용자정보</span></h3>
-
-                  {/*
-                  <div className="m-chips">
-                    <em className="o-chip">
-                      <span className="label">[0031] 을지로 6가</span>
-                    </em>
-                  </div>
-                   */}
-                  <div className="o-legend type-branch style-normal">
-                    <strong className="label">[0031] 을지로 6가</strong>
-                  </div>
+                  <h3 className="o-heading level3"><span className="label">기본정보</span></h3>
                 </div>
 
                 <div className="main">
@@ -305,23 +238,39 @@ function ADMAU0204M() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`직원번호/명`} require={false} />
+                            <Label label={`정산연월`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [000001] 홍길동
+                            <span className="o-digit type-date">2023-03</span>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`정산금액합계`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">
+                            58,984,700
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`직책`} require={false} />
+                            <Label label={`선납정산금액`} require={false} />
                           </th>
-                          <td colSpan={1}>
-                            부장
+                          <td colSpan={1} className="g-end">
+                            10,446,400
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`후납정산금액`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">
+                            48,538,300
                           </td>
                         </tr>
                       </tbody>
@@ -332,7 +281,22 @@ function ADMAU0204M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">권한설정</span></h3>
+                  <h3 className="o-heading level3"><span className="label">상세내역</span></h3>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main _primary">
@@ -344,7 +308,9 @@ function ADMAU0204M() {
                           <col className="wdth-10" />
                           <col />
                           <col />
-                          <col className="wdth-auto" />
+                          <col />
+                          <col />
+                          <col />
                           <col />
                           <col />
                         </colgroup>
@@ -352,47 +318,61 @@ function ADMAU0204M() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한설명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용여부</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권한여부</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선납수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">납부수량</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}>허용된 권한이 없습니다.</td>
+                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                        <>
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
                             <td>{idx + 1}</td>
-                            <td>000000005</td>
-                            <td className="g-start">중요용지용도품관리자</td>
-                            <td className="g-start"></td>
-                            <td>Y</td>
-                            <td>
-                              {
-                                idx === 1 ?
-                              <div className="m-checks">
-                                <label className="o-check type-swoosh">
-                                  <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                                  <span className="label _hidden">선택</span>
-                                </label>
-                              </div>
-                                :
-                              <label className="o-check type-swoosh">
-                                <input type="checkbox" title="선택" value="" className="bind" /><i aria-hidden="true"></i>
-                                <span className="label _hidden">선택</span>
-                              </label>
-                              }
-                            </td>
+                            <td>0001</td>
+                            <td className="g-start">영업부</td>
+                            <td>21077</td>
+                            <td className="g-start">중금채등록통장(거치식)</td>
+                            <td className="g-end">9,999</td>
+                            <td className="g-end">9,999</td>
+                            <td className="g-end">9,999</td>
                           </tr>
+                        {
+                          (idx - 2) % 3 === 0 &&
+                          <tr className="p-rowgroup-footer subtotal-trow">
+                            <td className="subtotal-tcell"></td>
+                            <td className="subtotal-tcell">0001</td>
+                            <td className="subtotal-tcell g-start">영업부 소계</td>
+                            <td className="subtotal-tcell"></td>
+                            <td className="subtotal-tcell g-start"></td>
+                            <td className="subtotal-tcell g-end">99,999</td>
+                            <td className="subtotal-tcell g-end">99,999</td>
+                            <td className="subtotal-tcell g-end">99,999</td>
+                            {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                          </tr>
+                        }
+                        </>
                         ))}
                         </tbody>
+
+                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                          <tr className="sumtotal-trow">
+                            <td colSpan={5} className="sumtotal-tcell">합계</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                          </tr>
+                        </tfoot>
                       </table>
                     </div>
                   </div>
@@ -401,18 +381,10 @@ function ADMAU0204M() {
 
             </SplitterPanel>
           </Splitter>
-
-          <div className="div-footer">
-            <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="저장" className="_solid-primary" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </>
   );
 }
 
-export default ADMAU0204M;
+export default HSPPC0201M;

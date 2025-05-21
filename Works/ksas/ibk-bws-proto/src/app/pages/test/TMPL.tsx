@@ -753,52 +753,152 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
-                            <>
-                            {
-                              (idx - 3) % 3 === 0 &&
-                              <tr className="p-rowgroup-header">
-                                <td colSpan={13} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                              </tr>
-                            }
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td><InputCheck label="선택" labelHidden /></td>
-                                <td>{idx + 1}</td>
-                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                                {
-                                  (idx) % 3 === 0 &&
-                                  <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                                }
-                                </td>
-                                <td>0465</td>
-                                <td className="g-start">독산하이테크</td>
-                                <td>10100</td>
-                                <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                                <td className="g-end">349</td>
-                                <td><span className="o-digit type-datetime">2025-12-25</span></td>
-                                <td>20-100</td>
-                                <td className="g-end">50</td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input type-spin wdth-50">
-                                        <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
-                                          decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
-                                        <i aria-hidden="true"></i>
-                                      </div>
+                          <>
+                          {
+                            (idx - 3) % 3 === 0 &&
+                            <tr className="p-rowgroup-header">
+                              <td colSpan={13} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                            </tr>
+                          }
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx + 1}</td>
+                              <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                              {
+                                (idx) % 3 === 0 &&
+                                <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                              }
+                              </td>
+                              <td>0465</td>
+                              <td className="g-start">독산하이테크</td>
+                              <td>10100</td>
+                              <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
+                              <td className="g-end">349</td>
+                              <td><span className="o-digit type-datetime">2025-12-25</span></td>
+                              <td>20-100</td>
+                              <td className="g-end">50</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input type-spin wdth-50">
+                                      <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                        decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                      <i aria-hidden="true"></i>
                                     </div>
                                   </div>
-                                </td>
-                                <td>장</td>
-                              </tr>
-                            {
-                              (idx - 2) % 3 === 0 &&
-                              <tr className="p-rowgroup-footer">
-                                <td colSpan={13} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                              </tr>
-                            }
-                            </>
+                                </div>
+                              </td>
+                              <td>장</td>
+                            </tr>
+                          {
+                            (idx - 2) % 3 === 0 &&
+                            <tr className="p-rowgroup-footer">
+                              <td colSpan={13} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                            </tr>
+                          }
+                          </>
                           ))}
                           </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h3 className="o-heading level3"><span className="label">소계 / 합계(합계 강조)</span></h3>
+
+                    <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                        <ImageButton label="목록출력" icon="print" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="main _primary">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="table-container p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                          </colgroup>
+
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용수량</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선납수량</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">납부수량</span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                          <>
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
+                              <td>{idx + 1}</td>
+                              <td>0001</td>
+                              <td className="g-start">영업부</td>
+                              <td>21077</td>
+                              <td className="g-start">중금채등록통장(거치식)</td>
+                              <td className="g-end">9,999</td>
+                              <td className="g-end">9,999</td>
+                              <td className="g-end">9,999</td>
+                            </tr>
+                          {
+                            (idx - 2) % 3 === 0 &&
+                            <tr className="p-rowgroup-footer subtotal-trow">
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell">0001</td>
+                              <td className="subtotal-tcell g-start">영업부 소계</td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell g-start"></td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            </tr>
+                          }
+                          </>
+                          ))}
+                          </tbody>
+
+                          <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            <tr className="sumtotal-trow">
+                              <td colSpan={5} className="sumtotal-tcell">합계</td>
+                              <td className="sumtotal-tcell g-end">999,999</td>
+                              <td className="sumtotal-tcell sumtotal-tcell-strong">정산대상금액</td>
+                              <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
+                            </tr>
+                          </tfoot>
                         </table>
                       </div>
                     </div>
