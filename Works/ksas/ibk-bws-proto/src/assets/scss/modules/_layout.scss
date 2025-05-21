@@ -552,24 +552,27 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
   // --remain-cell-head: (var(--margin-cell-head-block) * 2 - var(--margin-cell-block) * 2);
   // --height-cell-head: calc(var(--height-cell) + var(--remain-cell-head, 0px));
 
+  --height-headcell: calc(var(--rem) * var(--height-form-50) + var(--margin-headcell-block, var(--margin-cell-block)) * 2 + var(--edge-cell) * 1);
+  --height-footcell: calc(var(--rem) * var(--height-form-50) + var(--margin-footcell-block, var(--margin-cell-block)) * 2 + var(--edge-cell) * 1);
+
   --remain-section-main: (var(--edge-cell) * 2 + var(--width-scrollbar));
   --height-section-main-body: (var(--height-cell) * 10);
-  --height-section-main-head: (var(--height-cell-head) * 0);
-  --height-section-main-foot: (var(--height-cell-foot) * 0);
+  --height-section-main-head: (var(--height-headcell) * 0);
+  --height-section-main-foot: (var(--height-footcell) * 0);
 
   --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head) + var(--height-section-main-foot) + var(--remain-section-main));
 }
-.o-section >.main:has(.o-grid-table thead >:nth-child(1))  { --height-section-main-head: (var(--height-cell-head) * 1); }
-.o-section >.main:has(.o-grid-table thead >:nth-child(2))  { --height-section-main-head: (var(--height-cell-head) * 2); }
-.o-section >.main:has(.o-grid-table thead >:nth-child(3))  { --height-section-main-head: (var(--height-cell-head) * 3); }
+.o-section >.main:has(.o-grid-table thead >:nth-child(1))  { --height-section-main-head: (var(--height-headcell) * 1); }
+.o-section >.main:has(.o-grid-table thead >:nth-child(2))  { --height-section-main-head: (var(--height-headcell) * 2); --margin-headcell-block: #{III(2)}; }
+.o-section >.main:has(.o-grid-table thead >:nth-child(3))  { --height-section-main-head: (var(--height-headcell) * 3); }
 @for $i from 4 through 5 {
-  .o-section >.main:has(.o-grid-table thead >:nth-child(#{$i}))  { --height-section-main-head: (var(--height-cell-head) * #{$i}); }
+  .o-section >.main:has(.o-grid-table thead >:nth-child(#{$i}))  { --height-section-main-head: (var(--height-headcell) * #{$i}); }
 }
-.o-section >.main:has(.o-grid-table tfoot >:nth-child(1))  { --height-section-main-foot: (var(--height-cell-foot) * 1); }
-.o-section >.main:has(.o-grid-table tfoot >:nth-child(2))  { --height-section-main-foot: (var(--height-cell-foot) * 2); }
-.o-section >.main:has(.o-grid-table tfoot >:nth-child(3))  { --height-section-main-foot: (var(--height-cell-foot) * 3); }
+.o-section >.main:has(.o-grid-table tfoot >:nth-child(1))  { --height-section-main-foot: (var(--height-footcell) * 1); }
+.o-section >.main:has(.o-grid-table tfoot >:nth-child(2))  { --height-section-main-foot: (var(--height-footcell) * 2); }
+.o-section >.main:has(.o-grid-table tfoot >:nth-child(3))  { --height-section-main-foot: (var(--height-footcell) * 3); }
 @for $i from 4 through 5 {
-  .o-section >.main:has(.o-grid-table tfoot >:nth-child(#{$i}))  { --height-section-main-foot: (var(--height-cell-foot) * #{$i}); }
+  .o-section >.main:has(.o-grid-table tfoot >:nth-child(#{$i}))  { --height-section-main-foot: (var(--height-footcell) * #{$i}); }
 }
 .o-section >.main.rows-body-5i  { --height-section-main-body: (var(--height-cell) * 5); }
 .o-section >.main.rows-body-3i  { --height-section-main-body: (var(--height-cell) * 3); }
