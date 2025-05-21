@@ -665,18 +665,33 @@
       // position: sticky; z-index: 2; left: 0;
     }
 
-    tr:has(>td.p-x-empty-edge)  {
+    tr:has(>td.p-x-cell-blank)  {
       position: relative;
+
+      &:not(.p-rowgroup-footer)  {
+        display: none;
+      }
     }
 
-    .p-x-empty-edge  {
+    .p-x-cell-blank  {
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0;
       height: 0;
       padding: 0;
-      border-color: var(--color-edge-70);
+
+      // &:not(.p-rowgroup-footer >*)  {
+      //   visibility: hidden;
+      // }
+
+      &:where(.p-rowgroup-footer >*)  {
+        border-color: var(--color-edge-70);
+      }
+    }
+
+    .p-x-cell-span  {
+      border-bottom-color: $tp;
     }
   }
 

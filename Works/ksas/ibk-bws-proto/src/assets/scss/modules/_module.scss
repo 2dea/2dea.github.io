@@ -1416,7 +1416,7 @@
 // .o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: var(--color-key1-70); }
 // // .o-grid-table tbody >* >*  { white-space: nowrap; }
 // // .o-grid-table tbody >* >* >*  { white-space: normal; }
-.o-grid-table tbody >tr:nth-child(even)  { background: var(--color-grid-evenrow); background-color: gold; }
+.o-grid-table tbody >tr:nth-child(even)  { background: var(--color-grid-evenrow); }
 /* .o-grid-table tbody:first-of-type >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: inherit; }

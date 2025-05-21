@@ -2171,7 +2171,7 @@ function DEX() {
                       <div className="group">
                         <CommonButton label="행추가" className="_normal" />
                         <CommonButton label="행삭제" className="_normal" />
-                        <CommonButton label="취소" className="_cancel" />
+                        <CommonButton label="취소" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -2275,7 +2275,7 @@ function DEX() {
                       <div className="group">
                         <CommonButton label="행추가" className="_normal" />
                         <CommonButton label="행삭제" className="_normal" />
-                        <CommonButton label="취소" className="_cancel" />
+                        <CommonButton label="취소" className="_normal" />
                       </div>
                     </div>
                   </div>

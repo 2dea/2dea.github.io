@@ -111,7 +111,7 @@
   --design-label-white:                 var(--palette-gray-000);
   --design-label-normal:                var(--palette-gray-800);
   --design-label-strong:                var(--palette-gray-900);
-  --design-label-alternative:           var(--palette-gray-500);
+  --design-label-alternative:           var(--palette-gray-600);
   --design-label-assistive:             var(--palette-gray-400);
   --design-label-disabled:              var(--palette-gray-500);
 

@@ -220,7 +220,10 @@ function HSPBT0401M() {
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />
-                      <CommonButton label="취소" className="_cancel" />
+                      <CommonButton label="취소" className="_normal" />
+                    </div>
+
+                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />

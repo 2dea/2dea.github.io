@@ -346,13 +346,19 @@ function HSPBT0301M() {
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
                               <>
+                              {
+                                (idx - 3) % 3 === 0 &&
+                                <tr className="p-rowgroup-header">
+                                  <td colSpan={25} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                </tr>
+                              }
                                 <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                                   <td><InputCheck label="선택" labelHidden /></td>
                                   <td>{idx + 1}</td>
-                                  <td>
+                                  <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
                                   {
                                     (idx) % 3 === 0 &&
-                                    <span className="o-digit type-date">2025-12-25</span>
+                                    <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                                   }
                                   </td>
                                   <td>0465</td>
@@ -432,9 +438,9 @@ function HSPBT0301M() {
                                   </td>
                                 </tr>
                               {
-                                (idx + 1) % 3 === 0 &&
+                                (idx - 2) % 3 === 0 &&
                                 <tr className="p-rowgroup-footer">
-                                  <td colSpan={25} className="p-x-empty-edge"></td>
+                                  <td colSpan={25} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
                                 </tr>
                               }
                               </>

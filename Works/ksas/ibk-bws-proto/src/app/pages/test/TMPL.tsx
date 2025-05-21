@@ -657,9 +657,151 @@ function TMPL() {
                               </div>
                             </td>
                           </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`Button:where(.o-section >.m-header *)`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-header">
+
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <CommonButton label="행추가" className="_normal" />
+                                    <CommonButton label="행복사" className="_normal" />
+                                    <CommonButton label="행삭제" className="_normal" />
+                                    <CommonButton label="취소" className="_normal" />
+                                    <CommonButton label="표준템플릿" className="_normal" icon="excel-download-label" />
+                                  </div>
+
+                                  <div className="group">
+                                    <ImageButton label="엑셀​업로드" icon="excel-upload" />
+                                    <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                                    <ImageButton label="목록필터" icon="column-toggle" />
+                                    <ImageButton label="목록출력" icon="print" />
+                                  </div>
+                                </div>
+
+                              </div>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </form>
+                  </div>
+                </div>
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h2 className="o-heading level2"><span className="label">그리드 로우그룹/rowspan</span></h2>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                        <ImageButton label="목록필터" icon="column-toggle" />
+                        <ImageButton label="목록출력" icon="print" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="main _primary">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="table-container p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col className="wdth-50" />
+                            <col />
+                          </colgroup>
+
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
+                              <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고량</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종인도일자</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도한도</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
+                            </tr>
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={13}>등록된 데이터가 없습니다.</td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <>
+                            {
+                              (idx - 3) % 3 === 0 &&
+                              <tr className="p-rowgroup-header">
+                                <td colSpan={13} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                              </tr>
+                            }
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td><InputCheck label="선택" labelHidden /></td>
+                                <td>{idx + 1}</td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                {
+                                  (idx) % 3 === 0 &&
+                                  <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                }
+                                </td>
+                                <td>0465</td>
+                                <td className="g-start">독산하이테크</td>
+                                <td>10100</td>
+                                <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
+                                <td className="g-end">349</td>
+                                <td><span className="o-digit type-datetime">2025-12-25</span></td>
+                                <td>20-100</td>
+                                <td className="g-end">50</td>
+                                <td>
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input type-spin wdth-50">
+                                        <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                          decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>장</td>
+                              </tr>
+                            {
+                              (idx - 2) % 3 === 0 &&
+                              <tr className="p-rowgroup-footer">
+                                <td colSpan={13} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                              </tr>
+                            }
+                            </>
+                          ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -669,8 +811,10 @@ function TMPL() {
             <Tabs className="m-tabs react-tabs" defaultIndex={0}>
               <div className="m-tab type2">
                 <TabList className="lists">
-                  <Tab className="link"><span className="label">인도내역</span></Tab>
-                  <Tab className="link"><span className="label">인도취소내역</span></Tab>
+                  {/* <Tab className="link"><span className="label">.m-tab.type2 .link:tab10</span></Tab>
+                  <Tab className="link"><span className="label">.m-tab.type2 .link:tab20</span></Tab> */}
+                  <Tab className="link"><span className="label">레이블</span></Tab>
+                  <Tab className="link"><span className="label">LABEL</span></Tab>
                 </TabList>
               </div>
 
@@ -680,7 +824,7 @@ function TMPL() {
 
                     <div className="o-section">
                       <div className="m-header">
-                        <h2 className="o-heading level2"><span className="label">인도내역</span></h2>
+                        <h2 className="o-heading level2"><span className="label">틀고정(.p-x-frozen-last) / 오더바이(오름차순, 내림차순, 디폴트)(.p-sortable-column) / 필수입력 컬럼(.o-require-tag)</span></h2>
 
                         <div className="o-length">
                           <span className="head">전체</span>
@@ -810,135 +954,7 @@ function TMPL() {
                 </div>
               </TabPanel>
 
-              <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                <div className="o-grid">
-                  <div className="column">
-
-                    <div className="o-section">
-                      <div className="m-header">
-                        <h2 className="o-heading level2"><span className="label">삭제내역</span></h2>
-
-                        <div className="o-length">
-                          <span className="head">전체</span>
-                          <em className="data">
-                            <span className="value">8</span>
-                            <span className="units">건</span>
-                          </em>
-                        </div>
-
-                        <div className="m-binds">
-                          <div className="group">
-                            <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                            <ImageButton label="목록필터" icon="column-toggle" />
-                            <ImageButton label="목록출력" icon="print" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="main _primary">
-                        <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                        <div className="o-grid-table p-datatable">
-                          <div className="table-container p-datatable-wrapper">
-                            <table className="p-datatable-table p-datatable-scrollable-table">
-                              <colgroup>
-                                <col className="wdth-10" />
-                                <col className="wdth-10" />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col className="wdth-0" />
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                                <col className="wdth-0" />
-                              </colgroup>
-
-                              <thead className="p-datatable-thead">
-                                <tr>
-                                  <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                                  <th className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">도착예정일자</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일시</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도구분</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수취소일자</span></div></th>
-                                  <th className="p-align-center" colSpan={2}><div className="p-column-header-content"><span className="p-column-title">인도취소 사유</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
-                                  <th className="p-align-center" colSpan={2}><div className="p-column-header-content"><span className="p-column-title">일반인도 신청 및 수량 변경 사유</span></div></th>
-                                </tr>
-                              </thead>
-
-                              <tbody className="p-datatable-tbody">
-                                <tr className="p-datatable-emptymessage">
-                                  <td colSpan={16}>등록된 데이터가 없습니다.</td>
-                                </tr>
-                              </tbody>
-
-                              <tbody className="p-datatable-tbody">
-                              {[...Array(24)].map((e, idx) => (
-                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                  <td><InputCheck label="선택" labelHidden /></td>
-                                  <td>{idx + 1}</td>
-                                  <td>프로세스혁신</td>
-                                  <td>BC016</td>
-                                  <td className="g-start p-x-frozen-last">나의 알파체크카드(비교통_그린)</td>
-                                  <td><span className="o-digit type-date">2025-12-25</span></td>
-                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
-                                  <td>신청인도</td>
-                                  <td><span className="o-digit type-date">2025-12-25</span></td>
-                                  <td className="g-start">신청자 요청으로 인한 삭제</td>
-                                  <td>
-                                    <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay1.current.toggle(e)} />
-                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay1} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
-                                      <div className="layer-head">
-                                        <h3 className="o-heading"><span className="label">이미지보기</span></h3>
-                                      </div>
-                                      <div className="layer-body">
-                                        <div className="o-view-image">
-                                          <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-                                        </div>
-                                      </div>
-                                    </OverlayPanel>
-                                  </td>
-                                  <td className="g-end">50</td>
-                                  <td className="g-end">0</td>
-                                  <td>부산역</td>
-                                  <td className="g-start"></td>
-                                  <td>
-                                    <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay2.current.toggle(e)} />
-                                    <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay2} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
-                                      <div className="layer-head">
-                                        <h3 className="o-heading"><span className="label">이미지보기</span></h3>
-                                      </div>
-                                      <div className="layer-body">
-                                        <div className="o-view-image">
-                                          <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-                                        </div>
-                                      </div>
-                                    </OverlayPanel>
-                                  </td>
-                                </tr>
-                              ))}
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </TabPanel>
+              <TabPanel className="m-tabs-panel react-tabs__tab-panel"></TabPanel>
             </Tabs>
 
             <div className="o-grid">
@@ -2175,7 +2191,7 @@ function TMPL() {
                       <div className="group">
                         <CommonButton label="행추가" className="_normal" />
                         <CommonButton label="행삭제" className="_normal" />
-                        <CommonButton label="취소" className="_cancel" />
+                        <CommonButton label="취소" className="_normal" />
                       </div>
                     </div>
                   </div>
@@ -2279,7 +2295,7 @@ function TMPL() {
                       <div className="group">
                         <CommonButton label="행추가" className="_normal" />
                         <CommonButton label="행삭제" className="_normal" />
-                        <CommonButton label="취소" className="_cancel" />
+                        <CommonButton label="취소" className="_normal" />
                       </div>
                     </div>
                   </div>
