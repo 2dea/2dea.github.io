@@ -163,7 +163,7 @@ function HSPBT1601M() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-1">
+                  <div className="o-field colspan-2">
                     <Label label={`배송상태`} require={false} />
                     <div className="fields">
                       <div className="o-form _select wdth-auto">

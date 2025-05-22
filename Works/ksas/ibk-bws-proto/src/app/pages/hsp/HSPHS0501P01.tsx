@@ -119,7 +119,7 @@ function HSPHS0501P01() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-1">
+                  <div className="o-field colspan-2">
                     <Label label={`업체명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input wdth-30">

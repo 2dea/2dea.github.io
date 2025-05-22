@@ -312,7 +312,7 @@ function TMPL() {
                       </div>
                     </div>
 
-                    <div className="o-field colspan-1">
+                    <div className="o-field colspan-2">
                       <Label label={`.wdth-auto ~ .wdth-n`} require={false} />
                       <div className="fields">
                         <div className="o-form _select wdth-auto">
