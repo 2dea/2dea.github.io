@@ -186,7 +186,7 @@ function HSPBT0201M() {
 
 
                   <div className="o-field">
-                    <Label label={`미인수분 재고포함 여부`} />
+                    <Label label={`미인수분 재고포함 여부`} require={false} />
                     <div className="fields">
                       <div className="m-checks">
                         <InputCheck label="선택" labelHidden defaultChecked />

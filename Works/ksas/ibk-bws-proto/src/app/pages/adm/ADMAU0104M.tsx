@@ -140,7 +140,7 @@ function ADMAU0104M() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <Label label={`권한코드`} />
+                      <Label label={`권한코드`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -150,7 +150,7 @@ function ADMAU0104M() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`권한명`} />
+                      <Label label={`권한명`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -160,7 +160,7 @@ function ADMAU0104M() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`사용여부`} />
+                      <Label label={`사용여부`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />

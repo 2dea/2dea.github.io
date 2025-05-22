@@ -141,7 +141,7 @@ function HSPHS0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`신청부점`} />
+                    <Label label={`신청부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
@@ -154,7 +154,7 @@ function HSPHS0201M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`출급번호/품목명`} />
+                    <Label label={`출급번호/품목명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
@@ -167,7 +167,7 @@ function HSPHS0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`신청직원`} />
+                    <Label label={`신청직원`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />

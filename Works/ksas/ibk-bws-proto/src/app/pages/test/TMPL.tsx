@@ -178,7 +178,7 @@ function TMPL() {
                   <div className="fieldset">
 
                     <div className="o-field colspan-5">
-                      <Label label={`InputCheck`} />
+                      <Label label={`InputCheck`} require={false} />
                       <div className="fields">
                         <div className="m-checks">
                           {/* <label className="o-check type-swoosh">
@@ -221,7 +221,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field colspan-5">
-                      <Label label={`InputRadio`} />
+                      <Label label={`InputRadio`} require={false} />
                       <div className="fields">
                         <div className="m-checks">
                           {/* <label className="o-check type-swoosh">
@@ -1064,7 +1064,7 @@ function TMPL() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <Label label={`부점코드`} />
+                      <Label label={`부점코드`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -1074,7 +1074,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`부점상태`} />
+                      <Label label={`부점상태`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -1084,7 +1084,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`부점구분`} />
+                      <Label label={`부점구분`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -1094,7 +1094,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`지역본부`} />
+                      <Label label={`지역본부`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -1731,7 +1731,7 @@ function TMPL() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <Label label={`소속직원`} />
+                      <Label label={`소속직원`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -1741,7 +1741,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`근무여부`} />
+                      <Label label={`근무여부`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -1751,7 +1751,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`실근무부점`} />
+                      <Label label={`실근무부점`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -1761,7 +1761,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`소속부점`} />
+                      <Label label={`소속부점`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -1771,7 +1771,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`부점변경 여부`} />
+                      <Label label={`부점변경 여부`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -2247,7 +2247,7 @@ function TMPL() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <Label label={`코드도메인`} />
+                      <Label label={`코드도메인`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -2257,7 +2257,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`사용여부`} />
+                      <Label label={`사용여부`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -2267,7 +2267,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`도메인명`} />
+                      <Label label={`도메인명`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -2932,7 +2932,7 @@ function TMPL() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <Label label={`직원번호/명`} />
+                      <Label label={`직원번호/명`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
                           <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -2942,7 +2942,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`권한명`} />
+                      <Label label={`권한명`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />

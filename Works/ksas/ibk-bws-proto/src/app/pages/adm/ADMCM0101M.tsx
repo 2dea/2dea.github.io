@@ -124,7 +124,7 @@ function ADMCM0101M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`코드도메인`} />
+                    <Label label={`코드도메인`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -134,7 +134,7 @@ function ADMCM0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`사용여부`} />
+                    <Label label={`사용여부`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -144,7 +144,7 @@ function ADMCM0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`도메인명`} />
+                    <Label label={`도메인명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />

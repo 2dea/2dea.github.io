@@ -123,7 +123,7 @@ function ADMAU0201M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`부점코드`} />
+                    <Label label={`부점코드`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -133,7 +133,7 @@ function ADMAU0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`소속명`} />
+                    <Label label={`소속명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -143,7 +143,7 @@ function ADMAU0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`소속코드`} />
+                    <Label label={`소속코드`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />

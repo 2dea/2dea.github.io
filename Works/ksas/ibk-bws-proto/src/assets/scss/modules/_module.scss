@@ -680,10 +680,10 @@
 
 
 .o-check  { --height: 1em; --lh: (1em * var(--text-height)); --gap-col: #{$gap-element-50}; }
-.o-check  { display: inline-block; display: inline-flex; align-items: baseline; vertical-align: middle; position: relative; max-width: 100%; min-height: var(--height-outer, calc(var(--lh))); padding-left: var(--height-outer, var(--height)); text-align: left; text-align: start; }
+.o-check  { display: inline-block; display: inline-flex; align-items: baseline; vertical-align: middle; position: relative; max-width: 100%; min-height: var(--height-outer, calc(var(--lh, 1lh))); padding-left: var(--height-outer, var(--height)); text-align: left; text-align: start; }
 .o-check >*  { flex: none; min-width: 0; vertical-align: inherit; vertical-align: -webkit-baseline-middle; }
 .o-check >i,
-  .o-check input  { position: absolute; transform: translateY(-50%); left: 0; top: calc(var(--lh) / 2); top: calc(1lh / 2); width: var(--height); height: var(--height); margin: 0 calc((var(--height-outer, var(--height)) - var(--height)) / 2); }
+  .o-check input  { position: absolute; transform: translateY(-50%); left: 0; top: calc(var(--lh, 1lh) / 2); width: var(--height); height: var(--height); margin: 0 calc((var(--height-outer, var(--height)) - var(--height)) / 2); }
 .o-check input  { z-index: 1; cursor: inherit; }
 .o-check .o-icon  { font-size: inherit; line-height: inherit; }
 .o-check >.label  { flex: 0 1 auto; align-self: center; overflow: hidden; padding-left: var(--gap-col); }
@@ -1148,11 +1148,11 @@
 .m-filter-form >*  { flex: 0 1 auto; min-width: 0; min-height: $height-form-50; }
 .m-filter-form .fieldset  { flex: 1 0 0; margin: calc(-1 * $gap-element-50) calc(-1 * $gap-element-70); }
 .m-filter-form .fieldset >*  { min-width: 0; min-height: 0; padding: $gap-element-50 $gap-element-70; }
-// .m-filter-form .fieldset:has(>:nth-child(#{8n + 1}):last-child)  { padding-right: III(60); }
-.m-filter-form .fieldset.align-remain  { padding-right: III(120); }
+// .m-filter-form .fieldset:has(>:nth-child(#{8n + 1}):last-child)  { padding-right: III(56); }
+.m-filter-form .fieldset.align-remain  { padding-right: calc(III(56) * 3 / 2); }
 
-// .m-filter-form .fieldset.style-grid  { display: grid; align-items: stretch; grid-template-columns: repeat(auto-fill, minmax(III(60), 1fr)); grid-auto-flow: dense; }
-// .m-filter-form .fieldset.style-grid >*  { grid-column: auto /span 3; }
+// .m-filter-form .fieldset.style-grid  { --size: auto-fill; display: grid; align-items: normal; grid-template-columns: repeat(var(--size), minmax(III(56), 1fr)); grid-auto-flow: dense; }
+// .m-filter-form .fieldset.style-grid:has(>:nth-child(8))  { --size: auto-fit; }
 // .m-filter-form .fieldset.style-grid >.colspan-1  { grid-column: auto /span 4; }
 // .m-filter-form .fieldset.style-grid >.colspan-2  { grid-column: auto /span 5; }
 // @for $i from 3 through 29 {
@@ -1161,7 +1161,8 @@
 
 // .m-filter-form .fieldset:not(.style-grid)  { display: flex; flex-wrap: wrap; }
 // .m-filter-form .fieldset:not(.style-grid) >*  { flex: none; min-width: III(182.75); }
-.m-filter-form .fieldset  { display: grid; align-items: stretch; grid-template-columns: repeat(auto-fill, minmax(III(60), 1fr)); grid-auto-flow: dense; }
+.m-filter-form .fieldset  { --size: auto-fill; display: grid; align-items: normal; grid-template-columns: repeat(var(--size), minmax(III(56), 1fr)); grid-auto-flow: dense; }
+.m-filter-form .fieldset:has(>:nth-child(8))  { --size: auto-fit; }
 .m-filter-form .fieldset >*  { grid-column: auto /span 3; }
 .m-filter-form .fieldset >.colspan-1  { grid-column: auto /span 4; }
 .m-filter-form .fieldset >.colspan-2  { grid-column: auto /span 5; }
@@ -1409,7 +1410,7 @@
 .o-grid-table tr >* >*  { white-space: normal; }
 // .o-grid-table tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: var(--edge); }
 // .o-grid-table tr >:first-child  { border-left-width: var(--edge); }
-.o-grid-table thead tr >*  { height: var(--height-headcell, var(--height)); padding: var(--margin-headcell-block, var(--margin-block)) var(--margin-inline); }
+.o-grid-table thead tr >*  { --margin-block: var(--margin-headcell-block, var(--margin-cell-block)); --margin-inline: #{III(9)}; --height: var(--height-headcell, var(--height-cell)); }
 
 .o-grid-table tr >*  { border-width: 0 var(--edge) var(--edge) 0; }
 .o-grid-table thead:after,

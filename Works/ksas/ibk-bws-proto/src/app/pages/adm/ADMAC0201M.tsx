@@ -124,7 +124,7 @@ function ADMAC0201M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`직원번호/명`} />
+                    <Label label={`직원번호/명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
@@ -137,7 +137,7 @@ function ADMAC0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`권한명`} />
+                    <Label label={`권한명`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />

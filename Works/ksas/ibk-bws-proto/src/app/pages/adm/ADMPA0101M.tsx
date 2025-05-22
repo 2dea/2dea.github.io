@@ -125,7 +125,7 @@ function ADMPA0101M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`부점코드`} />
+                    <Label label={`부점코드`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -135,7 +135,7 @@ function ADMPA0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`부점상태`} />
+                    <Label label={`부점상태`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -145,7 +145,7 @@ function ADMPA0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`부점구분`} />
+                    <Label label={`부점구분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -155,7 +155,7 @@ function ADMPA0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`지역본부`} />
+                    <Label label={`지역본부`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />

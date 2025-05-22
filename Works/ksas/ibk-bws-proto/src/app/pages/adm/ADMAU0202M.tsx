@@ -136,7 +136,7 @@ function ADMAU0202M() {
                   <div className="fieldset">
 
                     <div className="o-field">
-                      <Label label={`권한명`} />
+                      <Label label={`권한명`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
@@ -146,7 +146,7 @@ function ADMAU0202M() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`사용여부`} />
+                      <Label label={`사용여부`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />

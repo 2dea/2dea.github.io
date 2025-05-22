@@ -105,7 +105,7 @@ function ADMAU0201P02() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`화면ID`} />
+                    <Label label={`화면ID`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -115,7 +115,7 @@ function ADMAU0201P02() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`화면명`} />
+                    <Label label={`화면명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -125,7 +125,7 @@ function ADMAU0201P02() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`매핑여부`} />
+                    <Label label={`매핑여부`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />

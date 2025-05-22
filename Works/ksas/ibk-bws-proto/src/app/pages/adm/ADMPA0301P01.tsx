@@ -105,7 +105,7 @@ function ADMPA0301P01() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`사무분장코드`} />
+                    <Label label={`사무분장코드`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -115,7 +115,7 @@ function ADMPA0301P01() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`사무분장명`} />
+                    <Label label={`사무분장명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />

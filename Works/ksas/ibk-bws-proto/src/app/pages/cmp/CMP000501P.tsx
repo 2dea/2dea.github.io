@@ -131,7 +131,7 @@ function CMP000501P() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`퇴직구분`} />
+                    <Label label={`퇴직구분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />

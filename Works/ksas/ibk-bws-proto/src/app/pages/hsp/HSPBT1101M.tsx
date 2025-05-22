@@ -182,7 +182,7 @@ function HSPBT1101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`ATM신청분`} />
+                    <Label label={`ATM신청분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" disabled />
