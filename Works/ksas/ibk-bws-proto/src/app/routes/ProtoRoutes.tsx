@@ -61,6 +61,11 @@ import HSPHS0501M from    'app/pages/hsp/HSPHS0501M';    // 중요용지·용도
 import HSPHS0501P01 from  'app/pages/hsp/HSPHS0501P01';  // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부입고 ~ (LP)검수내역조회
 import HSPHS0601M from    'app/pages/hsp/HSPHS0601M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부재고조회
 import HSPHS0701M from    'app/pages/hsp/HSPHS0701M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부인도월별누계
+import HSPHS0801M from    'app/pages/hsp/HSPHS0801M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지업체반납
+import HSPHS0901M from    'app/pages/hsp/HSPHS0901M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지제한등록
+import HSPHS1001M from    'app/pages/hsp/HSPHS1001M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지제한승인
+import HSPHS1201M from    'app/pages/hsp/HSPHS1201M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지제한승인
+import HSPHS1601M from    'app/pages/hsp/HSPHS1601M';    // 중요용지·용도품(본부) > 본부재고관리   > 용도품본부입고
 
 import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도품(본부) > 대금정산 > 수입인지정산
 
@@ -166,6 +171,11 @@ function ProtoRoutes() {
         { path: 'HSPHS0501P01',   element: <HSPHS0501P01 /> },
         { path: 'HSPHS0601M',     element: <HSPHS0601M /> },
         { path: 'HSPHS0701M',     element: <HSPHS0701M /> },
+        { path: 'HSPHS0801M',     element: <HSPHS0801M /> },
+        { path: 'HSPHS0901M',     element: <HSPHS0901M /> },
+        { path: 'HSPHS1001M',     element: <HSPHS1001M /> },
+        { path: 'HSPHS1201M',     element: <HSPHS1201M /> },
+        { path: 'HSPHS1601M',     element: <HSPHS1601M /> },
 
         { path: 'HSPPC0201M',     element: <HSPPC0201M /> },
       ],

@@ -659,6 +659,20 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
+                              <Label label={`.o-rich-text`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="o-rich-text">
+                                신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                                신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                                신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                                신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                                신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
                               <Label label={`Button:where(.o-section >.m-header *)`} require={false} />
                             </th>
                             <td colSpan={5}>

@@ -366,7 +366,7 @@ function HSPBT0301M() {
                                   <td>10100</td>
                                   <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
                                   <td className="g-end">349</td>
-                                  <td><span className="o-digit type-datetime">2025-12-25</span></td>
+                                  <td><span className="o-digit type-date">2025-12-25</span></td>
                                   <td>20-100</td>
                                   <td className="g-end">50</td>
                                   <td>

@@ -112,7 +112,47 @@ function DEX() {
       /* 자주사용하는 팝업 너비
 
        className="layer-wrap wdth-40
+NoW PPT #
+120
+[자주사용하는 문구]
 
+신세계백화점상품권10만원권
+IT금융개발부
+
+[ 자주 사용하는 팝업]
+className="layer-wrap wdth-40
+반반: HSPHS0201M
+
+
+HSPHS0601M:  련번호포함
+<div className="o-form _input wdth-30 g-end">
+o-form _input mode-required wdth-50
+
+o-form _input wdth-
+
+[작업 메모: 기획서 아직 컴펌 노노]
+용도품계정관리	: HSPSA0101M
+
+, 숫자: 오른쪽
+
+HSPHS0801M
+HSPHS0901M
+HSPHS1001M
+HSPHS1201M
+
+HSPHS1301M ->      HSPHS0201M 동일 화면
+HSPHS1301P01   ->   HSPHS0201P01 동일 화면
+HSPHS1401M ->       HSPHS0301M 동일 화면
+HSPHS1501M ->        HSPHS0401M 동일 화면
+HSPHS1501P01 ->     HSPHS0401P03 동일 화면
+
+기획서 없고
+
+HSPHS1601M -> 유사화면 HSPHS0501M
+
+
+정렬:
+왼쪽: 업체명 (주)앤비앤코퍼레이션
       */
 
       }
@@ -125,11 +165,12 @@ function DEX() {
         <div className="div-contents">
           <div className="o-grid">
             <div className="column">
+
               <form className="m-filter-form">
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`구분`} require={true} />
+                    <Label label={`XDropdown`} require={true} />
                     <div className="fields">
                       <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -139,39 +180,10 @@ function DEX() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`InputCheck`} require={false} />
-                    <div className="fields">
-                      <div className="m-checks">
-                        <InputCheck label="선택" labelHidden defaultChecked />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field colspan-2">
-                    <Label label={`기준일자 [결재요청전]`} require={true} />
+                    <Label label={`기준일자`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`재고유무`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`재고구분`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -191,7 +203,17 @@ function DEX() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`일련번호포함`} require={true} />
+                    <Label label={`발주기준`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`발주기준이하품목`} require={false} />
                     <div className="fields">
                       <div className="m-checks">
                         <InputCheck label="선택" labelHidden defaultChecked />
@@ -205,112 +227,36 @@ function DEX() {
                   <CommonButton label="조회" className="_inquire" />
                 </div>
               </form>
-            </div>
-            <div className="o-section">
-              <div className="m-header">
-                <h2 className="o-heading level2"><span className="label">코드도메인</span></h2>
 
-                <div className="m-binds">
-                  <div className="group">
-                    <CommonButton label="행추가" className="_normal" />
-                    <CommonButton label="행삭제" className="_normal" />
-                    <CommonButton label="취소" className="_normal" />
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">노션별 배송내역</span></h2>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="노션별배송부점" className="_normal" icon="excel-download-label" />
+                    </div>
+
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
                   </div>
                 </div>
+
               </div>
 
-              <div className="main _primary">
-                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                <div className="o-grid-table p-datatable">
-                  <div className="table-container p-datatable-wrapper">
-                    <table className="p-datatable-table p-datatable-scrollable-table">
-                      <colgroup>
-                        <col className="wdth-10" />
-                        <col className="wdth-10" />
-                        <col />
-                        <col />
-                        <col />
-                        <col className="wdth-auto" />
-                      </colgroup>
-
-                      <thead className="p-datatable-thead">
-                        <tr>
-                          <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">코드도메인</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">한글명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용여부</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">설명</span></div></th>
-                        </tr>
-                      </thead>
-
-                      <tbody className="p-datatable-tbody">
-                        <tr className="p-datatable-emptymessage">
-                          <td colSpan={7}>등록된 데이터가 없습니다.</td>
-                        </tr>
-                      </tbody>
-
-                      <tbody className="p-datatable-tbody">
-                      {[...Array(3)].map((e, idx) => (
-                        <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                          <td><InputCheck label="선택" labelHidden /></td>
-                          <td>{idx === 15 - 1 ? <Icon icon="grid-added" /> : idx === 2 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 | 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
-                          <td>
-                            신세계백화점상품권10만원권
-                          </td>
-                          <td>
-                            {idx === 15 - 1 ?
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-40">
-                                  <InputText placeholder="" value="AM123" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                            : `AM123`}
-                          </td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-70">
-                                  <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select wdth-30">
-                                  <XDropdown appendTo={document.body} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-70">
-                                  <InputText placeholder="내용을 입력해주세요" value="동산에 대한 요청의 상태를 동산에 대한 요청의 상태를 동산에 대한 요청의 상태를" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
