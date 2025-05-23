@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 본부재고관리 > 중요용지본부입고 ~ (LP)검수내역조회
+ * @description 중요용지·용도품(본부) > 본부재고관리 > 고가용도품본부재고조회
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPHS0501P01() {
+function HSPHS1701P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -87,7 +87,7 @@ function HSPHS0501P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-70p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -95,7 +95,7 @@ function HSPHS0501P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">검수내역조회</span></h3>}
+        header={<h3 className="o-heading"><span className="label">고가용도품본부재고조회</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -104,59 +104,18 @@ function HSPHS0501P01() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field colspan-2">
-                    <Label label={`검수기간`} require={true} />
+                  <div className="o-field">
+                    <Label label={`기준일자`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
-                      <span className="seps type-tilde">~</span>
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="o-field colspan-2">
-                    <Label label={`업체명`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input wdth-30">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="검색" icon="search" />
-                        </span>
-                      </div>
-
-                      <div className="o-form _input wdth-auto">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`입고여부`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
+                      <Tooltip target="#HSPHS1701P01-tooltip-10">
+                        해당날짜 결재요청 가능
+                      </Tooltip>
+                      <ImageButton id="HSPHS1701P01-tooltip-10" label="안내툴팁" title="" icon="alert-circle" className="g-cursor-help" />
                     </div>
                   </div>
 
@@ -195,16 +154,7 @@ function HSPHS0501P01() {
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
-                          <col className="wdth-10" />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col className="wdth-0" />
                           <col />
                           <col />
                           <col />
@@ -215,54 +165,34 @@ function HSPHS0501P01() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고완료</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고가능수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
-                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품의번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주단가</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일입고</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일출고</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">평균단가</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={17}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
-                            <td>P202500000001</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>P2025</td>
-                            <td className="g-start">국민관광상품권1만원권</td>
-                            <td>Y</td>
+                            <td>0001</td>
+                            <td className="g-start">지폐속박지(가대지)(띠지)</td>
                             <td className="g-end">0</td>
-                            <td className="g-start">(주)앤비앤코퍼레이션</td>
-                            <td>IV2020000000078-1</td>
-                            <td>~</td>
-                            <td>1</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td className="g-end">1</td>
-                            <td className="g-end">99</td>
-                            <td>CN2025000001</td>
-                            <td className="g-end">10</td>
-                            <td className="g-end">11</td>
-                            <td className="g-end">110</td>
+                            <td className="g-end">0</td>
+                            <td className="g-end">5,700</td>
+                            <td className="g-end">2,125,700</td>
+                            <td className="g-end">2,700</td>
                           </tr>
                         ))}
                         </tbody>
@@ -278,9 +208,16 @@ function HSPHS0501P01() {
 
         <div className="div-footer">
           <div className="m-binds type-end">
+
+            <div className="group _utility">
+              <div className="m-print-binds">
+                <CommonButton label="출력" className="_texted" />
+              </div>
+            </div>
+
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="선택" className="_solid-primary" />
+              <CommonButton label="결재요청" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -290,7 +227,7 @@ function HSPHS0501P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)업체조회 [wdth-70p(w1340)]</span>
+              <span className="label">(P)고가용도품본부재고조회 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
@@ -309,4 +246,4 @@ function HSPHS0501P01() {
   );
 }
 
-export default HSPHS0501P01;
+export default HSPHS1701P01;

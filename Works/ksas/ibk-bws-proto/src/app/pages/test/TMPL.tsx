@@ -264,6 +264,11 @@ function TMPL() {
                             <ImageButton label="초기화" icon="remove" />
                           </span>
                         </div>
+
+                        <Tooltip target="#HSPHS1701P01-tooltip-10">
+                          해당날짜 결재요청 가능
+                        </Tooltip>
+                        <ImageButton id="HSPHS1701P01-tooltip-10" label="안내툴팁" title="" icon="alert-circle" className="g-cursor-help" />
                       </div>
                     </div>
 

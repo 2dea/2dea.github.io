@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
+ * @description 진영메모장
  */
 
 // dependency
@@ -94,7 +94,35 @@ function DEX() {
   return (
     <>
       {
-      /* 작업 메모: 2025-05-22 수 : 기획서 용도품계정관리	: HSPSA0101M 는 아직 컴펌 노노
+      /*
+        [ 인덱스 - 업데이트 ]
+        HSPHS0801M
+        HSPHS0901M
+        HSPHS1001M
+        HSPHS1201M
+
+        --[ 동일 화면 ]
+        HSPHS1301M ->      HSPHS0201M 동일 화면
+        HSPHS1301P01   ->   HSPHS0201P01 동일 화면
+        HSPHS1401M ->       HSPHS0301M 동일 화면
+        HSPHS1501M ->        HSPHS0401M 동일 화면
+        HSPHS1501P01 ->     HSPHS0401P03 동일 화면
+        -- //[ 동일 화면 ]
+        HSPHS1601M
+        HSPHS1601P01      -> HSPHS0501P01 동일 화면
+        HSPHS1701M
+        HSPHS1701P01
+        HSPHS1801M -> HSPHS0701M 동일화면
+        HSPHS1901M
+
+        작업 메모: 2025-05-22 수 : 기획서 용도품계정관리	: HSPSA0101M 는 아직 컴펌 노노
+
+        **** ----------- -----------****
+        NoW PPT # 147
+        우선 폐기부터~
+
+        화면: HSPDU0101M 부터
+        **** ----------- -----------****
 
       */
 
@@ -103,6 +131,7 @@ function DEX() {
       /* 자주사용하는 텍스트 메모
 
         신세계백화점상품권10만원권
+        반반: HSPHS0201M
 
       */
 
@@ -146,7 +175,6 @@ HSPHS1401M ->       HSPHS0301M 동일 화면
 HSPHS1501M ->        HSPHS0401M 동일 화면
 HSPHS1501P01 ->     HSPHS0401P03 동일 화면
 
-기획서 없고
 
 HSPHS1601M -> 유사화면 HSPHS0501M
 
