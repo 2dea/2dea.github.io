@@ -118,7 +118,6 @@ function HSPDU0101M() {
         <div className="div-contents">
           <div className="o-grid">
             <div className="column">
-
               <form className="m-filter-form">
                 <div className="fieldset">
                   <div className="o-field">
@@ -204,224 +203,144 @@ function HSPDU0101M() {
                   </div>
                 </div>
               </div>
-
-              <Splitter  gutterSize={0} className="o-grid">
-                <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
-
-                  <div className="o-section">
-                    <div className="m-header">
-                      <h3 className="o-heading level3"><span className="label">직무분장</span></h3>
-
-
-                      <div className="m-binds">
-                        <div className="group">
-                          <CommonButton label="직무분장 관리" className="_normal" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
-                        <div className="table-container p-datatable-wrapper">
-                          <table className="p-datatable-table p-datatable-scrollable-table">
-                            <colgroup>
-                              <col className="wdth-10" />
-                              <col />
-                              <col className="wdth-auto" />
-                            </colgroup>
-
-                            <thead className="p-datatable-thead">
-                              <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장코드</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장명</span></div></th>
-                              </tr>
-                            </thead>
-
-                            <tbody className="p-datatable-tbody">
-                              <tr className="p-datatable-emptymessage">
-                                <td colSpan={3}>등록된 데이터가 없습니다.</td>
-                              </tr>
-                            </tbody>
-
-                            <tbody className="p-datatable-tbody">
-                            {[...Array(24)].map((e, idx) => (
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td>{idx + 1}</td>
-                                <td>10080</td>
-                                <td className="g-start">경영정보</td>
-                              </tr>
-                            ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SplitterPanel>
-
-                <SplitterPanel minSize={17.5} className="column">
-
-                  <div className="o-section">
-                    <div className="m-header">
-                      <h3 className="o-heading level3"><span className="label">근태정보</span></h3>
-
-                      <div className="m-binds">
-                        <div className="group">
-                          <CommonButton label="행추가" className="_normal" />
-                          <CommonButton label="행삭제" className="_normal" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
-                        <div className="table-container p-datatable-wrapper">
-                          <table className="p-datatable-table p-datatable-scrollable-table">
-                            <colgroup>
-                              <col className="wdth-10" />
-                              <col className="wdth-10" />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                            </colgroup>
-
-                            <thead className="p-datatable-thead">
-                              <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재직원</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">근태구분</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작시각</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료시각</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직직원</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반차구분</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴가일수</span></div></th>
-                              </tr>
-                            </thead>
-
-                            <tbody className="p-datatable-tbody">
-                              <tr className="p-datatable-emptymessage">
-                                <td colSpan={11}>등록된 데이터가 없습니다.</td>
-                              </tr>
-                            </tbody>
-
-                            <tbody className="p-datatable-tbody">
-                            {[...Array(1)].map((e, idx) => (
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td><InputCheck label="선택" labelHidden /></td>
-                                <td>{idx + 1}</td>
-                                <td>[0000001] 홍길동</td>
-                                <td></td>
-                                <td><span className="o-digit type-date">2025-12-25</span></td>
-                                <td><span className="o-digit type-date">2025-12-25</span></td>
-                                <td><span className="o-digit type-time">00:00</span></td>
-                                <td><span className="o-digit type-time">00:00</span></td>
-                                <td>[0000001] 홍길동</td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                            ))}
-                              <tr>
-                                <td><InputCheck label="선택" labelHidden /></td>
-                                <td><Icon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input wdth-50">
-                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                        <i aria-hidden="true"></i>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _select wdth-30">
-                                        <XDropdown appendTo={document.body} className="bind" />
-                                        <i aria-hidden="true"></i>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input type-date wdth-50">
-                                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                        <i aria-hidden="true"></i>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input type-date wdth-50">
-                                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                        <i aria-hidden="true"></i>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input type-time wdth-30">
-                                        <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
-                                        <i aria-hidden="true"></i>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input type-time wdth-30">
-                                        <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
-                                        <i aria-hidden="true"></i>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input wdth-50">
-                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                        <i aria-hidden="true"></i>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SplitterPanel>
-              </Splitter>
-
-
             </div>
           </div>
+          <Splitter  gutterSize={0} className="o-grid">
+            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">부점별 처리현황</span></h3>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="직무분장 관리" className="_normal" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main _primary rows-body-3i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col className="wdth-auto" />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사무분장명</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={3}>등록된 데이터가 없습니다.</td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td>10080</td>
+                            <td className="g-start">경영정보</td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </SplitterPanel>
+
+            <SplitterPanel minSize={17.5} className="column">
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">오손발송 상세내역</span></h3>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="행추가" className="_normal" />
+                      <CommonButton label="행삭제" className="_normal" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main _primary rows-body-3i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재직원</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">근태구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작시각</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료시각</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직직원</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반차구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴가일수</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={11}>등록된 데이터가 없습니다.</td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(1)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td><InputCheck label="선택" labelHidden /></td>
+                            <td>{idx + 1}</td>
+                            <td>[0000001] 홍길동</td>
+                            <td></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-time">00:00</span></td>
+                            <td><span className="o-digit type-time">00:00</span></td>
+                            <td>[0000001] 홍길동</td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </SplitterPanel>
+          </Splitter>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
