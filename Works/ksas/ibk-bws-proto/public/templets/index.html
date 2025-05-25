@@ -84,7 +84,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 .o-index-table .heading  { font-weight: 700; font-size: 2em; padding: 0.5em 0.5em; text-align: center; }
 
 .o-index-table .summary  { display: flex; border-bottom: 1px solid Transparent; }
-/* .o-index-table .summary .indexes  { display: flex; } */
+.o-index-table .summary .indexes  { display: flex; gap: 0 1em; }
 .o-index-table .summary .indexes a  { display: inline-block; padding: 5px 0; }
 
 .o-index-table a[href]:not([href=""], [href$="#"], [href$="undefined"])  { color: Blue; text-decoration: underline; }
@@ -152,7 +152,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 .o-index-table caption  { position: sticky; top: calc(var(--height) * 0); }
 .o-index-table thead  { position: sticky; top: calc(var(--height) * 1); }
 .o-index-table [scope="rowgroup"]  { position: sticky; top: calc(var(--height) * 2); }
-:target:before  { content: ""; display: inherit; display: table-row; height: calc(var(--height) * 2); }
+:target:before  { content: ""; display: inherit; display: block; height: calc(var(--height) * 2); visibility: hidden; }
 </style>
 <script type="text/javascript">
 //<![CDATA[
@@ -3940,7 +3940,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="empty _m">&#x200B;</td>
 			<td class="scnm"><span class="o-flex">중요용지일괄인도</span></td>
 			<td class="scid">HSPBT0501M</td>
-			<td class="link"><a target="page" href="/proto/undefined">HSPBT0501M</a></td>
+			<td class="link"><a target="page" href="/proto/HSPBT0501M">HSPBT0501M</a></td>
 			<td class="auth"><span class="name DEL"></span></td>
 			<td class="done"><span class="date DEL">2025-05-01</span></td>
 			<td class="note">
@@ -4397,7 +4397,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="scnm"><span class="o-flex">업체직배송품목관리</span></td>
 			<td class="scid">HSPBT1601M</td>
 			<td class="link"><a target="page" href="/proto/HSPBT1601M">HSPBT1601M</a></td>
-			<td class="auth"><span class="name DEL"></span>김진영</td>
+			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-21</span></td>
 			<td class="note">
 				<p class="__CLASSNAME__"></p>
