@@ -70,8 +70,11 @@ import HSPHS1601M from    'app/pages/hsp/HSPHS1601M';    // 중요용지·용도
 import HSPHS1701M from    'app/pages/hsp/HSPHS1701M';    // 중요용지·용도품(본부) > 본부재고관리   > 용도품본부입고
 import HSPHS1701P01 from  'app/pages/hsp/HSPHS1701P01';  // 중요용지·용도품(본부) > 본부재고관리   > 용도품본부입고
 import HSPHS1901M from    'app/pages/hsp/HSPHS1901M';    // 중요용지·용도품(본부) > 본부재고관리   > 일람부관리
+import HSPHS1901P02 from  'app/pages/hsp/HSPHS1901P02';  // 중요용지·용도품(본부) > 본부재고관리   > 일람부관리 ~ (LP)일람부수정이력
 
-import HSPDU0101M from    'app/pages/hsp/HSPDU0101M';    // 중요용지·용도품(본부) > 본부재고관리   > 일람부관리
+import HSPDU0101M from    'app/pages/hsp/HSPDU0101M';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지총괄현황
+import HSPDU0101P01 from  'app/pages/hsp/HSPDU0101P01';  // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지총괄현황 ~ (LP)오손이력조회
+import HSPDU0201M from    'app/pages/hsp/HSPDU0201M';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지센터인수(오배송)
 
 import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도품(본부) > 대금정산 > 수입인지정산
 
@@ -186,8 +189,12 @@ function ProtoRoutes() {
         { path: 'HSPHS1701M',     element: <HSPHS1701M /> },
         { path: 'HSPHS1701P01',   element: <HSPHS1701P01 /> },
         { path: 'HSPHS1901M',     element: <HSPHS1901M /> },
+        { path: 'HSPHS1901P02',   element: <HSPHS1901P02 /> },
+
 
         { path: 'HSPDU0101M',     element: <HSPDU0101M /> },
+        { path: 'HSPDU0101P01',   element: <HSPDU0101P01 /> },
+        { path: 'HSPDU0201M',     element: <HSPDU0201M /> },
 
         { path: 'HSPPC0201M',     element: <HSPPC0201M /> },
       ],

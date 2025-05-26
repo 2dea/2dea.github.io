@@ -35,10 +35,15 @@ import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function DEX() {
-  // 2025-05-21
-  // ppt 79:
-  // Dialog
-  // const [visible, setVisible] = useState<boolean>(true);
+  // 2025-05-26 월
+  // ppt: 152
+
+  // [ 메모 ] 
+  // 135 알람부등록 - 팝업 HSPHS1901P01 - key 화면	
+  // 알일람부수정	HSPHS1901P03  - 유사화면 확인  ->HSPHS1901P01
+
+  // [반반]
+  // HSPHS0901M
 
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
@@ -95,34 +100,9 @@ function DEX() {
     <>
       {
       /*
-        [ 인덱스 - 업데이트 ]
-        HSPHS0801M
-        HSPHS0901M
-        HSPHS1001M
-        HSPHS1201M
-
-        --[ 동일 화면 ]
-        HSPHS1301M ->      HSPHS0201M 동일 화면
-        HSPHS1301P01   ->   HSPHS0201P01 동일 화면
-        HSPHS1401M ->       HSPHS0301M 동일 화면
-        HSPHS1501M ->        HSPHS0401M 동일 화면
-        HSPHS1501P01 ->     HSPHS0401P03 동일 화면
-        -- //[ 동일 화면 ]
-        HSPHS1601M
-        HSPHS1601P01      -> HSPHS0501P01 동일 화면
-        HSPHS1701M
-        HSPHS1701P01
-        HSPHS1801M -> HSPHS0701M 동일화면
-        HSPHS1901M
-
-        작업 메모: 2025-05-22 수 : 기획서 용도품계정관리	: HSPSA0101M 는 아직 컴펌 노노
-
-        **** ----------- -----------****
-        NoW PPT # 147
-        우선 폐기부터~
-
-        화면: HSPDU0101M 부터
-        **** ----------- -----------****
+        [ 작업 메모 ]
+        
+        2025-05-22 수 : 기획서 용도품계정관리	: HSPSA0101M 는 아직 컴펌 노노
 
       */
 
@@ -132,6 +112,15 @@ function DEX() {
 
         신세계백화점상품권10만원권
         반반: HSPHS0201M
+              HSPHS0901M
+              HSPHS1901P02
+
+        [정렬]
+          왼쪽
+            : 지점: 
+          
+          왼쪽: 
+            업체명 (주)앤비앤코퍼레이션
 
       */
 
@@ -141,46 +130,29 @@ function DEX() {
       /* 자주사용하는 팝업 너비
 
        className="layer-wrap wdth-40
-NoW PPT #
-120
-[자주사용하는 문구]
 
-신세계백화점상품권10만원권
-IT금융개발부
+        [자주사용하는 문구]
 
-[ 자주 사용하는 팝업]
-className="layer-wrap wdth-40
-반반: HSPHS0201M
+        신세계백화점상품권10만원권
+        IT금융개발부
 
-
-HSPHS0601M:  련번호포함
-<div className="o-form _input wdth-30 g-end">
-o-form _input mode-required wdth-50
-
-o-form _input wdth-
-
-[작업 메모: 기획서 아직 컴펌 노노]
-용도품계정관리	: HSPSA0101M
-
-, 숫자: 오른쪽
-
-HSPHS0801M
-HSPHS0901M
-HSPHS1001M
-HSPHS1201M
-
-HSPHS1301M ->      HSPHS0201M 동일 화면
-HSPHS1301P01   ->   HSPHS0201P01 동일 화면
-HSPHS1401M ->       HSPHS0301M 동일 화면
-HSPHS1501M ->        HSPHS0401M 동일 화면
-HSPHS1501P01 ->     HSPHS0401P03 동일 화면
+        [ 자주 사용하는 팝업]
+        className="layer-wrap wdth-40
+        반반: HSPHS0201M
 
 
-HSPHS1601M -> 유사화면 HSPHS0501M
+        HSPHS0601M:  련번호포함
+        <div className="o-form _input wdth-30 g-end">
+        o-form _input mode-required wdth-50
 
+        o-form _input wdth-
 
-정렬:
-왼쪽: 업체명 (주)앤비앤코퍼레이션
+        [작업 메모: 기획서 아직 컴펌 노노]
+        용도품계정관리	: HSPSA0101M
+
+        <div className="o-form _input mode-required wdth-50 g-end">
+
+        
       */
 
       }

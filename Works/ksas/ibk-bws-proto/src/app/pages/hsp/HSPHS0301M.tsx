@@ -228,12 +228,6 @@ function HSPHS0301M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">

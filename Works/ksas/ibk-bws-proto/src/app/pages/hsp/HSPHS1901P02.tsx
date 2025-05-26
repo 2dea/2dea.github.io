@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 본부재고관리 > 고가용도품본부재고조회
+ * @description 중요용지·용도품(본부) > 본부재고관리 > 일람부수정이력 ~ (LP)일람부수정이력
  */
 
 // dependency
@@ -95,56 +95,15 @@ function HSPHS1901P02() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">고가용도품본부재고조회</span></h3>}
+        header={<h3 className="o-heading"><span className="label">일람부수정이력</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
-              <form className="m-filter-form">
-                <div className="fieldset">
-
-                  <div className="o-field">
-                    <Label label={`기준일자`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-
-                      <Tooltip target="#HSPHS1901P02-tooltip-10">
-                        해당날짜 결재요청 가능
-                      </Tooltip>
-                      <ImageButton id="HSPHS1901P02-tooltip-10" label="안내툴팁" title="" icon="alert-circle" className="g-cursor-help" />
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
-                </div>
-              </form>
-
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">발주목록</span></h4>
-
-                  <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
-                    </em>
-                  </div>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록필터" icon="column-toggle" />
-                      <ImageButton label="목록출력" icon="print" />
-                    </div>
-                  </div>
+                  <h4 className="o-heading level2"><span className="label">신청정보</span></h4>
                 </div>
 
                 <div className="main _primary rows-body-3i">
@@ -153,8 +112,6 @@ function HSPHS1901P02() {
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
-                          <col className="wdth-10" />
-                          <col />
                           <col />
                           <col />
                           <col />
@@ -165,34 +122,35 @@ function HSPHS1901P02() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일입고</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일출고</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">평균단가</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수정일시</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수정구분</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래직원</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수정내용</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시행문</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={6}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
+                        {[...Array(2)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>0001</td>
-                            <td className="g-start">지폐속박지(가대지)(띠지)</td>
-                            <td className="g-end">0</td>
-                            <td className="g-end">0</td>
-                            <td className="g-end">5,700</td>
-                            <td className="g-end">2,125,700</td>
-                            <td className="g-end">2,700</td>
+                            <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                            <td>품목상태변경</td>
+                            <td>00001</td>
+                            <td>홍길동</td>
+                            <td className="g-start">품목상태 정상</td>
+                            <td>
+                              <CommonButton label="보기" className="_normal" />
+                            </td>
                           </tr>
                         ))}
                         </tbody>
@@ -208,16 +166,9 @@ function HSPHS1901P02() {
 
         <div className="div-footer">
           <div className="m-binds type-end">
-
-            <div className="group _utility">
-              <div className="m-print-binds">
-                <CommonButton label="출력" className="_texted" />
-              </div>
-            </div>
-
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="결재요청" className="_solid-primary" />
+              <CommonButton label="삭제" className="_delete" />
             </div>
           </div>
         </div>
@@ -227,7 +178,7 @@ function HSPHS1901P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)고가용도품본부재고조회 [wdth-50p(w960)]</span>
+              <span className="label">(P)일람부수정이력 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
