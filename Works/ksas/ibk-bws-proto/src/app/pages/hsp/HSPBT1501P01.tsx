@@ -124,7 +124,7 @@ function HSPBT1501P01() {
                           <td colSpan={3}>
                               <div className="m-checks">
                                 <InputRadio name="RADIO_10" label="전자우편" />
-                                <InputRadio name="RADIO_10" label="UC쪽지" />
+                                <InputRadio name="RADIO_10" label="IBK톡" />
                               </div>
                           </td>
                         </tr>

@@ -42,6 +42,7 @@ import HSPBT0501M from    'app/pages/hsp/HSPBT0501M';    // 중요용지·용도
 import HSPBT0601M from    'app/pages/hsp/HSPBT0601M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지임시저장분인도
 import HSPBT0701M from    'app/pages/hsp/HSPBT0701M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지배송대상조회
 import HSPBT0801M from    'app/pages/hsp/HSPBT0801M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지배송명령
+import HSPBT1401M from    'app/pages/hsp/HSPBT1401M';    // 중요용지·용도품(본부) > 영업점배송관리 > 송장출력
 import HSPBT1001M from    'app/pages/hsp/HSPBT1001M';    // 중요용지·용도품(본부) > 영업점배송관리 > 용도품인도내역조회
 import HSPBT1101M from    'app/pages/hsp/HSPBT1101M';    // 중요용지·용도품(본부) > 영업점배송관리 > 용도품신청분인도
 import HSPBT1101P01 from  'app/pages/hsp/HSPBT1101P01';  // 중요용지·용도품(본부) > 영업점배송관리 > 용도품신청분인도 > 신청내역 ~ (LP)부분취소
@@ -161,6 +162,7 @@ function ProtoRoutes() {
         { path: 'HSPBT0601M',     element: <HSPBT0601M /> },
         { path: 'HSPBT0701M',     element: <HSPBT0701M /> },
         { path: 'HSPBT0801M',     element: <HSPBT0801M /> },
+        { path: 'HSPBT1401M',     element: <HSPBT1401M /> },
         { path: 'HSPBT1001M',     element: <HSPBT1001M /> },
         { path: 'HSPBT1101M',     element: <HSPBT1101M /> },
         { path: 'HSPBT1101P01',   element: <HSPBT1101P01 /> },
