@@ -266,9 +266,9 @@ function HSPHS0801M() {
                             <td className="g-start">국민관광상품권1만원권</td>
                             <td className="g-end">10,000</td>
                             <td></td>
-                            <td className="g-end">3434343434</td>
+                            <td>3434343434</td>
                             <td>~</td>
-                            <td className="g-end">33447900</td>
+                            <td>33447900</td>
                             <td>정상</td>
                             <td className="g-start">대행계약완료</td>
                           </tr>

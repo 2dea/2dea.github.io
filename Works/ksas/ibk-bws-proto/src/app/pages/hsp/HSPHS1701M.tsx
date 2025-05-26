@@ -174,25 +174,24 @@ function HSPHS1701M() {
                   <div className="o-field">
                     <Label label={`평균단가`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
                       </div>
                     </div>
                   </div>
 
+
                   <div className="o-field">
                     <Label label={`기준일자`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
+
                 </div>
 
                 <div className="binds">

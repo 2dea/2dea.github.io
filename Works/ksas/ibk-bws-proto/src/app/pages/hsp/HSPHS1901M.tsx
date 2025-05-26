@@ -123,7 +123,7 @@ function HSPHS1901M() {
                 <CommonButton label="거래정지" className="_lined-primary" />
                 <CommonButton label="정상" className="_lined-primary" />
                 <CommonButton label="수정" className="_lined-primary" />
-                <CommonButton label="알람부등록" className="_lined-primary" />
+                <CommonButton label="일람부등록" className="_solid-primary" />
                 </div>
             </div>
           </div>
@@ -317,7 +317,7 @@ function HSPHS1901M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">담당연락처</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기호유무</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호자리수</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">체크리스트</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">체크디지트</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">창구일련번호관려여부</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일반영업점기준량</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출장소기준량</span></div></th>
@@ -358,7 +358,7 @@ function HSPHS1901M() {
                             <td>{idx + 1}</td>
                             <td>PD011</td>
                             <td className="g-start">국민관광상품권1만원권</td>
-                            <td>소모품(소모품비품목)</td>
+                            <td className="g-start">소모품(소모품비품목)</td>
                             <td>접수</td>
                             <td>000000</td>
                             <td>홍길동</td>

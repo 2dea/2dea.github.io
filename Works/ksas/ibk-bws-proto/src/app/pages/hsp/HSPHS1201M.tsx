@@ -262,7 +262,7 @@ function HSPHS1201M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조달신청량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주미입고량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주미검고량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주미검수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">평균단가</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고금액</span></div></th>
@@ -294,7 +294,7 @@ function HSPHS1201M() {
                             <td>속</td>
                             <td className="g-end">1,780</td>
                             <td className="g-end">1,780,780</td>
-                            <td>폐지(재고사용불가)</td>
+                            <td>정상</td>
                           </tr>
                         ))}
                         </tbody>

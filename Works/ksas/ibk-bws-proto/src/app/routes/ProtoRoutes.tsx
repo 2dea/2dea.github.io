@@ -185,6 +185,7 @@ function ProtoRoutes() {
         { path: 'HSPHS1601M',     element: <HSPHS1601M /> },
         { path: 'HSPHS1701M',     element: <HSPHS1701M /> },
         { path: 'HSPHS1701P01',   element: <HSPHS1701P01 /> },
+        { path: 'HSPHS1901M',     element: <HSPHS1901M /> },
 
         { path: 'HSPDU0101M',     element: <HSPDU0101M /> },
 
