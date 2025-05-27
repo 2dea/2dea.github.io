@@ -300,7 +300,7 @@ function HSPHS0401M() {
                             <td>{idx + 1}</td>
                             <td>011465</td>
                             <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                            <td className="g-start">(주)앤비앤코퍼레이션</td>
+                            <td className="g-start"><a href="javascript:" className="o-link _normal">(주)앤비앤코퍼레이션</a></td>
                             <td>P1000</td>
                             <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
                             <td></td>

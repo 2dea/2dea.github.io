@@ -225,13 +225,18 @@
 .o-rich-text  { --lh: var(--text-height-para); line-height: var(--lh); }
 
 /** Links */
-.o-link  { --theme: #{$color-link1-40}; display: inline-flex; align-items: center; color: var(--theme); border-radius: 0; box-shadow: none; text-decoration: none; text-underline-offset: auto; white-space: normal; }
+.o-link  { --theme: var(--color-link1-40); display: inline-flex; align-items: center; color: var(--theme); border-radius: 0; box-shadow: none; text-decoration: none; text-underline-offset: auto; white-space: normal; }
 .o-link:hover  { --theme: inherit; text-decoration: underline; }
 
-.o-link._primary  { --theme: #{$color-key1-40}; }
-.o-link._primary:hover  { --theme: var(--color-key1-70); }
-.o-link._normal  { --theme: #{$color-link1-40}; }
-.o-link._normal:hover  { --theme: inherit; }
+.o-link.style-texted._primary  { --theme: var(--color-key1-40); }
+.o-link.style-texted._primary:hover  { --theme: var(--color-key1-70); }
+.o-link.style-texted._normal  { --theme: var(--color-link1-40); }
+.o-link.style-texted._normal:hover  { --theme: inherit; }
+
+.o-link:not(.style-texted)._normal  { text-decoration: underline; }
+.o-link:not(.style-texted)._normal:hover  { --theme: var(--color-key1-40); }
+
+.o-link:is(.o-grid-table tr >* *)  { white-space: nowrap; }
 
 
 /** Headings */
