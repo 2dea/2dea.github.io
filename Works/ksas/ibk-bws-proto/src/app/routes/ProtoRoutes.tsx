@@ -80,6 +80,14 @@ import HSPDU0101P01 from  'app/pages/hsp/HSPDU0101P01';  // 중요용지·용도
 import HSPDU0201M from    'app/pages/hsp/HSPDU0201M';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지센터인수(오배송)
 
 import HSPDU0501M from    'app/pages/hsp/HSPDU0501M';    // 중요용지·용도품(본부) > 폐기          > (폐기감사)감사/소각등록
+import HSPDU0701M from    'app/pages/hsp/HSPDU0701M';    // 중요용지·용도품(본부) > 폐기          > 일괄폐기미처리부점조회
+import HSPDU0801M from    'app/pages/hsp/HSPDU0801M';    // 중요용지·용도품(본부) > 폐기          > 본부중요용지일괄폐기
+import HSPDU0901M from    'app/pages/hsp/HSPDU0901M';    // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기
+
+
+import HSPHP0101M from    'app/pages/hsp/HSPHP0101M';    // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지조달신청
+import HSPHP0201M from    'app/pages/hsp/HSPHP0201M';    // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지조달신청접수
+import HSPHP0301M from    'app/pages/hsp/HSPHP0301M';    // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지검수승인등록
 
 import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도품(본부) > 대금정산 > 수입인지정산
 
@@ -205,6 +213,13 @@ function ProtoRoutes() {
         { path: 'HSPDU0201M',     element: <HSPDU0201M /> },
 
         { path: 'HSPDU0501M',     element: <HSPDU0501M /> },
+        { path: 'HSPDU0701M',     element: <HSPDU0701M /> },
+        { path: 'HSPDU0801M',     element: <HSPDU0801M /> },
+        { path: 'HSPDU0901M',     element: <HSPDU0901M /> },
+
+        { path: 'HSPHP0101M',     element: <HSPHP0101M /> },
+        { path: 'HSPHP0201M',     element: <HSPHP0201M /> },
+        { path: 'HSPHP0301M',     element: <HSPHP0301M /> },
 
         { path: 'HSPPC0201M',     element: <HSPPC0201M /> },
       ],

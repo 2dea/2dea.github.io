@@ -1,11 +1,10 @@
 /**
- * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지일괄인도
+ * @description 중요용지·용도품(본부) > 영업점배송관리 > 용도품일괄인도
  */
 
 // dependency
 import React, { useRef, useState } from 'react';
 
-// components
 // import '@modules/Index';
 import Favorite from 'app/shared/layouts/Favorite';
 import Icon from 'app/shared/modules/OIcon';
@@ -34,7 +33,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPBT0501M() {
+function HSPBT1301M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +43,7 @@ function HSPBT0501M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지일괄인도' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '용도품일괄인도' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +97,7 @@ function HSPBT0501M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지일괄인도</span>
+                <span className="label">용도품일괄인도</span>
 
                 <Favorite />
               </h1>
@@ -107,22 +106,13 @@ function HSPBT0501M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-
-              <div className="group">
-                <CommonButton label="일련번호조회" className="_lined-secondary" />
-                <CommonButton label="중복일련번호 체크" className="_lined-secondary" />
-                <CommonButton label="신설점포 기준량 조회" className="_lined-secondary" />
-              </div>
-
               <div className="group _assistive">
                 <CommonButton label="도움말" icon="help" className="_normal" />
               </div>
             </div>
 
             <div className="m-binds type-end">
-
               <div className="group _primary">
-                <CommonButton label="임시저장" className="_lined-primary" />
                 <CommonButton label="인도등록" className="_solid-primary" />
               </div>
             </div>
@@ -215,7 +205,6 @@ function HSPBT0501M() {
                           <col className="wdth-10" />
                           <col className="wdth-10" />
                           <col />
-                          <col />
                           <col className="wdth-auto" />
                         </colgroup>
 
@@ -223,7 +212,6 @@ function HSPBT0501M() {
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                           </tr>
@@ -231,7 +219,7 @@ function HSPBT0501M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={4}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -240,7 +228,6 @@ function HSPBT0501M() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
-                            <td className="g-start">1노선</td>
                             <td>0022</td>
                             <td className="g-start">종로6가</td>
                           </tr>
@@ -274,6 +261,10 @@ function HSPBT0501M() {
                         <XDropdown appendTo={document.body} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
+                      <div className="o-form _select wdth-50">
+                        <XDropdown appendTo={document.body} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -288,6 +279,7 @@ function HSPBT0501M() {
                           <col className="wdth-10" />
                           <col />
                           <col className="wdth-auto" />
+                          <col />
                           <col className="wdth-50" />
                         </colgroup>
 
@@ -297,13 +289,14 @@ function HSPBT0501M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목상태</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={6}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -314,6 +307,7 @@ function HSPBT0501M() {
                             <td>{idx + 1}</td>
                             <td>20801</td>
                             <td className="g-start">지급보증서</td>
+                            <td>정상</td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">
@@ -363,11 +357,6 @@ function HSPBT0501M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="표준템플릿" className="_normal" icon="excel-download-label" />
-                    </div>
-
-                    <div className="group">
-                      <ImageButton label="엑셀​업로드" icon="excel-upload" />
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
@@ -386,11 +375,7 @@ function HSPBT0501M() {
                           <col />
                           <col className="wdth-auto" />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col className="wdth-0" />
+                          <col className="wdth-50" />
                           <col />
                         </colgroup>
 
@@ -399,11 +384,10 @@ function HSPBT0501M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
-                            <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
@@ -413,7 +397,7 @@ function HSPBT0501M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={12}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -438,37 +422,6 @@ function HSPBT0501M() {
                               </div>
                             </td>
                             <td>개</td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-20">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-40">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>~</td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-40">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
                           </tr>
                         ))}
                         </tbody>
@@ -487,4 +440,4 @@ function HSPBT0501M() {
   );
 }
 
-export default HSPBT0501M;
+export default HSPBT1301M;

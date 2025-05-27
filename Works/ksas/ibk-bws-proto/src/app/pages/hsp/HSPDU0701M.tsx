@@ -1,5 +1,5 @@
 /**
- * @description 진영메모장
+ * @description 중요용지·용도품(본부) > 폐기 > 일괄폐기미처리부점조회
  */
 
 // dependency
@@ -34,14 +34,17 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function DEX() {
+function HSPDU0701M() {
+  // Dialog
+  // const [visible, setVisible] = useState<boolean>(true);
+
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
   const viewimageOverlay1 = useRef(null);
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품' }, { label: '본부부서조달관리(총무부 외)' }, { label: '(706520)(총무부 외) 중요용지 조달신청 접수' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '일괄폐기미처리부점조회' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -88,102 +91,37 @@ function DEX() {
 
   return (
     <>
-    {/*
-      [ 히니 차장님 - 작업 공유 - 메모 ]
-       2025-05-27 화
-       1.특이사항: 레이블이 SelectBox [by.one]
-       (폐기감사)감사/소각등록 ppt 170 :  HSPDU0501M
-
-
-      2. 품목폐지폐기등록 키페이지로 변경  HSPDU0801P01 PPT#180 key [by.one]
-            진영작업예정: (유사  키) 구양식폐기등록 품목폐지폐기등록
-            진영작업예정: (유사  키) 팝업 - 본부용도품일괄폐기- 용도품폐기 - HSPDU0901P01- PPT# 187
-
-    */}
-      {
-      /*
-        [ 작업 메모 ]
-        2025-05-27 화 작업 중
-
-        HSPHP0301M PPT 196 -> 수요일 시작 예정
-
-
-        본부중요용지일괄폐기 - 기획서 - 탭 화면..? 	HSPDU0801M ppt #179 -> 기획 확인필요
-
-        [key] 품목폐지폐기등록 키페이지로 변경  HSPDU0801P01 PPT#180 key
-          (유사 key) 구양식폐기등록 품목폐지폐기등록
-          (유사  키) 팝업 - 본부용도품일괄폐기- 용도품폐기 - HSPDU0901P01- PPT# 187
-
-
-        [나중에 업데이트 필요]
-        (폐기감사)감사/소각등록 ppt 170 :  HSPDU0501M // 특이사항: 레이블이 SelectBox
-        //   HSPBT0501M 참고해서 누락 페이지 작업 하기
-
-        [기획 업데이트 예정 2025-05-27]
-        HSPDU0801M ->
-        2025-05-22 수 : 기획서 용도품계정관리	: HSPSA0101M 는 아직 컴펌 노노
-
-      */
-
-      }
-      {
-      /* 자주사용하는 텍스트 메모
-
-        신세계백화점상품권10만원권
-
-        [정렬]
-          왼쪽
-            : 지점:
-
-          왼쪽:
-            업체명 (주)앤비앤코퍼레이션
-
-      */
-
-      }
-      {/*
-          자주사용 하는 레이아웃
-
-          [반반: HSPHS0201M]
-              HSPHS0901M
-              HSPHS1901P02
-
-      */}
-
-      {
-      /* 자주사용하는 팝업 너비
-
-       className="layer-wrap wdth-40
-
-        [자주사용하는 문구]
-
-        신세계백화점상품권10만원권
-        IT금융개발부
-
-        [ 자주 사용하는 팝업]
-        className="layer-wrap wdth-40
-
-
-        HSPHS0601M:  련번호포함
-        <div className="o-form _input wdth-30 g-end">
-        o-form _input mode-required wdth-50
-
-        o-form _input wdth-
-
-        [작업 메모: 기획서 아직 컴펌 노노]
-        용도품계정관리	: HSPSA0101M
-
-        <div className="o-form _input mode-required wdth-50 g-end">
-
-
-      */
-
-      }
-
       <div className="roles" data-div-role="0">
         <div className="div-header">
-          HI
+          <div className="main">
+            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+
+            <div className="m-title">
+              <h1 className="o-heading level1">
+                <span className="label">일괄폐기미처리부점조회</span>
+
+                <Favorite />
+              </h1>
+            </div>
+          </div>
+
+          <div className="binds">
+            <div className="m-binds type-start">
+              <div className="group _assistive">
+                <CommonButton label="도움말" icon="help" className="_normal" />
+              </div>
+            </div>
+
+            <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="출력" className="_texted" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
           <div className="o-grid">
@@ -191,31 +129,11 @@ function DEX() {
 
               <form className="m-filter-form">
                 <div className="fieldset">
-
+                  
                   <div className="o-field">
-                    <Label label={`XDropdown`} require={true} />
+                    <Label label={`출급번호/품목명`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`기준일자`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
+                      <div className="o-form _input mode-required">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
@@ -226,20 +144,11 @@ function DEX() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`발주기준`} require={true} />
+                    <Label label={`업무지원부`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`체크박스단독`} require={false} />
-                    <div className="fields">
-                      <div className="m-checks">
-                        <InputCheck label="선택" labelHidden defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -253,7 +162,7 @@ function DEX() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">노션별 배송내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">폐기미치리부점조회</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -265,20 +174,67 @@ function DEX() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="노션별배송부점" className="_normal" icon="excel-download-label" />
-                    </div>
-
-                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
+                  
                 </div>
 
+                <div className="main _primary rows-body-5i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col className="wdth-auto" />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서무계잔량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">창구잔량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={7}>등록된 데이터가 없습니다.</td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td>0022</td>
+                            <td className="g-start">프로세스혁신</td>
+                            <td className="g-end">0</td>
+                            <td className="g-end">1</td>
+                            <td className="g-end">1</td>
+                            <td className="g-start"></td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </div>
+
+            <div className="column"></div>
           </div>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
@@ -287,4 +243,4 @@ function DEX() {
   );
 }
 
-export default DEX;
+export default HSPDU0701M;
