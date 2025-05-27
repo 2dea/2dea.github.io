@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 폐기 > (폐기감사)감사/소각등록
+ * @description 중요용지·용도품(본부) > 폐기 > 폐기대상중요용지목록(감사자등록)
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPDU0501M() {
+function HSPDU0301M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function HSPDU0501M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '폐기' }, { label: '(폐기감사)감사/소각등록' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '폐기' }, { label: '폐기대상중요용지목록(감사자등록)' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function HSPDU0501M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">(폐기감사)감사/소각등록</span>
+                <span className="label">폐기대상중요용지목록(감사자등록)</span>
 
                 <Favorite />
               </h1>
@@ -108,6 +108,10 @@ function HSPDU0501M() {
           <div className="binds">
 
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="폐기통계내역" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" icon="help" className="_normal" />
               </div>
@@ -116,14 +120,14 @@ function HSPDU0501M() {
             <div className="m-binds type-end">
               <div className="group _utility">
                 <div className="m-print-binds">
+                  <CommonButton label="사고보고서 재출력" className="_texted" />
                   <CommonButton label="출력" className="_texted" />
                 </div>
               </div>
 
               <div className="group _primary">
-                <CommonButton label="반려" className="_lined-primary" />
-                <CommonButton label="소각완료취소" className="_lined-primary" />
-                <CommonButton label="소각완료" className="_solid-primary" />
+                <CommonButton label="감사자등록취소" className="_lined-primary" />
+                <CommonButton label="감사자등록" className="_solid-primary" />
               </div>
             </div>
 
@@ -367,4 +371,4 @@ function HSPDU0501M() {
   );
 }
 
-export default HSPDU0501M;
+export default HSPDU0301M;

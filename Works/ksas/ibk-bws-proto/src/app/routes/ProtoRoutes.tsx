@@ -79,6 +79,8 @@ import HSPDU0101M from    'app/pages/hsp/HSPDU0101M';    // 중요용지·용도
 import HSPDU0101P01 from  'app/pages/hsp/HSPDU0101P01';  // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지총괄현황 ~ (LP)오손이력조회
 import HSPDU0201M from    'app/pages/hsp/HSPDU0201M';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지센터인수(오배송)
 
+import HSPDU0301M from    'app/pages/hsp/HSPDU0301M';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지목록(감사자등록)
+
 import HSPDU0501M from    'app/pages/hsp/HSPDU0501M';    // 중요용지·용도품(본부) > 폐기          > (폐기감사)감사/소각등록
 import HSPDU0701M from    'app/pages/hsp/HSPDU0701M';    // 중요용지·용도품(본부) > 폐기          > 일괄폐기미처리부점조회
 import HSPDU0801M from    'app/pages/hsp/HSPDU0801M';    // 중요용지·용도품(본부) > 폐기          > 본부중요용지일괄폐기
@@ -211,6 +213,8 @@ function ProtoRoutes() {
         { path: 'HSPDU0101M',     element: <HSPDU0101M /> },
         { path: 'HSPDU0101P01',   element: <HSPDU0101P01 /> },
         { path: 'HSPDU0201M',     element: <HSPDU0201M /> },
+
+        { path: 'HSPDU0301M',     element: <HSPDU0301M /> },
 
         { path: 'HSPDU0501M',     element: <HSPDU0501M /> },
         { path: 'HSPDU0701M',     element: <HSPDU0701M /> },

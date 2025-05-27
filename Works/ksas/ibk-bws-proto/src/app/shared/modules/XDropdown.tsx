@@ -25,13 +25,13 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
   const [DropdownItems, setDropdownItems] = useState<XDropdownProps | null>(null);
   const items: XDropdownProps[] = [
     { code: '0', name: '전체' },
-    { code: '1', name: '항목 1' },
-    { code: '2', name: '항목 2' },
-    { code: '3', name: '항목 3 항목 3 항목 3 항목 3 항목 3 항목 3 항목 3 항목 3 항목 3' },
-    { code: '4', name: '항목 4' },
-    { code: '5', name: '항목 5' },
-    { code: '6', name: '항목 6' },
-    { code: '7', name: '항목 7' },
+    { code: '1', name: '한' },
+    { code: '2', name: '두글' },
+    { code: '3', name: '세글자' },
+    { code: '4', name: '네네글자' },
+    { code: '5', name: '다섯섯글자' },
+    { code: '6', name: '아주긴글자아주긴글자아주긴글자아주긴글자아주긴글자아주긴글자아주긴글자아주긴글자아주긴글자' },
+    { code: '7', name: '' },
     { code: '8', name: '예' },
     { code: '9', name: '아니오' },
   ];
