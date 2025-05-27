@@ -301,7 +301,7 @@ function TMPL() {
                       <Label label={`인수부점`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
-                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} tooltip="영대문자 6자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'both' }} />
                           <i aria-hidden="true"></i>
                         </div>
                       </div>
@@ -1141,6 +1141,19 @@ function TMPL() {
                       </em>
                     </div>
 
+                    <div className="o-field">
+                      <div className="fields">
+                        <div className="o-form _select wdth-50">
+                          <XDropdown appendTo={document.body} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
+                        <div className="o-form _select wdth-50">
+                          <XDropdown appendTo={document.body} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="m-binds">
                       <div className="group">
                         <ImageButton label="엑셀​다운로드" icon="excel-download" />
@@ -1239,6 +1252,15 @@ function TMPL() {
 
             <div className="o-grid">
               <div className="column">
+
+                <div className="m-divider">
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="취소" icon="du-up" className="_normal" />
+                      <CommonButton label="선택" icon="du-down" className="_normal" />
+                    </div>
+                  </div>
+                </div>
 
                 <div className="o-section">
                   <div className="m-header">
@@ -2367,7 +2389,7 @@ function TMPL() {
                                 <div className="o-field">
                                   <div className="fields">
                                     <div className="o-form _input wdth-70">
-                                      <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} tooltip="한글 20자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'focus' }} />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>
