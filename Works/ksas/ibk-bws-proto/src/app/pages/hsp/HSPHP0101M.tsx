@@ -339,6 +339,8 @@ function HSPHP0101M() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
@@ -346,10 +348,12 @@ function HSPHP0101M() {
                           <th colSpan={1}>
                             <Label label={`신청부점`} require={false} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             [0810] 프로세스혁신
                           </td>
+                        </tr>
 
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`신청직원`} require={false} />
                           </th>
@@ -369,7 +373,7 @@ function HSPHP0101M() {
                           <th colSpan={1}>
                             <Label label={`조달신청명`} require={true} />
                           </th>
-                          <td colSpan={5}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required">
@@ -385,7 +389,7 @@ function HSPHP0101M() {
                           <th colSpan={1}>
                             <Label label={`신청사유`} require={false} />
                           </th>
-                          <td colSpan={5}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">

@@ -179,7 +179,7 @@ function HSPHP0201M() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-2">
+                  <div className="o-field colspan-1">
                     <Label label={`조달신청명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
@@ -315,6 +315,8 @@ function HSPHP0201M() {
                   <form className="m-data-form">
                     <table className="table">
                       <colgroup>
+                        <col className="head" />
+                        <col className="data" />
                         <col className="head" />
                         <col className="data" />
                       </colgroup>
