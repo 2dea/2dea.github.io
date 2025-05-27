@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 영업점배송관리 > 영업점미인수내역조회 ~ (LP)알림발송
+ * @description 공통 ~ (LP)알림발송
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPBT1501P01() {
+function CMP001201P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -276,4 +276,4 @@ function HSPBT1501P01() {
   );
 }
 
-export default HSPBT1501P01;
+export default CMP001201P;
