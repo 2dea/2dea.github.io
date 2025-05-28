@@ -143,7 +143,7 @@ function HSPHS1901P02() {
                         <tbody className="p-datatable-tbody">
                         {[...Array(2)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                            <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                             <td>품목상태변경</td>
                             <td>00001</td>
                             <td>홍길동</td>

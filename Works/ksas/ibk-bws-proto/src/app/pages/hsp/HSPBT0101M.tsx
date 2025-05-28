@@ -301,7 +301,7 @@ function HSPBT0101M() {
                                 <td>프로세스혁신</td>
                                 <td>BC016</td>
                                 <td className="g-start p-x-frozen-last">나의 알파체크카드(비교통_그린)</td>
-                                <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
+                                <td><span className="o-digit type-datetime">2024-09-16 09:10:59</span></td>
                                 <td>신청인도</td>
                                 <td>정상</td>
                                 <td>부산</td>
@@ -425,7 +425,7 @@ function HSPBT0101M() {
                                 <td>BC016</td>
                                 <td className="g-start p-x-frozen-last">나의 알파체크카드(비교통_그린)</td>
                                 <td><span className="o-digit type-date">2024-09-16</span></td>
-                                <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
+                                <td><span className="o-digit type-datetime">2024-09-16 09:10:59</span></td>
                                 <td>신청인도</td>
                                 <td><span className="o-digit type-datetime">2024-09-16</span></td>
                                 <td className="g-start">신청자 요청으로 인한 삭제</td>

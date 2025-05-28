@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지배송대상조회
+ * @description 중요용지·용도품(본부) > 용도품계정관리 > 용도품계정출금내역조회
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPBT0701M() {
+function HSPSA0101M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function HSPBT0701M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지배송대상조회' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '용도품계정관리' }, { label: '용도품계정출금내역조회' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function HSPBT0701M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지배송대상조회</span>
+                <span className="label">용도품계정출금내역조회</span>
 
                 <Favorite />
               </h1>
@@ -107,7 +107,6 @@ function HSPBT0701M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-
               <div className="group _assistive">
                 <CommonButton label="도움말" icon="help" className="_normal" />
               </div>
@@ -116,10 +115,12 @@ function HSPBT0701M() {
             <div className="m-binds type-end">
               <div className="group _utility">
                 <div className="m-print-binds">
-                  <CommonButton label="인수도표 바코드 출력" className="_texted" />
-                  <CommonButton label="출급번호별 출력" className="_texted" />
-                  <CommonButton label="부점별 출력" className="_texted" />
+                  <CommonButton label="출력" className="_texted" />
                 </div>
+              </div>
+
+              <div className="group _primary">
+                <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
           </div>
@@ -134,18 +135,26 @@ function HSPBT0701M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                      <Label label={`업무지원`} require={true} />
-                      <div className="fields">
-                        <div className="o-form _select mode-required">
-                          <XDropdown appendTo={'self'} className="bind" />
-                          <i aria-hidden="true"></i>
-                        </div>
+                    <Label label={`신청부점`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input mode-required">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
                       </div>
+                    </div>
                   </div>
 
-                  <div className="o-field">
-                    <Label label={`인도일자`} require={true} />
+                  <div className="o-field colspan-2">
+                    <Label label={`조회기간`} require={true} />
                     <div className="fields">
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <span className="seps type-tilde">~</span>
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
@@ -154,44 +163,7 @@ function HSPBT0701M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`출급번호분류`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div className="o-field">
-                    <Label label={`인수부점`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`인도구분`} require={false} />
+                    <Label label={`거래구분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -209,7 +181,8 @@ function HSPBT0701M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">배송대상내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">용도품계정출금내역</span></h2>
+
                   <div className="o-length">
                     <span className="head">전체</span>
                     <em className="data">
@@ -220,12 +193,7 @@ function HSPBT0701M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="인수도표" className="_normal" icon="excel-download-label" />
-                    </div>
-
-                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
@@ -244,94 +212,72 @@ function HSPBT0701M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-0" />
                           <col />
                           <col />
                           <col />
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종류</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지로코드</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도구분</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일시</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계정코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">항목코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소관부서</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정정일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입금총액</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현금/대체</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={18}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={14}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
+                        {[...Array(2)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
-                            <td>0465</td>
-                            <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                            <td className="g-end">30</td>
-                            <td>다가</td>
-                            <td>221868620</td>
-                            <td>~</td>
-                            <td>221868620</td>
-                            <td></td>
-                            <td>0022</td>
-                            <td className="g-start">종로6가</td>
-                            <td className="g-start">23노선</td>
-                            <td>10000</td>
-                            <td>신청인도</td>
-                            <td>10000</td>
-                            <td>홍길동</td>
-                            <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>011465</td>
+                            <td>피복비</td>
+                            <td className="g-end">5,700</td>
+                            <td>0001</td>
+                            <td className="g-start">총무부</td>
+                            <td>취소</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td className="g-end">2,125,700</td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _select wdth-50">
+                                    <XDropdown appendTo={document.body} className="bind" />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>대체</td>
+                            <td className="g-start">비고</td>
                           </tr>
                         ))}
                         </tbody>
-
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                          <tr className="sumtotal-trow">
-                            <td colSpan={4} className="sumtotal-tcell">합계</td>
-                            <td className="sumtotal-tcell g-end">9,999</td>
-
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
-                          </tr>
-                        </tfoot>
                       </table>
                     </div>
                   </div>
@@ -340,6 +286,7 @@ function HSPBT0701M() {
 
             </div>
           </div>
+
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
@@ -347,4 +294,4 @@ function HSPBT0701M() {
   );
 }
 
-export default HSPBT0701M;
+export default HSPSA0101M;

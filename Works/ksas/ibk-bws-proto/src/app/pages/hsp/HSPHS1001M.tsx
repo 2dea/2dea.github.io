@@ -254,7 +254,7 @@ function HSPHS1001M() {
                             <td>홍길동</td>
                             <td></td>
                             <td></td>
-                            <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                            <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                           </tr>
                         ))}
                         </tbody>

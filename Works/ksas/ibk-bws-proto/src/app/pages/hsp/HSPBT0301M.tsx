@@ -421,7 +421,7 @@ function HSPBT0301M() {
                                     <CommonButton label="통화" className="_normal" icon="consult" />
                                   </td>
                                   <td>출납책임자 결재완료</td>
-                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                   <td>N</td>
                                   <td>
                                     <div className="o-field">

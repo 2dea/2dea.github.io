@@ -235,7 +235,7 @@ function HSPBT0101P01() {
                             <td>프로세스혁신</td>
                             <td>BC016</td>
                             <td className="g-start">나의 알파체크카드(비교통_그린)</td>
-                            <td><span className="o-digit type-datetime">2024-09-16 09:10:62</span></td>
+                            <td><span className="o-digit type-datetime">2024-09-16 09:10:59</span></td>
                             <td>신청인도</td>
                             <td className="g-end">50</td>
                             <td className="g-end">0</td>

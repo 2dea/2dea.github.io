@@ -252,25 +252,20 @@ function HSPHP0301M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조달신청명</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소관부서</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청결재상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">납기요청일</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청량</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기검수량</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수가능량</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청일</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청부점</span></div></th>
                           </tr>
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
@@ -285,26 +280,22 @@ function HSPHP0301M() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
+                        {[...Array(2)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                            <td>011465</td>
-                            <td>홍길동</td>
-                            <td>신청</td>
-                            <td>신청결재승인</td>
-                            <td>011465</td>
-                            <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                            <td className="g-end">131,333</td>
-                            <td>개</td>
+                            <td className="g-start">OTP</td>
+                            <td>접수</td>
+                            <td>OT700</td>
+                            <td className="g-start">OTP(카드형)</td>
+                            <td className="g-end">10</td>
+                            <td className="g-end">0</td>
+                            <td className="g-end">10</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td></td>
                             <td>011465</td>
                             <td>홍길동</td>
                             <td>011465</td>
-                            <td className="g-start">프로세스혁신</td>
+                            <td className="g-start">개인디지털</td>
                           </tr>
                         ))}
                         </tbody>
@@ -320,14 +311,7 @@ function HSPHP0301M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="신규" className="_create" />
-                    </div>
-                  </div>
                 </div>
-
                 <div className="main">
                   <form className="m-data-form">
                     <table className="table">
@@ -341,23 +325,30 @@ function HSPHP0301M() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청부점`} require={false} />
+                            <Label label={`조달신청명`} require={false} />
                           </th>
-                          <td colSpan={3}>
-                            [0810] 프로세스혁신
+                          <td colSpan={1}>
+                            OTP발생기 조달신청
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`검수요청부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            개인디지털
                           </td>
                         </tr>
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청직원`} require={false} />
+                            <Label label={`검수요청직원`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0810] 홍길동
+                            홍길동
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`신청일자`} require={false} />
+                            <Label label={`검수요청일자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             2025-12-25
@@ -366,28 +357,51 @@ function HSPHP0301M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`조달신청명`} require={true} />
+                            <Label label={`출급번호`} require={false} />
                           </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                          <td colSpan={1}>
+                            OT007
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`품목명`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            OTP발생기
                           </td>
                         </tr>
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청사유`} require={false} />
+                            <Label label={`검수요청량`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
+                            10
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`검수기능량`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            10
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`기검수량`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            10
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`검수량`} require={true} />
+                          </th>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input">
+                                <div className="o-form _input g-end mode-required">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -403,7 +417,7 @@ function HSPHP0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">신청내역</span></h3>
+                  <h3 className="o-heading level3"><span className="label">검수등록내역</span></h3>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -414,12 +428,6 @@ function HSPHP0301M() {
                   </div>
 
                   <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="행추가" className="_normal" />
-                      <CommonButton label="행삭제" className="_normal" />
-                      <CommonButton label="취소" className="_normal" />
-                    </div>
-
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
@@ -435,7 +443,10 @@ function HSPHP0301M() {
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
-                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                           <col />
                           <col />
                           <col />
@@ -447,71 +458,48 @@ function HSPHP0301M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소관부서</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호/품목명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">납기요청일<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수확인일</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조달신청명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청량</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수량</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수확인자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수취소일</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수취소자</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={9}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={13}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(1)].map((e, idx) => (
+                        {[...Array(2)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><InputCheck label="선택" labelHidden /></td>
-                            <td><Icon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
-                            <td></td>
-                            <td></td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50 g-end">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td></td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
+                            <td>{idx + 1}</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td className="g-start">OTP</td>
+                            <td>접수</td>
+                            <td>OT700</td>
+                            <td className="g-start">OTP(카드형)</td>
+                            <td className="g-end">10</td>
+                            <td className="g-end">0</td>
+                            <td>011465</td>
+                            <td>홍길동</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>011465</td>
+                            <td>홍길동</td>
                           </tr>
                         ))}
                         </tbody>

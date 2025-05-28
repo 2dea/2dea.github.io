@@ -246,7 +246,7 @@ function HSPHS0901M() {
                             <td>승인</td>
                             <td>012345</td>
                             <td>홍길동</td>
-                            <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                            <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                             <td>N</td>
                           </tr>
                         ))}

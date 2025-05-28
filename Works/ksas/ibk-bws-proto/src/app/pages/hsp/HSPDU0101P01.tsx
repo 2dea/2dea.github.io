@@ -183,7 +183,7 @@ function HSPDU0101P01() {
             <div className="column">
 
               <div className="o-section">
-                
+
                 <div className="m-header">
                   <h4 className="o-heading level2"><span className="label">거래이력</span></h4>
                 </div>
@@ -235,7 +235,7 @@ function HSPDU0101P01() {
                             <td className="g-start">미아동</td>
                             <td>3344785</td>
                             <td>홍길동</td>
-                            <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                            <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                             <td className="g-start"></td>
                           </tr>
                         ))}

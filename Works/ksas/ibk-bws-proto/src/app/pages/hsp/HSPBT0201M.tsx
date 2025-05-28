@@ -334,7 +334,7 @@ function HSPBT0201M() {
                             <td></td>
                             <td className="g-end">300</td>
                             <td className="g-end">0</td>
-                            <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                            <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                             <td className="g-end">30</td>
                             <td>미인수</td>
                             <td>10000-5000</td>

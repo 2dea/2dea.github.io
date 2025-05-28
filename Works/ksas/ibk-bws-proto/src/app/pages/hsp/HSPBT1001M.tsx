@@ -121,7 +121,7 @@ function HSPBT1001M() {
 
               <div className="group _primary">
                 <CommonButton label="인도취소" className="_lined-primary" />
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -312,7 +312,7 @@ function HSPBT1001M() {
                                 <td>56443</td>
                                 <td className="g-start p-x-frozen-last">은행신용카드회원제신고및재발급의뢰서</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
-                                <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                                <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>신청인도</td>
                                 <td>정상</td>
                                 <td className="g-end">50</td>
@@ -428,7 +428,7 @@ function HSPBT1001M() {
                                 <td>56443</td>
                                 <td className="g-start p-x-frozen-last">은행신용카드회원제신고및재발급의뢰서</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
-                                <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                                <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>신청인도</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td className="g-start">신청자 요청으로 인한 삭제</td>
