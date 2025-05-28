@@ -35,6 +35,10 @@ import CMP001502P from    'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재�
 // proto 중요용지·용도품(본부)
 import BSPRQ0201M from    'app/pages/hsp/BSPRQ0201M';    // 중요용지·용도품(영업점) > 신청 > 중요용지신청내역
 
+import BSPRQ0301P02 from   'app/pages/hsp/BSPRQ0301P02'; // 중요용지·용도품(영업점) > 신청 > 중요용지자동배송설정 > (LP)자동배송 신청 이력 조회
+
+import BSPAQ0101P01 from   'app/pages/hsp/BSPAQ0101P01'; // 중요용지·용도품(영업점) > 인수도 > 중요용지인수 > (LP)대량폐기결정
+
 
 // proto 중요용지·용도품(본부)
 import HSPBT0101M from    'app/pages/hsp/HSPBT0101M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역
@@ -178,6 +182,10 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'BSPRQ0201M',     element: <BSPRQ0201M /> },
+
+        { path: 'BSPRQ0301P02',   element: <BSPRQ0301P02 /> },
+
+        { path: 'BSPAQ0101P01',   element: <BSPAQ0101P01 /> },
 
         { path: 'HSPBT0101M',     element: <HSPBT0101M /> },
         { path: 'HSPBT0101P01',   element: <HSPBT0101P01 /> },
