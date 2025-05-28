@@ -301,7 +301,7 @@ function TMPL() {
                       <Label label={`인수부점`} require={false} />
                       <div className="fields">
                         <div className="o-form _input">
-                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} tooltip="영대문자 6자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'both' }} />
+                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} tooltip="영대문자 6자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'both', className: 'style-alert' }} />
                           <i aria-hidden="true"></i>
                         </div>
                       </div>
@@ -698,6 +698,18 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
+                              <Label label={`.o-link`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <ul>
+                                <li><a href="javascript:" className="o-link _normal">Links (._normal)</a></li>
+                                <li><a href="javascript:" className="o-link style-texted _normal">Links (.style-texted._normal)(미사용)</a></li>
+                                <li><a href="javascript:" className="o-link style-texted _primary">Links (.style-texted._normal)(미사용)</a></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
                               <Label label={`Button:where(.o-section >.m-header *)`} require={false} />
                             </th>
                             <td colSpan={5}>
@@ -1052,7 +1064,7 @@ function TMPL() {
                                   <td>프로세스혁신</td>
                                   <td>BC016</td>
                                   <td className="g-start p-x-frozen-last">나의 알파체크카드(비교통_그린)</td>
-                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:62</span></td>
+                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                   <td>신청인도</td>
                                   <td>정상</td>
                                   <td>부산</td>
@@ -2409,7 +2421,7 @@ function TMPL() {
                                 <div className="o-field">
                                   <div className="fields">
                                     <div className="o-form _input wdth-70">
-                                      <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} tooltip="한글 20자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'focus' }} />
+                                      <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} tooltip="한글 20자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'focus', className: 'style-notice' }} />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>
