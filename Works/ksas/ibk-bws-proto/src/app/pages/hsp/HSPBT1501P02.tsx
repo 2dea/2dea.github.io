@@ -132,7 +132,7 @@ function HSPBT1501P02() {
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">알림시간<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">알림시각<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점별 미인수내역</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">알림내용<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">알림 사용여부</span></div></th>

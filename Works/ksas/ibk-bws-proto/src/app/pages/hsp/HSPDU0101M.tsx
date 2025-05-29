@@ -319,7 +319,7 @@ function HSPDU0101M() {
                           <tr>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수시간</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수시각</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">행내등기신청번호</span></div></th>
                           </tr>
@@ -355,7 +355,7 @@ function HSPDU0101M() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="o-section">
                 <div className="main">
                   <form className="m-data-form">
@@ -379,7 +379,7 @@ function HSPDU0101M() {
                                     <InputText placeholder="" value="[006]미아동" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  
+
                                   <div className="o-form _select mode-required wdth-50">
                                     <XDropdown appendTo={'self'} className="bind" />
                                     <i aria-hidden="true"></i>
@@ -388,7 +388,7 @@ function HSPDU0101M() {
                                   <div className="binds">
                                     <CommonButton label="업무이력조회" className="_normal" />
                                   </div>
-                                
+
                                 </div>
                               </div>
                           </td>
@@ -458,7 +458,7 @@ function HSPDU0101M() {
                               </div>
                             </div>
                           </td>
-                          
+
                           <th colSpan={1}>
                             <Label label={`오손수량`} require={false} />
                           </th>
@@ -510,7 +510,7 @@ function HSPDU0101M() {
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                
+
                                 <div className="o-form _select wdth-50">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
@@ -519,7 +519,7 @@ function HSPDU0101M() {
                               </div>
                             </div>
                           </td>
-                          
+
                           <th colSpan={1}>
                             <Label label={`등록자`} require={false} />
                           </th>

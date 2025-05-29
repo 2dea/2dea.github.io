@@ -89,7 +89,7 @@ function DEX() {
   return (
     <>
     {/*
-      [ 히니 차장님 - 작업 공유 - 메모 ]
+      [ 하나 차장님 - 작업 공유 - 메모 ]
        2025-05-27 화
        1.특이사항: 레이블이 SelectBox [by.one]
        (폐기감사)감사/소각등록 ppt 170 :  HSPDU0501M
@@ -103,10 +103,12 @@ function DEX() {
       {
       /*
         [ 작업 메모 ]
-        2025-05-27 화 작업 중
+        2025-05-28 수 작업 중
+        (영업부)
+        63
+        ---///
 
-        HSPHP0301M PPT 196 -> 수요일 시작 예정
-
+        HSPHS2001M : 기획서 없음 : 본부재고관리 >  센터별영업점재고조회 ( 5/23화면 추가)
 
         본부중요용지일괄폐기 - 기획서 - 탭 화면..? 	HSPDU0801M ppt #179 -> 기획 확인필요
 
@@ -148,6 +150,23 @@ function DEX() {
               HSPHS0901M
               HSPHS1901P02
 
+          싱글 왼쪽 반: HSPDU0701M
+
+          [팝업레이아웃 ]
+            h3 : 표: input
+            h4
+            HSPBT0301P01
+
+            [ HSPHS1701P01 ]
+            조회: 달력+ 툴팁
+            하단: 출력버튼
+
+            HSPHP0401P01
+            조회
+            표
+
+
+
       */}
 
       {
@@ -179,6 +198,15 @@ function DEX() {
       */
 
       }
+      {/*
+        git status
+      . git add .
+
+        git commit -m "Ksa IBK-BWS-Proto (jin)"
+
+        git push
+
+      */}
 
       <div className="roles" data-div-role="0">
         <div className="div-header">

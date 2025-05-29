@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 신청 > 중요용지신청내역
+ * @description 중요용지·용도품(영업점) > 신청 > 용도품신청내역
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPRQ0201M() {
+function BSPRQ0501M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function BSPRQ0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '신청' }, { label: '중요용지신청내역' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '신청' }, { label: '용도품신청내역' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function BSPRQ0201M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지신청내역</span>
+                <span className="label">용도품신청내역</span>
 
                 <Favorite />
               </h1>
@@ -237,9 +237,7 @@ function BSPRQ0201M() {
                               <col />
                               <col />
                               <col />
-                              <col />
-                              <col />
-                              <col />
+
                             </colgroup>
 
                             <thead className="p-datatable-thead">
@@ -247,31 +245,27 @@ function BSPRQ0201M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청상태</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송상태</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량</span></div></th>
-                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청시각</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출납책임자</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재승인시각</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">도착예정일자</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종류</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소/정정일자</span></div></th>
                               </tr>
                               <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                               </tr>
                             </thead>
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={19}>등록된 데이터가 없습니다.</td>
+                                <td colSpan={15}>등록된 데이터가 없습니다.</td>
                               </tr>
                             </tbody>
 
@@ -284,19 +278,15 @@ function BSPRQ0201M() {
                                 <td>0001</td>
                                 <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
                                 <td>개</td>
-                                <td className="g-end">131,333</td>
+                                <td className="g-end">10</td>
                                 <td>정상</td>
                                 <td>결재승인</td>
+                                <td>홍길동</td>
                                 <td>배송완료</td>
-                                <td className="g-end">131,333</td>
-                                <td>011465</td>
+                                <td className="g-end">13</td>
                                 <td>홍길동</td>
                                 <td><span className="o-digit type-time">09:10:59</span></td>
-                                <td>홍길동</td>
-                                <td><span className="o-digit type-time">09:10:59</span></td>
-                                <td><span className="o-digit type-date">2025-12-25</span></td>
-                                <td></td>
-                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td className="g-start"></td>
                               </tr>
                             ))}
                             </tbody>
@@ -305,11 +295,11 @@ function BSPRQ0201M() {
                       </div>
                     </div>
 
-                    <div className="m-footer">
+                    {/* <div className="m-footer">
                       <ul className="m-bullets type-disc">
                         <li>12시 이전 출납책임자 승인 완료 시 신청일 다음날 도착(단, 수표의 경우 +1 영업일)</li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
 
                 </div>
@@ -324,4 +314,4 @@ function BSPRQ0201M() {
   );
 }
 
-export default BSPRQ0201M;
+export default BSPRQ0501M;

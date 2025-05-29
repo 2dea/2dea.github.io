@@ -33,11 +33,25 @@ import CMP001402P from    'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체�
 import CMP001502P from    'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
 
 // proto 중요용지·용도품(본부)
-import BSPRQ0201M from    'app/pages/hsp/BSPRQ0201M';    // 중요용지·용도품(영업점) > 신청 > 중요용지신청내역
+import BSPRQ0201M from    'app/pages/hsp/BSPRQ0201M';    // 중요용지·용도품(영업점) > 신청  > 중요용지신청내역
+import BSPRQ0301M from    'app/pages/hsp/BSPRQ0301M';    // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정
+import BSPRQ0301P02 from   'app/pages/hsp/BSPRQ0301P02'; // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정 > (LP)자동배송 신청 이력 조회
 
-import BSPRQ0301P02 from   'app/pages/hsp/BSPRQ0301P02'; // 중요용지·용도품(영업점) > 신청 > 중요용지자동배송설정 > (LP)자동배송 신청 이력 조회
+import BSPRQ0501M from    'app/pages/hsp/BSPRQ0501M';    // 중요용지·용도품(영업점) > 신청  > 용도품신청내역
 
-import BSPAQ0101P01 from   'app/pages/hsp/BSPAQ0101P01'; // 중요용지·용도품(영업점) > 인수도 > 중요용지인수 > (LP)대량폐기결정
+import BSPFD0101M from    'app/pages/hsp/BSPFD0101M';    // 중요용지·용도품(영업점) > 조회  > 중요용지재고조회
+import BSPFD0301M from    'app/pages/hsp/BSPFD0301M';    // 중요용지·용도품(영업점) > 조회  > 창구사용내역조회
+import BSPFD0401M from    'app/pages/hsp/BSPFD0401M';    // 중요용지·용도품(영업점) > 조회  > 서무계수급내역조회
+import BSPFD0501M from    'app/pages/hsp/BSPFD0501M';    // 중요용지·용도품(영업점) > 조회  > 서무계수급내역조회
+import BSPFD0601M from    'app/pages/hsp/BSPFD0601M';    // 중요용지·용도품(영업점) > 조회  > 출급번호별사용량조회
+import BSPFD0801M from    'app/pages/hsp/BSPFD0801M';    // 중요용지·용도품(영업점) > 조회  > 일련번호별거래내역조회
+import BSPFD0901M from    'app/pages/hsp/BSPFD0901M';    // 중요용지·용도품(영업점) > 조회  > 일련번호원장수정
+
+import BSPAQ0101M from    'app/pages/hsp/BSPAQ0101M';    // 중요용지·용도품(영업점) > 인수도 > 중요용지인수
+import BSPAQ0101P01 from  'app/pages/hsp/BSPAQ0101P01';  // 중요용지·용도품(영업점) > 인수도 > 중요용지인수 > (LP)대량폐기결정
+import BSPAQ0301M from    'app/pages/hsp/BSPAQ0301M';    // 중요용지·용도품(영업점) > 인수도 > 중요용지서무계 → 창구
+import BSPAQ0401M from    'app/pages/hsp/BSPAQ0401M';    // 중요용지·용도품(영업점) > 인수도 > 중요용지창구 → 서무계
+import BSPAQ0501M from    'app/pages/hsp/BSPAQ0501M';    // 중요용지·용도품(영업점) > 인수도 > 중요용지타지점인도
 
 
 // proto 중요용지·용도품(본부)
@@ -182,10 +196,23 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'BSPRQ0201M',     element: <BSPRQ0201M /> },
-
+        { path: 'BSPRQ0301M',     element: <BSPRQ0301M /> },
         { path: 'BSPRQ0301P02',   element: <BSPRQ0301P02 /> },
+        { path: 'BSPRQ0501M',     element: <BSPRQ0501M /> },
 
+        { path: 'BSPFD0101M',     element: <BSPFD0101M /> },
+        { path: 'BSPFD0301M',     element: <BSPFD0301M /> },
+        { path: 'BSPFD0401M',     element: <BSPFD0401M /> },
+        { path: 'BSPFD0501M',     element: <BSPFD0501M /> },
+        { path: 'BSPFD0601M',     element: <BSPFD0601M /> },
+        { path: 'BSPFD0801M',     element: <BSPFD0801M /> },
+        { path: 'BSPFD0901M',     element: <BSPFD0901M /> },
+
+        { path: 'BSPAQ0101M',     element: <BSPAQ0101M /> },
         { path: 'BSPAQ0101P01',   element: <BSPAQ0101P01 /> },
+        { path: 'BSPAQ0301M',     element: <BSPAQ0301M /> },
+        { path: 'BSPAQ0401M',     element: <BSPAQ0401M /> },
+        { path: 'BSPAQ0501M',     element: <BSPAQ0501M /> },
 
         { path: 'HSPBT0101M',     element: <HSPBT0101M /> },
         { path: 'HSPBT0101P01',   element: <HSPBT0101P01 /> },
