@@ -183,7 +183,7 @@ function TMPL() {
                 <div className="o-board type-c style-fit">
                   <div className="o-notice">
                     <span className="icons">
-                      <Icon icon="alert-star" />
+                      <Icon icon="alert-octagram" />
                     </span>
 
                     <div className="main">

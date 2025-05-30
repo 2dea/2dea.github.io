@@ -169,16 +169,21 @@
   .o-icon._favorite:before  { background-color: $tp; background-image: var(--obj-ico-star); }
 
 /* Icon Fixed */
+.o-icon._alert-octagram:before  { background-color: $tp; background-image: var(--obj-ico-alert-octagram); background-size: 100%; }
 .o-icon._excel-download:before  { background-color: $tp; background-image: var(--obj-ico-excel-download); background-size: 100%; }
 .o-icon._excel-download-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-download-label); background-size: 100%; }
 .o-icon._excel-upload:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload); background-size: 100%; }
+.o-icon._excel-upload-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload-label); background-size: 100%; }
 .o-icon._folder-open:before  { background-color: $tp; background-image: var(--obj-ico-folder-open); background-size: 100%; }
 .o-icon._folder:before  { background-color: $tp; background-image: var(--obj-ico-folder); background-size: 100%; }
 .o-icon._grid-added:before  { background-color: $tp; background-image: var(--obj-ico-grid-added); background-size: 100%; }
 .o-icon._grid-edited:before  { background-color: $tp; background-image: var(--obj-ico-grid-edited); background-size: 100%; }
 .o-icon._mdi-lock:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); }
 .o-icon._mdi-lock-locked:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); background-position: 25%; }
+.o-icon._new:before  { background-color: $tp; background-image: var(--obj-ico-new); background-size: 100%; }
 .o-icon._popup-close:before  { background-color: $tp; background-image: var(--obj-ico-popup-close); background-size: 100%; }
+.o-icon._rank-down:before  { background-color: $tp; background-image: var(--obj-ico-rank-down); background-size: 100%; }
+.o-icon._rank-up:before  { background-color: $tp; background-image: var(--obj-ico-rank-up); background-size: 100%; }
 .o-icon._remove:before  { background-color: $tp; background-image: var(--obj-ico-remove); background-size: 100%; }
 .o-icon._sort-asc:before  { background-color: $tp; background-image: var(--obj-ico-sort-asc); background-size: 100%; }
 .o-icon._sort-dec:before  { background-color: $tp; background-image: var(--obj-ico-sort-dec); background-size: 100%; }
@@ -477,7 +482,8 @@
 
 /** Bullet-Lists Module */
 .m-bullets  { --lh: var(--text-height-para); line-height: var(--lh); clear: both; position: relative; }
-.m-bullets >* +*  { margin-top: calc(5 / 14 * 1em); }
+.m-bullets strong  { font-weight: $bold-70; }
+.m-bullets >* +*  { margin-top: calc(1em * var(--margin-bullets, 4) / var(--fs-int, var(--font-30-int, 14))); }
 .m-bullets >:before  { position: absolute; text-align: center; }
 .m-bullets >dt.heading:before  { content: none; }
 
@@ -500,7 +506,7 @@
 .m-bullets.type-prec >dt.heading  { margin-left: calc(-2.4rem - 0.285715em); }
 // .m-bullets.type-prec >:before  { content: ""; width: 2.4rem; height: 2.4rem; margin-left: calc(-2.4rem - 0.285715em); margin-top: calc(0.785714em - 2.4rem / 2); margin-right: 0.285715em; background: url('../img/common/ico_label_prec.png') no-repeat; }
 
-.m-bullets:where(.m-footer *)  { font-size: $font-40; color: $color-text-30; }
+.m-bullets:where(.m-footer *)  { --fs-int: var(--font-40-int); font-size: calc(var(--rem) * var(--fs-int)); color: $color-text-30; }
 
 
 

@@ -756,6 +756,11 @@ function SUBTMPL() {
                   <div className="main">
                     <form className="m-data-form">
                       <table className="table">
+                        <colgroup>
+                          <col className="head" />
+                          <col className="data" />
+                        </colgroup>
+
                         <tbody>
                           <tr>
                             <th>
@@ -875,15 +880,21 @@ function SUBTMPL() {
                             </th>
                             <td>
                               <div className="m-flex-list flow-inline">
+                                <i className="o-icon _alert-octagram wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-download wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-download-label wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-upload wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _excel-upload-label wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _folder-open wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _folder wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-added wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-edited wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _mdi-lock-locked wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _new wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _popup-close wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _rank-down wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _rank-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _remove wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-asc wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-dec wdth-50" aria-hidden="true"></i>
