@@ -332,7 +332,7 @@ function TMPL() {
                       } />
                       <div className="fields">
                         <div className="o-form _input">
-                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} tooltip="영대문자 6자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'both', className: 'o-tooltip style-alert' }} />
+                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)}  tooltip={'영대문자 6자 내로 입력해주세요' as any} tooltipOptions={{ position: 'bottom', event: 'both', className: 'o-tooltip style-alert' }} />
                           <i aria-hidden="true"></i>
                         </div>
                       </div>
@@ -871,7 +871,7 @@ function TMPL() {
                               <td>10100</td>
                               <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
                               <td className="g-end">349</td>
-                              <td><span className="o-digit type-datetime">2025-12-25</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>20-100</td>
                               <td className="g-end">50</td>
                               <td>
@@ -2467,7 +2467,7 @@ function TMPL() {
                                 <div className="o-field">
                                   <div className="fields">
                                     <div className="o-form _input wdth-70">
-                                      <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} tooltip="한글 20자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'focus', className: 'o-tooltip style-notice' }} />
+                                      <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} tooltip={'수표류: 수표번호 8자리(앞, 두 문자 기호란에 입력) \n예) 가마 7564 3210' as any} tooltipOptions={{ position: 'bottom', event: 'focus', className: 'o-tooltip style-notice' }} />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>
@@ -3275,7 +3275,7 @@ function TMPL() {
                   <CommonButton label="삭제" className="_delete" />
                   <CommonButton label="취소" className="_cancel" />
                   <CommonButton label="결재요청" className="_solid-primary" />
-                  </div>
+                </div>
               </div>
             </div>
           </TabPanel>

@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 본부재고관리 > 고가용도품본부재고조회
+ * @description 중요용지·용도품(영업점) > 폐기 > 중요용지발송등록 ~ (LP)오손중요용지행내등기신청
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPHS1701P01() {
+function BSPDU0601P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -87,7 +87,7 @@ function HSPHS1701P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-70p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -95,44 +95,76 @@ function HSPHS1701P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">고가용도품본부재고조회</span></h3>}
+        header={<h3 className="o-heading"><span className="label">오손중요용지행내등기신청</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
-              <form className="m-filter-form">
-                <div className="fieldset">
-
-                  <div className="o-field">
-                    <Label label={`기준일자`} require={true} append={
-                      <>
-                        <div className="binds type-tooltip">
-                          <Tooltip className="o-tooltip" target="#HSPHS1701P01-tooltip-10" position="top">
-                            해당날짜 결재요청 가능
-                          </Tooltip>
-                          <ImageButton id="HSPHS1701P01-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
-                        </div>
-                      </>
-                    } />
-                    <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">오손이력조회</span></h4>
                 </div>
 
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`거래부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0810] 프로세스혁신
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`거래연월일`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-01-21</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`취소사유`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="일괄적용" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
                 </div>
-              </form>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="o-grid">
+            <div className="column">
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">발주목록</span></h4>
+                  <h5 className="o-heading level3"><span className="label">오손중요용지행내등기신청 대상내역</span></h5>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -151,7 +183,7 @@ function HSPHS1701P01() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -165,24 +197,34 @@ function HSPHS1701P01() {
                           <col />
                           <col />
                           <col />
+                          <col />
+                          <col />
+                          <col className="wdth-0" />
+                          <col />
+                          <col />
+                          <col />
+                          <col className="wdth-0" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일입고</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일출고</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">평균단가</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center" colSpan={4}><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
+                            <th className="p-align-center" colSpan={2}><div className="p-column-header-content"><span className="p-column-title">취소사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={15}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
@@ -190,13 +232,31 @@ function HSPHS1701P01() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>0001</td>
-                            <td className="g-start">지폐속박지(가대지)(띠지)</td>
+                            <td>프로세스혁신</td>
+                            <td>BC016</td>
+                            <td className="g-start">나의 알파체크카드(비교통_그린)</td>
+                            <td><span className="o-digit type-datetime">2024-09-16 09:10:59</span></td>
+                            <td>신청인도</td>
+                            <td className="g-end">50</td>
                             <td className="g-end">0</td>
-                            <td className="g-end">0</td>
-                            <td className="g-end">5,700</td>
-                            <td className="g-end">2,125,700</td>
-                            <td className="g-end">2,700</td>
+                            <td></td>
+                            <td>3344785</td>
+                            <td>~</td>
+                            <td>33447900</td>
+                            <td>부산역</td>
+                            <td className="g-start">
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-80">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <ImageButton label="이미지​​업로드" icon="upload" />
+                            </td>
                           </tr>
                         ))}
                         </tbody>
@@ -212,16 +272,9 @@ function HSPHS1701P01() {
 
         <div className="div-footer">
           <div className="m-binds type-end">
-
-            <div className="group _utility">
-              <div className="m-print-binds">
-                <CommonButton label="출력" className="_texted" />
-              </div>
-            </div>
-
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="결재요청" className="_solid-primary" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -231,7 +284,7 @@ function HSPHS1701P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)고가용도품본부재고조회 [wdth-50p(w960)]</span>
+              <span className="label">(P)오손중요용지행내등기신청 [wdth-70p(w1340)]</span>
             </h1>
           </div>
         </div>
@@ -250,4 +303,4 @@ function HSPHS1701P01() {
   );
 }
 
-export default HSPHS1701P01;
+export default BSPDU0601P02;

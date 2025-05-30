@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 인수도 > 중요용지인수
+ * @description 중요용지·용도품(영업점) > 인수도 > 용도품인수
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPAQ0101M() {
+function BSPAQ0201M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function BSPAQ0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지인수' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '용도품인수' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function BSPAQ0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지인수</span>
+                <span className="label">용도품인수</span>
 
                 <Favorite />
               </h1>
@@ -122,6 +122,7 @@ function BSPAQ0101M() {
 
               <div className="group _primary">
                 <CommonButton label="취소" className="_cancel" />
+                <CommonButton label="삭제" className="_delete" />
                 <CommonButton label="인수등록" className="_solid-primary" />
               </div>
             </div>
@@ -210,6 +211,15 @@ function BSPAQ0101M() {
                     </div>
                   </div>
 
+                  <div className="o-field">
+                    <Label label={`자동화기기사용분`} require={false} />
+                    <div className="fields">
+                      <div className="m-checks">
+                        <InputCheck label="선택" labelHidden defaultChecked />
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
                 <div className="binds">
@@ -262,11 +272,6 @@ function BSPAQ0101M() {
                                   <col />
                                   <col />
                                   <col />
-                                  <col className="wdth-0" />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
                                   <col />
                                   <col />
                                   <col />
@@ -282,10 +287,8 @@ function BSPAQ0101M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                                    <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도점</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도자</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부인도구분</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도상태</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도정정일자</span></div></th>
@@ -300,7 +303,7 @@ function BSPAQ0101M() {
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={18}>등록된 데이터가 없습니다.</td>
+                                    <td colSpan={13}>등록된 데이터가 없습니다.</td>
                                   </tr>
                                 </tbody>
 
@@ -313,15 +316,10 @@ function BSPAQ0101M() {
                                     <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
                                     <td className="g-end">30</td>
                                     <td className="g-end">1,000</td>
-                                    <td>다가</td>
-                                    <td>221868620</td>
-                                    <td>~</td>
-                                    <td>221868620</td>
                                     <td>0022</td>
                                     <td className="g-start">종로6가</td>
                                     <td>10000</td>
                                     <td>홍길동</td>
-                                    <td>신청인도</td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td>정상</td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
@@ -376,10 +374,6 @@ function BSPAQ0101M() {
                                   <col />
                                   <col />
                                   <col />
-                                  <col className="wdth-0" />
-                                  <col />
-                                  <col />
-                                  <col />
                                   <col />
                                   <col />
                                   <col />
@@ -407,7 +401,7 @@ function BSPAQ0101M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                                    <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
+
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수점</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수자</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
@@ -439,7 +433,7 @@ function BSPAQ0101M() {
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={29}>등록된 데이터가 없습니다.</td>
+                                    <td colSpan={25}>등록된 데이터가 없습니다.</td>
                                   </tr>
                                 </tbody>
 
@@ -452,10 +446,6 @@ function BSPAQ0101M() {
                                     <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
                                     <td className="g-end">30</td>
                                     <td className="g-end">1,000</td>
-                                    <td>다가</td>
-                                    <td>221868620</td>
-                                    <td>~</td>
-                                    <td>221868620</td>
                                     <td>0022</td>
                                     <td className="g-start">종로6가</td>
                                     <td>10000</td>
@@ -498,4 +488,4 @@ function BSPAQ0101M() {
   );
 }
 
-export default BSPAQ0101M;
+export default BSPAQ0201M;
