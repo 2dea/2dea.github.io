@@ -134,6 +134,7 @@
   }
 
   @supports (font-variation-settings: 'wght' 700) {
+    /* --typo-sans:        'Noto Sans', 'Noto Sans KR', 'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR'; */
     --typo-sans:        'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
   }
 }

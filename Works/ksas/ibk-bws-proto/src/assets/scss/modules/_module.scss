@@ -361,7 +361,7 @@
 // .o-tooltip:focus-visible  { outline: 0; }
 // .o-tooltip:focus-visible >*  { outline: $e20 solid var(--color-edge-70); outline-offset: $e10; }
 
-.o-tooltip  { font-size: calc(var(--rem) * 20); max-width: calc(var(--rem) * 300); }
+.o-tooltip  { font-size: calc(var(--rem) * 20); min-width: 1em; max-width: calc(var(--rem) * 300); }
 .o-tooltip .p-tooltip-text  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); margin: -1px -1px; padding: $gap-element-50 $gap-element-70; color: var(--color-text-00); background-color: var(--color-text-40); border-radius: $radius-50; }
 .o-tooltip .p-tooltip-arrow  { color: var(--color-text-40); }
 .o-tooltip.p-tooltip-right .p-tooltip-arrow { border-right-color: $cc; }
@@ -386,7 +386,7 @@
 .o-require-tag:before  { content: "*"; margin-right: calc(var(--rem) * 2); }
 .o-require-tag >.tag  { @include inc-sronly(none, 0); vertical-align: super; top: calc(var(--rem) * 4); right: calc(var(--rem) * 3); }
 
-.o-require-tag  { order: 0; align-self: flex-end; font-weight: $bold-40; }
+.o-require-tag  { order: 0; font-weight: $bold-40; }
 .o-require-tag:before  { margin-left: calc(var(--rem) * 2); margin-right: auto; }
 .o-require-tag >.tag  { left: calc(var(--rem) * 3); right: auto; }
 
