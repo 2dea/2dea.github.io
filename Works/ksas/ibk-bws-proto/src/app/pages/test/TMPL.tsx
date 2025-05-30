@@ -174,6 +174,24 @@ function TMPL() {
             <div className="o-grid">
               <div className="column">
 
+                <div className="o-board type-b style-fit">
+                  <div className="o-notice">
+                    type-b
+                  </div>
+                </div>
+
+                <div className="o-board type-c style-fit">
+                  <div className="o-notice">
+                    <span className="icons">
+                      <Icon icon="alert-star" />
+                    </span>
+
+                    <div className="main">
+                      <strong className="g-bold">[관리자공지]</strong> 처리완료를 통해 대금정산기본의 처리상태를 완료상태로 변경
+                    </div>
+                  </div>
+                </div>
+
                 <form className="m-filter-form">
                   <div className="fieldset">
 
@@ -254,7 +272,16 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`인도부점`} require={true} />
+                      <Label label={`인도부점`} require={true} append={
+                        <>
+                          <div className="binds type-tooltip">
+                            <Tooltip className="o-tooltip" target="#HSPHS1701P01-tooltip-10" position="top">
+                              해당날짜 결재요청 가능
+                            </Tooltip>
+                            <ImageButton id="HSPHS1701P01-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                          </div>
+                        </>
+                      } />
                       <div className="fields">
                         <div className="o-form _input mode-required">
                           {/* <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} /> */}
@@ -264,11 +291,6 @@ function TMPL() {
                             <ImageButton label="초기화" icon="remove" />
                           </span>
                         </div>
-
-                        <Tooltip target="#HSPHS1701P01-tooltip-10">
-                          해당날짜 결재요청 가능
-                        </Tooltip>
-                        <ImageButton id="HSPHS1701P01-tooltip-10" label="안내툴팁" title="" icon="alert-circle" className="g-cursor-help" />
                       </div>
                     </div>
 
@@ -298,10 +320,19 @@ function TMPL() {
                     </div>
 
                     <div className="o-field">
-                      <Label label={`인수부점`} require={false} />
+                      <Label label={`툴팁​도움말`} require={false} append={
+                        <>
+                          <div className="binds type-tooltip">
+                            <Tooltip className="o-tooltip" target="#HSPHS1701P01-tooltip-20" position="left">
+                              해당날짜 결재요청 가능 <br /> 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용 긴 내용
+                            </Tooltip>
+                            <ImageButton id="HSPHS1701P01-tooltip-20" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                          </div>
+                        </>
+                      } />
                       <div className="fields">
                         <div className="o-form _input">
-                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} tooltip="영대문자 6자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'both', className: 'style-alert' }} />
+                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} tooltip="영대문자 6자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'both', className: 'o-tooltip style-alert' }} />
                           <i aria-hidden="true"></i>
                         </div>
                       </div>
@@ -357,6 +388,21 @@ function TMPL() {
                     <CommonButton label="조회" className="_inquire" />
                   </div>
                 </form>
+
+                <div className="o-board type-a style-fit">
+                  <div className="o-field">
+                    <Label label={`감사자알림`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value="중요용지 폐기 감사자로 등록되었습니다. [감사/소각완료] 등록 부탁드립니다." className="bind" onChange={(e) => setValue(e.target.value)} disabled />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <div className="binds">
+                        <CommonButton label="발송" className="_solid-secondary" disabled />
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="o-section">
                   <div className="m-header">
@@ -2421,7 +2467,7 @@ function TMPL() {
                                 <div className="o-field">
                                   <div className="fields">
                                     <div className="o-form _input wdth-70">
-                                      <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} tooltip="한글 20자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'focus', className: 'style-notice' }} />
+                                      <InputText placeholder="" value="임차시설물폐쇠구분코드" className="bind" onChange={(e) => setValue(e.target.value)} tooltip="한글 20자 내로 입력해주세요" tooltipOptions={{ position: 'bottom', event: 'focus', className: 'o-tooltip style-notice' }} />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>

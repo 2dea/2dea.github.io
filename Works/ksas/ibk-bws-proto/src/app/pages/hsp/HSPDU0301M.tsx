@@ -176,7 +176,7 @@ function HSPDU0301M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`진행상태`} require={false} />
+                    <Label label={`사고보고여부`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -199,14 +199,21 @@ function HSPDU0301M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`감사자`} require={false} />
+                    <Label label={`조회구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`감사자지정`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
@@ -218,9 +225,24 @@ function HSPDU0301M() {
                 </div>
               </form>
 
+              <div className="o-board type-a style-fit">
+                <div className="o-field">
+                  <Label label={`감사자알림`} require={false} />
+                  <div className="fields">
+                    <div className="o-form _input">
+                      <InputText placeholder="" value="중요용지 폐기 감사자로 등록되었습니다. [감사/소각완료] 등록 부탁드립니다." className="bind" onChange={(e) => setValue(e.target.value)} disabled />
+                      <i aria-hidden="true"></i>
+                    </div>
+                    <div className="binds">
+                      <CommonButton label="발송" className="_solid-secondary" disabled />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">감사 및 소각(대상) 내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">창구오손등록 명세</span></h2>
                   <div className="o-length">
                     <span className="head">전체</span>
                     <em className="data">
@@ -338,7 +360,7 @@ function HSPDU0301M() {
                             <td><span className="o-digit type-date"></span></td>
                             <td>011465</td>
                             <td>홍길동</td>
-                            <td>70</td>
+                            <td className="g-end">70</td>
                             <td></td>
                             <td>10000</td>
                             <td>~</td>

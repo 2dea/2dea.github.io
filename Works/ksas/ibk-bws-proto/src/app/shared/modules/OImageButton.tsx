@@ -11,8 +11,8 @@ interface ImageButtonProps {
   id?: string;
   label: string;
   title?: string;
-  tooltip?: string;
-  tooltipPos?: string;
+  // tooltip?: string;
+  // tooltipPos?: string;
   icon?: string;
   iconWidth?: 50 | 70 | 30;
   size?: 50 | 70 | 30;
@@ -23,10 +23,22 @@ interface ImageButtonProps {
   disabled?: boolean;
 }
 
-function ImageButton({ type='button', id, label, title, tooltip, tooltipPos='top', icon, iconWidth, size, className, style, onClick, hidden, disabled }: ImageButtonProps) {
+function ImageButton({ type='button', id, label, title, /* tooltip, tooltipPos='top', */ icon, iconWidth, size, className, style, onClick, hidden, disabled }: ImageButtonProps) {
   return (
     <>
-      <button type={type} id={id} title={title ?? label} data-pr-tooltip={tooltip} data-pr-position={tooltipPos} className={`o-image-button${icon ? ` o-icon _${icon}` : ''}${iconWidth ? ` wdth-${iconWidth}` : ''}${className ? ` ${className}` : ''}${size ? ` size-${size}` : ''}`} style={style} onClick={onClick && onClick} hidden={hidden} disabled={disabled}>
+      <button
+        type={type}
+        id={id}
+        title={title ?? label}
+        // data-pr-tooltip={tooltip}
+        data-pr-event="both"
+        // data-pr-position={tooltipPos}
+        className={`o-image-button${icon ? ` o-icon _${icon}` : ''}${iconWidth ? ` wdth-${iconWidth}` : ''}${className ? ` ${className}` : ''}${size ? ` size-${size}` : ''}`}
+        style={style}
+        onClick={onClick && onClick}
+        hidden={hidden}
+        disabled={disabled}
+      >
         <span className="label">{label}</span>
       </button>
     </>

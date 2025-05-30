@@ -11,9 +11,10 @@ interface LabelProps {
   require?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  append?: React.ReactNode;
 }
 
-function Label({ label, require, className, style }: LabelProps) {
+function Label({ label, require, className, style, append }: LabelProps) {
   return (
     <>
       <div className={`o-label${className ? ` ${className}` : ''}`} style={style}>
@@ -22,6 +23,8 @@ function Label({ label, require, className, style }: LabelProps) {
 
           { (require) && <em className="o-require-tag"><span className="tag">(필수입력)</span></em> }
         </span>
+
+        { append }
       </div>
     </>
   );

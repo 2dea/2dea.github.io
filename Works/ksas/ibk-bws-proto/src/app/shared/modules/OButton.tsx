@@ -13,8 +13,8 @@ interface CommonButtonProps {
   id?: string;
   label: string;
   title?: string;
-  tooltip?: string;
-  tooltipPos?: string;
+  // tooltip?: string;
+  // tooltipPos?: string;
   icon?: string;
   iconWidth?: number;
   size?: 30 | 70 | 50;
@@ -25,10 +25,21 @@ interface CommonButtonProps {
   disabled?: boolean;
 }
 
-function CommonButton({ type='button', id, label, title, tooltip, tooltipPos='top', icon, iconWidth, size, className, style, onClick, hidden, disabled }: CommonButtonProps) {
+function CommonButton({ type='button', id, label, title, /* tooltip, tooltipPos='top', */ icon, iconWidth, size, className, style, onClick, hidden, disabled }: CommonButtonProps) {
   return (
     <>
-      <button type={type} id={id} title={title} data-pr-tooltip={tooltip} data-pr-position={tooltipPos} className={`o-button ${className ?? ''}${size ? ` size-${size}` : ''}`} style={style} onClick={onClick && onClick} hidden={hidden} disabled={disabled}>
+      <button type={type}
+        id={id}
+        title={title}
+        // data-pr-tooltip={tooltip}
+        data-pr-event="both"
+        // data-pr-position={tooltipPos}
+        className={`o-button ${className ?? ''}${size ? ` size-${size}` : ''}`}
+        style={style}
+        onClick={onClick && onClick}
+        hidden={hidden}
+        disabled={disabled}
+      >
         { (icon) && <Icon icon={icon} width={iconWidth} /> }
         <span className="label">{label}</span>
       </button>

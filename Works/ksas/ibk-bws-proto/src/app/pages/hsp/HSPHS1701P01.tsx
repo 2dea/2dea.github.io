@@ -105,17 +105,21 @@ function HSPHS1901P02() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`기준일자`} require={true} />
+                    <Label label={`기준일자`} require={true} append={
+                      <>
+                        <div className="binds type-tooltip">
+                          <Tooltip className="o-tooltip" target="#HSPHS1701P01-tooltip-10" position="top">
+                            해당날짜 결재요청 가능
+                          </Tooltip>
+                          <ImageButton id="HSPHS1701P01-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                        </div>
+                      </>
+                    } />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
-
-                      <Tooltip target="#HSPHS1901P02-tooltip-10">
-                        해당날짜 결재요청 가능
-                      </Tooltip>
-                      <ImageButton id="HSPHS1901P02-tooltip-10" label="안내툴팁" title="" icon="alert-circle" className="g-cursor-help" />
                     </div>
                   </div>
 

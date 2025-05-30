@@ -334,7 +334,7 @@ function HSPDU0501M() {
                             <td><span className="o-digit type-date"></span></td>
                             <td>011465</td>
                             <td>홍길동</td>
-                            <td>70</td>
+                            <td className="g-end">70</td>
                             <td></td>
                             <td>10000</td>
                             <td>~</td>
