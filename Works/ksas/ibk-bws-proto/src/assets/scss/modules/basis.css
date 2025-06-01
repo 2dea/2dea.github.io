@@ -10,6 +10,8 @@
   --root-em:            (1rem / var(--root-em-int));
   --rem:                var(--root-em);
 
+  --round:              4.9406564584124654e-323;
+
   --height-window-maximum:      100vh;
   --height-window-viewport:     var(--height-window-variable, 100vb);
 
@@ -136,6 +138,12 @@
   @supports (font-variation-settings: 'wght' 700) {
     /* --typo-sans:        'Noto Sans', 'Noto Sans KR', 'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR'; */
     --typo-sans:        'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
+  }
+
+  @supports (line-height: round(down, 1, 1)) {
+    /* --text-height:        round(down, calc(1em * var(--text-height-int, 16) / var(--text-size-int, 12)), 2px);
+    --text-height:        remove-unit(round(down, calc(1em * var(--text-height-int, 16) / var(--text-size-int, 12)), 2px)); */
+    --text-height-para:   round(down, calc(1em * 18 / 12), 2px);
   }
 }
 

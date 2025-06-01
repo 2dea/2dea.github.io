@@ -184,7 +184,6 @@ function BSPFD0701M() {
                 </div>
               </form>
 
-
               <div className="o-section">
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">발급점포내역</span></h2>
@@ -217,7 +216,7 @@ function BSPFD0701M() {
                           <col />
                           <col />
                           <col />
-                          <col />Z
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -259,6 +258,101 @@ function BSPFD0701M() {
                   </div>
                 </div>
 
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li className="c-color-strong">조회된 데이터 중 수표류를 제외한 품목은 부정확할 수 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">주요출급번호</span></h3>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="과거 기호(일련번호) 다운로드" className="_normal" icon="excel-download-label" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`10079`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            정액10만원권자기앞수표
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`10085`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            정액50만원권자기앞수표
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`10091`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            일반자기앞수표
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`10518`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            가계수표 100만원 이하
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`10547`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            가계수표 300만원 이하
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`10531`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            가계수표 500만원 이하
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`10122`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            비정액자기앞수표(1억초과)
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`10139`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            비정액자기앞수표(1억이하)
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
               </div>
 
             </div>

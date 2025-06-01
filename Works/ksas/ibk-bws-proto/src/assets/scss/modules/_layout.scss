@@ -247,7 +247,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-header .div-account .user .id  { color: var(--color-text-30); }
 .dom-header .div-account .user .id:before  { content: "("; }
 .dom-header .div-account .user .id:after  { content: ")"; }
-.dom-header .div-account .task .binds  { order: -1; }
+// .dom-header .div-account .task .binds  { order: -1; }
 .dom-header .div-account .task .prop  { display: flex; gap: $gap-element-70; }
 .dom-header .div-account .task .prop .data  { display: flex; gap: $gap-whitespace-30; color: var(--color-key1-40); }
 .dom-header .div-account .task .prop .data .value  { font-weight: $bold-70; }

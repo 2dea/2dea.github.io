@@ -175,9 +175,7 @@ function TMPL() {
               <div className="column">
 
                 <div className="o-board type-b style-fit">
-                  <div className="o-notice">
-                    type-b
-                  </div>
+                  .o-board.type-b
                 </div>
 
                 <div className="o-board type-c style-fit">
@@ -187,7 +185,7 @@ function TMPL() {
                     </span>
 
                     <div className="main">
-                      <strong className="g-bold">[관리자공지]</strong> 처리완료를 통해 대금정산기본의 처리상태를 완료상태로 변경
+                      <strong className="r-strong">[관리자공지]</strong> 처리완료를 통해 대금정산기본의 처리상태를 완료상태로 변경
                     </div>
                   </div>
                 </div>
@@ -407,6 +405,14 @@ function TMPL() {
                 <div className="o-section">
                   <div className="m-header">
                     <h2 className="o-heading level2"><span className="label">양식샘플</span></h2>
+
+                    <div className="m-checks">
+                      <InputCheck label="선택" labelHidden />
+                    </div>
+
+                    <div className="o-helper style-strong">
+                      <strong className="label">헬퍼텍스트</strong>
+                    </div>
 
                     <div className="m-binds">
                       <div className="group">
@@ -767,11 +773,12 @@ function TMPL() {
                                     <CommonButton label="행복사" className="_normal" />
                                     <CommonButton label="행삭제" className="_normal" />
                                     <CommonButton label="취소" className="_normal" />
-                                    <CommonButton label="표준템플릿" className="_normal" icon="excel-download-label" />
+                                    <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
+                                    <CommonButton label="일괄양식 업로드" className="_normal" icon="excel-upload-label" />
                                   </div>
 
                                   <div className="group">
-                                    <ImageButton label="엑셀​업로드" icon="excel-upload" />
+                                    {/* <ImageButton label="엑셀​업로드" icon="excel-upload" /> */}
                                     <ImageButton label="엑셀​다운로드" icon="excel-download" />
                                     <ImageButton label="목록필터" icon="column-toggle" />
                                     <ImageButton label="목록출력" icon="print" />
@@ -784,6 +791,54 @@ function TMPL() {
                         </tbody>
                       </table>
                     </form>
+                  </div>
+                </div>
+
+                <div className="o-section">
+                  <div className="o-board type-a">
+                    <div className="board-container">
+                      <div className="m-header">
+                        <strong className="o-heading"><span className="label">유의사항</span></strong>
+                      </div>
+
+                      <ul className="m-bullets type-disc">
+                        <li className="c-color-strong">인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</li>
+                        <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                      </ul>
+                    </div>
+
+                    <div className="board-container">
+                      <div className="m-header">
+                        <strong className="o-heading"><span className="label">유의사항</span></strong>
+                      </div>
+
+                      <ul className="m-bullets type-disc">
+                        <li>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 <em className="c-color-strong">인수직원의 부점정보를 확인해주세요.</em></li>
+                        <li><em className="c-color-strong">행내등기 대상</em>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                      </ul>
+
+                      <div className="board-container type-sub">
+                        <div className="m-header">
+                          <strong className="o-heading"><span className="label">여신자필서류(STP)</span></strong>
+                        </div>
+
+                        <ul className="m-bullets type-disc">
+                          <li><em className="c-color-strong">NET점 고객의 여신자필 서류를 대신 받아 전달</em>할 경우, <em className="c-color-strong">영업점 간 비용이 정산</em>됩니다.(발송지점 비용 1만원 ↓, 인수지점 비용 1만원 ↑)</li>
+                          <li><em className="c-color-strong">자점 고객이 NET점 방문 시</em> 고객에게 받을 서류를 미리 세팅하여 NET점에 보내는 경우 <em className="c-color-strong">서류구분을 [일반서류]로 선택</em> 후 신청해주세요.</li>
+                        </ul>
+                      </div>
+
+                      <div className="board-container type-sub">
+                        <div className="m-header">
+                          <strong className="o-heading"><span className="label">유의사항</span></strong>
+                        </div>
+
+                        <ul className="m-bullets type-disc">
+                          <li className="c-color-strong">인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</li>
+                          <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -3144,6 +3199,7 @@ function TMPL() {
                   <div className="m-footer">
                     <ul className="m-bullets type-disc">
                       <li>권한요청문의 : IT금융개발부 / 031-1234-5678</li>
+                      <li className="c-color-strong">비정액자기앞수표(1억이하)</li>
                     </ul>
                   </div>
                 </div>
