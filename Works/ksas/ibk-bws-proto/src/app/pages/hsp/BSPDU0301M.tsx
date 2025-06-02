@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 인수도 > 중요용지서무계 → 창구
+ * @description 중요용지·용도품(영업점) > 폐기 > 중요용지일괄폐기
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPAQ0301M() {
+function BSPDU0301M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -44,7 +44,7 @@ function BSPAQ0301M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '인수도' }, { label: '중요용지서무계 → 창구' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '폐기' }, { label: '중요용지일괄폐기' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function BSPAQ0301M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지서무계 &rarr; 창구</span>
+                <span className="label">중요용지일괄폐기</span>
 
                 <Favorite />
               </h1>
@@ -107,6 +107,7 @@ function BSPAQ0301M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+
               <div className="group _assistive">
                 <CommonButton label="도움말" icon="help" className="_normal" />
               </div>
@@ -120,11 +121,10 @@ function BSPAQ0301M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="삭제결재요청" className="_solid-primary" />
-                <CommonButton label="등록결재요청" className="_solid-primary" />
-                </div>
+                <CommonButton label="구양식/서손폐기등록" className="_solid-primary" />
+                <CommonButton label="품목폐지폐기등록" className="_solid-primary" />
+              </div>
             </div>
-
           </div>
         </div>
 
@@ -132,57 +132,6 @@ function BSPAQ0301M() {
         <div className="div-contents">
           <div className="o-grid">
             <div className="column">
-
-              <form className="m-filter-form">
-                <div className="fieldset">
-
-                  <div className="o-field colspan-2">
-                    <Label label={`부점`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input mode-required wdth-auto">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} disabled />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-
-                      <div className="o-form _select mode-required wdth-30">
-                        <XDropdown appendTo={'self'} className="bind" disabled />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`오늘인수내역`} require={false} />
-                    <div className="fields">
-                      <div className="m-checks">
-                        <InputCheck label="선택" labelHidden defaultChecked />
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
-                </div>
-              </form>
-
               <form className="m-filter-form">
                 <div className="fieldset">
 
@@ -218,7 +167,7 @@ function BSPAQ0301M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`조회기간`} require={true} />
+                    <Label label={`등록기간`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -239,20 +188,98 @@ function BSPAQ0301M() {
                 </div>
               </form>
 
+              <form className="m-filter-form">
+                <div className="fieldset">
+
+                  <div className="o-field colspan-2">
+                    <Label label={`부점`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input mode-required wdth-auto">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} disabled />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+
+                      <div className="o-form _select mode-required wdth-30">
+                        <XDropdown appendTo={'self'} className="bind" disabled />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`출급번호/품목명`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field colspan-2">
+                    <Label label={`폐기기간`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <span className="seps type-tilde">~</span>
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`결재상태`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`반려제외`} require={false} />
+                    <div className="fields">
+                      <div className="m-checks">
+                        <InputCheck label="선택" labelHidden />
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
+                </div>
+              </form>
+
+
               <Tabs className="m-tabs react-tabs" defaultIndex={0}>
                 <div className="m-tab type2">
                   <TabList className="lists">
-                    <Tab className="link"><span className="label">인수도거래</span></Tab>
-                    <Tab className="link"><span className="label">인도내역</span></Tab>
+                    <Tab className="link"><span className="label">폐기대상</span></Tab>
+                    <Tab className="link"><span className="label">폐기완료</span></Tab>
                   </TabList>
                 </div>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
                   <div className="o-grid">
                     <div className="column">
+
                       <div className="o-section">
                         <div className="m-header">
-                          <h2 className="o-heading level2"><span className="label">서무계재고내역</span></h2>
+                          <h2 className="o-heading level2"><span className="label">폐기대상</span></h2>
+
                           <div className="o-length">
                             <span className="head">전체</span>
                             <em className="data">
@@ -269,193 +296,51 @@ function BSPAQ0301M() {
                           </div>
                         </div>
 
-                        <div className="main _primary rows-body-3i">
+                        <div className="main _primary rows-body-5i">
                           <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                           <div className="o-grid-table p-datatable">
                             <div className="table-container p-datatable-wrapper">
                               <table className="p-datatable-table p-datatable-scrollable-table">
                                 <colgroup>
                                   <col className="wdth-10" />
-                                  <col className="wdth-10" />
                                   <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col className="wdth-0" />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col className="wdth-0" />
-                                  <col />
-                                </colgroup>
-
-                                <thead className="p-datatable-thead">
-                                  <tr>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                                    <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서무계</span></div></th>
-                                    <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">창구</span></div></th>
-
-                                  </tr>
-                                  <tr>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                                  </tr>
-                                </thead>
-
-                                <tbody className="p-datatable-tbody">
-                                  <tr className="p-datatable-emptymessage">
-                                    <td colSpan={14}>등록된 데이터가 없습니다.</td>
-                                  </tr>
-                                </tbody>
-
-                                <tbody className="p-datatable-tbody">
-                                {[...Array(2)].map((e, idx) => (
-                                  <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                    <td><InputCheck label="선택" labelHidden /></td>
-                                    <td>{idx + 1}</td>
-                                    <td>0465</td>
-                                    <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                                    <td className="g-end">1,300</td>
-                                    <td>가바</td>
-                                    <td>0465</td>
-                                    <td>~</td>
-                                    <td>0465</td>
-                                    <td>
-                                      <div className="o-field">
-                                        <div className="fields">
-                                          <div className="o-form _input wdth-40 g-end">
-                                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                            <i aria-hidden="true"></i>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div className="o-field">
-                                        <div className="fields">
-                                          <div className="o-form _input wdth-30">
-                                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                            <i aria-hidden="true"></i>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div className="o-field">
-                                        <div className="fields">
-                                          <div className="o-form _input wdth-40">
-                                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                            <i aria-hidden="true"></i>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </td>
-                                    <td>~</td>
-                                    <td>
-                                      <div className="o-field">
-                                        <div className="fields">
-                                          <div className="o-form _input wdth-40">
-                                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                            <i aria-hidden="true"></i>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                ))}
-                                </tbody>
-
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-
-                      <div className="m-divider">
-                        <div className="m-binds">
-                          <div className="group">
-                            <CommonButton label="취소" icon="du-up" className="_normal" />
-                            <CommonButton label="추가" icon="du-down" className="_normal" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="o-section">
-                        <div className="m-header">
-                          <h2 className="o-heading level2"><span className="label">서무계 &rarr; 창구</span></h2>
-                        </div>
-
-                        <div className="main _primary rows-body-3i">
-                          <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                          <div className="o-grid-table p-datatable">
-                            <div className="table-container p-datatable-wrapper">
-                              <table className="p-datatable-table p-datatable-scrollable-table">
-                                <colgroup>
-                                  <col className="wdth-10" />
-                                  <col className="wdth-10" />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col className="wdth-0" />
+                                  <col className="wdth-auto" />
                                   <col />
                                   <col />
                                 </colgroup>
 
                                 <thead className="p-datatable-thead">
                                   <tr>
-                                    <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검증 결과</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                                   </tr>
                                 </thead>
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={10}>등록된 데이터가 없습니다.</td>
+                                    <td colSpan={5}>등록된 데이터가 없습니다.</td>
                                   </tr>
                                 </tbody>
 
                                 <tbody className="p-datatable-tbody">
-                                {[...Array(2)].map((e, idx) => (
+                                {[...Array(24)].map((e, idx) => (
                                   <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                    <td><InputCheck label="선택" labelHidden /></td>
                                     <td>{idx + 1}</td>
                                     <td>0465</td>
                                     <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                                    <td className="g-end">1,300</td>
-                                    <td>가바</td>
-                                    <td>0465</td>
-                                    <td>~</td>
-                                    <td>0465</td>
-                                    <td>
-                                      {idx === 1 ? <span className="o-text-error">일련번호 채번 오류</span> : <>정상</>}
-                                    </td>
+                                    <td className="g-end">13,610</td>
+                                    <td><span className="o-digit type-date">2025-12-25</span></td>
                                   </tr>
                                 ))}
                                 </tbody>
-
                               </table>
                             </div>
                           </div>
                         </div>
 
-                      </div>
-
-                      <div className="o-section">
                         <div className="o-board type-a">
                           <div className="board-container">
                             <div className="m-header">
@@ -463,19 +348,26 @@ function BSPAQ0301M() {
                             </div>
 
                             <ul className="m-bullets type-disc">
-                              <li className="c-color-strong">OTP발생기(OT003) 중 일련번호가 '0'으로 시작하는 경우 9자리를 입력하시기 바랍니다.</li>
-                              <li className="c-color-strong">기호 입력 예시: 가나(실물의 일련번호 앞뒤 한글을 한번에 모아서 입력)</li>
-                              <li className="c-color-strong">일련번호가 없는 중요용지의 경우 수량에 맞게 일련번호를 임의로 입력하시기 바랍니다. 예시) 1~100</li>
-                              <li className="c-color-strong">인수결재가 완료되어야 서무계 재고가 반영되오니 결재를 확인하시기 바랍니다.</li>
-                              <li>기호가 있는 품목은 반드시 입력하고, 기호가 없는 품목은 공란으로 등록하시기 바랍니다.</li>
+                              <li>(1) 영업점 자체폐기: 통장류, 거래처로부터 회수한 중요용지 [예금규정 13조]</li>
+                              <li>(2) 본부집중폐기 : (1)항목 외 [카드류, 어음수표류, 기타증서류 등]</li>
+                              <ul className="m-bullets type-hyphen">
+                                <li>반드시 BPR발송 <em className="c-color-strong">[미발송시 검사부 상시 감사대상]</em> </li>
+                                <li>폐기 등록 시 일련번호 오류 입력 건은 전산불일치로 반송되오니 유의</li>
+                              </ul>
                             </ul>
                           </div>
                         </div>
+
+                        <div className="m-footer">
+                          <ul className="m-bullets type-disc">
+                            <li className="c-color-strong">본 거래는 서무계 잔량을 차감시킵니다. 사무계에 잔량이 있는지 확인하시기 바랍니다.</li>
+                          </ul>
+                        </div>
+
                       </div>
 
                     </div>
                   </div>
-
                 </TabPanel>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
@@ -484,7 +376,8 @@ function BSPAQ0301M() {
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h2 className="o-heading level2"><span className="label">창구인도내역</span></h2>
+                          <h2 className="o-heading level2"><span className="label">폐기완료</span></h2>
+
                           <div className="o-length">
                             <span className="head">전체</span>
                             <em className="data">
@@ -501,12 +394,13 @@ function BSPAQ0301M() {
                           </div>
                         </div>
 
-                        <div className="main _primary rows-body-3i">
+                        <div className="main _primary rows-body-5i">
                           <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                           <div className="o-grid-table p-datatable">
                             <div className="table-container p-datatable-wrapper">
                               <table className="p-datatable-table p-datatable-scrollable-table">
                                 <colgroup>
+                                  <col className="wdth-10" />
                                   <col className="wdth-10" />
                                   <col />
                                   <col />
@@ -514,65 +408,106 @@ function BSPAQ0301M() {
                                   <col />
                                   <col />
                                   <col />
-                                  <col className="wdth-0" />
                                   <col />
                                   <col />
                                   <col />
                                   <col />
                                   <col className="wdth-0" />
+                                  <col />
+                                  <col />
+                                  <col />
+                                  <col />
                                   <col />
                                 </colgroup>
 
                                 <thead className="p-datatable-thead">
                                   <tr>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                                    <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서무계</span></div></th>
-                                    <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">창구</span></div></th>
-
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기상태</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정정연월일자</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                    <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
+                                    <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기책임자</span></div></th>
+                                    <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기취소책임자</span></div></th>
                                   </tr>
                                   <tr>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                                   </tr>
                                 </thead>
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={13}>등록된 데이터가 없습니다.</td>
+                                    <td colSpan={18}>등록된 데이터가 없습니다.</td>
                                   </tr>
                                 </tbody>
 
                                 <tbody className="p-datatable-tbody">
-                                {[...Array(2)].map((e, idx) => (
+                                {[...Array(24)].map((e, idx) => (
                                   <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                    <td><InputCheck label="선택" labelHidden /></td>
                                     <td>{idx + 1}</td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td>0465</td>
                                     <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                                    <td className="g-end">1,300</td>
-                                    <td>가바</td>
-                                    <td>0465</td>
+                                    <td>정상</td>
+                                    <td></td>
+                                    <td><span className="o-digit type-date">2025-12-25</span></td>
+                                    <td className="g-end">13</td>
+                                    <td className="g-end">13,610</td>
+                                    <td>다가</td>
+                                    <td>0022</td>
                                     <td>~</td>
-                                    <td>0465</td>
-                                    <td className="g-end">1,300</td>
-                                    <td>가바</td>
-                                    <td>0465</td>
-                                    <td>~</td>
-                                    <td>0465</td>
+                                    <td>2218686</td>
+                                    <td>0009</td>
+                                    <td>홍길동</td>
+                                    <td>0009</td>
+                                    <td>홍길동</td>
                                   </tr>
                                 ))}
                                 </tbody>
-
                               </table>
                             </div>
                           </div>
                         </div>
 
+                        <div className="m-footer">
+                          <ul className="m-bullets type-disc">
+                            <li className="c-color-strong">본 거래는 서무계 잔량을 차감시킵니다. 사무계에 잔량이 있는지 확인하시기 바랍니다.</li>
+                          </ul>
+                        </div>
+
+                      </div>
+
+                      <div className="o-section">
+
+                        <div className="o-board type-a">
+                          <div className="board-container">
+                            <div className="m-header">
+                              <strong className="o-heading"><span className="label">유의사항</span></strong>
+                            </div>
+
+                            <ol className="m-bullets type-disc">
+                              <li>(1) 영업점 자체폐기: 통장류, 거래처로부터 회수한 중요용지 [예금규정 13조]</li>
+                              <li>
+                                (2) 본부집중폐기 : (1)항목 외 [카드류, 어음수표류, 기타증서류 등]
+
+                                <ul className="m-bullets type-hyphen">
+                                  <li>반드시 BPR발송 <em className="c-color-strong">[미발송시 검사부 상시 감사대상]</em> </li>
+                                  <li>폐기 등록 시 일련번호 오류 입력 건은 전산불일치로 반송되오니 유의</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
                       </div>
 
                     </div>
@@ -589,4 +524,4 @@ function BSPAQ0301M() {
   );
 }
 
-export default BSPAQ0301M;
+export default BSPDU0301M;

@@ -186,7 +186,7 @@ function BSPDU0601M() {
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h2 className="o-heading level2h2"><span className="label">발송대상</span></h2>
+                          <h2 className="o-heading level2"><span className="label">발송대상</span></h2>
 
                           <div className="m-binds">
                             <div className="group">

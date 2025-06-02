@@ -91,6 +91,11 @@ function DEX() {
 
 
     {/*
+      업무지원시스템 재구축 프로젝트에 사용할 템플릿 파일입니다.
+      * 마크업 및 스타일시트 등 포함
+     */}
+
+    {/*
       2025-05-30 금
         툴팁: BSPDU0101M
 
@@ -122,6 +127,9 @@ function DEX() {
           (유사 key) 구양식폐기등록 품목폐지폐기등록
           (유사  키) 팝업 - 본부용도품일괄폐기- 용도품폐기 - HSPDU0901P01- PPT# 187
 
+          2025-06-02 월 팝업
+            textarea 2줄: '서류내용', '비고' : BSPDU0601P02
+            input 1줄: 취소 사유 : HSPBT0301P01
 
         [나중에 업데이트 필요]
         (폐기감사)감사/소각등록 ppt 170 :  HSPDU0501M // 특이사항: 레이블이 SelectBox
@@ -174,6 +182,8 @@ function DEX() {
             HSPHP0401P01
             조회
             표
+
+            엄청 긴 테이블 :
 
 
 
@@ -268,6 +278,24 @@ function DEX() {
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field colspan-2">
+                    <Label label={`부점`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input mode-required wdth-auto">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} disabled />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+
+                      <div className="o-form _select mode-required wdth-30">
+                        <XDropdown appendTo={'self'} className="bind" disabled />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>

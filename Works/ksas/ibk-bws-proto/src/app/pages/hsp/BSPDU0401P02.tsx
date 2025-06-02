@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 폐기 > 중요용지발송등록 ~ (LP)오손중요용지행내등기신청
+ * @description 중요용지·용도품(영업점) > 폐기 > 중요용지사고보고 ~ (LP)사고보고
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPDU0601P02() {
+function BSPDU0401P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -95,7 +95,7 @@ function BSPDU0601P02() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">오손발송(행내등기신청)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">사고보고</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -190,7 +190,7 @@ function BSPDU0601P02() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">오손중요용지 행내등기 신청정보</span></h5>
+                  <h5 className="o-heading level3"><span className="label">사고보고</span></h5>
                 </div>
 
                 <div className="main">
@@ -293,11 +293,34 @@ function BSPDU0601P02() {
           </div>
         </div>
 
+        <div className="m-binds type-end">
+          <div className="group _primary">
+            <CommonButton label="취소" className="_cancel" />
+            <CommonButton label="저장" className="_solid-primary" />
+          </div>
+        </div>
+
+        {/* test 2025-06-02
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
               <CommonButton label="저장" className="_solid-primary" />
+            </div>
+          </div>
+        </div> */}
+
+        <div className="o-section">
+          <div className="o-board type-a">
+            <div className="board-container type-sub">
+              <div className="m-header">
+                <strong className="o-heading"><span className="label">유의사항</span></strong>
+              </div>
+
+              <ul className="m-bullets type-disc">
+                <li className="c-color-strong">인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</li>
+                <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -326,4 +349,4 @@ function BSPDU0601P02() {
   );
 }
 
-export default BSPDU0601P02;
+export default BSPDU0401P02;

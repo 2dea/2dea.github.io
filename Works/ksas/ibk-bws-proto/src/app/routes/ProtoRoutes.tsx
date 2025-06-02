@@ -57,7 +57,14 @@ import BSPAQ0501M from    'app/pages/hsp/BSPAQ0501M';    // 중요용지·용도
 
 import BSPDU0101M from    'app/pages/hsp/BSPDU0101M';    // 중요용지·용도품(영업점) > 폐기    > 오손등록
 import BSPDU0601M from    'app/pages/hsp/BSPDU0601M';    // 중요용지·용도품(영업점) > 폐기    > 중요용지발송등록
-import BSPDU0601P02 from  'app/pages/hsp/BSPDU0601P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지발송등록
+import BSPDU0601P02 from  'app/pages/hsp/BSPDU0601P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지발송등록 ~ (LP)오손발송(행내등기신청)
+import BSPDU0201M from    'app/pages/hsp/BSPDU0201M';    // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회
+import BSPDU0201P02 from  'app/pages/hsp/BSPDU0201P02';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손이력조회
+import BSPDU0601P01 from  'app/pages/hsp/BSPDU0601P01';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손중요용지사유변경
+import BSPDU0301M from    'app/pages/hsp/BSPDU0301M';    // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기
+import BSPDU0301P01 from  'app/pages/hsp/BSPDU0301P01';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ (LP)구양식/서손폐기등록(영업점)
+
+import BSPDU0401P02 from  'app/pages/hsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고 ~ (LP)사고보고
 
 
 // proto 중요용지·용도품(본부)
@@ -126,6 +133,10 @@ import HSPHP0501M from    'app/pages/hsp/HSPHP0501M';    // 중요용지·용도
 import HSPSA0101M from    'app/pages/hsp/HSPSA0101M';    // 중요용지·용도품(본부) > 용도품계정관리        > 용도품계정출금내역조회
 
 import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도품(본부) > 대금정산 > 수입인지정산
+
+
+// proto 재난·안전관리
+import STMKY0201M from    'app/pages/stm/STMKY0201M';   // 재난·안전관리 > 열쇠관리 > 열쇠등록관리
 
 
 // proto 영업지원
@@ -225,6 +236,13 @@ function ProtoRoutes() {
         { path: 'BSPDU0101M',     element: <BSPDU0101M /> },
         { path: 'BSPDU0601M',     element: <BSPDU0601M /> },
         { path: 'BSPDU0601P02',   element: <BSPDU0601P02 /> },
+        { path: 'BSPDU0201M',     element: <BSPDU0201M /> },
+        { path: 'BSPDU0201P02',   element: <BSPDU0201P02 /> },
+        { path: 'BSPDU0601P01',   element: <BSPDU0601P01 /> },
+        { path: 'BSPDU0301M',     element: <BSPDU0301M /> },
+        { path: 'BSPDU0301P01',     element: <BSPDU0301P01 /> },
+
+        { path: 'BSPDU0401P02',   element: <BSPDU0401P02 /> },
 
         { path: 'HSPBT0101M',     element: <HSPBT0101M /> },
         { path: 'HSPBT0101P01',   element: <HSPBT0101P01 /> },
@@ -290,6 +308,13 @@ function ProtoRoutes() {
         { path: 'HSPSA0101M',     element: <HSPSA0101M /> },
 
         { path: 'HSPPC0201M',     element: <HSPPC0201M /> },
+      ],
+    },
+    { // 재난·안전관리
+      path: '/proto',
+      element: <Decorator />,
+      children: [
+        { path: 'STMKY0201M',   element: <STMKY0201M /> },
       ],
     },
     { // 영업지원

@@ -115,6 +115,7 @@ function BSPDU0101M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
+                <CommonButton label="선택" className="_solid-primary" />
                 <CommonButton label="추가" className="_solid-primary" />
                 <CommonButton label="오손등록요청" className="_solid-primary" />
               </div>
