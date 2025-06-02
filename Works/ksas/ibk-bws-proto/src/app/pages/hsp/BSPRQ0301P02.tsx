@@ -242,7 +242,7 @@ function BSPRQ0301P02() {
                             <td className="g-start">국민관광상품권1만원권</td>
                             <td>제외</td>
                             <td>등록</td>
-                            <td>결제승인</td>
+                            <td>결재승인</td>
                             <td>P2025</td>
                             <td>홍길동</td>
                           </tr>

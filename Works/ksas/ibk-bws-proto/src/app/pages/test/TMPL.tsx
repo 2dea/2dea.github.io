@@ -187,7 +187,18 @@ function TMPL() {
                     <div className="main">
                       <strong className="r-strong">[관리자공지]</strong> 처리완료를 통해 대금정산기본의 처리상태를 완료상태로 변경
                     </div>
+
+                    <div className="binds">
+                      <CommonButton label="바로가기" className="_texted-primary" icon="link" />
+                    </div>
                   </div>
+                </div>
+
+                <div className="o-board type-a style-fit">
+                  <ul className="m-bullets type-disc">
+                    <li className="c-color-strong">품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</li>
+                    <li className="c-color-strong">자동배송 품목 등록 및 제외는 부점장 결재 완료 후 반영되므로 결재요청 필수</li>
+                  </ul>
                 </div>
 
                 <form className="m-filter-form">
@@ -412,6 +423,14 @@ function TMPL() {
 
                     <div className="o-helper style-strong">
                       <strong className="label">헬퍼텍스트</strong>
+                    </div>
+
+                    <div className="o-legend type-helper style-normal">
+                      <strong className="label">우측 헬퍼텍스트(일반)</strong>
+                    </div>
+
+                    <div className="o-legend type-helper style-strong">
+                      <strong className="label">우측 헬퍼텍스트(강조)</strong>
                     </div>
 
                     <div className="m-binds">
@@ -820,6 +839,12 @@ function TMPL() {
                       <div className="board-container type-sub">
                         <div className="m-header">
                           <strong className="o-heading"><span className="label">여신자필서류(STP)</span></strong>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="안내문 상세보기" className="_texted-primary" icon="link" />
+                            </div>
+                          </div>
                         </div>
 
                         <ul className="m-bullets type-disc">

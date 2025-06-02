@@ -383,7 +383,7 @@ function BSPAQ0301M() {
                         <div className="m-binds">
                           <div className="group">
                             <CommonButton label="취소" icon="du-up" className="_normal" />
-                            <CommonButton label="선택" icon="du-down" className="_normal" />
+                            <CommonButton label="추가" icon="du-down" className="_normal" />
                           </div>
                         </div>
                       </div>
@@ -453,6 +453,25 @@ function BSPAQ0301M() {
                           </div>
                         </div>
 
+                      </div>
+
+                      <div className="o-section">
+                        <div className="o-board type-a">
+                          <div className="board-container">
+                            <div className="m-header">
+                              <strong className="o-heading"><span className="label">유의사항</span></strong>
+                            </div>
+
+                            <ul className="m-bullets type-disc">
+                              <li className="c-color-strong">인수결재가 완료되어야 서무계 재고가 반영되오니 결재를 확인하시기 바랍니다.</li>
+                              <li className="c-color-strong">기호 입력 예시: 가나(실물의 일련번호 앞뒤 한글을 한번에 모아서 입력)</li>
+                              <li className="c-color-strong">일련번호 옆 조회버튼을 클릭하여 서무계 재고를 확인하시기 바랍니다.</li>
+                              <li>조회 시 일련번호가 없는 중요용지의 경우 수량에 맞게 일련번호를 임의로 입력하시기 바랍니다. 예시) 1~100</li>
+                              <li>OTP발생기(OT003) 중 일련번호가 '0'으로 시작하는 경우 9자리를 입력하시기 바랍니다.</li>
+                              <li>기호가 있는 품목은 반드시 입력하고, 기호가 없는 품목은 공란으로 등록하시기 바랍니다.</li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
 
                     </div>

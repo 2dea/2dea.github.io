@@ -264,6 +264,12 @@ function BSPDU0101M() {
                     </div>
                   </div>
                 </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>통합단말에서 등록된 정보가 노출됩니다.</li>
+                  </ul>
+                </div>
               </div>
 
 

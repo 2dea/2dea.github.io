@@ -126,6 +126,13 @@ function BSPRQ0301M() {
           <div className="o-grid">
             <div className="column">
 
+              <div className="o-board type-a style-fit">
+                <ul className="m-bullets type-disc">
+                  <li className="c-color-strong">품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</li>
+                  <li className="c-color-strong">자동배송 품목 등록 및 제외는 부점장 결재 완료 후 반영되므로 결재요청 필수</li>
+                </ul>
+              </div>
+
               <form className="m-filter-form">
                 <div className="fieldset">
 
@@ -371,7 +378,7 @@ function BSPRQ0301M() {
                             <td>수표어음료</td>
                             <td>0001</td>
                             <td className="g-start">Box연계시스템</td>
-                            <td>등록</td>
+                            <td>제외</td>
                             <td className="g-end">60,269</td>
                             <td className="g-end">0</td>
                             <td>월평균 사용량의 30%이하</td>

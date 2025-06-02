@@ -260,6 +260,11 @@ function BSPFD0901M() {
               <div className="o-section">
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">일련번호 원장수정 내역</span></h2>
+
+                  <div className="o-helper style-strong">
+                    <strong className="label">서무계 원장만 수정 가능하며, 매수와 일치된 일련번호 등록 시만 거래 가능합니다.</strong>
+                  </div>
+
                   <div className="o-length">
                     <span className="head">전체</span>
                     <em className="data">

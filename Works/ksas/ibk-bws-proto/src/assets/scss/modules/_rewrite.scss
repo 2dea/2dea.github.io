@@ -360,17 +360,17 @@
     border-bottom: $e10 solid var(--color-edge-40);
 
     .o-heading  {
-    padding-left: 0;
+      padding-left: 0;
 
-    &:before  {
-      background: none;
-    }
+      &:before  {
+        background: none;
+      }
 
-    >.label {
-      @include inc-ellipsis();
-      display: block;
-      overflow: hidden;
-    }
+      >.label {
+        @include inc-ellipsis();
+        display: block;
+        overflow: hidden;
+      }
     }
   }
 
@@ -451,45 +451,45 @@
   }
 
   .p-dialog-header  {
-  @include setReset();
+    @include setReset();
 
-  padding: $margin-section-40 $margin-popup-inline;
-  padding-right: calc($margin-popup-inline - $margin-section-30);
-  border-bottom: $e10 solid var(--color-edge-40);
-  background-color: inherit;
-  border-radius: var(--radius) var(--radius) 0 0;
+    padding: $margin-section-40 $margin-popup-inline;
+    padding-right: calc($margin-popup-inline - $margin-section-30);
+    border-bottom: $e10 solid var(--color-edge-40);
+    background-color: inherit;
+    border-radius: var(--radius) var(--radius) 0 0;
 
-  >*  {
-    flex: none;
-    min-width: 0;
-  }
-
-  .p-dialog-title  {
-    flex: 1 0 0;
-    display: flex;
-    align-items: center;
-    min-height: $height-form-70;
-
-    >* {
-    min-width: 0;
-    }
-  }
-
-  .o-heading  {
-    font-size: $font-90;
-    line-height: $line-90;
-    padding-left: 0;
-
-    &:before  {
-    background: none;
+    >*  {
+      flex: none;
+      min-width: 0;
     }
 
-    >.label {
-    @include inc-ellipsis();
-    display: block;
-    overflow: hidden;
+    .p-dialog-title  {
+      flex: 1 0 0;
+      display: flex;
+      align-items: center;
+      min-height: $height-form-70;
+
+      >* {
+      min-width: 0;
+      }
     }
-  }
+
+    .o-heading  {
+      font-size: $font-90;
+      line-height: $line-90;
+      padding-left: 0;
+
+      &:before  {
+        background: none;
+      }
+
+      >.label {
+        @include inc-ellipsis();
+        display: block;
+        overflow: hidden;
+      }
+    }
   }
 
   .p-dialog-content  {

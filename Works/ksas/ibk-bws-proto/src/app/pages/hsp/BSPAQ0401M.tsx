@@ -373,7 +373,7 @@ function BSPAQ0401M() {
                           <div className="m-binds">
                             <div className="group">
                               <CommonButton label="취소" icon="du-up" className="_normal" />
-                              <CommonButton label="선택" icon="du-down" className="_normal" />
+                              <CommonButton label="추가" icon="du-down" className="_normal" />
                             </div>
                           </div>
                         </div>
@@ -443,6 +443,25 @@ function BSPAQ0401M() {
                             </div>
                           </div>
 
+                        </div>
+
+                        <div className="o-section">
+                          <div className="o-board type-a">
+                            <div className="board-container">
+                              <div className="m-header">
+                                <strong className="o-heading"><span className="label">유의사항</span></strong>
+                              </div>
+
+                              <ul className="m-bullets type-disc">
+                                <li className="c-color-strong">OTP발생기(OT003) 중 일련번호 자리수가 10자리인 경우 앞에서부터 9자리를 입력하시기 바랍니다.</li>
+                                <li className="c-color-strong">기호 입력 예시: 가나(실물의 일련번호 앞뒤 한글을 한번에 모아서 입력)</li>
+                                <li className="c-color-strong">일련번호가 없는 중요용지의 경우 수량에 맞게 일련번호를 임의로 입력하시기 바랍니다. 예시) 1~100</li>
+                                <li>일련번호 기호 입력 시 숫자는 입력하실 수 없습니다.</li>
+                                <li>수량과 (기호) 시작일련번호 입력 시 종료일련번호가 자동 산출됩니다.</li>
+                                <li>기호가 있는 품목은 반드시 입력하고, 기호가 없는 품목은 공란으로 등록하시기 바랍니다.</li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
 
                       </div>
