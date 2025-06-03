@@ -109,7 +109,7 @@ function BSPRQ0501M() {
             <div className="m-binds type-start">
 
               <div className="group _assistive">
-                <CommonButton label="도움말" icon="help" className="_normal" />
+                <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
 

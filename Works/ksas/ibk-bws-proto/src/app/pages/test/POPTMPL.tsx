@@ -256,7 +256,7 @@ function POPTMPL() {
               <div className="m-divider">
                 <div className="m-binds">
                   <div className="group">
-                    <CommonButton label="관련화면매핑" icon="du-down" className="_normal" />
+                    <CommonButton label="관련화면매핑" className="_normal" icon="du-down" />
                   </div>
                 </div>
               </div>

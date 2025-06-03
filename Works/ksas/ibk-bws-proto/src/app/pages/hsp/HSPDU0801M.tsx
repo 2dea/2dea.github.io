@@ -109,7 +109,7 @@ function HSPDU0801M() {
             <div className="m-binds type-start">
 
               <div className="group _assistive">
-                <CommonButton label="도움말" icon="help" className="_normal" />
+                <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
 
@@ -183,7 +183,7 @@ function HSPDU0801M() {
                   <CommonButton label="조회" className="_inquire" />
                 </div>
               </form>
-              
+
               <form className="m-filter-form">
                 <div className="fieldset">
 

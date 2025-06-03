@@ -197,7 +197,7 @@ function ADMPA0301P01() {
               <div className="m-divider">
                 <div className="m-binds">
                   <div className="group">
-                    <CommonButton label="선택항목추가" icon="du-down" className="_normal" />
+                    <CommonButton label="선택항목추가" className="_normal" icon="du-down" />
                   </div>
                 </div>
               </div>

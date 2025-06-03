@@ -113,7 +113,7 @@ function HSPBT0401M() {
               </div>
 
               <div className="group _assistive">
-                <CommonButton label="도움말" icon="help" className="_normal" />
+                <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
 
