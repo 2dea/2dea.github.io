@@ -103,7 +103,7 @@ function STMKY0201M() {
           <div className="binds">
             <div className="m-binds type-start">
               <div className="group _assistive">
-                <CommonButton label="도움말" icon="help" className="_normal" />
+                <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
 
@@ -352,7 +352,7 @@ function STMKY0201M() {
                             <Label label={`열쇠관리번호`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
+
                           </td>
 
                           <th colSpan={1}>
@@ -361,7 +361,7 @@ function STMKY0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select mode-required wdth-30">
+                                <div className="o-form _select mode-required wdth-40">
                                   <XDropdown appendTo={document.body} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -380,7 +380,7 @@ function STMKY0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select mode-required">
+                                <div className="o-form _select mode-required wdth-50">
                                   <XDropdown appendTo={document.body} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -389,12 +389,12 @@ function STMKY0201M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`등록구분(금고기준)`} require={true} />
+                            <Label label={`등록구분​(금고기준)`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select mode-required">
+                                <div className="o-form _select mode-required wdth-50">
                                   <XDropdown appendTo={document.body} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -410,7 +410,7 @@ function STMKY0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input mode-required wdth-40 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -425,7 +425,7 @@ function STMKY0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input wdth-40 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -442,7 +442,7 @@ function STMKY0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input wdth-40 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -457,7 +457,7 @@ function STMKY0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input wdth-40 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -488,7 +488,7 @@ function STMKY0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-30">
+                                <div className="o-form _input wdth-40">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -513,7 +513,6 @@ function STMKY0201M() {
                           </td>
                         </tr>
 
-
                         <tr>
                           <th colSpan={1}>
                             <Label label={`메모`} require={false} />
@@ -523,6 +522,43 @@ function STMKY0201M() {
                               <div className="fields">
                                 <div className="o-form _input">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`열쇠이미지​첨부`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="m-flex-list">
+                              <div className="m-upload-image">
+                                <div className="main">
+                                  <strong className="label">앞면</strong>
+                                  <span className="o-object style-fit">
+                                    <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+                                    <ImageButton label="열쇠​이미지​보기" icon="maximize" size={50} />
+                                  </span>
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="파일선택" className="_normal" />
+                                  <CommonButton label="파일다운" className="_normal" />
+                                </div>
+                              </div>
+
+                              <div className="m-upload-image">
+                                <div className="main">
+                                  <strong className="label">뒷면</strong>
+                                  <span className="o-object style-fit">
+                                    <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+                                    <ImageButton label="열쇠​이미지​보기" icon="maximize" size={50} />
+                                  </span>
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="파일선택" className="_normal" />
+                                  <CommonButton label="파일다운" className="_normal" />
                                 </div>
                               </div>
                             </div>

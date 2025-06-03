@@ -650,7 +650,3 @@
 .o-loading-layer:not(.js_show)  { animation: ANI_fade forwards; }
 .o-loading-layer:not(.js_show) >*  { animation: ANI_fadeOut forwards; animation-duration: inherit; }
 .o-loading-layer.js_show >*  { animation: ANI_fadeIn forwards; animation-duration: inherit; }
-
-
-.m-flex-list { display: flex; flex-flow: row wrap; align-items: center; gap: 1em; }
-.m-flex-list >* { min-width: 0; outline: 1px solid Orange; outline-offset: 1px; }

@@ -32,9 +32,9 @@
   --typo-code:          var(--typo-mono), monospace;
 
   --text-size-int:      11;
-  --text-size:          calc(1em / var(--root-em-int, 16) * var(--text-size-int, 15));
+  --text-size:          1em / var(--root-em-int, 16) * var(--text-size-int, 15);
   --text-height-int:    14;
-  --text-height:        calc(var(--text-height-int, 16) / var(--text-size-int, 12));
+  --text-height:        var(--text-height-int, 16) / var(--text-size-int, 12);
 
   --color-ground: White;
   --color-edge-40: Silver;
@@ -65,7 +65,7 @@ th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: in
 
 *  { margin: 0; padding: 0; }
 html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); scroll-behavior: smooth; }
-body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40); font-size: var(--text-size); line-height: var(--text-height); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); }
+body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); }
 
 body  { padding: 10px; }
 a  { cursor: text; }
@@ -9753,7 +9753,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="scid">STMKY0201M</td>
 			<td class="link"><a target="page" href="/proto/STMKY0201M">STMKY0201M</a></td>
 			<td class="auth"><span class="name DEL"></span></td>
-			<td class="done"><span class="date DEL">2025-06-02</span></td>
+			<td class="done"><span class="date DEL">2025-06-04</span></td>
 			<td class="note">
 				<p class="__CLASSNAME__"></p>
 			</td>

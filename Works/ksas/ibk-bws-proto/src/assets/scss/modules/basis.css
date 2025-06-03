@@ -97,9 +97,10 @@
   --text-feature:       var(--text-feature-base, normal);
 
   --text-size-int:      var(--font-50-int);
-  --text-size:          calc(1em / var(--root-em-int, 16) * var(--text-size-int, 15));
+  --text-size:          1em / var(--root-em-int, 16) * var(--text-size-int, 15);
   --text-height-int:    var(--line-50-int);
-  --text-height:        calc(var(--text-height-int, 16) / var(--text-size-int, 12));
+  --text-height:        var(--text-height-int, 16) / var(--text-size-int, 12);
+  --text-height-rel:    calc(1em * 16 / 12);
   --text-height-para:   calc(1em * 18 / 12);
 
   --text-spacing:       0;
@@ -143,6 +144,7 @@
   @supports (line-height: round(down, 1, 1)) {
     /* --text-height:        round(down, calc(1em * var(--text-height-int, 16) / var(--text-size-int, 12)), 2px);
     --text-height:        remove-unit(round(down, calc(1em * var(--text-height-int, 16) / var(--text-size-int, 12)), 2px)); */
+    --text-height-rel:    round(down, calc(1em * 16 / 12), 2px);
     --text-height-para:   round(down, calc(1em * 18 / 12), 2px);
   }
 }

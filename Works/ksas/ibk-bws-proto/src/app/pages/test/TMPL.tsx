@@ -119,7 +119,7 @@ function TMPL() {
           {/* <div className="m-binds type-start">
             <div className="group">
               <CommonButton label="화면잠금" icon="lock" className="_normal" />
-              <CommonButton label="도움말" icon="help" className="_normal" />
+              <CommonButton label="도움말" className="_normal" icon="help" />
             </div>
           </div> */}
 
@@ -133,7 +133,7 @@ function TMPL() {
               </div>
 
               <div className="group _assistive">
-                <CommonButton label="도움말" icon="help" className="_normal" />
+                <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
 
@@ -186,11 +186,12 @@ function TMPL() {
 
                     <div className="main">
                       <strong className="r-strong">[관리자공지]</strong> 처리완료를 통해 대금정산기본의 처리상태를 완료상태로 변경
+                      <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">바로가기<Icon icon="link" /></a></span>
                     </div>
 
-                    <div className="binds">
-                      <CommonButton label="바로가기" className="_texted-primary" icon="link" />
-                    </div>
+                    {/* <div className="binds">
+                      <a href="javascript:" className="o-link texted-button _primary">바로가기<Icon icon="link" /></a>
+                    </div> */}
                   </div>
                 </div>
 
@@ -773,9 +774,12 @@ function TMPL() {
                             </th>
                             <td colSpan={5}>
                               <ul>
+                                <li><a href="javascript:" className="o-link texted-button _primary">바로가기<Icon icon="link" /></a></li>
                                 <li><a href="javascript:" className="o-link _normal">Links (._normal)</a></li>
-                                <li><a href="javascript:" className="o-link style-texted _normal">Links (.style-texted._normal)(미사용)</a></li>
-                                <li><a href="javascript:" className="o-link style-texted _primary">Links (.style-texted._normal)(미사용)</a></li>
+                                <li><a href="javascript:" className="o-link texted-button _normal">Links (a.texted-button._normal)(미사용)</a></li>
+                                <li><a href="javascript:" className="o-link texted-button _primary">Links (a.texted-button._primary)</a></li>
+                                <li><button type="button" className="o-link texted-button _normal">Links (button.texted-button._primary)(미사용)</button></li>
+                                <li><button type="button" className="o-link texted-button _primary">Links (button.texted-button._primary)(미사용)</button></li>
                               </ul>
                             </td>
                           </tr>
@@ -843,6 +847,7 @@ function TMPL() {
                           <div className="m-binds">
                             <div className="group">
                               <CommonButton label="안내문 상세보기" className="_texted-primary" icon="link" />
+                              <a href="javascript:" className="o-link texted-button _primary">안내문 상세보기<Icon icon="link" /></a>
                             </div>
                           </div>
                         </div>
