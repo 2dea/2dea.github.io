@@ -136,10 +136,23 @@ import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도
 
 
 // proto 재난·안전관리
+import STMGD0101M from    'app/pages/stm/STMGD0101M';     // 재난·안전관리 > 기계경비당직관리 > 당직신청관리
+
+import STMKY0101M from    'app/pages/stm/STMKY0101M';     // 재난·안전관리 > 열쇠관리 > 열쇠종류관리
 import STMKY0201M from    'app/pages/stm/STMKY0201M';     // 재난·안전관리 > 열쇠관리 > 열쇠등록관리
+import STMKY0201P02 from  'app/pages/stm/STMKY0201P02';   // 재난·안전관리 > 열쇠관리 > 열쇠등록관리 ~ (LP)열쇠폐기
 import STMKY0201P03 from  'app/pages/stm/STMKY0201P03';   // 재난·안전관리 > 열쇠관리 > 열쇠등록관리 ~ (LP)열쇠별보관담당자
+import STMKY0301M from    'app/pages/stm/STMKY0301M';     // 재난·안전관리 > 열쇠관리 > 열쇠인수도관리
+import STMKY0301P01 from  'app/pages/stm/STMKY0301P01';   // 재난·안전관리 > 열쇠관리 > 열쇠인수도관리 ~ (LP)열쇠인수도취소
+
 
 import STMKY0401P01 from  'app/pages/stm/STMKY0401P01';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)열쇠이미지보기
+import STMKY0401P02 from  'app/pages/stm/STMKY0401P02';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠위탁요청
+import STMKY0401P04 from  'app/pages/stm/STMKY0401P04';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠반납요청
+import STMKY0401P06 from  'app/pages/stm/STMKY0401P06';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠위탁승인
+import STMKY0401P08 from  'app/pages/stm/STMKY0401P08';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠반납승인
+import STMKY0401P10 from  'app/pages/stm/STMKY0401P10';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠보관확인증관리
+import STMKY0601M from    'app/pages/stm/STMKY0601M';     // 재난·안전관리 > 열쇠관리 > 관련조회 및 출력
 
 
 // proto 영업지원
@@ -317,10 +330,23 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
+        { path: 'STMGD0101M',   element: <STMGD0101M /> },
+
+        { path: 'STMKY0101M',   element: <STMKY0101M /> },
         { path: 'STMKY0201M',   element: <STMKY0201M /> },
+        { path: 'STMKY0201P02', element: <STMKY0201P02 /> },
         { path: 'STMKY0201P03', element: <STMKY0201P03 /> },
+        { path: 'STMKY0301M',   element: <STMKY0301M /> },
+        { path: 'STMKY0301P01', element: <STMKY0301P01 /> },
 
         { path: 'STMKY0401P01', element: <STMKY0401P01 /> },
+        { path: 'STMKY0401P02', element: <STMKY0401P02 /> },
+        { path: 'STMKY0401P04', element: <STMKY0401P04 /> },
+        { path: 'STMKY0401P06', element: <STMKY0401P06 /> },
+        { path: 'STMKY0401P08', element: <STMKY0401P08 /> },
+        { path: 'STMKY0401P10', element: <STMKY0401P10 /> },
+        { path: 'STMKY0601M',   element: <STMKY0601M /> },
+
       ],
     },
     { // 영업지원

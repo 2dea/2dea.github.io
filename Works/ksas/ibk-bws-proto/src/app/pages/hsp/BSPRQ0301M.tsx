@@ -128,8 +128,8 @@ function BSPRQ0301M() {
 
               <div className="o-board type-a style-fit">
                 <ul className="m-bullets type-disc">
-                  <li className="c-color-strong">품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</li>
-                  <li className="c-color-strong">자동배송 품목 등록 및 제외는 부점장 결재 완료 후 반영되므로 결재요청 필수</li>
+                  <li className="c-color-strong"><em>품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</em></li>
+                  <li className="c-color-strong"><em>자동배송 품목 등록 및 제외는 부점장 결재 완료 후 반영되므로 결재요청 필수</em></li>
                 </ul>
               </div>
 

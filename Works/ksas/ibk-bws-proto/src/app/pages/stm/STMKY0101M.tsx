@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 조회 > 수표발급점포조회
+ * @description 재난·안전관리 > 열쇠관리 > 열쇠종류관리
  */
 
 // dependency
@@ -34,17 +34,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPFD0701M() {
-  // Dialog
-  // const [visible, setVisible] = useState<boolean>(true);
-
+function STMKY0101M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
-  const viewimageOverlay1 = useRef(null);
-  const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '조회' }, { label: '수표발급점포조회' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '열쇠관리' }, { label: '열쇠종류관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +93,7 @@ function BSPFD0701M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">수표발급점포조회</span>
+                <span className="label">열쇠종류관리</span>
 
                 <Favorite />
               </h1>
@@ -107,57 +102,32 @@ function BSPFD0701M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
 
+            <div className="m-binds type-end">
+              <div className="group _primary">
+                <CommonButton label="삭제" className="_delete" />
+                <CommonButton label="저장" className="_solid-primary" />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="o-grid">
-            <div className="column">
+          <Splitter gutterSize={0} className="o-grid">
+            <SplitterPanel minSize={17.5} className="column">
 
               <form className="m-filter-form">
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={true} />
+                    <Label label={`부점`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`일련번호`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input mode-required">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
-                </div>
-              </form>
-
-              <form className="m-filter-form">
-                <div className="fieldset">
-
-                  <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input mode-required">
+                      <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
@@ -168,10 +138,30 @@ function BSPFD0701M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`일련번호`} require={true} />
+                    <Label label={`열쇠구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`열쇠유형`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`사용여부`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -186,7 +176,8 @@ function BSPFD0701M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">발급점포내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">열쇠종류내역</span></h2>
+
                   <div className="o-length">
                     <span className="head">전체</span>
                     <em className="data">
@@ -196,6 +187,7 @@ function BSPFD0701M() {
                   </div>
 
                   <div className="m-binds">
+
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
@@ -203,7 +195,7 @@ function BSPFD0701M() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -217,61 +209,74 @@ function BSPFD0701M() {
                           <col />
                           <col />
                           <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠종류코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠유형</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용유형</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+                          </tr>
+                          <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={12}>등록된 데이터가 없습니다.</td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(10)].map((e, idx) => (
+                        {[...Array(5)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>가나</td>
-                            <td>0465</td>
-                            <td>창구인도</td>
+                            <td>012345</td>
+                            <td className="g-start">겉문열쇠</td>
+                            <td>금고실</td>
+                            <td>열쇠</td>
+                            <td>Y</td>
+                            <td>012345</td>
+                            <td className="g-start">프로세스혁신부</td>
+                            <td>012345</td>
+                            <td>홍길동</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>1111</td>
-                            <td className="g-start">김천</td>
                             <td className="g-start"></td>
                           </tr>
                         ))}
                         </tbody>
-
                       </table>
                     </div>
                   </div>
                 </div>
-
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li className="c-color-strong"><em>조회된 데이터 중 수표류를 제외한 품목은 부정확할 수 있습니다.</em></li>
-                  </ul>
-                </div>
               </div>
+
+            </SplitterPanel>
+
+            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">주요출급번호</span></h3>
+                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="과거 기호(일련번호) 다운로드" className="_normal" icon="excel-download-label" />
+                      <CommonButton label="신규" className="_create" />
                     </div>
                   </div>
                 </div>
@@ -284,69 +289,128 @@ function BSPFD0701M() {
                         <col className="data" />
                         <col className="head" />
                         <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`10079`} require={false} />
+                            <Label label={`부점`} require={true} />
                           </th>
                           <td colSpan={1}>
-                            정액10만원권자기앞수표
+                            [0810] 프로세스혁신
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`10085`} require={false} />
+                            <Label label={`등록자`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            정액50만원권자기앞수표
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`10091`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            일반자기앞수표
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`10518`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            가계수표 100만원 이하
+                            [0810] 홍길동
                           </td>
                         </tr>
+
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`10547`} require={false} />
+                            <Label label={`등록일자`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            가계수표 300만원 이하
+                            <span className="o-digit type-date">2025-12-25</span>
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`10531`} require={false} />
+                            <Label label={`열쇠종류코드`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            가계수표 500만원 이하
+
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`열쇠명`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`열쇠구분`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`열쇠유형`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`10122`} require={false} />
+                            <Label label={`사용여부`} require={true} />
                           </th>
                           <td colSpan={1}>
-                            비정액자기앞수표(1억초과)
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
                           </td>
+                        </tr>
 
+                        <tr>
                           <th colSpan={1}>
-                            <Label label={`10139`} require={false} />
+                            <Label label={`주관부서`} require={false} />
                           </th>
-                          <td colSpan={1}>
-                            비정액자기앞수표(1억이하)
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                </div>
+                              </div>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -355,13 +419,14 @@ function BSPFD0701M() {
                 </div>
               </div>
 
-            </div>
-          </div>
+            </SplitterPanel>
+          </Splitter>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
+
       </div>
     </>
   );
 }
 
-export default BSPFD0701M;
+export default STMKY0101M;

@@ -276,7 +276,7 @@ function BSPDU0601M() {
 
                         <div className="m-footer">
                           <ul className="m-bullets type-disc">
-                            <li className="c-color-strong">오손등록 후 결재완료된 경우 발송대상 내역에서 조회가 능합니다.</li>
+                            <li className="c-color-strong"><em>오손등록 후 결재완료된 경우 발송대상 내역에서 조회가 능합니다.</em></li>
                           </ul>
                         </div>
 
