@@ -197,8 +197,9 @@ function TMPL() {
 
                 <div className="o-board type-a style-fit">
                   <ul className="m-bullets type-disc">
-                    <li className="c-color-strong">품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</li>
-                    <li className="c-color-strong">자동배송 품목 등록 및 제외는 부점장 결재 완료 후 반영되므로 결재요청 필수</li>
+                    <li>문의 : <span className="o-consult"><strong className="head">안전관리실</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463</span></span></span></li>
+                    <li className="c-color-strong"><em>품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</em></li>
+                    <li className="c-color-strong"><em>자동배송 품목 등록 및 제외는 부점장 결재 완료 후 반영되므로 결재요청 필수</em></li>
                   </ul>
                 </div>
 
@@ -825,7 +826,7 @@ function TMPL() {
                       </div>
 
                       <ul className="m-bullets type-disc">
-                        <li className="c-color-strong">인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</li>
+                        <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
                         <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
                       </ul>
                     </div>
@@ -864,7 +865,7 @@ function TMPL() {
                         </div>
 
                         <ul className="m-bullets type-disc">
-                          <li className="c-color-strong">인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</li>
+                          <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
                           <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
                         </ul>
                       </div>
@@ -3229,7 +3230,7 @@ function TMPL() {
                   <div className="m-footer">
                     <ul className="m-bullets type-disc">
                       <li>권한요청문의 : IT금융개발부 / 031-1234-5678</li>
-                      <li className="c-color-strong">비정액자기앞수표(1억이하)</li>
+                      <li className="c-color-strong"><em>비정액자기앞수표(1억이하)</em></li>
                     </ul>
                   </div>
                 </div>

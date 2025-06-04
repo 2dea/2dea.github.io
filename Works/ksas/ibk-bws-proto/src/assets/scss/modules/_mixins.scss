@@ -47,6 +47,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  color: inherit;
   background: $tp;
   border-radius: 0;
 
@@ -60,7 +61,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    color: inherit;
+    // color: inherit;
     border-radius: 0;
     cursor: inherit;
     transition: inherit;

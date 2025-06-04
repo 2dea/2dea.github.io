@@ -107,8 +107,8 @@ function STMKY0201P03() {
 
                 <div className="main">
                   <figure className="o-figure">
-                    <div className="main">
-                      <img src={require("assets/images/content/STMKY0201P03_010.png")} alt="" />
+                    <div className="body">
+                      <img src={require("assets/images/media/STMKY0201P03_010.png")} alt="" />
                     </div>
                   </figure>
                 </div>
@@ -121,8 +121,8 @@ function STMKY0201P03() {
 
                 <div className="main">
                   <figure className="o-figure">
-                    <div className="main">
-                      <img src={require("assets/images/content/STMKY0201P03_020.png")} alt="" />
+                    <div className="body">
+                      <img src={require("assets/images/media/STMKY0201P03_020.png")} alt="" />
                     </div>
                   </figure>
                 </div>
