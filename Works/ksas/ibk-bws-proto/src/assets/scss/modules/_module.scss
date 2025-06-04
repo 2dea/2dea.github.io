@@ -341,6 +341,12 @@
 .m-upload-image >.main .o-object .o-image-button:before  { background-position: 75%; }
 .m-upload-image >.binds  { display: flex; justify-content: center; gap: $gap-element-30; margin-top: $gap-element-50; }
 
+.m-upload-image >.main .o-object:empty  { border-style: dotted; background: var(--color-ground-30); }
+.m-upload-image >.main .o-object:empty:before  { content: none; }
+
+.m-upload-image.type-choose >.main >.label  { @include inc-abscenter; font-weight: inherit; position: absolute; z-index: 1; margin: 0; color: var(--color-text-20); }
+.m-upload-image.type-choose >.main .o-object >*  { z-index: 2; }
+
 
 .m-flex-list { display: flex; flex-flow: row wrap; gap: var(--gap, #{$gap-element-50}); }
 .m-flex-list >* { flex: none; min-width: 0; }

@@ -95,6 +95,8 @@ function DEX() {
       * 마크업 및 스타일시트 등 포함
      */}
 
+     {/* https://figma.com/ @ ego2dea@gmail.com : 2dea.com */}
+
     {/*
       2025-05-30 금
         툴팁: BSPDU0101M
@@ -183,7 +185,7 @@ function DEX() {
             조회
             표
 
-            엄청 긴 테이블 :
+            엄청 긴 테이블 : BSPDU0201M
 
 
 

@@ -152,9 +152,9 @@ function STMKY0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`삭제여부`} require={true} />
+                    <Label label={`열쇠구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -162,9 +162,9 @@ function STMKY0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`주관부서`} require={true} />
+                    <Label label={`주관부서`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -172,9 +172,9 @@ function STMKY0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`열쇠상태`} require={true} />
+                    <Label label={`열쇠상태`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -534,13 +534,50 @@ function STMKY0201M() {
                           </th>
                           <td colSpan={3}>
                             <div className="m-flex-list">
+                              <div className="m-upload-image type-choose">{/* .m-upload-image.type-choose { @DEV } */}
+                                <div className="main">
+                                  <div className="header">
+                                    <strong className="label">앞면</strong>
+                                  </div>
+                                  <div className="o-object style-fit"><img src={require("assets/images/common/img_empty-image.png")} alt="" /></div>
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="파일삭제" className="_normal" />
+                                  <CommonButton label="파일선택" className="_normal" />
+                                </div>
+                              </div>
+
+                              <div className="m-upload-image type-choose">{/* .m-upload-image.type-choose { @DEV } */}
+                                <div className="main">
+                                  <div className="header">
+                                    <strong className="label">뒷면</strong>
+                                  </div>
+                                  <div className="o-object style-fit"></div>
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="파일삭제" className="_normal" />
+                                  <CommonButton label="파일선택" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`열쇠이미지​첨부`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="m-flex-list">
                               <div className="m-upload-image">
                                 <div className="main">
-                                  <strong className="label">앞면</strong>
-                                  <span className="o-object style-fit">
+                                  <div className="header">
+                                    <strong className="label">앞면</strong>
+                                  </div>
+                                  <div className="o-object style-fit">
                                     <img src={require("assets/images/common/img_empty-image.png")} alt="" />
                                     <ImageButton label="열쇠​이미지​보기" icon="maximize" size={50} />
-                                  </span>
+                                  </div>
                                 </div>
                                 <div className="binds">
                                   <CommonButton label="파일선택" className="_normal" />
@@ -550,11 +587,13 @@ function STMKY0201M() {
 
                               <div className="m-upload-image">
                                 <div className="main">
-                                  <strong className="label">뒷면</strong>
-                                  <span className="o-object style-fit">
+                                  <div className="header">
+                                    <strong className="label">뒷면</strong>
+                                  </div>
+                                  <div className="o-object style-fit">
                                     <img src={require("assets/images/common/img_empty-image.png")} alt="" />
                                     <ImageButton label="열쇠​이미지​보기" icon="maximize" size={50} />
-                                  </span>
+                                  </div>
                                 </div>
                                 <div className="binds">
                                   <CommonButton label="파일선택" className="_normal" />

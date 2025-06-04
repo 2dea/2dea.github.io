@@ -136,7 +136,10 @@ import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도
 
 
 // proto 재난·안전관리
-import STMKY0201M from    'app/pages/stm/STMKY0201M';   // 재난·안전관리 > 열쇠관리 > 열쇠등록관리
+import STMKY0201M from    'app/pages/stm/STMKY0201M';     // 재난·안전관리 > 열쇠관리 > 열쇠등록관리
+import STMKY0201P03 from  'app/pages/stm/STMKY0201P03';   // 재난·안전관리 > 열쇠관리 > 열쇠등록관리 ~ (LP)열쇠별보관담당자
+
+import STMKY0401P01 from  'app/pages/stm/STMKY0401P01';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)열쇠이미지보기
 
 
 // proto 영업지원
@@ -315,6 +318,9 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'STMKY0201M',   element: <STMKY0201M /> },
+        { path: 'STMKY0201P03', element: <STMKY0201P03 /> },
+
+        { path: 'STMKY0401P01', element: <STMKY0401P01 /> },
       ],
     },
     { // 영업지원
