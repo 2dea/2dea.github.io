@@ -154,7 +154,7 @@ function TMPL() {
                 <CommonButton label="삭제" className="_delete" />
                 <CommonButton label="취소" className="_cancel" />
                 <CommonButton label="결재요청" className="_solid-primary" />
-                </div>
+              </div>
             </div>
           </div>
         </div>
