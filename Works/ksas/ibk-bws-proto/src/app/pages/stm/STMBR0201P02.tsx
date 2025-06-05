@@ -226,6 +226,13 @@ function STMBR0201P02() {
 
                         <tr>
                           <th colSpan={1}>
+                            <Label label={`경유지`} require={false} />
+                          </th>
+                          <td colSpan={3}></td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
                             <Label label={`기타사항`} require={false} />
                           </th>
                           <td colSpan={3}></td>

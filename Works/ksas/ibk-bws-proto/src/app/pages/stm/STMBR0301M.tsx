@@ -213,7 +213,7 @@ function STMBR0301M() {
                             <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">운해일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">운행일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출발지</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">경유지</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">도착지</span></div></th>
