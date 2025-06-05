@@ -138,6 +138,15 @@ import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도
 // proto 재난·안전관리
 import STMGD0101M from    'app/pages/stm/STMGD0101M';     // 재난·안전관리 > 기계경비당직관리 > 당직신청관리
 
+import STMVL0101M from    'app/pages/stm/STMVL0101M';     // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
+
+import STMBR0101M from    'app/pages/stm/STMBR0101M';     // 재난·안전관리 > 버스배차신청 > 배차신청
+import STMBR0101P01 from  'app/pages/stm/STMBR0101P01';   // 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)일괄신청하기
+import STMBR0101P02 from  'app/pages/stm/STMBR0101P02';   // 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)배차결과
+
+import STMBR0201P02 from  'app/pages/stm/STMBR0201P02';   // 재난·안전관리 > 버스배차신청 > 배차일정표 ~ (LP)일정상세보기
+import STMBR0301M from    'app/pages/stm/STMBR0301M';     // 재난·안전관리 > 버스배차신청 > 배차집계
+
 import STMKY0101M from    'app/pages/stm/STMKY0101M';     // 재난·안전관리 > 열쇠관리 > 열쇠종류관리
 import STMKY0201M from    'app/pages/stm/STMKY0201M';     // 재난·안전관리 > 열쇠관리 > 열쇠등록관리
 import STMKY0201P02 from  'app/pages/stm/STMKY0201P02';   // 재난·안전관리 > 열쇠관리 > 열쇠등록관리 ~ (LP)열쇠폐기
@@ -331,6 +340,15 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'STMGD0101M',   element: <STMGD0101M /> },
+
+        { path: 'STMVL0101M',   element: <STMVL0101M /> },
+
+        { path: 'STMBR0101M',   element: <STMBR0101M /> },
+        { path: 'STMBR0101P01', element: <STMBR0101P01 /> },
+        { path: 'STMBR0101P02', element: <STMBR0101P02 /> },
+
+        { path: 'STMBR0201P02', element: <STMBR0201P02 /> },
+        { path: 'STMBR0301M',   element: <STMBR0301M /> },
 
         { path: 'STMKY0101M',   element: <STMKY0101M /> },
         { path: 'STMKY0201M',   element: <STMKY0201M /> },

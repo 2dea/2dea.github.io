@@ -89,7 +89,92 @@ function DEX() {
   return (
     <>
 
+    {/*
+      2025-06-05 목
+      STMBR0301P02 다음에 단가표 작업 예정
 
+      */}
+{/*
+
+<td><InputCheck label="선택" labelHidden /></td>
+<td>{idx + 1}</td>
+
+<td>012345</td>
+<td>Y</td>
+
+<td>금고실</td>
+<td>열쇠</td>
+<td>정상</td>
+<td>현재</td>
+<td>서무팀장</td>
+<td>결제승인</td>
+
+<td>012345</td>
+<td>홍길동</td>
+<td>신규</td>
+
+<td>~</td>
+<td></td>
+<td>현재</td>
+
+<td className="g-start">겉문열쇠</td>
+<td className="g-start">금고실 #1</td>
+<td className="g-start">프로세스혁신부</td>
+<td><span className="o-digit type-date">2025-12-25</span></td>
+
+<td className="g-start"></td>
+
+<td className="g-end"></td>
+<td className="g-end">1</td>
+
+<td><span className="o-digit type-tel">010-1234-5678</span></td>
+
+<td>
+  <div className="o-field">
+    <div className="fields">
+      <div className="o-form _input type-date wdth-50">
+        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+        <i aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</td>
+
+<td>
+  <div className="o-field">
+    <div className="fields">
+      <div className="o-form _input wdth-50">
+        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+        <i aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</td>
+
+
+<td>
+  <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
+  <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+    <div className="layer-head">
+      <h3 className="o-heading"><span className="label">이미지보기</span></h3>
+    </div>
+    <div className="layer-body">
+      <div className="o-view-image">
+        <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+      </div>
+    </div>
+  </OverlayPanel>
+</td>
+
+
+<col className="wdth-10" />
+<col className="wdth-0" />
+<col className="wdth-auto" />
+
+<td>AJ렌트카</td>
+
+
+*/}
     {/*
       업무지원시스템 재구축 프로젝트에 사용할 템플릿 파일입니다.
       * 마크업 및 스타일시트 등 포함
@@ -110,6 +195,7 @@ function DEX() {
       2025-06-04 수 #265 - STMKY0601M
 
       -- -// before
+
         #243: 열쇠폐기 취소(관리자..) ???
         #245: 열쇠관리 > 열쇠등록관리 _ 공지사항.. ?
 
