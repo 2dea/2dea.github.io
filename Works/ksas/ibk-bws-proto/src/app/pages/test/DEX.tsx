@@ -97,7 +97,18 @@ function DEX() {
 
      {/* https://figma.com/ @ ego2dea@gmail.com : 2dea.com */}
 
+    {/* Order list
+      1(1)
+
+      * dddd
+        - ddddd
+
+    */}
+
     {/*
+
+      2025-06-04 수 #265 - STMKY0601M
+
       2025-05-30 금
         툴팁: BSPDU0101M
 
@@ -190,6 +201,8 @@ function DEX() {
 
 
       */}
+
+      {/* 정규식: <li className="c-color-strong">(.*)</li>  */}
 
       {
       /* 자주사용하는 팝업 너비
@@ -344,6 +357,21 @@ function DEX() {
                   </div>
                 </div>
 
+              </div>
+
+              <div className="o-section">
+                <div className="o-board type-a">
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">유의사항</span></strong>
+                    </div>
+
+                    <ul className="m-bullets type-disc">
+                      <li>cccc</li>
+                      <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
             </div>

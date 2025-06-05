@@ -516,7 +516,7 @@ function BSPDU0101M() {
 
                         <div className="m-footer">
                           <ul className="m-bullets type-disc">
-                            <li className="c-color-strong">반드시 실물을 확인하여 입력해 주세요.</li>
+                            <li className="c-color-strong"><em>반드시 실물을 확인하여 입력해 주세요.</em></li>
                           </ul>
                         </div>
 
