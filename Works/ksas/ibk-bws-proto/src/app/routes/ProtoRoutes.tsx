@@ -56,15 +56,15 @@ import BSPAQ0401M from    'app/pages/hsp/BSPAQ0401M';    // 중요용지·용도
 import BSPAQ0501M from    'app/pages/hsp/BSPAQ0501M';    // 중요용지·용도품(영업점) > 인수도 > 중요용지타지점인도
 
 import BSPDU0101M from    'app/pages/hsp/BSPDU0101M';    // 중요용지·용도품(영업점) > 폐기    > 오손등록
-import BSPDU0601M from    'app/pages/hsp/BSPDU0601M';    // 중요용지·용도품(영업점) > 폐기    > 중요용지발송등록
-import BSPDU0601P02 from  'app/pages/hsp/BSPDU0601P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지발송등록 ~ (LP)오손발송(행내등기신청)
+import BSPDU0601M from    'app/pages/hsp/BSPDU0601M';    // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록
+import BSPDU0601P02 from  'app/pages/hsp/BSPDU0601P02';  // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록 ~ (LP)오손발송(행내등기신청)
 import BSPDU0201M from    'app/pages/hsp/BSPDU0201M';    // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회
 import BSPDU0201P02 from  'app/pages/hsp/BSPDU0201P02';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손이력조회
-import BSPDU0601P01 from  'app/pages/hsp/BSPDU0601P01';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손중요용지사유변경
+import BSPDU0601P01 from  'app/pages/hsp/BSPDU0601P01';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손사유변경
 import BSPDU0301M from    'app/pages/hsp/BSPDU0301M';    // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기
 import BSPDU0301P01 from  'app/pages/hsp/BSPDU0301P01';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ (LP)구양식/서손폐기등록(영업점)
 
-import BSPDU0401P02 from  'app/pages/hsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고 ~ (LP)사고보고
+import BSPDU0401P02 from  'app/pages/hsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점) ~ (LP)사고보고등록
 
 
 // proto 중요용지·용도품(본부)
@@ -156,7 +156,7 @@ import STMKY0301P01 from  'app/pages/stm/STMKY0301P01';   // 재난·안전관�
 
 
 import STMKY0401P01 from  'app/pages/stm/STMKY0401P01';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)열쇠이미지보기
-import STMKY0401P02 from  'app/pages/stm/STMKY0401P02';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠위탁요청
+import STMKY0401P02 from  'app/pages/stm/STMKY0401P02';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠위탁요청
 import STMKY0401P04 from  'app/pages/stm/STMKY0401P04';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠반납요청
 import STMKY0401P06 from  'app/pages/stm/STMKY0401P06';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠위탁승인
 import STMKY0401P08 from  'app/pages/stm/STMKY0401P08';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠반납승인

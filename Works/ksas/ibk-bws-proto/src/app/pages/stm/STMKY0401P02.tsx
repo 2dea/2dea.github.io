@@ -1,5 +1,5 @@
 /**
-* @description 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠위탁요청
+* @description 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠위탁요청
  */
 
 // dependency
@@ -95,7 +95,7 @@ function STMKY0401P02() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">위탁열쇠위탁요청</span></h3>}
+        header={<h3 className="o-heading"><span className="label">예비열쇠위탁요청</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -286,7 +286,7 @@ function STMKY0401P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)위탁열쇠위탁요청 [wdth-50p(w960)]</span>
+              <span className="label">(P)예비열쇠위탁요청 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>

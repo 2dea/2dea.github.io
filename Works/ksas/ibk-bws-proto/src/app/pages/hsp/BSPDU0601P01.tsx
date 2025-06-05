@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 폐기 > 오손처리진행상태조회 > (LP)오손중요용지사유변경
+ * @description 중요용지·용도품(영업점) > 폐기 > 오손처리진행상태조회 > (LP)오손사유변경
  */
 
 // dependency
@@ -95,7 +95,7 @@ function BSPDU0601P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">오손중요용지사유변경</span></h3>}
+        header={<h3 className="o-heading"><span className="label">오손사유변경</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -201,7 +201,7 @@ function BSPDU0601P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)오손중요용지사유변경 [wdth-50p(w960)]</span>
+              <span className="label">(P)오손사유변경 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>

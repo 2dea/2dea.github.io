@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 폐기 > 중요용지발송등록
+ * @description 중요용지·용도품(영업점) > 폐기 > 폐기중요용지발송등록
  */
 
 // dependency
@@ -44,7 +44,7 @@ function BSPDU0601M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '폐기' }, { label: '중요용지발송등록' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '폐기' }, { label: '폐기중요용지발송등록' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function BSPDU0601M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지발송등록</span>
+                <span className="label">폐기중요용지발송등록</span>
 
                 <Favorite />
               </h1>
@@ -176,7 +176,7 @@ function BSPDU0601M() {
                 <div className="m-tab type2">
                   <TabList className="lists">
                     <Tab className="link"><span className="label">발송대상</span></Tab>
-                    <Tab className="link"><span className="label">발송완료내역</span></Tab>
+                    <Tab className="link"><span className="label">발송완료</span></Tab>
                   </TabList>
                 </div>
 

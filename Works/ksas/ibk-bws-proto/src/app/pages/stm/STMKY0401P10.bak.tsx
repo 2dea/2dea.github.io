@@ -101,8 +101,8 @@ function STMKY0401P10() {
           <Tabs className="m-tabs react-tabs" defaultIndex={0}>
             <div className="m-tab type2">
               <TabList className="lists">
-                <Tab className="link"><span className="label">예비열쇠보관확인증요청</span></Tab>
-                <Tab className="link"><span className="label">예비열쇠보관확인증내역</span></Tab>
+                <Tab className="link"><span className="label">위탁확인증요청</span></Tab>
+                <Tab className="link"><span className="label">확인증발송내역</span></Tab>
               </TabList>
             </div>
 
@@ -292,7 +292,7 @@ function STMKY0401P10() {
 
                   <div className="o-section">
                     <div className="m-header">
-                      <h4 className="o-heading level2"><span className="label">예비열쇠보관확인증내역</span></h4>
+                      <h5 className="o-heading level3"><span className="label">우리부점 &rarr; 다른부점 열쇠확인증 발송내역</span></h5>
 
                       <div className="o-length">
                         <span className="head">전체</span>
@@ -310,7 +310,7 @@ function STMKY0401P10() {
                       </div>
                     </div>
 
-                    <div className="main _primary">
+                    <div className="main _primary rows-body-5i">
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -355,8 +355,101 @@ function STMKY0401P10() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={13}>### 수정해야 해요 ###</td>
+                                <td colSpan={13}>등록된 데이터가 없습니다.</td>
                               </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                            {[...Array(24)].map((e, idx) => (
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td>{idx + 1}</td>
+                                <td>0465</td>
+                                <td className="g-start">부산</td>
+                                <td>10000</td>
+                                <td>홍길동</td>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td>0465</td>
+                                <td className="g-start">부산</td>
+                                <td>10000</td>
+                                <td>홍길동</td>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td>정상1건</td>
+                                <td>
+                                  <a href="javascript:" className="o-link _normal">결재요청</a>
+                                </td>
+                              </tr>
+                            ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h5 className="o-heading level3"><span className="label">다른부점 &rarr; 우리부점 열쇠확인증 발송내역</span></h5>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-body-5i">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="table-container p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                                <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위탁보관부점(상대부점)</span></div></th>
+                                <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">확인증수령부점(우리부점)</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠상태</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
+                              </tr>
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령일자</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
                                 <td colSpan={13}>등록된 데이터가 없습니다.</td>
                               </tr>

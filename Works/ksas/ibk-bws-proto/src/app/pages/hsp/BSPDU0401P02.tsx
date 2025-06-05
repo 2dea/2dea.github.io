@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 폐기 > 중요용지사고보고 ~ (LP)사고보고
+ * @description 중요용지·용도품(영업점) > 폐기 > 중요용지사고보고(영업점) ~ (LP)사고보고등록
  */
 
 // dependency
@@ -95,7 +95,7 @@ function BSPDU0401P02() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">사고보고</span></h3>}
+        header={<h3 className="o-heading"><span className="label">사고보고등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
