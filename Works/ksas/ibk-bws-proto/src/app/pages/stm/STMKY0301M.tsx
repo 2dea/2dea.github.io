@@ -464,6 +464,7 @@ function STMKY0301M() {
                                     <td>홍길동</td>
                                     <td>대리</td>
                                     <td className="g-start">금고실 #1</td>
+                                    <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td className="g-start"></td>
                                   </tr>
                                 ))}
