@@ -236,7 +236,7 @@ function HSPHS0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={7}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -338,7 +338,7 @@ function HSPHS0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 

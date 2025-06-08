@@ -207,7 +207,7 @@ function ADMAU0202M() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={5}>매핑된 관련화면이 없습니다.</td>
+                              <td colSpan={5}><div className="gridtable-empty">매핑된 관련화면이 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -300,7 +300,7 @@ function ADMAU0202M() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -449,7 +449,7 @@ function ADMAU0202M() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 

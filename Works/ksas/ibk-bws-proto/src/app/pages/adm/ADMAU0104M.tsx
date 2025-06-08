@@ -219,7 +219,7 @@ function ADMAU0104M() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={4}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={4}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 

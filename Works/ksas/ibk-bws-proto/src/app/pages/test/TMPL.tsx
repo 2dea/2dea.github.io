@@ -847,7 +847,7 @@ function TMPL() {
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="안내문 상세보기" className="_texted-primary" icon="link" />
+                              {/* <CommonButton label="안내문 상세보기" className="_texted-primary" icon="link" /> */}
                               <a href="javascript:" className="o-link texted-button _primary">안내문 상세보기<Icon icon="link" /></a>
                             </div>
                           </div>
@@ -930,7 +930,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={13}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -1039,7 +1039,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -1184,7 +1184,7 @@ function TMPL() {
 
                               <tbody className="p-datatable-tbody">
                                 <tr className="p-datatable-emptymessage">
-                                  <td colSpan={21}>등록된 데이터가 없습니다.</td>
+                                  <td colSpan={21}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                 </tr>
                               </tbody>
 
@@ -1377,7 +1377,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={18}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -2044,7 +2044,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={16}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={16}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -2267,7 +2267,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={3}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={3}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -2339,7 +2339,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={11}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -2528,7 +2528,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={6}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -2636,7 +2636,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={8}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -2787,7 +2787,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={6}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -3100,7 +3100,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={3}>No available options</td>
+                              <td colSpan={3}><div className="gridtable-empty">No available options</div></td>
                             </tr>
                           </tbody>
 
@@ -3207,7 +3207,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -3313,7 +3313,7 @@ function TMPL() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={6}>등록된 데이터가 없습니다.</td>
+                              <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 

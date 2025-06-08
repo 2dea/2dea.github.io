@@ -231,7 +231,7 @@ function HSPBT0501M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -303,7 +303,7 @@ function HSPBT0501M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -413,7 +413,7 @@ function HSPBT0501M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={12}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 

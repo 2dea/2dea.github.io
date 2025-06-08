@@ -231,7 +231,7 @@ function BSSTI0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={15}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 

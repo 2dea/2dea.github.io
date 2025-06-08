@@ -321,7 +321,7 @@ function BSPDU0301M() {
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={5}>등록된 데이터가 없습니다.</td>
+                                    <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -446,7 +446,7 @@ function BSPDU0301M() {
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={18}>등록된 데이터가 없습니다.</td>
+                                    <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 

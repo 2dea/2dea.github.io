@@ -241,7 +241,7 @@ function HSPHP0401P01() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={19}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={19}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 

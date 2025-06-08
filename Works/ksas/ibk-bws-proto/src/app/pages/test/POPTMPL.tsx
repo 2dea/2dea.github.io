@@ -231,7 +231,7 @@ function POPTMPL() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}>등록된 데이터가 없습니다.</td>
+                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -285,7 +285,7 @@ function POPTMPL() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={2}>매핑된 화면이 없습니다.</td>
+                            <td colSpan={2}><div className="gridtable-empty">매핑된 화면이 없습니다.</div></td>
                           </tr>
                         </tbody>
 
