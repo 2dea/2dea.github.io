@@ -1642,6 +1642,51 @@
 
 
 
+.o-calendar  {
+  --edge: var(--edge-cell);
+  --height-cell: #{III(100)};
+  --height-headcell: #{III(30)};
+  --height: var(--height-cell);
+  --margin-inline: #{III(4)};
+  --lh: #{III(22)};
+
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  clear: both;
+}
+.o-calendar .table-container  { border: var(--edge) solid var(--color-edge-40); }
+.o-calendar :has(table)  { flex: 1 0 0; display: flex; flex-direction: column; min-height: 0; }
+.o-calendar table  { table-layout: fixed; width: 100%; min-height: 100%; white-space: normal; }
+.o-calendar table tr >*  { height: var(--height); padding: 0; border: 0 solid var(--color-edge-30); }
+.o-calendar table thead tr >*  { --height: var(--height-headcell); border-right: var(--edge) solid var(--color-edge-40); }
+.o-calendar table tbody tr >*  { border-width: 0 var(--edge) var(--edge) 0; }
+
+.o-calendar table thead  { background: var(--color-ground-40); text-align: center; }
+
+.o-calendar .fc-scrollgrid-sync-inner:where(.fc-col-header-cell *)  { opacity: 0.5; }
+
+.o-calendar .fc-day-today  { background: var(--color-ground2-yellow-40); }
+.o-calendar .fc-daygrid-day-frame  { display: flex; flex-direction: column; min-height: 100%; padding: III(2) 0; }
+.o-calendar .fc-daygrid-day-top  { --height: #{III(20)}; font-size: $font-30; line-height: $line-30; display: flex; align-items: center; gap: $gap-element-50; height: calc(var(--height) + III(4)); margin-bottom: III(1); padding: 0 III(2) 0 var(--margin-inline); }
+.o-calendar .fc-daygrid-day-top:where(.fc-day-other *) { opacity: 0.5; }
+.o-calendar .fc-daygrid-day-number  { line-height: var(--height); display: inline-block; width: var(--height); height: var(--height); border-radius: 50%; text-align: center; }
+.o-calendar .fc-daygrid-day-number:where(.fc-daygrid-day:nth-child(1) *)  { color: var(--color-point-red); }
+.o-calendar .fc-daygrid-day-number:where(.fc-daygrid-day:nth-child(7) *)  { color: var(--color-key1-70); }
+.o-calendar .fc-daygrid-day-number:where(.fc-day-today *)  { color: var(--color-text-00); background: var(--color-point-orange); }
+.o-calendar .fc-daygrid-day-memo  { @include inc-ellipsis(); line-height: var(--height); overflow: hidden; color: var(--color-text-30); }
+
+.o-calendar .fc-daygrid-day-events  { position: relative; }
+.o-calendar .fc-daygrid-event-harness  { --lw: 1; font-size: $font-40; line-height: $line-40; position: relative; height: var(--lh); padding: III(1) 0; white-space: nowrap; }
+.o-calendar .fc-daygrid-event  { display: block; position: relative; z-index: 1; padding: 0 var(--margin-inline); cursor: pointer; }
+.o-calendar .fc-event-main  { position: absolute; width: 100%; width: calc(100% * var(--lw, 1) - var(--margin-inline) * 2 + var(--rem) * (var(--lw, 1) - 1)); }
+.o-calendar .fc-event-main-frame  { display: flex; align-items: center; gap: $gap-whitespace-50; padding: III(2) $gap-element-30; background: var(--color-ground-40); border-radius: $radius-50; }
+.o-calendar .fc-event-main-frame:where(.theme-primary *)  { color: var(--color-text-00); background-color: var(--color-key1-40); }
+.o-calendar .fc-event-title-container  { overflow: hidden; }
+.o-calendar .fc-event-title  { @include inc-ellipsis(); overflow: hidden; }
+.o-calendar .fc-daygrid-day-bottom  { padding: III(1) var(--margin-inline); }
+
+
 
 
 
@@ -1716,7 +1761,13 @@
   .p-datatable-table:not(:has(tbody:nth-of-type(2))):has(>tbody >.p-datatable-emptymessage:only-child)  { min-height: 100%; }
   // .p-datatable-emptymessage:only-child:not(:has(+tbody) >*) >*  { height: calc(var(--height-section-main-body)); }
   .p-datatable-emptymessage:has(div) >*  { padding: 0 0; }
-  .p-datatable-emptymessage div  { width: 100cqi; padding: var(--margin-block) var(--margin-inline); }
+  .p-datatable-emptymessage div  { --remain: var(--edge); width: calc(100cqi - var(--remain, 1px)); padding: var(--margin-block) var(--margin-inline); }
+  // .p-datatable-emptymessage div  { --remain: var(--remain-section-main, var(--edge)); padding-right: 0; }
+  .p-datatable-emptymessage:is(:has(+tbody) >*) div  { --remain: var(--remain-section-main, var(--edge)); padding-right: 0; }
+
+  .p-datatable-table  { min-height: 100%; }
+  .p-datatable-table >tbody:not(:has(>.p-datatable-emptymessage:only-child))  { height: 100%; }
+  .p-datatable-table >tbody:not(:has(>.p-datatable-emptymessage:only-child)):after  { content: ""; display: table-row; }
 }
 
 .o-grid-table .table-container {

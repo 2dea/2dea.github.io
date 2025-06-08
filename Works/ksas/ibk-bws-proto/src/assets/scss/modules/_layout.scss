@@ -419,15 +419,16 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // .dom-main :has(:where(.div-contents)) >:first-child  { padding-top: $margin-layout-block; }
 
 
-.dom-main .div-header  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; /* min-height: calc($height-form-70 + $height-form-30 + $gap-element-70 + $margin-section-50 * 2 + $e10); */ padding-top: $margin-section-50; padding-bottom: $margin-section-50; border-bottom: $e10 solid var(--color-edge-30); background-color: var(--color-ground-30); }
+.dom-main .div-header  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; /* min-height: calc($height-form-70 + $height-form-30 + $gap-element-70 * 1 + $margin-section-50 * 2 + $e10); */ padding-top: $margin-section-50; padding-bottom: $margin-section-50; border-bottom: $e10 solid var(--color-edge-30); background-color: var(--color-ground-30); }
 .dom-main .div-header .o-check  { order: -1; margin-right: $gap-whitespace-30; }
 .dom-main .div-header .o-breadcrumb  { flex: 1 0 0; overflow: hidden; }
 .dom-main .div-header .o-breadcrumb >*  { display: flex; }
 
 .dom-main .div-header >*  { display: flex; flex-direction: column; justify-content: center; gap: $gap-element-70; min-width: 0; }
 .dom-main .div-header >.main  { gap: inherit; white-space: nowrap; }
-.dom-main .div-header >.binds  { margin-left: auto }
+.dom-main .div-header >.binds  { min-height: calc($height-form-70 + $height-form-30 + $gap-element-70 * 1); margin-left: auto; }
 .dom-main .div-header >.binds .m-binds  { justify-content: flex-end; flex-wrap: wrap-reverse; min-height: 0; }
+.dom-main .div-header >.binds .m-binds:empty  { display: none; }
 .dom-main .div-header >.binds .m-binds:not(.type-end)  { gap: $gap-element-70 $gap-element-30; }
 .dom-main .div-header >.binds .m-binds.type-end  { min-height: $height-form-70; }
 .dom-main .div-header >.binds .m-binds >*  { justify-content: inherit; }
@@ -508,6 +509,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .o-section  { display: flex; flex-direction: column; gap: $margin-section-20; }
 .o-section:has(>.main._primary),
   .o-section >.main._primary  { flex: 1 0 0; }
+.o-section >.main._primary  { display: flex; flex-direction: column; }
 // .o-section >.main._primary:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 3; }
 .o-section >.main:where(.o-grid >.column:nth-child(1) *)  { position: relative; z-index: 4; }
 

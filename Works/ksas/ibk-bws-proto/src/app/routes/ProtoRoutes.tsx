@@ -144,6 +144,7 @@ import STMBR0101M from    'app/pages/stm/STMBR0101M';     // 재난·안전관�
 import STMBR0101P01 from  'app/pages/stm/STMBR0101P01';   // 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)일괄신청하기
 import STMBR0101P03 from  'app/pages/stm/STMBR0101P03';   // 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)배차정보등록
 import STMBR0101P02 from  'app/pages/stm/STMBR0101P02';   // 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)배차결과
+import STMBR0201M from    'app/pages/stm/STMBR0201M';     // 재난·안전관리 > 버스배차신청 > 배차일정표
 
 import STMBR0201P02 from  'app/pages/stm/STMBR0201P02';   // 재난·안전관리 > 버스배차신청 > 배차일정표 ~ (LP)일정상세보기
 import STMBR0301M from    'app/pages/stm/STMBR0301M';     // 재난·안전관리 > 버스배차신청 > 배차집계
@@ -349,6 +350,7 @@ function ProtoRoutes() {
         { path: 'STMBR0101P01', element: <STMBR0101P01 /> },
         { path: 'STMBR0101P02', element: <STMBR0101P02 /> },
         { path: 'STMBR0101P03', element: <STMBR0101P03 /> },
+        { path: 'STMBR0201M',   element: <STMBR0201M /> },
 
         { path: 'STMBR0201P02', element: <STMBR0201P02 /> },
         { path: 'STMBR0301M',   element: <STMBR0301M /> },
