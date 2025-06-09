@@ -1643,7 +1643,8 @@
 .o-grid-table .o-form:not(tr >:where(.g-start, .g-end) *):only-child  { margin-left: auto; margin-right: auto; }
 .o-grid-table .o-form:is(tr >:where(.g-end) *):only-child  { margin-left: auto; }
 
-.o-grid-table .o-form[class*=" wdth-"]:not(.type-date, .type-time)  { flex: auto; }
+// .o-grid-table .o-form[class*=" wdth-"]:not(.type-date, .type-time)  { flex: auto; }
+.o-grid-table .o-form[class*=" wdth-"]:not(.type-time)  { flex: auto; }
 // .o-grid-table .o-form.wdth-10  { min-width: calc(var(--rem) * 50); }
 // .o-grid-table .o-form.wdth-20  { min-width: calc(var(--rem) * 60); }
 // .o-grid-table .o-form.wdth-30  { min-width: calc(var(--rem) * 80); }
