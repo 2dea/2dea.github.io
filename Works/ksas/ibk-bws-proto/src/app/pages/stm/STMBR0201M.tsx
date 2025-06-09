@@ -120,8 +120,12 @@ function STMBR0201M() {
             <div className="column">
 
               <div className="o-section">
+                <div className="m-calendar-header">
+
+                </div>
+
                 <div className="m-header">
-                  <div className="o-length">
+                  <div className="o-length justify-start">
                     <span className="head">3월 총 접수좌수</span>
                     <em className="data">
                       <span className="value">8</span>
@@ -303,7 +307,7 @@ function STMBR0201M() {
                               <div className="fc-daygrid-day-frame fc-scrollgrid-sync-inner">
                                 <div className="fc-daygrid-day-top">
                                   <span className="fc-daygrid-day-number">5</span>
-                                  <em className="fc-daygrid-day-memo">부처님오신날(대체 휴일)</em>
+                                  <em className="fc-daygrid-day-memo type-holyday">부처님오신날(대체 휴일)</em>
                                 </div>
                                 <div className="fc-daygrid-day-events">
                                   {/* <div className="fc-daygrid-event-harness"></div> */}
@@ -365,7 +369,7 @@ function STMBR0201M() {
                                 </div>
                                 <div className="fc-daygrid-day-events">
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-daygrid-event theme-primary" style={{ '--lw': '2' } as React.CSSProperties}>{/* .theme-primary { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -392,7 +396,7 @@ function STMBR0201M() {
                                   <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-daygrid-event theme-primary" style={{ '--lw': '2' } as React.CSSProperties}>{/* .theme-primary { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -416,7 +420,20 @@ function STMBR0201M() {
                                   <span className="fc-daygrid-day-number">11</span>
                                 </div>
                                 <div className="fc-daygrid-day-events">
-                                  {/* <div className="fc-daygrid-event-harness"></div> */}
+                                  <div className="fc-daygrid-event-harness">
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key2" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key2 { @DEV } */}
+                                      <div className="fc-event-main">
+                                        <div className="fc-event-main-frame">
+                                          <div className="fc-event-time">09:30</div>
+                                          <div className="fc-event-title-container">
+                                            <div className="fc-event-title">VM연수 / 1대</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+
+                                  <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-day-bottom"></div>
                                 </div>
@@ -430,9 +447,24 @@ function STMBR0201M() {
                                   <span className="fc-daygrid-day-number">12</span>
                                 </div>
                                 <div className="fc-daygrid-day-events">
-                                  {/* <div className="fc-daygrid-event-harness"></div> */}
+                                  <div className="fc-daygrid-event-harness"></div>
 
-                                  <div className="fc-daygrid-day-bottom"></div>
+                                  <div className="fc-daygrid-event-harness">
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                      <div className="fc-event-main">
+                                        <div className="fc-event-main-frame">
+                                          <div className="fc-event-time">09:30</div>
+                                          <div className="fc-event-title-container">
+                                            <div className="fc-event-title">대면상품집합교육 / 3대</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+
+                                  <div className="fc-daygrid-day-bottom">
+                                    <CommonButton label="1건 더보기" className="_texted-primary" icon="sum-plus" />
+                                  </div>
                                 </div>
                                 <div className="fc-daygrid-day-bg"></div>
                               </div>
@@ -444,7 +476,20 @@ function STMBR0201M() {
                                   <span className="fc-daygrid-day-number">13</span>
                                 </div>
                                 <div className="fc-daygrid-day-events">
-                                  {/* <div className="fc-daygrid-event-harness"></div> */}
+                                  <div className="fc-daygrid-event-harness">
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                      <div className="fc-event-main">
+                                        <div className="fc-event-main-frame">
+                                          <div className="fc-event-time">09:30</div>
+                                          <div className="fc-event-title-container">
+                                            <div className="fc-event-title">대면상품집합교육 / 3대</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+
+                                  <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-day-bottom"></div>
                                 </div>
@@ -458,7 +503,20 @@ function STMBR0201M() {
                                   <span className="fc-daygrid-day-number">14</span>
                                 </div>
                                 <div className="fc-daygrid-day-events">
-                                  {/* <div className="fc-daygrid-event-harness"></div> */}
+                                  <div className="fc-daygrid-event-harness"></div>
+
+                                  <div className="fc-daygrid-event-harness">
+                                    <a className="fc-event fc-event-start fc-daygrid-event theme-key2" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.theme-key2 { @DEV } */}
+                                      <div className="fc-event-main">
+                                        <div className="fc-event-main-frame">
+                                          <div className="fc-event-time">09:30</div>
+                                          <div className="fc-event-title-container">
+                                            <div className="fc-event-title">5일(금~화) 이어진 일정 / 3대</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
 
                                   <div className="fc-daygrid-day-bottom"></div>
                                 </div>
@@ -472,7 +530,20 @@ function STMBR0201M() {
                                   <span className="fc-daygrid-day-number">15</span>
                                 </div>
                                 <div className="fc-daygrid-day-events">
-                                  {/* <div className="fc-daygrid-event-harness"></div> */}
+                                  <div className="fc-daygrid-event-harness">
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '1' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                      <div className="fc-event-main">
+                                        <div className="fc-event-main-frame">
+                                          <div className="fc-event-time">09:30</div>
+                                          <div className="fc-event-title-container">
+                                            <div className="fc-event-title">긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트 / 3대</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+
+                                  <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-day-bottom"></div>
                                 </div>
@@ -488,7 +559,18 @@ function STMBR0201M() {
                                   <span className="fc-daygrid-day-number">16</span>
                                 </div>
                                 <div className="fc-daygrid-day-events">
-                                  {/* <div className="fc-daygrid-event-harness"></div> */}
+                                  <div className="fc-daygrid-event-harness">
+                                    <a className="fc-event fc-event-end fc-daygrid-event theme-key2" style={{ '--lw': '3' } as React.CSSProperties}>{/* .fc-event-end.theme-key2 { @DEV } */}
+                                      <div className="fc-event-main">
+                                        <div className="fc-event-main-frame">
+                                          <div className="fc-event-time">09:30</div>
+                                          <div className="fc-event-title-container">
+                                            <div className="fc-event-title">5일(금~화) 이어진 일정 / 3대</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
 
                                   <div className="fc-daygrid-day-bottom"></div>
                                 </div>
@@ -502,7 +584,20 @@ function STMBR0201M() {
                                   <span className="fc-daygrid-day-number">17</span>
                                 </div>
                                 <div className="fc-daygrid-day-events">
-                                  {/* <div className="fc-daygrid-event-harness"></div> */}
+                                  <div className="fc-daygrid-event-harness"></div>
+
+                                  <div className="fc-daygrid-event-harness">
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '1' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                      <div className="fc-event-main">
+                                        <div className="fc-event-main-frame">
+                                          <div className="fc-event-time">09:30</div>
+                                          <div className="fc-event-title-container">
+                                            <div className="fc-event-title">대면상품집합교육 / 3대</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
 
                                   <div className="fc-daygrid-day-bottom"></div>
                                 </div>
@@ -516,7 +611,7 @@ function STMBR0201M() {
                                   <span className="fc-daygrid-day-number">18</span>
                                 </div>
                                 <div className="fc-daygrid-day-events">
-                                  {/* <div className="fc-daygrid-event-harness"></div> */}
+                                  <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-day-bottom"></div>
                                 </div>

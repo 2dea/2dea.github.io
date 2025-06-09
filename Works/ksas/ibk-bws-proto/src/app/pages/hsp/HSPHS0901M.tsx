@@ -364,6 +364,7 @@ function HSPHS0901M() {
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled/>
                                   <i aria-hidden="true"></i>
                                 </div>
+                                <span className="helper style-strong"><em>해당 기간동안 신청할 수 없습니다.</em></span>
                               </div>
                             </div>
                           </td>
@@ -379,6 +380,7 @@ function HSPHS0901M() {
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
+                                <span className="helper style-strong"><em>해당량 보다 많거나 같으면 신청할 수 없습니다.</em></span>
                               </div>
                             </div>
                           </td>
@@ -391,10 +393,16 @@ function HSPHS0901M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} disabled />
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={10} cols={80} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
+                            </div>
+
+                            <div className="m-footer">
+                              <ul className="m-bullets type-disc">
+                                <li className="c-color-strong"><em>해당 출급번호 신청 시 출력될 메시지입니다.</em></li>
+                              </ul>
                             </div>
                           </td>
                         </tr>

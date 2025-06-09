@@ -488,6 +488,8 @@
 // // .o-label >.outer-binds  { margin-left: auto; }
 
 // .o-label:where(.m-data-form th:not(td *) *) >.label  { margin-right: calc(var(--rem) * -2); }
+.o-label:where(.o-field >*)  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-70); }
+
 
 
 
@@ -530,6 +532,7 @@
 .o-helper.style-strong  { color: var(--color-point-red); }
 
 .o-helper:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
+.o-helper:where(.m-footer *)  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
 
 
 .o-legend.type-branch.style-normal  { color: var(--color-text-30); }
@@ -542,6 +545,7 @@
 .o-length  { display: flex; gap: $gap-whitespace-30; }
 .o-length >*  { display: flex; gap: inherit; }
 .o-length .data .value  { font-weight: $bold-70; color: var(--color-point-orange); }
+.o-length .foot  { color: var(--color-text-30); }
 
 .o-length:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
 
@@ -556,7 +560,7 @@
 /** Bullet-Lists Module */
 .m-bullets  { --lh: var(--text-height-para); font-size: calc(var(--rem) * var(--fs-int)); line-height: var(--lh); clear: both; position: relative; }
 .m-bullets strong  { font-weight: $bold-70; }
-.m-bullets >* +*  { margin-top: calc(1em * var(--margin-bullets, 4) / var(--fs-int, var(--font-30-int, 14))); }
+.m-bullets >* +*  { margin-top: calc(1em * var(--margin-bullets, 0) / var(--fs-int, var(--font-30-int, 14))); }
 .m-bullets >:before  { position: absolute; text-align: center; }
 .m-bullets >dt.heading:before  { content: none; }
 
@@ -580,10 +584,11 @@
 // .m-bullets.type-prec >:before  { content: ""; width: 2.4rem; height: 2.4rem; margin-left: calc(-2.4rem - 0.285715em); margin-top: calc(0.785714em - 2.4rem / 2); margin-right: 0.285715em; background: url('../img/common/ico_label_prec.png') no-repeat; }
 
 
-.m-bullets:where(.o-board *)  { --fs-int: var(--font-40-int); }
+.m-bullets:where(.o-board *)  { --fs-int: var(--font-40-int); --margin-bullets: 4; }
 .m-bullets:where(.o-board:not(.style-fit) *)  { color: $color-text-30; }
 .m-bullets:where(.o-board:not(.style-fit) .board-container *)  { --margin-bullets: 8; }
 .m-bullets:where(.m-footer *)  { --fs-int: var(--font-40-int); color: $color-text-30; }
+.m-bullets:where(.o-section >.m-footer *)  { --margin-bullets: 4; }
 
 .m-bullets >:has(.o-consult)  { color: $color-text-70; }
 
@@ -614,9 +619,11 @@
 // .m-header >.o-heading  { flex: 1 0 0; min-height: $height-form-50; overflow: hidden; }
 .m-header >.o-heading  { min-height: $height-form-50; overflow: hidden; }
 .m-header >.m-binds  { gap: inherit; }
-.m-header >:where(.o-heading, .o-helper, .m-checks) +:not(.o-helper, .m-checks)  { margin-left: auto; }
-.m-header >:where(.o-heading, .o-helper, .m-checks):only-child  { flex: 1 0 0; }
+.m-header >:where(.o-heading, .o-helper, .m-checks, .justify-start) +:not(.o-helper, .m-checks)  { margin-left: auto; }
+.m-header >:where(.o-heading, .o-helper, .m-checks, .justify-start):only-child  { flex: 1 0 0; }
 
+
+.m-footer:where(* +:not(.o-section >*))  { margin-top: $gap-element-30; }
 
 
 
@@ -1287,10 +1294,16 @@
 
 
 
-.o-field  { display: inline-flex; gap: $gap-element-30 $gap-element-50; max-width: 100%; white-space: normal; }
-.o-field:only-child  { display: flex; }
+// .o-field  { display: inline-flex; gap: $gap-element-30 $gap-element-50; max-width: 100%; white-space: normal; }
+// .o-field:only-child  { display: flex; }
+.o-field  { display: flex; gap: $gap-element-30 $gap-element-50; max-width: 100%; white-space: normal; }
 .o-field >.fields  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; min-height: $height-form-50; margin: 0; }
 .o-field >.fields >:not(.o-form)  { min-width: 0; }
+
+.o-field >.fields >.helper  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
+.o-field >.fields >.helper.style-strong  { color: var(--color-point-red); }
+.o-field >.fields >.helper strong
+.o-field >.fields >strong.helper  { font-weight: $bold-70; }
 
 .o-field:where(.m-filter-form .fieldset >:not(:only-child), .axis-cols)  { flex-direction: column; align-items: normal; }
 .o-field:where(.m-filter-form .fieldset >:not(:only-child), .axis-cols) >*  { min-height: 0; }
@@ -1301,6 +1314,9 @@
 
 
 
+
+
+.m-mixed-field  { display: flex; align-items: center; gap: $gap-element-90; }
 
 
 
@@ -1343,7 +1359,7 @@
   .m-filter-form .fieldset >.colspan-#{$i}  { grid-column: auto /span #{$i + 3}; }
 }
 
-.m-filter-form .fieldset >* >.o-label  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-70); }
+// .m-filter-form .fieldset >* >.o-label  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-70); }
 .m-filter-form .fieldset >* >.fields >.m-checks  { padding-right: $gap-element-70; }
 
 
@@ -1649,6 +1665,9 @@
   --height: var(--height-cell);
   --margin-inline: #{III(4)};
   --lh: #{III(22)};
+  --radius: #{$radius-50};
+  --theme1: var(--color-key1-40);
+  --theme2: var(--color-ground-90);
 
   flex: 1 0 0;
   display: flex;
@@ -1675,16 +1694,21 @@
 .o-calendar .fc-daygrid-day-number:where(.fc-daygrid-day:nth-child(7) *)  { color: var(--color-key1-70); }
 .o-calendar .fc-daygrid-day-number:where(.fc-day-today *)  { color: var(--color-text-00); background: var(--color-point-orange); }
 .o-calendar .fc-daygrid-day-memo  { @include inc-ellipsis(); line-height: var(--height); overflow: hidden; color: var(--color-text-30); }
+.o-calendar .fc-daygrid-day-memo.type-holyday  { color: var(--color-point-red); }
 
 .o-calendar .fc-daygrid-day-events  { position: relative; }
 .o-calendar .fc-daygrid-event-harness  { --lw: 1; font-size: $font-40; line-height: $line-40; position: relative; height: var(--lh); padding: III(1) 0; white-space: nowrap; }
-.o-calendar .fc-daygrid-event  { display: block; position: relative; z-index: 1; padding: 0 var(--margin-inline); cursor: pointer; }
-.o-calendar .fc-event-main  { position: absolute; width: 100%; width: calc(100% * var(--lw, 1) - var(--margin-inline) * 2 + var(--rem) * (var(--lw, 1) - 1)); }
-.o-calendar .fc-event-main-frame  { display: flex; align-items: center; gap: $gap-whitespace-50; padding: III(2) $gap-element-30; background: var(--color-ground-40); border-radius: $radius-50; }
-.o-calendar .fc-event-main-frame:where(.theme-primary *)  { color: var(--color-text-00); background-color: var(--color-key1-40); }
+.o-calendar .fc-daygrid-event  { display: block; position: relative; z-index: 1; cursor: pointer; }
+.o-calendar .fc-event-main  { position: absolute; width: 100%; width: calc(100% * var(--lw, 1) + var(--rem) * (var(--lw, 1) - 1)); }
+.o-calendar .fc-event-main-frame  { display: flex; align-items: center; gap: $gap-whitespace-50; margin: 0 var(--margin-inline); padding: III(2) $gap-element-30; background: var(--color-ground-40); border-radius: $radius-50; }
+.o-calendar .fc-event-main-frame  { margin-inline-start: 0; margin-inline-end: 0; border-start-start-radius: 0; border-start-end-radius: 0; border-end-start-radius: 0; border-end-end-radius: 0; }
+.o-calendar .fc-event-main-frame:where(.fc-event-start *)  { margin-inline-start: var(--margin-inline); border-start-start-radius: var(--radius); border-end-start-radius: var(--radius); }
+.o-calendar .fc-event-main-frame:where(.fc-event-end *)  { margin-inline-end: var(--margin-inline); border-start-end-radius: var(--radius); border-end-end-radius: var(--radius); }
+.o-calendar .fc-event-main-frame:where(.theme-key1 *)  { color: var(--color-text-00); background-color: var(--theme1); }
+.o-calendar .fc-event-main-frame:where(.theme-key2 *)  { background-color: var(--theme2); }
 .o-calendar .fc-event-title-container  { overflow: hidden; }
 .o-calendar .fc-event-title  { @include inc-ellipsis(); overflow: hidden; }
-.o-calendar .fc-daygrid-day-bottom  { padding: III(1) var(--margin-inline); }
+.o-calendar .fc-daygrid-day-bottom  { display: flex; align-items: center; justify-content: center; gap: $gap-element-30; padding: III(1) var(--margin-inline); }
 
 
 

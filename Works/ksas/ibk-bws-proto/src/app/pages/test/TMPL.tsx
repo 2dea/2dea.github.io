@@ -197,7 +197,7 @@ function TMPL() {
 
                 <div className="o-board type-a style-fit">
                   <ul className="m-bullets type-disc">
-                    <li>문의 : <span className="o-consult"><strong className="head">안전관리실</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463</span></span></span></li>
+                    <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463, 0000</span></span></span></li>
                     <li className="c-color-strong"><em>품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</em></li>
                     <li className="c-color-strong"><em>자동배송 품목 등록 및 제외는 부점장 결재 완료 후 반영되므로 결재요청 필수</em></li>
                   </ul>
@@ -353,7 +353,7 @@ function TMPL() {
                       <Label label={`인도구분`} require={false} />
                       <div className="fields">
                         <div className="o-form _select">
-                          <XDropdown appendTo={'self'} className="bind" />
+                          <XDropdown placeholder="선택선택 선택" appendTo={'self'} className="bind" />
                           <i aria-hidden="true"></i>
                         </div>
                       </div>
@@ -498,6 +498,7 @@ function TMPL() {
                                     <InputText placeholder="" value="Value" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
+                                  <span className="helper">우편물 수령 시 연락 가능한 전화번호</span>
                                 </div>
                               </div>
                             </td>
@@ -513,6 +514,7 @@ function TMPL() {
                                     <InputText placeholder="" value="Value" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
+                                  <span className="string">(자동화기기)</span>
                                 </div>
                               </div>
                             </td>
@@ -752,6 +754,43 @@ function TMPL() {
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
+                              </div>
+
+                              <div className="m-footer">
+                                <ul className="m-bullets type-disc">
+                                  <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
+                                  <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`인수부점`} require={true} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-mixed-field">
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input mode-required wdth-90">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="m-checks">
+                                  <InputRadio name="RADIO:T_10" label="서무대리" defaultChecked />
+                                  <InputRadio name="RADIO:T_10" label="보관카드담당자" />
+                                </div>
+
+                                <div className="binds">
+                                  <CommonButton label="즐겨찾기" className="_normal" />
+                                </div>
+                              </div>
+
+                              <div className="m-footer">
+                                <p className="o-helper">도착예정일자: YYYY-MM-DD 신청일자에 실물 발송한 경우</p>
                               </div>
                             </td>
                           </tr>
