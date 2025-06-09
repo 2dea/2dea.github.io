@@ -128,7 +128,7 @@ function STMKY0301M() {
 
               <div className="o-board type-a style-fit">
                 <ul className="m-bullets type-disc">
-                  <li>문의 : <span className="o-consult"><strong className="head">안전관리실</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463</span></span></span></li>
+                  <li>문의 : <span className="o-consult"><strong className="head">비상계획팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463, 3484</span></span></span></li>
                 </ul>
               </div>
 
@@ -276,7 +276,7 @@ function STMKY0301M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠종류</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경전보관책임자</span></div></th>
-                                    <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경후보관책임자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                    <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경후보관책임자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">예외승인</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고(사유)</span></div></th>
                                   </tr>
@@ -289,13 +289,12 @@ function STMKY0301M() {
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">모출납</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">외화출납</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출납담당책임자</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">외화출납담당책임자</span></div></th>
                                   </tr>
                                 </thead>
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                    <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -332,7 +331,6 @@ function STMKY0301M() {
                                       </div>
                                     </td>
                                     <td></td>
-                                    <td>N</td>
                                     <td>N</td>
                                     <td>N</td>
                                     <td>N</td>

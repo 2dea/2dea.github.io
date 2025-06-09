@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역 ~ (LP)인도취소
+ * @description 재난·안전관리 > 가스분사기대장관리 > 가스분사기관리대장 ~ (LP)가스분사기관리대장 수정
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPBT0101P01() {
+function STMGI0101P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -87,7 +87,7 @@ function HSPBT0101P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-70p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -95,7 +95,7 @@ function HSPBT0101P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">인도취소</span></h3>}
+        header={<h3 className="o-heading"><span className="label">수정</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -103,68 +103,7 @@ function HSPBT0101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">중요용지 인도취소</span></h4>
-                </div>
-
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
-
-                      <tbody>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`거래부점`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0810] 프로세스혁신
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`거래연월일`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-01-21</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`취소사유`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <div className="binds">
-                                  <CommonButton label="일괄적용" className="_normal" />
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">인도취소 대상내역</span></h5>
+                  <h4 className="o-heading level2"><span className="label">가스분사기관리대장내역</span></h4>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -177,13 +116,12 @@ function HSPBT0101P01() {
                   <div className="m-binds">
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -199,32 +137,32 @@ function HSPBT0101P01() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-0" />
                           <col />
-                          <col />
-                          <col />
-                          <col className="wdth-0" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도부점</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일시</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                            <th className="p-align-center" colSpan={4}><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
-                            <th className="p-align-center" colSpan={2}><div className="p-column-header-content"><span className="p-column-title">취소사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">가스분사기번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">가스분사기형식</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">가스분사기이미지</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">책임자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">약제교체일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소지허가증</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -232,30 +170,53 @@ function HSPBT0101P01() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>프로세스혁신</td>
-                            <td>BC016</td>
-                            <td className="g-start">나의 알파체크카드(비교통_그린)</td>
-                            <td><span className="o-digit type-datetime">2024-09-16 09:10:59</span></td>
-                            <td>신청인도</td>
-                            <td className="g-end">50</td>
-                            <td className="g-end">0</td>
-                            <td></td>
-                            <td>3344785</td>
-                            <td>~</td>
-                            <td>33447900</td>
-                            <td>부산역</td>
+                            <td>20240065</td>
+                            <td>이지스-2</td>
+                            <td>
+                              <ImageButton label="이미지​​업로드" icon="upload" />
+                            </td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-80">
+                                  <div className="o-form _input wdth-30">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
                               </div>
                             </td>
+                            <td>홍길동</td>
                             <td>
-                              <ImageButton label="이미지​​업로드" icon="upload" />
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-30">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>홍길동</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-date wdth-50">
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
                             </td>
                           </tr>
                         ))}
@@ -274,7 +235,7 @@ function HSPBT0101P01() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="저장" className="_solid-primary" />
+              <CommonButton label="결재요청" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -284,7 +245,7 @@ function HSPBT0101P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)인도취소 [wdth-70p(w1340)]</span>
+              <span className="label">(P)가스분사기관리대장 수정 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>
@@ -303,4 +264,4 @@ function HSPBT0101P01() {
   );
 }
 
-export default HSPBT0101P01;
+export default STMGI0101P01;

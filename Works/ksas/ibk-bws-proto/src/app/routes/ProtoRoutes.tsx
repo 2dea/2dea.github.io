@@ -136,35 +136,43 @@ import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도
 
 
 // proto 재난·안전관리
-import STMGD0101M from    'app/pages/stm/STMGD0101M';     // 재난·안전관리 > 기계경비당직관리 > 당직신청관리
+import STMGD0101M from    'app/pages/stm/STMGD0101M';     // 재난·안전관리 > 기계경비당직관리         > 당직신청관리
+
+import STMDM0101M from    'app/pages/stm/STMDM0101M';     // 재난·안전관리 > 배차관리                > 배차신청
+import STMDM0201M from    'app/pages/stm/STMDM0201M';     // 재난·안전관리 > 배차관리                > 배차이력
+import STMDM0301M from    'app/pages/stm/STMDM0301M';     // 재난·안전관리 > 배차관리                > 배차관리
+import STMDM0401M from    'app/pages/stm/STMDM0401M';     // 재난·안전관리 > 배차관리                > 차량관리
+import STMDM0401P02 from  'app/pages/stm/STMDM0401P02';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)차종조회
+import STMDM0401P03 from  'app/pages/stm/STMDM0401P03';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)차종팝업
+
+import STMGI0101M from    'app/pages/stm/STMGI0101M';     // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장
+import STMGI0101P01 from  'app/pages/stm/STMGI0101P01';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)수정
+import STMGI0101P02 from  'app/pages/stm/STMGI0101P02';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)반납요청
 
 import STMVL0101M from    'app/pages/stm/STMVL0101M';     // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
 
-import STMBR0101M from    'app/pages/stm/STMBR0101M';     // 재난·안전관리 > 버스배차신청 > 배차신청
-import STMBR0101P01 from  'app/pages/stm/STMBR0101P01';   // 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)일괄신청하기
-import STMBR0101P03 from  'app/pages/stm/STMBR0101P03';   // 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)배차정보등록
-import STMBR0101P02 from  'app/pages/stm/STMBR0101P02';   // 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)배차결과
-import STMBR0201M from    'app/pages/stm/STMBR0201M';     // 재난·안전관리 > 버스배차신청 > 배차일정표
+import STMBR0101M from    'app/pages/stm/STMBR0101M';     // 재난·안전관리 > 버스배차신청             > 배차신청
+import STMBR0101P01 from  'app/pages/stm/STMBR0101P01';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)일괄신청하기
+import STMBR0101P03 from  'app/pages/stm/STMBR0101P03';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)배차정보등록
+import STMBR0101P02 from  'app/pages/stm/STMBR0101P02';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)배차결과
+import STMBR0201M from    'app/pages/stm/STMBR0201M';     // 재난·안전관리 > 버스배차신청             > 배차일정표
+import STMBR0201P02 from  'app/pages/stm/STMBR0201P02';   // 재난·안전관리 > 버스배차신청             > 배차일정표 ~ (LP)일정상세보기
+import STMBR0301M from    'app/pages/stm/STMBR0301M';     // 재난·안전관리 > 버스배차신청             > 배차집계
+import STMBR0301P01 from  'app/pages/stm/STMBR0301P01';   // 재난·안전관리 > 버스배차신청             > 배차집계  ~ (LP)단가표
 
-import STMBR0201P02 from  'app/pages/stm/STMBR0201P02';   // 재난·안전관리 > 버스배차신청 > 배차일정표 ~ (LP)일정상세보기
-import STMBR0301M from    'app/pages/stm/STMBR0301M';     // 재난·안전관리 > 버스배차신청 > 배차집계
-import STMBR0301P01 from  'app/pages/stm/STMBR0301P01';   // 재난·안전관리 > 버스배차신청 > 배차집계  ~ (LP)단가표
-
-import STMKY0101M from    'app/pages/stm/STMKY0101M';     // 재난·안전관리 > 열쇠관리 > 열쇠종류관리
-import STMKY0201M from    'app/pages/stm/STMKY0201M';     // 재난·안전관리 > 열쇠관리 > 열쇠등록관리
-import STMKY0201P02 from  'app/pages/stm/STMKY0201P02';   // 재난·안전관리 > 열쇠관리 > 열쇠등록관리 ~ (LP)열쇠폐기
-import STMKY0201P03 from  'app/pages/stm/STMKY0201P03';   // 재난·안전관리 > 열쇠관리 > 열쇠등록관리 ~ (LP)열쇠별보관담당자
-import STMKY0301M from    'app/pages/stm/STMKY0301M';     // 재난·안전관리 > 열쇠관리 > 열쇠인수도관리
-import STMKY0301P01 from  'app/pages/stm/STMKY0301P01';   // 재난·안전관리 > 열쇠관리 > 열쇠인수도관리 ~ (LP)열쇠인수도취소
-
-
-import STMKY0401P01 from  'app/pages/stm/STMKY0401P01';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)열쇠이미지보기
-import STMKY0401P02 from  'app/pages/stm/STMKY0401P02';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠위탁요청
-import STMKY0401P04 from  'app/pages/stm/STMKY0401P04';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠반납요청
-import STMKY0401P06 from  'app/pages/stm/STMKY0401P06';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠위탁승인
-import STMKY0401P08 from  'app/pages/stm/STMKY0401P08';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)위탁열쇠반납승인
-import STMKY0401P10 from  'app/pages/stm/STMKY0401P10';   // 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠보관확인증관리
-import STMKY0601M from    'app/pages/stm/STMKY0601M';     // 재난·안전관리 > 열쇠관리 > 관련조회 및 출력
+import STMKY0101M from    'app/pages/stm/STMKY0101M';     // 재난·안전관리 > 열쇠관리                 > 열쇠종류관리
+import STMKY0201M from    'app/pages/stm/STMKY0201M';     // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리
+import STMKY0201P02 from  'app/pages/stm/STMKY0201P02';   // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리 ~ (LP)열쇠폐기
+import STMKY0201P03 from  'app/pages/stm/STMKY0201P03';   // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리 ~ (LP)열쇠별보관담당자
+import STMKY0301M from    'app/pages/stm/STMKY0301M';     // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리
+import STMKY0301P01 from  'app/pages/stm/STMKY0301P01';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)열쇠인수도취소
+import STMKY0401P01 from  'app/pages/stm/STMKY0401P01';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)열쇠이미지보기
+import STMKY0401P02 from  'app/pages/stm/STMKY0401P02';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)예비열쇠위탁요청
+import STMKY0401P04 from  'app/pages/stm/STMKY0401P04';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)위탁열쇠반납요청
+import STMKY0401P06 from  'app/pages/stm/STMKY0401P06';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)예비열쇠위탁승인
+import STMKY0401P08 from  'app/pages/stm/STMKY0401P08';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)위탁열쇠반납승인
+import STMKY0401P10 from  'app/pages/stm/STMKY0401P10';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)예비열쇠보관확인증관리
+import STMKY0601M from    'app/pages/stm/STMKY0601M';     // 재난·안전관리 > 열쇠관리                 > 관련조회 및 출력
 
 
 // proto 영업지원
@@ -344,7 +352,17 @@ function ProtoRoutes() {
       children: [
         { path: 'STMGD0101M',   element: <STMGD0101M /> },
 
+        { path: 'STMDM0101M',   element: <STMDM0101M /> },
+        { path: 'STMDM0201M',   element: <STMDM0201M /> },
+        { path: 'STMDM0301M',   element: <STMDM0301M /> },
+        { path: 'STMDM0401M',   element: <STMDM0401M /> },
+        { path: 'STMDM0401P02', element: <STMDM0401P02 /> },
+        { path: 'STMGI0101M',   element: <STMGI0101M /> },
+        { path: 'STMDM0401P03', element: <STMDM0401P03 /> },
+        { path: 'STMGI0101P02', element: <STMGI0101P02 /> },
+
         { path: 'STMVL0101M',   element: <STMVL0101M /> },
+        { path: 'STMGI0101P01', element: <STMGI0101P01 /> },
 
         { path: 'STMBR0101M',   element: <STMBR0101M /> },
         { path: 'STMBR0101P01', element: <STMBR0101P01 /> },

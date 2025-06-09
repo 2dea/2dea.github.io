@@ -90,8 +90,10 @@ function DEX() {
     <>
 
     {/*
-      2025-06-05 목
-      STMBR0301M 다음에 작업 예정
+      2025-06-09 월
+      배차관리 ~  가스분사기대장관리
+
+    #66   #96
 
       */}
 {/*
@@ -140,16 +142,18 @@ function DEX() {
   </div>
 </td>
 
-<td>
-  <div className="o-field">
-    <div className="fields">
-      <div className="o-form _input wdth-50">
-        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-        <i aria-hidden="true"></i>
-      </div>
-    </div>
-  </div>
-</td>
+
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _select wdth-30">
+                                    <XDropdown appendTo={document.body} className="bind" />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
 
 
 <td>
@@ -314,6 +318,10 @@ function DEX() {
 
             엄청 긴 테이블 : BSPDU0201M
 
+            이미지 : STMKY0201M
+
+            td 텍스트 링크
+            <td className="g-start"><a href="javascript:" className="o-link _normal">링크</a></td>
 
 
       */}
