@@ -241,7 +241,7 @@ function ADMAC0201M() {
                   </div>
                    */}
                   <div className="o-legend type-branch style-normal">
-                    <strong className="label">[0031] 을지로 6가</strong>
+                    <em className="label">[0031] 을지로 6가</em>
                   </div>
                 </div>
 

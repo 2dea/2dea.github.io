@@ -234,7 +234,7 @@ function BSPAQ0101M() {
                           <h2 className="o-heading level2"><span className="label">미인수내역</span></h2>
 
                           <div className="o-helper style-strong">
-                            <strong className="label">신청자란이 공란인 경우 자동배송 또는 타지점 인도분</strong>
+                            <em className="label">신청자란이 공란인 경우 자동배송 또는 타지점 인도분</em>
                           </div>
 
                           <div className="o-length">
@@ -352,7 +352,7 @@ function BSPAQ0101M() {
                           <h2 className="o-heading level2"><span className="label">인수내역</span></h2>
 
                           <div className="o-helper style-strong">
-                            <strong className="label">신청자란이 공란인 경우 자동배송 또는 타지점 인도분</strong>
+                            <em className="label">신청자란이 공란인 경우 자동배송 또는 타지점 인도분</em>
                           </div>
 
                           <div className="o-length">

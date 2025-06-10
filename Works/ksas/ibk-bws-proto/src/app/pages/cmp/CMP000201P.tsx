@@ -124,7 +124,7 @@ function CMP000201P() {
               <div className="o-section">
                 <div className="m-header">
                   <div className="o-legend type-helper style-normal">
-                    <strong className="label">첨부파일의 용량은 10MB 이하입니다.</strong>
+                    <em className="label">첨부파일의 용량은 10MB 이하입니다.</em>
                   </div>
                 </div>
 

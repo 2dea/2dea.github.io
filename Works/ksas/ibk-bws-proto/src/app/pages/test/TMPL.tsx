@@ -424,15 +424,15 @@ function TMPL() {
                     </div>
 
                     <div className="o-helper style-strong">
-                      <strong className="label">헬퍼텍스트</strong>
+                      <em className="label">헬퍼텍스트</em>
                     </div>
 
                     <div className="o-legend type-helper style-normal">
-                      <strong className="label">우측 헬퍼텍스트(일반)</strong>
+                      <em className="label">우측 헬퍼텍스트(일반)</em>
                     </div>
 
                     <div className="o-legend type-helper style-strong">
-                      <strong className="label">우측 헬퍼텍스트(강조)</strong>
+                      <em className="label">우측 헬퍼텍스트(강조)</em>
                     </div>
 
                     <div className="m-binds">

@@ -121,7 +121,43 @@ function STMBR0201M() {
 
               <div className="o-section">
                 <div className="m-calendar-header">
+                  <div className="main">
+                    <div className="year">
+                      <span className="label" aria-label="선택 연도">2025</span>
+                      <ImageButton label="이전 연도" icon="arrow-left" className="bind prev" />
+                      <ImageButton label="다음 연도" icon="arrow-right" className="bind next" />
+                    </div>
 
+                    <div className="month">
+                      <div className="group">
+                        <button type="button" className="bind"><span className="label">1월</span></button>
+                        <button type="button" className="bind"><span className="label">2월</span></button>
+                        <button type="button" className="bind"><span className="label">3월</span></button>
+                        <button type="button" className="bind"><span className="label">4월</span></button>
+                        <button type="button" className="bind"><span className="label">5월</span></button>
+                        <button type="button" className="bind"><span className="label">6월</span></button>
+                        <button type="button" className="bind"><span className="label">7월</span></button>
+                        <button type="button" className="bind"><span className="label">8월</span></button>
+                        <button type="button" className="bind"><span className="label">9월</span></button>
+                        <button type="button" className="bind"><span className="label">10월</span></button>
+                        <button type="button" className="bind"><span className="label">11월</span></button>
+                        <button type="button" className="bind"><span className="label">12월</span></button>
+                      </div>
+                    </div>
+
+                    <div className="today">
+                      <CommonButton label="오늘" className="_normal" />
+                    </div>
+                  </div>
+
+                  <div className="binds">
+                    <div className="views">
+                      <div className="m-toggles">
+                        <CommonButton label="달력" className="" icon="calendar" />
+                        <CommonButton label="목록" className="" icon="menu-alt" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="m-header">
@@ -134,10 +170,13 @@ function STMBR0201M() {
                     <span className="foot">(완료 0건 + 반려 0건)</span>
                   </div>
 
-                  <div className="m-binds">
-                    <div className="group">
-                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록출력" icon="print" />
+                  <div className="m-legend">
+                    <div className="o-legend type-helper style-normal">
+                      <strong className="label">당행</strong>
+                    </div>
+
+                    <div className="o-legend type-helper style-normal">
+                      <strong className="label">외부</strong>
                     </div>
                   </div>
 
