@@ -285,10 +285,12 @@
 .o-file:is(a):not(:active):where(.m-file-list *) { opacity: 0.88; }
 
 
-.o-limit  { font-size: $font-40; line-height: $line-40; display: inline-flex; }
+.o-limit  { font-size: $font-40; line-height: $line-40; display: inline-flex; max-width: 100%; white-space: nowrap; }
 .o-limit >.head  { @include getGlobalHidden(); }
-.o-limit >.data  { display: flex; gap: $gap-whitespace-50; }
+.o-limit >.data  { display: flex; gap: $gap-whitespace-30; }
 .o-limit >.data >:not(.value)  { color: var(--color-text-20); }
+
+.o-limit:where(.type-file, .type-length)  { overflow: hidden; }
 
 
 .m-file  { display: flex; align-items: center; }
@@ -1205,9 +1207,10 @@
 .o-form :is(input:where(.o-form._input *), select:not([multiple]))  { text-overflow: ellipsis; }
 .o-form:has(.o-image-button, button >.o-icon) input:where(.o-form._input *)  { padding-right: 0; }
 
-.o-form:has(textarea)  { flex-direction: column; }
-.o-form textarea  { --lh: var(--text-height-para); --margin-block: #{calc(III(3) + III(2))}; flex: 1 0 auto; line-height: var(--lh); width: 100%; }
+.o-form:has(textarea)  { flex-direction: column; align-items: normal; }
+.o-form textarea  { --lh: var(--text-height-para); --margin-block: #{calc(III(3) + III(2))}; flex: 1 0 auto; line-height: var(--lh); min-width: 100%; min-height: calc(var(--lh) * 1 + var(--margin-block) * 2); }
 .o-form textarea:where(:not([rows]), [rows=""])  { height: calc(var(--lh) * 3 + var(--margin-block) * 2); }
+.o-form textarea:where([rows="1"])  { --lh: inherit; --margin-block: #{III(3)}; }
 
 .o-form select  { padding-right: 1em; background: var(--obj-sym-expand-more) no-repeat calc(100% + III(1)) 50% /#{III(20)} 100%; text-align: left; text-align: start; }
 
@@ -1223,6 +1226,9 @@
 .o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); }
 
 .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { visibility: hidden; }
+
+
+.o-form .o-limit.type-length  { font-size: $font-10; line-height: $line-10; margin: III(2) var(--margin-inline) III(4) auto; }
 
 
 .o-form:where(.type-num, .type-date, .type-time) input  { font-feature-settings: var(--text-feature-tnum); }
@@ -1245,12 +1251,18 @@
 }
 
 
+.o-form._input.type-listbox:not(:has([disabled]))  { cursor: pointer; }
+.o-form._input.type-listbox:not(:has([disabled])) *  { cursor: inherit; }
+
 .o-form._input.type-time  { text-align: center; }
 
 .o-form._input.type-spin  { text-align: center; }
 .o-form._input.type-spin .inner-binds:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); background: var(--color-edge-40); }
 .o-form._input.type-spin .inner-binds:has(>._sum-minus)  { order: -1; flex-direction: row-reverse; }
 .o-form._input.type-spin input  { padding-left: 0; padding-right: 0; }
+
+
+.o-form:where(.is-proto) .inner-binds >.o-image-button  { position: absolute; right: 0; pointer-events: none; cursor: pointer; }
 
 
 // .o-form[style*="width:"],
@@ -1621,7 +1633,7 @@
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: inherit; } */
 
-.o-grid-table tbody >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
+.o-grid-table tbody:not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
 .o-grid-table table >* >tr >.sumtotal-tcell-strong  { color: var(--color-key1-90); background-color: var(--color-ground-70); }
 .o-grid-table table >* >tr.subtotal-trow  { background-color: var(--color-ground2-blue-30); }

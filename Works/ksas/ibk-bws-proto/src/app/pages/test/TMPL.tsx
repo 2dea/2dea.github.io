@@ -498,13 +498,13 @@ function TMPL() {
                                     <InputText placeholder="" value="Value" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <span className="helper">우편물 수령 시 연락 가능한 전화번호</span>
+                                  <span className="helper style-strong"><em>우편물 수령 시 연락 가능한 전화번호</em></span>
                                 </div>
                               </div>
                             </td>
 
                             <th colSpan={1}>
-                              <Label label={`Icon(search) + InputText`} require={false} />
+                              <Label label={`Icon(search) + InputText + string`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
@@ -744,7 +744,47 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`InputTextarea`} require={false} />
+                              <Label label={`FAKE Calendar`} require={false} />
+                            </th>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-date is-proto mode-required wdth-50">{/* .type-date.is-proto { @DEV } */}
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="" icon="calendar" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`FAKE Dropdown`} require={false} />
+                            </th>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-listbox is-proto mode-required wdth-50">{/* .type-listbox.is-proto { @DEV } */}
+                                    <InputText placeholder="선택" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="" icon="arrow-down" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`...`} require={false} />
+                            </th>
+                            <td colSpan={1}></td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`InputTextarea`} require={true} />
                             </th>
                             <td colSpan={5}>
                               <div className="o-field">
@@ -752,6 +792,15 @@ function TMPL() {
                                   <div className="o-form _input mode-required">
                                     <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                                     <i aria-hidden="true"></i>
+
+                                    <div className="o-limit type-length">
+                                      <span className="head">글자수</span>
+                                      <span className="data">
+                                        <em className="value">0</em>
+                                        <span className="sep">/</span>
+                                        <span className="limits" aria-label="입력가능 글자수">100</span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -790,7 +839,7 @@ function TMPL() {
                               </div>
 
                               <div className="m-footer">
-                                <p className="o-helper">도착예정일자: YYYY-MM-DD 신청일자에 실물 발송한 경우</p>
+                                <p className="o-helper style-strong"><em>도착예정일자: YYYY-MM-DD 신청일자에 실물 발송한 경우</em></p>
                               </div>
                             </td>
                           </tr>
