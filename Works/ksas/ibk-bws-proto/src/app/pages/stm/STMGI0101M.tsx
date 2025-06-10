@@ -306,7 +306,7 @@ function STMGI0101M() {
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
                             <td>분실신고</td>
-                            <td className="g-start"><a href="javascript:" className="o-link _normal">결재반려</a></td>
+                            <td><a href="javascript:" className="o-link _normal">결재반려</a></td>
                             <td>홍길동</td>
                             <td>12가1234</td>
                             <td>12가1234</td>

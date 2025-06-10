@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 가스분사기대장관리 > 가스분사기관리대장 ~ (LP)가스분사기관리대장 반납요청
+ * @description 재난·안전관리 > 가스분사기대장관리 > 가스분사기관리대장 ~ (LP)인수등록
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMGI0101P01() {
+function STMGI0101P03() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -87,7 +87,7 @@ function STMGI0101P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -95,7 +95,7 @@ function STMGI0101P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">반납요청</span></h3>}
+        header={<h3 className="o-heading"><span className="label">인수등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -103,7 +103,7 @@ function STMGI0101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">반납정보</span></h4>
+                  <h4 className="o-heading level2"><span className="label">인수정보</span></h4>
                 </div>
 
                 <div className="main">
@@ -114,42 +114,48 @@ function STMGI0101P01() {
                         <col className="data" />
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`반납대상부점`} require={false} />
+                            <Label label={`인수대상부점`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 프로세스혁신
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`담당자`} require={false} />
+                            <Label label={`사용자`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select">
-                                  <XDropdown appendTo={'self'} className="bind" />
+                                <div className="o-form _input mode-required">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
                                 </div>
                               </div>
                             </div>
                           </td>
-                        </tr>
 
-                        <tr>
                           <th colSpan={1}>
-                            <Label label={`발송메시지`} require={true} />
+                            <Label label={`책임자`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -180,7 +186,7 @@ function STMGI0101P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)가스분사기관리대장 수정 [wdth-40p(w770)]</span>
+              <span className="label">(P)인수등록 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
@@ -199,4 +205,4 @@ function STMGI0101P01() {
   );
 }
 
-export default STMGI0101P01;
+export default STMGI0101P03;

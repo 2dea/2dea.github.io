@@ -141,6 +141,8 @@ import STMGD0101M from    'app/pages/stm/STMGD0101M';     // 재난·안전관�
 import STMDM0101M from    'app/pages/stm/STMDM0101M';     // 재난·안전관리 > 배차관리                > 배차신청
 import STMDM0201M from    'app/pages/stm/STMDM0201M';     // 재난·안전관리 > 배차관리                > 배차이력
 import STMDM0301M from    'app/pages/stm/STMDM0301M';     // 재난·안전관리 > 배차관리                > 배차관리
+import STMDM0301P01 from  'app/pages/stm/STMDM0301P01';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)배차등록
+import STMDM0301P02 from  'app/pages/stm/STMDM0301P02';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)반납완료등록
 import STMDM0401M from    'app/pages/stm/STMDM0401M';     // 재난·안전관리 > 배차관리                > 차량관리
 import STMDM0401P02 from  'app/pages/stm/STMDM0401P02';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)차종조회
 import STMDM0401P03 from  'app/pages/stm/STMDM0401P03';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)차종팝업
@@ -148,6 +150,10 @@ import STMDM0401P03 from  'app/pages/stm/STMDM0401P03';   // 재난·안전관�
 import STMGI0101M from    'app/pages/stm/STMGI0101M';     // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장
 import STMGI0101P01 from  'app/pages/stm/STMGI0101P01';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)수정
 import STMGI0101P02 from  'app/pages/stm/STMGI0101P02';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)반납요청
+import STMGI0101P03 from  'app/pages/stm/STMGI0101P03';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)인수등록
+import STMGI0101P04 from  'app/pages/stm/STMGI0101P04';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)분실신고
+
+import STMGI0201M from    'app/pages/stm/STMGI0201M';     // 재난·안전관리 > 가스분사기관리대장(관리자) > 가스분사기관리대장(관리자)
 
 import STMVL0101M from    'app/pages/stm/STMVL0101M';     // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
 
@@ -355,11 +361,16 @@ function ProtoRoutes() {
         { path: 'STMDM0101M',   element: <STMDM0101M /> },
         { path: 'STMDM0201M',   element: <STMDM0201M /> },
         { path: 'STMDM0301M',   element: <STMDM0301M /> },
+        { path: 'STMDM0301P01', element: <STMDM0301P01 /> },
+        { path: 'STMDM0301P02', element: <STMDM0301P02 /> },
         { path: 'STMDM0401M',   element: <STMDM0401M /> },
         { path: 'STMDM0401P02', element: <STMDM0401P02 /> },
         { path: 'STMGI0101M',   element: <STMGI0101M /> },
         { path: 'STMDM0401P03', element: <STMDM0401P03 /> },
         { path: 'STMGI0101P02', element: <STMGI0101P02 /> },
+        { path: 'STMGI0101P03', element: <STMGI0101P03 /> },
+        { path: 'STMGI0101P04', element: <STMGI0101P04 /> },
+        { path: 'STMGI0201M',   element: <STMGI0201M /> },
 
         { path: 'STMVL0101M',   element: <STMVL0101M /> },
         { path: 'STMGI0101P01', element: <STMGI0101P01 /> },
