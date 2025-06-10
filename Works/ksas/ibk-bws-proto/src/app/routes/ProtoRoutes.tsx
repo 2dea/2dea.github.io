@@ -138,6 +138,8 @@ import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도
 // proto 재난·안전관리
 import STMGD0101M from    'app/pages/stm/STMGD0101M';     // 재난·안전관리 > 기계경비당직관리         > 당직신청관리
 
+import STMVL0101M from    'app/pages/stm/STMVL0101M';     // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
+
 import STMDM0101M from    'app/pages/stm/STMDM0101M';     // 재난·안전관리 > 배차관리                > 배차신청
 import STMDM0201M from    'app/pages/stm/STMDM0201M';     // 재난·안전관리 > 배차관리                > 배차이력
 import STMDM0301M from    'app/pages/stm/STMDM0301M';     // 재난·안전관리 > 배차관리                > 배차관리
@@ -153,9 +155,13 @@ import STMGI0101P02 from  'app/pages/stm/STMGI0101P02';   // 재난·안전관�
 import STMGI0101P03 from  'app/pages/stm/STMGI0101P03';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)인수등록
 import STMGI0101P04 from  'app/pages/stm/STMGI0101P04';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)분실신고
 
-import STMGI0201M from    'app/pages/stm/STMGI0201M';     // 재난·안전관리 > 가스분사기관리대장(관리자) > 가스분사기관리대장(관리자)
+import STMGI0201M from    'app/pages/stm/STMGI0201M';     // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자)
+import STMGI0201P01 from  'app/pages/stm/STMGI0201P01';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자) ~ (LP)폐기등록
+import STMGI0201P02 from  'app/pages/stm/STMGI0201P02';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자) ~ (LP)인도등록
+import STMGI0201P03 from  'app/pages/stm/STMGI0201P03';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자) ~ (LP)분실접수
 
-import STMVL0101M from    'app/pages/stm/STMVL0101M';     // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
+import STMGI0301M from    'app/pages/stm/STMGI0301M';     // 재난·안전관리 > 가스분사기대장관리        > 가스분사기이력조회
+
 
 import STMBR0101M from    'app/pages/stm/STMBR0101M';     // 재난·안전관리 > 버스배차신청             > 배차신청
 import STMBR0101P01 from  'app/pages/stm/STMBR0101P01';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)일괄신청하기
@@ -182,11 +188,18 @@ import STMKY0601M from    'app/pages/stm/STMKY0601M';     // 재난·안전관�
 
 
 // proto 영업지원
-import BSSTI0101M from    'app/pages/bss/BSSTI0101M';   // 영업지원 > 연수원 > 연수원품목정보관리
-import BSSTI0201M from    'app/pages/bss/BSSTI0201M';   // 영업지원 > 연수원 > 연수원품목입출고등록
-import BSSTI0301M from    'app/pages/bss/BSSTI0301M';   // 영업지원 > 연수원 > 연수원품목입출고취소
-import BSSTI0401M from    'app/pages/bss/BSSTI0401M';   // 영업지원 > 연수원 > 연수원입출고내역조회
-import BSSTI0501M from    'app/pages/bss/BSSTI0501M';   // 영업지원 > 연수원 > 연수원품목재고조회
+import BSSCR0101P02 from  'app/pages/bss/BSSCR0101P02'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)달력카테고리관리
+
+import BSSCR0301P01 from  'app/pages/bss/BSSCR0301P01'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)배송업체정보
+import BSSCR0301P02 from  'app/pages/bss/BSSCR0301P02'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)연도별배송수량참고
+import BSSCR0301P03 from  'app/pages/bss/BSSCR0301P03'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)인수증확인
+import BSSCR0301P04 from  'app/pages/bss/BSSCR0301P04'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)고객배송정보
+
+import BSSTI0101M from    'app/pages/bss/BSSTI0101M';   // 영업지원 > 연수원    > 연수원품목정보관리
+import BSSTI0201M from    'app/pages/bss/BSSTI0201M';   // 영업지원 > 연수원    > 연수원품목입출고등록
+import BSSTI0301M from    'app/pages/bss/BSSTI0301M';   // 영업지원 > 연수원    > 연수원품목입출고취소
+import BSSTI0401M from    'app/pages/bss/BSSTI0401M';   // 영업지원 > 연수원    > 연수원입출고내역조회
+import BSSTI0501M from    'app/pages/bss/BSSTI0501M';   // 영업지원 > 연수원    > 연수원품목재고조회
 
 // proto 관리자
 import ADMCM0101M from    'app/pages/adm/ADMCM0101M';   // 관리자 > 코드관리 > 공통코드관리
@@ -372,6 +385,12 @@ function ProtoRoutes() {
         { path: 'STMGI0101P04', element: <STMGI0101P04 /> },
         { path: 'STMGI0201M',   element: <STMGI0201M /> },
 
+        { path: 'STMGI0201P01', element: <STMGI0201P01 /> },
+        { path: 'STMGI0201P02', element: <STMGI0201P02 /> },
+        { path: 'STMGI0201P03', element: <STMGI0201P03 /> },
+
+        { path: 'STMGI0301M',   element: <STMGI0301M /> },
+
         { path: 'STMVL0101M',   element: <STMVL0101M /> },
         { path: 'STMGI0101P01', element: <STMGI0101P01 /> },
 
@@ -406,6 +425,12 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
+        { path: 'BSSCR0101P02', element: <BSSCR0101P02 /> },
+        { path: 'BSSCR0301P01', element: <BSSCR0301P01 /> },
+        { path: 'BSSCR0301P02', element: <BSSCR0301P02 /> },
+        { path: 'BSSCR0301P03', element: <BSSCR0301P03 /> },
+        { path: 'BSSCR0301P04', element: <BSSCR0301P04 /> },
+
         { path: 'BSSTI0101M',   element: <BSSTI0101M /> },
         { path: 'BSSTI0201M',   element: <BSSTI0201M /> },
         { path: 'BSSTI0301M',   element: <BSSTI0301M /> },
