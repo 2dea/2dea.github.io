@@ -329,7 +329,7 @@ function HSPHS0501M() {
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고가능량</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일렬번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">포장구분</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수입인지구분</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체코드</span></div></th>
@@ -537,7 +537,7 @@ function HSPHS0501M() {
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수번호</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
-                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일렬번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">포장구분</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수입인지구분</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체코드</span></div></th>

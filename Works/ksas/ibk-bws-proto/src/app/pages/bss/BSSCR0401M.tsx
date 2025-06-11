@@ -125,7 +125,7 @@ function BSSCR0401M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`신천연도`} require={true} />
+                    <Label label={`신청연도`} require={true} />
                     <div className="fields">
                       <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />

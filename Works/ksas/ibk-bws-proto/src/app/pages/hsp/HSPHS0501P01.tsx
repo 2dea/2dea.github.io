@@ -290,7 +290,7 @@ function HSPHP0401P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)업체조회 [wdth-70p(w1340)]</span>
+              <span className="label">(P)검수내역조회 [wdth-70p(w1340)]</span>
             </h1>
           </div>
         </div>

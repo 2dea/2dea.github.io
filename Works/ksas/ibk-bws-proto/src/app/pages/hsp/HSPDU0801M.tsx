@@ -402,7 +402,7 @@ function HSPDU0801M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정정연월일</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기수량</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                                    <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일렬번호</span></div></th>
+                                    <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일련번호</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기책임자</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유내용</span></div></th>

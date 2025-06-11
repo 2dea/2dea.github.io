@@ -338,8 +338,10 @@ function HSPHS0201M() {
                         <colgroup>
                           <col className="wdth-10" />
                           <col />
-                          <col />
                           <col className="wdth-auto" />
+                          <col />
+                          <col />
+                          <col />
                           <col />
                           <col />
                         </colgroup>

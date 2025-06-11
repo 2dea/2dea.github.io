@@ -71,7 +71,7 @@ import BSPDU0401P02 from  'app/pages/hsp/BSPDU0401P02';  // 중요용지·용도
 import HSPBT0101M from    'app/pages/hsp/HSPBT0101M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역
 import HSPBT0101P01 from  'app/pages/hsp/HSPBT0101P01';  // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역 ~ (LP)인도취소
 import HSPBT0301M from    'app/pages/hsp/HSPBT0301M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역
-import HSPBT0301P01 from  'app/pages/hsp/HSPBT0301P01';  // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역 ~ (LP)부분취소
+import HSPBT0301P01 from  'app/pages/hsp/HSPBT0301P01';  // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지신청분인도   > 신청내역 ~ (LP)본부반송
 import HSPBT0201M from    'app/pages/hsp/HSPBT0201M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지자동배송인도
 import HSPBT0401M from    'app/pages/hsp/HSPBT0401M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지일반인도
 import HSPBT0501M from    'app/pages/hsp/HSPBT0501M';    // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지일괄인도
@@ -81,7 +81,7 @@ import HSPBT0801M from    'app/pages/hsp/HSPBT0801M';    // 중요용지·용도
 import HSPBT1401M from    'app/pages/hsp/HSPBT1401M';    // 중요용지·용도품(본부) > 영업점배송관리 > 송장출력
 import HSPBT1001M from    'app/pages/hsp/HSPBT1001M';    // 중요용지·용도품(본부) > 영업점배송관리 > 용도품인도내역조회
 import HSPBT1101M from    'app/pages/hsp/HSPBT1101M';    // 중요용지·용도품(본부) > 영업점배송관리 > 용도품신청분인도
-import HSPBT1101P01 from  'app/pages/hsp/HSPBT1101P01';  // 중요용지·용도품(본부) > 영업점배송관리 > 용도품신청분인도 > 신청내역 ~ (LP)부분취소
+import HSPBT1101P01 from  'app/pages/hsp/HSPBT1101P01';  // 중요용지·용도품(본부) > 영업점배송관리 > 용도품신청분인도 > 신청내역 ~ (LP)본부반송
 import HSPBT1201M from    'app/pages/hsp/HSPBT1201M';    // 중요용지·용도품(본부) > 영업점배송관리 > 용도품일반인도
 import HSPBT1301M from    'app/pages/hsp/HSPBT1301M';    // 중요용지·용도품(본부) > 영업점배송관리 > 용도품일괄인도
 import HSPBT0901M from    'app/pages/hsp/HSPBT0901M';    // 중요용지·용도품(본부) > 영업점배송관리 > 용도품배송명령

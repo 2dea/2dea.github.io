@@ -242,7 +242,7 @@ function HSPHS0801M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납량</span></div></th>
-                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일렬번호</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납사유</span></div></th>
                           </tr>

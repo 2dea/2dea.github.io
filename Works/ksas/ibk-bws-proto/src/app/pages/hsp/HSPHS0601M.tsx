@@ -264,7 +264,7 @@ function HSPHS0601M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일평균인도량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일렬번호</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종류</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">포장단위</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>

@@ -200,7 +200,7 @@ function HSPHS0501P02() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일렬번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수방법</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수직원</span></div></th>
@@ -319,7 +319,7 @@ function HSPHS0501P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)업체조회 [wdth-70p(w1340)]</span>
+              <span className="label">(P)0원입고등록 [wdth-70p(w1340)]</span>
             </h1>
           </div>
         </div>

@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 영업점배송관리 > 용도품신청분인도 > 신청내역 ~ (LP)부분취소
+ * @description 중요용지·용도품(본부) > 영업점배송관리 > 용도품신청분인도 > 신청내역 ~ (LP)본부반송
  */
 
 // dependency
@@ -134,7 +134,7 @@ function HSPBT1101P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`반송반송`} require={true} />
+                            <Label label={`반송사유`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -219,7 +219,7 @@ function HSPBT1101P01() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
-                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반송반송</span></div></th>
+                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반송사유</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>

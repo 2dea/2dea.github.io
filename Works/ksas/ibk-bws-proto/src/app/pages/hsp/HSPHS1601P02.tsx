@@ -292,7 +292,7 @@ function HSPHS1601P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)업체조회 [wdth-60p(w1150)]</span>
+              <span className="label">(P)0원입고등록 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>
