@@ -96,16 +96,19 @@ import HSPHS0201P01 from  'app/pages/hsp/HSPHS0201P01';  // 중요용지·용도
 import HSPHS0301M from    'app/pages/hsp/HSPHS0301M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지조달신청현황
 import HSPHS0401M from    'app/pages/hsp/HSPHS0401M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지검수승인등록
 import HSPHS0401P03 from  'app/pages/hsp/HSPHS0401P03';  // 중요용지·용도품(본부) > 본부재고관리   > 중요용지검수승인등록 ~ (LP)물품검수조서
-import HSPHS0501M from    'app/pages/hsp/HSPHS0501M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부입고
-import HSPHS0501P01 from  'app/pages/hsp/HSPHS0501P01';  // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부입고 ~ (LP)검수내역조회
+import HSPHS0501M from    'app/pages/hsp/HSPHS0501M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부입고 > 입고대상
+import HSPHS0501P01 from  'app/pages/hsp/HSPHS0501P01';  // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부입고 > 입고대상 ~ (LP)검수내역조회
+import HSPHS0501P02 from  'app/pages/hsp/HSPHS0501P02';  // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부입고 > 입고대상 ~ (LP)0원입고등록
 import HSPHS0601M from    'app/pages/hsp/HSPHS0601M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부재고조회
 import HSPHS2001M from    'app/pages/hsp/HSPHS2001M';    // 중요용지·용도품(본부) > 본부재고관리   > 센터별영업점재고조회
 import HSPHS0701M from    'app/pages/hsp/HSPHS0701M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부인도월별누계
 import HSPHS0801M from    'app/pages/hsp/HSPHS0801M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지업체반납
 import HSPHS0901M from    'app/pages/hsp/HSPHS0901M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지제한등록
 import HSPHS1001M from    'app/pages/hsp/HSPHS1001M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지제한승인
-import HSPHS1201M from    'app/pages/hsp/HSPHS1201M';    // 중요용지·용도품(본부) > 본부재고관리   > 중요용지제한승인
-import HSPHS1601M from    'app/pages/hsp/HSPHS1601M';    // 중요용지·용도품(본부) > 본부재고관리   > 용도품본부입고
+import HSPHS1201M from    'app/pages/hsp/HSPHS1201M';    // 중요용지·용도품(본부) > 본부재고관리   > 용도품발주명세표
+import HSPHS1301M from    'app/pages/hsp/HSPHS1301M';    // 중요용지·용도품(본부) > 본부재고관리   > 용도품조달신청
+import HSPHS1601M from    'app/pages/hsp/HSPHS1601M';    // 중요용지·용도품(본부) > 본부재고관리   > 용도품본부입고 > 입고대상
+import HSPHS1601P02 from  'app/pages/hsp/HSPHS1601P02';  // 중요용지·용도품(본부) > 본부재고관리   > 용도품본부입고 > 입고대상 ~ (LP)0원입고등록
 import HSPHS1701M from    'app/pages/hsp/HSPHS1701M';    // 중요용지·용도품(본부) > 본부재고관리   > 용도품본부입고
 import HSPHS1701P01 from  'app/pages/hsp/HSPHS1701P01';  // 중요용지·용도품(본부) > 본부재고관리   > 용도품본부입고
 import HSPHS1901M from    'app/pages/hsp/HSPHS1901M';    // 중요용지·용도품(본부) > 본부재고관리   > 일람부관리
@@ -194,6 +197,10 @@ import BSSCR0301P01 from  'app/pages/bss/BSSCR0301P01'; // 영업지원 > 캘린
 import BSSCR0301P02 from  'app/pages/bss/BSSCR0301P02'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)연도별배송수량참고
 import BSSCR0301P03 from  'app/pages/bss/BSSCR0301P03'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)인수증확인
 import BSSCR0301P04 from  'app/pages/bss/BSSCR0301P04'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)고객배송정보
+
+import BSSCR0401M from    'app/pages/bss/BSSCR0401M';   // 영업지원 > 캘린더신청 > 신청내역조회
+import BSSCR0501M from    'app/pages/bss/BSSCR0501M';   // 영업지원 > 캘린더신청 > 배부수량관리
+
 
 import BSSTI0101M from    'app/pages/bss/BSSTI0101M';   // 영업지원 > 연수원    > 연수원품목정보관리
 import BSSTI0201M from    'app/pages/bss/BSSTI0201M';   // 영업지원 > 연수원    > 연수원품목입출고등록
@@ -329,6 +336,7 @@ function ProtoRoutes() {
         { path: 'HSPHS0401P03',   element: <HSPHS0401P03 /> },
         { path: 'HSPHS0501M',     element: <HSPHS0501M /> },
         { path: 'HSPHS0501P01',   element: <HSPHS0501P01 /> },
+        { path: 'HSPHS0501P02',   element: <HSPHS0501P02 /> },
         { path: 'HSPHS0601M',     element: <HSPHS0601M /> },
         { path: 'HSPHS2001M',     element: <HSPHS2001M /> },
         { path: 'HSPHS0701M',     element: <HSPHS0701M /> },
@@ -336,7 +344,9 @@ function ProtoRoutes() {
         { path: 'HSPHS0901M',     element: <HSPHS0901M /> },
         { path: 'HSPHS1001M',     element: <HSPHS1001M /> },
         { path: 'HSPHS1201M',     element: <HSPHS1201M /> },
+        { path: 'HSPHS1301M',     element: <HSPHS1301M /> },
         { path: 'HSPHS1601M',     element: <HSPHS1601M /> },
+        { path: 'HSPHS1601P02',   element: <HSPHS1601P02 /> },
         { path: 'HSPHS1701M',     element: <HSPHS1701M /> },
         { path: 'HSPHS1701P01',   element: <HSPHS1701P01 /> },
         { path: 'HSPHS1901M',     element: <HSPHS1901M /> },
@@ -430,6 +440,9 @@ function ProtoRoutes() {
         { path: 'BSSCR0301P02', element: <BSSCR0301P02 /> },
         { path: 'BSSCR0301P03', element: <BSSCR0301P03 /> },
         { path: 'BSSCR0301P04', element: <BSSCR0301P04 /> },
+
+        { path: 'BSSCR0401M',   element: <BSSCR0401M /> },
+        { path: 'BSSCR0501M',   element: <BSSCR0501M /> },
 
         { path: 'BSSTI0101M',   element: <BSSTI0101M /> },
         { path: 'BSSTI0201M',   element: <BSSTI0201M /> },

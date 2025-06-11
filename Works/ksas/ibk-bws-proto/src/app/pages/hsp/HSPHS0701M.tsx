@@ -123,9 +123,9 @@ function HSPHS0701M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`적요`} require={true} />
+                    <Label label={`적요`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

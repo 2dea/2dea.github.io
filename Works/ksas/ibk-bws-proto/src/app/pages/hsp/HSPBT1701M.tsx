@@ -139,7 +139,7 @@ function HSPBT1701M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`본점구분`} require={false} />
+                    <Label label={`배송업체구분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -159,7 +159,22 @@ function HSPBT1701M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`배송일자`} require={false} />
+                    <Label label={`신청기간`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input type-date wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <span className="seps type-tilde">~</span>
+                      <div className="o-form _input type-date wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field colspan-2">
+                    <Label label={`인수기간`} require={false} />
                     <div className="fields">
                       <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -222,8 +237,9 @@ function HSPBT1701M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-10" />
-                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -240,9 +256,10 @@ function HSPBT1701M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송부점</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층/호수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본점구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송업체구분</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령인</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산확정</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산</span></div></th>
                           </tr>
@@ -250,14 +267,13 @@ function HSPBT1701M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
                             <td className="g-start">성남하이테크</td>
@@ -272,7 +288,8 @@ function HSPBT1701M() {
                             <td className="g-start">1층</td>
                             <td>서울시회</td>
                             <td>홍길동</td>
-                            <td>01012345678</td>
+                            <td><span className="o-digit type-tel">02-729-7610</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td>Y</td>
                             <td>Y</td>
                           </tr>
@@ -286,6 +303,7 @@ function HSPBT1701M() {
                             <td className="sumtotal-tcell"></td>
                             <td className="sumtotal-tcell"></td>
                             <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell"></td>
                             <td className="sumtotal-tcell"></td>
                             <td className="sumtotal-tcell"></td>
                             <td className="sumtotal-tcell"></td>

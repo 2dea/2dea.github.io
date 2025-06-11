@@ -109,7 +109,6 @@ function HSPBT1501M() {
             <div className="m-binds type-start">
               <div className="group">
                 <CommonButton label="알림발송" className="_lined-secondary" />
-                <CommonButton label="알림설정" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -146,9 +145,9 @@ function HSPBT1501M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`구분`} require={true} />
+                    <Label label={`구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

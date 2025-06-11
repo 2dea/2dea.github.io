@@ -111,6 +111,12 @@ function HSPHS0301M() {
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
+
+            <div className="m-binds type-end">
+              <div className="group _primary">
+                <CommonButton label="조달신청취소" className="_lined-primary" />
+                </div>
+            </div>
           </div>
         </div>
 
@@ -269,7 +275,7 @@ function HSPHS0301M() {
                             <td className="g-end">300,000</td>
                             <td className="g-end">300,000</td>
                             <td>개</td>
-                            <td>22186</td>
+                            <td><span className="o-digit type-tel">02-729-7610</span></td>
                             <td>홍길동</td>
                             <td>입고완료</td>
                           </tr>

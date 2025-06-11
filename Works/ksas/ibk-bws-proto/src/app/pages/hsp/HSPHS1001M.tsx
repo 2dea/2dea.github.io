@@ -151,9 +151,9 @@ function HSPHS1001M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`신청상태`} require={true} />
+                    <Label label={`신청상태`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

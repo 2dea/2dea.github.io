@@ -87,7 +87,7 @@ function HSPHS0201P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -150,7 +150,7 @@ function HSPHS0201P01() {
                             <Label label={`신청일자`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            2025-12-25
+                            <span className="o-digit type-date">2025-12-25</span>
                           </td>
                         </tr>
                       </tbody>
@@ -158,66 +158,81 @@ function HSPHS0201P01() {
                   </form>
                 </div>
               </div>
-
               <div className="o-section">
-                <div className="main _primary rows-body-1i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="table-container p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col className="wdth-10" />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                        </colgroup>
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">상세정보</span></h4>
+                </div>
 
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">규격</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">납기요청일</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소요예산</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">용도구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점보유량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
-                          </tr>
-                        </thead>
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
 
-                        {/* <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                          </tr>
-                        </tbody> */}
-
-                        <tbody className="p-datatable-tbody">
-                        {[...Array(1)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>PD011</td>
-                            <td className="g-start">신세계백화점상품권10만원건</td>
-                            <td></td>
-                            <td className="g-end">10</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td className="g-end">10</td>
-                            <td>중요용지</td>
-                            <td className="g-end">0</td>
-                            <td>매</td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`출급번호`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            00000
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`품목명`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            신세계백화점상품권10만원건
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`규격`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">
+                            10
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`신청량`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">
+                            10
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`납기요청일`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`용도구분`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            중요용지
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`부점보유량`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">
+                            10
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`단위`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            매
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
                 </div>
               </div>
 
@@ -239,7 +254,7 @@ function HSPHS0201P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)물품신청결재창 [wdth-50p(w960)]</span>
+              <span className="label">(P)물품신청결재창 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>

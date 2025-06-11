@@ -109,10 +109,8 @@ function HSPBT1601M() {
             <div className="m-binds type-start">
 
               <div className="group">
-                <CommonButton label="배송지시취소" className="_lined-secondary" />
-                <CommonButton label="배송지시" className="_lined-secondary" />
+                <CommonButton label="발주서전송취소" className="_lined-secondary" />
                 <CommonButton label="발주서전송" className="_lined-secondary" />
-                <CommonButton label="인수확인" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -127,10 +125,6 @@ function HSPBT1601M() {
                 </div>
               </div>
 
-              <div className="group _primary">
-                <CommonButton label="삭제" className="_delete" />
-                <CommonButton label="저장" className="_solid-primary" />
-              </div>
             </div>
           </div>
         </div>
@@ -154,7 +148,7 @@ function HSPBT1601M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`본점구분`} require={false} />
+                    <Label label={`배송업체구분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -178,7 +172,7 @@ function HSPBT1601M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`신청일자`} require={false} />
+                    <Label label={`신청기간`} require={false} />
                     <div className="fields">
                       <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -243,7 +237,8 @@ function HSPBT1601M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-auto" />
+                          <col />
+                          <col />
                           <col />
                           <col />
                           <col />
@@ -262,10 +257,11 @@ function HSPBT1601M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송성공여부</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송량</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송지주소</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층/호수</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본점구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송업체구분</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령인</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산</span></div></th>
@@ -278,7 +274,7 @@ function HSPBT1601M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -295,66 +291,13 @@ function HSPBT1601M() {
                             <td className="g-end">300</td>
                             <td>홍길동</td>
                             <td>미배송</td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-30 g-end">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-auto">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-30">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _select wdth-50">
-                                    <XDropdown appendTo={document.body} className="bind" />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-30">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
+                            <td>Y</td>
+                            <td className="g-end">30</td>
+                            <td className="g-start">서울특별시 서초구 서초대로 77길 17</td>
+                            <td className="g-start">1층</td>
+                            <td className="g-start">서울특별시</td>
+                            <td>홍길동</td>
+                            <td><span className="o-digit type-tel">02-729-7610</span></td>
                             <td>N</td>
                           </tr>
                         ))}

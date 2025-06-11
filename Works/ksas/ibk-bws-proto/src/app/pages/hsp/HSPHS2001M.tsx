@@ -131,9 +131,9 @@ function HSPHS2001M() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`업무지원부`} require={true} />
+                    <Label label={`업무지원`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

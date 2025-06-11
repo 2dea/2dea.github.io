@@ -363,11 +363,11 @@ function HSPBT0501M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="표준템플릿" className="_normal" icon="excel-download-label" />
+                      <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
+                      <CommonButton label="일괄양식 업로드" className="_normal" icon="excel-upload-label" />
                     </div>
 
                     <div className="group">
-                      <ImageButton label="엑셀​업로드" icon="excel-upload" />
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>

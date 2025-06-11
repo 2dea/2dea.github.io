@@ -109,8 +109,8 @@ function HSPBT1101M() {
             <div className="m-binds type-start">
 
               <div className="group">
-                <CommonButton label="부분취소등록" className="_lined-secondary" />
-                <CommonButton label="부분취소등록 회수" className="_lined-secondary" />{/* "본부취소내역" 탭 활성화 시 출력 */}
+                <CommonButton label="본부반송" className="_lined-secondary" />
+                <CommonButton label="본부반송취소" className="_lined-secondary" />{/* "본부반송내역" 탭 활성화 시 출력 */}
               </div>
 
               <div className="group _assistive">
@@ -205,7 +205,7 @@ function HSPBT1101M() {
                 <div className="m-tab type2">
                   <TabList className="lists">
                     <Tab className="link"><span className="label">신청내역</span></Tab>
-                    <Tab className="link"><span className="label">본부취소내역</span></Tab>
+                    <Tab className="link"><span className="label">본부반송내역</span></Tab>
                   </TabList>
                 </div>
 
@@ -387,7 +387,7 @@ function HSPBT1101M() {
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h2 className="o-heading level2"><span className="label">본부취소내역</span></h2>
+                          <h2 className="o-heading level2"><span className="label">본부반송내역</span></h2>
 
                           <div className="o-length">
                             <span className="head">전체</span>
@@ -447,8 +447,8 @@ function HSPBT1101M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부취소일자</span></div></th>
-                                    <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부취소사유</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부반송일자</span></div></th>
+                                    <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부반송사유</span></div></th>
                                   </tr>
                                   <tr>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>

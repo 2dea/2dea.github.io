@@ -109,9 +109,10 @@ function HSPBT0301M() {
             <div className="m-binds type-start">
 
               <div className="group">
-                <CommonButton label="본부취소등록" className="_lined-secondary" />
+                <CommonButton label="본부반송" className="_lined-secondary" />
                 <CommonButton label="일련번호조회" className="_lined-secondary" />
                 <CommonButton label="중복일련번호 체크" className="_lined-secondary" />
+                <CommonButton label="본부반송취소" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -214,7 +215,7 @@ function HSPBT0301M() {
             <div className="m-tab type2">
               <TabList className="lists">
                 <Tab className="link"><span className="label">신청내역</span></Tab>
-                <Tab className="link"><span className="label">본부취소내역</span></Tab>
+                <Tab className="link"><span className="label">본부반송내역</span></Tab>
               </TabList>
             </div>
 
@@ -462,7 +463,7 @@ function HSPBT0301M() {
 
                   <div className="o-section">
                     <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">본부취소내역</span></h2>
+                      <h2 className="o-heading level2"><span className="label">본부반송내역</span></h2>
 
                       <div className="o-length">
                         <span className="head">전체</span>
@@ -509,6 +510,7 @@ function HSPBT0301M() {
 
                             <thead className="p-datatable-thead">
                               <tr>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
@@ -523,8 +525,8 @@ function HSPBT0301M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재단계</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출납책임자 결재여부</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">예외처리여부</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부취소일자</span></div></th>
-                                <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부취소사유</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부반송일자</span></div></th>
+                                <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부반송사유</span></div></th>
                               </tr>
                               <tr>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
@@ -534,13 +536,14 @@ function HSPBT0301M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={19}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
                               <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td><InputCheck label="선택" labelHidden /></td>
                                 <td>{idx + 1}</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td>10330</td>

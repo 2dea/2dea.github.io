@@ -144,9 +144,9 @@ function HSPDU0701M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`업무지원부`} require={true} />
+                    <Label label={`업무지원`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

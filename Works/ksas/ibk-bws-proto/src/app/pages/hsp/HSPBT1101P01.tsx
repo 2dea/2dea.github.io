@@ -95,7 +95,7 @@ function HSPBT1101P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">본부취소</span></h3>}
+        header={<h3 className="o-heading"><span className="label">본부반송</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -103,7 +103,7 @@ function HSPBT1101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">용도품 본부취소</span></h4>
+                  <h4 className="o-heading level2"><span className="label">용도품 본부반송</span></h4>
                 </div>
 
                 <div className="main">
@@ -134,7 +134,7 @@ function HSPBT1101P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`취소사유`} require={true} />
+                            <Label label={`반송반송`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -164,7 +164,7 @@ function HSPBT1101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">본부취소 대상내역</span></h5>
+                  <h5 className="o-heading level3"><span className="label">본부반송 대상내역</span></h5>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -219,7 +219,7 @@ function HSPBT1101P01() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
-                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소사유</span></div></th>
+                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반송반송</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
@@ -289,7 +289,7 @@ function HSPBT1101P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)본부취소 [wdth-60p(w1150)]</span>
+              <span className="label">(P)본부반송 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>

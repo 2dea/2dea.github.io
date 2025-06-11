@@ -175,9 +175,9 @@ function HSPBT0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`재고기준`} require={true} />
+                    <Label label={`재고기준`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

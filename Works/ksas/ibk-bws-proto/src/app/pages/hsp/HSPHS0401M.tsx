@@ -114,7 +114,7 @@ function HSPHS0401M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="확인취소" className="_lined-primary" />
+                <CommonButton label="검수확인취소" className="_lined-primary" />
                 <CommonButton label="검수확인" className="_solid-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
                 </div>

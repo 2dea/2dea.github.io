@@ -135,9 +135,9 @@ function HSPHS0101M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`품목분류`} require={true} />
+                    <Label label={`품목분류`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -168,9 +168,9 @@ function HSPHS0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`상태`} require={true} />
+                    <Label label={`상태`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -178,9 +178,9 @@ function HSPHS0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`발주기준`} require={true} />
+                    <Label label={`발주기준`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

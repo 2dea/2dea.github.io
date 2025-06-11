@@ -258,6 +258,8 @@ function DEX() {
 
         HSPHS2001M : 기획서 없음 : 본부재고관리 >  센터별영업점재고조회 ( 5/23화면 추가)
 
+        조회- 타이틀 옆 문구 : HSPHS0601M렝
+
         본부중요용지일괄폐기 - 기획서 - 탭 화면..? 	HSPDU0801M ppt #179 -> 기획 확인필요
 
 
@@ -298,7 +300,8 @@ function DEX() {
               HSPHS0901M
               HSPHS1901P02
 
-          싱글 왼쪽 반: HSPDU0701M
+          싱글 왼쪽 반: HSPDU0701M , HSPHS2001M
+
 
           [팝업레이아웃 ]
             h3 : 표: input
@@ -363,6 +366,50 @@ function DEX() {
         git push
 
       */}
+
+      {/*
+
+      2025-06-11 수
+ ### 완료
+HSPHS0501M 중요용지본부입고
+HSPHS1601M 용도품본부입고
+ HSPHP0401M (총무부외)중요용지본부입고
+
+# 외
+
+HSPBT0301M
+HSPBT0201M
+HSPBT0501M
+HSPBT0701M
+HSPBT0801M
+
+HSPBT1401M 송장출력
+HSPBT1001M
+HSPBT1101M
+HSPBT1101P01
+HSPBT0901M
+HSPBT1501M
+HSPBT1601M
+HSPBT1701M
+HSPHS0201M
+HSPHS0201P01
+
+HSPHS0301M
+HSPHS0401M
+HSPHS0601M
+HSPHS2001M
+HSPDU0701M
+HSPHS0701M
+HSPHS1001M
+HSPHS1201M
+
+HSPHS0201M
+HSPHS1301M
+
+2025-06-12 에는 본부
+ppt114 부터~
+
+*/}
 
       <div className="roles" data-div-role="0">
         <div className="div-header">

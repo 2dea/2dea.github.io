@@ -135,9 +135,9 @@ function HSPBT0801M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                      <Label label={`노선`} require={true} />
+                      <Label label={`업무지원`} require={false} />
                       <div className="fields">
-                        <div className="o-form _select mode-required">
+                        <div className="o-form _select">
                           <XDropdown appendTo={'self'} className="bind" />
                           <i aria-hidden="true"></i>
                         </div>
@@ -145,20 +145,53 @@ function HSPBT0801M() {
                   </div>
 
                   <div className="o-field">
-                      <Label label={`결재여부`} require={true} />
-                      <div className="fields">
-                        <div className="o-form _select mode-required">
-                          <XDropdown appendTo={'self'} className="bind" />
-                          <i aria-hidden="true"></i>
-                        </div>
-                      </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`인도일자`} require={true} />
+                    <Label label={`인수부점`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <div className="o-form _input">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`출급번호분류`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`재고기준`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div className="o-field">
+                    <Label label={`미인수분 재고포함 여부`} require={false} />
+                    <div className="fields">
+                      <div className="m-checks">
+                        <InputCheck label="선택" labelHidden defaultChecked />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`월평균사용량 >=`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
