@@ -146,8 +146,8 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 .o-index-table tbody tr.del  { background-color: #ededed; color: #bbbbbb; }
 .o-index-table tbody tr.key1,
 .o-index-table tbody tr.key  { background-color: #ffeeeb; }
-.o-index-table tbody tr.js_clicked:not(:active)  { background-color: Beige; }
-.o-index-table tbody tr:hover:not(:active, :has(>[scope="rowgroup"]), .del, .js_clicked) >*  { background-color: Ivory; }
+.o-index-table tbody tr.js_clicked:not(:active)  { background-color: Beige; background-color: Honeydew; }
+.o-index-table tbody tr:hover:not(:active, :has(>[scope="rowgroup"]), .del, .js_clicked) >*  { background-color: Ivory; background-color: Beige; }
 
 .o-index-table caption  { position: sticky; top: calc(var(--height) * 0); }
 .o-index-table thead  { position: sticky; top: calc(var(--height) * 1); }
@@ -157,6 +157,16 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 </style>
 <script type="text/javascript">
 //<![CDATA[
+/*
+	HSPBT0301P01	본부반송
+	HSPBT0301M	본부반송내역
+	HSPBT1101P01	본부반송
+	HSPBT1101M	본부반송내역
+	HSPHS0501M	입고거래내역
+	HSPHS1601M	입고거래내역
+	HSPHP0401M	입고거래내역
+
+ */
 
 ; (function(window, document, undefined) {
 	"use strict";
@@ -4098,7 +4108,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL"></span></td>
 			<td class="done"><span class="date done">2025-05-19</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4109,20 +4119,20 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td>&#x200B;</td>
 			<td>03</td>
 			<td>&#x200B;</td>
-			<td>본부취소</td>
+			<td>본부반송</td>
 			<td>HSPBT</td>
 			<td>HSPBT03</td>
 			<td>1</td>
 			<td>P</td>
 			<td>01</td>
 			<td class="empty _lp">&#x200B;</td>
-			<td class="scnm"><span class="o-flex"><small class="type">LP</small> 본부취소</span></td>
+			<td class="scnm"><span class="o-flex"><small class="type">LP</small> 본부반송</span></td>
 			<td class="scid">HSPBT0301P01</td>
 			<td class="link"><a target="page" href="/proto/HSPBT0301P01">HSPBT0301P01</a></td>
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-16</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -4132,7 +4142,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td>BT</td>
 			<td>&#x200B;</td>
 			<td>03</td>
-			<td>본부취소내역</td>
+			<td>본부반송내역</td>
 			<td>&#x200B;</td>
 			<td>HSPBT</td>
 			<td>HSPBT03</td>
@@ -4170,7 +4180,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-19</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4218,7 +4228,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL"></span></td>
 			<td class="done"><span class="date done">2025-05-26</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4266,7 +4276,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-20</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4290,7 +4300,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-20</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL key">
@@ -4338,7 +4348,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-20</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -4458,7 +4468,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-20</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4469,20 +4479,20 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td>&#x200B;</td>
 			<td>11</td>
 			<td>&#x200B;</td>
-			<td>본부취소</td>
+			<td>본부반송</td>
 			<td>HSPBT</td>
 			<td>HSPBT11</td>
 			<td>1</td>
 			<td>P</td>
 			<td>01</td>
 			<td class="empty _lp">&#x200B;</td>
-			<td class="scnm"><span class="o-flex"><small class="type">LP</small> 본부취소</span></td>
+			<td class="scnm"><span class="o-flex"><small class="type">LP</small> 본부반송</span></td>
 			<td class="scid">HSPBT1101P01</td>
 			<td class="link"><a target="page" href="/proto/HSPBT1101P01">HSPBT1101P01</a></td>
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-20</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -4492,7 +4502,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td>BT</td>
 			<td>&#x200B;</td>
 			<td>11</td>
-			<td>본부취소내역</td>
+			<td>본부반송내역</td>
 			<td>&#x200B;</td>
 			<td>HSPBT</td>
 			<td>HSPBT11</td>
@@ -4578,7 +4588,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-21</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4602,7 +4612,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-21</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -4674,7 +4684,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-21</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4698,7 +4708,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-21</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4722,7 +4732,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-21</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -4770,7 +4780,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-21</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 화면변경, 구조 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4794,7 +4804,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-21</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 화면변경, 구조 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -4818,7 +4828,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-22</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL key">
@@ -4842,6 +4852,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-22</span></td>
 			<td class="note">
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 				<p class="modify1">[2025-05-28] ["검수대상" 섹션 ~ 그리드 영역 ~ "업체명" 컬럼] 링크텍스트('.o-link') 적용</p>
 			</td>
 		</tr>
@@ -4938,7 +4949,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-22</span></td>
 			<td class="note">
-				<p class="modify">###</p>
+				<p class="modify">[2025-06-12] 화면변경, 구조 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -4948,7 +4959,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td>HS</td>
 			<td>&#x200B;</td>
 			<td>05</td>
-			<td>입고내역</td>
+			<td>입고거래내역</td>
 			<td>&#x200B;</td>
 			<td>HSPHS</td>
 			<td>HSPHS05</td>
@@ -5035,7 +5046,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-22</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -5059,6 +5070,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-28</span></td>
 			<td class="note">
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 				<p class="strong">[2025-05-23]{화면추가}</p>
 			</td>
 		</tr>
@@ -5083,7 +5095,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-22</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -5155,7 +5167,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-23</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -5203,7 +5215,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-23</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -5419,7 +5431,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-23</span></td>
 			<td class="note">
-				<p class="modify">###</p>
+				<p class="modify">[2025-06-12] 화면변경, 구조 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -5429,7 +5441,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td>HS</td>
 			<td>&#x200B;</td>
 			<td>16</td>
-			<td>입고내역</td>
+			<td>입고거래내역</td>
 			<td>&#x200B;</td>
 			<td>HSPHS</td>
 			<td>HSPHS16</td>
@@ -5998,7 +6010,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-27</span></td>
 			<td class="note">
-				<p class="__CLASSNAME__"></p>
+				<p class="modify">[2025-06-12] 문구 및 요소 수정</p>
 			</td>
 		</tr>
 		<tr class="DEL">
@@ -6286,7 +6298,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL">김진영</span></td>
 			<td class="done"><span class="date done">2025-05-28</span></td>
 			<td class="note">
-				<p class="modify">###</p>
+				<p class="modify">[2025-06-12] 화면변경, 구조 수정</p>
 			</td>
 		</tr>
 		<tr class="del">
@@ -6296,7 +6308,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td>HP</td>
 			<td>&#x200B;</td>
 			<td>04</td>
-			<td>입고내역</td>
+			<td>입고거래내역</td>
 			<td>&#x200B;</td>
 			<td>HSPHP</td>
 			<td>HSPHP04</td>
