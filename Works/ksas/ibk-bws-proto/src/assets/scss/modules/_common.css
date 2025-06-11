@@ -344,6 +344,8 @@
   --height-icon-70:             24;
   --height-icon-70:             var(--height-icon-50);
 
+  --height-ctrl-50:             18;
+
   --height-form-30:             24;
   --height-form-50:             26;
   --height-form-70:             30;

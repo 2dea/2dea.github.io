@@ -129,13 +129,13 @@ function STMBR0201M() {
                     </div>
 
                     <div className="month">
-                      <div className="group">
+                      <div className="o-radios type-tab">
                         <button type="button" className="bind"><span className="label">1월</span></button>
                         <button type="button" className="bind"><span className="label">2월</span></button>
                         <button type="button" className="bind"><span className="label">3월</span></button>
                         <button type="button" className="bind"><span className="label">4월</span></button>
                         <button type="button" className="bind"><span className="label">5월</span></button>
-                        <button type="button" className="bind"><span className="label">6월</span></button>
+                        <button type="button" className="bind is-checked"><span className="label">6월</span></button>
                         <button type="button" className="bind"><span className="label">7월</span></button>
                         <button type="button" className="bind"><span className="label">8월</span></button>
                         <button type="button" className="bind"><span className="label">9월</span></button>
@@ -146,14 +146,14 @@ function STMBR0201M() {
                     </div>
 
                     <div className="today">
-                      <CommonButton label="오늘" className="_normal" />
+                      <CommonButton label="오늘" className="_normal" size={30} />
                     </div>
                   </div>
 
                   <div className="binds">
                     <div className="views">
-                      <div className="m-toggles">
-                        <CommonButton label="달력" className="" icon="calendar" />
+                      <div className="o-toggles type-tab">
+                        <CommonButton label="달력" className="is-selected" icon="calendar" />
                         <CommonButton label="목록" className="" icon="menu-alt" />
                       </div>
                     </div>
@@ -170,16 +170,17 @@ function STMBR0201M() {
                     <span className="foot">(완료 0건 + 반려 0건)</span>
                   </div>
 
-                  <div className="m-legend">
-                    <div className="o-legend type-helper style-normal">
-                      <strong className="label">당행</strong>
-                    </div>
+                  <div className="m-legend" aria-label="범례">
+                    <span className="o-legend type-legend">
+                      <em className="o-legend-tag type-bullet theme-key1"><span className="tag">(당행)</span></em>
+                      <span className="label">당행</span>
+                    </span>
 
-                    <div className="o-legend type-helper style-normal">
-                      <strong className="label">외부</strong>
-                    </div>
+                    <span className="o-legend type-legend">
+                      <em className="o-legend-tag type-bullet theme-key2"><span className="tag">(외부)</span></em>
+                      <span className="label">외부</span>
+                    </span>
                   </div>
-
                 </div>
 
                 <div className="main _primary rows-auto">

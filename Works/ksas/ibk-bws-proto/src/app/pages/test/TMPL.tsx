@@ -417,11 +417,14 @@ function TMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h2 className="o-heading level2"><span className="label">양식샘플</span></h2>
+                    <h2 className="o-heading level2">
+                      <span className="label">양식샘플</span>
+                      <InputCheck label="사용" labelHidden />
+                    </h2>
 
-                    <div className="m-checks">
-                      <InputCheck label="선택" labelHidden />
-                    </div>
+                    {/* <div className="m-checks">
+                      <InputCheck label="사용" labelHidden />
+                    </div> */}
 
                     <div className="o-helper style-strong">
                       <em className="label">헬퍼텍스트</em>
@@ -433,6 +436,23 @@ function TMPL() {
 
                     <div className="o-legend type-helper style-strong">
                       <em className="label">우측 헬퍼텍스트(강조)</em>
+                    </div>
+
+                    <div className="m-legend" aria-label="범례">
+                      <span className="o-legend type-legend">
+                        <em className="o-legend-tag type-bullet theme-key1"><span className="tag">(당행)</span></em>
+                        <span className="label">당행</span>
+                      </span>
+
+                      <span className="o-legend type-legend">
+                        <em className="o-legend-tag type-bullet theme-key2"><span className="tag">(외부)</span></em>
+                        <span className="label">외부</span>
+                      </span>
+                    </div>
+
+                    <div className="o-toggles type-tab">
+                      <CommonButton label="달력" className="is-selected" icon="calendar" />
+                      <CommonButton label="목록" className="" icon="menu-alt" />
                     </div>
 
                     <div className="m-binds">

@@ -261,6 +261,8 @@
 /** Headings */
 .o-heading  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; display: block; display: flex; align-items: center; position: relative; color: $color-text-70; }
 .o-heading:before  { position: absolute; text-align: center; }
+.o-heading >.label  { overflow: hidden; text-overflow: ellipsis; }
+.o-heading .label +.o-check  { line-height: $height-ctrl-50; margin-left: $gap-element-30; }
 
 .o-heading.level1  { font-size: $font-90; line-height: $line-90; }
 
@@ -464,33 +466,47 @@
 .o-require-tag >.tag  { left: calc(var(--rem) * 3); right: auto; }
 
 
+/** Legend Tags */
+.o-legend-tag  { --height: (1em - #{III(3)}); display: inline-flex; align-items: center; position: relative; white-space: nowrap; }
+.o-legend-tag:before  { content: ""; display: block; width: calc(var(--width, var(--height))); height: calc(var(--height)); border: $e10 solid $tp; background: var(--theme, currentColor); border-radius: $radius-abs-20; }
+.o-legend-tag >.tag  { @include inc-sronly(none, 0); @include inc-abscenter(); }
+
+.o-legend-tag:where(.type-bullet)  { --height: (1em - #{III(3)}); }
+.o-legend-tag:where(.type-bullet):before  { border-radius: 50%; }
+
+.o-legend-tag:where(.theme-key1)  { --theme: var(--color-key1-40); }
+.o-legend-tag:where(.theme-key2)  { --theme: var(--color-ground-90); }
+
+
+
+/** Chips */
 .o-chip  { font-size: $font-40; line-height: $line-40; display: flex; align-items: center; padding: III(3) III(8); background: var(--color-ground-70); border-radius: $radius-abs-999; }
 
 .m-chips  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-50; }
 
+
 /** Labels */
 .o-label  { --lh: var(--line-abs-40); --gap-col: #{$gap-element-30}; display: inline-block; display: inline-flex; align-items: center; gap: 0 var(--gap-col); max-width: 100%; }
 .o-label >*  { flex: 0 1 auto; min-width: 0; height: 100%; }
-.o-label >.label  { flex: 1 0 0; display: flex; flex-wrap: wrap; }
+// .o-label >.label  { flex: 1 0 0; display: flex; flex-wrap: wrap; }
+// .o-label .o-require-tag  { position: absolute; }
 .o-label >.label  { flex: 0 1 auto; display: block; position: relative; }
-.o-label .o-require-tag  { position: absolute; }
-.o-label >.label:has(.o-require-tag) +*  { padding-left: $gap-element-70; }
-
-.o-label .o-require-tag  { position: absolute; }
+.o-label .o-require-tag  { position: relative; }
 
 .o-label >.binds  { display: flex; align-items: center; position: relative; }
 .o-label >.binds >*  { margin-top: calc((var(--lh) - $height-form-30) / 2); margin-bottom: calc((var(--lh) - $height-form-30) / 2); }
-
-.o-label >.binds.type-tooltip  { margin-left: calc(-1 * var(--gap-col)); }
-
-// // .o-label:where(.m-data-form th *) >.label  { font-weight: inherit; color: inherit; }
+.o-label >.binds:where(.type-tooltip)  { margin-left: calc(-1 * var(--gap-col)); }
 
 // // .o-label >.inner-binds  { position: relative; }
-
 // // .o-label >.outer-binds  { margin-left: auto; }
 
-// .o-label:where(.m-data-form th:not(td *) *) >.label  { margin-right: calc(var(--rem) * -2); }
 .o-label:where(.o-field >*)  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-70); }
+
+// .o-label:where(.m-data-form th:not(td *) *) >.label  { margin-right: calc(var(--rem) * -2); }
+.o-label:where(.m-data-form >* >* >* >th >*)  { display: flex; /* flex-wrap: wrap; */ }
+.o-label:where(.m-data-form >* >* >* >th >*) >.label +*  { align-self: flex-end; margin-left: auto; }
+.o-label:where(.m-data-form >* >* >* >th >*) .o-require-tag  { position: absolute; }
+.o-label:where(.m-data-form >* >* >* >th >*) >.label:has(.o-require-tag) +*  { padding-left: $gap-element-70; }
 
 
 
@@ -537,11 +553,24 @@
 .o-helper:where(.m-footer *)  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
 
 
+// .o-legend  { color: var(--color-text-30); }
 .o-legend.type-branch.style-normal  { color: var(--color-text-30); }
 .o-legend.type-helper.style-normal  { color: var(--color-text-30); }
 .o-legend.type-helper.style-strong  { color: var(--color-point-red); }
 
+.o-legend.type-legend  { display: inline-flex; align-items: center; color: var(--color-text-30); }
+.o-legend.type-legend >.o-legend-tag  { margin-right: $gap-element-30; }
+// .o-legend.type-legend >.bullet  { --height: (1em - #{III(3)}); display: flex; align-items: center; margin-right: $gap-element-30; }
+// .o-legend.type-legend >.bullet:before  { content: ""; display: block; width: calc(var(--height)); height: calc(var(--height)); border: $e10 solid $tp; background: var(--theme, currentColor); border-radius: 50%; }
+
+// .o-legend.type-legend >.bullet:where(.theme-key1)  { --theme: var(--color-key1-40); }
+// .o-legend.type-legend >.bullet:where(.theme-key2)  { --theme: var(--color-ground-90); }
+
 .o-legend:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
+
+
+.m-legend  { display: flex; align-items: center; }
+.m-legend:has(.o-legend.type-legend)  { gap: $gap-element-70; }
 
 
 .o-length  { display: flex; gap: $gap-whitespace-30; }
@@ -560,9 +589,9 @@
 
 
 /** Bullet-Lists Module */
-.m-bullets  { --lh: var(--text-height-para); font-size: calc(var(--rem) * var(--fs-int)); line-height: var(--lh); clear: both; position: relative; }
+.m-bullets  { --fs-absint: var(--font-40-int); --lh: var(--text-height-para); font-size: calc(var(--rem) * var(--fs-int)); line-height: var(--lh); clear: both; position: relative; }
 .m-bullets strong  { font-weight: $bold-70; }
-.m-bullets >* +*  { margin-top: calc(1em * var(--margin-bullets, 0) / var(--fs-int, var(--font-30-int, 14))); }
+.m-bullets >* +*  { margin-top: calc(1em * var(--margin-bullets, 0) / var(--fs-absint, var(--font-30-int, 14))); }
 .m-bullets >:before  { position: absolute; text-align: center; }
 .m-bullets >dt.heading:before  { content: none; }
 
@@ -598,12 +627,34 @@
 
 
 
+.m-calendar-header  { display: flex; align-items: center; /* margin-bottom: $margin-section-20; */ padding-bottom: $margin-section-40; border-bottom: $e10 solid var(--color-edge-30); }
+.m-calendar-header >*,
+.m-calendar-header >* >*,
+.m-calendar-header >* >* >*  { flex: none; display: flex; align-items: center; min-width: 0; }
+.m-calendar-header >.main  { flex: 1; gap: $gap-element-90; }
+.m-calendar-header >.main >.year  { --gap-col: #{$gap-element-70}; order: -1; gap: var(--gap-col); }
+.m-calendar-header >.main >.year >.label  { font-weight: $bold-70; font-size: $font-90; line-height: $line-90; color: var(--color-text-70); }
+.m-calendar-header >.main >.year >.bind  { order: -2; }
+.m-calendar-header >.main >.year >.bind +.bind  { margin-left: $e10; }
+.m-calendar-header >.main >.year >.bind +.bind:after  { content: ""; position: absolute; right: 100%; transform: translateX(calc(var(--gap-col) / -2)); width: $e10; height: III(10); background: var(--color-edge-40); }
+.m-calendar-header >.main >.month  {  }
+.m-calendar-header >.main >.today  { order: -2; }
 
 
 
+.o-radios  { --fs-absint: var(--font-70-int); font-size: $font-70; font-size: calc(var(--rem) * var(--fs-int, var(--fs-absint))); line-height: $line-70; display: flex; align-items: center; position: relative; padding: $e10; border: $e10 solid var(--color-edge-40); color: var(--color-text-30); background: var(--color-ground-40); border-radius: $radius-abs-999; }
+.o-radios >.bind  { flex: 1; display: flex; align-items: center; justify-content: center; min-width: 1em; min-width: calc(1em * 43 / var(--fs-absint)); height: $height-form-50; min-height: 1em; padding: III(2) calc(1em * 5 / var(--fs-absint)); border: $e10 solid $tp; color: var(--color-text-00); background: var(--color-key1-90); border-radius: inherit; }
+.o-radios >.bind:not([disabled], [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
+.o-radios >.bind:not(.is-checked)  { color: inherit; background-color: $tp; }
+.o-radios >.bind:not(.is-checked):not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
 
 
-
+.o-toggles  { display: flex; align-items: center; position: relative; color: var(--color-text-30); background: var(--color-ground-40); border-radius: $radius-50; }
+.o-toggles:after  { content: ""; position: absolute; inset: 0; border: $e10 solid var(--color-edge-40); }
+.o-toggles >.o-button  { --theme: var(--color-key1-40); z-index: 1; border-color: currentColor; background: var(--color-ground); }
+.o-toggles >.o-button.is-selected .o-icon:before  { background-position: 50%; }
+.o-toggles >.o-button:not(.is-selected)  { border-color: $tp; color: inherit; background-color: $tp; }
+.o-toggles >.o-button:not(.is-selected):not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
 
 
 
@@ -619,10 +670,12 @@
 .m-header  { display: flex; align-items: center; justify-content: flex-end; gap: $gap-element-70; }
 .m-header >*  { flex: 0 1 auto; min-width: 0; @include inc-ellipsis(); }
 // .m-header >.o-heading  { flex: 1 0 0; min-height: $height-form-50; overflow: hidden; }
-.m-header >.o-heading  { min-height: $height-form-50; overflow: hidden; }
+.m-header >.o-heading  { min-height: $height-form-50; }
 .m-header >.m-binds  { gap: inherit; }
 .m-header >:where(.o-heading, .o-helper, .m-checks, .justify-start) +:not(.o-helper, .m-checks)  { margin-left: auto; }
 .m-header >:where(.o-heading, .o-helper, .m-checks, .justify-start):only-child  { flex: 1 0 0; }
+
+.m-header:where(.o-section >*)  { min-height: $height-form-50; }
 
 
 .m-footer:where(* +:not(.o-section >*))  { margin-top: $gap-element-30; }
@@ -695,12 +748,12 @@
 .o-button:-moz-focusring  { outline: 1px dotted ButtonText; }
 
 
-.o-button,  .o-button._default  { --theme: var(--color-text-40); --margin-block: ((var(--rem) * (var(--height-form-30) - var(--height-icon-30)) - var(--e10) * 2) / 2); line-height: var(--text-height-rel); gap: $gap-whitespace-30; min-width: calc(4em - $e10 * 2); min-height: $height-form-30; padding: calc(var(--margin-block)) 0.5em; border-color: currentColor; color: var(--theme); background-color: $color-ground; border-radius: $radius-50; white-space: nowrap; }
-.o-button:not([disabled], [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
-.o-button:is([disabled], [aria-disabled="true"])  { color: GrayText; -webkit-text-fill-color: currentColor; filter: none; filter: grayscale(1.0) opacity(0.6) brightness(0.9); }
+.o-button,  .o-button:where(._default)  { --theme: var(--color-text-40); --margin-block: ((var(--rem) * (var(--height-form-30) - var(--height-icon-30)) - var(--e10) * 2) / 2); line-height: var(--text-height-rel); gap: $gap-whitespace-30; min-width: calc(4em - $e10 * 2); min-height: $height-form-30; padding: calc(var(--margin-block)) 0.5em; border-color: currentColor; color: var(--theme); background-color: $color-ground; border-radius: $radius-50; white-space: nowrap; }
+.o-button:where(:not([disabled], [aria-disabled="true"]))  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
+.o-button:where([disabled], [aria-disabled="true"])  { color: GrayText; -webkit-text-fill-color: currentColor; filter: none; filter: grayscale(1.0) opacity(0.6) brightness(0.9); }
 
-.o-button:not([class*="-button _"])  { border-color: #A8AEB7; background: #EAECEF; background: -webkit-gradient(linear, left top, left bottom, from(White), to(#EAECEF)); background: linear-gradient(to bottom, White, #EAECEF); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='White', endColorstr='#EAECEF', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFEAECEF', EndColorStr='#FFFFFFFF')"; }
-.o-button:not([class*="-button _"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { border-color: currentColor; background: White; background: -webkit-gradient(linear, left top, left bottom, from(#EDEFF1), to(White)); background: linear-gradient(to bottom, #EDEFF1, White); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEFF1', endColorstr='White', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFFFF', EndColorStr='#FFEDEFF1')"; }
+.o-button:where(:not([class*="-button _"]))  { border-color: #A8AEB7; background: #EAECEF; background: -webkit-gradient(linear, left top, left bottom, from(White), to(#EAECEF)); background: linear-gradient(to bottom, White, #EAECEF); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='White', endColorstr='#EAECEF', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFEAECEF', EndColorStr='#FFFFFFFF')"; }
+.o-button:where(:not([class*="-button _"]):not([disabled], [aria-disabled="true"]):hover:not(:active))  { border-color: currentColor; background: White; background: -webkit-gradient(linear, left top, left bottom, from(#EDEFF1), to(White)); background: linear-gradient(to bottom, #EDEFF1, White); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEFF1', endColorstr='White', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFFFF', EndColorStr='#FFEDEFF1')"; }
 
 // .o-button[class*="-primary"]  { --theme: #{$color-key1-40}; }
 // .o-button[class*="-primary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #{$color-button1-70}; }
@@ -905,7 +958,7 @@
 .o-check:has(input:not(:hover):focus) >i  { outline: $e10 solid var(--color-edge-focus); }
 
 
-.o-check.type-swoosh  { --height-int: var(--text-height-int); --height: 1lh; --height: max(1lh, 18px); --lh: var(--height); }
+.o-check.type-swoosh  { --height-int: var(--text-height-int, var(--height-ctrl-50)); --height: 1lh; --height: max(1lh, 18px); --lh: var(--height); }
 
 .o-check.type-swoosh >i  { border-radius: $radius-50; }
 .o-check.type-swoosh >i:before  { --height-inner: calc(var(--height) * 16 / var(--height-int)); content: "" !important; }
@@ -1371,7 +1424,6 @@
   .m-filter-form .fieldset >.colspan-#{$i}  { grid-column: auto /span #{$i + 3}; }
 }
 
-// .m-filter-form .fieldset >* >.o-label  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-70); }
 .m-filter-form .fieldset >* >.fields >.m-checks  { padding-right: $gap-element-70; }
 
 
