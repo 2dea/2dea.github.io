@@ -107,7 +107,7 @@ function BSSCR0101P02() {
                   <div className="o-field">
                     <Label label={`기준연도`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select mode-required wdth-30p">
+                      <div className="o-form _select mode-required wdth-30">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
