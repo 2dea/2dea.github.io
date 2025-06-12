@@ -138,6 +138,28 @@ function FileUploads() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
+                            <Label label={`파일첨부 (단일)`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input is-file mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                                <div className="binds">
+                                  <input type="file" className="overlay" />
+                                  <CommonButton label="파일선택" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
                             <Label label={`파일첨부 예`} require={true} />
                           </th>
                           <td colSpan={1}>

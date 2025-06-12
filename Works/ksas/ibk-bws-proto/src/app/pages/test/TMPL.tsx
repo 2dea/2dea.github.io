@@ -941,6 +941,34 @@ function TMPL() {
 
                     <div className="board-container">
                       <div className="m-header">
+                        <strong className="o-heading"><span className="label">Order Lists</span></strong>
+                      </div>
+
+                      <ol className="m-bullets type-decimal level1">
+                        <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
+                        <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                        <li>dddddddddddddd</li>
+                      </ol>
+                    </div>
+
+                    <div className="board-container">
+                      <div className="m-header">
                         <strong className="o-heading"><span className="label">유의사항</span></strong>
                       </div>
 

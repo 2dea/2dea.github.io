@@ -593,18 +593,14 @@
 
 
 /** Bullet-Lists Module */
-.m-bullets  { --fs-absint: var(--font-40-int); --lh: var(--text-height-para); font-size: calc(var(--rem) * var(--fs-int)); line-height: var(--lh); clear: both; position: relative; }
+.m-bullets  { --fs-absint: var(--font-40-int); --lh: var(--text-height-para); font-size: calc(var(--rem) * var(--fs-int)); line-height: var(--lh); clear: both; position: relative; padding-left: 0.899554em; }
 .m-bullets strong  { font-weight: $bold-70; }
 .m-bullets >* +*  { margin-top: calc(1em * var(--margin-bullets, 0) / var(--fs-absint, var(--font-30-int, 14))); }
-.m-bullets >:before  { position: absolute; text-align: center; }
-.m-bullets >dt.heading:before  { content: none; }
+.m-bullets >:before  { content: var(--content); position: absolute; width: 0.899554em; margin-left: -0.899554em; text-align: center; }
+.m-bullets >.heading  { margin-left: -0.899554em; }
+.m-bullets >.heading:before  { content: none; }
 
-.m-bullets.type-disc  { padding-left: 0.899554em; }
-.m-bullets.type-disc >dt.heading  { margin-left: -0.899554em; }
-.m-bullets.type-disc >:before  { content: "• "; width: 0.899554em; margin-left: -0.899554em; }
-.m-bullets.type-disc  { padding-left: 0.839286em; }
-.m-bullets.type-disc >dt.heading  { margin-left: -0.839286em; }
-.m-bullets.type-disc >:before  { content: "· "; width: 0.839286em; margin-left: -0.839286em; }
+.m-bullets.type-disc  { --content: "· "; --content: "• "; }
 
 .m-bullets.type-hyphen  { padding-left: 0.908483em; }
 .m-bullets.type-hyphen >dt.heading  { margin-left: -0.908483em; }
@@ -617,6 +613,11 @@
 .m-bullets.type-prec  { padding-left: calc(2.4rem + 0.285715em); }
 .m-bullets.type-prec >dt.heading  { margin-left: calc(-2.4rem - 0.285715em); }
 // .m-bullets.type-prec >:before  { content: ""; width: 2.4rem; height: 2.4rem; margin-left: calc(-2.4rem - 0.285715em); margin-top: calc(0.785714em - 2.4rem / 2); margin-right: 0.285715em; background: url('../img/common/ico_label_prec.png') no-repeat; }
+
+.m-bullets.type-decimal  { counter-reset: NUM_orders; }
+.m-bullets.type-decimal >*  { display: flex; }
+.m-bullets.type-decimal >:before  { counter-increment: NUM_orders; content: counter(NUM_orders) "."; }
+// .m-bullets.type-decimal >:nth-child(-n+9):before  { content: "0" counter(NUM_orders) "."; }
 
 
 .m-bullets:where(.o-board *)  { --fs-int: var(--font-40-int); --margin-bullets: 4; }
@@ -1370,9 +1371,12 @@
 .o-field >.fields  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; min-height: $height-form-50; margin: 0; }
 .o-field >.fields >:not(.o-form)  { min-width: 0; }
 
+.o-field >.fields >.binds  { position: relative; }
+.o-field >.fields >.binds .overlay  { position: absolute; inset: 0; z-index: 2; opacity: 0.0; }
+
 .o-field >.fields >.helper  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
 .o-field >.fields >.helper.style-strong  { color: var(--color-point-red); }
-.o-field >.fields >.helper strong
+.o-field >.fields >.helper strong,
 .o-field >.fields >strong.helper  { font-weight: $bold-70; }
 
 .o-field:where(.m-filter-form .fieldset >:not(:only-child), .axis-cols)  { flex-direction: column; align-items: normal; }

@@ -373,6 +373,7 @@ function STMFL0101M() {
                                   </span>
                                 </div>
                                 <div className="binds">
+                                  <input type="file" className="overlay" />
                                   <CommonButton label="파일선택" className="_normal" />
                                 </div>
                               </div>
@@ -489,8 +490,8 @@ function STMFL0101M() {
 
                 <div className="m-footer">
                   <ul className="m-bullets type-disc">
-                    <li>소화기 관리번호 및 구입 연월일은 업무지원시스템 &lt;소방안전관리&gt;에서 조회</li>
-                    <li>신청 사유는 &lt;고장 / 불량 / 내용연수(10년)경과&gt; 등으로 표기</li>
+                    <li>소화기 관리번호 및 구입 연월일은 업무지원시스템 &lt;소방안전관리&gt;에서 조회해주세요.</li>
+                    <li>신청 사유는 &lt;고장 / 불량 / 내용연수(10년)경과&gt; 등으로 표기해주세요.</li>
                   </ul>
                 </div>
 
