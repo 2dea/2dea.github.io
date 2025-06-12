@@ -136,9 +136,9 @@ function HSPHS1701M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`구분`} require={true} />
+                    <Label label={`구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -159,9 +159,9 @@ function HSPHS1701M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`재고유무`} require={true} />
+                    <Label label={`재고유무`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
+                      <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
@@ -172,9 +172,9 @@ function HSPHS1701M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`평균단가`} require={true} />
+                    <Label label={`평균단가`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

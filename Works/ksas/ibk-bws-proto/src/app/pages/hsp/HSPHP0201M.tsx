@@ -126,7 +126,7 @@ function HSPHP0201M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`소관부서`} require={true} />
+                    <Label label={`소관부점`} require={true} />
                     <div className="fields">
                       <div className="o-form _input mode-required">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} disabled />

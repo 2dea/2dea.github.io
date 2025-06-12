@@ -160,9 +160,9 @@ function HSPDU0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`인수구분`} require={true} />
+                    <Label label={`인수구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

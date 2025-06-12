@@ -174,6 +174,10 @@ function HSPHS0701M() {
                   </div>
 
                 </div>
+
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
+                </div>
               </form>
 
               <div className="o-section">

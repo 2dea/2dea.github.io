@@ -143,7 +143,7 @@ function HSPHP0301M() {
                     <Label label={`신청부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} disabled />
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
@@ -179,7 +179,7 @@ function HSPHP0301M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`소관부서`} require={false} />
+                    <Label label={`소관부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
@@ -261,6 +261,7 @@ function HSPHP0301M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청량</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기검수량</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수가능량</span></div></th>
+                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청일</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수요청부점</span></div></th>
@@ -291,6 +292,8 @@ function HSPHP0301M() {
                             <td className="g-end">10</td>
                             <td className="g-end">0</td>
                             <td className="g-end">10</td>
+                            <td>정상</td>
+                            <td>결재요청</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td>011465</td>
                             <td>홍길동</td>

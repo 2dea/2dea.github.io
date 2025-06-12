@@ -191,7 +191,7 @@ function HSPHP0401M() {
                     <Label label={`업체명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input wdth-30">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
                           <ImageButton label="검색" icon="search" />
@@ -199,7 +199,7 @@ function HSPHP0401M() {
                       </div>
 
                       <div className="o-form _input wdth-auto">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>

@@ -214,7 +214,7 @@ function HSPDU0801M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`폐점기간`} require={true} />
+                    <Label label={`폐기기간`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -242,7 +242,7 @@ function HSPDU0801M() {
                     <Label label={`반려제외`} require={false} />
                     <div className="fields">
                       <div className="m-checks">
-                        <InputCheck label="선택" labelHidden defaultChecked />
+                        <InputCheck label="선택" labelHidden />
                       </div>
                     </div>
                   </div>
@@ -257,8 +257,8 @@ function HSPDU0801M() {
               <Tabs className="m-tabs react-tabs" defaultIndex={0}>
                 <div className="m-tab type2">
                   <TabList className="lists">
-                    <Tab className="link"><span className="label">폐기대상내역</span></Tab>
-                    <Tab className="link"><span className="label">폐기완료내역</span></Tab>
+                    <Tab className="link"><span className="label">폐기대상</span></Tab>
+                    <Tab className="link"><span className="label">폐기완료</span></Tab>
                   </TabList>
                 </div>
 
@@ -268,7 +268,7 @@ function HSPDU0801M() {
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h2 className="o-heading level2"><span className="label">폐기대상내역</span></h2>
+                          <h2 className="o-heading level2"><span className="label">폐기대상</span></h2>
 
                           <div className="o-length">
                             <span className="head">전체</span>
@@ -342,7 +342,7 @@ function HSPDU0801M() {
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h2 className="o-heading level2"><span className="label">폐기완료내역</span></h2>
+                          <h2 className="o-heading level2"><span className="label">폐기완료</span></h2>
 
                           <div className="o-length">
                             <span className="head">전체</span>
