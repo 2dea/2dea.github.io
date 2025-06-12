@@ -430,14 +430,6 @@ function TMPL() {
                       <em className="label">헬퍼텍스트</em>
                     </div>
 
-                    <div className="o-legend type-helper style-normal">
-                      <em className="label">우측 헬퍼텍스트(일반)</em>
-                    </div>
-
-                    <div className="o-legend type-helper style-strong">
-                      <em className="label">우측 헬퍼텍스트(강조)</em>
-                    </div>
-
                     <div className="m-legend" aria-label="범례">
                       <span className="o-legend type-legend">
                         <em className="o-legend-tag type-bullet theme-key1"><span className="tag">(당행)</span></em>
@@ -448,6 +440,14 @@ function TMPL() {
                         <em className="o-legend-tag type-bullet theme-key2"><span className="tag">(외부)</span></em>
                         <span className="label">외부</span>
                       </span>
+                    </div>
+
+                    <div className="o-legend type-helper style-normal">
+                      <em className="label">우측 헬퍼텍스트(일반)</em>
+                    </div>
+
+                    <div className="o-legend type-helper style-strong">
+                      <em className="label">우측 헬퍼텍스트(강조)</em>
                     </div>
 
                     <div className="o-toggles type-tab">

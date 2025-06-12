@@ -814,6 +814,7 @@ function SUBTMPL() {
                                 <i className="o-icon _arrow-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-right wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-up wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _attach wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _calendar wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _close wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _column-toggle wdth-50" aria-hidden="true"></i>
@@ -824,6 +825,7 @@ function SUBTMPL() {
                                 <i className="o-icon _du-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-right wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-up wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _edit wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _file wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _filter-alt wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _help wdth-50" aria-hidden="true"></i>
@@ -847,6 +849,8 @@ function SUBTMPL() {
                                 {/* <i className="o-icon _sort wdth-50" aria-hidden="true"></i> */}
                                 <i className="o-icon _sum-minus wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sum-plus wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _task-multi wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _task-single wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _tel wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _upload wdth-50" aria-hidden="true"></i>
                               </div>
