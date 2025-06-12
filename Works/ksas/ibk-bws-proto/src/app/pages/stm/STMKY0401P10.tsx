@@ -87,7 +87,7 @@ function STMKY0401P10() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -292,7 +292,7 @@ function STMKY0401P10() {
 
                   <div className="o-section">
                     <div className="m-header">
-                      <h4 className="o-heading level2"><span className="label">예비열쇠보관확인증내역</span></h4>
+                      <h4 className="o-heading level2"><span className="label">예비열쇠보관확인증 내역</span></h4>
 
                       <div className="o-length">
                         <span className="head">전체</span>
@@ -329,36 +329,39 @@ function STMKY0401P10() {
                               <col />
                               <col />
                               <col />
+                              <col />
+                              <col />
+                              <col />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
                               <tr>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위탁보관부점(우리부점)</span></div></th>
-                                <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">확인증수령부점(상대부점)</span></div></th>
+                                <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우리부점</span></div></th>
+                                <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상대부점</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송일자</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령일자</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠상태</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                               </tr>
                               <tr>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래구분</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래구분</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                               </tr>
                             </thead>
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={13}><div className="gridtable-empty">### 수정해야 해요 ###</div></td>
-                              </tr>
-                              <tr className="p-datatable-emptymessage">
-                                <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={16}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -370,16 +373,19 @@ function STMKY0401P10() {
                                 <td className="g-start">부산</td>
                                 <td>10000</td>
                                 <td>홍길동</td>
-                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td>요청</td>
+                                <td>
+                                  <a href="javascript:" className="o-link _normal">결재요청</a>
+                                </td>
                                 <td>0465</td>
                                 <td className="g-start">부산</td>
                                 <td>10000</td>
                                 <td>홍길동</td>
+                                <td>요청</td>
+                                <td>결재요청</td>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td>정상1건</td>
-                                <td>
-                                  <a href="javascript:" className="o-link _normal">결재요청</a>
-                                </td>
                               </tr>
                             ))}
                             </tbody>
@@ -414,7 +420,7 @@ function STMKY0401P10() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)예비열쇠보관확인증관리 [wdth-50p(w960)]</span>
+              <span className="label">(P)예비열쇠보관확인증관리 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>
