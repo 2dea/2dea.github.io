@@ -109,9 +109,7 @@ function HSPHS0201M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="삭제" className="_delete" />
-                <CommonButton label="저장" className="_solid-primary" />
-                <CommonButton label="결재요청" className="_solid-primary" />
+                <CommonButton label="조달신청" className="_solid-primary" />
               </div>
             </div>
           </div>
@@ -120,7 +118,7 @@ function HSPHS0201M() {
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
           <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
+            <SplitterPanel minSize={17.5} className="column">
 
               <form className="m-filter-form">
                 <div className="fieldset">
@@ -175,6 +173,15 @@ function HSPHS0201M() {
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
                         </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`반려제외`} require={false} />
+                    <div className="fields">
+                      <div className="m-checks">
+                        <InputCheck label="선택" labelHidden defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -261,7 +268,7 @@ function HSPHS0201M() {
 
             </SplitterPanel>
 
-            <SplitterPanel minSize={17.5} className="column">
+            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
 
               <div className="o-section">
                 <div className="m-header">
@@ -280,12 +287,29 @@ function HSPHS0201M() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
                             <Label label={`구매요청명`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`출급번호`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -297,122 +321,79 @@ function HSPHS0201M() {
                               </div>
                             </div>
                           </td>
+                          <th colSpan={1}>
+                            <Label label={`규격`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`단위`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`신청량`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required g-end">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`납기요청일`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date mode-required wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`소요예산`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input g-end">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
                   </form>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">신청목록</span></h3>
-                </div>
-
-                <div className="main _primary">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="table-container p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col className="wdth-10" />
-                          <col />
-                          <col />
-                          <col className="wdth-auto" />
-                          <col />
-                          <col />
-                        </colgroup>
-
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">규격</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">납기요청일<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소요예산</span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                        {[...Array(2)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td></td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50 g-end">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-50 g-end">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
                 </div>
               </div>
 

@@ -396,6 +396,10 @@ function BSSCR0401M() {
 
                           <div className="m-binds">
                             <div className="group">
+                              <CommonButton label="알림발송" className="_lined-secondary" />
+                            </div>
+
+                            <div className="group">
                               <ImageButton label="엑셀​다운로드" icon="excel-download" />
                               <ImageButton label="목록출력" icon="print" />
                             </div>
