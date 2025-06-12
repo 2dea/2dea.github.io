@@ -142,6 +142,12 @@ import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도
 import STMGD0101M from    'app/pages/stm/STMGD0101M';     // 재난·안전관리 > 기계경비당직관리         > 당직신청관리
 
 import STMVL0101M from    'app/pages/stm/STMVL0101M';     // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
+import STMVL0101P02 from  'app/pages/stm/STMVL0101P02';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)수정기한관리
+import STMVL0101P03 from  'app/pages/stm/STMVL0101P03';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사관리
+import STMVL0101P04 from  'app/pages/stm/STMVL0101P04';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사정보등록
+import STMVL0101P05 from  'app/pages/stm/STMVL0101P05';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사연락처
+
+import STMVL0201M from    'app/pages/stm/STMVL0201M';     // 재난·안전관리 > 업무용차량관리(운행일지등) > 미등록운행일지알람
 
 import STMDM0101M from    'app/pages/stm/STMDM0101M';     // 재난·안전관리 > 배차관리                > 배차신청
 import STMDM0201M from    'app/pages/stm/STMDM0201M';     // 재난·안전관리 > 배차관리                > 배차이력
@@ -187,7 +193,10 @@ import STMKY0401P04 from  'app/pages/stm/STMKY0401P04';   // 재난·안전관�
 import STMKY0401P06 from  'app/pages/stm/STMKY0401P06';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)예비열쇠위탁승인
 import STMKY0401P08 from  'app/pages/stm/STMKY0401P08';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)위탁열쇠반납승인
 import STMKY0401P10 from  'app/pages/stm/STMKY0401P10';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)예비열쇠보관확인증관리
+import STMKY0501P02 from  'app/pages/stm/STMKY0501P02';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)위탁확인증
 import STMKY0601M from    'app/pages/stm/STMKY0601M';     // 재난·안전관리 > 열쇠관리                 > 관련조회 및 출력
+
+import STMFL0101M from    'app/pages/stm/STMFL0101M';     // 재난·안전관리 > 소화기대장관리            > 소화기신청
 
 
 // proto 영업지원
@@ -402,6 +411,11 @@ function ProtoRoutes() {
         { path: 'STMGI0301M',   element: <STMGI0301M /> },
 
         { path: 'STMVL0101M',   element: <STMVL0101M /> },
+        { path: 'STMVL0101P02', element: <STMVL0101P02 /> },
+        { path: 'STMVL0101P03', element: <STMVL0101P03 /> },
+        { path: 'STMVL0101P04', element: <STMVL0101P04 /> },
+        { path: 'STMVL0101P05', element: <STMVL0101P05 /> },
+        { path: 'STMVL0201M',   element: <STMVL0201M /> },
         { path: 'STMGI0101P01', element: <STMGI0101P01 /> },
 
         { path: 'STMBR0101M',   element: <STMBR0101M /> },
@@ -427,7 +441,10 @@ function ProtoRoutes() {
         { path: 'STMKY0401P06', element: <STMKY0401P06 /> },
         { path: 'STMKY0401P08', element: <STMKY0401P08 /> },
         { path: 'STMKY0401P10', element: <STMKY0401P10 /> },
+        { path: 'STMKY0501P02', element: <STMKY0501P02 /> },
         { path: 'STMKY0601M',   element: <STMKY0601M /> },
+
+        { path: 'STMFL0101M',   element: <STMFL0101M /> },
 
       ],
     },

@@ -138,9 +138,9 @@ function STMVL0101M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`관리부점`} require={false} />
+                    <Label label={`관리부점`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input wdth-50">
+                      <div className="o-form _input mode-required wdth-50">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} disabled />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
@@ -201,9 +201,14 @@ function STMVL0101M() {
                     </div>
                   </div>
 
-                  <div className="o-field">
+                  <div className="o-field colspan-2">
                     <Label label={`카드번호`} require={false} />
                     <div className="fields">
+                      <div className="o-form _select wdth-auto">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
@@ -243,6 +248,7 @@ function STMVL0101M() {
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="차량별관리자지정" className="_normal" />
+                      <CommonButton label="임대회사관리" className="_normal" />
                     </div>
 
                     <div className="group">
@@ -403,6 +409,7 @@ function STMVL0101M() {
                             <tr>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일자</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요일</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주행전</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주행후</span></div></th>
@@ -425,7 +432,7 @@ function STMVL0101M() {
                           </tbody>
 
                           <tbody className="p-datatable-tbody">
-                          {[...Array(24)].map((e, idx) => (
+                          {[...Array(2)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
@@ -433,7 +440,7 @@ function STMVL0101M() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input type-date wdth-50">
+                                    <div className="o-form _input type-date wdth-30">
                                       <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                       <i aria-hidden="true"></i>
                                     </div>
@@ -444,7 +451,7 @@ function STMVL0101M() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-50">
+                                    <div className="o-form _input wdth-40">
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
@@ -458,7 +465,7 @@ function STMVL0101M() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-50 g-end">
+                                    <div className="o-form _input wdth-40 g-end">
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
@@ -468,7 +475,7 @@ function STMVL0101M() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-50 g-end">
+                                    <div className="o-form _input wdth-40 g-end">
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
@@ -478,7 +485,99 @@ function STMVL0101M() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-50">
+                                    <div className="o-form _input wdth-40">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                              {
+                                idx === 1 ?
+                                <ImageButton label="파일보기" icon="attach" />
+                                :
+                                <ImageButton label="파일업로드" icon="upload" />
+                              }
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                            </tr>
+                          ))}
+                            <tr>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td><Icon icon="grid-added" /></td>{/* 추가된 행 .o-icon._grid-added 순번 대체 { @DEV } */}
+                              <td className="p-x-frozen-last">24가0165</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input type-date wdth-30">
+                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>금</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>홍길동</td>
+                              <td className="g-end">1,300</td>
+                              <td className="g-end">1,300</td>
+                              <td className="g-end">1,300</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40">
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
@@ -486,8 +585,30 @@ function STMVL0101M() {
                                 </div>
                               </td>
                               <td><ImageButton label="파일업로드" icon="upload" /></td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
-                          ))}
                           </tbody>
                         </table>
                       </div>

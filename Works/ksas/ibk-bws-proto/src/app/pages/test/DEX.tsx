@@ -90,6 +90,14 @@ function DEX() {
     <>
 
     {/*
+    2025-06-12 목
+      재난안전관리  업무용차량관리 부터 시작~
+
+    STMKY0501P02  #260 완료
+    BSSCR0101P03 키페이지
+
+    행내등기?
+
     2025-06-11 수 : 영업지원-  BSSCR0401T PPT 113 부터~
     2025-06-10 화
     BSSCR0101P02  기준연도 너비 확인 필요
@@ -126,6 +134,7 @@ function DEX() {
 <td className="g-start">겉문열쇠</td>
 <td className="g-start">금고실 #1</td>
 <td className="g-start">프로세스혁신부</td>
+<td className="g-start">을지로</td>
 <td><span className="o-digit type-date">2025-12-25</span></td>
 
 <td className="g-start"></td>
@@ -408,6 +417,9 @@ HSPHS1301M
 
 2025-06-12 에는 본부
 ppt114 부터~
+
+
+&lt;  &gt;
 
 */}
 

@@ -350,8 +350,8 @@ function STMDM0401P02() {
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>9430-0303-2364-5984</td>
-                            <td>9430-0303-2364-5984</td>
+                            <td> - - - </td>
+                            <td> - - - </td>
                             <td className="g-end">1,000,000</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                           </tr>
