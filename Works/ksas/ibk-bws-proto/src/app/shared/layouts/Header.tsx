@@ -293,8 +293,8 @@ function Header() {
 
               <div className="item">
                 <div className="header">
-                  <a href="javascript:" title="소화기대장관리" className="p-accordion-header-link" aria-expanded="false">
-                    <span className="p-accordion-header-text">소화기대장관리</span>
+                  <a href="javascript:" title="소방안전관리" className="p-accordion-header-link" aria-expanded="false">
+                    <span className="p-accordion-header-text">소방안전관리</span>
                   </a>
                 </div>
 

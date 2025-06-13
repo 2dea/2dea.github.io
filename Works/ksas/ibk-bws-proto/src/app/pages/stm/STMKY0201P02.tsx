@@ -167,12 +167,6 @@ function STMKY0201P02() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
                 <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">폐기대상내역</span></h5>

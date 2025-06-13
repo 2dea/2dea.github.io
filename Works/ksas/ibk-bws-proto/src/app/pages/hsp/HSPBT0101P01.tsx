@@ -156,12 +156,6 @@ function HSPBT0101P01() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
                 <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">인도취소 대상내역</span></h5>

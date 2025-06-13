@@ -341,29 +341,6 @@ function BSPDU0301M() {
                           </div>
                         </div>
 
-                        <div className="o-board type-a">
-                          <div className="board-container">
-                            <div className="m-header">
-                              <strong className="o-heading"><span className="label">유의사항</span></strong>
-                            </div>
-
-                            <ul className="m-bullets type-disc">
-                              <li>(1) 영업점 자체폐기: 통장류, 거래처로부터 회수한 중요용지 [예금규정 13조]</li>
-                              <li>(2) 본부집중폐기 : (1)항목 외 [카드류, 어음수표류, 기타증서류 등]</li>
-                              <ul className="m-bullets type-hyphen">
-                                <li>반드시 BPR발송 <em className="c-color-strong">[미발송시 검사부 상시 감사대상]</em> </li>
-                                <li>폐기 등록 시 일련번호 오류 입력 건은 전산불일치로 반송되오니 유의</li>
-                              </ul>
-                            </ul>
-                          </div>
-                        </div>
-
-                        <div className="m-footer">
-                          <ul className="m-bullets type-disc">
-                            <li className="c-color-strong"><em>본 거래는 서무계 잔량을 차감시킵니다. 사무계에 잔량이 있는지 확인하시기 바랍니다.</em></li>
-                          </ul>
-                        </div>
-
                       </div>
 
                     </div>
@@ -479,41 +456,41 @@ function BSPDU0301M() {
                           </div>
                         </div>
 
-                        <div className="m-footer">
-                          <ul className="m-bullets type-disc">
-                            <li className="c-color-strong"><em>본 거래는 서무계 잔량을 차감시킵니다. 사무계에 잔량이 있는지 확인하시기 바랍니다.</em></li>
-                          </ul>
-                        </div>
-
-                      </div>
-
-                      <div className="o-section">
-
-                        <div className="o-board type-a">
-                          <div className="board-container">
-                            <div className="m-header">
-                              <strong className="o-heading"><span className="label">유의사항</span></strong>
-                            </div>
-
-                            <ol className="m-bullets type-disc">
-                              <li>(1) 영업점 자체폐기: 통장류, 거래처로부터 회수한 중요용지 [예금규정 13조]</li>
-                              <li>
-                                (2) 본부집중폐기 : (1)항목 외 [카드류, 어음수표류, 기타증서류 등]
-
-                                <ul className="m-bullets type-hyphen">
-                                  <li>반드시 BPR발송 <em className="c-color-strong">[미발송시 검사부 상시 감사대상]</em> </li>
-                                  <li>폐기 등록 시 일련번호 오류 입력 건은 전산불일치로 반송되오니 유의</li>
-                                </ul>
-                              </li>
-                            </ol>
-                          </div>
-                        </div>
                       </div>
 
                     </div>
                   </div>
                 </TabPanel>
               </Tabs>
+
+              <div className="o-section">
+
+                <div className="o-board type-a">
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">유의사항</span></strong>
+                    </div>
+
+                    <ul className="m-bullets type-decimal level1">
+                      <li>영업점 자체폐기: 통장류, 거래처로부터 회수한 중요용지 [예금규정 13조]</li>
+                      <li>
+                        본부집중폐기: 항목 1 외 [카드류, 어음수표류, 기타증서류 등]
+                        <ul className="m-bullets type-hyphen">
+                          <li>반드시 BPR발송 <em className="c-color-strong">[미발송시 검사부 상시 감사대상]</em> </li>
+                          <li>폐기 등록 시 일련번호 오류 입력 건은 전산불일치로 반송되오니 유의</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li className="c-color-strong"><em>본 거래는 서무계 잔량을 차감시킵니다. 사무계에 잔량이 있는지 확인하시기 바랍니다.</em></li>
+                  </ul>
+                </div>
+
+              </div>
 
             </div>
           </div>

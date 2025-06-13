@@ -137,6 +137,12 @@ import HSPSA0101M from    'app/pages/hsp/HSPSA0101M';    // 중요용지·용도
 
 import HSPPC0201M from    'app/pages/hsp/HSPPC0201M';    // 중요용지·용도품(본부) > 대금정산 > 수입인지정산
 
+// proto 행내등기·우편물
+import BEXRQ0101M from    'app/pages/bex/BEXRQ0101M';     // 행내등기·우편물 > 행내등기 > 행내등기신청
+import BEXRQ0401M from    'app/pages/bex/BEXRQ0401M';     // 행내등기·우편물 > 행내등기 > 행내등기인수
+
+
+
 
 // proto 재난·안전관리
 import STMGD0101M from    'app/pages/stm/STMGD0101M';     // 재난·안전관리 > 기계경비당직관리         > 당직신청관리
@@ -196,7 +202,13 @@ import STMKY0401P10 from  'app/pages/stm/STMKY0401P10';   // 재난·안전관�
 import STMKY0501P02 from  'app/pages/stm/STMKY0501P02';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)위탁확인증
 import STMKY0601M from    'app/pages/stm/STMKY0601M';     // 재난·안전관리 > 열쇠관리                 > 관련조회 및 출력
 
-import STMFL0101M from    'app/pages/stm/STMFL0101M';     // 재난·안전관리 > 소화기대장관리            > 소화기신청
+import STMFL0101M from    'app/pages/stm/STMFL0101M';     // 재난·안전관리 > 소방안전관리              > 소화기신청
+import STMFL0201M from    'app/pages/stm/STMFL0201M';     // 재난·안전관리 > 소방안전관리              > 소화기관리대장
+import STMFL0201P02 from  'app/pages/stm/STMFL0201P02';   // 재난·안전관리 > 소방안전관리              > 소화기관리대장 ~ (LP)소화기관리이력
+import STMFL0201P03 from  'app/pages/stm/STMFL0201P03';   // 재난·안전관리 > 소방안전관리              > 소화기관리대장 ~ (LP)소화기폐기
+import STMFL0401M from    'app/pages/stm/STMFL0401M';     // 재난·안전관리 > 소방안전관리              > 자위소방대편성표
+import STMFL0501M from    'app/pages/stm/STMFL0501M';     // 재난·안전관리 > 소방안전관리              > 자위소방대편성표현황
+
 
 
 // proto 영업지원
@@ -384,6 +396,15 @@ function ProtoRoutes() {
         { path: 'HSPPC0201M',     element: <HSPPC0201M /> },
       ],
     },
+    { // 행내등기·우편물
+      path: '/proto',
+      element: <Decorator />,
+      children: [
+        { path: 'BEXRQ0101M',   element: <BEXRQ0101M /> },
+        { path: 'BEXRQ0401M',   element: <BEXRQ0401M /> },
+
+      ],
+    },
     { // 재난·안전관리
       path: '/proto',
       element: <Decorator />,
@@ -445,6 +466,12 @@ function ProtoRoutes() {
         { path: 'STMKY0601M',   element: <STMKY0601M /> },
 
         { path: 'STMFL0101M',   element: <STMFL0101M /> },
+        { path: 'STMFL0201M',   element: <STMFL0201M /> },
+        { path: 'STMFL0201P02', element: <STMFL0201P02 /> },
+        { path: 'STMFL0201P03', element: <STMFL0201P03 /> },
+        { path: 'STMFL0401M',   element: <STMFL0401M /> },
+        { path: 'STMFL0501M',   element: <STMFL0501M /> },
+
 
       ],
     },

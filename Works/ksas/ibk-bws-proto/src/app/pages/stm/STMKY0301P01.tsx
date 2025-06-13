@@ -163,12 +163,6 @@ function STMKY0301P01() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
                 <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">열쇠인수도취소내역</span></h5>

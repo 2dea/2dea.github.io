@@ -199,12 +199,6 @@ function BSPDU0301P01() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
                 <div className="m-header">
                   <h4 className="o-heading level2"><span className="label">재고 내역</span></h4>
@@ -258,12 +252,6 @@ function BSPDU0301P01() {
                   </div>
                 </div>
               </div>
-
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
 
               <div className="o-section">
                 <div className="m-header">
@@ -360,26 +348,25 @@ function BSPDU0301P01() {
                 </div>
               </div>
 
-            </div>
-          </div>
+              <div className="o-section">
+                <div className="o-board type-a">
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">유의사항</span></strong>
+                    </div>
 
-          <div className="o-section">
-            <div className="o-board type-a">
-              <div className="board-container">
-                <div className="m-header">
-                  <strong className="o-heading"><span className="label">유의사항</span></strong>
+                    <ul className="m-bullets type-disc">
+                      <li>이 거래는 서무계 재고내역에 한해서 폐기가 가능한 거래입니다. 중요용지 재고조회(일련번호 포함)화면 조회 후 확인하여 등록하세요.</li>
+                      <li>일련번호 앞자리가 '0'으로 시작하는 경우 '0' 모두 입력하세요. (폐기일련번호 입력 예시: 0001000 | 0100001)</li>
+                      <li>온누리상품권의 경우 온누리상품권 스캔등록 후 폐기등록을 입력하세요. (완료 전 스캔선택여부 'Y' 확인, 'N'일 경우 스캔내역 조회)</li>
+                      <li><em className="c-color-strong">폐기 일련번호를 실물번호 그대로 입력하지 않을 경우 반송처리되니 주의해주세요.</em></li>
+                    </ul>
+                  </div>
                 </div>
-
-                <ul className="m-bullets type-disc">
-                  <li>이 거래는 서무계 재고내역에 한해서 폐기가 가능한 거래입니다. 중요용지 재고조회(일련번호 포함)화면 조회 후 확인하여 등록하세요.</li>
-                  <li>일련번호 앞자리가 '0'으로 시작하는 경우 '0' 모두 입력하세요. (폐기일련번호 입력 예시: 0001000 | 0100001)</li>
-                  <li>온누리상품권의 경우 온누리상품권 스캔등록 후 폐기등록을 입력하세요. (완료 전 스캔선택여부 'Y' 확인, 'N'일 경우 스캔내역 조회)</li>
-                  <li><em className="c-color-strong">폐기 일련번호를 실물번호 그대로 입력하지 않을 경우 반송처리되니 주의해주세요.</em></li>
-                </ul>
               </div>
+
             </div>
           </div>
-
         </div>
 
         <div className="div-footer">
@@ -390,6 +377,7 @@ function BSPDU0301P01() {
             </div>
           </div>
         </div>
+
       </Dialog>
 
       <div className="roles" data-div-role="0">

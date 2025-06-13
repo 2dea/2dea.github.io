@@ -168,12 +168,6 @@ function STMKY0401P04() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
                 <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">우리부점 &rarr; 다른부점 위탁보관내역</span></h5>

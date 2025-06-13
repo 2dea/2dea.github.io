@@ -1,5 +1,5 @@
 /**
-* @description 재난·안전관리 > 열쇠관리 > 예비열쇠관리 ~ (LP)예비열쇠위탁요청
+ * @description 재난·안전관리 > 소방안전관리 > 소화기관리대장 ~ (LP)소화기관리이력
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMKY0401P02() {
+function STMFL0201P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -87,7 +87,7 @@ function STMKY0401P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -95,99 +95,16 @@ function STMKY0401P02() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">예비열쇠위탁요청</span></h3>}
+        header={<h3 className="o-heading"><span className="label">소화기관리이력</span></h3>}
       >
         <div className="div-container">
+
           <div className="o-grid">
             <div className="column">
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">열쇠위탁요청</span></h4>
-                </div>
-
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
-
-                      <tbody>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`요청부점`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0810] 프로세스혁신
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`요청자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0810] 홍길동
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`요청일자`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-date mode-required wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`위탁(상대)부점)`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`상대부점 수령자`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={'self'} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">우리부점 &rarr; 다른부점 위탁요청내역</span></h5>
-
+                  <h4 className="o-heading level2"><span className="label">소화기관이력</span></h4>
                   <div className="o-length">
                     <span className="head">전체</span>
                     <em className="data">
@@ -218,27 +135,51 @@ function STMKY0401P02() {
                           <col />
                           <col />
                           <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠구분</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠종류</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위탁수량</span></div></th>
-                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보관담당자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">분류</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소화기관리번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관리내역번호</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소화기종류</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소화기용량</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">제조업체명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">제조일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">제조번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">충약일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치장소</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">책임자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                           </tr>
                           <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -246,13 +187,25 @@ function STMKY0401P02() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>금고실</td>
-                            <td className="g-start">비상문 겉문열쇠</td>
-                            <td className="g-end">5</td>
+                            <td>수정</td>
+                            <td>결제승인</td>
+                            <td>202500001</td>
+                            <td>202500001</td>
+                            <td>012345</td>
+                            <td className="g-start">을지로</td>
+                            <td>분말소화기</td>
+                            <td className="g-end">33</td>
+                            <td>업체명 (주)앤비앤코퍼레이션</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>012345</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td className="g-start">출구 앞</td>
                             <td>012345</td>
                             <td>홍길동</td>
-                            <td>팀장</td>
-                            <td className="g-start"></td>
+                            <td>012345</td>
+                            <td>홍길동</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
                           </tr>
                         ))}
                         </tbody>
@@ -260,7 +213,9 @@ function STMKY0401P02() {
                     </div>
                   </div>
                 </div>
+
               </div>
+
 
             </div>
           </div>
@@ -269,8 +224,7 @@ function STMKY0401P02() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="결재요청" className="_solid-primary" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -280,7 +234,7 @@ function STMKY0401P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)예비열쇠위탁요청 [wdth-50p(w960)]</span>
+              <span className="label">(P)소화기관리이력 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>
@@ -299,4 +253,4 @@ function STMKY0401P02() {
   );
 }
 
-export default STMKY0401P02;
+export default STMFL0201P02;

@@ -182,12 +182,6 @@ function BSPDU0601P02() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
                 <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">오손중요용지 행내등기 신청정보</span></h5>

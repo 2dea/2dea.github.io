@@ -182,12 +182,6 @@ function HSPHS0401P03() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
 
                 <div className="main _primary rows-body-3i">

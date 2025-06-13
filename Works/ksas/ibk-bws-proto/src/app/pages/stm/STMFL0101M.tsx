@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 소화기대장관리 > 소화기신청
+ * @description 재난·안전관리 > 소방안전관리 > 소화기신청
  */
 
 // dependency
@@ -39,7 +39,7 @@ function STMFL0101M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '소화기대장관리' }, { label: '소화기신청' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '소방안전관리' }, { label: '소화기신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -120,8 +120,12 @@ function STMFL0101M() {
 
               <div className="group _primary">
                 <CommonButton label="삭제" className="_delete" />
-                <CommonButton label="결재요청취소" className="_solid-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
+              </div>
+
+              <div className="group _primary">
+                <CommonButton label="반려" className="_solid-primary" />
+                <CommonButton label="승인" className="_solid-primary" />
               </div>
             </div>
           </div>
@@ -129,64 +133,68 @@ function STMFL0101M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
+          <div className="o-grid">
+            <div className="column">
+              <form className="m-filter-form">
+                <div className="fieldset">
 
-          <form className="m-filter-form">
-            <div className="fieldset">
+                  <div className="o-field colspan-2">
+                    <Label label={`신청기간`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <span className="seps type-tilde">~</span>
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
 
-              <div className="o-field colspan-2">
-                <Label label={`신청기간`} require={true} />
-                <div className="fields">
-                  <div className="o-form _input type-date mode-required wdth-50">
-                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                    <i aria-hidden="true"></i>
+                  <div className="o-field">
+                    <Label label={`신청부점`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <span className="seps type-tilde">~</span>
-                  <div className="o-form _input type-date mode-required wdth-50">
-                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                    <i aria-hidden="true"></i>
+
+                  <div className="o-field">
+                    <Label label={`결재상태`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown placeholder="선택선택 선택" appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
                   </div>
+
+                  <div className="o-field">
+                    <Label label={`대장등록여부`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown placeholder="선택선택 선택" appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
-              </div>
 
-              <div className="o-field">
-                <Label label={`신청부점`} require={false} />
-                <div className="fields">
-                  <div className="o-form _input">
-                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                    <i aria-hidden="true"></i>
-                    <span className="inner-binds">
-                      <ImageButton label="초기화" icon="remove" />
-                    </span>
-                  </div>
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
                 </div>
-              </div>
-
-              <div className="o-field">
-                <Label label={`결재상태`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select">
-                    <XDropdown placeholder="선택선택 선택" appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-field">
-                <Label label={`대장등록여부`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select">
-                    <XDropdown placeholder="선택선택 선택" appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
+              </form>
             </div>
+          </div>
 
-            <div className="binds">
-              <CommonButton label="조회" className="_inquire" />
-            </div>
-          </form>
 
           <Splitter gutterSize={0} className="o-grid">
             <SplitterPanel minSize={17.5} className="column">
@@ -505,10 +513,10 @@ function STMFL0101M() {
                     </div>
 
                     <ul className="m-bullets type-disc">
-                      <li>(견적)인터넷 &lt;분말소화기&gt; 검색하여 단가 17,000원이하 제품(수입품)으로 견적서 받아.</li>
-                      <li>(절차) 신청서 + 견적서(김권운) 전송 &gt; 안전관리팀, 예산 재배정 &gt; 지금, 구입 및 배치</li>
-                      <li>(대장정리) &lt;업무지원시스템&gt; 재난 안전관리 &gt; 소방안전관리 &gt; 구매한 소화기 자료 업데이트(필수)</li>
-                      <li>(폐기) 노후소화기는 자체 폐기하거나, 시군구청 홈페이지에서 대형 폐기물 배출신청 또는 대평폐기물 스티커(개당 3,000원 내외)를 구입 배출하시면 됩니다.</li>
+                      <li>(견적) 인터넷 &lt;분말소화기&gt; 검색하여 단가 17,000원이하 제품(수입품)으로 견적서 받아주세요.</li>
+                      <li>(절차) 소화기신청 &gt; 안전관리팀 예산 재배정 &gt; 부점에서 호솨기 구입하여 배치합니다.</li>
+                      <li>(대장정리) 소화기 신청 결재승인 시 소화기관리대장에 소화기 정보가 자동으로 생성됩니다.</li>
+                      <li>(폐기) 노후소화기는 자체 폐기하거나, 시군구청 홈페이지에서 대형 폐기물 배출신청 또는 대평폐기물 스티커(개당 3,000원 내외)를 구입하여 배출하시면 됩니다.</li>
                     </ul>
                   </div>
                 </div>

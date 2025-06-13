@@ -90,6 +90,15 @@ function DEX() {
     <>
 
     {/*
+    2025-06-13 금
+    소화기
+
+        [수정 했음]
+        STMDM0301M : Name="m-filter-form">
+
+    행내등기 후~
+
+
     2025-06-12 목
       재난안전관리  업무용차량관리 부터 시작~
 
@@ -134,7 +143,9 @@ function DEX() {
 <td className="g-start">겉문열쇠</td>
 <td className="g-start">금고실 #1</td>
 <td className="g-start">프로세스혁신부</td>
+<td className="g-start">[00070] 프로세스혁신부</td>
 <td className="g-start">을지로</td>
+영업무
 <td><span className="o-digit type-date">2025-12-25</span></td>
 
 <td className="g-start"></td>
@@ -143,6 +154,8 @@ function DEX() {
 <td className="g-end">1</td>
 
 <td><span className="o-digit type-tel">010-1234-5678</span></td>
+
+<td>분말소화기</td>
 
 <td>
   <div className="o-field">
@@ -161,6 +174,16 @@ function DEX() {
                                 <div className="fields">
                                   <div className="o-form _select wdth-30">
                                     <XDropdown appendTo={document.body} className="bind" />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -189,6 +212,15 @@ function DEX() {
 <col className="wdth-auto" />
 
 <td>AJ렌트카</td>
+
+
+                                  <tr>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                  </tr>
+
 
 
 */}
@@ -236,7 +268,7 @@ function DEX() {
 
         #BSPDU0401P01 사고보고확인요청 : 기획 미 확정
 
-        [유의사항 레이아웃 - 확인필요] -BSPDU0301M #93
+        [유의사항 레이아웃 - 확인필요] -BSPDU0301M #93 블릿 참고
 
 
         온누리상품권일련번호확인 -> 보류?? HSPDU0201P02 본부..-> 유의사항 레이아웃 확인필요
@@ -297,7 +329,10 @@ function DEX() {
             : 지점:
 
           왼쪽:
-            업체명 (주)앤비앤코퍼레이션
+                                        <td>업체명 (주)앤비앤코퍼레이션</td>
+
+            td
+
 
       */
 
@@ -335,7 +370,8 @@ function DEX() {
 
       */}
 
-      {/* 정규식: <li className="c-color-strong">(.*)</li>  */}
+      {/* 정규식: <li className="c-color-strong">(.*)</li>
+             */}
 
       {
       /* 자주사용하는 팝업 너비

@@ -176,12 +176,6 @@ function HSPDU0101P01() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
 
                 <div className="m-header">

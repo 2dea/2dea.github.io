@@ -329,12 +329,6 @@ function STMBR0101P01() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="m-divider">
                 <div className="m-binds">
                   <div className="group">
@@ -577,6 +571,7 @@ function STMBR0101P01() {
                     </div>
                   </div>
                 </div>
+
               </div>
 
             </div>

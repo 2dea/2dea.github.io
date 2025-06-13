@@ -119,28 +119,34 @@ function STMDM0301M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <form className="m-filter-form">
-            <div className="fieldset">
+          <div className="o-grid">
+            <div className="column">
 
-              <div className="o-field">
-                <Label label={`차량번호`} require={false} />
-                <div className="fields">
-                  <div className="o-form _input wdth-50">
-                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                    <i aria-hidden="true"></i>
-                    <span className="inner-binds">
-                      <ImageButton label="초기화" icon="remove" />
-                    </span>
+              <form className="m-filter-form">
+                <div className="fieldset">
+
+                  <div className="o-field">
+                    <Label label={`차량번호`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input wdth-50">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+                    </div>
                   </div>
+
                 </div>
-              </div>
+
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
+                </div>
+              </form>
 
             </div>
-
-            <div className="binds">
-              <CommonButton label="조회" className="_inquire" />
-            </div>
-          </form>
+          </div>
 
           <Splitter gutterSize={0} className="o-grid">
             <SplitterPanel minSize={17.5} className="column">

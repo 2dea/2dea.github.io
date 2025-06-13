@@ -148,12 +148,6 @@ function STMKY0401P06() {
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div className="o-grid">
-            <div className="column">
-
               <div className="o-section">
                 <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">다른부점 &rarr; 우리부점 위탁요청내역</span></h5>
