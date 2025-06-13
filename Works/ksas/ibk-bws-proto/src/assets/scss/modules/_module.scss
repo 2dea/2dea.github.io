@@ -593,31 +593,43 @@
 
 
 /** Bullet-Lists Module */
-.m-bullets  { --fs-absint: var(--font-40-int); --lh: var(--text-height-para); font-size: calc(var(--rem) * var(--fs-int)); line-height: var(--lh); clear: both; position: relative; padding-left: 0.899554em; }
+.m-bullets  {
+  --fs-absint: var(--font-40-int);
+  --lh: var(--text-height-para);
+  --margin: (1em * var(--margin-bullets-inner, var(--margin-bullets, 0)) / var(--fs-absint, var(--font-30-int, 14)));
+
+  font-size: calc(var(--rem) * var(--fs-int)); line-height: var(--lh); clear: both; position: relative;
+}
+.m-bullets >*  {
+  --width-int: (var(--width-bullet) / 42);
+  --width: calc(1em * var(--width-int));
+  --width-neg: calc(-1em * var(--width-int));
+
+  min-height: 1lh;
+  padding-left: var(--width);
+}
+.m-bullets >* +*  { margin-top: calc(var(--margin)); }
+.m-bullets >:before  { content: var(--content); position: absolute; width: var(--width); margin-left: var(--width-neg); text-align: center; white-space: nowrap; }
+.m-bullets >:where(.heading)  { margin-left: var(--width-neg); }
+.m-bullets >:where(.heading):before  { content: none; }
 .m-bullets strong  { font-weight: $bold-70; }
-.m-bullets >* +*  { margin-top: calc(1em * var(--margin-bullets, 0) / var(--fs-absint, var(--font-30-int, 14))); }
-.m-bullets >:before  { content: var(--content); position: absolute; width: 0.899554em; margin-left: -0.899554em; text-align: center; }
-.m-bullets >.heading  { margin-left: -0.899554em; }
-.m-bullets >.heading:before  { content: none; }
 
-.m-bullets.type-disc  { --content: "· "; --content: "• "; }
+.m-bullets >* .m-bullets  { --margin-bullets-inner: (var(--margin-bullets) / 2); margin-top: calc(var(--margin)); }
+.m-bullets +.m-bullets  { margin-top: calc(var(--margin) + max(var(--margin) / 2, III(2))); }
 
-.m-bullets.type-hyphen  { padding-left: 0.908483em; }
-.m-bullets.type-hyphen >dt.heading  { margin-left: -0.908483em; }
-.m-bullets.type-hyphen >:before  { content: "- "; width: 0.908483em; margin-left: -0.908483em; }
+.m-bullets.type-disc  { --content: "·" var(--utf-nbsp); --content: "•" var(--utf-nbsp); --width-bullet: 31.031; }
 
-.m-bullets.type-asterisk  { padding-left: 1.027902em; }
-.m-bullets.type-asterisk >dt.heading  { margin-left: -1.027902em; }
-.m-bullets.type-asterisk >:before  { content: "* "; width: 1.027902em; margin-left: -1.027902em; }
+.m-bullets.type-hyphen  { --content: "-" var(--utf-nbsp); --width-bullet: 28.656; }
 
-.m-bullets.type-prec  { padding-left: calc(2.4rem + 0.285715em); }
-.m-bullets.type-prec >dt.heading  { margin-left: calc(-2.4rem - 0.285715em); }
-// .m-bullets.type-prec >:before  { content: ""; width: 2.4rem; height: 2.4rem; margin-left: calc(-2.4rem - 0.285715em); margin-top: calc(0.785714em - 2.4rem / 2); margin-right: 0.285715em; background: url('../img/common/ico_label_prec.png') no-repeat; }
+.m-bullets.type-asterisk  { --content: "*" var(--utf-nbsp); --width-bullet: 30.969; }
 
 .m-bullets.type-decimal  { counter-reset: NUM_orders; }
-.m-bullets.type-decimal >*  { display: flex; }
-.m-bullets.type-decimal >:before  { counter-increment: NUM_orders; content: counter(NUM_orders) "."; }
-// .m-bullets.type-decimal >:nth-child(-n+9):before  { content: "0" counter(NUM_orders) "."; }
+.m-bullets.type-decimal >*  { --content: var(--content-pre, "") counter(NUM_orders) var(--content-suf, ".") var(--utf-nbsp); --width-bullet: 71.578; }
+.m-bullets.type-decimal >:where(:nth-child(-n + 9))  { --content-pre: "0"; --content-pre: ""; --width-bullet: 45.656; }
+.m-bullets.type-decimal >:before  { counter-increment: NUM_orders; text-align: left; text-align: start; }
+
+.m-bullets.type-decimal.level2 >*  { --content-pre: "("; --content-suf: ")"; --width-bullet: 92.125; }
+.m-bullets.type-decimal.level2 >:where(:nth-child(-n + 9))  { --width-bullet: 66.203; }
 
 
 .m-bullets:where(.o-board *)  { --fs-int: var(--font-40-int); --margin-bullets: 4; }

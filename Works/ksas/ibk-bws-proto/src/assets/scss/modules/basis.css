@@ -120,6 +120,9 @@
 
   --blur-abs-50:        1.5px;
 
+  --utf-nbsp:           "\00A0";
+  --utf-jwsp:           "\200B";
+
 
   @media
     screen and (-webkit-min-device-pixel-ratio: 1.25),
