@@ -193,8 +193,8 @@ function BEXRQ0101M() {
                   </div>
 
                   <div className="o-toggles type-tab">
-                    <CommonButton label="단건신청" className="is-selected" icon="task-single" />
-                    <CommonButton label="일괄신청" className="" icon="task-multi" />
+                    <CommonButton label="단건신청" className="" icon="task-single" />
+                    <CommonButton label="일괄신청" className="is-selected" icon="task-multi" />
                   </div>
                 </div>
 
@@ -206,58 +206,79 @@ function BEXRQ0101M() {
                         <col className="data" />
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`인수자`} require={false} />
+                            <Label label={`인수자`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50">
+                                <div className="o-form _input mode-required wdth-50">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
                           </td>
-                        </tr>
-                        <tr>
+
                           <th colSpan={1}>
-                            <Label label={`인수부점`} require={false} />
+                            <Label label={`실근무지`} require={true} />
                           </th>
                           <td colSpan={3}>
-                            <div className="m-mixed-field">
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-90">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={'self'} className="bind" disabled />
+                                  <i aria-hidden="true"></i>
                                 </div>
-                              </div>
-
-                              <div className="m-checks">
-                                <InputRadio name="RADIO:T_10" label="서무대리" defaultChecked />
-                                <InputRadio name="RADIO:T_10" label="보관카드담당자" />
-                              </div>
-
-                              <div className="binds">
-                                <CommonButton label="즐겨찾기" className="_normal" />
+                                <span className="helper">인수자가 설정한 근무지입니다.</span>
                               </div>
                             </div>
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`서류구분`} require={false} />
+                            <Label label={`인수부점`} require={true} />
+                          </th>
+                          <td colSpan={5}>
+                              <div className="m-mixed-field">
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input mode-required wdth-90">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="m-checks">
+                                  <InputRadio name="RADIO_10" label="서무대리" defaultChecked />
+                                  <InputRadio name="RADIO_10" label="보관카드담당자" />
+                                </div>
+
+                                <div className="binds">
+                                  <CommonButton label="즐겨찾기" className="_normal" />
+                                </div>
+                              </div>
+
+                              <div className="m-footer">
+                                <p className="o-helper">도착예정일자: YYYY-MM-DD 신청일자에 실물 발송한 경우</p>
+                              </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`서류구분`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select wdth-50">
+                                <div className="o-form _select mode-required wdth-50">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -265,12 +286,12 @@ function BEXRQ0101M() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`수량`} require={false} />
+                            <Label label={`수량`} require={true} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input type-spin wdth-50">
+                                <div className="o-form _input type-spin mode-required wdth-50">
                                   <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
                                     decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                   <i aria-hidden="true"></i>
@@ -281,22 +302,21 @@ function BEXRQ0101M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`서류내용`} require={false} />
+                            <Label label={`서류내용`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={5}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-70">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <div className="o-form _input mode-required wdth-90">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
 
-                                <div className="o-form _select wdth-70">
+                                <div className="o-form _select wdth-90">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
                                 <CommonButton label="서류내용관리" className="_normal" />
-
                               </div>
                             </div>
                           </td>
@@ -329,15 +349,18 @@ function BEXRQ0101M() {
 
                   <div className="o-field">
                     <div className="fields">
-                      <div className="o-form _select wdth-50">
+                      <div className="o-form _select wdth-80">
                         <XDropdown appendTo={document.body} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
-                      <CommonButton label="인수자 일괄추가" className="_normal" />
                     </div>
                   </div>
 
                   <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="인수자 일괄추가" className="_normal" />
+                    </div>
+
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행복사" className="_normal" />
@@ -349,7 +372,6 @@ function BEXRQ0101M() {
 
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
@@ -366,11 +388,11 @@ function BEXRQ0101M() {
                           <col />
                           <col />
                           <col />
+                          <col className="wdth-10" />
+                          <col className="wdth-10" />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -421,8 +443,8 @@ function BEXRQ0101M() {
                             <td>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _select wdth-30">
-                                    <XDropdown appendTo={document.body} className="bind" />
+                                  <div className="o-form _select wdth-50">
+                                    <XDropdown appendTo={document.body} className="bind" disabled />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -433,7 +455,7 @@ function BEXRQ0101M() {
                             <td>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _select wdth-30">
+                                  <div className="o-form _select wdth-50">
                                     <XDropdown appendTo={document.body} className="bind" />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -443,7 +465,7 @@ function BEXRQ0101M() {
                             <td>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-50">
+                                  <div className="o-form _input wdth-50 g-end">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -453,8 +475,8 @@ function BEXRQ0101M() {
                             <td>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-70">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <div className="o-form _input wdth-90">
+                                    <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
@@ -465,6 +487,12 @@ function BEXRQ0101M() {
                       </table>
                     </div>
                   </div>
+                </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>신청 상세정보 일괄적용 시 체크된 일괄신청내역만 상세정보가 적용됩니다.</li>
+                  </ul>
                 </div>
 
               </div>
@@ -478,8 +506,25 @@ function BEXRQ0101M() {
 
                     <ul className="m-bullets type-disc">
                       <li>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 <em className="c-color-strong">인수직원의 부점정보를 확인해주세요.</em></li>
-                      <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                      <li><em className="c-color-strong">행내등기 대상</em>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
                     </ul>
+
+                    <div className="board-container type-sub">
+                      <div className="m-header">
+                        <strong className="o-heading"><span className="label">여신자필서류(STP)</span></strong>
+
+                        <div className="m-binds">
+                          <div className="group">
+                            <a href="javascript:" className="o-link texted-button _primary">안내문 상세보기<Icon icon="link" /></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <ul className="m-bullets type-disc">
+                        <li><em className="c-color-strong">NET점 고객의 여신자필 서류를 대신 받아 전달</em>할 경우, <em className="c-color-strong">영업점 간 비용이 정산</em>됩니다.(발송지점 비용 1만원 ↓, 인수지점 비용 1만원 ↑)</li>
+                        <li><em className="c-color-strong">자점 고객이 NET점 방문 시</em> 고객에게 받을 서류를 미리 세팅하여 NET점에 보내는 경우 <em className="c-color-strong">서류구분을 [일반서류]로 선택</em> 후 신청해주세요.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

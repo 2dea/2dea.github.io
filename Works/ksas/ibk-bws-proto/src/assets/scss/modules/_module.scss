@@ -614,7 +614,7 @@
 .m-bullets >:where(.heading):before  { content: none; }
 .m-bullets strong  { font-weight: $bold-70; }
 
-.m-bullets >* .m-bullets  { --margin-bullets-inner: (var(--margin-bullets) / 2); margin-top: calc(var(--margin)); }
+.m-bullets >* .m-bullets  { --margin-bullets-inner: (var(--margin-bullets) / 2); font-size: 1em; margin-top: calc(var(--margin)); }
 .m-bullets +.m-bullets  { margin-top: calc(var(--margin) + max(var(--margin) / 2, III(2))); }
 
 .m-bullets.type-disc  { --content: "·" var(--utf-nbsp); --content: "•" var(--utf-nbsp); --width-bullet: 31.031; }
