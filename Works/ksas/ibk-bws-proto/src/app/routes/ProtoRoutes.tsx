@@ -143,9 +143,9 @@ import BEXRQ0101M from    'app/pages/bex/BEXRQ0101M';     // 행내등기·우�
 import BEXRQ0101P01 from  'app/pages/bex/BEXRQ0101P01';   // 행내등기·우편물 > 행내등기 > 행내등기신청 ~ (LP)인수자즐겨찾기
 import BEXRQ0101P02 from  'app/pages/bex/BEXRQ0101P02';   // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)서류내용관리
 
-import BEXRQ0201P02 from  'app/pages/bex/BEXRQ0201P02';   // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기 STP관리
+import BEXRQ0201P02 from  'app/pages/bex/BEXRQ0201P02';   // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)여신자필서류(STP)관리
 
-import BEXRQ0201P01 from  'app/pages/bex/BEXRQ0201P01';   // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기변경이력
+import BEXRQ0201P01 from  'app/pages/bex/BEXRQ0201P01';   // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기STP변경이력
 
 import BEXRQ0401M from    'app/pages/bex/BEXRQ0401M';     // 행내등기·우편물 > 행내등기 > 행내등기인수
 
@@ -157,7 +157,7 @@ import BEXRQ0601P02 from  'app/pages/bex/BEXRQ0601P02';   // 행내등기·우�
 import BEXPM0101M from    'app/pages/bex/BEXPM0101M';     // 행내등기·우편물 > 우편물 > 우편물신청
 
 import BEXPM0201M from    'app/pages/bex/BEXPM0201M';     // 행내등기·우편물 > 우편물 > 우편물신청내역
-import BEXPM0601M from    'app/pages/bex/BEXPM0601M';     // 행내등기·우편물 > 우편물 > 대행신청내역
+import BEXPM0601M from    'app/pages/bex/BEXPM0601M';     // 행내등기·우편물 > 우편물 > 우편물대행신청내역
 import BEXPM0301M from    'app/pages/bex/BEXPM0301M';     // 행내등기·우편물 > 우편물 > 우편물검수
 import BEXPM0301P01 from  'app/pages/bex/BEXPM0301P01';   // 행내등기·우편물 > 우편물 > 우편물검수 ~ (LP)우편물일괄검수등록
 

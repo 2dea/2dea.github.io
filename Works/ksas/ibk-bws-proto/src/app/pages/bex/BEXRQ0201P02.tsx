@@ -1,5 +1,5 @@
 /**
- * @description 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기 STP관리
+ * @description 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)여신자필서류(STP)관리
  */
 
 // dependency
@@ -95,7 +95,7 @@ function BEXRQ0201P02() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">행내등기 STP관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">여신자필서류(STP)관리</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -502,7 +502,7 @@ function BEXRQ0201P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)행내등기 STP관리 [wdth-70p(w960)]</span>
+              <span className="label">(P)여신자필서류(STP)관리 [wdth-70p(w960)]</span>
             </h1>
           </div>
         </div>

@@ -1,5 +1,5 @@
 /**
- * @description 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기변경이력
+ * @description 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기STP변경이력
  */
 
 // dependency
@@ -95,7 +95,7 @@ function BEXRQ0201P01() {
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">행내등기변경이력</span></h3>}
+        header={<h3 className="o-heading"><span className="label">행내등기STP변경이력</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -203,7 +203,7 @@ function BEXRQ0201P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)행내등기변경이력 [wdth-60p(w1150)]</span>
+              <span className="label">(P)행내등기STP변경이력 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>

@@ -1,5 +1,5 @@
 /**
- * @description 행내등기·우편물 > 우편물 > 대행신청내역
+ * @description 행내등기·우편물 > 우편물 > 우편물대행신청내역
  */
 
 // dependency
@@ -39,7 +39,7 @@ function BEXPM0601M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '우편물' }, { label: '대행신청내역' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물대행신청내역' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -93,7 +93,7 @@ function BEXPM0601M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">대행신청내역</span>
+                <span className="label">우편물대행신청내역</span>
 
                 <Favorite />
               </h1>
