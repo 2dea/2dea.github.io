@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 인사정보 > 직원관리
+ * @description 공통·결재 > 인사정보 > 직원관리
  */
 
 // dependency
@@ -39,7 +39,7 @@ function ADMPA0301M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '인사정보' }, { label: '직원관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '인사정보' }, { label: '직원관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');

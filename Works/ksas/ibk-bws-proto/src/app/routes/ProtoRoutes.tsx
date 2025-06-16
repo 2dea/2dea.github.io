@@ -254,30 +254,30 @@ import BSSTI0301M from    'app/pages/bss/BSSTI0301M';   // 영업지원 > 연수
 import BSSTI0401M from    'app/pages/bss/BSSTI0401M';   // 영업지원 > 연수원    > 연수원입출고내역조회
 import BSSTI0501M from    'app/pages/bss/BSSTI0501M';   // 영업지원 > 연수원    > 연수원품목재고조회
 
-// proto 관리자
-import ADMCM0101M from    'app/pages/adm/ADMCM0101M';   // 관리자 > 코드관리 > 공통코드관리
+// proto 공통·결재
+import ADMCM0101M from    'app/pages/adm/ADMCM0101M';   // 공통·결재 > 코드관리 > 공통코드관리
 
-import ADMPA0101M from    'app/pages/adm/ADMPA0101M';   // 관리자 > 인사정보 > 부점관리
-import ADMPA0201M from    'app/pages/adm/ADMPA0201M';   // 관리자 > 인사정보 > 팀정보관리
-import ADMPA0301M from    'app/pages/adm/ADMPA0301M';   // 관리자 > 인사정보 > 직원관리
-import ADMPA0301P01 from  'app/pages/adm/ADMPA0301P01'; // 관리자 > 인사정보 > 직원관리 ~ (LP)직무분장관리
-import ADMPA0301P02 from  'app/pages/adm/ADMPA0301P02'; // 관리자 > 인사정보 > 직원관리 ~ (LP)변경이력
-import ADMPA0401M from    'app/pages/adm/ADMPA0401M';   // 관리자 > 인사정보 > 외주직원관리
+import ADMPA0101M from    'app/pages/adm/ADMPA0101M';   // 공통·결재 > 인사정보 > 부점관리
+import ADMPA0201M from    'app/pages/adm/ADMPA0201M';   // 공통·결재 > 인사정보 > 팀정보관리
+import ADMPA0301M from    'app/pages/adm/ADMPA0301M';   // 공통·결재 > 인사정보 > 직원관리
+import ADMPA0301P01 from  'app/pages/adm/ADMPA0301P01'; // 공통·결재 > 인사정보 > 직원관리 ~ (LP)직무분장관리
+import ADMPA0301P02 from  'app/pages/adm/ADMPA0301P02'; // 공통·결재 > 인사정보 > 직원관리 ~ (LP)변경이력
+import ADMPA0401M from    'app/pages/adm/ADMPA0401M';   // 공통·결재 > 인사정보 > 외주직원관리
 
-import ADMAU0101M from    'app/pages/adm/ADMAU0101M';   // 관리자 > 권한관리 > 생성관리 > (T)메뉴관리
-import ADMAU0101P01 from  'app/pages/adm/ADMAU0101P01'; // 관리자 > 권한관리 > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
-import ADMAU0102M from    'app/pages/adm/ADMAU0102M';   // 관리자 > 권한관리 > 생성관리 > (T)화면관리
-import ADMAU0103M from    'app/pages/adm/ADMAU0103M';   // 관리자 > 권한관리 > 생성관리 > (T)팝업관리
-import ADMAU0104M from    'app/pages/adm/ADMAU0104M';   // 관리자 > 권한관리 > 생성관리 > (T)권한관리
-import ADMAU0201M from    'app/pages/adm/ADMAU0201M';   // 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
-import ADMAU0201P01 from  'app/pages/adm/ADMAU0201P01'; // 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)화면매핑
-import ADMAU0201P02 from  'app/pages/adm/ADMAU0201P02'; // 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)관련화면매핑
-import ADMAU0202M from    'app/pages/adm/ADMAU0202M';   // 관리자 > 권한관리 > 매핑관리 > (T)권한별 메뉴/팝업관리
-import ADMAU0203M from    'app/pages/adm/ADMAU0203M';   // 관리자 > 권한관리 > 매핑관리 > (T)부점/부서별 권한관리
-import ADMAU0204M from    'app/pages/adm/ADMAU0204M';   // 관리자 > 권한관리 > 매핑관리 > (T)사용자별 권한관리
+import ADMAU0101M from    'app/pages/adm/ADMAU0101M';   // 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리
+import ADMAU0101P01 from  'app/pages/adm/ADMAU0101P01'; // 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
+import ADMAU0102M from    'app/pages/adm/ADMAU0102M';   // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리
+import ADMAU0103M from    'app/pages/adm/ADMAU0103M';   // 공통·결재 > 권한관리 > 생성관리 > (T)팝업관리
+import ADMAU0104M from    'app/pages/adm/ADMAU0104M';   // 공통·결재 > 권한관리 > 생성관리 > (T)권한관리
+import ADMAU0201M from    'app/pages/adm/ADMAU0201M';   // 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
+import ADMAU0201P01 from  'app/pages/adm/ADMAU0201P01'; // 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)화면매핑
+import ADMAU0201P02 from  'app/pages/adm/ADMAU0201P02'; // 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)관련화면매핑
+import ADMAU0202M from    'app/pages/adm/ADMAU0202M';   // 공통·결재 > 권한관리 > 매핑관리 > (T)권한별 메뉴/팝업관리
+import ADMAU0203M from    'app/pages/adm/ADMAU0203M';   // 공통·결재 > 권한관리 > 매핑관리 > (T)부점/부서별 권한관리
+import ADMAU0204M from    'app/pages/adm/ADMAU0204M';   // 공통·결재 > 권한관리 > 매핑관리 > (T)사용자별 권한관리
 
-import ADMAC0101M from    'app/pages/adm/ADMAC0101M';   // 관리자 > 권한위임 > 부점별 권한위임
-import ADMAC0201M from    'app/pages/adm/ADMAC0201M';   // 관리자 > 권한위임 > 사용자별 권한관리
+import ADMAC0101M from    'app/pages/adm/ADMAC0101M';   // 공통·결재 > 권한위임 > 부점별 권한위임
+import ADMAC0201M from    'app/pages/adm/ADMAC0201M';   // 공통·결재 > 권한위임 > 사용자별 권한관리
 
 function ProtoRoutes() {
   return useRoutes([
@@ -539,7 +539,7 @@ function ProtoRoutes() {
         { path: 'BSSTI0501M',   element: <BSSTI0501M /> },
       ],
     },
-    { // 관리자
+    { // 공통·결재
       path: '/proto',
       element: <Decorator />,
       children: [

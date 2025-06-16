@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한관리 > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
+ * @description 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
  */
 
 // dependency

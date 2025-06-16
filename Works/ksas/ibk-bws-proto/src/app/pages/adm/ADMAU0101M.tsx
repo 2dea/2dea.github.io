@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한관리 > 생성관리 > (T)메뉴관리
+ * @description 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리
  */
 
 // dependency
@@ -39,7 +39,7 @@ function ADMAU0201M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한관리' }, { label: '생성관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '권한관리' }, { label: '생성관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');

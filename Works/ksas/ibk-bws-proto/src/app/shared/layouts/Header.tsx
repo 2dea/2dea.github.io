@@ -100,7 +100,7 @@ function Header() {
               <li><a href="javascript:" className="link"><span className="label">비상계획안전기획</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">영업지원</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">수수료관리</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">관리자</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">공통·결재</span></a></li>
             </ul>
           </div>
 

@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
+ * @description 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
  */
 
 // dependency

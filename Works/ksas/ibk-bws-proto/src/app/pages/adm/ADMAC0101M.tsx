@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 권한위임 > 부점별 권한위임
+ * @description 공통·결재 > 권한위임 > 부점별 권한위임
  */
 
 // dependency
@@ -39,7 +39,7 @@ function ADMAC0101M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '권한위임' }, { label: '부점별 권한위임' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '권한위임' }, { label: '부점별 권한위임' }];
 
   // InputText
   const [value, setValue] = useState<string>('');

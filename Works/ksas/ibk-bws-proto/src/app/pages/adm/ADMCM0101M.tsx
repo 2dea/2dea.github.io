@@ -1,5 +1,5 @@
 /**
- * @description 관리자 > 코드관리 > 공통코드관리
+ * @description 공통·결재 > 코드관리 > 공통코드관리
  */
 
 // dependency
@@ -39,7 +39,7 @@ function ADMCM0101M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '관리자' }, { label: '코드관리' }, { label: '공통코드관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '코드관리' }, { label: '공통코드관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
