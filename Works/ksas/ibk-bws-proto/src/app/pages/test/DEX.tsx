@@ -90,6 +90,9 @@ function DEX() {
     <>
 
     {/*
+      2025-06-17 화
+      행내등기 # 66  우편물발송처리결과 BEXPM0401M ~
+
     2025-06-13 금
     소화기
 
@@ -179,6 +182,7 @@ function DEX() {
                                 </div>
                               </div>
                             </td>
+
                             <td>
                               <div className="o-field">
                                 <div className="fields">
@@ -328,10 +332,7 @@ function DEX() {
           왼쪽
             : 지점:
 
-          왼쪽:
-                                        <td>업체명 (주)앤비앤코퍼레이션</td>
-
-            td
+          왼쪽: <td>업체명 (주)앤비앤코퍼레이션</td>
 
 
       */
@@ -352,13 +353,13 @@ function DEX() {
             h4
             HSPBT0301P01
 
-            [ HSPHS1701P01 ]
-            조회: 달력+ 툴팁
-            하단: 출력버튼
-
-            HSPHP0401P01
+          [HSPHP0401P01]
             조회
             표
+
+            [ HSPHS1701P01 , ]
+            조회: 달력+ 툴팁 하단: 출력버튼
+
 
             엄청 긴 테이블 : BSPDU0201M
 
@@ -413,48 +414,6 @@ function DEX() {
       */}
 
       {/*
-
-      2025-06-11 수
- ### 완료
-HSPHS0501M 중요용지본부입고
-HSPHS1601M 용도품본부입고
- HSPHP0401M (총무부외)중요용지본부입고
-
-# 외
-
-HSPBT0301M
-HSPBT0201M
-HSPBT0501M
-HSPBT0701M
-HSPBT0801M
-
-HSPBT1401M 송장출력
-HSPBT1001M
-HSPBT1101M
-HSPBT1101P01
-HSPBT0901M
-HSPBT1501M
-HSPBT1601M
-HSPBT1701M
-HSPHS0201M
-HSPHS0201P01
-
-HSPHS0301M
-HSPHS0401M
-HSPHS0601M
-HSPHS2001M
-HSPDU0701M
-HSPHS0701M
-HSPHS1001M
-HSPHS1201M
-
-HSPHS0201M
-HSPHS1301M
-
-2025-06-12 에는 본부
-ppt114 부터~
-
-
 &lt;  &gt;
 
 */}
