@@ -134,6 +134,36 @@ function BEXRQ0401M() {
           <div className="o-grid">
             <div className="column">
 
+              <div className="o-board type-a style-fit">
+                <dl className="m-defines">
+                  <div className="group">
+                    <dt className="head">
+                      <strong className="o-heading">
+                        <span className="label">미인수 건수</span>
+                      </strong>
+                    </dt>
+                    <dd className="data">
+                      <div className="o-length">
+                        <span className="head">부점</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </dd>
+                    <dd className="data">
+                      <div className="o-length">
+                        <span className="head">개인</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+
               <form className="m-filter-form">
                 <div className="fieldset">
 
@@ -243,7 +273,7 @@ function BEXRQ0401M() {
 
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                     <div className="o-grid-table p-datatable">
                       <div className="table-container p-datatable-wrapper">

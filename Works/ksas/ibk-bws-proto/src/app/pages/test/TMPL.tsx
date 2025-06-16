@@ -174,8 +174,49 @@ function TMPL() {
             <div className="o-grid">
               <div className="column">
 
+                <div className="o-board type-a style-fit">
+                  <dl className="m-defines">
+                    <div className="group">
+                      <dt className="head">
+                        <strong className="o-heading">
+                          <span className="label">미인수 건수</span>
+                        </strong>
+                      </dt>
+                      <dd className="data">
+                        <div className="o-length">
+                          <span className="head">부점</span>
+                          <em className="data">
+                            <span className="value">8</span>
+                            <span className="units">건</span>
+                          </em>
+                        </div>
+                      </dd>
+                      <dd className="data">
+                        <div className="o-length">
+                          <span className="head">개인</span>
+                          <em className="data">
+                            <span className="value">8</span>
+                            <span className="units">건</span>
+                          </em>
+                        </div>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+
                 <div className="o-board type-b style-fit">
-                  .o-board.type-b
+                  <dl className="m-defines">
+                    <div className="group">
+                      <dt className="head">신청부점</dt>
+                      <dd className="data">[0034] 을지로</dd>
+                      <dd className="data">2025-01-21</dd>
+                    </div>
+
+                    <div className="group">
+                      <dt className="head">신청자</dt>
+                      <dd className="data">[000000] 홍길동</dd>
+                    </div>
+                  </dl>
                 </div>
 
                 <div className="o-board type-c style-fit">

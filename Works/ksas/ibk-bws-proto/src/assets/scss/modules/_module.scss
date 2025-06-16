@@ -710,12 +710,24 @@
 .o-notice >.binds  { align-self: center; margin-left: $gap-element-70; }
 
 
+.m-defines  { display: flex; flex-wrap: wrap; gap: $gap-element-70 $gap-element-80; }
+.m-defines >.group  { display: flex; align-items: center; }
+.m-defines >.group >.head  { font-weight: $bold-70; margin-right: $gap-element-70; color: var(--color-text-70); }
+.m-defines >.group >.head  { font-weight: $bold-70; margin-right: $gap-element-70; color: var(--color-text-70); }
+.m-defines >.group >.data +*  { margin-left: $gap-element-70; }
+
+.m-defines:where(.o-board *) >.group >:not(:has(.o-heading))  { font-size: $font-40; line-height: $line-40; }
+
 
 .o-board  {
   --margin-block: #{$gap-element-80};
   --margin-inline: #{$gap-element-90};
   --surface: var(--color-ground-40);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(var(--margin-block) * 2 + $line-abs-50);
   border: $e10 solid var(--color-edge, currentColor);
   background-color: var(--surface);
   border-radius: $radius-50;
