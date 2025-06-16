@@ -161,6 +161,8 @@ import BEXPM0601M from    'app/pages/bex/BEXPM0601M';     // 행내등기·우�
 import BEXPM0301M from    'app/pages/bex/BEXPM0301M';     // 행내등기·우편물 > 우편물 > 우편물검수
 import BEXPM0301P01 from  'app/pages/bex/BEXPM0301P01';   // 행내등기·우편물 > 우편물 > 우편물검수 ~ (LP)우편물일괄검수등록
 
+import BEXPM0401M from    'app/pages/bex/BEXPM0401M';     // 행내등기·우편물 > 우편물 > 우편물발송처리결과
+
 
 
 
@@ -443,7 +445,8 @@ function ProtoRoutes() {
         { path: 'BEXPM0201M',     element: <BEXPM0201M /> },
         { path: 'BEXPM0601M',     element: <BEXPM0601M /> },
         { path: 'BEXPM0301M',     element: <BEXPM0301M /> },
-        { path: 'BEXPM0301P01',   element: <BEXPM0301P01 /> },
+
+        { path: 'BEXPM0401M',     element: <BEXPM0401M /> },
       ],
     },
     { // 재난·안전관리
