@@ -242,7 +242,7 @@ import STMFL0501M from 'app/pages/stm/STMFL0501M';     // 재난·안전관리 >
 
 
 // proto 영업지원
-import BSSAP0201M from 'app/pages/bss/BSSAP0201M';     // 영업지원 > A4용지관리 > A4용지신청내역
+import BSSAP0201M from 'app/pages/bss/BSSAP0201M';     // 영업지원 > A4용지관리 > A4용지인수
 import BSSDM0101M from 'app/pages/bss/BSSDM0101M';     // 영업지원 > 문서관리	 > 문서열람
 import BSSDM0201M from 'app/pages/bss/BSSDM0201M';     // 영업지원 > 문서관리	 > 문서열람
 

@@ -1,5 +1,5 @@
 /**
- * @description 영업지원 > A4용지관리 > A4용지신청내역
+ * @description 영업지원 > A4용지관리 > A4용지인수
  */
 
 // dependency
@@ -44,7 +44,7 @@ function BSSAP0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: 'A4용지관리' }, { label: 'A4용지신청내역' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: 'A4용지관리' }, { label: 'A4용지인수' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function BSSAP0201M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">A4용지신청내역</span>
+                <span className="label">A4용지인수</span>
 
                 <Favorite />
               </h1>
