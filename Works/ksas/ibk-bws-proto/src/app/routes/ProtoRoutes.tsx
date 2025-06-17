@@ -32,6 +32,11 @@ import CMP001401P from 'app/pages/cmp/CMP001401P';   // 공통 ~ (LP)업체조�
 import CMP001402P from 'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체기본정보
 import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
 
+// proto 자금현수송
+import FMTFC0201M from 'app/pages/fmt/FMTFC0201M';      // 자금현수송 > 외화정사 > 인수도관리
+import FMTFC0201P01 from 'app/pages/fmt/FMTFC0201P01';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(정사)
+
+
 // proto 중요용지·용도품(본부)
 import BSPRQ0201M from 'app/pages/hsp/BSPRQ0201M';    // 중요용지·용도품(영업점) > 신청  > 중요용지신청내역
 import BSPRQ0301M from 'app/pages/hsp/BSPRQ0301M';    // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정
@@ -237,6 +242,14 @@ import STMFL0501M from 'app/pages/stm/STMFL0501M';     // 재난·안전관리 >
 
 
 // proto 영업지원
+import BSSAP0201M from 'app/pages/bss/BSSAP0201M';     // 영업지원 > A4용지관리 > A4용지신청내역
+import BSSDM0101M from 'app/pages/bss/BSSDM0101M';     // 영업지원 > 문서관리	 > 문서열람
+import BSSDM0201M from 'app/pages/bss/BSSDM0201M';     // 영업지원 > 문서관리	 > 문서열람
+
+
+import BSSDM0201P01 from 'app/pages/bss/BSSDM0201P01'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기승인
+import BSSDM0201P02 from 'app/pages/bss/BSSDM0201P02'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기정산
+
 import BSSCR0101P02 from 'app/pages/bss/BSSCR0101P02'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)달력카테고리관리
 import BSSCR0101P03 from 'app/pages/bss/BSSCR0101P03'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)부점선택
 
@@ -315,6 +328,15 @@ function ProtoRoutes() {
         { path: 'CMP001401P', element: <CMP001401P /> },
         { path: 'CMP001402P', element: <CMP001402P /> },
         { path: 'CMP001502P', element: <CMP001502P /> },
+      ],
+    },
+    { // 자금현수송
+      path: '/proto',
+      element: <Decorator />,
+      children: [
+        { path: 'FMTFC0201M', element: <FMTFC0201M /> },
+        { path: 'FMTFC0201P01', element: <FMTFC0201P01 /> },
+
       ],
     },
     { // 중요용지·용도품(본부)
@@ -526,6 +548,13 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
+        { path: 'BSSAP0201M', element: <BSSAP0201M /> },
+        { path: 'BSSDM0101M', element: <BSSDM0101M /> },
+        { path: 'BSSDM0201M', element: <BSSDM0201M /> },
+
+        { path: 'BSSDM0201P01', element: <BSSDM0201P01 /> },
+        { path: 'BSSDM0201P02', element: <BSSDM0201P02 /> },
+
         { path: 'BSSCR0101P02', element: <BSSCR0101P02 /> },
         { path: 'BSSCR0101P03', element: <BSSCR0101P03 /> },
         { path: 'BSSCR0301P01', element: <BSSCR0301P01 /> },
