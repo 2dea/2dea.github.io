@@ -542,7 +542,7 @@ function HSPHS0501M() {
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수입인지구분</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체코드</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고부정</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고부점</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수방법</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수량</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수직원<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>

@@ -249,7 +249,7 @@ function STMFL0201P03() {
                             <td>{idx + 1}</td>
                             <td>202500001</td>
                             <td>정상</td>
-                            <td>결제승인</td>
+                            <td>결재승인</td>
                             <td>분말소화기</td>
                             <td className="g-end">33</td>
                             <td className="g-start">업체명 (주)앤비앤코퍼레이션</td>

@@ -242,13 +242,18 @@ function STMFL0101M() {
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청금액</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우리부점결재</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">안전기획팀결재</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
@@ -256,7 +261,7 @@ function STMFL0101M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -268,7 +273,20 @@ function STMFL0101M() {
                             <td className="g-start">을지로</td>
                             <td className="g-end">1</td>
                             <td className="g-end">1,000</td>
-                            <td>결제승인</td>
+                          {
+                            idx === 1 ?
+                            <td><a href="javascript:" className="o-link _normal">결재반려</a></td>
+                            :
+                            <td>결재승인</td>
+                          }
+                            <td>임꺽정</td>
+                          {
+                            idx === 1 ?
+                            <td><a href="javascript:" className="o-link _normal">결재반려</a></td>
+                            :
+                            <td>결재승인</td>
+                          }
+                            <td>임꺽정</td>
                             <td>012345</td>
                             <td>홍길동</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
@@ -338,12 +356,12 @@ function STMFL0101M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`결재수량`} require={true} />
+                            <Label label={`신청수량`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input mode-required wdth-50 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -357,7 +375,7 @@ function STMFL0101M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input g-end">
+                                <div className="o-form _input mode-required wdth-50 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -514,7 +532,7 @@ function STMFL0101M() {
 
                     <ul className="m-bullets type-disc">
                       <li>(견적) 인터넷 &lt;분말소화기&gt; 검색하여 단가 17,000원이하 제품(수입품)으로 견적서 받아주세요.</li>
-                      <li>(절차) 소화기신청 &gt; 안전관리팀 예산 재배정 &gt; 부점에서 호솨기 구입하여 배치합니다.</li>
+                      <li>(절차) 소화기신청 &gt; 안전관리팀 예산 재배정 &gt; 부점에서 소화기를 구입하여 배치합니다.</li>
                       <li>(대장정리) 소화기 신청 결재승인 시 소화기관리대장에 소화기 정보가 자동으로 생성됩니다.</li>
                       <li>(폐기) 노후소화기는 자체 폐기하거나, 시군구청 홈페이지에서 대형 폐기물 배출신청 또는 대평폐기물 스티커(개당 3,000원 내외)를 구입하여 배출하시면 됩니다.</li>
                     </ul>

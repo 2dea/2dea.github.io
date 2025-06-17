@@ -187,7 +187,7 @@ function HSPHP0401M() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-2">
+                  {/* <div className="o-field colspan-2">
                     <Label label={`업체명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input wdth-30">
@@ -200,6 +200,16 @@ function HSPHP0401M() {
 
                       <div className="o-form _input wdth-auto">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div> */}
+
+                  <div className="o-field">
+                    <Label label={`업체명`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -305,19 +315,19 @@ function HSPHP0401M() {
                                   <col />
                                   <col />
                                   <col />
+                                  {/* <col /> */}
                                   <col />
                                   <col />
                                   <col />
                                   <col />
                                   <col />
                                   <col />
+                                  {/* <col />
                                   <col />
                                   <col />
                                   <col />
                                   <col />
-                                  <col />
-                                  <col />
-                                  <col />
+                                  <col /> */}
                                   <col className="wdth-auto" />
                                 </colgroup>
 
@@ -332,26 +342,26 @@ function HSPHP0401M() {
                                     <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">포장구분</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수입인지구분</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체코드</span></div></th>
+                                    {/* <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체코드</span></div></th> */}
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수번호</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수방법<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수직원<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품의번호</span></div></th>
+                                    {/* <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품의번호</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주번호</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주일자</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주수량</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주단가</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주금액</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발주금액</span></div></th> */}
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                                   </tr>
                                 </thead>
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={26}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                    <td colSpan={19}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -415,7 +425,7 @@ function HSPHP0401M() {
                                         </div>
                                       </div>
                                     </td>
-                                    <td>IV2020000000078-1</td>
+                                    {/* <td>IV2020000000078-1</td> */}
                                     <td className="g-start">(주)앤비앤코퍼레이션</td>
                                     <td>IV2020000000078-1</td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
@@ -449,12 +459,12 @@ function HSPHP0401M() {
                                         </div>
                                       </div>
                                     </td>
-                                    <td>IV2020000000078-1</td>
+                                    {/* <td>IV2020000000078-1</td>
                                     <td>IV2020000000078-1</td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td className="g-end">100</td>
                                     <td className="g-end">100</td>
-                                    <td className="g-end">100</td>
+                                    <td className="g-end">100</td> */}
                                     <td className="g-start"></td>
                                   </tr>
                                 ))}
@@ -516,7 +526,7 @@ function HSPHP0401M() {
                                   <col />
                                   <col />
                                   <col />
-                                  <col />
+                                  {/* <col /> */}
                                   <col />
                                   <col />
                                   <col />
@@ -540,9 +550,9 @@ function HSPHP0401M() {
                                     <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">포장구분</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수입인지구분</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체코드</span></div></th>
+                                    {/* <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체코드</span></div></th> */}
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고부정</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고부점</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수방법</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수량</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수직원<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
@@ -551,7 +561,7 @@ function HSPHP0401M() {
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={23}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                    <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -575,7 +585,7 @@ function HSPHP0401M() {
                                     <td>33447900</td>
                                     <td></td>
                                     <td></td>
-                                    <td>IV202000</td>
+                                    {/* <td>IV202000</td> */}
                                     <td className="g-start">제작업체명</td>
                                     <td>P0465</td>
                                     <td>전수</td>

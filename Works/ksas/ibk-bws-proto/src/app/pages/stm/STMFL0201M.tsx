@@ -325,7 +325,7 @@ function STMFL0201M() {
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td>정상</td>
-                                    <td>결제승인</td>
+                                    <td>결재승인</td>
                                     <td>
                                       <div className="o-field">
                                         <div className="fields">

@@ -188,7 +188,7 @@ function STMFL0201P02() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
                             <td>수정</td>
-                            <td>결제승인</td>
+                            <td>결재승인</td>
                             <td>202500001</td>
                             <td>202500001</td>
                             <td>012345</td>

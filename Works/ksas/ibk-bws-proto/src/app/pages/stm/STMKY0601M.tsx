@@ -665,7 +665,7 @@ function STMKY0601M() {
                                     <td></td>
                                     <td>정상</td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
-                                    <td>결제승인</td>
+                                    <td>결재승인</td>
                                     <td>Y</td>
                                     <td>10000</td>
                                     <td>홍길동</td>

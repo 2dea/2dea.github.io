@@ -313,9 +313,9 @@ function STMBR0101M() {
                               <td>홍길동</td>
                               <td><span className="o-digit type-tel">010-1234-5678</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>결제승인</td>
+                              <td>결재승인</td>
                               <td>홍길동</td>
-                              <td>결제승인</td>
+                              <td>결재승인</td>
                               <td>홍길동</td>
                               <td className="g-start">2025년도 상반기 연수</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>

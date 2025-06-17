@@ -191,7 +191,7 @@ function BSSCR0301P02() {
                             <td className="g-end">0034</td>
                             <td className="g-start">을지로</td>
                             <td className="g-start">소속</td>
-                            <td>결제승인</td>
+                            <td>결재승인</td>
                             <td>012345</td>
                             <td>홍길동</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
