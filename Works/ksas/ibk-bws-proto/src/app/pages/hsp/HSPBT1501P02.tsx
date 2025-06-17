@@ -94,6 +94,7 @@ function HSPBT1501P02() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">알림설정</span></h3>}
       >

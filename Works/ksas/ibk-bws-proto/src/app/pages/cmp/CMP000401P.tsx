@@ -94,6 +94,7 @@ function CMP000401P() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">이미지업로드</span></h3>}
         resizable={false}/* resizable={false} { @DEV } */

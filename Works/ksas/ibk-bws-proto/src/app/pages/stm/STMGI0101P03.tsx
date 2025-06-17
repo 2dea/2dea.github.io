@@ -94,6 +94,7 @@ function STMGI0101P03() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">인수등록</span></h3>}
       >

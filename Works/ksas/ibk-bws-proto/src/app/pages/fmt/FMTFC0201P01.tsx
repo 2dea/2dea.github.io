@@ -94,6 +94,7 @@ function FMTFC0201P01() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">외화정사인수도(정사)</span></h3>}
       >

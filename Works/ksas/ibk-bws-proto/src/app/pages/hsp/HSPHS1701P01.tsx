@@ -94,6 +94,7 @@ function HSPHS1701P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">고가용도품본부재고조회</span></h3>}
       >

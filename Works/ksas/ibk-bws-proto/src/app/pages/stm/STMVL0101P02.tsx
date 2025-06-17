@@ -94,6 +94,7 @@ function STMVL0101P02() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">차량별관리자지정</span></h3>}
       >

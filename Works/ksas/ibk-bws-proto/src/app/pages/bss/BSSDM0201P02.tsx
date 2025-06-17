@@ -94,6 +94,7 @@ function BSSDM0201P02() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">대량폐기정산</span></h3>}
       >

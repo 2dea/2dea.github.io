@@ -94,6 +94,7 @@ function HSPBT0301P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">본부반송</span></h3>}
       >

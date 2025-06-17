@@ -94,6 +94,7 @@ function HSPHP0401P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">검수내역조회(총무부외)</span></h3>}
       >

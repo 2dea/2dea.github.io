@@ -94,6 +94,7 @@ function BEXRQ0601P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">행내등기노선조회</span></h3>}
       >

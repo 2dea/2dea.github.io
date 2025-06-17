@@ -94,6 +94,7 @@ function BSPAQ0101P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">대량폐기결정</span></h3>}
       >

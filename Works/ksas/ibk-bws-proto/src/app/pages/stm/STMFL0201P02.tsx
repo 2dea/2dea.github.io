@@ -94,6 +94,7 @@ function STMFL0201P02() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">소화기관리이력</span></h3>}
       >

@@ -94,6 +94,7 @@ function BSPRQ0301P02() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">자동배송 신청 이력 조회</span></h3>}
       >

@@ -94,6 +94,7 @@ function STMKY0401P10() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">예비열쇠보관확인증관리</span></h3>}
       >

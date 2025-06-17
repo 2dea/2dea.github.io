@@ -94,6 +94,7 @@ function POPTMPL() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">관련화면매핑</span></h3>}
       >

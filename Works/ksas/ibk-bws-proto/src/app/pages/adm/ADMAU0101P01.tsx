@@ -94,6 +94,7 @@ function ADMAU0101P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">상위메뉴선택</span></h3>}
       >

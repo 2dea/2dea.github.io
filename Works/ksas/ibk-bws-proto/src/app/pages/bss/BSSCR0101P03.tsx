@@ -94,6 +94,7 @@ function BSSCR0101P03() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">부점선택</span></h3>}
       >

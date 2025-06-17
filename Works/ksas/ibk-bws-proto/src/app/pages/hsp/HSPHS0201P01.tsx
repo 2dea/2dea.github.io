@@ -94,6 +94,7 @@ function HSPHS0201P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">물품신청결재창</span></h3>}
       >

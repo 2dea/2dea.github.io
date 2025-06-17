@@ -94,6 +94,7 @@ function ADMPA0301P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">직무분장관리</span></h3>}
       >

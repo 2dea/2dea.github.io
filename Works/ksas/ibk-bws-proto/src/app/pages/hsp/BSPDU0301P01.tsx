@@ -94,6 +94,7 @@ function BSPDU0301P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">구양식/서손폐기등록(영업점)</span></h3>}
       >

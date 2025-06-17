@@ -94,6 +94,7 @@ function STMKY0401P08() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">위탁열쇠반납승인</span></h3>}
       >
