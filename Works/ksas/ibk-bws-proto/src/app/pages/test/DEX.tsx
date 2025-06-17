@@ -90,8 +90,8 @@ function DEX() {
     <>
 
       {/*
-      2025-06-17 화
-      행내등기 # 66  우편물발송처리결과 BEXPM0401M ~
+      2025-06-18 수 : 자금현수송~ #142
+      ~ 6/17 행내등기
 
 
  */}
@@ -103,6 +103,14 @@ function DEX() {
 <td>012345</td>
 <td>Y</td>
 
+<td>01234</td>
+<td className="g-start">을지로</td>
+<td className="g-start">부산</td>
+
+<td>012345</td>
+<td>홍길동</td>
+
+
 <td>금고실</td>
 <td>열쇠</td>
 <td>정상</td>
@@ -110,8 +118,7 @@ function DEX() {
 <td>서무팀장</td>
 <td>결재승인</td>
 
-<td>012345</td>
-<td>홍길동</td>
+
 <td>신규</td>
 
 <td>~</td>
@@ -124,11 +131,15 @@ function DEX() {
 <td className="g-start">[00070] 프로세스혁신부</td>
 <td className="g-start">을지로</td>
 영업무
+
 <td><span className="o-digit type-date">2025-12-25</span></td>
+<td><span className="o-digit type-time">00:00</span></td>
 
 <td className="g-start"></td>
 
-  신세계백화점상품권10만원권  IT금융개발부  <td>업체명 (주)앤비앤코퍼레이션</td>
+  신세계백화점상품권10만원권  IT금융개발부
+
+<td className="g-start">업체명 (주)앤비앤코퍼레이션</td>
 
 <td className="g-end"></td>
 <td className="g-end">1</td>
@@ -229,10 +240,10 @@ function DEX() {
       {/*
           자주사용 하는 레이아웃
 
-          [반반: HSPHS0201M]
+          [반반: HSPHS0201M] :
               HSPHS0901M
-              HSPHS1901P02
-              ADMPA0301M: 반반 3개 테이블
+              BSSDM0101M: 조회 / 밑에는 반반
+              ADMPA0301M: 위에는 조회  밑에는 반반 3개 테이블
 
           싱글 왼쪽 반: HSPDU0701M , HSPHS2001M
 
@@ -253,7 +264,7 @@ function DEX() {
             [레이아웃 팝업] BSPDU0401P02 : 하단에 유의사항
 
 
-            엄청 긴 테이블 : BSPDU0201M
+            엄청 긴 테이블 : BSPDU0201M : 일련번호
             일괄적용 및 유의사항 2개: BEXRQ0101M
 
             메뉴 선택  BSSCR0101P03 BEXRQ0101P03
