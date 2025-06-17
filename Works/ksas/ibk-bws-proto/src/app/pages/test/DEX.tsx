@@ -89,38 +89,13 @@ function DEX() {
   return (
     <>
 
-    {/*
+      {/*
       2025-06-17 화
       행내등기 # 66  우편물발송처리결과 BEXPM0401M ~
 
-    2025-06-13 금
-    소화기
 
-        [수정 했음]
-        STMDM0301M : Name="m-filter-form">
-
-    행내등기 후~
-
-
-    2025-06-12 목
-      재난안전관리  업무용차량관리 부터 시작~
-
-    STMKY0501P02  #260 완료
-    BSSCR0101P03 키페이지
-
-    행내등기?
-
-    2025-06-11 수 : 영업지원-  BSSCR0401T PPT 113 부터~
-    2025-06-10 화
-    BSSCR0101P02  기준연도 너비 확인 필요
-
-      2025-06-09 월
-      배차관리 ~  가스분사기대장관리
-
-    #66   #96ksff
-
-      */}
-{/*
+ */}
+      {/*
 
 <td><InputCheck label="선택" labelHidden /></td>
 <td>{idx + 1}</td>
@@ -133,7 +108,7 @@ function DEX() {
 <td>정상</td>
 <td>현재</td>
 <td>서무팀장</td>
-<td>결제승인</td>
+<td>결재승인</td>
 
 <td>012345</td>
 <td>홍길동</td>
@@ -153,6 +128,8 @@ function DEX() {
 
 <td className="g-start"></td>
 
+  신세계백화점상품권10만원권  IT금융개발부  <td>업체명 (주)앤비앤코퍼레이션</td>
+
 <td className="g-end"></td>
 <td className="g-end">1</td>
 
@@ -170,7 +147,6 @@ function DEX() {
     </div>
   </div>
 </td>
-
 
                             <td>
                               <div className="o-field">
@@ -217,6 +193,7 @@ function DEX() {
 
 <td>AJ렌트카</td>
 
+<td className="g-start"><a href="javascript:" className="o-link _normal">링크</a></td>
 
                                   <tr>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
@@ -225,125 +202,37 @@ function DEX() {
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                                   </tr>
 
+         <div className="o-form _input wdth-30 g-end">
+        o-form _input mode-required wdth-50
 
+화살표  &rarr;
+&lt;  &gt;
 
 */}
-    {/*
+      {/*
       업무지원시스템 재구축 프로젝트에 사용할 템플릿 파일입니다.
       * 마크업 및 스타일시트 등 포함
      */}
 
-     {/* https://figma.com/ @ ego2dea@gmail.com : 2dea.com */}
-
-    {/* Order list
-      1(1)
-
-      * dddd
-        - ddddd
-
-    */}
-
-    {/*
-
-      2025-06-04 수 #265 - STMKY0601M
-
-      -- -// before
-
-        #243: 열쇠폐기 취소(관리자..) ???
-        #245: 열쇠관리 > 열쇠등록관리 _ 공지사항.. ?
-
-        #246 ~ : STMKY0301M : 문의: 안전관리실~
-
-        기획서 확인 필요[ #250 ] 열쇠인수도관리 사용열쇠 (보관담당자) 예외승인 안내
-        STMKY0201M
-
-        #253: 위탁열쇠위탁요청 -> 제목 - 기획서 - 인덱스 확인 필요
+      {/* https://figma.com/ @ ego2dea@gmail.com : 2dea.com */}
 
 
-        [ 디자인 ]
-        자위소방대편성표 #293
-
-
-        JY
-        - ing
-        # 93
-
-        [레이아웃 팝업 확인] #84 : BSPDU0401P02 : 사고보고 버튼 하단에 유의사항 BSPDU0401P02
-
-        #BSPDU0401P01 사고보고확인요청 : 기획 미 확정
-
-        [유의사항 레이아웃 - 확인필요] -BSPDU0301M #93 블릿 참고
-
-
-        온누리상품권일련번호확인 -> 보류?? HSPDU0201P02 본부..-> 유의사항 레이아웃 확인필요
-
-
-      2025-05-30 금
-        툴팁: BSPDU0101M
-
-        BSPDU0601P02 - 작업 예정 - 오손중요용지행내등기신청 #76
+      {/*
 
       2025-05-27 화
       1.특이사항: 레이블이 SelectBox [by.one]
-      (폐기감사)감사/소각등록 ppt 170 :  HSPDU0501M
 
 
-      2. 품목폐지폐기등록 키페이지로 변경  HSPDU0801P01 PPT#180 key [by.one]
-            진영작업예정: (유사  키) 구양식폐기등록 품목폐지폐기등록
-            진영작업예정: (유사  키) 팝업 - 본부용도품일괄폐기- 용도품폐기 - HSPDU0901P01- PPT# 187
-
-    */}
-      {
-      /*
-        [ 작업 메모 ]
-        2025-05-28 수 작업 중
-        (영업부)
-        63
-        ---///
-
-        HSPHS2001M : 기획서 없음 : 본부재고관리 >  센터별영업점재고조회 ( 5/23화면 추가)
-
-        조회- 타이틀 옆 문구 : HSPHS0601M렝
-
-        본부중요용지일괄폐기 - 기획서 - 탭 화면..? 	HSPDU0801M ppt #179 -> 기획 확인필요
-
-
-          2025-06-02 월 팝업
-            textarea 2줄: '서류내용', '비고' : BSPDU0601P02
-            input 1줄: 취소 사유 : HSPBT0301P01
-
-        [기획 업데이트 예정 2025-05-27]
-        HSPDU0801M ->
-        2025-05-22 수 : 기획서 용도품계정관리	: HSPSA0101M 는 아직 컴펌 노노
-
-        화살표
-          &rarr;
-
-
-      */
-
-      }
-      {
-      /* 자주사용하는 텍스트 메모
-
-        신세계백화점상품권10만원권
-
-        [정렬]
-          왼쪽
-            : 지점:
-
-          왼쪽: <td>업체명 (주)앤비앤코퍼레이션</td>
-
-
-      */
-
-      }
+       textarea 2줄: '서류내용', '비고' : BSPDU0601P02
+        input 1줄: 취소 사유 : HSPBT0301P01
+         툴팁: BSPDU0101M
       {/*
           자주사용 하는 레이아웃
 
           [반반: HSPHS0201M]
               HSPHS0901M
               HSPHS1901P02
+              ADMPA0301M: 반반 3개 테이블
 
           싱글 왼쪽 반: HSPDU0701M , HSPHS2001M
 
@@ -360,47 +249,24 @@ function DEX() {
             [ HSPHS1701P01 , ]
             조회: 달력+ 툴팁 하단: 출력버튼
 
+            [유의사항 레이아웃] -BSPDU0301M 블릿 참고
+            [레이아웃 팝업] BSPDU0401P02 : 하단에 유의사항
+
 
             엄청 긴 테이블 : BSPDU0201M
+            일괄적용 및 유의사항 2개: BEXRQ0101M
 
-            이미지 : STMKY0201M
-
-            td 텍스트 링크
-            <td className="g-start"><a href="javascript:" className="o-link _normal">링크</a></td>
+            메뉴 선택  BSSCR0101P03 BEXRQ0101P03
+            좌:우 : 추가 취소 [BEXRQ0101P03]
 
 
-      */}
-
-      {/* 정규식: <li className="c-color-strong">(.*)</li>
-             */}
-
-      {
       /* 자주사용하는 팝업 너비
-
-       className="layer-wrap wdth-40
-
-        [자주사용하는 문구]
-
-        신세계백화점상품권10만원권
-        IT금융개발부
 
         [ 자주 사용하는 팝업]
         className="layer-wrap wdth-40
 
-
-        HSPHS0601M:  련번호포함
-        <div className="o-form _input wdth-30 g-end">
-        o-form _input mode-required wdth-50
-
-        o-form _input wdth-
-
-        [작업 메모: 기획서 아직 컴펌 노노]
-        용도품계정관리	: HSPSA0101M
-
-        <div className="o-form _input mode-required wdth-50 g-end">
-
-
       */
+        {/* 정규식: <li className="c-color-strong">(.*)</li> */ }
 
       }
       {/*
@@ -413,15 +279,7 @@ function DEX() {
 
       */}
 
-      {/*
-&lt;  &gt;
-
-*/}
-
       <div className="roles" data-div-role="0">
-        <div className="div-header">
-          HI
-        </div>
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
           <div className="o-grid">
@@ -429,6 +287,15 @@ function DEX() {
 
               <form className="m-filter-form">
                 <div className="fieldset">
+
+                  <div className="o-field">
+                    <Label label={`인풋`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      </div>
+                    </div>
+                  </div>
 
                   <div className="o-field">
                     <Label label={`XDropdown`} require={true} />

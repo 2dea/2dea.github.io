@@ -92,7 +92,7 @@ function BEXRQ0101P02() {
         contentClassName="layer-body"
         visible={visible}
         style={{}}
-        onHide={() => {if (!visible) return; setVisible(false); }}
+        onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">서류내용관리</span></h3>}
@@ -122,7 +122,7 @@ function BEXRQ0101P02() {
                         <colgroup>
                           <col className="wdth-10" />
                           <col />
-                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -140,31 +140,31 @@ function BEXRQ0101P02() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-10">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-10">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input">
+                                      <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
+                              </td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>

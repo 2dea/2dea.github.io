@@ -92,7 +92,7 @@ function POPTMPL() {
         contentClassName="layer-body"
         visible={visible}
         style={{}}
-        onHide={() => {if (!visible) return; setVisible(false); }}
+        onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">관련화면매핑</span></h3>}
@@ -236,16 +236,16 @@ function POPTMPL() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><InputCheck label="선택" labelHidden /></td>
-                            <td>{idx + 1}</td>
-                            <td>AABB00001M00</td>
-                            <td className="g-start">원화현수송신청</td>
-                            <td>N</td>
-                            <td><span className="o-digit type-date">2024-09-16</span></td>
-                          </tr>
-                        ))}
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx + 1}</td>
+                              <td>AABB00001M00</td>
+                              <td className="g-start">원화현수송신청</td>
+                              <td>N</td>
+                              <td><span className="o-digit type-date">2024-09-16</span></td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -290,20 +290,20 @@ function POPTMPL() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>AABB00001M00</td>
-                            <td className="g-start">
-                              <div className="m-with-bind">
-                                <span className="main">원화현수송신청_관련화면 01</span>
-                                <span className="binds">
-                                  <ImageButton label="삭제" icon="delete" />
-                                </span>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
+                          {[...Array(24)].map((e, idx) => (
+                            // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>AABB00001M00</td>
+                              <td className="g-start">
+                                <div className="m-with-bind">
+                                  <span className="main">원화현수송신청_관련화면 01</span>
+                                  <span className="binds">
+                                    <ImageButton label="삭제" icon="delete" />
+                                  </span>
+                                </div>
+                              </td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>

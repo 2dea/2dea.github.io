@@ -108,12 +108,10 @@ function BEXPM0401M() {
             </div>
 
             <div className="m-binds type-end">
-
-              <div className="group _primary">
-                <CommonButton label="검수수정" className="_solid-primary" />
-                <CommonButton label="검수취소" className="_lined-primary" />
-                <CommonButton label="검수등록" className="_solid-primary" />
-                <CommonButton label="신청수정" className="_solid-primary" />
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="출력" className="_texted" />
+                </div>
               </div>
 
             </div>
@@ -126,27 +124,6 @@ function BEXPM0401M() {
           <form className="m-filter-form">
             <div className="fieldset">
 
-              <div className="o-field colspan-4">
-                <Label label={`기간`} require={true} />
-                <div className="fields">
-
-                  <div className="o-form _select mode-required">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-
-                  <div className="o-form _input type-date mode-required wdth-50">
-                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                    <i aria-hidden="true"></i>
-                  </div>
-                  <span className="seps type-tilde">~</span>
-                  <div className="o-form _input type-date mode-required wdth-50">
-                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
               <div className="o-field">
                 <Label label={`신청부점`} require={false} />
                 <div className="fields">
@@ -156,29 +133,6 @@ function BEXPM0401M() {
                     <span className="inner-binds">
                       <ImageButton label="초기화" icon="remove" />
                     </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-field">
-                <Label label={`신청자`} require={false} />
-                <div className="fields">
-                  <div className="o-form _input">
-                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                    <i aria-hidden="true"></i>
-                    <span className="inner-binds">
-                      <ImageButton label="초기화" icon="remove" />
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-field">
-                <Label label={`진행상태`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -196,6 +150,21 @@ function BEXPM0401M() {
                 </div>
               </div>
 
+              <div className="o-field colspan-2">
+                <Label label={`검수일자`} require={true} />
+                <div className="fields">
+                  <div className="o-form _input type-date mode-required wdth-50">
+                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                    <i aria-hidden="true"></i>
+                  </div>
+                  <span className="seps type-tilde">~</span>
+                  <div className="o-form _input type-date mode-required wdth-50">
+                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                    <i aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
               <div className="o-field">
                 <Label label={`우편물구분`} require={false} />
                 <div className="fields">
@@ -207,10 +176,21 @@ function BEXPM0401M() {
               </div>
 
               <div className="o-field">
-                <Label label={`신청일련번호`} require={false} />
+                <Label label={`집계방법`} require={false} />
                 <div className="fields">
-                  <div className="o-form _input">
-                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                  <div className="o-form _select">
+                    <XDropdown appendTo={'self'} className="bind" />
+                    <i aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-field">
+                <Label label={`정렬순서`} require={false} />
+                <div className="fields">
+                  <div className="o-form _select">
+                    <XDropdown appendTo={'self'} className="bind" />
+                    <i aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -224,7 +204,7 @@ function BEXPM0401M() {
 
           <div className="o-section">
             <div className="m-header">
-              <h2 className="o-heading level2"><span className="label">우편물 검수내역</span></h2>
+              <h2 className="o-heading level2"><span className="label">우편물 처리방법</span></h2>
 
               <div className="o-length">
                 <span className="head">전체</span>
@@ -237,6 +217,7 @@ function BEXPM0401M() {
               <div className="m-binds">
                 <div className="group">
                   <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                  <ImageButton label="목록필터" icon="column-toggle" />
                   <ImageButton label="목록출력" icon="print" />
                 </div>
               </div>
@@ -249,21 +230,6 @@ function BEXPM0401M() {
                   <table className="p-datatable-table p-datatable-scrollable-table">
                     <colgroup>
                       <col className="wdth-10" />
-                      <col className="wdth-10" />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
                       <col />
                       <col />
                       <col />
@@ -288,24 +254,10 @@ function BEXPM0401M() {
 
                     <thead className="p-datatable-thead">
                       <tr>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청시각</span></div></th>
                         <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물구분</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일련번호</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
-                        <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수자</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종변경직원</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총발송수량</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총통신료</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총환부수량</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총환부료</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">처리수량</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">익일특급</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보통등기</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배달증명</span></div></th>
@@ -314,329 +266,226 @@ function BEXPM0401M() {
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등기소포</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">국제특급</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">국제등기</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배달부증명내용증명</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">국제특급</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">국제등기</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">DM발송</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요금수취자부담</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배달부증명 내용증명</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요금 수취자부담</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송수량</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통신료</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">환부수량</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">환부료</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
                       </tr>
                       <tr>
+                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                      </tr>
+                    </thead>
+
+                    <tbody className="p-datatable-tbody">
+                      <tr className="p-datatable-emptymessage">
+                        <td colSpan={21}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                      </tr>
+                    </tbody>
+
+                    <tbody className="p-datatable-tbody">
+                      {[...Array(5)].map((e, idx) => (
+                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                          <td>{idx + 1}</td>
+                          <td>0092</td>
+                          <td className="g-start">부산</td>
+                          <td><span className="o-digit type-date">2025-12-25</span></td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">10</td>
+                          <td className="g-end">6,000</td>
+                          <td className="g-end">10,000</td>
+                        </tr>
+                      ))}
+                    </tbody>
+
+                    <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                      <tr className="sumtotal-trow">
+                        <td colSpan={4} className="sumtotal-tcell">합계</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100</td>
+                        <td className="sumtotal-tcell g-end">100,000</td>
+                        <td className="sumtotal-tcell g-end">100,000</td>
+                      </tr>
+                    </tfoot>
+
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="o-section">
+            <div className="m-header">
+              <h3 className="o-heading level3"><span className="label">우편물 처리상세내역</span></h3>
+
+              <div className="o-length">
+                <span className="head">전체</span>
+                <em className="data">
+                  <span className="value">8</span>
+                  <span className="units">건</span>
+                </em>
+              </div>
+
+              <div className="m-binds">
+                <div className="group">
+                  <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                  <ImageButton label="목록출력" icon="print" />
+                </div>
+              </div>
+            </div>
+
+            <div className="main _primary rows-body-3i">
+              <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+              <div className="o-grid-table p-datatable">
+                <div className="table-container p-datatable-wrapper">
+                  <table className="p-datatable-table p-datatable-scrollable-table">
+                    <colgroup>
+                      <col className="wdth-10" />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                    </colgroup>
+
+                    <thead className="p-datatable-thead">
+                      <tr>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물구분</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일련번호</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
+                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
+                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
+                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
+                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수자</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청순번</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물종류</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자명</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송수량</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">환부수량</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통신료</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">환부료</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
+                      </tr>
+                      <tr>
+                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                         <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                         <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                         <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                         <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                         <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                         <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                       </tr>
                     </thead>
 
                     <tbody className="p-datatable-tbody">
                       <tr className="p-datatable-emptymessage">
-                        <td colSpan={36}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                        <td colSpan={21}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                       </tr>
                     </tbody>
 
                     <tbody className="p-datatable-tbody">
-                    {[...Array(5)].map((e, idx) => (
-                      <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                        <td><InputCheck label="선택" labelHidden /></td>
-                        <td>{idx + 1}</td>
-                        <td><span className="o-digit type-date">2025-12-25</span></td>
-                        <td><span className="o-digit type-time">00:00</span></td>
-                        <td>0092</td>
-                        <td className="g-start">프로세스혁신부</td>
-                        <td>0092</td>
-                        <td>홍길동</td>
-                        <td>신청</td>
-                        <td>반송카드</td>
-                        <td>0092-1111</td>
-                        <td>0092</td>
-                        <td>홍길동</td>
-                        <td>0092</td>
-                        <td>홍길동</td>
-                        <td><span className="o-digit type-tel">02-729-7610</span></td>
-                        <td><span className="o-digit type-date">2025-12-25</span></td>
-                        <td>0092</td>
-                        <td>홍길동</td>
-                        <td>0092</td>
-                        <td>홍길동</td>
-                        <td className="g-end">10</td>
-                        <td className="g-end">10</td>
-                        <td className="g-end">10</td>
-                        <td className="g-end">10</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="o-section">
-            <div className="m-header">
-              <h3 className="o-heading level3"><span className="label">우편물 상세내역</span></h3>
-
-              <div className="o-length">
-                <span className="head">전체</span>
-                <em className="data">
-                  <span className="value">8</span>
-                  <span className="units">건</span>
-                </em>
-              </div>
-
-              <div className="o-field">
-                <div className="fields">
-                  <div className="o-form _select wdth-80">
-                    <XDropdown appendTo={document.body} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div className="m-binds">
-                <div className="group">
-                  <CommonButton label="일괄적용" className="_normal" />
-                </div>
-
-                <div className="group">
-                  <CommonButton label="행추가" className="_normal" />
-                  <CommonButton label="행삭제" className="_normal" />
-                  <CommonButton label="취소" className="_normal" />
-                </div>
-
-                <div className="group">
-                  <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                  <ImageButton label="목록출력" icon="print" />
-                </div>
-              </div>
-            </div>
-
-            <div className="main _primary rows-body-3i">
-              <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-              <div className="o-grid-table p-datatable">
-                <div className="table-container p-datatable-wrapper">
-                  <table className="p-datatable-table p-datatable-scrollable-table">
-                    <colgroup>
-                      <col className="wdth-10" />
-                      <col className="wdth-10" />
-                      <col />
-                      <col />
-                      <col />
-                      <col className="wdth-10" />
-                      <col className="wdth-10" />
-                      <col />
-                      <col />
-                    </colgroup>
-
-                    <thead className="p-datatable-thead">
-                      <tr>
-                        <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물종류<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물내용<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신처구분</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대외수신처</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부도착 후 소요기간</span></div></th>
-                      </tr>
-                    </thead>
-
-                    <tbody className="p-datatable-tbody">
-                      <tr className="p-datatable-emptymessage">
-                        <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                      </tr>
-                    </tbody>
-
-                    <tbody className="p-datatable-tbody">
-                      {[...Array(3)].map((e, idx) => (
-                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                          <td><InputCheck label="선택" labelHidden /></td>
-                          <td>{idx + 1}</td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select wdth-50">
-                                  <XDropdown appendTo={document.body} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-spin wdth-30">
-                                  <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
-                                    decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select wdth-50">
-                                  <XDropdown appendTo={document.body} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select wdth-60">
-                                  <XDropdown appendTo={document.body} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-20">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td></td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <div className="m-footer">
-              <ul className="m-bullets type-disc">
-                <li className="c-color-strong"><em>일괄적용 시 우편물정보 그리드에 선택된 항목에만 적용됩니다.</em></li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div className="o-section">
-            <div className="m-header">
-              <h3 className="o-heading level3"><span className="label">우편물 상세내역</span></h3>
-
-              <div className="o-length">
-                <span className="head">전체</span>
-                <em className="data">
-                  <span className="value">8</span>
-                  <span className="units">건</span>
-                </em>
-              </div>
-
-              <div className="m-binds">
-                <div className="group">
-                  <CommonButton label="일괄적용" className="_normal" />
-                </div>
-
-                <div className="group">
-                  <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                  <ImageButton label="목록출력" icon="print" />
-                </div>
-              </div>
-            </div>
-
-
-            <div className="main _primary rows-body-3i">
-              <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-              <div className="o-grid-table p-datatable">
-                <div className="table-container p-datatable-wrapper">
-                  <table className="p-datatable-table p-datatable-scrollable-table">
-                    <colgroup>
-                      <col className="wdth-10" />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                    </colgroup>
-
-                    <thead className="p-datatable-thead">
-                      <tr>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물종류</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물내용<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신처구분</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자명</span></div></th>
-                      </tr>
-                    </thead>
-
-                    <tbody className="p-datatable-tbody">
-                      <tr className="p-datatable-emptymessage">
-                        <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                      </tr>
-                    </tbody>
-
-                    <tbody className="p-datatable-tbody">
-                      {[...Array(3)].map((e, idx) => (
-                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                          <td>{idx + 1}</td>
-                          <td>보통카드</td>
-                          <td className="g-end">1</td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td>일반수신자</td>
-                          <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-20">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
+                      {[...Array(5)].map((e, idx) => (
+                        <>
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td>우편물</td>
+                            <td>0092000025</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>0092</td>
+                            <td>홍길동</td>
+                            <td>0092</td>
+                            <td className="g-start">프로세스혁신부</td>
+                            <td>0092</td>
+                            <td>홍길동</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>0092</td>
+                            <td>홍길동</td>
+                            <td>{idx + 1}</td>
+                            <td>보통등기</td>
+                            <td>홍길동</td>
+                            <td className="g-end">1</td>
+                            <td className="g-end">2</td>
+                            <td className="g-end">10</td>
+                            <td className="g-end">100</td>
+                            <td className="g-end">10,000</td>
+                          </tr>
+                          {
+                            (idx - 2) % 3 === 0 &&
+                            <tr className="p-rowgroup-footer subtotal-trow">
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell g-start">소계</td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            </tr>
+                          }
+                        </>
                       ))}
                     </tbody>
                   </table>
