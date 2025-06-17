@@ -459,7 +459,7 @@ function TMPL() {
                 <div className="o-section">
                   <div className="m-header">
                     <h2 className="o-heading level2">
-                      <span className="label">양식샘플</span>
+                      <span className="label">양식샘플(.m-data-form.style-fill)</span>
                       <InputCheck label="사용" labelHidden />
                     </h2>
 
@@ -504,7 +504,7 @@ function TMPL() {
                   </div>
 
                   <div className="main">
-                    <form className="m-data-form">
+                    <form className="m-data-form style-fill">
                       <table className="table">
                         <colgroup>
                           <col className="head" />
@@ -3531,6 +3531,235 @@ function TMPL() {
 
               </SplitterPanel>
             </Splitter>
+
+            <div className="m-filter-select">
+              <div className="fieldset">
+
+                <dl className="defines">
+                  <div className="define-group">
+                    <dt className="head">부점선택</dt>
+                    <dd className="data">
+                      <div className="group m-radio-menu">
+                        <button type="button" className="bind"><span className="label">본부</span></button>
+                        <button type="button" className="bind"><span className="label">지역본부</span></button>
+                        <button type="button" className="bind is-checked"><span className="label">영업점</span></button>
+                        <button type="button" className="bind"><span className="label">기타</span></button>
+                      </div>
+
+                      <div className="group m-radio-menu">
+                        <button type="button" className="bind"><span className="label">WM센터</span></button>
+                        <button type="button" className="bind is-checked"><span className="label">출장소</span></button>
+                        <button type="button" className="bind"><span className="label">긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름</span></button>
+                        <button type="button" className="bind"><span className="label">기업금융센터</span></button>
+                        <button type="button" className="bind"><span className="label">대기업금융센터</span></button>
+                        <button type="button" className="bind"><span className="label">WM센터</span></button>
+                        <button type="button" className="bind"><span className="label">출장소</span></button>
+                        <button type="button" className="bind"><span className="label">기업금융센터</span></button>
+                        <button type="button" className="bind"><span className="label">대기업금융센터</span></button>
+                      </div>
+
+                      <div className="group checks size-2">
+                        <div className="item"><InputCheck label="전체" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="안산외국인금융센터긴지점명안산외국인금융센터긴지점명안산외국인금융센터긴지점명안산외국인금융센터긴지점명안산외국인금융센터긴지점명" defaultChecked /></div>
+                        <div className="item"><InputCheck label="대구경북동부지역본부 기관영업팀" defaultChecked /></div>
+                        <div className="item"><InputCheck label="하남데이터센터이전추진단" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                        <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      </div>
+                    </dd>
+                  </div>
+
+                  <div className="define-group">
+                    <dt className="head">직책선택</dt>
+                    <dd className="data">
+                      <div className="group checks">
+                        <div className="item"><InputCheck label="전체" /></div>
+                        <div className="item"><InputCheck label="그룹장/본부장" /></div>
+                        <div className="item"><InputCheck label="지점장" /></div>
+                        <div className="item"><InputCheck label="서무대리" /></div>
+                        <div className="item"><InputCheck label="서무책임" /></div>
+                        <div className="item"><InputCheck label="서무팀장" /></div>
+                        <div className="item"><InputCheck label="보안카드담당자" /></div>
+                      </div>
+                    </dd>
+                  </div>
+                </dl>
+
+              </div>
+
+              <div className="binds">
+                <CommonButton label="조회" className="_inquire" />
+              </div>
+            </div>
+
+            <div className="o-grid">
+              <div className="column">
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h4 className="o-heading level2"><span className="label">검색결과</span></h4>
+
+                    <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <CommonButton label="초기화" className="_normal" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="main _primary rows-body-5i">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="table-container p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                          </colgroup>
+
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx + 1}</td>
+                              <td className="g-start">사회공헌부</td>
+                              <td>팀원</td>
+                              <td>21215</td>
+                              <td>김한별</td>
+                            </tr>
+                          ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="m-shuttle-binds">
+                <div className="group">
+                  <CommonButton label="추가" icon="du-right" className="_normal" />
+                  <CommonButton label="취소" icon="du-left" className="_normal" />
+                </div>
+              </div>
+
+              <div className="column">
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h4 className="o-heading level2"><span className="label">인수자목록</span></h4>
+
+                    <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
+
+                    <div className="o-field">
+                      <div className="fields">
+                        <div className="o-form _input wdth-90">
+                          <Icon icon="search" />
+                          <AutoComplete className="bind" placeholder="직원번호/명을 입력해주세요" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                          <i aria-hidden="true"></i>
+                          <span className="inner-binds">
+                            <ImageButton label="초기화" icon="remove" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="main _primary rows-body-5i">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="table-container p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                          </colgroup>
+
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx + 1}</td>
+                              <td className="g-start">사회공헌부</td>
+                              <td>팀원</td>
+                              <td>21215</td>
+                              <td>김한별</td>
+                            </tr>
+                          ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
 
             <div className="div-footer">
               <div className="m-binds type-end">

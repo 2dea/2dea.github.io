@@ -144,7 +144,7 @@ function BEXRQ0101M() {
                 </div>
 
                 <div className="main">
-                  <form className="m-data-form">
+                  <form className="m-data-form style-fill">
                     <table className="table">
                       <colgroup>
                         <col className="head" />
@@ -199,7 +199,7 @@ function BEXRQ0101M() {
                 </div>
 
                 <div className="main">
-                  <form className="m-data-form">
+                  <form className="m-data-form style-fill">
                     <table className="table">
                       <colgroup>
                         <col className="head" />

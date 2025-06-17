@@ -98,6 +98,75 @@ function BEXRQ0101P03() {
         header={<h3 className="o-heading"><span className="label">인수자일괄추가</span></h3>}
       >
         <div className="div-container">
+          <div className="m-filter-select">
+            <div className="fieldset">
+
+              <dl className="defines">
+                <div className="define-group">
+                  <dt className="head">부점선택</dt>
+                  <dd className="data">
+                    <div className="group m-radio-menu">
+                      <button type="button" className="bind"><span className="label">본부</span></button>
+                      <button type="button" className="bind"><span className="label">지역본부</span></button>
+                      <button type="button" className="bind is-checked"><span className="label">영업점</span></button>
+                      <button type="button" className="bind"><span className="label">기타</span></button>
+                    </div>
+
+                    <div className="group m-radio-menu">
+                      <button type="button" className="bind"><span className="label">WM센터</span></button>
+                      <button type="button" className="bind is-checked"><span className="label">출장소</span></button>
+                      <button type="button" className="bind"><span className="label">긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름긴센터이름</span></button>
+                      <button type="button" className="bind"><span className="label">기업금융센터</span></button>
+                      <button type="button" className="bind"><span className="label">대기업금융센터</span></button>
+                      <button type="button" className="bind"><span className="label">WM센터</span></button>
+                      <button type="button" className="bind"><span className="label">출장소</span></button>
+                      <button type="button" className="bind"><span className="label">기업금융센터</span></button>
+                      <button type="button" className="bind"><span className="label">대기업금융센터</span></button>
+                    </div>
+
+                    <div className="group checks size-2">
+                      <div className="item"><InputCheck label="전체" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="안산외국인금융센터긴지점명안산외국인금융센터긴지점명안산외국인금융센터긴지점명안산외국인금융센터긴지점명안산외국인금융센터긴지점명" defaultChecked /></div>
+                      <div className="item"><InputCheck label="대구경북동부지역본부 기관영업팀" defaultChecked /></div>
+                      <div className="item"><InputCheck label="하남데이터센터이전추진단" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                      <div className="item"><InputCheck label="강남WM센터" defaultChecked /></div>
+                    </div>
+                  </dd>
+                </div>
+
+                <div className="define-group">
+                  <dt className="head">직책선택</dt>
+                  <dd className="data">
+                    <div className="group checks">
+                      <div className="item"><InputCheck label="전체" /></div>
+                      <div className="item"><InputCheck label="그룹장/본부장" /></div>
+                      <div className="item"><InputCheck label="지점장" /></div>
+                      <div className="item"><InputCheck label="서무대리" /></div>
+                      <div className="item"><InputCheck label="서무책임" /></div>
+                      <div className="item"><InputCheck label="서무팀장" /></div>
+                      <div className="item"><InputCheck label="보안카드담당자" /></div>
+                    </div>
+                  </dd>
+                </div>
+              </dl>
+
+            </div>
+
+            <div className="binds">
+              <CommonButton label="조회" className="_inquire" />
+            </div>
+          </div>
+
           <div className="o-grid">
             <div className="column">
 
@@ -120,7 +189,7 @@ function BEXRQ0101P03() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-8i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -206,7 +275,7 @@ function BEXRQ0101P03() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-8i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">

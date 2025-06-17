@@ -621,6 +621,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .o-grid >.column._fixed-6-12  { width: calc(var(--rem) * 756 + var(--gap-grid)); }
 .o-grid >.column.p-splitter-panel  { max-width: none; }
 // .o-grid >.column._views:not(.p-splitter-panel)  { max-width: calc(var(--rem) * 626 + var(--gap-grid)); }
+.o-grid >.m-shuttle-binds  { margin: 0 calc($margin-section-50 + (-1 * var(--gap-grid) / 2)); }
+
 .o-grid :has(.o-section >.main._primary):not(.column)   { flex: 1; display: flex; flex-direction: column; background-color: inherit; }
 
 

@@ -894,6 +894,10 @@
 .m-print-binds >* +:before  { content: ""; position: absolute; left: calc(-1 * $e10 * 2); width: $e10; height: calc(1em * 12 / 14); background: var(--color-edge-40); }
 
 
+.m-shuttle-binds  { display: flex; flex-direction: column; justify-content: center; }
+.m-shuttle-binds >.group  { display: flex; flex-direction: column; justify-content: center; gap: $gap-element-80; }
+
+
 .m-divider  { display: flex; flex-direction: column; align-items: center; justify-content: center; clear: both; position: relative; }
 .m-divider >*  { position: relative; min-height: 0; }
 .m-divider:before  { content: ""; position: absolute; top: 50%; width: 100%; height: $e10; background: var(--color-edge-30); }
@@ -1465,6 +1469,42 @@
 
 
 
+.m-radio-menu  { display: flex; flex-direction: column; }
+.m-radio-menu >.bind  { display: flex; align-items: center; min-width: 1em; min-height: 1em; padding: 0; padding: III(8) III(4) III(8) III(12); border: 0 none; border-bottom: $e10 solid var(--color-edge-40); background: none; text-align: left; text-align: start; }
+.m-radio-menu >.bind >.label  { @include inc-ellipsis(); flex: 1 0 0; overflow: hidden; }
+.m-radio-menu >.bind:after  { content: ""; font-size: $height-icon-30; line-height: 1; width: 1em; height: 1em; margin: 0 calc(($height-form-30 - 1em) / 2); background: var(--obj-ico-arrow-right) no-repeat 0 /500%; }
+.m-radio-menu >.bind:not(.is-checked):after  { display: none; }
+.m-radio-menu >.bind.is-checked  { background: var(--color-ground2-blue-30); }
+.m-radio-menu >.bind:not(.is-checked):hover:not(:active)  { background-color: var(--color-dimmed-hover); }
+
+
+.m-filter-select  { --width: #{III(255)}; --height: var(--height-cell); overflow: hidden; border: $e10 solid var(--color-edge-70); border-radius: $radius-50; }
+.m-filter-select >.fieldset  { display: flex; flex-direction: column; margin-bottom: calc(-1 * $e10); }
+.m-filter-select >.fieldset >*  { flex: 1 0 0; min-height: 0; }
+.m-filter-select >.fieldset .defines  { display: flex; }
+.m-filter-select >.fieldset .defines >* +*  { border-left: $e10 solid var(--color-edge-40); }
+.m-filter-select >.fieldset .define-group  { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.m-filter-select >.fieldset .define-group:has(>.data >:only-child)  { flex: 0 0 var(--width); }
+.m-filter-select >.fieldset .define-group >*  { flex: none; min-height: 0; }
+.m-filter-select >.fieldset .define-group >.head  { font-weight: $bold-70; height: var(--height); padding: III(8) III(4) III(8) III(12); border-bottom: $e10 solid var(--color-edge-40); background: var(--color-ground-40); }
+.m-filter-select >.fieldset .define-group >.data  { flex: 1; display: flex; }
+.m-filter-select >.fieldset .define-group >.data >*  { flex: 1; min-width: 0; max-width: 100%; }
+.m-filter-select >.fieldset .define-group >.data >* +*  { border-left: $e10 solid var(--color-edge-40); }
+.m-filter-select >.fieldset .define-group >.data >.checks  { flex: 0 0 var(--width); }
+
+.m-filter-select >.fieldset .define-group >.data >.checks.size-2  { flex-basis: calc(var(--width) * 2); }
+.m-filter-select >.fieldset .define-group >.data >.checks.size-2 >*  { width: 50%; }
+
+.m-filter-select >.binds  { display: flex; justify-content: flex-end; padding: $margin-section-40; border-top: $e10 solid var(--color-edge-40); }
+
+
+.m-filter-select .group  { max-height: calc(var(--height) * 8); overflow: auto; overflow-x: hidden; }
+.m-filter-select .group >*  { min-height: var(--height); }
+
+.m-filter-select .checks >.item  { float: left; width: 100%; min-width: 0; height: var(--height); padding: III(8) III(4) III(8) III(12); border-bottom: $e10 solid $tp; }
+.m-filter-select .checks:after  { content: ""; display: block; clear: both; height: 0; visibility: hidden; }
+.m-filter-select .checks .o-check .label  { @include inc-ellipsis(); }
+
 
 
 
@@ -1473,6 +1513,7 @@
 .m-data-form table:not(td *)  { table-layout: fixed; width: 100%; background: $color-ground; }
 .m-data-form col.head:not(td *)  { width: calc(var(--rem) * 120); }
 .m-data-form tr >:not(td *)  { height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
+.m-data-form.style-fill tr >:not(td *)  { --margin-cell-block: 8px; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1); }
 .m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >:not(td *)  { border-top-width: $e10; border-top-color: $color-key1-40; }
 .m-data-form tr >:first-child:not(td *)  { border-left-width: $e10; }
 .m-data-form tr >:last-child:not(td *)  { border-right-width: $e10; }
