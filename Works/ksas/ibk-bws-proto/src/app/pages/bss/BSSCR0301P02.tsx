@@ -94,7 +94,7 @@ function BSSCR0301P02() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">연도별배송수량참고</span></h3>}
       >

@@ -94,7 +94,7 @@ function STMBR0201P02() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">일정상세보기</span></h3>}
       >

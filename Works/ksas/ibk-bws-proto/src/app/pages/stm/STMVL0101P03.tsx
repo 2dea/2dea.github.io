@@ -94,7 +94,7 @@ function STMVL0101P03() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">임대회사관리</span></h3>}
       >

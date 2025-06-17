@@ -94,7 +94,7 @@ function BEXRQ0201P01() {
         style={{}}
         onHide={() => {if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">행내등기STP변경이력</span></h3>}
       >
