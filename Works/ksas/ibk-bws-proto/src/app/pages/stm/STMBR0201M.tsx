@@ -184,7 +184,7 @@ function STMBR0201M() {
                 </div>
 
                 <div className="main _primary rows-auto">
-                  <div className="o-calendar">
+                  <div className="o-calendar g-hide">
                     <div className="table-container">
                       <table>
                         <colgroup span={7}></colgroup>
@@ -918,6 +918,10 @@ function STMBR0201M() {
                         </tbody>
                       </table>
                     </div>
+                  </div>
+
+                  <div className="m-schedule">
+
                   </div>
                 </div>
               </div>

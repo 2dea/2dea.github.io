@@ -947,7 +947,7 @@
  */
 
 
-.o-check  { --height: 1em; --lh: var(--text-height-rel); --gap-col: #{$gap-element-50}; }
+.o-check  { --height: 1em; --lh: var(--text-height-rel); --gap-col: #{$gap-element-30}; }
 .o-check  { display: inline-block; display: inline-flex; align-items: baseline; vertical-align: middle; position: relative; max-width: 100%; min-height: var(--height-outer, calc(var(--lh, 1lh))); padding-left: var(--height-outer, var(--height)); text-align: left; text-align: start; }
 .o-check >*  { flex: none; min-width: 0; vertical-align: inherit; vertical-align: -webkit-baseline-middle; }
 .o-check >i,
@@ -1019,9 +1019,11 @@
 
 
 
-.m-checks  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-70 $gap-element-80; }
+.m-checks  { --gap-col: #{$gap-element-80}; display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-70 var(--gap-col); }
 .m-checks  { min-height: $height-form-50; }
 // .m-checks  { display: grid; grid-template-columns: repeat(auto-fill, minmax(III(80), 1fr)); }
+.m-checks >.wdth-auto  { flex: auto; }
+.m-checks .o-check +.o-field  { margin-left: calc($gap-element-30 - var(--gap-col)); }
 
 
 
@@ -1509,15 +1511,21 @@
 
 
 
-.m-data-form  { clear: both; }
-.m-data-form table:not(td *)  { table-layout: fixed; width: 100%; background: $color-ground; }
-.m-data-form col.head:not(td *)  { width: calc(var(--rem) * 120); }
-.m-data-form tr >:not(td *)  { height: var(--height-cell); padding: var(--margin-cell-block) III(7); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
-.m-data-form.style-fill tr >:not(td *)  { --margin-cell-block: 8px; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1); }
-.m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >:not(td *)  { border-top-width: $e10; border-top-color: $color-key1-40; }
-.m-data-form tr >:first-child:not(td *)  { border-left-width: $e10; }
-.m-data-form tr >:last-child:not(td *)  { border-right-width: $e10; }
-.m-data-form th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) III(11); color: $color-text-70; background: var(--color-ground-40); }
+.m-data-form  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
+.m-data-form table:not(td *)  { table-layout: fixed; border-collapse: collapse; width: 100%; background: $color-ground; }
+.m-data-form col:not(td *)  { width: calc(1em * var(--em) * 0.80246 + var(--margin-headcell-inline) * 2 + $e10); }
+.m-data-form col.head:not(td *)  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
+.m-data-form col.head:not(.auto):not(td *)  { width: calc(var(--rem) * 120); }
+.m-data-form tr >:not(td *)  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
+.m-data-form tr >[rowspan]:not(td *)  { border-right-width: $e10; }
+.m-data-form.style-fill tr >:not(td *)  { --margin-cell-block: #{III(8)}; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1); }
+// .m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >:not(td *)  { border-top-width: $e10; border-top-color: $color-key1-40; }
+// .m-data-form tr >:first-child:not(td *)  { border-left-width: $e10; }
+// .m-data-form tr >:last-child:not(td *)  { border-right-width: $e10; }
+.m-data-form th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; background: var(--color-ground-40); }
+
+.m-data-form table:not(td *)  { border-style: solid hidden; border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
+
 
 
 
@@ -1722,7 +1730,7 @@
 .o-grid-table .wdth-10:where(tr >*, col)  { width: calc(var(--rem) * 50); }  // ### min-width: ?;
 .o-grid-table .wdth-50:where(tr >*, col)  { width: calc(var(--rem) * 120); }  // ### min-width: ?;
 .o-grid-table .wdth-auto:where(tr >*, col)  { width: auto; }
-.o-grid-table table  { width: 100%; background: $color-ground; text-align: center; }
+.o-grid-table table  { border-collapse: separate; width: 100%; background: $color-ground; text-align: center; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
 // // .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
 .o-grid-table thead  { font-size: $font-40; line-height: $line-40; position: relative; color: var(--color-key1-70); background: var(--color-ground-40); }
@@ -1815,7 +1823,7 @@
 }
 .o-calendar .table-container  { border: var(--edge) solid var(--color-edge-40); }
 .o-calendar :has(table)  { flex: 1 0 0; display: flex; flex-direction: column; min-height: 0; }
-.o-calendar table  { table-layout: fixed; width: 100%; min-height: 100%; white-space: normal; }
+.o-calendar table  { table-layout: fixed; border-collapse: separate; width: 100%; min-height: 100%; white-space: normal; }
 .o-calendar table tr >*  { height: var(--height); padding: 0; border: 0 solid var(--color-edge-30); }
 .o-calendar table thead tr >*  { --height: var(--height-headcell); border-right: var(--edge) solid var(--color-edge-40); }
 .o-calendar table tbody tr >*  { border-width: 0 var(--edge) var(--edge) 0; }
