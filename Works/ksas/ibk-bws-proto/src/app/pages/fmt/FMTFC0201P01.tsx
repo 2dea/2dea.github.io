@@ -127,7 +127,7 @@ function FMTFC0201P01() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input type-date wdth-50">
+                                <div className="o-form _input type-date mode-required wdth-50">
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -141,8 +141,8 @@ function FMTFC0201P01() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="m-checks">
-                                  <InputRadio name="RADIO:T_10" label="출남당자 &rarr; 정사원 [정사]" />
-                                  <InputRadio name="RADIO:T_10" label="정사원 [정사] &rarr; 출남당자" defaultChecked />
+                                  <InputRadio name="RADIO:T_10" label="출납담당 &rarr; 정사원 [정사]" defaultChecked disabled />
+                                  <InputRadio name="RADIO:T_10" label="정사원 [정사] &rarr; 출납담당" disabled />
                                 </div>
                               </div>
                             </div>
@@ -218,6 +218,19 @@ function FMTFC0201P01() {
 
                   <div className="m-binds">
                     <div className="group">
+                      <CommonButton label="행추가" className="_normal" />
+                      <div className="o-form _input wdth-50 g-end">
+                        <InputText placeholder="" value="1" className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <CommonButton label="행복사" className="_normal" />
+                        </span>
+                      </div>
+                      <CommonButton label="행삭제" className="_normal" />
+                      <CommonButton label="취소" className="_normal" />
+                    </div>
+
+                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
@@ -232,8 +245,7 @@ function FMTFC0201P01() {
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
-                          <col />
-                          <col />
+                          <col className="wdth-10" />
                           <col />
                           <col />
                           <col />
@@ -243,27 +255,27 @@ function FMTFC0201P01() {
 
                         <thead className="p-datatable-thead">
                           <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기납수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도금액</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">적요</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                          {[...Array(24)].map((e, idx) => (
-                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td>{idx + 1}</td>
+                          {[...Array(4)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx === 4 - 1 ? <Icon icon="grid-added" /> : idx === 1 ? <Icon icon="grid-edited" /> : idx + 1}</td>{/* 추가된 행 .o-icon._grid-added 순번 대체 | 수정된 행 .o-icon._grid-edited 순번 대체 { @DEV } */}
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
@@ -284,8 +296,6 @@ function FMTFC0201P01() {
                                   </div>
                                 </div>
                               </td>
-                              <td className="g-end">10</td>
-                              <td className="g-end">3</td>
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
@@ -300,8 +310,8 @@ function FMTFC0201P01() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-30">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <div className="o-form _input wdth-50 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>

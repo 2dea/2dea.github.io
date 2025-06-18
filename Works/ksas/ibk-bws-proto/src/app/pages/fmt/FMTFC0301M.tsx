@@ -130,23 +130,12 @@ function FMTFC0301M() {
                   <div className="o-field colspan-2">
                     <Label label={`조회기간`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                      <span className="seps type-tilde">~</span>
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`인도구분`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
+                      <div className="o-form _select mode-required wdth-auto">
                         <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -163,7 +152,7 @@ function FMTFC0301M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`체크박스단독`} require={false} />
+                    <Label label={`위폐여부`} require={false} />
                     <div className="fields">
                       <div className="m-checks">
                         <InputCheck label="선택" labelHidden />
@@ -207,11 +196,13 @@ function FMTFC0301M() {
                           <col />
                           <col />
                           <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업대상</span></div></th>
@@ -240,14 +231,16 @@ function FMTFC0301M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={19}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
+                          <>
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td className="g-start">EUR (유럽연합 유로)</td>
                               <td>100</td>
                               <td className="g-end">10,000</td>
@@ -266,8 +259,80 @@ function FMTFC0301M() {
                               <td className="g-end">10</td>
                               <td className="g-end">10</td>
                             </tr>
+                          {
+                            (idx - 2) % 3 === 0 &&
+                            <tr className="p-rowgroup-footer subtotal-trow">
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell g-start">소계</td>
+                              <td className="subtotal-tcell"></td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            </tr>
+                          }
+                          {
+                            (idx - 5) % 6 === 0 &&
+                            <tr className="p-rowgroup-footer daytotal-trow">
+                              <td className="daytotal-tcell"></td>
+                              <td className="daytotal-tcell g-start">일계</td>
+                              <td className="daytotal-tcell g-start"></td>
+                              <td className="daytotal-tcell"></td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              <td className="subtotal-tcell g-end">99,999</td>
+                              {/* rowGroupFooterTemplate={totalDayCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            </tr>
+                          }
+                          </>
                           ))}
                         </tbody>
+
+                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                          <tr className="sumtotal-trow">
+                            <td colSpan={4} className="sumtotal-tcell">합계</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                          </tr>
+                        </tfoot>
                       </table>
                     </div>
                   </div>
@@ -276,54 +341,56 @@ function FMTFC0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">외화 정사 및 비용절감 누계 (2000.02 기준)</span></h3>
+                  <h3 className="o-heading level3"><span className="label">외화정사 및 비용절감 누계</span></h3>
+
+                  <div className="o-legend type-helper style-normal">
+                    <em className="label">2000.02 기준</em>
+                  </div>
                 </div>
 
                 <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
+                  <div className="o-data-table">
+                    <div className="table-container">
+                      <table className="table">
+                        <colgroup>
+                          <col style={{ width: '25%' }} />
+                          <col style={{ width: '25%' }} />
+                          <col style={{ width: '25%' }} />
+                          <col style={{ width: '25%' }} />
+                        </colgroup>
 
-                      <tbody>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`등록일자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-date wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`등록직원`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-50">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
+                        <thead>
+                          <tr>
+                            <th colSpan={2}>외화정사매수</th>
+                            <th colSpan={2}>비용절감액</th>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>월간누계</th>
+                            <th colSpan={1}>연간누계</th>
+                            <th colSpan={1}>월간누계</th>
+                            <th colSpan={1}>연간누계</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td colSpan={1} className="g-end">
+                              0
+                            </td>
+                            <td colSpan={1} className="g-end">
+                              0
+                            </td>
+                            <td colSpan={1} className="g-end">
+                              0
+                            </td>
+                            <td colSpan={1} className="g-end">
+                              9,999
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
 

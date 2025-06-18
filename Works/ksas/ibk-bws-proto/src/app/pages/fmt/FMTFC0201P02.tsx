@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTFC0201P01() {
+function FMTFC0201P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -363,4 +363,4 @@ function FMTFC0201P01() {
   );
 }
 
-export default FMTFC0201P01;
+export default FMTFC0201P02;

@@ -91,7 +91,7 @@ function TMPL() {
 
   return (
     <>
-      {/* <Dialog className="o-loading-layer" baseZIndex={2000} visible={visible} onHide={() => {if (!visible) return; setVisible(false); }} content={({ hide }) => (
+      {/* <Dialog className="o-loading-layer" baseZIndex={2000} visible={visible} onHide={() => { if (!visible) return; setVisible(false); }} content={({ hide }) => (
         <>
           <div className="m-loading">
             <i className="o-loading style-spinner" aria-hidden="true"></i>
@@ -944,6 +944,14 @@ function TMPL() {
                                   <div className="group">
                                     <CommonButton label="행추가" className="_normal" />
                                     <CommonButton label="행복사" className="_normal" />
+                                    <div className="o-form _input wdth-70 g-end">
+                                      <InputText placeholder="" value="1" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                      <span className="inner-binds">
+                                        <CommonButton label="행추가" className="_normal" />
+                                        <CommonButton label="행복사" className="_normal" />
+                                      </span>
+                                    </div>
                                     <CommonButton label="행삭제" className="_normal" />
                                     <CommonButton label="취소" className="_normal" />
                                     <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
@@ -964,6 +972,61 @@ function TMPL() {
                         </tbody>
                       </table>
                     </form>
+                  </div>
+                </div>
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h3 className="o-heading level3"><span className="label">외화정사 및 비용절감 누계</span></h3>
+
+                    <div className="o-legend type-helper style-normal">
+                      <em className="label">2000.02 기준</em>
+                    </div>
+                  </div>
+
+                  <div className="main">
+                    <div className="o-data-table">
+                      <div className="table-container">
+                        <table className="table">
+                          <colgroup>
+                            <col style={{ width: '25%' }} />
+                            <col style={{ width: '25%' }} />
+                            <col style={{ width: '25%' }} />
+                            <col style={{ width: '25%' }} />
+                          </colgroup>
+
+                          <thead>
+                            <tr>
+                              <th colSpan={2}>외화정사매수</th>
+                              <th colSpan={2}>비용절감액</th>
+                            </tr>
+                            <tr>
+                              <th colSpan={1}>월간누계</th>
+                              <th colSpan={1}>연간누계</th>
+                              <th colSpan={1}>월간누계</th>
+                              <th colSpan={1}>연간누계</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr>
+                              <td colSpan={1} className="g-end">
+                                0
+                              </td>
+                              <td colSpan={1} className="g-end">
+                                0
+                              </td>
+                              <td colSpan={1} className="g-end">
+                                0
+                              </td>
+                              <td colSpan={1} className="g-end">
+                                9,999
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -1184,7 +1247,7 @@ function TMPL() {
 
                 <div className="o-section">
                   <div className="m-header">
-                    <h3 className="o-heading level3"><span className="label">소계 / 합계(합계 강조)</span></h3>
+                    <h3 className="o-heading level3"><span className="label">소계 / 일계 / 합계(합계 강조)</span></h3>
 
                     <div className="o-length">
                       <span className="head">전체</span>
@@ -1262,6 +1325,20 @@ function TMPL() {
                               <td className="subtotal-tcell g-end">99,999</td>
                               <td className="subtotal-tcell g-end">99,999</td>
                               {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            </tr>
+                          }
+                          {
+                            (idx - 5) % 6 === 0 &&
+                            <tr className="p-rowgroup-footer daytotal-trow">
+                              <td className="daytotal-tcell"></td>
+                              <td className="daytotal-tcell g-start">일계</td>
+                              <td className="daytotal-tcell"></td>
+                              <td className="daytotal-tcell"></td>
+                              <td className="daytotal-tcell g-start"></td>
+                              <td className="daytotal-tcell g-end">99,999</td>
+                              <td className="daytotal-tcell g-end">99,999</td>
+                              <td className="daytotal-tcell g-end">99,999</td>
+                              {/* rowGroupFooterTemplate={totalDayCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
                             </tr>
                           }
                           </>
