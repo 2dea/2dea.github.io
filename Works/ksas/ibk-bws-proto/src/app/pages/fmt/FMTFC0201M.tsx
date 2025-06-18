@@ -315,7 +315,7 @@ function FMTFC0201M() {
           </div>
 
           <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
+            <SplitterPanel minSize={17.5} className="column">
 
               <div className="o-section">
                 <div className="m-header">
@@ -463,7 +463,6 @@ function FMTFC0201M() {
 
             </SplitterPanel>
           </Splitter>
-
 
         </div>
         {/* <!-- // Contents { @DEV } --> */}

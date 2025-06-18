@@ -120,7 +120,7 @@ function DEX() {
 <td>현재</td>
 <td>서무팀장</td>
 <td>결재승인</td>
-
+<td>결재요청</td>
 
 <td>신규</td>
 
@@ -138,6 +138,13 @@ function DEX() {
 <td><span className="o-digit type-date">2025-12-25</span></td>
 <td><span className="o-digit type-time">00:00</span></td>
 
+
+
+                                      <td className="g-end">30</td>
+                                      <td>다가</td>
+                                      <td>221868620</td>
+                                      <td>신청인도</td>
+                                      <td>정상</td>
 <td className="g-start"></td>
 
   신세계백화점상품권10만원권  IT금융개발부
@@ -164,6 +171,7 @@ function DEX() {
   </div>
 </td>
 
+<Icon icon="grid-added" />
                             <td>
                               <div className="o-field">
                                 <div className="fields">
