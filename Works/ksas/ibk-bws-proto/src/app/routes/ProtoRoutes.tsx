@@ -33,8 +33,11 @@ import CMP001402P from 'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체기�
 import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
 
 // proto 자금현수송
+import FMTFC0101P01 from 'app/pages/fmt/FMTFC0101P01';  // 자금현수송 > 외화정사 > 일일실적관리 ~ (LP)위조및변조화폐신고서등록
+
 import FMTFC0201M from 'app/pages/fmt/FMTFC0201M';      // 자금현수송 > 외화정사 > 인수도관리
 import FMTFC0201P01 from 'app/pages/fmt/FMTFC0201P01';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(정사)
+import FMTFC0201P02 from 'app/pages/fmt/FMTFC0201P02';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(반납)
 
 
 // proto 중요용지·용도품(본부)
@@ -334,8 +337,11 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
-        { path: 'FMTFC0201M', element: <FMTFC0201M /> },
+        { path: 'FMTFC0101P01', element: <FMTFC0101P01 /> },
+
+        { path: 'FMTFC0201M',   element: <FMTFC0201M /> },
         { path: 'FMTFC0201P01', element: <FMTFC0201P01 /> },
+        { path: 'FMTFC0201P02', element: <FMTFC0201P02 /> },
 
       ],
     },
