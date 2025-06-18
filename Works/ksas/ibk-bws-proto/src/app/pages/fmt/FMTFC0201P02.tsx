@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(정사)
+ * @description 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(반납)
  */
 
 // dependency
@@ -96,7 +96,7 @@ function FMTFC0201P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">외화정사인수도(정사)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">외화정사인수도(반납)</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -247,7 +247,7 @@ function FMTFC0201P01() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기납수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기반납수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납금액</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">적요</span></div></th>
@@ -300,8 +300,8 @@ function FMTFC0201P01() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-30">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <div className="o-form _input wdth-50">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>
@@ -344,7 +344,7 @@ function FMTFC0201P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)외화정사인수도(정사) [wdth-50p(w1150)]</span>
+              <span className="label">(P)외화정사인수도(반납) [wdth-50p(w1150)]</span>
             </h1>
           </div>
         </div>

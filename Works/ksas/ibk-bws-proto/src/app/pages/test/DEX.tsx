@@ -91,6 +91,9 @@ function DEX() {
 
       {/*
       2025-06-18 수 : 자금현수송~ #142
+
+      2025-16-18 수 : 업데이트 내용: 모든 팝업에 modal={true} 기본: dim  처리 있음
+        예외: '확인' 버튼만 있는 경우! -> modal={false}  -> 조회성 모달!
       ~ 6/17 행내등기
 
 
@@ -148,6 +151,8 @@ function DEX() {
 
 <td>분말소화기</td>
 
+달력 하나
+
 <td>
   <div className="o-field">
     <div className="fields">
@@ -182,6 +187,38 @@ function DEX() {
                             </td>
 
 
+
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required">
+                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="초기화" icon="remove" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            카운트
+
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-spin wdth-50">
+                                    <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                      decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <td>
+                              <ImageButton label="이미지​​업로드" icon="upload" />
+                            </td>
 
 <td>
   <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />

@@ -33,11 +33,22 @@ import CMP001402P from 'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체기�
 import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
 
 // proto 자금현수송
+import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사 > 일일실적관리
 import FMTFC0101P01 from 'app/pages/fmt/FMTFC0101P01';  // 자금현수송 > 외화정사 > 일일실적관리 ~ (LP)위조및변조화폐신고서등록
+import FMTFC0101P02 from 'app/pages/fmt/FMTFC0101P02';  // 자금현수송 > 외화정사 > 일일실적관리 ~ (LP)외화정사등록
+
 
 import FMTFC0201M from 'app/pages/fmt/FMTFC0201M';      // 자금현수송 > 외화정사 > 인수도관리
 import FMTFC0201P01 from 'app/pages/fmt/FMTFC0201P01';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(정사)
 import FMTFC0201P02 from 'app/pages/fmt/FMTFC0201P02';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(반납)
+import FMTFC0201P03 from 'app/pages/fmt/FMTFC0201P03';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)인수(정사분)
+import FMTFC0201P04 from 'app/pages/fmt/FMTFC0201P04';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)인수(반납분)
+import FMTFC0201P05 from 'app/pages/fmt/FMTFC0201P05';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)반송(정사분)
+import FMTFC0201P06 from 'app/pages/fmt/FMTFC0201P06';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)반송(반납분)
+import FMTFC0201P07 from 'app/pages/fmt/FMTFC0201P07';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)인도취소(정사분)
+import FMTFC0201P08 from 'app/pages/fmt/FMTFC0201P08';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)인도취소(반납분)
+
+import FMTFC0301M from 'app/pages/fmt/FMTFC0301M';      // 자금현수송 > 외화정사 > 일일업무현황조회
 
 
 // proto 중요용지·용도품(본부)
@@ -337,11 +348,21 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
+        { path: 'FMTFC0101M',   element: <FMTFC0101M /> },
         { path: 'FMTFC0101P01', element: <FMTFC0101P01 /> },
+        { path: 'FMTFC0101P02', element: <FMTFC0101P02 /> },
 
-        { path: 'FMTFC0201M',   element: <FMTFC0201M /> },
+        { path: 'FMTFC0201M', element: <FMTFC0201M /> },
         { path: 'FMTFC0201P01', element: <FMTFC0201P01 /> },
         { path: 'FMTFC0201P02', element: <FMTFC0201P02 /> },
+        { path: 'FMTFC0201P03', element: <FMTFC0201P03 /> },
+        { path: 'FMTFC0201P04', element: <FMTFC0201P04 /> },
+        { path: 'FMTFC0201P05', element: <FMTFC0201P05 /> },
+        { path: 'FMTFC0201P06', element: <FMTFC0201P06 /> },
+        { path: 'FMTFC0201P07', element: <FMTFC0201P07 /> },
+        { path: 'FMTFC0201P08', element: <FMTFC0201P08 /> },
+
+        { path: 'FMTFC0301M',   element: <FMTFC0301M /> },
 
       ],
     },

@@ -92,7 +92,7 @@ function BEXRQ0201P01() {
         contentClassName="layer-body"
         visible={visible}
         style={{}}
-        onHide={() => {if (!visible) return; setVisible(false); }}
+        onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         modal={false}
         // footer={<></>}
@@ -138,6 +138,7 @@ function BEXRQ0201P01() {
                           <col />
                           <col />
                           <col className="wdth-auto" />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -161,25 +162,25 @@ function BEXRQ0201P01() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>10079</td>
-                            <td className="g-start">프로세스혁신부</td>
-                            <td>1234</td>
-                            <td>홍길동</td>
-                            <td>일반서류</td>
-                            <td className="g-end">1,046</td>
-                            <td className="g-start">서류내용</td>
-                            <td className="g-start">비고</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                          </tr>
-                        ))}
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td>10079</td>
+                              <td className="g-start">프로세스혁신부</td>
+                              <td>1234</td>
+                              <td>홍길동</td>
+                              <td>일반서류</td>
+                              <td className="g-end">1,046</td>
+                              <td className="g-start">서류내용</td>
+                              <td className="g-start">비고</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
