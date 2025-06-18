@@ -268,14 +268,16 @@ import BSSDM0201M from 'app/pages/bss/BSSDM0201M';     // 영업지원 > 문서�
 import BSSDM0201P01 from 'app/pages/bss/BSSDM0201P01'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기승인
 import BSSDM0201P02 from 'app/pages/bss/BSSDM0201P02'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기정산
 
+import BSSCR0101M from 'app/pages/bss/BSSCR0101M'; // 영업지원 > 캘린더신청 > 신청기간관리
+import BSSCR0101P01 from 'app/pages/bss/BSSCR0101P01'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)공지이미지관리
 import BSSCR0101P02 from 'app/pages/bss/BSSCR0101P02'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)달력카테고리관리
 import BSSCR0101P03 from 'app/pages/bss/BSSCR0101P03'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)부점선택
-
+import BSSCR0201M from 'app/pages/bss/BSSCR0201M';   // 영업지원 > 캘린더신청 > 신청관리
+import BSSCR0301M from 'app/pages/bss/BSSCR0301M';   // 영업지원 > 캘린더신청 > 배송·인수관리
 import BSSCR0301P01 from 'app/pages/bss/BSSCR0301P01'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)배송업체정보
 import BSSCR0301P02 from 'app/pages/bss/BSSCR0301P02'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)연도별배송수량참고
 import BSSCR0301P03 from 'app/pages/bss/BSSCR0301P03'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)인수증확인
 import BSSCR0301P04 from 'app/pages/bss/BSSCR0301P04'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)고객배송정보
-
 import BSSCR0401M from 'app/pages/bss/BSSCR0401M';   // 영업지원 > 캘린더신청 > 신청내역조회
 import BSSCR0501M from 'app/pages/bss/BSSCR0501M';   // 영업지원 > 캘린더신청 > 배부수량관리
 
@@ -590,13 +592,16 @@ function ProtoRoutes() {
         { path: 'BSSDM0201P01', element: <BSSDM0201P01 /> },
         { path: 'BSSDM0201P02', element: <BSSDM0201P02 /> },
 
+        { path: 'BSSCR0101M', element: <BSSCR0101M /> },
+        { path: 'BSSCR0101P01', element: <BSSCR0101P01 /> },
         { path: 'BSSCR0101P02', element: <BSSCR0101P02 /> },
         { path: 'BSSCR0101P03', element: <BSSCR0101P03 /> },
+        { path: 'BSSCR0201M', element: <BSSCR0201M /> },
+        { path: 'BSSCR0301M', element: <BSSCR0301M /> },
         { path: 'BSSCR0301P01', element: <BSSCR0301P01 /> },
         { path: 'BSSCR0301P02', element: <BSSCR0301P02 /> },
         { path: 'BSSCR0301P03', element: <BSSCR0301P03 /> },
         { path: 'BSSCR0301P04', element: <BSSCR0301P04 /> },
-
         { path: 'BSSCR0401M', element: <BSSCR0401M /> },
         { path: 'BSSCR0501M', element: <BSSCR0501M /> },
 
