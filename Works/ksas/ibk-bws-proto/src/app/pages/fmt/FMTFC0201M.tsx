@@ -283,7 +283,7 @@ function FMTFC0201M() {
                               <td>{idx + 1}</td>
                               <td className="g-start">출납담당 정사원[정사]</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td><span className="o-digit type-time">00:00:00</span></td>
                               <td>홍길동</td>
                               <td>인수</td>
                               <td className="g-start">USD(미국 달러)</td>
@@ -291,7 +291,7 @@ function FMTFC0201M() {
                               <td className="g-end">10,000</td>
                               <td className="g-end">20,000</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td><span className="o-digit type-time">00:00:00</span></td>
                               <td>홍길동</td>
                               <td></td>
                               <td className="g-start">6/17 정사분 인수</td>
@@ -353,6 +353,7 @@ function FMTFC0201M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도시각</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도직원</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도매수</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도금액</span></div></th>
@@ -362,7 +363,7 @@ function FMTFC0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -372,8 +373,9 @@ function FMTFC0201M() {
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td><span className="o-digit type-time">00:00:00</span></td>
                               <td>홍길동</td>
+                              <td className="g-start">USD(미국 달러)</td>
                               <td className="g-end">10</td>
                               <td className="g-end">10,000</td>
                               <td className="g-end">20,000</td>
@@ -427,6 +429,7 @@ function FMTFC0201M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도시각</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도직원</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도매수</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도금액</span></div></th>
@@ -436,7 +439,7 @@ function FMTFC0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -446,8 +449,9 @@ function FMTFC0201M() {
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td><span className="o-digit type-time">00:00:00</span></td>
                               <td>홍길동</td>
+                              <td className="g-start">USD(미국 달러)</td>
                               <td className="g-end">10</td>
                               <td className="g-end">10,000</td>
                               <td className="g-end">20,000</td>

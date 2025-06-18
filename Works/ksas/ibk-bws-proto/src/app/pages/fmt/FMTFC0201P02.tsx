@@ -141,8 +141,8 @@ function FMTFC0201P01() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="m-checks">
-                                  <InputRadio name="RADIO:T_10" label="출남당자 &rarr; 정사원 [정사]" />
-                                  <InputRadio name="RADIO:T_10" label="정사원 [정사] &rarr; 출남당자" defaultChecked />
+                                  <InputRadio name="RADIO:T_10" label="출납담당 &rarr; 정사원 [정사]" />
+                                  <InputRadio name="RADIO:T_10" label="정사원 [정사] &rarr; 출납담당" defaultChecked />
                                 </div>
                               </div>
                             </div>
@@ -300,7 +300,7 @@ function FMTFC0201P01() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-50">
+                                    <div className="o-form _input wdth-50 g-end">
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                       <i aria-hidden="true"></i>
                                     </div>
