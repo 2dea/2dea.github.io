@@ -92,7 +92,7 @@ function HSPHS0501P02() {
         contentClassName="layer-body"
         visible={visible}
         style={{}}
-        onHide={() => {if (!visible) return; setVisible(false); }}
+        onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}

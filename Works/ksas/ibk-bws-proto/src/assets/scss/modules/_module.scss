@@ -1310,8 +1310,11 @@
 .o-form:has(>.o-icon:where(:first-child)) :is(input:where(.o-form._input *), select:not([multiple]))  { padding-left: calc(var(--margin-inline) + var(--height-icon) + var(--gap-icon)); }
 
 
-.o-form .inner-binds  { display: inline-flex; align-items: center; }
+.o-form .inner-binds  { display: inline-flex; align-items: center; border-radius: inherit; }
 .o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); }
+.o-form .inner-binds .o-button  { margin: calc(-1 * $e10); margin-left: 0; border-radius: 0; }
+.o-form .inner-binds .o-button:hover,  .o-form .inner-binds .o-button:focus  { z-index: 2; }
+.o-form .inner-binds .o-button:last-child  { border-start-end-radius: inherit; border-end-end-radius: inherit; }
 
 // .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { visibility: hidden; }
 .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { display: none; }
@@ -1511,9 +1514,21 @@
 
 
 
+.o-data-table  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
+.o-data-table table:not(td *)  { border-collapse: collapse; width: 100%; background: $color-ground; text-align: center; }
+.o-data-table col:not(td *)  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
+.o-data-table col.head:not(td *)  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
+.o-data-table col.head:not(.auto):not(td *)  { width: calc(var(--rem) * 120); }
+.o-data-table tr >:not(td *)  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-30); border-width: 0 $e10 $e10; }
+.o-data-table th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; background: var(--color-ground-40); }
+
+.o-data-table table:not(td *)  { border: hidden; }
+.o-data-table :has(>table):not(td *)  { border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
+
+
 .m-data-form  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
 .m-data-form table:not(td *)  { table-layout: fixed; border-collapse: collapse; width: 100%; background: $color-ground; }
-.m-data-form col:not(td *)  { width: calc(1em * var(--em) * 0.80246 + var(--margin-headcell-inline) * 2 + $e10); }
+.m-data-form col:not(td *)  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
 .m-data-form col.head:not(td *)  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
 .m-data-form col.head:not(.auto):not(td *)  { width: calc(var(--rem) * 120); }
 .m-data-form tr >:not(td *)  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
@@ -1770,6 +1785,7 @@
 .o-grid-table tbody:not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
 .o-grid-table table >* >tr >.sumtotal-tcell-strong  { color: var(--color-key1-90); background-color: var(--color-ground-70); }
+.o-grid-table table >* >tr.daytotal-trow  { background-color: var(--color-ground2-orange-40); }
 .o-grid-table table >* >tr.subtotal-trow  { background-color: var(--color-ground2-blue-30); }
 .o-grid-table tbody >tr.js_clicked  { background-color: var(--color-grid-selected); background: linear-gradient(90deg, var(--color-grid-point) $e30, var(--color-grid-selected) $e30); }
 // .o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 2; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
