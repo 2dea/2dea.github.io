@@ -669,9 +669,9 @@
 .o-toggles  { display: flex; align-items: center; position: relative; color: var(--color-text-30); background: var(--color-ground-40); border-radius: $radius-50; }
 .o-toggles:after  { content: ""; position: absolute; inset: 0; border: $e10 solid var(--color-edge-40); }
 .o-toggles >.o-button  { --theme: var(--color-key1-40); z-index: 1; border-color: currentColor; background: var(--color-ground); }
-.o-toggles >.o-button.is-selected .o-icon:before  { background-position: 50%; }
-.o-toggles >.o-button:not(.is-selected)  { border-color: $tp; color: inherit; background-color: $tp; }
-.o-toggles >.o-button:not(.is-selected):not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
+.o-toggles >.o-button:is(.is-selected, [aria-selected="true"]) .o-icon:before  { background-position: 50%; }
+.o-toggles >.o-button:not(.is-selected, [aria-selected="true"])  { border-color: $tp; color: inherit; background-color: $tp; }
+.o-toggles >.o-button:not(.is-selected, [aria-selected="true"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
 
 
 

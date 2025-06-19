@@ -211,7 +211,7 @@ function FMTFC0301M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미정사매수</span></div></th>
                             <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">과부족(매수)</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">과부족금액(혼입)</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재사용율 (%)</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재사용률 (%)</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료절감액</span></div></th>
                           </tr>
                           <tr>

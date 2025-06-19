@@ -251,6 +251,14 @@
   --color-point-orange:         var(--design-point-orange);
   --color-point-yellow:         var(--design-point-yellow);
   --color-point-skyblue:        var(--design-point-skyblue);
+/* ### */
+  --color-theme-key00:          var(--design-background-heavy);
+  --color-theme-key01:          var(--design-primary-normal);
+  --color-theme-key02:          var(--design-point-red);
+  --color-theme-key03:          var(--design-point-orange);
+  --color-theme-key04:          var(--design-point-yellow);
+  --color-theme-key05:          var(--design-grid-point);
+  --color-theme-key06:          var(--design-point-skyblue);
 
   --color-required:             var(--design-point-red);
   --color-delete:               var(--design-point-red);

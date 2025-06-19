@@ -119,7 +119,7 @@ function STMBR0201M() {
           <div className="o-grid">
             <div className="column">
 
-              <div className="o-section">
+              <Tabs className="o-section" defaultIndex={1}>
                 <div className="m-calendar-header">
                   <div className="main">
                     <div className="year">
@@ -152,10 +152,10 @@ function STMBR0201M() {
 
                   <div className="binds">
                     <div className="views">
-                      <div className="o-toggles type-tab">
-                        <CommonButton label="달력" className="is-selected" icon="calendar" />
-                        <CommonButton label="목록" className="" icon="menu-alt" />
-                      </div>
+                      <TabList className="o-toggles type-tab">
+                        <Tab className="o-button"><Icon icon="calendar" /><span className="label">달력</span></Tab>
+                        <Tab className="o-button"><Icon icon="menu-alt" /><span className="label">목록</span></Tab>
+                      </TabList>
                     </div>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ function STMBR0201M() {
                 </div>
 
                 <div className="main _primary rows-auto">
-                  <div className="o-calendar g-hide">
+                  <TabPanel className="o-calendar">
                     <div className="table-container">
                       <table>
                         <colgroup span={7}></colgroup>
@@ -918,13 +918,13 @@ function STMBR0201M() {
                         </tbody>
                       </table>
                     </div>
-                  </div>
+                  </TabPanel>
 
-                  <div className="m-schedule">
-
-                  </div>
+                  <TabPanel className="m-schedule">
+                    목록
+                  </TabPanel>
                 </div>
-              </div>
+              </Tabs>
 
             </div>
 

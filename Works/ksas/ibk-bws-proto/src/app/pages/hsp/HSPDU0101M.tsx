@@ -176,7 +176,7 @@ function HSPDU0101M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송등록</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">센터접수</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진척율(%)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진척률(%)</span></div></th>
                           </tr>
                         </thead>
 
@@ -254,7 +254,7 @@ function HSPDU0101M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송등록</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">센터접수</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진척율(%)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진척률(%)</span></div></th>
                           </tr>
                         </thead>
 

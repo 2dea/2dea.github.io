@@ -761,6 +761,12 @@ function TMPL() {
                                     <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
+                                  <div className="binds type-tooltip">
+                                    <Tooltip className="o-tooltip" target="#FMTFC0101P01-tooltip-10" position="top">
+                                      예 : 1234567가가가, AA123456A
+                                    </Tooltip>
+                                    <ImageButton id="FMTFC0101P01-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                                  </div>
                                 </div>
                               </div>
                             </td>
@@ -967,6 +973,31 @@ function TMPL() {
                                 </div>
 
                               </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`예제`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <ol className="m-bullets type-decimal level1">
+                                <li>
+                                  <div className="m-flex-list">
+                                    <strong>.o-check +.o-field</strong>
+                                    <a href="/proto/FMTFC0101P01" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      FMTFC0101P01<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
+                                    <strong>소계 / 일계 / 합계</strong>
+                                    <a href="/proto/FMTFC0301M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      FMTFC0301M<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                             </ol>
                             </td>
                           </tr>
                         </tbody>
