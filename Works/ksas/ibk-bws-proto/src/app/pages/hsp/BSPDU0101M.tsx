@@ -423,7 +423,7 @@ function BSPDU0101M() {
                                             <ImageButton id="BSPDU0101M-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
                                           </span>
                                         </span>
-                                    </div>
+                                      </div>
                                     </th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사고보고여부<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오손사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>

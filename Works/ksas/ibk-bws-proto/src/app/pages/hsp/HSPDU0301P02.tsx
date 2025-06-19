@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 본부재고관리 > 중요용지조달신청 ~ (LP)물품신청결재창
+ * @description 중요용지·용도품(본부) > 폐기 > 폐기대상중요용지목록(감사자등록) ~ (LP)감사자등록
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPHS0201P01() {
+function HSPDU0301P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -96,7 +96,7 @@ function HSPHS0201P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">물품신청결재창</span></h3>}
+        header={<h3 className="o-heading"><span className="label">감사자등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -104,7 +104,11 @@ function HSPHS0201P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">물품신청서</span></h4>
+                  <h4 className="o-heading level2"><span className="label">감사자등록</span></h4>
+
+                  <div className="o-helper style-strong">
+                    <em className="label">감시자를 선택해 주세요.</em>
+                  </div>
                 </div>
 
                 <div className="main">
@@ -113,125 +117,48 @@ function HSPHS0201P01() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청명`} require={false} />
+                            <Label label={`감시자`} require={true} />
                           </th>
-                          <td colSpan={3}>
-                            [신세계백화점상품권10만원건] 1건 재고부족으로 인한 신청
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-60">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="m-checks">
+                                  <InputCheck label="알림전송여부" defaultChecked />
+                                </div>
+                              </div>
+                            </div>
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청직원`} require={false} />
+                            <Label label={`알림메시지`} require={true} />
                           </th>
                           <td colSpan={1}>
-                            홍길동
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`신청부점`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            프로세스혁신
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`소요예산`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            200,000(부가세 포함)
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`신청일자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                   </form>
                 </div>
+
               </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">상세정보</span></h4>
-                </div>
-
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
-
-                      <tbody>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`용도구분`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            중요용지
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`출급번호`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            00000
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`품목명`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            신세계백화점상품권10만원건
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`규격`} require={false} />
-                          </th>
-                          <td colSpan={1} className="g-end">
-                            10
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`신청량`} require={false} />
-                          </th>
-                          <td colSpan={1} className="g-end">
-                            10
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`납기요청일`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`용도구분`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            중요용지
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
@@ -240,7 +167,7 @@ function HSPHS0201P01() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="결재요청" className="_solid-primary" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -250,7 +177,7 @@ function HSPHS0201P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)물품신청결재창 [wdth-40p(w770)]</span>
+              <span className="label">(P)알림발송 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -269,4 +196,4 @@ function HSPHS0201P01() {
   );
 }
 
-export default HSPHS0201P01;
+export default HSPDU0301P02;
