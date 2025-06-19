@@ -494,8 +494,8 @@ function HSPHS1901P01() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select wdth-50">
-                                  <XDropdown appendTo={document.body} className="bind" />
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -727,7 +727,7 @@ function HSPHS1901P01() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_lined-primary" />
+              <CommonButton label="취소" className="_cancel" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>

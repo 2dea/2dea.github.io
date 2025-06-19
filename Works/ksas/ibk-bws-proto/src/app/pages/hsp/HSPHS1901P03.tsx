@@ -140,7 +140,7 @@ function HSPHS1901P03() {
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required">
+                                <div className="o-form _input mode-required wdth-90">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -311,7 +311,7 @@ function HSPHS1901P03() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input">
+                                <div className="o-form _input wdth-50">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -368,7 +368,7 @@ function HSPHS1901P03() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <XDropdown appendTo={document.body} className="bind" disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -494,8 +494,8 @@ function HSPHS1901P03() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select wdth-50">
-                                  <XDropdown appendTo={document.body} className="bind" />
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -713,6 +713,30 @@ function HSPHS1901P03() {
                             </div>
                           </td>
                         </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`반려사유`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                                  <i aria-hidden="true"></i>
+
+                                  <div className="o-limit type-length">
+                                    <span className="head">글자수</span>
+                                    <span className="data">
+                                      <em className="value">0</em>
+                                      <span className="sep">/</span>
+                                      <span className="limits" aria-label="입력가능 글자수">100</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
 
                       </tbody>
                     </table>
@@ -726,9 +750,15 @@ function HSPHS1901P03() {
 
         <div className="div-footer">
           <div className="m-binds type-end">
+            <div className="group">
+              <CommonButton label="시행문서등록" className="_lined-secondary" />
+              <CommonButton label="거래이력조회" className="_lined-secondary" />
+            </div>
+
             <div className="group _primary">
-              <CommonButton label="취소" className="_lined-primary" />
-              <CommonButton label="저장" className="_solid-primary" />
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="반려" className="_lined-primary" />
+              <CommonButton label="승인" className="_solid-primary" />
             </div>
           </div>
         </div>

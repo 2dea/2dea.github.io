@@ -141,6 +141,9 @@ import HSPDU0101M from 'app/pages/hsp/HSPDU0101M';    // 중요용지·용도품
 import HSPDU0101P01 from 'app/pages/hsp/HSPDU0101P01';  // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지총괄현황 ~ (LP)오손이력조회
 import HSPDU0201M from 'app/pages/hsp/HSPDU0201M';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지센터인수(오배송)
 
+import HSPDU0201P02 from 'app/pages/hsp/HSPDU0201P02';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지센터인수(오배송) ~ (LP)온누리상품권일련번호확인
+import HSPDU0201P03 from 'app/pages/hsp/HSPDU0201P03';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지센터인수(오배송) ~ (LP)오손중요용지행내등기신청
+
 import HSPDU0301M from 'app/pages/hsp/HSPDU0301M';    // 중요용지·용도품(본부) > 폐기          > 폐기대상중요용지목록(감사자등록)
 
 import HSPDU0501M from 'app/pages/hsp/HSPDU0501M';    // 중요용지·용도품(본부) > 폐기          > (폐기감사)감사/소각등록
@@ -157,6 +160,7 @@ import HSPHP0401P01 from 'app/pages/hsp/HSPHP0401P01';  // 중요용지·용도�
 import HSPHP0501M from 'app/pages/hsp/HSPHP0501M';    // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지조달신청현황
 
 import HSPSA0101M from 'app/pages/hsp/HSPSA0101M';    // 중요용지·용도품(본부) > 용도품계정관리        > 용도품계정출금내역조회
+import HSPSA0201M from 'app/pages/hsp/HSPSA0201M';    // 중요용지·용도품(본부) > 용도품계정관리        > 용도품계정대사
 
 import HSPPC0201M from 'app/pages/hsp/HSPPC0201M';    // 중요용지·용도품(본부) > 대금정산 > 수입인지정산
 
@@ -463,6 +467,9 @@ function ProtoRoutes() {
         { path: 'HSPDU0101P01', element: <HSPDU0101P01 /> },
         { path: 'HSPDU0201M',  element: <HSPDU0201M /> },
 
+        { path: 'HSPDU0201P02', element: <HSPDU0201P02 /> },
+        { path: 'HSPDU0201P03', element: <HSPDU0201P03 /> },
+
         { path: 'HSPDU0301M',   element: <HSPDU0301M /> },
 
         { path: 'HSPDU0501M',   element: <HSPDU0501M /> },
@@ -477,6 +484,7 @@ function ProtoRoutes() {
         { path: 'HSPHP0401P01', element: <HSPHP0401P01 /> },
         { path: 'HSPHP0501M',   element: <HSPHP0501M /> },
         { path: 'HSPSA0101M',   element: <HSPSA0101M /> },
+        { path: 'HSPSA0201M',   element: <HSPSA0201M /> },
 
         { path: 'HSPPC0201M',   element: <HSPPC0201M /> },
       ],

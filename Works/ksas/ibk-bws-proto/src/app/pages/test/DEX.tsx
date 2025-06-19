@@ -90,7 +90,7 @@ function DEX() {
     <>
 
       {/*
-      2025-06-18 수 : 자금현수송~ #142
+      2025-06-19 목 : 본부 #137 HSPHS1901P03 부터~
 
       2025-16-18 수 : 업데이트 내용: 모든 팝업에 modal={true} 기본: dim  처리 있음
         예외: '확인' 버튼만 있는 경우! -> modal={false}  -> 조회성 모달!
@@ -106,13 +106,16 @@ function DEX() {
 <td>012345</td>
 <td>Y</td>
 
-<td>01234</td>
+<td className="g-start">[00070] 프로세스혁신부</td>
 <td className="g-start">을지로</td>
 <td className="g-start">부산</td>
 
 <td>012345</td>
 <td>홍길동</td>
 
+
+<td>~</td>
+<td></td>
 
 <td>금고실</td>
 <td>열쇠</td>
@@ -121,57 +124,54 @@ function DEX() {
 <td>서무팀장</td>
 <td>결재승인</td>
 <td>결재요청</td>
-
 <td>신규</td>
-
-<td>~</td>
-<td></td>
 <td>현재</td>
+<td>다가</td>
+<td>221868620</td>
+<td>신청인도</td>
+<td>정상</td>
 
 <td className="g-start">겉문열쇠</td>
 <td className="g-start">금고실 #1</td>
 <td className="g-start">프로세스혁신부</td>
-<td className="g-start">[00070] 프로세스혁신부</td>
-<td className="g-start">을지로</td>
-영업무
+<td className="g-start">업체명 (주)앤비앤코퍼레이션</td>
 
 <td><span className="o-digit type-date">2025-12-25</span></td>
 <td><span className="o-digit type-time">00:00</span></td>
 
-
-
-                                      <td className="g-end">30</td>
-                                      <td>다가</td>
-                                      <td>221868620</td>
-                                      <td>신청인도</td>
-                                      <td>정상</td>
 <td className="g-start"></td>
 
-  신세계백화점상품권10만원권  IT금융개발부
-
-<td className="g-start">업체명 (주)앤비앤코퍼레이션</td>
-
 <td className="g-end"></td>
-<td className="g-end">1</td>
+<td className="g-end">30</td>
 
 <td><span className="o-digit type-tel">010-1234-5678</span></td>
 
-<td>분말소화기</td>
-
-달력 하나
-
-<td>
-  <div className="o-field">
-    <div className="fields">
-      <div className="o-form _input type-date wdth-50">
-        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-        <i aria-hidden="true"></i>
-      </div>
-    </div>
-  </div>
-</td>
-
+더하기 추가
 <Icon icon="grid-added" />
+
+
+                            달력 하나
+                            <div className="o-field">
+                              <Label label={`직원번호/명`} require={false} />
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-date wdth-50">
+                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
                             <td>
                               <div className="o-field">
                                 <div className="fields">
@@ -193,73 +193,6 @@ function DEX() {
                                 </div>
                               </div>
                             </td>
-
-
-
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input mode-required">
-                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                    <span className="inner-binds">
-                                      <ImageButton label="초기화" icon="remove" />
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-
-                            카운트
-
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input type-spin wdth-50">
-                                    <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
-                                      decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-
-                            <td>
-                              <ImageButton label="이미지​​업로드" icon="upload" />
-                            </td>
-
-<td>
-  <ImageButton label="이미지​보기" icon="image" onClick={(e) => viewimageOverlay0.current.toggle(e)} />
-  <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
-    <div className="layer-head">
-      <h3 className="o-heading"><span className="label">이미지보기</span></h3>
-    </div>
-    <div className="layer-body">
-      <div className="o-view-image">
-        <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-      </div>
-    </div>
-  </OverlayPanel>
-</td>
-
-
-<col className="wdth-10" />
-<col className="wdth-0" />
-<col className="wdth-auto" />
-
-<td>AJ렌트카</td>
-
-<td className="g-start"><a href="javascript:" className="o-link _normal">링크</a></td>
-
-                                  <tr>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                                  </tr>
-
-         <div className="o-form _input wdth-30 g-end">
-        o-form _input mode-required wdth-50
 
 화살표  &rarr;
 &lt;  &gt;
@@ -308,13 +241,18 @@ function DEX() {
             [유의사항 레이아웃] -BSPDU0301M 블릿 참고
             [레이아웃 팝업] BSPDU0401P02 : 하단에 유의사항
 
+            [ 테이블 ]
+            // 소계 합계 : FMTFC0301M
+            // th 타이틀: FMTFC0301M
+            // m-data-form : 테이블 FMTFC0101P01
 
             엄청 긴 테이블 : BSPDU0201M : 일련번호
-            일괄적용 및 유의사항 2개: BEXRQ0101M
+            일괄적용 및 유의사항 2개: BEXRQ0101M <col className="head auto" style={{ '--em': 2 } as React.CSSProperties} />
 
             메뉴 선택  BSSCR0101P03 BEXRQ0101P03
             좌:우 : 추가 취소 [BEXRQ0101P03]
 
+            2025-06-19 버튼 group 메모: 'group' 'group: 행추가, 삭제~~ '
 
       /* 자주사용하는 팝업 너비
 
@@ -345,18 +283,19 @@ function DEX() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`인풋`} require={false} />
+                    <Label label={`직원번호/명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
 
                   <div className="o-field">
-                    <Label label={`XDropdown`} require={true} />
+                    <Label label={`권한명`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
