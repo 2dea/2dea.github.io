@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사등록
+ * @description 자금현수송 > 외화정사 > 일일실적관리 > 실적내역 ~ (LP)외화정사등록
  */
 
 // dependency
@@ -172,7 +172,7 @@ function FMTFC0101P02() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>

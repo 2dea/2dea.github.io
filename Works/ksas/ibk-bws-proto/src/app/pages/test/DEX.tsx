@@ -90,7 +90,8 @@ function DEX() {
     <>
 
       {/*
-      2025-06-19 목 : 본부 #137 HSPHS1901P03 부터~
+      스케줄
+      2025-06-20 금 : 본부 #182 HSPDU0801P04 이후 부터~ 폐기취소(본부)
 
       2025-16-18 수 : 업데이트 내용: 모든 팝업에 modal={true} 기본: dim  처리 있음
         예외: '확인' 버튼만 있는 경우! -> modal={false}  -> 조회성 모달!
@@ -149,6 +150,11 @@ function DEX() {
 더하기 추가
 <Icon icon="grid-added" />
 
+<td>나가</td>
+                              <td>10000</td>
+                              <td>~</td>
+                              <td>10000</td>
+
 
                             달력 하나
                             <div className="o-field">
@@ -194,6 +200,23 @@ function DEX() {
                               </div>
                             </td>
 
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
 화살표  &rarr;
 &lt;  &gt;
 
@@ -214,7 +237,7 @@ function DEX() {
 
        textarea 2줄: '서류내용', '비고' : BSPDU0601P02
         input 1줄: 취소 사유 : HSPBT0301P01
-         툴팁: BSPDU0101M
+         툴팁: BSPDU0101M 일련번호: th 물은표
       {/*
           자주사용 하는 레이아웃
 
@@ -244,15 +267,21 @@ function DEX() {
             [ 테이블 ]
             // 소계 합계 : FMTFC0301M
             // th 타이틀: FMTFC0301M
-            // m-data-form : 테이블 FMTFC0101P01
+            // m-data-form : 테이블 FMTFC0101P01 th,
 
             엄청 긴 테이블 : BSPDU0201M : 일련번호
+            FMTFC0101P01
             일괄적용 및 유의사항 2개: BEXRQ0101M <col className="head auto" style={{ '--em': 2 } as React.CSSProperties} />
+
+            BEXRQ0101M:
 
             메뉴 선택  BSSCR0101P03 BEXRQ0101P03
             좌:우 : 추가 취소 [BEXRQ0101P03]
 
-            2025-06-19 버튼 group 메모: 'group' 'group: 행추가, 삭제~~ '
+            2025-06-19 버튼 group 메모: 'group' 'group: 행추가, 삭제~~ ' : BEXRQ0101M
+
+            테이블 col 너비 주기 : HSPSA0201M
+            <col className="head" style={{ width: 'calc(var(--rem) * 180)' }} />
 
       /* 자주사용하는 팝업 너비
 
@@ -404,8 +433,25 @@ function DEX() {
                     </div>
 
                     <ul className="m-bullets type-disc">
-                      <li>cccc</li>
+                      <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
                       <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                      <li>
+                        블라블라블라
+
+                        <ul className="m-bullets type-hyphen">
+                          <li>블라블라블라</li>
+                          <li>
+                            블라블라블라
+
+                            <ul className="m-bullets type-asterisk">
+                              <li>블라블라블라</li>
+                              <li>블라블라블라</li>
+                            </ul>
+                          </li>
+                          <li>블라블라블라</li>
+                        </ul>
+                      </li>
+                      <li>블라블라블라</li>
                     </ul>
                   </div>
                 </div>
