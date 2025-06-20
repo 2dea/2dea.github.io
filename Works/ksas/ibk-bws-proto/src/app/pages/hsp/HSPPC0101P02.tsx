@@ -296,7 +296,7 @@ function HSPPC0101P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)업체직접배송정산자료생성 [wdth-50p(w1960)]</span>
+              <span className="label">(P)업체직접배송정산자료생성 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>

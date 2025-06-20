@@ -88,6 +88,10 @@ import BSPDU0301P01 from 'app/pages/hsp/BSPDU0301P01';  // 중요용지·용도�
 import BSPDU0401P02 from 'app/pages/hsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점) ~ (LP)사고보고등록
 
 
+import BSPDU0301P02 from 'app/pages/bsp/BSPDU0301P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ 품목폐지폐기등록
+import BSPDU0301P03 from 'app/pages/bsp/BSPDU0301P03';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ 온누리상품권스캔등록
+
+
 // proto 중요용지·용도품(본부)
 import HSPBT0101M from 'app/pages/hsp/HSPBT0101M';      // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역
 import HSPBT0101P01 from 'app/pages/hsp/HSPBT0101P01';  // 중요용지·용도품(본부) > 영업점배송관리 > 중요용지인도내역조회 > 인도내역 ~ (LP)인도취소
@@ -177,6 +181,12 @@ import HSPPC0101P01 from 'app/pages/hsp/HSPPC0101P01';  // 중요용지·용도�
 import HSPPC0101P02 from 'app/pages/hsp/HSPPC0101P02';  // 중요용지·용도품(본부) > 대금정산             > 업체직배송품목정산 ~ (LP)업체직접배송정산자료생성
 import HSPPC0201M from 'app/pages/hsp/HSPPC0201M';      // 중요용지·용도품(본부) > 대금정산             > 수입인지정산
 import HSPPC0301M from 'app/pages/hsp/HSPPC0301M';      // 중요용지·용도품(본부) > 대금정산             > 정산내역조회
+import HSPPC0401M from 'app/pages/hsp/HSPPC0401M';      // 중요용지·용도품(본부) > 대금정산             > 대금정산품의
+
+import HSPPC0401P01 from 'app/pages/hsp/HSPPC0401P01';  // 중요용지·용도품(본부) > 대금정산             > 대금정산품의 ~ (LP)사업조회
+import HSPPC0401P02 from 'app/pages/hsp/HSPPC0401P02';  // 중요용지·용도품(본부) > 대금정산             > 대금정산품의 ~ (LP)항목코드조회
+import HSPPC0401P03 from 'app/pages/hsp/HSPPC0401P03';  // 중요용지·용도품(본부) > 대금정산             > 대금정산품의 ~ (LP)CC처리내역선택
+
 
 
 // proto 행내등기·우편물
@@ -418,6 +428,8 @@ function ProtoRoutes() {
         { path: 'BSPDU0601P01', element: <BSPDU0601P01 /> },
         { path: 'BSPDU0301M',   element: <BSPDU0301M /> },
         { path: 'BSPDU0301P01', element: <BSPDU0301P01 /> },
+        { path: 'BSPDU0301P02', element: <BSPDU0301P02 /> },
+        { path: 'BSPDU0301P03', element: <BSPDU0301P03 /> },
 
         { path: 'BSPDU0401P02', element: <BSPDU0401P02 /> },
 
@@ -510,6 +522,12 @@ function ProtoRoutes() {
 
         { path: 'HSPPC0201M',   element: <HSPPC0201M /> },
         { path: 'HSPPC0301M',   element: <HSPPC0301M /> },
+        { path: 'HSPPC0401M',   element: <HSPPC0401M /> },
+
+        { path: 'HSPPC0401P01', element: <HSPPC0401P01 /> },
+        { path: 'HSPPC0401P02', element: <HSPPC0401P02 /> },
+        { path: 'HSPPC0401P03', element: <HSPPC0401P03 /> },
+
       ],
     },
     { // 행내등기·우편물

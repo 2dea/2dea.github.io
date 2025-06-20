@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 대금정산 > 업체직배송품목정산 ~ (LP)용도품계정기타출금내역검색
+ * @description 중요용지·용도품(본부) > 대금정산 > 업체직배송품목정산 ~ (LP)CC처리내역선택
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPPC0101P01() {
+function HSPPC0401P03() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -96,7 +96,7 @@ function HSPPC0101P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">용도품계정기타출금내역검색</span></h3>}
+        header={<h3 className="o-heading"><span className="label">항목코드조회</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -105,28 +105,15 @@ function HSPPC0101P01() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field">
-                    <Label label={`부점`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
                   <div className="o-field colspan-2">
-                    <Label label={`출금기간`} require={false} />
+                    <Label label={`조회기간`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input type-date wdth-50">
+                      <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
                       <span className="seps type-tilde">~</span>
-                      <div className="o-form _input type-date wdth-50">
+                      <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
@@ -142,7 +129,7 @@ function HSPPC0101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">용도품계정 기타출금내역</span></h4>
+                  <h4 className="o-heading level2"><span className="label">CC처리내역</span></h4>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -155,7 +142,6 @@ function HSPPC0101P01() {
                   <div className="m-binds">
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
@@ -175,26 +161,27 @@ function HSPPC0101P01() {
                           <col />
                           <col />
                           <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계정코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계정명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비목</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">CC처리일자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행부점</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세부사업코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행금액</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행사유</span></div></th>
+                          </tr>
+                          <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입금액</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -203,13 +190,12 @@ function HSPPC0101P01() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>11116011465</td>
-                            <td>용도품</td>
-                            <td className="g-start">전산소모품비</td>
-                            <td>011465</td>
+                            <td>1111605</td>
                             <td className="g-start">총무부</td>
-                            <td className="g-end">131,333</td>
-                            <td className="g-end">131,333</td>
+                            <td>11605</td>
+                            <td>1111</td>
+                            <td className="g-end">30,000,000</td>
+                            <td className="g-start"></td>
                           </tr>
                         ))}
                         </tbody>
@@ -237,7 +223,7 @@ function HSPPC0101P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)용도품계정기타출금내역검색 [wdth-50p(w960)]</span>
+              <span className="label">(P)항목코드조회 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
@@ -256,4 +242,4 @@ function HSPPC0101P01() {
   );
 }
 
-export default HSPPC0101P01;
+export default HSPPC0401P03;

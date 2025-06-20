@@ -91,7 +91,16 @@ function DEX() {
 
       {/*
       스케줄
-      2025-06-20 금 : 본부 #182 HSPDU0801P04 이후 부터~ 폐기취소(본부)
+      2025-06-23 월 : 영업점 #102
+
+      2025-06-20 금 :
+        - ing:영업점 시작 했음:
+            확인필요 후 , 월요일 06-23 완료 처리 예정:
+              1. BSPDU0301P01  버튼 ' 온누리스캔내역 조회' 등..
+              2. BSPDU0301P03: 유의사항 UI 체크확인 필요 및 버튼 ' 스캔등록 ' 의 버튼들
+
+          메모: 열쇠등록관리( STMKY0201M ) 기획업데이트 적용 완료
+        - done본부 #211 HSPDU0801P04 이후 부터~ 폐기취소(본부)
 
       2025-16-18 수 : 업데이트 내용: 모든 팝업에 modal={true} 기본: dim  처리 있음
         예외: '확인' 버튼만 있는 경우! -> modal={false}  -> 조회성 모달!
@@ -138,6 +147,13 @@ function DEX() {
 <td className="g-start">업체명 (주)앤비앤코퍼레이션</td>
 
 <td><span className="o-digit type-date">2025-12-25</span></td>
+<td><span className="o-digit type-time">00:00</span></td>
+
+<td><span className="o-digit type-date">2025-12</span></td>
+
+<td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+<td><span className="o-digit type-num">123-45-67890</span></td>
+<td><span className="o-digit type-tel">02-729-7610</span></td>
 <td><span className="o-digit type-time">00:00</span></td>
 
 <td className="g-start"></td>
@@ -220,6 +236,11 @@ function DEX() {
 화살표  &rarr;
 &lt;  &gt;
 
+<tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            </tr>
+
 */}
       {/*
       업무지원시스템 재구축 프로젝트에 사용할 템플릿 파일입니다.
@@ -234,7 +255,7 @@ function DEX() {
       2025-05-27 화
       1.특이사항: 레이블이 SelectBox [by.one]
 
-
+        [table main ] 레드 문구 HSPHS0901M
        textarea 2줄: '서류내용', '비고' : BSPDU0601P02
         input 1줄: 취소 사유 : HSPBT0301P01
          툴팁: BSPDU0101M 일련번호: th 물은표
@@ -244,7 +265,7 @@ function DEX() {
           [반반: HSPHS0201M] :
               HSPHS0901M
               BSSDM0101M: 조회 / 밑에는 반반
-              ADMPA0301M: 위에는 조회  밑에는 반반 3개 테이블
+              ADMPA0301M: 위에는 조회 full  / 밑에는 반반 3개 테이블
 
           싱글 왼쪽 반: HSPDU0701M , HSPHS2001M
 

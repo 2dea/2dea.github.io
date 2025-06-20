@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 폐기 > 중요용지일괄폐기 ~ (LP)구양식/서손폐기등록(영업점)
+ * @description 중요용지·용도품(영업점) > 폐기 > 중요용지일괄폐기 ~ 품목폐지폐기등록
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPDU0301P01() {
+function BSPDU0301P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -96,7 +96,7 @@ function BSPDU0301P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">구양식/서손폐기등록(영업점)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">품목폐지폐기등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -125,6 +125,7 @@ function BSPDU0301P01() {
                           <td colSpan={1}>
                             [0810] 부산/일반
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`폐기일자`} require={false} />
                           </th>
@@ -134,23 +135,10 @@ function BSPDU0301P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`출근번호/품목명`} require={true} />
+                            <Label label={`출근번호/품목명`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-90">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
-                                </div>
-                                <div className="binds">
-                                  <CommonButton label="온누리 스캔등록" className="_normal" />
-                                </div>
-                              </div>
-                            </div>
+                            [0810] 정액10만원권자기앞수표
                           </td>
                         </tr>
                         <tr>
@@ -158,44 +146,13 @@ function BSPDU0301P01() {
                             <Label label={`재고총수량`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="fields">
-                              <div className="o-form _input wdth-50">
-                                <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                                <span className="inner-binds">
-                                  <ImageButton label="초기화" icon="remove" />
-                                </span>
-                              </div>
-                            </div>
+                           10
                           </td>
                           <th colSpan={1}>
                             <Label label={`폐기총수량`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="fields">
-                              <div className="o-form _input">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`폐기사유`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={'self'} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            10
                           </td>
                         </tr>
                       </tbody>
@@ -206,66 +163,9 @@ function BSPDU0301P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">재고 내역</span></h4>
-                </div>
-
-                <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="table-container p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col className="wdth-10" />
-                          <col />
-                          <col />
-                          <col />
-                          <col className="wdth-0" />
-                          <col />
-                          <col />
-                        </colgroup>
-
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고수량</span></div></th>
-                            <th className="p-align-center" colSpan={4}><div className="p-column-header-content"><span className="p-column-title">재고일련번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신양식</span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td className="g-end">50</td>
-                            <td>가바</td>
-                            <td>3344785</td>
-                            <td>~</td>
-                            <td>33447900</td>
-                            <td className="g-start"></td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">폐기등록</span></h5>
 
                   <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="온누리스캔내역 조회" className="_normal" />
-                    </div>
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />
@@ -281,6 +181,12 @@ function BSPDU0301P01() {
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col className="wdth-0" />
+                          <col />
+                          <col />
                           <col />
                           <col />
                           <col />
@@ -290,18 +196,20 @@ function BSPDU0301P01() {
 
                         <thead className="p-datatable-thead">
                           <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th className="p-align-center" colSpan={4}>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고수량</span></div></th>
+                            <th className="p-align-center" colSpan={5}>
                               <div className="p-column-header-content">
                                 <span className="p-column-title">
                                   폐기일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em>
                                   <span className="binds type-tooltip">
-                                    <Tooltip className="o-tooltip" target="#BSPDU0301P01-tooltip-10" position="top">
+                                    <Tooltip className="o-tooltip" target="#BSPDU0301P02-tooltip-10" position="top">
                                       수표류: 수표번호 8자리(앞, 두 문자 기호란에 입력) <br />
                                       예) 가마 7564 3210
                                     </Tooltip>
-                                    <ImageButton id="BSPDU0301P01-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                                    <ImageButton id="BSPDU0301P02-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
                                   </span>
                                 </span>
                               </div>
@@ -311,18 +219,24 @@ function BSPDU0301P01() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
+                            <td>가바</td>
+                            <td>2022250</td>
+                            <td>~</td>
+                            <td>2022250</td>
+                            <td className="g-end">30</td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-50 g-end">
+                                  <div className="o-form _input wdth-20 g-end">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -332,7 +246,7 @@ function BSPDU0301P01() {
                             <td>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-20">
+                                  <div className="o-form _input wdth-50">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -377,9 +291,8 @@ function BSPDU0301P01() {
                     </div>
 
                     <ol className="m-bullets type-decimal level1">
-                      <li>이 거래는 서무계 재고내역에 한해서 폐기가 가능한 거래입니다. 중요용지 재고조회(일련번호 포함)화면 조회 후 확인하여 등록하세요.</li>
-                      <li>일련번호 앞자리가 '0'으로 시작하는 경우 '0' 모두 입력하세요. (폐기일련번호 입력 예시: 0001000 | 0100001)</li>
-                      <li>온누리상품권의 경우 온누리상품권 스캔등록 후 폐기등록을 입력하세요. (완료 전 스캔선택여부 'Y' 확인, 'N'일 경우 스캔내역 조회)</li>
+                      <li>재고일련번호가 존재 시에는 체크표시가 된 내역만 폐기가 됩니다.</li>
+                      <li>재고일련번호가 존재할 시 폐기는 재고일련번호 한해서만 폐기가 가능합니다.</li>
                       <li className="c-color-strong"><em>폐기 일련번호를 실물번호 그대로 입력하지 않을 경우 반송처리되니 주의해주세요.</em></li>
                     </ol>
                   </div>
@@ -424,4 +337,4 @@ function BSPDU0301P01() {
   );
 }
 
-export default BSPDU0301P01;
+export default BSPDU0301P02;

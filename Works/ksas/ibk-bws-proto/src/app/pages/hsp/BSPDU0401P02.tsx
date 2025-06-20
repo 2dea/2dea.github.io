@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 폐기 > 중요용지사고보고(영업점) ~ (LP)사고보고등록
+ * @description 중요용지·용도품(영업점) > 폐기 > 중요용지사고보고(영업점) ~ 품목폐지폐기등록
  */
 
 // dependency
@@ -96,7 +96,7 @@ function BSPDU0401P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">사고보고등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">품목폐지폐기등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
