@@ -534,15 +534,26 @@ function STMKY0201M() {
                           </th>
                           <td colSpan={3}>
                             <div className="m-flex-list">
+                              {/* .m-upload-image.type-choose { @DEV } */}
+                              {/* <div className="m-upload-image type-choose">
+                                <div className="main">
+                                  <div className="header">
+                                    <strong className="label">앞면</strong>
+                                  </div>
+                                  <div className="o-object style-fit"></div>
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="파일삭제" className="_normal" />
+                                  <CommonButton label="파일선택" className="_normal" />
+                                </div>
+                              </div> */}
+
                               <div className="m-upload-image">
                                 <div className="main">
                                   <div className="header">
                                     <strong className="label">앞면</strong>
                                   </div>
-                                  <div className="o-object style-fit">
-                                    <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-                                    <ImageButton label="열쇠​이미지​보기" icon="maximize" size={50} />
-                                  </div>
+                                  <div className="o-object style-fit"><img src={require("assets/images/common/img_empty-image.png")} alt="" /></div>
                                 </div>
                                 <div className="binds">
                                   <CommonButton label="파일삭제" className="_normal" />
@@ -555,10 +566,7 @@ function STMKY0201M() {
                                   <div className="header">
                                     <strong className="label">뒷면</strong>
                                   </div>
-                                  <div className="o-object style-fit">
-                                    <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-                                    <ImageButton label="열쇠​이미지​보기" icon="maximize" size={50} />
-                                  </div>
+                                  <div className="o-object style-fit"></div>
                                 </div>
                                 <div className="binds">
                                   <CommonButton label="파일삭제" className="_normal" />

@@ -128,7 +128,7 @@ function BSSCR0101M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">품목별 신청내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">신청정보(기간) 내역</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>

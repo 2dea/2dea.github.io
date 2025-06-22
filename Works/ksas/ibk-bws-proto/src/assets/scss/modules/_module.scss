@@ -315,7 +315,7 @@
 
 
 
-.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(16) III(16); border: $e10 dotted var(--color-edge-70); background: var(--color-ground-30); border-radius: $radius-50; transition: 0.3s; }
+.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(16) III(16); border: $e10 dashed var(--color-edge-70); background: var(--color-ground-30); border-radius: $radius-50; transition: 0.3s; }
 .o-attach .summary  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); color: var(--color-text-30); text-align: center; }
 .o-attach .binds +.summary  { margin-top: $margin-section-50; }
 
@@ -368,7 +368,7 @@
 .m-upload-image >.main .o-object .o-image-button:before  { background-position: 75%; }
 .m-upload-image >.binds  { display: flex; justify-content: center; gap: $gap-element-30; margin-top: $gap-element-50; }
 
-.m-upload-image >.main .o-object:empty  { border-style: dotted; background: var(--color-ground-30); }
+.m-upload-image >.main .o-object:empty  { border-style: dashed; background: var(--color-ground-30); }
 .m-upload-image >.main .o-object:empty:before  { content: none; }
 
 .m-upload-image.type-choose >.main >.header  { margin-bottom: 0; }
@@ -653,7 +653,7 @@
 .m-calendar-header >.main >.year >.label  { font-weight: $bold-70; font-size: $font-90; line-height: $line-90; color: var(--color-text-70); }
 .m-calendar-header >.main >.year >.bind  { order: -2; }
 .m-calendar-header >.main >.year >.bind +.bind  { margin-left: $e10; }
-.m-calendar-header >.main >.year >.bind +.bind:after  { content: ""; position: absolute; right: 100%; transform: translateX(calc(var(--gap-col) / -2)); width: $e10; height: III(10); background: var(--color-edge-40); }
+.m-calendar-header >.main >.year >.bind +.bind:after  { content: ""; position: absolute; right: 100%; transform: translateX(calc(var(--gap-col) / -2)); width: $e10; height: III(10); background: var(--color-edge-40); pointer-events: none; }
 .m-calendar-header >.main >.month  {  }
 .m-calendar-header >.main >.today  { order: -2; }
 
@@ -684,13 +684,18 @@
 
 
 
+// .m-header  { display: flex; align-items: center; justify-content: flex-end; gap: $gap-element-70; }
+// .m-header >*  { flex: 0 1 auto; min-width: 0; @include inc-ellipsis(); }
+// // .m-header >.o-heading  { flex: 1 0 0; min-height: $height-form-50; overflow: hidden; }
+// .m-header >.o-heading  { min-height: $height-form-50; }
+// .m-header >.m-binds  { gap: inherit; }
+// .m-header >:where(.o-heading, .o-helper, .m-checks, .justify-start) +:not(.o-helper, .m-checks, .justify-start)  { margin-left: auto; }
+// .m-header >:where(.o-heading, .o-helper, .m-checks, .justify-start):only-child  { flex: 1 0 0; }
 .m-header  { display: flex; align-items: center; justify-content: flex-end; gap: $gap-element-70; }
-.m-header >*  { flex: 0 1 auto; min-width: 0; @include inc-ellipsis(); }
-// .m-header >.o-heading  { flex: 1 0 0; min-height: $height-form-50; overflow: hidden; }
-.m-header >.o-heading  { min-height: $height-form-50; }
+.m-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
+.m-header >.o-heading  { flex: 0 1 auto; min-height: $height-form-50; }
 .m-header >.m-binds  { gap: inherit; }
-.m-header >:where(.o-heading, .o-helper, .m-checks, .justify-start) +:not(.o-helper, .m-checks)  { margin-left: auto; }
-.m-header >:where(.o-heading, .o-helper, .m-checks, .justify-start):only-child  { flex: 1 0 0; }
+.m-header >:where(.o-heading, .m-checks, .o-helper, .justify-start):not(:has(~.o-heading, ~.m-checks, ~.o-helper, ~.justify-start))  { margin-right: auto; }
 
 .m-header:where(.o-section >*)  { min-height: $height-form-50; }
 
