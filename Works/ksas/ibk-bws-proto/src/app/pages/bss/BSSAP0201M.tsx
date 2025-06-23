@@ -107,27 +107,24 @@ function BSSAP0201M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
+            </div>
 
-              <div className="m-binds type-end">
-                <div className="group _utility">
-                  <div className="m-print-binds">
-                    <CommonButton label="출력" className="_texted" />
-                  </div>
-                </div>
-
-                <div className="group _primary">
-                  <CommonButton label="인수증확인" className="_lined-primary" />
-                  <CommonButton label="배송업체정보" className="_lined-primary" />
-                  <CommonButton label="신청취소" className="_solid-primary" />
+            <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="출력" className="_texted" />
                 </div>
               </div>
 
+              <div className="group _primary">
+                <CommonButton label="인수증확인" className="_lined-primary" />
+                <CommonButton label="배송업체정보" className="_lined-primary" />
+                <CommonButton label="신청취소" className="_solid-primary" />
+              </div>
             </div>
-
           </div>
         </div>
 

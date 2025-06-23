@@ -355,7 +355,7 @@ function BSPDU0401M() {
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="결재선변경관리 LINK" className="_normal" />
+                              <CommonButton label="결재선변경관리" className="_texted-primary" icon="link" />
                             </div>
                             <div className="group">
                               <ImageButton label="엑셀​다운로드" icon="excel-download" />

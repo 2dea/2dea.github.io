@@ -207,7 +207,7 @@ function BSPDU0402M() {
 
                       <div className="m-binds">
                         <div className="group">
-                          <CommonButton label="결재선변경관리 LINK" className="_normal" />
+                          <CommonButton label="결재선변경관리" className="_texted-primary" icon="link" />
                         </div>
 
                         <div className="group">

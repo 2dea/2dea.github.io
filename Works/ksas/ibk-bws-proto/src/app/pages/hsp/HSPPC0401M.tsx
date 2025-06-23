@@ -286,7 +286,7 @@ function HSPPC0401M() {
                   </span>
 
                   <div className="main">
-                    <strong className="r-strong">[관리자공지]</strong> 처리완료를 통해 대금정산기본의 처리상태를 완료상태로 변경로 바꾼다.
+                    <strong className="r-strong">[관리자공지]</strong> 처리완료를 통해 대금정산기본의 처리상태를 완료상태로 변경
                   </div>
                 </div>
               </div>
@@ -444,7 +444,7 @@ function HSPPC0401M() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
+                      <CommonButton label="일괄처리 파일생성" className="_normal" icon="excel-download-label" />
                     </div>
 
                     <div className="group">

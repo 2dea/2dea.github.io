@@ -107,7 +107,7 @@ function BSSDM0201P02() {
                   <h4 className="o-heading level2"><span className="label">폐기상세정보</span></h4>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -165,7 +165,7 @@ function BSSDM0201P02() {
                               <td>본부승인</td>
                               <td className="g-end">10</td>
                               <td>홍길동</td>
-                              <td className="g-start">기타</td>
+                              <td>기타</td>
                             </tr>
                           ))}
                         </tbody>
@@ -177,7 +177,7 @@ function BSSDM0201P02() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">폐기상세정보</span></h5>
+                  <h5 className="o-heading level3"><span className="label">폐기정산정보</span></h5>
                 </div>
 
                 <div className="main">
@@ -199,15 +199,6 @@ function BSSDM0201P02() {
                                 <div className="o-form _input">
                                   <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
                                   <i aria-hidden="true"></i>
-
-                                  <div className="o-limit type-length">
-                                    <span className="head">글자수</span>
-                                    <span className="data">
-                                      <em className="value">0</em>
-                                      <span className="sep">/</span>
-                                      <span className="limits" aria-label="입력가능 글자수">100</span>
-                                    </span>
-                                  </div>
                                 </div>
                               </div>
                             </div>
