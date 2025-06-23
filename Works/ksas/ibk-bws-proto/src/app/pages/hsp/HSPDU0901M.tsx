@@ -401,7 +401,7 @@ function HSPDU0901M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기수량</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래자</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유구분</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유내용</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요청부점</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요청자</span></div></th>
