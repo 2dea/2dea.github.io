@@ -278,7 +278,7 @@
 
 
 
-.o-data  { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.o-data  { display: inline-block; vertical-align: bottom; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 
 .o-file { display: inline-flex; max-width: 100%; }
@@ -376,14 +376,16 @@
 .m-upload-image.type-choose >.main .o-object >*  { z-index: 2; }
 
 
-.m-flex-list { display: flex; flex-flow: row wrap; gap: var(--gap, #{$gap-element-50}); }
+.m-flex-list { display: flex; flex-flow: row wrap; align-items: baseline; gap: var(--gap, #{$gap-element-50}); }
 .m-flex-list >* { flex: none; min-width: 0; }
 
 .m-flex-list.axis-cols { flex-flow: column; }
 
+.m-flex-list +.m-flex-list  { margin-top: $gap-element-50; }
+
 .m-flex-list >.o-icon { outline: 1px solid Orange; outline-offset: 1px; }
 
-.m-flex-list:has(>.m-upload-image) { --gap: #{$gap-element-80}; }
+.m-flex-list:has(>.m-upload-image) { --gap: #{$gap-element-80}; align-items: normal; }
 .m-flex-list:has(>.m-upload-image):where(.m-data-form >* >* >tr >* >*) { padding: $gap-element-30 0; }
 
 
@@ -484,7 +486,20 @@
 
 
 /** Chips */
-.o-chip  { font-size: $font-40; line-height: $line-40; display: flex; align-items: center; padding: III(3) III(8); background: var(--color-ground-70); border-radius: $radius-abs-999; }
+.o-chip  { display: inline-flex; align-items: center; min-width: 1em; padding: III(2) III(7); border: $e10 solid currentColor; color: var(--theme); background: var(--color-ground); border-radius: $radius-abs-999; }
+
+.o-chip:is([class*=" var-lined"])  { background-color: var(--color-ground); }
+.o-chip:is([class*=" var-solid"])  { border-color: $tp; color: var(--color-ground); background-color: var(--theme, Black); }
+.o-chip:is([class*="-00"])  { --theme: var(--color-ground-90); }
+.o-chip:is([class*="-01"])  { --theme: var(--color-key1-40); }
+.o-chip:is([class*="-02"])  { --theme: var(--color-point-orange); }
+.o-chip:is(.var-lined-00)  { border-color: var(--color-edge-40); color: var(--color-text-30); }
+.o-chip:is(.var-solid-00)  { color: var(--color-text-40); }
+.o-chip:is(.var-lined-01)  { border-color: var(--color-edge2-blue-30); background-color: var(--color-ground2-blue-30); }
+
+.o-chip.size-30  { font-size: $font-40; line-height: $line-40; padding: III(0) III(5); }
+.o-chip.size-50  { font-size: $font-40; line-height: $line-40; }
+.o-chip.size-70  { font-size: $font-50; line-height: $line-50; }
 
 .m-chips  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-50; }
 
@@ -524,6 +539,7 @@
   .o-digit.type-tel,
   .o-digit.type-num,
   .o-digit[class*=" type-"]  { white-space: nowrap; }
+  .o-digit[class*=" type-"]  { @include inc-ellipsis(); display: inline-block; vertical-align: bottom; max-width: 100%; overflow: hidden; }
 
 
 .o-find-mark  { background-color: var(--color-ground2-blue-40); border-radius: $radius-abs-20; outline: 0; }
@@ -718,10 +734,9 @@
 .m-defines  { display: flex; flex-wrap: wrap; gap: $gap-element-70 $gap-element-80; }
 .m-defines >.group  { display: flex; align-items: center; }
 .m-defines >.group >.head  { font-weight: $bold-70; margin-right: $gap-element-70; color: var(--color-text-70); }
-.m-defines >.group >.head  { font-weight: $bold-70; margin-right: $gap-element-70; color: var(--color-text-70); }
 .m-defines >.group >.data +*  { margin-left: $gap-element-70; }
 
-.m-defines:where(.o-board *) >.group >:not(:has(.o-heading))  { font-size: $font-40; line-height: $line-40; }
+.m-defines:where(.o-board *) >.group >.head:not(:has(.o-heading))  { font-size: $font-40; line-height: $line-40; }
 
 
 .o-board  {

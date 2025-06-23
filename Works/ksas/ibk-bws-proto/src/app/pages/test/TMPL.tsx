@@ -208,13 +208,43 @@ function TMPL() {
                   <dl className="m-defines">
                     <div className="group">
                       <dt className="head">신청부점</dt>
-                      <dd className="data">[0034] 을지로</dd>
-                      <dd className="data">2025-01-21</dd>
+                      <dd className="data">
+                        [0034] 을지로
+                      </dd>
+                      <dd className="data">
+                        2025-01-21
+                      </dd>
                     </div>
 
                     <div className="group">
                       <dt className="head">신청자</dt>
-                      <dd className="data">[000000] 홍길동</dd>
+                      <dd className="data">
+                        [000000] 홍길동
+                      </dd>
+                    </div>
+
+                    <div className="group">
+                      <dt className="head">신청연도</dt>
+                      <dd className="data">
+                        <em className="o-chip var-lined-01"><span className="label">2025년</span></em>
+                      </dd>
+                    </div>
+
+                    <div className="group">
+                      <dt className="head">신청상태</dt>
+                      <dd className="data">
+                        <em className="o-chip var-lined-01"><span className="label">신청마감</span></em>
+                      </dd>
+                    </div>
+
+                    <div className="group">
+                      <dt className="head">고객정보입력</dt>
+                      <dd className="data">
+                        <div className="m-checks">
+                          <InputRadio name="RADIO_20" label="신청" defaultChecked />
+                          <InputRadio name="RADIO_20" label="미신청" />
+                        </div>
+                      </dd>
                     </div>
                   </dl>
                 </div>
@@ -912,6 +942,37 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
+                              <Label label={`.o-chip`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-flex-list">
+                                <em className="o-chip var-lined-00 size-30"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-00 size-30"><span className="label">레이블</span></em>
+                                <em className="o-chip var-lined-01 size-30"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-01 size-30"><span className="label">레이블</span></em>
+                                <em className="o-chip var-lined-02 size-30"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-02 size-30"><span className="label">레이블</span></em>
+                              </div>
+                              <div className="m-flex-list">
+                                <em className="o-chip var-lined-00 size-50"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-00 size-50"><span className="label">레이블</span></em>
+                                <em className="o-chip var-lined-01 size-50"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-01 size-50"><span className="label">레이블</span></em>
+                                <em className="o-chip var-lined-02 size-50"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-02 size-50"><span className="label">레이블</span></em>
+                              </div>
+                              <div className="m-flex-list">
+                                <em className="o-chip var-lined-00 size-70"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-00 size-70"><span className="label">레이블</span></em>
+                                <em className="o-chip var-lined-01 size-70"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-01 size-70"><span className="label">레이블</span></em>
+                                <em className="o-chip var-lined-02 size-70"><span className="label">레이블</span></em>
+                                <em className="o-chip var-solid-02 size-70"><span className="label">레이블</span></em>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
                               <Label label={`.o-rich-text`} require={false} />
                             </th>
                             <td colSpan={5}>
@@ -947,6 +1008,10 @@ function TMPL() {
                               <div className="m-header">
 
                                 <div className="m-binds">
+                                  <div className="group">
+                                    <CommonButton label="결재선변경관리" className="_texted-primary" icon="link" />
+                                  </div>
+
                                   <div className="group">
                                     <CommonButton label="행추가" className="_normal" />
                                     <CommonButton label="행복사" className="_normal" />
