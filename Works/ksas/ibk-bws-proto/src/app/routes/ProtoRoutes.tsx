@@ -217,7 +217,7 @@ import BEXPM0601M from 'app/pages/bex/BEXPM0601M';      // 행내등기·우편�
 import BEXPM0301M from 'app/pages/bex/BEXPM0301M';      // 행내등기·우편물 > 우편물   > 우편물검수
 import BEXPM0301P01 from 'app/pages/bex/BEXPM0301P01';  // 행내등기·우편물 > 우편물   > 우편물검수 ~ (LP)우편물일괄검수등록
 
-import BEXPM0401M from 'app/pages/bex/BEXPM0401M';      // 행내등기·우편물 > 우편물   > 우편물발송처리결과
+import BEXPM0401M from 'app/pages/bex/BEXPM0401M';      // 행내등기·우편물 > 우편물   > 우편물처리결과
 import BEXPM0501M from 'app/pages/bex/BEXPM0501M';      // 행내등기·우편물 > 우편물   > 등기번호등록/조회
 
 
@@ -294,8 +294,8 @@ import BSSAP0201M from 'app/pages/bss/BSSAP0201M';     // 영업지원 > A4용�
 import BSSAP0201P01 from 'app/pages/bss/BSSAP0201P01'; // 영업지원 > A4용지관리 > A4용지인수 ~ (LP)배송업체관리
 import BSSAP0201P02 from 'app/pages/bss/BSSAP0201P02'; // 영업지원 > A4용지관리 > A4용지인수 ~ (LP)배송업체정보
 
-import BSSDM0101M from 'app/pages/bss/BSSDM0101M';     // 영업지원 > 문서관리	 > 문서열람
-import BSSDM0201M from 'app/pages/bss/BSSDM0201M';     // 영업지원 > 문서관리	 > 문서열람
+import BSSDM0101M from 'app/pages/bss/BSSDM0101M';     // 영업지원 > 문서관리	 > 문서열람신청
+import BSSDM0201M from 'app/pages/bss/BSSDM0201M';     // 영업지원 > 문서관리	 > 문서대량폐기
 import BSSDM0201P01 from 'app/pages/bss/BSSDM0201P01'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기승인
 import BSSDM0201P02 from 'app/pages/bss/BSSDM0201P02'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기정산
 import BSSDM0201P03 from 'app/pages/bss/BSSDM0201P03'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기정보입력

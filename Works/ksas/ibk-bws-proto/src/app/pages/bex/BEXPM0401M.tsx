@@ -1,5 +1,5 @@
 /**
- * @description 행내등기·우편물 > 우편물 > 우편물발송처리결과
+ * @description 행내등기·우편물 > 우편물 > 우편물처리결과
  */
 
 // dependency
@@ -39,7 +39,7 @@ function BEXPM0401M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물발송처리결과' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물처리결과' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -93,7 +93,7 @@ function BEXPM0401M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">우편물발송처리결과</span>
+                <span className="label">우편물처리결과</span>
 
                 <Favorite />
               </h1>

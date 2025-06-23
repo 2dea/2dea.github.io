@@ -1,5 +1,5 @@
 /**
- * @description 영업지원 > 문서관리 > 문서열람
+ * @description 영업지원 > 문서관리 > 문서열람신청
  */
 
 // dependency
@@ -44,7 +44,7 @@ function BSSDM0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '문서관리' }, { label: '문서열람' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '문서관리' }, { label: '문서열람신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function BSSDM0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">문서열람</span>
+                <span className="label">문서열람신청</span>
 
                 <Favorite />
               </h1>
