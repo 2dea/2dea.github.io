@@ -657,6 +657,43 @@
 .m-bullets >:has(.o-consult)  { color: $color-text-70; }
 
 
+.o-steps  {  --theme: var(--color-key1-40); display: flex; }
+.o-steps >*  { display: flex; position: relative; }
+
+.o-steps .order  { position: relative; border-radius: 50%; }
+.o-steps .order:after  { content: ""; position: absolute; z-index: 2; left: 0; top: 0; transform: translate(III(-3), III(-3)); width: III(30); height: III(30); border: $e10 solid var(--theme); background: var(--color-ground); pointer-events: none; }
+.o-steps .order .count  { font-weight: $bold-70; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; width: III(24); height: III(24); border: $e10 solid $tp; color: var(--color-text-00); background: var(--theme); border-radius: inherit; }
+.o-steps .order .count:after  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+.o-steps .order .count:after  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
+.o-steps .order .count:after  { content: "check"; font-size: III(18); display: flex; align-items: center; justify-content: center; position: absolute; left: 0; top: 0; width: 100%; max-width: none; height: 100%; background-color: inherit; }
+.o-steps .order .suffix  { @include getGlobalHidden(); }
+
+.o-steps >:not([aria-label="진행 완료"]) .order .count:after  { opacity: 0.0; }
+.o-steps >:is([aria-label="진행 단계"]) .order .count  { z-index: 3; }
+.o-steps >:is([aria-label="진행 단계"]) .label .main  { font-weight: $bold-70; color: var(--theme); }
+.o-steps >:not([aria-label="진행 단계"]) .order:after  { opacity: 0.0; }
+.o-steps >:is([aria-label="진행 예정"]) .order .count  { border-color: var(--color-edge-40); color: var(--color-text-20); background-color: var(--color-ground); }
+.o-steps >:is([aria-label="진행 예정"]) .label .main  { color: var(--color-text-disabled); }
+
+.o-steps:where(.axis-cols)  { flex-direction: column; }
+.o-steps:where(.axis-cols) >*  { gap: $gap-element-70; }
+.o-steps:where(.axis-cols) .order  { width: III(24); min-height: III(24); }
+// .o-steps:where(.axis-cols) .order .count  { position: absolute; margin-top: calc((III(20) - III(24)) / 2) }
+.o-steps:where(.axis-cols) .label .main  { font-size: $font-70; line-height: $line-70; display: block; padding: calc((III(24) - III(20)) / 2) 0; }
+
+.o-steps:where(.axis-cols) >:not(:last-child) .order:before  { content: ""; position: absolute; left: 50%; top: $e10; margin-right: III(0.5); width: $e10; height: 100%; background: var(--color-edge-40); }
+.o-steps:where(.axis-cols) >:not(:last-child) .label  { padding-bottom: III(30); }
+
+
+
+.m-step-form  { display: flex; border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
+.m-step-form >*  { flex: none; min-width: 0; padding: calc($margin-section-70 - $e10) calc($margin-section-70 - $e10); }
+.m-step-form >:first-child  { border-start-start-radius: inherit; border-end-start-radius: inherit; }
+.m-step-form >:last-child  { border-start-end-radius: inherit; border-end-end-radius: inherit; }
+.m-step-form >.steps  { display: flex; align-items: center; flex-direction: column; justify-content: center; padding: calc($margin-section-70 - $e10) calc($margin-section-80 - $e10); background: var(--color-ground-40); }
+.m-step-form >.fieldset  { flex: 1 0 0; }
+.m-step-form >.fieldset.size-3  { min-height: III(282); }
+
 
 
 
@@ -1939,7 +1976,11 @@
 .m-filter-form:not(:only-child)  { margin-bottom: $margin-section-50; }
 .m-filter-form:has(+.o-board.style-fit)  { margin-bottom: $margin-section-20; }
 
-.o-board.style-fit:has(~.m-filter-form)  { margin-bottom: $margin-section-20; }
+.o-board:has(+.o-board)  { margin-bottom: 0; }
+.o-board +.o-board  { margin-top: $margin-section-20; }
+// .o-board.style-fit:has(+.m-filter-form)  { margin-bottom: $margin-section-20; }
+.o-board:has(+.m-filter-form)  { margin-bottom: $margin-section-20; }
+.o-board:has(+.m-step-form)  { margin-bottom: $margin-section-20; }
 
 .m-tab:not(:only-child).type1  { margin-bottom: $margin-section-50; }
 .m-tab:not(:only-child).type2  { margin-bottom: $margin-section-30; }

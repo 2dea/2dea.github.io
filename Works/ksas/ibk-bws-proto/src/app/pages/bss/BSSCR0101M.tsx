@@ -130,18 +130,13 @@ function BSSCR0101M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">신청정보(기간) 내역</span></h2>
 
-                  <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
-                    </em>
-                  </div>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록출력" icon="print" />
+                  <div className="o-field">
+                    <Label label={`신청연도`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select wdth-40">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -170,17 +165,23 @@ function BSSCR0101M() {
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청연도</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소속</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">차수</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청상태</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가여부</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청기간</span></div></th>
+                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송기간</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종등록자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종거래일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                           </tr>
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">마감여부</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
@@ -188,7 +189,7 @@ function BSSCR0101M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={16}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -196,20 +197,319 @@ function BSSCR0101M() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>0465</td>
                             <td>2025</td>
-                            <td className="g-start">중부지역본부</td>
-                            <td>일반</td>
-                            <td>신청</td>
-                            <td>결재승인</td>
-                            <td>10000</td>
+                            <td>1</td>
+                            <td>인수완료</td>
+                            <td>N</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>Y</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>00000</td>
                             <td>홍길동</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>벽걸이달력(3단)</td>
+                            <td className="g-start"></td>
                           </tr>
                         ))}
                         </tbody>
                       </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">차수별 진행단계</span></h3>
+
+                  <div className="m-checks">
+                    <InputRadio name="RADIO_10" label="신청" />
+                    <InputRadio name="RADIO_10" label="배송·인수" defaultChecked />
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="차수생성" className="_create" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main">
+                  <div className="o-board type-b">
+                    <dl className="m-defines">
+                      <div className="group">
+                        <dt className="head">신청연도</dt>
+                        <dd className="data">
+                          <em className="o-chip var-lined-01"><span className="label">2025년</span></em>
+                        </dd>
+                      </div>
+
+                      <div className="group">
+                        <dt className="head">신청상태</dt>
+                        <dd className="data">
+                          <em className="o-chip var-lined-01"><span className="label">신청마감</span></em>
+                        </dd>
+                      </div>
+
+                      <div className="group">
+                        <dt className="head">고객정보입력</dt>
+                        <dd className="data">
+                          <div className="m-checks">
+                            <InputRadio name="RADIO_20" label="신청" defaultChecked />
+                            <InputRadio name="RADIO_20" label="미신청" />
+                          </div>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div className="m-step-form">
+                    <div className="steps">
+                      <ol className="o-steps axis-cols">
+                        <li aria-label="진행 완료">
+                          <span className="order" aria-hidden="true">
+                            <span className="prefix"></span>
+                            <span className="count">1</span>
+                            <span className="suffix">단계. </span>
+                          </span>
+                          <span className="label">
+                            <em className="main">신청등록</em>
+                          </span>
+                        </li>
+                        <li aria-label="진행 단계">
+                          <span className="order" aria-hidden="true">
+                            <span className="prefix"></span>
+                            <span className="count">2</span>
+                            <span className="suffix">단계. </span>
+                          </span>
+                          <span className="label">
+                            <em className="main">신청마감</em>
+                          </span>
+                        </li>
+                        <li aria-label="진행 예정">
+                          <span className="order" aria-hidden="true">
+                            <span className="prefix"></span>
+                            <span className="count">3</span>
+                            <span className="suffix">단계. </span>
+                          </span>
+                          <span className="label">
+                            <em className="main">배송등록</em>
+                          </span>
+                        </li>
+                        <li aria-label="진행 예정">
+                          <span className="order" aria-hidden="true">
+                            <span className="prefix"></span>
+                            <span className="count">4</span>
+                            <span className="suffix">단계. </span>
+                          </span>
+                          <span className="label">
+                            <em className="main">인수완료</em>
+                          </span>
+                        </li>
+                      </ol>
+                    </div>
+
+                    <div className="fieldset size-3">
+
+                      <div className="o-section">
+                        <div className="m-header">
+                          <h4 className="o-heading level4"><span className="label">신청등록</span></h4>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="신청마감취소" className="_lined-primary" />
+                              <CommonButton label="마감" className="_solid-primary" disabled />
+                              <CommonButton label="저장" className="_solid-primary" disabled />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="main">
+                          <div className="m-data-form">
+                            <table className="table">
+                              <colgroup>
+                                <col className="head" />
+                                <col className="data" />
+                                <col className="head" />
+                                <col className="data" />
+                                <col className="head" />
+                                <col className="data" />
+                              </colgroup>
+
+                              <tbody>
+                                <tr>
+                                  <th colSpan={1}>
+                                    <Label label={`신청시작일자`} require={true} />
+                                  </th>
+                                  <td colSpan={1}>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-date mode-required wdth-50">
+                                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
+                                          <i aria-hidden="true"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <th colSpan={1}>
+                                    <Label label={`신청종료일자`} require={true} />
+                                  </th>
+                                  <td colSpan={1}>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-date mode-required wdth-50">
+                                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
+                                          <i aria-hidden="true"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <th colSpan={1}>
+                                    <Label label={`등록일자`} require={false} />
+                                  </th>
+                                  <td colSpan={1}>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-date wdth-50">
+                                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
+                                          <i aria-hidden="true"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-section">
+                        <div className="m-header">
+                          <h4 className="o-heading level4"><span className="label">배송등록</span></h4>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="배송등록취소" className="_lined-primary" disabled />
+                              <CommonButton label="저장" className="_solid-primary" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="main">
+                          <div className="m-data-form">
+                            <table className="table">
+                              <colgroup>
+                                <col className="head" />
+                                <col className="data" />
+                                <col className="head" />
+                                <col className="data" />
+                                <col className="head" />
+                                <col className="data" />
+                              </colgroup>
+
+                              <tbody>
+                                <tr>
+                                  <th colSpan={1}>
+                                    <Label label={`배송시작일자`} require={true} />
+                                  </th>
+                                  <td colSpan={1}>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-date mode-required wdth-50">
+                                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                          <i aria-hidden="true"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <th colSpan={1}>
+                                    <Label label={`배송종료일자`} require={true} />
+                                  </th>
+                                  <td colSpan={1}>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-date mode-required wdth-50">
+                                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                          <i aria-hidden="true"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                  <th colSpan={1}>
+                                    <Label label={`등록일자`} require={false} />
+                                  </th>
+                                  <td colSpan={1}>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-date wdth-50">
+                                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
+                                          <i aria-hidden="true"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-section">
+                        <div className="m-header">
+                          <h4 className="o-heading level4"><span className="label">인수등록</span></h4>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="인수등록취소" className="_lined-primary" disabled />
+                              <CommonButton label="저장" className="_solid-primary" disabled />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="main">
+                          <div className="m-data-form">
+                            <table className="table">
+                              <colgroup>
+                                <col className="head" />
+                                <col className="data" />
+                                <col className="head" />
+                                <col className="data" />
+                                <col className="head" />
+                                <col className="data" />
+                              </colgroup>
+
+                              <tbody>
+                                <tr>
+                                  <th colSpan={1}>
+                                    <Label label={`등록일자`} require={true} />
+                                  </th>
+                                  <td colSpan={5}>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-date wdth-50">
+                                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
+                                          <i aria-hidden="true"></i>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+
                     </div>
                   </div>
                 </div>
