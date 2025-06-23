@@ -54,38 +54,38 @@ import FMTFF0101M from 'app/pages/fmt/FMTFF0101M';      // 자금현수송 > 외
 
 
 // proto 중요용지·용도품(본부)
-import BSPRQ0201M from 'app/pages/hsp/BSPRQ0201M';      // 중요용지·용도품(영업점) > 신청  > 중요용지신청내역
-import BSPRQ0301M from 'app/pages/hsp/BSPRQ0301M';      // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정
-import BSPRQ0301P02 from 'app/pages/hsp/BSPRQ0301P02';  // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정 > (LP)자동배송 신청 이력 조회
+import BSPRQ0201M from 'app/pages/bsp/BSPRQ0201M';      // 중요용지·용도품(영업점) > 신청  > 중요용지신청내역
+import BSPRQ0301M from 'app/pages/bsp/BSPRQ0301M';      // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정
+import BSPRQ0301P02 from 'app/pages/bsp/BSPRQ0301P02';  // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정 > (LP)자동배송 신청 이력 조회
 
-import BSPRQ0501M from 'app/pages/hsp/BSPRQ0501M';      // 중요용지·용도품(영업점) > 신청  > 용도품신청내역
+import BSPRQ0501M from 'app/pages/bsp/BSPRQ0501M';      // 중요용지·용도품(영업점) > 신청  > 용도품신청내역
 
-import BSPFD0101M from 'app/pages/hsp/BSPFD0101M';      // 중요용지·용도품(영업점) > 조회  > 중요용지재고조회
-import BSPFD0301M from 'app/pages/hsp/BSPFD0301M';      // 중요용지·용도품(영업점) > 조회  > 창구사용내역조회
-import BSPFD0401M from 'app/pages/hsp/BSPFD0401M';      // 중요용지·용도품(영업점) > 조회  > 서무계수급내역조회
-import BSPFD0501M from 'app/pages/hsp/BSPFD0501M';      // 중요용지·용도품(영업점) > 조회  > 서무계수급내역조회
-import BSPFD0601M from 'app/pages/hsp/BSPFD0601M';      // 중요용지·용도품(영업점) > 조회  > 출급번호별사용량조회
-import BSPFD0701M from 'app/pages/hsp/BSPFD0701M';      // 중요용지·용도품(영업점) > 조회  > 수표발급점포조회
-import BSPFD0801M from 'app/pages/hsp/BSPFD0801M';      // 중요용지·용도품(영업점) > 조회  > 일련번호별거래내역조회
-import BSPFD0901M from 'app/pages/hsp/BSPFD0901M';      // 중요용지·용도품(영업점) > 조회  > 일련번호원장수정
+import BSPFD0101M from 'app/pages/bsp/BSPFD0101M';      // 중요용지·용도품(영업점) > 조회  > 중요용지재고조회
+import BSPFD0301M from 'app/pages/bsp/BSPFD0301M';      // 중요용지·용도품(영업점) > 조회  > 창구사용내역조회
+import BSPFD0401M from 'app/pages/bsp/BSPFD0401M';      // 중요용지·용도품(영업점) > 조회  > 서무계수급내역조회
+import BSPFD0501M from 'app/pages/bsp/BSPFD0501M';      // 중요용지·용도품(영업점) > 조회  > 서무계수급내역조회
+import BSPFD0601M from 'app/pages/bsp/BSPFD0601M';      // 중요용지·용도품(영업점) > 조회  > 출급번호별사용량조회
+import BSPFD0701M from 'app/pages/bsp/BSPFD0701M';      // 중요용지·용도품(영업점) > 조회  > 수표발급점포조회
+import BSPFD0801M from 'app/pages/bsp/BSPFD0801M';      // 중요용지·용도품(영업점) > 조회  > 일련번호별거래내역조회
+import BSPFD0901M from 'app/pages/bsp/BSPFD0901M';      // 중요용지·용도품(영업점) > 조회  > 일련번호원장수정
 
-import BSPAQ0101M from 'app/pages/hsp/BSPAQ0101M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지인수
-import BSPAQ0101P01 from 'app/pages/hsp/BSPAQ0101P01';  // 중요용지·용도품(영업점) > 인수도 > 중요용지인수 > (LP)대량폐기결정
-import BSPAQ0201M from 'app/pages/hsp/BSPAQ0201M';      // 중요용지·용도품(영업점) > 인수도 > 용도품인수
-import BSPAQ0301M from 'app/pages/hsp/BSPAQ0301M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지서무계 → 창구
-import BSPAQ0401M from 'app/pages/hsp/BSPAQ0401M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지창구 → 서무계
-import BSPAQ0501M from 'app/pages/hsp/BSPAQ0501M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지타지점인도
+import BSPAQ0101M from 'app/pages/bsp/BSPAQ0101M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지인수
+import BSPAQ0101P01 from 'app/pages/bsp/BSPAQ0101P01';  // 중요용지·용도품(영업점) > 인수도 > 중요용지인수 > (LP)대량폐기결정
+import BSPAQ0201M from 'app/pages/bsp/BSPAQ0201M';      // 중요용지·용도품(영업점) > 인수도 > 용도품인수
+import BSPAQ0301M from 'app/pages/bsp/BSPAQ0301M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지서무계 → 창구
+import BSPAQ0401M from 'app/pages/bsp/BSPAQ0401M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지창구 → 서무계
+import BSPAQ0501M from 'app/pages/bsp/BSPAQ0501M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지타지점인도
 
-import BSPDU0101M from 'app/pages/hsp/BSPDU0101M';      // 중요용지·용도품(영업점) > 폐기    > 오손등록
-import BSPDU0601M from 'app/pages/hsp/BSPDU0601M';      // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록
-import BSPDU0601P02 from 'app/pages/hsp/BSPDU0601P02';  // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록 ~ (LP)오손발송(행내등기신청)
-import BSPDU0201M from 'app/pages/hsp/BSPDU0201M';      // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회
-import BSPDU0201P02 from 'app/pages/hsp/BSPDU0201P02';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손이력조회
-import BSPDU0601P01 from 'app/pages/hsp/BSPDU0601P01';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손사유변경
-import BSPDU0301M from 'app/pages/hsp/BSPDU0301M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기
-import BSPDU0301P01 from 'app/pages/hsp/BSPDU0301P01';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ (LP)구양식/서손폐기등록(영업점)
+import BSPDU0101M from 'app/pages/bsp/BSPDU0101M';      // 중요용지·용도품(영업점) > 폐기    > 오손등록
+import BSPDU0601M from 'app/pages/bsp/BSPDU0601M';      // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록
+import BSPDU0601P02 from 'app/pages/bsp/BSPDU0601P02';  // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록 ~ (LP)오손발송(행내등기신청)
+import BSPDU0201M from 'app/pages/bsp/BSPDU0201M';      // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회
+import BSPDU0201P02 from 'app/pages/bsp/BSPDU0201P02';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손이력조회
+import BSPDU0601P01 from 'app/pages/bsp/BSPDU0601P01';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손사유변경
+import BSPDU0301M from 'app/pages/bsp/BSPDU0301M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기
+import BSPDU0301P01 from 'app/pages/bsp/BSPDU0301P01';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ (LP)구양식/서손폐기등록(영업점)
 
-import BSPDU0401P02 from 'app/pages/hsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점) ~ (LP)사고보고등록
+import BSPDU0401P02 from 'app/pages/bsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점) ~ (LP)사고보고등록
 
 
 import BSPDU0301P02 from 'app/pages/bsp/BSPDU0301P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ 품목폐지폐기등록
