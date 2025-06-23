@@ -85,7 +85,12 @@ import BSPDU0601P01 from 'app/pages/bsp/BSPDU0601P01';  // 중요용지·용도�
 import BSPDU0301M from 'app/pages/bsp/BSPDU0301M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기
 import BSPDU0301P01 from 'app/pages/bsp/BSPDU0301P01';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ (LP)구양식/서손폐기등록(영업점)
 
+
+import BSPDU0401M from 'app/pages/bsp/BSPDU0401M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점)
 import BSPDU0401P02 from 'app/pages/bsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점) ~ (LP)사고보고등록
+import BSPDU0402M from 'app/pages/bsp/BSPDU0402M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(본부)
+
+
 
 
 import BSPDU0301P02 from 'app/pages/bsp/BSPDU0301P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ 품목폐지폐기등록
@@ -286,10 +291,21 @@ import STMFL0501M from 'app/pages/stm/STMFL0501M';       // 재난·안전관리
 
 // proto 영업지원
 import BSSAP0201M from 'app/pages/bss/BSSAP0201M';     // 영업지원 > A4용지관리 > A4용지인수
+import BSSAP0201P01 from 'app/pages/bss/BSSAP0201P01'; // 영업지원 > A4용지관리 > A4용지인수 ~ (LP)배송업체관리
+import BSSAP0201P02 from 'app/pages/bss/BSSAP0201P02'; // 영업지원 > A4용지관리 > A4용지인수 ~ (LP)배송업체정보
+
 import BSSDM0101M from 'app/pages/bss/BSSDM0101M';     // 영업지원 > 문서관리	 > 문서열람
 import BSSDM0201M from 'app/pages/bss/BSSDM0201M';     // 영업지원 > 문서관리	 > 문서열람
 import BSSDM0201P01 from 'app/pages/bss/BSSDM0201P01'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기승인
 import BSSDM0201P02 from 'app/pages/bss/BSSDM0201P02'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기정산
+import BSSDM0201P03 from 'app/pages/bss/BSSDM0201P03'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기정보입력
+import BSSDM0201P04 from 'app/pages/bss/BSSDM0201P04'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기반려
+
+import BSSLQ0201M from 'app/pages/bss/BSSLQ0201M';     // 영업지원 > 대량신규  > 대량신규신청
+import BSSLQ0101M from 'app/pages/bss/BSSLQ0101M';     // 영업지원 > 대량신규  > 대량신규승인
+import BSSLQ0101P01 from 'app/pages/bss/BSSLQ0101P01'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)대량신규승인
+import BSSLQ0101P04 from 'app/pages/bss/BSSLQ0101P04'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)반려좌수상세보기
+
 
 import BSSCR0101M from 'app/pages/bss/BSSCR0101M';     // 영업지원 > 캘린더신청 > 신청기간관리
 import BSSCR0101P01 from 'app/pages/bss/BSSCR0101P01'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)공지이미지관리
@@ -431,7 +447,9 @@ function ProtoRoutes() {
         { path: 'BSPDU0301P02', element: <BSPDU0301P02 /> },
         { path: 'BSPDU0301P03', element: <BSPDU0301P03 /> },
 
+        { path: 'BSPDU0401M', element: <BSPDU0401M /> },
         { path: 'BSPDU0401P02', element: <BSPDU0401P02 /> },
+        { path: 'BSPDU0402M', element: <BSPDU0402M /> },
 
         { path: 'HSPBT0101M',   element: <HSPBT0101M /> },
         { path: 'HSPBT0101P01', element: <HSPBT0101P01 /> },
@@ -635,14 +653,29 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'BSSAP0201M',   element: <BSSAP0201M /> },
+        { path: 'BSSAP0201P01', element: <BSSAP0201P01 /> },
+        { path: 'BSSAP0201P02', element: <BSSAP0201P02 /> },
+
         { path: 'BSSDM0101M',   element: <BSSDM0101M /> },
         { path: 'BSSDM0201M',   element: <BSSDM0201M /> },
 
         { path: 'BSSDM0201P01', element: <BSSDM0201P01 /> },
         { path: 'BSSDM0201P02', element: <BSSDM0201P02 /> },
+        { path: 'BSSDM0201P03', element: <BSSDM0201P03 /> },
+        { path: 'BSSDM0201P04', element: <BSSDM0201P04 /> },
+
+
+
+        { path: 'BSSLQ0201M',   element: <BSSLQ0201M /> },
+        { path: 'BSSLQ0101M',   element: <BSSLQ0101M /> },
+
+        { path: 'BSSDM0201P01', element: <BSSDM0201P01 /> },
+
+        { path: 'BSSLQ0101P01', element: <BSSLQ0101P01 /> },
+
+        { path: 'BSSLQ0101P04', element: <BSSLQ0101P04 /> },
 
         { path: 'BSSCR0101M',   element: <BSSCR0101M /> },
-        { path: 'BSSCR0101P01', element: <BSSCR0101P01 /> },
         { path: 'BSSCR0101P02', element: <BSSCR0101P02 /> },
         { path: 'BSSCR0101P03', element: <BSSCR0101P03 /> },
         { path: 'BSSCR0201M',   element: <BSSCR0201M /> },

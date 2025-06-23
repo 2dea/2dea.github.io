@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 대금정산 > 업체직배송품목정산 ~ (LP)사업조회
+ * @description 영업지원 > A4용지관리 > A4용지인수 ~ (LP)배송업체정보
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPPC0401P01() {
+function BSSAP0201P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -87,7 +87,7 @@ function HSPPC0401P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -96,95 +96,40 @@ function HSPPC0401P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">사업조회</span></h3>}
+        header={<h3 className="o-heading"><span className="label">배송업체정보</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
-              <form className="m-filter-form">
-                <div className="fieldset">
+              <div className="o-section">
 
-                  <div className="o-field">
-                    <Label label={`사업연도`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input type-date wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled/>
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
 
-                  <div className="o-field">
-                    <Label label={`부점`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} readOnly />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`예산구분`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`사업코드`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`사업명/세부사업명`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field colspan-2">
-                    <Label label={`비목`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input wdth-40">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="검색" icon="search" />
-                        </span>
-                      </div>
-                      <div className="o-form _input wdth-auto">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`기준연도`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
                 </div>
-
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
-                </div>
-              </form>
+              </div>
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">자료생성</span></h4>
+                  <h4 className="o-heading level2"><span className="label">등록내역</span></h4>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -208,26 +153,26 @@ function HSPPC0401P01() {
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
+                          <col className="wdth-10" />
                           <col />
                           <col />
                           <col />
+                          <col className="wdth-auto" />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세부</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세부사업명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비목</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비목명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">한도잔액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준연도</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체주소</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">담당자명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이메일주소</span></div></th>
                           </tr>
                         </thead>
 
@@ -240,14 +185,14 @@ function HSPPC0401P01() {
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>1111605</td>
-                            <td className="g-start">(직원행복부 급여운영팀) 단신</td>
-                            <td>전체</td>
-                            <td>11</td>
-                            <td className="g-start">금융거래정보 중계 및 통보업무</td>
-                            <td>1111605</td>
-                            <td className="g-start">냉난방비</td>
-                            <td className="g-end">131,2222,222</td>
+                            <td>{idx + 1}</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>서울시 외</td>
+                            <td className="g-start">업체명 (주)앤비앤코퍼레이션</td>
+                            <td className="g-start">서울특별시 서초구 서초대로 77길 17</td>
+                            <td>홍길동</td>
+                            <td><span className="o-digit type-tel">010-1234-5678</span></td>
+                            <td className="g-start">abc002@naver.com</td>
                           </tr>
                         ))}
                         </tbody>
@@ -264,8 +209,7 @@ function HSPPC0401P01() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="선택" className="_solid-primary" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -275,7 +219,7 @@ function HSPPC0401P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)사업조회 [wdth-50p(w960)]</span>
+              <span className="label">(P)배송업체정보 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>
@@ -294,4 +238,4 @@ function HSPPC0401P01() {
   );
 }
 
-export default HSPPC0401P01;
+export default BSSAP0201P02;

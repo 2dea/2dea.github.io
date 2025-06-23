@@ -91,7 +91,13 @@ function DEX() {
 
       {/*
       스케줄
-      2025-06-23 월 : 영업점 #102
+      2025-06-24 화 : BSSLQ0101M 대량신규승인 [영업지원] #46 부터~
+      2025-06-23 월 :
+            1. [영업지원] 시작~! , ' 서식장부관리 ' 외 모두 진행~
+            3. 기획 스케줄 공유
+              - 6/23 ' 외화정사 ' 기획 완료 예정
+              - 기획 아직 노노: 출입증, 기계경비당직관리. set 시간ㄴ등록
+            2. [용도품 ( 영업점 )]  완료
 
         23 key 자동배송 품목 등록 및 제외 확인 BSPRQ0301P01
           --- 6/20 : 레이아웃 확인: HSPDU0301P02 : 감시자를 확인해주세요 #161
@@ -243,6 +249,9 @@ function DEX() {
 <tr>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             </tr>
 
 */}

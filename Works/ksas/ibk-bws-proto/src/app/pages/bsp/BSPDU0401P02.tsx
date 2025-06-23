@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 폐기 > 중요용지사고보고(영업점) ~ 품목폐지폐기등록
+ * @description 중요용지·용도품(영업점) > 폐기 > 중요용지사고보고(영업점) ~ (LP)사고보고등록
  */
 
 // dependency
@@ -87,7 +87,7 @@ function BSPDU0401P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-70p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -96,7 +96,7 @@ function BSPDU0401P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">품목폐지폐기등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">사고보고등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -107,13 +107,12 @@ function BSPDU0401P02() {
                   <h4 className="o-heading level2"><span className="label">오손내역</span></h4>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
-                          <col className="wdth-10" />
                           <col />
                           <col />
                           <col />
@@ -125,14 +124,12 @@ function BSPDU0401P02() {
                           <col />
                           <col />
                           <col />
+                          <col className="wdth-0" />
                           <col />
-                          <col />
-                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
@@ -142,7 +139,6 @@ function BSPDU0401P02() {
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                             <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사유</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
@@ -152,15 +148,14 @@ function BSPDU0401P02() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>BC016</td>
+                            <td>3344785</td>
                             <td className="g-start">부산역</td>
                             <td>3344785</td>
                             <td className="g-start">나의 알파체크카드(비교통_그린)</td>
@@ -169,11 +164,10 @@ function BSPDU0401P02() {
                             <td>3344785</td>
                             <td>홍길동</td>
                             <td className="g-end">50</td>
-                            <td>라가</td>
+                            <td>가마</td>
                             <td>3344785</td>
                             <td>~</td>
                             <td>33447900</td>
-                            <td className="g-start"></td>
                           </tr>
                         ))}
                         </tbody>
@@ -201,14 +195,29 @@ function BSPDU0401P02() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`발송일자`} require={false} />
+                            <Label label={`사고부점`} require={true} />
                           </th>
                           <td colSpan={1}>
-                            <span className="o-digit type-date">2025-01-21</span>
+                            [0810] 용인
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`발송직원`} require={false} />
+                            <Label label={`사고유형`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            훼손
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`발생일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`운용책임자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 홍길동
@@ -217,36 +226,27 @@ function BSPDU0401P02() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`인수직원`} require={false} />
+                            <Label label={`출급번호/품목명`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0810] 폐기중용용지 담당자
+                            [0810] 정액10만원권자기앞수표
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`인수부점`} require={false} />
+                            <Label label={`수량`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0810] 프로세스혁신
+                            30
                           </td>
                         </tr>
-
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`건수`} require={false} />
+                            <Label label={`일련번호`} require={false} />
                           </th>
-                          <td colSpan={1}>
-                            01
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`서류구분`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            폐기중요용지
+                          <td colSpan={3}>
+                            가마 / 17733015 ~ 17733015
                           </td>
                         </tr>
-
                         <tr>
                           <th colSpan={1}>
                             <Label label={`서류내용`} require={true} />
@@ -255,22 +255,6 @@ function BSPDU0401P02() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`비고`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
                                   <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -288,12 +272,11 @@ function BSPDU0401P02() {
                 <div className="o-board type-a">
                   <div className="board-container type-sub">
                     <div className="m-header">
-                      <strong className="o-heading"><span className="label">유의사항</span></strong>
+                      <strong className="o-heading"><span className="label">필요 조치사항 안내</span></strong>
                     </div>
 
                     <ul className="m-bullets type-disc">
-                      <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
-                      <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                      <li className="c-color-strong"><em>외화수표: 발생사 사고보고(CRS송금수표: CITI BANK)</em></li>
                     </ul>
                   </div>
                 </div>
@@ -318,7 +301,7 @@ function BSPDU0401P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)오손발송(행내등기신청) [wdth-70p(w1340)]</span>
+              <span className="label">(LP)사고보고등록 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>

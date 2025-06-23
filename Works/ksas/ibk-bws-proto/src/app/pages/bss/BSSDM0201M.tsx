@@ -230,7 +230,7 @@ function BSSDM0201M() {
                   </div>
                 </div>
 
-                <div className="main _primary">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -428,7 +428,7 @@ function BSSDM0201M() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
