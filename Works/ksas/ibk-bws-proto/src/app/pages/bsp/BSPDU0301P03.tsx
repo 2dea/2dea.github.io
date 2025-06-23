@@ -146,7 +146,7 @@ function BSPDU0301P03() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`출근번호/품목명`} require={true} />
+                            <Label label={`출근번호/품목명`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 전통시장온누리상품권5천원권
@@ -178,12 +178,10 @@ function BSPDU0301P03() {
                             <Label label={`스캔등록`} require={true} />
                           </th>
                           <td colSpan={3}>
-                            <div className="m-header">
-                              <div className="m-binds">
-                                <div className="group">
-                                  <CommonButton label="BPR 조회" className="_normal" />
-                                  <CommonButton label="BPR 스캔" className="_normal" />
-                                </div>
+                            <div className="m-binds">
+                              <div className="group _start">
+                                <CommonButton label="BPR조회" className="_normal" />
+                                <CommonButton label="BPR스캔" className="_normal" />
                               </div>
                             </div>
                           </td>
@@ -203,28 +201,27 @@ function BSPDU0301P03() {
 
                     <ol className="m-bullets type-decimal level1">
                       <li>입력한 폐기수량과 일련번호가 동일한 실물을 스캔해주세요. (동일하지 않은 경우 반송 사유)</li>
-                      <li><strong className="strong">BPR 스캔 실행 화면 내 전송 매수에 동일한 수량을 입력해주세요.</strong></li>
+                      <li><strong className="strong">BPR스캔 실행 화면 내 전송 매수에 동일한 수량을 입력해주세요.</strong></li>
                       <li><strong className="strong">전송 전 삽입스캔을 통해 추가스캔이 가능하며 전송 후엔 추가 스캔이 되지 않습니다.</strong></li>
-                      <li>BPR 스캔 실행 화면 내 스캔 완료 후 반드시 전송하고 종료해주세요.</li>
+                      <li>BPR스캔 실행 화면 내 스캔 완료 후 반드시 전송하고 종료해주세요.</li>
                       <li>상품권 실물이 아닌 복사본, 출력물의 경우 앞&middot;뒷면을 분리 후 스캔해주세요.</li>
                     </ol>
+                  </div>
 
-
-                    <div className="board-container type-sub">
-                      <div className="m-header">
-                        <strong className="o-heading"><span className="label c-color-strong">BPR 스캔 등록 순서</span></strong>
-                      </div>
-
-                      <ul className="m-bullets type-disc">
-                        <li className="c-color-strong">주의: [저장] 버튼을 클릭하지 않는 경우 등록 누락
-                          <ol className="m-bullets type-decimal level2 c-color-strong">
-                            <li>[BPR 스캔]으로 스캔등록</li>
-                            <li>[BPR 조회]으로 스캔정보(생략 가능)</li>
-                            <li>[BPR 저장]으로 스캔등록 완료</li>
-                          </ol>
-                        </li>
-                      </ul>
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">BPR 스캔 등록 순서</span></strong>
                     </div>
+
+                    <ul className="m-bullets type-disc">
+                      <li className="c-color-strong">주의: [저장] 버튼을 클릭하지 않는 경우 등록 누락
+                        <ol className="m-bullets type-decimal level1 c-color-strong">
+                          <li>[BPR스캔]으로 스캔등록</li>
+                          <li>[BPR조회]으로 스캔정보 확인(생략 가능)</li>
+                          <li>[저장]으로 BPR스캔등록 완료</li>
+                        </ol>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

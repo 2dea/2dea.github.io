@@ -695,7 +695,7 @@
 .m-header >*  { flex: none; min-width: 0; @include inc-ellipsis(); }
 .m-header >.o-heading  { flex: 0 1 auto; min-height: $height-form-50; }
 .m-header >.m-binds  { gap: inherit; }
-.m-header >:where(.o-heading, .m-checks, .o-helper, .justify-start):not(:has(~.o-heading, ~.m-checks, ~.o-helper, ~.justify-start))  { margin-right: auto; }
+.m-header >:where(.o-heading, .o-helper, .justify-start):not(:has(~.o-heading, ~.o-helper, ~.justify-start))  { margin-right: auto; }
 
 .m-header:where(.o-section >*)  { min-height: $height-form-50; }
 

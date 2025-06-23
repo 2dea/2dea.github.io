@@ -180,7 +180,7 @@ function HSPPC0101P02() {
                   <div className="o-field">
                     <Label label={`단가`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input mode-required wdth-40">
+                      <div className="o-form _input mode-required wdth-40 g-end">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
@@ -286,7 +286,7 @@ function HSPPC0101P02() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="선택" className="_solid-primary" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>

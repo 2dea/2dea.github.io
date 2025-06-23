@@ -117,7 +117,7 @@ function CMP000401P() {
 
               <div className="o-section type-upload-image">
                 <div className="m-header">
-                  <div className="m-checks">
+                  <div className="m-checks justify-start">
                     <InputCheck label="전체선택" />
                   </div>
 

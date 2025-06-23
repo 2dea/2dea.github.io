@@ -128,7 +128,7 @@ function HSPPC0401M() {
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
           <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
+            <SplitterPanel minSize={17.5} className="column">
 
               <form className="m-filter-form">
                 <div className="fieldset">
@@ -295,21 +295,16 @@ function HSPPC0401M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">기본정보</span></h3>
 
-                  <div className="o-field">
-                    <div className="m-checks">
-                      <InputRadio name="RADIO:T_10" label="선납분" />
-                      <InputRadio name="RADIO:T_10" label="후납분" />
-                    </div>
+                  <div className="m-checks">
+                    <InputRadio name="RADIO:T_10" label="선납분" />
+                    <InputRadio name="RADIO:T_10" label="후납분" />
                   </div>
-
                 </div>
 
                 <div className="main">
                   <form className="m-data-form">
                     <table className="table">
                       <colgroup>
-                        <col className="head" />
-                        <col className="data" />
                         <col className="head" />
                         <col className="data" />
                         <col className="head" />
@@ -326,20 +321,16 @@ function HSPPC0401M() {
                           <td colSpan={1}>
                             <span className="o-digit type-date">2023-03</span>
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`비목`} require={false} />
                           </th>
                           <td colSpan={1}>
                             수입인지세
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`선납정산금액`} require={false} />
-                          </th>
-                          <td colSpan={1} className="g-end">
-                            58,984,700
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`후납정산금액`} require={false} />
                           </th>
                           <td colSpan={1} className="g-end">
                             58,984,700
@@ -347,28 +338,46 @@ function HSPPC0401M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
+                            <Label label={`후납정산금액`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">
+                            58,984,700
+                          </td>
+
+                          <th colSpan={1}>
                             <Label label={`집행금액`} require={false} />
                           </th>
                           <td colSpan={1} className="g-end">
                             58,984,700
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`집행환수금액`} require={false} />
                           </th>
                           <td colSpan={1} className="g-end">
                             0
                           </td>
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`정산대상금액`} require={false} />
                           </th>
                           <td colSpan={1} className="g-end">
                             58,984,700
                           </td>
+
                           <th colSpan={1}>
-                            <Label label={`처리상태/일자`} require={false} />
+                            <Label label={`처리상태`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            미처리 / <span className="o-digit type-date">2025-12-25</span>
+                            미처리
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`처리일자`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
                           </td>
                         </tr>
                         <tr>
@@ -385,13 +394,14 @@ function HSPPC0401M() {
                               </div>
                             </div>
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`사업`} require={true} />
                           </th>
-                          <td colSpan={5}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-30">
+                                <div className="o-form _input mode-required wdth-30">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
@@ -491,6 +501,7 @@ function HSPPC0401M() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
+                              <td>0001</td>
                               <td className="g-start">영업부</td>
                               <td className="g-start">수입인지세</td>
                               <td>0001</td>
@@ -509,6 +520,7 @@ function HSPPC0401M() {
                             <td colSpan={6} className="sumtotal-tcell">합계</td>
                             <td className="sumtotal-tcell g-end">999,999</td>
                             <td className="sumtotal-tcell g-end">0</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
                             <td className="sumtotal-tcell g-end">999,999</td>
                             <td className="sumtotal-tcell g-end">999,999</td>
                           </tr>

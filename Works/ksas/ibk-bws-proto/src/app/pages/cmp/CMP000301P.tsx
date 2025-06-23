@@ -116,7 +116,7 @@ function CMP000301P() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <div className="m-checks">
+                  <div className="m-checks justify-start">
                     <InputCheck label="전체선택" />
                   </div>
 
