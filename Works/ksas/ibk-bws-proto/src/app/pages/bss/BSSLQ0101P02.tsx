@@ -1,5 +1,5 @@
 /**
- * @description 영업지원 > 대량신규  > 대량신규승인 ~ (LP)대량신규승인
+ * @description 영업지원 > 대량신규  > 대량신규승인 ~ (LP)대량신규승인취소
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSSLQ0101P01() {
+function BSSLQ0101P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -96,7 +96,7 @@ function BSSLQ0101P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">대량신규승인</span></h3>}
+        header={<h3 className="o-heading"><span className="label">대량신규승인취소</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -104,7 +104,7 @@ function BSSLQ0101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">승인내역</span></h4>
+                  <h4 className="o-heading level2"><span className="label">승인 상세내역</span></h4>
                 </div>
 
                 <div className="main">
@@ -120,13 +120,10 @@ function BSSLQ0101P01() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`구분`} require={true} />
+                            <Label label={`구분`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            <div className="m-checks">
-                              <InputRadio name="RADIO:T_10" label="승인" />
-                              <InputRadio name="RADIO:T_10" label="반송" />
-                            </div>
+                            승인
                           </td>
                         </tr>
                         <tr>
@@ -145,80 +142,36 @@ function BSSLQ0101P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`영엄점수령 예정일자`} require={true} />
+                            <Label label={`영엄점수령 예정일자`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-date mode-required wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            <span className="o-digit type-date">2025-12-25</span>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`승인좌수`} require={true} />
+                            <Label label={`승인좌수`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            100
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`승인거절사유`} require={true} />
+                            <Label label={`승인거절사유`} require={false} />
                           </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
+                          <td colSpan={3}></td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
                             <Label label={`특이사항`} require={false} />
                           </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
+                          <td colSpan={3}></td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
                             <Label label={`작업기간`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-date wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <span className="seps type-tilde">~</span>
-                                <div className="o-form _input type-date wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            <span className="o-digit type-date">2025-12-25</span> ~ <span className="o-digit type-date">2025-12-25</span>
                           </td>
                         </tr>
                       </tbody>
@@ -362,7 +315,7 @@ function BSSLQ0101P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)대량신규승인 [wdth-40p(w770)]</span>
+              <span className="label">(P)대량신규승인취소 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -381,4 +334,4 @@ function BSSLQ0101P01() {
   );
 }
 
-export default BSSLQ0101P01;
+export default BSSLQ0101P02;

@@ -237,15 +237,21 @@ function HSPDU0201P03() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`서류내용`} require={true} />
+                            <Label label={`건수`} require={true} />
                           </th>
-                          <td colSpan={3}>
-                            <span className="o-digit type-date">2025-12-25</span>
+                          <td colSpan={1}>
+                            1
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`서류구분`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            일반서류
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`반송사유`} require={true} />
+                            <Label label={`서류내용`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">

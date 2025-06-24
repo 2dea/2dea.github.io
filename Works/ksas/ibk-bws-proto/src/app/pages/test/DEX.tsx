@@ -91,7 +91,17 @@ function DEX() {
 
       {/*
       스케줄
-      2025-06-24 화 : BSSLQ0101M 대량신규승인 [영업지원] #46 부터~
+      2025-06-24 수 :
+        [Todo List]
+          1.행내등기 > 등기우편물~
+
+      2025-06-24 화 :
+        [Todo List]
+          1. 자금현수송 > 원화정사
+          2.행내등기 > 등기우편물~
+
+        [ 완료 ] [영업지원] #50 부터~ # BSSRM0101M 부터~ ->
+
       2025-06-23 월 :
             1. [영업지원] 시작~! , ' 서식장부관리 ' 외 모두 진행~
             3. 기획 스케줄 공유
@@ -156,15 +166,19 @@ function DEX() {
 <td className="g-start">프로세스혁신부</td>
 <td className="g-start">업체명 (주)앤비앤코퍼레이션</td>
 
-<td><span className="o-digit type-date">2025-12-25</span></td>
+<td> </td>
 <td><span className="o-digit type-time">00:00</span></td>
 
 <td><span className="o-digit type-date">2025-12</span></td>
+
+<td><span className="o-digit type-date">2025-12-25</span></td>
 
 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
 <td><span className="o-digit type-num">123-45-67890</span></td>
 <td><span className="o-digit type-tel">02-729-7610</span></td>
 <td><span className="o-digit type-time">00:00</span></td>
+
+<span className="o-digit type-date">2025-12-25</span>
 
 <td className="g-start"></td>
 
@@ -254,6 +268,31 @@ function DEX() {
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             </tr>
 
+
+                  <div className="o-field">
+                    <Label label={`비고`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                   <tr>
+                      <th colSpan={1}>
+                        <Label label={`비고`} require={false} />
+                      </th>
+                      <td colSpan={3}>
+                        <div className="o-field">
+                          <div className="fields">
+                            <div className="o-form _input">
+                              <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
 */}
       {/*
       업무지원시스템 재구축 프로젝트에 사용할 템플릿 파일입니다.
@@ -297,6 +336,8 @@ function DEX() {
 
             [유의사항 레이아웃] -BSPDU0301M 블릿 참고
             [레이아웃 팝업] BSPDU0401P02 : 하단에 유의사항
+
+            [요청사항 : BSSLQ0201M ]
 
             [ 테이블 ]
             // 소계 합계 : FMTFC0301M

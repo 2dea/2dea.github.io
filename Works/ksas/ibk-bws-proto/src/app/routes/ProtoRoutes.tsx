@@ -33,6 +33,11 @@ import CMP001402P from 'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체기�
 import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
 
 // proto 자금현수송
+import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사 > 신청(인도)
+import FMTCC0101P01 from 'app/pages/fmt/FMTCC0101P01';  // 자금현수송 > 원화정사 > 신청(인도) ~ (LP)호송금인수증등록
+import FMTCC0201M from 'app/pages/fmt/FMTCC0201M';      // 자금현수송 > 원화정사 > 결과(인수)
+import FMTCC0301M from 'app/pages/fmt/FMTCC0301M';      // 자금현수송 > 원화정사 > 관련조회 및 출력
+
 import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사 > 일일실적관리 > 실적내역
 import FMTFC0101P01 from 'app/pages/fmt/FMTFC0101P01';  // 자금현수송 > 외화정사 > 일일실적관리 > 실적내역 ~ (LP)위조및변조화폐신고서등록
 import FMTFC0101P02 from 'app/pages/fmt/FMTFC0101P02';  // 자금현수송 > 외화정사 > 일일실적관리 > 실적내역 ~ (LP)외화정사등록
@@ -169,6 +174,8 @@ import HSPDU0801P02 from 'app/pages/hsp/HSPDU0801P02';  // 중요용지·용도�
 import HSPDU0801P04 from 'app/pages/hsp/HSPDU0801P04';  // 중요용지·용도품(본부) > 폐기          > 본부중요용지일괄폐기 ~ (LP)폐기취소(본부)
 
 import HSPDU0901M from 'app/pages/hsp/HSPDU0901M';      // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기
+import HSPDU0901P01 from 'app/pages/hsp/HSPDU0901P01';  // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기 ~ (LP)용도품폐기
+import HSPDU0901P02 from 'app/pages/hsp/HSPDU0901P02';  // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기 ~ (LP)폐기취소(본부)
 
 
 import HSPHP0101M from 'app/pages/hsp/HSPHP0101M';      // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지조달신청
@@ -204,6 +211,7 @@ import BEXRQ0401M from 'app/pages/bex/BEXRQ0401M';      // 행내등기·우편�
 
 import BEXRQ0201P01 from 'app/pages/bex/BEXRQ0201P01';  // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기STP변경이력
 import BEXRQ0201P02 from 'app/pages/bex/BEXRQ0201P02';  // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)여신자필서류(STP)관리
+import BEXRQ0201P03 from 'app/pages/bex/BEXRQ0201P03';  // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기변경이력
 
 import BEXRQ0601M from 'app/pages/bex/BEXRQ0601M';      // 행내등기·우편물 > 행내등기 > 행내등기노선관리
 
@@ -267,10 +275,12 @@ import STMBR0301P01 from 'app/pages/stm/STMBR0301P01';   // 재난·안전관리
 
 import STMKY0101M from 'app/pages/stm/STMKY0101M';       // 재난·안전관리 > 열쇠관리                 > 열쇠종류관리
 import STMKY0201M from 'app/pages/stm/STMKY0201M';       // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리
+import STMKY0201P01 from 'app/pages/stm/STMKY0201P01';   // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리 ~ (LP)열쇠이미지확대
 import STMKY0201P02 from 'app/pages/stm/STMKY0201P02';   // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리 ~ (LP)열쇠폐기
 import STMKY0201P03 from 'app/pages/stm/STMKY0201P03';   // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리 ~ (LP)열쇠별보관담당자
 import STMKY0301M from 'app/pages/stm/STMKY0301M';       // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리
 import STMKY0301P01 from 'app/pages/stm/STMKY0301P01';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)열쇠인수도취소
+import STMKY0301P03 from 'app/pages/stm/STMKY0301P03';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)과거내역조회
 import STMKY0401P01 from 'app/pages/stm/STMKY0401P01';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)열쇠이미지보기
 import STMKY0401P02 from 'app/pages/stm/STMKY0401P02';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)예비열쇠위탁요청
 import STMKY0401P04 from 'app/pages/stm/STMKY0401P04';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)위탁열쇠반납요청
@@ -304,6 +314,8 @@ import BSSDM0201P04 from 'app/pages/bss/BSSDM0201P04'; // 영업지원 > 문서�
 import BSSLQ0201M from 'app/pages/bss/BSSLQ0201M';     // 영업지원 > 대량신규  > 대량신규신청
 import BSSLQ0101M from 'app/pages/bss/BSSLQ0101M';     // 영업지원 > 대량신규  > 대량신규승인
 import BSSLQ0101P01 from 'app/pages/bss/BSSLQ0101P01'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)대량신규승인
+import BSSLQ0101P02 from 'app/pages/bss/BSSLQ0101P02'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)대량신규승인취소
+import BSSLQ0101P03 from 'app/pages/bss/BSSLQ0101P03'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)업무완료
 import BSSLQ0101P04 from 'app/pages/bss/BSSLQ0101P04'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)반려좌수상세보기
 
 
@@ -392,6 +404,12 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
+        { path: 'FMTCC0101M',   element: <FMTCC0101M /> },
+        { path: 'FMTCC0101P01', element: <FMTCC0101P01 /> },
+
+        { path: 'FMTCC0201M',   element: <FMTCC0201M /> },
+        { path: 'FMTCC0301M',   element: <FMTCC0301M /> },
+
         { path: 'FMTFC0101M',   element: <FMTFC0101M /> },
         { path: 'FMTFC0101P01', element: <FMTFC0101P01 /> },
         { path: 'FMTFC0101P02', element: <FMTFC0101P02 /> },
@@ -522,7 +540,10 @@ function ProtoRoutes() {
         { path: 'HSPDU0801P02', element: <HSPDU0801P02 /> },
         { path: 'HSPDU0801P04', element: <HSPDU0801P04 /> },
 
+
         { path: 'HSPDU0901M',   element: <HSPDU0901M /> },
+        { path: 'HSPDU0901P01', element: <HSPDU0901P01 /> },
+        { path: 'HSPDU0901P02', element: <HSPDU0901P02 /> },
 
         { path: 'HSPHP0101M',   element: <HSPHP0101M /> },
         { path: 'HSPHP0201M',   element: <HSPHP0201M /> },
@@ -561,6 +582,7 @@ function ProtoRoutes() {
 
         { path: 'BEXRQ0201P01', element: <BEXRQ0201P01 /> },
         { path: 'BEXRQ0201P02', element: <BEXRQ0201P02 /> },
+        { path: 'BEXRQ0201P03', element: <BEXRQ0201P03 /> },
 
         { path: 'BEXRQ0601M',   element: <BEXRQ0601M /> },
 
@@ -624,10 +646,12 @@ function ProtoRoutes() {
 
         { path: 'STMKY0101M',   element: <STMKY0101M /> },
         { path: 'STMKY0201M',   element: <STMKY0201M /> },
+        { path: 'STMKY0201P01', element: <STMKY0201P01 /> },
         { path: 'STMKY0201P02', element: <STMKY0201P02 /> },
         { path: 'STMKY0201P03', element: <STMKY0201P03 /> },
         { path: 'STMKY0301M',   element: <STMKY0301M /> },
         { path: 'STMKY0301P01', element: <STMKY0301P01 /> },
+        { path: 'STMKY0301P03', element: <STMKY0301P03 /> },
 
         { path: 'STMKY0401P01', element: <STMKY0401P01 /> },
         { path: 'STMKY0401P02', element: <STMKY0401P02 /> },
@@ -672,7 +696,8 @@ function ProtoRoutes() {
         { path: 'BSSDM0201P01', element: <BSSDM0201P01 /> },
 
         { path: 'BSSLQ0101P01', element: <BSSLQ0101P01 /> },
-
+        { path: 'BSSLQ0101P02', element: <BSSLQ0101P02 /> },
+        { path: 'BSSLQ0101P03', element: <BSSLQ0101P03 /> },
         { path: 'BSSLQ0101P04', element: <BSSLQ0101P04 /> },
 
         { path: 'BSSCR0101M',   element: <BSSCR0101M /> },
