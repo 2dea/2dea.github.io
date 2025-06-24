@@ -268,7 +268,7 @@ function BSSCR0101M() {
 
                   <div className="m-step-form">
                     <div className="steps">
-                      <ol className="o-steps axis-cols">
+                      <ol className="o-steps axis-cols type-normal">
                         <li aria-label="진행 완료">
                           <span className="order" aria-hidden="true">
                             <span className="prefix"></span>

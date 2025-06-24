@@ -657,32 +657,43 @@
 .m-bullets >:has(.o-consult)  { color: $color-text-70; }
 
 
-.o-steps  {  --theme: var(--color-key1-40); display: flex; }
+.o-steps  {  --theme: var(--color-key1-40); display: flex; margin: 0 auto; }
 .o-steps >*  { display: flex; position: relative; }
 
-.o-steps .order  { position: relative; border-radius: 50%; }
-.o-steps .order:after  { content: ""; position: absolute; z-index: 2; left: 0; top: 0; transform: translate(III(-3), III(-3)); width: III(30); height: III(30); border: $e10 solid var(--theme); background: var(--color-ground); pointer-events: none; }
-.o-steps .order .count  { font-weight: $bold-70; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; width: III(24); height: III(24); border: $e10 solid $tp; color: var(--color-text-00); background: var(--theme); border-radius: inherit; }
+.o-steps .order  { position: relative; width: III(30); height: III(30); border-radius: 50%; }
+.o-steps .order:after  { content: ""; position: absolute; z-index: 2; left: 0; top: 0; width: III(30); height: III(30); border: $e10 solid var(--theme); background: var(--color-ground); pointer-events: none; }
+.o-steps .order .count  { font-weight: $bold-70; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; width: III(24); height: III(24); margin: calc((III(30) - III(24)) / 2); border: $e10 solid $tp; color: var(--color-text-00); background: var(--theme); border-radius: inherit; }
 .o-steps .order .count:after  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 .o-steps .order .count:after  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
 .o-steps .order .count:after  { content: "check"; font-size: III(18); display: flex; align-items: center; justify-content: center; position: absolute; left: 0; top: 0; width: 100%; max-width: none; height: 100%; background-color: inherit; }
 .o-steps .order .suffix  { @include getGlobalHidden(); }
+.o-steps >:after  { position: absolute; width: $e10; height: $e10; background: var(--theme, Black); }
 
+// .o-steps >:not([aria-label="진행 완료"]):after  { background-color: var(--color-edge-40); }
 .o-steps >:not([aria-label="진행 완료"]) .order .count:after  { opacity: 0.0; }
 .o-steps >:is([aria-label="진행 단계"]) .order .count  { z-index: 3; }
 .o-steps >:is([aria-label="진행 단계"]) .label .main  { font-weight: $bold-70; color: var(--theme); }
+.o-steps >:not(:has(~[aria-label="진행 단계"])):after  { background-color: var(--color-edge-40); }
 .o-steps >:not([aria-label="진행 단계"]) .order:after  { opacity: 0.0; }
 .o-steps >:is([aria-label="진행 예정"]) .order .count  { border-color: var(--color-edge-40); color: var(--color-text-20); background-color: var(--color-ground); }
 .o-steps >:is([aria-label="진행 예정"]) .label .main  { color: var(--color-text-disabled); }
 
+
 .o-steps:where(.axis-cols)  { flex-direction: column; }
 .o-steps:where(.axis-cols) >*  { gap: $gap-element-70; }
-.o-steps:where(.axis-cols) .order  { width: III(24); min-height: III(24); }
+.o-steps:where(.axis-cols) .order  { height: auto; }
 // .o-steps:where(.axis-cols) .order .count  { position: absolute; margin-top: calc((III(20) - III(24)) / 2) }
-.o-steps:where(.axis-cols) .label .main  { font-size: $font-70; line-height: $line-70; display: block; padding: calc((III(24) - III(20)) / 2) 0; }
+.o-steps:where(.axis-cols) .label .main  { font-size: $font-70; line-height: $line-70; display: block; padding: calc((III(30) - III(20)) / 2) 0; }
 
-.o-steps:where(.axis-cols) >:not(:last-child) .order:before  { content: ""; position: absolute; left: 50%; top: $e10; margin-right: III(0.5); width: $e10; height: 100%; background: var(--color-edge-40); }
-.o-steps:where(.axis-cols) >:not(:last-child) .label  { padding-bottom: III(30); }
+.o-steps:where(.axis-cols) >:not(:last-child):after  { content: ""; left: calc(III(30) / 2); top: calc(III(30) / 2); margin-left: III(-0.5); height: 100%; }
+.o-steps:where(.axis-cols) >:not(:last-child) .label  { padding-bottom: III(24); }
+
+
+.o-steps:where(.axis-rows.type-normal) >*  { flex: 1; flex-direction: column; align-items: center; gap: $gap-element-70; min-width: 0; padding: 0 III(12); }
+.o-steps:where(.axis-rows.type-normal) .label  { display: block; text-align: center; }
+.o-steps:where(.axis-rows.type-normal) .label >*  { display: block; }
+
+.o-steps:where(.axis-rows.type-normal) >:not(:last-child):after  { content: ""; left: 50%; top: calc(III(30) / 2); width: 100%; }
 
 
 
@@ -793,7 +804,7 @@
 .o-board.style-fit  { --margin-block: #{$gap-element-70}; --margin-inline: #{$gap-element-70}; }
 
 .o-board.type-a  { --color-edge: var(--color-edge-40); --surface: var(--color-ground); }
-.o-board.type-b  { --color-edge: var(--tp); --surface: var(--color-ground-30); }
+.o-board.type-b  { --color-edge: var(--tp); --surface: var(--color-ground-40); }
 .o-board.type-c  { --color-edge: var(--tp); --surface: var(--color-ground2-blue-30); }
 
 .o-board .o-heading  { font-size: inherit; line-height: inherit; padding-left: 0; }
@@ -1330,6 +1341,7 @@
   min-height: 1em; padding: 0; border: 0 none; color: inherit; background: none; outline: 0; border-radius: inherit; box-shadow: none; filter: inherit; }
 
 .o-form:where(.o-field >* >*)  { flex: 1 1 0; min-width: 0; }
+// .o-form:where(.o-field.colspan-4 >:not(:has(>.wdth-auto)) >*)  { flex: 0 0 auto; }
 .o-form  {
   --margin-block: #{III(3)};
   --margin-inline: #{calc($gap-element-70 - $e10)};

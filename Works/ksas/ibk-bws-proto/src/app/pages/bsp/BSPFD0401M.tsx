@@ -406,7 +406,7 @@ function BSPFD0401M() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래년월일</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래연월일</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래구분</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입고</span></div></th>

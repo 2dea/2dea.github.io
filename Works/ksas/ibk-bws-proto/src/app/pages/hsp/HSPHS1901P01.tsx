@@ -87,7 +87,7 @@ function HSPHS1901P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -140,7 +140,7 @@ function HSPHS1901P01() {
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-90">
+                                <div className="o-form _input mode-required">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -397,7 +397,7 @@ function HSPHS1901P01() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50">
+                                <div className="o-form _input">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -410,7 +410,7 @@ function HSPHS1901P01() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
+                                <div className="o-form _input mode-required">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -537,12 +537,12 @@ function HSPHS1901P01() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50">
+                                <div className="o-form _input wdth-auto">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                                 <span className="seps type-slash">/</span>
-                                <div className="o-form _input wdth-50">
+                                <div className="o-form _input wdth-auto">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -606,7 +606,7 @@ function HSPHS1901P01() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`시행년월`} require={true} />
+                            <Label label={`시행연월`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -738,7 +738,7 @@ function HSPHS1901P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)일람부등록 [wdth-50p(w960)]</span>
+              <span className="label">(P)일람부등록 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
