@@ -152,7 +152,7 @@ function BEXRM0201P01() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
+                                <div className="o-form _select mode-required">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>

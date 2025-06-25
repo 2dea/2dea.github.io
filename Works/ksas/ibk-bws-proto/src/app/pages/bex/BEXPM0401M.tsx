@@ -268,7 +268,7 @@ function BEXPM0401M() {
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">국제등기</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">DM발송</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배달부증명 내용증명</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요금 수취자부담</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요금수취자부담</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송수량</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통신료</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">환부수량</span></div></th>

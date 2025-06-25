@@ -229,8 +229,8 @@ function HSPDU0301M() {
                 <div className="o-field">
                   <Label label={`감사자알림`} require={false} />
                   <div className="fields">
-                    <div className="o-form _input">
-                      <InputText placeholder="" value="중요용지 폐기 감사자로 등록되었습니다. [감사/소각완료] 등록 부탁드립니다." className="bind" onChange={(e) => setValue(e.target.value)} disabled />
+                    <div className="o-form _input mode-disabled-placeholder">
+                      <InputText placeholder="감사자지정 구분을 '지정'으로 한 후 조회 시 활성화됩니다" value="중요용지 폐기 감사자로 등록되었습니다. [감사/소각완료] 등록 부탁드립니다." className="bind" onChange={(e) => setValue(e.target.value)} disabled />
                       <i aria-hidden="true"></i>
                     </div>
                     <div className="binds">
@@ -252,6 +252,10 @@ function HSPDU0301M() {
                   </div>
 
                   <div className="m-binds">
+                      <div className="group">
+                        <CommonButton label="감사자료" className="_normal" icon="excel-download-label" />
+                      </div>
+
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />

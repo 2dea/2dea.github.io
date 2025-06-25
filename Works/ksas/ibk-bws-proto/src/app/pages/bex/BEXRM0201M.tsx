@@ -435,7 +435,7 @@ function BEXRM0201M() {
                         </div>
                       </td>
                       <th colSpan={1}>
-                        <Label label={`로봇배송실수취자`} require={false} />
+                        <Label label={`로봇배송​실수취자`} require={false} />
                       </th>
                       <td colSpan={1}>
                         [0810] 홍길동
@@ -455,7 +455,7 @@ function BEXRM0201M() {
                         <span className="o-digit type-datetime">2025-12-25 09:10:59</span>
                       </td>
                       <th colSpan={1}>
-                        <Label label={`인수자(수령자)`} require={false} />
+                        <Label label={`인수자​(수령자)`} require={false} />
                       </th>
                       <td colSpan={1}>
                         [0810] 홍길동

@@ -215,7 +215,7 @@ function BSSTN0101P01() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" icon="du-up" className="_normal" />
+              <CommonButton label="취소" className="_cancel" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>

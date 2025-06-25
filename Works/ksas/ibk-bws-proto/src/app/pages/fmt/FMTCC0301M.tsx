@@ -250,7 +250,7 @@ function FMTCC0301M() {
                                   {[...Array(4)].map((e, idx) => (
                                     <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                                       <td><span className="o-digit type-date">2025-12-25</span></td>
-                                      <td>5만원궘</td>
+                                      <td>5만원권</td>
                                       <td className="g-end">3000</td>
                                       <td className="g-end">30,000</td>
                                       <td className="g-end">3000</td>
@@ -348,7 +348,7 @@ function FMTCC0301M() {
                                       <td><span className="o-digit type-date">2025-12-25</span></td>
                                       <td><span className="o-digit type-date">2025-12-25</span></td>
                                       <td>부족</td>
-                                      <td>5만원궘</td>
+                                      <td>5만원권</td>
                                       <td className="g-end">3000</td>
                                       <td className="g-start">사유를 여기에 표시해줍니다.</td>
                                     </tr>
@@ -436,7 +436,7 @@ function FMTCC0301M() {
                                         <td>10000</td>
                                         <td className="g-start">부산</td>
                                         <td>부족</td>
-                                        <td>5만원궘</td>
+                                        <td>5만원권</td>
                                         <td className="g-end">3000</td>
                                         <td>홍길동</td>
                                         <td className="g-start">사유를 여기에 표시해줍니다.</td>

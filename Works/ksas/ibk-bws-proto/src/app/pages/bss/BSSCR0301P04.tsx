@@ -144,7 +144,7 @@ function BSSCR0301P04() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수취인명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수취자명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송주소</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>

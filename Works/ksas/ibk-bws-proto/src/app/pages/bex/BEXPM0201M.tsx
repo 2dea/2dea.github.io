@@ -265,7 +265,7 @@ function BEXPM0201M() {
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">국제등기</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">DM발송</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배달증명부 내용증명</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요금 수취자부담</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요금수취자부담</span></div></th>
                       </tr>
                       <tr>
                         <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>

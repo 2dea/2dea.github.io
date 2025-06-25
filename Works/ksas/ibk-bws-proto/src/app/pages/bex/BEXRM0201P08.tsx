@@ -226,7 +226,7 @@ function BEXRM0201P08() {
                             법원등기
                           </td>
                           <th colSpan={1}>
-                            <Label label={`로봇배송발송자`} require={false} />
+                            <Label label={`로봇배송​발송자`} require={false} />
                           </th>
                           <td colSpan={3}>
                             [8282] 홍길동
@@ -240,13 +240,13 @@ function BEXRM0201P08() {
                             [0801] 프로세스혁신부
                           </td>
                           <th colSpan={1}>
-                            <Label label={`수취부자`} require={false} />
+                            <Label label={`수취자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 홍길동
                           </td>
                           <th colSpan={1}>
-                            <Label label={`안수자`} require={false} />
+                            <Label label={`인수자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 홍길동

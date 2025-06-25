@@ -139,7 +139,7 @@ function BEXRM0201P05() {
                           <span className="data">
                             <em className="value">0</em>
                             <span className="sep">/</span>
-                            <span className="limits" aria-label="입력가능 글자수">100</span>
+                            <span className="limits" aria-label="입력가능 글자수">1000</span>{/* 임의 마크업(기획 확인필요) { @DEV } */}
                           </span>
                         </div>
                       </div>
