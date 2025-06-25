@@ -111,7 +111,7 @@ function FMTFC0201P01() {
                   <form className="m-data-form">
                     <table className="table">
                       <colgroup>
-                        <col className="head auto" style={{ '--em': 2 } as React.CSSProperties} />
+                        <col className="head aut" style={{ '--em': 2 } as React.CSSProperties} />
                         <col className="head" />
                         <col className="data" />
                         <col className="head" />

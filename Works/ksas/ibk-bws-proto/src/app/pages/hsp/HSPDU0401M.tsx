@@ -184,7 +184,7 @@ function HSPDU0401M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">창구오손등록 명세</span></h2>
+                  <h2 className="o-heading level2"><span className="label">소각확인서 스캔내역</span></h2>
                   <div className="o-length">
                     <span className="head">전체</span>
                     <em className="data">
@@ -230,7 +230,7 @@ function HSPDU0401M() {
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">스캔완료</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">의뢰제목</span></div></th>
-                            <th rowSpan={2} colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상기간(From-To)</span></div></th>
+                            <th rowSpan={2} colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상기간(From~To)</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소각일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상건수</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사고보고</span></div></th>
@@ -277,9 +277,18 @@ function HSPDU0401M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">소각확인서 스캔정보</span></h3>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="스캔이미지" className="_normal" />
+                      <CommonButton label="초기화" className="_normal" />
+                      <CommonButton label="수정" className="_normal" />
+                      <CommonButton label="삭제" className="_normal" />
+                    </div>
+                  </div>
                 </div>
 
-                <div className="main rows-body-3i">
+                <div className="main">
                   <form className="m-data-form">
                     <table className="table">
                       <colgroup>
@@ -287,6 +296,7 @@ function HSPDU0401M() {
                         <col className="data" />
                         <col className="head" />
                         <col className="data" />
+                        <col className="data man" style={{ width: 'calc(100% * 384 / var(--width-layout-container, 1536))', minWidth: 'calc(var(--rem) * 280)' }} />
                       </colgroup>
 
                       <tbody>
@@ -297,21 +307,65 @@ function HSPDU0401M() {
                           <td colSpan={1}>
                             <span className="o-digit type-date">2025-12-25</span>
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`등록자`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [00000] 홍길동 <CommonButton label="스캔이미지" className="_normal" />
+                            [00000] 홍길동
+                          </td>
+
+                          <td rowSpan={5} className="surface g-center">
+                            <div className="m-step">
+                              <div className="header">
+                                <Label label={`BPR스캔등록`} require={false} />
+                              </div>
+
+                              <div className="steps">
+                                <ol className="o-steps axis-rows type-normal" aria-label="진행 상태">
+                                  <li aria-label="진행 완료">
+                                    <span className="order" aria-hidden="true">
+                                      <span className="prefix"></span>
+                                      <span className="count">1</span>
+                                      <span className="suffix">단계. </span>
+                                    </span>
+                                    <span className="label">
+                                      <em className="main"><CommonButton label="스캔등록" className="_solid-secondary" /></em>
+                                    </span>
+                                  </li>
+                                  <li aria-label="진행 단계">
+                                    <span className="order" aria-hidden="true">
+                                      <span className="prefix"></span>
+                                      <span className="count">2</span>
+                                      <span className="suffix">단계. </span>
+                                    </span>
+                                    <span className="label">
+                                      <em className="main"><CommonButton label="스캔확인" className="_solid-secondary" /></em>
+                                    </span>
+                                  </li>
+                                  <li aria-label="진행 예정">
+                                    <span className="order" aria-hidden="true">
+                                      <span className="prefix"></span>
+                                      <span className="count">3</span>
+                                      <span className="suffix">단계. </span>
+                                    </span>
+                                    <span className="label">
+                                      <em className="main"><CommonButton label="스캔완료" className="_solid-secondary" disabled /></em>
+                                    </span>
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`담당연락처`} require={false} />
+                            <Label label={`의뢰제목`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50">
+                                <div className="o-form _input">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -321,7 +375,7 @@ function HSPDU0401M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`대상기간(From-To)`} require={false} />
+                            <Label label={`대상기간​(From~To)`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -338,6 +392,7 @@ function HSPDU0401M() {
                               </div>
                             </div>
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`대상건수`} require={false} />
                           </th>
@@ -366,6 +421,7 @@ function HSPDU0401M() {
                               </div>
                             </div>
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`사고보고여부`} require={false} />
                           </th>
@@ -387,7 +443,7 @@ function HSPDU0401M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value="내용을 입력해주세요" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -397,7 +453,6 @@ function HSPDU0401M() {
                       </tbody>
                     </table>
                   </form>
-
                 </div>
 
               </div>

@@ -375,7 +375,7 @@ function DEX() {
 
             엄청 긴 테이블 : BSPDU0201M : 일련번호
             FMTFC0101P01
-            일괄적용 및 유의사항 2개: BEXRQ0101M <col className="head auto" style={{ '--em': 2 } as React.CSSProperties} />
+            일괄적용 및 유의사항 2개: BEXRQ0101M <col className="head aut" style={{ '--em': 2 } as React.CSSProperties} />
 
             BEXRQ0101M:
 

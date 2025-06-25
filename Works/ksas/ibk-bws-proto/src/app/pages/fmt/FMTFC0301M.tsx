@@ -129,7 +129,7 @@ function FMTFC0301M() {
 
                   <div className="o-field colspan-4">
                     <Label label={`조회기간`} require={true} />
-                    <div className="fields">
+                    <div className="fields basis-pass">
                       <div className="o-form _select mode-required wdth-50">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
@@ -143,7 +143,7 @@ function FMTFC0301M() {
 
                   <div className="o-field colspan-4">
                     <Label label={`조회기간`} require={true} />
-                    <div className="fields">
+                    <div className="fields basis-pass">
                       <div className="o-form _select mode-required wdth-50">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
@@ -162,7 +162,7 @@ function FMTFC0301M() {
 
                   <div className="o-field colspan-4">
                     <Label label={`조회기간`} require={true} />
-                    <div className="fields">
+                    <div className="fields basis-pass">
                       <div className="o-form _select mode-required wdth-50">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
@@ -176,7 +176,7 @@ function FMTFC0301M() {
 
                   <div className="o-field colspan-4">
                     <Label label={`조회기간`} require={true} />
-                    <div className="fields">
+                    <div className="fields basis-pass">
                       <div className="o-form _select mode-required wdth-50">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>

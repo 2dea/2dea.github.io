@@ -423,6 +423,25 @@ function TMPL() {
                       </div>
                     </div>
 
+                    <div className="o-field colspan-4">
+                      <Label label={`.basis-pass`} require={true} />
+                      <div className="fields basis-pass">
+                        <div className="o-form _select mode-required wdth-50">
+                          <XDropdown appendTo={'self'} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
+                        <div className="o-form _input type-date mode-required wdth-50">
+                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                          <i aria-hidden="true"></i>
+                        </div>
+                        <span className="seps type-tilde">~</span>
+                        <div className="o-form _input type-date mode-required wdth-50">
+                          <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
 
                   <div className="binds">
@@ -434,8 +453,8 @@ function TMPL() {
                   <div className="o-field">
                     <Label label={`감사자알림`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value="중요용지 폐기 감사자로 등록되었습니다. [감사/소각완료] 등록 부탁드립니다." className="bind" onChange={(e) => setValue(e.target.value)} disabled />
+                      <div className="o-form _input mode-disabled-placeholder">
+                        <InputText placeholder="감사자지정 구분을 '지정'으로 한 후 조회 시 활성화됩니다" value="중요용지 폐기 감사자로 등록되었습니다. [감사/소각완료] 등록 부탁드립니다." className="bind" onChange={(e) => setValue(e.target.value)} disabled />
                         <i aria-hidden="true"></i>
                       </div>
                       <div className="binds">
@@ -1008,6 +1027,17 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
+                              <Label label={`.m-string-binds`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-string-binds">
+                                <span className="string">[00000] 홍길동</span>
+                                <span className="binds justify-end"><CommonButton label="스캔이미지" className="_normal" /></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
                               <Label label={`Button:where(.o-section >.m-header *)`} require={false} />
                             </th>
                             <td colSpan={5}>
@@ -1054,9 +1084,20 @@ function TMPL() {
                               <ol className="m-bullets type-decimal level1">
                                 <li>
                                   <div className="m-flex-list">
-                                    <strong>.o-check +.o-field</strong>
+                                    <strong>.o-field:where(.o-check +*)</strong>
                                     <a href="/proto/FMTFC0101P01" target="ibkbws_exam" className="o-link texted-button _primary">
                                       FMTFC0101P01<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
+                                    <strong>[rowspan]:where(.m-data-form *)</strong>
+                                    <a href="/proto/FMTFC0101P01" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      FMTFC0101P01<Icon icon="link" />
+                                    </a>
+                                    <a href="/proto/HSPDU0401M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      HSPDU0401M<Icon icon="link" />
                                     </a>
                                   </div>
                                 </li>
@@ -1250,89 +1291,333 @@ function TMPL() {
 
                   <div className="main">
                     <div className="o-board">
-                      <ol className="o-steps axis-rows type-normal">
-                        <li aria-label="진행 완료">
-                          <span className="order" aria-hidden="true">
-                            <span className="prefix"></span>
-                            <span className="count">1</span>
-                            <span className="suffix">단계. </span>
-                          </span>
-                          <span className="label">
-                            <em className="main">신청등록</em>
-                          </span>
-                        </li>
-                        <li aria-label="진행 단계">
-                          <span className="order" aria-hidden="true">
-                            <span className="prefix"></span>
-                            <span className="count">2</span>
-                            <span className="suffix">단계. </span>
-                          </span>
-                          <span className="label">
-                            <em className="main">신청마감</em>
-                          </span>
-                        </li>
-                        <li aria-label="진행 예정">
-                          <span className="order" aria-hidden="true">
-                            <span className="prefix"></span>
-                            <span className="count">3</span>
-                            <span className="suffix">단계. </span>
-                          </span>
-                          <span className="label">
-                            <em className="main">배송등록</em>
-                          </span>
-                        </li>
-                        <li aria-label="진행 예정">
-                          <span className="order" aria-hidden="true">
-                            <span className="prefix"></span>
-                            <span className="count">4</span>
-                            <span className="suffix">단계. </span>
-                          </span>
-                          <span className="label">
-                            <em className="main">인수완료</em>
-                          </span>
-                        </li>
-                      </ol>
+                      <div className="m-step">
+                        <div className="steps">
+                          <ol className="o-steps axis-rows type-straight" aria-label="진행 상태">
+                            <li aria-label="진행 완료">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">1</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">고객정보입력신청</em>
+                              </span>
+                            </li>
+                            <li aria-label="진행 단계">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">2</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">결재중</em>
+                              </span>
+                            </li>
+                            <li aria-label="진행 예정">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">3</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">고객정보입력완료</em>
+                              </span>
+                            </li>
+                            <li aria-label="진행 예정">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">4</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">배송중</em>
+                              </span>
+                            </li>
+                            <li aria-label="진행 예정">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">5</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">인수완료</em>
+                              </span>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
                     </div>
 
+                    <div className="o-board">
+                      <div className="m-step">
+                        <div className="steps">
+                          <ol className="o-steps axis-rows type-normal basis-type-addition" aria-label="진행 상태">
+                            <li aria-label="진행 완료">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">1</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">신청</em>
+
+                                <span className="addition">
+                                  <span className="item name">최유나</span>
+                                  <span className="item date">2025-02-01</span>
+                                </span>
+                              </span>
+                            </li>
+                            <li aria-label="진행 단계">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">2</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">검수</em>
+
+                                <span className="addition">
+                                  <span className="item name">제갈공명</span>
+                                  <span className="item date">2025-03-10</span>
+                                </span>
+                              </span>
+                            </li>
+                            <li aria-label="진행 예정">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">3</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">배송</em>
+                              </span>
+                            </li>
+                            <li aria-label="진행 예정">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">4</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main">인수</em>
+                              </span>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="data man" style={{ width: 'calc(100% * 384 / var(--width-layout-container, 1536))', minWidth: 'calc(var(--rem) * 280)' }} />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`등록일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`등록자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [00000] 홍길동
+                          </td>
+
+                          <td rowSpan={5} className="surface g-center">
+                            <div className="m-step">
+                              <div className="header">
+                                <Label label={`BPR스캔등록`} require={false} />
+                              </div>
+
+                              <div className="steps">
+                                <ol className="o-steps axis-rows type-normal" aria-label="진행 상태">
+                                  <li aria-label="진행 완료">
+                                    <span className="order" aria-hidden="true">
+                                      <span className="prefix"></span>
+                                      <span className="count">1</span>
+                                      <span className="suffix">단계. </span>
+                                    </span>
+                                    <span className="label">
+                                      <em className="main"><CommonButton label="스캔등록" className="_solid-secondary" /></em>
+                                    </span>
+                                  </li>
+                                  <li aria-label="진행 단계">
+                                    <span className="order" aria-hidden="true">
+                                      <span className="prefix"></span>
+                                      <span className="count">2</span>
+                                      <span className="suffix">단계. </span>
+                                    </span>
+                                    <span className="label">
+                                      <em className="main"><CommonButton label="스캔확인" className="_solid-secondary" /></em>
+                                    </span>
+                                  </li>
+                                  <li aria-label="진행 예정">
+                                    <span className="order" aria-hidden="true">
+                                      <span className="prefix"></span>
+                                      <span className="count">3</span>
+                                      <span className="suffix">단계. </span>
+                                    </span>
+                                    <span className="label">
+                                      <em className="main"><CommonButton label="스캔완료" className="_solid-secondary" disabled /></em>
+                                    </span>
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`의뢰제목`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`대상기간​(From~To)`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <span className="seps type-tilde">~</span>
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`대상건수`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50 g-end">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`소각연월일`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`사고보고여부`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="m-checks">
+                                  <InputCheck label="선택" labelHidden />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
 
                     <div className="o-board">
-                      <ol className="o-steps axis-rows type-normal">
-                        <li aria-label="진행 완료">
-                          <span className="order" aria-hidden="true">
-                            <span className="prefix"></span>
-                            <span className="count">1</span>
-                            <span className="suffix">단계. </span>
-                          </span>
-                          <span className="label">
-                            <em className="main"><CommonButton label="스캔등록" className="_solid-secondary" /></em>
-                          </span>
-                        </li>
-                        <li aria-label="진행 단계">
-                          <span className="order" aria-hidden="true">
-                            <span className="prefix"></span>
-                            <span className="count">2</span>
-                            <span className="suffix">단계. </span>
-                          </span>
-                          <span className="label">
-                            <em className="main"><CommonButton label="스캔확인" className="_solid-secondary" /></em>
-                          </span>
-                        </li>
-                        <li aria-label="진행 예정">
-                          <span className="order" aria-hidden="true">
-                            <span className="prefix"></span>
-                            <span className="count">3</span>
-                            <span className="suffix">단계. </span>
-                          </span>
-                          <span className="label">
-                            <em className="main"><CommonButton label="스캔완료" className="_solid-secondary" disabled /></em>
-                          </span>
-                        </li>
-                      </ol>
+                      <div className="m-step">
+                        <div className="header">
+                          <Label label={`BPR스캔등록`} require={false} />
+                        </div>
+
+                        <div className="steps">
+                          <ol className="o-steps axis-rows type-normal" aria-label="진행 상태">
+                            <li aria-label="진행 완료">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">1</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main"><CommonButton label="스캔등록" className="_solid-secondary" /></em>
+                              </span>
+                            </li>
+                            <li aria-label="진행 단계">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">2</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main"><CommonButton label="스캔확인" className="_solid-secondary" /></em>
+                              </span>
+                            </li>
+                            <li aria-label="진행 예정">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">3</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <span className="label">
+                                <em className="main"><CommonButton label="스캔완료" className="_solid-secondary" disabled /></em>
+                              </span>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
                     </div>
 
                     <div className="m-step-form">
                       <div className="steps">
-                        <ol className="o-steps axis-cols type-normal">
+                        <ol className="o-steps axis-cols type-normal" aria-label="진행 상태">
                           <li aria-label="진행 완료">
                             <span className="order" aria-hidden="true">
                               <span className="prefix"></span>
