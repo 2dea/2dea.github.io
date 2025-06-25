@@ -1,2 +1,5 @@
 @charset "UTF-8";
 
+.m-string-binds  { display: flex; align-items: center; gap: $gap-element-30; }
+.m-string-binds .binds  { display: flex; align-items: center; gap: $gap-element-30; }
+.m-string-binds .justify-end  { margin-left: auto; }
