@@ -91,9 +91,13 @@ function DEX() {
 
       {/*
       스케줄
-      2025-06-24 수 :
+      2025-06-26 목 :
+          1.행내등기 > 등기우편물~  #83 이후부터~ # BEXRM0201P09 부터~
+      2025-06-25 수 :
         [Todo List]
-          1.행내등기 > 등기우편물~
+          1. 채권양도통지(B2B팩토링) : [영업지원] #80 -> 완료 함
+          2.행내등기 > 등기우편물~
+            중간에 멈춤 : BEXRM0201P06 : #81
 
       2025-06-24 화 :
         [Todo List]
@@ -126,6 +130,8 @@ function DEX() {
         예외: '확인' 버튼만 있는 경우! -> modal={false}  -> 조회성 모달!
       ~ 6/17 행내등기
 
+<td class="auth"><span class="name DEL">김진영</span></td>
+<td class="done"><span class="date done">2025-06-26</span></td>
 
  */}
       {/*
@@ -138,6 +144,7 @@ function DEX() {
 
 <td className="g-start">[00070] 프로세스혁신부</td>
 <td className="g-start">을지로</td>
+<td>0025</td>
 <td className="g-start">부산</td>
 
 <td>012345</td>
@@ -293,6 +300,23 @@ function DEX() {
                         </div>
                       </td>
                     </tr>
+
+                     문구 + 보통 버튼
+
+                    <td colSpan={5}>
+                        <div className="m-string-binds">
+                          <span className="string">로봇배송</span>
+                          <span className="binds"><CommonButton label="거래이력" className="_normal" /></span>
+                        </div>
+                      </td>
+
+                      <td colSpan={5}>
+                        <div className="m-string-binds">
+                          <span className="string">로봇배송</span>
+                          <span className="binds"><CommonButton label="거래이력" className="_normal" /></span>
+                        </div>
+                      </td>
+
 */}
       {/*
       업무지원시스템 재구축 프로젝트에 사용할 템플릿 파일입니다.
@@ -338,6 +362,11 @@ function DEX() {
             [레이아웃 팝업] BSPDU0401P02 : 하단에 유의사항
 
             [요청사항 : BSSLQ0201M ]
+            유의사항 단독  InputTextarea
+
+            [ 일괄적용] 버튼 : BEXRQ0101M
+            <CommonButton label="일괄적용" icon="du-down" className="_normal" />
+            STMBR0101P01 팝업
 
             [ 테이블 ]
             // 소계 합계 : FMTFC0301M
@@ -498,6 +527,29 @@ function DEX() {
                   </div>
                 </div>
 
+              </div>
+
+              <div className="o-section">
+                <div className="o-board type-a">
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">유의사항</span></strong>
+                    </div>
+
+                    <ul className="m-bullets type-disc">
+                      <li className="c-color-strong"><em>바코드정보 입력 창에서 바코드 입력 시 접수내역 등록되며 연속 거래 가능</em></li>
+                      <li className="c-color-strong">
+                        사용방법
+                        <ol className="m-bullets type-decimal level1 c-color-strong">
+                          <li>등록구분 선택</li>
+                          <li>바코드정보 입력창 선택</li>
+                          <li>[바코드스캔]으로 바코드 읽고 엔터</li>
+                          <li>등록 완료되면 닫기 후 접수내역 확인</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <div className="o-section">

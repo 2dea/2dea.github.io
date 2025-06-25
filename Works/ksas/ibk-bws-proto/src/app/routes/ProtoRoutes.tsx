@@ -202,31 +202,41 @@ import HSPPC0401P03 from 'app/pages/hsp/HSPPC0401P03';  // 중요용지·용도�
 
 
 // proto 행내등기·우편물
-import BEXRQ0101M from 'app/pages/bex/BEXRQ0101M';      // 행내등기·우편물 > 행내등기 > 행내등기신청
-import BEXRQ0101P01 from 'app/pages/bex/BEXRQ0101P01';  // 행내등기·우편물 > 행내등기 > 행내등기신청 ~ (LP)인수자즐겨찾기
-import BEXRQ0101P02 from 'app/pages/bex/BEXRQ0101P02';  // 행내등기·우편물 > 행내등기 > 행내등기신청 ~ (LP)서류내용관리
-import BEXRQ0101P03 from 'app/pages/bex/BEXRQ0101P03';  // 행내등기·우편물 > 행내등기 > 행내등기신청 ~ (LP)인수자일괄추가
+import BEXRQ0101M from 'app/pages/bex/BEXRQ0101M';      // 행내등기·우편물 > 행내등기  > 행내등기신청
+import BEXRQ0101P01 from 'app/pages/bex/BEXRQ0101P01';  // 행내등기·우편물 > 행내등기  > 행내등기신청 ~ (LP)인수자즐겨찾기
+import BEXRQ0101P02 from 'app/pages/bex/BEXRQ0101P02';  // 행내등기·우편물 > 행내등기  > 행내등기신청 ~ (LP)서류내용관리
+import BEXRQ0101P03 from 'app/pages/bex/BEXRQ0101P03';  // 행내등기·우편물 > 행내등기  > 행내등기신청 ~ (LP)인수자일괄추가
 
-import BEXRQ0401M from 'app/pages/bex/BEXRQ0401M';      // 행내등기·우편물 > 행내등기 > 행내등기인수
+import BEXRQ0401M from 'app/pages/bex/BEXRQ0401M';      // 행내등기·우편물 > 행내등기  > 행내등기인수
 
-import BEXRQ0201P01 from 'app/pages/bex/BEXRQ0201P01';  // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기STP변경이력
-import BEXRQ0201P02 from 'app/pages/bex/BEXRQ0201P02';  // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)여신자필서류(STP)관리
-import BEXRQ0201P03 from 'app/pages/bex/BEXRQ0201P03';  // 행내등기·우편물 > 행내등기 > 행내등기현황관리 ~ (LP)행내등기변경이력
+import BEXRQ0201P01 from 'app/pages/bex/BEXRQ0201P01';  // 행내등기·우편물 > 행내등기  > 행내등기현황관리 ~ (LP)행내등기STP변경이력
+import BEXRQ0201P02 from 'app/pages/bex/BEXRQ0201P02';  // 행내등기·우편물 > 행내등기  > 행내등기현황관리 ~ (LP)여신자필서류(STP)관리
+import BEXRQ0201P03 from 'app/pages/bex/BEXRQ0201P03';  // 행내등기·우편물 > 행내등기  > 행내등기현황관리 ~ (LP)행내등기변경이력
 
-import BEXRQ0601M from 'app/pages/bex/BEXRQ0601M';      // 행내등기·우편물 > 행내등기 > 행내등기노선관리
+import BEXRQ0601M from 'app/pages/bex/BEXRQ0601M';      // 행내등기·우편물 > 행내등기  > 행내등기노선관리
 
-import BEXRQ0601P01 from 'app/pages/bex/BEXRQ0601P01';  // 행내등기·우편물 > 행내등기 > 행내등기노선관리 ~ (LP)행내등기노선등록
-import BEXRQ0601P02 from 'app/pages/bex/BEXRQ0601P02';  // 행내등기·우편물 > 행내등기 > 행내등기노선관리 ~ (LP)행내등기노선등록
+import BEXRQ0601P01 from 'app/pages/bex/BEXRQ0601P01';  // 행내등기·우편물 > 행내등기  > 행내등기노선관리 ~ (LP)행내등기노선등록
+import BEXRQ0601P02 from 'app/pages/bex/BEXRQ0601P02';  // 행내등기·우편물 > 행내등기  > 행내등기노선관리 ~ (LP)행내등기노선등록
 
-import BEXPM0101M from 'app/pages/bex/BEXPM0101M';      // 행내등기·우편물 > 우편물   > 우편물신청
+import BEXPM0101M from 'app/pages/bex/BEXPM0101M';      // 행내등기·우편물 > 우편물    > 우편물신청
 
-import BEXPM0201M from 'app/pages/bex/BEXPM0201M';      // 행내등기·우편물 > 우편물   > 우편물신청내역
-import BEXPM0601M from 'app/pages/bex/BEXPM0601M';      // 행내등기·우편물 > 우편물   > 우편물대행신청내역
-import BEXPM0301M from 'app/pages/bex/BEXPM0301M';      // 행내등기·우편물 > 우편물   > 우편물검수
-import BEXPM0301P01 from 'app/pages/bex/BEXPM0301P01';  // 행내등기·우편물 > 우편물   > 우편물검수 ~ (LP)우편물일괄검수등록
+import BEXPM0201M from 'app/pages/bex/BEXPM0201M';      // 행내등기·우편물 > 우편물    > 우편물신청내역
+import BEXPM0601M from 'app/pages/bex/BEXPM0601M';      // 행내등기·우편물 > 우편물    > 우편물대행신청내역
+import BEXPM0301M from 'app/pages/bex/BEXPM0301M';      // 행내등기·우편물 > 우편물    > 우편물검수
+import BEXPM0301P01 from 'app/pages/bex/BEXPM0301P01';  // 행내등기·우편물 > 우편물    > 우편물검수 ~ (LP)우편물일괄검수등록
 
-import BEXPM0401M from 'app/pages/bex/BEXPM0401M';      // 행내등기·우편물 > 우편물   > 우편물처리결과
-import BEXPM0501M from 'app/pages/bex/BEXPM0501M';      // 행내등기·우편물 > 우편물   > 등기번호등록/조회
+import BEXPM0401M from 'app/pages/bex/BEXPM0401M';      // 행내등기·우편물 > 우편물    > 우편물처리결과
+import BEXPM0501M from 'app/pages/bex/BEXPM0501M';      // 행내등기·우편물 > 우편물    > 등기번호등록/조회
+
+import BEXRM0201M from 'app/pages/bex/BEXRM0201M';      // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장
+import BEXRM0201P01 from 'app/pages/bex/BEXRM0201P01';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)등기우편물접수
+import BEXRM0201P02 from 'app/pages/bex/BEXRM0201P02';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)등기우편물통보결과
+import BEXRM0201P03 from 'app/pages/bex/BEXRM0201P03';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)등기우편물인수정보등록
+import BEXRM0201P04 from 'app/pages/bex/BEXRM0201P04';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)등기우편물인수
+import BEXRM0201P05 from 'app/pages/bex/BEXRM0201P05';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)서명이미지보기
+import BEXRM0201P06 from 'app/pages/bex/BEXRM0201P06';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)로봇배송등록
+import BEXRM0201P07 from 'app/pages/bex/BEXRM0201P07';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)알림메시지
+import BEXRM0201P08 from 'app/pages/bex/BEXRM0201P08';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)등기우편물거래이력
 
 
 
@@ -300,43 +310,49 @@ import STMFL0501M from 'app/pages/stm/STMFL0501M';       // 재난·안전관리
 
 
 // proto 영업지원
-import BSSAP0201M from 'app/pages/bss/BSSAP0201M';     // 영업지원 > A4용지관리 > A4용지인수
-import BSSAP0201P01 from 'app/pages/bss/BSSAP0201P01'; // 영업지원 > A4용지관리 > A4용지인수 ~ (LP)배송업체관리
-import BSSAP0201P02 from 'app/pages/bss/BSSAP0201P02'; // 영업지원 > A4용지관리 > A4용지인수 ~ (LP)배송업체정보
+import BSSAP0201M from 'app/pages/bss/BSSAP0201M';     // 영업지원 > A4용지관리             > A4용지인수
+import BSSAP0201P01 from 'app/pages/bss/BSSAP0201P01'; // 영업지원 > A4용지관리             > A4용지인수 ~ (LP)배송업체관리
+import BSSAP0201P02 from 'app/pages/bss/BSSAP0201P02'; // 영업지원 > A4용지관리             > A4용지인수 ~ (LP)배송업체정보
 
-import BSSDM0101M from 'app/pages/bss/BSSDM0101M';     // 영업지원 > 문서관리	 > 문서열람신청
-import BSSDM0201M from 'app/pages/bss/BSSDM0201M';     // 영업지원 > 문서관리	 > 문서대량폐기
-import BSSDM0201P01 from 'app/pages/bss/BSSDM0201P01'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기승인
-import BSSDM0201P02 from 'app/pages/bss/BSSDM0201P02'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기정산
-import BSSDM0201P03 from 'app/pages/bss/BSSDM0201P03'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기정보입력
-import BSSDM0201P04 from 'app/pages/bss/BSSDM0201P04'; // 영업지원 > 문서관리	 > 문서대량폐기 ~ (LP)대량폐기반려
+import BSSDM0101M from 'app/pages/bss/BSSDM0101M';     // 영업지원 > 문서관리	              > 문서열람신청
+import BSSDM0201M from 'app/pages/bss/BSSDM0201M';     // 영업지원 > 문서관리	              > 문서대량폐기
+import BSSDM0201P01 from 'app/pages/bss/BSSDM0201P01'; // 영업지원 > 문서관리	              > 문서대량폐기 ~ (LP)대량폐기승인
+import BSSDM0201P02 from 'app/pages/bss/BSSDM0201P02'; // 영업지원 > 문서관리	              > 문서대량폐기 ~ (LP)대량폐기정산
+import BSSDM0201P03 from 'app/pages/bss/BSSDM0201P03'; // 영업지원 > 문서관리	              > 문서대량폐기 ~ (LP)대량폐기정보입력
+import BSSDM0201P04 from 'app/pages/bss/BSSDM0201P04'; // 영업지원 > 문서관리	              > 문서대량폐기 ~ (LP)대량폐기반려
 
-import BSSLQ0201M from 'app/pages/bss/BSSLQ0201M';     // 영업지원 > 대량신규  > 대량신규신청
-import BSSLQ0101M from 'app/pages/bss/BSSLQ0101M';     // 영업지원 > 대량신규  > 대량신규승인
-import BSSLQ0101P01 from 'app/pages/bss/BSSLQ0101P01'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)대량신규승인
-import BSSLQ0101P02 from 'app/pages/bss/BSSLQ0101P02'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)대량신규승인취소
-import BSSLQ0101P03 from 'app/pages/bss/BSSLQ0101P03'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)업무완료
-import BSSLQ0101P04 from 'app/pages/bss/BSSLQ0101P04'; // 영업지원 > 대량신규  > 대량신규승인 ~ (LP)반려좌수상세보기
+import BSSLQ0201M from 'app/pages/bss/BSSLQ0201M';     // 영업지원 > 대량신규               > 대량신규신청
+import BSSLQ0101M from 'app/pages/bss/BSSLQ0101M';     // 영업지원 > 대량신규               > 대량신규승인
+import BSSLQ0101P01 from 'app/pages/bss/BSSLQ0101P01'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)대량신규승인
+import BSSLQ0101P02 from 'app/pages/bss/BSSLQ0101P02'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)대량신규승인취소
+import BSSLQ0101P03 from 'app/pages/bss/BSSLQ0101P03'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)업무완료
+import BSSLQ0101P04 from 'app/pages/bss/BSSLQ0101P04'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)반려좌수상세보기
 
 
-import BSSCR0101M from 'app/pages/bss/BSSCR0101M';     // 영업지원 > 캘린더신청 > 신청기간관리
-import BSSCR0101P01 from 'app/pages/bss/BSSCR0101P01'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)공지이미지관리
-import BSSCR0101P02 from 'app/pages/bss/BSSCR0101P02'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)달력카테고리관리
-import BSSCR0101P03 from 'app/pages/bss/BSSCR0101P03'; // 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)부점선택
-import BSSCR0201M from 'app/pages/bss/BSSCR0201M';     // 영업지원 > 캘린더신청 > 신청관리
-import BSSCR0301M from 'app/pages/bss/BSSCR0301M';     // 영업지원 > 캘린더신청 > 배송·인수관리
-import BSSCR0301P01 from 'app/pages/bss/BSSCR0301P01'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)배송업체정보
-import BSSCR0301P02 from 'app/pages/bss/BSSCR0301P02'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)연도별배송수량참고
-import BSSCR0301P03 from 'app/pages/bss/BSSCR0301P03'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)인수증확인
-import BSSCR0301P04 from 'app/pages/bss/BSSCR0301P04'; // 영업지원 > 캘린더신청 > 배송·인수관리 ~ (LP)고객배송정보
-import BSSCR0401M from 'app/pages/bss/BSSCR0401M';     // 영업지원 > 캘린더신청 > 신청내역조회
-import BSSCR0501M from 'app/pages/bss/BSSCR0501M';     // 영업지원 > 캘린더신청 > 배부수량관리
+import BSSTN0101M from 'app/pages/bss/BSSTN0101M';     // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링)
+import BSSTN0101P01 from 'app/pages/bss/BSSTN0101P01'; // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링) ~ (LP)등기번호등록
+import BSSTN0101P04 from 'app/pages/bss/BSSTN0101P04'; // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링) ~ (LP)등기번호수정
+import BSSTN0101P02 from 'app/pages/bss/BSSTN0101P02'; // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링) ~ (LP)채권양도일괄검수등록
+import BSSTN0101P03 from 'app/pages/bss/BSSTN0101P03'; // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링) ~ (LP)채권양도행내등기신청
 
-import BSSTI0101M from 'app/pages/bss/BSSTI0101M';     // 영업지원 > 연수원    > 연수원품목정보관리
-import BSSTI0201M from 'app/pages/bss/BSSTI0201M';     // 영업지원 > 연수원    > 연수원품목입출고등록
-import BSSTI0301M from 'app/pages/bss/BSSTI0301M';     // 영업지원 > 연수원    > 연수원품목입출고취소
-import BSSTI0401M from 'app/pages/bss/BSSTI0401M';     // 영업지원 > 연수원    > 연수원입출고내역조회
-import BSSTI0501M from 'app/pages/bss/BSSTI0501M';     // 영업지원 > 연수원    > 연수원품목재고조회
+import BSSCR0101M from 'app/pages/bss/BSSCR0101M';     // 영업지원 > 캘린더신청             > 신청기간관리
+import BSSCR0101P01 from 'app/pages/bss/BSSCR0101P01'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)공지이미지관리
+import BSSCR0101P02 from 'app/pages/bss/BSSCR0101P02'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)달력카테고리관리
+import BSSCR0101P03 from 'app/pages/bss/BSSCR0101P03'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)부점선택
+import BSSCR0201M from 'app/pages/bss/BSSCR0201M';     // 영업지원 > 캘린더신청             > 신청관리
+import BSSCR0301M from 'app/pages/bss/BSSCR0301M';     // 영업지원 > 캘린더신청             > 배송·인수관리
+import BSSCR0301P01 from 'app/pages/bss/BSSCR0301P01'; // 영업지원 > 캘린더신청             > 배송·인수관리 ~ (LP)배송업체정보
+import BSSCR0301P02 from 'app/pages/bss/BSSCR0301P02'; // 영업지원 > 캘린더신청             > 배송·인수관리 ~ (LP)연도별배송수량참고
+import BSSCR0301P03 from 'app/pages/bss/BSSCR0301P03'; // 영업지원 > 캘린더신청             > 배송·인수관리 ~ (LP)인수증확인
+import BSSCR0301P04 from 'app/pages/bss/BSSCR0301P04'; // 영업지원 > 캘린더신청             > 배송·인수관리 ~ (LP)고객배송정보
+import BSSCR0401M from 'app/pages/bss/BSSCR0401M';     // 영업지원 > 캘린더신청             > 신청내역조회
+import BSSCR0501M from 'app/pages/bss/BSSCR0501M';     // 영업지원 > 캘린더신청             > 배부수량관리
+
+import BSSTI0101M from 'app/pages/bss/BSSTI0101M';     // 영업지원 > 연수원                 > 연수원품목정보관리
+import BSSTI0201M from 'app/pages/bss/BSSTI0201M';     // 영업지원 > 연수원                 > 연수원품목입출고등록
+import BSSTI0301M from 'app/pages/bss/BSSTI0301M';     // 영업지원 > 연수원                 > 연수원품목입출고취소
+import BSSTI0401M from 'app/pages/bss/BSSTI0401M';     // 영업지원 > 연수원                 > 연수원입출고내역조회
+import BSSTI0501M from 'app/pages/bss/BSSTI0501M';     // 영업지원 > 연수원                 > 연수원품목재고조회
 
 // proto 공통·결재
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M';      // 공통·결재 > 코드관리 > 공통코드관리
@@ -598,6 +614,16 @@ function ProtoRoutes() {
 
         { path: 'BEXPM0401M',   element: <BEXPM0401M /> },
         { path: 'BEXPM0501M',   element: <BEXPM0501M /> },
+
+        { path: 'BEXRM0201M',   element: <BEXRM0201M /> },
+        { path: 'BEXRM0201P01', element: <BEXRM0201P01 /> },
+        { path: 'BEXRM0201P02', element: <BEXRM0201P02 /> },
+        { path: 'BEXRM0201P03', element: <BEXRM0201P03 /> },
+        { path: 'BEXRM0201P04', element: <BEXRM0201P04 /> },
+        { path: 'BEXRM0201P05', element: <BEXRM0201P05 /> },
+        { path: 'BEXRM0201P06', element: <BEXRM0201P06 /> },
+        { path: 'BEXRM0201P07', element: <BEXRM0201P07 /> },
+        { path: 'BEXRM0201P08', element: <BEXRM0201P08 /> },
       ],
     },
     { // 재난·안전관리
@@ -699,6 +725,12 @@ function ProtoRoutes() {
         { path: 'BSSLQ0101P02', element: <BSSLQ0101P02 /> },
         { path: 'BSSLQ0101P03', element: <BSSLQ0101P03 /> },
         { path: 'BSSLQ0101P04', element: <BSSLQ0101P04 /> },
+
+        { path: 'BSSTN0101M',   element: <BSSTN0101M /> },
+        { path: 'BSSTN0101P01', element: <BSSTN0101P01 /> },
+        { path: 'BSSTN0101P02', element: <BSSTN0101P02 /> },
+        { path: 'BSSTN0101P03', element: <BSSTN0101P03 /> },
+        { path: 'BSSTN0101P04', element: <BSSTN0101P04 /> },
 
         { path: 'BSSCR0101M',   element: <BSSCR0101M /> },
         { path: 'BSSCR0101P02', element: <BSSCR0101P02 /> },
