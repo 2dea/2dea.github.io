@@ -209,9 +209,12 @@ import BEXRQ0101P03 from 'app/pages/bex/BEXRQ0101P03';  // 행내등기·우편�
 
 import BEXRQ0401M from 'app/pages/bex/BEXRQ0401M';      // 행내등기·우편물 > 행내등기  > 행내등기인수
 
+import BEXRQ0201M from 'app/pages/bex/BEXRQ0201M';      // 행내등기·우편물 > 행내등기  > 행내등기현황관리
 import BEXRQ0201P01 from 'app/pages/bex/BEXRQ0201P01';  // 행내등기·우편물 > 행내등기  > 행내등기현황관리 ~ (LP)행내등기STP변경이력
 import BEXRQ0201P02 from 'app/pages/bex/BEXRQ0201P02';  // 행내등기·우편물 > 행내등기  > 행내등기현황관리 ~ (LP)여신자필서류(STP)관리
 import BEXRQ0201P03 from 'app/pages/bex/BEXRQ0201P03';  // 행내등기·우편물 > 행내등기  > 행내등기현황관리 ~ (LP)행내등기변경이력
+
+import BEXRQ0301M from 'app/pages/bex/BEXRQ0301M';      // 행내등기·우편물 > 행내등기  > 행내등기검수
 
 import BEXRQ0601M from 'app/pages/bex/BEXRQ0601M';      // 행내등기·우편물 > 행내등기  > 행내등기노선관리
 
@@ -237,6 +240,8 @@ import BEXRM0201P05 from 'app/pages/bex/BEXRM0201P05';  // 행내등기·우편�
 import BEXRM0201P06 from 'app/pages/bex/BEXRM0201P06';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)로봇배송등록
 import BEXRM0201P07 from 'app/pages/bex/BEXRM0201P07';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)알림메시지
 import BEXRM0201P08 from 'app/pages/bex/BEXRM0201P08';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)등기우편물거래이력
+import BEXRM0201P09 from 'app/pages/bex/BEXRM0201P09';  // 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)로봇배송취소
+import BEXRM0301M from 'app/pages/bex/BEXRM0301M';      // 행내등기·우편물 > 등기우편물 > 등기우편물조회/출력
 
 
 
@@ -244,7 +249,8 @@ import BEXRM0201P08 from 'app/pages/bex/BEXRM0201P08';  // 행내등기·우편�
 import STMGD0101M from 'app/pages/stm/STMGD0101M';       // 재난·안전관리 > 기계경비당직관리          > 당직신청관리
 
 import STMVL0101M from 'app/pages/stm/STMVL0101M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
-import STMVL0101P02 from 'app/pages/stm/STMVL0101P02';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)수정기한관리
+import STMVL0101P01 from 'app/pages/stm/STMVL0101P01';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)수정기한관리
+import STMVL0101P02 from 'app/pages/stm/STMVL0101P02';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)차량별관리자지정
 import STMVL0101P03 from 'app/pages/stm/STMVL0101P03';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사관리
 import STMVL0101P04 from 'app/pages/stm/STMVL0101P04';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사정보등록
 import STMVL0101P05 from 'app/pages/stm/STMVL0101P05';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사연락처
@@ -595,11 +601,13 @@ function ProtoRoutes() {
         { path: 'BEXRQ0101P03', element: <BEXRQ0101P03 /> },
 
         { path: 'BEXRQ0401M',   element: <BEXRQ0401M /> },
+        { path: 'BEXRQ0201M',   element: <BEXRQ0201M /> },
 
         { path: 'BEXRQ0201P01', element: <BEXRQ0201P01 /> },
         { path: 'BEXRQ0201P02', element: <BEXRQ0201P02 /> },
         { path: 'BEXRQ0201P03', element: <BEXRQ0201P03 /> },
 
+        { path: 'BEXRQ0301M',   element: <BEXRQ0301M /> },
         { path: 'BEXRQ0601M',   element: <BEXRQ0601M /> },
 
         { path: 'BEXRQ0601P01', element: <BEXRQ0601P01 /> },
@@ -624,6 +632,8 @@ function ProtoRoutes() {
         { path: 'BEXRM0201P06', element: <BEXRM0201P06 /> },
         { path: 'BEXRM0201P07', element: <BEXRM0201P07 /> },
         { path: 'BEXRM0201P08', element: <BEXRM0201P08 /> },
+        { path: 'BEXRM0201P09', element: <BEXRM0201P09 /> },
+        { path: 'BEXRM0301M',   element: <BEXRM0301M /> },
       ],
     },
     { // 재난·안전관리
@@ -653,6 +663,7 @@ function ProtoRoutes() {
         { path: 'STMGI0301M',   element: <STMGI0301M /> },
 
         { path: 'STMVL0101M',   element: <STMVL0101M /> },
+        { path: 'STMVL0101P01', element: <STMVL0101P01 /> },
         { path: 'STMVL0101P02', element: <STMVL0101P02 /> },
         { path: 'STMVL0101P03', element: <STMVL0101P03 /> },
         { path: 'STMVL0101P04', element: <STMVL0101P04 /> },

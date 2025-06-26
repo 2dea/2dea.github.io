@@ -1,5 +1,5 @@
 /**
-* @description 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회 ~ (LP)수정기한관리
+* @description 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회 ~ (LP)차량별관리자지정
  */
 
 // dependency
@@ -201,7 +201,7 @@ function STMVL0101P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)수정기한관리 [wdth-40p(w770)]</span>
+              <span className="label">(P)차량별관리자지정 [wdth-25p]</span>
             </h1>
           </div>
         </div>
