@@ -217,6 +217,9 @@
  ------------- */
 
 /** Colors */
+.c-color-text  { color: var(--color-text-40) !important; }
+.c-color-label  { color: var(--color-text-70) !important; }
+
 .c-color-key  { color: var(--color-key1-40) !important; }
 .c-color-point  { color: var(--color-point-orange) !important; }
 .c-color-strong  { color: var(--color-point-red) !important; }

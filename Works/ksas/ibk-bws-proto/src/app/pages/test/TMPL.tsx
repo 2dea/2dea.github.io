@@ -537,7 +537,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-legend type-helper style-normal">
-                      <em className="label">우측 헬퍼텍스트(일반)</em>
+                      <em className="label"><strong className="c-color-text">도착예정일자 : YYYY-MM-DD</strong> (신청일자에 실물 발송한 경우)</em>
                     </div>
 
                     <div className="o-legend type-helper style-strong">
