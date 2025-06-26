@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-.m-flex-list:has(>.o-field) { --gap: #{$gap-element-30} #{$gap-element-70}; align-items: normal; }
-.m-flex-list:has(>.o-field):where(.m-binds +*) { margin-top: $gap-element-30; }
-
 
 .o-board-list {display: flex; gap: 8px;}
 .o-board-list .item {display: flex; flex-grow: 1; justify-content: space-between; align-items: center; padding: 12px 24px; border-radius: 12px; background-color: #DDE7FE;}

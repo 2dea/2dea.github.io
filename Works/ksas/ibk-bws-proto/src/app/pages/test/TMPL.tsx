@@ -1103,6 +1103,14 @@ function TMPL() {
                                 </li>
                                 <li>
                                   <div className="m-flex-list">
+                                    <strong>.m-flex-list:has(&gt;.o-field):where(.m-binds +*)</strong>
+                                    <a href="/proto/STMVL0101P01" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      STMVL0101P01<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
                                     <strong>소계 / 일계 / 합계</strong>
                                     <a href="/proto/FMTFC0301M" target="ibkbws_exam" className="o-link texted-button _primary">
                                       FMTFC0301M<Icon icon="link" />
