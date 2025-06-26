@@ -131,7 +131,9 @@ function DEX() {
       ~ 6/17 행내등기
 
 <td class="auth"><span class="name DEL">김진영</span></td>
-<td class="done"><span class="date done">2025-06-26</span></td>
+<td class="done"><span class="date done">2025-06-27</span></td>
+
+about:blank
 
  */}
       {/*
@@ -213,6 +215,15 @@ function DEX() {
                                 </div>
                               </div>
                             </div>
+
+                            일반 문구 + 버튼
+                            <td colSpan={1}>
+                            <div className="m-string-binds">
+                              <span className="o-digit type-datetime string">2025-12-25 09:10:59</span>
+                              <span className="binds"><CommonButton label="현재시각" className="_normal" /></span>
+                            </div>
+                          </td>
+
 
                             <td colSpan={1}>
                               <div className="o-field">
@@ -328,7 +339,7 @@ function DEX() {
 
       {/*
 
-      2025-05-27 화
+      2025-05/27 화
       1.특이사항: 레이블이 SelectBox [by.one]
 
         [table main ] 레드 문구 HSPHS0901M
@@ -344,6 +355,8 @@ function DEX() {
               ADMPA0301M: 위에는 조회 full  / 밑에는 반반 3개 테이블
 
           싱글 왼쪽 반: HSPDU0701M , HSPHS2001M
+
+          팝업: row 3 : BEXRQ0201P03
 
 
           [팝업레이아웃 ]
@@ -383,6 +396,80 @@ function DEX() {
             좌:우 : 추가 취소 [BEXRQ0101P03]
 
             2025-06-19 버튼 group 메모: 'group' 'group: 행추가, 삭제~~ ' : BEXRQ0101M
+
+            STMVL0101P01 버튼 여러개
+
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`부점`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+
+                            <div className="m-binds">
+                              <div className="group _start">
+                                <CommonButton label="전체삭제" className="_normal" disabled />
+                                <CommonButton label="추가" className="_normal" />
+                              </div>
+                            </div>
+
+                            <div className="m-flex-list">
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                            </div>
+
+                          </td>
+                        </tr>
+
 
             테이블 col 너비 주기 : HSPSA0201M
             <col className="head" style={{ width: 'calc(var(--rem) * 180)' }} />

@@ -122,6 +122,166 @@ function STMDM0301M() {
           <div className="o-grid">
             <div className="column">
 
+              <div className="o-section">
+                <div className="o-board-list">
+                  <div className="item">
+                    <div className="info">
+                      <i className="o-icon _test wdth-70" aria-hidden="true"></i>
+                      {/* <ImageButton label="이미지" icon="attach" /> */}
+                      <span className="name">배차가능차량</span>
+                    </div>
+                    <div className="data">
+                      <strong>100</strong>
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <div className="info">
+                      <i className="o-icon _test wdth-70" aria-hidden="true"></i>
+                      {/* <ImageButton label="이미지" icon="attach" /> */}
+                      <span className="name">배차가능차량</span>
+                    </div>
+                    <div className="data">
+                      <strong>100</strong>
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <div className="info">
+                      <i className="o-icon _test wdth-70" aria-hidden="true"></i>
+                      {/* <ImageButton label="이미지" icon="attach" /> */}
+                      <span className="name">배차가능차량</span>
+                    </div>
+                    <div className="data">
+                      <strong>100</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="o-board-list o-board-data">
+                  <div className="item">
+                    <div className="head">
+                      <div className="title">본부</div>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </div>
+
+                    <div className="body">
+                      <ul className="data-list">
+                        <li className="item-level-01">
+                          <div className="data-list">
+                              <span className="name">완료</span>
+                              <strong className="data">000</strong>
+                          </div>
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                        </li>
+
+                        <li className="item-level-01">
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="head">
+                      <div className="title">본부</div>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </div>
+
+                    <div className="body">
+                      <ul className="data-list">
+                        <li className="item-level-01">
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                        </li>
+
+                        <li className="item-level-01">
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="head">
+                      <div className="title">본부</div>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </div>
+
+                    <div className="body">
+                      <ul className="data-list">
+                        <li className="item-level-01">
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                        </li>
+
+                        <li className="item-level-01">
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
               <form className="m-filter-form">
                 <div className="fieldset">
 
