@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 가스분사기대장관리 > 가스분사기관리대장 ~ (LP)가스분사기관리대장 반납요청
+ * @description 재난·안전관리 > 기계경비당직관리 > 당직신청관리 ~ (LP)대직자변경이력
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMGI0101P01() {
+function STMGD0101P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -87,7 +87,7 @@ function STMGI0101P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -96,7 +96,7 @@ function STMGI0101P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">반납요청</span></h3>}
+        header={<h3 className="o-heading"><span className="label">대직자변경이력</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -104,62 +104,66 @@ function STMGI0101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">반납정보</span></h4>
+                  <h4 className="o-heading level2"><span className="label">대직자변경이력</span></h4>
                 </div>
 
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
+                <div className="main _primary rows-body-5i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
 
-                      <tbody>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`반납대상부점`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0810] 프로세스혁신
-                          </td>
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직일자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직사유</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일직</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경일자</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세부내용</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자</span></div></th>
+                          </tr>
+                        </thead>
 
-                          <th colSpan={1}>
-                            <Label label={`담당자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select">
-                                  <XDropdown appendTo={'self'} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
 
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`발송메시지`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-
-                      </tbody>
-                    </table>
-                  </form>
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>공사</td>
+                              <td className="g-start">레이아웃 야간공사</td>
+                              <td>팀원1</td>
+                              <td>[20240065] 홍길동</td>
+                              <td>대직1</td>
+                              <td>[20240065] 홍길동</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -170,8 +174,7 @@ function STMGI0101P01() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="결재요청" className="_solid-primary" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -181,7 +184,7 @@ function STMGI0101P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)가스분사기관리대장 반납요청 [wdth-40p(w770)]</span>
+              <span className="label">(P)대직자변경이력 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>
@@ -200,4 +203,4 @@ function STMGI0101P01() {
   );
 }
 
-export default STMGI0101P01;
+export default STMGD0101P02;

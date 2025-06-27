@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 기계경비당직관리 > 당직신청관리
+ * @description 재난·안전관리 > 기계경비당직관리 > 당직신청관리(관리자)
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMGD0101M() {
+function STMGD0201M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -117,9 +117,15 @@ function STMGD0101M() {
             </div>
 
             <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="출력" className="_texted" />
+                </div>
+              </div>
+
               <div className="group _primary">
-                <CommonButton label="삭제" className="_delete" />
-                <CommonButton label="당직신청" className="_solid-primary" />
+                <CommonButton label="반려" className="_lined-primary" />
+                <CommonButton label="승인" className="_solid-primary" />
               </div>
             </div>
           </div>
@@ -129,7 +135,7 @@ function STMGD0101M() {
         <div className="div-contents">
           <div className="o-board type-a style-fit">
             <ul className="m-bullets type-disc">
-              <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7483</span></span></span> | 반드시 조회 후 신청해주세요.</li>
+              <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7483</span></span></span></li>
             </ul>
           </div>
 
@@ -200,7 +206,7 @@ function STMGD0101M() {
               </div>
             </div>
 
-            <div className="main _primary rows-body-3i">
+            <div className="main _primary">
               <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
               <div className="o-grid-table p-datatable">
                 <div className="table-container p-datatable-wrapper">
@@ -245,7 +251,6 @@ function STMGD0101M() {
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">안전관리실 결재상태</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 등록</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 결재상태</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 등록</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 결재상태</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검사항</span></div></th>
                         <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업시간</span></div></th>
@@ -268,7 +273,7 @@ function STMGD0101M() {
 
                     <tbody className="p-datatable-tbody">
                       <tr className="p-datatable-emptymessage">
-                        <td colSpan={23}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                        <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                       </tr>
                     </tbody>
 
@@ -278,7 +283,7 @@ function STMGD0101M() {
                           {
                             (idx - 3) % 3 === 0 &&
                             <tr className="p-rowgroup-header">
-                              <td colSpan={23} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                              <td colSpan={22} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
                             </tr>
                           }
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
@@ -338,33 +343,62 @@ function STMGD0101M() {
                             <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
                               {
                                 (idx) % 3 === 0 &&
-                                <CommonButton label="대직자 등록" className="_normal" /> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                <>결재승인</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                               }
                             </td>
                             <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
                               {
                                 (idx) % 3 === 0 &&
-                                <></> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                <><a href="javascript:" className="o-link _normal">등록완료</a></> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                               }
                             </td>
                             <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
                               {
                                 (idx) % 3 === 0 &&
-                                <CommonButton label="점검표 등록" className="_normal" /> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                <>결재승인</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                               }
                             </td>
-                            <td>결재승인</td>
-                            <td>이상무</td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                              {
+                                (idx) % 3 === 0 &&
+                                <>이상무</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                              }
+                            </td>
+                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                              {
+                                (idx) % 3 === 0 &&
+                                <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                              }
+                            </td>
+                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                              {
+                                (idx) % 3 === 0 &&
+                                <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                              }
+                            </td>
+                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                              {
+                                (idx) % 3 === 0 &&
+                                <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                              }
+                            </td>
+                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                              {
+                                (idx) % 3 === 0 &&
+                                <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                              }
+                            </td>
+                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                              {
+                                (idx) % 3 === 0 &&
+                                <span className="o-digit type-date">2025-12-25</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                              }
+                            </td>
                           </tr>
                           {
                             (idx - 2) % 3 === 0 &&
                             <tr className="p-rowgroup-footer">
-                              <td colSpan={23} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                              <td colSpan={22} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
                             </tr>
                           }
                         </>
@@ -377,26 +411,6 @@ function STMGD0101M() {
 
           </div>
 
-          <div className="o-section">
-            <div className="o-board type-a">
-              <div className="board-container">
-                <div className="m-header">
-                  <strong className="o-heading"><span className="label">유의사항</span></strong>
-                </div>
-
-                <ul className="m-bullets type-disc">
-                  <li>당직가능업무: 공사, 청소 등 불가피한 경우만 해당됩니다.</li>
-                  <li className="c-color-strong"><em>당직구분은 일직과 숙직이 있으며, 각 2인 1조로 당직근무 실시</em></li>
-                  <li className="c-color-strong"><em>용역 경비원의 당직근무 수행불가</em></li>
-                  <li className="c-color-strong"><em>당직근무 중 업무용 PC OFF 유지 필수(PC ON 시 당직근무 인정 불가)</em></li>
-                  <li>당직실시의 경우 세팅비는 별도로 지급이 불가</li>
-                  <li>일직: 09:00 ~ 18:00 / 숙직: 18:00 ~ 09:00(익일)</li>
-                  <li className="c-color-strong"><em>익월 1영업일 오후 4시까지 결재완료된 건만 반영됩니다.</em></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
@@ -404,4 +418,4 @@ function STMGD0101M() {
   );
 }
 
-export default STMGD0101M;
+export default STMGD0201M;

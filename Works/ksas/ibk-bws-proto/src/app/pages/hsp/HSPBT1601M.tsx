@@ -109,8 +109,8 @@ function HSPBT1601M() {
             <div className="m-binds type-start">
 
               <div className="group">
-                <CommonButton label="발주서전송취소" className="_lined-secondary" />
-                <CommonButton label="발주서전송" className="_lined-secondary" />
+                <CommonButton label="배송지시취소" className="_lined-secondary" />
+                <CommonButton label="배송지시전송" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">

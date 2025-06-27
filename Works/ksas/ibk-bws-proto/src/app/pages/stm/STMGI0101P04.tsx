@@ -294,7 +294,7 @@ function STMGI0101P04() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)가스분사기관리대장 수정 [wdth-50p(w960)]</span>
+              <span className="label">(P)분실신고 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>

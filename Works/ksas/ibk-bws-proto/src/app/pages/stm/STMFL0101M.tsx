@@ -356,23 +356,9 @@ function STMFL0101M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청수량`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50 g-end">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <span className="units">개</span>
-                              </div>
-                            </div>
-                          </td>
-                          <th colSpan={1}>
                             <Label label={`신청금액`} require={true} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required wdth-50 g-end">

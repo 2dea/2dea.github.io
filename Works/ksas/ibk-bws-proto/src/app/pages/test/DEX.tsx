@@ -91,7 +91,20 @@ function DEX() {
 
       {/*
       스케줄
-      2025-06-26 목 :
+      2025-06/30 월 :
+      "재난 안전관리"-
+        - [제외] 당직비정산
+        - [제외] 월세팅비정산
+        자율보안체계
+        도급사업관리
+
+      [영업지원]
+        - 서식장부관리
+
+      2025-06/27 금 :
+         "재난 안전관리" #18 이후에
+         _theme.scss #STMDM0301M 배차관리 #32 재난안전
+      2025-06/26 목 :
           1.행내등기 > 등기우편물~  #83 이후부터~ # BEXRM0201P09 부터~
       2025-06-25 수 :
         [Todo List]
@@ -218,11 +231,11 @@ about:blank
 
                             일반 문구 + 버튼
                             <td colSpan={1}>
-                            <div className="m-string-binds">
-                              <span className="o-digit type-datetime string">2025-12-25 09:10:59</span>
-                              <span className="binds"><CommonButton label="현재시각" className="_normal" /></span>
-                            </div>
-                          </td>
+                              <div className="m-string-binds">
+                                <span className="o-digit type-datetime string">2025-12-25 09:10:59</span>
+                                <span className="binds"><CommonButton label="현재시각" className="_normal" /></span>
+                              </div>
+                            </td>
 
 
                             <td colSpan={1}>
