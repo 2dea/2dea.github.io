@@ -309,61 +309,66 @@ function HSPBT1401M() {
 
             <div className="column">
 
-              <div className="m-print-form">
-                <div className="card">
-                  <div className="header">
-                    <strong className="heading">송장 출력</strong>
-                  </div>
+              <div className="o-section">
+                <div className="main">
+                  <div className="m-print-form">
+                    <div className="card">
+                      <div className="header">
+                        <strong className="heading">송장 출력</strong>
+                      </div>
 
-                  <div className="bodies">
+                      <div className="bodies m-mixed-field">
 
-                    <div className="o-field">
-                      <Label label={`부점코드`} require={false} />
-                      <div className="fields">
-                        <div className="o-form _input">
-                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                          <i aria-hidden="true"></i>
+                        <div className="o-field">
+                          <Label label={`취급자`} require={false} />
+                          <div className="fields">
+                            <div className="o-form _input wdth-50">
+                              <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                              <i aria-hidden="true"></i>
+                            </div>
+                          </div>
                         </div>
+
+                        <div className="o-field">
+                          <Label label={`확인자`} require={false} />
+                          <div className="fields">
+                            <div className="o-form _input wdth-50">
+                              <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                              <i aria-hidden="true"></i>
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
 
-                    <div className="o-field">
-                      <Label label={`부점상태`} require={false} />
-                      <div className="fields">
-                        <div className="o-form _select">
-                          <XDropdown appendTo={'self'} className="bind" />
-                          <i aria-hidden="true"></i>
-                        </div>
+                    <div className="card">
+                      <div className="header">
+                        <strong className="heading">바코드 출력</strong>
                       </div>
-                    </div>
 
-                  </div>
-                </div>
+                      <div className="bodies m-mixed-field">
 
-                <div className="card">
-                  <div className="header">
-                    <strong className="heading">바코드 출력</strong>
-                  </div>
-
-                  <div className="bodies">
-
-                    <div className="o-field">
-                      <Label label={`부점코드`} require={false} />
-                      <div className="fields">
-                        <div className="o-form _input">
-                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                          <i aria-hidden="true"></i>
+                        <div className="o-field">
+                          <Label label={`옵션`} require={false} />
+                          <div className="fields">
+                            <div className="o-form _select wdth-50">
+                              <XDropdown appendTo={'self'} className="bind" />
+                              <i aria-hidden="true"></i>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
 
-                    <div className="o-field">
-                      <Label label={`부점상태`} require={false} />
-                      <div className="fields">
-                        <div className="o-form _select">
-                          <XDropdown appendTo={'self'} className="bind" />
-                          <i aria-hidden="true"></i>
+                        <div className="o-field">
+                          <Label label={`일련번호`} require={false} />
+                          <div className="fields">
+                            <div className="o-form _input wdth-auto">
+                              <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                              <i aria-hidden="true"></i>
+                            </div>
+                          </div>
                         </div>
+
                       </div>
                     </div>
 

@@ -28,3 +28,46 @@
 
 .o-board-list.o-board-data .item >.head .title-area {display: flex; flex-direction: column;}
 .o-board-list.o-board-data .item >.head .title-area .title {order: 2; font-size: $font-40; line-height: $line-40; color: var(--color-key1-70);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* soo */
+
+// .test-binds  { background: gray; padding: 20px 30px 20px 5px; border-radius: 4px; width: 400px; }
+
+// .test-binds  { display: flex; align-items: center; gap: 8px; }
+// // .test-binds >.string  { flex: 1; }
+// .test-binds .string  { color: blue; }
+// .test-binds .binds  { margin-left: auto }
+
+
+
+.m-print-form  { display: flex; gap: 8px; }
+.m-print-form >*  { flex: 1; min-width: 0; }
+.m-print-form .o-form  { min-width: var(--width-50); }
+.m-print-form .card  { display: flex; flex-direction: column; background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 4px; }
+.m-print-form .card >.header  { font-size: 13px; line-height: $line-40; background: var(--color-ground-70); padding: 6px; text-align: center; }
+// .m-print-form .card >.bodies  { display: flex; padding: 8px 16px; gap: 16px; justify-content: center; }
+.m-print-form .card >.bodies  { flex-wrap: wrap; gap: 8px 12px; padding: 8px 16px; justify-content: center; }
+.m-print-form .card >.bodies >*  { flex: 1; min-width: 0; }
+.m-print-form .card >.bodies:has(.o-form.wdth-auto) >*  { flex: none; }
+.m-print-form .card >.bodies >:has(.o-form.wdth-auto)  { flex: auto; }
+
+
+
+
+
+
+
