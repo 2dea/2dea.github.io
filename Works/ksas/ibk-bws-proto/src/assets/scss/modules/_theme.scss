@@ -2,18 +2,29 @@
 
 
 .o-board-list {display: flex; gap: 8px;}
-.o-board-list .item {display: flex; flex-grow: 1; justify-content: space-between; align-items: center; padding: 12px 24px; border-radius: 12px; background-color: #DDE7FE;}
+.o-board-list > .item {display: flex; flex-grow: 1; justify-content: space-between; align-items: center; padding: 12px 24px; border-radius: 12px; background-color: #DDE7FE;}
+
 .o-board-list .item .info {display: flex; flex-direction: column; gap: 0 4px;}
 .o-board-list .item .info .name {font-size: $font-40; line-height: $line-40; color: var(--color-key1-70);}
 .o-board-list .item .data strong {font-size: 20px; line-height: 30px; color: $color-text-70; font-weight: 700; margin-left: 16px;}
 
 
-.o-board-list.o-board-data {}
+
 .o-board-list.o-board-data .item {flex-direction: column; align-items: flex-start;}
-.o-board-list.o-board-data .item > .head {display: flex; justify-content: space-between; width: 100%;}
+.o-board-list.o-board-data .item > .head {display: flex; justify-content: space-between; width: 100%; align-items: center;}
 .o-board-list.o-board-data .item > .body {width: 100%;}
 .o-board-list.o-board-data .item > .body::before {content: ''; display: block; width: 100%; height: 1px; background-color: red; margin: 8px 0;}
-.o-board-list.o-board-data .item .body .data-list {display: flex; width: 100%;}
-.o-board-list.o-board-data .item .body .data-list li {display: flex; flex-wrap: wrap; width: 100%;}
+.o-board-list.o-board-data .item .body .data-list {display: flex; width: 100%; flex-direction: column;}
+.o-board-list.o-board-data .item .body .data-list li {display: flex; width: 100%;}
 .o-board-list.o-board-data .item .body .data-list .name {display: flex; justify-content: space-between; width: 100%;}
-.o-board-list.o-board-data .item .body .data-list .body {}
+.o-board-list.o-board-data .item .body .data-list .item-level-01 > .data-list {flex-direction: row;}
+
+
+.data-list-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px;}
+.o-board-list.o-board-data .data-list-grid > .item {display: flex; flex-direction: row; justify-content: space-between;}
+
+.o-board-data .head .title {font-size:14px; line-height: 18px; font-weight: 700;}
+
+
+.o-board-list.o-board-data .item >.head .title-area {display: flex; flex-direction: column;}
+.o-board-list.o-board-data .item >.head .title-area .title {order: 2; font-size: $font-40; line-height: $line-40; color: var(--color-key1-70);}

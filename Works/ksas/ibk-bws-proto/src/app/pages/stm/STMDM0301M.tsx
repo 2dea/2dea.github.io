@@ -178,45 +178,6 @@ function STMDM0301M() {
                       <ul className="data-list">
                         <li className="item-level-01">
                           <div className="data-list">
-                              <span className="name">완료</span>
-                              <strong className="data">000</strong>
-                          </div>
-                          <div className="data-list">
-                            <span className="name">완료</span>
-                            <strong className="data">000</strong>
-                          </div>
-                        </li>
-
-                        <li className="item-level-01">
-                          <div className="data-list">
-                            <span className="name">완료</span>
-                            <strong className="data">000</strong>
-                          </div>
-                          <div className="data-list">
-                            <span className="name">완료</span>
-                            <strong className="data">000</strong>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="head">
-                      <div className="title">본부</div>
-
-                      <div className="o-length">
-                        <span className="head">전체</span>
-                        <em className="data">
-                          <span className="value">8</span>
-                          <span className="units">건</span>
-                        </em>
-                      </div>
-                    </div>
-
-                    <div className="body">
-                      <ul className="data-list">
-                        <li className="item-level-01">
-                          <div className="data-list">
                             <span className="name">완료</span>
                             <strong className="data">000</strong>
                           </div>
@@ -276,6 +237,195 @@ function STMDM0301M() {
                           </div>
                         </li>
                       </ul>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="head">
+                      <div className="title">본부</div>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </div>
+
+                    <div className="body">
+                      <ul className="data-list">
+                        <li className="item-level-01">
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                        </li>
+
+                        <li className="item-level-01">
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                          <div className="data-list">
+                            <span className="name">완료</span>
+                            <strong className="data">000</strong>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="o-board-list o-board-data">
+                  <div className="item">
+                    <div className="head">
+                      <div className="title">본부</div>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </div>
+
+                    <div className="body">
+                      <ul className="data-list-grid">
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="head">
+                      <div className="title">본부</div>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </div>
+
+                    <div className="body">
+                      <ul className="data-list-grid">
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="head">
+                      <div className="title">본부</div>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+                    </div>
+
+                    <div className="body">
+                      <ul className="data-list-grid">
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                        <li className="item">
+                          <span className="name">완료</span>
+                          <strong className="data">000</strong>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="o-board-list o-board-data">
+
+                  <div className="item">
+                    <div className="head">
+                      <div className="title-area">
+                        <div className="title">배차가능차량</div>
+                        <i className="o-icon _test wdth-70" aria-hidden="true"></i>
+                      </div>
+                      <div className="data">
+                        <strong>100</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <div className="head">
+                      <div className="title-area">
+                        <div className="title">배차가능차량</div>
+                        <i className="o-icon _test wdth-70" aria-hidden="true"></i>
+                      </div>
+                      <div className="data">
+                        <strong>100</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <div className="head">
+                      <div className="title-area">
+                        <div className="title">배차가능차량</div>
+                        <i className="o-icon _test wdth-70" aria-hidden="true"></i>
+                      </div>
+                      <div className="data">
+                        <strong>100</strong>
+                      </div>
                     </div>
                   </div>
 
@@ -368,16 +518,16 @@ function STMDM0301M() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(5)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><InputCheck label="선택" labelHidden /></td>
-                            <td>{idx + 1}</td>
-                            <td>IT센터</td>
-                            <td>12가1234</td>
-                            <td>다이너스티3.0</td>
-                            <td>검정</td>
-                          </tr>
-                        ))}
+                          {[...Array(5)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx + 1}</td>
+                              <td>IT센터</td>
+                              <td>12가1234</td>
+                              <td>다이너스티3.0</td>
+                              <td>검정</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -457,23 +607,23 @@ function STMDM0301M() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(5)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>IT센터</td>
-                            <td>PD011</td>
-                            <td className="g-start">프로세스혁신부</td>
-                            <td>012345</td>
-                            <td>홍길동</td>
-                            <td>12가1234</td>
-                            <td>다이너스티3.0</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>부산</td>
-                            <td>출장</td>
-                          </tr>
-                        ))}
+                          {[...Array(5)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td>IT센터</td>
+                              <td>PD011</td>
+                              <td className="g-start">프로세스혁신부</td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td>12가1234</td>
+                              <td>다이너스티3.0</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>부산</td>
+                              <td>출장</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -552,21 +702,21 @@ function STMDM0301M() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(5)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td>PD011</td>
-                            <td className="g-start">프로세스혁신부</td>
-                            <td>012345</td>
-                            <td>홍길동</td>
-                            <td>12가1234</td>
-                            <td>다이너스티3.0</td>
-                            <td>부산</td>
-                            <td>출장</td>
-                          </tr>
-                        ))}
+                          {[...Array(5)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td>PD011</td>
+                              <td className="g-start">프로세스혁신부</td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td>12가1234</td>
+                              <td>다이너스티3.0</td>
+                              <td>부산</td>
+                              <td>출장</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -636,19 +786,19 @@ function STMDM0301M() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(5)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td><InputCheck label="선택" labelHidden /></td>
-                            <td>{idx + 1}</td>
-                            <td>12가1234</td>
-                            <td>다이너스티3.0</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td className="g-start"></td>
-                          </tr>
-                        ))}
+                          {[...Array(5)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx + 1}</td>
+                              <td>12가1234</td>
+                              <td>다이너스티3.0</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td className="g-start"></td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
