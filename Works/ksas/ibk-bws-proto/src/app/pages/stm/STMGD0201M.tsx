@@ -255,7 +255,7 @@ function STMGD0201M() {
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검사항</span></div></th>
                         <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업시간</span></div></th>
                         <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기계경비</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최조등록일자</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최초등록일자</span></div></th>
                       </tr>
                       <tr>
                         <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>

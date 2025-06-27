@@ -175,12 +175,12 @@ html  {
 body  {
   font-family: inherit; font-family: var(--typo-base, inherit); font-size: 0.8em; line-height: inherit;
   overflow-y: auto; margin: 0; color: WindowText; background: Transparent;
-  overflow-wrap: anywhere; word-break: break-word; word-break: keep-all; letter-spacing: normal;
+  word-break: break-word; word-break: keep-all; word-wrap: break-word; overflow-wrap: anywhere; letter-spacing: normal;
   overscroll-behavior: inherit;
 }
-@supports not (overflow-wrap: anywhere) {
+/* @supports not (overflow-wrap: anywhere) {
   body  { word-wrap: break-word; }
-}
+} */
 
 input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
 pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
