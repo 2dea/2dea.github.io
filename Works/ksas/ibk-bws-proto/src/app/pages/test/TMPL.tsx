@@ -1207,7 +1207,7 @@ function TMPL() {
                             <li>블라블라블라</li>
                           </ul>
                         </li>
-                          <li>블라블라블라</li>
+                        <li>블라블라블라</li>
                       </ul>
                     </div>
 

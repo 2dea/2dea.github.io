@@ -307,8 +307,71 @@ function HSPBT1401M() {
 
             </div>
 
-            <div className="column"></div>
+            <div className="column">
 
+              <div className="m-print-form">
+                <div className="card">
+                  <div className="header">
+                    <strong className="heading">송장 출력</strong>
+                  </div>
+
+                  <div className="bodies">
+
+                    <div className="o-field">
+                      <Label label={`부점코드`} require={false} />
+                      <div className="fields">
+                        <div className="o-form _input">
+                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="o-field">
+                      <Label label={`부점상태`} require={false} />
+                      <div className="fields">
+                        <div className="o-form _select">
+                          <XDropdown appendTo={'self'} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div className="card">
+                  <div className="header">
+                    <strong className="heading">바코드 출력</strong>
+                  </div>
+
+                  <div className="bodies">
+
+                    <div className="o-field">
+                      <Label label={`부점코드`} require={false} />
+                      <div className="fields">
+                        <div className="o-form _input">
+                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="o-field">
+                      <Label label={`부점상태`} require={false} />
+                      <div className="fields">
+                        <div className="o-form _select">
+                          <XDropdown appendTo={'self'} className="bind" />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>

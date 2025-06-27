@@ -1624,7 +1624,9 @@
 .o-data-table col.head:not(td *)  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
 .o-data-table col.head:not(.aut):not(td *)  { width: calc(var(--rem) * 120); }
 .o-data-table tr >:not(td *)  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-30); border-width: 0 $e10 $e10; }
-.o-data-table th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; background: var(--color-ground-40); }
+.o-data-table th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; }
+.o-data-table th:not(thead >* >*):not(td *)  { background: var(--color-ground-30); }
+.o-data-table thead:not(td *)  { background: var(--color-ground-40); }
 
 .o-data-table table:not(td *)  { border: hidden; }
 .o-data-table :has(>table):not(td *)  { border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
@@ -1641,7 +1643,8 @@
 // .m-data-form tr:first-child:not(:where(thead, tbody) ~* >*) >:not(td *)  { border-top-width: $e10; border-top-color: $color-key1-40; }
 // .m-data-form tr >:first-child:not(td *)  { border-left-width: $e10; }
 // .m-data-form tr >:last-child:not(td *)  { border-right-width: $e10; }
-.m-data-form th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; background: var(--color-ground-40); }
+.m-data-form th:not(td *)  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; }
+.m-data-form th:not(thead >* >*):not(td *)  { background: var(--color-ground-40); }
 .m-data-form [rowspan]:where(th:has(+th), td:has(+td)):not(td *)  { border-right-width: $e10; }
 .m-data-form [rowspan]:where(th:is(th +*), td:is(td +*)):not(td *)  { border-left-width: $e10; }
 
