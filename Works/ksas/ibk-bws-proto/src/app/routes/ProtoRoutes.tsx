@@ -249,6 +249,7 @@ import BEXRM0301M from 'app/pages/bex/BEXRM0301M';      // 행내등기·우편�
 import STMGD0101M from 'app/pages/stm/STMGD0101M';       // 재난·안전관리 > 기계경비당직관리          > 당직신청관리
 import STMGD0101P01 from 'app/pages/stm/STMGD0101P01';   // 재난·안전관리 > 기계경비당직관리          > 당직신청관리 ~ (LP)대직자등록
 import STMGD0101P02 from 'app/pages/stm/STMGD0101P02';   // 재난·안전관리 > 기계경비당직관리          > 당직신청관리 ~ (LP)대직자변경이력
+import STMGD0101P03 from 'app/pages/stm/STMGD0101P03';   // 재난·안전관리 > 기계경비당직관리          > 당직신청관리 ~ (LP)당직점검표등록
 import STMGD0101P04 from 'app/pages/stm/STMGD0101P04';   // 재난·안전관리 > 기계경비당직관리          > 당직신청관리 ~ (LP)당직신청
 import STMGD0101P05 from 'app/pages/stm/STMGD0101P05';   // 재난·안전관리 > 기계경비당직관리          > 당직신청관리 ~ (LP)이력조회
 
@@ -658,6 +659,7 @@ function ProtoRoutes() {
         { path: 'STMGD0101M',   element: <STMGD0101M /> },
         { path: 'STMGD0101P01', element: <STMGD0101P01 /> },
         { path: 'STMGD0101P02', element: <STMGD0101P02 /> },
+        { path: 'STMGD0101P03', element: <STMGD0101P03 /> },
         { path: 'STMGD0101P04', element: <STMGD0101P04 /> },
         { path: 'STMGD0101P05', element: <STMGD0101P05 /> },
 
