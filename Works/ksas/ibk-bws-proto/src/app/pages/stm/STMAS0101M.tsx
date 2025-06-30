@@ -270,7 +270,7 @@ function STMAS0101M() {
                     <ul className="m-bullets type-disc">
                       <li className="c-color-strong"><em>등록기한: 2025-01-01 ~ 2025-05-28</em></li>
                       <li>등록기한 내 세부추진계획 등록을 완료해주세요.</li>
-                      <li>기한 내 등록이 어려운 경우, 담당부서로 사전에 문의 부탁드립니다. (<span className="o-consult"><strong className="head">비상계획팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000</span></span></span>)</li>
+                      <li>기한 내 등록이 어려운 경우, 담당부서로 사전에 문의 부탁드립니다. <span className="o-consult brackets-round">(<strong className="head">비상계획팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000</span></span>)</span></li>
                     </ul>
                   </div>
                 </div>
