@@ -261,6 +261,8 @@ import STMGD0401P02 from 'app/pages/stm/STMGD0401P02';   // 재난·안전관리
 import STMGD0401P04 from 'app/pages/stm/STMGD0401P04';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)명령부 초기화
 import STMGD0401P05 from 'app/pages/stm/STMGD0401P05';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)이력조회
 
+import STMGD0501M from 'app/pages/stm/STMGD0501M';       // 재난·안전관리 > 기계경비보안관리(관리자)
+
 import STMVL0101M from 'app/pages/stm/STMVL0101M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
 import STMVL0101P01 from 'app/pages/stm/STMVL0101P01';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)수정기한관리
 import STMVL0101P02 from 'app/pages/stm/STMVL0101P02';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)차량별관리자지정
@@ -269,7 +271,6 @@ import STMVL0101P04 from 'app/pages/stm/STMVL0101P04';   // 재난·안전관리
 import STMVL0101P05 from 'app/pages/stm/STMVL0101P05';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사연락처
 
 import STMVL0201M from 'app/pages/stm/STMVL0201M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 미등록운행일지알람
-
 
 import STMDM0101M from 'app/pages/stm/STMDM0101M';       // 재난·안전관리 > 배차관리                > 배차신청
 import STMDM0201M from 'app/pages/stm/STMDM0201M';       // 재난·안전관리 > 배차관리                > 배차이력
@@ -668,6 +669,8 @@ function ProtoRoutes() {
         { path: 'STMGD0401P02', element: <STMGD0401P02 /> },
         { path: 'STMGD0401P04', element: <STMGD0401P04 /> },
         { path: 'STMGD0401P05', element: <STMGD0401P05 /> },
+
+        { path: 'STMGD0501M',   element: <STMGD0501M /> },
 
         { path: 'STMDM0101M',   element: <STMDM0101M /> },
         { path: 'STMDM0201M',   element: <STMDM0201M /> },
