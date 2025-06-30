@@ -87,7 +87,7 @@ function STMGD0101P03() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -145,43 +145,81 @@ function STMGD0101P03() {
                     <div className="table-container">
                       <table className="table">
                         <colgroup>
-                          <col style={{ width: '25%' }} />
+                          <col style={{ width: '15%' }} />
                           <col style={{ width: 'auto' }} />
                           <col style={{ width: '25%' }} />
                         </colgroup>
 
                         <thead>
                           <tr>
-                            <th colSpan={1}>구분</th>
-                            <th colSpan={1}>점검사항</th>
-                            <th colSpan={1}>이상유무</th>
+                            <th colSpan={1}>
+                              <Label label={`구분`} require={false} />
+                            </th>
+                            <th colSpan={1}>
+                              <Label label={`점검사항`} require={false} />
+                            </th>
+                            <th colSpan={1}>
+                              <Label label={`이상유무`} require={false} />
+                            </th>
                           </tr>
                         </thead>
 
                         <tbody>
                           <tr>
                             <th colSpan={1}>
-                              경비
+                              <Label label={`경비`} require={false} />
                             </th>
                             <td colSpan={1} className="g-start">
                               <ul className="m-bullets type-disc">
                                 <li>각종사무기기및전열기전원스위치차단상태점검</li>
+                                <li>점내 IBK365코너 방범시설 세팅 이상유무</li>
+                                <li>건물내 잔류직원 및 잠복자 유무</li>
+                                <li>CCTV 점검</li>
                               </ul>
                             </td>
                             <td rowSpan={3} colSpan={1}>
-                              0
+                              <div className="m-checks flow-inline">
+                                <InputRadio name="RADIO_10" label="이상무" defaultChecked />
+                                <InputRadio name="RADIO_10" label="이상유" />
+                              </div>
                             </td>
                           </tr>
                           <tr>
                             <th colSpan={1}>
-                              경비
+                              <Label label={`보안`} require={false} />
                             </th>
                             <td colSpan={1} className="g-start">
                               <ul className="m-bullets type-disc">
-                                <li>각종사무기기및전열기전원스위치차단상태점검</li>
+                                <li>책상, 서류함, 캐비닛, 금고, 서고 등 시건상태</li>
+                                <li>중요서류, 문서 및 인장, 열쇠 등 방치여부</li>
+                                <li>사무실 정리정돈 및 청소상태</li>
                               </ul>
                             </td>
                           </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`소방`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-start">
+                              <ul className="m-bullets type-disc">
+                                <li>사무실, 금고, 서고 등 전등 소등상태</li>
+                                <li>각종사무기기 및 전열기 전원스위치 차단상태 점검</li>
+                                <li>재떨이, 휴지통 등 화기 단속상태</li>
+                                <li>식당 가스안전밸브 잠금상태 및 가스누출여부</li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`특이사항`} require={false} />
+                            </th>
+                            <td colSpan={2} className="g-start">
+                              <div className="o-form _input">
+                                <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -191,7 +229,7 @@ function STMGD0101P03() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">인수자목록</span></h4>
+                  <h4 className="o-heading level2"><span className="label">당직관련 작업시각</span></h4>
                 </div>
 
                 <div className="main">
@@ -199,38 +237,75 @@ function STMGD0101P03() {
                     <div className="table-container">
                       <table className="table">
                         <colgroup>
-                          <col style={{ width: '25%' }} />
+                          <col style={{ width: '10%' }} />
+                          <col style={{ width: '10%' }} />
+                          <col style={{ width: '10%' }} />
+                          <col style={{ width: '10%' }} />
                           <col style={{ width: 'auto' }} />
-                          <col style={{ width: '25%' }} />
-                          <col style={{ width: '25%' }} />
                         </colgroup>
 
                         <thead>
                           <tr>
-                            <th colSpan={2}>외화정사매수</th>
-                            <th colSpan={2}>비용절감액</th>
+                            <th colSpan={2}>
+                              <Label label={`작업(공사, 청소)시각`} require={false} />
+                            </th>
+                            <th colSpan={2}>
+                              <Label label={`기계경비`} require={false} />
+                            </th>
+                            <th rowSpan={2} colSpan={1}>
+                              <Label label={`비고`} require={false} />
+                            </th>
                           </tr>
                           <tr>
-                            <th colSpan={1}>월간누계</th>
-                            <th colSpan={1}>연간누계</th>
-                            <th colSpan={1}>월간누계</th>
-                            <th colSpan={1}>연간누계</th>
+                            <th colSpan={1}>
+                              <Label label={`시작`} require={true} />
+                            </th>
+                            <th colSpan={1}>
+                              <Label label={`종료`} require={true} />
+                            </th>
+                            <th colSpan={1}>
+                              <Label label={`경비해제`} require={true} />
+                            </th>
+                            <th colSpan={1}>
+                              <Label label={`경비SET`} require={true} />
+                            </th>
                           </tr>
                         </thead>
 
                         <tbody>
                           <tr>
-                            <th colSpan={1} className="g-end">
-                              0
-                            </th>
-                            <td colSpan={1} className="g-end">
-                              0
+                            <td colSpan={1}>
+                              <div className="o-form _input type-time mode-required wdth-30">
+                                <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                <i aria-hidden="true"></i>
+                              </div>
                             </td>
-                            <td colSpan={1} className="g-end">
-                              0
+                            <td colSpan={1}>
+                              <div className="o-form _input type-time mode-required wdth-30">
+                                <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                <i aria-hidden="true"></i>
+                              </div>
                             </td>
-                            <td colSpan={1} className="g-end">
-                              9,999
+                            <td colSpan={1}>
+                              <div className="o-form _input type-time mode-required wdth-30">
+                                <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </td>
+                            <td colSpan={1}>
+                              <div className="o-form _input type-time mode-required wdth-30">
+                                <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </td>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="m-checks">
+                                    <InputCheck label="숙직(철야공사 등)으로 Set 절차없이 인계" />
+                                  </div>
+                                </div>
+                              </div>
                             </td>
                           </tr>
                         </tbody>
@@ -242,7 +317,7 @@ function STMGD0101P03() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">인수자목록</span></h4>
+                  <h4 className="o-heading level2"><span className="label">점검자</span></h4>
                 </div>
 
                 <div className="main">
@@ -250,38 +325,78 @@ function STMGD0101P03() {
                     <div className="table-container">
                       <table className="table">
                         <colgroup>
-                          <col style={{ width: '25%' }} />
-                          <col style={{ width: '25%' }} />
-                          <col style={{ width: '25%' }} />
-                          <col style={{ width: '25%' }} />
+                          <col style={{ width: '20%' }} />
+                          <col style={{ width: '20%' }} />
+                          <col style={{ width: '20%' }} />
+                          <col style={{ width: '20%' }} />
+                          <col style={{ width: 'auto' }} />
                         </colgroup>
 
                         <thead>
                           <tr>
-                            <th colSpan={2}>외화정사매수</th>
-                            <th colSpan={2}>비용절감액</th>
+                            <th colSpan={2}>
+                              <Label label={`일직`} require={false} />
+                            </th>
+                            <th colSpan={2}>
+                              <Label label={`숙직`} require={false} />
+                            </th>
+                            <th colSpan={1} rowSpan={2}>
+                              <Label label={`경비회사 수화자`} require={false} />
+                            </th>
                           </tr>
                           <tr>
-                            <th colSpan={1}>월간누계</th>
-                            <th colSpan={1}>연간누계</th>
-                            <th colSpan={1}>월간누계</th>
-                            <th colSpan={1}>연간누계</th>
+                            <th colSpan={1}>
+                              <Label label={`직원번호`} require={false} />
+                            </th>
+                            <th colSpan={1}>
+                              <Label label={`직원명`} require={false} />
+                            </th>
+                            <th colSpan={1}>
+                              <Label label={`직원번호`} require={false} />
+                            </th>
+                            <th colSpan={1}>
+                              <Label label={`직원명`} require={false} />
+                            </th>
                           </tr>
                         </thead>
 
                         <tbody>
                           <tr>
-                            <th colSpan={1} className="g-end">
-                              0
-                            </th>
-                            <td colSpan={1} className="g-end">
-                              0
+                            <td colSpan={1}>
+                              000000
                             </td>
-                            <td colSpan={1} className="g-end">
-                              0
+                            <td colSpan={1}>
+                              홍길동
                             </td>
-                            <td colSpan={1} className="g-end">
-                              9,999
+                            <td colSpan={1}>
+                              000000
+                            </td>
+                            <td colSpan={1}>
+                              이순신
+                            </td>
+                            <td colSpan={1} rowSpan={2}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>
+                              000000
+                            </td>
+                            <td colSpan={1}>
+                              홍길동
+                            </td>
+                            <td colSpan={1}>
+                              000000
+                            </td>
+                            <td colSpan={1}>
+                              이순신
                             </td>
                           </tr>
                         </tbody>
@@ -299,7 +414,7 @@ function STMGD0101P03() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="선택" className="_solid-primary" />
+              <CommonButton label="결재요청" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -309,7 +424,7 @@ function STMGD0101P03() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)당직점검표등록 [wdth-60p(w1150)]</span>
+              <span className="label">(P)당직점검표등록 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
