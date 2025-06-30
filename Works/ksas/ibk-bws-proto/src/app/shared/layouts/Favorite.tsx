@@ -8,7 +8,7 @@ import React, { useRef, useState } from 'react';
 // components
 import InputCheck from 'app/shared/modules/OInputCheck';
 
-function Favorite() {
+function FavoriteDiv() {
   return (
     <>
       {/* <label className="o-check type-symbol style-favorite">
@@ -21,4 +21,4 @@ function Favorite() {
   );
 }
 
-export default Favorite;
+export default FavoriteDiv;

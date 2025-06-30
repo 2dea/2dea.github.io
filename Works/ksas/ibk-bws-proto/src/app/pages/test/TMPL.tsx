@@ -7,7 +7,8 @@ import React, { useRef, useState } from 'react';
 
 // components
 // import '@modules/Index';
-import Favorite from 'app/shared/layouts/Favorite';
+import FavoriteDiv from 'app/shared/layouts/Favorite';
+import ConsultsDiv from 'app/shared/layouts/Consults';
 import Icon from 'app/shared/modules/OIcon';
 import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
@@ -111,7 +112,7 @@ function TMPL() {
               <h1 className="o-heading level1">
                 <span className="label">(총무부 외) 중요용지 조달신청 접수</span>
 
-                <Favorite />
+                <FavoriteDiv />
               </h1>
             </div>
           </div>
@@ -160,29 +161,7 @@ function TMPL() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <div className="div-consults">
-          <div className="bodies">
-            <ul className="m-bullets">
-              <li>
-                <div className="m-consult">
-                  <span className="header">
-                    <strong className="heading">문의</strong>
-                  </span>
-                  <span className="bodies">
-                    <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463, 0000</span></span></span>
-                  </span>
-
-                  <span className="aside">
-                    <span className="o-icon-text">
-                      <Icon icon="consult-alert" />
-                      <span className="label">반드시 조회 후 신청해주세요.</span>
-                    </span>
-                  </span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <ConsultsDiv visible={true} divName="안전관리팀" telNumber="7463, 0000" asideLabel="반드시 조회 후 신청해주세요." /* asideIcon="consult-alert" */ />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}

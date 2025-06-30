@@ -7,7 +7,8 @@ import React, { useRef, useState } from 'react';
 
 // components
 // import '@modules/Index';
-import Favorite from 'app/shared/layouts/Favorite';
+import FavoriteDiv from 'app/shared/layouts/Favorite';
+import ConsultsDiv from 'app/shared/layouts/Consults';
 import Icon from 'app/shared/modules/OIcon';
 import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
@@ -100,7 +101,7 @@ function HSPDU0301M() {
               <h1 className="o-heading level1">
                 <span className="label">폐기대상중요용지목록(감사자등록)</span>
 
-                <Favorite />
+                <FavoriteDiv />
               </h1>
             </div>
           </div>
@@ -133,6 +134,10 @@ function HSPDU0301M() {
 
           </div>
         </div>
+
+        {/* <!-- /* Consults { @DEV } --> */}
+        <ConsultsDiv visible={false} />
+        {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">

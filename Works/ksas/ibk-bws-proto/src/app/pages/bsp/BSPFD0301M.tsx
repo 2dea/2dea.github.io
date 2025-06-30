@@ -7,7 +7,8 @@ import React, { useRef, useState } from 'react';
 
 // components
 // import '@modules/Index';
-import Favorite from 'app/shared/layouts/Favorite';
+import FavoriteDiv from 'app/shared/layouts/Favorite';
+import ConsultsDiv from 'app/shared/layouts/Consults';
 import Icon from 'app/shared/modules/OIcon';
 import Label from 'app/shared/modules/OLabel';
 import CommonButton from 'app/shared/modules/OButton';
@@ -100,7 +101,7 @@ function BSPFD0301M() {
               <h1 className="o-heading level1">
                 <span className="label">창구사용내역조회</span>
 
-                <Favorite />
+                <FavoriteDiv />
               </h1>
             </div>
           </div>
@@ -122,6 +123,10 @@ function BSPFD0301M() {
             </div>
           </div>
         </div>
+
+        {/* <!-- /* Consults { @DEV } --> */}
+        <ConsultsDiv visible={false} />
+        {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
