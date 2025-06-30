@@ -117,8 +117,8 @@ function ADMCM0101M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="o-grid">
-            <div className="column">
+          <Splitter gutterSize={0} className="o-grid">
+            <SplitterPanel minSize={17.5} className="column">
 
               <form className="m-filter-form">
                 <div className="fieldset">
@@ -186,7 +186,7 @@ function ADMCM0101M() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-7i">
+                <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -273,6 +273,10 @@ function ADMCM0101M() {
                 </div>
               </div>
 
+            </SplitterPanel>
+
+            <SplitterPanel minSize={17.5} className="column">
+
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">코드도메인 상세내용</span></h3>
@@ -299,7 +303,7 @@ function ADMCM0101M() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -412,8 +416,8 @@ function ADMCM0101M() {
                 </div>
               </div>
 
-            </div>
-          </div>
+            </SplitterPanel>
+          </Splitter>
 
           <div className="div-footer">
             <div className="m-binds type-end">

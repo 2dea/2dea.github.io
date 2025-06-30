@@ -810,6 +810,7 @@ function SUBTMPL() {
                             <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _alert-circle wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _consult-alert wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-right wdth-50" aria-hidden="true"></i>

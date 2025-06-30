@@ -29,6 +29,11 @@
 //   // }
 // }
 
+
+.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*) >input:not([type="radio"]) ~i:before  { width: var(--height-inner); max-width: none; transition: none; }
+.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*) >input:not([type="radio"]):checked ~i:before  { max-width: none; }
+.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*) >input:not([type="radio"]):not(:checked) ~i:before  { visibility: hidden; }
+
 @layer primereact-rewrite {
   .p-hidden  {
   display: none !important;
