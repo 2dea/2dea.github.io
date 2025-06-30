@@ -172,7 +172,7 @@ function STMGD0101P03() {
                             </th>
                             <td colSpan={1} className="g-start">
                               <ul className="m-bullets type-disc">
-                                <li>각종 사무기기 및 전열기 전원스위치 차단상태 점검</li>
+                                <li>각종 출입문 창문 시건상태</li>
                                 <li>점내 IBK365코너 방범시설 세팅 이상유무</li>
                                 <li>건물내 잔류직원 및 잠복자 유무</li>
                                 <li>CCTV 점검</li>
@@ -216,7 +216,7 @@ function STMGD0101P03() {
                             </th>
                             <td colSpan={2} className="g-start">
                               <div className="o-form _input">
-                                <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                                <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
                                 <i aria-hidden="true"></i>
                               </div>
                             </td>
