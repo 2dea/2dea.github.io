@@ -259,10 +259,12 @@ import STMGD0301M from 'app/pages/stm/STMGD0301M';       // 재난·안전관리
 import STMGD0401M from 'app/pages/stm/STMGD0401M';       // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리
 import STMGD0401P01 from 'app/pages/stm/STMGD0401P01';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)대직자등록
 import STMGD0401P02 from 'app/pages/stm/STMGD0401P02';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)대직자변경이력
+import STMGD0401P03 from 'app/pages/stm/STMGD0401P03';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)당직점검표등록
 import STMGD0401P04 from 'app/pages/stm/STMGD0401P04';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)명령부 초기화
 import STMGD0401P05 from 'app/pages/stm/STMGD0401P05';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)이력조회
 
-import STMGD0501M from 'app/pages/stm/STMGD0501M';       // 재난·안전관리 > 기계경비보안관리(관리자)
+import STMGD0501M from 'app/pages/stm/STMGD0501M';       // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리(관리자)
+import STMGD0501P01 from 'app/pages/stm/STMGD0501P01';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리(관리자) ~ (LP)명령부복수부점관리
 
 import STMVL0101M from 'app/pages/stm/STMVL0101M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
 import STMVL0101P01 from 'app/pages/stm/STMVL0101P01';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)수정기한관리
@@ -304,6 +306,9 @@ import STMBR0201M from 'app/pages/stm/STMBR0201M';       // 재난·안전관리
 import STMBR0201P02 from 'app/pages/stm/STMBR0201P02';   // 재난·안전관리 > 버스배차신청             > 배차일정표 ~ (LP)일정상세보기
 import STMBR0301M from 'app/pages/stm/STMBR0301M';       // 재난·안전관리 > 버스배차신청             > 배차집계
 import STMBR0301P01 from 'app/pages/stm/STMBR0301P01';   // 재난·안전관리 > 버스배차신청             > 배차집계  ~ (LP)단가표
+
+import STMAS0101M from 'app/pages/stm/STMAS0101M';       // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획
+import STMAS0201P01 from 'app/pages/stm/STMAS0201P01';   // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획현황 ~ (LP)등록기한관리
 
 import STMKY0101M from 'app/pages/stm/STMKY0101M';       // 재난·안전관리 > 열쇠관리                 > 열쇠종류관리
 import STMKY0201M from 'app/pages/stm/STMKY0201M';       // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리
@@ -669,10 +674,12 @@ function ProtoRoutes() {
         { path: 'STMGD0401M',   element: <STMGD0401M /> },
         { path: 'STMGD0401P01', element: <STMGD0401P01 /> },
         { path: 'STMGD0401P02', element: <STMGD0401P02 /> },
+        { path: 'STMGD0401P03', element: <STMGD0401P03 /> },
         { path: 'STMGD0401P04', element: <STMGD0401P04 /> },
         { path: 'STMGD0401P05', element: <STMGD0401P05 /> },
 
         { path: 'STMGD0501M',   element: <STMGD0501M /> },
+        { path: 'STMGD0501P01', element: <STMGD0501P01 /> },
 
         { path: 'STMDM0101M',   element: <STMDM0101M /> },
         { path: 'STMDM0201M',   element: <STMDM0201M /> },
@@ -712,6 +719,9 @@ function ProtoRoutes() {
         { path: 'STMBR0201P02', element: <STMBR0201P02 /> },
         { path: 'STMBR0301M',   element: <STMBR0301M /> },
         { path: 'STMBR0301P01', element: <STMBR0301P01 /> },
+
+        { path: 'STMAS0101M',   element: <STMAS0101M /> },
+        { path: 'STMAS0201P01', element: <STMAS0201P01 /> },
 
         { path: 'STMKY0101M',   element: <STMKY0101M /> },
         { path: 'STMKY0201M',   element: <STMKY0201M /> },

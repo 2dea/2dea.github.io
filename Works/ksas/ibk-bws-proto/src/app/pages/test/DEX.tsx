@@ -93,9 +93,16 @@ function DEX() {
       {/*
       스케줄
       2025-06/30 월 :
+        #210 이후로~
+      전화번호
+        -  NONO: 전산, it
+
+
       "재난 안전관리"-
         - [제외] 당직비정산
         - [제외] 월세팅비정산
+        - [제외] 출입증/방문증
+
         자율보안체계
         도급사업관리
 
@@ -145,7 +152,7 @@ function DEX() {
       ~ 6/17 행내등기
 
 <td class="auth"><span class="name DEL">김진영</span></td>
-<td class="done"><span class="date done">2025-06-27</span></td>
+<td class="done"><span class="date done">2025-06-30</span></td>
 
 about:blank
 
@@ -384,6 +391,9 @@ about:blank
 
             [ HSPHS1701P01 , ]
             조회: 달력+ 툴팁 하단: 출력버튼
+
+            기한 달력 ~ 달력
+          <span className="seps type-tilde">~</span>
 
             [유의사항 레이아웃] -BSPDU0301M 블릿 참고
             [레이아웃 팝업] BSPDU0401P02 : 하단에 유의사항
