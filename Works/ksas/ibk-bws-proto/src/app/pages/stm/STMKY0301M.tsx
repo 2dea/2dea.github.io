@@ -123,7 +123,7 @@ function STMKY0301M() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={false} />
+        <ConsultsDiv visible={false} heading="문의" divName="비상계획팀" telNumber="7463, 3484" asideLabel="" />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
@@ -131,11 +131,11 @@ function STMKY0301M() {
           <div className="o-grid">
             <div className="column">
 
-              <div className="o-board type-a style-fit">
+              {/* <div className="o-board type-a style-fit">
                 <ul className="m-bullets type-disc">
                   <li>문의 : <span className="o-consult"><strong className="head">비상계획팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463, 3484</span></span></span></li>
                 </ul>
-              </div>
+              </div> */}
 
               <form className="m-filter-form">
                 <div className="fieldset">

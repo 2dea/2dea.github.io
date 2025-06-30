@@ -161,7 +161,7 @@ function TMPL() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={true} divName="안전관리팀" telNumber="7463, 0000" asideLabel="반드시 조회 후 신청해주세요." /* asideIcon="consult-alert" */ />
+        <ConsultsDiv visible={true} heading="문의" divName="안전관리팀" telNumber="7463, 0000" asideLabel="반드시 조회 후 신청해주세요." /* asideIcon="consult-alert" */ />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
@@ -232,9 +232,10 @@ function TMPL() {
 
                 <div className="o-board type-a style-fit">
                   <ul className="m-bullets type-disc">
-                    <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463, 0000</span></span></span></li>
-                    <li className="c-color-strong"><em>품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</em></li>
+                    {/* <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7463, 0000</span></span></span></li>
+                    <li className="c-color-strong"><em>품목별 자동배송 기준의 월평균 사용량은 최근 3개월 월평균 사용량을 의미</em></li> */}
                     <li className="c-color-strong"><em>자동배송 품목 등록 및 제외는 부점장 결재 완료 후 반영되므로 결재요청 필수</em></li>
+                    <li>기한 내 등록이 어려운 경우, 담당부서로 사전에 문의 부탁드립니다. <span className="o-consult brackets-round">(<strong className="head">비상계획팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000</span></span>)</span></li>
                   </ul>
                 </div>
 

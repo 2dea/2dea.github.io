@@ -133,16 +133,16 @@ function STMGD0201M() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={false} />
+        <ConsultsDiv visible={true} heading="문의" divName="안전관리팀" telNumber="7483" asideLabel="" />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="o-board type-a style-fit">
+          {/* <div className="o-board type-a style-fit">
             <ul className="m-bullets type-disc">
               <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7483</span></span></span></li>
             </ul>
-          </div>
+          </div> */}
 
           <form className="m-filter-form">
             <div className="fieldset">

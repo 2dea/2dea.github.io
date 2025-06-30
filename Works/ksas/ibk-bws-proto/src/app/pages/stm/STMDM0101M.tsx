@@ -121,7 +121,7 @@ function STMDM0101M() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={false} />
+        <ConsultsDiv visible={true} heading="문의" divName="안전관리팀" telNumber="7860, 7861" asideLabel="" />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
@@ -129,11 +129,11 @@ function STMDM0101M() {
           <Splitter gutterSize={0} className="o-grid">
             <SplitterPanel minSize={17.5} className="column">
 
-              <div className="o-board type-a style-fit">
+              {/* <div className="o-board type-a style-fit">
                 <ul className="m-bullets type-disc">
                   <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7860, 7861</span></span></span></li>
                 </ul>
-              </div>
+              </div> */}
 
               <form className="m-filter-form">
                 <div className="fieldset">

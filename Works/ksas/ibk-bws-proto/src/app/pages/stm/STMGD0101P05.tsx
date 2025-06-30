@@ -326,7 +326,7 @@ function STMGD0101P05() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={false} />
+        <ConsultsDiv visible={false} heading="문의" divName="안전관리팀" telNumber="0000" asideLabel="반드시 조회 후 신청해주세요." />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}

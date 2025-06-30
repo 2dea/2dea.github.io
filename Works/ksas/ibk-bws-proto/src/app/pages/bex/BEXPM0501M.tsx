@@ -117,16 +117,16 @@ function BEXPM0501M() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={false} />
+        <ConsultsDiv visible={true} heading="우편물 위치 확인" divName="우체국 고객센터" telNumber="1588-1300" asideLabel="" />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="o-board type-a style-fit">
+          {/* <div className="o-board type-a style-fit">
             <ul className="m-bullets type-disc">
               <li>우편물 위치 확인 : <span className="o-consult"><strong className="head">우체국 고객센터</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">1588-1300</span></span></span></li>
             </ul>
-          </div>
+          </div> */}
 
           <form className="m-filter-form">
             <div className="fieldset">

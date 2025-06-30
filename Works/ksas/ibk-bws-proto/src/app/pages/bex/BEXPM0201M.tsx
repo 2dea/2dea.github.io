@@ -125,16 +125,16 @@ function BEXPM0201M() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={false} />
+        <ConsultsDiv visible={true} heading="문의" divName="프로세스 혁신부 물류지원팀" telNumber="4332, 4335" asideLabel="" />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="o-board type-a style-fit">
+          {/* <div className="o-board type-a style-fit">
             <ul className="m-bullets type-disc">
               <li>문의 : <span className="o-consult"><strong className="head">프로세스 혁신부 물류지원팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">4332, 4335</span></span></span> / <span className="o-consult"><strong className="head">IT담당자</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">2485, 2517</span></span></span></li>
             </ul>
-          </div>
+          </div> */}
 
           <form className="m-filter-form">
             <div className="fieldset">

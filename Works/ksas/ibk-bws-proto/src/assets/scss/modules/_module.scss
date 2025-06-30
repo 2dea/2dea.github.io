@@ -247,6 +247,9 @@
 .o-consult >.data  { font-weight: $bold-70; color: var(--color-key1-40); }
 .o-consult >.data .o-icon:before  { background-position: 50%; }
 
+// .o-consult:where(.brackets-round):before  { content: "("; }
+// .o-consult:where(.brackets-round):after  { content: ")"; }
+
 
 .m-consult  { display: flex; gap: $gap-element-70; }
 .m-consult >*  { display: flex; }
