@@ -234,7 +234,6 @@ function STMGD0201M() {
                       <col />
                       <col />
                       <col />
-                      <col />
                     </colgroup>
 
                     <thead className="p-datatable-thead">
@@ -249,8 +248,8 @@ function STMGD0201M() {
                         <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">숙직</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점 결재상태</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">안전관리실 결재상태</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 등록</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 결재상태</span></div></th>
+                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 등록</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 결재상태</span></div></th>
                         <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검사항</span></div></th>
                         <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업시간</span></div></th>

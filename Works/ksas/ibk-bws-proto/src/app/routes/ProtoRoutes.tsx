@@ -255,7 +255,9 @@ import STMGD0101P05 from 'app/pages/stm/STMGD0101P05';   // 재난·안전관리
 import STMGD0201M from 'app/pages/stm/STMGD0201M';       // 재난·안전관리 > 기계경비당직관리          > 당직신청관리(관리자)
 import STMGD0301M from 'app/pages/stm/STMGD0301M';       // 재난·안전관리 > 기계경비당직관리          > 당직비정산
 
+import STMGD0401M from 'app/pages/stm/STMGD0401M';       // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리
 import STMGD0401P01 from 'app/pages/stm/STMGD0401P01';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)대직자등록
+import STMGD0401P02 from 'app/pages/stm/STMGD0401P02';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)대직자변경이력
 
 import STMVL0101M from 'app/pages/stm/STMVL0101M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
 import STMVL0101P01 from 'app/pages/stm/STMVL0101P01';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)수정기한관리
@@ -659,7 +661,9 @@ function ProtoRoutes() {
         { path: 'STMGD0201M',   element: <STMGD0201M /> },
         { path: 'STMGD0301M',   element: <STMGD0301M /> },
 
+        { path: 'STMGD0401M',   element: <STMGD0401M /> },
         { path: 'STMGD0401P01', element: <STMGD0401P01 /> },
+        { path: 'STMGD0401P02', element: <STMGD0401P02 /> },
 
         { path: 'STMDM0101M',   element: <STMDM0101M /> },
         { path: 'STMDM0201M',   element: <STMDM0201M /> },

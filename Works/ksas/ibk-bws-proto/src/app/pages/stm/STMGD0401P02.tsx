@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 기계경비당직관리 > 기계경비보안관리 ~ (LP)대직자등록
+ * @description 재난·안전관리 > 기계경비당직관리 > 기계경비보안관리 ~ (LP)대직자변경이력
  */
 
 // dependency
@@ -34,7 +34,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMGD0401P01() {
+function STMGD0401P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -96,7 +96,7 @@ function STMGD0401P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">대직자등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">대직자변경이력</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -104,7 +104,7 @@ function STMGD0401P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">대직자등록</span></h4>
+                  <h4 className="o-heading level2"><span className="label">대직자변경이력</span></h4>
                 </div>
 
                 <div className="main _primary rows-body-5i">
@@ -117,76 +117,37 @@ function STMGD0401P01() {
                           <col />
                           <col />
                           <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경일시</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={4}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
-                            <>
-                              {
-                                (idx - 3) % 3 === 0 &&
-                                <tr className="p-rowgroup-header">
-                                  <td colSpan={4} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                                </tr>
-                              }
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                                  {
-                                    (idx) % 3 === 0 &&
-                                    <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                                  }
-                                </td>
-                                <td>1</td>
-                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                                  {
-                                    (idx) % 3 === 0 ?
-                                      <>[000081] 홍길동</>
-                                      : <div className="o-field">
-                                        <div className="fields">
-                                          <div className="o-form _input wdth-50">
-                                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                            <i aria-hidden="true"></i>
-                                          </div>
-                                        </div>
-                                      </div>
-                                  }
-                                </td>
-                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                                  {
-                                    (idx) % 3 === 0 ?
-                                      <div className="o-field">
-                                        <div className="fields">
-                                          <div className="o-form _input wdth-50">
-                                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                            <i aria-hidden="true"></i>
-                                          </div>
-                                        </div>
-                                      </div> :
-                                      <>[000081] 홍길동</>
-                                  }
-                                </td>
-                              </tr>
-                              {
-                                (idx - 2) % 3 === 0 &&
-                                <tr className="p-rowgroup-footer">
-                                  <td colSpan={4} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                                </tr>
-                              }
-                            </>
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>1</td>
+                              <td>[0000] 홍길동</td>
+                              <td>[0000] 홍길동</td>
+                              <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+                            </tr>
                           ))}
                         </tbody>
                       </table>
@@ -202,8 +163,7 @@ function STMGD0401P01() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="결재요청" className="_solid-primary" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -213,7 +173,7 @@ function STMGD0401P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)대직자등록 [wdth-40p(w770)]</span>
+              <span className="label">(P)대직자변경이력 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -232,4 +192,4 @@ function STMGD0401P01() {
   );
 }
 
-export default STMGD0401P01;
+export default STMGD0401P02;
