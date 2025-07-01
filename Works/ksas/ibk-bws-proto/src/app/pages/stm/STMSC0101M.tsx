@@ -253,7 +253,7 @@ function STMSC0101M() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12</span></td>
                             <td>0034</td>
                             <td className="g-start">을지로</td>
                             <td className="g-start">특수청소 용역 계약</td>

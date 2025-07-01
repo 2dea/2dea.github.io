@@ -181,9 +181,9 @@ function STMSC0101P01() {
                           <tr>
                             <th colSpan={1}>9</th>
                             <td colSpan={2} className="g-start">
-                              당행 사업장(영업점 포함)에서 수급인의 근로자가 업무를 수행하지 않는 계약
+                              {/* 당행 사업장(영업점 포함)에서 수급인의 근로자가 업무를 수행하지 않는 계약
 
-                              {/* <ul className="m-bullets type-disc">
+                              <ul className="m-bullets type-disc">
                                 <li>프로그램 개발 용역 시
                                   <ul className="m-bullets type-hyphen">
                                     <li>수급인 사업장에서 근로자가 작업 <strong className="string">▶ 제출 비대상</strong></li>
@@ -192,8 +192,9 @@ function STMSC0101P01() {
                                 </li>
                               </ul> */}
 
-                              <dl className="m-bullets type-disc">
+                              <dl className="m-bullets type-disc gap-50">
                                 <dt>당행 사업장(영업점 포함)에서 수급인의 근로자가 업무를 수행하지 않는 계약</dt>
+
                                 <dd>프로그램 개발 용역 시 <strong>수급인 사업장에서 근로자가 작업</strong> <em className="o-chip var-lined-00 size-30"><span className="label">제출 비대상</span></em></dd>
                                 <dd>프로그램 개발 용역 시 <strong>도급인(당행)의 사업장에서 작업</strong> <em className="o-chip var-lined-01 size-30"><span className="label">제출 대상</span></em></dd>
                               </dl>
@@ -202,7 +203,7 @@ function STMSC0101P01() {
                           <tr>
                             <th colSpan={1}>10</th>
                             <td colSpan={2} className="g-start">
-                              당행 사업장(영업점 포함)에서 수급인의 근로자가 연속적으로 업무를 수행하나,<br /><strong className="string">1개월</strong>을 초과하지 않고 종료되는 <strong className="string">일시적 작업</strong>의 계약
+                              {/* 당행 사업장(영업점 포함)에서 수급인의 근로자가 연속적으로 업무를 수행하나, <em className="g-bold">1개월</em>을 초과하지 않고 종료되는 <em className="g-bold">일시적 작업</em>의 계약
                               <ul className="m-bullets type-disc">
                                 <li>사업장 내 소득 작업을 위해
                                   <ul className="m-bullets type-hyphen">
@@ -210,22 +211,37 @@ function STMSC0101P01() {
                                     <li>40일간 작업 <strong className="string">▶ 제출 대상</strong></li>
                                   </ul>
                                 </li>
-                              </ul>
+                              </ul> */}
+
+                              <dl className="m-bullets type-disc gap-50">
+                                <dt>당행 사업장(영업점 포함)에서 수급인의 근로자가 연속적으로 업무를 수행하나, <em className="g-bold">1개월</em>을 초과하지 않고 종료되는 <em className="g-bold">일시적 작업</em>의 계약</dt>
+
+                                <dd>사업장 내 소득 작업을 위해 <strong>15일간 작업</strong> <em className="o-chip var-lined-00 size-30"><span className="label">제출 비대상</span></em></dd>
+                                <dd>사업장 내 소득 작업을 위해 <strong>40일간 작업</strong> <em className="o-chip var-lined-01 size-30"><span className="label">제출 대상</span></em></dd>
+                              </dl>
                             </td>
                           </tr>
                           <tr>
                             <th colSpan={1}>11</th>
                             <td colSpan={2} className="g-start">
-                              당행 사업장(영업점 포함)에서 수급인의 근로자가 비연속적으로 업무를 수행하나,<br /><strong className="string">연간 60일</strong>을 초과하지 않는 <strong className="string">간헐적 작업</strong>의 계약
+                              {/* 당행 사업장(영업점 포함)에서 수급인의 근로자가 비연속적으로 업무를 수행하나,<br /><em className="g-bold">연간 60일</em>을 초과하지 않는 <em className="g-bold">간헐적 작업</em>의 계약
                               <ul className="m-bullets type-disc">
-                                <li>승강기 유지보수 작업을 위해 연간 (1) A영업점 2일 + (2) B영업점 4일 + (3) C영업점 3일 + …… (26) Z영업점 1일 = 총 작업일수[(1) ~ (26) 총합]</li>
+                                <li>승강기 유지보수 작업을 위해 연간 (1) A영업점 2일 + (2) B영업점 4일 + (3) C영업점 3일 + …… (26) Z영업점 1일 = 총 작업일수((1) ~ (26) 총합)</li>
                                 <li>총 작업일수가 연간
                                   <ul className="m-bullets type-hyphen">
                                     <li>47일 <strong className="string">▶ 제출 비대상</strong></li>
                                     <li>80일 <strong className="string">▶ 제출 대상</strong></li>
                                   </ul>
                                 </li>
-                              </ul>
+                              </ul> */}
+
+                              <dl className="m-bullets type-disc gap-50">
+                                <dt>당행 사업장(영업점 포함)에서 수급인의 근로자가 비연속적으로 업무를 수행하나, <em className="g-bold">연간 60일</em>을 초과하지 않는 <em className="g-bold">간헐적 작업</em>의 계약</dt>
+
+                                <dd>승강기 유지보수 작업을 위해 연간 (1) A영업점 2일 + (2) B영업점 4일 + (3) C영업점 3일 + …… (26) Z영업점 1일 = 총 작업일수((1) ~ (26) 총합)</dd>
+                                <dd>총 작업일수가 연간 <strong>47일</strong> <em className="o-chip var-lined-00 size-30"><span className="label">제출 비대상</span></em></dd>
+                                <dd>총 작업일수가 연간 <strong>80일</strong> <em className="o-chip var-lined-01 size-30"><span className="label">제출 대상</span></em></dd>
+                              </dl>
                             </td>
                           </tr>
                         </tbody>
