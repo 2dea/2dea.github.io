@@ -92,11 +92,12 @@ function DEX() {
 
       {/*
       스케줄
+      2025-07/01 화 :
+
       2025-06/30 월 :
         #210 이후로~
       전화번호
         -  NONO: 전산, it
-
 
       "재난 안전관리"-
         - [제외] 당직비정산
@@ -135,7 +136,7 @@ function DEX() {
             2. [용도품 ( 영업점 )]  완료
 
         23 key 자동배송 품목 등록 및 제외 확인 BSPRQ0301P01
-          --- 6/20 : 레이아웃 확인: HSPDU0301P02 : 감시자를 확인해주세요 #161
+          --- 6/20 : HSPDU0301P02 : 감시자를 확인해주세요 #161
 
 
       2025-06-20 금 :
@@ -296,6 +297,12 @@ about:blank
                           </td>
                         </tr>
 
+                        th label <br >
+                        <th colSpan={1}>
+                            <Label label={<>인계자 <br />(전임 분임​보안담당자)</>} require={false} />
+                          </th>
+
+
 화살표  &rarr;
 &lt;  &gt;
 
@@ -349,6 +356,49 @@ about:blank
                         </div>
                       </td>
 
+                        td 안에 제목 + o-form
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`인계자`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <Label label={`전임 분임보안담당관`} require={false} />
+                              <div className="fields">
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        STMSC0101M
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`여러`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="m-mixed-field">
+
+                              <div className="o-field">
+                                <Label label={`상시(인원수)`} require={false} />
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50 g-end">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <span className="helper">추정치를 입력해주세요.</span>
+                                </div>
+                              </div>
+
+                            </div>
+                          </td>
+                        </tr>
+
+
 */}
       {/*
       업무지원시스템 재구축 프로젝트에 사용할 템플릿 파일입니다.
@@ -374,6 +424,8 @@ about:blank
               HSPHS0901M
               BSSDM0101M: 조회 / 밑에는 반반
               ADMPA0301M: 위에는 조회 full  / 밑에는 반반 3개 테이블
+
+              반반: STMAS0101M 등록기한 안내
 
           싱글 왼쪽 반: HSPDU0701M , HSPHS2001M
 
@@ -404,6 +456,8 @@ about:blank
             [ 일괄적용] 버튼 : BEXRQ0101M
             <CommonButton label="일괄적용" icon="du-down" className="_normal" />
             STMBR0101P01 팝업
+
+            [ input + 삭제 버튼 ] STMHA0101M    m-flex-list
 
             [ 테이블 ]
             // 소계 합계 : FMTFC0301M

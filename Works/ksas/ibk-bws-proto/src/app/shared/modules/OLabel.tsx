@@ -7,7 +7,8 @@
 import React, { useRef, useState } from 'react';
 
 interface LabelProps {
-  label: string;
+  // label: string;
+  label: React.ReactNode;
   require?: boolean;
   className?: string;
   style?: React.CSSProperties;

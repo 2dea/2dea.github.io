@@ -262,9 +262,12 @@ import STMGD0401P02 from 'app/pages/stm/STMGD0401P02';   // 재난·안전관리
 import STMGD0401P03 from 'app/pages/stm/STMGD0401P03';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)당직점검표등록
 import STMGD0401P04 from 'app/pages/stm/STMGD0401P04';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)명령부 초기화
 import STMGD0401P05 from 'app/pages/stm/STMGD0401P05';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)이력조회
+import STMGD0401P06 from 'app/pages/stm/STMGD0401P06';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)명령부등록
 
 import STMGD0501M from 'app/pages/stm/STMGD0501M';       // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리(관리자)
 import STMGD0501P01 from 'app/pages/stm/STMGD0501P01';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리(관리자) ~ (LP)명령부복수부점관리
+
+import STMGD0701M from 'app/pages/stm/STMGD0701M';       // 재난·안전관리 > 기계경비당직관리          > SET시각등록
 
 import STMVL0101M from 'app/pages/stm/STMVL0101M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
 import STMVL0101P01 from 'app/pages/stm/STMVL0101P01';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)수정기한관리
@@ -309,6 +312,15 @@ import STMBR0301P01 from 'app/pages/stm/STMBR0301P01';   // 재난·안전관리
 
 import STMAS0101M from 'app/pages/stm/STMAS0101M';       // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획
 import STMAS0201P01 from 'app/pages/stm/STMAS0201P01';   // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획현황 ~ (LP)등록기한관리
+
+import STMAS0301M from 'app/pages/stm/STMAS0301M';       // 재난·안전관리 > 자율보안체계             > 보안업무심사분석
+import STMHA0101M from 'app/pages/stm/STMHA0101M';       // 재난·안전관리 > 자율보안체계             > 위기상황시대응조편성
+import STMHA0201M from 'app/pages/stm/STMHA0201M';       // 재난·안전관리 > 자율보안체계             > 위기상황시대응조편성현황
+import STMHA0301M from 'app/pages/stm/STMHA0301M';       // 재난·안전관리 > 자율보안체계             > 위기상황시대응조편성현황
+import STMHA0401M from 'app/pages/stm/STMHA0401M';       // 재난·안전관리 > 자율보안체계             > 분임보안담당관인수인계서현황
+
+import STMSC0101M from 'app/pages/stm/STMSC0101M';       // 재난·안전관리 > 도급사업관리             > 도급계약 현황 등록
+import STMSC0101P01 from 'app/pages/stm/STMSC0101P01';   // 재난·안전관리 > 도급사업관리             > 도급계약 현황 등록 ~ (LP)도급계약 현황 등록
 
 import STMKY0101M from 'app/pages/stm/STMKY0101M';       // 재난·안전관리 > 열쇠관리                 > 열쇠종류관리
 import STMKY0201M from 'app/pages/stm/STMKY0201M';       // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리
@@ -677,6 +689,7 @@ function ProtoRoutes() {
         { path: 'STMGD0401P03', element: <STMGD0401P03 /> },
         { path: 'STMGD0401P04', element: <STMGD0401P04 /> },
         { path: 'STMGD0401P05', element: <STMGD0401P05 /> },
+        { path: 'STMGD0401P06', element: <STMGD0401P06 /> },
 
         { path: 'STMGD0501M',   element: <STMGD0501M /> },
         { path: 'STMGD0501P01', element: <STMGD0501P01 /> },
@@ -701,6 +714,8 @@ function ProtoRoutes() {
 
         { path: 'STMGI0301M',   element: <STMGI0301M /> },
 
+        { path: 'STMGD0701M',   element: <STMGD0701M /> },
+
         { path: 'STMVL0101M',   element: <STMVL0101M /> },
         { path: 'STMVL0101P01', element: <STMVL0101P01 /> },
         { path: 'STMVL0101P02', element: <STMVL0101P02 /> },
@@ -722,6 +737,15 @@ function ProtoRoutes() {
 
         { path: 'STMAS0101M',   element: <STMAS0101M /> },
         { path: 'STMAS0201P01', element: <STMAS0201P01 /> },
+
+        { path: 'STMAS0301M',   element: <STMAS0301M /> },
+        { path: 'STMHA0101M',   element: <STMHA0101M /> },
+        { path: 'STMHA0201M',   element: <STMHA0201M /> },
+        { path: 'STMHA0301M',   element: <STMHA0301M /> },
+        { path: 'STMHA0401M',   element: <STMHA0401M /> },
+
+        { path: 'STMSC0101M',   element: <STMSC0101M /> },
+        { path: 'STMSC0101P01', element: <STMSC0101P01 /> },
 
         { path: 'STMKY0101M',   element: <STMKY0101M /> },
         { path: 'STMKY0201M',   element: <STMKY0201M /> },
