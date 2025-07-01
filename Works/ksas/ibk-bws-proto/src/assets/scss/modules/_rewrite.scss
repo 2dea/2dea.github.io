@@ -30,9 +30,10 @@
 // }
 
 
-.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*) >input:not([type="radio"]) ~i:before  { width: var(--height-inner); max-width: none; transition: none; }
-.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*) >input:not([type="radio"]):checked ~i:before  { max-width: none; }
-.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*) >input:not([type="radio"]):not(:checked) ~i:before  { visibility: hidden; }
+.o-check:where(:has(.item:nth-child(50) >.o-check) >* >*, .o-grid-table *)  { transition: none; }
+.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*, .o-grid-table *) >input:not([type="radio"]) ~i:before  { width: var(--height-inner); max-width: none; transition: none; }
+.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*, .o-grid-table *) >input:not([type="radio"]):checked ~i:before  { max-width: none; }
+.o-check.type-swoosh:where(:has(.item:nth-child(50) >.o-check) >* >*, .o-grid-table *) >input:not([type="radio"]):not(:checked) ~i:before  { visibility: hidden; }
 
 @layer primereact-rewrite {
   .p-hidden  {
@@ -762,8 +763,11 @@
     }
   }
 
+  // .p-x-cell-span  {
   .p-x-cell-span  {
-    border-bottom-color: $tp;
+    &:not(tr:only-child >*)  {
+      border-bottom-color: $tp;
+    }
   }
   }
 

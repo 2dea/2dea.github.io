@@ -619,6 +619,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .o-grid >.column  { flex: 1 0 0; display: flex; flex-direction: column; min-width: 0; padding: 0 calc(var(--gap-grid) / 2); }
 // .o-grid >.column._views  { flex: 0 1 auto; width: calc(var(--rem) * 626 + var(--gap-grid)); }
 .o-grid >.column  { min-width: calc(var(--rem) * 254 + var(--gap-grid)); }
+.o-grid >.column:where(.o-grid:has(>.column.flex-auto) >:not(.flex-auto))  { flex: none; }
+.o-grid >.column:where(.flex-auto)  { flex: 1; }
 .o-grid >.column:where(._views, ._fixed-views, ._fixed-6-12)  { flex: 0 1 auto; }
 .o-grid >.column._views  { width: calc(100% * 5 / 12); max-width: calc(var(--rem) * 626 + var(--gap-grid)); }
 .o-grid >.column._fixed-views  { width: calc(var(--rem) * 626 + var(--gap-grid)); }
