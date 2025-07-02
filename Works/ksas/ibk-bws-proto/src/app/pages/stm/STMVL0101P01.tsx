@@ -183,7 +183,7 @@ function STMVL0101P01() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td><span className="o-digit type-date">2025-12-25</span> ~ <span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
                             <td>N</td>
                             <td>009211</td>
                             <td className="g-start">[00070] 프로세스혁신부</td>

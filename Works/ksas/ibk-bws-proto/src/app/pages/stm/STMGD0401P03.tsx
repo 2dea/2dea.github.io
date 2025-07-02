@@ -230,7 +230,16 @@ function STMGD0401P03() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">카드 및 출입문 열쇠 인수도부</span></h4>
+                  <h4 className="o-heading level2">
+                    <span className="label">카드 및 출입문 열쇠 인수도부</span>
+                    <div className="m-inline-binds type-tooltip">
+                      <Tooltip className="o-tooltip" target="#STMGD0401P03-tooltip-10" position="top">
+                        [경비업무규경] 제38조(보안점검자의 임무) 보안점검자의 임무는 다음 각 호와 같다.<br /><br />
+                        7. 다음 영업일에 세트카드 및 출입문 열쇠를 서무팀장(출장소의 경우 서무 최상급자)에게 반납하고, 기계경비보안점검표를 작성하여 전산 결재 한다.
+                      </Tooltip>
+                      <ImageButton id="STMGD0401P03-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                    </div>
+                  </h4>
                 </div>
 
                 <div className="main">
@@ -242,11 +251,15 @@ function STMGD0401P03() {
                           <col style={{ width: '10%' }} />
                           <col style={{ width: '10%' }} />
                           <col style={{ width: '10%' }} />
+                          <col style={{ width: '10%' }} />
                           <col style={{ width: 'auto' }} />
                         </colgroup>
 
                         <thead>
                           <tr>
+                            <th colSpan={1}>
+                              <Label label={`구분`} require={false} />
+                            </th>
                             <th colSpan={2}>
                               <Label label={`인계자`} require={false} />
                             </th>
@@ -254,176 +267,165 @@ function STMGD0401P03() {
                               <Label label={`인수자`} require={false} />
                             </th>
                           </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td colSpan={1} rowSpan={2}>
+                              점검일자
+                            </td>
+                            <td colSpan={1} rowSpan={2}>
+                              서무팀장
+                            </td>
+                            <td colSpan={1} rowSpan={2}>
+                              <div className="o-form _input wdth-70">
+                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <i aria-hidden="true"></i>
+                              </div>
+                            </td>
+                            <td colSpan={1}>
+                              점검자2
+                            </td>
+                            <td colSpan={1}>
+                              [0000] 홍길동
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>
+                              점검자2
+                            </td>
+                            <td colSpan={1}>
+                              [0000] 홍길동
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1} rowSpan={2}>
+                              점검일자 익일
+                            </td>
+                            <td colSpan={1}>
+                              점검자1
+                            </td>
+                            <td colSpan={1}>
+                              [0000] 홍길동
+                            </td>
+                            <td colSpan={1} rowSpan={2}>
+                              서무팀장
+                            </td>
+                            <td colSpan={1} rowSpan={2}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-70">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>
+                              점검자2
+                            </td>
+                            <td colSpan={1}>
+                              [0000] 홍길동
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2">
+                    <span className="label">세트현황</span>
+                  </h4>
+                </div>
+
+                <div className="main">
+                  <div className="o-data-table">
+                    <div className="table-container">
+                      <table className="table">
+                        <colgroup>
+                          <col style={{ width: '10%' }} />
+                          <col style={{ width: '10%' }} />
+                          <col style={{ width: 'auto' }} />
+                          <col style={{ width: 'auto' }} />
+                        </colgroup>
+
+                        <thead>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`점검자`} require={false} />
+                              <Label label={`구분`} require={false} />
                             </th>
                             <th colSpan={1}>
-                              <Label label={`대직자`} require={false} />
+                              <Label label={`세트시각`} require={true} />
                             </th>
                             <th colSpan={1}>
-                              <Label label={`점검자`} require={false} />
+                              <Label label={`실시자`} require={false} />
                             </th>
                             <th colSpan={1}>
-                              <Label label={`대직자`} require={false} />
+                              <Label label={`경비회사 수화자`} require={false} />
                             </th>
                           </tr>
                         </thead>
 
                         <tbody>
                           <tr>
-                            <td colSpan={1}>
-                              <div className="o-form _input wdth-50">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                              </div>
+                            <td colSpan={1} rowSpan={2}>
+                              지점
                             </td>
-                            <td colSpan={1}>
-                              <div className="o-form _input wdth-50">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                              </div>
-                            </td>
-                            <td colSpan={1}>
-                              <div className="o-form _input wdth-50">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                              </div>
-                            </td>
-                            <td colSpan={1}>
-                              <div className="o-form _input wdth-50">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td colSpan={1}>
-                              <div className="o-form _input wdth-50">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                              </div>
-                            </td>
-                            <td colSpan={1}>
-                              <div className="o-form _input wdth-50">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                              </div>
-                            </td>
-                            <td colSpan={1}>
-                              <div className="o-form _input wdth-50">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                              </div>
-                            </td>
-                            <td colSpan={1}>
-                              <div className="o-form _input wdth-50">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">세트현황</span></h4>
-                </div>
-
-                <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="table-container p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                        </colgroup>
-
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세트시각<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실시자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">경비회사 수화자</span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={4}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                          {[...Array(24)].map((e, idx) => (
-                            <>
-                              {
-                                (idx - 3) % 3 === 0 &&
-                                <tr className="p-rowgroup-header">
-                                  <td colSpan={4} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                                </tr>
-                              }
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                                  {
-                                    (idx) % 3 === 0 &&
-                                    <>지점</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                                  }
-                                </td>
-                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                                  {
-                                    (idx) % 3 === 0 &&
-                                    <div className="o-form _input type-time mode-required wdth-30">
-                                      <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  }
-                                </td>
-                                <td>
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input wdth-50">
-                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                        <i aria-hidden="true"></i>
-                                      </div>
-                                    </div>
+                            <td colSpan={1} rowSpan={2}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-time mode-required wdth-30">
+                                    <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                    <i aria-hidden="true"></i>
                                   </div>
-                                </td>
-                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                                  {
-                                    (idx) % 3 === 0 &&
-                                    <div className="o-field">
-                                      <div className="fields">
-                                        <div className="o-form _input wdth-50">
-                                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                          <i aria-hidden="true"></i>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  }
-                                </td>
-                              </tr>
-                              {
-                                (idx - 2) % 3 === 0 &&
-                                <tr className="p-rowgroup-footer">
-                                  <td colSpan={4} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                                </tr>
-                              }
-                            </>
-                          ))}
+                                </div>
+                              </div>
+                            </td>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-70">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td colSpan={1} rowSpan={2}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-70">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-70">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
+
               </div>
 
             </div>

@@ -320,7 +320,10 @@ import STMHA0301M from 'app/pages/stm/STMHA0301M';       // 재난·안전관리
 import STMHA0401M from 'app/pages/stm/STMHA0401M';       // 재난·안전관리 > 자율보안체계             > 분임보안담당관인수인계서현황
 
 import STMSC0101M from 'app/pages/stm/STMSC0101M';       // 재난·안전관리 > 도급사업관리             > 도급계약 현황 등록
-import STMSC0101P01 from 'app/pages/stm/STMSC0101P01';   // 재난·안전관리 > 도급사업관리             > 도급계약 현황 등록 ~ (LP)도급계약 현황 등록
+import STMSC0101P01 from 'app/pages/stm/STMSC0101P01';   // 재난·안전관리 > 도급사업관리             > 도급계약 현황 등록 ~ (LP)도급사업체크리스트
+import STMSC0101P02 from 'app/pages/stm/STMSC0101P02';   // 재난·안전관리 > 도급사업관리             > 도급계약 현황 등록 ~ (LP)참고
+import STMSC0201M from 'app/pages/stm/STMSC0201M';       // 재난·안전관리 > 도급사업관리             > 도급계약 현황 확인
+import STMSC0301M from 'app/pages/stm/STMSC0301M';       // 재난·안전관리 > 도급사업관리             > 안전보건협의체 회의록
 
 import STMKY0101M from 'app/pages/stm/STMKY0101M';       // 재난·안전관리 > 열쇠관리                 > 열쇠종류관리
 import STMKY0201M from 'app/pages/stm/STMKY0201M';       // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리
@@ -367,6 +370,9 @@ import BSSLQ0101P02 from 'app/pages/bss/BSSLQ0101P02'; // 영업지원 > 대량�
 import BSSLQ0101P03 from 'app/pages/bss/BSSLQ0101P03'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)업무완료
 import BSSLQ0101P04 from 'app/pages/bss/BSSLQ0101P04'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)반려좌수상세보기
 
+
+import BSSRM0101M from 'app/pages/bss/BSSRM0101M';     // 영업지원 > 토지보상우편물         > 토지보상우편물
+import BSSRM0201M from 'app/pages/bss/BSSRM0201M';     // 영업지원 > 토지보상우편물         > 토지보상우편물(본부)
 
 import BSSTN0101M from 'app/pages/bss/BSSTN0101M';     // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링)
 import BSSTN0101P01 from 'app/pages/bss/BSSTN0101P01'; // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링) ~ (LP)등기번호등록
@@ -746,6 +752,9 @@ function ProtoRoutes() {
 
         { path: 'STMSC0101M',   element: <STMSC0101M /> },
         { path: 'STMSC0101P01', element: <STMSC0101P01 /> },
+        { path: 'STMSC0101P02', element: <STMSC0101P02 /> },
+        { path: 'STMSC0201M',   element: <STMSC0201M /> },
+        { path: 'STMSC0301M',   element: <STMSC0301M /> },
 
         { path: 'STMKY0101M',   element: <STMKY0101M /> },
         { path: 'STMKY0201M',   element: <STMKY0201M /> },
@@ -802,6 +811,10 @@ function ProtoRoutes() {
         { path: 'BSSLQ0101P02', element: <BSSLQ0101P02 /> },
         { path: 'BSSLQ0101P03', element: <BSSLQ0101P03 /> },
         { path: 'BSSLQ0101P04', element: <BSSLQ0101P04 /> },
+
+        { path: 'BSSRM0101M',   element: <BSSRM0101M /> },
+
+        { path: 'BSSRM0201M',   element: <BSSRM0201M /> },
 
         { path: 'BSSTN0101M',   element: <BSSTN0101M /> },
         { path: 'BSSTN0101P01', element: <BSSTN0101P01 /> },

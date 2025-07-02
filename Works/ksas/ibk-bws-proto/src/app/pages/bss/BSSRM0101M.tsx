@@ -1,5 +1,5 @@
 /**
- * @description 영업지원 > 채권양도통지(B2B팩토링)
+ * @description 영업지원 > 토지보상우편물
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSSTN0101M() {
+function BSSRM0101M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -45,7 +45,7 @@ function BSSTN0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '채권양도통지(B2B팩토링)' }, { label: '채권양도통지(B2B팩토링)' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '토지보상우편물' }, { label: '토지보상우편물' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function BSSTN0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">채권양도통지(B2B팩토링)</span>
+                <span className="label">토지보상우편물</span>
 
                 <FavoriteDiv />
               </h1>
@@ -114,15 +114,17 @@ function BSSTN0101M() {
             </div>
 
             <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="출력" className="_texted" />
+                </div>
+              </div>
+
               <div className="group _primary">
-                <CommonButton label="삭제" className="_delete" />
-                <CommonButton label="통지완료" className="_solid-primary" />
-                <CommonButton label="등기번호수정" className="_solid-primary" />
-                <CommonButton label="등기번호등록" className="_solid-primary" />
-                <CommonButton label="검수취소" className="_lined-primary" />
-                <CommonButton label="검수수정" className="_solid-primary" />
-                <CommonButton label="검수등록" className="_solid-primary" />
-                <CommonButton label="실물인도" className="_solid-primary" />
+                <CommonButton label="인수취소" className="_lined-primary" />
+                <CommonButton label="인수" className="_solid-primary" />
+                <CommonButton label="이관취소" className="_lined-primary" />
+                <CommonButton label="이관" className="_solid-primary" />
               </div>
             </div>
 
@@ -141,9 +143,14 @@ function BSSTN0101M() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field colspan-2">
-                    <Label label={`신청일자`} require={true} />
+                  <div className="o-field colspan-4">
+                    <Label label={`기간`} require={true} />
                     <div className="fields">
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
@@ -157,40 +164,10 @@ function BSSTN0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`등기번호 등록여부`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`검수완료여부`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`인도여부`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`수신자명`} require={false} />
+                    <Label label={`인수부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} readOnly />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
@@ -200,27 +177,21 @@ function BSSTN0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`등기번호`} require={false} />
+                    <Label label={`진행상태`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="o-field">
-                    <Label label={`통지완료여부`} require={false} />
+                  <div className="o-field colspan-2">
+                    <Label label={`우편물 내용`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                      <div className="o-form _input wdth-90">
+                        <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -234,7 +205,7 @@ function BSSTN0101M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">토지보상 우편물 내역</span></h2>
 
                   <div className="m-binds">
                     <div className="group">
@@ -277,30 +248,33 @@ function BSSTN0101M() {
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일련번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">BPR조회</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출력일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출력횟수</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등기번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등기번호등록일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">내부계약번호</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관리부점</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">차주</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">행내등기번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">채권통지완료여부</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">채권통지삭제여부</span></div></th>
-
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관련고객명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물내용</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수일자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">메모</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이관일자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이관부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이관자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관리번호</span></div></th>
                           </tr>
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
@@ -315,26 +289,27 @@ function BSSTN0101M() {
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
-                              <td>01234512340001</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>
-                                <CommonButton label="조회" className="_normal" />
-                              </td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>55</td>
-                              <td>012345</td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>01234512340001</td>
+
                               <td>홍길동</td>
-                              <td>107-89-12345</td>
+                              <td className="g-start">한국전력공가 부산울산지역</td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td>인수</td>
                               <td>012345</td>
                               <td className="g-start">을지로</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>012345</td>
                               <td>홍길동</td>
-                              <td>107-89-12345</td>
+                              <td className="g-start">메모</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>012345</td>
+                              <td className="g-start">을지로</td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td className="g-start">비고</td>
                               <td>01234512340001</td>
-                              <td>통지대기</td>
-                              <td>N</td>
                             </tr>
                           ))}
                         </tbody>
@@ -343,9 +318,9 @@ function BSSTN0101M() {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
+
 
         </div>
         {/* <!-- // Contents { @DEV } --> */}
@@ -354,4 +329,4 @@ function BSSTN0101M() {
   );
 }
 
-export default BSSTN0101M;
+export default BSSRM0101M;

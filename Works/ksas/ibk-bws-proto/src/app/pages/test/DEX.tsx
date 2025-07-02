@@ -92,7 +92,14 @@ function DEX() {
 
       {/*
       스케줄
-      2025-07/01 화 :
+      2025-07/02 목 : BSSRM0201M 부터~ [영업지원] > 토지 #70
+
+
+      [재난안전관리] > 도급사업관리 -
+      [영업지원]
+        > 토지 #70
+        > 서식장부
+        -
 
       2025-06/30 월 :
         #210 이후로~
@@ -211,6 +218,8 @@ about:blank
 
 <span className="o-digit type-date">2025-12-25</span>
 
+<span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span>
+
 <td className="g-start"></td>
 
 <td className="g-end"></td>
@@ -312,6 +321,9 @@ about:blank
 
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명</span></div></th>
+                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자번호</span></div></th>
                             </tr>
 
 
@@ -398,6 +410,8 @@ about:blank
                           </td>
                         </tr>
 
+                        ▶  「건설사업기본법」
+                        특수문자
 
 */}
       {/*
@@ -458,6 +472,10 @@ about:blank
             STMBR0101P01 팝업
 
             [ input + 삭제 버튼 ] STMHA0101M    m-flex-list
+
+
+            [ 체크 리스트 ]
+             STMSC0101P01
 
             [ 테이블 ]
             // 소계 합계 : FMTFC0301M

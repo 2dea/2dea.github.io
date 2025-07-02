@@ -123,6 +123,7 @@ function STMGD0401M() {
                 <div className="m-print-binds">
                   <CommonButton label="조회내역출력" className="_texted" />
                   <CommonButton label="점검표출력" className="_texted" />
+                  <CommonButton label="열쇠인수도출력" className="_texted" />
                 </div>
               </div>
 
@@ -140,223 +141,230 @@ function STMGD0401M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          {/* <div className="o-board type-a style-fit">
-            <ul className="m-bullets type-disc">
-              <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7483</span></span></span></li>
-            </ul>
-          </div> */}
+          <div className="o-grid">
+            <div className="column">
 
-          <form className="m-filter-form">
-            <div className="fieldset">
-
-              <div className="o-field">
-                <Label label={`점검연월`} require={true} />
-                <div className="fields">
-                  <div className="o-form _select mode-required">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-field colspan-2">
-                <Label label={`점검부점`} require={false} />
-                <div className="fields">
-                  <div className="o-form _input wdth-50">
-                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                    <i aria-hidden="true"></i>
-                    <span className="inner-binds">
-                      <ImageButton label="초기화" icon="remove" />
-                    </span>
-                  </div>
-                  <div className="o-form _select wdth-50">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div className="binds">
-              <CommonButton label="조회" className="_inquire" />
-            </div>
-          </form>
-
-          <div className="o-section">
-            <div className="m-header">
-              <h2 className="o-heading level2"><span className="label">기계경비보안관리</span></h2>
-
-              <div className="o-helper style-strong">
-                <em className="label">[명령부등록] 후 승인 전 [점검표등록]이 불가합니다. 결재내역(공통 &gt; 결재내역관리)를 확인하세요.</em>
-              </div>
-
-              <div className="o-length">
-                <span className="head">전체</span>
-                <em className="data">
-                  <span className="value">8</span>
-                  <span className="units">건</span>
-                </em>
-              </div>
-
-              <div className="m-binds">
-                <div className="group">
-                  <CommonButton label="명령부 등록" className="_normal" />
-                  <CommonButton label="이력조회" className="_normal" />
-                </div>
-
-                <div className="group">
-                  <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                  <ImageButton label="목록출력" icon="print" />
-                </div>
-              </div>
-            </div>
-
-            <div className="main _primary rows-body-5i">
-              <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-              <div className="o-grid-table p-datatable">
-                <div className="table-container p-datatable-wrapper">
-                  <table className="p-datatable-table p-datatable-scrollable-table">
-                    <colgroup>
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                    </colgroup>
-
-                    <thead className="p-datatable-thead">
-                      <tr>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검일자</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요일</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검자</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 등록</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 결재상태</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 등록</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 결재상태</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검사항</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지점세트시각</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">명령부 결재상태</span></div></th>
-                      </tr>
-                    </thead>
-
-                    <tbody className="p-datatable-tbody">
-                      <tr className="p-datatable-emptymessage">
-                        <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                      </tr>
-                    </tbody>
-
-                    <tbody className="p-datatable-tbody">
-                      {[...Array(24)].map((e, idx) => (
-                        <>
-                          {
-                            (idx - 3) % 3 === 0 &&
-                            <tr className="p-rowgroup-header">
-                                <td colSpan={11} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                            </tr>
-                          }
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>화</>
-                              }
-                            </td>
-                            <td>1</td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 ?
-                                <><a href="javascript:" className="o-link _normal">[000081] 홍길동</a> <em className="o-chip var-lined-00 size-30"><span className="label">대직</span></em></>
-                                  : <div className="o-field">
-                                      <div className="fields">
-                                        <div className="o-form _input wdth-50">
-                                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                          <i aria-hidden="true"></i>
-                                        </div>
-                                      </div>
-                                  </div>
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <CommonButton label="점검표 등록" className="_normal" /> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>결재승인</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <a href="javascript:" className="o-link _normal">등록완료</a>
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>결재승인</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>결재승인 <em className="o-chip var-lined-00 size-30"><span className="label">초기화</span></em></> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                          </tr>
-                          {
-                            (idx - 2) % 3 === 0 &&
-                            <tr className="p-rowgroup-footer">
-                              <td colSpan={11} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                            </tr>
-                          }
-                        </>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="o-section">
-            <div className="o-board type-a">
-              <div className="board-container">
-                <div className="m-header">
-                  <strong className="o-heading"><span className="label">유의사항</span></strong>
-                </div>
-
+              {/* <div className="o-board type-a style-fit">
                 <ul className="m-bullets type-disc">
-                  <li>익월 명령부 등록시 당월 점검표가 25일까지 모두 등록되어 있어야 합니다.</li>
-                  <li>점검표 등록은 1일부터 순차적으로 등록해야합니다.</li>
-                  <li>당일 점검표 등록은 전월 점검표가 모두 등록되어 있어야 합니다.</li>
-                  <li>당직가능업무: 공사, 청소 등 불가피한 경우만 해당됩니다.</li>
-                  <li className="c-color-strong"><em>월 초 점검표 등록, 대직자 등록 비활성화시 명령부 결재상태를 확인해주세요.</em></li>
-                  <li className="c-color-strong"><em>점검표 결재 승인 후 대직자 변경이 필요한 경우 점검표 재등록 반려결재 후 변경가능합니다.</em></li>
+                  <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7483</span></span></span></li>
                 </ul>
+              </div> */}
+
+              <form className="m-filter-form">
+                <div className="fieldset">
+
+                  <div className="o-field">
+                    <Label label={`점검연월`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field colspan-2">
+                    <Label label={`점검부점`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input wdth-50">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+                      <div className="o-form _select wdth-50">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
+                </div>
+              </form>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">기계경비보안관리</span></h2>
+
+                  <div className="o-helper style-strong">
+                    <em className="label">[명령부등록] 후 승인 전 [점검표등록]이 불가합니다. 결재내역(공통 &gt; 결재내역관리)를 확인하세요.</em>
+                  </div>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="명령부 등록" className="_normal" />
+                      <CommonButton label="이력조회" className="_normal" />
+                    </div>
+
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main _primary rows-body-5i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요일</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 등록</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 결재상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 등록</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 결재상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검사항</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지점세트시각</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">명령부 결재상태</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <>
+                              {
+                                (idx - 3) % 3 === 0 &&
+                                <tr className="p-rowgroup-header">
+                                    <td colSpan={11} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                </tr>
+                              }
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>화</>
+                                  }
+                                </td>
+                                <td>1</td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 ?
+                                    <><a href="javascript:" className="o-link _normal">[000081] 홍길동</a> <em className="o-chip var-lined-00 size-30"><span className="label">대직</span></em></>
+                                      : <div className="o-field">
+                                          <div className="fields">
+                                            <div className="o-form _input wdth-50">
+                                              <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                              <i aria-hidden="true"></i>
+                                            </div>
+                                          </div>
+                                      </div>
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <CommonButton label="점검표 등록" className="_normal" /> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>결재승인</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <a href="javascript:" className="o-link _normal">등록완료</a>
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>결재승인</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>결재승인 <em className="o-chip var-lined-00 size-30"><span className="label">초기화</span></em></> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                              </tr>
+                              {
+                                (idx - 2) % 3 === 0 &&
+                                <tr className="p-rowgroup-footer">
+                                  <td colSpan={11} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                </tr>
+                              }
+                            </>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+
+              <div className="o-section">
+                <div className="o-board type-a">
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">유의사항</span></strong>
+                    </div>
+
+                    <ul className="m-bullets type-disc">
+                      <li>익월 명령부 등록시 당월 점검표가 25일까지 모두 등록되어 있어야 합니다.</li>
+                      <li>점검표 등록은 1일부터 순차적으로 등록해야합니다.</li>
+                      <li>당일 점검표 등록은 전월 점검표가 모두 등록되어 있어야 합니다.</li>
+                      <li>당직가능업무: 공사, 청소 등 불가피한 경우만 해당됩니다.</li>
+                      <li className="c-color-strong"><em>월 초 점검표 등록, 대직자 등록 비활성화시 명령부 결재상태를 확인해주세요.</em></li>
+                      <li className="c-color-strong"><em>점검표 결재 승인 후 대직자 변경이 필요한 경우 점검표 재등록 반려결재 후 변경가능합니다.</em></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+
 
         </div>
         {/* <!-- // Contents { @DEV } --> */}

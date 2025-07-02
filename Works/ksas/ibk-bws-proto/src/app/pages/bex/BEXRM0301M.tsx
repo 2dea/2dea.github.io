@@ -130,219 +130,224 @@ function BEXRM0301M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
+          <div className="o-grid">
+            <div className="column">
 
-          <form className="m-filter-form">
-            <div className="fieldset">
+              <form className="m-filter-form">
+                <div className="fieldset">
 
-              <div className="o-field">
-                <Label label={`바코드정보`} require={false} />
-                <div className="fields">
-                  <div className="o-form _input">
-                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                    <i aria-hidden="true"></i>
+                  <div className="o-field">
+                    <Label label={`바코드정보`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field colspan-4">
+                    <Label label={`기간`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <span className="seps type-tilde">~</span>
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`접수장소`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`진행상태`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`등록구분`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field colspan-2">
+                    <Label label={`대상`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select wdth-50">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+
+                      <div className="o-form _input wdth-auto">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`정렬구분`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
+                </div>
+              </form>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">등기우편물 접수내역</span></h2>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="o-field colspan-4">
-                <Label label={`기간`} require={true} />
-                <div className="fields">
-                  <div className="o-form _select mode-required">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
+                <div className="main _primary">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
 
-                  <div className="o-form _input type-date mode-required wdth-50">
-                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                    <i aria-hidden="true"></i>
-                  </div>
-                  <span className="seps type-tilde">~</span>
-                  <div className="o-form _input type-date mode-required wdth-50">
-                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                    <i aria-hidden="true"></i>
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수정보</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수취정보</span></div></th>
+                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">로봇배송정보</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령정보</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">바코드정보</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통보방법</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">로봇배송일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송결과</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령일시</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={20}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx + 1}</td>
+                              <td>123456789123</td>
+                              <td><span className="o-digit type-time">00:00:00</span></td>
+                              <td className="g-start">을지로</td>
+                              <td>홍길동</td>
+                              <td>접수</td>
+                              <td>법원서류</td>
+                              <td>홍길동</td>
+                              <td className="g-start">을지로</td>
+                              <td>홍길동</td>
+                              <td>로봇배송</td>
+                              <td>홍길동</td>
+                              <td>홍길동</td>
+                              <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+                              <td>완료(수령)</td>
+                              <td>홍길동</td>
+                              <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+                              <td>N</td>
+                              <td className="g-start"></td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="o-field">
-                <Label label={`접수장소`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-field">
-                <Label label={`진행상태`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-field">
-                <Label label={`등록구분`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-field colspan-2">
-                <Label label={`대상`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select wdth-50">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-
-                  <div className="o-form _input wdth-auto">
-                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-field">
-                <Label label={`정렬구분`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
               </div>
 
             </div>
-
-            <div className="binds">
-              <CommonButton label="조회" className="_inquire" />
-            </div>
-          </form>
-
-          <div className="o-section">
-            <div className="m-header">
-              <h2 className="o-heading level2"><span className="label">등기우편물 접수내역</span></h2>
-
-              <div className="o-length">
-                <span className="head">전체</span>
-                <em className="data">
-                  <span className="value">8</span>
-                  <span className="units">건</span>
-                </em>
-              </div>
-
-              <div className="m-binds">
-                <div className="group">
-                  <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                  <ImageButton label="목록필터" icon="column-toggle" />
-                  <ImageButton label="목록출력" icon="print" />
-                </div>
-              </div>
-            </div>
-
-            <div className="main _primary">
-              <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-              <div className="o-grid-table p-datatable">
-                <div className="table-container p-datatable-wrapper">
-                  <table className="p-datatable-table p-datatable-scrollable-table">
-                    <colgroup>
-                      <col className="wdth-10" />
-                      <col className="wdth-10" />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                    </colgroup>
-
-                    <thead className="p-datatable-thead">
-                      <tr>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                        <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수정보</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록구분</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송자</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수취정보</span></div></th>
-                        <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">로봇배송정보</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령정보</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서명</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
-                      </tr>
-                      <tr>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">바코드정보</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수일시</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통보방법</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송자</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">로봇배송일시</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송결과</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령일시</span></div></th>
-                      </tr>
-                    </thead>
-
-                    <tbody className="p-datatable-tbody">
-                      <tr className="p-datatable-emptymessage">
-                        <td colSpan={20}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                      </tr>
-                    </tbody>
-
-                    <tbody className="p-datatable-tbody">
-                      {[...Array(24)].map((e, idx) => (
-                        <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                          <td><InputCheck label="선택" labelHidden /></td>
-                          <td>{idx + 1}</td>
-                          <td>123456789123</td>
-                          <td><span className="o-digit type-time">00:00:00</span></td>
-                          <td className="g-start">을지로</td>
-                          <td>홍길동</td>
-                          <td>접수</td>
-                          <td>법원서류</td>
-                          <td>홍길동</td>
-                          <td className="g-start">을지로</td>
-                          <td>홍길동</td>
-                          <td>로봇배송</td>
-                          <td>홍길동</td>
-                          <td>홍길동</td>
-                          <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
-                          <td>완료(수령)</td>
-                          <td>홍길동</td>
-                          <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
-                          <td>N</td>
-                          <td className="g-start"></td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
           </div>
 
         </div>

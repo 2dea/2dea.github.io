@@ -270,7 +270,7 @@ function BSSLQ0101P03() {
                             <Label label={`작업기간`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            <span className="o-digit type-date">2025-12-25</span> ~ <span className="o-digit type-date">2025-12-25</span>
+                            <span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span>
                           </td>
                         </tr>
                       </tbody>

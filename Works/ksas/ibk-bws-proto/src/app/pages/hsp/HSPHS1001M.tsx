@@ -156,7 +156,17 @@ function HSPHS1001M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`신청상태`} require={false} />
+                    <Label label={`신청상태`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`품목구분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -164,6 +174,7 @@ function HSPHS1001M() {
                       </div>
                     </div>
                   </div>
+
                 </div>
 
                 <div className="binds">
@@ -211,12 +222,14 @@ function HSPHS1001M() {
                           <col />
                           <col />
                           <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목구분</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래제한구분</span></div></th>
@@ -239,7 +252,7 @@ function HSPHS1001M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -248,6 +261,7 @@ function HSPHS1001M() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>신청</td>
+                            <td>중요용지</td>
                             <td>PD011</td>
                             <td className="g-start">국민관광상품권1만원권</td>
                             <td>기간제한</td>
@@ -293,8 +307,14 @@ function HSPHS1001M() {
                           <th colSpan={1}>
                             <Label label={`출급번호`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             [0810] 정액10만원권
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`품목구분`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0810] 프로세스혁신
                           </td>
                         </tr>
                         <tr>

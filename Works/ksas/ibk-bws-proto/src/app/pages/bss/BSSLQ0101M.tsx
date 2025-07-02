@@ -210,155 +210,156 @@ function BSSLQ0101M() {
                 </div>
               </form>
 
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main _primary body-3i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                        <col className="wdth-10" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청제목</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점서류발송일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점수령희망일자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사전협의자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수결재상태</span></div></th>
+                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접릭식계좌</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무시작일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점수령예정일자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인거절사유</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">특이사항</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타요청사항</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청좌수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인좌수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수좌수(A+B)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">완료좌수(A)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반려좌수(B)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={31}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td>신청</td>
+                              <td>012345</td>
+                              <td className="g-start">을지로</td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td className="g-start">급여이체 통장 신규 요청</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>결재요청</td>
+                              <td className="g-end">30</td>
+                              <td className="g-end">30</td>
+                              <td className="g-end">30</td>
+                              <td className="g-end">30</td>
+                              <td className="g-end">
+                                <a href="javascript:" className="o-link _normal">30</a>
+                              </td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                              <td className="g-start">급여이체 통장 신규 요청</td>
+                              <td className="g-start">특이사항</td>
+                              <td className="g-start">신입행 학생증 카드 마케팅</td>
+                              <td className="g-start">비고</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
-            <div className="o-section">
-              <div className="m-header">
-                <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
-
-                <div className="m-binds">
-                  <div className="group">
-                    <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                    <ImageButton label="목록출력" icon="print" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="main _primary body-3i">
-                <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                <div className="o-grid-table p-datatable">
-                  <div className="table-container p-datatable-wrapper">
-                    <table className="p-datatable-table p-datatable-scrollable-table">
-                      <colgroup>
-                      <col className="wdth-10" />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      </colgroup>
-
-                      <thead className="p-datatable-thead">
-                        <tr>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
-                          <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
-                          <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청제목</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점서류발송일자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점수령희망일자</span></div></th>
-                          <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사전협의자</span></div></th>
-                          <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수일자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수결재상태</span></div></th>
-                          <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접릭식계좌</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인일자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무시작일자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료일자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점수령예정일자</span></div></th>
-                          <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료자</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인거절사유</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">특이사항</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타요청사항</span></div></th>
-                          <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
-
-                        </tr>
-                        <tr>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청좌수</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인좌수</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수좌수(A+B)</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">완료좌수(A)</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반려좌수(B)</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                        </tr>
-                      </thead>
-
-                      <tbody className="p-datatable-tbody">
-                        <tr className="p-datatable-emptymessage">
-                          <td colSpan={31}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                        </tr>
-                      </tbody>
-
-                      <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>신청</td>
-                            <td>012345</td>
-                            <td className="g-start">을지로</td>
-                            <td>012345</td>
-                            <td>홍길동</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td className="g-start">급여이체 통장 신규 요청</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>012345</td>
-                            <td>홍길동</td>
-                            <td>012345</td>
-                            <td>홍길동</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>결재요청</td>
-                            <td className="g-end">30</td>
-                            <td className="g-end">30</td>
-                            <td className="g-end">30</td>
-                            <td className="g-end">30</td>
-                            <td className="g-end">
-                              <a href="javascript:" className="o-link _normal">30</a>
-                            </td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>012345</td>
-                            <td>홍길동</td>
-                            <td className="g-start">급여이체 통장 신규 요청</td>
-                            <td className="g-start">특이사항</td>
-                            <td className="g-start">신입행 학생증 카드 마케팅</td>
-                            <td className="g-start">비고</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
 
         </div>
         {/* <!-- // Contents { @DEV } --> */}

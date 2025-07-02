@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 자율보안체계 > 보안업무심사분석
+ * @description 재난·안전관리 > 도급사업관리 > 도급계약 현황 확인
  */
 
 // dependency
@@ -35,12 +35,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMAS0301M() {
+function STMSC0201M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '자율보안체계' }, { label: '보안업무심사분석' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '도급계약 현황 확인' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function STMAS0301M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">보안업무심사분석</span>
+                <span className="label">도급계약 현황 확인</span>
 
                 <FavoriteDiv />
               </h1>
@@ -103,14 +103,11 @@ function STMAS0301M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="계약종료알림발송" className="_lined-secondary" />
+              </div>
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
-              </div>
-            </div>
-
-            <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="결재요청" className="_solid-primary" />
               </div>
             </div>
           </div>
@@ -132,7 +129,7 @@ function STMAS0301M() {
                     <Label label={`부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} readOnly />
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
@@ -141,15 +138,25 @@ function STMAS0301M() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-2">
-                    <Label label={`대상연도`} require={true} />
+                  <div className="o-field">
+                    <Label label={`계약상태`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field colspan-2">
+                    <Label label={`계약일자`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
                       <span className="seps type-tilde">~</span>
-                      <div className="o-form _input type-date mode-required wdth-50">
+                      <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
@@ -165,7 +172,7 @@ function STMAS0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">등록현황</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -200,16 +207,17 @@ function STMAS0301M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-auto" />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상연도</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록연월</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록기한</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재일자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
@@ -225,26 +233,27 @@ function STMAS0301M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>0034</td>
-                            <td className="g-start">을지로</td>
-                            <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
-                            <td>완료</td>
-                            <td>결재승인</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>0034</td>
-                            <td>홍길동</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                          </tr>
-                        ))}
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12</span></td>
+                              <td>0034</td>
+                              <td className="g-start">을지로</td>
+                              <td className="g-start">승강기유지보수</td>
+                              <td>진행중</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>결재승인</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>0034</td>
+                              <td>홍길동</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -258,21 +267,7 @@ function STMAS0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
-                </div>
-
-                <div className="o-board type-a">
-                  <div className="board-container">
-                    <div className="m-header">
-                      <strong className="o-heading"><span className="label">등록기한 안내</span></strong>
-                    </div>
-
-                    <ul className="m-bullets type-disc">
-                      <li className="c-color-strong"><em>등록기한: 2025-01-01 ~ 2025-05-28</em></li>
-                      <li>등록기한 내 세부추진계획 등록을 완료해주세요.</li>
-                      <li>기한 내 등록이 어려운 경우, 담당부서로 사전에 문의 부탁드립니다. <span className="o-consult brackets-round">(<strong className="head">비상계획팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000</span></span>)</span></li>
-                    </ul>
-                  </div>
+                  <h3 className="o-heading level3"><span className="label">기본정보</span></h3>
                 </div>
 
                 <div className="main">
@@ -281,123 +276,130 @@ function STMAS0301M() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`대상연도`} require={false} />
-                          </th>
-                          <td colSpan={1}>2025</td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`내용`} require={true} />
+                            <Label label={`부점`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
-                                  <i aria-hidden="true"></i>
-
-                                  <div className="o-limit type-length">
-                                    <span className="head">글자수</span>
-                                    <span className="data">
-                                      <em className="value">0</em>
-                                      <span className="sep">/</span>
-                                      <span className="limits" aria-label="입력가능 글자수">100</span>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            [0034] 을지로
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`등록자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0034] 을지로
                           </td>
                         </tr>
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`파일첨부`} require={false} />
+                            <Label label={`결재상태`} require={false} />
                           </th>
                           <td colSpan={1}>
+                            결재승인
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`등록일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
 
-                            <div className="o-section">
-                              <div className="m-header">
-                                <div className="o-limit type-file">
-                                  <span className="head">파일크기</span>
-                                  <span className="data">
-                                    <em className="value">1MB</em>
-                                    <span className="sep">/</span>
-                                    <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                                  </span>
-                                </div>
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
+                </div>
 
-                                <div className="m-binds">
-                                  <div className="group">
-                                    <CommonButton label="파일선택" className="_normal" />
-                                    <CommonButton label="파일삭제" className="_normal" />
-                                    <CommonButton label="파일다운" className="_normal" />
-                                    <CommonButton label="양식다운" className="_normal" />
-                                  </div>
-                                </div>
-                              </div>
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
 
-                              <div className="main rows-body-3i">
-                                <div className="o-grid-table type-upload js_dragovered">{/* 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                                  <div className="table-container">
-                                    <table>
-                                      <colgroup>
-                                        <col className="wdth-10" />
-                                        <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
-                                        <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
-                                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`계약명`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            승강기 유지보수 도급계약
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`계약일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`계약기간`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`계약금액(원)`} require={true} />
+                          </th>
+                          <td colSpan={1} className="g-end">
+                            10,000,000
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`수급인명(업체명)`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            오티스엘리베이터
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`근로형태`} require={true} />
+                          </th>
+                          <td colSpan={3}>
 
-                                      <thead>
-                                        <tr>
-                                          <th><InputCheck label="전체​선택" labelHidden /></th>
-                                          <th>파일명</th>
-                                          <th>파일크기</th>
-                                        </tr>
-                                      </thead>
-
-                                      <tbody>
-                                        <tr>
-                                          <td colSpan={3}>
-                                            <div className="o-attach">
-                                              <div className="summary">
-                                                <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                                                <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                                              </div>
-                                            </div>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-
-                                      <tbody>
-                                        {[...Array(24)].map((e, idx) => (
-                                          <tr key={idx}>
-                                            <td><InputCheck label="선택" labelHidden /></td>
-                                            <td className="g-start">
-                                              <span className="o-file">
-                                                {
-                                                  idx === 1 ?
-                                                    <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                                                    :
-                                                    <span className="name">파일명</span>
-                                                }
-                                                <span className="ext">.xlsx</span>
-                                              </span>
-                                            </td>
-                                            <td className="g-end">1023KB</td>
-                                          </tr>
-                                        ))}
-                                      </tbody>
-                                    </table>
-                                  </div>
-                                </div>
-                              </div>
+                            <div className="m-string-binds">
+                              <span className="string">일시적</span>
+                              <span className="binds"><CommonButton label="참고" className="_normal" /></span>
                             </div>
-
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`인원/작업일 수`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            일시적 (일수) : 25일
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-rich-text">
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                            </div>
                           </td>
                         </tr>
                       </tbody>
@@ -416,4 +418,4 @@ function STMAS0301M() {
   );
 }
 
-export default STMAS0301M;
+export default STMSC0201M;

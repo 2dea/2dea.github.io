@@ -156,14 +156,25 @@ function HSPHS0901M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`삭제여부`} require={true} />
+                    <Label label={`삭제여부`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
+
+                  <div className="o-field">
+                    <Label label={`품목구분`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
                 <div className="binds">
@@ -210,12 +221,14 @@ function HSPHS0901M() {
                           <col />
                           <col />
                           <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상황</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목구분</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래제한구분</span></div></th>
@@ -234,7 +247,7 @@ function HSPHS0901M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -243,6 +256,7 @@ function HSPHS0901M() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
                             <td>적용</td>
+                            <td>중요용지</td>
                             <td>PD011</td>
                             <td className="g-start">국민관광상품권1만원권</td>
                             <td>메시지출력</td>
@@ -283,6 +297,8 @@ function HSPHS0901M() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
@@ -303,10 +319,8 @@ function HSPHS0901M() {
                               </div>
                             </div>
                           </td>
-                        </tr>
-                        <tr>
                           <th colSpan={1}>
-                            <Label label={`신청부점`} require={true} />
+                            <Label label={`품목구분`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 프로세스혁신
@@ -314,9 +328,17 @@ function HSPHS0901M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
+                            <Label label={`신청부점`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            중요용지
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
                             <Label label={`신청직원`} require={true} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             [0810] 홍길동
                           </td>
                         </tr>
@@ -324,7 +346,7 @@ function HSPHS0901M() {
                           <th colSpan={1}>
                             <Label label={`제한구분`} require={true} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             <div className="m-checks">
                               <InputRadio name="RADIO_10" label="거래제한" />
                               <InputRadio name="RADIO_10" label="메시지출력" />

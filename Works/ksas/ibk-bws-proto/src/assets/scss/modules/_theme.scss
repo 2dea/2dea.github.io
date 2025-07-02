@@ -1,2 +1,5 @@
 @charset "UTF-8";
 
+.o-section:not(.o-section *):not(.o-grid >.column >*)  {
+  outline: thick solid Red;
+}

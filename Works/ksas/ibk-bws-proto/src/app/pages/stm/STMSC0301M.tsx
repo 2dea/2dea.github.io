@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 자율보안체계 > 보안업무심사분석
+ * @description 재난·안전관리 > 도급사업관리 > 안전보건협의체 회의록
  */
 
 // dependency
@@ -35,12 +35,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMAS0301M() {
+function STMSC0301M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '자율보안체계' }, { label: '보안업무심사분석' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '안전보건협의체 회의록' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function STMAS0301M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">보안업무심사분석</span>
+                <span className="label">안전보건협의체 회의록</span>
 
                 <FavoriteDiv />
               </h1>
@@ -103,14 +103,24 @@ function STMAS0301M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="알림발송" className="_lined-secondary" />
+              </div>
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
 
             <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="출력" className="_texted" />
+                </div>
+              </div>
+
               <div className="group _primary">
-                <CommonButton label="결재요청" className="_solid-primary" />
+                <CommonButton label="삭제" className="_delete" />
+                <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
           </div>
@@ -132,7 +142,7 @@ function STMAS0301M() {
                     <Label label={`부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} readOnly />
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
@@ -142,7 +152,7 @@ function STMAS0301M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`대상연도`} require={true} />
+                    <Label label={`대상연월`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -165,7 +175,7 @@ function STMAS0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">등록내역</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -196,22 +206,13 @@ function STMAS0301M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상연도</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상연월</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록기한</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재일자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                           </tr>
@@ -225,7 +226,7 @@ function STMAS0301M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -233,13 +234,9 @@ function STMAS0301M() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12</span></td>
                             <td>0034</td>
                             <td className="g-start">을지로</td>
-                            <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
-                            <td>완료</td>
-                            <td>결재승인</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td>0034</td>
                             <td>홍길동</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
@@ -258,20 +255,56 @@ function STMAS0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
+                  <h3 className="o-heading level3"><span className="label">기본정보</span></h3>
                 </div>
 
-                <div className="o-board type-a">
-                  <div className="board-container">
-                    <div className="m-header">
-                      <strong className="o-heading"><span className="label">등록기한 안내</span></strong>
-                    </div>
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
 
-                    <ul className="m-bullets type-disc">
-                      <li className="c-color-strong"><em>등록기한: 2025-01-01 ~ 2025-05-28</em></li>
-                      <li>등록기한 내 세부추진계획 등록을 완료해주세요.</li>
-                      <li>기한 내 등록이 어려운 경우, 담당부서로 사전에 문의 부탁드립니다. <span className="o-consult brackets-round">(<strong className="head">비상계획팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000</span></span>)</span></li>
-                    </ul>
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0034] 을지로
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`등록자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0034] 을지로
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`등록일자`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="신규" className="_create" />
+                    </div>
                   </div>
                 </div>
 
@@ -286,9 +319,18 @@ function STMAS0301M() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`대상연도`} require={false} />
+                            <Label label={`대상연월`} require={true} />
                           </th>
-                          <td colSpan={1}>2025</td>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date mode-required wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
@@ -314,7 +356,6 @@ function STMAS0301M() {
                             </div>
                           </td>
                         </tr>
-
                         <tr>
                           <th colSpan={1}>
                             <Label label={`파일첨부`} require={false} />
@@ -416,4 +457,4 @@ function STMAS0301M() {
   );
 }
 
-export default STMAS0301M;
+export default STMSC0301M;

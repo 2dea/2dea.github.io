@@ -138,281 +138,287 @@ function STMGD0201M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          {/* <div className="o-board type-a style-fit">
-            <ul className="m-bullets type-disc">
-              <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7483</span></span></span></li>
-            </ul>
-          </div> */}
+          <div className="o-grid">
+            <div className="column">
 
-          <form className="m-filter-form">
-            <div className="fieldset">
+              {/* <div className="o-board type-a style-fit">
+                <ul className="m-bullets type-disc">
+                  <li>문의 : <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">7483</span></span></span></li>
+                </ul>
+              </div> */}
 
-              <div className="o-field">
-                <Label label={`당직연월`} require={true} />
-                <div className="fields">
-                  <div className="o-form _select mode-required">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
+              <form className="m-filter-form">
+                <div className="fieldset">
+
+                  <div className="o-field">
+                    <Label label={`당직연월`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _select mode-required">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`부점`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`승인구분`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
+                </div>
+              </form>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">당직신청내역</span></h2>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="이력조회" className="_normal" />
+                    </div>
+
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="o-field">
-                <Label label={`부점`} require={false} />
-                <div className="fields">
-                  <div className="o-form _input">
-                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                    <i aria-hidden="true"></i>
-                    <span className="inner-binds">
-                      <ImageButton label="초기화" icon="remove" />
-                    </span>
-                  </div>
-                </div>
-              </div>
+                <div className="main _primary">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
 
-              <div className="o-field">
-                <Label label={`승인구분`} require={false} />
-                <div className="fields">
-                  <div className="o-form _select">
-                    <XDropdown appendTo={'self'} className="bind" />
-                    <i aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div className="binds">
-              <CommonButton label="조회" className="_inquire" />
-            </div>
-          </form>
-
-          <div className="o-section">
-            <div className="m-header">
-              <h2 className="o-heading level2"><span className="label">당직신청내역</span></h2>
-
-              <div className="o-length">
-                <span className="head">전체</span>
-                <em className="data">
-                  <span className="value">8</span>
-                  <span className="units">건</span>
-                </em>
-              </div>
-
-              <div className="m-binds">
-                <div className="group">
-                  <CommonButton label="이력조회" className="_normal" />
-                </div>
-
-                <div className="group">
-                  <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                  <ImageButton label="목록출력" icon="print" />
-                </div>
-              </div>
-            </div>
-
-            <div className="main _primary">
-              <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-              <div className="o-grid-table p-datatable">
-                <div className="table-container p-datatable-wrapper">
-                  <table className="p-datatable-table p-datatable-scrollable-table">
-                    <colgroup>
-                      <col className="wdth-10" />
-                      <col className="wdth-10" />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                      <col />
-                    </colgroup>
-
-                    <thead className="p-datatable-thead">
-                      <tr>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직일자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일직</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">숙직</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점 결재상태</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">안전관리실 결재상태</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 결재상태</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 등록</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 결재상태</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검사항</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업시간</span></div></th>
-                        <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기계경비</span></div></th>
-                        <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최초등록일자</span></div></th>
-                      </tr>
-                      <tr>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세부내용</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀원</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직자</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀원</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직자</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">해제</span></div></th>
-                        <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">SET</span></div></th>
-                      </tr>
-                    </thead>
-
-                    <tbody className="p-datatable-tbody">
-                      <tr className="p-datatable-emptymessage">
-                        <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                      </tr>
-                    </tbody>
-
-                    <tbody className="p-datatable-tbody">
-                      {[...Array(24)].map((e, idx) => (
-                        <>
-                          {
-                            (idx - 3) % 3 === 0 &&
-                            <tr className="p-rowgroup-header">
-                              <td colSpan={22} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                            </tr>
-                          }
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <InputCheck label="선택" labelHidden />
-                              }
-                            </td>
-                            <td>{idx + 1}</td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>20240065</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span g-start">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>을지로</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>공사</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span g-start">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>지점 리모델링 공사</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td>팀원1</td>
-                            <td>[000081] 홍길동</td>
-                            <td>팀원1</td>
-                            <td><a href="javascript:" className="o-link _normal">[000081] 홍길동</a>&nbsp;<em className="o-chip var-lined-00 size-30"><span className="label">대직</span></em></td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>결재승인</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>결재승인</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>결재승인</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <><a href="javascript:" className="o-link _normal">등록완료</a></> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>결재승인</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <>이상무</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
-                            <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                              {
-                                (idx) % 3 === 0 &&
-                                <span className="o-digit type-date">2025-12-25</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                              }
-                            </td>
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직일자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일직</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">숙직</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점 결재상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">안전관리실 결재상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대직자 결재상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 등록</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검표 결재상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검사항</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업시간</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기계경비</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최초등록일자</span></div></th>
                           </tr>
-                          {
-                            (idx - 2) % 3 === 0 &&
-                            <tr className="p-rowgroup-footer">
-                              <td colSpan={22} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                            </tr>
-                          }
-                        </>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세부내용</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀원</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀원</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">해제</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">SET</span></div></th>
+                          </tr>
+                        </thead>
 
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <>
+                              {
+                                (idx - 3) % 3 === 0 &&
+                                <tr className="p-rowgroup-header">
+                                  <td colSpan={22} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                </tr>
+                              }
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <InputCheck label="선택" labelHidden />
+                                  }
+                                </td>
+                                <td>{idx + 1}</td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <span className="o-digit type-date">2025-12-25</span> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>20240065</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span g-start">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>을지로</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>공사</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span g-start">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>지점 리모델링 공사</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td>팀원1</td>
+                                <td>[000081] 홍길동</td>
+                                <td>팀원1</td>
+                                <td><a href="javascript:" className="o-link _normal">[000081] 홍길동</a>&nbsp;<em className="o-chip var-lined-00 size-30"><span className="label">대직</span></em></td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>결재승인</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>결재승인</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>결재승인</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <><a href="javascript:" className="o-link _normal">등록완료</a></> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>결재승인</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>이상무</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <span className="o-digit type-time">00:00</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <span className="o-digit type-date">2025-12-25</span>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                              </tr>
+                              {
+                                (idx - 2) % 3 === 0 &&
+                                <tr className="p-rowgroup-footer">
+                                  <td colSpan={22} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                </tr>
+                              }
+                            </>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
           </div>
 
         </div>

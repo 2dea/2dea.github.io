@@ -199,7 +199,7 @@ function STMAS0201P01() {
                               <td>{idx + 1}</td>
                               <td>2025</td>
                               <td>영업점</td>
-                              <td><span className="o-digit type-date">2025-12-25</span> ~ <span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
                               <td>홍길동</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>홍길동</td>

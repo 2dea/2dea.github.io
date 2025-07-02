@@ -236,7 +236,7 @@ function STMAS0101M() {
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td>0034</td>
                             <td className="g-start">을지로</td>
-                            <td><span className="o-digit type-date">2025-12-25</span> ~ <span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
                             <td>완료</td>
                             <td>결재승인</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
