@@ -19,6 +19,7 @@ import ING from 'app/pages/test/ING';         // ING
 import DialogPopup from 'app/pages/test/DialogPopup'; // DialogPopup
 import LoadingBar from 'app/pages/test/LoadingBar';  // LoadingBar
 import FileUploads from 'app/pages/test/FileUploads'; // FileUploads
+import SurveyForms from 'app/pages/test/SurveyForms'; // SurveyForms
 
 // proto 공통
 import CMP000201P from 'app/pages/cmp/CMP000201P';   // 공통 ~ (LP)엑셀업로드
@@ -437,6 +438,7 @@ function ProtoRoutes() {
       path: '/test',
       element: <Decorator />,
       children: [
+        { path: 'SurveyForms', element: <SurveyForms /> },
         { path: 'FileUploads', element: <FileUploads /> },
         { path: 'DialogPopup', element: <DialogPopup /> },
         { path: 'POPTMPL',     element: <POPTMPL /> },
