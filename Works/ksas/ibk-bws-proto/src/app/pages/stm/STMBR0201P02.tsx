@@ -267,7 +267,7 @@ function STMBR0201P02() {
                               </div>
 
                               <div className="main rows-body-3i">
-                                <div className="o-grid-table type-upload js_dragovered">{/* 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                                <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
                                   <div className="table-container">
                                     <table>
                                       <colgroup>

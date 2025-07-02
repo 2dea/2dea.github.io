@@ -1926,6 +1926,8 @@
 
 .o-grid-table tbody:not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
+.o-grid-table table >* >tr >.tcell-strong  { background-color: var(--color-ground2-skyblue-30); }
+
 .o-grid-table table >* >tr >.sumtotal-tcell-strong  { color: var(--color-key1-90); background-color: var(--color-ground-70); }
 .o-grid-table table >* >tr.daytotal-trow  { background-color: var(--color-ground2-orange-40); }
 .o-grid-table table >* >tr.subtotal-trow  { background-color: var(--color-ground2-blue-30); }

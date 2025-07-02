@@ -104,7 +104,7 @@ function CMP000301P() {
             <div className="column">
 
               <form className="m-upload-file">
-                <div className="o-attach js_dragovered">{/* 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                <div className="o-attach js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
                   <div className="binds">
                     <CommonButton label="파일선택" size={70} className="_choose" />
                   </div>

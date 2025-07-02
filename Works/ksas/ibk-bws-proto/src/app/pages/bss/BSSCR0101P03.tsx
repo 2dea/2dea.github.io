@@ -149,6 +149,7 @@ function BSSCR0101P03() {
               <div className="m-divider">
                 <div className="m-binds">
                   <div className="group">
+                    <CommonButton label="취소" icon="du-up" className="_normal" />
                     <CommonButton label="추가" icon="du-down" className="_normal" />
                   </div>
                 </div>

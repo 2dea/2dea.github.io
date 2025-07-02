@@ -518,7 +518,7 @@ function TMPL() {
                 <div className="o-section">
                   <div className="m-header">
                     <h2 className="o-heading level2">
-                      <span className="label">양식샘플(.m-data-form.style-fill)</span>
+                      <span className="label">양식샘플</span>
                       <InputCheck label="사용" labelHidden />
                     </h2>
 
@@ -563,7 +563,7 @@ function TMPL() {
                   </div>
 
                   <div className="main">
-                    <form className="m-data-form style-fill">
+                    <form className="m-data-form">
                       <table className="table">
                         <colgroup>
                           <col className="head" />
@@ -947,7 +947,6 @@ function TMPL() {
                             </th>
                             <td colSpan={5}>
                               <div className="m-mixed-field">
-
                                 <div className="o-field">
                                   <div className="fields">
                                     <div className="o-form _input mode-required wdth-90">
@@ -1091,7 +1090,7 @@ function TMPL() {
                               <ol className="m-bullets type-decimal level1">
                                 <li>
                                   <div className="m-flex-list">
-                                    <strong>.o-field:where(.o-check +*)</strong>
+                                    <strong>.m-data-form.style-fill</strong>
                                     <a href="/proto/FMTFC0101P01" target="ibkbws_exam" className="o-link texted-button _primary">
                                       FMTFC0101P01<Icon icon="link" />
                                     </a>
@@ -2104,6 +2103,98 @@ function TMPL() {
                           </tfoot>
                         </table>
                       </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div className="o-grid">
+              <div className="column flex-auto">
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h2 className="o-heading level2"><span className="label">.o-grid &gt;.column.flex-auto / 하드코딩 그리드테이블(합계) </span></h2>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                        <ImageButton label="목록출력" icon="print" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="main _primary rows-auto">
+                    <div className="o-grid-table type-table case-notice-calendar">{/* [하드코딩] */}
+                      <div className="table-container">
+                        <table>
+                          <colgroup>
+                            <col />
+                            <col />
+                            <col style={{ width: '15%' }} />
+                            <col style={{ width: '15%' }} />
+                            <col style={{ width: '15%' }} />
+                          </colgroup>
+
+                          <thead>
+                            <tr>
+                              <th>구분</th>
+                              <th>종류</th>
+                              <th>총신청수량</th>
+                              <th>영업점배송수량</th>
+                              <th>고객배송수량</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr>
+                              <td>A</td>
+                              <td className="g-start">벽걸이달력(3단)</td>
+                              <td className="g-end">999</td>
+                              <td className="g-end">999</td>
+                              <td className="tcell-strong g-end">999</td>
+                            </tr>
+                            <tr>
+                              <td>B</td>
+                              <td className="g-start">벽걸이달력(일반)</td>
+                              <td className="g-end">999</td>
+                              <td className="g-end">999</td>
+                              <td className="tcell-strong g-end">999</td>
+                            </tr>
+                            <tr>
+                              <td>C</td>
+                              <td className="g-start">탁상달력</td>
+                              <td className="g-end">999</td>
+                              <td className="g-end">999</td>
+                              <td className="tcell-strong g-end">999</td>
+                            </tr>
+                          </tbody>
+
+                          <tfoot className="sumtotal-tfoot">
+                            <tr className="sumtotal-trow">
+                              <td colSpan={2}>합계</td>
+                              <td className="g-end">9,999</td>
+                              <td className="g-end">9,999</td>
+                              <td className="sumtotal-tcell-strong g-end">9,999</td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="column">
+
+                <div className="o-section">
+                  <div className="m-header"></div>
+
+                  <div className="main _primary rows-auto">
+                    <div className="o-view-image case-notice-calendar">
+                      <img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" />
                     </div>
                   </div>
                 </div>

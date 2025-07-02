@@ -140,10 +140,12 @@
   --design-background-strong:           var(--palette-gray-200);
   --design-background-heavy:            var(--palette-gray-300);
 
-  --design-background2-blue-30:         var(--palette-blue-050);
-  --design-background2-blue-40:         var(--palette-blue-100);
   --design-background2-orange-40:       var(--palette-orange-100);
   --design-background2-yellow-40:       var(--palette-yellow-100);
+  --design-background2-skyblue-30:      var(--palette-skyblue-001);
+  --design-background2-skyblue-40:      var(--palette-skyblue-100);
+  --design-background2-blue-30:         var(--palette-blue-050);
+  --design-background2-blue-40:         var(--palette-blue-100);
 
   --design-line-weak:                   var(--palette-gray-200);
   --design-line-normal:                 var(--palette-gray-300);
@@ -229,10 +231,12 @@
   --color-ground-required:      var(--design-background2-yellow-40);
   --color-ground-disabled:      var(--design-background-normal);
 
-  --color-ground2-blue-30:      var(--design-background2-blue-30);
-  --color-ground2-blue-40:      var(--design-background2-blue-40);
   --color-ground2-orange-40:    var(--design-background2-orange-40);
   --color-ground2-yellow-40:    var(--design-background2-yellow-40);
+  --color-ground2-skyblue-30:   var(--design-background2-skyblue-30);
+  --color-ground2-skyblue-40:   var(--design-background2-skyblue-40);
+  --color-ground2-blue-30:      var(--design-background2-blue-30);
+  --color-ground2-blue-40:      var(--design-background2-blue-40);
 
   --color-key1-40:              var(--design-primary-normal);
   --color-key1-70:              var(--design-primary-strong);
