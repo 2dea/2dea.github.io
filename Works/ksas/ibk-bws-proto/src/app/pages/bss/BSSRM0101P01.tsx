@@ -124,7 +124,7 @@ function BSSRM0101P01() {
                           <td colSpan={1}>
                             <div className="m-string-binds">
                               <span className="o-digit type-date string">2025-12-25</span>
-                              <span className="binds"><CommonButton label="BRP 조회" className="_normal" /></span>
+                              <span className="binds"><CommonButton label="BPR 조회" className="_normal" /></span>
                             </div>
                           </td>
                         </tr>

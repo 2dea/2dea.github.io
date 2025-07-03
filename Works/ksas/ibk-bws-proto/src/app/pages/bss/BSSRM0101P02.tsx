@@ -137,7 +137,7 @@ function BSSRM0101P02() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`메시지발송직원`} require={true} />
+                            <Label label={`메시지​발송직원`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">

@@ -105,7 +105,7 @@ function BSSRM0201P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">BRP 스캔등록</span></h4>
+                  <h4 className="o-heading level2"><span className="label">BPR 스캔등록</span></h4>
                 </div>
 
                 <div className="main">
@@ -139,8 +139,8 @@ function BSSRM0201P01() {
                           </th>
                           <td colSpan={3}>
                             <div className="m-inline-binds">
-                              <CommonButton label="BRP 조회" className="_normal" />
-                              <CommonButton label="BRP 스캔" className="_normal" />
+                              <CommonButton label="BPR 조회" className="_normal" />
+                              <CommonButton label="BPR 스캔" className="_normal" />
                             </div>
                           </td>
                         </tr>
@@ -174,12 +174,12 @@ function BSSRM0201P01() {
 
                     <ul className="m-bullets type-disc">
                       <li className="c-color-strong">
-                        BRP 스캔 등록 순서 (주의: [저장] 버튼 클릭하지 않을 경우 등록 누락됨)
+                        BPR 스캔 등록 순서 (주의: [저장] 버튼 클릭하지 않을 경우 등록 누락됨)
                         <ol className="m-bullets type-decimal level1 c-color-strong">
-                          <li>[BRP 스캔]으로 스캔등록</li>
-                          <li>[BRP 조회]으로 스캔정보 확인(생략가능)</li>
-                          <li>[BRP 조회]으로 스캔정보 확인(생략가능)</li>
-                          <li>[저장]으로 BRP 스캔등록 완료</li>
+                          <li>[BPR 스캔]으로 스캔등록</li>
+                          <li>[BPR 조회]으로 스캔정보 확인(생략가능)</li>
+                          <li>[BPR 조회]으로 스캔정보 확인(생략가능)</li>
+                          <li>[저장]으로 BPR 스캔등록 완료</li>
                         </ol>
                       </li>
                     </ul>

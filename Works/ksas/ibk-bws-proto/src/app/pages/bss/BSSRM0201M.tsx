@@ -390,12 +390,12 @@ function BSSRM0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`BRP`} require={false} />
+                            <Label label={`BPR`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="m-inline-binds">
-                                <CommonButton label="BRP 스캔정보 선택" className="_normal" />
-                                <CommonButton label="BRP 조회" className="_normal" />
+                                <CommonButton label="BPR 스캔정보 선택" className="_normal" />
+                                <CommonButton label="BPR 조회" className="_normal" />
                             </div>
                           </td>
 
@@ -424,7 +424,7 @@ function BSSRM0201M() {
 
 
                           <th colSpan={1}>
-                            <Label label={`메시지발송직원`} require={true} />
+                            <Label label={`메시지​발송직원`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
