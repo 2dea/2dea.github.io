@@ -115,6 +115,14 @@ function CMP000801P() {
             </div>
           </div>
         </div>
+
+        <div className="div-footer">
+          <div className="m-binds type-end">
+            <div className="group _primary">
+              <CommonButton label="확인" className="_solid-primary" />
+            </div>
+          </div>
+        </div>
       </Dialog>
 
       <div className="roles" data-div-role="0">
