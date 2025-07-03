@@ -373,6 +373,7 @@ import BSSLQ0101P04 from 'app/pages/bss/BSSLQ0101P04'; // 영업지원 > 대량�
 
 
 import BSSRM0101M from 'app/pages/bss/BSSRM0101M';     // 영업지원 > 토지보상우편물         > 토지보상우편물
+import BSSRM0101P01 from 'app/pages/bss/BSSRM0101P01'; // 영업지원 > 토지보상우편물         > 토지보상우편물 ~ (LP)공지(메모/알림)관리
 import BSSRM0201M from 'app/pages/bss/BSSRM0201M';     // 영업지원 > 토지보상우편물         > 토지보상우편물(본부)
 
 import BSSTN0101M from 'app/pages/bss/BSSTN0101M';     // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링)
@@ -424,6 +425,7 @@ import ADMAU0204M from 'app/pages/adm/ADMAU0204M';      // 공통·결재 > 권�
 
 import ADMAC0101M from 'app/pages/adm/ADMAC0101M';      // 공통·결재 > 권한위임 > 부점별 권한위임
 import ADMAC0201M from 'app/pages/adm/ADMAC0201M';      // 공통·결재 > 권한위임 > 사용자별 권한관리
+import ADMPH0101M from 'app/pages/adm/ADMPH0101M';      // 공통·결재 > 휴일관리 > 영업일/휴일등록
 
 function ProtoRoutes() {
   return useRoutes([
@@ -815,6 +817,7 @@ function ProtoRoutes() {
         { path: 'BSSLQ0101P04', element: <BSSLQ0101P04 /> },
 
         { path: 'BSSRM0101M',   element: <BSSRM0101M /> },
+        { path: 'BSSRM0101P01', element: <BSSRM0101P01 /> },
 
         { path: 'BSSRM0201M',   element: <BSSRM0201M /> },
 
@@ -870,6 +873,7 @@ function ProtoRoutes() {
 
         { path: 'ADMAC0101M',   element: <ADMAC0101M /> },
         { path: 'ADMAC0201M',   element: <ADMAC0201M /> },
+        { path: 'ADMPH0101M',   element: <ADMPH0101M /> },
       ],
     },
   ]);
