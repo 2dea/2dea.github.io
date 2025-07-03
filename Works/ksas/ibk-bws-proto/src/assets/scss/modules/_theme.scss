@@ -3,3 +3,11 @@
 .o-section:not(.o-section *):not(.o-grid >.column >*)  {
   outline: thick solid Red;
 }
+
+.g-valign-super  { vertical-align: super; }
+.g-valign-sub  { vertical-align: sub; }
+.g-valign-txtbottom  { vertical-align: text-bottom; }
+.g-valign-txttop  { vertical-align: text-top; }
+.g-valign-bottom  { vertical-align: bottom; }
+.g-valign-top  { vertical-align: top; }
+.g-valign-center  { vertical-align: center; }
