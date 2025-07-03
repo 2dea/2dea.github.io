@@ -111,7 +111,7 @@ function BSSRM0201M() {
               <div className="group">
                 <CommonButton label="알림발송" className="_lined-secondary" />
                 <CommonButton label="스캔내역조회" className="_lined-secondary" />
-                <CommonButton label="BPR스캔등록" className="_lined-secondary" />
+                <CommonButton label="BPR 스캔등록" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -212,6 +212,14 @@ function BSSRM0201M() {
               <div className="o-section">
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">토지보상 우편물 내역</span></h2>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
 
                   <div className="m-binds">
                     <div className="group">
@@ -386,7 +394,7 @@ function BSSRM0201M() {
                           </th>
                           <td colSpan={3}>
                             <div className="m-inline-binds">
-                                <CommonButton label="BRP스캔정보 선택" className="_normal" />
+                                <CommonButton label="BRP 스캔정보 선택" className="_normal" />
                                 <CommonButton label="BRP 조회" className="_normal" />
                             </div>
                           </td>
@@ -596,7 +604,7 @@ function BSSRM0201M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">부점</span></h4>
+                  <h3 className="o-heading level3"><span className="label">거래이력</span></h3>
                 </div>
 
                 <div className="main _primary rows-body-5i">
@@ -613,33 +621,43 @@ function BSSRM0201M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-auto" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래부점</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래구분</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송대상부점</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래시각</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소사유</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래비고</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관련고객명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일련번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소여부</span></div></th>
                           </tr>
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -647,14 +665,20 @@ function BSSRM0201M() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>접수</td>
-                            <td>0022</td>
-                            <td className="g-start">종로6가</td>
-                            <td>0009</td>
-                            <td>홍길동</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
-                            <td className="g-start"></td>
+                            <td>등록</td>
+                            <td>000912</td>
+                            <td>홍길동</td>
+                            <td>0810</td>
+                            <td className="g-start">프로세스혁신부</td>
+                            <td>0810</td>
+                            <td className="g-start">프로세스혁신부</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td className="g-start">취소사유</td>
+                            <td className="g-start">거래비고</td>
+                            <td>홍길동</td>
+                            <td>00000</td>
+                            <td></td>
                           </tr>
                         ))}
                         </tbody>

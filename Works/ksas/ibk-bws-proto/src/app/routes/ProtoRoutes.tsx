@@ -374,7 +374,14 @@ import BSSLQ0101P04 from 'app/pages/bss/BSSLQ0101P04'; // 영업지원 > 대량�
 
 import BSSRM0101M from 'app/pages/bss/BSSRM0101M';     // 영업지원 > 토지보상우편물         > 토지보상우편물
 import BSSRM0101P01 from 'app/pages/bss/BSSRM0101P01'; // 영업지원 > 토지보상우편물         > 토지보상우편물 ~ (LP)공지(메모/알림)관리
+import BSSRM0101P02 from 'app/pages/bss/BSSRM0101P02'; // 영업지원 > 토지보상우편물         > 토지보상우편물 ~ (LP)이관등록
+import BSSRM0101P03 from 'app/pages/bss/BSSRM0101P03'; // 영업지원 > 토지보상우편물         > 토지보상우편물 ~ (LP)이관취소
+import BSSRM0101P04 from 'app/pages/bss/BSSRM0101P04'; // 영업지원 > 토지보상우편물         > 토지보상우편물 ~ (LP)인수등록
+import BSSRM0101P05 from 'app/pages/bss/BSSRM0101P05'; // 영업지원 > 토지보상우편물         > 토지보상우편물 ~ (LP)인수취소
+
 import BSSRM0201M from 'app/pages/bss/BSSRM0201M';     // 영업지원 > 토지보상우편물         > 토지보상우편물(본부)
+import BSSRM0201P01 from 'app/pages/bss/BSSRM0201P01'; // 영업지원 > 토지보상우편물         > 토지보상우편물(본부) ~ (LP)스캔이미지등록
+import BSSRM0201P02 from 'app/pages/bss/BSSRM0201P02'; // 영업지원 > 토지보상우편물         > 토지보상우편물(본부) ~ (LP)BPR스캔내역조회
 
 import BSSTN0101M from 'app/pages/bss/BSSTN0101M';     // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링)
 import BSSTN0101P01 from 'app/pages/bss/BSSTN0101P01'; // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링) ~ (LP)등기번호등록
@@ -818,8 +825,14 @@ function ProtoRoutes() {
 
         { path: 'BSSRM0101M',   element: <BSSRM0101M /> },
         { path: 'BSSRM0101P01', element: <BSSRM0101P01 /> },
+        { path: 'BSSRM0101P02', element: <BSSRM0101P02 /> },
+        { path: 'BSSRM0101P03', element: <BSSRM0101P03 /> },
+        { path: 'BSSRM0101P04', element: <BSSRM0101P04 /> },
+        { path: 'BSSRM0101P05', element: <BSSRM0101P05 /> },
 
         { path: 'BSSRM0201M',   element: <BSSRM0201M /> },
+        { path: 'BSSRM0201P01', element: <BSSRM0201P01 /> },
+        { path: 'BSSRM0201P02', element: <BSSRM0201P02 /> },
 
         { path: 'BSSTN0101M',   element: <BSSTN0101M /> },
         { path: 'BSSTN0101P01', element: <BSSTN0101P01 /> },

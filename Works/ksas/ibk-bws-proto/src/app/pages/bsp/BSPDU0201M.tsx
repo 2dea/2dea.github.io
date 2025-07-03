@@ -388,7 +388,7 @@ function BSPDU0201M() {
                               <td>홍길동</td>
                               <td className="g-start"></td>
                               <td>
-                                <CommonButton label="BPR조회" className="_normal" />
+                                <CommonButton label="BPR 조회" className="_normal" />
                               </td>
                               <td>
                                 <CommonButton label="이력" className="_normal" />

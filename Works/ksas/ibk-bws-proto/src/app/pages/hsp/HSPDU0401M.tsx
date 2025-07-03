@@ -323,7 +323,7 @@ function HSPDU0401M() {
                           <td rowSpan={5} className="surface g-center">
                             <div className="m-step">
                               <div className="header">
-                                <Label label={`BPR스캔등록`} require={false} />
+                                <Label label={`BPR 스캔등록`} require={false} />
                               </div>
 
                               <div className="steps">

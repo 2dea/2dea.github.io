@@ -207,6 +207,14 @@ function BSSRM0101M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">토지보상 우편물 내역</span></h2>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
@@ -318,6 +326,336 @@ function BSSRM0101M() {
                   </div>
                 </div>
               </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3">
+                    <span className="label">토지보상 우편물 진행정보</span>
+                  </h3>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`등록일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-string-binds">
+                              <span className="o-digit type-date string">2025-12-25</span>
+                              <span className="binds"><CommonButton label="메모관리" className="_normal" /></span>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`등록부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0810] 프로세스혁신부
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`등록직원`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [081000] 홍길동
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`진행상태`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            인수
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`BRP`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="m-inline-binds">
+                              <CommonButton label="BRP스캔정보 선택" className="_normal" />
+                              <CommonButton label="BRP 조회" className="_normal" />
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`발송일시`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <span className="o-digit type-datetime">2025-12-25 09:10:59</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`인수부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0034] 을지로
+                          </td>
+
+
+                          <th colSpan={1}>
+                            <Label label={`메시지발송직원`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`인수일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`인수직원`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [008100] 홍길동
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`이관부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`이관일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`이관직원`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [081000] 홍길동
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`관련고객명`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            이기업
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고내용`} require={false} />
+                          </th>
+                          <td colSpan={7}>
+
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`우편물내용`} require={false} />
+                          </th>
+                          <td colSpan={3} className="g-valign-top">
+                            <div className="o-rich-text">
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`등기본등본 & 관리서류`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+
+                            <div className="o-section">
+                              <div className="m-header">
+                                <div className="o-limit type-file">
+                                  <span className="head">파일크기</span>
+                                  <span className="data">
+                                    <em className="value">1MB</em>
+                                    <span className="sep">/</span>
+                                    <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                                  </span>
+                                </div>
+
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <CommonButton label="파일선택" className="_normal" />
+                                    <CommonButton label="파일삭제" className="_normal" />
+                                    <CommonButton label="파일다운" className="_normal" />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="main rows-body-3i">
+                                <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                                  <div className="table-container">
+                                    <table>
+                                      <colgroup>
+                                        <col className="wdth-10" />
+                                        <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                                        <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                                      </colgroup>
+
+                                      <thead>
+                                        <tr>
+                                          <th><InputCheck label="전체​선택" labelHidden /></th>
+                                          <th>파일명</th>
+                                          <th>파일크기</th>
+                                        </tr>
+                                      </thead>
+
+                                      <tbody>
+                                        <tr>
+                                          <td colSpan={3}>
+                                            <div className="o-attach">
+                                              <div className="summary">
+                                                <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                                <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+
+                                      <tbody>
+                                        {[...Array(24)].map((e, idx) => (
+                                          <tr key={idx}>
+                                            <td><InputCheck label="선택" labelHidden /></td>
+                                            <td className="g-start">
+                                              <span className="o-file">
+                                                {
+                                                  idx === 1 ?
+                                                    <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                                    :
+                                                    <span className="name">파일명</span>
+                                                }
+                                                <span className="ext">.xlsx</span>
+                                              </span>
+                                            </td>
+                                            <td className="g-end">1023KB</td>
+                                          </tr>
+                                        ))}
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">거래이력</span></h3>
+                </div>
+
+                <div className="main _primary rows-body-5i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래자</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래구분</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송대상부점</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소사유</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래비고</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관련고객명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일련번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소여부</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>등록</td>
+                              <td>000912</td>
+                              <td>홍길동</td>
+                              <td>0810</td>
+                              <td className="g-start">프로세스혁신부</td>
+                              <td>0810</td>
+                              <td className="g-start">프로세스혁신부</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td className="g-start">취소사유</td>
+                              <td className="g-start">거래비고</td>
+                              <td>홍길동</td>
+                              <td>00000</td>
+                              <td></td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 

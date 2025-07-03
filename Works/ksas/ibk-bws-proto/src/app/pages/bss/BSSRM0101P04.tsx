@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 폐기 > 중요용지일괄폐기 ~ 온누리상품권스캔등록
+ * @description 영업지원 > 토지보상우편물  > 토지보상우편물 ~ (LP)인수등록
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPDU0301P03() {
+function BSSRM0101P04() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -97,19 +97,21 @@ function BSPDU0301P03() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">온누리상품권스캔등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">인수등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
               <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">대상목록</span></h4>
+                </div>
+
                 <div className="main">
                   <form className="m-data-form">
                     <table className="table">
                       <colgroup>
-                        <col className="head" />
-                        <col className="data" />
                         <col className="head" />
                         <col className="data" />
                       </colgroup>
@@ -117,72 +119,39 @@ function BSPDU0301P03() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`등록일자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-01-21</span>
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`등록자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0810] 홍길동
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`폐기수량`} require={true} />
+                            <Label label={`관련고객명`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-90">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                <div className="o-form _input mode-required wdth-70">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
                                 </div>
                               </div>
                             </div>
                           </td>
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
-                            <Label label={`출근번호/품목명`} require={false} />
+                            <Label label={`비고(사유)`} require={true} />
                           </th>
                           <td colSpan={1}>
-                            [0810] 전통시장온누리상품권5천원권
-                          </td>
-                        </tr>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
+                                  <i aria-hidden="true"></i>
 
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`일련번호`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-70">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
+                                  <div className="o-limit type-length">
+                                    <span className="head">글자수</span>
+                                    <span className="data">
+                                      <em className="value">0</em>
+                                      <span className="sep">/</span>
+                                      <span className="limits" aria-label="입력가능 글자수">100</span>
+                                    </span>
+                                  </div>
                                 </div>
-                                <span className="seps type-tilde">~</span>
-                                <div className="o-form _input mode-required wdth-70">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`스캔등록`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="m-binds">
-                              <div className="group _start">
-                                <CommonButton label="BPR 조회" className="_normal" />
-                                <CommonButton label="BPR 스캔" className="_normal" />
                               </div>
                             </div>
                           </td>
@@ -190,40 +159,6 @@ function BSPDU0301P03() {
                       </tbody>
                     </table>
                   </form>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="o-board type-a">
-                  <div className="board-container">
-                    <div className="m-header">
-                      <strong className="o-heading"><span className="label">유의사항</span></strong>
-                    </div>
-
-                    <ol className="m-bullets type-decimal level1">
-                      <li>입력한 폐기수량과 일련번호가 동일한 실물을 스캔해주세요. (동일하지 않은 경우 반송 사유)</li>
-                      <li><strong className="strong">BPR 스캔 실행 화면 내 전송 매수에 동일한 수량을 입력해주세요.</strong></li>
-                      <li><strong className="strong">전송 전 삽입스캔을 통해 추가스캔이 가능하며 전송 후엔 추가 스캔이 되지 않습니다.</strong></li>
-                      <li>BPR 스캔 실행 화면 내 스캔 완료 후 반드시 전송하고 종료해주세요.</li>
-                      <li>상품권 실물이 아닌 복사본, 출력물의 경우 앞&middot;뒷면을 분리 후 스캔해주세요.</li>
-                    </ol>
-                  </div>
-
-                  <div className="board-container">
-                    <div className="m-header">
-                      <strong className="o-heading"><span className="label">BPR 스캔 등록 순서</span></strong>
-                    </div>
-
-                    <ul className="m-bullets type-disc">
-                      <li className="c-color-strong">주의: [저장] 버튼을 클릭하지 않는 경우 등록 누락
-                        <ol className="m-bullets type-decimal level1 c-color-strong">
-                          <li>[BPR 스캔]으로 스캔등록</li>
-                          <li>[BPR 조회]으로 스캔정보 확인(생략 가능)</li>
-                          <li>[저장]으로 BPR 스캔등록 완료</li>
-                        </ol>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
 
@@ -239,14 +174,13 @@ function BSPDU0301P03() {
             </div>
           </div>
         </div>
-
       </Dialog>
 
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)구양식/서손폐기등록(영업점) [wdth-40p(w770)]</span>
+              <span className="label">(P)인수등록 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -269,4 +203,4 @@ function BSPDU0301P03() {
   );
 }
 
-export default BSPDU0301P03;
+export default BSSRM0101P04;
