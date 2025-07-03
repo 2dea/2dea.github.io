@@ -92,7 +92,9 @@ function DEX() {
 
       {/*
       스케줄
-      2025-07/02 목 : BSSRM0201M 부터~ [영업지원] > 토지 #70
+      2025-07/03
+      [2025-07-03]{화면추가}
+      목 : BSSRM0201M 부터~ [영업지원] > 토지 #70
 
 
       [재난안전관리] > 도급사업관리 -
@@ -150,10 +152,12 @@ function DEX() {
         - ing:영업점 시작 했음:
             확인필요 후 , 월요일 06-23 완료 처리 예정:
               1. BSPDU0301P01  버튼 ' 온누리스캔내역 조회' 등..
-              2. BSPDU0301P03: 유의사항 UI 체크확인 필요 및 버튼 ' 스캔등록 ' 의 버튼들
+              2. BSPDU0301P03: 유의사항 UI 체크확인 필요 및 버튼 ' 스캔등록 ' 의 버튼들 Order Lists
 
           메모: 열쇠등록관리( STMKY0201M ) 기획업데이트 적용 완료
         - done본부 #211 HSPDU0801P04 이후 부터~ 폐기취소(본부)
+
+        placeHolder: 내용 / 비고 / 메모 / 사항 placeholder="내용을 입력해주세요"
 
       2025-16-18 수 : 업데이트 내용: 모든 팝업에 modal={true} 기본: dim  처리 있음
         예외: '확인' 버튼만 있는 경우! -> modal={false}  -> 조회성 모달!
@@ -465,7 +469,7 @@ about:blank
             [레이아웃 팝업] BSPDU0401P02 : 하단에 유의사항
 
             [요청사항 : BSSLQ0201M ]
-            유의사항 단독  InputTextarea
+            유의사항 / 메모  단독  InputTextarea
 
             [ 일괄적용] 버튼 : BEXRQ0101M
             <CommonButton label="일괄적용" icon="du-down" className="_normal" />

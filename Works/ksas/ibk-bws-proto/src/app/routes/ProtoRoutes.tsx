@@ -29,6 +29,7 @@ import CMP000401P from 'app/pages/cmp/CMP000401P';   // 공통 ~ (LP)이미지�
 import CMP000501P from 'app/pages/cmp/CMP000501P';   // 공통 ~ (LP)직원조회
 import CMP001101P from 'app/pages/cmp/CMP001101P';   // 공통 ~ (LP)이미지보기
 import CMP001201P from 'app/pages/cmp/CMP001201P';   // 공통 ~ (LP)알림발송
+import CMP001301P from 'app/pages/cmp/CMP001301P';   // 공통 ~ (LP)알림발송
 import CMP001401P from 'app/pages/cmp/CMP001401P';   // 공통 ~ (LP)업체조회
 import CMP001402P from 'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체기본정보
 import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
@@ -417,10 +418,14 @@ import ADMPA0301M from 'app/pages/adm/ADMPA0301M';      // 공통·결재 > 인�
 import ADMPA0301P01 from 'app/pages/adm/ADMPA0301P01';  // 공통·결재 > 인사정보 > 직원관리 ~ (LP)직무분장관리
 import ADMPA0301P02 from 'app/pages/adm/ADMPA0301P02';  // 공통·결재 > 인사정보 > 직원관리 ~ (LP)변경이력
 import ADMPA0401M from 'app/pages/adm/ADMPA0401M';      // 공통·결재 > 인사정보 > 외주직원관리
+import ADMPA0501M from 'app/pages/adm/ADMPA0501M';      // 공통·결재 > 인사정보 > 업무담당자문의처관리
+import ADMPA0601M from 'app/pages/adm/ADMPA0601M';      // 공통·결재 > 인사정보 > 실근무지관리
+import ADMPA0601P01 from 'app/pages/adm/ADMPA0601P01';  // 공통·결재 > 인사정보 > 직원관리 ~ (LP)실근무지조회
 
 import ADMAU0101M from 'app/pages/adm/ADMAU0101M';      // 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리
 import ADMAU0101P01 from 'app/pages/adm/ADMAU0101P01';  // 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
 import ADMAU0102M from 'app/pages/adm/ADMAU0102M';      // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리
+import ADMAU0102P01 from 'app/pages/adm/ADMAU0102P01';  // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리 ~ (LP)미리보기
 import ADMAU0103M from 'app/pages/adm/ADMAU0103M';      // 공통·결재 > 권한관리 > 생성관리 > (T)팝업관리
 import ADMAU0104M from 'app/pages/adm/ADMAU0104M';      // 공통·결재 > 권한관리 > 생성관리 > (T)권한관리
 import ADMAU0201M from 'app/pages/adm/ADMAU0201M';      // 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
@@ -467,6 +472,7 @@ function ProtoRoutes() {
         { path: 'CMP000501P', element: <CMP000501P /> },
         { path: 'CMP001101P', element: <CMP001101P /> },
         { path: 'CMP001201P', element: <CMP001201P /> },
+        { path: 'CMP001301P', element: <CMP001301P /> },
         { path: 'CMP001401P', element: <CMP001401P /> },
         { path: 'CMP001402P', element: <CMP001402P /> },
         { path: 'CMP001502P', element: <CMP001502P /> },
@@ -871,10 +877,14 @@ function ProtoRoutes() {
         { path: 'ADMPA0301P01', element: <ADMPA0301P01 /> },
         { path: 'ADMPA0301P02', element: <ADMPA0301P02 /> },
         { path: 'ADMPA0401M',   element: <ADMPA0401M /> },
+        { path: 'ADMPA0501M',   element: <ADMPA0501M /> },
+        { path: 'ADMPA0601M',   element: <ADMPA0601M /> },
+        { path: 'ADMPA0601P01', element: <ADMPA0601P01 /> },
 
         { path: 'ADMAU0101M',   element: <ADMAU0101M /> },
         { path: 'ADMAU0101P01', element: <ADMAU0101P01 /> },
         { path: 'ADMAU0102M',   element: <ADMAU0102M /> },
+        { path: 'ADMAU0102P01', element: <ADMAU0102P01 /> },
         { path: 'ADMAU0103M',   element: <ADMAU0103M /> },
         { path: 'ADMAU0104M',   element: <ADMAU0104M /> },
         { path: 'ADMAU0201M',   element: <ADMAU0201M /> },
