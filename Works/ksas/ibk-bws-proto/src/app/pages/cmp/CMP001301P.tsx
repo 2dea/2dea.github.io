@@ -95,189 +95,183 @@ function CMP001301P() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">업무문의처</span></h3>}
       >
         <div className="div-container">
-          <div className="o-grid">
-            <div className="column">
-
-              <Tabs className="m-tabs react-tabs" defaultIndex={0}>
-                <div className="m-tab type2">
-                  <TabList className="lists">
-                    <Tab className="link"><span className="label">자금현수송</span></Tab>
-                    <Tab className="link"><span className="label">중요용지&middot;용도품</span></Tab>
-                    <Tab className="link"><span className="label">행내등기&middot;우편물</span></Tab>
-                    <Tab className="link"><span className="label">재난&middot;안전관리</span></Tab>
-                    <Tab className="link"><span className="label">영업지원</span></Tab>
-                    <Tab className="link"><span className="label">수수료관리</span></Tab>
-                    <Tab className="link"><span className="label">공통&middot;결재</span></Tab>
-                  </TabList>
-                </div>
-
-                <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  <div className="o-grid">
-                    <div className="column">
-
-                      <div className="o-section">
-                        <div className="m-header">
-                          <h3 className="o-heading level2"><span className="label">업무문의</span></h3>
-                        </div>
-
-                        <div className="main">
-                          <div className="o-data-table">
-                            <div className="table-container">
-                              <table className="table">
-                                <colgroup>
-                                  <col style={{ width: 'auto' }} />
-                                  <col style={{ width: 'auto' }} />
-                                  <col style={{ width: '10%' }} />
-                                  <col style={{ width: '15%' }} />
-                                  <col style={{ width: '10%' }} />
-                                  <col style={{ width: '10%' }} />
-                                </colgroup>
-
-                                <thead>
-                                  <tr>
-                                    <th colSpan={1}>부서명</th>
-                                    <th colSpan={1}>담당업무</th>
-                                    <th colSpan={1}>담당자</th>
-                                    <th colSpan={3}>내선번호/IBK톡</th>
-                                  </tr>
-                                </thead>
-
-                                <tbody>
-                                  <tr>
-                                    <td colSpan={1} rowSpan={6}>프로세스혁신부</td>
-                                    <td colSpan={1} rowSpan={3}>원화신청</td>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4306</td>
-                                    <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
-                                    <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
-                                  </tr>
-                                  <tr>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4303</td>
-                                    <td colSpan={1}></td>
-                                    <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
-                                  </tr>
-                                  <tr>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4304</td>
-                                    <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
-                                    <td colSpan={1}></td>
-                                  </tr>
-                                  <tr>
-                                    <td colSpan={1} rowSpan={2}>외화신청</td>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4301</td>
-                                    <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
-                                    <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
-                                  </tr>
-                                  <tr>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4305</td>
-                                    <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
-                                    <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
-                                  </tr>
-                                  <tr>
-                                    <td colSpan={1}>위폐감별</td>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4304</td>
-                                    <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
-                                    <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </TabPanel>
-
-                <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  <div className="o-grid">
-                    <div className="column">
-
-                      <div className="o-section">
-                        <div className="m-header">
-                          <h3 className="o-heading level2"><span className="label">업무문의</span></h3>
-                        </div>
-
-                        <div className="main">
-                          <div className="o-data-table">
-                            <div className="table-container">
-                              <table className="table">
-                                <colgroup>
-                                  <col style={{ width: 'auto' }} />
-                                  <col style={{ width: 'auto' }} />
-                                  <col style={{ width: '10%' }} />
-                                  <col style={{ width: '15%' }} />
-                                  <col style={{ width: '10%' }} />
-                                  <col style={{ width: '10%' }} />
-                                </colgroup>
-
-                                <thead>
-                                  <tr>
-                                    <th colSpan={1}>부서명</th>
-                                    <th colSpan={1}>담당업무</th>
-                                    <th colSpan={1}>담당자</th>
-                                    <th colSpan={3}>내선번호/IBK톡</th>
-                                  </tr>
-                                </thead>
-
-                                <tbody>
-                                  <tr>
-                                    <td colSpan={1} rowSpan={3}>프로세스혁신부</td>
-                                    <td colSpan={1}>용도품신청</td>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4328</td>
-                                    <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
-                                    <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
-                                  </tr>
-                                  <tr>
-                                    <td colSpan={1}>용도품신청(서울)</td>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4364, 4251</td>
-                                    <td colSpan={1}></td>
-                                    <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
-                                  </tr>
-                                  <tr>
-                                    <td colSpan={1}>용도품신청(지방)</td>
-                                    <td colSpan={1}>홍길동</td>
-                                    <td colSpan={1}>8-4311, 4314</td>
-                                    <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
-                                    <td colSpan={1}></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-                    </div>
-                  </div>
-                </TabPanel>
-
-                <TabPanel></TabPanel>
-
-                <TabPanel></TabPanel>
-
-                <TabPanel></TabPanel>
-
-                <TabPanel></TabPanel>
-
-                <TabPanel></TabPanel>
-              </Tabs>
-
+          <Tabs className="m-tabs react-tabs" defaultIndex={0}>
+            <div className="m-tab type1">
+              <TabList className="lists">
+                <Tab className="link"><span className="label">자금현수송</span></Tab>
+                <Tab className="link"><span className="label">중요용지&middot;용도품</span></Tab>
+                <Tab className="link"><span className="label">행내등기&middot;우편물</span></Tab>
+                <Tab className="link"><span className="label">재난&middot;안전관리</span></Tab>
+                <Tab className="link"><span className="label">영업지원</span></Tab>
+                <Tab className="link"><span className="label">수수료관리</span></Tab>
+                <Tab className="link"><span className="label">공통&middot;결재</span></Tab>
+              </TabList>
             </div>
-          </div>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h3 className="o-heading level2"><span className="label">업무문의</span></h3>
+                    </div>
+
+                    <div className="main">
+                      <div className="o-data-table">
+                        <div className="table-container">
+                          <table className="table">
+                            <colgroup>
+                              <col style={{ width: '25%' }} />
+                              <col style={{ width: 'auto' }} />
+                              <col style={{ width: '10%' }} />
+                              <col style={{ width: '20%' }} />
+                              <col style={{ width: '0' }} />
+                              <col style={{ width: '0' }} />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th colSpan={1}>부서명</th>
+                                <th colSpan={1}>담당업무</th>
+                                <th colSpan={1}>담당자</th>
+                                <th colSpan={3}>내선번호/IBK톡</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td colSpan={1} rowSpan={6}>프로세스혁신부</td>
+                                <td colSpan={1} rowSpan={3}>원화신청</td>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4306</td>
+                                <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
+                                <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
+                              </tr>
+                              <tr>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4303</td>
+                                <td colSpan={1}></td>
+                                <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
+                              </tr>
+                              <tr>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4304</td>
+                                <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
+                                <td colSpan={1}></td>
+                              </tr>
+                              <tr>
+                                <td colSpan={1} rowSpan={2}>외화신청</td>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4301</td>
+                                <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
+                                <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
+                              </tr>
+                              <tr>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4305</td>
+                                <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
+                                <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
+                              </tr>
+                              <tr>
+                                <td colSpan={1}>위폐감별</td>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4304</td>
+                                <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
+                                <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </TabPanel>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h3 className="o-heading level2"><span className="label">업무문의</span></h3>
+                    </div>
+
+                    <div className="main">
+                      <div className="o-data-table">
+                        <div className="table-container">
+                          <table className="table">
+                            <colgroup>
+                              <col style={{ width: '25%' }} />
+                              <col style={{ width: 'auto' }} />
+                              <col style={{ width: '10%' }} />
+                              <col style={{ width: '20%' }} />
+                              <col style={{ width: '0' }} />
+                              <col style={{ width: '0' }} />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th colSpan={1}>부서명</th>
+                                <th colSpan={1}>담당업무</th>
+                                <th colSpan={1}>담당자</th>
+                                <th colSpan={3}>내선번호/IBK톡</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td colSpan={1} rowSpan={3}>프로세스혁신부</td>
+                                <td colSpan={1}>용도품신청</td>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4328</td>
+                                <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
+                                <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
+                              </tr>
+                              <tr>
+                                <td colSpan={1}>용도품신청(서울)</td>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4364, 4251</td>
+                                <td colSpan={1}></td>
+                                <td colSpan={1}><CommonButton label="IBK톡" className="_normal" /></td>
+                              </tr>
+                              <tr>
+                                <td colSpan={1}>용도품신청(지방)</td>
+                                <td colSpan={1}>홍길동</td>
+                                <td colSpan={1}>8-4311, 4314</td>
+                                <td colSpan={1}><CommonButton label="전화" className="_normal" /></td>
+                                <td colSpan={1}></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </TabPanel>
+
+            <TabPanel></TabPanel>
+
+            <TabPanel></TabPanel>
+
+            <TabPanel></TabPanel>
+
+            <TabPanel></TabPanel>
+
+            <TabPanel></TabPanel>
+          </Tabs>
         </div>
 
         <div className="div-footer">

@@ -27,12 +27,14 @@ import CMP000301P from 'app/pages/cmp/CMP000301P';   // 공통 ~ (LP)파일업�
 import CMP000302P from 'app/pages/cmp/CMP000302P';   // 공통 ~ (LP)첨부파일
 import CMP000401P from 'app/pages/cmp/CMP000401P';   // 공통 ~ (LP)이미지업로드
 import CMP000501P from 'app/pages/cmp/CMP000501P';   // 공통 ~ (LP)직원조회
+import CMP000801P from 'app/pages/cmp/CMP000801P';   // 공통 ~ (LP)도움말
 import CMP001101P from 'app/pages/cmp/CMP001101P';   // 공통 ~ (LP)이미지보기
 import CMP001201P from 'app/pages/cmp/CMP001201P';   // 공통 ~ (LP)알림발송
 import CMP001301P from 'app/pages/cmp/CMP001301P';   // 공통 ~ (LP)알림발송
 import CMP001401P from 'app/pages/cmp/CMP001401P';   // 공통 ~ (LP)업체조회
 import CMP001402P from 'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체기본정보
 import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
+import CMP001601P from 'app/pages/cmp/CMP001601P';   // 공통 ~ (LP)반려
 
 // proto 자금현수송
 import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사 > 신청(인도)
@@ -425,7 +427,7 @@ import ADMPA0601P01 from 'app/pages/adm/ADMPA0601P01';  // 공통·결재 > 인�
 import ADMAU0101M from 'app/pages/adm/ADMAU0101M';      // 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리
 import ADMAU0101P01 from 'app/pages/adm/ADMAU0101P01';  // 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
 import ADMAU0102M from 'app/pages/adm/ADMAU0102M';      // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리
-import ADMAU0102P01 from 'app/pages/adm/ADMAU0102P01';  // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리 ~ (LP)미리보기
+// import ADMAU0102P01 from 'app/pages/adm/ADMAU0102P01';  // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리 ~ (LP)미리보기
 import ADMAU0103M from 'app/pages/adm/ADMAU0103M';      // 공통·결재 > 권한관리 > 생성관리 > (T)팝업관리
 import ADMAU0104M from 'app/pages/adm/ADMAU0104M';      // 공통·결재 > 권한관리 > 생성관리 > (T)권한관리
 import ADMAU0201M from 'app/pages/adm/ADMAU0201M';      // 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
@@ -470,12 +472,14 @@ function ProtoRoutes() {
         { path: 'CMP000302P', element: <CMP000302P /> },
         { path: 'CMP000401P', element: <CMP000401P /> },
         { path: 'CMP000501P', element: <CMP000501P /> },
+        { path: 'CMP000801P', element: <CMP000801P /> },
         { path: 'CMP001101P', element: <CMP001101P /> },
         { path: 'CMP001201P', element: <CMP001201P /> },
         { path: 'CMP001301P', element: <CMP001301P /> },
         { path: 'CMP001401P', element: <CMP001401P /> },
         { path: 'CMP001402P', element: <CMP001402P /> },
         { path: 'CMP001502P', element: <CMP001502P /> },
+        { path: 'CMP001601P', element: <CMP001601P /> },
       ],
     },
     { // 자금현수송
@@ -884,7 +888,7 @@ function ProtoRoutes() {
         { path: 'ADMAU0101M',   element: <ADMAU0101M /> },
         { path: 'ADMAU0101P01', element: <ADMAU0101P01 /> },
         { path: 'ADMAU0102M',   element: <ADMAU0102M /> },
-        { path: 'ADMAU0102P01', element: <ADMAU0102P01 /> },
+        // { path: 'ADMAU0102P01', element: <ADMAU0102P01 /> },
         { path: 'ADMAU0103M',   element: <ADMAU0103M /> },
         { path: 'ADMAU0104M',   element: <ADMAU0104M /> },
         { path: 'ADMAU0201M',   element: <ADMAU0201M /> },

@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)첨부파일
+ * @description 공통 ~ (LP)반려
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function CMP000302P() {
+function CMP001601P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -88,81 +88,28 @@ function CMP000302P() {
   return (
     <>
       <Dialog
-        className="layer-wrap case-upload-file wdth-40p"
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={false}
+        modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">첨부파일</span></h3>}
+        header={<h3 className="o-heading"><span className="label">반려</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
-              {/* <form className="m-upload-file">
-                <div className="o-attach js_dragovered">
-                  <div className="binds">
-                    <CommonButton label="파일선택" size={70} className="_choose" />
-                  </div>
-                  <div className="summary">
-                    <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                    <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                  </div>
-                </div>
-              </form> */}
-
               <div className="o-section">
                 <div className="m-header">
-                  <div className="m-checks justify-start">
-                    <InputCheck label="전체선택" />
-                  </div>
-
-                  <div className="o-limit type-file">
-                    <span className="head">파일크기</span>
-                    <span className="data">
-                      <em className="value">1MB</em>
-                      <span className="sep">/</span>
-                      <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                    </span>
-                  </div>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      {/* <CommonButton label="파일삭제" className="_normal" /> */}
-                      <CommonButton label="파일다운" className="_normal" />
-                    </div>
-                  </div>
+                  <h4 className="o-heading level2"><span className="label">반려내용</span></h4>
                 </div>
 
                 <div className="main">
-                  <div className="m-file-list type-upload">
-                    <ul>
-                      {[...Array(2)].map((e, idx) => (
-                      <li key={idx}>
-                        <div className="card">
-                          <InputCheck label="선택" labelHidden />
-
-                          <div className="m-file">
-                            <a href="javascript:" className="o-file">
-                              <span className="name">파일명</span>
-                              <span className="ext">.ext</span>
-                            </a>
-                            <span className="o-limit type-file">
-                              <span className="head">파일크기</span>
-                              <span className="data">
-                                <em className="value">1023KB</em>
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      ))}
-                    </ul>
-                  </div>
+                  반려
                 </div>
               </div>
 
@@ -173,9 +120,8 @@ function CMP000302P() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              {/* <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="저장" className="_solid-primary" /> */}
-              <CommonButton label="확인" className="_solid-primary" />
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="반려" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -185,7 +131,7 @@ function CMP000302P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)첨부파일 [wdth-40p(w770)]</span>
+              <span className="label">(P)반려 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -208,4 +154,4 @@ function CMP000302P() {
   );
 }
 
-export default CMP000302P;
+export default CMP001601P;

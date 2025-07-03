@@ -1,5 +1,5 @@
 /**
- * @description 공통·결재 > 권한관리 > 생성관리 > 화면관리 ~ (LP)미리보기
+ * @description 공통 ~ (LP)도움말
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMAU0102P01() {
+function CMP000801P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -88,30 +88,29 @@ function ADMAU0102P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-25p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">미리보기</span></h3>}
+        header={<h3 className="o-heading"><span className="label">도움말</span></h3>}
+        resizable={false}/* resizable={false} { @DEV } */
       >
         <div className="div-container">
           <div className="o-grid">
-
             <div className="column">
               <div className="o-section">
-
                 <div className="main">
-                  <div className="o-view-image">
-                    {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg/640px-%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg" alt="" /> */}
-                    <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-                  </div>
+                  <figure className="o-figure">
+                    <div className="body">
+                      <img src={require("assets/images/temp/CMP000801P_010.png")} alt="" />
+                    </div>
+                  </figure>
                 </div>
-
               </div>
             </div>
           </div>
@@ -122,7 +121,7 @@ function ADMAU0102P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)미리보기 [wdth-25p]</span>
+              <span className="label">(P)도움말 [wdth-60p(w1150)][resizable="false"]</span>
             </h1>
           </div>
         </div>
@@ -145,4 +144,4 @@ function ADMAU0102P01() {
   );
 }
 
-export default ADMAU0102P01;
+export default CMP000801P;

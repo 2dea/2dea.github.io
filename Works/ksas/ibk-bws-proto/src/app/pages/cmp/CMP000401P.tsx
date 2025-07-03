@@ -253,7 +253,7 @@ function CMP000401P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)이미지업로드 [wdth-40p(w770)]</span>
+              <span className="label">(P)이미지업로드 [wdth-40p(w770)][resizable="false"]</span>
             </h1>
           </div>
         </div>
