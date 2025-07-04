@@ -109,7 +109,23 @@ function CMP001601P() {
                 </div>
 
                 <div className="main">
-                  반려
+                  <div className="o-field">
+                    <div className="fields">
+                      <div className="o-form _input mode-required">
+                        <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                        <i aria-hidden="true"></i>
+
+                        <div className="o-limit type-length">
+                          <span className="head">글자수</span>
+                          <span className="data">
+                            <em className="value">0</em>
+                            <span className="sep">/</span>
+                            <span className="limits" aria-label="입력가능 글자수">100</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -121,7 +137,7 @@ function CMP001601P() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="반려" className="_solid-primary" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>

@@ -211,10 +211,6 @@ function STMDM0101M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -225,11 +221,9 @@ function STMDM0101M() {
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청차량</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우리부점결재</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">안전관리팀결재</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출발시각</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청시각</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">도착예정일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">도착예정시각</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">목적지</span></div></th>
@@ -242,16 +236,12 @@ function STMDM0101M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">차량번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">차종</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={20}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={16}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -260,18 +250,14 @@ function STMDM0101M() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
                             <td>IT센터</td>
-                            <td>012345</td>
-                            <td>PD011</td>
+                            <td>2025000007</td>
+                            <td>0810</td>
                             <td className="g-start">프로세스혁신부</td>
                             <td>012345</td>
                             <td>홍길동</td>
                             <td>12가1234</td>
                             <td>다이너스티3.0</td>
                             <td>결재승인</td>
-                            <td>홍길동</td>
-                            <td>결재승인</td>
-                            <td>홍길동</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td><span className="o-digit type-time">00:00</span></td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>

@@ -123,7 +123,6 @@ function BSPAQ0201M() {
 
               <div className="group _primary">
                 <CommonButton label="취소" className="_cancel" />
-                <CommonButton label="삭제" className="_delete" />
                 <CommonButton label="인수등록" className="_solid-primary" />
               </div>
             </div>
@@ -247,6 +246,11 @@ function BSPAQ0201M() {
                       <div className="o-section">
                         <div className="m-header">
                           <h2 className="o-heading level2"><span className="label">미인수내역</span></h2>
+
+                          <div className="o-helper style-strong">
+                            <em className="label">신청자란이 공란인 경우 자동배송 또는 타지점 인도분</em>
+                          </div>
+
                           <div className="o-length">
                             <span className="head">전체</span>
                             <em className="data">
@@ -282,6 +286,7 @@ function BSPAQ0201M() {
                                   <col />
                                   <col />
                                   <col />
+                                  <col />
                                 </colgroup>
 
                                 <thead className="p-datatable-thead">
@@ -294,6 +299,7 @@ function BSPAQ0201M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도점</span></div></th>
                                     <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도자</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본부인도구분</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도상태</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도정정일자</span></div></th>
@@ -308,7 +314,7 @@ function BSPAQ0201M() {
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                    <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -325,6 +331,7 @@ function BSPAQ0201M() {
                                     <td className="g-start">종로6가</td>
                                     <td>10000</td>
                                     <td>홍길동</td>
+                                    <td>신청인도</td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td>정상</td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>

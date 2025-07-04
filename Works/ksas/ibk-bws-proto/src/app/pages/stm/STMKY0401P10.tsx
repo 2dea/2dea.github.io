@@ -292,6 +292,49 @@ function STMKY0401P10() {
               <div className="o-grid">
                 <div className="column">
 
+                  <form className="m-filter-form">
+                    <div className="fieldset">
+
+                      <div className="o-field colspan-4">
+                        <Label label={`기간`} require={false} />
+                        <div className="fields">
+                          <div className="o-form _select">
+                            <XDropdown appendTo={'self'} className="bind" />
+                            <i aria-hidden="true"></i>
+                          </div>
+
+                          <div className="o-form _input type-date wdth-50">
+                            <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                            <i aria-hidden="true"></i>
+                          </div>
+                          <span className="seps type-tilde">~</span>
+                          <div className="o-form _input type-date wdth-50">
+                            <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                            <i aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-field">
+                        <Label label={`상대부점`} require={false} />
+                        <div className="fields">
+                          <div className="o-form _input">
+                            <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                            <i aria-hidden="true"></i>
+                            <span className="inner-binds">
+                              <ImageButton label="초기화" icon="remove" />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div className="binds">
+                      <CommonButton label="조회" className="_inquire" />
+                    </div>
+                  </form>
+
                   <div className="o-section">
                     <div className="m-header">
                       <h4 className="o-heading level2"><span className="label">예비열쇠보관확인증 내역</span></h4>
@@ -319,6 +362,8 @@ function STMKY0401P10() {
                           <table className="p-datatable-table p-datatable-scrollable-table">
                             <colgroup>
                               <col className="wdth-10" />
+                              <col className="wdth-10" />
+                              <col />
                               <col />
                               <col />
                               <col />
@@ -338,8 +383,9 @@ function STMKY0401P10() {
 
                             <thead className="p-datatable-thead">
                               <tr>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우리부점</span></div></th>
+                                <th colSpan={7} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우리부점</span></div></th>
                                 <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상대부점</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송일자</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령일자</span></div></th>
@@ -351,7 +397,7 @@ function STMKY0401P10() {
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래구분</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
@@ -363,21 +409,23 @@ function STMKY0401P10() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={16}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
                               <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td><InputCheck label="선택" labelHidden /></td>
                                 <td>{idx + 1}</td>
                                 <td>0465</td>
                                 <td className="g-start">부산</td>
                                 <td>10000</td>
                                 <td>홍길동</td>
                                 <td>요청</td>
+                                <td>결재승인</td>
                                 <td>
-                                  <a href="javascript:" className="o-link _normal">결재요청</a>
+                                  <CommonButton label="승인" className="_normal" />
                                 </td>
                                 <td>0465</td>
                                 <td className="g-start">부산</td>

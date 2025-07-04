@@ -124,23 +124,35 @@ function FMTFC0201P01() {
                       <tbody>
                         <tr>
                           <th colSpan={2}>
-                            <Label label={`수신기관`} require={false} />
+                            <Label label={`수신기관`} require={true} />
                           </th>
-                          <td colSpan={5}>
+                          <td colSpan={1}>
                             <div className="m-checks">
                               <InputCheck label="남대문 경찰서" defaultChecked />
                               <InputCheck label="한국은행 본부" />
                             </div>
                           </td>
+                          <th colSpan={1}>
+                            <Label label={`등록자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0000] 홍길동
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`등록일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
                         </tr>
                         <tr>
                           <th colSpan={2}>
-                            <Label label={`신고직원`} require={false} />
+                            <Label label={`신고직원`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input">
+                                <div className="o-form _input mode-required wdth-70">
                                   <AutoComplete className="bind" placeholder="" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
@@ -152,22 +164,22 @@ function FMTFC0201P01() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`발견일자`} require={false} />
+                            <Label label={`발견일자`} require={true} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-form _input type-date wdth-50">
+                            <div className="o-form _input type-date mode-required wdth-50">
                               <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                               <i aria-hidden="true"></i>
                             </div>
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`발견경위`} require={false} />
+                            <Label label={`발견경위`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select wdth-40">
+                                <div className="o-form _select mode-required wdth-40">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -188,12 +200,12 @@ function FMTFC0201P01() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`기번호`} require={false} />
+                            <Label label={`기번호`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50">
+                                <div className="o-form _input mode-required wdth-50">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -208,12 +220,12 @@ function FMTFC0201P01() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`수량(장)`} require={false} />
+                            <Label label={`수량(장)`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input mode-required wdth-50 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -226,7 +238,7 @@ function FMTFC0201P01() {
                             <Label label={`위조​방식`} require={false} />
                           </th>
                           <th colSpan={1}>
-                            <Label label={`위조방법`} require={false} />
+                            <Label label={`위조방법`} require={true} />
                           </th>
                           <td colSpan={5}>
                             <div className="m-checks">
@@ -249,7 +261,7 @@ function FMTFC0201P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`숨은그림`} require={false} />
+                            <Label label={`숨은그림`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="m-checks">
@@ -288,7 +300,7 @@ function FMTFC0201P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`은선`} require={false} />
+                            <Label label={`은선`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="m-checks">
@@ -335,7 +347,7 @@ function FMTFC0201P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`홀로그램`} require={false} />
+                            <Label label={`홀로그램`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="m-checks">
@@ -374,7 +386,7 @@ function FMTFC0201P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`색변환잉크`} require={false} />
+                            <Label label={`색변환잉크`} require={true} />
                           </th>
                           <td colSpan={5}>
                             <div className="m-checks">
@@ -394,7 +406,7 @@ function FMTFC0201P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`형광물질`} require={false} />
+                            <Label label={`형광물질`} require={true} />
                           </th>
                           <td colSpan={5}>
                             <div className="m-checks">
@@ -413,7 +425,7 @@ function FMTFC0201P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`합지여부`} require={false} />
+                            <Label label={`합지여부`} require={true} />
                           </th>
                           <td colSpan={5}>
                             <div className="m-checks">

@@ -77,6 +77,7 @@ import BSPFD0601M from 'app/pages/bsp/BSPFD0601M';      // 중요용지·용도�
 import BSPFD0701M from 'app/pages/bsp/BSPFD0701M';      // 중요용지·용도품(영업점) > 조회  > 수표발급점포조회
 import BSPFD0801M from 'app/pages/bsp/BSPFD0801M';      // 중요용지·용도품(영업점) > 조회  > 일련번호별거래내역조회
 import BSPFD0901M from 'app/pages/bsp/BSPFD0901M';      // 중요용지·용도품(영업점) > 조회  > 일련번호원장수정
+import BSPFD0901P01 from 'app/pages/bsp/BSPFD0901P01';  // 중요용지·용도품(영업점) > 조회  > 일련번호원장수정 > (LP)이력조회
 
 import BSPAQ0101M from 'app/pages/bsp/BSPAQ0101M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지인수
 import BSPAQ0101P01 from 'app/pages/bsp/BSPAQ0101P01';  // 중요용지·용도품(영업점) > 인수도 > 중요용지인수 > (LP)대량폐기결정
@@ -97,7 +98,7 @@ import BSPDU0301P01 from 'app/pages/bsp/BSPDU0301P01';  // 중요용지·용도�
 
 import BSPDU0401M from 'app/pages/bsp/BSPDU0401M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점)
 import BSPDU0401P02 from 'app/pages/bsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점) ~ (LP)사고보고등록
-import BSPDU0402M from 'app/pages/bsp/BSPDU0402M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(본부)
+import BSPDU0501M from 'app/pages/bsp/BSPDU0501M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(본부)
 
 
 
@@ -412,34 +413,42 @@ import BSSTI0401M from 'app/pages/bss/BSSTI0401M';     // 영업지원 > 연수�
 import BSSTI0501M from 'app/pages/bss/BSSTI0501M';     // 영업지원 > 연수원                 > 연수원품목재고조회
 
 // proto 공통·결재
-import ADMCM0101M from 'app/pages/adm/ADMCM0101M';      // 공통·결재 > 코드관리 > 공통코드관리
+import ADMCM0101M from 'app/pages/adm/ADMCM0101M';      // 공통·결재 > 코드관리    > 공통코드관리
 
-import ADMPA0101M from 'app/pages/adm/ADMPA0101M';      // 공통·결재 > 인사정보 > 부점관리
-import ADMPA0201M from 'app/pages/adm/ADMPA0201M';      // 공통·결재 > 인사정보 > 팀정보관리
-import ADMPA0301M from 'app/pages/adm/ADMPA0301M';      // 공통·결재 > 인사정보 > 직원관리
-import ADMPA0301P01 from 'app/pages/adm/ADMPA0301P01';  // 공통·결재 > 인사정보 > 직원관리 ~ (LP)직무분장관리
-import ADMPA0301P02 from 'app/pages/adm/ADMPA0301P02';  // 공통·결재 > 인사정보 > 직원관리 ~ (LP)변경이력
-import ADMPA0401M from 'app/pages/adm/ADMPA0401M';      // 공통·결재 > 인사정보 > 외주직원관리
-import ADMPA0501M from 'app/pages/adm/ADMPA0501M';      // 공통·결재 > 인사정보 > 업무담당자문의처관리
-import ADMPA0601M from 'app/pages/adm/ADMPA0601M';      // 공통·결재 > 인사정보 > 실근무지관리
-import ADMPA0601P01 from 'app/pages/adm/ADMPA0601P01';  // 공통·결재 > 인사정보 > 직원관리 ~ (LP)실근무지조회
+import ADMSM0101M from 'app/pages/adm/ADMSM0101M';      // 공통·결재 > 결재관리    > 결재내역관리
+import ADMSM0101P01 from 'app/pages/adm/ADMSM0101P01';  // 공통·결재 > 결재관리    > 결재내역관리 ~ (LP)변경이력
 
-import ADMAU0101M from 'app/pages/adm/ADMAU0101M';      // 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리
-import ADMAU0101P01 from 'app/pages/adm/ADMAU0101P01';  // 공통·결재 > 권한관리 > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
-import ADMAU0102M from 'app/pages/adm/ADMAU0102M';      // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리
+import ADMPA0101M from 'app/pages/adm/ADMPA0101M';      // 공통·결재 > 인사정보    > 부점관리
+import ADMPA0201M from 'app/pages/adm/ADMPA0201M';      // 공통·결재 > 인사정보    > 팀정보관리
+import ADMPA0301M from 'app/pages/adm/ADMPA0301M';      // 공통·결재 > 인사정보    > 직원관리
+import ADMPA0301P01 from 'app/pages/adm/ADMPA0301P01';  // 공통·결재 > 인사정보    > 직원관리 ~ (LP)직무분장관리
+import ADMPA0301P02 from 'app/pages/adm/ADMPA0301P02';  // 공통·결재 > 인사정보    > 직원관리 ~ (LP)변경이력
+import ADMPA0401M from 'app/pages/adm/ADMPA0401M';      // 공통·결재 > 인사정보    > 외주직원관리
+import ADMPA0501M from 'app/pages/adm/ADMPA0501M';      // 공통·결재 > 인사정보    > 업무담당자문의처관리
+import ADMPA0601M from 'app/pages/adm/ADMPA0601M';      // 공통·결재 > 인사정보    > 실근무지관리
+import ADMPA0601P01 from 'app/pages/adm/ADMPA0601P01';  // 공통·결재 > 인사정보    > 직원관리 ~ (LP)실근무지조회
+
+import ADMAU0101M from 'app/pages/adm/ADMAU0101M';      // 공통·결재 > 권한관리    > 생성관리 > (T)메뉴관리
+import ADMAU0101P01 from 'app/pages/adm/ADMAU0101P01';  // 공통·결재 > 권한관리    > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
+import ADMAU0102M from 'app/pages/adm/ADMAU0102M';      // 공통·결재 > 권한관리    > 생성관리 > (T)화면관리
 // import ADMAU0102P01 from 'app/pages/adm/ADMAU0102P01';  // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리 ~ (LP)미리보기
-import ADMAU0103M from 'app/pages/adm/ADMAU0103M';      // 공통·결재 > 권한관리 > 생성관리 > (T)팝업관리
-import ADMAU0104M from 'app/pages/adm/ADMAU0104M';      // 공통·결재 > 권한관리 > 생성관리 > (T)권한관리
-import ADMAU0201M from 'app/pages/adm/ADMAU0201M';      // 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리
-import ADMAU0201P01 from 'app/pages/adm/ADMAU0201P01';  // 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)화면매핑
-import ADMAU0201P02 from 'app/pages/adm/ADMAU0201P02';  // 공통·결재 > 권한관리 > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)관련화면매핑
-import ADMAU0202M from 'app/pages/adm/ADMAU0202M';      // 공통·결재 > 권한관리 > 매핑관리 > (T)권한별 메뉴/팝업관리
-import ADMAU0203M from 'app/pages/adm/ADMAU0203M';      // 공통·결재 > 권한관리 > 매핑관리 > (T)부점/부서별 권한관리
-import ADMAU0204M from 'app/pages/adm/ADMAU0204M';      // 공통·결재 > 권한관리 > 매핑관리 > (T)사용자별 권한관리
+import ADMAU0103M from 'app/pages/adm/ADMAU0103M';      // 공통·결재 > 권한관리    > 생성관리 > (T)팝업관리
+import ADMAU0104M from 'app/pages/adm/ADMAU0104M';      // 공통·결재 > 권한관리    > 생성관리 > (T)권한관리
+import ADMAU0201M from 'app/pages/adm/ADMAU0201M';      // 공통·결재 > 권한관리    > 매핑관리 > (T)메뉴별 화면관리
+import ADMAU0201P01 from 'app/pages/adm/ADMAU0201P01';  // 공통·결재 > 권한관리    > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)화면매핑
+import ADMAU0201P02 from 'app/pages/adm/ADMAU0201P02';  // 공통·결재 > 권한관리    > 매핑관리 > (T)메뉴별 화면관리 ~ (LP)관련화면매핑
+import ADMAU0202M from 'app/pages/adm/ADMAU0202M';      // 공통·결재 > 권한관리    > 매핑관리 > (T)권한별 메뉴/팝업관리
+import ADMAU0203M from 'app/pages/adm/ADMAU0203M';      // 공통·결재 > 권한관리    > 매핑관리 > (T)부점/부서별 권한관리
+import ADMAU0204M from 'app/pages/adm/ADMAU0204M';      // 공통·결재 > 권한관리    > 매핑관리 > (T)사용자별 권한관리
 
-import ADMAC0101M from 'app/pages/adm/ADMAC0101M';      // 공통·결재 > 권한위임 > 부점별 권한위임
-import ADMAC0201M from 'app/pages/adm/ADMAC0201M';      // 공통·결재 > 권한위임 > 사용자별 권한관리
-import ADMPH0101M from 'app/pages/adm/ADMPH0101M';      // 공통·결재 > 휴일관리 > 영업일/휴일등록
+import ADMAU0301M from 'app/pages/adm/ADMAU0301M';      // 공통·결재 > 권한관리    > 비밀번호변경
+
+import ADMAC0101M from 'app/pages/adm/ADMAC0101M';      // 공통·결재 > 권한위임    > 부점별 권한위임
+import ADMAC0201M from 'app/pages/adm/ADMAC0201M';      // 공통·결재 > 권한위임    > 사용자별 권한관리
+
+import ADMTI0101M from 'app/pages/adm/ADMTI0101M';      // 공통·결재 > 거래정보관리 > 거래정보관리
+
+import ADMPH0101M from 'app/pages/adm/ADMPH0101M';      // 공통·결재 > 휴일관리     > 영업일/휴일등록
 
 function ProtoRoutes() {
   return useRoutes([
@@ -528,6 +537,7 @@ function ProtoRoutes() {
         { path: 'BSPFD0701M',   element: <BSPFD0701M /> },
         { path: 'BSPFD0801M',   element: <BSPFD0801M /> },
         { path: 'BSPFD0901M',   element: <BSPFD0901M /> },
+        { path: 'BSPFD0901P01', element: <BSPFD0901P01 /> },
 
         { path: 'BSPAQ0101M',   element: <BSPAQ0101M /> },
         { path: 'BSPAQ0101P01', element: <BSPAQ0101P01 /> },
@@ -549,7 +559,7 @@ function ProtoRoutes() {
 
         { path: 'BSPDU0401M', element: <BSPDU0401M /> },
         { path: 'BSPDU0401P02', element: <BSPDU0401P02 /> },
-        { path: 'BSPDU0402M', element: <BSPDU0402M /> },
+        { path: 'BSPDU0501M', element: <BSPDU0501M /> },
 
         { path: 'HSPBT0101M',   element: <HSPBT0101M /> },
         { path: 'HSPBT0101P01', element: <HSPBT0101P01 /> },
@@ -874,6 +884,8 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'ADMCM0101M',   element: <ADMCM0101M /> },
+        { path: 'ADMSM0101M',   element: <ADMSM0101M /> },
+        { path: 'ADMSM0101P01', element: <ADMSM0101P01 /> },
 
         { path: 'ADMPA0101M',   element: <ADMPA0101M /> },
         { path: 'ADMPA0201M',   element: <ADMPA0201M /> },
@@ -897,8 +909,10 @@ function ProtoRoutes() {
         { path: 'ADMAU0202M',   element: <ADMAU0202M /> },
         { path: 'ADMAU0203M',   element: <ADMAU0203M /> },
         { path: 'ADMAU0204M',   element: <ADMAU0204M /> },
+        { path: 'ADMAU0301M',   element: <ADMAU0301M /> },
 
         { path: 'ADMAC0101M',   element: <ADMAC0101M /> },
+        { path: 'ADMTI0101M',   element: <ADMTI0101M /> },
         { path: 'ADMAC0201M',   element: <ADMAC0201M /> },
         { path: 'ADMPH0101M',   element: <ADMPH0101M /> },
       ],

@@ -280,6 +280,7 @@ function BSPFD0901M() {
 
                   <div className="m-binds">
                     <div className="group">
+                      <CommonButton label="이력조회" className="_normal" />
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />
                       <CommonButton label="취소" className="_normal" />
@@ -305,11 +306,6 @@ function BSPFD0901M() {
                           <col />
                           <col className="wdth-0" />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col className="wdth-0" />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -317,12 +313,8 @@ function BSPFD0901M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호/품목명</span></div></th>
                             <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서무계</span></div></th>
-                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">창구</span></div></th>
-
                           </tr>
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">매수</span></div></th>
-                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">매수</span></div></th>
                             <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                           </tr>
@@ -330,7 +322,7 @@ function BSPFD0901M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -389,11 +381,6 @@ function BSPFD0901M() {
                                 </div>
                               </div>
                             </td>
-                            <td className="g-end">1,300</td>
-                            <td>가바</td>
-                            <td>0465</td>
-                            <td>~</td>
-                            <td>0465</td>
                           </tr>
                         ))}
                         </tbody>

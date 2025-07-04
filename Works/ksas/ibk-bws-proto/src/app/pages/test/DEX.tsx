@@ -92,8 +92,19 @@ function DEX() {
 
       {/*
       스케줄
-      2025-07/03
+      2025-07/07 월 수정사항
+        - 자금현수송 #197 FMTCC0201M : 총 합계 레이아웃 : 기획 -디자인 확인 필요 /
+        1. 어드민 해야할 부분 #92: ADMAM0101M
+
+        2025-07/04
+
+       2. FMTFC0101P01 필수 값 수정 #222
+
+
       [2025-07-03]{화면추가}
+        - 거래정보관리 # 95
+
+      탭은 2개로
       목 : BSSRM0201M 부터~ [영업지원] > 토지 #70
 
 
@@ -311,7 +322,7 @@ about:blank
                         </tr>
 
                         th label <br >
-                        <th colSpan={1}>
+                        <th colSpan={1}><
                             <Label label={<>인계자 <br />(전임 분임​보안담당자)</>} require={false} />
                           </th>
 
@@ -605,17 +616,6 @@ about:blank
 
               <form className="m-filter-form">
                 <div className="fieldset">
-
-                  <div className="o-field">
-                    <Label label={`직원번호/명`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
                   <div className="o-field">
                     <Label label={`권한명`} require={false} />
                     <div className="fields">
@@ -648,6 +648,17 @@ about:blank
                       </div>
                     </div>
                   </div>
+
+                  <div className="o-field">
+                    <Label label={`직원번호/명`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
 
                   <div className="o-field">
                     <Label label={`발주기준`} require={true} />

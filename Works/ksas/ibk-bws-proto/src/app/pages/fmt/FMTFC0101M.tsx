@@ -181,19 +181,6 @@ function FMTFC0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`인수직원`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
                     <Label label={`취소포함`} require={false} />
                     <div className="fields">
                       <div className="m-checks">
@@ -453,6 +440,11 @@ function FMTFC0101M() {
                                   <col />
                                   <col />
                                   <col />
+                                  <col />
+                                  <col />
+                                  <col />
+                                  <col />
+                                  <col />
                                 </colgroup>
 
                                 <thead className="p-datatable-thead">
@@ -464,6 +456,9 @@ function FMTFC0101M() {
                                     <th colSpan={10} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위조방식</span></div></th>
                                     <th rowSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신기관</span></div></th>
                                     <th rowSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">특이사항</span></div></th>
+                                    <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신고자</span></div></th>
+                                    <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                                    <th rowSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                                     <th rowSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                                   </tr>
                                   <tr>
@@ -474,6 +469,10 @@ function FMTFC0101M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">색변환잉크</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">형광물질</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합지여부</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                                   </tr>
                                   <tr>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방법</span></div></th>
@@ -487,7 +486,7 @@ function FMTFC0101M() {
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                    <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -510,6 +509,11 @@ function FMTFC0101M() {
                                       <td>앞면위폐, 뒷면위폐</td>
                                       <td>남대문경찰서, 한국은행 본부</td>
                                       <td className="g-start">수납지점: 동대문 지점</td>
+                                      <td>000000</td>
+                                      <td>홍길동</td>
+                                      <td>000000</td>
+                                      <td>홍길동</td>
+                                      <td><span className="o-digit type-date">2025-12-25</span></td>
                                       <td>결재요청</td>
                                     </tr>
                                   ))}
@@ -567,6 +571,11 @@ function FMTFC0101M() {
                                   <col />
                                   <col />
                                   <col />
+                                  <col />
+                                  <col />
+                                  <col />
+                                  <col />
+                                  <col />
                                 </colgroup>
 
                                 <thead className="p-datatable-thead">
@@ -579,6 +588,9 @@ function FMTFC0101M() {
                                     <th colSpan={10} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위조방식</span></div></th>
                                     <th rowSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신기관</span></div></th>
                                     <th rowSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">특이사항</span></div></th>
+                                    <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신고자</span></div></th>
+                                    <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                                    <th rowSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                                     <th rowSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                                   </tr>
                                   <tr>
@@ -589,6 +601,10 @@ function FMTFC0101M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">색변환잉크</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">형광물질</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합지여부</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                                   </tr>
                                   <tr>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방법</span></div></th>
@@ -602,7 +618,7 @@ function FMTFC0101M() {
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                    <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -626,6 +642,11 @@ function FMTFC0101M() {
                                       <td>앞면위폐, 뒷면위폐</td>
                                       <td>남대문경찰서, 한국은행 본부</td>
                                       <td className="g-start">수납지점: 동대문 지점</td>
+                                      <td>000000</td>
+                                      <td>홍길동</td>
+                                      <td>000000</td>
+                                      <td>홍길동</td>
+                                      <td><span className="o-digit type-date">2025-12-25</span></td>
                                       <td>결재요청</td>
                                     </tr>
                                   ))}

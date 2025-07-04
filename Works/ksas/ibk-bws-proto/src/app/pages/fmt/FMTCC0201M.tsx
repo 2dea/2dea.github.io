@@ -112,7 +112,7 @@ function FMTCC0201M() {
             <div className="m-binds type-end">
               <div className="group _primary">
                 <CommonButton label="결재요청" className="_solid-primary" />
-                <CommonButton label="저장" className="_solid-primary" />
+                <CommonButton label="임시저장" className="_solid-primary" />
               </div>
             </div>
 
@@ -291,6 +291,14 @@ function FMTCC0201M() {
                                 </div>
                               </div>
                             </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`총인수금액`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            40,000,000
                           </td>
                         </tr>
                       </tbody>
