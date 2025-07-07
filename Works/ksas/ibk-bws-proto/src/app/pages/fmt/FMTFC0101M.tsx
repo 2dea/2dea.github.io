@@ -414,7 +414,7 @@ function FMTFC0101M() {
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">위페과부족 상세정보</span></h4>
+                          <h4 className="o-heading level4"><span className="label">위폐과부족 상세정보</span></h4>
                         </div>
 
                         <div className="main _primary rows-body-3i">
@@ -535,7 +535,7 @@ function FMTFC0101M() {
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h2 className="o-heading level2"><span className="label">위페과부족내역</span></h2>
+                          <h2 className="o-heading level2"><span className="label">위폐과부족내역</span></h2>
 
                           <div className="m-binds">
                             <div className="m-binds">
