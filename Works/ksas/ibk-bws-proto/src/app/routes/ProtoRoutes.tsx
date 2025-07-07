@@ -338,6 +338,7 @@ import STMKY0201P03 from 'app/pages/stm/STMKY0201P03';   // 재난·안전관리
 import STMKY0301M from 'app/pages/stm/STMKY0301M';       // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리
 import STMKY0301P01 from 'app/pages/stm/STMKY0301P01';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)열쇠인수도취소
 import STMKY0301P03 from 'app/pages/stm/STMKY0301P03';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)과거내역조회
+import STMKY0401M from 'app/pages/stm/STMKY0401M';       // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리
 import STMKY0401P01 from 'app/pages/stm/STMKY0401P01';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)열쇠이미지보기
 import STMKY0401P02 from 'app/pages/stm/STMKY0401P02';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)예비열쇠위탁요청
 import STMKY0401P04 from 'app/pages/stm/STMKY0401P04';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)위탁열쇠반납요청
@@ -796,6 +797,7 @@ function ProtoRoutes() {
         { path: 'STMKY0301P01', element: <STMKY0301P01 /> },
         { path: 'STMKY0301P03', element: <STMKY0301P03 /> },
 
+        { path: 'STMKY0401M',   element: <STMKY0401M /> },
         { path: 'STMKY0401P01', element: <STMKY0401P01 /> },
         { path: 'STMKY0401P02', element: <STMKY0401P02 /> },
         { path: 'STMKY0401P04', element: <STMKY0401P04 /> },

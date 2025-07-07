@@ -11,3 +11,10 @@
 .g-valign-bottom  { vertical-align: bottom; }
 .g-valign-top  { vertical-align: top; }
 .g-valign-center  { vertical-align: center; }
+
+
+.o-status-text:not(.style-inherit)  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; }
+.o-status-text:not(:only-child)  { margin-right: $gap-element-30; }
+
+.o-status-text.type-20  { color: var(--color-point-red); }
+.o-status-text.type-80  { color: var(--color-point-skyblue); }
