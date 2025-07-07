@@ -102,18 +102,46 @@ function STMKY0401P01() {
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
-              <div className="image"></div>
+              <div className="m-figures colsplit-2">
+                <div className="o-figure">
+                  <div className="header m-header">
+                    <strong className="o-heading"><span className="label">앞면 이미지</span></strong>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <ImageButton label="다운로드" icon="download" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="body"><img src={require("assets/images/common/img_empty-image.png")} alt="" /></div>
+                </div>
+
+                <div className="o-figure">
+                  <div className="header m-header">
+                    <strong className="o-heading"><span className="label">뒷면 이미지</span></strong>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <ImageButton label="다운로드" icon="download" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="body"><img src={require("assets/images/common/img_empty-image.png")} alt="" /></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="div-footer">
+        {/* <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
-        </div>
+        </div> */}
       </Dialog>
 
       <div className="roles" data-div-role="0">

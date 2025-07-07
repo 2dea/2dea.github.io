@@ -822,6 +822,7 @@ function SUBTMPL() {
                                 <i className="o-icon _consult wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _contacts wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _delete wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _download wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-right wdth-50" aria-hidden="true"></i>
