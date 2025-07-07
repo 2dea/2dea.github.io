@@ -18,3 +18,8 @@
 
 .o-status-text.type-20  { color: var(--color-point-red); }
 .o-status-text.type-80  { color: var(--color-point-skyblue); }
+
+.o-data-table:not(td *) table >*  { position: relative; }
+.o-data-table:not(td *) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
+
+.o-data-table +.o-data-table  { margin-top: $margin-section-40; }

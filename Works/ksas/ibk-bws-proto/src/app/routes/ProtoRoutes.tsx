@@ -448,6 +448,9 @@ import ADMAU0301M from 'app/pages/adm/ADMAU0301M';      // 공통·결재 > 권�
 import ADMAC0101M from 'app/pages/adm/ADMAC0101M';      // 공통·결재 > 권한위임    > 부점별 권한위임
 import ADMAC0201M from 'app/pages/adm/ADMAC0201M';      // 공통·결재 > 권한위임    > 사용자별 권한관리
 
+import ADMAM0101M from 'app/pages/adm/ADMAM0101M';      // 공통·결재 > 알림관리    > 알림메시지관리
+import ADMAM0101P01 from 'app/pages/adm/ADMAM0101P01';  // 공통·결재 > 알림관리    > 알림메시지관리 ~ (LP)알림수신제외직원등록
+
 import ADMTI0101M from 'app/pages/adm/ADMTI0101M';      // 공통·결재 > 거래정보관리 > 거래정보관리
 
 import ADMPH0101M from 'app/pages/adm/ADMPH0101M';      // 공통·결재 > 휴일관리     > 영업일/휴일등록
@@ -918,6 +921,8 @@ function ProtoRoutes() {
         { path: 'ADMAC0101M',   element: <ADMAC0101M /> },
         { path: 'ADMTI0101M',   element: <ADMTI0101M /> },
         { path: 'ADMAC0201M',   element: <ADMAC0201M /> },
+        { path: 'ADMAM0101M',   element: <ADMAM0101M /> },
+        { path: 'ADMAM0101P01', element: <ADMAM0101P01 /> },
         { path: 'ADMPH0101M',   element: <ADMPH0101M /> },
       ],
     },

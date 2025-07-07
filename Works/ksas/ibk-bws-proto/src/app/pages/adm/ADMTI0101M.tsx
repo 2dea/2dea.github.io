@@ -122,151 +122,648 @@ function ADMTI0101M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} className="column">
 
-              <form className="m-filter-form">
-                <div className="fieldset">
+          <form className="m-filter-form">
+            <div className="fieldset">
 
-                  <div className="o-field colspan-2">
-                    <Label label={`연월`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _select mode-required wdth-50">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
+              <div className="o-field colspan-2">
+                <Label label={`거래기간`} require={true} />
+                <div className="fields">
+                  <div className="o-form _input type-date mode-required wdth-50">
+                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                    <i aria-hidden="true"></i>
+                  </div>
+                  <span className="seps type-tilde">~</span>
+                  <div className="o-form _input type-date mode-required wdth-50">
+                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                    <i aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-field">
+                <Label label={`업무구분코드`} require={false} />
+                <div className="fields">
+                  <div className="o-form _select">
+                    <XDropdown appendTo={'self'} className="bind" />
+                    <i aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="binds">
+              <CommonButton label="조회" className="_inquire" />
+            </div>
+          </form>
+
+          <Tabs className="m-tabs react-tabs" defaultIndex={0}>
+            <div className="m-tab type2">
+              <TabList className="lists">
+                <Tab className="link"><span className="label">기간별업무현황</span></Tab>
+                <Tab className="link"><span className="label">물류지원업무현황</span></Tab>
+                <Tab className="link"><span className="label">자금현수송업무현황</span></Tab>
+              </TabList>
+            </div>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">업무별 거래 점검현황</span></h2>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
                       </div>
-                      <div className="o-form _select mode-required wdth-30">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록필터" icon="column-toggle" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main">
+                      <div className="column">
+
+                        <div className="o-data-table">
+                          <div className="table-container">
+                            <table className="table">
+                              <colgroup>
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                              </colgroup>
+
+                              <thead>
+                                <tr>
+                                  <th rowSpan={2}>항목</th>
+                                  <th rowSpan={2}>전체</th>
+                                  <th colSpan={3}>연도별</th>
+                                  <th colSpan={3}>월별</th>
+                                  <th colSpan={3}>일별</th>
+                                </tr>
+                                <tr>
+                                  <th>전연도</th>
+                                  <th>당해연도</th>
+                                  <th>증감</th>
+                                  <th>전월</th>
+                                  <th>당월</th>
+                                  <th>증감</th>
+                                  <th>전일</th>
+                                  <th>당일</th>
+                                  <th>증감</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <tr>
+                                  <th>결재건수</th>
+                                  <td>69,965</td>
+                                  <td>38,965</td>
+                                  <td>31,965</td>
+                                  <td>-7,965</td>
+                                  <td>88</td>
+                                  <td>68</td>
+                                  <td>-28</td>
+                                  <td>8</td>
+                                  <td>8</td>
+                                  <td>-2</td>
+                                </tr>
+                                <tr>
+                                  <th>중요용지인수도</th>
+                                  <td>69,965</td>
+                                  <td>38,965</td>
+                                  <td>31,965</td>
+                                  <td>-7,965</td>
+                                  <td>88</td>
+                                  <td>68</td>
+                                  <td>-28</td>
+                                  <td>8</td>
+                                  <td>8</td>
+                                  <td>-2</td>
+                                </tr>
+                                <tr>
+                                  <th>행내등기신청</th>
+                                  <td>69,965</td>
+                                  <td>38,965</td>
+                                  <td>31,965</td>
+                                  <td>-7,965</td>
+                                  <td>88</td>
+                                  <td>68</td>
+                                  <td>-28</td>
+                                  <td>8</td>
+                                  <td>8</td>
+                                  <td>-2</td>
+                                </tr>
+                                <tr>
+                                  <th>자금현송신청</th>
+                                  <td>69,965</td>
+                                  <td>38,965</td>
+                                  <td>31,965</td>
+                                  <td>-7,965</td>
+                                  <td>88</td>
+                                  <td>68</td>
+                                  <td>-28</td>
+                                  <td>8</td>
+                                  <td>8</td>
+                                  <td>-2</td>
+                                </tr>
+                                <tr>
+                                  <th>웹단말</th>
+                                  <td>69,965</td>
+                                  <td>38,965</td>
+                                  <td>31,965</td>
+                                  <td>-7,965</td>
+                                  <td>88</td>
+                                  <td>68</td>
+                                  <td>-28</td>
+                                  <td>8</td>
+                                  <td>8</td>
+                                  <td>-2</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">단말거래량</span></h2>
+                    </div>
+
+                    <div className="main">
+                      <div className="column">
+
+                        <div className="o-data-table">
+                          <div className="table-container">
+                            <table className="table">
+                              <colgroup>
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                              </colgroup>
+
+                              <thead>
+                                <tr>
+                                  <th colSpan={3}>연도별</th>
+                                  <th colSpan={3}>월별</th>
+                                  <th colSpan={3}>일별</th>
+                                </tr>
+                                <tr>
+                                  <th>전연도</th>
+                                  <th>당해연도</th>
+                                  <th>전연동기</th>
+                                  <th>전월</th>
+                                  <th>당월</th>
+                                  <th>전월동기</th>
+                                  <th>전일</th>
+                                  <th>당일</th>
+                                  <th>전일동기</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <tr>
+                                  <td>38,965</td>
+                                  <td>31,965</td>
+                                  <td>-7,965</td>
+                                  <td>88</td>
+                                  <td>68</td>
+                                  <td>-28</td>
+                                  <td>8</td>
+                                  <td>8</td>
+                                  <td>-2</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">서버거래량</span></h2>
+                    </div>
+
+                    <div className="main">
+                      <div className="column">
+
+                        <div className="o-data-table">
+                          <div className="table-container">
+                            <table className="table">
+                              <colgroup>
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                              </colgroup>
+
+                              <thead>
+                                <tr>
+                                  <th colSpan={3}>연도별</th>
+                                  <th colSpan={3}>월별</th>
+                                  <th colSpan={3}>일별</th>
+                                </tr>
+                                <tr>
+                                  <th>전연도</th>
+                                  <th>당해연도</th>
+                                  <th>전연동기</th>
+                                  <th>전월</th>
+                                  <th>당월</th>
+                                  <th>전월동기</th>
+                                  <th>전일</th>
+                                  <th>당일</th>
+                                  <th>전일동기</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <tr>
+                                  <td>38,965</td>
+                                  <td>31,965</td>
+                                  <td>-7,965</td>
+                                  <td>88</td>
+                                  <td>68</td>
+                                  <td>-28</td>
+                                  <td>8</td>
+                                  <td>8</td>
+                                  <td>-2</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                   </div>
 
                 </div>
+              </div>
+            </TabPanel>
 
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
-                </div>
-              </form>
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
 
-              <div className="o-section">
-                <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">아직 미진행</span></h2>
-                </div>
+              <div className="o-grid">
+                <div className="column">
 
-                <div className="main _primary">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="table-container p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col className="wdth-10" />
-                          <col />
-                          <col />
-                          <col />
-                          <col className="wdth-auto" />
-                        </colgroup>
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">물류지원업무현황</span></h2>
+                    </div>
 
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요일</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴일내용</span></div></th>
-                          </tr>
-                        </thead>
+                    <div className="main">
+                      <div className="o-data-table">
+                        <div className="table-container">
+                          <table className="table">
+                            <colgroup span={6}></colgroup>
 
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                          </tr>
-                        </tbody>
+                            <thead>
+                              <tr>
+                                <th>업무구분</th>
+                                <th colSpan={5}>업무처리내용</th>
+                              </tr>
+                            </thead>
 
-                        <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-date">월</span></td>
-                            <td>
-                            {
-                              idx === 1 ?
-                              <span className="c-color-strong">휴일</span>
-                              :
-                              <></>
-                            }
-                            </td>
-                            <td className="g-start"></td>
-                          </tr>
-                        ))}
-                        </tbody>
-                      </table>
+                            <tbody>
+                              <tr>
+                                <th rowSpan={4}>중요용지</th>
+                                <th rowSpan={2}>구분</th>
+                                <th colSpan={3}>중요용지 배송</th>
+                                <th rowSpan={2}>어음&middot;수표 인자</th>
+                              </tr>
+                              <tr>
+                                <th colSpan={1}>서울</th>
+                                <th colSpan={1}>지방</th>
+                                <th colSpan={1}>계</th>
+                              </tr>
+                              <tr>
+                                <th colSpan={1}>영업점(수)</th>
+                                <td colSpan={1}>62</td>
+                                <td colSpan={1}>88</td>
+                                <td colSpan={1}>150</td>
+                                <td colSpan={1}>22</td>
+                              </tr>
+                              <tr>
+                                <th colSpan={1}>건</th>
+                                <td colSpan={1}>62</td>
+                                <td colSpan={1}>88</td>
+                                <td colSpan={1}>150</td>
+                                <td colSpan={1}>7,410</td>
+                              </tr>
+                              <tr>
+                                <th rowSpan={3}>용도품</th>
+                                <th colSpan={1}>구분</th>
+                                <th colSpan={1}>서울</th>
+                                <th colSpan={1}>지방</th>
+                                <th colSpan={1}>계</th>
+                                <th colSpan={1}>비고</th>
+                              </tr>
+                              <tr>
+                                <th colSpan={1}>영업점(수)</th>
+                                <td colSpan={1}>62</td>
+                                <td colSpan={1}>88</td>
+                                <td colSpan={1}>150</td>
+                                <td colSpan={1} rowSpan={2}>22 box</td>
+                              </tr>
+                              <tr>
+                                <th colSpan={1}>건</th>
+                                <td colSpan={1}>62</td>
+                                <td colSpan={1}>88</td>
+                                <td colSpan={1}>150</td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              <tr>
+                                <th rowSpan={3}>폐기중요용지<br />(본부접수기준)</th>
+                                <th>구분</th>
+                                <th>전일미처리</th>
+                                <th>접수</th>
+                                <th>접수완료</th>
+                                <th>미처리</th>
+                              </tr>
+                              <tr>
+                                <th colSpan={1}>영업점(수)</th>
+                                <td colSpan={1}></td>
+                                <td colSpan={1}>88</td>
+                                <td colSpan={1}>150</td>
+                                <td colSpan={1}></td>
+                              </tr>
+                              <tr>
+                                <th colSpan={1}>폐기수량(건)</th>
+                                <td colSpan={1}></td>
+                                <td colSpan={1}>88</td>
+                                <td colSpan={1}>150</td>
+                                <td colSpan={1}></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div className="o-data-table">
+                        <div className="table-container">
+                          <table className="table">
+                            <colgroup span={6}></colgroup>
+
+                            <thead>
+                              <tr>
+                                <th>업무구분</th>
+                                <th colSpan={5}>업무처리내용</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <th rowSpan={2}>토지보상</th>
+                                <th>전일미처리</th>
+                                <th>접수</th>
+                                <th>접수완료</th>
+                                <th>미처리</th>
+                                <th>영업점발송</th>
+                              </tr>
+                              <tr>
+                                <td colSpan={1}></td>
+                                <td colSpan={1}>8</td>
+                                <td colSpan={1}>7</td>
+                                <td colSpan={1}></td>
+                                <td colSpan={1}></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                      <div className="o-data-table">
+                        <div className="table-container">
+                          <table className="table">
+                            <colgroup span={5}></colgroup>
+
+                            <thead>
+                              <tr>
+                                <th>업무구분</th>
+                                <th colSpan={4}>업무처리내용</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <th rowSpan={8}>메일센터<br />업무내역</th>
+                                <th>우편발송</th>
+                                <td colSpan={2}>1,276</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>우편접수</th>
+                                <td colSpan={2}>84</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>행내외문서</th>
+                                <td colSpan={2}>84</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>여성시대</th>
+                                <td colSpan={2}>84</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>중요용지 투입</th>
+                                <td colSpan={2}>84</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>행내등기 처리</th>
+                                <td colSpan={2}>84</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>대여반출 반송</th>
+                                <td colSpan={2}>84</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>메일센터 총건수</th>
+                                <td colSpan={2}>9,484</td>
+                                <td>건</td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              <tr>
+                                <th rowSpan={5}>서울 중앙 우체국 접수 내역</th>
+                                <th>법원등기</th>
+                                <td colSpan={2}>1,276</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>일반등기</th>
+                                <td colSpan={2}>84</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>반송등기</th>
+                                <td colSpan={2}>19</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>후납우편</th>
+                                <td colSpan={2}>19</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>특급</th>
+                                <td colSpan={2}>19</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th colSpan={2}>용산우체국</th>
+                                <td colSpan={2}>26</td>
+                                <td>건</td>
+                              </tr>
+                              <tr>
+                                <th>기타</th>
+                                <th>본점수령</th>
+                                <td>-</td>
+                                <td>건</td>
+                                <th>압류</th>
+                              </tr>
+                              <tr>
+                                <th colSpan={2}>등기총건수</th>
+                                <td colSpan={2}>1,382</td>
+                                <td >1,007</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
                   </div>
+
                 </div>
               </div>
 
-            </SplitterPanel>
+            </TabPanel>
 
-            <SplitterPanel minSize={17.5} className="column">
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
 
-              <div className="o-section">
-                <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
-                </div>
+              <div className="o-grid">
+                <div className="column">
 
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">자금 현&middot;수송(자금중계) 내역</span></h2>
 
-                      <tbody>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`일자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`상태`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="m-checks">
-                              <InputRadio name="RADIO:T_10" label="휴일" defaultChecked />
-                              <InputRadio name="RADIO:T_10" label="영업일" />
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`휴일내용`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
+                      <div className="o-legend type-helper style-normal">
+                        <em className="label">(단위: 원)</em>
+                      </div>
+                    </div>
+
+                    <div className="main">
+                      <div className="column">
+
+                        <div className="o-data-table">
+                          <div className="table-container">
+                            <table className="table">
+                              <colgroup>
+                                {/* <col style={{ width: '25%' }} /> */}
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                                <col style={{ width: '' }} />
+                              </colgroup>
+
+                              <thead>
+                                <tr>
+                                  <th colSpan={3}>구분</th>
+                                  <th colSpan={2}>내용</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <tr>
+                                  <th rowSpan={6}>영업점</th>
+                                  <th rowSpan={3}>청구</th>
+                                  <th>원화</th>
+                                  <td>18</td>
+                                  <td>4,635,651,000</td>
+                                </tr>
+                                <tr>
+                                  <th>외화</th>
+                                  <td>18</td>
+                                  <td>4,635,651,000</td>
+                                </tr>
+                                <tr>
+                                  <th rowSpan={3}>불입</th>
+                                  <th colSpan={1}>서울</th>
+                                  <th colSpan={1}>지방</th>
+                                  <th colSpan={1}>계</th>
+                                </tr>
+                                <tr>
+                                  <th colSpan={1}>영업점(수)</th>
+                                  <td colSpan={1} className="g-end">62</td>
+                                  <td colSpan={1} className="g-end">88</td>
+                                  <td colSpan={1} className="g-end">150</td>
+                                  <td colSpan={1} className="g-end">22</td>
+                                </tr>
+                                <tr>
+                                  <th colSpan={1}>건</th>
+                                  <td colSpan={1} className="g-end">62</td>
+                                  <td colSpan={1} className="g-end">88</td>
+                                  <td colSpan={1} className="g-end">150</td>
+                                  <td colSpan={1} className="g-end">7,410</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
-            </SplitterPanel>
-          </Splitter>
+            </TabPanel>
+
+          </Tabs>
 
           <div className="div-footer">
             <div className="m-binds type-end">
