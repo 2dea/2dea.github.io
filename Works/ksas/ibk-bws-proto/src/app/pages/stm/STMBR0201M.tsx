@@ -167,7 +167,7 @@ function STMBR0201M() {
 
                 <div className="m-header">
                   <div className="o-length justify-start">
-                    <span className="head">3월 총 접수좌수</span>
+                    <span className="head">6월 총 접수좌수</span>
                     <em className="data">
                       <span className="value">8</span>
                       <span className="units">건</span>
@@ -177,12 +177,12 @@ function STMBR0201M() {
 
                   <div className="m-legend" aria-label="범례">
                     <span className="o-legend type-legend">
-                      <em className="o-legend-tag type-bullet theme-key1"><span className="tag">(당행)</span></em>
+                      <em className="o-legend-tag type-bullet theme-key-01"><span className="tag">(당행)</span></em>
                       <span className="label">당행</span>
                     </span>
 
                     <span className="o-legend type-legend">
-                      <em className="o-legend-tag type-bullet theme-key2"><span className="tag">(외부)</span></em>
+                      <em className="o-legend-tag type-bullet theme-key-00"><span className="tag">(외부)</span></em>
                       <span className="label">외부</span>
                     </span>
                   </div>
@@ -414,7 +414,7 @@ function STMBR0201M() {
                                 </div>
                                 <div className="fc-daygrid-day-events">
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -441,7 +441,7 @@ function STMBR0201M() {
                                   <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -466,7 +466,7 @@ function STMBR0201M() {
                                 </div>
                                 <div className="fc-daygrid-day-events">
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key2" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key2 { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-00" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-00 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -495,7 +495,7 @@ function STMBR0201M() {
                                   <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -522,7 +522,7 @@ function STMBR0201M() {
                                 </div>
                                 <div className="fc-daygrid-day-events">
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -551,7 +551,7 @@ function STMBR0201M() {
                                   <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-start fc-daygrid-event theme-key2" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.theme-key2 { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-daygrid-event theme-key-00" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.theme-key-00 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -576,7 +576,7 @@ function STMBR0201M() {
                                 </div>
                                 <div className="fc-daygrid-day-events">
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '1' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '1' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -605,7 +605,7 @@ function STMBR0201M() {
                                 </div>
                                 <div className="fc-daygrid-day-events">
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-end fc-daygrid-event theme-key2" style={{ '--lw': '3' } as React.CSSProperties}>{/* .fc-event-end.theme-key2 { @DEV } */}
+                                    <a className="fc-event fc-event-end fc-daygrid-event theme-key-00" style={{ '--lw': '3' } as React.CSSProperties}>{/* .fc-event-end.theme-key-00 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -632,7 +632,7 @@ function STMBR0201M() {
                                   <div className="fc-daygrid-event-harness"></div>
 
                                   <div className="fc-daygrid-event-harness">
-                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key1" style={{ '--lw': '1' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key1 { @DEV } */}
+                                    <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '1' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
                                           <div className="fc-event-time">09:30</div>
@@ -926,7 +926,76 @@ function STMBR0201M() {
                   </TabPanel>
 
                   <TabPanel className="m-schedule">
-                    목록
+                    <div className="schedule-container">
+                      <ul>
+                        {/* <li className="colgroup">
+                          <span className="col head"></span>
+                          <span className="col data"></span>
+                        </li> */}
+                        <li>
+                          <div className="head">
+                            <span className="dates">
+                              <span className="date month">06</span>
+                              <span className="date day">01</span>
+                              <span className="weekday day-sat">토요일</span>
+                            </span>
+                          </div>
+
+                          <div className="data">
+                            <div className="bodies">
+                              <ul className="o-timeline">
+                                <li>
+                                  <div className="tags">
+                                    <span className="time">09:00</span>
+                                    <span className="category">
+                                      <em className="chip theme-key-01"><span className="label">당행</span></em>
+                                    </span>
+                                  </div>
+                                  <div className="main">
+                                    <a href="javascript:" className="o-link _normal">당행</a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <span className="time">11:30</span>
+                                  <span className="category">
+                                    <em className="chip theme-key-00"><span className="label">외부</span></em>
+                                  </span>
+                                  <span className="main">
+                                    <a href="javascript:" className="o-link _normal">당행</a>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div className="head">
+                            <span className="dates">
+                              <span className="date month">04</span>
+                              <span className="date day">04</span>
+                              <span className="weekday day-sun">일요일</span>
+                            </span>
+                          </div>
+
+                          <div className="data"></div>
+                        </li>
+
+                        <li>
+                          <div className="head">
+                            <span className="dates">
+                              <span className="date month">06</span>
+                              <span className="date day">03</span>
+                              <span className="weekday">월요일</span>
+                            </span>
+                          </div>
+
+                          <div className="data">
+                            ddddd
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </TabPanel>
                 </div>
               </Tabs>

@@ -2052,6 +2052,40 @@
 .o-calendar .fc-daygrid-day-bottom  { display: flex; align-items: center; justify-content: center; gap: $gap-element-30; padding: III(1) var(--margin-inline); }
 
 
+.o-timeline  {  }
+.o-timeline .time  { font-size: $font-40; color: var(--color-text-30); }
+
+.o-timeline  { display: flex; flex-direction: column; }
+.o-timeline >*  { line-height: $line-abs-50; display: flex; min-height: 0; }
+.o-timeline >* >*  { flex: none; display: flex; min-width: 0; }
+.o-timeline >* >.main  { flex: 1; }
+
+
+.m-schedule  {
+  // --height: var()
+}
+.m-schedule .dates  { display: flex; align-items: center; gap: $gap-element-30; min-height: III(36); }
+.m-schedule .dates >*  { flex: none; font-size: $font-40; line-height: $line-40; min-width: 0; }
+.m-schedule .dates >:where(.date)  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; width: calc(1em * 22 / 16); }
+.m-schedule .dates >:where(.date:not(.day))  { width: calc(1em * 26 / 16); }
+.m-schedule .dates >:where(.date:not(.day)):after  { content: "."; }
+.m-schedule .dates >:where(.weekday)  { color: var(--color-text-30); }
+.m-schedule .dates >:where(.weekday.day-sat)  { color: var(--color-key1-70); }
+.m-schedule .dates >:where(.weekday.day-sun)  { color: var(--color-point-red); }
+
+.m-schedule .schedule-container  {  }
+.m-schedule .schedule-container >*  { display: table; table-layout: fixed; width: 100%; }
+.m-schedule .schedule-container >* >*  { display: table-row; vertical-align: top; }
+.m-schedule .schedule-container >* >* >*  { display: table-cell; vertical-align: inherit; }
+.m-schedule .schedule-container >* >* >.head  { width: calc(1em * 138 / 14); }
+
+.m-schedule .schedule-container  { border: $e10 solid var(--color-edge-40); }
+.m-schedule .schedule-container >*  { border-collapse: collapse; border: hidden; }
+.m-schedule .schedule-container >* >*  {  }
+.m-schedule .schedule-container >* >* >*  { padding: III(12) III(24) III(12) 0; border: 0 solid var(--color-edge-30); border-width: 0 0 $e10; }
+.m-schedule .schedule-container >* >* >:first-child  { padding-left: III(24); }
+
+
 
 
 /*
