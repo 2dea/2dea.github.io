@@ -3,25 +3,3 @@
 .o-section:not(.o-section *):not(.o-grid >.column >*)  {
   outline: thick solid Red;
 }
-
-.g-valign-super  { vertical-align: super; }
-.g-valign-sub  { vertical-align: sub; }
-.g-valign-txtbottom  { vertical-align: text-bottom; }
-.g-valign-txttop  { vertical-align: text-top; }
-.g-valign-bottom  { vertical-align: bottom; }
-.g-valign-top  { vertical-align: top; }
-.g-valign-center  { vertical-align: center; }
-
-
-.o-status-text:not(.style-inherit)  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; }
-.o-status-text:not(:only-child)  { margin-right: $gap-element-30; }
-
-.o-status-text.type-20  { color: var(--color-point-red); }
-.o-status-text.type-80  { color: var(--color-point-skyblue); }
-
-.o-data-table:not(td *) table >*  { position: relative; }
-.o-data-table:not(td *) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
-
-.o-data-table:not(td *) .subtotal-tcell  { font-weight: $bold-70; background: var(--color-ground2-skyblue-40); }
-
-.o-data-table +.o-data-table  { margin-top: $margin-section-40; }

@@ -194,7 +194,7 @@ function ADMOA0401M() {
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업 ID</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업ID</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록시각</span></div></th>

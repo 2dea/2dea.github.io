@@ -702,7 +702,7 @@ function ADMTI0101M() {
                     <div className="m-header">
                       <h2 className="o-heading level2"><span className="label">자금 현&middot;수송(자금중계) 내역</span></h2>
 
-                      <div className="o-legend type-helper style-normal">
+                      <div className="o-legend type-unit style-normal">
                         <em className="label">(단위: 원)</em>
                       </div>
                     </div>

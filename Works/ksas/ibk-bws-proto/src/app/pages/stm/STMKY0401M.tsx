@@ -286,7 +286,7 @@ function STMKY0401M() {
                               <td>
                               {
                                 idx === 1 ?
-                                  <span className="o-status-text type-20">위탁미지정</span>
+                                  <span className="o-status-text style-inherit type-20">위탁미지정</span>
                                 :
                                 idx === 3 ?
                                   <span className="o-status-text style-inherit type-80">위탁중</span>

@@ -256,13 +256,16 @@
   --color-point-yellow:         var(--design-point-yellow);
   --color-point-skyblue:        var(--design-point-skyblue);
 /* ### */
-  --color-theme-key00:          var(--design-background-heavy);
+  /* --color-theme-key00:          var(--design-background-heavy);
   --color-theme-key01:          var(--design-primary-normal);
   --color-theme-key02:          var(--design-point-red);
   --color-theme-key03:          var(--design-point-orange);
   --color-theme-key04:          var(--design-point-yellow);
   --color-theme-key05:          var(--design-grid-point);
-  --color-theme-key06:          var(--design-point-skyblue);
+  --color-theme-key06:          var(--design-point-skyblue); */
+
+  --color-legend-theme-00:      var(--color-ground-90);
+  --color-legend-theme-01:      var(--color-key1-40);
 
   --color-required:             var(--design-point-red);
   --color-delete:               var(--design-point-red);
@@ -605,6 +608,14 @@
 .g-center  { text-align: center !important; }
 .g-end  { text-align: right !important; text-align: end !important; }
 .g-start  { text-align: left !important; text-align: start !important; }
+
+.g-valign-super  { vertical-align: super; }
+.g-valign-sub  { vertical-align: sub; }
+.g-valign-txtbottom  { vertical-align: text-bottom; }
+.g-valign-txttop  { vertical-align: text-top; }
+.g-valign-bottom  { vertical-align: bottom; }
+.g-valign-top  { vertical-align: top; }
+.g-valign-center  { vertical-align: center; }
 
 .g-middle  { display: inline-flex; align-items: center; }
 

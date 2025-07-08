@@ -356,7 +356,7 @@ function ADMOA0201M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래결과</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류코드</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류일련번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">에러프로그래명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">에러프로그램명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">자산거래구분</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무거래코드</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무유형코드</span></div></th>
@@ -490,7 +490,7 @@ function ADMOA0201M() {
                           </th>
                           <td colSpan={1}></td>
                           <th colSpan={1}>
-                            <Label label={`에러프로그래명`} require={false} />
+                            <Label label={`에러프로그램명`} require={false} />
                           </th>
                           <td colSpan={1}>
                           </td>
