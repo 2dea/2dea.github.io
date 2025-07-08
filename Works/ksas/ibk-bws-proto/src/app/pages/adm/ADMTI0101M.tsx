@@ -151,6 +151,16 @@ function ADMTI0101M() {
                 </div>
               </div>
 
+              <div className="o-field">
+                <Label label={`관할업무센터`} require={false} />
+                <div className="fields">
+                  <div className="o-form _select">
+                    <XDropdown appendTo={'self'} className="bind" disabled />
+                    <i aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             <div className="binds">
@@ -220,7 +230,7 @@ function ADMTI0101M() {
                                   <th colSpan={3}>일별</th>
                                 </tr>
                                 <tr>
-                                  <th>전연도</th>
+                                  <th>전년도</th>
                                   <th>당해연도</th>
                                   <th>증감</th>
                                   <th>전월</th>
@@ -336,15 +346,15 @@ function ADMTI0101M() {
                                   <th colSpan={3}>일별</th>
                                 </tr>
                                 <tr>
-                                  <th>전연도</th>
+                                  <th>전년도</th>
                                   <th>당해연도</th>
-                                  <th>전연동기</th>
+                                  <th>전년동기</th>
                                   <th>전월</th>
                                   <th>당월</th>
-                                  <th>전월동기</th>
+                                  <th>전년동월</th>
                                   <th>전일</th>
                                   <th>당일</th>
-                                  <th>전일동기</th>
+                                  <th>전년동일</th>
                                 </tr>
                               </thead>
 
@@ -398,15 +408,15 @@ function ADMTI0101M() {
                                   <th colSpan={3}>일별</th>
                                 </tr>
                                 <tr>
-                                  <th>전연도</th>
+                                  <th>전년도</th>
                                   <th>당해연도</th>
-                                  <th>전연동기</th>
+                                  <th>전년동기</th>
                                   <th>전월</th>
                                   <th>당월</th>
-                                  <th>전월동기</th>
+                                  <th>전년동월</th>
                                   <th>전일</th>
                                   <th>당일</th>
-                                  <th>전일동기</th>
+                                  <th>전년동일</th>
                                 </tr>
                               </thead>
 
@@ -481,9 +491,12 @@ function ADMTI0101M() {
                                 <th colSpan={1}>건</th>
                                 <td colSpan={1}>62</td>
                                 <td colSpan={1}>88</td>
-                                <td colSpan={1}>150</td>
-                                <td colSpan={1}>7,410</td>
+                                <td colSpan={1}><strong>150</strong></td>
+                                <td colSpan={1}><strong>7,410</strong></td>
                               </tr>
+                            </tbody>
+
+                            <tbody>
                               <tr>
                                 <th rowSpan={3}>용도품</th>
                                 <th colSpan={1}>구분</th>
@@ -497,13 +510,13 @@ function ADMTI0101M() {
                                 <td colSpan={1}>62</td>
                                 <td colSpan={1}>88</td>
                                 <td colSpan={1}>150</td>
-                                <td colSpan={1} rowSpan={2}>22 box</td>
+                                <td colSpan={1} rowSpan={2}><strong>22 box</strong></td>
                               </tr>
                               <tr>
                                 <th colSpan={1}>건</th>
                                 <td colSpan={1}>62</td>
                                 <td colSpan={1}>88</td>
-                                <td colSpan={1}>150</td>
+                                <td colSpan={1}><strong>150</strong></td>
                               </tr>
                             </tbody>
 
@@ -526,8 +539,8 @@ function ADMTI0101M() {
                               <tr>
                                 <th colSpan={1}>폐기수량(건)</th>
                                 <td colSpan={1}></td>
-                                <td colSpan={1}>88</td>
-                                <td colSpan={1}>150</td>
+                                <td colSpan={1}><strong>88</strong></td>
+                                <td colSpan={1}><strong>150</strong></td>
                                 <td colSpan={1}></td>
                               </tr>
                             </tbody>
@@ -559,8 +572,8 @@ function ADMTI0101M() {
                               <tr>
                                 <td colSpan={1}></td>
                                 <td colSpan={1}>8</td>
-                                <td colSpan={1}>7</td>
-                                <td colSpan={1}></td>
+                                <td colSpan={1}><strong>7</strong></td>
+                                <td colSpan={1}><strong>-</strong></td>
                                 <td colSpan={1}></td>
                               </tr>
                             </tbody>
@@ -619,14 +632,14 @@ function ADMTI0101M() {
                               </tr>
                               <tr>
                                 <th>메일센터 총건수</th>
-                                <td colSpan={2}>9,484</td>
+                                <td colSpan={2}><strong>9,484</strong></td>
                                 <td>건</td>
                               </tr>
                             </tbody>
 
                             <tbody>
                               <tr>
-                                <th rowSpan={5}>서울 중앙 우체국 접수 내역</th>
+                                <th rowSpan={5}>서울 중앙 우체국<br />접수 내역</th>
                                 <th>법원등기</th>
                                 <td colSpan={2}>1,276</td>
                                 <td>건</td>
@@ -666,7 +679,7 @@ function ADMTI0101M() {
                               <tr>
                                 <th colSpan={2}>등기총건수</th>
                                 <td colSpan={2}>1,382</td>
-                                <td >1,007</td>
+                                <td ><strong>1,007</strong></td>
                               </tr>
                             </tbody>
                           </table>
@@ -711,43 +724,48 @@ function ADMTI0101M() {
 
                               <thead>
                                 <tr>
-                                  <th colSpan={3}>구분</th>
+                                  <th colSpan={3} rowSpan={2}>구분</th>
                                   <th colSpan={2}>내용</th>
+                                </tr>
+                                <tr>
+                                  <th>영업점수</th>
+                                  <th>금액</th>
                                 </tr>
                               </thead>
 
                               <tbody>
                                 <tr>
                                   <th rowSpan={6}>영업점</th>
-                                  <th rowSpan={3}>청구</th>
-                                  <th>원화</th>
+                                  <td rowSpan={3}>청구</td>
+                                  <td>원화</td>
                                   <td>18</td>
                                   <td>4,635,651,000</td>
                                 </tr>
                                 <tr>
-                                  <th>외화</th>
+                                  <td>외화</td>
+                                  <td>18</td>
+                                  <td>4,635,651,000</td>
+                                </tr>
+                                <tr className="subtotal-trow">
+                                  <th className="subtotal-tcell">소계</th>
+                                  <td className="subtotal-tcell">18</td>
+                                  <td className="subtotal-tcell">4,635,651,000</td>
+                                </tr>
+                                <tr>
+                                  <td rowSpan={3}>불입</td>
+                                  <td>원화</td>
                                   <td>18</td>
                                   <td>4,635,651,000</td>
                                 </tr>
                                 <tr>
-                                  <th rowSpan={3}>불입</th>
-                                  <th colSpan={1}>서울</th>
-                                  <th colSpan={1}>지방</th>
-                                  <th colSpan={1}>계</th>
+                                  <td>외화</td>
+                                  <td>18</td>
+                                  <td>4,635,651,000</td>
                                 </tr>
-                                <tr>
-                                  <th colSpan={1}>영업점(수)</th>
-                                  <td colSpan={1} className="g-end">62</td>
-                                  <td colSpan={1} className="g-end">88</td>
-                                  <td colSpan={1} className="g-end">150</td>
-                                  <td colSpan={1} className="g-end">22</td>
-                                </tr>
-                                <tr>
-                                  <th colSpan={1}>건</th>
-                                  <td colSpan={1} className="g-end">62</td>
-                                  <td colSpan={1} className="g-end">88</td>
-                                  <td colSpan={1} className="g-end">150</td>
-                                  <td colSpan={1} className="g-end">7,410</td>
+                                <tr className="subtotal-trow">
+                                  <th className="subtotal-tcell">소계</th>
+                                  <td className="subtotal-tcell">18</td>
+                                  <td className="subtotal-tcell">4,635,651,000</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -765,13 +783,6 @@ function ADMTI0101M() {
 
           </Tabs>
 
-          <div className="div-footer">
-            <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="저장" className="_solid-primary" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </>

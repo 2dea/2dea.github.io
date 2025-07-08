@@ -196,7 +196,7 @@ function BSPAQ0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`인도구분`} require={false} />
+                    <Label label={`인수구분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />

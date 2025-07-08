@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 폐기 > 일괄폐기미처리부점조회
+ * @description 공통·결재 > 운영관리 > 거래로그관리
  */
 
 // dependency
@@ -35,17 +35,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function HSPDU0701M() {
-  // Dialog
-  // const [visible, setVisible] = useState<boolean>(true);
-
+function ADMOA0101M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
-  const viewimageOverlay1 = useRef(null);
-  const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '일괄폐기미처리부점조회' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '운영관리' }, { label: '거래로그관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +94,7 @@ function HSPDU0701M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">일괄폐기미처리부점조회</span>
+                <span className="label">거래로그관리</span>
 
                 <FavoriteDiv />
               </h1>
@@ -113,13 +108,6 @@ function HSPDU0701M() {
               </div>
             </div>
 
-            <div className="m-binds type-end">
-              <div className="group _utility">
-                <div className="m-print-binds">
-                  <CommonButton label="출력" className="_texted" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -131,14 +119,28 @@ function HSPDU0701M() {
         <div className="div-contents">
           <div className="o-grid">
             <div className="column">
-
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={true} />
+                  <div className="o-field colspan-2">
+                    <Label label={`거래일자`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
+                      <div className="o-form _input type-date wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <span className="seps type-tilde">~</span>
+                      <div className="o-form _input type-date wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`거래부점`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
@@ -149,10 +151,43 @@ function HSPDU0701M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`업무지원`} require={false} />
+                    <Label label={`거래자`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
+                      <div className="o-form _input">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`거래코드`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`거래서비스명`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`오류내용`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -167,7 +202,7 @@ function HSPDU0701M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">폐기미처리부점조회</span></h2>
+                  <h2 className="o-heading level2"><span className="label">거래로그관리</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -180,13 +215,14 @@ function HSPDU0701M() {
                   <div className="m-binds">
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
 
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -197,39 +233,59 @@ function HSPDU0701M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-auto" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래시각</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래서비스명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">연계 IF ID</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류메시지코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류메시지내용</span></div></th>
+                          </tr>
+                          <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서무계잔량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">창구잔량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                        {[...Array(24)].map((e, idx) => (
-                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>0022</td>
-                            <td className="g-start">프로세스혁신</td>
-                            <td className="g-end">0</td>
-                            <td className="g-end">1</td>
-                            <td className="g-end">1</td>
-                            <td className="g-start"></td>
-                          </tr>
-                        ))}
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td>AG20050</td>
+                              <td>계정계</td>
+                              <td>AG20050</td>
+                              <td>10050</td>
+                              <td className="g-start">부산</td>
+                              <td>0873</td>
+                              <td>홍길동</td>
+                              <td className="g-start"></td>
+                              <td className="g-start"></td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -238,14 +294,11 @@ function HSPDU0701M() {
               </div>
 
             </div>
-
-            <div className="column"></div>
           </div>
         </div>
-        {/* <!-- // Contents { @DEV } --> */}
       </div>
     </>
   );
 }
 
-export default HSPDU0701M;
+export default ADMOA0101M;

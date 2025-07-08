@@ -455,6 +455,16 @@ import ADMTI0101M from 'app/pages/adm/ADMTI0101M';      // 공통·결재 > 거�
 
 import ADMPH0101M from 'app/pages/adm/ADMPH0101M';      // 공통·결재 > 휴일관리     > 영업일/휴일등록
 
+import ADMOA0101M from 'app/pages/adm/ADMOA0101M';      // 공통·결재 > 운영관리     > 거래로그관리
+import ADMOA0201M from 'app/pages/adm/ADMOA0201M';      // 공통·결재 > 운영관리     > 전문로그관리
+import ADMOA0301M from 'app/pages/adm/ADMOA0301M';      // 공통·결재 > 운영관리     > 원장수정관리
+import ADMOA0401M from 'app/pages/adm/ADMOA0401M';      // 공통·결재 > 운영관리     > 배치모니터링관리
+
+import ADMRC0101M from 'app/pages/adm/ADMRC0101M';      // 공통·결재 > 대사관리	     > 중요용지사용내역대사
+import ADMRC0201M from 'app/pages/adm/ADMRC0201M';      // 공통·결재 > 대사관리	     > 중요용지잔량대사
+import ADMRC0301M from 'app/pages/adm/ADMRC0301M';      // 공통·결재 > 대사관리	     > 창구로인도(비호스트)
+import ADMRC0401M from 'app/pages/adm/ADMRC0401M';      // 공통·결재 > 대사관리	     > 대금정산모니터링
+
 function ProtoRoutes() {
   return useRoutes([
     {
@@ -924,6 +934,16 @@ function ProtoRoutes() {
         { path: 'ADMAM0101M',   element: <ADMAM0101M /> },
         { path: 'ADMAM0101P01', element: <ADMAM0101P01 /> },
         { path: 'ADMPH0101M',   element: <ADMPH0101M /> },
+
+        { path: 'ADMOA0101M',   element: <ADMOA0101M /> },
+        { path: 'ADMOA0201M',   element: <ADMOA0201M /> },
+        { path: 'ADMOA0301M',   element: <ADMOA0301M /> },
+        { path: 'ADMOA0401M',   element: <ADMOA0401M /> },
+
+        { path: 'ADMRC0101M',   element: <ADMRC0101M /> },
+        { path: 'ADMRC0201M',   element: <ADMRC0201M /> },
+        { path: 'ADMRC0301M',   element: <ADMRC0301M /> },
+        { path: 'ADMRC0401M',   element: <ADMRC0401M /> },
       ],
     },
   ]);

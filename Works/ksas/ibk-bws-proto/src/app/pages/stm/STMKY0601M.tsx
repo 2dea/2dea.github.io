@@ -169,6 +169,16 @@ function STMKY0601M() {
                   </div>
 
                   <div className="o-field">
+                    <Label label={`구분`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
                     <Label label={`열쇠종류`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
@@ -739,6 +749,11 @@ function STMKY0601M() {
                                   <col />
                                   <col />
                                   <col />
+                                  <col />
+                                  <col />
+                                  <col />
+                                  <col />
+                                  <col />
                                 </colgroup>
 
                                 <thead className="p-datatable-thead">
@@ -748,9 +763,9 @@ function STMKY0601M() {
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠종류</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                                     <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                                    <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위탁신청부점(상대부점)</span></div></th>
-                                    <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위탁보관부점(우리부점)</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위수탁관련비고</span></div></th>
+                                    <th colSpan={8} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위탁신청부점(상대부점)</span></div></th>
+                                    <th colSpan={7} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">위탁보관부점(우리부점)</span></div></th>
+                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                                   </tr>
                                   <tr>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
@@ -758,17 +773,22 @@ function STMKY0601M() {
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠상태</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소일자</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령일자</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠상태</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                                   </tr>
                                 </thead>
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={16}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                    <td colSpan={21}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -785,11 +805,16 @@ function STMKY0601M() {
                                     <td className="g-start">부산</td>
                                     <td>10000</td>
                                     <td>홍길동</td>
+                                    <td>정상</td>
+                                    <td>결재승인</td>
+                                    <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td><span className="o-digit type-date">2025-12-25</span></td>
                                     <td>0465</td>
                                     <td className="g-start">부산</td>
                                     <td>10000</td>
                                     <td>홍길동</td>
+                                    <td>정상</td>
+                                    <td>결재승인</td>
                                     <td className="g-start">재수령 처리 예정</td>
                                   </tr>
                                 ))}

@@ -1,0 +1,782 @@
+/**
+ * @description 공통·결재 > 대사관리 > 대금정산모니터링
+ */
+
+// dependency
+import React, { useRef, useState } from 'react';
+
+// components
+// import '@modules/Index';
+import FavoriteDiv from 'app/shared/layouts/Favorite';
+import ConsultsDiv from 'app/shared/layouts/Consults';
+import Icon from 'app/shared/modules/OIcon';
+import Label from 'app/shared/modules/OLabel';
+import CommonButton from 'app/shared/modules/OButton';
+import ImageButton from 'app/shared/modules/OImageButton';
+import InputCheck from 'app/shared/modules/OInputCheck';
+import InputRadio from 'app/shared/modules/OInputRadio';
+import XDropdown from 'app/shared/modules/XDropdown';
+import XMultiSelect from 'app/shared/modules/XMultiSelect';
+import { Dialog } from 'primereact/dialog';
+import { OverlayPanel } from 'primereact/overlaypanel';
+import { Tooltip } from 'primereact/tooltip';
+import { MenuItem } from 'primereact/menuitem';
+import { BreadCrumb } from 'primereact/breadcrumb';
+import { InputText } from 'primereact/inputtext';
+import { InputNumber } from 'primereact/inputnumber';
+import { AutoComplete } from 'primereact/autocomplete';
+import { addLocale } from 'primereact/api';
+import { Nullable } from 'primereact/ts-helpers';
+import { Calendar } from 'primereact/calendar';
+import { InputTextarea } from 'primereact/inputtextarea';
+import { RadioButton, RadioButtonChangeEvent } from 'primereact/radiobutton';
+import { Checkbox } from 'primereact/checkbox';
+import { DataTable } from 'primereact/datatable';
+import { Splitter, SplitterPanel } from 'primereact/splitter';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
+function ADMRC0401M() {
+  // OverlayPanel
+  const viewimageOverlay0 = useRef(null);
+
+  // BreadCrumb
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '대사관리' }, { label: '대금정산모니터링' }];
+
+  // InputText
+  const [value, setValue] = useState<string>('');
+
+  // InputNumber
+  const [InputNumberValue, setInputNumberValue] = useState(0);
+
+  // AutoComplete
+  const [AutoCompleteValue, setAutoCompleteValue] = useState('');
+  const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
+  const AutoCompleteSearch = (evt) => {
+    setAutoCompleteItems([...Array(10).keys()].map(item => evt.query + '-' + item));
+  };
+  const itemTemplate = (item) => {
+    return (
+      <>
+        <span className="p-autocomplete-cell">[0001] 홍길동</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">부장</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">[0031] 을지6가</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">0031</span>
+        <span className="p-autocomplete-cell sep">|</span>
+        <span className="p-autocomplete-cell">[1111] 을지6가</span>
+      </>
+    );
+  };
+
+  // Calendar
+  addLocale('ko', {
+    firstDayOfWeek: 0,
+    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+    monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+  });
+  const [Date, setDate] = useState<Nullable<Date>>(null);
+  const [Time, setTime] = useState(null);
+
+  // RadioButton
+  const [ingredient, setIngredient] = useState<string>('');
+
+  // Checkbox
+  const [checked, setChecked] = useState<boolean>(false);
+
+  return (
+    <>
+      <div className="roles" data-div-role="0">
+        <div className="div-header">
+          <div className="main">
+            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+
+            <div className="m-title">
+              <h1 className="o-heading level1">
+                <span className="label">대금정산모니터링</span>
+
+                <FavoriteDiv />
+              </h1>
+            </div>
+          </div>
+
+          <div className="binds">
+            <div className="m-binds type-start">
+              <div className="group _assistive">
+                <CommonButton label="도움말" className="_normal" icon="help" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* <!-- /* Consults { @DEV } --> */}
+        <ConsultsDiv visible={false} heading="문의" divName="안전관리팀" telNumber="0000" asideLabel="반드시 조회 후 신청해주세요." />
+        {/* <!-- // Consults { @DEV } --> */}
+
+        {/* <!-- /* Contents { @DEV } --> */}
+        <div className="div-contents">
+          <form className="m-filter-form">
+            <div className="fieldset">
+
+              <div className="o-field colspan-2">
+                <Label label={`검색기준`} require={true} />
+                <div className="fields">
+                  <div className="o-form _select mode-required wdth-50">
+                    <XDropdown appendTo={'self'} className="bind" />
+                    <i aria-hidden="true"></i>
+                  </div>
+
+                  <div className="o-form _select mode-required wdth-50">
+                    <XDropdown appendTo={'self'} className="bind" />
+                    <i aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-field">
+                <Label label={`기준일자`} require={true} />
+                <div className="fields">
+                  <div className="o-form _input type-date mode-required wdth-50">
+                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                    <i aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="binds">
+              <CommonButton label="조회" className="_inquire" />
+            </div>
+          </form>
+
+          <Tabs className="m-tabs react-tabs" defaultIndex={3}>
+            <div className="m-tab type2">
+              <TabList className="lists">
+                <Tab className="link"><span className="label">정산(전/후)금액 비교</span></Tab>
+                <Tab className="link"><span className="label">정산(전/후)상세 비교</span></Tab>
+                <Tab className="link"><span className="label">기타대금검증</span></Tab>
+                <Tab className="link"><span className="label">비목별상세</span></Tab>
+              </TabList>
+            </div>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">부점별 신청내역</span></h2>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="table-container p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">달력</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종인수일자</span></div></th>
+                                <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송지정보</span></div></th>
+                              </tr>
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">벽걸이(3단)</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">벽걸이(일반)</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">탁상</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배송지주소</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
+                              <tr className="p-datatable-emptymessage">
+                                <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                            {[...Array(24)].map((e, idx) => (
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td className="g-end">50</td>
+                                <td className="g-end">50</td>
+                                <td className="g-end">100</td>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td><span className="o-digit type-tel">010-1234-5678</span></td>
+                                <td>2210</td>
+                                <td className="g-start">서울특별시 서초구 서초대로 77길 17</td>
+                              </tr>
+                            ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </TabPanel>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">정산(전/후)상세 비교</span></h2>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-body-5i">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="table-container p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">자료구분</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비목코드</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비목명</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본/영구분</span></div></th>
+                                <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경 전</span></div></th>
+                                <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경 후</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">차액</span></div></th>
+                              </tr>
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업일시</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행환수액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업일시</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행환수액</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
+                              <tr className="p-datatable-emptymessage">
+                                <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                            {[...Array(24)].map((e, idx) => (
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td>{idx + 1}</td>
+                                <td>11-인도</td>
+                                <td>0465</td>
+                                <td className="g-start">소모품비</td>
+                                <td></td>
+                                <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+                                <td className="g-end">1,000,050</td>
+                                <td className="g-end">1,000,050</td>
+                                <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+                                <td className="g-end">0</td>
+                                <td className="g-end">0</td>
+                                <td className="g-end">1,000,050</td>
+                              </tr>
+                            ))}
+                            </tbody>
+
+                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                              <tr className="sumtotal-trow">
+                                <td colSpan={6} className="sumtotal-tcell">합계</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
+                                <td className="sumtotal-tcell"></td>
+                                <td className="sumtotal-tcell g-end">0</td>
+                                <td className="sumtotal-tcell g-end">0</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
+                              </tr>
+                            </tfoot>
+
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-section">
+
+                    <div className="main">
+                      <form className="m-data-form">
+                        <table className="table">
+                          <colgroup>
+                            <col className="head" />
+                            <col className="data" />
+                            <col className="head" />
+                            <col className="data" />
+                          </colgroup>
+
+                          <tbody>
+                            <tr>
+                              <th colSpan={1}>
+                                <Label label={`정산금액 합계`} require={false} />
+                              </th>
+                              <td colSpan={1}>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input g-end wdth-70">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <th colSpan={1}>
+                                <Label label={`전/후 비교 차액`} require={false} />
+                              </th>
+                              <td colSpan={1}>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input g-end wdth-70">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </form>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </TabPanel>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">용도품 출금 내역 vs 기타 정산자료 생성 확인 (기준년도 내 출금 후 미입금 내역)</span></h2>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-body-3i">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="table-container p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                                <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">용도품 출금 내역(물품구매대금)</span></div></th>
+                                <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타정산 내역(부점별 정산자료 생성)</span></div></th>
+                              </tr>
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계정코드</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">항목코드(명)</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정정일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타정산번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산구분</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산(입금)금액</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
+                              <tr className="p-datatable-emptymessage">
+                                <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                            {[...Array(24)].map((e, idx) => (
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td>{idx + 1}</td>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td>20251111</td>
+                                <td>피복비</td>
+                                <td className="g-end">1,000</td>
+                                <td>기타</td>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td>20250010000</td>
+                                <td>정산대기</td>
+                                <td>업체직배송정산</td>
+                                <td className="g-end">700</td>
+                              </tr>
+                            ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">해당 기준분기 기타정산 내역</span></h2>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-body-3i">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="table-container p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col className="wdth-10" />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                                <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">용도품 출금 내역(물품구매대금)</span></div></th>
+                                <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타정산 내역(부점별 정산자료 생성)</span></div></th>
+                              </tr>
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계정코드</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">항목코드(명)</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정정일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타정산번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산구분</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산(입금)금액</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
+                              <tr className="p-datatable-emptymessage">
+                                <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                              {[...Array(24)].map((e, idx) => (
+                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                  <td><InputCheck label="선택" labelHidden /></td>
+                                  <td>{idx + 1}</td>
+                                  <td><span className="o-digit type-date">2025-12-25</span></td>
+                                  <td>20251111</td>
+                                  <td>피복비</td>
+                                  <td className="g-end">1,000</td>
+                                  <td>기타</td>
+                                  <td><span className="o-digit type-date">2025-12-25</span></td>
+                                  <td>20250010000</td>
+                                  <td>정산대기</td>
+                                  <td>업체직배송정산</td>
+                                  <td className="g-end">700</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="div-footer">
+                <div className="m-binds type-end">
+
+                  <div className="group _primary">
+                    <CommonButton label="정산완료" className="_solid-primary" />
+                  </div>
+
+                </div>
+              </div>
+            </TabPanel>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">본부 영업점 정산합계(소모품비)</span></h2>
+                    </div>
+
+                    <div className="main _primary rows-auto">
+                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                        <div className="table-container">
+                          <table>
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col style={{ width: '15%' }} />
+                              <col style={{ width: '15%' }} />
+                              <col style={{ width: '15%' }} />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th>구분</th>
+                                <th>종류</th>
+                                <th>총신청수량</th>
+                                <th>영업점배송수량</th>
+                                <th>고객배송수량</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td>A</td>
+                                <td className="g-start">벽걸이달력(3단)</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="tcell-strong g-end">999</td>
+                              </tr>
+                              <tr>
+                                <td>B</td>
+                                <td className="g-start">벽걸이달력(일반)</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="tcell-strong g-end">999</td>
+                              </tr>
+                              <tr>
+                                <td>C</td>
+                                <td className="g-start">탁상달력</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="tcell-strong g-end">999</td>
+                              </tr>
+                            </tbody>
+
+                            <tfoot className="sumtotal-tfoot">
+                              <tr className="sumtotal-trow">
+                                <td colSpan={2}>합계</td>
+                                <td className="g-end">9,999</td>
+                                <td className="g-end">9,999</td>
+                                <td className="sumtotal-tcell-strong g-end">9,999</td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">폐기미처리부점조회</span></h2>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div className="main _primary rows-auto">
+                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                        <div className="table-container">
+                          <table>
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col style={{ width: '15%' }} />
+                              <col style={{ width: '15%' }} />
+                              <col style={{ width: '15%' }} />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th>구분</th>
+                                <th>종류</th>
+                                <th>총신청수량</th>
+                                <th>영업점배송수량</th>
+                                <th>고객배송수량</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td>B</td>
+                                <td className="g-start">벽걸이달력(일반)</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="tcell-strong g-end">999</td>
+                              </tr>
+                              <tr>
+                                <td>C</td>
+                                <td className="g-start">탁상달력</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="tcell-strong g-end">999</td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+
+                            <tfoot className="sumtotal-tfoot">
+                              <tr className="sumtotal-trow">
+                                <td colSpan={2}>합계</td>
+                                <td className="g-end">9,999</td>
+                                <td className="g-end">9,999</td>
+                                <td className="sumtotal-tcell-strong g-end">9,999</td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="div-footer">
+                <div className="m-binds type-end">
+
+                  <div className="group _primary">
+                    <CommonButton label="피벗다운로드" className="_solid-primary" />
+                    <CommonButton label="피벗생성" className="_solid-primary" />
+                  </div>
+
+                </div>
+              </div>
+            </TabPanel>
+
+          </Tabs>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default ADMRC0401M;

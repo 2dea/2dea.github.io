@@ -107,12 +107,6 @@ function ADMPH0101M() {
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
-
-            {/* <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="저장" className="_solid-primary" />
-              </div>
-            </div> */}
           </div>
         </div>
 

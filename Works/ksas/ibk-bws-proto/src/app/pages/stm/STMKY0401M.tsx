@@ -241,9 +241,6 @@ function STMKY0401M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -255,8 +252,8 @@ function STMKY0401M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠종류</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                             <th rowSpan={2} className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">위탁수량</span></div></th>
-                            <th colSpan={8} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요청부점(우리부점)</span></div></th>
-                            <th colSpan={7} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보관부점(상대부점)</span></div></th>
+                            <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요청부점(우리부점)</span></div></th>
+                            <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보관부점(상대부점)</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                           </tr>
                           <tr>
@@ -265,22 +262,19 @@ function STMKY0401M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠상태</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠상태</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={24}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={21}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -329,15 +323,12 @@ function STMKY0401M() {
                               <td className="g-start">프로세스혁신부</td>
                               <td>10000</td>
                               <td>홍길동</td>
-                              <td>정상</td>
                               <td>결재승인</td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>0465</td>
                               <td className="g-start">프로세스혁신부</td>
                               <td>10000</td>
                               <td>홍길동</td>
-                              <td>정상</td>
                               <td>결재승인</td>
                               <td className="g-start">재결재필요</td>
                             </tr>
