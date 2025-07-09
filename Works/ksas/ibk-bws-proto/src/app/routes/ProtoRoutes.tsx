@@ -311,6 +311,7 @@ import STMBR0101P01 from 'app/pages/stm/STMBR0101P01';   // 재난·안전관리
 import STMBR0101P03 from 'app/pages/stm/STMBR0101P03';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)배차정보등록
 import STMBR0101P02 from 'app/pages/stm/STMBR0101P02';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)배차결과
 import STMBR0201M from 'app/pages/stm/STMBR0201M';       // 재난·안전관리 > 버스배차신청             > 배차일정표
+import STMBR0201P01 from 'app/pages/stm/STMBR0201P01';   // 재난·안전관리 > 버스배차신청             > 배차일정표 ~ (LP)일정더보기
 import STMBR0201P02 from 'app/pages/stm/STMBR0201P02';   // 재난·안전관리 > 버스배차신청             > 배차일정표 ~ (LP)일정상세보기
 import STMBR0301M from 'app/pages/stm/STMBR0301M';       // 재난·안전관리 > 버스배차신청             > 배차집계
 import STMBR0301P01 from 'app/pages/stm/STMBR0301P01';   // 재난·안전관리 > 버스배차신청             > 배차집계  ~ (LP)단가표
@@ -376,6 +377,8 @@ import BSSLQ0101P01 from 'app/pages/bss/BSSLQ0101P01'; // 영업지원 > 대량�
 import BSSLQ0101P02 from 'app/pages/bss/BSSLQ0101P02'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)대량신규승인취소
 import BSSLQ0101P03 from 'app/pages/bss/BSSLQ0101P03'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)업무완료
 import BSSLQ0101P04 from 'app/pages/bss/BSSLQ0101P04'; // 영업지원 > 대량신규               > 대량신규승인 ~ (LP)반려좌수상세보기
+import BSSLQ0301M from 'app/pages/bss/BSSLQ0301M';     // 영업지원 > 대량신규               > 대량신규현황
+import BSSLQ0301P01 from 'app/pages/bss/BSSLQ0301P01'; // 영업지원 > 대량신규               > 대량신규현황 ~ (LP)대량신규현황
 
 
 import BSSRM0101M from 'app/pages/bss/BSSRM0101M';     // 영업지원 > 토지보상우편물         > 토지보상우편물
@@ -786,7 +789,7 @@ function ProtoRoutes() {
         { path: 'STMBR0101P02', element: <STMBR0101P02 /> },
         { path: 'STMBR0101P03', element: <STMBR0101P03 /> },
         { path: 'STMBR0201M',   element: <STMBR0201M /> },
-
+        { path: 'STMBR0201P01', element: <STMBR0201P01 /> },
         { path: 'STMBR0201P02', element: <STMBR0201P02 /> },
         { path: 'STMBR0301M',   element: <STMBR0301M /> },
         { path: 'STMBR0301P01', element: <STMBR0301P01 /> },
@@ -863,6 +866,8 @@ function ProtoRoutes() {
         { path: 'BSSLQ0101P02', element: <BSSLQ0101P02 /> },
         { path: 'BSSLQ0101P03', element: <BSSLQ0101P03 /> },
         { path: 'BSSLQ0101P04', element: <BSSLQ0101P04 /> },
+        { path: 'BSSLQ0301M',   element: <BSSLQ0301M /> },
+        { path: 'BSSLQ0301P01', element: <BSSLQ0301P01 /> },
 
         { path: 'BSSRM0101M',   element: <BSSRM0101M /> },
         { path: 'BSSRM0101P01', element: <BSSRM0101P01 /> },

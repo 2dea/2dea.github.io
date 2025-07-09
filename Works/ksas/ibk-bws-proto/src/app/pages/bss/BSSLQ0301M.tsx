@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 버스배차신청 > 배차일정표
+ * @description 영업지원 > 대량신규 > 대량신규현황
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMBR0201M() {
+function BSSLQ0301M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -45,7 +45,7 @@ function STMBR0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '배차일정표' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '대량신규현황' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMBR0201M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">배차일정표</span>
+                <span className="label">대량신규현황</span>
 
                 <FavoriteDiv />
               </h1>
@@ -1117,4 +1117,4 @@ function STMBR0201M() {
   );
 }
 
-export default STMBR0201M;
+export default BSSLQ0301M;
