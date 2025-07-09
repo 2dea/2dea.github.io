@@ -93,6 +93,8 @@ function DEX() {
       {/*
       스케줄
 
+      2025-07/10 목: 오전 [영업지원] - 서식장부관리 및 수정사항
+
       2025-07/08 화 수정사항
         #99
 
@@ -416,7 +418,7 @@ about:blank
                             <div className="m-mixed-field">
 
                               <div className="o-field">
-                                <Label label={`상시(인원수)`} require={false} />
+                                <Label label={`상시(인원수)`} require={true} />
                                 <div className="fields">
                                   <div className="o-form _input mode-required wdth-50 g-end">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />

@@ -471,6 +471,7 @@ import ADMRC0401P01 from 'app/pages/adm/ADMRC0401P01';  // 공통·결재 > 대�
 
 import ADMRC0501M from 'app/pages/adm/ADMRC0501M';      // 공통·결재 > 대사관리	     > 수입인지정산모니터링
 import ADMNT0101M from 'app/pages/adm/ADMNT0101M';      // 공통·결재 > 공지사항
+import ADMQA0101M from 'app/pages/adm/ADMQA0101M';      // 공통·결재 > Q/A
 
 function ProtoRoutes() {
   return useRoutes([
@@ -957,6 +958,8 @@ function ProtoRoutes() {
 
         { path: 'ADMRC0501M',   element: <ADMRC0501M /> },
         { path: 'ADMNT0101M',   element: <ADMNT0101M /> },
+
+        { path: 'ADMQA0101M',   element: <ADMQA0101M /> },
       ],
     },
   ]);
