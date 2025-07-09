@@ -35,12 +35,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function ADMRC0401M() {
+function ADMRC0501M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '대사관리' }, { label: '대금정산모니터링' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '대사관리' }, { label: '수입인지정산모니터링' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -157,8 +157,6 @@ function ADMRC0401M() {
               <TabList className="lists">
                 <Tab className="link"><span className="label">정산(전/후)금액 비교</span></Tab>
                 <Tab className="link"><span className="label">정산(전/후)상세 비교</span></Tab>
-                <Tab className="link"><span className="label">기타대금검증</span></Tab>
-                <Tab className="link"><span className="label">비목별상세</span></Tab>
               </TabList>
             </div>
 
@@ -209,28 +207,6 @@ function ADMRC0401M() {
                                 <td className="g-end">999</td>
                                 <td className="g-end">999</td>
                               </tr>
-
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
                             </tbody>
 
                             <tfoot className="sumtotal-tfoot">
@@ -250,83 +226,6 @@ function ADMRC0401M() {
 
                 </div>
 
-                <div className="column">
-
-                  <div className="o-section">
-                    <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">대금정산 전 거래구분별 정산예산금액</span></h2>
-                    </div>
-
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
-                        <div className="table-container p-datatable-wrapper">
-                          <table className="p-datatable-table p-datatable-scrollable-table">
-                            <colgroup>
-                              <col className="wdth-10" />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                            </colgroup>
-
-                            <thead className="p-datatable-thead">
-                              <tr>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">순번</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">정산거래구분</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">건수</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">정산예상금액</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">생성일시</span></div>
-                                </th>
-                              </tr>
-                            </thead>
-
-                            <tbody className="p-datatable-tbody">
-                              <tr className="p-datatable-emptymessage">
-                                <td colSpan={6}>
-                                  <div className="gridtable-empty">등록된 데이터가 없습니다.</div>
-                                </td>
-                              </tr>
-                            </tbody>
-
-                            <tbody className="p-datatable-tbody">
-                              {[...Array(5)].map((e, idx) => (
-                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight<$tr.trigger('click')> { @DEV } */}
-                                  <td>{idx + 1}</td>
-                                  <td>인도취소</td>
-                                  <td className="g-end">46</td>
-                                  <td className="g-end">7,000,000</td>
-                                  <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
-                                </tr>
-                              ))}
-                            </tbody>
-
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드
-            합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                              <tr className="sumtotal-trow">
-                                <td colSpan={2} className="sumtotal-tcell">총계</td>
-                                <td className="sumtotal-tcell g-end">999</td>
-                                <td className="sumtotal-tcell g-end">999,999</td>
-                                <td className="sumtotal-tcell"><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
-                              </tr>
-                            </tfoot>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
               </div>
 
               <div className="o-grid">
@@ -334,13 +233,53 @@ function ADMRC0401M() {
                 <div className="column">
 
                   <div className="o-section">
+
                     <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">비목별 정산금액(작업전)</span></h2>
+                      <h2 className="o-heading level2"><span className="label">수입인지 비교대사 검증 1,2(JYCO1408B 실행 전)</span></h2>
 
                       <div className="m-binds">
                         <div className="group">
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
                           <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-auto">
+                      <div className="o-grid-table type-table case-notice-calendar">{/* [하드코딩] */}
+                        <div className="table-container">
+                          <table>
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th>전월-현월 재고수량</th>
+                                <th>현월 재고수량</th>
+                                <th>전월 재고수량</th>
+                                <th>2개월전 재고수량</th>
+                                <th>3개월전 재고수량</th>
+                                <th>4개월전 재고수량</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td className="g-end">0</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
                     </div>
@@ -351,7 +290,9 @@ function ADMRC0401M() {
                         <div className="table-container p-datatable-wrapper">
                           <table className="p-datatable-table p-datatable-scrollable-table">
                             <colgroup>
-                              <col className="wdth-10" />
+                              <col />
+                              <col />
+                              <col />
                               <col />
                               <col />
                               <col />
@@ -361,24 +302,14 @@ function ADMRC0401M() {
 
                             <thead className="p-datatable-thead">
                               <tr>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">순번</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">비목(명)</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">구분</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">집행금액</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">환수금액</span></div>
-                                </th>
-                                <th className="p-align-center">
-                                  <div className="p-column-header-content"><span className="p-column-title">합계금액(정산금액)</span></div>
-                                </th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출금번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신규</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신규취소</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이월</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이월취소</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선납재고</span></div></th>
                               </tr>
                             </thead>
 
@@ -387,108 +318,23 @@ function ADMRC0401M() {
                                 <td colSpan={6}>
                                   <div className="gridtable-empty">등록된 데이터가 없습니다.</div>
                                 </td>
-                              </tr>
-                            </tbody>
-
-                            <tbody className="p-datatable-tbody">
-                              {[...Array(10)].map((e, idx) => (
-                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight
-              <$tr.trigger('click')> { @DEV } */}
-                                  <td>{idx + 1}</td>
-                                  <td>소모품비</td>
-                                  <td>영업점</td>
-                                  <td className="g-end">7,000,000</td>
-                                  <td className="g-end">7,000,000</td>
-                                  <td className="g-end">7,000,000</td>
-                                </tr>
-                              ))}
-                            </tbody>
-
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드
-            합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                              <tr className="sumtotal-trow">
-                                <td colSpan={2} className="sumtotal-tcell">총계</td>
-                                <td className="sumtotal-tcell"></td>
-                                <td className="sumtotal-tcell g-end">999,999</td>
-                                <td className="sumtotal-tcell g-end">999,999</td>
-                                <td className="sumtotal-tcell g-end">999,999</td>
-                              </tr>
-                            </tfoot>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="column">
-
-                  <div className="o-section">
-                    <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">비목별 정산금액(작업후)</span></h2>
-
-                      <div className="m-binds">
-                        <div className="group">
-                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                          <ImageButton label="목록출력" icon="print" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
-                        <div className="table-container p-datatable-wrapper">
-                          <table className="p-datatable-table p-datatable-scrollable-table">
-                            <colgroup>
-                              <col className="wdth-10" />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                            </colgroup>
-
-                            <thead className="p-datatable-thead">
-                              <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비목(명)</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행금액</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">환수금액</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계금액(정산금액)</span></div></th>
-                              </tr>
-                            </thead>
-
-                            <tbody className="p-datatable-tbody">
-                              <tr className="p-datatable-emptymessage">
-                                <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
                             <tbody className="p-datatable-tbody">
                               {[...Array(10)].map((e, idx) => (
                                 <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                  <td>{idx + 1}</td>
-                                  <td>소모품비</td>
-                                  <td>영업점</td>
-                                  <td className="g-end">7,000,000</td>
-                                  <td className="g-end">7,000,000</td>
-                                  <td className="g-end">7,000,000</td>
+                                  <td>2107</td>
+                                  <td className="g-start">중금채등록통장(거치식)</td>
+                                  <td className="g-end">7,000</td>
+                                  <td className="g-end">7,000</td>
+                                  <td className="g-end">7,000</td>
+                                  <td className="g-end">7,000</td>
+                                  <td className="g-end">700</td>
+                                  <td className="g-end">700</td>
                                 </tr>
                               ))}
                             </tbody>
-
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                              <tr className="sumtotal-trow">
-                                <td colSpan={2} className="sumtotal-tcell">총계</td>
-                                <td className="sumtotal-tcell"></td>
-                                <td className="sumtotal-tcell g-end">999,999</td>
-                                <td className="sumtotal-tcell g-end">999,999</td>
-                                <td className="sumtotal-tcell g-end">999,999</td>
-                              </tr>
-                            </tfoot>
                           </table>
                         </div>
                       </div>
@@ -497,12 +343,122 @@ function ADMRC0401M() {
 
                 </div>
 
-              </div>
-
-              <div className="o-grid">
                 <div className="column">
 
                   <div className="o-section">
+
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">수입인지 비교대사 검증 1,2(JYCO1408B 실행 후)</span></h2>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-auto">
+                      <div className="o-grid-table type-table case-notice-calendar">{/* [하드코딩] */}
+                        <div className="table-container">
+                          <table>
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th>전월-현월 재고수량</th>
+                                <th>현월 재고수량</th>
+                                <th>전월 재고수량</th>
+                                <th>2개월전 재고수량</th>
+                                <th>3개월전 재고수량</th>
+                                <th>4개월전 재고수량</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td className="g-end">0</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                              </tr>
+                              <tr>
+                                <td className="g-end">0</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">999</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-body-3i">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="table-container p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출금번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신규</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신규취소</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이월</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이월취소</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선납재고</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
+                              <tr className="p-datatable-emptymessage">
+                                <td colSpan={6}>
+                                  <div className="gridtable-empty">등록된 데이터가 없습니다.</div>
+                                </td>
+                              </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                              {[...Array(10)].map((e, idx) => (
+                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                  <td>2107</td>
+                                  <td className="g-start">중금채등록통장(거치식)</td>
+                                  <td className="g-end">7,000</td>
+                                  <td className="g-end">7,000</td>
+                                  <td className="g-end">7,000</td>
+                                  <td className="g-end">7,000</td>
+                                  <td className="g-end">700</td>
+                                  <td className="g-end">700</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
 
                     <div className="main">
                       <form className="m-data-form">
@@ -510,28 +466,12 @@ function ADMRC0401M() {
                           <colgroup>
                             <col className="head" />
                             <col className="data" />
-                            <col className="head" />
-                            <col className="data" />
                           </colgroup>
 
                           <tbody>
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`기타정산금액`} require={false} />
-                              </th>
-                              <td colSpan={1}>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input g-end wdth-70">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-
-                              <th colSpan={1}>
-                                <Label label={`전/후 비교 차액`} require={false} />
+                                <Label label={`비교검증값`} require={false} />
                               </th>
                               <td colSpan={1}>
                                 <div className="o-field">
@@ -548,11 +488,12 @@ function ADMRC0401M() {
                         </table>
                       </form>
                     </div>
-
                   </div>
 
                 </div>
+
               </div>
+
             </TabPanel>
 
             <TabPanel className="m-tabs-panel react-tabs__tab-panel">
@@ -561,7 +502,7 @@ function ADMRC0401M() {
 
                   <div className="o-section">
                     <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">정산(전/후)상세 비교</span></h2>
+                      <h2 className="o-heading level2"><span className="label">프로시저(전/후) 부점별 상세내역</span></h2>
 
                       <div className="o-length">
                         <span className="head">전체</span>
@@ -597,32 +538,44 @@ function ADMRC0401M() {
                               <col />
                               <col />
                               <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
                               <tr>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">자료구분</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비목코드</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비목명</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">본/영구분</span></div></th>
-                                <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경 전</span></div></th>
-                                <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경 후</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">차액</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계정부점</span></div></th>
+                                <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실행 전</span></div></th>
+                                <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실행 후</span></div></th>
                               </tr>
                               <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업일시</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행금액</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행환수액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행환수금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산대상금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선납정산금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">후납정산금액</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업일시</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행금액</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행환수액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">집행환수금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산대상금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선납정산금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">후납정산금액</span></div></th>
                               </tr>
                             </thead>
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -630,17 +583,22 @@ function ADMRC0401M() {
                             {[...Array(24)].map((e, idx) => (
                               <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                                 <td>{idx + 1}</td>
-                                <td>11-인도</td>
                                 <td>0465</td>
-                                <td className="g-start">소모품비</td>
-                                <td></td>
+                                <td className="g-start">회기역출장소</td>
+                                <td>0465</td>
+                                <td className="g-start">회기역출장소</td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td className="g-end">1,000,050</td>
+                                <td className="g-end">0</td>
                                 <td className="g-end">1,000,050</td>
+                                <td className="g-end">0</td>
+                                <td className="g-end">1,000</td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
-                                <td className="g-end">0</td>
+                                <td className="g-end">1,000,050</td>
                                 <td className="g-end">0</td>
                                 <td className="g-end">1,000,050</td>
+                                <td className="g-end">0</td>
+                                <td className="g-end">1,000</td>
                               </tr>
                             ))}
                             </tbody>
@@ -649,9 +607,14 @@ function ADMRC0401M() {
                               <tr className="sumtotal-trow">
                                 <td colSpan={6} className="sumtotal-tcell">합계</td>
                                 <td className="sumtotal-tcell g-end">999,999</td>
-                                <td className="sumtotal-tcell g-end">999,999</td>
-                                <td className="sumtotal-tcell"></td>
                                 <td className="sumtotal-tcell g-end">0</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
+                                <td className="sumtotal-tcell g-end">0</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
+                                <td className="sumtotal-tcell g-end">0</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
+                                <td className="sumtotal-tcell g-end">0</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
                                 <td className="sumtotal-tcell g-end">0</td>
                                 <td className="sumtotal-tcell g-end">999,999</td>
                               </tr>
@@ -680,29 +643,11 @@ function ADMRC0401M() {
                               <th colSpan={1}>
                                 <Label label={`정산금액 합계`} require={false} />
                               </th>
-                              <td colSpan={1}>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input g-end wdth-70">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
+                              <td colSpan={1} className="g-end">1,000,000,000</td>
                               <th colSpan={1}>
                                 <Label label={`전/후 비교 차액`} require={false} />
                               </th>
-                              <td colSpan={1}>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input g-end wdth-70">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
+                              <td colSpan={1} className="g-end">1,000</td>
                             </tr>
                           </tbody>
                         </table>
@@ -1335,4 +1280,4 @@ function ADMRC0401M() {
   );
 }
 
-export default ADMRC0401M;
+export default ADMRC0501M;

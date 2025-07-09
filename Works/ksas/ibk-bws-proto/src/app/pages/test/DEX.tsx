@@ -96,6 +96,7 @@ function DEX() {
       2025-07/08 화 수정사항
         #99
 
+
       2025-07/07 월 수정사항
         - 자금현수송 #197 FMTCC0201M : 총 합계 레이아웃 : 기획 -디자인 확인 필요 /
         1. 어드민 해야할 부분 #92: ADMAM0101M
@@ -620,6 +621,7 @@ about:blank
 
               <form className="m-filter-form">
                 <div className="fieldset">
+
                   <div className="o-field">
                     <Label label={`권한명`} require={false} />
                     <div className="fields">
@@ -641,7 +643,7 @@ about:blank
                   </div>
 
                   <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={false} />
+                    <Label label={`출급번호`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
