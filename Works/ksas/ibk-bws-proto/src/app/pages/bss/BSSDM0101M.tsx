@@ -512,7 +512,7 @@ function BSSDM0101M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`파일첨부`} require={true} />
+                            <Label label={`첨부파일`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">

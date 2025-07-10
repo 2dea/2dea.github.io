@@ -143,7 +143,7 @@ function FileUploads() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`파일첨부 (단일)`} require={true} />
+                            <Label label={`첨부파일 (단일)`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -165,7 +165,7 @@ function FileUploads() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`파일첨부 예`} require={true} />
+                            <Label label={`첨부파일 예`} require={true} />
                           </th>
                           <td colSpan={1}>
 

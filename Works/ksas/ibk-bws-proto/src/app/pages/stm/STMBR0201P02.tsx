@@ -242,7 +242,7 @@ function STMBR0201P02() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`파일첨부`} require={false} />
+                            <Label label={`첨부파일`} require={false} />
                           </th>
                           <td colSpan={3}>
 

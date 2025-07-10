@@ -317,7 +317,7 @@ function STMAS0301M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`파일첨부`} require={false} />
+                            <Label label={`첨부파일`} require={false} />
                           </th>
                           <td colSpan={1}>
 

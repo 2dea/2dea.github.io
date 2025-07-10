@@ -501,7 +501,7 @@ function STMBR0101M() {
                           </td>
 
                           <th colSpan={1} rowSpan={4}>
-                            <Label label={`파일첨부`} require={false} />
+                            <Label label={`첨부파일`} require={false} />
                           </th>
                           <td colSpan={3} rowSpan={4}>
                             <div className="o-section">
