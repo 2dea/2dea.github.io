@@ -910,9 +910,24 @@ function TMPL() {
                             </td>
 
                             <th colSpan={1}>
-                              <Label label={`...`} require={false} />
+                              <Label label={`InputNumber2`} require={false} />
                             </th>
-                            <td colSpan={1}></td>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-spin wdth-50">
+                                    <InputText type="text" placeholder="" value="0" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="증가" icon="sum-plus" />
+                                    </span>
+                                    <span className="inner-binds">
+                                      <ImageButton label="감소" icon="sum-minus" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th colSpan={1}>

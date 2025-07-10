@@ -584,6 +584,7 @@
 .g-strong,
   .g-bold  { font-weight: var(--bold-70, 700) !important; }
 .g-light  { font-weight: var(--bold-40, 400) !important; }
+.g-regular  { font-weight: inherit !important; }
 
 .g-color-inherit  { color: inherit !important; }
 

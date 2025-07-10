@@ -329,7 +329,7 @@ function BSSCR0201M() {
                       <table className="table">
                         <colgroup span={5}></colgroup>
 
-                        <thead>
+                        {/* <thead>
                           <tr>
                             <th rowSpan={2} colSpan={1}>배부수량 (A+B+C) <em className="o-chip var-solid-02 size-70"><span className="label">1,200</span></em></th>
                             <th colSpan={1}>A</th>
@@ -337,20 +337,23 @@ function BSSCR0201M() {
                             <th colSpan={1}>C</th>
                             <td rowSpan={2} colSpan={1} className="subtotal-tcell">합계 0</td>
                           </tr>
-                        </thead>
+                        </thead> */}
 
                         <tbody>
-                          {/* <tr>
-                            <th rowSpan={2} colSpan={1}>배부수량 (A+B+C) <em className="o-chip var-solid-02 size-70"><span className="label">1,200</span></em></th>
-                            <th colSpan={1}>A</th>
-                            <th colSpan={1}>B</th>
-                            <th colSpan={1}>C</th>
-                            <td rowSpan={2} colSpan={1} className="subtotal-tcell">합계 0</td>
-                          </tr> */}
                           <tr>
+                            <th colSpan={1}>
+                              <div className="o-field axis-cols align-center">
+                                <Label className="g-regular" label={<><span className="wbr">배부수량 </span><span className="wbr">(A+B+C)</span></>} require={false} />
+                                <div className="fields">
+                                  <span className="string">
+                                    <em className="o-chip var-solid-02 size-70"><span className="label">1,200</span></em>
+                                  </span>
+                                </div>
+                              </div>
+                            </th>
                             <td colSpan={1}>
-                              <div className="o-field">
-                                <Label label={`신청연도`} require={false} />
+                              <div className="o-field axis-cols align-center">
+                                <Label label={<><span className="wbr">A </span><span className="wbr">벽걸이 (3단)</span></>} require={false} />
                                 <div className="fields">
                                   <div className="o-form _input type-spin wdth-50">
                                     <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
@@ -361,8 +364,8 @@ function BSSCR0201M() {
                               </div>
                             </td>
                             <td colSpan={1}>
-                              <div className="o-field">
-                                <Label label={`신청연도`} require={false} />
+                              <div className="o-field axis-cols align-center">
+                                <Label label={<><span className="wbr">B </span><span className="wbr">벽걸이 (일반)</span></>} require={false} />
                                 <div className="fields">
                                   <div className="o-form _input type-spin wdth-50">
                                     <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
@@ -373,14 +376,22 @@ function BSSCR0201M() {
                               </div>
                             </td>
                             <td colSpan={1}>
-                              <div className="o-field">
-                                <Label label={`신청연도`} require={false} />
+                              <div className="o-field axis-cols align-center">
+                                <Label label={<><span className="wbr">C </span><span className="wbr">탁상달력</span></>} require={false} />
                                 <div className="fields">
                                   <div className="o-form _input type-spin wdth-50">
                                     <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td colSpan={1} className="subtotal-tcell">
+                              <div className="o-field axis-cols align-center">
+                                <Label label={`합계`} require={false} />
+                                <div className="fields">
+                                  <strong className="string">0</strong>
                                 </div>
                               </div>
                             </td>

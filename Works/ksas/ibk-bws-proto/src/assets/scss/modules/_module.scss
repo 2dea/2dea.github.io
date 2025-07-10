@@ -1527,7 +1527,8 @@
 .o-form._input.type-time  { text-align: center; }
 
 .o-form._input.type-spin  { text-align: center; }
-.o-form._input.type-spin .inner-binds:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); background: var(--color-edge-40); }
+.o-form._input.type-spin .inner-binds:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); margin: 0 III(-1); background: var(--color-edge-40); pointer-events: none; }
+.o-form._input.type-spin .inner-binds:before  { position: absolute; }
 .o-form._input.type-spin .inner-binds:has(>._sum-minus)  { order: -1; flex-direction: row-reverse; }
 .o-form._input.type-spin input  { padding-left: 0; padding-right: 0; }
 
@@ -1592,12 +1593,18 @@
 .o-field >.fields >.helper strong,
 .o-field >.fields >strong.helper  { font-weight: $bold-70; }
 
+.o-field.align-center  { align-items: center; }
+
 .o-field:where(.m-filter-form .fieldset >:not(:only-child), .axis-cols)  { flex-direction: column; align-items: normal; }
 .o-field:where(.m-filter-form .fieldset >:not(:only-child), .axis-cols) >*  { min-height: 0; }
 
 .o-field:not(.m-filter-form .fieldset >:not(:only-child), .axis-cols)  { align-items: center; }
 .o-field:not(.m-filter-form .fieldset >:not(:only-child), .axis-cols) >*  { flex: none; min-width: 0; }
 .o-field:not(.m-filter-form .fieldset >:not(:only-child), .axis-cols) >.fields  { flex: 1; }
+
+
+.o-field:where(.o-data-table.style-fill *) .o-label  { margin-bottom: $gap-element-70; }
+.o-field:where(.o-data-table.style-fill *) .o-label .wbr  { display: block; }
 
 
 
@@ -1697,7 +1704,7 @@
 
 
 .o-data-table  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
-.o-data-table:not(td *) table  { border-collapse: collapse; width: 100%; background: $color-ground; text-align: center; }
+.o-data-table:not(td *) table  { border-collapse: collapse; width: 100%; /* min-width: 100%; */ background: $color-ground; text-align: center; }
 .o-data-table:not(td *) table:has(>colgroup[span])  { table-layout: fixed; }
 .o-data-table:not(td *) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
 .o-data-table:not(td *) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
@@ -1713,7 +1720,8 @@
 .o-data-table:not(td *) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
 
 .o-data-table:not(td *) table  { border: hidden; }
-.o-data-table :has(>table)  { border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
+.o-data-table:not(td *) :has(>table)  { border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
+.o-data-table:not(td *) >.table-container  { overflow: auto; }
 
 .o-data-table.style-fill,
   :has(.table):where(.o-data-table.style-fill *)  { flex: 1; display: flex; flex-direction: column; }
@@ -1723,7 +1731,7 @@
 
 
 .m-data-form  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
-.m-data-form:not(td *) table  { table-layout: fixed; border-collapse: collapse; width: 100%; background: $color-ground; }
+.m-data-form table:not(td *)  { table-layout: fixed; border-collapse: collapse; width: 100%; background: $color-ground; }
 .m-data-form:not(td *) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
 .m-data-form:not(td *) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
 .m-data-form:not(td *) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
@@ -1740,7 +1748,7 @@
 
 .m-data-form:not(td *) tr >.surface  { background-color: var(--color-ground-40); }
 
-.m-data-form:not(td *) table  { border-style: solid hidden; border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
+.m-data-form table:not(td *)  { border-style: solid hidden; border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
 
 
 
