@@ -136,7 +136,7 @@ function STMGD0101P05() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`점검구분`} require={true} />
+                    <Label label={`점검부점`} require={true} />
                     <div className="fields">
                       <div className="o-form _input mode-required">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} disabled />
@@ -237,7 +237,13 @@ function STMGD0101P05() {
                                 <td>팀원1</td>
                                 <td>[20240065] 홍길동</td>
                                 <td>팀원1</td>
-                                <td>[20240065] 홍길동</td>
+                                <td className="g-start">
+                                  {
+                                    (idx) === 2 ? <>[000081] 홍길동</> :
+                                    <>[000081] 홍길동 <em className="o-chip var-lined-00 size-30"><span className="label">대직</span></em></>
+                                  }
+
+                                </td>
                                 <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
                                   {
                                     (idx) % 3 === 0 &&
@@ -309,8 +315,7 @@ function STMGD0101P05() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="결재요청" className="_solid-primary" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>

@@ -95,7 +95,11 @@ function DEX() {
 
       2025-07/10 목: 오전 [영업지원] - 서식장부관리 및 수정사항
 
+      파일첨부 -> 첨부파일
+
       2025-07/08 화 수정사항
+
+
         #99
 
 
@@ -194,6 +198,8 @@ about:blank
 
 <td>012345</td>
 <td>Y</td>
+
+<td className="g-start">외국환거래표(외국통화매매전용)</td>
 
 <td className="g-start">[00070] 프로세스혁신부</td>
 <td className="g-start">을지로</td>

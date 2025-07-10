@@ -141,22 +141,12 @@ function ADMOA0201M() {
                     <Label label={`거래시각`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-time mode-required wdth-30">
-                        <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                        <Calendar placeholder="" value={Time} locale="ko" mask="99:99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
                         <i aria-hidden="true"></i>
                       </div>
                       <span className="seps type-tilde">~</span>
                       <div className="o-form _input type-time mode-required wdth-30">
-                        <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`업무구분코드`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _select mode-required">
-                        <XDropdown appendTo={'self'} className="bind" />
+                        <Calendar placeholder="" value={Time} locale="ko" mask="99:99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -264,6 +254,16 @@ function ADMOA0201M() {
 
                   <div className="o-field">
                     <Label label={`자산결재관리번호`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`결의서번호`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -390,7 +390,9 @@ function ADMOA0201M() {
                               <td>요청</td>
                               <td>정상</td>
                               <td>507 처분요청</td>
-                              <td><span className="o-digit type-tel">02-729-7610</span></td>
+                              <td>
+                                <a href="javascript:" className="o-link _normal">000000000034778</a>
+                              </td>
                               <td>0873</td>
                               <td className="g-start">프로세스혁신부</td>
                               <td>0873</td>

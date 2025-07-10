@@ -126,7 +126,7 @@ function STMGD0401P05() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`점검구분`} require={true} />
+                    <Label label={`점검부점`} require={true} />
                     <div className="fields">
                       <div className="o-form _input mode-required">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} disabled />
@@ -168,7 +168,6 @@ function STMGD0401P05() {
                           <col />
                           <col />
                           <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -178,7 +177,7 @@ function STMGD0401P05() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검부점</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검자</span></div></th>
-                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결제</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록직원</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재관리번호</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일시</span></div></th>
@@ -186,15 +185,14 @@ function STMGD0401P05() {
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀원</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점장</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀장</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -251,12 +249,6 @@ function STMGD0401P05() {
                                   {
                                     (idx) % 3 === 0 &&
                                     <>[20240065] 김팀장</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                                  }
-                                </td>
-                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
-                                  {
-                                    (idx) % 3 === 0 &&
-                                    <>[20240065] 김점장</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                                   }
                                 </td>
                                 <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}

@@ -411,11 +411,17 @@ import BSSCR0301P04 from 'app/pages/bss/BSSCR0301P04'; // 영업지원 > 캘린�
 import BSSCR0401M from 'app/pages/bss/BSSCR0401M';     // 영업지원 > 캘린더신청             > 신청내역조회
 import BSSCR0501M from 'app/pages/bss/BSSCR0501M';     // 영업지원 > 캘린더신청             > 배부수량관리
 
-import BSSTI0101M from 'app/pages/bss/BSSTI0101M';     // 영업지원 > 연수원                 > 연수원품목정보관리
-import BSSTI0201M from 'app/pages/bss/BSSTI0201M';     // 영업지원 > 연수원                 > 연수원품목입출고등록
-import BSSTI0301M from 'app/pages/bss/BSSTI0301M';     // 영업지원 > 연수원                 > 연수원품목입출고취소
-import BSSTI0401M from 'app/pages/bss/BSSTI0401M';     // 영업지원 > 연수원                 > 연수원입출고내역조회
-import BSSTI0501M from 'app/pages/bss/BSSTI0501M';     // 영업지원 > 연수원                 > 연수원품목재고조회
+import BSSFM0101M from 'app/pages/bss/BSSFM0101M';     // 영업지원 > 서식장부관리           > 출급번호관리
+import BSSFM0101P01 from 'app/pages/bss/BSSFM0101P01'; // 영업지원 > 서식장부관리           > 출급번호관리 ~ (LP)변경이력
+import BSSFM0101P02 from 'app/pages/bss/BSSFM0101P02'; // 영업지원 > 서식장부관리           > 출급번호관리 ~ (LP)출급번호분류관리
+import BSSFM0201M from 'app/pages/bss/BSSFM0201M';     // 영업지원 > 서식장부관리           > 서식코드관리
+import BSSFM0201P01 from 'app/pages/bss/BSSFM0201P01'; // 영업지원 > 서식장부관리           > 서식코드관리 ~ (LP)변경이력
+
+import BSSTI0101M from 'app/pages/bss/BSSTI0101M';     // 영업지원 > 연수원                > 연수원품목정보관리
+import BSSTI0201M from 'app/pages/bss/BSSTI0201M';     // 영업지원 > 연수원                > 연수원품목입출고등록
+import BSSTI0301M from 'app/pages/bss/BSSTI0301M';     // 영업지원 > 연수원                > 연수원품목입출고취소
+import BSSTI0401M from 'app/pages/bss/BSSTI0401M';     // 영업지원 > 연수원                > 연수원입출고내역조회
+import BSSTI0501M from 'app/pages/bss/BSSTI0501M';     // 영업지원 > 연수원                > 연수원품목재고조회
 
 // proto 공통·결재
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M';      // 공통·결재 > 코드관리    > 공통코드관리
@@ -898,6 +904,12 @@ function ProtoRoutes() {
         { path: 'BSSCR0301P04', element: <BSSCR0301P04 /> },
         { path: 'BSSCR0401M',   element: <BSSCR0401M /> },
         { path: 'BSSCR0501M',   element: <BSSCR0501M /> },
+
+        { path: 'BSSFM0101M',   element: <BSSFM0101M /> },
+        { path: 'BSSFM0101P01', element: <BSSFM0101P01 /> },
+        { path: 'BSSFM0101P02', element: <BSSFM0101P02 /> },
+        { path: 'BSSFM0201M',   element: <BSSFM0201M /> },
+        { path: 'BSSFM0201P01', element: <BSSFM0201P01 /> },
 
         { path: 'BSSTI0101M',   element: <BSSTI0101M /> },
         { path: 'BSSTI0201M',   element: <BSSTI0201M /> },
