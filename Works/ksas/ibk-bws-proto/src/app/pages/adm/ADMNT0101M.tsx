@@ -247,7 +247,7 @@ function ADMNT0101M() {
                               <td>텍스트</td>
                               <td className="g-start">영업점배송관리</td>
                               <td className="g-start">우편물</td>
-                              <td className="g-start">[공지]중요용지 자동뱃오 품목 확대</td>
+                              <td className="g-start">[공지]중요용지 자동배송 품목 확대</td>
                               <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                               <td className="g-start">프로세스혁신부</td>
                               <td>홍길동</td>

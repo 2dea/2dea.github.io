@@ -221,7 +221,7 @@ function BSPDU0601P02() {
                             <Label label={`인수직원`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0810] 폐기중용용지 담당자
+                            [0810] 폐기중요용지 담당자
                           </td>
 
                           <th colSpan={1}>

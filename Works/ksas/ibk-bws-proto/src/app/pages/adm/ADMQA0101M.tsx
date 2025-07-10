@@ -228,7 +228,7 @@ function ADMQA0101M() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
-                              <td className="g-start">[공지]중요용지 자동뱃오 품목 확대</td>
+                              <td className="g-start">[공지]중요용지 자동배송 품목 확대</td>
                               <td>012345</td>
                               <td>홍길동</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
@@ -412,12 +412,6 @@ function ADMQA0101M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">답변입력</span></h3>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="신규" className="_create" />
-                    </div>
-                  </div>
                 </div>
 
                 <div className="main">

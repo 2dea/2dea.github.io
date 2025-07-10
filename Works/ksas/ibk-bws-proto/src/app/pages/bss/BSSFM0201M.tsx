@@ -517,11 +517,8 @@ function BSSFM0201M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -530,7 +527,7 @@ function BSSFM0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`서식파일등록여부`} require={true} />
+                            <Label label={`서식파일​등록여부`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="m-checks">
@@ -540,7 +537,7 @@ function BSSFM0201M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`서식견본등록여부`} require={true} />
+                            <Label label={`서식견본​등록여부`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="m-checks">
@@ -582,7 +579,7 @@ function BSSFM0201M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>

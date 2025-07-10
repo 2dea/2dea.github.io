@@ -120,7 +120,7 @@ function BSSFM0101M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="폐기취소" className="_lined-primary" />
+                <CommonButton label="폐지취소" className="_lined-primary" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
@@ -505,8 +505,8 @@ function BSSFM0101M() {
                           <td colSpan={3}>
                             <div className="m-checks">
                               <InputCheck label="용도품" />
-                              <InputCheck label="중용용지" />
-                              <InputCheck label="중용용지" />
+                              <InputCheck label="중요용지" />
+                              <InputCheck label="BPR" />
                             </div>
                           </td>
 
@@ -517,7 +517,7 @@ function BSSFM0101M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>

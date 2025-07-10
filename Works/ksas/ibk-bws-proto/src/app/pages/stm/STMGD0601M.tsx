@@ -260,8 +260,8 @@ function STMGD0601M() {
                                       <td>
                                         <div className="o-field">
                                           <div className="fields">
-                                            <div className="o-form _input wdth-50 g-end">
-                                              <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                            <div className="o-form _input wdth-50">
+                                              <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                               <i aria-hidden="true"></i>
                                             </div>
                                           </div>

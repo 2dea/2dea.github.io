@@ -95,7 +95,7 @@ function BSSFM0101P02() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={false}
+        modal={true}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">출급번호분류관리</span></h3>}
       >
@@ -133,7 +133,7 @@ function BSSFM0101P02() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">분류명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록직원</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록직원</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                           </tr>
                         </thead>
 
@@ -153,7 +153,7 @@ function BSSFM0101P02() {
                             <td className="g-start">벽걸이(일반)</td>
                             <td className="g-start"></td>
                             <td>홍길동</td>
-                            <td><span className="o-digit type-date">2025-12</span></td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
                           </tr>
                         ))}
                         </tbody>
@@ -188,7 +188,7 @@ function BSSFM0101P02() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`출급번호시작값`} require={true} />
+                            <Label label={`출급번호​시작값`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -201,7 +201,7 @@ function BSSFM0101P02() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`출급번호종료값`} require={true} />
+                            <Label label={`출급번호​종료값`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
