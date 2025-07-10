@@ -375,26 +375,47 @@ function BSSFM0201M() {
                             <Label label={`서식코드`} require={true} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-form _input">
-                              <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                              <i aria-hidden="true"></i>
-                            </div>
+                            <div className="m-mixed-field">
+                              <div className="o-field">
+                                <div className="o-form _input wdth-50 mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
 
-                            <div className="m-checks">
-                              <InputCheck label="직접입력" />
-                              <InputCheck label="BPR사용여부" />
+                              <div className="m-checks">
+                                <InputCheck label="직접입력" />
+                                <InputCheck label="BPR사용여부" />
+                              </div>
                             </div>
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`비고`} require={false} />
+                            <Label label={`요청자`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input">
+                                <div className="o-form _input mode-required">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`담당부서`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -404,7 +425,7 @@ function BSSFM0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`분류`} require={true} />
+                            <Label label={`대분류`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -414,6 +435,127 @@ function BSSFM0201M() {
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`중분류`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`상태코드`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" disabled />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`용도구분`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`서식명`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`보존기한`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`보존연한내용`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`서식파일등록여부`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-checks">
+                              <InputRadio name="RADIO:T_10" label="YES" />
+                              <InputRadio name="RADIO:T_10" label="NO" defaultChecked />
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`서식견본등록여부`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-checks">
+                              <InputRadio name="RADIO:T_20" label="YES" />
+                              <InputRadio name="RADIO:T_20" label="NO" defaultChecked />
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`용도지정여부`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-checks">
+                              <InputRadio name="RADIO:T_30" label="YES" />
+                              <InputRadio name="RADIO:T_30" label="NO" defaultChecked />
                             </div>
                           </td>
 
@@ -424,34 +566,6 @@ function BSSFM0201M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value="[0000001] 홍길동" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`요청일자`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-date mode-required wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`담당부서`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -461,61 +575,6 @@ function BSSFM0201M() {
                         </tr>
 
                         <tr>
-                          <th colSpan={1}>
-                            <Label label={`상태`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={document.body} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`품목명`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value="[0000001] 홍길동" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`서식코드`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`용도`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="m-checks">
-                              <InputCheck label="용도품" />
-                              <InputCheck label="중용용지" />
-                              <InputCheck label="중용용지" />
-                            </div>
-                          </td>
-
                           <th colSpan={1}>
                             <Label label={`비고`} require={false} />
                           </th>
@@ -529,27 +588,12 @@ function BSSFM0201M() {
                               </div>
                             </div>
                           </td>
-                        </tr>
 
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`수정내용`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={8} cols={80} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
 
-                          <th colSpan={1}>
+                          <th colSpan={1} rowSpan={2}>
                             <Label label={`첨부파일`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={3} rowSpan={2}>
                             <div className="o-section">
                               <div className="m-header">
                                 <div className="o-limit type-file">
@@ -622,6 +666,23 @@ function BSSFM0201M() {
                                       </tbody>
                                     </table>
                                   </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`수정내용`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={8} cols={80} />
+                                  <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>

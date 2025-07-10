@@ -260,6 +260,8 @@ import STMGD0101P05 from 'app/pages/stm/STMGD0101P05';   // 재난·안전관리
 
 import STMGD0201M from 'app/pages/stm/STMGD0201M';       // 재난·안전관리 > 기계경비당직관리          > 당직신청관리(관리자)
 import STMGD0301M from 'app/pages/stm/STMGD0301M';       // 재난·안전관리 > 기계경비당직관리          > 당직비정산
+import STMGD0301P01 from 'app/pages/stm/STMGD0301P01';   // 재난·안전관리 > 기계경비당직관리          > 당직비정산 ~ (LP)직원별당직비산정결과
+import STMGD0301P02 from 'app/pages/stm/STMGD0301P02';   // 재난·안전관리 > 기계경비당직관리          > 당직비정산 ~ (LP)부점별당직비산정결과
 
 import STMGD0401M from 'app/pages/stm/STMGD0401M';       // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리
 import STMGD0401P01 from 'app/pages/stm/STMGD0401P01';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리 ~ (LP)대직자등록
@@ -271,6 +273,9 @@ import STMGD0401P06 from 'app/pages/stm/STMGD0401P06';   // 재난·안전관리
 
 import STMGD0501M from 'app/pages/stm/STMGD0501M';       // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리(관리자)
 import STMGD0501P01 from 'app/pages/stm/STMGD0501P01';   // 재난·안전관리 > 기계경비당직관리          > 기계경비보안관리(관리자) ~ (LP)명령부복수부점관리
+
+import STMGD0601M from 'app/pages/stm/STMGD0601M';       // 재난·안전관리 > 기계경비당직관리          > 월세팅비정산
+import STMGD0601P01 from 'app/pages/stm/STMGD0601P01';   // 재난·안전관리 > 기계경비당직관리          > 월세팅비정산 ~ (LP)부점별세팅비산정결과
 
 import STMGD0701M from 'app/pages/stm/STMGD0701M';       // 재난·안전관리 > 기계경비당직관리          > SET시각등록
 
@@ -748,6 +753,8 @@ function ProtoRoutes() {
 
         { path: 'STMGD0201M',   element: <STMGD0201M /> },
         { path: 'STMGD0301M',   element: <STMGD0301M /> },
+        { path: 'STMGD0301P01', element: <STMGD0301P01 /> },
+        { path: 'STMGD0301P02', element: <STMGD0301P02 /> },
 
         { path: 'STMGD0401M',   element: <STMGD0401M /> },
         { path: 'STMGD0401P01', element: <STMGD0401P01 /> },
@@ -759,6 +766,9 @@ function ProtoRoutes() {
 
         { path: 'STMGD0501M',   element: <STMGD0501M /> },
         { path: 'STMGD0501P01', element: <STMGD0501P01 /> },
+
+        { path: 'STMGD0601M',   element: <STMGD0601M /> },
+        { path: 'STMGD0601P01', element: <STMGD0601P01 /> },
 
         { path: 'STMDM0101M',   element: <STMDM0101M /> },
         { path: 'STMDM0201M',   element: <STMDM0201M /> },
