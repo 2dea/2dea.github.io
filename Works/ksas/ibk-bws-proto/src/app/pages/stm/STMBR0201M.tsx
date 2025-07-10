@@ -124,7 +124,7 @@ function STMBR0201M() {
           <div className="o-grid">
             <div className="column">
 
-              <Tabs className="o-section" defaultIndex={1}>
+              <Tabs className="o-section" defaultIndex={0}>
                 <div className="m-calendar-header">
                   <div className="main">
                     <div className="year">
@@ -952,40 +952,46 @@ function STMBR0201M() {
                             </div>
 
                             <div className="bodies">
-                              <ul className="o-timeline">
+                              <ul className="o-schedule type-timeline">
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">09:00</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-01"><span className="label">당행</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    <div className="tags">
+                                      <span className="time">09:00</span>
+                                      <span className="category">
+                                        <em className="chip theme-key-01"><span className="label">당행</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">11:30</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-00"><span className="label">외부</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">Loremipsumdolorsitamet,consecteturadipiscingelit.Vivamusindignissimdiam.Inplaceratsodaleslorem,egetlaciniasapiengravidavel.Nullafacilisi.Proinornarehendreritleo,vitaefringillaurnaornarenec.</a>
+                                    <div className="tags">
+                                      <span className="time">11:30</span>
+                                      <span className="category">
+                                        <em className="chip theme-key-00"><span className="label">외부</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">24:44</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-00"><span className="label">외부</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    <div className="tags">
+                                      <span className="time">24:44</span>
+                                      <span className="category">
+                                        <em className="chip theme-key-00"><span className="label">외부</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    </div>
                                   </div>
                                 </li>
                               </ul>
@@ -1016,52 +1022,60 @@ function STMBR0201M() {
 
                           <div className="data">
                             <div className="bodies">
-                              <ul className="o-timeline">
+                              <ul className="o-schedule type-timeline">
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">09:00</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-01"><span className="label">당행</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    <div className="tags">
+                                      <span className="time">09:00</span>
+                                      <span className="category">
+                                        <em className="chip theme-key-01"><span className="label">당행</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">11:30</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-00"><span className="label">외부</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    <div className="tags">
+                                      <span className="time">11:30</span>
+                                      <span className="category">
+                                        <em className="chip theme-key-00"><span className="label">외부</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">14:00</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-01"><span className="label">당행</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">수신재연수 / 5대</a>
+                                    <div className="tags">
+                                      <span className="time">14:00</span>
+                                      <span className="category">
+                                        <em className="chip theme-key-01"><span className="label">당행</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">수신재연수 / 5대</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">17:44</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-00"><span className="label">외부</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">수신재연수 / 5대</a>
+                                    <div className="tags">
+                                      <span className="time">17:44</span>
+                                      <span className="category">
+                                        <em className="chip theme-key-00"><span className="label">외부</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">수신재연수 / 5대</a>
+                                    </div>
                                   </div>
                                 </li>
                               </ul>

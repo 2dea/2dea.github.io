@@ -45,7 +45,7 @@ function BSSLQ0301M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '대량신규현황' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '대량신규' }, { label: '대량신규현황' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -124,7 +124,7 @@ function BSSLQ0301M() {
           <div className="o-grid">
             <div className="column">
 
-              <Tabs className="o-section" defaultIndex={1}>
+              <Tabs className="o-section" defaultIndex={0}>
                 <div className="m-calendar-header">
                   <div className="main">
                     <div className="year">
@@ -177,13 +177,13 @@ function BSSLQ0301M() {
 
                   <div className="m-legend" aria-label="범례">
                     <span className="o-legend type-legend">
-                      <em className="o-legend-tag type-bullet theme-key-01"><span className="tag">(당행)</span></em>
-                      <span className="label">당행</span>
+                      <em className="o-legend-tag type-bullet theme-key-01"><span className="tag">(승인)</span></em>
+                      <span className="label">승인좌수</span>
                     </span>
 
                     <span className="o-legend type-legend">
-                      <em className="o-legend-tag type-bullet theme-key-00"><span className="tag">(외부)</span></em>
-                      <span className="label">외부</span>
+                      <em className="o-legend-tag type-bullet theme-key-00"><span className="tag">(신청)</span></em>
+                      <span className="label">신청좌수</span>
                     </span>
                   </div>
                 </div>
@@ -417,9 +417,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">대면상품집합교육 / 3대</div>
+                                            <div className="fc-event-title">대량신규신청</div>
                                           </div>
                                         </div>
                                       </div>
@@ -444,9 +443,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">대면상품집합교육 / 3대</div>
+                                            <div className="fc-event-title">대량신규신청</div>
                                           </div>
                                         </div>
                                       </div>
@@ -469,9 +467,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-00" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-00 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">VM연수 / 1대</div>
+                                            <div className="fc-event-title">[부산] 대량신규신청</div>
                                           </div>
                                         </div>
                                       </div>
@@ -498,9 +495,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">대면상품집합교육 / 3대</div>
+                                            <div className="fc-event-title">대량신규신청</div>
                                           </div>
                                         </div>
                                       </div>
@@ -525,9 +521,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">대면상품집합교육 / 3대</div>
+                                            <div className="fc-event-title">대량신규신청</div>
                                           </div>
                                         </div>
                                       </div>
@@ -554,9 +549,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-start fc-daygrid-event theme-key-00" style={{ '--lw': '2' } as React.CSSProperties}>{/* .fc-event-start.theme-key-00 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">5일(금~화) 이어진 일정 / 3대</div>
+                                            <div className="fc-event-title">5일(금~화) 이어진 일정</div>
                                           </div>
                                         </div>
                                       </div>
@@ -579,9 +573,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '1' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트 / 3대</div>
+                                            <div className="fc-event-title">긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트긴제목테스트</div>
                                           </div>
                                         </div>
                                       </div>
@@ -608,9 +601,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-end fc-daygrid-event theme-key-00" style={{ '--lw': '3' } as React.CSSProperties}>{/* .fc-event-end.theme-key-00 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">5일(금~화) 이어진 일정 / 3대</div>
+                                            <div className="fc-event-title">5일(금~화) 이어진 일정</div>
                                           </div>
                                         </div>
                                       </div>
@@ -635,9 +627,8 @@ function BSSLQ0301M() {
                                     <a className="fc-event fc-event-start fc-event-end fc-daygrid-event theme-key-01" style={{ '--lw': '1' } as React.CSSProperties}>{/* .fc-event-start.fc-event-end.theme-key-01 { @DEV } */}
                                       <div className="fc-event-main">
                                         <div className="fc-event-main-frame">
-                                          <div className="fc-event-time">09:30</div>
                                           <div className="fc-event-title-container">
-                                            <div className="fc-event-title">대면상품집합교육 / 3대</div>
+                                            <div className="fc-event-title">대량신규신청</div>
                                           </div>
                                         </div>
                                       </div>
@@ -952,40 +943,46 @@ function BSSLQ0301M() {
                             </div>
 
                             <div className="bodies">
-                              <ul className="o-timeline">
+                              <ul className="o-schedule type-normal">
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">09:00</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-01"><span className="label">당행</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    <div className="tags">
+                                      <em className="o-legend-tag type-bullet theme-key-01"><span className="tag">(승인)</span></em>
+                                      <span className="category">
+                                        <em className="chip"><span className="label">승인좌수 : <span className="value">100</span>건</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">대량신규신청</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">11:30</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-00"><span className="label">외부</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">Loremipsumdolorsitamet,consecteturadipiscingelit.Vivamusindignissimdiam.Inplaceratsodaleslorem,egetlaciniasapiengravidavel.Nullafacilisi.Proinornarehendreritleo,vitaefringillaurnaornarenec.</a>
+                                    <div className="tags">
+                                      <em className="o-legend-tag type-bullet theme-key-00"><span className="tag">(신청)</span></em>
+                                      <span className="category">
+                                        <em className="chip"><span className="label">신청좌수 : <span className="value">100</span>건</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">24:44</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-00"><span className="label">외부</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    <div className="tags">
+                                      <em className="o-legend-tag type-bullet theme-key-00"><span className="tag">(신청)</span></em>
+                                      <span className="category">
+                                        <em className="chip"><span className="label">신청좌수 : <span className="value">100</span>건</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">대량신규신청</a>
+                                    </div>
                                   </div>
                                 </li>
                               </ul>
@@ -1016,52 +1013,60 @@ function BSSLQ0301M() {
 
                           <div className="data">
                             <div className="bodies">
-                              <ul className="o-timeline">
+                              <ul className="o-schedule type-normal">
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">09:00</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-01"><span className="label">당행</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    <div className="tags">
+                                      <em className="o-legend-tag type-bullet theme-key-01"><span className="tag">(승인)</span></em>
+                                      <span className="category">
+                                        <em className="chip"><span className="label">승인좌수 : <span className="value">100</span>건</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">대량신규신청</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">11:30</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-00"><span className="label">외부</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                                    <div className="tags">
+                                      <em className="o-legend-tag type-bullet theme-key-00"><span className="tag">(신청)</span></em>
+                                      <span className="category">
+                                        <em className="chip"><span className="label">신청좌수 : <span className="value">100</span>건</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">대량신규신청</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">14:00</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-01"><span className="label">당행</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">수신재연수 / 5대</a>
+                                    <div className="tags">
+                                      <em className="o-legend-tag type-bullet theme-key-01"><span className="tag">(승인)</span></em>
+                                      <span className="category">
+                                        <em className="chip"><span className="label">승인좌수 : <span className="value">100</span>건</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">[부산] 대량신규신청</a>
+                                    </div>
                                   </div>
                                 </li>
 
                                 <li>
-                                  <div className="tags">
-                                    <span className="time">17:44</span>
-                                    <span className="category">
-                                      <em className="chip theme-key-00"><span className="label">외부</span></em>
-                                    </span>
-                                  </div>
                                   <div className="main">
-                                    <a href="javascript:" className="o-link _normal">수신재연수 / 5대</a>
+                                    <div className="tags">
+                                      <em className="o-legend-tag type-bullet theme-key-00"><span className="tag">(신청)</span></em>
+                                      <span className="category">
+                                        <em className="chip"><span className="label">신청좌수 : <span className="value">100</span>건</span></em>
+                                      </span>
+                                    </div>
+                                    <div className="subject">
+                                      <a href="javascript:" className="o-link _normal">[부산] 대량신규신청</a>
+                                    </div>
                                   </div>
                                 </li>
                               </ul>

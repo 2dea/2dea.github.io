@@ -97,7 +97,7 @@ function BSSLQ0301P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">3월 11일 대량신규현황 (4건)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">3월 11일 대량신규현황</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -106,40 +106,223 @@ function BSSLQ0301P01() {
               <div className="o-section">
                 <div className="main">
                   <div className="m-schedule">
-                    <ul className="o-timeline">
+                    <ul className="o-schedule type-normal">
                       <li>
-                        <div className="tags">
-                          <span className="time">09:00</span>
-                          <span className="category">
-                            <em className="chip theme-key-01"><span className="label">당행</span></em>
-                          </span>
-                        </div>
                         <div className="main">
-                          <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                          <div className="tags">
+                            <em className="o-legend-tag type-bullet theme-key-01"><span className="tag">(승인)</span></em>
+                            <span className="category">
+                              <em className="chip"><span className="label">승인좌수 : <span className="value">100</span>건</span></em>
+                            </span>
+                          </div>
+                          <div className="subject">
+                            <span className="label">[부산] 대량신규신청</span>
+                          </div>
+                        </div>
+
+                        <div className="summary o-details">
+                          <ul className="o-tabular">
+                            {/* <li className="colgroup">
+                              <span className="col head"></span>
+                              <span className="col data"></span>
+                            </li> */}
+
+                            <li>
+                              <div className="head">
+                                부점
+                              </div>
+
+                              <div className="data">
+                                [00000] 부산
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                승인일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-11
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                업무시작일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-12
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                업무완료일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-13
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                영업점수령예정일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-14
+                              </div>
+                            </li>
+                          </ul>
                         </div>
                       </li>
 
                       <li>
-                        <div className="tags">
-                          <span className="time">11:30</span>
-                          <span className="category">
-                            <em className="chip theme-key-00"><span className="label">외부</span></em>
-                          </span>
-                        </div>
                         <div className="main">
-                          <a href="javascript:" className="o-link _normal">Loremipsumdolorsitamet,consecteturadipiscingelit.Vivamusindignissimdiam.Inplaceratsodaleslorem,egetlaciniasapiengravidavel.Nullafacilisi.Proinornarehendreritleo,vitaefringillaurnaornarenec.</a>
+                          <div className="tags">
+                            <em className="o-legend-tag type-bullet theme-key-00"><span className="tag">(신청)</span></em>
+                            <span className="category">
+                              <em className="chip"><span className="label">신청좌수 : <span className="value">100</span>건</span></em>
+                            </span>
+                          </div>
+                          <div className="subject">
+                            <span className="label">Loremipsumdolorsitamet,consecteturadipiscingelit,seddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniam,quisnostrudexercitationullamcolaborisnisiutaliquipexeacommodoconsequat.</span>
+                          </div>
+                        </div>
+
+                        <div className="summary o-details">
+                          <ul className="o-tabular">
+                            {/* <li className="colgroup">
+                              <span className="col head"></span>
+                              <span className="col data"></span>
+                            </li> */}
+
+                            {/* <li>
+                              <div className="head">
+                                부점
+                              </div>
+
+                              <div className="data">
+                                [00000] 부산
+                              </div>
+                            </li> */}
+
+                            <li>
+                              <div className="head">
+                                승인일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-11
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                업무시작일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-12
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                업무완료일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-13
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                영업점수령예정일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-14
+                              </div>
+                            </li>
+                          </ul>
                         </div>
                       </li>
 
                       <li>
-                        <div className="tags">
-                          <span className="time">24:44</span>
-                          <span className="category">
-                            <em className="chip theme-key-00"><span className="label">외부</span></em>
-                          </span>
-                        </div>
                         <div className="main">
-                          <a href="javascript:" className="o-link _normal">대면상품집합교육 / 3대</a>
+                          <div className="tags">
+                            <em className="o-legend-tag type-bullet theme-key-01"><span className="tag">(승인)</span></em>
+                            <span className="category">
+                              <em className="chip"><span className="label">승인좌수 : <span className="value">100</span>건</span></em>
+                            </span>
+                          </div>
+                          <div className="subject">
+                            <span className="label">대량신규신청</span>
+                          </div>
+                        </div>
+
+                        <div className="summary o-details">
+                          <ul className="o-tabular">
+                            {/* <li className="colgroup">
+                              <span className="col head"></span>
+                              <span className="col data"></span>
+                            </li> */}
+
+                            {/* <li>
+                              <div className="head">
+                                부점
+                              </div>
+
+                              <div className="data">
+                                [00000] 부산
+                              </div>
+                            </li> */}
+
+                            <li>
+                              <div className="head">
+                                승인일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-11
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                업무시작일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-12
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                업무완료일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-13
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="head">
+                                영업점수령예정일자
+                              </div>
+
+                              <div className="data">
+                                2025-03-14
+                              </div>
+                            </li>
+                          </ul>
                         </div>
                       </li>
                     </ul>

@@ -651,6 +651,31 @@
 .m-dialog-message >*  { flex: 1; display: inline-flex; flex-direction: column; justify-content: center; max-width: 100%; text-align: left; text-align: start; }
 
 
+.o-tabular  { display: table; border-collapse: collapse; width: 100%; }
+.o-tabular >*  { display: table-row; vertical-align: middle; }
+.o-tabular >* >*  { display: table-cell; vertical-align: inherit; }
+// .o-tabular >.colgroup  { display: table-column-group; }
+// .o-tabular >.colgroup >.col  { display: table-column; width: auto; }
+// .o-tabular >.colgroup >.col.head  { width: 0; }
+.o-tabular >* >.head  { width: 0; white-space: nowrap; }
+
+.o-tabular:where(.o-details *)  { font-size: $font-40; line-height: $line-40; }
+.o-tabular:where(.o-details *) >* >*  { height: III(26); }
+.o-tabular:where(.o-details *) >* >:not(:first-child)  { padding-left: $gap-element-90; }
+.o-tabular:where(.o-details *) >* >.head  { color: var(--color-text-30); }
+.o-tabular:where(.o-details *) >* >.data  { --lh: var(--text-height-para); line-height: var(--lh); }
+
+
+
+.o-details  {
+  --margin-block: #{$gap-element-80};
+  --margin-inline: #{$gap-element-90};
+
+  padding: var(--margin-block) var(--margin-inline); border-top: $e10 solid var(--color-edge-40); background: var(--color-ground-40);
+}
+
+
+
 
 
 
@@ -2056,23 +2081,31 @@
 .o-calendar .fc-daygrid-day-bottom  { display: flex; align-items: center; justify-content: center; gap: $gap-element-30; padding: III(1) var(--margin-inline); }
 
 
-.o-timeline  {  }
-.o-timeline .time  { font-feature-settings: var(--text-feature-tnum); font-size: $font-40; color: var(--color-text-30); }
-.o-timeline .chip  { display: inline-flex; align-items: center; min-width: 1em; padding: III(2) III(7); border: $e10 solid currentColor; color: var(--theme); background: var(--color-ground); border-radius: $radius-abs-999; }
+.o-schedule  {  }
+.o-schedule .o-legend-tag  { font-size: $font-40; margin: calc((III(18) - III(10)) / 2) 0; }
+.o-schedule .time  { font-feature-settings: var(--text-feature-tnum); font-size: $font-40; color: var(--color-text-30); }
+.o-schedule .chip  { display: inline-flex; align-items: center; min-width: 1em; padding: III(2) III(7); border: $e10 solid currentColor; color: var(--theme); background: Transparent; border-radius: $radius-abs-999; }
+.o-schedule .chip  { font-size: $font-40; line-height: $line-40; padding: III(0) III(5); }
+.o-schedule .chip  { border-color: var(--color-edge-40); color: var(--color-text-30); background-color: $tp; }
+.o-schedule .chip .value  { color: var(--color-point-orange); }
 
-.o-timeline .chip  { border-color: $tp; color: var(--color-ground); background-color: var(--theme, Black); }
-.o-timeline .chip:is(.theme-key-00)  { --theme: var(--color-legend-theme-00); color: inherit; }
-.o-timeline .chip:is(.theme-key-01)  { --theme: var(--color-legend-theme-01); }
+.o-schedule >*  { position: relative; }
+.o-schedule >* >.main  { line-height: $line-abs-50; display: flex; align-items: flex-start; gap: $gap-element-70; padding: calc((III(36) - III(18)) / 2) 0; }
+.o-schedule >* >.main >*  { flex: none; display: flex; gap: $gap-element-70; min-width: 0; }
+.o-schedule >* >.main >.subject  { flex: 1; }
+.o-schedule >* >.main >.subject >.label  { font-weight: $bold-70; }
 
-.o-timeline .chip  { font-size: $font-40; line-height: $line-40; padding: III(0) III(5); }
+.o-schedule:where(.type-timeline) .chip  { border-color: $tp; color: var(--color-ground); background-color: var(--theme, Black); }
+.o-schedule:where(.type-timeline) .chip:is(.theme-key-00)  { --theme: var(--color-legend-theme-00); color: inherit; }
+.o-schedule:where(.type-timeline) .chip:is(.theme-key-01)  { --theme: var(--color-legend-theme-01); }
 
-.o-timeline  { display: flex; flex-direction: column; }
-.o-timeline >*  { line-height: $line-abs-50; display: flex; align-items: flex-start; gap: $gap-element-70; position: relative; min-height: 0; padding: calc((III(36) - III(18)) / 2) 0; }
-.o-timeline >* >*  { flex: none; display: flex; gap: $gap-element-70; min-width: 0; }
-.o-timeline >* >.main  { flex: 1; }
+.o-schedule:where(.type-timeline) >:not(:last-child):after  { content: ""; width: III(10); height: 100%; position: absolute; top: III(18); background: var(--color-ground2-blue-40); }
+.o-schedule:where(.type-timeline) >* >.main >.tags:before  { content: ""; display: inline-block; width: III(10); height: III(10); position: relative; z-index: 1; margin: calc((III(18) - III(10)) / 2) 0; border: $e10 solid var(--color-edge2-blue-30); background: var(--color-ground); border-radius: 50%; }
 
-.o-timeline >:before  { content: ""; display: inline-block; width: III(10); height: III(10); position: relative; z-index: 1; margin: calc((III(18) - III(10)) / 2) 0; border: $e10 solid var(--color-edge2-blue-30); background: var(--color-ground); border-radius: 50%; }
-.o-timeline >:not(:last-child):after  { content: ""; width: III(10); height: 100%; position: absolute; top: III(18); background: var(--color-ground2-blue-40); }
+.o-schedule:where(.type-normal):where(.m-schedule >*) >:not(:first-child)  { margin-top: $margin-section-50; }
+.o-schedule:where(.type-normal):where(.m-schedule >*) >* >.main  { flex-direction: column; gap: $gap-element-30; }
+.o-schedule:where(.type-normal):where(.m-schedule >*) >* >.main >.subject  { padding-left: III(18); }
+.o-schedule:where(.type-normal):where(.m-schedule >*) >* >.summary .head  { min-width: calc(1em * 100 / 13); }
 
 
 .m-schedule  {
@@ -2089,13 +2122,13 @@
 .m-schedule .day-memo  { font-size: $font-40; line-height: $line-40; }
 .m-schedule .day-memo .o-legend.type-legend >.o-legend-tag  { margin-right: $gap-element-70; }
 
-.m-schedule :where(.schedule-container) >*  { display: table; table-layout: fixed; width: 100%; }
+.m-schedule :where(.schedule-container) >*  { display: table; border-collapse: collapse; width: 100%; }
 .m-schedule :where(.schedule-container) >* >*  { display: table-row; vertical-align: top; }
 .m-schedule :where(.schedule-container) >* >* >*  { display: table-cell; vertical-align: inherit; }
 .m-schedule :where(.schedule-container) >* >* >* >*  { display: grid; min-height: III(36); align-items: center; }
 
 .m-schedule :where(.schedule-container)  { border: $e10 solid var(--color-edge-40); }
-.m-schedule :where(.schedule-container) >*  { border-collapse: collapse; border: hidden; }
+.m-schedule :where(.schedule-container) >*  { table-layout: fixed; border: hidden; }
 .m-schedule :where(.schedule-container) >* >.day-today  { background: var(--color-ground2-yellow-40); }
 .m-schedule :where(.schedule-container) >* >* >*  { padding: III(12) III(24) III(12) 0; border: 0 solid var(--color-edge-30); border-width: 0 0 $e10; }
 .m-schedule :where(.schedule-container) >* >* >:first-child  { padding-left: III(24); }
