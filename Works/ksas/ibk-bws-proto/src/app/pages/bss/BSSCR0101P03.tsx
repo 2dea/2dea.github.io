@@ -88,7 +88,7 @@ function BSSCR0101P03() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -107,6 +107,13 @@ function BSSCR0101P03() {
                 <div className="define-group">
                   <dt className="head">부점선택</dt>
                   <dd className="data">
+                    <div className="group m-radio-menu">
+                      <button type="button" className="bind"><span className="label">본부</span></button>
+                      <button type="button" className="bind"><span className="label">지역본부</span></button>
+                      <button type="button" className="bind is-checked"><span className="label">영업점</span></button>
+                    </div>
+
+
                     <div className="group m-radio-menu">
                       <button type="button" className="bind"><span className="label">WM센터</span></button>
                       <button type="button" className="bind is-checked"><span className="label">출장소</span></button>
@@ -179,6 +186,13 @@ function BSSCR0101P03() {
                       </div>
                     </div>
                   </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
+                      <CommonButton label="일괄양식 업로드" className="_normal" icon="excel-upload-label" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main _primary rows-body-8i">
@@ -246,7 +260,7 @@ function BSSCR0101P03() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)부점선택 [wdth-40p(w770)]</span>
+              <span className="label">(P)부점선택 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
