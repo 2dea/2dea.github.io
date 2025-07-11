@@ -313,12 +313,6 @@ function FMTFC0201M() {
             </div>
           </div>
 
-          <div className="o-grid">
-            <div className="column">
-
-            </div>
-          </div>
-
           <Splitter gutterSize={0} className="o-grid">
             <SplitterPanel minSize={17.5} className="column">
 

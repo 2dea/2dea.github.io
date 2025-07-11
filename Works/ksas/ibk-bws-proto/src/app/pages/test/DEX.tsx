@@ -93,7 +93,14 @@ function DEX() {
       {/*
       스케줄
 
-      2025-07/10 목: 오전 [영업지원] - 서식장부관리 및 수정사항
+      7/ [ 재난 안전-출입증현황관리  ] STMPR0301P02 #170
+
+      2025-07/11 금: 출입증  #152
+
+      2025-07/10 목:
+        오후: STMGD0301M #21
+        #46
+        오전 [영업지원] - 서식장부관리 및 수정사항
 
       파일첨부 -> 첨부파일
 
@@ -351,7 +358,10 @@ about:blank
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
 
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명</span></div></th>
-                          <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자번호</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자번호</span></div></th>
+
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
                             </tr>
 
 
