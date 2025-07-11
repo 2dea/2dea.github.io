@@ -1109,6 +1109,14 @@ function TMPL() {
                               <ol className="m-bullets type-decimal level1">
                                 <li>
                                   <div className="m-flex-list">
+                                    <strong>.o-section .m-tabs</strong>
+                                    <a href="/proto/STMPR0201M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      STMPR0201M<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
                                     <strong>.m-data-form.style-fill</strong>
                                     <a href="/proto/FMTFC0101P01" target="ibkbws_exam" className="o-link texted-button _primary">
                                       FMTFC0101P01<Icon icon="link" />
