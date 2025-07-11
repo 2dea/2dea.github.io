@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 본부재고관리 > 중요용지제한승인
+ * @description 중요용지·용도품(본부) > 본부재고관리 > 중요용지·용도품제한승인
  */
 
 // dependency
@@ -40,7 +40,7 @@ function HSPHS1001M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '본부재고관리' }, { label: '중요용지제한승인' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '본부재고관리' }, { label: '중요용지·용도품제한승인' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function HSPHS1001M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지제한승인</span>
+                <span className="label">중요용지·용도품제한승인</span>
 
                 <FavoriteDiv />
               </h1>

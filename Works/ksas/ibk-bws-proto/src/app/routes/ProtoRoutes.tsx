@@ -143,8 +143,8 @@ import HSPHS0601M from 'app/pages/hsp/HSPHS0601M';      // 중요용지·용도�
 import HSPHS2001M from 'app/pages/hsp/HSPHS2001M';      // 중요용지·용도품(본부) > 본부재고관리   > 센터별영업점재고조회
 import HSPHS0701M from 'app/pages/hsp/HSPHS0701M';      // 중요용지·용도품(본부) > 본부재고관리   > 중요용지본부인도월별누계
 import HSPHS0801M from 'app/pages/hsp/HSPHS0801M';      // 중요용지·용도품(본부) > 본부재고관리   > 중요용지업체반납
-import HSPHS0901M from 'app/pages/hsp/HSPHS0901M';      // 중요용지·용도품(본부) > 본부재고관리   > 중요용지제한등록
-import HSPHS1001M from 'app/pages/hsp/HSPHS1001M';      // 중요용지·용도품(본부) > 본부재고관리   > 중요용지제한승인
+import HSPHS0901M from 'app/pages/hsp/HSPHS0901M';      // 중요용지·용도품(본부) > 본부재고관리   > 중요용지·용도품제한등록
+import HSPHS1001M from 'app/pages/hsp/HSPHS1001M';      // 중요용지·용도품(본부) > 본부재고관리   > 중요용지·용도품제한승인
 import HSPHS1201M from 'app/pages/hsp/HSPHS1201M';      // 중요용지·용도품(본부) > 본부재고관리   > 용도품발주명세표
 import HSPHS1301M from 'app/pages/hsp/HSPHS1301M';      // 중요용지·용도품(본부) > 본부재고관리   > 용도품조달신청
 import HSPHS1301P01 from 'app/pages/hsp/HSPHS1301P01';  // 중요용지·용도품(본부) > 본부재고관리   > 용도품조달신청 ~ (LP)물품신청결재창
