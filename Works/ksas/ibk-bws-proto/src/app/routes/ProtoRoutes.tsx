@@ -322,7 +322,8 @@ import STMBR0301M from 'app/pages/stm/STMBR0301M';       // 재난·안전관리
 import STMBR0301P01 from 'app/pages/stm/STMBR0301P01';   // 재난·안전관리 > 버스배차신청             > 배차집계  ~ (LP)단가표
 
 import STMPR0101M from 'app/pages/stm/STMPR0101M';       // 재난·안전관리 > 출입증/방문증            > 출입증신청
-import STMPR0101P01 from 'app/pages/stm/STMPR0101P01';   // 재난·안전관리 > 출입증/방문증            > 출입증신청 ~ (LP)등록기한관리
+import STMPR0101P01 from 'app/pages/stm/STMPR0101P01';   // 재난·안전관리 > 출입증/방문증            > 출입증신청 ~ (LP)반려내역불러오기
+import STMPR0101P02 from 'app/pages/stm/STMPR0101P02';   // 재난·안전관리 > 출입증/방문증            > 출입증신청 ~ (LP)하남IT센터신청안내
 import STMPR0201M from 'app/pages/stm/STMPR0201M';       // 재난·안전관리 > 출입증/방문증            > 출입증신청내역
 import STMPR0301M from 'app/pages/stm/STMPR0301M';       // 재난·안전관리 > 출입증/방문증            > 출입증현황관리
 import STMPR0301P01 from 'app/pages/stm/STMPR0301P01';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)기간연장
@@ -833,6 +834,7 @@ function ProtoRoutes() {
 
         { path: 'STMPR0101M',   element: <STMPR0101M /> },
         { path: 'STMPR0101P01', element: <STMPR0101P01 /> },
+        { path: 'STMPR0101P02', element: <STMPR0101P02 /> },
         { path: 'STMPR0201M',   element: <STMPR0201M /> },
         { path: 'STMPR0301M',   element: <STMPR0301M /> },
         { path: 'STMPR0301P01', element: <STMPR0301P01 /> },

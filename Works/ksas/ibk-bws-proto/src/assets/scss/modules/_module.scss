@@ -931,6 +931,24 @@
 
 
 
+.o-pair  { display: flex; align-items: center; gap: $gap-element-30; }
+.o-pair >*  { flex: none; min-width: 0; }
+
+.o-pair:where(.o-pair-board *)  { justify-content: space-between; color: var(--color-text-30); }
+.o-pair:where(.o-pair-board *) a  { color: var(--color-text-70); text-decoration: underline; }
+.o-pair:where(.o-pair-board *) >.head  { color: var(--color-key1-70); }
+.o-pair:where(.o-pair-board *) >.data  { font-weight: $bold-70; color: var(--color-text-40); }
+
+.o-pair:where(.o-pair-board.type-normal *) >.data  { font-size: $font-70; line-height: $line-70; }
+.o-pair:where(.o-pair-board.type-normal *) >.data  { font-size: $font-70; line-height: $line-70; }
+
+
+.o-pair-board  { min-height: III(42); padding: III(12) III(24); background: var(--color-ground2-blue-30); background: linear-gradient(to top left, var(--color-ground2-blue-40), var(--color-ground2-blue-30)); border-radius: $radius-70; }
+
+
+
+.m-board  { display: flex; flex-direction: column; gap: $gap-element-50; }
+.m-board >.bodies  { display: grid; grid-template-columns: repeat(auto-fit, minmax(III(200), 1fr)); gap: $gap-element-70; }
 
 
 

@@ -124,10 +124,19 @@ function STMPR0301M() {
                 </div>
               </div>
 
-              {/* 안전관리팀 { @DEV } */}
+              {/* IT센터 / 안전관리팀 { @DEV } */}
               <div className="group _primary">
                 <CommonButton label="반려" className="_lined-primary" />
                 <CommonButton label="승인" className="_solid-primary" />
+              </div>
+
+              {/* 일반부서 { @DEV } */}
+              <div className="group _primary">
+                <CommonButton label="반납" className="_solid-primary" />
+                <CommonButton label="분실" className="_solid-primary" />
+                <CommonButton label="재발급" className="_solid-primary" />
+                <CommonButton label="출입구역변경/추가" className="_solid-primary" />
+                <CommonButton label="기간연장" className="_solid-primary" />
               </div>
 
             </div>
@@ -142,6 +151,97 @@ function STMPR0301M() {
         <div className="div-contents">
           <div className="o-grid">
             <div className="column">
+
+              <div className="m-board">
+                <div className="header m-header">
+                  <div className="o-length justify-start">
+                    <span className="head">총발급건수</span>
+                    <em className="data">
+                      <span className="value">3,000</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+                </div>
+
+                <div className="bodies">
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">발급</strong>
+                          <span className="data"><a href="javascript:">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">미반납</strong>
+                          <span className="data"><a href="javascript:">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">출입구역추가</strong>
+                          <span className="data"><a href="javascript:">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">출입구역변경</strong>
+                          <span className="data"><a href="javascript:">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">재발급</strong>
+                          <span className="data"><a href="javascript:">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">기간연장</strong>
+                          <span className="data"><a href="javascript:">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">분실/기타</strong>
+                          <span className="data"><a href="javascript:" className="c-color-strong">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
               <form className="m-filter-form">
                 <div className="fieldset">

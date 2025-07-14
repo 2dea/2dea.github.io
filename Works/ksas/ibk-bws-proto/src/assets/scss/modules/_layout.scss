@@ -569,6 +569,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
   --height-section-main: calc(var(--height-section-main-body) + var(--height-section-main-head) + var(--height-section-main-foot) + var(--remain-section-main));
 }
+.o-section >.main:has(.o-grid-table:is(.type-table, .type-upload))  { --remain-section-main: (var(--edge-cell) * 2); }
 .o-section >.main:has(.o-grid-table thead >:nth-child(1))  { --height-section-main-head: (var(--height-headcell) * 1); }
 .o-section >.main:has(.o-grid-table thead >:nth-child(2))  { --height-section-main-head: (var(--height-headcell) * 2); --margin-headcell-block: #{III(2)}; }
 .o-section >.main:has(.o-grid-table thead >:nth-child(3))  { --height-section-main-head: (var(--height-headcell) * 3); }
