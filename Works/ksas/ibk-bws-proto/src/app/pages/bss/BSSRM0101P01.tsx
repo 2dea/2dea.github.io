@@ -151,7 +151,7 @@ function BSSRM0101P01() {
                   <h5 className="o-heading level3"><span className="label">일자별 메모 내역</span></h5>
                 </div>
 
-                <div className="main _primary body-5i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">

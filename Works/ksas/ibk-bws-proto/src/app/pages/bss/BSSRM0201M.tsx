@@ -230,7 +230,7 @@ function BSSRM0201M() {
                   </div>
                 </div>
 
-                <div className="main _primary body-3i">
+                <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -607,7 +607,7 @@ function BSSRM0201M() {
                   <h3 className="o-heading level3"><span className="label">거래이력</span></h3>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">

@@ -238,7 +238,7 @@ function BSSFM0201M() {
                   <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
                 </div>
 
-                <div className="main _primary body-5i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">

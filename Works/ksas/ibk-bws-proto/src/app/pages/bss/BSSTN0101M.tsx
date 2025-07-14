@@ -245,7 +245,7 @@ function BSSTN0101M() {
                   </div>
                 </div>
 
-                <div className="main _primary body-3i">
+                <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
