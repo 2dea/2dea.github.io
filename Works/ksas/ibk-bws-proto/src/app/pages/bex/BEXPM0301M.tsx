@@ -419,14 +419,13 @@ function BEXPM0301M() {
                         <XDropdown appendTo={document.body} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
+                      <div className="binds">
+                        <CommonButton label="일괄적용" className="_normal" />
+                      </div>
                     </div>
                   </div>
 
                   <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="일괄적용" className="_normal" />
-                    </div>
-
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />

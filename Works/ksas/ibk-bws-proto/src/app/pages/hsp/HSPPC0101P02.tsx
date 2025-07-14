@@ -185,7 +185,9 @@ function HSPPC0101P02() {
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
-                      <CommonButton label="일괄적용" className="_normal" />
+                      <div className="binds">
+                        <CommonButton label="일괄적용" className="_normal" />
+                      </div>
                     </div>
                   </div>
 

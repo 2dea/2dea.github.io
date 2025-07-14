@@ -227,12 +227,13 @@ function STMFL0201M() {
                                 <i aria-hidden="true"></i>
                               </div>
 
-                              <CommonButton label="일괄적용" className="_normal" />
+                              <div className="binds">
+                                <CommonButton label="일괄적용" className="_normal" />
+                              </div>
                             </div>
                           </div>
 
                           <div className="m-binds">
-
                             <div className="group">
                               <CommonButton label="행추가" className="_normal" />
                               <CommonButton label="행복사" className="_normal" />
