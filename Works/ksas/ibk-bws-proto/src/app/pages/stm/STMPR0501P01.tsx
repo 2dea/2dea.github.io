@@ -227,7 +227,7 @@ function STMPR0501P01() {
                     </div>
 
                     <ul className="m-bullets type-disc">
-                      <li>방문증은 케이스와 목걸이 포함하여 반납해주시 바랍니다.</li>
+                      <li>방문증은 케이스와 목걸이를 포함하여 반납해주시기 바랍니다.</li>
                     </ul>
 
                   </div>

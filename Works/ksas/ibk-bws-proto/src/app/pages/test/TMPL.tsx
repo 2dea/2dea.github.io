@@ -1411,6 +1411,55 @@ function TMPL() {
                     <div className="o-board">
                       <div className="m-step">
                         <div className="steps">
+                          <ol className="o-steps axis-rows type-straight" aria-label="진행 상태">
+                            <li aria-label="진행 완료">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">1</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <a href="javascript:" aria-current="false" className="label">
+                                <em className="main">현송직원확인</em>
+                              </a>
+                            </li>
+                            <li aria-label="진행 완료">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">2</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <a href="javascript:" aria-current="step" className="label">
+                                <em className="main">내국환취결</em>
+                              </a>
+                            </li>
+                            <li aria-label="진행 단계">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">3</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <a href="javascript:" aria-current="false" className="label">
+                                <em className="main">출발시각 등록</em>
+                              </a>
+                            </li>
+                            <li aria-label="진행 예정">
+                              <span className="order" aria-hidden="true">
+                                <span className="prefix"></span>
+                                <span className="count">4</span>
+                                <span className="suffix">단계. </span>
+                              </span>
+                              <a href="javascript:" aria-disabled="true" aria-current="false" className="label">
+                                <em className="main">도착시각(업무센터)</em>
+                              </a>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="o-board">
+                      <div className="m-step">
+                        <div className="steps">
                           <ol className="o-steps axis-rows type-normal basis-type-addition" aria-label="진행 상태">
                             <li aria-label="진행 완료">
                               <span className="order" aria-hidden="true">

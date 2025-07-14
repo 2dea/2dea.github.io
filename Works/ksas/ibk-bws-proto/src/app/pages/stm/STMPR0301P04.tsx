@@ -232,11 +232,11 @@ function STMPR0301P04() {
                 <div className="o-board type-a">
                   <div className="board-container">
                     <div className="m-header">
-                      <strong className="o-heading"><span className="label">주의사항</span></strong>
+                      <strong className="o-heading"><span className="label">유의사항</span></strong>
                     </div>
 
                     <ul className="m-bullets type-disc">
-                      <li>목걸이 및 케이스를 포함하여 반납하시기 바랍니다.</li>
+                      <li>출입증은 케이스와 목걸이를 포함하여 반납해주시기 바랍니다.</li>
                     </ul>
 
                   </div>

@@ -347,7 +347,7 @@
 
 
 
-.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(16) III(16); border: $e10 dashed var(--color-edge-70); background: var(--color-ground-30); border-radius: $radius-50; transition: 0.3s; }
+.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: III(15) III(15); border: $e10 dashed var(--color-edge-70); background: var(--color-ground-30); border-radius: $radius-50; transition: 0.3s; }
 .o-attach .summary  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); color: var(--color-text-30); text-align: center; }
 .o-attach .binds +.summary  { margin-top: $margin-section-50; }
 
@@ -358,6 +358,7 @@
 .o-attach:where(.layer-wrap.case-upload-excel .m-upload-file *)  { padding: III(24) III(24); }
 
 .o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: III(100); margin: III(3) auto; }
+.o-attach:where(.o-grid-table.type-upload:where(.o-section >.main.rows-body-2i >*) *)  { min-height: III(68); }
 .o-attach:where(.o-grid-table.type-upload *) .summary .wbr  { display: block; }
 
 
@@ -752,11 +753,19 @@
 // .o-steps >:not([aria-label="진행 완료"]):after  { background-color: var(--color-edge-40); }
 .o-steps >:not([aria-label="진행 완료"]) .order .count:after  { opacity: 0.0; }
 .o-steps >:is([aria-label="진행 단계"]) .order .count  { z-index: 3; }
-.o-steps >:is([aria-label="진행 단계"]) .label .main  { font-weight: $bold-70; color: var(--theme); }
+.o-steps >:is([aria-label="진행 단계"]) .label .main  { font-weight: $bold-70; }
+.o-steps >:is([aria-label="진행 단계"]) .label:not([aria-current="false"]) .main  { color: var(--theme); }
 .o-steps >:not(:has(~[aria-label="진행 단계"])):after  { background-color: var(--color-edge-40); }
 .o-steps >:not([aria-label="진행 단계"]) .order:after  { opacity: 0.0; }
 .o-steps >:is([aria-label="진행 예정"]) .order .count  { border-color: var(--color-edge-40); color: var(--color-text-20); background-color: var(--color-ground); }
 .o-steps >:is([aria-label="진행 예정"]) .label .main  { color: var(--color-text-disabled); }
+
+.o-steps >* .label[aria-disabled="true"]  { color: inherit; filter: none; }
+.o-steps >* .label[aria-current] .main  { display: flex; align-items: center; }
+.o-steps >* .label[aria-current] .main:after  { content: ""; width: 20px; height: 20px; margin-left: III(4); background: var(--obj-ico-arrow-drop-down) no-repeat 0 /500%; }
+.o-steps >* .label[aria-current][aria-disabled="true"] .main:after  { background-position: 25%; }
+.o-steps >* .label[aria-current="step"] .main  { font-weight: $bold-70; color: var(--theme); cursor: default; }
+.o-steps >* .label[aria-current="step"] .main:after  { background-position: 50%; }
 
 
 .o-steps:where(.axis-cols)  { --gap-step: #{III(24)}; flex-direction: column; gap: 0; }
@@ -1704,24 +1713,24 @@
 
 
 .o-data-table  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
-.o-data-table:not(td *) table  { border-collapse: collapse; width: 100%; /* min-width: 100%; */ background: $color-ground; text-align: center; }
-.o-data-table:not(td *) table:has(>colgroup[span])  { table-layout: fixed; }
-.o-data-table:not(td *) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
-.o-data-table:not(td *) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
-.o-data-table:not(td *) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
-.o-data-table:not(td *) tr >*  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-30); border-width: 0 $e10 $e10; }
-.o-data-table:not(td *) th  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; }
-.o-data-table:not(td *) th:not(thead >* >*)  { background: var(--color-ground-30); }
-.o-data-table:not(td *) thead  { background: var(--color-ground-40); }
+.o-data-table :where(table:not(td *))  { border-collapse: collapse; width: 100%; /* min-width: 100%; */ background: $color-ground; text-align: center; }
+.o-data-table :where(table:not(td *)):has(>colgroup[span])  { table-layout: fixed; }
+.o-data-table :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
+.o-data-table :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
+.o-data-table :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
+.o-data-table :where(table:not(td *)) tr >*  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-30); border-width: 0 $e10 $e10; }
+.o-data-table :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; }
+.o-data-table :where(table:not(td *)) th:not(thead >* >*)  { background: var(--color-ground-30); }
+.o-data-table :where(table:not(td *)) thead  { background: var(--color-ground-40); }
 
-.o-data-table:not(td *) .subtotal-tcell  { font-weight: $bold-70; background: var(--color-ground2-skyblue-40); }
+.o-data-table :where(table:not(td *)) .subtotal-tcell  { font-weight: $bold-70; background: var(--color-ground2-skyblue-40); }
 
-.o-data-table:not(td *) table >*  { position: relative; }
-.o-data-table:not(td *) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
+.o-data-table :where(table:not(td *)) >*  { position: relative; }
+.o-data-table :where(table:not(td *)) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
 
-.o-data-table:not(td *) table  { border: hidden; }
-.o-data-table:not(td *) :has(>table)  { border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
-.o-data-table:not(td *) >.table-container  { overflow: auto; }
+.o-data-table :where(table:not(td *))  { border: hidden; }
+.o-data-table :has(>:where(table:not(td *)))  { border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
+.o-data-table >.table-container  { overflow: auto; }
 
 .o-data-table.style-fill,
   :has(.table):where(.o-data-table.style-fill *)  { flex: 1; display: flex; flex-direction: column; }
@@ -1731,24 +1740,24 @@
 
 
 .m-data-form  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
-.m-data-form table:not(td *)  { table-layout: fixed; border-collapse: collapse; width: 100%; background: $color-ground; }
-.m-data-form:not(td *) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
-.m-data-form:not(td *) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
-.m-data-form:not(td *) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
-.m-data-form:not(td *) tr >*  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
-// .m-data-form:not(td *) [rowspan]:where(th, td)  { border-right-width: $e10; }
-.m-data-form:not(td *).style-fill tr >*  { --margin-cell-block: #{III(8)}; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1); }
-// .m-data-form:not(td *) tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: $color-key1-40; }
-// .m-data-form:not(td *) tr >:first-child  { border-left-width: $e10; }
-// .m-data-form:not(td *) tr >:last-child  { border-right-width: $e10; }
-.m-data-form:not(td *) th  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; }
-.m-data-form:not(td *) th:not(thead >* >*)  { background: var(--color-ground-40); }
-.m-data-form:not(td *) [rowspan]:where(th:has(+th), td:has(+td))  { border-right-width: $e10; }
-.m-data-form:not(td *) [rowspan]:where(th:is(th +*), td:is(td +*))  { border-left-width: $e10; }
+.m-data-form :where(table:not(td *))  { table-layout: fixed; border-collapse: collapse; width: 100%; background: $color-ground; }
+.m-data-form :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
+.m-data-form :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
+.m-data-form :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
+.m-data-form :where(table:not(td *)) tr >*  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
+// .m-data-form :where(table:not(td *)) [rowspan]:where(th, td)  { border-right-width: $e10; }
+.m-data-form :where(table:not(td *)).style-fill tr >*  { --margin-cell-block: #{III(8)}; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1); }
+// .m-data-form :where(table:not(td *)) tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: $color-key1-40; }
+// .m-data-form :where(table:not(td *)) tr >:first-child  { border-left-width: $e10; }
+// .m-data-form :where(table:not(td *)) tr >:last-child  { border-right-width: $e10; }
+.m-data-form :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; }
+.m-data-form :where(table:not(td *)) th:not(thead >* >*)  { background: var(--color-ground-40); }
+.m-data-form :where(table:not(td *)) [rowspan]:where(th:has(+th), td:has(+td))  { border-right-width: $e10; }
+.m-data-form :where(table:not(td *)) [rowspan]:where(th:is(th +*), td:is(td +*))  { border-left-width: $e10; }
 
-.m-data-form:not(td *) tr >.surface  { background-color: var(--color-ground-40); }
+.m-data-form :where(table:not(td *)) tr >.surface  { background-color: var(--color-ground-40); }
 
-.m-data-form table:not(td *)  { border-style: solid hidden; border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
+.m-data-form :where(table:not(td *))  { border-style: solid hidden; border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
 
 
 
