@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 출입증/방문증 > 출입증현황관리 ~ (LP)방문증분실(미반납)
+ * @description 재난·안전관리 > 출입증/방문증 > 부서행사용방문증현황관리 ~ (LP)방문증분실(미반납)
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMPR0301P05() {
+function STMPR0501P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -165,7 +165,7 @@ function STMPR0301P05() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`재발방지 및 향후 관리방안`} require={true} />
+                            <Label label={`향후 관리방안`} require={true} />
                           </th>
                           <td colSpan={5}>
                             <div className="o-field">
@@ -204,26 +204,20 @@ function STMPR0301P05() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원구분</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입증번호(사원번호)</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문증번호</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">회사명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴대전화번호</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입기간</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계속사용</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입건물</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문기간</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문건물</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층수</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">프로젝트명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입사유</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">행사명/방문목적</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문사유</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
@@ -233,7 +227,7 @@ function STMPR0301P05() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -241,16 +235,13 @@ function STMPR0301P05() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
-                              <td>자회사(상주)</td>
-                              <td>AM123</td>
+                              <td>000001</td>
                               <td className="g-start">(주)회사명</td>
                               <td>홍길동</td>
-                              <td><span className="o-digit type-tel">010-7329-7610</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>Y</td>
                               <td>본점</td>
-                              <td>전체</td>
+                              <td>5</td>
                               <td className="g-start">기업시스템</td>
                               <td className="g-start"></td>
                             </tr>
@@ -262,33 +253,21 @@ function STMPR0301P05() {
                 </div>
               </div>
 
+              {/*
               <div className="o-section">
                 <div className="o-board type-a">
                   <div className="board-container">
                     <div className="m-header">
-                      <strong className="o-heading"><span className="label">출입증관리의무</span></strong>
-
-                      <div className="m-checks justify-start">
-                        <InputCheck label="확인함" />
-                      </div>
+                      <strong className="o-heading"><span className="label">유의사항</span></strong>
                     </div>
 
-                    {/* <p className="o-para">
-                      출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 합니다.<br />
-                      관리자는 출입증을 발급받은 자가 퇴직, 및 근무종료 등 당행 출입사유 해제 시 실물을 회수하여 안전관리팀으로 반납하여, 반납이 불가한 경우 「분실(미반납) 사유서」를 작성하여 안전관리팀으로 제출하시기 바랍니다.
-                    </p>
-
-                    <p className="o-para">
-                      [보안업무규정 제90조(출입증관리) 및 제90조의3(상세출입증관리)]
-                    </p> */}
-
-                    <ul className="m-bullets">
-                      <li>출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 합니다. 관리자는 출입증을 발급받은 자가 퇴직, 및 근무종료 등 당행 출입사유 해제 시 실물을 회수하여 안전관리팀으로 반납하여, 반납이 불가한 경우 「분실(미반납) 사유서」를 작성하여 안전관리팀으로 제출하시기 바랍니다. <em className="c-color-label">[보안업무규정 제90조(출입증관리) 및 제90조의3(상세출입증관리)]</em></li>
+                    <ul className="m-bullets type-disc">
+                      <li>주의사항 추후 검토</li>
                     </ul>
 
                   </div>
                 </div>
-              </div>
+              </div> */}
 
             </div>
 
@@ -299,7 +278,7 @@ function STMPR0301P05() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="저장" className="_solid-primary" />
+              <CommonButton label="결재요청" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -332,4 +311,4 @@ function STMPR0301P05() {
   );
 }
 
-export default STMPR0301P05;
+export default STMPR0501P02;

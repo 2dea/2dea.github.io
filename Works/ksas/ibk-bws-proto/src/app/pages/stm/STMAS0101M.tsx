@@ -200,7 +200,6 @@ function STMAS0101M() {
                           <col />
                           <col />
                           <col />
-                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">

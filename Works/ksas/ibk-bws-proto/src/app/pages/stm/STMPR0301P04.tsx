@@ -173,7 +173,7 @@ function STMPR0301P04() {
                           <col />
                           <col />
                           <col />
-                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">

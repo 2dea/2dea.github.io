@@ -123,7 +123,6 @@ function STMPR0401M() {
 
               {/* 안전관리팀 { @DEV } */}
               <div className="group _primary">
-                <CommonButton label="하남IT센터신청안내" className="_lined-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
 
@@ -132,7 +131,7 @@ function STMPR0401M() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={true} heading="문의" divName="안전관리팀" telNumber="7184" asideLabel="" />
+        <ConsultsDiv visible={true} heading="문의" divName="안전관리팀" telNumber="7184" asideLabel="사전 협의 후 신청하시기 바랍니다." />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
@@ -192,27 +191,13 @@ function STMPR0401M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`프로젝트명`} require={true} />
+                            <Label label={`행사명/방문목적`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={7}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required">
+                                <div className="o-form _input mode-required wdth-90">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`출입건물`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-70">
-                                  <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -227,10 +212,10 @@ function STMPR0401M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">출입신청정보</span></h2>
+                  <h2 className="o-heading level2"><span className="label">방문신청정보</span></h2>
 
                   <div className="o-helper style-strong">
-                    <em className="label">출입증 발급 접수 후 1~2영업일 소유됨</em>
+                    <em className="label">접수일로부터 2~3영업일 소유됨</em>
                   </div>
 
                   <div className="o-length">
@@ -269,78 +254,29 @@ function STMPR0401M() {
                       <div className="table-container p-datatable-wrapper">
                         <table className="p-datatable-table p-datatable-scrollable-table">
                           <colgroup>
-                            <col className="wdth-10" />
-                            <col className="wdth-10" />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col className="wdth-auto" />
+                          <col className="wdth-10" />
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col className="wdth-auto" />
                           </colgroup>
 
                           <thead className="p-datatable-thead">
                             <tr>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원구분<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                              <th colSpan={2} className="p-align-center">
-                                <div className="p-column-header-content">
-                                  <span className="p-column-title">출입증번호(사원번호)<em className="o-require-tag"><span className="tag">(필수입력)</span></em>
-                                    <span className="binds type-tooltip">
-                                      <Tooltip className="o-tooltip" target="#STMPR0401M-tooltip-10" position="top">
-
-                                        <strong>[ 구분별 출입증번호 채번 ]</strong><br />
-                                        <br />
-                                        <ul className="m-bullets type-disc">
-                                          <li>자회사(상주): A+숫자5자리, B+숫자6자리(안전관리팀에서 채번하여 등록), 숫자만 입력(5~9만번대)</li>
-                                          <li>자회사(비상주): 안전관리팀에서 별도 비직번발급(B로 등록)</li>
-                                          <li>외주직원(인사정보등록): 숫자만 입력(5~9만 번대)</li>
-                                        <li>외주직원(인사정보미등록): F+숫자5자리, S+숫자5자리, DP+숫자5자리(안전관리팀에서 채번하여 등록), B+숫자6자리(안전관리팀에서 채번하여 등록), A+숫자5자리</li>
-                                        </ul>
-                                      </Tooltip>
-                                      <ImageButton id="STMPR0401M-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
-                                    </span>
-                                  </span>
-                                </div>
-                              </th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">회사명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴대전화번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                              <th colSpan={2} className="p-align-center">
-                                <div className="p-column-header-content">
-                                  <span className="p-column-title">출입기간<em className="o-require-tag"><span className="tag">(필수입력)</span></em>
-                                    <span className="binds type-tooltip">
-                                      <Tooltip className="o-tooltip" target="#STMPR0401M-tooltip-20" position="top">
-
-                                        <strong>[ 출입기간 참고 ]</strong><br />
-                                        <br />
-                                        <ul className="m-bullets type-disc">
-                                          <li>자회사(상주): 기간설정 or 계속사용 선택가능</li>
-                                          <li>자회사(비상주): 최장 1년까지만 등록가능</li>
-                                          <li>외주직원(인사정보등록): 기간설정 or 계속사용 선택가능</li>
-                                          <li>외주직원(인사정보미등록): 최장 1년까지만 등록가능</li>
-                                        </ul>
-                                      </Tooltip>
-                                      <ImageButton id="STMPR0401M-tooltip-20" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
-                                    </span>
-                                  </span>
-                                </div>
-                              </th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계속사용</span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입건물<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총수<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문기간<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문건물<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층수<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             </tr>
                             <tr>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영문</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">숫자</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용일자</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
                             </tr>
@@ -348,7 +284,7 @@ function STMPR0401M() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -357,6 +293,46 @@ function STMPR0401M() {
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-50">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-50">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input type-date wdth-50">
+                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input type-date wdth-50">
+                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
@@ -370,16 +346,6 @@ function STMPR0401M() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _select wdth-50">
-                                      <XDropdown appendTo={document.body} className="bind" />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                <div className="o-field">
-                                  <div className="fields">
                                     <div className="o-form _input wdth-50">
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
@@ -390,79 +356,7 @@ function STMPR0401M() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-50">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input wdth-50">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input wdth-50">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input type-date wdth-50">
-                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input type-date wdth-50">
-                                      <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td><InputCheck label="선택" labelHidden /></td>
-
-                              <td>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _select wdth-50">
-                                      <XDropdown appendTo={document.body} className="bind" />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input wdth-50">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input wdth-50">
+                                    <div className="o-form _input wdth-90">
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
@@ -483,126 +377,84 @@ function STMPR0401M() {
                 <div className="o-grid">
                   <div className="column">
 
-                    <Tabs className="m-tabs react-tabs" defaultIndex={0}>
-                      <div className="m-tab type2 type-step">
-                        <TabList className="lists">
-                          <Tab className="link"><span className="label">01. 반명함사진</span></Tab>
-                          <Tab className="link"><span className="label">02. 신분증사본</span></Tab>
-                          <Tab className="link"><span className="label">03. 개인정보동의서</span></Tab>
-                          <Tab className="link"><span className="label">04. 보안서약서</span></Tab>
-                        </TabList>
+                    <div className="o-section">
+                      <div className="m-header">
+                        <h4 className="o-heading level4"><span className="label">부서행사증빙자료</span></h4>
+
+                        <div className="o-limit type-file">
+                          <span className="head">파일크기</span>
+                          <span className="data">
+                            <em className="value">1MB</em>
+                            <span className="sep">/</span>
+                            <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                          </span>
+                        </div>
+
+                        <div className="m-binds">
+                          <div className="group">
+                            <CommonButton label="파일선택" className="_normal" />
+                            <CommonButton label="파일삭제" className="_normal" />
+                            <CommonButton label="파일다운" className="_normal" />
+                          </div>
+                        </div>
                       </div>
 
-                      <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+                      <div className="main rows-body-3i">
+                        <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                          <div className="table-container">
+                            <table>
+                              <colgroup>
+                                <col className="wdth-10" />
+                                <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                                <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                              </colgroup>
 
-                        <div className="o-section">
-                          <div className="m-header">
-                            <h4 className="o-heading level4"><span className="label">반명함사진</span></h4>
+                              <thead>
+                                <tr>
+                                  <th><InputCheck label="전체​선택" labelHidden /></th>
+                                  <th>파일명</th>
+                                  <th>파일크기</th>
+                                </tr>
+                              </thead>
 
-                            <div className="o-helper">
-                              <em className="label">(허용 확장자 : PDF, JPG)</em>
-                            </div>
+                              <tbody>
+                                <tr>
+                                  <td colSpan={3}>
+                                    <div className="o-attach">
+                                      <div className="summary">
+                                        <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                        <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
 
-                            <div className="o-limit type-file">
-                              <span className="head">파일크기</span>
-                              <span className="data">
-                                <em className="value">1MB</em>
-                                <span className="sep">/</span>
-                                <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                              </span>
-                            </div>
-
-                            <div className="m-binds">
-                              <div className="group">
-                                <CommonButton label="파일선택" className="_normal" />
-                                <CommonButton label="파일삭제" className="_normal" />
-                                <CommonButton label="파일다운" className="_normal" />
-                              </div>
-                            </div>
+                              <tbody>
+                                {[...Array(24)].map((e, idx) => (
+                                  <tr key={idx}>
+                                    <td><InputCheck label="선택" labelHidden /></td>
+                                    <td className="g-start">
+                                      <span className="o-file">
+                                        {
+                                          idx === 1 ?
+                                            <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                            :
+                                            <span className="name">파일명</span>
+                                        }
+                                        <span className="ext">.xlsx</span>
+                                      </span>
+                                    </td>
+                                    <td className="g-end">1023KB</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
                           </div>
-
-                          <div className="main rows-body-3i">
-                            <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                              <div className="table-container">
-                                <table>
-                                  <colgroup>
-                                    <col className="wdth-10" />
-                                    <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
-                                    <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
-                                  </colgroup>
-
-                                  <thead>
-                                    <tr>
-                                      <th><InputCheck label="전체​선택" labelHidden /></th>
-                                      <th>파일명</th>
-                                      <th>파일크기</th>
-                                    </tr>
-                                  </thead>
-
-                                  <tbody>
-                                    <tr>
-                                      <td colSpan={3}>
-                                        <div className="o-attach">
-                                          <div className="summary">
-                                            <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                                            <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                                          </div>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-
-                                  <tbody>
-                                    {[...Array(24)].map((e, idx) => (
-                                      <tr key={idx}>
-                                        <td><InputCheck label="선택" labelHidden /></td>
-                                        <td className="g-start">
-                                          <span className="o-file">
-                                            {
-                                              idx === 1 ?
-                                                <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                                                :
-                                                <span className="name">파일명</span>
-                                            }
-                                            <span className="ext">.xlsx</span>
-                                          </span>
-                                        </td>
-                                        <td className="g-end">1023KB</td>
-                                      </tr>
-                                    ))}
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="o-board type-c style-fit">
-                            <div className="o-notice">
-                              <span className="icons">
-                                <Icon icon="alert-octagram" />
-                              </span>
-
-                              <div className="main">
-                                <span>반명함 사진 규격은 3cm X 4cm, JPG 파일형식만 첨부 가능하며, 암호화된 파일은 반드시 암호화 해제 후 첨부하시기 바랍니다.</span>
-
-                                <div className="m-checks g-end">
-                                  <InputCheck label="확인함" />
-                                </div>
-                              </div>
-
-                            </div>
-                          </div>
-
                         </div>
-                      </TabPanel>
+                      </div>
 
-                      <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-
-                        <div className="o-section">
-                          02
-                        </div>
-                      </TabPanel>
-                    </Tabs>
+                    </div>
 
                   </div>
 
@@ -616,15 +468,17 @@ function STMPR0401M() {
                       <div className="o-board type-a">
                         <div className="board-container">
                           <div className="m-header">
-                            <strong className="o-heading"><span className="label">출입증발급기준</span></strong>
-                            <div className="m-checks">
-                              <InputCheck label="확인함" />
-                            </div>
+                            <strong className="o-heading"><span className="label">단체방문객출입기준</span></strong>
+                            <span className="binds justify-end">
+                              <span className="m-checks">
+                                <InputCheck label="확인함" />
+                              </span>
+                            </span>
                           </div>
 
-                          <ul className="m-bullets type-disc">
-                            <li>2개월 이상(평균 주 1회 이상) 상시 출입자에 한해 발급 가능합니다.</li>
-                            <li>단, IT(데이터)센터는 3개월 이상(평균 주 1회 이상) 상시 출입자에 한합니다.</li>
+                          <ul className="">
+                            <li>각 부서장은 각종 행사 등의 사유로 단체 방문객이 발생한 경우에는 방문 목적, 일시, 방문자 인적사항, 방문구역 등을 기재하여 안전관리실에 단체방문객 출입신청을 해야한다. 단체방문을 신청한 각 부서장은 시설보안 유지를 위해 안전관리실의 보안조치에 따라 이를 준하여야 한다.</li>
+
                           </ul>
                         </div>
                       </div>
@@ -632,15 +486,16 @@ function STMPR0401M() {
                       <div className="o-board type-a">
                         <div className="board-container">
                           <div className="m-header">
-                            <strong className="o-heading"><span className="label">출입증관리의무</span></strong>
-                            <div className="m-checks">
-                              <InputCheck label="확인함" />
-                            </div>
+                            <strong className="o-heading"><span className="label">방문자관리의무</span></strong>
+                            <span className="binds justify-end">
+                              <span className="m-checks">
+                                <InputCheck label="확인함" />
+                              </span>
+                            </span>
                           </div>
 
-                          <ul className="m-bullets type-disc">
-                            <li>출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 하며, 출입증은 상시 패용하고 타인에게 양도할 수 없습니다.</li>
-                            <li>관리자는 출입증을 발급받은 자가 퇴직, 근무 종료 등 당행 출입사유 해제 시 출입증 실물을 회수하여 안전관리팀으로 반납하여야 합니다.</li>
+                          <ul className="">
+                            <li>관리자는 행사참석 방문객을 확인 후 인솔하여 방문자의 최종 퇴행시까지 확인하여야 하며, 방문객은 방문을 마치고 본점을 나갈 경우에는 방문증을 반납하야야 한다.</li>
                           </ul>
                         </div>
                       </div>
@@ -660,9 +515,8 @@ function STMPR0401M() {
                     </div>
 
                     <ul className="m-bullets type-disc">
-                      <li>출입증 번호 : ITO관리시스템 등록 인력은 A직번, S직번, DP직번, 부점관리시스템 등록 인력은 F직번, 인사정보시스템 등록 인력은 숫자 5자리(5만 번 대 ~ 9만 번 대), 그 외 출입증 번호는 안전관리팀으로 문의하시기 바랍니다.</li>
-                      <li>출입구역 : 근무지 또는 업무 관련 주출입 건물 1곳을 선택하여 신청 가능하며, 주근무지 외 다른 건물 출입권한 추가 신청은 「출입구역 변경(추가) 요청서」로 신청하기 바랍니다.</li>
-                      <li>출입증 발급 후 출입증 발급 기준 미달 확인 시 출입권한은 언제든 차단될 수 있습니다.</li>
+                      <li>지급된 방문증은 방문증 신청정보와 일치하도록 관리하여주시고, 방문 종료 즉시 회수하여 안전관리팀으로 반납해주시기 바랍니다.</li>
+                      <li>부서 행사전용 방문증입니다. 행사 목적 외 방문객은 로비 안내데스크에서 출입 절차에 따라 일일방문증을 발급받아 출입하시기 바랍니다.</li>
                     </ul>
                   </div>
                 </div>

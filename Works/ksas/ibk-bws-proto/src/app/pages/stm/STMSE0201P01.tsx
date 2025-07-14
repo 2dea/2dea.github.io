@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 자율보안체계 > 보안업무세부추진계획현황 ~ (LP)등록기한관리
+ * @description 재난·안전관리 > 안전점검의날점검표 > 점검표등록현황 ~ (LP)점검표생성
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMAS0201P01() {
+function STMSE0201P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -97,7 +97,7 @@ function STMAS0201P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">등록기한관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">점검표생성</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -108,7 +108,7 @@ function STMAS0201P01() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`대상연도`} require={true} />
+                    <Label label={`점검기간`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -140,7 +140,7 @@ function STMAS0201P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">등록내역</span></h4>
+                  <h4 className="o-heading level2"><span className="label">등록기한 내역</span></h4>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -153,6 +153,7 @@ function STMAS0201P01() {
                   <div className="m-binds">
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
@@ -177,7 +178,7 @@ function STMAS0201P01() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상연도</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검연월</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분 </span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록기한</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
@@ -215,7 +216,7 @@ function STMAS0201P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">상세정보</span></h5>
+                  <h5 className="o-heading level3"><span className="label">등록기한 정보</span></h5>
 
                   <div className="m-binds">
                     <div className="group">
@@ -237,7 +238,7 @@ function STMAS0201P01() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`대상연도`} require={true} />
+                            <Label label={`점검연월`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -267,9 +268,27 @@ function STMAS0201P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`등록기한`} require={true} />
+                            <Label label={`등록시작일자`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date mode-required wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <span className="seps type-tilde">~</span>
+                                <div className="o-form _input type-date mode-required wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`등록종료일자`} require={true} />
+                          </th>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input type-date mode-required wdth-50">
@@ -310,7 +329,7 @@ function STMAS0201P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)등록기한관리 [wdth-40p(w770)]</span>
+              <span className="label">(P)점검표생성 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -333,4 +352,4 @@ function STMAS0201P01() {
   );
 }
 
-export default STMAS0201P01;
+export default STMSE0201P01;

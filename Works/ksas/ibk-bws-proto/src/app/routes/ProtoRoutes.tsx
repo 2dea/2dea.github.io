@@ -330,8 +330,16 @@ import STMPR0301P02 from 'app/pages/stm/STMPR0301P02';   // 재난·안전관리
 import STMPR0301P03 from 'app/pages/stm/STMPR0301P03';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)재발급
 import STMPR0301P04 from 'app/pages/stm/STMPR0301P04';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)반납
 import STMPR0301P05 from 'app/pages/stm/STMPR0301P05';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)방문증분실(미반납)
+import STMPR0401M from 'app/pages/stm/STMPR0401M';       // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증신청
+import STMPR0501M from 'app/pages/stm/STMPR0501M';       // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증현황관리
+import STMPR0501P01 from 'app/pages/stm/STMPR0501P01';   // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증현황관리 ~ (LP)반납
+import STMPR0501P02 from 'app/pages/stm/STMPR0501P02';   // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증현황관리 ~ (LP)방문증분실(미반납)
+import STMPR0501P03 from 'app/pages/stm/STMPR0501P03';   // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증현황관리 ~ (LP)방문증번호관리
 
-import STMPR0401M from 'app/pages/stm/STMPR0401M';       // 재난·안전관리 > 출입증/방문증             > 부서행사용방문증신청
+import STMSE0101M from 'app/pages/stm/STMSE0101M';       // 재난·안전관리 > 안전점검의날점검표        > 점검표등록
+
+import STMPE0101M from 'app/pages/stm/STMPE0101M';       // 재난·안전관리 > 보안진단의날점검표        > 점검표등록
+import STMSE0201P01 from 'app/pages/stm/STMSE0201P01';   // 재난·안전관리 > 보안진단의날점검표        > 점검표등록 ~ (LP)점검표생성
 
 import STMAS0101M from 'app/pages/stm/STMAS0101M';       // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획
 import STMAS0201P01 from 'app/pages/stm/STMAS0201P01';   // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획현황 ~ (LP)등록기한관리
@@ -834,6 +842,15 @@ function ProtoRoutes() {
         { path: 'STMPR0301P05', element: <STMPR0301P05 /> },
 
         { path: 'STMPR0401M',   element: <STMPR0401M /> },
+        { path: 'STMPR0501M',   element: <STMPR0501M /> },
+        { path: 'STMPR0501P01', element: <STMPR0501P01 /> },
+        { path: 'STMPR0501P02', element: <STMPR0501P02 /> },
+        { path: 'STMPR0501P03', element: <STMPR0501P03 /> },
+
+        { path: 'STMSE0101M',   element: <STMSE0101M /> },
+
+        { path: 'STMPE0101M',   element: <STMPE0101M /> },
+        { path: 'STMSE0201P01', element: <STMSE0201P01 /> },
 
         { path: 'STMAS0101M',   element: <STMAS0101M /> },
         { path: 'STMAS0201P01', element: <STMAS0201P01 /> },

@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 출입증/방문증 > 출입증현황관리 ~ (LP)방문증분실(미반납)
+ * @description 재난·안전관리 > 출입증/방문증 > 부서행사용방문증현황관리 ~ (LP)방문증번호관리
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMPR0301P05() {
+function STMPR0501P03() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -97,7 +97,7 @@ function STMPR0301P05() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">방문증분실(미반납)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">방문증번호관리</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -105,88 +105,30 @@ function STMPR0301P05() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
-                </div>
+                  <h4 className="o-heading level2"><span className="label">방문증내역</span></h4>
 
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
 
-                      <tbody>
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="행추가" className="_normal" />
+                      <CommonButton label="행삭제" className="_normal" />
+                      <CommonButton label="취소" className="_normal" />
+                      <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
+                      <CommonButton label="일괄양식 업로드" className="_normal" icon="excel-upload-label" />
+                    </div>
 
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`신청부점`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0001] 을지로
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`신청자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0001] 홍길동
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`신청일자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`사유`} require={true} />
-                          </th>
-                          <td colSpan={5}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select wdth-50 mode-required">
-                                  <XDropdown appendTo={document.body} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`재발방지 및 향후 관리방안`} require={true} />
-                          </th>
-                          <td colSpan={5}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">분실(미반납) 대상</span></h4>
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main _primary rows-body-5i">
@@ -195,6 +137,7 @@ function STMPR0301P05() {
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
+                          <col className="wdth-10" />
                           <col className="wdth-10" />
                           <col />
                           <col />
@@ -212,47 +155,69 @@ function STMPR0301P05() {
 
                         <thead className="p-datatable-thead">
                           <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원구분</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입증번호(사원번호)</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문증번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">회사명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴대전화번호</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입기간</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계속사용</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입건물</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문기간</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문건물</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층수</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">프로젝트명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입사유</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
-                              <td>자회사(상주)</td>
-                              <td>AM123</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-30">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _select wdth-50">
+                                      <XDropdown appendTo={document.body} className="bind" />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
                               <td className="g-start">(주)회사명</td>
                               <td>홍길동</td>
-                              <td><span className="o-digit type-tel">010-7329-7610</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>Y</td>
                               <td>본점</td>
-                              <td>전체</td>
-                              <td className="g-start">기업시스템</td>
-                              <td className="g-start"></td>
+                              <td>10</td>
+                              <td>012345</td>
+                              <td className="g-start">을지로</td>
+                              <td>012345</td>
+                              <td>홍길동</td>
                             </tr>
                           ))}
                         </tbody>
@@ -262,33 +227,6 @@ function STMPR0301P05() {
                 </div>
               </div>
 
-              <div className="o-section">
-                <div className="o-board type-a">
-                  <div className="board-container">
-                    <div className="m-header">
-                      <strong className="o-heading"><span className="label">출입증관리의무</span></strong>
-
-                      <div className="m-checks justify-start">
-                        <InputCheck label="확인함" />
-                      </div>
-                    </div>
-
-                    {/* <p className="o-para">
-                      출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 합니다.<br />
-                      관리자는 출입증을 발급받은 자가 퇴직, 및 근무종료 등 당행 출입사유 해제 시 실물을 회수하여 안전관리팀으로 반납하여, 반납이 불가한 경우 「분실(미반납) 사유서」를 작성하여 안전관리팀으로 제출하시기 바랍니다.
-                    </p>
-
-                    <p className="o-para">
-                      [보안업무규정 제90조(출입증관리) 및 제90조의3(상세출입증관리)]
-                    </p> */}
-
-                    <ul className="m-bullets">
-                      <li>출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 합니다. 관리자는 출입증을 발급받은 자가 퇴직, 및 근무종료 등 당행 출입사유 해제 시 실물을 회수하여 안전관리팀으로 반납하여, 반납이 불가한 경우 「분실(미반납) 사유서」를 작성하여 안전관리팀으로 제출하시기 바랍니다. <em className="c-color-label">[보안업무규정 제90조(출입증관리) 및 제90조의3(상세출입증관리)]</em></li>
-                    </ul>
-
-                  </div>
-                </div>
-              </div>
 
             </div>
 
@@ -309,7 +247,7 @@ function STMPR0301P05() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)방문증분실(미반납) [wdth-60p(w1150)]</span>
+              <span className="label">(P)방문증번호관리 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>
@@ -332,4 +270,4 @@ function STMPR0301P05() {
   );
 }
 
-export default STMPR0301P05;
+export default STMPR0501P03;

@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 출입증/방문증 > 출입증신청내역
+ * @description 재난·안전관리 > 출입증/방문증 > 부서행사용방문증현황관리
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMPR0201M() {
+function STMPR0501M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -45,7 +45,7 @@ function STMPR0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '출입증/방문증' }, { label: '출입증신청내역' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '출입증/방문증' }, { label: '부서행사용방문증현황관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMPR0201M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">출입증신청내역</span>
+                <span className="label">부서행사용방문증현황관리</span>
 
                 <FavoriteDiv />
               </h1>
@@ -108,6 +108,9 @@ function STMPR0201M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="알림전송" className="_lined-secondary" />
+              </div>
 
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
@@ -123,6 +126,8 @@ function STMPR0201M() {
 
               {/* 안전관리팀 { @DEV } */}
               <div className="group _primary">
+                <CommonButton label="방문증관리번호" className="_solid-primary" />
+                <CommonButton label="수정" className="_solid-primary" />
                 <CommonButton label="반려" className="_lined-primary" />
                 <CommonButton label="승인" className="_solid-primary" />
               </div>
@@ -157,7 +162,7 @@ function STMPR0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`프로젝트명`} require={false} />
+                    <Label label={`행사명/방문목적`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
@@ -167,7 +172,17 @@ function STMPR0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`출입건물`} require={false} />
+                    <Label label={`방문건물`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`상태`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -200,11 +215,11 @@ function STMPR0201M() {
           </div>
 
           <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
+            <SplitterPanel minSize={17.5}  className="column">
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">출입증신청내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">방문증신청내역</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -229,6 +244,8 @@ function STMPR0201M() {
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
+                          <col className="wdth-10" />
+                          <col />
                           <col />
                           <col />
                           <col />
@@ -246,22 +263,22 @@ function STMPR0201M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">프로젝트명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입건물</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">행사명/방문목적</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문건물</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우리부점결재</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">IT센터결재</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">안전관리팀결재</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반려내역</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
@@ -273,25 +290,26 @@ function STMPR0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={16}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
                               <td>012345</td>
                               <td className="g-start">을지로</td>
                               <td className="g-start"></td>
                               <td>본점</td>
+                              <td><a href="javascript:" className="o-link _normal">분실</a></td>
                               <td className="g-end">10</td>
                               <td>결재승인</td>
                               <td>홍길동</td>
                               <td>결재승인</td>
                               <td>홍길동</td>
-                              <td><a href="javascript:" className="o-link _normal">결재반려</a></td>
-                              <td>홍길동</td>
+                              <td><CommonButton label="내역조회" className="_normal" /></td>
                               <td>012345</td>
                               <td>홍길동</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
@@ -306,7 +324,7 @@ function STMPR0201M() {
 
             </SplitterPanel>
 
-            <SplitterPanel minSize={17.5} className="column">
+            <SplitterPanel minSize={17.5} size={100 * 5 / 12} className="column _views">
 
               <div className="o-section">
                 <div className="m-header">
@@ -322,13 +340,17 @@ function STMPR0201M() {
 
                   <div className="m-binds">
                     <div className="group">
+                      <CommonButton label="방문증번호 일괄적용" className="_normal" />
+                    </div>
+
+                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -342,22 +364,17 @@ function STMPR0201M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원구분</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입증번호(사원번호)<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문증번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">회사명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴대전화번호</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입기간</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계속사용</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문기간</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층수</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입사유</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문사유</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
@@ -367,7 +384,7 @@ function STMPR0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -375,25 +392,20 @@ function STMPR0201M() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
-                              <td>자회사(상주)</td>
                               <td>
-                                {idx === 3 - 1 ?
-                                  <div className="o-field">
-                                    <div className="fields">
-                                      <div className="o-form _input wdth-50">
-                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                        <i aria-hidden="true"></i>
-                                      </div>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-30">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
                                     </div>
                                   </div>
-                                  : `AM123`}
+                                </div>
                               </td>
                               <td className="g-start">(주)회사명</td>
                               <td>홍길동</td>
-                              <td><span className="o-digit type-tel">010-7329-7610</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>Y</td>
+                              <td className="c-color-strong"><span className="o-digit type-date">2025-12-25</span></td>
                               <td>11</td>
                               <td className="g-start"></td>
                             </tr>
@@ -403,130 +415,91 @@ function STMPR0201M() {
                     </div>
                   </div>
                 </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li className="c-color-strong"><em>방문기간 만료 시 종료일자가 빨간색으로 표시됩니다.</em></li>
+                  </ul>
+                </div>
+
               </div>
 
               <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level4"><span className="label">부서행사증빙자료</span></h4>
 
-                <Tabs className="m-tabs react-tabs" defaultIndex={0}>
-                  <div className="m-tab type2 type-step">
-                    <TabList className="lists">
-                      <Tab className="link"><span className="label">01. 반명함사진</span></Tab>
-                      <Tab className="link"><span className="label">02. 신분증사본</span></Tab>
-                      <Tab className="link"><span className="label">03. 개인정보동의서</span></Tab>
-                      <Tab className="link"><span className="label">04. 보안서약서</span></Tab>
-                    </TabList>
+                  <div className="o-limit type-file">
+                    <span className="head">파일크기</span>
+                    <span className="data">
+                      <em className="value">1MB</em>
+                      <span className="sep">/</span>
+                      <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                    </span>
                   </div>
 
-                  <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-
-                    <div className="o-section">
-                      <div className="m-header">
-                        <h4 className="o-heading level4"><span className="label">반명함사진</span></h4>
-
-                        <div className="o-helper">
-                          <em className="label">(허용 확장자 : PDF, JPG)</em>
-                        </div>
-
-                        <div className="o-limit type-file">
-                          <span className="head">파일크기</span>
-                          <span className="data">
-                            <em className="value">1MB</em>
-                            <span className="sep">/</span>
-                            <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                          </span>
-                        </div>
-
-                        <div className="m-binds">
-                          <div className="group">
-                            <CommonButton label="파일선택" className="_normal" />
-                            <CommonButton label="파일삭제" className="_normal" />
-                            <CommonButton label="파일다운" className="_normal" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="main rows-body-2i">
-                        <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                          <div className="table-container">
-                            <table>
-                              <colgroup>
-                                <col className="wdth-10" />
-                                <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
-                                <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
-                              </colgroup>
-
-                              <thead>
-                                <tr>
-                                  <th><InputCheck label="전체​선택" labelHidden /></th>
-                                  <th>파일명</th>
-                                  <th>파일크기</th>
-                                </tr>
-                              </thead>
-
-                              <tbody>
-                                <tr>
-                                  <td colSpan={3}>
-                                    <div className="o-attach">
-                                      <div className="summary">
-                                        <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                                        <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-
-                              <tbody>
-                                {[...Array(24)].map((e, idx) => (
-                                  <tr key={idx}>
-                                    <td><InputCheck label="선택" labelHidden /></td>
-                                    <td className="g-start">
-                                      <span className="o-file">
-                                        {
-                                          idx === 1 ?
-                                            <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                                            :
-                                            <span className="name">파일명</span>
-                                        }
-                                        <span className="ext">.xlsx</span>
-                                      </span>
-                                    </td>
-                                    <td className="g-end">1023KB</td>
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="o-board type-c style-fit">
-                        <div className="o-notice">
-                          <span className="icons">
-                            <Icon icon="alert-octagram" />
-                          </span>
-
-                          <div className="main">
-                            <span>반명함 사진 규격은 3cm X 4cm, JPG 파일형식만 첨부 가능합니다.</span>
-
-                            <span className="binds">
-                              <span className="m-checks">
-                                <InputCheck label="확인함" />
-                              </span>
-                            </span>
-
-                          </div>
-
-                        </div>
-                      </div>
-
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="파일선택" className="_normal" />
+                      <CommonButton label="파일삭제" className="_normal" />
+                      <CommonButton label="파일다운" className="_normal" />
                     </div>
-                  </TabPanel>
+                  </div>
+                </div>
 
-                  <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                    02
-                  </TabPanel>
-                </Tabs>
+                <div className="main rows-body-3i">
+                  <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                    <div className="table-container">
+                      <table>
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                          <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                        </colgroup>
+
+                        <thead>
+                          <tr>
+                            <th><InputCheck label="전체​선택" labelHidden /></th>
+                            <th>파일명</th>
+                            <th>파일크기</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td colSpan={3}>
+                              <div className="o-attach">
+                                <div className="summary">
+                                  <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                  <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+
+                        <tbody>
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx}>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td className="g-start">
+                                <span className="o-file">
+                                  {
+                                    idx === 1 ?
+                                      <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                      :
+                                      <span className="name">파일명</span>
+                                  }
+                                  <span className="ext">.xlsx</span>
+                                </span>
+                              </td>
+                              <td className="g-end">1023KB</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
 
               </div>
 
@@ -540,4 +513,4 @@ function STMPR0201M() {
   );
 }
 
-export default STMPR0201M;
+export default STMPR0501M;

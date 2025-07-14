@@ -335,7 +335,7 @@ function STMPR0101M() {
                               </th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계속사용</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입건물<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총수<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층수<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             </tr>
                             <tr>
@@ -625,7 +625,7 @@ function STMPR0101M() {
                             </div>
                           </div>
 
-                          <ul className="m-bullets type-disc">
+                          <ul className="m-bullets">
                             <li>2개월 이상(평균 주 1회 이상) 상시 출입자에 한해 발급 가능합니다.</li>
                             <li>단, IT(데이터)센터는 3개월 이상(평균 주 1회 이상) 상시 출입자에 한합니다.</li>
                           </ul>
@@ -641,7 +641,7 @@ function STMPR0101M() {
                             </div>
                           </div>
 
-                          <ul className="m-bullets type-disc">
+                          <ul className="">
                             <li>출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 하며, 출입증은 상시 패용하고 타인에게 양도할 수 없습니다.</li>
                             <li>관리자는 출입증을 발급받은 자가 퇴직, 근무 종료 등 당행 출입사유 해제 시 출입증 실물을 회수하여 안전관리팀으로 반납하여야 합니다.</li>
                           </ul>
