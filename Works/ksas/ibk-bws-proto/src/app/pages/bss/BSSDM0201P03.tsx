@@ -128,7 +128,6 @@ function BSSDM0201P03() {
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                   <i aria-hidden="true"></i>
                                 </div>
-
                                 <div className="binds">
                                   <CommonButton label="일괄적용" className="_normal" />
                                 </div>

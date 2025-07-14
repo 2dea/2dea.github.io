@@ -344,7 +344,7 @@ function STMPR0301M() {
                               <td>홍길동</td>
                               <td><span className="o-digit type-tel">010-7329-7610</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td className="c-color-strong"><span className="o-digit type-date">2025-12-25</span></td>
                               <td>Y</td>
                               <td>수지IT센터</td>
                               <td>7,11 전체</td>
@@ -360,7 +360,7 @@ function STMPR0301M() {
 
                 <div className="m-footer">
                   <ul className="m-bullets type-disc">
-                    <li className="c-color-strong"><em>출입기간 만료까지 일주일 남았을 경우에는 종료일자가 빨간색으로 표시됩니다.</em></li>
+                    <li>출입기간 만료까지 일주일 남았을 경우에는 종료일자가 <em className="c-color-strong">강조 표시</em>됩니다.</li>
                   </ul>
                 </div>
 

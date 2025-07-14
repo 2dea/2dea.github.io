@@ -357,8 +357,8 @@
 .o-attach:where(.m-upload-file *) .summary  { min-height: calc(var(--lh) * 2); min-height: calc(1lh * 2); margin-bottom: calc(-1 * var(--lh)); margin-bottom: -1lh; }
 .o-attach:where(.layer-wrap.case-upload-excel .m-upload-file *)  { padding: III(24) III(24); }
 
-.o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: III(100); margin: III(3) auto; }
-.o-attach:where(.o-grid-table.type-upload:where(.o-section >.main.rows-body-2i >*) *)  { min-height: III(68); }
+.o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: III(90); margin: III(3) auto; padding: III(7) III(15); }
+.o-attach:where(.o-grid-table.type-upload:where(.o-section >.main.rows-body-2i >*) *)  { min-height: III(55); }
 .o-attach:where(.o-grid-table.type-upload *) .summary .wbr  { display: block; }
 
 
@@ -877,9 +877,10 @@
 .o-notice >*  { flex: none; min-width: 0; }
 // .o-notice >.icons  { --shf: 4.9406564584124654e-322; margin-right: $gap-element-70; padding-top: calc((1lh - $height-icon-30) * var(--shf, 1) / var(--shf, 1) / 2); }
 .o-notice >.icons  { margin-right: $gap-element-70; padding-top: calc((1lh - $height-icon-30) / 2); }
-.o-notice >.main  { flex: 0 1 auto; }
+// .o-notice >.main  { flex: 0 1 auto; }
+.o-notice >.main  { flex: 1; }
 .o-notice >.main >.inline-binds  { display: inline-flex; align-items: center; margin: 0 $gap-element-70; }
-.o-notice >.binds  { align-self: center; margin-left: $gap-element-70; }
+.o-notice >.binds  { align-self: center; display: flex; align-items: center; height: $height-form-50; margin: calc((1lh - $height-form-50) / 2) 0; margin-left: $gap-element-70; }
 
 
 .m-defines  { display: flex; flex-wrap: wrap; gap: $gap-element-70 $gap-element-80; }
@@ -1199,7 +1200,7 @@
 
 
 
-.m-checks  { --gap-col: #{$gap-element-80}; display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-70 var(--gap-col); }
+.m-checks  { --gap-col: #{$gap-element-80}; line-height: calc(1em + var(--rem) * 4); display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-70 var(--gap-col); }
 .m-checks  { min-height: $height-form-50; }
 // .m-checks  { display: grid; grid-template-columns: repeat(auto-fill, minmax(III(80), 1fr)); }
 .m-checks >.wdth-auto  { flex: auto; }

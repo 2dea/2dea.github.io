@@ -356,8 +356,8 @@ function STMPR0401M() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-90">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <div className="o-form _input wdth-80">
+                                      <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>
@@ -372,140 +372,144 @@ function STMPR0401M() {
                 </div>
               </div>
 
+            </div>
+          </div>
+
+          <div className="o-grid">
+            <div className="column">
+
               <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level4"><span className="label">부서행사증빙자료</span></h4>
 
-                <div className="o-grid">
-                  <div className="column">
-
-                    <div className="o-section">
-                      <div className="m-header">
-                        <h4 className="o-heading level4"><span className="label">부서행사증빙자료</span></h4>
-
-                        <div className="o-limit type-file">
-                          <span className="head">파일크기</span>
-                          <span className="data">
-                            <em className="value">1MB</em>
-                            <span className="sep">/</span>
-                            <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                          </span>
-                        </div>
-
-                        <div className="m-binds">
-                          <div className="group">
-                            <CommonButton label="파일선택" className="_normal" />
-                            <CommonButton label="파일삭제" className="_normal" />
-                            <CommonButton label="파일다운" className="_normal" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="main rows-body-3i">
-                        <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                          <div className="table-container">
-                            <table>
-                              <colgroup>
-                                <col className="wdth-10" />
-                                <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
-                                <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
-                              </colgroup>
-
-                              <thead>
-                                <tr>
-                                  <th><InputCheck label="전체​선택" labelHidden /></th>
-                                  <th>파일명</th>
-                                  <th>파일크기</th>
-                                </tr>
-                              </thead>
-
-                              <tbody>
-                                <tr>
-                                  <td colSpan={3}>
-                                    <div className="o-attach">
-                                      <div className="summary">
-                                        <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                                        <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-
-                              <tbody>
-                                {[...Array(24)].map((e, idx) => (
-                                  <tr key={idx}>
-                                    <td><InputCheck label="선택" labelHidden /></td>
-                                    <td className="g-start">
-                                      <span className="o-file">
-                                        {
-                                          idx === 1 ?
-                                            <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                                            :
-                                            <span className="name">파일명</span>
-                                        }
-                                        <span className="ext">.xlsx</span>
-                                      </span>
-                                    </td>
-                                    <td className="g-end">1023KB</td>
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
+                  <div className="o-limit type-file">
+                    <span className="head">파일크기</span>
+                    <span className="data">
+                      <em className="value">1MB</em>
+                      <span className="sep">/</span>
+                      <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                    </span>
                   </div>
 
-                  <div className="column">
-                    <div className="o-section">
-
-                      <div className="m-header">
-                        <h3 className="o-heading level3"><span className="label">필수확인사항</span></h3>
-                      </div>
-
-                      <div className="o-board type-a">
-                        <div className="board-container">
-                          <div className="m-header">
-                            <strong className="o-heading"><span className="label">단체방문객출입기준</span></strong>
-                            <span className="binds justify-end">
-                              <span className="m-checks">
-                                <InputCheck label="확인함" />
-                              </span>
-                            </span>
-                          </div>
-
-                          <ul className="">
-                            <li>각 부서장은 각종 행사 등의 사유로 단체 방문객이 발생한 경우에는 방문 목적, 일시, 방문자 인적사항, 방문구역 등을 기재하여 안전관리실에 단체방문객 출입신청을 해야한다. 단체방문을 신청한 각 부서장은 시설보안 유지를 위해 안전관리실의 보안조치에 따라 이를 준하여야 한다.</li>
-
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="o-board type-a">
-                        <div className="board-container">
-                          <div className="m-header">
-                            <strong className="o-heading"><span className="label">방문자관리의무</span></strong>
-                            <span className="binds justify-end">
-                              <span className="m-checks">
-                                <InputCheck label="확인함" />
-                              </span>
-                            </span>
-                          </div>
-
-                          <ul className="">
-                            <li>관리자는 행사참석 방문객을 확인 후 인솔하여 방문자의 최종 퇴행시까지 확인하여야 하며, 방문객은 방문을 마치고 본점을 나갈 경우에는 방문증을 반납하야야 한다.</li>
-                          </ul>
-                        </div>
-                      </div>
-
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="파일선택" className="_normal" />
+                      <CommonButton label="파일삭제" className="_normal" />
+                      <CommonButton label="파일다운" className="_normal" />
                     </div>
                   </div>
+                </div>
 
+                <div className="main rows-body-3i">
+                  <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                    <div className="table-container">
+                      <table>
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                          <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                        </colgroup>
+
+                        <thead>
+                          <tr>
+                            <th><InputCheck label="전체​선택" labelHidden /></th>
+                            <th>파일명</th>
+                            <th>파일크기</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td colSpan={3}>
+                              <div className="o-attach">
+                                <div className="summary">
+                                  <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                  <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+
+                        <tbody>
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx}>
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td className="g-start">
+                                <span className="o-file">
+                                  {
+                                    idx === 1 ?
+                                      <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                      :
+                                      <span className="name">파일명</span>
+                                  }
+                                  <span className="ext">.xlsx</span>
+                                </span>
+                              </td>
+                              <td className="g-end">1023KB</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
 
               </div>
+
+            </div>
+
+            <div className="column">
+              <div className="o-section">
+
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">필수확인사항</span></h3>
+                </div>
+
+                <div className="o-board type-a">
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">단체방문객출입기준</span></strong>
+                      <div className="m-checks justify-start">
+                        <InputCheck label="확인함" />
+                      </div>
+                    </div>
+
+                    <ul className="m-bullets">
+                      <li>
+                        <p>
+                          각 부서장은 각종 행사 등의 사유로 단체 방문객이 발생한 경우에는 방문 목적, 일시, 방문자 인적사항, 방문구역 등을 기재하여 안전관리실에 단체방문객 출입신청을 해야한다. <br />
+                          단체방문을 신청한 각 부서장은 시설보안 유지를 위해 안전관리실의 보안조치에 따라 이를 준하여야 한다.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">방문자관리의무</span></strong>
+                      <div className="m-checks justify-start">
+                        <InputCheck label="확인함" />
+                      </div>
+                    </div>
+
+                    <ul className="m-bullets">
+                      <li>
+                        <p>
+                          관리자는 행사참석 방문객을 확인 후 인솔하여 방문자의 최종 퇴행시까지 확인하여야 하며, 방문객은 방문을 마치고 본점을 나갈 경우에는 방문증을 반납하야야 한다.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div className="o-grid">
+            <div className="column">
 
               <div className="o-section">
                 <div className="o-board type-a">
@@ -515,7 +519,7 @@ function STMPR0401M() {
                     </div>
 
                     <ul className="m-bullets type-disc">
-                      <li>지급된 방문증은 방문증 신청정보와 일치하도록 관리하여주시고, 방문 종료 즉시 회수하여 안전관리팀으로 반납해주시기 바랍니다.</li>
+                      <li>지급된 방문증은 방문증 신청정보와 일치하도록 관리하여 주시고, 방문 종료 즉시 회수하여 안전관리팀으로 반납해주시기 바랍니다.</li>
                       <li>부서 행사전용 방문증입니다. 행사 목적 외 방문객은 로비 안내데스크에서 출입 절차에 따라 일일방문증을 발급받아 출입하시기 바랍니다.</li>
                     </ul>
                   </div>

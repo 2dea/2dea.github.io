@@ -418,7 +418,7 @@ function STMPR0501M() {
 
                 <div className="m-footer">
                   <ul className="m-bullets type-disc">
-                    <li className="c-color-strong"><em>방문기간 만료 시 종료일자가 빨간색으로 표시됩니다.</em></li>
+                    <li>방문기간 만료 시 종료일자가 <em className="c-color-strong">강조 표시</em>됩니다.</li>
                   </ul>
                 </div>
 
