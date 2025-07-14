@@ -289,7 +289,7 @@ function STMPR0301P02() {
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
-                      <CommonButton label="행복사" className="_normal" />
+                      <CommonButton label="행삭제" className="_normal" />
                       <CommonButton label="취소" className="_normal" />
                     </div>
 
@@ -311,7 +311,7 @@ function STMPR0301P02() {
                           <col className="wdth-10" />
                           <col />
                           <col />
-                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -320,7 +320,6 @@ function STMPR0301P02() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입건물<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층수<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">프로젝트명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입사유<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                           </tr>
                         </thead>
@@ -339,7 +338,7 @@ function STMPR0301P02() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _select wdth-30">
+                                    <div className="o-form _select wdth-70">
                                       <XDropdown appendTo={document.body} className="bind" />
                                       <i aria-hidden="true"></i>
                                     </div>
@@ -349,14 +348,13 @@ function STMPR0301P02() {
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input wdth-50">
+                                    <div className="o-form _input wdth-30">
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
                                   </div>
                                 </div>
                               </td>
-
                               <td>
                                 <div className="o-field">
                                   <div className="fields">

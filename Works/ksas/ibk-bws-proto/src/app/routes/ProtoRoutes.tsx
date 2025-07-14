@@ -327,6 +327,11 @@ import STMPR0201M from 'app/pages/stm/STMPR0201M';       // 재난·안전관리
 import STMPR0301M from 'app/pages/stm/STMPR0301M';       // 재난·안전관리 > 출입증/방문증            > 출입증현황관리
 import STMPR0301P01 from 'app/pages/stm/STMPR0301P01';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)기간연장
 import STMPR0301P02 from 'app/pages/stm/STMPR0301P02';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)출입구역변경
+import STMPR0301P03 from 'app/pages/stm/STMPR0301P03';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)재발급
+import STMPR0301P04 from 'app/pages/stm/STMPR0301P04';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)반납
+import STMPR0301P05 from 'app/pages/stm/STMPR0301P05';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)방문증분실(미반납)
+
+import STMPR0401M from 'app/pages/stm/STMPR0401M';       // 재난·안전관리 > 출입증/방문증             > 부서행사용방문증신청
 
 import STMAS0101M from 'app/pages/stm/STMAS0101M';       // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획
 import STMAS0201P01 from 'app/pages/stm/STMAS0201P01';   // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획현황 ~ (LP)등록기한관리
@@ -824,6 +829,11 @@ function ProtoRoutes() {
         { path: 'STMPR0301M',   element: <STMPR0301M /> },
         { path: 'STMPR0301P01', element: <STMPR0301P01 /> },
         { path: 'STMPR0301P02', element: <STMPR0301P02 /> },
+        { path: 'STMPR0301P03', element: <STMPR0301P03 /> },
+        { path: 'STMPR0301P04', element: <STMPR0301P04 /> },
+        { path: 'STMPR0301P05', element: <STMPR0301P05 /> },
+
+        { path: 'STMPR0401M',   element: <STMPR0401M /> },
 
         { path: 'STMAS0101M',   element: <STMAS0101M /> },
         { path: 'STMAS0201P01', element: <STMAS0201P01 /> },

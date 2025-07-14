@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 출입증/방문증 > 출입증신청
+ * @description 재난·안전관리 > 출입증/방문증 > 부서행사용방문증신청
  */
 
 // dependency
@@ -35,7 +35,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMPR0101M() {
+function STMPR0401M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -45,7 +45,7 @@ function STMPR0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '출입증/방문증' }, { label: '출입증신청' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '출입증/방문증' }, { label: '부서행사용방문증신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMPR0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">출입증신청</span>
+                <span className="label">부서행사용방문증신청</span>
 
                 <FavoriteDiv />
               </h1>
@@ -294,7 +294,7 @@ function STMPR0101M() {
                                 <div className="p-column-header-content">
                                   <span className="p-column-title">출입증번호(사원번호)<em className="o-require-tag"><span className="tag">(필수입력)</span></em>
                                     <span className="binds type-tooltip">
-                                      <Tooltip className="o-tooltip" target="#STMPR0101M-tooltip-10" position="top">
+                                      <Tooltip className="o-tooltip" target="#STMPR0401M-tooltip-10" position="top">
 
                                         <strong>[ 구분별 출입증번호 채번 ]</strong><br />
                                         <br />
@@ -305,7 +305,7 @@ function STMPR0101M() {
                                         <li>외주직원(인사정보미등록): F+숫자5자리, S+숫자5자리, DP+숫자5자리(안전관리팀에서 채번하여 등록), B+숫자6자리(안전관리팀에서 채번하여 등록), A+숫자5자리</li>
                                         </ul>
                                       </Tooltip>
-                                      <ImageButton id="STMPR0101M-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                                      <ImageButton id="STMPR0401M-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
                                     </span>
                                   </span>
                                 </div>
@@ -317,7 +317,7 @@ function STMPR0101M() {
                                 <div className="p-column-header-content">
                                   <span className="p-column-title">출입기간<em className="o-require-tag"><span className="tag">(필수입력)</span></em>
                                     <span className="binds type-tooltip">
-                                      <Tooltip className="o-tooltip" target="#STMPR0101M-tooltip-20" position="top">
+                                      <Tooltip className="o-tooltip" target="#STMPR0401M-tooltip-20" position="top">
 
                                         <strong>[ 출입기간 참고 ]</strong><br />
                                         <br />
@@ -328,7 +328,7 @@ function STMPR0101M() {
                                           <li>외주직원(인사정보미등록): 최장 1년까지만 등록가능</li>
                                         </ul>
                                       </Tooltip>
-                                      <ImageButton id="STMPR0101M-tooltip-20" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                                      <ImageButton id="STMPR0401M-tooltip-20" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
                                     </span>
                                   </span>
                                 </div>
@@ -583,13 +583,10 @@ function STMPR0101M() {
                               </span>
 
                               <div className="main">
-                                <div className="m-string-binds">
-                                  <span className="string">반명함 사진 규격은 3cm X 4cm, JPG 파일형식만 첨부 가능하며, 암호화된 파일은 반드시 암호화 해제 후 첨부하시기 바랍니다.</span>
-                                  <span className="binds justify-end">
-                                    <span className="m-checks">
-                                      <InputCheck label="확인함" />
-                                    </span>
-                                  </span>
+                                <span>반명함 사진 규격은 3cm X 4cm, JPG 파일형식만 첨부 가능하며, 암호화된 파일은 반드시 암호화 해제 후 첨부하시기 바랍니다.</span>
+
+                                <div className="m-checks g-end">
+                                  <InputCheck label="확인함" />
                                 </div>
                               </div>
 
@@ -620,7 +617,7 @@ function STMPR0101M() {
                         <div className="board-container">
                           <div className="m-header">
                             <strong className="o-heading"><span className="label">출입증발급기준</span></strong>
-                            <div className="m-checks justify-start">
+                            <div className="m-checks">
                               <InputCheck label="확인함" />
                             </div>
                           </div>
@@ -636,7 +633,7 @@ function STMPR0101M() {
                         <div className="board-container">
                           <div className="m-header">
                             <strong className="o-heading"><span className="label">출입증관리의무</span></strong>
-                            <div className="m-checks justify-start">
+                            <div className="m-checks">
                               <InputCheck label="확인함" />
                             </div>
                           </div>
@@ -681,4 +678,4 @@ function STMPR0101M() {
   );
 }
 
-export default STMPR0101M;
+export default STMPR0401M;
