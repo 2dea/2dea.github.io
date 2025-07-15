@@ -145,6 +145,42 @@ function STMPR0501M() {
           <div className="o-grid">
             <div className="column">
 
+              <div className="m-board">
+                <div className="header m-header">
+                  <div className="o-length justify-start">
+                    <span className="head">총발급건수</span>
+                    <em className="data">
+                      <span className="value">3,000</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+                </div>
+
+                <div className="bodies">
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">발급</strong>
+                          <span className="data"><a href="javascript:">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="card o-pair-board type-normal">
+                    <ul className="m-pairs">
+                      <li>
+                        <div className="o-pair">
+                          <strong className="head">미반납</strong>
+                          <span className="data"><a href="javascript:">9,999</a></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
               <form className="m-filter-form">
                 <div className="fieldset">
 

@@ -336,13 +336,13 @@ about:blank
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
+                                <div className="fields">
+                                  <div className="o-form _input wdth-80">
+                                    <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
                           </td>
                         </tr>
 
@@ -483,6 +483,9 @@ about:blank
               ADMPA0301M: 위에는 조회 full  / 밑에는 반반 3개 테이블
 
               반반: STMAS0101M 등록기한 안내
+
+
+            STMPR0401M .o-grid .column : 참고 조회, 표, 반반, 유의사항
 
           싱글 왼쪽 반: HSPDU0701M , HSPHS2001M
 
@@ -820,6 +823,25 @@ about:blank
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
+
+      {/*
+      <div className="J-test">
+
+        개발 상식:
+         ajax, fetch, axios
+
+        [ Ajax ] Asynchronous JavaScript And XML
+         Ajax의 약자를 토대로 본래 의미를 살펴보면
+         JavaScript를 사용한 비동기 통신,
+         클라이언트와 서버간에 데이터를 주고받는 기술이라고 할 수 있습니다.
+
+         Ajax는 JavaScript에서 비동기 HTTP 통신이 가능하도록 해줍니다.
+         비동기 Http 통신이란 response와 request를 비동기 식으로 다룰 수 있다는 것을 의미
+
+         예를 들어 여러분이 페이스북에서 좋아요 버튼을 누를 때마다 페이지가 갱신이 된다면 음... 많이 불편하겠죠?
+          또는 구글에서 검색을 하는데 추천 검색어가 로드될때마다 페이지가 새로고침된다면 얼마나 짜증이 날까요?
+
+      </div> */}
     </>
   );
 }

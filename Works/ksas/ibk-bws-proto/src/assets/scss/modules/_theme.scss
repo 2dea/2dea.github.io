@@ -3,3 +3,5 @@
 .o-section:not(.o-section *):not(.o-grid >.column >*)  {
   outline: thick solid Red;
 }
+
+.m-board:not(:only-child)  { margin-bottom: $margin-section-50; }
