@@ -23,6 +23,7 @@ import { Tooltip } from 'primereact/tooltip';
 import { MenuItem } from 'primereact/menuitem';
 import { BreadCrumb } from 'primereact/breadcrumb';
 import { InputText } from 'primereact/inputtext';
+import { InputMask } from 'primereact/inputmask';
 import { InputNumber } from 'primereact/inputnumber';
 import { AutoComplete } from 'primereact/autocomplete';
 import { addLocale } from 'primereact/api';
@@ -49,6 +50,9 @@ function TMPL() {
 
   // InputText
   const [value, setValue] = useState<string>('');
+
+  // InputMask
+  const [Mask, setMask] = useState(null);
 
   // InputNumber
   const [InputNumberValue, setInputNumberValue] = useState(0);
@@ -809,9 +813,18 @@ function TMPL() {
                             </td>
 
                             <th colSpan={1}>
-                              <Label label={`...`} require={false} />
+                              <Label label={`InputMask(사업자등록번호)`} require={false} />
                             </th>
-                            <td colSpan={1}></td>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-num mode-required wdth-60">
+                                    <InputMask placeholder="" mask="999-99-99999" value={Mask} className="bind" onChange={(e) => setMask(e.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
                           </tr>
                           <tr>
                             <th colSpan={1}>
