@@ -393,8 +393,8 @@ function ADMAM0101M() {
                           <td colSpan={1}>
                             <div className="m-checks">
                               <InputRadio name="RADIO_10" label="행내우편" defaultChecked />
-                              <InputRadio name="RADIO_10" label="IBK톡" />
-                              <InputRadio name="RADIO_10" label="쪽지" />
+                              <InputRadio name="RADIO_10" label="IBK톡(알림)" />
+                              <InputRadio name="RADIO_10" label="IBK톡(쪽지)" />
                             </div>
                           </td>
                         </tr>

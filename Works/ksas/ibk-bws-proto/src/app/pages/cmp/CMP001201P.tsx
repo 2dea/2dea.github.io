@@ -125,8 +125,8 @@ function CMP001201P() {
                           </th>
                           <td colSpan={3}>
                               <div className="m-checks">
-                                <InputRadio name="RADIO_10" label="행내우편" />
-                                <InputRadio name="RADIO_10" label="IBK톡" />
+                                <InputRadio name="RADIO_10" label="IBK톡(알림)" />
+                                <InputRadio name="RADIO_10" label="IBK톡(쪽지)" />
                               </div>
                           </td>
                         </tr>
