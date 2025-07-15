@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
-.o-section:not(.o-section *):not(.o-grid >.column >*)  {
+// .o-section:not(.o-section *):not(.o-grid >.column >*)  {
+.o-section:not(.o-section *):not(.o-grid >.column >*):not(.m-tabs >.m-tabs-panel >*)  {
   outline: thick solid Red;
 }
-
+.o-grid:where(.o-grid *) {
+  outline: thick solid Blue;
+}
 .m-board:not(:only-child)  { margin-bottom: $margin-section-50; }

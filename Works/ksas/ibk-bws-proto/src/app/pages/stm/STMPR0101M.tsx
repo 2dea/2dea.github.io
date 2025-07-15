@@ -478,481 +478,483 @@ function STMPR0101M() {
                 </div>
               </div>
 
-              <div className="o-section">
+            </div>
+          </div>
 
-                <div className="o-grid">
-                  <div className="column">
+          <div className="o-grid">
+            <div className="column">
 
-                    <Tabs className="m-tabs react-tabs" defaultIndex={0}>
-                      <div className="m-tab type2 type-step">
-                        <TabList className="lists">
-                          <Tab className="link"><span className="label">01. 반명함사진</span></Tab>
-                          <Tab className="link"><span className="label">02. 신분증사본</span></Tab>
-                          <Tab className="link"><span className="label">03. 개인정보동의서</span></Tab>
-                          <Tab className="link"><span className="label">04. 보안서약서</span></Tab>
-                        </TabList>
+              <Tabs className="m-tabs react-tabs" defaultIndex={0}>
+                <div className="m-tab type2 type-step">
+                  <TabList className="lists">
+                    <Tab className="link"><span className="label">01. 반명함사진</span></Tab>
+                    <Tab className="link"><span className="label">02. 신분증사본</span></Tab>
+                    <Tab className="link"><span className="label">03. 개인정보동의서</span></Tab>
+                    <Tab className="link"><span className="label">04. 보안서약서</span></Tab>
+                  </TabList>
+                </div>
+
+                <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h4 className="o-heading level4"><span className="label">반명함사진</span></h4>
+
+                      <div className="o-helper">
+                        <em className="label">(허용 확장자 : JPG)</em>
                       </div>
 
-                      <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                        <div className="o-section">
-                          <div className="m-header">
-                            <h4 className="o-heading level4"><span className="label">반명함사진</span></h4>
-
-                            <div className="o-helper">
-                              <em className="label">(허용 확장자 : JPG)</em>
-                            </div>
-
-                            <div className="o-limit type-file">
-                              <span className="head">파일크기</span>
-                              <span className="data">
-                                <em className="value">1MB</em>
-                                <span className="sep">/</span>
-                                <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                              </span>
-                            </div>
-
-                            <div className="m-binds">
-                              <div className="group">
-                                <CommonButton label="파일선택" className="_normal" />
-                                <CommonButton label="파일삭제" className="_normal" />
-                                <CommonButton label="파일다운" className="_normal" />
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="main rows-body-2i">
-                            <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                              <div className="table-container">
-                                <table>
-                                  <colgroup>
-                                    <col className="wdth-10" />
-                                    <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
-                                    <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
-                                  </colgroup>
-
-                                  <thead>
-                                    <tr>
-                                      <th><InputCheck label="전체​선택" labelHidden /></th>
-                                      <th>파일명</th>
-                                      <th>파일크기</th>
-                                    </tr>
-                                  </thead>
-
-                                  <tbody>
-                                    <tr>
-                                      <td colSpan={3}>
-                                        <div className="o-attach">
-                                          <div className="summary">
-                                            <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                                            <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                                          </div>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-
-                                  <tbody>
-                                    {[...Array(24)].map((e, idx) => (
-                                      <tr key={idx}>
-                                        <td><InputCheck label="선택" labelHidden /></td>
-                                        <td className="g-start">
-                                          <span className="o-file">
-                                            {
-                                              idx === 1 ?
-                                                <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                                                :
-                                                <span className="name">파일명</span>
-                                            }
-                                            <span className="ext">.xlsx</span>
-                                          </span>
-                                        </td>
-                                        <td className="g-end">1023KB</td>
-                                      </tr>
-                                    ))}
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="m-footer">
-                            <div className="o-board type-c style-fit">
-                              <div className="o-notice">
-                                <span className="icons">
-                                  <Icon icon="alert-octagram" />
-                                </span>
-                                <div className="main">반명함 사진 규격은 3cm × 4cm, JPG 파일형식만 첨부 가능하며, 암호화된 파일은 반드시 암호화 해제 후 첨부하시기 바랍니다.</div>
-
-                                <div className="binds">
-                                  <div className="m-checks">
-                                    <InputCheck label="확인함" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </TabPanel>
-
-                      <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                        <div className="o-section">
-                          <div className="m-header">
-                            <h4 className="o-heading level4"><span className="label">신분증사본</span></h4>
-
-                            <div className="o-helper">
-                              <em className="label">(허용 확장자 : PDF, JPG)</em>
-                            </div>
-
-                            <div className="o-limit type-file">
-                              <span className="head">파일크기</span>
-                              <span className="data">
-                                <em className="value">1MB</em>
-                                <span className="sep">/</span>
-                                <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                              </span>
-                            </div>
-
-                            <div className="m-binds">
-                              <div className="group">
-                                <CommonButton label="파일선택" className="_normal" />
-                                <CommonButton label="파일삭제" className="_normal" />
-                                <CommonButton label="파일다운" className="_normal" />
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="main rows-body-2i">
-                            <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                              <div className="table-container">
-                                <table>
-                                  <colgroup>
-                                    <col className="wdth-10" />
-                                    <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
-                                    <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
-                                  </colgroup>
-
-                                  <thead>
-                                    <tr>
-                                      <th><InputCheck label="전체​선택" labelHidden /></th>
-                                      <th>파일명</th>
-                                      <th>파일크기</th>
-                                    </tr>
-                                  </thead>
-
-                                  <tbody>
-                                    <tr>
-                                      <td colSpan={3}>
-                                        <div className="o-attach">
-                                          <div className="summary">
-                                            <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                                            <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                                          </div>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-
-                                  <tbody>
-                                    {[...Array(24)].map((e, idx) => (
-                                      <tr key={idx}>
-                                        <td><InputCheck label="선택" labelHidden /></td>
-                                        <td className="g-start">
-                                          <span className="o-file">
-                                            {
-                                              idx === 1 ?
-                                                <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                                                :
-                                                <span className="name">파일명</span>
-                                            }
-                                            <span className="ext">.xlsx</span>
-                                          </span>
-                                        </td>
-                                        <td className="g-end">1023KB</td>
-                                      </tr>
-                                    ))}
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="m-footer">
-                            <div className="o-board type-c style-fit">
-                              <div className="o-notice">
-                                <span className="icons">
-                                  <Icon icon="alert-octagram" />
-                                </span>
-                                <div className="main">신분증 앞면 주민등록번호 뒷자리, 운전면허번호, 여권번호 전체 마스킹 처리된 PDF, JPG 파일만 첨부 가능하며, 얼굴 식별 및 생년월일 식별이 가능해야 합니다.</div>
-
-                                <div className="binds">
-                                  <div className="m-checks">
-                                    <InputCheck label="확인함" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </TabPanel>
-
-                      <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                        <div className="o-section">
-                          <div className="m-header">
-                            <h4 className="o-heading level4"><span className="label">개인정보동의서</span></h4>
-
-                            <div className="o-helper">
-                              <em className="label">(허용 확장자 : PDF, JPG)</em>
-                            </div>
-
-                            <div className="o-limit type-file">
-                              <span className="head">파일크기</span>
-                              <span className="data">
-                                <em className="value">1MB</em>
-                                <span className="sep">/</span>
-                                <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                              </span>
-                            </div>
-
-                            <div className="m-binds">
-                              <div className="group">
-                                <CommonButton label="파일선택" className="_normal" />
-                                <CommonButton label="파일삭제" className="_normal" />
-                                <CommonButton label="파일다운" className="_normal" />
-                                <CommonButton label="양식다운" className="_normal" />
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="main rows-body-2i">
-                            <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                              <div className="table-container">
-                                <table>
-                                  <colgroup>
-                                    <col className="wdth-10" />
-                                    <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
-                                    <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
-                                  </colgroup>
-
-                                  <thead>
-                                    <tr>
-                                      <th><InputCheck label="전체​선택" labelHidden /></th>
-                                      <th>파일명</th>
-                                      <th>파일크기</th>
-                                    </tr>
-                                  </thead>
-
-                                  <tbody>
-                                    <tr>
-                                      <td colSpan={3}>
-                                        <div className="o-attach">
-                                          <div className="summary">
-                                            <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                                            <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                                          </div>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-
-                                  <tbody>
-                                    {[...Array(24)].map((e, idx) => (
-                                      <tr key={idx}>
-                                        <td><InputCheck label="선택" labelHidden /></td>
-                                        <td className="g-start">
-                                          <span className="o-file">
-                                            {
-                                              idx === 1 ?
-                                                <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                                                :
-                                                <span className="name">파일명</span>
-                                            }
-                                            <span className="ext">.xlsx</span>
-                                          </span>
-                                        </td>
-                                        <td className="g-end">1023KB</td>
-                                      </tr>
-                                    ))}
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="m-footer">
-                            <div className="o-board type-c style-fit">
-                              <div className="o-notice">
-                                <span className="icons">
-                                  <Icon icon="alert-octagram" />
-                                </span>
-                                <div className="main">개인정보 수집·이용 동의서는 반드시 양식을 다운받아 서면 작성한 파일로 PDF, JPG 파일형식만 첨부 가능합니다. (동의함 체크, 날짜, 성명, 서명날인)</div>
-
-                                <div className="binds">
-                                  <div className="m-checks">
-                                    <InputCheck label="확인함" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </TabPanel>
-
-                      <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                        <div className="o-section">
-                          <div className="m-header">
-                            <h4 className="o-heading level4"><span className="label">보안서약서</span></h4>
-
-                            <div className="o-helper">
-                              <em className="label">(허용 확장자 : PDF, JPG)</em>
-                            </div>
-
-                            <div className="o-limit type-file">
-                              <span className="head">파일크기</span>
-                              <span className="data">
-                                <em className="value">1MB</em>
-                                <span className="sep">/</span>
-                                <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
-                              </span>
-                            </div>
-
-                            <div className="m-binds">
-                              <div className="group">
-                                <CommonButton label="파일선택" className="_normal" />
-                                <CommonButton label="파일삭제" className="_normal" />
-                                <CommonButton label="파일다운" className="_normal" />
-                                <CommonButton label="양식다운" className="_normal" />
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="main rows-body-2i">
-                            <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
-                              <div className="table-container">
-                                <table>
-                                  <colgroup>
-                                    <col className="wdth-10" />
-                                    <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
-                                    <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
-                                  </colgroup>
-
-                                  <thead>
-                                    <tr>
-                                      <th><InputCheck label="전체​선택" labelHidden /></th>
-                                      <th>파일명</th>
-                                      <th>파일크기</th>
-                                    </tr>
-                                  </thead>
-
-                                  <tbody>
-                                    <tr>
-                                      <td colSpan={3}>
-                                        <div className="o-attach">
-                                          <div className="summary">
-                                            <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
-                                            <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
-                                          </div>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-
-                                  <tbody>
-                                    {[...Array(24)].map((e, idx) => (
-                                      <tr key={idx}>
-                                        <td><InputCheck label="선택" labelHidden /></td>
-                                        <td className="g-start">
-                                          <span className="o-file">
-                                            {
-                                              idx === 1 ?
-                                                <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
-                                                :
-                                                <span className="name">파일명</span>
-                                            }
-                                            <span className="ext">.xlsx</span>
-                                          </span>
-                                        </td>
-                                        <td className="g-end">1023KB</td>
-                                      </tr>
-                                    ))}
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="m-footer">
-                            <div className="o-board type-c style-fit">
-                              <div className="o-notice">
-                                <span className="icons">
-                                  <Icon icon="alert-octagram" />
-                                </span>
-                                <div className="main">IT(데이터)센터는 보안교육 및 보안서약서 첨부 필수로 PDF, JPG 파일형식만 첨부 가능합니다.</div>
-
-                                <div className="binds">
-                                  <div className="m-checks">
-                                    <InputCheck label="확인함" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </TabPanel>
-                    </Tabs>
-
-                  </div>
-
-                  <div className="column">
-                    <div className="o-section">
-
-                      <div className="m-header">
-                        <h3 className="o-heading level3"><span className="label">필수확인사항</span></h3>
+                      <div className="o-limit type-file">
+                        <span className="head">파일크기</span>
+                        <span className="data">
+                          <em className="value">1MB</em>
+                          <span className="sep">/</span>
+                          <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                        </span>
                       </div>
 
-                      <div className="o-board type-a">
-                        <div className="board-container">
-                          <div className="m-header">
-                            <strong className="o-heading"><span className="label">출입증발급기준</span></strong>
-                            <div className="m-checks justify-start">
+                      <div className="m-binds">
+                        <div className="group">
+                          <CommonButton label="파일선택" className="_normal" />
+                          <CommonButton label="파일삭제" className="_normal" />
+                          <CommonButton label="파일다운" className="_normal" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main rows-body-2i">
+                      <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                        <div className="table-container">
+                          <table>
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                              <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th><InputCheck label="전체​선택" labelHidden /></th>
+                                <th>파일명</th>
+                                <th>파일크기</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td colSpan={3}>
+                                  <div className="o-attach">
+                                    <div className="summary">
+                                      <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                      <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              {[...Array(24)].map((e, idx) => (
+                                <tr key={idx}>
+                                  <td><InputCheck label="선택" labelHidden /></td>
+                                  <td className="g-start">
+                                    <span className="o-file">
+                                      {
+                                        idx === 1 ?
+                                          <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                          :
+                                          <span className="name">파일명</span>
+                                      }
+                                      <span className="ext">.xlsx</span>
+                                    </span>
+                                  </td>
+                                  <td className="g-end">1023KB</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="m-footer">
+                      <div className="o-board type-c style-fit">
+                        <div className="o-notice">
+                          <span className="icons">
+                            <Icon icon="alert-octagram" />
+                          </span>
+                          <div className="main">반명함 사진 규격은 3cm × 4cm, JPG 파일형식만 첨부 가능하며, 암호화된 파일은 반드시 암호화 해제 후 첨부하시기 바랍니다.</div>
+
+                          <div className="binds">
+                            <div className="m-checks">
                               <InputCheck label="확인함" />
                             </div>
                           </div>
-
-                          <ul className="m-bullets">
-                            <li>
-                              <p>
-                                2개월 이상(평균 주 1회 이상) 상시 출입자에 한해 발급 가능합니다. <br />
-                                단, IT(데이터)센터는 3개월 이상(평균 주 1회 이상) 상시 출입자에 한합니다.
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div className="board-container">
-                          <div className="m-header">
-                            <strong className="o-heading"><span className="label">출입증관리의무</span></strong>
-                            <div className="m-checks justify-start">
-                              <InputCheck label="확인함" />
-                            </div>
-                          </div>
-
-                          <ul className="m-bullets">
-                            <li>
-                              <p>
-                                출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 하며, 출입증은 상시 패용하고 타인에게 양도할 수 없습니다. <br />
-                                관리자는 출입증을 발급받은 자가 퇴직, 근무 종료 등 당행 출입사유 해제 시 출입증 실물을 회수하여 안전관리팀으로 반납하여야 합니다.
-                              </p>
-                            </li>
-                          </ul>
                         </div>
                       </div>
-
                     </div>
                   </div>
+                </TabPanel>
 
+                <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h4 className="o-heading level4"><span className="label">신분증사본</span></h4>
+
+                      <div className="o-helper">
+                        <em className="label">(허용 확장자 : PDF, JPG)</em>
+                      </div>
+
+                      <div className="o-limit type-file">
+                        <span className="head">파일크기</span>
+                        <span className="data">
+                          <em className="value">1MB</em>
+                          <span className="sep">/</span>
+                          <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                        </span>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <CommonButton label="파일선택" className="_normal" />
+                          <CommonButton label="파일삭제" className="_normal" />
+                          <CommonButton label="파일다운" className="_normal" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main rows-body-2i">
+                      <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                        <div className="table-container">
+                          <table>
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                              <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th><InputCheck label="전체​선택" labelHidden /></th>
+                                <th>파일명</th>
+                                <th>파일크기</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td colSpan={3}>
+                                  <div className="o-attach">
+                                    <div className="summary">
+                                      <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                      <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              {[...Array(24)].map((e, idx) => (
+                                <tr key={idx}>
+                                  <td><InputCheck label="선택" labelHidden /></td>
+                                  <td className="g-start">
+                                    <span className="o-file">
+                                      {
+                                        idx === 1 ?
+                                          <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                          :
+                                          <span className="name">파일명</span>
+                                      }
+                                      <span className="ext">.xlsx</span>
+                                    </span>
+                                  </td>
+                                  <td className="g-end">1023KB</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="m-footer">
+                      <div className="o-board type-c style-fit">
+                        <div className="o-notice">
+                          <span className="icons">
+                            <Icon icon="alert-octagram" />
+                          </span>
+                          <div className="main">신분증 앞면 주민등록번호 뒷자리, 운전면허번호, 여권번호 전체 마스킹 처리된 PDF, JPG 파일만 첨부 가능하며, 얼굴 식별 및 생년월일 식별이 가능해야 합니다.</div>
+
+                          <div className="binds">
+                            <div className="m-checks">
+                              <InputCheck label="확인함" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabPanel>
+
+                <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h4 className="o-heading level4"><span className="label">개인정보동의서</span></h4>
+
+                      <div className="o-helper">
+                        <em className="label">(허용 확장자 : PDF, JPG)</em>
+                      </div>
+
+                      <div className="o-limit type-file">
+                        <span className="head">파일크기</span>
+                        <span className="data">
+                          <em className="value">1MB</em>
+                          <span className="sep">/</span>
+                          <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                        </span>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <CommonButton label="파일선택" className="_normal" />
+                          <CommonButton label="파일삭제" className="_normal" />
+                          <CommonButton label="파일다운" className="_normal" />
+                          <CommonButton label="양식다운" className="_normal" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main rows-body-2i">
+                      <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                        <div className="table-container">
+                          <table>
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                              <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th><InputCheck label="전체​선택" labelHidden /></th>
+                                <th>파일명</th>
+                                <th>파일크기</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td colSpan={3}>
+                                  <div className="o-attach">
+                                    <div className="summary">
+                                      <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                      <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              {[...Array(24)].map((e, idx) => (
+                                <tr key={idx}>
+                                  <td><InputCheck label="선택" labelHidden /></td>
+                                  <td className="g-start">
+                                    <span className="o-file">
+                                      {
+                                        idx === 1 ?
+                                          <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                          :
+                                          <span className="name">파일명</span>
+                                      }
+                                      <span className="ext">.xlsx</span>
+                                    </span>
+                                  </td>
+                                  <td className="g-end">1023KB</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="m-footer">
+                      <div className="o-board type-c style-fit">
+                        <div className="o-notice">
+                          <span className="icons">
+                            <Icon icon="alert-octagram" />
+                          </span>
+                          <div className="main">개인정보 수집·이용 동의서는 반드시 양식을 다운받아 서면 작성한 파일로 PDF, JPG 파일형식만 첨부 가능합니다. (동의함 체크, 날짜, 성명, 서명날인)</div>
+
+                          <div className="binds">
+                            <div className="m-checks">
+                              <InputCheck label="확인함" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabPanel>
+
+                <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h4 className="o-heading level4"><span className="label">보안서약서</span></h4>
+
+                      <div className="o-helper">
+                        <em className="label">(허용 확장자 : PDF, JPG)</em>
+                      </div>
+
+                      <div className="o-limit type-file">
+                        <span className="head">파일크기</span>
+                        <span className="data">
+                          <em className="value">1MB</em>
+                          <span className="sep">/</span>
+                          <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                        </span>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <CommonButton label="파일선택" className="_normal" />
+                          <CommonButton label="파일삭제" className="_normal" />
+                          <CommonButton label="파일다운" className="_normal" />
+                          <CommonButton label="양식다운" className="_normal" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main rows-body-2i">
+                      <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                        <div className="table-container">
+                          <table>
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                              <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                            </colgroup>
+
+                            <thead>
+                              <tr>
+                                <th><InputCheck label="전체​선택" labelHidden /></th>
+                                <th>파일명</th>
+                                <th>파일크기</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td colSpan={3}>
+                                  <div className="o-attach">
+                                    <div className="summary">
+                                      <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                      <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              {[...Array(24)].map((e, idx) => (
+                                <tr key={idx}>
+                                  <td><InputCheck label="선택" labelHidden /></td>
+                                  <td className="g-start">
+                                    <span className="o-file">
+                                      {
+                                        idx === 1 ?
+                                          <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                          :
+                                          <span className="name">파일명</span>
+                                      }
+                                      <span className="ext">.xlsx</span>
+                                    </span>
+                                  </td>
+                                  <td className="g-end">1023KB</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="m-footer">
+                      <div className="o-board type-c style-fit">
+                        <div className="o-notice">
+                          <span className="icons">
+                            <Icon icon="alert-octagram" />
+                          </span>
+                          <div className="main">IT(데이터)센터는 보안교육 및 보안서약서 첨부 필수로 PDF, JPG 파일형식만 첨부 가능합니다.</div>
+
+                          <div className="binds">
+                            <div className="m-checks">
+                              <InputCheck label="확인함" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabPanel>
+              </Tabs>
+
+            </div>
+
+            <div className="column">
+              <div className="o-section">
+
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">필수확인사항</span></h3>
+                </div>
+
+                <div className="o-board type-a">
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">출입증발급기준</span></strong>
+                      <div className="m-checks justify-start">
+                        <InputCheck label="확인함" />
+                      </div>
+                    </div>
+
+                    <ul className="m-bullets">
+                      <li>
+                        <p>
+                          2개월 이상(평균 주 1회 이상) 상시 출입자에 한해 발급 가능합니다. <br />
+                          단, IT(데이터)센터는 3개월 이상(평균 주 1회 이상) 상시 출입자에 한합니다.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">출입증관리의무</span></strong>
+                      <div className="m-checks justify-start">
+                        <InputCheck label="확인함" />
+                      </div>
+                    </div>
+
+                    <ul className="m-bullets">
+                      <li>
+                        <p>
+                          출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 하며, 출입증은 상시 패용하고 타인에게 양도할 수 없습니다. <br />
+                          관리자는 출입증을 발급받은 자가 퇴직, 근무 종료 등 당행 출입사유 해제 시 출입증 실물을 회수하여 안전관리팀으로 반납하여야 합니다.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
               </div>
+            </div>
+
+          </div>
+
+          <div className="o-grid">
+            <div className="column">
 
               <div className="o-section">
                 <div className="o-board type-a">
