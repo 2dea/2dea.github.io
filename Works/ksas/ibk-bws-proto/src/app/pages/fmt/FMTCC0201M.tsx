@@ -111,8 +111,8 @@ function FMTCC0201M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
+                <CommonButton label="임시저장" className="_lined-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
-                <CommonButton label="임시저장" className="_solid-primary" />
               </div>
             </div>
 
@@ -143,6 +143,19 @@ function FMTCC0201M() {
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`신청부점`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input mode-required">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
                       </div>
                     </div>
                   </div>

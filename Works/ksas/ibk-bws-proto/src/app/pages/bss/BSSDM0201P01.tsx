@@ -105,7 +105,7 @@ function BSSDM0201P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
+                  <h4 className="o-heading level2"><span className="label">폐기상세정보</span></h4>
                 </div>
 
                 <div className="main">
@@ -141,7 +141,21 @@ function BSSDM0201P01() {
                             [0810] 서울역
                           </td>
                           <th colSpan={1}>
-                            <Label label={`수거예정일`} require={true} />
+                            <Label label={`전화번호`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-tel">02-729-7610</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`신청일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`수거예정일자`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -154,32 +168,77 @@ function BSSDM0201P01() {
                             </div>
                           </td>
                         </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`폐기종류`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            기타
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`인계자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [00001] 홍길동
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`신청량`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            120 (단위: box)
-                          </td>
-                        </tr>
                       </tbody>
                     </table>
                   </form>
                 </div>
+              </div>
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">문서대량폐기 신청정보</span></h4>
+
+                  <div className="o-length">
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
+                    </div>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                        <ImageButton label="목록출력" icon="print" />
+                      </div>
+                    </div>
+                </div>
+
+                <div className="main _primary rows-body-3i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청단위</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인계자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기종류</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td>박스</td>
+                            <td className="g-end">20</td>
+                            <td>홍길동</td>
+                            <td>보존기간경과문서</td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
             </div>

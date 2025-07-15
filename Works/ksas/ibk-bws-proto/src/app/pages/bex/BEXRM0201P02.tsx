@@ -174,10 +174,6 @@ function BEXRM0201P02() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="행삭제" className="_normal" />
-                    </div>
-
-                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
@@ -275,6 +271,7 @@ function BEXRM0201P02() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>

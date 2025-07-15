@@ -88,7 +88,7 @@ function BSSDM0201P03() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -105,13 +105,15 @@ function BSSDM0201P03() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">폐기정보</span></h4>
+                  <h4 className="o-heading level2"><span className="label">폐기상세정보</span></h4>
                 </div>
 
-                <div className="main rows-body-5i">
+                <div className="main">
                   <form className="m-data-form">
                     <table className="table">
                       <colgroup>
+                        <col className="head" />
+                        <col className="data" />
                         <col className="head" />
                         <col className="data" />
                       </colgroup>
@@ -119,9 +121,51 @@ function BSSDM0201P03() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`페기일자`} require={false} />
+                            <Label label={`문서폐기관리번호`} require={false} />
                           </th>
                           <td colSpan={1}>
+                            2025000001
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`신청자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [00001] 홍길동
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`신청부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0810] 서울역
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`전화번호`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-tel">02-729-7610</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`신청일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`수거예정일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`폐기일자`} require={false} />
+                          </th>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input type-date wdth-50">
@@ -140,29 +184,27 @@ function BSSDM0201P03() {
                   </form>
                 </div>
               </div>
-
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">문서대량폐기 신청정보</span></h5>
+                  <h4 className="o-heading level2"><span className="label">문서대량폐기 신청정보</span></h4>
 
                   <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
-                    </em>
-                  </div>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록필터" icon="column-toggle" />
-                      <ImageButton label="목록출력" icon="print" />
+                      <span className="head">전체</span>
+                      <em className="data">
+                        <span className="value">8</span>
+                        <span className="units">건</span>
+                      </em>
                     </div>
-                  </div>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                        <ImageButton label="목록출력" icon="print" />
+                      </div>
+                    </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -174,60 +216,36 @@ function BSSDM0201P03() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
+                          <col className="wdth-50" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
-                            <th colSpan={2} className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청단위</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인계자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기종류</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수거예정일</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                          </tr>
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청단위</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인계자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기종류</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기량</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(24)].map((e, idx) => (
+                          // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>1234</td>
-                            <td className="g-start">마포중앙</td>
-                            <td>10079</td>
-                            <td className="p-x-frozen-last">홍길동</td>
-                            <td><span className="o-digit type-tel">02-729-7610</span></td>
-                            <td><span className="o-digit type-date">2025-05-05</span></td>
-                            <td>마대자루</td>
-                            <td className="g-end">100</td>
+                            <td>박스</td>
+                            <td className="g-end">20</td>
                             <td>홍길동</td>
-                            <td>기타</td>
-                            <td><span className="o-digit type-date">2025-05-05</span></td>
+                            <td>보존기간경과문서</td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">
@@ -238,15 +256,17 @@ function BSSDM0201P03() {
                                 </div>
                               </div>
                             </td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-spin wdth-50">
-                                  <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
-                                    decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
-                                  <i aria-hidden="true"></i>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-spin wdth-50">
+                                    <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                      decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
+                            </td>
                           </tr>
                         ))}
                         </tbody>
@@ -254,6 +274,7 @@ function BSSDM0201P03() {
                     </div>
                   </div>
                 </div>
+
               </div>
 
             </div>
@@ -274,7 +295,7 @@ function BSSDM0201P03() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)대량폐기정보입력 [wdth-60p(w1150)]</span>
+              <span className="label">(P)대량폐기정보입력 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>

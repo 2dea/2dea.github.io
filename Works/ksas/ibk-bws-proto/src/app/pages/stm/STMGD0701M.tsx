@@ -116,7 +116,6 @@ function STMGD0501M() {
             <div className="m-binds type-end">
               <div className="group _primary">
                 <CommonButton label="경영실적포털 자료전송" className="_solid-primary" />
-                <CommonButton label="삭제" className="_lined-primary" />
               </div>
             </div>
           </div>
@@ -225,7 +224,6 @@ function STMGD0501M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
@@ -237,14 +235,13 @@ function STMGD0501M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
                               <td><span className="o-digit type-date">2025-12</span></td>
                               <td>626</td>

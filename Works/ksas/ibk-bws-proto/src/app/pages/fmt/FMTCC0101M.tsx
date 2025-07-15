@@ -133,7 +133,7 @@ function FMTCC0101M() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`신청일자`} require={true} />
+                    <Label label={`신청기간`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -143,6 +143,19 @@ function FMTCC0101M() {
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`신청부점`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -293,6 +306,12 @@ function FMTCC0101M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">신청자정보</span></h3>
+
+                  <div className="m-binds">
+                      <div className="group">
+                        <CommonButton label="신규" className="_create" />
+                      </div>
+                    </div>
                 </div>
 
                 <div className="main">

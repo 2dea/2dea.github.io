@@ -522,12 +522,9 @@ function BSPAQ0301M() {
                               <col />
                               <col />
                               <col />
-                              <col className="wdth-0" />
-                              <col />
-                              <col />
-                              <col />
                               <col />
                               <col className="wdth-0" />
+                              <col />
                               <col />
                             </colgroup>
 
@@ -537,13 +534,12 @@ function BSPAQ0301M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                                <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서무계</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
                                 <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">창구</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
 
                               </tr>
                               <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                                <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                                 <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                               </tr>
@@ -551,7 +547,7 @@ function BSPAQ0301M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -562,16 +558,13 @@ function BSPAQ0301M() {
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td>0465</td>
                                 <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
+                                <td>정상</td>
                                 <td className="g-end">1,300</td>
                                 <td>가바</td>
                                 <td>0465</td>
                                 <td>~</td>
                                 <td>0465</td>
-                                <td className="g-end">1,300</td>
-                                <td>가바</td>
-                                <td>0465</td>
-                                <td>~</td>
-                                <td>0465</td>
+                                <td>결재승인</td>
                               </tr>
                             ))}
                             </tbody>

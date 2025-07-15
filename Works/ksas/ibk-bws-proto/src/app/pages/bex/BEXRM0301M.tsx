@@ -116,7 +116,7 @@ function BEXRM0301M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="전자문서" className="_solid-primary" />
+                <CommonButton label="서명" className="_solid-primary" />
                 <CommonButton label="인수" className="_solid-primary" />
               </div>
             </div>
