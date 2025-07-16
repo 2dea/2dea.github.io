@@ -318,6 +318,16 @@ about:blank
 <Icon icon="grid-added" />
 
 <td>나가</td>
+
+(주)앤비앤코퍼레이션
+
+
+<li>입금계좌: 기업은행 ___-______-__-___</li>
+
+사업자등록번호
+<li>___-______-__-___</li>
+
+계좌번호
                               <td>10000</td>
                               <td>~</td>
                               <td>10000</td>
@@ -353,6 +363,19 @@ about:blank
                                 </div>
                               </div>
                             </td>
+
+                            기준연월
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-date wdth-50">
+                                    <Calendar placeholder="" value={Date} locale="ko" view="month" dateFormat="yy-mm" mask="9999-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                        <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
 
                             <td>
                               <div className="o-field">
@@ -408,6 +431,20 @@ about:blank
                             </div>
                           </td>
                         </tr>
+
+
+                        글자색
+                        <th colSpan={1}>
+                            <Label label={`검증여부`} require={false} />
+                          </th>
+                          <td>
+                            <div className="m-string-binds">
+                              <span className="string">
+                                <span className="o-status-text style-inherit type-20">불일치</span>
+                              </span >
+                                <span className="binds justify-end"><CommonButton label="검증" className="_normal" /></span>
+                            </div >
+                          </td >
 
 
                         th label <br >

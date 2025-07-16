@@ -268,7 +268,7 @@ function FEMDA0201M() {
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자등록번호</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발의일자</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결의일자</span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급수수료</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급 수수료</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약명</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약기간</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
@@ -359,37 +359,40 @@ function FEMDA0201M() {
                             <Label label={`계약정보 불러오기`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            [0001] 영업부
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="검색" icon="search" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                           </td>
 
                           <th colSpan={1}>
                             <Label label={`지급구분`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0001] 홍길동
+                            수도권
                           </td>
 
                           <th colSpan={1}>
                             <Label label={`지급대상연월`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
+                            <span className="o-digit type-date">2025-12</span>
                           </td>
                         </tr>
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`지급결의명`} require={true} />
+                            <Label label={`지급결의명`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            (수도권)물류운송대행계약서
                           </td>
 
                           <th colSpan={1}>
@@ -412,11 +415,10 @@ function FEMDA0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 mode-required g-end">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <div className="o-form _input type-date mode-required wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <span className="units">명</span>
                               </div>
                             </div>
                           </td>
@@ -424,129 +426,205 @@ function FEMDA0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`지급업체명`} require={true} />
+                            <Label label={`지급업체명`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={'self'} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            (주)앤비앤코퍼레이션
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`사업자등록번호`} require={true} />
+                            <Label label={`사업자등록번호`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={'self'} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            999-99-99999
                           </td>
                           <th colSpan={1}>
-                            <Label label={`입금은행명`} require={true} />
+                            <Label label={`입금은행명`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={'self'} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            기업은행
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`입금계좌번호`} require={true} />
+                            <Label label={`입금계좌번호`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={'self'} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            999-99-99999
                           </td>
-
                         </tr>
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`지급수수료`} require={true} />
+                            <Label label={`지급 수수료`} require={false} />
                           </th>
                           <td>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-time mode-required wdth-30">
-                                  <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            金 일천이백칠십이원 (￦100,000,000)
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`세금계산서 불러오기`} require={true} />
                           </th>
-                          <td>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input type-time mode-required wdth-30">
-                                  <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                <div className="o-form _input wdth-70">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="검색" icon="search" />
+                                  </span>
                                 </div>
                               </div>
                             </div>
                           </td>
+
                           <th colSpan={1}>
-                            <Label label={`국세청승인번호`} require={false} />
+                            <Label label={`국세청 승인번호`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            <a href="javascript:" className="o-link _normal">999-99-99999</a>
                           </td>
 
                           <th colSpan={1}>
                             <Label label={`검증여부`} require={false} />
                           </th>
                           <td>
+                            <div className="m-string-binds">
+                              <span className="string">
+                                {/* <>일치</> */}
+                                <span className="o-status-text style-inherit type-20">불일치</span>
+                              </span>
+                              <span className="binds justify-end"><CommonButton label="검증" className="_normal" /></span>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`결의내용`} require={false} />
+                          </th>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input type-time wdth-30">
-                                  <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                <div className="o-form _input">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={8} cols={80} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`첨부파일`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+
+                            <div className="o-section">
+                              <div className="m-header">
+                                <div className="o-limit type-file">
+                                  <span className="head">파일크기</span>
+                                  <span className="data">
+                                    <em className="value">1MB</em>
+                                    <span className="sep">/</span>
+                                    <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                                  </span>
+                                </div>
+
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <CommonButton label="파일선택" className="_normal" />
+                                    <CommonButton label="파일삭제" className="_normal" />
+                                    <CommonButton label="파일다운" className="_normal" />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="main rows-body-3i">
+                                <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                                  <div className="table-container">
+                                    <table>
+                                      <colgroup>
+                                        <col className="wdth-10" />
+                                        <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                                        <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                                      </colgroup>
+
+                                      <thead>
+                                        <tr>
+                                          <th><InputCheck label="전체​선택" labelHidden /></th>
+                                          <th>파일명</th>
+                                          <th>파일크기</th>
+                                        </tr>
+                                      </thead>
+
+                                      <tbody>
+                                        <tr>
+                                          <td colSpan={3}>
+                                            <div className="o-attach">
+                                              <div className="summary">
+                                                <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                                <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+
+                                      <tbody>
+                                        {[...Array(24)].map((e, idx) => (
+                                          <tr key={idx}>
+                                            <td><InputCheck label="선택" labelHidden /></td>
+                                            <td className="g-start">
+                                              <span className="o-file">
+                                                {
+                                                  idx === 1 ?
+                                                    <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                                    :
+                                                    <span className="name">파일명</span>
+                                                }
+                                                <span className="ext">.xlsx</span>
+                                              </span>
+                                            </td>
+                                            <td className="g-end">1023KB</td>
+                                          </tr>
+                                        ))}
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="m-footer">
+                                <ul className="m-bullets type-disc">
+                                  <li className="c-color-strong"><em>청구공문은 필수 첨부입니다.</em></li>
+                                </ul>
+                              </div>
+
+                            </div>
+
                           </td>
                         </tr>
 
                       </tbody>
                     </table>
                   </form>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="o-board type-a">
+                  <div className="board-container">
+                    <div className="m-header">
+                      <strong className="o-heading"><span className="label">지급결의 순서</span></strong>
+                    </div>
+
+                    <ol className="m-bullets type-decimal level1">
+                      <li>계약정보 불러오기 [돋보기] 버튼을 눌러 계약정보를 선택합니다.</li>
+                      <li>세금계산서 불러오기 [돋보기] 버튼을 눌러 세금계산서를 선택합니다.</li>
+                      <li>[검증] 버튼을 눌러 계약정보에 지급 수수료와 세금계산서 금액을 비교합니다.</li>
+                      <li>검증여부가 일치인 경우 [지급결의]버튼을 눌러 결재요청을 합니다.</li>
+                      <li>검증여부가 불일치인 경우 계약정보 or 세금계산서 정보를 확인 후 재선택합니다.</li>
+                    </ol>
+                  </div>
                 </div>
               </div>
 

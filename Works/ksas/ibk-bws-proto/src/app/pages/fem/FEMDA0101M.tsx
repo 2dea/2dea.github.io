@@ -275,7 +275,7 @@ function FEMDA0101M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자등록번호</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약상태</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약기간</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총계약금액</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총 계약금액</span></div></th>
                                 <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록정보</span></div></th>
                                 <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">해지정보</span></div></th>
@@ -304,7 +304,7 @@ function FEMDA0101M() {
                                   <td>{idx + 1}</td>
                                   <td>수도권</td>
                                   <td className="g-start">(수도권)물류운송대행계약서</td>
-                                  <td className="g-start">업체명 (주)앤비앤코퍼레이션</td>
+                                  <td className="g-start">(주)앤비앤코퍼레이션</td>
                                   <td>221868620</td>
                                   <td>정상</td>
                                   <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
@@ -494,7 +494,7 @@ function FEMDA0101M() {
 
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`총계약금액`} require={true} />
+                                <Label label={`총 계약금액`} require={true} />
                               </th>
                               <td colSpan={3}>
                                 金 일천이백칠십이원 (￦100,000,000)
@@ -657,7 +657,7 @@ function FEMDA0101M() {
                               <tr>
                                 <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">연월</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준연월</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공급가액</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세액</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
@@ -791,7 +791,7 @@ function FEMDA0101M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자등록번호</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약상태</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약기간</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총계약금액</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총 계약금액</span></div></th>
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">입금계좌</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록정보</span></div></th>

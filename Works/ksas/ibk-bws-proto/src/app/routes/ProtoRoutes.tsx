@@ -454,6 +454,11 @@ import BSSTI0501M from 'app/pages/bss/BSSTI0501M';     // 영업지원 > 연수�
 import FEMDA0101M from 'app/pages/fem/FEMDA0101M';      // 수수료관리 > 물류대행수수료 > 계약서관리
 import FEMDA0101P01 from 'app/pages/fem/FEMDA0101P01';  // 수수료관리 > 물류대행수수료 > 계약서관리 ~ (LP)중도해지
 import FEMDA0201M from 'app/pages/fem/FEMDA0201M';      // 수수료관리 > 물류대행수수료 > 지급결의
+import FEMDA0201P01 from 'app/pages/fem/FEMDA0201P01';  // 수수료관리 > 물류대행수수료 > 지급결의 ~ (LP)중도해지
+import FEMDA0201P02 from 'app/pages/fem/FEMDA0201P02';  // 수수료관리 > 물류대행수수료 > 지급결의 ~ (LP)세금계산서불러오기
+import FEMDA0201P04 from 'app/pages/fem/FEMDA0201P04';  // 수수료관리 > 물류대행수수료 > 지급결의 ~ (LP)지급결의취소
+
+import FEMCT0201P01 from 'app/pages/fem/FEMCT0201P01';  // 수수료관리 > 물류대행수수료 > 지급결의 ~ (LP)월별지급검증등록
 
 
 // proto 공통·결재
@@ -978,14 +983,18 @@ function ProtoRoutes() {
         { path: 'BSSTI0501M',   element: <BSSTI0501M /> },
       ],
     },
-    ,
-    { // 영업지원
+    { // 수수료관리
       path: '/proto',
       element: <Decorator />,
       children: [
         { path: 'FEMDA0101M',   element: <FEMDA0101M /> },
         { path: 'FEMDA0101P01', element: <FEMDA0101P01 /> },
         { path: 'FEMDA0201M',   element: <FEMDA0201M /> },
+        { path: 'FEMDA0201P01', element: <FEMDA0201P01 /> },
+        { path: 'FEMDA0201P04', element: <FEMDA0201P04 /> },
+
+
+        { path: 'FEMCT0201P01', element: <FEMCT0201P01 /> },
       ]
     },
     { // 공통·결재
@@ -995,6 +1004,7 @@ function ProtoRoutes() {
         { path: 'ADMCM0101M',   element: <ADMCM0101M /> },
         { path: 'ADMSM0101M',   element: <ADMSM0101M /> },
         { path: 'ADMSM0101P01', element: <ADMSM0101P01 /> },
+        { path: 'FEMDA0201P02', element: <FEMDA0201P02 /> },
 
         { path: 'ADMPA0101M',   element: <ADMPA0101M /> },
         { path: 'ADMPA0201M',   element: <ADMPA0201M /> },
