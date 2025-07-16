@@ -1173,9 +1173,25 @@ function TMPL() {
                                 </li>
                                 <li>
                                   <div className="m-flex-list">
+                                    <strong>세금계산서</strong>
+                                    <a href="/proto/FEMDA0201P02" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      FEMDA0201P02<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
                                     <strong>이미지보기(다단)</strong>
                                     <a href="/proto/STMKY0401P01" target="ibkbws_exam" className="o-link texted-button _primary">
                                       STMKY0401P01<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
+                                    <strong>상태 데이터</strong>
+                                    <a href="/proto/STMKY0401M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      STMKY0401M<Icon icon="link" />
                                     </a>
                                   </div>
                                 </li>

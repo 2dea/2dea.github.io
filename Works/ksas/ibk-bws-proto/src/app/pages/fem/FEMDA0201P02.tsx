@@ -92,7 +92,7 @@ function FEMDA0201P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -110,6 +110,12 @@ function FEMDA0201P02() {
               <div className="o-section">
                 <div className="m-header">
                   <h4 className="o-heading level2"><span className="label">세금계산서 불러오기</span></h4>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="국세청 승인번호 찾기" className="_normal" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main">
@@ -179,8 +185,331 @@ function FEMDA0201P02() {
               <div className="o-section">
                 <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">세금계산서</span></h5>
+
+                  <div className="o-field">
+                    <Label label={`승인번호`} require={false} />
+                    <div className="fields">
+                      <span className="string o-digit type-num">99999999-99999999-9999999</span>
+                    </div>
+                  </div>
                 </div>
 
+                <div className="main">
+                  <div className="o-data-table type-taxinvoice">
+                    <div className="table-container" style={{ '--width--col': '(1em * 120 / 14)' } as React.CSSProperties}>
+                      <table className="table g-fixed-table">
+                        <colgroup>
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          {/* <col style={{ width: 'calc(100% / 4 - var(--width--col))' }} /> */}
+                          <col />
+
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col />
+
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col />
+
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col />
+                        </colgroup>
+
+                        <thead>
+                          <tr>
+                            <th colSpan={4}>공급자</th>
+                            <th colSpan={4}>공급받는자</th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="g-start">
+                          <tr>
+                            <th colSpan={1}>
+                              등록​번호
+                            </th>
+                            <td colSpan={1}>
+                              999-99-99999
+                            </td>
+
+                            <th colSpan={1}>
+                              종사업장​번호
+                            </th>
+                            <td colSpan={1}>
+
+                            </td>
+
+                            <th colSpan={1}>
+                              등록​번호
+                            </th>
+                            <td colSpan={1}>
+                              999-99-99999
+                            </td>
+
+                            <th colSpan={1}>
+                              종사업장​번호
+                            </th>
+                            <td colSpan={1}>
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              상호​(법인명)
+                            </th>
+                            <td colSpan={1}>
+                              나이스씨엠에스(주)
+                            </td>
+
+                            <th colSpan={1}>
+                              성명
+                            </th>
+                            <td colSpan={1}>
+                              홍길동
+                            </td>
+
+                            <th colSpan={1}>
+                              상호​(법인명)
+                            </th>
+                            <td colSpan={1}>
+                              나이스씨엠에스(주)
+                            </td>
+
+                            <th colSpan={1}>
+                              성명
+                            </th>
+                            <td colSpan={1}>
+                              홍길동
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              사업장​주소
+                            </th>
+                            <td colSpan={3}>
+                              서울특별시 마포구 마포대로 130(공덕동 동방빌딩) 7층
+                            </td>
+
+                            <th colSpan={1}>
+                              사업장​주소
+                            </th>
+                            <td colSpan={3}>
+                              서울특별시 마포구 마포대로 130(공덕동 동방빌딩) 7층
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              업태
+                            </th>
+                            <td colSpan={1}>
+                              운수서비스
+                            </td>
+
+                            <th colSpan={1}>
+                              종목
+                            </th>
+                            <td colSpan={1}>
+                              화물운송
+                            </td>
+
+                            <th colSpan={1}>
+                              업태
+                            </th>
+                            <td colSpan={1}>
+                              운수서비스
+                            </td>
+
+                            <th colSpan={1}>
+                              종목
+                            </th>
+                            <td colSpan={1}>
+                              화물운송
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              이메일
+                            </th>
+                            <td colSpan={3}>
+                              example@abc.def
+                            </td>
+
+                            <th colSpan={1}>
+                              이메일
+                            </th>
+                            <td colSpan={3}>
+                              example@abc.def
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+
+                            </th>
+                            <td colSpan={3}>
+
+                            </td>
+
+                            <th colSpan={1}>
+                              이메일
+                            </th>
+                            <td colSpan={3}>
+
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table className="table g-fixed-table">
+                        <colgroup>
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col />
+
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col />
+
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col />
+
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col />
+                        </colgroup>
+
+                        <tbody className="g-start">
+                          <tr>
+                            <th colSpan={1}>
+                              작성일자
+                            </th>
+                            <td colSpan={3}>
+                              2024-12-31
+                            </td>
+
+                            <th colSpan={1}>
+                              공급가액
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              8,008,000
+                            </td>
+
+                            <th colSpan={1}>
+                              세액
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              800,800
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              수정사유
+                            </th>
+                            <td colSpan={3}>
+                              해당없음
+                            </td>
+
+                            <th colSpan={1}>
+                              비고
+                            </th>
+                            <td colSpan={3}>
+                              해당없음
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table className="table g-fixed-table">
+                        <colgroup>
+                          <col style={{ width: 'calc(var(--width--col) / 2)' }} />
+                          <col style={{ width: 'calc(var(--width--col) / 2)' }} />
+                          <col />
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                          <col style={{ width: 'calc(var(--width--col))' }} />
+                        </colgroup>
+
+                        <tbody className="g-end">
+                          <tr className="g-center">
+                            <th colSpan={1}>월</th>
+                            <th colSpan={1}>일</th>
+                            <th colSpan={1}>품목</th>
+                            <th colSpan={1}>규격</th>
+                            <th colSpan={1}>수량</th>
+                            <th colSpan={1}>단가</th>
+                            <th colSpan={1}>공급가액</th>
+                            <th colSpan={1}>세액</th>
+                            <th colSpan={1}>비고</th>
+                          </tr>
+                          <tr>
+                            <td colSpan={1} className="g-center">12</td>
+                            <td colSpan={1} className="g-center">31</td>
+                            <td colSpan={1} className="g-start">2024년 12월 용역표 중소기업은행 물류대형 업무</td>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}>8,808,800</td>
+                            <td colSpan={1}>8,808,800</td>
+                            <td colSpan={1} className="g-start"></td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1} className="g-start"></td>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1} className="g-start"></td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1} className="g-start"></td>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1} className="g-start"></td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1} className="g-start"></td>
+                            <td colSpan={1} className="g-center"></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1} className="g-start"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table className="table g-fixed-table">
+                        <colgroup span={5}></colgroup>
+
+                        <thead>
+                          <tr>
+                            <th colSpan={1}>합계금액</th>
+                            <th colSpan={1}>현금</th>
+                            <th colSpan={1}>수표</th>
+                            <th colSpan={1}>어음</th>
+                            <th colSpan={1}>외상미수금</th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="g-end">
+                          <tr>
+                            <td colSpan={1}>8,808,800</td>
+                            <td colSpan={1}>0</td>
+                            <td colSpan={1}>0</td>
+                            <td colSpan={1}>0</td>
+                            <td colSpan={1}>8,808,800</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </div>
@@ -201,7 +530,7 @@ function FEMDA0201P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)세금계산서불러오기 [wdth-50p(w960)]</span>
+              <span className="label">(P)세금계산서불러오기 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>

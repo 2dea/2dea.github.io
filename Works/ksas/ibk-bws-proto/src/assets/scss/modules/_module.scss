@@ -1748,6 +1748,7 @@
 .o-data-table :where(table:not(td *)) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
 
 .o-data-table :where(table:not(td *))  { border: hidden; }
+.o-data-table :where(table:not(td *)) +table  { border-top: $e10 solid var(--color-edge-70); }
 .o-data-table :has(>:where(table:not(td *)))  { border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
 .o-data-table >.table-container  { overflow: auto; }
 
