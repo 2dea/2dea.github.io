@@ -97,6 +97,8 @@ function DEX() {
       {/*
       스케줄
 
+      2025/07/16 수 수수료 #27
+
       2025/07/15 화
       FEMDA0101M
 
@@ -321,13 +323,14 @@ about:blank
 
 (주)앤비앤코퍼레이션
 
+국세청 승인번호
 
 <li>입금계좌: 기업은행 ___-______-__-___</li>
 
-사업자등록번호
-<li>___-______-__-___</li>
+사업자등록번호 999-99-99999
+<li>___-__-____</li>
 
-계좌번호
+계좌번호 ___-__-_____
                               <td>10000</td>
                               <td>~</td>
                               <td>10000</td>
@@ -370,7 +373,7 @@ about:blank
                                 <div className="fields">
                                   <div className="o-form _input type-date wdth-50">
                                     <Calendar placeholder="" value={Date} locale="ko" view="month" dateFormat="yy-mm" mask="9999-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                        <i aria-hidden="true"></i>
+                                    <i aria-hidden="true"></i>
                                   </div>
                                 </div>
                               </div>
@@ -406,13 +409,13 @@ about:blank
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-80">
-                                    <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
+                              <div className="fields">
+                                <div className="o-form _input wdth-80">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
                                 </div>
                               </div>
+                            </div>
                           </td>
                         </tr>
 
@@ -553,6 +556,19 @@ about:blank
                             </div>
                           </td>
                         </tr>
+
+
+                              <td>
+                                <span className="o-status-text style-inherit type-20">불일치</span>
+                              </td >
+
+                              조건식
+                               <td>
+                                {(idx) % 3 === 0 ?
+                                  <span className="o-status-text style-inherit type-20">불일치</span> : <>일치</>
+                                }
+                              </td>
+
 
                         ▶  「건설사업기본법」
                         특수문자

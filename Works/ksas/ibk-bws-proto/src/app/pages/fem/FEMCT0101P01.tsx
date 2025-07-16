@@ -1,5 +1,5 @@
 /**
- * @description 수수료관리 > 물류대행수수료 > 계약서관리 ~ (LP)중도해지
+ * @description 수수료관리 > 자금현수송수수료 > 계약서관리 ~ (LP)중도해지
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FEMDA0101P01() {
+function FEMCT0101P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -268,4 +268,4 @@ function FEMDA0101P01() {
   );
 }
 
-export default FEMDA0101P01;
+export default FEMCT0101P01;

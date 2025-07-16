@@ -305,7 +305,7 @@ function FEMDA0101M() {
                                   <td>수도권</td>
                                   <td className="g-start">(수도권)물류운송대행계약서</td>
                                   <td className="g-start">(주)앤비앤코퍼레이션</td>
-                                  <td>221868620</td>
+                                  <td>999-99-99999</td>
                                   <td>정상</td>
                                   <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
                                   <td className="g-end">1,000,000,000</td>
@@ -820,7 +820,7 @@ function FEMDA0101M() {
                                   <td>수도권</td>
                                   <td className="g-start">(수도권)물류운송대행계약서</td>
                                   <td className="g-start">(주)앤비앤코퍼레이션</td>
-                                  <td>221868620</td>
+                                  <td>999-99-99999</td>
                                   <td>정상</td>
                                   <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
                                   <td className="g-end">1,000,000,000</td>
