@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMGD0501M() {
+function STMGD0701M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -170,7 +170,7 @@ function STMGD0501M() {
                     </div>
                   </div>
 
-                  <div className="o-field">
+                  {/* <div className="o-field">
                     <Label label={`경비회사`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
@@ -178,7 +178,7 @@ function STMGD0501M() {
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                 </div>
 
@@ -271,4 +271,4 @@ function STMGD0501M() {
   );
 }
 
-export default STMGD0501M;
+export default STMGD0701M;

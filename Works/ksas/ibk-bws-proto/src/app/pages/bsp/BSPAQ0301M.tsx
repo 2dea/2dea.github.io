@@ -125,8 +125,8 @@ function BSPAQ0301M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="삭제결재요청" className="_solid-primary" />
-                <CommonButton label="등록결재요청" className="_solid-primary" />
+                <CommonButton label="삭제" className="_delete" />
+                <CommonButton label="등록" className="_solid-primary" />
                 </div>
             </div>
 
@@ -529,29 +529,23 @@ function BSPAQ0301M() {
                               <col />
                               <col className="wdth-0" />
                               <col />
-                              <col />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
                               <tr>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
-                                <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">창구</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
-
-                              </tr>
-                              <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                <th rowSpan={1} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                                <th rowSpan={1} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인도일자</span></div></th>
+                                <th rowSpan={1} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                                <th rowSpan={1} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                                <th rowSpan={1} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                                <th rowSpan={1} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                                 <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                               </tr>
                             </thead>
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -568,7 +562,6 @@ function BSPAQ0301M() {
                                 <td>0465</td>
                                 <td>~</td>
                                 <td>0465</td>
-                                <td>결재승인</td>
                               </tr>
                             ))}
                             </tbody>
