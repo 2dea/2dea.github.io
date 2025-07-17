@@ -315,7 +315,7 @@ function SUBTMPL() {
               </li>
               <li>
                 <a href="javascript:" className="link"><span className="label">자금현송명령부관리</span></a>
-                <button type="button" title="닫기" className="o-image-button o-icon _close" disabled><span className="label">닫기</span></button>{/* 화면잠금 .o-image-button._close[disabled] { @DEV } */}
+                <button type="button" title="닫기" className="o-image-button o-icon _close" disabled><span className="label">닫기</span></button>{/* 화면잠금 .o-image-button._close:disabled { @DEV } */}
               </li>
               <li>
                 <a href="javascript:" className="link"><span className="label">행내등기 신청제한 미인수내역</span></a>

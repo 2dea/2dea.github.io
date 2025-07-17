@@ -277,8 +277,10 @@
 /** Links */
 .o-link  { font-size: inherit; line-height: inherit; display: inline; vertical-align: baseline; min-width: 0; min-height: 0; padding: 0; border: 0 none; color: inherit; background-color: $tp; border-radius: 0; box-shadow: none; }
 
-.o-link  { --theme: var(--color-link1-40); display: inline-flex; align-items: center; gap: $gap-whitespace-30; color: var(--theme); border-radius: $radius-50; text-decoration: none; text-underline-offset: auto; }
+.o-link  { --theme: var(--color-link1-40); display: inline-flex; align-items: center; color: var(--theme); border-radius: $radius-50; text-decoration: none; text-underline-offset: auto; }
 .o-link:hover  { --theme: inherit; text-decoration: underline; }
+
+.o-link:not(.o-link)  { gap: $gap-whitespace-30; }
 
 .o-link.texted-button._primary  { --theme: var(--color-key1-40); }
 .o-link.texted-button._primary:hover  { --theme: var(--color-key1-70); }
@@ -828,9 +830,9 @@
 
 .o-radios  { --fs-absint: var(--font-70-int); font-size: $font-70; font-size: calc(var(--rem) * var(--fs-int, var(--fs-absint))); line-height: $line-70; display: flex; align-items: center; position: relative; padding: $e10; border: $e10 solid var(--color-edge-40); color: var(--color-text-30); background: var(--color-ground-40); border-radius: $radius-abs-999; }
 .o-radios >.bind  { flex: 1; display: flex; align-items: center; justify-content: center; min-width: 1em; min-width: calc(1em * 43 / var(--fs-absint)); height: $height-form-50; min-height: 1em; padding: III(2) calc(1em * 5 / var(--fs-absint)); border: $e10 solid $tp; color: var(--color-text-00); background: var(--color-key1-90); border-radius: inherit; }
-.o-radios >.bind:not([disabled], [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
+.o-radios >.bind:not(:disabled, [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
 .o-radios >.bind:not(.is-checked)  { color: inherit; background-color: $tp; }
-.o-radios >.bind:not(.is-checked):not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
+.o-radios >.bind:not(.is-checked):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
 
 
 .o-toggles  { display: flex; align-items: center; position: relative; color: var(--color-text-30); background: var(--color-ground-40); border-radius: $radius-50; }
@@ -838,7 +840,7 @@
 .o-toggles >.o-button  { --theme: var(--color-key1-40); z-index: 1; border-color: currentColor; background: var(--color-ground); }
 .o-toggles >.o-button:is(.is-selected, [aria-selected="true"]) .o-icon:before  { background-position: 50%; }
 .o-toggles >.o-button:not(.is-selected, [aria-selected="true"])  { border-color: $tp; color: inherit; background-color: $tp; }
-.o-toggles >.o-button:not(.is-selected, [aria-selected="true"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
+.o-toggles >.o-button:not(.is-selected, [aria-selected="true"]):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
 
 
 
@@ -969,58 +971,59 @@
 
 
 .o-button,  .o-button:where(._default)  { --theme: var(--color-text-40); --margin-block: ((var(--rem) * (var(--height-form-30) - var(--height-icon-30)) - var(--e10) * 2) / 2); line-height: var(--text-height-rel); gap: $gap-whitespace-30; min-width: calc(4em - $e10 * 2); min-height: $height-form-30; padding: calc(var(--margin-block)) 0.5em; border-color: currentColor; color: var(--theme); background-color: $color-ground; border-radius: $radius-50; white-space: nowrap; }
-.o-button:where(:not([disabled], [aria-disabled="true"]))  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
-.o-button:where([disabled], [aria-disabled="true"])  { color: GrayText; -webkit-text-fill-color: currentColor; filter: none; filter: grayscale(1.0) opacity(0.6) brightness(0.9); }
+.o-button:where(:not(:disabled, [aria-disabled="true"]))  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
+.o-button:where(:disabled, [aria-disabled="true"])  { color: GrayText; -webkit-text-fill-color: currentColor; filter: none; filter: grayscale(1.0) opacity(0.6) brightness(0.9); }
 
 .o-button:where(:not([class*="-button _"]))  { border-color: #A8AEB7; background: #EAECEF; background: -webkit-gradient(linear, left top, left bottom, from(White), to(#EAECEF)); background: linear-gradient(to bottom, White, #EAECEF); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='White', endColorstr='#EAECEF', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFEAECEF', EndColorStr='#FFFFFFFF')"; }
-.o-button:where(:not([class*="-button _"]):not([disabled], [aria-disabled="true"]):hover:not(:active))  { border-color: currentColor; background: White; background: -webkit-gradient(linear, left top, left bottom, from(#EDEFF1), to(White)); background: linear-gradient(to bottom, #EDEFF1, White); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEFF1', endColorstr='White', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFFFF', EndColorStr='#FFEDEFF1')"; }
+.o-button:where(:not([class*="-button _"]):not(:disabled, [aria-disabled="true"]):hover:not(:active))  { border-color: currentColor; background: White; background: -webkit-gradient(linear, left top, left bottom, from(#EDEFF1), to(White)); background: linear-gradient(to bottom, #EDEFF1, White); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EDEFF1', endColorstr='White', GradientType=0 ); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFFFF', EndColorStr='#FFEDEFF1')"; }
 
 // .o-button[class*="-primary"]  { --theme: #{$color-key1-40}; }
-// .o-button[class*="-primary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #{$color-button1-70}; }
+// .o-button[class*="-primary"]:not(:disabled, [aria-disabled="true"]):hover  { --theme: #{$color-button1-70}; }
 // .o-button[class*="-secondary"]  { --theme: #{$color-point-skyblue}; }
-// .o-button[class*="-secondary"]:not([disabled], [aria-disabled="true"]):hover  { --theme: #{$color-key2-70}; }
+// .o-button[class*="-secondary"]:not(:disabled, [aria-disabled="true"]):hover  { --theme: #{$color-key2-70}; }
 // .o-button[class*=" _filled"]  { --fill-opacity: 0.12; border-color: Transparent; background-color: rgb(from currentColor r g b / var(--fill-opacity)); }
-// .o-button[class*=" _filled"]:not([disabled], [aria-disabled="true"]):hover  { --fill-opacity: 0.2; }
+// .o-button[class*=" _filled"]:not(:disabled, [aria-disabled="true"]):hover  { --fill-opacity: 0.2; }
 // .o-button[class*=" _solid"]  { font-weight: var(--bold-70); border-color: Transparent; color: var(--color-text-00); background-color: var(--theme); }
 // // .o-button[class*=" _lined"]  { color: var(--theme); }
 // .o-button._normal  { --theme: var(--color-edge-70); }
-// .o-button._normal:not([disabled], [aria-disabled="true"]):hover  { --theme: #{$color-link1-40}; }
-// .o-button._normal:not([disabled], [aria-disabled="true"]) >.label  { color: inherit; }
+// .o-button._normal:not(:disabled, [aria-disabled="true"]):hover  { --theme: #{$color-link1-40}; }
+// .o-button._normal:not(:disabled, [aria-disabled="true"]) >.label  { color: inherit; }
 
 // .o-button.style-texted  { border-color: Transparent; background: Transparent; box-shadow: none; }
 // .o-button.style-texted:hover  { text-decoration: underline; }
 // .o-button.style-texted:not(.m-print-binds :only-child)  { min-width: 1em; }
 
-// .o-button:is([class*=" _filled"], [class*=" _solid"]):is([disabled], [aria-disabled="true"])  { color: #{$color-button3-40}; background-color: var(--color-ground-90); filter: opacity(0.6); }
-// .o-button:is([class*=" _lined"], ._normal:not(.style-texted)):is([disabled], [aria-disabled="true"])  { border-color: var(--color-edge-40); color: #{$color-button3-40}; filter: opacity(0.6); }
+// .o-button:is([class*=" _filled"], [class*=" _solid"]):is(:disabled, [aria-disabled="true"])  { color: #{$color-button3-40}; background-color: var(--color-ground-90); filter: opacity(0.6); }
+// .o-button:is([class*=" _lined"], ._normal:not(.style-texted)):is(:disabled, [aria-disabled="true"])  { border-color: var(--color-edge-40); color: #{$color-button3-40}; filter: opacity(0.6); }
 .o-button:is([class*=" _texted"])  { --theme: #{$color-link1-40}; border-color: Transparent; background: Transparent; box-shadow: none; }
-.o-button:is([class*=" _texted"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: var(--color-text-40); text-decoration: underline; }
+.o-button:is([class*=" _texted"]):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: var(--color-text-40); text-decoration: underline; }
 .o-button:is([class*=" _texted"]):not(.m-print-binds *)  { padding-left: 0; padding-right: 0; }
 .o-button:is([class*=" _texted"]):not(.m-print-binds :only-child)  { min-width: 1em; }
 .o-button:is([class*=" _texted"]) .o-icon  { order: 1; }
 .o-button:is([class*=" _filled"])  { --fill-opacity: 0.12; border-color: Transparent; background-color: rgb(from currentColor r g b / var(--fill-opacity)); }
-.o-button:is([class*=" _filled"]):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --fill-opacity: 0.2; }
+.o-button:is([class*=" _filled"]):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --fill-opacity: 0.2; }
 .o-button:is([class*=" _solid"], ._create, ._choose, ._inquire)  { font-weight: var(--bold-70); border-color: Transparent; color: var(--color-text-00) !important; background-color: var(--theme); }
 .o-button:is([class*=" _lined"], ._delete)  { background-color: $color-ground; }
 .o-button:is([class*="-primary"], ._delete)  { --theme: #{$color-button1-40}; }
 .o-button:is([class*="-secondary"], ._create, ._choose)  { --theme: #{$color-button2-40}; }
 .o-button:is(._texted-primary)  { --theme: #{$color-button2-40}; }
-.o-button:is(._texted-primary):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
+.o-button:is(._texted-primary):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
 .o-button:is(._texted-primary) .o-icon:before  { background-position: 50%; }
 .o-button:is(._solid, ._inquire)  { --theme: #{$color-button3-40}; }
-.o-button:is(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-70}; }
-.o-button:is(._lined-secondary):not(:hover:not(:active))  { border-color: var(--color-button2-30); background-color: var(--color-ground-40); }
+.o-button:is(._solid, ._inquire):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-70}; }
+.o-button:is(._lined-secondary):not(:disabled, [aria-disabled="true"]):not(:hover:not(:active))  { border-color: var(--color-button2-30); background-color: var(--color-ground-40); }
+// .o-button:is(._lined-secondary):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { border-color: var(--color-button2-30); background-color: var(--color-ground-40); }
 // .o-button:is(._normal, ._cancel)  { --theme: var(--color-button3-30); }
-// .o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-40}; }
-// .o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]) >.label  { color: var(--color-text-40); }
+// .o-button:is(._normal, ._cancel):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button3-40}; }
+// .o-button:is(._normal, ._cancel):not(:disabled, [aria-disabled="true"]) >.label  { color: var(--color-text-40); }
 .o-button:is(._normal, ._cancel)  { --theme: var(--color-text-40); }
-.o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"])  { border-color: #{$color-button3-30}; }
-.o-button:is(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { border-color: #{$color-button3-40}; }
+.o-button:is(._normal, ._cancel):not(:disabled, [aria-disabled="true"])  { border-color: #{$color-button3-30}; }
+.o-button:is(._normal, ._cancel):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { border-color: #{$color-button3-40}; }
 
-.o-button:is([class*=" _solid"], ._create, ._choose):not(._solid, ._inquire):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
-.o-button:is([class*=" _lined"], ._delete):not(._normal, ._cancel):not([disabled], [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; background-color: var(--color-ground-40); }
+.o-button:is([class*=" _solid"], ._create, ._choose):not(._solid, ._inquire):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
+.o-button:is([class*=" _lined"], ._delete):not(._normal, ._cancel):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; background-color: var(--color-ground-40); }
 
-.o-button:is([disabled], [aria-disabled="true"])  { color: var(--theme); filter: opacity(0.4); }
+.o-button:is(:disabled, [aria-disabled="true"])  { color: var(--theme); filter: opacity(0.4); }
 
 
 .o-button:where(.m-binds.type-start *),
@@ -1043,13 +1046,13 @@
 .o-image-button >*  { flex: none; min-width: 0; }
 
 .o-image-button  { font-size: $height-form-30; width: 1em; height: 1em; /* overflow: hidden; */ border-radius: $radius-50; }
-.o-image-button:not([disabled], [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
+.o-image-button:not(:disabled, [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
 .o-image-button:empty  { background-color: Gold; }
 .o-image-button >.label  { @include inc-sronly(); }
 
-.o-image-button:is([disabled], [aria-disabled="true"])  { filter: opacity(0.4); }
+.o-image-button:is(:disabled, [aria-disabled="true"])  { filter: opacity(0.4); }
 
-.o-image-button:not([disabled], [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
+.o-image-button:not(:disabled, [aria-disabled="true"]):hover:not(:active)  { background-color: $color-dimmed-hover; }
 
 .o-image-button:where(.m-header .m-binds *),
   .o-image-button:where(.m-file-list .card .binds *),
@@ -1117,18 +1120,18 @@
 .o-check >input:checked ~i:before  { content: "check_box"; color: var(--color-checked); }
 .o-check >input[type="radio"]:not(.type-checkbox):checked ~i:before  { content: "radio_button_checked"; }
 
-.o-check >input[disabled] ~i:before  { color: var(--color-enabled); filter: opacity(0.35); }
-.o-check >:has(input[disabled]) ~.label,
-  .o-check >input[disabled] ~.label  { color: var(--color-text-disabled, GrayText); }
+.o-check >input:disabled ~i:before  { color: var(--color-enabled); filter: opacity(0.35); }
+.o-check >:has(input:disabled) ~.label,
+  .o-check >input:disabled ~.label  { color: var(--color-text-disabled, GrayText); }
 
 .o-check >input,
   .o-check >input ~*  { cursor: pointer; }
-.o-check >input[disabled],
-  .o-check >input[disabled] ~*  { cursor: default; cursor: not-allowed; }
+.o-check >input:disabled,
+  .o-check >input:disabled ~*  { cursor: default; cursor: not-allowed; }
 
 .o-check >input ~i  { outline: $e20 solid Transparent; outline-offset: calc(-1 * $e20); border-radius: 0.5rem; transition-duration: 0.05s; }
 .o-check >input[type="radio"]:not(.type-checkbox) ~i  { outline-offset: calc(-1 * $e20 / 2); border-radius: 50%; }
-.o-check:hover >input:not([disabled]):not(:focus) ~i  { box-shadow: 0 0 $e20 var(--color-edge-focus); }
+.o-check:hover >input:not(:disabled):not(:focus) ~i  { box-shadow: 0 0 $e20 var(--color-edge-focus); }
 .o-check >input:focus-visible ~i:not(:hover)  { outline: $e20 solid currentColor; }
 
 .o-check >.label._hidden  { @include inc-sronly; }
@@ -1152,8 +1155,8 @@
 .o-check >.label:empty,
   .o-check >.label._hidden  { width: 0; white-space: nowrap; padding-left: 0; }
 
-.o-check [disabled]  { filter: opacity(0.65); }
-.o-check:has([disabled])  { color: var(--color-text-disabled, GrayText); cursor: default; cursor: not-allowed; }
+.o-check :disabled  { filter: opacity(0.65); }
+.o-check:has(:disabled)  { color: var(--color-text-disabled, GrayText); cursor: default; cursor: not-allowed; }
 
 // .o-check:not(.m-checks >*, .o-heading >*)  { margin-top: calc((var(--lh) - 1em) / -2); }
 .o-check:not(.m-checks >*, .o-heading >*)  { margin-top: -1.8px; }
@@ -1172,8 +1175,8 @@
 
 .o-check >i  { --surface: var(--color-ground); color: var(--color-enabled); }
 .o-check >:checked ~i  { color: var(--color-checked); }
-.o-check >[disabled] ~i  { filter: opacity(0.5); }
-.o-check:not(.type-icon) >[disabled] ~i  { filter: grayscale(0.9) opacity(0.65); }
+.o-check >:disabled ~i  { filter: opacity(0.5); }
+.o-check:not(.type-icon) >:disabled ~i  { filter: grayscale(0.9) opacity(0.65); }
 // // // .o-check:has(input:not(:hover):focus):not(.type-icon) >i  { outline: $e10 solid var(--color-edge-focus); }
 // // .o-check:has(input:not(:hover):focus) >i  { outline: $e10 solid var(--color-edge-focus); }
 // .o-check >input:not(:hover):focus ~i  { outline: $e10 solid var(--color-edge2-blue-30); }
@@ -1204,7 +1207,7 @@
 
 .o-check.type-swoosh:hover:not(:active) >i  { color: var(--color-enabled-hover); }
 .o-check.type-swoosh:has(:checked):hover:not(:active) >i  { color: var(--color-checked-hover); }
-.o-check.type-swoosh >[disabled] ~i  { --surface: var(--surface-disabled); color: var(--color-enabled) !important; filter: none; }
+.o-check.type-swoosh >:disabled ~i  { --surface: var(--surface-disabled); color: var(--color-enabled) !important; filter: none; }
 
 
 .o-check.type-icon  { --height-int: var(--height-icon-50); --height-outer: calc(var(--rem) * var(--height-form-50)); width: var(--height-outer, var(--height)); height: var(--height-outer, var(--height)); }
@@ -1212,7 +1215,7 @@
 .o-check.type-icon >i:before  { content: "" !important; background-position: 25%; }
 .o-check.type-icon >:checked ~i:before  { background-position: 50%; }
 
-.o-check.type-icon:not(:has([disabled])):hover:not(:active)  { background: $color-dimmed-hover; }
+.o-check.type-icon:not(:has(:disabled)):hover:not(:active)  { background: $color-dimmed-hover; }
 
 .o-check.type-icon:where(.m-title .style-favorite) >:checked ~i:before  { background-position: 100%; }
 
@@ -1235,7 +1238,7 @@
 
 .o-image-check  { font-size: $height-form-30; width: 1em; height: 1em; border-radius: $radius-50; }
 .o-image-check input  { position: absolute; z-index: 1; width: 100%; height: 100%; opacity: 0.001; }
-.o-image-check input:not([disabled])  { cursor: inherit; }
+.o-image-check input:not(:disabled)  { cursor: inherit; }
 .o-image-check >.label  { @include inc-sronly(); }
 
 .o-image-check._menu-toggle   { justify-content: flex-end; width: III(24); height: auto; overflow: hidden; border-radius: 0; }
@@ -1279,11 +1282,11 @@
 .o-form ::-webkit-input-placeholder  { font-weight: inherit; font-family: inherit; text-align: inherit !important; color: $color-text-placeholder; }
 .o-form ::placeholder  { font-weight: inherit; font-family: inherit; text-align: inherit !important; color: $color-text-placeholder; }
 
-.o-form:not(.mode-disabled-placeholder) [disabled]:-ms-input-placeholder  { opacity: 0 !important; }
-.o-form:not(.mode-disabled-placeholder) [disabled]::-ms-input-placeholder  { opacity: 0 !important; }
-.o-form:not(.mode-disabled-placeholder) [disabled]::-moz-placeholder  { opacity: 0 !important; }
-.o-form:not(.mode-disabled-placeholder) [disabled]::-webkit-input-placeholder  { opacity: 0 !important; }
-.o-form:not(.mode-disabled-placeholder) [disabled]::placeholder  { opacity: 0 !important; }
+.o-form:not(.mode-disabled-placeholder) :disabled:-ms-input-placeholder  { opacity: 0 !important; }
+.o-form:not(.mode-disabled-placeholder) :disabled::-ms-input-placeholder  { opacity: 0 !important; }
+.o-form:not(.mode-disabled-placeholder) :disabled::-moz-placeholder  { opacity: 0 !important; }
+.o-form:not(.mode-disabled-placeholder) :disabled::-webkit-input-placeholder  { opacity: 0 !important; }
+.o-form:not(.mode-disabled-placeholder) :disabled::placeholder  { opacity: 0 !important; }
 
 .o-form.align-placeholder-start :-ms-input-placeholder  { text-align: start !important; text-align: left; }
 .o-form.align-placeholder-start ::-ms-input-placeholder  { text-align: start !important; text-align: left; }
@@ -1297,16 +1300,16 @@
 // // .o-form:not(.type-string)  { font-weight: var(--bold-40, 400); }
 // // .o-form >*  { flex: 0 1 auto; box-sizing: border-box; min-width: 0; border-radius: inherit; transition-duration: inherit; }
 // // .o-form >.bind  { font-size: inherit; line-height: inherit; flex: 1; width: 100%; min-width: 2.4em; color: inherit; outline: 0; box-shadow: none; }
-// // .o-form >.bind[disabled]  { opacity: 1.0; -webkit-text-fill-color: currentColor; }
+// // .o-form >.bind:disabled  { opacity: 1.0; -webkit-text-fill-color: currentColor; }
 // // .o-form >.bind ~i  { position: absolute; inset: 0; border: $e10 solid Transparent; outline-offset: calc(-1 * $e10); pointer-events: none; }
 // // .o-form:where( ._input, ._select )  { background-color: var(--color-ground-enabled); }
 // // .o-form:where( ._input, ._select ) >.bind  { min-height: $height-form-50; padding-left: 0.7rem; padding-left: max(calc(7em / 14), 0.7rem); border: $e10 solid Transparent; background-color: Transparent; }
 // // .o-form:where( ._input, ._select ) >.bind ~i  { border-color: var(--color-edge-40); }
 
-// // .o-form:has(>.bind[disabled])  { color: inherit; background-color: var(--color-ground-disabled); }
+// // .o-form:has(>.bind:disabled)  { color: inherit; background-color: var(--color-ground-disabled); }
 
-// // .o-form:where( ._input, ._select ):has(>.bind:where( :not([disabled]):not([readonly]) )):hover  { color: var(--color-text-40); background-color: $color-ground; }
-// // .o-form:where( ._input, ._select ):hover >.bind:where( :not([disabled]):not([readonly]) ) ~i  { outline: $e10 solid var(--color-edge5); }
+// // .o-form:where( ._input, ._select ):has(>.bind:where( :not(:disabled):not([readonly]) )):hover  { color: var(--color-text-40); background-color: $color-ground; }
+// // .o-form:where( ._input, ._select ):hover >.bind:where( :not(:disabled):not([readonly]) ) ~i  { outline: $e10 solid var(--color-edge5); }
 
 // // .o-form >.bind:focus ~i  { outline-offset: $e10; }
 // // .o-form:where( ._input, ._select ) >.bind:focus ~i  { outline: $e20 solid var(--color-black); }
@@ -1398,7 +1401,7 @@
 // .o-form .inner-binds  { display: inline-flex; align-items: center; height: $height-form-30; }
 // .o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); border-top-left-radius: 0; border-bottom-left-radius: 0; }
 
-// .o-form:has(>.bind[disabled])  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+// .o-form:has(>.bind:disabled)  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
 // .o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: var(--color-ground-disabled); }
 // .o-form.mode-required  { background: var(--color-ground-required); }
 
@@ -1549,8 +1552,8 @@
 }
 
 
-.o-form._input.type-listbox:not(:has([disabled]))  { cursor: pointer; }
-.o-form._input.type-listbox:not(:has([disabled])) *  { cursor: inherit; }
+.o-form._input.type-listbox:not(:has(:disabled))  { cursor: pointer; }
+.o-form._input.type-listbox:not(:has(:disabled)) *  { cursor: inherit; }
 
 .o-form._input.type-time  { text-align: center; }
 
@@ -1580,7 +1583,7 @@
 
 
 .o-form.mode-required  { background: var(--color-ground-required); }
-.o-form:has([disabled]:is(input:where(.o-form._input *), select, textarea))  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+.o-form:has(:disabled:is(input:where(.o-form._input *), select, textarea))  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
 .o-form:not(.mode-required, .mode-string):has([readonly]:is(input:where(.o-form._input *), select, textarea))  { background-color: var(--color-ground-disabled); }
 .o-form:has([readonly]:is(input:where(.o-form._input *), select, textarea)) .o-image-button:before  { background-position: 50%; }
 
@@ -2015,7 +2018,7 @@
 // .o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: var(--color-key1-70); }
 // // .o-grid-table tbody >* >*  { white-space: nowrap; }
 // // .o-grid-table tbody >* >* >*  { white-space: normal; }
-.o-grid-table tbody >tr:nth-child(even)  { background: var(--color-grid-evenrow); }
+.o-grid-table tbody:not(:has([rowspan])) >tr:nth-child(even)  { background: var(--color-grid-evenrow); }
 /* .o-grid-table tbody:first-of-type >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: inherit; }
@@ -2024,7 +2027,7 @@
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: inherit; } */
 
-.o-grid-table tbody:not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
+.o-grid-table tbody:not(:has([rowspan])):not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
 .o-grid-table table >* >tr >.tcell-strong  { background-color: var(--color-ground2-skyblue-30); }
 

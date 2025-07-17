@@ -848,7 +848,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={1}>
-                              <Label label={`Calendar​[disabled]`} require={false} />
+                              <Label label={`Calendar​:disabled`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">

@@ -121,6 +121,26 @@ function SurveyForms() {
                 </div>
 
                 <div className="main">
+                  <div className="m-survey-form">
+                    <ol>
+                      <li>
+                        <div className="m-survey">
+                          <div className="header">
+                            <div className="subject"></div>
+                          </div>
+                          <div className="bodies">
+                            <ol>
+                              <li>
+                                <fieldset className="o-survey" disabled>
+
+                                </fieldset>
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
                 </div>
               </div>
 

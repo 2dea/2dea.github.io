@@ -48,8 +48,8 @@
   }
 
   .p-datatable {
-
     // *  { all: revert; }
+
     .p-datatable-tbody>tr>td {
       text-align: revert;
     }
@@ -61,6 +61,11 @@
 
     .p-datatable-tbody>tr.p-highlight {
       color: revert;
+    }
+  }
+  .p-datatable-scrollable {
+    .p-frozen-column {
+      background: revert;
     }
   }
 }
@@ -90,7 +95,7 @@
       }
     }
 
-    &:not([disableed], [aria-disabled=true]) {
+    &:not(:disabled, [aria-disabled=true]) {
       transition: all 0.15s;
       transition-property: border-color, background-color, color, opacity, filter;
 
@@ -235,7 +240,7 @@
 //     @include setReset(1);
 
 //     // .p-dropdown-label  {
-//     //   &.p-placeholder:not([disableed])  { color: $color-text-placeholder; }
+//     //   &.p-placeholder:not(:disabled)  { color: $color-text-placeholder; }
 //     // }
 
 //     .p-dropdown-trigger  { width: auto; }
@@ -244,7 +249,7 @@
 //   }
 
 //   .p-placeholder  { color: revert; }
-//   .p-placeholder:not([disableed])  { color: var(--color-text-placeholder); }
+//   .p-placeholder:not(:disabled)  { color: var(--color-text-placeholder); }
 
 //   &:has(:is(.bind, .p-inputtext).p-disabled)  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
 // }
@@ -254,7 +259,7 @@
     color: revert;
   }
 
-  .p-placeholder:not([disableed]) {
+  .p-placeholder:not(:disabled) {
     color: var(--color-text-placeholder);
   }
 
@@ -813,7 +818,12 @@
 
     tbody tr.p-highlight {
       background-color: var(--color-grid-selected);
-      background: linear-gradient(90deg, var(--color-grid-point) $e30, var(--color-grid-selected) $e30);
+      background: var(--color-grid-selected) linear-gradient(90deg, var(--color-grid-point) $e30, var(--color-grid-selected) $e30);
+
+      // .p-frozen-column:first-child:not(:hover >*)  {
+      >:first-child:not(:hover >*)  {
+        background: inherit;
+      }
     }
 
     .p-x-frozen-last {
