@@ -196,7 +196,6 @@ function FEMCT0201P05() {
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
-
                 </div>
 
                 <div className="main _primary rows-body-5i">
@@ -234,26 +233,31 @@ function FEMCT0201P05() {
                           {[...Array(24)].map((e, idx) => (
                             <>
                               <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
-                                <td>{idx + 1}</td>
-                                <td>0001</td>
-                                <td className="g-start">영업부</td>
-                                <td>21077</td>
-                                <td className="g-start">중금채등록통장(거치식)</td>
+                                <td>수도권</td>
+                                <td>(주)앤비앤코퍼레이션</td>
                                 <td className="g-end">9,999</td>
                                 <td className="g-end">9,999</td>
                                 <td className="g-end">9,999</td>
+                                <td>
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input wdth-80">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
                               </tr>
                               {
                                 (idx - 2) % 3 === 0 &&
                                 <tr className="p-rowgroup-footer subtotal-trow">
                                   <td className="subtotal-tcell"></td>
-                                  <td className="subtotal-tcell">0001</td>
-                                  <td className="subtotal-tcell g-start">영업부 소계</td>
-                                  <td className="subtotal-tcell"></td>
-                                  <td className="subtotal-tcell g-start"></td>
+                                  <td className="subtotal-tcell">전담 계(수도권, 경수, 인천, 충청, 호남)</td>
                                   <td className="subtotal-tcell g-end">99,999</td>
                                   <td className="subtotal-tcell g-end">99,999</td>
                                   <td className="subtotal-tcell g-end">99,999</td>
+                                    <td className="subtotal-tcell"></td>
                                   {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
                                 </tr>
                               }
@@ -261,13 +265,11 @@ function FEMCT0201P05() {
                                 (idx - 5) % 6 === 0 &&
                                 <tr className="p-rowgroup-footer daytotal-trow">
                                   <td className="daytotal-tcell"></td>
-                                  <td className="daytotal-tcell g-start">일계</td>
-                                  <td className="daytotal-tcell"></td>
-                                  <td className="daytotal-tcell"></td>
-                                  <td className="daytotal-tcell g-start"></td>
+                                  <td className="daytotal-tcell">전담 노선 청구 합계금액</td>
                                   <td className="daytotal-tcell g-end">99,999</td>
                                   <td className="daytotal-tcell g-end">99,999</td>
                                   <td className="daytotal-tcell g-end">99,999</td>
+                                    <td className="daytotal-tcell"></td>
                                   {/* rowGroupFooterTemplate={totalDayCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
                                 </tr>
                               }
@@ -277,10 +279,11 @@ function FEMCT0201P05() {
 
                         <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
                           <tr className="sumtotal-trow">
-                            <td colSpan={5} className="sumtotal-tcell">합계</td>
+                            <td colSpan={2} className="sumtotal-tcell">자금현수송대행수수료 청구 총합계</td>
                             <td className="sumtotal-tcell g-end">999,999</td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong">정산대상금액</td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell"></td>
                           </tr>
                         </tfoot>
                       </table>
@@ -288,6 +291,160 @@ function FEMCT0201P05() {
                   </div>
                 </div>
               </div>
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3"><span className="label">전담 건당 수수료 계산(수도권, 강원, 경수, 인천, 충청, 호남)</span></h5>
+                </div>
+
+                <div className="main _primary rows-auto">
+                  <div className="o-grid-table type-table">{/* [하드코딩] */}
+                    <div className="table-container">
+                      <table>
+                        <colgroup>
+                          <col />
+                          <col style={{ width: '15%' }} />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead>
+                          <tr>
+                            <th colSpan={2}>구분</th>
+                            <th>건수</th>
+                            <th>적용</th>
+                            <th>적용 건수</th>
+                            <th>건당 금액</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td rowSpan={2}>단독운송</td>
+                            <td>원화</td>
+                            <td className="g-end">999</td>
+                            <td rowSpan={2} className="g-end">-</td>
+                            <td className="g-end">999</td>
+                            <td className="g-end">1,999</td>
+                          </tr>
+                          <tr>
+                            <td>외화</td>
+                            <td className="g-end">999</td>
+                            <td className="g-end">999</td>
+                            <td className="g-end">1,999</td>
+                          </tr>
+                          <tr>
+                            <td rowSpan={2}>병행운송</td>
+                            <td>원화</td>
+                            <td rowSpan={2} className="g-end">999</td>
+                            <td rowSpan={2} className="g-end">30%</td>
+                            <td className="g-end">999</td>
+                            <td className="g-end">1,999</td>
+                          </tr>
+                          <tr>
+                            <td>외화</td>
+                            <td className="g-end">999</td>
+                            <td className="g-end">1,999</td>
+                          </tr>
+
+                          <tr>
+                            <td colSpan={2} className="tcell-strong"></td>
+                            <td className="g-end tcell-strong">999</td>
+                            <td className="g-end tcell-strong"></td>
+                            <td className="g-end tcell-strong">999</td>
+                            <td className="g-end tcell-strong"></td>
+                          </tr>
+
+                        </tbody>
+
+                        <tfoot className="sumtotal-tfoot">
+                          <tr className="sumtotal-trow">
+                            <td colSpan={4}>합계</td>
+                            <td className="g-end">9,999</td>
+                            <td className="g-end">9,999</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/*
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3"><span className="label">전담 건당 수수료 계산(수도권, 강원, 경수, 인천, 충청, 호남)</span></h5>
+                </div>
+
+                <div className="main _primary rows-body-5i">
+                  <DataTable className="o-grid-table g-hide" />
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">적용</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">적용 건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건당 금액</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <>
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
+                                <td>단독운송</td>
+                                <td>원화</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">30%</td>
+                                <td className="g-end">999</td>
+                                <td className="g-end">9,999</td>
+                              </tr>
+                              {
+                                (idx - 2) % 3 === 0 &&
+                                <tr className="p-rowgroup-footer subtotal-trow">
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell g-end">999</td>
+                                  <td className="subtotal-tcell g-end"></td>
+                                  <td className="subtotal-tcell g-end">99,999</td>
+                                  <td className="subtotal-tcell g-end">99,999</td>
+                                </tr>
+                              }
+                            </>
+                          ))}
+                        </tbody>
+
+                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">
+                          <tr className="sumtotal-trow">
+                            <td colSpan={4} className="sumtotal-tcell">실건수</td>
+                            <td className="sumtotal-tcell g-end">999,999</td>
+                            <td className="sumtotal-tcell g-end"></td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
 
             </div>
           </div>

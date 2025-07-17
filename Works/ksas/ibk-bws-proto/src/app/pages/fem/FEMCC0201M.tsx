@@ -1,5 +1,5 @@
 /**
- * @description 수수료관리 > 물류대행수수료 > 지급결의
+ * @description 수수료관리 > 원화정사수수료 > 지급결의
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FEMDA0201M() {
+function FEMCC0201M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -46,7 +46,7 @@ function FEMDA0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '수수료관리' }, { label: '물류대행수수료' }, { label: '지급결의' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '수수료관리' }, { label: '원화정사수수료' }, { label: '지급결의' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -160,16 +160,6 @@ function FEMDA0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`계약구분`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
                     <Label label={`지급결의명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input wdth-50">
@@ -255,13 +245,11 @@ function FEMDA0201M() {
                             <col />
                             <col />
                             <col />
-                            <col />
                           </colgroup>
 
                           <thead className="p-datatable-thead">
                             <tr>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급구분</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급대상연월</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급결의명</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급업체명</span></div></th>
@@ -290,7 +278,7 @@ function FEMDA0201M() {
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              <td colSpan={21}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -298,7 +286,6 @@ function FEMDA0201M() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
-                              <td>수도권</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td className="g-start">(수도권)물류운송대행계약서</td>
                               <td className="g-start">(주)앤비앤코퍼레이션</td>
@@ -356,7 +343,7 @@ function FEMDA0201M() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`계약정보 불러오기`} require={false} />
+                            <Label label={`계약정보 불러오기`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -373,16 +360,9 @@ function FEMDA0201M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`지급구분`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            수도권
-                          </td>
-
-                          <th colSpan={1}>
                             <Label label={`지급대상연월`} require={false} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             <span className="o-digit type-date">2025-12</span>
                           </td>
                         </tr>
@@ -392,7 +372,7 @@ function FEMDA0201M() {
                             <Label label={`지급결의명`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            (수도권)물류운송대행계약서
+                            자금현수송 지급수수료(2025년 4월분)
                           </td>
 
                           <th colSpan={1}>
@@ -455,10 +435,20 @@ function FEMDA0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`지급 수수료`} require={false} />
+                            <Label label={`지급 수수료 불러오기`} require={false} />
                           </th>
                           <td>
-                            金 일천이백칠십이원 (￦100,000,000)
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="검색" icon="search" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                           </td>
 
                           <th colSpan={1}>
@@ -486,7 +476,7 @@ function FEMDA0201M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`검증여부`} require={true} />
+                            <Label label={`검증여부`} require={false} />
                           </th>
                           <td>
                             <div className="m-string-binds">
@@ -619,7 +609,11 @@ function FEMDA0201M() {
 
                     <ol className="m-bullets type-decimal level1">
                       <li>계약정보 불러오기 [돋보기] 버튼을 눌러 계약정보를 선택합니다.</li>
+                      <li>지급수수료 불러오기 [돋보기] 버튼을 눌러 지급수수료를 선택합니다.</li>
                       <li>세금계산서 불러오기 [돋보기] 버튼을 눌러 세금계산서를 선택합니다.</li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
                       <li>[검증] 버튼을 눌러 계약정보에 지급 수수료와 세금계산서 금액을 비교합니다.</li>
                       <li>검증여부가 일치인 경우 [지급결의] 버튼을 눌러 결재요청을 합니다.</li>
                       <li>검증여부가 불일치인 경우 계약정보 or 세금계산서 정보를 확인 후 재선택합니다.</li>
@@ -638,4 +632,4 @@ function FEMDA0201M() {
   );
 }
 
-export default FEMDA0201M;
+export default FEMCC0201M;
