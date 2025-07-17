@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FEMDA0201M() {
+function FEMCT0301M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -46,7 +46,7 @@ function FEMDA0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '수수료관리' }, { label: '물류대행수수료' }, { label: '지급결의' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '수수료관리' }, { label: '자금현수송수수료' }, { label: '지급결의' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -160,16 +160,6 @@ function FEMDA0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`계약구분`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
                     <Label label={`지급결의명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input wdth-50">
@@ -254,14 +244,12 @@ function FEMDA0201M() {
                             <col />
                             <col />
                             <col />
-                            <col />
-                            <col />
                           </colgroup>
 
                           <thead className="p-datatable-thead">
                             <tr>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급구분</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산기준</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급대상연월</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급결의명</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급업체명</span></div></th>
@@ -269,8 +257,6 @@ function FEMDA0201M() {
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발의일자</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결의일자</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급 수수료</span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약명</span></div></th>
-                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약기간</span></div></th>
                               <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
                               <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                               <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록정보</span></div></th>
@@ -283,14 +269,14 @@ function FEMDA0201M() {
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소일자</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소/정정일자</span></div></th>
                               <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취소사유</span></div></th>
                             </tr>
                           </thead>
 
                           <tbody className="p-datatable-tbody">
                             <tr className="p-datatable-emptymessage">
-                              <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              <td colSpan={20}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                             </tr>
                           </tbody>
 
@@ -306,11 +292,9 @@ function FEMDA0201M() {
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td className="g-end">1,000</td>
-                              <td className="g-start">(수도권)물류운송대행계약서</td>
-                              <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
                               <td>미지급</td>
                               <td>정상</td>
-                              <td>결재취소요청</td>
+                              <td>결재승인</td>
                               <td>011465</td>
                               <td>홍길동</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
@@ -354,29 +338,13 @@ function FEMDA0201M() {
                       </colgroup>
 
                       <tbody>
+
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`계약정보 불러오기`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" />
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`지급구분`} require={false} />
+                            <Label label={`정산기준`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            수도권
+                            개별
                           </td>
 
                           <th colSpan={1}>
@@ -385,6 +353,19 @@ function FEMDA0201M() {
                           <td colSpan={1}>
                             <span className="o-digit type-date">2025-12</span>
                           </td>
+                          <th colSpan={1}>
+                            <Label label={`등록자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0081] 홍길동
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`등록일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
                         </tr>
 
                         <tr>
@@ -392,7 +373,7 @@ function FEMDA0201M() {
                             <Label label={`지급결의명`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            (수도권)물류운송대행계약서
+                            자금현수송 지급수수료(2025년 4월분)
                           </td>
 
                           <th colSpan={1}>
@@ -462,20 +443,10 @@ function FEMDA0201M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`세금계산서 불러오기`} require={true} />
+                            <Label label={`세금계산서 합계`} require={false} />
                           </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input wdth-70">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" />
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
+                          <td colSpan={1} className="g-end">
+                            000,000,000
                           </td>
 
                           <th colSpan={1}>
@@ -618,11 +589,9 @@ function FEMDA0201M() {
                     </div>
 
                     <ol className="m-bullets type-decimal level1">
-                      <li>계약정보 불러오기 [돋보기] 버튼을 눌러 계약정보를 선택합니다.</li>
-                      <li>세금계산서 불러오기 [돋보기] 버튼을 눌러 세금계산서를 선택합니다.</li>
-                      <li>[검증] 버튼을 눌러 계약정보에 지급 수수료와 세금계산서 금액을 비교합니다.</li>
-                      <li>검증여부가 일치인 경우 [지급결의] 버튼을 눌러 결재요청을 합니다.</li>
-                      <li>검증여부가 불일치인 경우 계약정보 or 세금계산서 정보를 확인 후 재선택합니다.</li>
+                      <li>월별 금액검증 화면에서 검증여부 일치된 내역(지급결의 대상)이 지급결의내역 리스트에 조회됩니다.</li>
+                      <li>지급결의내역 중 지급결의할 행을 선택한 후 상세정보를 작성합니다.</li>
+                      <li>작성완료 후 [지급결의] 버튼을 눌러 결재요청합니다.</li>
                     </ol>
                   </div>
                 </div>
@@ -638,4 +607,4 @@ function FEMDA0201M() {
   );
 }
 
-export default FEMDA0201M;
+export default FEMCT0301M;

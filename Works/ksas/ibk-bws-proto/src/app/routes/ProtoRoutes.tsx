@@ -37,6 +37,8 @@ import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상�
 import CMP001601P from 'app/pages/cmp/CMP001601P';   // 공통 ~ (LP)반려
 
 // proto 자금현수송
+import FMTCT0101M from 'app/pages/fmt/FMTCT0101M';      // 자금현수송 > 원화현수송 > 원화현수송신청
+
 import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사 > 신청(인도)
 import FMTCC0101P01 from 'app/pages/fmt/FMTCC0101P01';  // 자금현수송 > 원화정사 > 신청(인도) ~ (LP)호송금인수증등록
 import FMTCC0201M from 'app/pages/fmt/FMTCC0201M';      // 자금현수송 > 원화정사 > 결과(인수)
@@ -452,23 +454,37 @@ import BSSTI0501M from 'app/pages/bss/BSSTI0501M';     // 영업지원 > 연수�
 
 // proto 수수료관리
 import FEMDA0101M from 'app/pages/fem/FEMDA0101M';      // 수수료관리 > 물류대행수수료 > 계약서관리
-import FEMDA0101P01 from 'app/pages/fem/FEMDA0101P01';  // 수수료관리 > 물류대행수수료 > 계약서관리 ~ (LP)중도해지
+import FEMDA0101P01 from 'app/pages/fem/FEMDA0101P01';  // 수수료관리 > 물류대행수수료 > 계약서관리       ~ (LP)중도해지
 import FEMDA0201M from 'app/pages/fem/FEMDA0201M';      // 수수료관리 > 물류대행수수료 > 지급결의
-import FEMDA0201P01 from 'app/pages/fem/FEMDA0201P01';  // 수수료관리 > 물류대행수수료 > 지급결의 ~ (LP)계약정보불러오기
-import FEMDA0201P02 from 'app/pages/fem/FEMDA0201P02';  // 수수료관리 > 물류대행수수료 > 지급결의 ~ (LP)세금계산서불러오기
-import FEMDA0201P03 from 'app/pages/fem/FEMDA0201P03';  // 수수료관리 > 물류대행수수료 > 지급결의 ~ (LP)세금계산서보기
-import FEMDA0201P04 from 'app/pages/fem/FEMDA0201P04';  // 수수료관리 > 물류대행수수료 > 지급결의 ~ (LP)지급결의취소
+import FEMDA0201P01 from 'app/pages/fem/FEMDA0201P01';  // 수수료관리 > 물류대행수수료 > 지급결의         ~ (LP)계약정보불러오기
+import FEMDA0201P02 from 'app/pages/fem/FEMDA0201P02';  // 수수료관리 > 물류대행수수료 > 지급결의         ~ (LP)세금계산서불러오기
+import FEMDA0201P03 from 'app/pages/fem/FEMDA0201P03';  // 수수료관리 > 물류대행수수료 > 지급결의         ~ (LP)세금계산서보기
+import FEMDA0201P04 from 'app/pages/fem/FEMDA0201P04';  // 수수료관리 > 물류대행수수료 > 지급결의         ~ (LP)지급결의취소
 
 import FEMCT0101M from 'app/pages/fem/FEMCT0101M';      // 수수료관리 > 자금현수송수수료 > 계약서관리
-import FEMCT0101P01 from 'app/pages/fem/FEMCT0101P01';  // 수수료관리 > 자금현수송수수료 > 계약서관리 ~ (LP)중도해지
+import FEMCT0101P01 from 'app/pages/fem/FEMCT0101P01';  // 수수료관리 > 자금현수송수수료 > 계약서관리       ~ (LP)중도해지
+import FEMCT0201M from 'app/pages/fem/FEMCT0201M';      // 수수료관리 > 자금현수송수수료 > 월별금액검증
+import FEMCT0201P01 from 'app/pages/fem/FEMCT0201P01';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)월별지급검증등록
+import FEMCT0201P02 from 'app/pages/fem/FEMCT0201P02';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)지급상세검증
+import FEMCT0201P03 from 'app/pages/fem/FEMCT0201P03';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)세금계산서불러오기
+import FEMCT0201P04 from 'app/pages/fem/FEMCT0201P04';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)세금계산서보기
+import FEMCT0201P05 from 'app/pages/fem/FEMCT0201P05';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)월별요약
 
-import FEMCT0201M from 'app/pages/fem/FEMCT0201M';      // 수수료관리 > 월별금액검증 > 계약서관리
-import FEMCT0201P01 from 'app/pages/fem/FEMCT0201P01';  // 수수료관리 > 월별금액검증 > 월별금액검증 ~ (LP)월별지급검증등록
-import FEMCT0201P02 from 'app/pages/fem/FEMCT0201P02';  // 수수료관리 > 월별금액검증 > 월별금액검증 ~ (LP)지급상세검증
-import FEMCT0201P05 from 'app/pages/fem/FEMCT0201P05';  // 수수료관리 > 월별금액검증 > 월별금액검증 ~ (LP)지급상세검증
+import FEMCT0301P01 from 'app/pages/fem/FEMCT0301P01';  // 수수료관리 > 자금현수송수수료 > 지급결의     ~ (LP)지급결의취소
 
-import FEMCC0101P01 from 'app/pages/fem/FEMCC0101P01';  // 수수료관리 > 원화정사수수료 > 계약서관리 ~ (LP)중도해지
+import FEMCT0301M from 'app/pages/fem/FEMCT0301M';      // 수수료관리 > 자금현수송수수료 > 지급결의
+import FEMCT0401M from 'app/pages/fem/FEMCT0401M';      // 수수료관리 > 자금현수송수수료 > 현송금송부서관리
+import FEMCT0401P01 from 'app/pages/fem/FEMCT0401P01';  // 수수료관리 > 자금현수송수수료 > 현송금송부서관리 ~ (LP)과거내역조회
 
+import FEMCC0101M from 'app/pages/fem/FEMCC0101M';      // 수수료관리 > 원화정사수수료 > 계약서관리
+import FEMCC0101P01 from 'app/pages/fem/FEMCC0101P01';  // 수수료관리 > 원화정사수수료 > 계약서관리       ~ (LP)중도해지
+import FEMCC0201M from 'app/pages/fem/FEMCC0201M';      // 수수료관리 > 원화정사수수료 > 지급결의
+import FEMCC0201P01 from 'app/pages/fem/FEMCC0201P01';  // 수수료관리 > 원화정사수수료 > 지급결의         ~ (LP)계약정보불러오기
+import FEMCC0201P02 from 'app/pages/fem/FEMCC0201P02';  // 수수료관리 > 원화정사수수료 > 지급결의         ~ (LP)지급수수료상세등록
+import FEMCC0201P03 from 'app/pages/fem/FEMCC0201P03';  // 수수료관리 > 원화정사수수료 > 지급결의         ~ (LP)세금계산서불러오기
+import FEMCC0201P04 from 'app/pages/fem/FEMCC0201P04';  // 수수료관리 > 원화정사수수료 > 지급결의         ~ (LP)세금계산서보기
+
+import FEMCC0201P05 from 'app/pages/fem/FEMCC0201P05';  // 수수료관리 > 원화정사수수료 > 지급결의     ~ (LP)지급결의취소
 
 // proto 공통·결재
 import ADMCM0101M from 'app/pages/adm/ADMCM0101M';      // 공통·결재 > 코드관리    > 공통코드관리
@@ -571,6 +587,8 @@ function ProtoRoutes() {
       path: '/proto',
       element: <Decorator />,
       children: [
+        { path: 'FMTCT0101M',   element: <FMTCT0101M /> },
+
         { path: 'FMTCC0101M',   element: <FMTCC0101M /> },
         { path: 'FMTCC0101P01', element: <FMTCC0101P01 /> },
 
@@ -1008,9 +1026,23 @@ function ProtoRoutes() {
         { path: 'FEMCT0201M',   element: <FEMCT0201M /> },
         { path: 'FEMCT0201P01', element: <FEMCT0201P01 /> },
         { path: 'FEMCT0201P02', element: <FEMCT0201P02 /> },
+        { path: 'FEMCT0201P03', element: <FEMCT0201P03 /> },
+        { path: 'FEMCT0201P04', element: <FEMCT0201P04 /> },
         { path: 'FEMCT0201P05', element: <FEMCT0201P05 /> },
+        { path: 'FEMCT0301P01', element: <FEMCT0301P01 /> },
 
+        { path: 'FEMCT0301M',   element: <FEMCT0301M /> },
+        { path: 'FEMCT0401M',   element: <FEMCT0401M /> },
+        { path: 'FEMCT0401P01', element: <FEMCT0401P01 /> },
+
+        { path: 'FEMCC0101M',   element: <FEMCC0101M /> },
         { path: 'FEMCC0101P01', element: <FEMCC0101P01 /> },
+        { path: 'FEMCC0201M',   element: <FEMCC0201M /> },
+        { path: 'FEMCC0201P01', element: <FEMCC0201P01 /> },
+        { path: 'FEMCC0201P02', element: <FEMCC0201P02 /> },
+        { path: 'FEMCC0201P03', element: <FEMCC0201P03 /> },
+        { path: 'FEMCC0201P04', element: <FEMCC0201P04 /> },
+        { path: 'FEMCC0201P05', element: <FEMCC0201P05 /> },
       ]
     },
     { // 공통·결재

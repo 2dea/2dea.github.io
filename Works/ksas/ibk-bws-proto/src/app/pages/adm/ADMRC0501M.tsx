@@ -250,7 +250,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table case-notice-calendar">{/* [하드코딩] */}
+                      <div className="o-grid-table type-table">{/* [하드코딩] */}
                         <div className="table-container">
                           <table>
                             <colgroup>
@@ -362,7 +362,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table case-notice-calendar">{/* [하드코딩] */}
+                      <div className="o-grid-table type-table">{/* [하드코딩] */}
                         <div className="table-container">
                           <table>
                             <colgroup>
