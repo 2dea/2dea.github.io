@@ -405,7 +405,29 @@ about:blank
                             </td>
 
 
-                        <tr>
+
+
+                          <th colSpan={1}>
+                            <Label label={`라디오버튼 + 기타`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+
+                            <div className="m-checks">
+                              <InputRadio name="RADIO:T_10" label="승용차(차량번호)" />
+                              <InputRadio name="RADIO:T_10" label="기타(사유입력)" />
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input is-file mode-required wdth-90">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                            <tr>
                           <th colSpan={1}>
                             <Label label={`비고`} require={false} />
                           </th>

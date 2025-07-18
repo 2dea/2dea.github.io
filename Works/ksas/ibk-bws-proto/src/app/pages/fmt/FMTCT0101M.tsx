@@ -315,9 +315,9 @@ function FMTCT0101M() {
                         <colgroup>
                           <col />
                           <col />
+                          <col className="wdth-50" />
                           <col />
-                          <col />
-                          <col />
+                          <col className="wdth-50" />
                           <col />
                         </colgroup>
 

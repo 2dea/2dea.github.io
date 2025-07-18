@@ -361,7 +361,7 @@ function FEMDA0201M() {
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input">
+                                <div className="o-form _input mode-required">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
@@ -467,7 +467,7 @@ function FEMDA0201M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-70">
+                                <div className="o-form _input mode-required wdth-70">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">

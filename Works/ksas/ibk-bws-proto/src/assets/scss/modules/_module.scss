@@ -1308,15 +1308,15 @@
 
 // // .o-form:has(>.bind:disabled)  { color: inherit; background-color: var(--color-ground-disabled); }
 
-// // .o-form:where( ._input, ._select ):has(>.bind:where( :not(:disabled):not([readonly]) )):hover  { color: var(--color-text-40); background-color: $color-ground; }
-// // .o-form:where( ._input, ._select ):hover >.bind:where( :not(:disabled):not([readonly]) ) ~i  { outline: $e10 solid var(--color-edge5); }
+// // .o-form:where( ._input, ._select ):has(>.bind:where( :not(:disabled):not(:read-only) )):hover  { color: var(--color-text-40); background-color: $color-ground; }
+// // .o-form:where( ._input, ._select ):hover >.bind:where( :not(:disabled):not(:read-only) ) ~i  { outline: $e10 solid var(--color-edge5); }
 
 // // .o-form >.bind:focus ~i  { outline-offset: $e10; }
 // // .o-form:where( ._input, ._select ) >.bind:focus ~i  { outline: $e20 solid var(--color-black); }
 
-// // .o-form:has(>.bind:where( :not([readonly]) ):focus-visible)  { color: var(--color-text-40); background-color: $color-ground; }
-// // .o-form >.bind:where( :not([readonly]) ):focus-visible ~i  { outline: $e20 solid var(--color-edge-70); outline-width: $e20 !important; }
-// // .o-form:where( ._input, ._select ) >.bind:where( :not([readonly]) ):focus-visible ~i  { outline-offset: calc(-1 * $e10); }
+// // .o-form:has(>.bind:where( :not(:read-only) ):focus-visible)  { color: var(--color-text-40); background-color: $color-ground; }
+// // .o-form >.bind:where( :not(:read-only) ):focus-visible ~i  { outline: $e20 solid var(--color-edge-70); outline-width: $e20 !important; }
+// // .o-form:where( ._input, ._select ) >.bind:where( :not(:read-only) ):focus-visible ~i  { outline-offset: calc(-1 * $e10); }
 
 
 // // .o-form._select >select  { -webkit-appearance: none; appearance: none; overflow: hidden; padding-right: 1.5em; background: var(--obj-sym-expand-more) no-repeat calc(100% + $e10) 50% /2rem 100%; text-overflow: ellipsis; white-space: nowrap; }
@@ -1402,7 +1402,7 @@
 // .o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); border-top-left-radius: 0; border-bottom-left-radius: 0; }
 
 // .o-form:has(>.bind:disabled)  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
-// .o-form:not(.mode-required, .mode-string):has(>.bind[readonly])  { background-color: var(--color-ground-disabled); }
+// .o-form:not(.mode-required, .mode-string):has(>.bind:read-only)  { background-color: var(--color-ground-disabled); }
 // .o-form.mode-required  { background: var(--color-ground-required); }
 
 // .o-form:has(input:where([value=""], :not([value]))) :has(>.o-image-button._remove)  { display: none; }
@@ -1582,10 +1582,18 @@
 .o-form.wdth-90  { width: var(--width-90); }
 
 
-.o-form.mode-required  { background: var(--color-ground-required); }
-.o-form:has(:disabled:is(input:where(.o-form._input *), select, textarea))  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
-.o-form:not(.mode-required, .mode-string):has([readonly]:is(input:where(.o-form._input *), select, textarea))  { background-color: var(--color-ground-disabled); }
-.o-form:has([readonly]:is(input:where(.o-form._input *), select, textarea)) .o-image-button:before  { background-position: 50%; }
+.o-form.mode-string  { border-color: $tp; background: $tp; }
+.o-form.mode-required  { background-color: var(--color-ground-required); }
+// .o-form:has(:disabled:is(input:where(.o-form._input *), select, textarea))  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+// .o-form:not(.mode-required, .mode-string):has(:read-only:is(input:where(.o-form._input *), select, textarea))  { background-color: var(--color-ground-disabled); }
+// .o-form:has(:read-only:is(input:where(.o-form._input *), select, textarea)) .o-image-button:before  { background-position: 50%; }
+
+.o-form:has(:disabled:is(input:where(.o-form._input *), select, textarea))  { color: $color-text-disabled; background-color: var(--color-ground-disabled); }
+.o-form:has(:read-only:is(input:where(.o-form._input *), textarea))  { background-color: var(--color-ground-disabled); }
+.o-form:has(:read-only:is(input:where(.o-form._input *), textarea)) .o-image-button:before  { background-position: 50%; }
+
+.o-form.mode-required:has(:read-only:is(input:where(.o-form._input *), textarea)):has(.o-image-button._search:not(:disabled))  { background-color: var(--color-ground-required); }
+
 
 
 

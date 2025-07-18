@@ -234,8 +234,8 @@ function FMTFF0301M() {
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>EUR (유럽연합 유로)</td> {/* <td className="g-start">EUR (유럽연합 유로)</td> <td className="g-start">KRW (대한민국 원)</td> */}
                               <td>KRW (대한민국 원)</td>
-                              <td></td>
-                              <td></td>
+                              <td className="g-end"></td>
+                              <td className="g-end"></td>
                               <td></td>
                               <td></td>
                             </tr>

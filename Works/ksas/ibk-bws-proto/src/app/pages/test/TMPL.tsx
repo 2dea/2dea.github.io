@@ -681,7 +681,7 @@ function TMPL() {
                             </td>
 
                             <th colSpan={1}>
-                              <Label label={`InputText​[readonly] + Search-ImageButton`} require={false} />
+                              <Label label={`InputText​:read-only + Search-ImageButton`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
