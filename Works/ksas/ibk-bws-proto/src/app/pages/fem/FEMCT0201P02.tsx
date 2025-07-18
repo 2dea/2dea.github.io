@@ -281,10 +281,10 @@ function FEMCT0201P02() {
                     <div className="group">
                       <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
                       <CommonButton label="일괄양식 업로드" className="_normal" icon="excel-upload-label" />
+                      <CommonButton label="상세검증" className="_normal" />
                     </div>
 
                     <div className="group">
-                      <CommonButton label="상세검증" className="_normal" icon="excel-upload-label" />
                     </div>
 
                     <div className="group">
@@ -366,12 +366,12 @@ function FEMCT0201P02() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타통화내역</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기본요금</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 합계(VAP포함)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 합계(VAT포함)</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금사유</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">예외</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기본요금</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 합계(VAP포함)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 합계(VAT포함)</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금사유</span></div></th>
                           </tr>
                         </thead>
@@ -446,7 +446,7 @@ function FEMCT0201P02() {
                                     <span className="o-status-text style-inherit type-20">-20,000</span> : <>-73,000</>
                                   }
                               </td>
-                              <td>병행할인</td>
+                              <td className="g-start">병행할인</td>
                               <td>
                                   {(idx) % 3 === 0 ?
                                     <span className="o-status-text style-inherit type-20">불일치</span> : <>일치</>

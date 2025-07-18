@@ -198,7 +198,7 @@ function FEMCT0201P05() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-auto">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -217,8 +217,8 @@ function FEMCT0201P05() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무센터</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송회사</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공급가액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부가세</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">청구 금액(부가세 포함)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">VAT(부가세)</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">청구 금액(VAT포함)</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                           </tr>
                         </thead>

@@ -349,7 +349,7 @@ function FEMCC0201M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
                                     <ImageButton label="검색" icon="search" />
@@ -435,16 +435,16 @@ function FEMCC0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`지급 수수료 불러오기`} require={false} />
+                            <Label label={`지급 수수료 불러오기`} require={true} />
                           </th>
                           <td>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" />
+                                    <ImageButton label="검색" icon="search" disabled />
                                   </span>
                                 </div>
                               </div>
@@ -458,10 +458,10 @@ function FEMCC0201M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input wdth-70">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" />
+                                    <ImageButton label="검색" icon="search" disabled />
                                   </span>
                                 </div>
                               </div>
@@ -611,9 +611,6 @@ function FEMCC0201M() {
                       <li>계약정보 불러오기 [돋보기] 버튼을 눌러 계약정보를 선택합니다.</li>
                       <li>지급수수료 불러오기 [돋보기] 버튼을 눌러 지급수수료를 선택합니다.</li>
                       <li>세금계산서 불러오기 [돋보기] 버튼을 눌러 세금계산서를 선택합니다.</li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
                       <li>[검증] 버튼을 눌러 계약정보에 지급 수수료와 세금계산서 금액을 비교합니다.</li>
                       <li>검증여부가 일치인 경우 [지급결의] 버튼을 눌러 결재요청을 합니다.</li>
                       <li>검증여부가 불일치인 경우 계약정보 or 세금계산서 정보를 확인 후 재선택합니다.</li>

@@ -356,13 +356,13 @@ function FEMDA0201M() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`계약정보 불러오기`} require={false} />
+                            <Label label={`계약정보 불러오기`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
                                     <ImageButton label="검색" icon="search" />
@@ -468,10 +468,10 @@ function FEMDA0201M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input wdth-70">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" />
+                                    <ImageButton label="검색" icon="search" disabled />
                                   </span>
                                 </div>
                               </div>

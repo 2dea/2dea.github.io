@@ -653,7 +653,7 @@ function FEMCT0101M() {
                                   </td>
 
                                   <th colSpan={1}>
-                                    <Label label={`황복할인율(%)`} require={true} />
+                                    <Label label={`왕복할인율(%)`} require={true} />
                                   </th>
                                   <td colSpan={1}>
                                     <div className="o-field">
