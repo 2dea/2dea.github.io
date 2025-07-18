@@ -150,7 +150,7 @@ function HSPHS1301P01() {
                             <Label label={`소요예산`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            200,000(부가세 포함)
+                            200,000(VAT포함)
                           </td>
                           <th colSpan={1}>
                             <Label label={`신청일자`} require={false} />

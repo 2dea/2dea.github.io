@@ -359,7 +359,7 @@ function BEXRQ0101M() {
                   <div className="o-field">
                     <div className="fields">
                       <div className="o-form _select wdth-80">
-                        <XDropdown appendTo={document.body} className="bind" />
+                        <XDropdown appendTo={document.body} placeholder="노선별 인수부점 일괄추가" className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -411,8 +411,7 @@ function BEXRQ0101M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수부점<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무지</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서무대리</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보관카드담당자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">담당자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서류구분<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서류내용<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
@@ -421,7 +420,7 @@ function BEXRQ0101M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -459,8 +458,16 @@ function BEXRQ0101M() {
                                 </div>
                               </div>
                             </td>
-                            <td><InputCheck label="선택" labelHidden /></td>
-                            <td><InputCheck label="선택" labelHidden /></td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _select wdth-50">
+                                    <XDropdown appendTo={document.body} className="bind" />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">

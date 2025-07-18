@@ -145,10 +145,10 @@ function BSSDM0201P04() {
                             [0810] 서울역
                           </td>
                           <th colSpan={1}>
-                            <Label label={`전화번호`} require={false} />
+                            <Label label={`인계자`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <span className="o-digit type-tel">02-729-7610</span>
+                            이재모
                           </td>
                         </tr>
                         <tr>
@@ -159,7 +159,7 @@ function BSSDM0201P04() {
                             <span className="o-digit type-date">2025-12-25</span>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`수거예정일자`} require={false} />
+                            <Label label={`신청량`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <span className="o-digit type-date">2025-12-25</span>
@@ -223,14 +223,13 @@ function BSSDM0201P04() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청단위</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인계자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기종류</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={4}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -241,7 +240,6 @@ function BSSDM0201P04() {
                             <td>{idx + 1}</td>
                             <td>박스</td>
                             <td className="g-end">20</td>
-                            <td>홍길동</td>
                             <td>보존기간경과문서</td>
                           </tr>
                         ))}

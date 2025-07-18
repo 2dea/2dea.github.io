@@ -92,7 +92,7 @@ function BSSDM0201P03() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-70p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -123,48 +123,6 @@ function BSSDM0201P03() {
                       </colgroup>
 
                       <tbody>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`문서폐기관리번호`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            2025000001
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`신청자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [00001] 홍길동
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`신청부점`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0810] 서울역
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`전화번호`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-tel">02-729-7610</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`신청일자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`수거예정일자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
-                          </td>
-                        </tr>
                         <tr>
                           <th colSpan={1}>
                             <Label label={`폐기일자`} require={false} />
@@ -225,19 +183,28 @@ function BSSDM0201P03() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청단위</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인계자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기종류</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기량</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청량</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인계자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수거예정일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -246,10 +213,15 @@ function BSSDM0201P03() {
                           // <tr key={idx} className={ (idx === 0) && "p-highlight" }>
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>박스</td>
-                            <td className="g-end">20</td>
+                            <td>0003</td>
+                            <td className="g-start">마포중앙</td>
+                            <td>000001</td>
                             <td>홍길동</td>
-                            <td>보존기간경과문서</td>
+                            <td>01-123-4567</td>
+                            <td>2025-01-01</td>
+                            <td className="g-end">20</td>
+                            <td>이재모</td>
+                            <td>2025-01-01</td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">
@@ -299,7 +271,7 @@ function BSSDM0201P03() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)대량폐기정보입력 [wdth-40p(w770)]</span>
+              <span className="label">(P)대량폐기정보입력 [wdth-70p(w1150)]</span>
             </h1>
           </div>
         </div>

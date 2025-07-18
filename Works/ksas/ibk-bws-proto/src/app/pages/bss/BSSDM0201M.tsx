@@ -281,6 +281,7 @@ function BSSDM0201M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기량</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기처리자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기정산 결재상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기정산 증빙자료</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청번호</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주소</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반려사유</span></div></th>
@@ -318,6 +319,9 @@ function BSSDM0201M() {
                               <td>012345</td>
                               <td>홍길동</td>
                               <td>상태</td>
+                              <td>
+                                <ImageButton label="이미지​다운로드" icon="download" />
+                              </td>
                               <td>012345</td>
                               <td className="g-start">서울특별시 서초구 서초대로 77길 17</td>
                               <td className="g-start">영업점요청</td>

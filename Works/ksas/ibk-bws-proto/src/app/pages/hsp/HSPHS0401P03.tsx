@@ -158,7 +158,7 @@ function HSPHS0401P03() {
                             <Label label={`검수금액`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            200,000 원(부가세 포함)
+                            200,000 원(VAT포함)
                           </td>
                           <th colSpan={1}>
                             <Label label={`신청일자`} require={false} />

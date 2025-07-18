@@ -119,6 +119,7 @@ function STMKY0301M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
+                <CommonButton label="과거내역조회" className="_lined-primary" />
                 <CommonButton label="인수도등록" className="_solid-primary" />
                 <CommonButton label="인수도취소" className="_solid-primary" />
               </div>
@@ -239,14 +240,20 @@ function STMKY0301M() {
                         </em>
                       </div>
 
-                      <div className="m-binds">
-                        <div className="m-binds">
-                          <div className="group">
-                            <CommonButton label="변경보관책임자명 입력" className="_solid-primary" />
-                            <CommonButton label="일괄반영" className="_normal" />
+                      <div className="o-field">
+                        <Label label={`변경보관책임자`} require={false} />
+                        <div className="fields">
+                          <div className="o-form _input wdth-50">
+                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                            <i aria-hidden="true"></i>
+                          </div>
+                          <div className="binds">
+                            <CommonButton label="일괄적용" className="_normal" />
                           </div>
                         </div>
+                      </div>
 
+                      <div className="m-binds">
                         <div className="group">
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
                           <ImageButton label="목록출력" icon="print" />

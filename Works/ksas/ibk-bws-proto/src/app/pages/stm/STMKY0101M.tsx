@@ -134,7 +134,7 @@ function STMKY0101M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`부점`} require={false} />
+                    <Label label={`주관부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
@@ -303,7 +303,7 @@ function STMKY0101M() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`부점`} require={true} />
+                            <Label label={`부점`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 프로세스혁신
@@ -394,13 +394,13 @@ function STMKY0101M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`주관부서`} require={false} />
+                            <Label label={`주관부점`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select wdth-50">
-                                  <XDropdown appendTo={document.body} className="bind" />
+                                <div className="o-form _input mode-required wdth-90">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
