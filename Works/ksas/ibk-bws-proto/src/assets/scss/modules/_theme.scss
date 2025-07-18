@@ -4,7 +4,7 @@
 .o-section:not(.o-section *):not(.o-grid >.column >*):not(.m-tabs >.m-tabs-panel >*)  {
   outline: thick solid Red;
 }
-.o-grid:where(.o-grid *) {
+.o-grid:where(.o-grid *):where(.dom-wrapper.type-proto *) {
   outline: thick solid Blue;
 }
 .m-board:not(:only-child)  { margin-bottom: $margin-section-50; }

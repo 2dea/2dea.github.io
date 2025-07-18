@@ -16,7 +16,7 @@ import Footer from './Footer';
 function Decorator() {
   return (
     <>
-      <div id="Document" className="dom-wrapper">
+      <div id="Document" className="dom-wrapper type-proto">
         <Header />
         {/* <!-- /* Container { @DEV } --> */}
         <div role="main" id="Center" className="dom-main">
