@@ -325,6 +325,8 @@ about:blank
 
 국세청 승인번호
 
+자금현수송 지급수수료(2025년 4월분)
+
 <li>입금계좌: 기업은행 ___-______-__-___</li>
 
 사업자등록번호 999-99-99999
@@ -680,7 +682,7 @@ about:blank
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -690,7 +692,7 @@ about:blank
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -700,7 +702,7 @@ about:blank
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -710,7 +712,7 @@ about:blank
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -720,7 +722,7 @@ about:blank
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 

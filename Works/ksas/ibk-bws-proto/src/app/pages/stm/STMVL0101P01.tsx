@@ -315,7 +315,7 @@ function STMVL0101P01() {
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -325,7 +325,7 @@ function STMVL0101P01() {
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -335,7 +335,7 @@ function STMVL0101P01() {
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -345,7 +345,7 @@ function STMVL0101P01() {
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -355,7 +355,7 @@ function STMVL0101P01() {
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 

@@ -37,31 +37,37 @@ import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상�
 import CMP001601P from 'app/pages/cmp/CMP001601P';   // 공통 ~ (LP)반려
 
 // proto 자금현수송
-import FMTCT0101M from 'app/pages/fmt/FMTCT0101M';      // 자금현수송 > 원화현수송 > 원화현수송신청
+import FMTCT0101M from 'app/pages/fmt/FMTCT0101M';      // 자금현수송 > 원화현수송    > 원화현수송신청
 
-import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사 > 신청(인도)
-import FMTCC0101P01 from 'app/pages/fmt/FMTCC0101P01';  // 자금현수송 > 원화정사 > 신청(인도) ~ (LP)호송금인수증등록
-import FMTCC0201M from 'app/pages/fmt/FMTCC0201M';      // 자금현수송 > 원화정사 > 결과(인수)
-import FMTCC0301M from 'app/pages/fmt/FMTCC0301M';      // 자금현수송 > 원화정사 > 관련조회 및 출력
+import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사      > 신청(인도)
+import FMTCC0101P01 from 'app/pages/fmt/FMTCC0101P01';  // 자금현수송 > 원화정사      > 신청(인도) ~ (LP)호송금인수증등록
+import FMTCC0201M from 'app/pages/fmt/FMTCC0201M';      // 자금현수송 > 원화정사      > 결과(인수)
+import FMTCC0301M from 'app/pages/fmt/FMTCC0301M';      // 자금현수송 > 원화정사      > 관련조회 및 출력
 
-import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사 > 일일실적관리 > 실적내역
-import FMTFC0101P01 from 'app/pages/fmt/FMTFC0101P01';  // 자금현수송 > 외화정사 > 일일실적관리 > 실적내역 ~ (LP)위조및변조화폐신고서등록
-import FMTFC0101P02 from 'app/pages/fmt/FMTFC0101P02';  // 자금현수송 > 외화정사 > 일일실적관리 > 실적내역 ~ (LP)외화정사등록
+import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역
+import FMTFC0101P01 from 'app/pages/fmt/FMTFC0101P01';  // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역 ~ (LP)위조및변조화폐신고서등록
+import FMTFC0101P02 from 'app/pages/fmt/FMTFC0101P02';  // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역 ~ (LP)외화정사등록
 
 
-import FMTFC0201M from 'app/pages/fmt/FMTFC0201M';      // 자금현수송 > 외화정사 > 인수도관리
-import FMTFC0201P01 from 'app/pages/fmt/FMTFC0201P01';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(정사)
-import FMTFC0201P02 from 'app/pages/fmt/FMTFC0201P02';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)외화정사인수도(반납)
-import FMTFC0201P03 from 'app/pages/fmt/FMTFC0201P03';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)인수(정사분)
-import FMTFC0201P04 from 'app/pages/fmt/FMTFC0201P04';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)인수(반납분)
-import FMTFC0201P05 from 'app/pages/fmt/FMTFC0201P05';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)반송(정사분)
-import FMTFC0201P06 from 'app/pages/fmt/FMTFC0201P06';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)반송(반납분)
-import FMTFC0201P07 from 'app/pages/fmt/FMTFC0201P07';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)인도취소(정사분)
-import FMTFC0201P08 from 'app/pages/fmt/FMTFC0201P08';  // 자금현수송 > 외화정사 > 인수도관리 ~ (LP)인도취소(반납분)
+import FMTFC0201M from 'app/pages/fmt/FMTFC0201M';      // 자금현수송 > 외화정사      > 인수도관리
+import FMTFC0201P01 from 'app/pages/fmt/FMTFC0201P01';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)외화정사인수도(정사)
+import FMTFC0201P02 from 'app/pages/fmt/FMTFC0201P02';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)외화정사인수도(반납)
+import FMTFC0201P03 from 'app/pages/fmt/FMTFC0201P03';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)인수(정사분)
+import FMTFC0201P04 from 'app/pages/fmt/FMTFC0201P04';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)인수(반납분)
+import FMTFC0201P05 from 'app/pages/fmt/FMTFC0201P05';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)반송(정사분)
+import FMTFC0201P06 from 'app/pages/fmt/FMTFC0201P06';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)반송(반납분)
+import FMTFC0201P07 from 'app/pages/fmt/FMTFC0201P07';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)인도취소(정사분)
+import FMTFC0201P08 from 'app/pages/fmt/FMTFC0201P08';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)인도취소(반납분)
 
-import FMTFC0301M from 'app/pages/fmt/FMTFC0301M';      // 자금현수송 > 외화정사 > 일일업무현황조회
+import FMTFC0301M from 'app/pages/fmt/FMTFC0301M';      // 자금현수송 > 외화정사      > 일일업무현황조회
 
 import FMTFF0101M from 'app/pages/fmt/FMTFF0101M';      // 자금현수송 > 외화정사수수료 > 수수료절감표조회
+import FMTFF0201M from 'app/pages/fmt/FMTFF0201M';      // 자금현수송 > 외화정사수수료 > 수수료율관리
+import FMTFF0301M from 'app/pages/fmt/FMTFF0301M';      // 자금현수송 > 외화정사수수료 > 환율관리
+
+import FMTDP0101M from 'app/pages/fmt/FMTDP0101M';      // 자금현수송 > 파출수납      > 계약현황
+import FMTDP0201M from 'app/pages/fmt/FMTDP0201M';      // 자금현수송 > 파출수납      > 창구를거치지않은예금의입출금대장
+import FMTCD0101M from 'app/pages/fmt/FMTCD0101M';      // 자금현수송 > 외화위폐감별
 
 
 // proto 중요용지·용도품(본부)
@@ -611,6 +617,11 @@ function ProtoRoutes() {
         { path: 'FMTFC0301M',   element: <FMTFC0301M /> },
 
         { path: 'FMTFF0101M',   element: <FMTFF0101M /> },
+        { path: 'FMTFF0201M',   element: <FMTFF0201M /> },
+        { path: 'FMTFF0301M',   element: <FMTFF0301M /> },
+        { path: 'FMTDP0101M',   element: <FMTDP0101M /> },
+        { path: 'FMTDP0201M',   element: <FMTDP0201M /> },
+        { path: 'FMTCD0101M',   element: <FMTCD0101M /> },
 
       ],
     },

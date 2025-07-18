@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 외화정사수수료 > 수수료절감표조회
+ * @description 자금현수송 > 외화정사수수료 > 환율관리
  */
 
 // dependency
@@ -36,17 +36,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTFF0101M() {
-  // Dialog
-  // const [visible, setVisible] = useState<boolean>(true);
-
+function FMTFF0301M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
-  const viewimageOverlay1 = useRef(null);
-  const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '외화정사수수료' }, { label: '수수료절감표조회' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '외화정사수수료' }, { label: '환율관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -103,7 +98,7 @@ function FMTFF0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">수수료절감표조회</span>
+                <span className="label">환율관리</span>
 
                 <FavoriteDiv />
               </h1>
@@ -111,6 +106,7 @@ function FMTFF0101M() {
           </div>
 
           <div className="binds">
+
             <div className="m-binds type-start">
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
@@ -118,12 +114,11 @@ function FMTFF0101M() {
             </div>
 
             <div className="m-binds type-end">
-              <div className="group _utility">
-                <div className="m-print-binds">
-                  <CommonButton label="출력" className="_texted" />
-                </div>
+              <div className="group _primary">
+                <CommonButton label="환율정보반영" className="_solid-primary" />
               </div>
             </div>
+
           </div>
         </div>
 
@@ -150,10 +145,20 @@ function FMTFF0101M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`통화코드`} require={false} />
+                    <Label label={`기준통화`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`상대통화`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" disabled />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -168,7 +173,7 @@ function FMTFF0101M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">수수료절감표 내역</span></h2>
+                  <h2 className="o-heading level2"><span className="label">환율정보 내역</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -206,13 +211,13 @@ function FMTFF0101M() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정사금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료율</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">환율</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재사용률(%)</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료절감액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준일자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준통화</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상대통화</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회회차 장부가격</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종회차 장부가격</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회회차</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종회차</span></div></th>
                           </tr>
                         </thead>
 
@@ -224,46 +229,18 @@ function FMTFF0101M() {
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
-                            <>
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
-                                <td>{idx + 1}</td>
-                                <td>EUR(유럽연합 유로)</td>
-                                <td>500</td>
-                                <td className="g-end">50,000</td>
-                                <td className="g-end">0.35</td>
-                                <td className="g-end">1,00</td>
-                                <td className="g-end">0.0</td>
-                                <td className="g-end">0</td>
-                              </tr>
-                              {
-                                (idx - 2) % 3 === 0 &&
-                                <tr className="p-rowgroup-footer subtotal-trow">
-                                  <td className="subtotal-tcell"></td>
-                                  <td className="subtotal-tcell">소계</td>
-                                  <td className="subtotal-tcell"></td>
-                                  <td className="subtotal-tcell g-end">50,000</td>
-                                  <td className="subtotal-tcell g-end">0.35</td>
-                                  <td className="subtotal-tcell g-end">1,00</td>
-                                  <td className="subtotal-tcell g-end">0.0</td>
-                                  <td className="subtotal-tcell g-end">0</td>
-                                  {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                                </tr>
-                              }
-                            </>
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>EUR (유럽연합 유로)</td> {/* <td className="g-start">EUR (유럽연합 유로)</td> <td className="g-start">KRW (대한민국 원)</td> */}
+                              <td>KRW (대한민국 원)</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
                           ))}
                         </tbody>
-
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                          <tr className="sumtotal-trow">
-                            <td colSpan={3} className="sumtotal-tcell">총계</td>
-                            <td className="subtotal-tcell g-end">50,000</td>
-                            <td className="subtotal-tcell g-end">0.35</td>
-                            <td className="subtotal-tcell g-end">1,00</td>
-                            <td className="subtotal-tcell g-end">0.0</td>
-                            <td className="subtotal-tcell g-end">0</td>
-                          </tr>
-                        </tfoot>
-
                       </table>
                     </div>
                   </div>
@@ -271,9 +248,8 @@ function FMTFF0101M() {
               </div>
 
             </div>
-
-            <div className="column"></div>
           </div>
+
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
@@ -281,4 +257,4 @@ function FMTFF0101M() {
   );
 }
 
-export default FMTFF0101M;
+export default FMTFF0301M;

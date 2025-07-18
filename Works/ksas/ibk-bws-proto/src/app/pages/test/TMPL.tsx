@@ -975,6 +975,73 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
+                              <Label label={`전체삭제/추가`} require={true} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-binds">
+                                <div className="group _start">
+                                  <CommonButton label="전체삭제" className="_normal" disabled />
+                                  <CommonButton label="추가" className="_normal" />
+                                </div>
+                              </div>
+
+                              <div className="m-flex-list">
+
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input mode-required wdth-50">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                    <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                  </div>
+                                </div>
+
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-50">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                    <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                  </div>
+                                </div>
+
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-50">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                    <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                  </div>
+                                </div>
+
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-50">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                    <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                  </div>
+                                </div>
+
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-50">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                    <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
                               <Label label={`인수부점`} require={true} />
                             </th>
                             <td colSpan={5}>
@@ -1163,6 +1230,14 @@ function TMPL() {
                                     </a>
                                   </div>
                                 </li>
+                                {/* <li>
+                                  <div className="m-flex-list">
+                                    <strong>폼 전체삭제/추가</strong>
+                                    <a href="/proto/STMVL0101P01" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      STMVL0101P01<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li> */}
                                 <li>
                                   <div className="m-flex-list">
                                     <strong>관련규정</strong>

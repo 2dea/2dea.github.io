@@ -285,9 +285,6 @@ function FEMCT0201P02() {
                     </div>
 
                     <div className="group">
-                    </div>
-
-                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>

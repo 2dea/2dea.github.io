@@ -298,7 +298,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" disabled /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" disabled /></div>
                                 </div>
                               </div>
                             </div>
@@ -329,7 +329,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" disabled /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" disabled /></div>
                                 </div>
                               </div>
                             </div>
@@ -360,7 +360,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" disabled /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" disabled /></div>
                                 </div>
                               </div>
                             </div>
@@ -392,7 +392,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" disabled />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -405,7 +405,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" disabled />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -418,7 +418,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" disabled />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -451,7 +451,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" disabled />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -464,7 +464,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" disabled />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
@@ -477,7 +477,7 @@ function STMHA0101M() {
                                       <ImageButton label="초기화" icon="remove" disabled />
                                     </span>
                                   </div>
-                                  <div className="binds"><ImageButton label="파일보기" icon="delete" /></div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                 </div>
                               </div>
 
