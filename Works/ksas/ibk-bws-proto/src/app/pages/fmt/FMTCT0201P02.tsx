@@ -132,17 +132,17 @@ function FMTCT0201P02() {
                             <Label label={`현송확인직원`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0034] 을지로
+                            [123456] 임꺽정
                           </td>
                         </tr>
 
                         <tr>
                           <th colSpan={1} rowSpan={4}>
-                            <Label label={`현송원`} require={false} />
+                            <Label label={`현송원 사진`} require={false} />
                           </th>
                           <td colSpan={1} rowSpan={4}>
-                            <div className="image">
-                              <img src="https://images.unsplash.com/photo-1743001025958-19eca24afd23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                            <div className="o-view-image ratio-portrait h-120">
+                              <img src={require("assets/images/temp/FMTCT0201P02_010.jpg")} alt="" />
                             </div>
                           </td>
 
@@ -159,7 +159,7 @@ function FMTCT0201P02() {
                             <Label label={`현송원`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0801] 홍길동
+                            [123456] 홍길동
                           </td>
                         </tr>
                         <tr>
@@ -169,7 +169,7 @@ function FMTCT0201P02() {
                           <td colSpan={1}>
                             <div className="m-string-binds">
                               <span className="o-digit type-tel">02-729-7610</span>
-                              <span className="binds"><CommonButton label="인증번호요청" className="_normal" /></span>
+                              <span className="binds justify-end"><CommonButton label="인증번호요청" className="_normal" /></span>
                             </div>
                           </td>
                         </tr>
@@ -180,9 +180,16 @@ function FMTCT0201P02() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input type-num mode-required wdth-30">
+                                <div className="o-form _input type-num mode-required">
                                   <InputMask placeholder="" mask="999999" value={Mask} className="bind" onChange={(e) => setMask(e.value)} />
                                   <i aria-hidden="true"></i>
+                                  <span className="inner-string type-time-cert">0:00</span>
+                                  <span className="inner-binds">
+                                    <CommonButton label="시간연장" className="_normal" />
+                                  </span>
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="인증확인" className="_solid-secondary" />
                                 </div>
                               </div>
                             </div>
@@ -236,12 +243,12 @@ function FMTCT0201P02() {
 
                       <ol className="m-bullets type-decimal level1">
                         <li>인증번호요청 후 인증번호를 SMS인증번호 입력란에 입력하여 인증합니다.</li>
-                        <li>인증이 정상적으로 완료되면 현송직원확인 저장합니다.
-                          <ul className="m-bullets type-asterisk">
-                            <li>시스템 오류 등의 이유로 현송직원확인이 정상적으로 이루어지지 않는 경우 장애구분 선택 후 사유를 입력합니다.</li>
-                          </ul>
-                        </li>
+                        <li>인증이 정상적으로 완료되면 현송직원확인 저장합니다.</li>
                       </ol>
+
+                      <ul className="m-bullets type-asterisk">
+                        <li>시스템 오류 등의 이유로 현송직원확인이 정상적으로 이루어지지 않는 경우 장애구분 선택 후 사유를 입력합니다.</li>
+                      </ul>
                     </div>
 
                   </div>

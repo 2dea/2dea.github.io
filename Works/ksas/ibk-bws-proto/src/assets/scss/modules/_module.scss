@@ -389,10 +389,17 @@
 .o-figure >.body >*  { display: block; }
 
 
-.o-view-image  { background: var(--color-ground-70) var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
+.o-view-image  { max-width: fit-content; background: var(--color-ground-70) var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
 .o-view-image:before  { display: block; min-width: 100%; min-height: III(96); aspect-ratio: 4 / 3; background: inherit; background-size: calc(100% * 81 / 400) auto; border-radius: $radius-70; }
-.o-view-image:empty:before  { content: ""; }
 .o-view-image >*  { display: block; }
+
+.o-view-image:empty  { border-radius: $radius-70; }
+.o-view-image:empty:before  { content: ""; }
+
+.o-view-image:where(.ratio-portrait)  { background-size: 26% auto; }
+.o-view-image:where(.ratio-portrait):before  { min-width: III(90); min-height: 100%; aspect-ratio: 3 / 4; background-size: auto calc(100% * 81 / 400); }
+
+.o-view-image.h-120 :is( object, img, svg )  { height: III(120); }
 
 .o-view-image.case-notice-calendar:before  { min-width: III(626); min-height: III(177); aspect-ratio: auto; }
 
@@ -1556,7 +1563,11 @@
 .o-form .inner-binds +.inner-binds:has(>:nth-child(2))  { border-left: $e10 solid var(--color-edge-40); }
 .o-form .inner-binds .o-button  { margin: calc(-1 * $e10); margin-left: 0; border-radius: 0; }
 .o-form .inner-binds .o-button:hover,  .o-form .inner-binds .o-button:focus  { z-index: 2; }
+.o-form .inner-binds .o-button:first-child  { margin-left: $e10; }
 .o-form .inner-binds .o-button:last-child  { border-start-end-radius: inherit; border-end-end-radius: inherit; }
+
+.o-form .inner-string  { padding-right: $gap-element-70; }
+.o-form .inner-string.type-time-cert  { font-feature-settings: var(--text-feature-tnum); font-size: $font-30; line-height: $line-30; color: var(--color-point-red); }
 
 // .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { visibility: hidden; }
 .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { display: none; }

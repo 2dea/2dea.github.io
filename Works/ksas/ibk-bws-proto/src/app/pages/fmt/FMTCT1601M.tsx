@@ -130,7 +130,7 @@ function FMTCT1601M() {
 
               <div className="group _primary">
                 <CommonButton label="업무센터반려" className="_lined-primary" />
-                <CommonButton label="업무센터결재" className="_solid-primary" />
+                <CommonButton label="업무센터결정" className="_solid-primary" />
               </div>
             </div>
 
