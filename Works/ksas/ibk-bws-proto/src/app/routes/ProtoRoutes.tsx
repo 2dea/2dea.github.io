@@ -306,10 +306,12 @@ import STMVL0101P05 from 'app/pages/stm/STMVL0101P05';   // 재난·안전관리
 import STMVL0201M from 'app/pages/stm/STMVL0201M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 미등록운행일지알람
 
 import STMDM0101M from 'app/pages/stm/STMDM0101M';       // 재난·안전관리 > 배차관리                > 배차신청
+import STMDM0101P01 from 'app/pages/stm/STMDM0101P01';   // 재난·안전관리 > 배차관리                > 배차신청 ~ (LP)배차신청유의사항
+import STMDM0101P02 from 'app/pages/stm/STMDM0101P02';   // 재난·안전관리 > 배차관리                > 배차신청 ~ (LP)배차신청결재상태
 import STMDM0201M from 'app/pages/stm/STMDM0201M';       // 재난·안전관리 > 배차관리                > 배차이력
 import STMDM0301M from 'app/pages/stm/STMDM0301M';       // 재난·안전관리 > 배차관리                > 배차관리
-import STMDM0301P01 from 'app/pages/stm/STMDM0301P01';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)배차등록
-import STMDM0301P02 from 'app/pages/stm/STMDM0301P02';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)반납완료등록
+import STMDM0301P01 from 'app/pages/stm/STMDM0301P01';   // 재난·안전관리 > 배차관리                > 배차관리 ~ (LP)배차등록
+import STMDM0301P02 from 'app/pages/stm/STMDM0301P02';   // 재난·안전관리 > 배차관리                > 배차관리 ~ (LP)반납완료등록
 import STMDM0401M from 'app/pages/stm/STMDM0401M';       // 재난·안전관리 > 배차관리                > 차량관리
 import STMDM0401P02 from 'app/pages/stm/STMDM0401P02';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)차종조회
 import STMDM0401P03 from 'app/pages/stm/STMDM0401P03';   // 재난·안전관리 > 배차관리                > 차량관리 ~ (LP)차종팝업
@@ -859,6 +861,8 @@ function ProtoRoutes() {
         { path: 'STMGD0601P01', element: <STMGD0601P01 /> },
 
         { path: 'STMDM0101M',   element: <STMDM0101M /> },
+        { path: 'STMDM0101P01', element: <STMDM0101P01 /> },
+        { path: 'STMDM0101P02', element: <STMDM0101P02 /> },
         { path: 'STMDM0201M',   element: <STMDM0201M /> },
         { path: 'STMDM0301M',   element: <STMDM0301M /> },
         { path: 'STMDM0301P01', element: <STMDM0301P01 /> },

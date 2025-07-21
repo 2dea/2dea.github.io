@@ -30,6 +30,8 @@
   --font-15px:          15;
   --font-16px:          16;
   --font-20px:          20;
+  --font-24px:          24;
+  --font-36px:          36;
 
   --line-10px:          12;
   --line-11px:          14;
@@ -39,40 +41,52 @@
   --line-15px:          20;
   --line-16px:          20;
   --line-20px:          26;
+  --line-24px:          30;
+  --line-36px:          42;
 
   --font-10-int:        var(--font-10px);
   --font-30-int:        var(--font-12px);
   --font-40-int:        var(--font-13px);
   --font-50-int:        var(--font-14px);
-  --font-70-int:        var(--font-16px);
-  --font-90-int:        var(--font-20px);
+  --font-60-int:        var(--font-16px);
+  --font-70-int:        var(--font-20px);
+  --font-80-int:        var(--font-24px);
+  --font-90-int:        var(--font-36px);
 
   --line-10-int:        var(--line-10px);
   --line-30-int:        var(--line-12px);
   --line-40-int:        var(--line-13px);
   --line-50-int:        var(--line-14px);
-  --line-70-int:        var(--line-16px);
-  --line-90-int:        var(--line-20px);
+  --line-60-int:        var(--line-16px);
+  --line-70-int:        var(--line-20px);
+  --line-80-int:        var(--line-24px);
+  --line-90-int:        var(--line-36px);
 
   --font-10:            calc(var(--rem) * var(--font-10-int));
   --font-30:            calc(var(--rem) * var(--font-30-int));
   --font-40:            calc(var(--rem) * var(--font-40-int));
   --font-50:            calc(var(--rem) * var(--font-50-int));
+  --font-60:            calc(var(--rem) * var(--font-60-int));
   --font-70:            calc(var(--rem) * var(--font-70-int));
+  --font-80:            calc(var(--rem) * var(--font-80-int));
   --font-90:            calc(var(--rem) * var(--font-90-int));
 
   --line-abs-10:        calc(var(--rem) * var(--line-10-int));
   --line-abs-30:        calc(var(--rem) * var(--line-30-int));
   --line-abs-40:        calc(var(--rem) * var(--line-40-int));
   --line-abs-50:        calc(var(--rem) * var(--line-50-int));
+  --line-abs-60:        calc(var(--rem) * var(--line-60-int));
   --line-abs-70:        calc(var(--rem) * var(--line-70-int));
+  --line-abs-80:        calc(var(--rem) * var(--line-80-int));
   --line-abs-90:        calc(var(--rem) * var(--line-90-int));
 
   --line-10:            calc(var(--line-10-int) / var(--font-10-int));
   --line-30:            calc(var(--line-30-int) / var(--font-30-int));
   --line-40:            calc(var(--line-40-int) / var(--font-40-int));
   --line-50:            calc(var(--line-50-int) / var(--font-50-int));
+  --line-60:            calc(var(--line-60-int) / var(--font-60-int));
   --line-70:            calc(var(--line-70-int) / var(--font-70-int));
+  --line-80:            calc(var(--line-80-int) / var(--font-80-int));
   --line-90:            calc(var(--line-90-int) / var(--font-90-int));
 
 

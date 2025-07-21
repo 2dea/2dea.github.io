@@ -870,10 +870,13 @@ function SUBTMPL() {
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _arrow-drop-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-drop-up wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _branch wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _move wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _repair wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _star wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _favorite wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _vehicle wdth-50" aria-hidden="true"></i>
                               </div>
                             </td>
                           </tr>

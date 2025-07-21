@@ -1201,6 +1201,9 @@ function TMPL() {
                                     <a href="/proto/STMPR0301M" target="ibkbws_exam" className="o-link texted-button _primary">
                                       STMPR0301M<Icon icon="link" />
                                     </a>
+                                    <a href="/proto/STMDM0301M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      STMDM0301M<Icon icon="link" />
+                                    </a>
                                   </div>
                                 </li>
                                 <li>
@@ -1267,6 +1270,14 @@ function TMPL() {
                                     <strong>상태 데이터</strong>
                                     <a href="/proto/STMKY0401M" target="ibkbws_exam" className="o-link texted-button _primary">
                                       STMKY0401M<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
+                                    <strong>결재선</strong>
+                                    <a href="/proto/STMDM0101P02" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      STMDM0101P02<Icon icon="link" />
                                     </a>
                                   </div>
                                 </li>

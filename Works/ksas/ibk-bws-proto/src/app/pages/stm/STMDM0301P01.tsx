@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 배차관리 > 차량관리 ~ (LP)배차등록
+ * @description 재난·안전관리 > 배차관리 > 배차관리 ~ (LP)배차등록
  */
 
 // dependency

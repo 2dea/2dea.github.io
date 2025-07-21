@@ -140,7 +140,8 @@ html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable bot
  --------------- */
 
 *  { letter-spacing: var(--text-spacing); }
-:before,  :after  { border-radius: inherit; letter-spacing: inherit; animation: inherit; transition: inherit; }
+// :before,  :after  { border-radius: inherit; letter-spacing: inherit; animation: inherit; transition: inherit; }
+:before,  :after  { border-radius: inherit; letter-spacing: inherit; }
 html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); }
 body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); }
 /* @media
@@ -258,7 +259,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 
-.dom-header .div-nav-global  { grid-column: 2; font-weight: $bold-70; font-size: $font-70; line-height: $line-70; overflow-x: scroll; margin-bottom: calc(-1 * $width-scrollbar); white-space: nowrap; }
+.dom-header .div-nav-global  { grid-column: 2; font-weight: $bold-70; font-size: $font-60; line-height: $line-60; overflow-x: scroll; margin-bottom: calc(-1 * $width-scrollbar); white-space: nowrap; }
 .dom-header .div-nav-global .link  { display: flex; position: relative; height: III(47); padding: $gap-element-70 1em; white-space: nowrap; transition: 0.3s; }
 .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"])  { z-index: 3; color: $color-key1-40; }
 .dom-header .div-nav-global .link[aria-current]:not([aria-current="false"]):before  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: III(var(--height-header-divider)); background: var(--color-point-orange); }
@@ -431,8 +432,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main .div-header >.binds  { min-height: calc($height-form-70 + $height-form-30 + $gap-element-70 * 1); margin-left: auto; }
 .dom-main .div-header >.binds .m-binds  { justify-content: flex-end; flex-wrap: wrap-reverse; min-height: 0; }
 .dom-main .div-header >.binds .m-binds:empty  { display: none; }
-.dom-main .div-header >.binds .m-binds:not(.type-end)  { gap: $gap-element-70 $gap-element-30; }
-.dom-main .div-header >.binds .m-binds.type-end  { min-height: $height-form-70; }
+.dom-main .div-header >.binds .m-binds:not(.type-end)  { gap: $gap-element-70 $gap-element-30; margin-bottom: auto; }
+.dom-main .div-header >.binds .m-binds.type-end  { min-height: $height-form-70; margin-top: auto; }
 .dom-main .div-header >.binds .m-binds >*  { justify-content: inherit; }
 
 

@@ -170,10 +170,13 @@
 /* Icon Filled */
 .o-icon._arrow-drop-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-down); }
 .o-icon._arrow-drop-up:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-up); }
+.o-icon._branch:before  { background-color: $tp; background-image: var(--obj-ico-branch); }
 .o-icon._move:before,
   .o-icon._sort:before  { background-color: $tp; background-image: var(--obj-ico-move); }
+.o-icon._repair:before  { background-color: $tp; background-image: var(--obj-ico-repair); }
 .o-icon._star:before,
   .o-icon._favorite:before  { background-color: $tp; background-image: var(--obj-ico-star); }
+.o-icon._vehicle:before  { background-color: $tp; background-image: var(--obj-ico-vehicle); }
 
 /* Icon Fixed */
 .o-icon._alert-octagram:before  { background-color: $tp; background-image: var(--obj-ico-alert-octagram); background-size: 100%; }
@@ -238,7 +241,7 @@
 .o-text-error  { color: var(--color-error); }
 .o-text-strong  { font-weight: $bold-70; color: var(--color-point-red); }
 
-.o-caption-text  { font-weight: $bold-70; font-size: $font-90; line-height: $line-90; display: block; color: var(--color-text-70); }
+.o-caption-text  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; display: block; color: var(--color-text-70); }
 .o-caption-text:not(.align-inherit)  { text-align: center; }
 
 
@@ -296,12 +299,12 @@
 
 
 /** Headings */
-.o-heading  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; display: block; display: flex; align-items: center; position: relative; color: $color-text-70; }
+.o-heading  { font-weight: $bold-70; font-size: $font-60; line-height: $line-60; display: block; display: flex; align-items: center; position: relative; color: $color-text-70; }
 .o-heading:before  { position: absolute; text-align: center; }
 .o-heading >.label  { overflow: hidden; text-overflow: ellipsis; }
 .o-heading .label +.o-check  { line-height: $height-ctrl-50; margin-left: $gap-element-30; }
 
-.o-heading.level1  { font-size: $font-90; line-height: $line-90; }
+.o-heading.level1  { font-size: $font-70; line-height: $line-70; }
 
 .o-heading:not(.level1)  { --width-bullet: var(--rem) * 12; --gap: var(--rem) * var(--gap-element-30); padding-left: calc(var(--width-bullet) + var(--gap)); }
 .o-heading:not(.level1):before  { content: ""; }
@@ -650,7 +653,7 @@
 .o-length:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
 
 
-.m-dialog-message  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-70; line-height: var(--lh); flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 100%; min-height: calc(var(--lh) * 1); margin: 0 auto; text-align: center; }
+.m-dialog-message  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-60; line-height: var(--lh); flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 100%; min-height: calc(var(--lh) * 1); margin: 0 auto; text-align: center; }
 .m-dialog-message >*  { flex: 1; display: inline-flex; flex-direction: column; justify-content: center; max-width: 100%; text-align: left; text-align: start; }
 
 
@@ -783,7 +786,7 @@
 .o-steps:where(.axis-cols) >*  { gap: $gap-element-70; }
 .o-steps:where(.axis-cols) .order  { height: auto; }
 // .o-steps:where(.axis-cols) .order .count  { position: absolute; margin-top: calc((III(20) - III(24)) / 2) }
-.o-steps:where(.axis-cols) .label .main  { font-size: $font-70; line-height: $line-70; display: block; padding: calc((III(30) - III(20)) / 2) 0; }
+.o-steps:where(.axis-cols) .label .main  { font-size: $font-60; line-height: $line-60; display: block; padding: calc((III(30) - III(20)) / 2) 0; }
 
 .o-steps:where(.axis-cols) >:not(:last-child):after  { content: ""; left: calc(III(30) / 2); top: calc(III(30) / 2); margin-left: III(-0.5); height: 100%; }
 .o-steps:where(.axis-cols) >:not(:last-child) .label  { padding-bottom: var(--gap-step); }
@@ -828,7 +831,7 @@
 .m-calendar-header >* >* >*  { flex: none; display: flex; align-items: center; min-width: 0; }
 .m-calendar-header >.main  { flex: 1; gap: $gap-element-90; }
 .m-calendar-header >.main >.year  { --gap-col: #{$gap-element-70}; order: -1; gap: var(--gap-col); }
-.m-calendar-header >.main >.year >.label  { font-weight: $bold-70; font-size: $font-90; line-height: $line-90; color: var(--color-text-70); }
+.m-calendar-header >.main >.year >.label  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; color: var(--color-text-70); }
 .m-calendar-header >.main >.year >.bind  { order: -2; }
 .m-calendar-header >.main >.year >.bind +.bind  { margin-left: $e10; }
 .m-calendar-header >.main >.year >.bind +.bind:after  { content: ""; position: absolute; right: 100%; transform: translateX(calc(var(--gap-col) / -2)); width: $e10; height: III(10); background: var(--color-edge-40); pointer-events: none; }
@@ -837,7 +840,7 @@
 
 
 
-.o-radios  { --fs-absint: var(--font-70-int); font-size: $font-70; font-size: calc(var(--rem) * var(--fs-int, var(--fs-absint))); line-height: $line-70; display: flex; align-items: center; position: relative; padding: $e10; border: $e10 solid var(--color-edge-40); color: var(--color-text-30); background: var(--color-ground-40); border-radius: $radius-abs-999; }
+.o-radios  { --fs-absint: var(--font-60-int); font-size: $font-60; font-size: calc(var(--rem) * var(--fs-int, var(--fs-absint))); line-height: $line-60; display: flex; align-items: center; position: relative; padding: $e10; border: $e10 solid var(--color-edge-40); color: var(--color-text-30); background: var(--color-ground-40); border-radius: $radius-abs-999; }
 .o-radios >.bind  { flex: 1; display: flex; align-items: center; justify-content: center; min-width: 1em; min-width: calc(1em * 43 / var(--fs-absint)); height: $height-form-50; min-height: 1em; padding: III(2) calc(1em * 5 / var(--fs-absint)); border: $e10 solid $tp; color: var(--color-text-00); background: var(--color-key1-90); border-radius: inherit; }
 .o-radios >.bind:not(:disabled, [aria-disabled="true"])  { transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
 .o-radios >.bind:not(.is-checked)  { color: inherit; background-color: $tp; }
@@ -950,11 +953,16 @@
 .o-pair:where(.o-pair-board *) >.head  { color: var(--color-key1-70); }
 .o-pair:where(.o-pair-board *) >.data  { font-weight: $bold-70; color: var(--color-text-40); }
 
-.o-pair:where(.o-pair-board.type-normal *) >.data  { font-size: $font-70; line-height: $line-70; }
-.o-pair:where(.o-pair-board.type-normal *) >.data  { font-size: $font-70; line-height: $line-70; }
+.o-pair:where(.o-pair-board.type-normal *) >.data  { font-size: $font-60; line-height: $line-60; }
+
+.o-pair:where(.o-pair-board.type-icon *) >.head .o-icon  { display: block; margin: 0 0 $gap-element-30; }
+.o-pair:where(.o-pair-board.type-icon *) >.head .o-icon:before  { font-size: $height-icon-50; background-position: 50%; }
+.o-pair:where(.o-pair-board.type-icon *) >.data  { font-size: $font-80; line-height: $line-80; }
 
 
 .o-pair-board  { min-height: III(42); padding: III(12) III(24); background: var(--color-ground2-blue-30); background: linear-gradient(to top left, var(--color-ground2-blue-40), var(--color-ground2-blue-30)); border-radius: $radius-70; }
+
+.o-pair-board.type-icon  { min-height: III(42); padding: III(12) III(24); background: var(--color-ground2-blue-30); background: linear-gradient(to top left, var(--color-ground2-blue-40), var(--color-ground2-blue-30)); border-radius: $radius-70; }
 
 
 
@@ -1263,8 +1271,23 @@
 
 
 
+.o-approve  { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: III(118); text-align: center; }
+.o-approve:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+.o-approve:before  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
+.o-approve:before  { content: "check"; font-size: III(18); display: flex; align-items: center; justify-content: center; width: III(24); max-width: none; height: III(24); color: var(--color-key1-40); background-color: var(--color-ground2-blue-30); border-radius: 50%; animation: none; }
+.o-approve >*  { width: 100%; min-height: 0; margin-top: III(10); }
 
+.o-approve .main >*  { display: block; }
+.o-approve .main >* >*  { display: block; }
+.o-approve .main >* >.position  { font-size: $font-40; line-height: $line-40; margin-top: $gap-whitespace-30; color: var(--color-text-30); }
 
+.o-approve .aside  { position: relative; margin-top: $gap-element-30; }
+.o-approve .aside >.substitute  { font-size: $font-30; line-height: $line-30; position: absolute; left: 0; right: 0; color: var(--color-key1-40); }
+
+.o-approve:where([aria-label="결재 대기"])  { background-color: var(--color-ground2-blue-40);  animation: ANI_approveBlink 1s step-end 0s 60; }
+.o-approve:where([aria-label="결재 예정"], [aria-label="결재 대기"]):before  { color: var(--color-icon-40); background-color: var(--color-ground-40); }
+
+:has(.o-approve):is(.o-data-table.type-approve tr >*)  { padding: 0; }
 
 
 
@@ -1777,6 +1800,10 @@
   :has(.table):where(.o-data-table.style-fill *)  { flex: 1; display: flex; flex-direction: column; }
 .o-data-table.style-fill .table  { flex: 1; }
 
+.o-data-table:where(.type-approve) :where(table:not(td *)) tbody:not(:last-child):after  { background-color: var(--color-edge-30); }
+.o-data-table:where(.type-approve) :where(table:not(td *)) .approve-tfoot  { font-size: $font-30; line-height: $line-30; background-color: var(--color-ground-30); }
+.o-data-table:where(.type-approve) :where(table:not(td *)) .approve-tfoot .o-digit.type-time  { color: var(--color-text-30); }
+
 .o-data-table +.o-data-table  { margin-top: $margin-section-40; }
 
 
@@ -2171,7 +2198,7 @@
 }
 .m-schedule .dates  { display: flex; align-items: center; gap: $gap-element-30; min-height: III(36); }
 .m-schedule .dates >*  { flex: none; font-size: $font-40; line-height: $line-40; min-width: 0; }
-.m-schedule .dates >:where(.date)  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; width: calc(1em * 22 / 16); }
+.m-schedule .dates >:where(.date)  { font-weight: $bold-70; font-size: $font-60; line-height: $line-60; width: calc(1em * 22 / 16); }
 .m-schedule .dates >:where(.date:not(.day))  { width: calc(1em * 26 / 16); }
 .m-schedule .dates >:where(.date:not(.day)):after  { content: "."; }
 .m-schedule .dates >:where(.weekday)  { color: var(--color-text-30); }

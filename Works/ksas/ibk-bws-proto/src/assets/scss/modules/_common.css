@@ -542,6 +542,15 @@
   }
 }
 
+
+/** Partial Keyframes */
+@keyframes ANI_approveBlink  {
+  50% {
+    background-color: var(--color-ground2-blue-30);
+  }
+}
+
+
 /** Styles Selector
  ------------------ */
 

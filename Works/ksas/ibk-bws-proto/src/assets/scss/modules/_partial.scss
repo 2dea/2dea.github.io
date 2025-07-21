@@ -1,2 +1,9 @@
 @charset "UTF-8";
 
+.m-shop  { display: flex; }
+.m-shop >*  { flex: none; display: flex; flex-direction: column; min-width: 0; border: $e10 solid var(--color-edge-40); }
+.m-shop >* >*  { flex: 1; }
+
+.m-shop >.m-shop-list  { flex: 1; }
+
+.m-shop  { flex: 1; }
