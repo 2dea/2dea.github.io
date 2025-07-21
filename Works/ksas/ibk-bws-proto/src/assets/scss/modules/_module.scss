@@ -1019,6 +1019,7 @@
 .o-button:is(._normal, ._cancel)  { --theme: var(--color-text-40); }
 .o-button:is(._normal, ._cancel):not(:disabled, [aria-disabled="true"])  { border-color: #{$color-button3-30}; }
 .o-button:is(._normal, ._cancel):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { border-color: #{$color-button3-40}; }
+.o-button:is(._approve):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { text-decoration: underline; }
 
 .o-button:is([class*=" _solid"], ._create, ._choose):not(._solid, ._inquire):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
 .o-button:is([class*=" _lined"], ._delete):not(._normal, ._cancel):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; background-color: var(--color-ground-40); }

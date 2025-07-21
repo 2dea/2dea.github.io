@@ -4907,7 +4907,8 @@ function TMPL() {
                   <CommonButton label="업무지원결정" className="_lined-primary" />
                   <CommonButton label="삭제" className="_delete" />
                   <CommonButton label="취소" className="_cancel" />
-                  <CommonButton label="결재요청" className="_solid-primary" />
+                  <CommonButton label="저장" className="_solid-primary" />
+                  <CommonButton label="결재요청" className="_solid-primary _approve" />
                 </div>
               </div>
             </div>
