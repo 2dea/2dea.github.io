@@ -756,7 +756,8 @@
 .o-steps >:not([aria-label="진행 완료"]) .order .count:after  { opacity: 0.0; }
 .o-steps >:is([aria-label="진행 단계"]) .order .count  { z-index: 3; }
 .o-steps >:is([aria-label="진행 단계"]) .label .main  { font-weight: $bold-70; }
-.o-steps >:is([aria-label="진행 단계"]) .label:not([aria-current="false"]) .main  { color: var(--theme); }
+.o-steps:not([role="tablist"]) >:is([aria-label="진행 단계"]) .label:not([aria-current="false"]) .main  { color: var(--theme); }
+.o-steps:is([role="tablist"]) >:is([aria-selected="true"]) .label .main  { color: var(--theme); }
 .o-steps >:not(:has(~[aria-label="진행 단계"])):after  { background-color: var(--color-edge-40); }
 .o-steps >:not([aria-label="진행 단계"]) .order:after  { opacity: 0.0; }
 .o-steps >:is([aria-label="진행 예정"]) .order .count  { border-color: var(--color-edge-40); color: var(--color-text-20); background-color: var(--color-ground); }
@@ -764,10 +765,18 @@
 
 .o-steps >* .label[aria-disabled="true"]  { color: inherit; filter: none; }
 .o-steps >* .label[aria-current] .main  { display: flex; align-items: center; }
-.o-steps >* .label[aria-current] .main:after  { content: ""; width: 20px; height: 20px; margin-left: III(4); background: var(--obj-ico-arrow-drop-down) no-repeat 0 /500%; }
+.o-steps >* .label[aria-current] .main:after  { content: ""; width: III(20); height: III(20); margin-left: III(4); background: var(--obj-ico-arrow-drop-down) no-repeat 0 /500%; }
 .o-steps >* .label[aria-current][aria-disabled="true"] .main:after  { background-position: 25%; }
 .o-steps >* .label[aria-current="step"] .main  { font-weight: $bold-70; color: var(--theme); cursor: default; }
 .o-steps >* .label[aria-current="step"] .main:after  { background-position: 50%; }
+
+.o-steps[role="tablist"] >[aria-disabled="true"]  { color: inherit; filter: none; }
+.o-steps[role="tablist"] >[aria-selected] .label .main  { display: flex; align-items: center; }
+.o-steps[role="tablist"] >[aria-selected] .label .main:after  { content: ""; width: III(20); height: III(20); margin-left: III(4); background: var(--obj-ico-arrow-drop-down) no-repeat 0 /500%; }
+// .o-steps[role="tablist"] >[aria-label="진행 단계"]:not([aria-disabled="true"]) .label .main  { color: inherit; }
+.o-steps[role="tablist"] >[aria-selected][aria-disabled="true"] .label .main:after  { background-position: 25%; }
+.o-steps[role="tablist"] >[aria-selected="true"] .label .main  { font-weight: $bold-70; color: var(--theme); cursor: default; }
+.o-steps[role="tablist"] >[aria-selected="true"] .label .main:after  { background-position: 50%; }
 
 
 .o-steps:where(.axis-cols)  { --gap-step: #{III(24)}; flex-direction: column; gap: 0; }

@@ -38,6 +38,15 @@ import CMP001601P from 'app/pages/cmp/CMP001601P';   // 공통 ~ (LP)반려
 
 // proto 자금현수송
 import FMTCT0101M from 'app/pages/fmt/FMTCT0101M';      // 자금현수송 > 원화현수송    > 원화현수송신청
+import FMTCT0101P01 from 'app/pages/fmt/FMTCT0101P01';  // 자금현수송 > 원화현수송    > 원화현수송신청 ~ (LP)손상권내역조회
+
+import FMTCT0201M from 'app/pages/fmt/FMTCT0201M';      // 자금현수송 > 원화현수송    > 원화현수송신청관리
+import FMTCT0201P01 from 'app/pages/fmt/FMTCT0201P01';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)현송직원확인
+import FMTCT0201P02 from 'app/pages/fmt/FMTCT0201P02';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)영업점불입결정
+import FMTCT0201P03 from 'app/pages/fmt/FMTCT0201P03';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)일괄송부서출력
+
+import FMTCT1601M from 'app/pages/fmt/FMTCT1601M';      // 자금현수송 > 원화현수송    > 원화현수송신청관리(업무센터)
+
 
 import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사      > 신청(인도)
 import FMTCC0101P01 from 'app/pages/fmt/FMTCC0101P01';  // 자금현수송 > 원화정사      > 신청(인도) ~ (LP)호송금인수증등록
@@ -594,6 +603,14 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'FMTCT0101M',   element: <FMTCT0101M /> },
+        { path: 'FMTCT0101P01', element: <FMTCT0101P01 /> },
+
+        { path: 'FMTCT0201M',   element: <FMTCT0201M /> },
+        { path: 'FMTCT0201P01', element: <FMTCT0201P01 /> },
+        { path: 'FMTCT0201P02', element: <FMTCT0201P02 /> },
+        { path: 'FMTCT0201P03', element: <FMTCT0201P03 /> },
+
+        { path: 'FMTCT1601M',   element: <FMTCT1601M /> },
 
         { path: 'FMTCC0101M',   element: <FMTCC0101M /> },
         { path: 'FMTCC0101P01', element: <FMTCC0101P01 /> },

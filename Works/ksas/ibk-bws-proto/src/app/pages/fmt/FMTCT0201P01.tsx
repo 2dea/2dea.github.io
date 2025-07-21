@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 원화현수송 > 원화현수송신청 > 실적내역
+ * @description 자금현수송 > 원화현수송 > 원화현수송신청관리 ~ (LP)영업점불입결정
  */
 
 // dependency
@@ -36,12 +36,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTCT0101M() {
+function FMTCT0201P01() {
+  // Dialog
+  const [visible, setVisible] = useState<boolean>(true);
+
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
-
-  // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화현수송' }, { label: '원화현수송신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -91,53 +91,25 @@ function FMTCT0101M() {
 
   return (
     <>
-      <div className="roles" data-div-role="0">
-        <div className="div-header">
-          <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
-
-            <div className="m-title">
-              <h1 className="o-heading level1">
-                <span className="label">원화현수송신청</span>
-
-                <FavoriteDiv />
-              </h1>
-            </div>
-          </div>
-
-          <div className="binds">
-
-            <div className="m-binds type-start">
-              <div className="group _assistive">
-                <CommonButton label="도움말" className="_normal" icon="help" />
-              </div>
-            </div>
-
-            <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="신청" className="_solid-primary _approve" />
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={false} heading="문의" divName="안전관리팀" telNumber="0000" asideLabel="반드시 조회 후 신청해주세요." />
-        {/* <!-- // Consults { @DEV } --> */}
-
-        {/* <!-- /* Contents { @DEV } --> */}
-        <div className="div-contents">
+      <Dialog
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        headerClassName="layer-head"
+        contentClassName="layer-body"
+        visible={visible}
+        style={{}}
+        onHide={() => { if (!visible) return; setVisible(false); }}
+        closeIcon={<Icon icon="popup-close" />}
+        modal={true}
+        // footer={<></>}
+        header={<h3 className="o-heading"><span className="label">영업점불입결정</span></h3>}
+      >
+        <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">기본정보</span></h2>
-
-                  <div className="o-legend type-helper style-normal">
-                    <em className="label"><strong className="c-color-text">마감시간(프로세스혁신부) : 23 : 00</strong></em>
-                  </div>
+                  <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
                 </div>
 
                 <div className="main">
@@ -186,33 +158,16 @@ function FMTCT0101M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`구분`} require={true} />
+                            <Label label={`요청일자`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="m-checks">
-                              <InputRadio name="RADIO_10" label="청구" defaultChecked />
-                              <InputRadio name="RADIO_10" label="불입" />
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`요청일자`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-date mode-required wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            <span className="o-digit type-date">2025-12-25</span>
                           </td>
 
                           <th colSpan={1}>
                             <Label label={`현송업체`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _select mode-required wdth-70">
@@ -222,25 +177,20 @@ function FMTCT0101M() {
                               </div>
                             </div>
                           </td>
+                          <th colSpan={1}>
+                            <Label label={`관할업무센터`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            [0081] 프로세스혁신부
+                          </td>
                         </tr>
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`관할업무센터`} require={true} />
+                            <Label label={`비고(신청)`} require={false} />
                           </th>
                           <td colSpan={7}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-70">
-                                  <XDropdown appendTo={document.body} className="bind"  disabled />
-                                  <i aria-hidden="true"></i>
-                                </div>
-
-                                <div className="m-checks">
-                                  <InputCheck label="예외선택" />
-                                </div>
-                              </div>
-                            </div>
+                            영업점 신청 시 비고
                           </td>
                         </tr>
 
@@ -265,31 +215,11 @@ function FMTCT0101M() {
                   </form>
                 </div>
 
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li>협송업체 선택 시 전용노선 신청일 경우 [1. 관할자금모점]으로, 건별 신청일 경우 [2~5 해당업체]로 신청해주세요.</li>
-                  </ul>
-                </div>
-
               </div>
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
-
-                  <div className="o-helper style-strong">
-                    <em className="label">[필수] 거래 시 통합단말 권종별 손상권 등록내역(전영업일기준)을 반드시 확인해주세요.</em>
-                  </div>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="자동생성" className="_normal" />
-                    </div>
-
-                    <div className="group">
-                      <CommonButton label="손상권조회" className="_solid-primary" />
-                    </div>
-                  </div>
+                  <h5 className="o-heading level3"><span className="label">영업점불입결정내역</span></h5>
 
                   <div className="m-binds">
                     <div className="group">
@@ -299,7 +229,7 @@ function FMTCT0101M() {
                   </div>
                 </div>
 
-                <div className="main _primary">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -307,7 +237,11 @@ function FMTCT0101M() {
                         <colgroup>
                           <col />
                           <col />
+                          <col />
+                          <col />
                           <col className="wdth-50" />
+                          <col />
+                          <col />
                           <col />
                           <col className="wdth-50" />
                           <col />
@@ -315,11 +249,21 @@ function FMTCT0101M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권</span></div></th>
+                            <th rowSpan={3} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권</span></div></th>
                           </tr>
                           <tr>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청액</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액(영업점)</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청액</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액(영업점)</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
@@ -329,7 +273,7 @@ function FMTCT0101M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -339,6 +283,8 @@ function FMTCT0101M() {
                               <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
                                 <td className="g-end">15만원권</td>
                                 <td>대속</td>
+                                <td className="g-end">2</td>
+                                <td className="g-end">100,000,000</td>
                                 <td>
                                   <div className="o-field">
                                     <div className="fields">
@@ -350,7 +296,18 @@ function FMTCT0101M() {
                                     </div>
                                   </div>
                                 </td>
-                                <td className="g-end">0</td>
+                                <td>
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input wdth-50 g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="g-end">2</td>
+                                <td className="g-end">100,000,000</td>
                                 <td>
                                   <div className="o-field">
                                     <div className="fields">
@@ -362,7 +319,16 @@ function FMTCT0101M() {
                                     </div>
                                   </div>
                                 </td>
-                                <td className="g-end">0</td>
+                                <td>
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input wdth-50 g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
                               </tr>
                               {
                                 (idx - 2) % 3 === 0 &&
@@ -371,8 +337,12 @@ function FMTCT0101M() {
                                   <td className="subtotal-tcell g-start">소계</td>
                                   <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell g-end">99</td>
-                                    <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell g-end"></td>
+                                  <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell g-end">99,999</td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell g-end"></td>
                                   {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
                                 </tr>
                               }
@@ -383,10 +353,14 @@ function FMTCT0101M() {
                         <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
                           <tr className="sumtotal-trow">
                             <td colSpan={2} className="sumtotal-tcell">합계</td>
+                            <td className="sumtotal-tcell"></td>
+                            <td className="sumtotal-tcell"></td>
                             <td className="sumtotal-tcell">신청금액</td>
                             <td className="sumtotal-tcell g-end">999,999</td>
                             <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell g-end"></td>
+                            <td className="sumtotal-tcell"></td>
+                            <td className="sumtotal-tcell sumtotal-tcell-strong">결정금액</td>
+                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                           </tr>
                         </tfoot>
                       </table>
@@ -399,10 +373,42 @@ function FMTCT0101M() {
           </div>
 
         </div>
+
+        <div className="div-footer">
+          <div className="m-binds type-end">
+            <div className="group _primary">
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="저장" className="_solid-primary" />
+            </div>
+          </div>
+        </div>
+      </Dialog>
+
+      <div className="roles" data-div-role="0">
+        <div className="div-header">
+          <div className="m-title">
+            <h1 className="o-heading level1">
+              <span className="label">(P)영업점불입결정 [wdth-60p(w1150)]</span>
+            </h1>
+          </div>
+        </div>
+
+        {/* <!-- /* Consults { @DEV } --> */}
+        <ConsultsDiv visible={false} heading="문의" divName="안전관리팀" telNumber="0000" asideLabel="반드시 조회 후 신청해주세요." />
+        {/* <!-- // Consults { @DEV } --> */}
+
+        {/* <!-- /* Contents { @DEV } --> */}
+        <div className="div-contents">
+          <div className="m-binds">
+            <div className="group _start">
+              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => setVisible(true)} />
+            </div>
+          </div>
+        </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
     </>
   );
 }
 
-export default FMTCT0101M;
+export default FMTCT0201P01;

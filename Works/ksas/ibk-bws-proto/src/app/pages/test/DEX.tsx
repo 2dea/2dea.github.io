@@ -97,6 +97,8 @@ function DEX() {
       {/*
       스케줄
 
+      2025/07/22 [자금현수송] #34 이후로부터 FMTCT1601P01
+
       2025/07/16 수 수수료 #27
 
       2025/07/15 화
@@ -291,7 +293,8 @@ about:blank
 <td className="g-start">겉문열쇠</td>
 <td className="g-start">금고실 #1</td>
 <td className="g-start">프로세스혁신부</td>
-<td className="g-start">업체명 (주)앤비앤코퍼레이션</td>
+업체명
+<td className="g-start">(주)앤비앤코퍼레이션</td>
 
 <td> </td>
 <td><span className="o-digit type-time">00:00</span></td>
