@@ -1,5 +1,5 @@
 /**
-  * @description 재난·안전관리 > 도급사업관리 > 도급계약 현황 등록 ~ (LP)참고
+  * @description 재난·안전관리 > 도급사업관리 > 순회점검표 등록 ~ (LP)순회점검표 등록
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMSC0101P02() {
+function STMSC0401P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -99,9 +99,9 @@ function STMSC0101P02() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={false}
+        modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">참고</span></h3>}
+        header={<h3 className="o-heading"><span className="label">순회점검표 등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -110,42 +110,7 @@ function STMSC0101P02() {
               <div className="o-section">
 
                 <div className="main">
-                  <div className="o-data-table">
-                    <div className="table-container">
-                      <table className="table">
-                        <colgroup>
-                          <col style={{ width: '15%' }} />
-                          <col style={{ width: 'auto' }} />
-                        </colgroup>
 
-                        <tbody>
-                          <tr>
-                            <th colSpan={1}>일시적</th>
-                            <td colSpan={1} className="g-start">
-                              <dl className="m-bullets type-disc gap-50">
-                                <dt>당행 사업장(영업점 포함)에서 수급인의 근로자가 연속적으로 업무를 수행하나, <em className="g-bold">1개월</em>을 초과하지 않고 종료되는 <em className="g-bold">일시적 작업</em>의 계약</dt>
-
-                                <dd>사업장 내 소득 작업을 위해 <strong>15일간 작업</strong> <em className="o-chip var-lined-00 size-30"><span className="label">제출 비대상</span></em></dd>
-                                <dd>사업장 내 소득 작업을 위해 <strong>40일간 작업</strong> <em className="o-chip var-lined-01 size-30"><span className="label">제출 대상</span></em></dd>
-                              </dl>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th colSpan={1}>간헐적</th>
-                            <td colSpan={1} className="g-start">
-                              <dl className="m-bullets type-disc gap-50">
-                                <dt>당행 사업장(영업점 포함)에서 수급인의 근로자가 비연속적으로 업무를 수행하나, <em className="g-bold">연간 60일</em>을 초과하지 않는 <em className="g-bold">간헐적 작업</em>의 계약</dt>
-
-                                <dd>승강기 유지보수 작업을 위해 연간 (1) A영업점 2일 + (2) B영업점 4일 + (3) C영업점 3일 + …… (26) Z영업점 1일 = 총 작업일수((1) ~ (26) 총합)</dd>
-                                <dd>총 작업일수가 연간 <strong>47일</strong> <em className="o-chip var-lined-00 size-30"><span className="label">제출 비대상</span></em></dd>
-                                <dd>총 작업일수가 연간 <strong>80일</strong> <em className="o-chip var-lined-01 size-30"><span className="label">제출 대상</span></em></dd>
-                              </dl>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
                 </div>
 
               </div>
@@ -167,7 +132,7 @@ function STMSC0101P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)참고 [wdth-40p(w770)]</span>
+              <span className="label">(P)순회점검표 등록 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -190,4 +155,4 @@ function STMSC0101P02() {
   );
 }
 
-export default STMSC0101P02;
+export default STMSC0401P01;

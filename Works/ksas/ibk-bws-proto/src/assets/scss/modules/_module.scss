@@ -670,6 +670,7 @@
 // .o-tabular >.colgroup  { display: table-column-group; }
 // .o-tabular >.colgroup >.col  { display: table-column; width: auto; }
 // .o-tabular >.colgroup >.col.head  { width: 0; }
+.o-tabular >* >:not(:first-child)  { padding-left: $gap-element-70; }
 .o-tabular >* >.head  { width: 0; white-space: nowrap; }
 
 .o-tabular:where(.o-details *)  { font-size: $font-40; line-height: $line-40; }
@@ -677,6 +678,9 @@
 .o-tabular:where(.o-details *) >* >:not(:first-child)  { padding-left: $gap-element-90; }
 .o-tabular:where(.o-details *) >* >.head  { color: var(--color-text-30); }
 .o-tabular:where(.o-details *) >* >.data  { --lh: var(--text-height-para); line-height: var(--lh); }
+
+.o-tabular:where(.m-caption *) >* >*  { height: III(30); }
+.o-tabular:where(.m-caption *) >* >.head  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
 
 
 

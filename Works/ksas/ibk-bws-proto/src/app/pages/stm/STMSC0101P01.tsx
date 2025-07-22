@@ -99,7 +99,7 @@ function STMSC0101P01() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">도급사업체크리스트</span></h3>}
       >
