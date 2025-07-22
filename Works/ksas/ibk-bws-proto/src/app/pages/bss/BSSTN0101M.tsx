@@ -119,6 +119,7 @@ function BSSTN0101M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
+               <CommonButton label="취소" className="_cancel" />
                 <CommonButton label="삭제" className="_delete" />
                 <CommonButton label="통지완료" className="_solid-primary" />
                 <CommonButton label="등기번호수정" className="_solid-primary" />
@@ -219,12 +220,19 @@ function BSSTN0101M() {
                   <div className="o-field">
                     <Label label={`통지완료여부`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`내역삭제여부`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
@@ -240,7 +248,19 @@ function BSSTN0101M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
                   <div className="m-binds">
+                     <div className="group">
+                        <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
+                     </div>
+
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록필터" icon="column-toggle" />

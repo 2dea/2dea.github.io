@@ -134,9 +134,9 @@ function BSSCR0401M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`신청연도`} require={true} />
+                    <Label label={`신청연도`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -144,16 +144,16 @@ function BSSCR0401M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`신청부점`} require={true} />
+                    <Label label={`신청부점`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
+                      <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
                         </span>
                       </div>
-                      <div className="o-form _select mode-required wdth-auto">
+                      <div className="o-form _select wdth-auto">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -161,9 +161,9 @@ function BSSCR0401M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`결재상태`} require={true} />
+                    <Label label={`결재상태`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -171,9 +171,9 @@ function BSSCR0401M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`품목`} require={true} />
+                    <Label label={`품목`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -181,9 +181,9 @@ function BSSCR0401M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`신청여부`} require={true} />
+                    <Label label={`신청여부`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

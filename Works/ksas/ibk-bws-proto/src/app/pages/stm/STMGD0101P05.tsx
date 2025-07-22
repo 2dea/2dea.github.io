@@ -192,7 +192,7 @@ function STMGD0101P05() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직부점</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일직</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">숙직</span></div></th>
-                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재</span></div></th>
+                            <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록직원</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재관리번호</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일시</span></div></th>
@@ -203,7 +203,7 @@ function STMGD0101P05() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀원</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당직자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀원</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀장</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점장</span></div></th>
@@ -212,7 +212,7 @@ function STMGD0101P05() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -252,6 +252,12 @@ function STMGD0101P05() {
                                   {
                                     (idx) % 3 === 0 &&
                                     <>안전관리실결재</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                  }
+                                </td>
+                                <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                  {
+                                    (idx) % 3 === 0 &&
+                                    <>정상</> /* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                                   }
                                 </td>
                                 <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}

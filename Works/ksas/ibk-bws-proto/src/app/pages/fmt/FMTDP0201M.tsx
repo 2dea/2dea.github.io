@@ -313,6 +313,7 @@ function FMTDP0201M() {
                           <col />
                           <col />
                           <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -327,6 +328,7 @@ function FMTDP0201M() {
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                             <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재</span></div></th>
                           </tr>
                           <tr>
@@ -345,7 +347,7 @@ function FMTDP0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -366,6 +368,7 @@ function FMTDP0201M() {
                               <td>0801</td>
                               <td>홍길동</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td>결재승인</td>
                               <td>홍길동</td>
                               <td>감리역</td>
                               <td>부점장</td>
@@ -443,11 +446,65 @@ function FMTDP0201M() {
                         </tr>
 
                         <tr>
+                          <th colSpan={1}>
+                            <Label label={`거래구분/금액`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
 
-                          <th colSpan={1} rowSpan={2}>
+                                <div className="o-form _input mode-required wdth-50 g-end">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`계좌번호`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input is-file wdth-90">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`이동수단`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+
+                            <div className="m-checks">
+                              <InputRadio name="RADIO:T_10" label="승용차(차량번호)" />
+                              <InputRadio name="RADIO:T_10" label="기타(사유입력)" />
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input is-file mode-required wdth-90">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
                             <Label label={`주소`} require={true} />
                           </th>
-                          <td colSpan={3} rowSpan={2}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required wdth-40">
@@ -466,40 +523,9 @@ function FMTDP0201M() {
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
-
                             </div>
                           </td>
 
-                          <th colSpan={1}>
-                            <Label label={`거래구분`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
-                                  <XDropdown appendTo={document.body} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`금액`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50 g-end">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
                           <th colSpan={1}>
                             <Label label={`수행직원`} require={true} />
                           </th>
@@ -544,36 +570,6 @@ function FMTDP0201M() {
                               </div>
 
                             </div>
-                          </td>
-
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`이동수단`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-
-                            <div className="m-checks">
-                              <InputRadio name="RADIO:T_10" label="승용차(차량번호)" />
-                              <InputRadio name="RADIO:T_10" label="기타(사유입력)" />
-
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input is-file mode-required wdth-90">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`계좌번호`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            999-99-99999
                           </td>
                         </tr>
                       </tbody>
