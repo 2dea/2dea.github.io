@@ -389,7 +389,7 @@
 .o-figure >.body >*  { display: block; }
 
 
-.o-view-image  { max-width: fit-content; background: var(--color-ground-70) var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
+.o-view-image  { width: fit-content; background: var(--color-ground-70) var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
 .o-view-image:before  { display: block; min-width: 100%; min-height: III(96); aspect-ratio: 4 / 3; background: inherit; background-size: calc(100% * 81 / 400) auto; border-radius: $radius-70; }
 .o-view-image >*  { display: block; }
 
@@ -679,6 +679,7 @@
 .o-tabular:where(.o-details *) >* >.head  { color: var(--color-text-30); }
 .o-tabular:where(.o-details *) >* >.data  { --lh: var(--text-height-para); line-height: var(--lh); }
 
+.o-tabular:where(.m-caption *)  { margin: calc((III(30) - III(18))) 0; }
 .o-tabular:where(.m-caption *) >* >*  { height: III(30); }
 .o-tabular:where(.m-caption *) >* >.head  { font-weight: $bold-70; font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
 
@@ -691,6 +692,24 @@
   padding: var(--margin-block) var(--margin-inline); border-top: $e10 solid var(--color-edge-40); background: var(--color-ground-40);
 }
 
+
+.m-caption  {}
+.m-caption >.header  { padding-bottom: $gap-element-90; border-bottom: $e10 solid var(--color-edge-30); }
+.m-caption >.header .category  { margin-bottom: $gap-element-30; }
+.m-caption >.header .heading  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; }
+
+.m-caption >.footer  { padding: $gap-element-90 $gap-element-80; border-bottom: $e10 solid var(--color-edge-30); background: var(--color-ground-30); }
+
+
+.m-caption-figure  { display: flex; gap: $margin-section-70; }
+.m-caption-figure >*  { flex: none; min-width: 0; }
+.m-caption-figure >.caption  { flex: 1; }
+.m-caption-figure .figure  { width: III(432); height: III(328); border: $e10 solid var(--color-edge-40); }
+.m-caption-figure .figure :has(.o-view-image),
+.m-caption-figure .figure .o-view-image  { height: 100%; }
+.m-caption-figure .o-view-image  { margin: 0 auto; }
+.m-caption-figure .o-view-image  { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; background: var(--color-ground) var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
+.m-caption-figure .o-view-image >*  { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; margin: auto; }
 
 
 
@@ -1666,7 +1685,7 @@
 
 // .o-field  { display: inline-flex; gap: $gap-element-30 $gap-element-50; max-width: 100%; white-space: normal; }
 // .o-field:only-child  { display: flex; }
-.o-field  { display: flex; gap: $gap-element-30 $gap-element-50; max-width: 100%; white-space: normal; }
+.o-field  { display: flex; gap: $gap-element-30 $gap-element-70; max-width: 100%; white-space: normal; }
 .o-field >.fields  { display: flex; align-items: center; gap: $gap-element-30; min-height: $height-form-50; margin: 0; }
 .o-field >.fields:not(.basis-pass)  { flex-wrap: wrap; }
 // .o-field >.fields >:not(.o-form)  { min-width: 0; }
@@ -1693,6 +1712,8 @@
 .o-field:where(.o-data-table.style-fill *) .o-label  { margin-bottom: $gap-element-70; }
 .o-field:where(.o-data-table.style-fill *) .o-label .wbr  { display: block; }
 
+.o-field:where(.type-strong-label-70)  { column-gap: $gap-element-80; }
+.o-field:where(.type-strong-label-70) .o-label  { font-size: $font-60; line-height: $line-60; }
 
 
 

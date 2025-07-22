@@ -35,6 +35,8 @@ import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
 function BSSAP0101M() {
   // Dialog
@@ -136,10 +138,24 @@ function BSSAP0101M() {
 
               <div className="m-caption-figure">
                 <div className="figure">
+                  <Swiper
+                    modules={[A11y, Navigation, Pagination, Scrollbar]}
+                    navigation
+                  >
+                    <SwiperSlide><div className="o-view-image"><img src={require("assets/images/media/STMKY0201P03_010.png")} alt="" /></div></SwiperSlide>
+                    <SwiperSlide><div className="o-view-image"><img src={require("assets/images/media/BEXPM0101P01_010.png")} alt="" /></div></SwiperSlide>
+                    <SwiperSlide><div className="o-view-image"><img src={require("assets/images/media/STMPR0101P02_010.png")} alt="" /></div></SwiperSlide>
+                    <SwiperSlide><div className="o-view-image"><img src={require("assets/images/temp/FMTCT0201P02_010.jpg")} alt="" /></div></SwiperSlide>
+                    <SwiperSlide><div className="o-view-image"><img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" /></div></SwiperSlide>
+                  </Swiper>
                 </div>
 
                 <div className="caption m-caption">
                   <div className="header">
+                    <div className="category">
+                      <small className="index">00626</small>
+                    </div>
+                    <div className="heading"><strong className="label">A4복사용지</strong></div>
                   </div>
 
                   <div className="bodies">
@@ -208,7 +224,7 @@ function BSSAP0101M() {
 
                   <div className="footer">
                     <div className="input-amount">
-                      <div className="o-field">
+                      <div className="o-field type-strong-label-70">
                         <Label label={`신청수량`} require={false} />
                         <div className="fields">
                           <div className="o-form _input type-spin wdth-50">
@@ -245,59 +261,39 @@ function BSSAP0101M() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`부점`} require={true} />
+                            <Label label={`부점`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-60">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
+                            [0034] 을지로
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`수령인`} require={true} />
+                            <Label label={`수령인`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-60">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
+                            [00001] 김민정
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`배송주소`} require={false} />
+                            <Label label={`배송주소`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-40">
+                                <div className="o-form _input mode-required wdth-40">
                                   <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
                                     <ImageButton label="검색" icon="search" />
                                   </span>
                                 </div>
-                                <div className="o-form _input wdth-90">
+                                <div className="o-form _input mode-required wdth-90">
                                   <InputText placeholder="" value="서울특별시 중구 을지로 79" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <div className="o-form _input wdth-90">
+                                <div className="o-form _input mode-required wdth-90">
                                   <InputText placeholder="" value="기업은행 본점" className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -311,10 +307,17 @@ function BSSAP0101M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`전화번호​(내선)`} require={false} />
+                            <Label label={`전화번호​(내선)`} require={true} />
                           </th>
                           <td colSpan={1}>
-                            <span className="o-digit type-tel">02-1234-5678</span>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
                           </td>
                         </tr>
                         <tr>
