@@ -1267,6 +1267,14 @@ function TMPL() {
                                 </li>
                                 <li>
                                   <div className="m-flex-list">
+                                    <strong>캐러셀</strong>
+                                    <a href="/proto/BSSAP0101M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      BSSAP0101M<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
                                     <strong>상태 데이터</strong>
                                     <a href="/proto/STMKY0401M" target="ibkbws_exam" className="o-link texted-button _primary">
                                       STMKY0401M<Icon icon="link" />

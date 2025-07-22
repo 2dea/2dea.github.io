@@ -46,6 +46,13 @@ import FMTCT0201P02 from 'app/pages/fmt/FMTCT0201P02';  // 자금현수송 > 원
 import FMTCT0201P03 from 'app/pages/fmt/FMTCT0201P03';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)일괄송부서출력
 
 import FMTCT1601M from 'app/pages/fmt/FMTCT1601M';      // 자금현수송 > 원화현수송    > 원화현수송신청관리(업무센터)
+import FMTCT1601P01 from 'app/pages/fmt/FMTCT1601P01';  // 자금현수송 > 원화현수송    > 원화현수송신청관리(업무센터) ~ (LP)업무센터결정
+import FMTCT0301M from 'app/pages/fmt/FMTCT0301M';      // 자금현수송 > 원화현수송    > 원화시재 및 보유현황
+import FMTCT0401M from 'app/pages/fmt/FMTCT0401M';      // 자금현수송 > 원화현수송    > 원화마감시간관리
+
+import FMTCT0701M from 'app/pages/fmt/FMTCT0701M';      // 자금현수송 > 원화현수송    > 자금현송명령부관리(업무센터)
+import FMTCT0801M from 'app/pages/fmt/FMTCT0801M';      // 자금현수송 > 원화현수송    > 지점간 원화현수송신청관리
+import FMTCT0801P01 from 'app/pages/fmt/FMTCT0801P01';  // 자금현수송 > 원화현수송    > 지점간 원화현수송신청관리 ~ (LP)신청
 
 
 import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사      > 신청(인도)
@@ -617,6 +624,14 @@ function ProtoRoutes() {
         { path: 'FMTCT0201P03', element: <FMTCT0201P03 /> },
 
         { path: 'FMTCT1601M',   element: <FMTCT1601M /> },
+        { path: 'FMTCT1601P01', element: <FMTCT1601P01 /> },
+
+        { path: 'FMTCT0301M',   element: <FMTCT0301M /> },
+        { path: 'FMTCT0401M',   element: <FMTCT0401M /> },
+
+        { path: 'FMTCT0701M',   element: <FMTCT0701M /> },
+        { path: 'FMTCT0801M',   element: <FMTCT0801M /> },
+        { path: 'FMTCT0801P01', element: <FMTCT0801P01 /> },
 
         { path: 'FMTCC0101M',   element: <FMTCC0101M /> },
         { path: 'FMTCC0101P01', element: <FMTCC0101P01 /> },
