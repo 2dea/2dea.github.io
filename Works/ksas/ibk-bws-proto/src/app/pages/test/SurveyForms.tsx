@@ -131,8 +131,34 @@ function SurveyForms() {
                           <div className="bodies">
                             <ol>
                               <li>
-                                <fieldset className="o-survey" disabled>
+                                <fieldset className="o-survey">
+                                  <div className="fields">
+                                    ddddddddddddd
+                                  </div>
+                                  <div className="description">
+                                    <div className="o-board type-b">
+                                      <div className="board-container">
+                                        <div className="m-header">
+                                          <strong className="o-heading"><span className="label">비밀</span></strong>
+                                        </div>
 
+                                        <ul className="m-bullets type-disc">
+                                          <li>블라블라블라</li>
+                                        </ul>
+                                      </div>
+                                      <div className="board-container">
+                                        <div className="m-header">
+                                          <strong className="o-heading"><span className="label">비밀</span></strong>
+                                        </div>
+
+                                        <dl className="m-bullets type-disc">
+                                          <dt><strong className="o-heading">비밀</strong></dt>
+                                          <dd>블라블라블라</dd>
+                                          <dd>블라블라블라</dd>
+                                        </dl>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </fieldset>
                               </li>
                             </ol>

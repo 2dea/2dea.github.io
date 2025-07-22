@@ -116,7 +116,7 @@ import BSPDU0601M from 'app/pages/bsp/BSPDU0601M';      // 중요용지·용도�
 import BSPDU0601P02 from 'app/pages/bsp/BSPDU0601P02';  // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록 ~ (LP)오손발송(행내등기신청)
 import BSPDU0201M from 'app/pages/bsp/BSPDU0201M';      // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회
 import BSPDU0201P02 from 'app/pages/bsp/BSPDU0201P02';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손이력조회
-import BSPDU0601P01 from 'app/pages/bsp/BSPDU0601P01';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손사유변경
+import BSPDU0201P03 from 'app/pages/bsp/BSPDU0201P03';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손사유변경
 import BSPDU0301M from 'app/pages/bsp/BSPDU0301M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기
 import BSPDU0301P01 from 'app/pages/bsp/BSPDU0301P01';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ (LP)구양식/서손폐기등록(영업점)
 
@@ -695,7 +695,7 @@ function ProtoRoutes() {
         { path: 'BSPDU0601P02', element: <BSPDU0601P02 /> },
         { path: 'BSPDU0201M',   element: <BSPDU0201M /> },
         { path: 'BSPDU0201P02', element: <BSPDU0201P02 /> },
-        { path: 'BSPDU0601P01', element: <BSPDU0601P01 /> },
+        { path: 'BSPDU0201P03', element: <BSPDU0201P03 /> },
         { path: 'BSPDU0301M',   element: <BSPDU0301M /> },
         { path: 'BSPDU0301P01', element: <BSPDU0301P01 /> },
         { path: 'BSPDU0301P02', element: <BSPDU0301P02 /> },

@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPDU0601P01() {
+function BSPDU0201P03() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -230,4 +230,4 @@ function BSPDU0601P01() {
   );
 }
 
-export default BSPDU0601P01;
+export default BSPDU0201P03;

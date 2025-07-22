@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 열쇠관리 > 열쇠인수도관리 ~ (LP)사용열쇠(보관담당자)예외승인안내
+ * @description 중요용지·용도품(영업점) > 신청 > 중요용지신청
  */
 
 // dependency
@@ -36,12 +36,17 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMKY0301P02() {
+function BSPRQ0101M() {
   // Dialog
-  const [visible, setVisible] = useState<boolean>(true);
+  // const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
+  const viewimageOverlay1 = useRef(null);
+  const viewimageOverlay2 = useRef(null);
+
+  // BreadCrumb
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '신청' }, { label: '중요용지신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -91,74 +96,27 @@ function STMKY0301P02() {
 
   return (
     <>
-      <Dialog
-        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
-        headerClassName="layer-head"
-        contentClassName="layer-body"
-        visible={visible}
-        style={{}}
-        onHide={() => { if (!visible) return; setVisible(false); }}
-        closeIcon={<Icon icon="popup-close" />}
-        modal={false}
-        // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">사용열쇠(보관담당자)예외승인안내</span></h3>}
-      >
-        <div className="div-container">
-          <div className="o-grid">
-            <div className="column">
-
-              <div className="o-board type-b">
-                <strong className="o-caption-text">
-                  현금금고 겉문열쇠의 사용열쇠보관담당자는 출납담당책임자입니다. <br />
-                  확인 후 등록바랍니다.
-                </strong>
-              </div>
-
-
-              <div className="o-section">
-                <div className="main">
-                  <div className="o-board type-a">
-                    <div className="board-container">
-                      <div className="m-header">
-                        <strong className="o-heading"><span className="label">관련규정</span></strong>
-                      </div>
-
-                      <dl className="m-bullets type-none case-clause">
-                        <dt className="terms">제5조(금고열쇠의 관리) ② 관리책임자는 4급 이상 직원 또는 모출납에게 금고열쇠의 보관 및 관리를 아래와 같이 위임할 수 있다.</dt>
-                        <dd>4. 현금금고의 겉문열쇠 : 부점 내 출납담당자책임자가 보관 및 관리한다.</dd>
-                        <dd>5. 현금금고의 속문열쇠 : 부점 내 모출납이 보관 및 관리한다.</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li>예외승인: 열쇠인수도 팝업 우측 상단 예외승인 체크박스 클릭.</li>
-                    <li>문의: 8-7463, 3484, 4535</li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div className="div-footer">
-          <div className="m-binds type-end">
-            <div className="group _primary">
-              <CommonButton label="확인" className="_solid-primary" />
-            </div>
-          </div>
-        </div>
-      </Dialog>
-
       <div className="roles" data-div-role="0">
         <div className="div-header">
-          <div className="m-title">
-            <h1 className="o-heading level1">
-              <span className="label">(P)사용열쇠(보관담당자)예외승인안내 [wdth-40p(w770)]</span>
-            </h1>
+          <div className="main">
+            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+
+            <div className="m-title">
+              <h1 className="o-heading level1">
+                <span className="label">중요용지신청</span>
+
+                <FavoriteDiv />
+              </h1>
+            </div>
+          </div>
+
+          <div className="binds">
+            <div className="m-binds type-start">
+
+              <div className="group _assistive">
+                <CommonButton label="도움말" className="_normal" icon="help" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -168,9 +126,20 @@ function STMKY0301P02() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="m-binds">
-            <div className="group _start">
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => setVisible(true)} />
+          <div className="m-shop">
+            <div className="m-shop-list">
+              <div className="container">
+              </div>
+            </div>
+
+            <div className="m-shop-detail">
+              <div className="container">
+              </div>
+            </div>
+
+            <div className="m-shop-basket">
+              <div className="container">
+              </div>
             </div>
           </div>
         </div>
@@ -180,4 +149,4 @@ function STMKY0301P02() {
   );
 }
 
-export default STMKY0301P02;
+export default BSPRQ0101M;
