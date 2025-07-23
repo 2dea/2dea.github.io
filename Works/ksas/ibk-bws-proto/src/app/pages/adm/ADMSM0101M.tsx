@@ -407,15 +407,10 @@ function ADMSM0101M() {
                 </div>
 
                 <div className="main">
-                  <div className="o-data-table">
+                  <div className="o-data-table type-approve">
                     <div className="table-container">
                       <table className="table">
-                        <colgroup>
-                          {/* <col style={{ width: '25%' }} />
-                          <col style={{ width: '25%' }} />
-                          <col style={{ width: '25%' }} />
-                          <col style={{ width: '25%' }} /> */}
-                        </colgroup>
+                        <colgroup span={6}></colgroup>
 
                         <thead>
                           <tr>
@@ -430,20 +425,73 @@ function ADMSM0101M() {
 
                         <tbody>
                           <tr>
-                            <td colSpan={1} className="g-end">
-                              0
+                            <td colSpan={1}>
+                              <div className="o-approve" aria-label="결재 요청">
+                                <div className="main">
+                                  <span className="approval">
+                                    <span className="name">김준완</span>
+                                    <span className="position">대리</span>
+                                  </span>
+                                </div>
+                                <div className="aside">
+                                  <em className="substitute"></em>
+                                </div>
+                              </div>
                             </td>
-                            <td colSpan={1} className="g-end">
-                              0
+                            <td colSpan={1}>
+                              <div className="o-approve" aria-label="결재 완료">
+                                <div className="main">
+                                  <span className="approval">
+                                    <span className="name">안정원</span>
+                                    <span className="position">팀장</span>
+                                  </span>
+                                </div>
+                                <div className="aside">
+                                  <em className="substitute"></em>
+                                </div>
+                              </div>
                             </td>
-                            <td colSpan={1} className="g-end">
-                              0
+                            <td colSpan={1}>
+                              <div className="o-approve" aria-label="결재 대기">
+                                <div className="main">
+                                  <span className="approval">
+                                    <span className="name">안정원</span>
+                                    <span className="position">팀장</span>
+                                  </span>
+                                </div>
+                                <div className="aside">
+                                  <em className="substitute">대직 홍길동</em>
+                                </div>
+                              </div>
                             </td>
-                            <td colSpan={1} className="g-end">
-                              9,999
+                            <td colSpan={1}>
+                              <div className="o-approve" aria-label="결재 예정">
+                                <div className="main">
+                                  <span className="approval">
+                                    <span className="name">이익준</span>
+                                    <span className="position">부장</span>
+                                  </span>
+                                </div>
+                                <div className="aside">
+                                  <em className="substitute"></em>
+                                </div>
+                              </div>
                             </td>
+                            <td colSpan={1}></td>
+                            <td colSpan={1}></td>
                           </tr>
                         </tbody>
+
+                        <tfoot className="approve-tfoot">
+                          <tr className="approve-trow">
+                            <td colSpan={1} className="approve-tcell"><span className="o-digit type-date">2025-12-25</span> <span className="o-digit type-time">13:28</span></td>
+                            <td colSpan={1} className="approve-tcell"><span className="o-digit type-date">2025-12-25</span> <span className="o-digit type-time">13:28</span></td>
+                            <td colSpan={1} className="approve-tcell"></td>
+                            <td colSpan={1} className="approve-tcell"></td>
+                            <td colSpan={1} className="approve-tcell"></td>
+                            <td colSpan={1} className="approve-tcell"></td>
+                          </tr>
+                        </tfoot>
                       </table>
                     </div>
                   </div>
