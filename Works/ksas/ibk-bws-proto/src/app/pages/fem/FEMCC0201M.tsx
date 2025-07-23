@@ -405,6 +405,20 @@ function FEMCC0201M() {
                         </tr>
 
                         <tr>
+                          <th colSpan={1} rowSpan={2}>
+                            <Label label={`결의내용`} require={false} />
+                          </th>
+                          <td colSpan={3} rowSpan={2}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
                           <th colSpan={1}>
                             <Label label={`지급업체명`} require={false} />
                           </th>
@@ -415,9 +429,12 @@ function FEMCC0201M() {
                           <th colSpan={1}>
                             <Label label={`사업자등록번호`} require={false} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={1} >
                             999-99-99999
                           </td>
+                        </tr>
+
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`입금은행명`} require={false} />
                           </th>
@@ -435,16 +452,16 @@ function FEMCC0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`지급 수수료 불러오기`} require={true} />
+                            <Label label={`(A)지급수수료 불러오기`} require={true} />
                           </th>
-                          <td>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required">
+                                <div className="o-form _input mode-required wdth-70">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" disabled />
+                                    <ImageButton label="검색" icon="search" />
                                   </span>
                                 </div>
                               </div>
@@ -461,7 +478,7 @@ function FEMCC0201M() {
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" disabled />
+                                    <ImageButton label="검색" icon="search" />
                                   </span>
                                 </div>
                               </div>
@@ -469,16 +486,42 @@ function FEMCC0201M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`국세청 승인번호`} require={false} />
+                            <Label label={`국세청승인번호`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <a href="javascript:" className="o-link _normal">999-99-99999</a>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`(B)지급수수료 예외금액`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <a href="javascript:" className="o-link _normal">999-99-99999</a>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} disabled />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="m-checks">
+                                  <InputCheck label="예외" />
+                                </div>
+                              </div>
+                            </div>
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`검증여부`} require={false} />
+                            <Label label={`(C)최종지급수수료(A+B)`} require={false} />
                           </th>
-                          <td>
+                          <td colSpan={1}>
+                            金 일천이백칠십이원 (￦100,000,000)
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`검증여부`} require={true} />
+                          </th>
+                          <td colSpan={3}>
                             <div className="m-string-binds">
                               <span className="string">
                                 {/* <>일치</> */}
@@ -491,20 +534,20 @@ function FEMCC0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`결의내용`} require={false} />
+                            <Label label={`지급수수료 예외사유`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={8} cols={80} />
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={8} cols={80} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`첨부파일`} require={true} />
+                            <Label label={`첨부파일`} require={false} />
                           </th>
                           <td colSpan={3}>
 

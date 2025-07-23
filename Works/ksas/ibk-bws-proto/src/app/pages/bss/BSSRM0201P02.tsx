@@ -134,7 +134,10 @@ function BSSRM0201P02() {
                       </div>
                     </div>
                   </div>
+                </div>
 
+                <div className="binds">
+                  <CommonButton label="조회" className="_inquire" />
                 </div>
               </form>
 
@@ -220,7 +223,7 @@ function BSSRM0201P02() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>

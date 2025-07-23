@@ -182,18 +182,18 @@ function FEMCT0201P02() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`지급수수료`} require={false} />
+                            <Label label={`(A)지급수수료`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            金 일천이백칠십이원 (￦100,000,000)
+                            100,000,000
                           </td>
                           <th colSpan={1}>
-                            <Label label={`세금계산서 합계`} require={false} />
+                            <Label label={`세금계산서 불러오기`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-70">
+                                <div className="o-form _input mode-required wdth-70">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">
@@ -205,11 +205,38 @@ function FEMCT0201P02() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`국세청 승인번호`} require={false} />
+                            <Label label={`국세청승인번호`} require={false} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             <a href="javascript:" className="o-link _normal">999999999-99999999-99999999</a>
                           </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`(B)지급수수료 예외금액`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} disabled />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="m-checks">
+                                  <InputCheck label="예외" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`(C)최종지급수수료(A+B)`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            金 일천이백칠십이원 (￦100,000,000)
+                          </td>
+
                           <th colSpan={1}>
                             <Label label={`세금계산서 검증여부`} require={true} />
                           </th>
@@ -222,22 +249,6 @@ function FEMCT0201P02() {
                               <span className="binds justify-end"><CommonButton label="검증" className="_normal" /></span>
                             </div>
                           </td>
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`비고`} require={false} />
-                          </th>
-                          <td colSpan={5}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
 
                           <th colSpan={1}>
                             <Label label={`상세 검증여부`} require={true} />
@@ -245,10 +256,40 @@ function FEMCT0201P02() {
                           <td>
                             <div className="m-string-binds">
                               <span className="string">
-                                {/* <>일치</> */}
-                                <span className="o-status-text style-inherit type-20">불일치</span>
+                                <>일치</>
+                                {/* <span className="o-status-text style-inherit type-20">불일치</span> */}
                               </span>
                               <span className="binds justify-end"><CommonButton label="검증" className="_normal" /></span>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`지급수수료 예외사유`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} disabled />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
                             </div>
                           </td>
                         </tr>
@@ -281,7 +322,6 @@ function FEMCT0201P02() {
                     <div className="group">
                       <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
                       <CommonButton label="일괄양식 업로드" className="_normal" icon="excel-upload-label" />
-                      <CommonButton label="상세검증" className="_normal" />
                     </div>
 
                     <div className="group">

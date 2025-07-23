@@ -113,8 +113,8 @@ function HSPPC0401P01() {
                   <div className="o-field">
                     <Label label={`사업연도`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input type-date wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled/>
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" disabled />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>

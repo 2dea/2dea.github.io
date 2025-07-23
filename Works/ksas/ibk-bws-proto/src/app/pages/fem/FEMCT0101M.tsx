@@ -143,15 +143,15 @@ function FEMCT0101M() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`계약기간`} require={true} />
+                    <Label label={`계약기간`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                       <span className="seps type-tilde">~</span>
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -489,7 +489,7 @@ function FEMCT0101M() {
 
                                 <tr>
                                   <th colSpan={1}>
-                                    <Label label={`총 계약금액`} require={true} />
+                                    <Label label={`전담 총 계약금액`} require={true} />
                                   </th>
                                   <td colSpan={3}>
                                     <div className="o-field">

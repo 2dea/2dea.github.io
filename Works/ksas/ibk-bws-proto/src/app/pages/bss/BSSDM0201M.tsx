@@ -320,7 +320,7 @@ function BSSDM0201M() {
                               <td>홍길동</td>
                               <td>상태</td>
                               <td>
-                                <ImageButton label="이미지​다운로드" icon="download" />
+                                <ImageButton label="파일보기" icon="attach" />
                               </td>
                               <td>012345</td>
                               <td className="g-start">서울특별시 서초구 서초대로 77길 17</td>

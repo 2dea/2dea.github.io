@@ -130,8 +130,9 @@ function FMTCC0101M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="o-grid">
-            <div className="column">
+
+          <Splitter gutterSize={0} className="o-grid">
+            <SplitterPanel minSize={17.5} className="column">
 
               <form className="m-filter-form">
                 <div className="fieldset">
@@ -202,12 +203,6 @@ function FMTCC0101M() {
                   <CommonButton label="조회" className="_inquire" />
                 </div>
               </form>
-
-            </div>
-          </div>
-
-          <Splitter gutterSize={0} className="o-grid">
-            <SplitterPanel minSize={17.5} className="column">
 
               <div className="o-section">
                 <div className="m-header">
