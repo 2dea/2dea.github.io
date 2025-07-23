@@ -1216,6 +1216,17 @@ function TMPL() {
                                 </li>
                                 <li>
                                   <div className="m-flex-list">
+                                    <strong>.o-grid-table.type-table.case-data</strong>
+                                    <a href="/proto/ADMRC0401M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      ADMRC0401M<Icon icon="link" />
+                                    </a>
+                                    <a href="/proto/FMTCT0901M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      FMTCT0901M<Icon icon="link" />
+                                    </a>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="m-flex-list">
                                     <strong>[rowspan]:where(.m-data-form *)</strong>
                                     <a href="/proto/FMTFC0101P01" target="ibkbws_exam" className="o-link texted-button _primary">
                                       FMTFC0101P01<Icon icon="link" />

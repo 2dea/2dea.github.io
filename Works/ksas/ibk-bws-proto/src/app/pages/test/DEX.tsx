@@ -626,6 +626,7 @@ about:blank
               BSSDM0101M: 조회 / 밑에는 반반
               ADMPA0301M: 위에는 조회 full  / 밑에는 반반 3개 테이블
 
+              반반: 탭 안에 FMTCT0901M
               반반: STMAS0101M 등록기한 안내
 
 

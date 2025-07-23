@@ -2078,7 +2078,7 @@
 .o-grid-table thead:not(.freeze-pane)  { position: sticky; z-index: 3; top: 0; }
 .o-grid-table tfoot  { font-weight: $bold-70; position: relative; }
 .o-grid-table tfoot:not(.freeze-pane)  { position: sticky; z-index: 3; bottom: 0; }
-.o-grid-table th  { font-weight: $bold-70; }
+.o-grid-table th:not(tbody *)  { font-weight: $bold-70; }
 
 // .o-grid-table tr >*  { min-width: 0; height: var(--height); padding: var(--margin-block) var(--margin-inline); border: 0 solid var(--color-edge-30); border-width: 0 var(--edge) var(--edge) 0; }
 .o-grid-table tr >*  { min-width: 0; height: var(--height); padding: var(--margin-block) var(--margin-inline); border: 0 solid var(--color-edge-30); }
@@ -2099,7 +2099,7 @@
 // .o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: var(--color-key1-70); }
 // // .o-grid-table tbody >* >*  { white-space: nowrap; }
 // // .o-grid-table tbody >* >* >*  { white-space: normal; }
-.o-grid-table tbody:where(:not(:has([rowspan]))) >tr:nth-child(even)  { background: var(--color-grid-evenrow); }
+.o-grid-table:where(:not(.type-table.case-data)) tbody:where(:not(:has([rowspan]))) >tr:nth-child(even)  { background: var(--color-grid-evenrow); }
 /* .o-grid-table tbody:first-of-type >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: inherit; }
@@ -2108,7 +2108,7 @@
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(odd)  { background-color: var(--color-grid-evenrow); background-color: red; }
 .o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(even)  { background-color: var(--color-grid-evenrow); background-color: inherit; } */
 
-.o-grid-table tbody:where(:not(:has([rowspan]))):not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
+.o-grid-table:where(:not(.type-table.case-data)) tbody:where(:not(:has([rowspan]))):not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
 .o-grid-table table >* >tr >.tcell-strong  { background-color: var(--color-ground2-skyblue-30); }
 
@@ -2126,6 +2126,10 @@
 
 // .o-grid-table thead  { position: sticky; z-index: 3; top: 0; }
 // .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 2; left: 0; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
+
+.o-grid-table:where(.type-table.case-data) tbody th  { background-color: var(--color-ground-30); }
+
+
 
 .o-grid-table .table-container:where(.type-upload.js_dragovered >*)  { box-shadow: 0 0 $e10 $e10 var(--color-edge2-blue-30); }
 .o-grid-table table:where(.type-upload >* >*)  { table-layout: fixed; }

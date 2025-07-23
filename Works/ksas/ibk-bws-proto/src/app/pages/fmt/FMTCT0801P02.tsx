@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 원화현수송 > 지점간 원화현수송신청관리 ~ (LP)신청
+ * @description 자금현수송 > 원화현수송 > 지점간 원화현수송신청관리 ~ (LP)불입결정
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTCT0801P01() {
+function FMTCT0801P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -101,7 +101,7 @@ function FMTCT0801P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">지점간 자금신청</span></h3>}
+        header={<h3 className="o-heading"><span className="label">불입결정</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -129,14 +129,14 @@ function FMTCT0801P01() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청부점`} require={true} />
+                            <Label label={`신청부점`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0034] 을지로
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`요청일자`} require={true} />
+                            <Label label={`현송일자`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -159,17 +159,10 @@ function FMTCT0801P01() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`상대부점`} require={true} />
+                            <Label label={`상대부점`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                            [0081] 명동역
                           </td>
                         </tr>
 
@@ -248,6 +241,34 @@ function FMTCT0801P01() {
 
                         <tr>
                           <th colSpan={1}>
+                            <Label label={`책임자`} require={true} />
+                          </th>
+                          <td colSpan={7}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required wdth-50">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`현송원예외사항(신청)`} require={false} />
+                          </th>
+                          <td colSpan={7}>
+                            신청시 등록한 내용
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
                             <Label label={`현송원예외사항`} require={false} />
                           </th>
                           <td colSpan={7}>
@@ -271,7 +292,7 @@ function FMTCT0801P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">지점간 자금신청내역</span></h5>
+                  <h5 className="o-heading level3"><span className="label">지점간 불입결정내역</span></h5>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -308,6 +329,10 @@ function FMTCT0801P01() {
                           <col className="wdth-10" />
                           <col />
                           <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                           <col className="wdth-50" />
                           <col />
                         </colgroup>
@@ -317,8 +342,13 @@ function FMTCT0801P01() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청액</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액</span></div></th>
                           </tr>
                           <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
@@ -328,7 +358,7 @@ function FMTCT0801P01() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -336,7 +366,11 @@ function FMTCT0801P01() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
                               <td><InputCheck label="선택" labelHidden /></td>
-                              <td><Icon icon="grid-added" /></td>
+                              <td>{idx + 1}</td>
+                              <td>KOR(한국 원)</td>
+                              <td>10000</td>
+                              <td className="g-end">20,000</td>
+                              <td className="g-end">400,000</td>
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
@@ -382,29 +416,19 @@ function FMTCT0801P01() {
                           <tr className="sumtotal-trow">
                             <td colSpan={2} className="sumtotal-tcell">합계</td>
                             <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell"></td>
                             <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액</td>
+                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                             <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
+                            <td className="sumtotal-tcell sumtotal-tcell-strong"></td>
+                            <td className="sumtotal-tcell sumtotal-tcell-strong">결정금액</td>
+                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
+                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
+
                           </tr>
                         </tfoot>
                       </table>
                     </div>
                   </div>
-                </div>
-
-                <div className="m-footer">
-                  <ul className="m-bullets type-disc">
-                    <li><em className="c-color-strong">자금현수송 대행 의뢰 시 옆 기업 中 택1하여 현송업체와 일정 등 협의해주세요.</em>
-                      <ul className="m-bullets type-hyphen">
-                        <li>나이스씨엠에스(주) 02-364-6251, 한국금융안전(주) 02-870-7000</li>
-                      </ul>
-                    </li>
-                    <li><em className="c-color-strong">현송원 입력 시 현송원이 없는 경우 자금모점(프로세스혁신부)으로 연락주세요.</em>
-                      <ul className="m-bullets type-hyphen">
-                        <li>8-4306, 8-4303, 8-4304</li>
-                      </ul>
-                    </li>
-                  </ul>
                 </div>
 
               </div>
@@ -428,7 +452,7 @@ function FMTCT0801P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)신청 [wdth-70p(w1340)]</span>
+              <span className="label">(P)불입결정 [wdth-70p(w1340)]</span>
             </h1>
           </div>
         </div>
@@ -451,4 +475,4 @@ function FMTCT0801P01() {
   );
 }
 
-export default FMTCT0801P01;
+export default FMTCT0801P02;

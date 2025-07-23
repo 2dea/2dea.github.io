@@ -774,19 +774,19 @@ function FMTCT0801M() {
                                   </td>
 
                                   <th colSpan={1}>
-                                    <Label label={`현송원(1)`} require={false} />
+                                    <Label label={`현송원 1`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동1
                                   </td>
                                   <th colSpan={1}>
-                                    <Label label={`현송원(2)`} require={false} />
+                                    <Label label={`현송원 2`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동2
                                   </td>
                                   <th colSpan={1}>
-                                    <Label label={`현송원(3)`} require={false} />
+                                    <Label label={`현송원 3`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동3
@@ -965,19 +965,19 @@ function FMTCT0801M() {
                                   </td>
 
                                   <th colSpan={1}>
-                                    <Label label={`현송원(1)`} require={false} />
+                                    <Label label={`현송원 1`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동1
                                   </td>
                                   <th colSpan={1}>
-                                    <Label label={`현송원(2)`} require={false} />
+                                    <Label label={`현송원 2`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동2
                                   </td>
                                   <th colSpan={1}>
-                                    <Label label={`현송원(3)`} require={false} />
+                                    <Label label={`현송원 3`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동3
@@ -1160,19 +1160,19 @@ function FMTCT0801M() {
                                   </td>
 
                                   <th colSpan={1}>
-                                    <Label label={`현송원(1)`} require={false} />
+                                    <Label label={`현송원 1`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동1
                                   </td>
                                   <th colSpan={1}>
-                                    <Label label={`현송원(2)`} require={false} />
+                                    <Label label={`현송원 2`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동2
                                   </td>
                                   <th colSpan={1}>
-                                    <Label label={`현송원(3)`} require={false} />
+                                    <Label label={`현송원 3`} require={false} />
                                   </th>
                                   <td colSpan={1}>
                                     [0081] 홍길동3
