@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 신청 > 중요용지신청
+ * @description 자금현수송 > 원화현수송 > 자금현수송노선출력
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPRQ0101M() {
+function FMTCT1101M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -46,7 +46,7 @@ function BSPRQ0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '신청' }, { label: '중요용지신청' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '신청' }, { label: '자금현수송노선출력' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -103,7 +103,7 @@ function BSPRQ0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지신청</span>
+                <span className="label">자금현수송노선출력</span>
 
                 <FavoriteDiv />
               </h1>
@@ -126,22 +126,154 @@ function BSPRQ0101M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
-          <div className="m-shop">
-            <div className="m-shop-list">
-              <div className="container">
+
+          ...
+
+            <div className="o-grid">
+              <div className="column">
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h3 className="o-heading level3"><span className="label">요약정보</span></h3>
+
+                    <div className="o-legend type-unit style-normal">
+                      <em className="label">(단위: 건)</em>
+                    </div>
+                  </div>
+
+                  <div className="main">
+                    {/* <form className="m-data-form">
+                      <table className="table">
+                        <colgroup>
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                        </colgroup>
+
+                        <tbody>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`원화청구`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              9,999
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`외화청구`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              9,999
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`청구 전체`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              99,999
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`원화불입`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              9,999
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`외화불입`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              9,999
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`불입 전체`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              99,999
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`원화`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              99,999
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`외화`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              99,999
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`전체`} require={false} />
+                            </th>
+                            <td colSpan={1} className="g-end">
+                              999,999
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </form> */}
+
+                    <div className="o-data-table">
+                      <div className="table-container">
+                        <table className="table">
+                          <colgroup span={4}></colgroup>
+
+                          <thead>
+                            <tr>
+                              <th colSpan={1}>구분</th>
+                              <th colSpan={1}>원화</th>
+                              <th colSpan={1}>외화</th>
+                              <th colSpan={1}>합계(원화+외화)</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr>
+                              <th colSpan={1}>청구</th>
+                              <td colSpan={1} className="g-end">9,999</td>
+                              <td colSpan={1} className="g-end">9,999</td>
+                              <td colSpan={1} className="g-end">99,999</td>
+                            </tr>
+                            <tr>
+                              <th colSpan={1}>불입</th>
+                              <td colSpan={1} className="g-end">9,999</td>
+                              <td colSpan={1} className="g-end">9,999</td>
+                              <td colSpan={1} className="g-end">99,999</td>
+                            </tr>
+                          </tbody>
+
+                          <tfoot className="sumtotal-tfoot">
+                            <tr className="sumtotal-trow">
+                              <th colSpan={1} className="sumtotal-tcell">총계</th>
+                              <td colSpan={1} className="sumtotal-tcell g-end">99,999</td>
+                              <td colSpan={1} className="sumtotal-tcell g-end">99,999</td>
+                              <td colSpan={1} className="sumtotal-tcell g-end">999,999</td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+
+              <div className="column"></div>
             </div>
 
-            <div className="m-shop-detail">
-              <div className="container">
-              </div>
-            </div>
+          ...
 
-            <div className="m-shop-basket">
-              <div className="container">
-              </div>
-            </div>
-          </div>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
@@ -149,4 +281,4 @@ function BSPRQ0101M() {
   );
 }
 
-export default BSPRQ0101M;
+export default FMTCT1101M;
