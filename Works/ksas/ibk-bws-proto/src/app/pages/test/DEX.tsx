@@ -97,6 +97,9 @@ function DEX() {
       {/*
       스케줄
 
+      2025/07/25 [자금현수송] #92 이후로부터 FMTCT1401M
+
+      2025/07/24 [자금현수송] #73 이후로부터
       2025/07/22 [자금현수송] #38 이후로부터
 
       2025/07/16 수 수수료 #27
@@ -106,44 +109,6 @@ function DEX() {
 
       <>blueline
 
-[행내등기]
-BEXRQ0201P02
-
-FMTCC0301M
-FMTFC0101M
-
-BSPAQ0101M
-BSPAQ0301M
-BSPAQ0401M
-BSPAQ0501M
-BSPDU0601M
-BSPRQ0201M
-BSPDU0301M
-BSPDU0401M
-BSPRQ0501M
-BSPAQ0201M
-BSPDU0101M
-BSPDU0501M
-
-HSPHS1601M
-HSPHS0501M
-HSPBT1101M
-HSPDU0901M
-HSPDU0801M
-HSPHP0401M
-
-[ 재난 - 안전관리 ]
-
-STMGD0601M
-STMPR0101M
-STMPR0101M
-STMFL0201M
-STMKY0601M
-STMKY0301M
-
-BSSAP0201M
-BSSCR0401M
-</>
 
         1.수정사항 및
         2. ["자금현수송" - "외화정사수수료" 부터 모두~ ] / 원화현수송 제외 아래 모두 :
@@ -161,11 +126,6 @@ BSSCR0401M
       파일첨부 -> 첨부파일
 
       2025-07/08 화 수정사항
-
-
-        #99
-
-
       2025-07/07 월 수정사항
         - 자금현수송 #197 FMTCC0201M : 총 합계 레이아웃 : 기획 -디자인 확인 필요 /
         1. 어드민 해야할 부분 #92: ADMAM0101M
@@ -248,8 +208,9 @@ BSSCR0401M
         예외: '확인' 버튼만 있는 경우! -> modal={false}  -> 조회성 모달!
       ~ 6/17 행내등기
 
+완료 메시지
 <td class="auth"><span class="name DEL">김진영</span></td>
-<td class="done"><span class="date done">2025-06-30</span></td>
+<td class="done"><span class="date done">2025-07-24</span></td>
 
 about:blank
 
@@ -263,6 +224,7 @@ about:blank
 <td>Y</td>
 
 <td className="g-start">외국환거래표(외국통화매매전용)</td>
+<td className="g-start">프로세스혁신부</td>
 
 <td className="g-start">[00070] 프로세스혁신부</td>
 <td className="g-start">을지로</td>

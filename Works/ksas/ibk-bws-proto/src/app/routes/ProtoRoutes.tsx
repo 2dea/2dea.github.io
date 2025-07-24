@@ -53,14 +53,27 @@ import FMTCT0801P01 from 'app/pages/fmt/FMTCT0801P01';  // 자금현수송 > 원
 import FMTCT0801P02 from 'app/pages/fmt/FMTCT0801P02';  // 자금현수송 > 원화현수송    > 지점간 원화현수송신청관리 ~ (LP)불입결정
 
 import FMTCT0901M from 'app/pages/fmt/FMTCT0901M';      // 자금현수송 > 원화현수송     > 원화시재금현황
+import FMTCT1501M from 'app/pages/fmt/FMTCT1501M';      // 자금현수송 > 원화현수송     > 자금현수송노선업로드
+import FMTCT1501P02 from 'app/pages/fmt/FMTCT1501P02';  // 자금현수송 > 원화현수송     > 자금현수송노선업로드 ~ (LP)현송원관리
+import FMTCT1001M from 'app/pages/fmt/FMTCT1001M';      // 자금현수송 > 원화현수송     > 자금현수송노선관리
+import FMTCT1001P01 from 'app/pages/fmt/FMTCT1001P01';  // 자금현수송 > 원화현수송     > 자금현수송노선관리 ~ (LP)자금현수송노선등록
+import FMTCT1001P02 from 'app/pages/fmt/FMTCT1001P02';  // 자금현수송 > 원화현수송     > 자금현수송노선관리 ~ (LP)자금현수송노선조회
+import FMTCT1101M from 'app/pages/fmt/FMTCT1101M';      // 자금현수송 > 원화현수송     > 자금현수송노선출력
+import FMTCT1301M from 'app/pages/fmt/FMTCT1301M';      // 자금현수송 > 원화현수송     > 원화미취결내역알림
 
-import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사      > 신청(인도)
-import FMTCC0101P01 from 'app/pages/fmt/FMTCC0101P01';  // 자금현수송 > 원화정사      > 신청(인도) ~ (LP)호송금인수증등록
-import FMTCC0201M from 'app/pages/fmt/FMTCC0201M';      // 자금현수송 > 원화정사      > 결과(인수)
+import FMTCT1401M from 'app/pages/fmt/FMTCT1401M';      // 자금현수송 > 원화현수송     > 타행현수송신청관리
+import FMTCT1401P01 from 'app/pages/fmt/FMTCT1401P01';  // 자금현수송 > 원화현수송     > 타행현수송신청관리 ~ (LP)타행현수송신청
+// import FMTCT0801P02 from 'app/pages/fmt/FMTCT0801P02';  // 자금현수송 > 원화현수송    > 타행현수송신청관리 ~ (LP)불입결정
+
 import FMTCC0301M from 'app/pages/fmt/FMTCC0301M';      // 자금현수송 > 원화정사      > 관련조회 및 출력
 import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역
 import FMTFC0101P01 from 'app/pages/fmt/FMTFC0101P01';  // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역 ~ (LP)위조및변조화폐신고서등록
 import FMTFC0101P02 from 'app/pages/fmt/FMTFC0101P02';  // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역 ~ (LP)외화정사등록
+
+
+import FMTCC0101M from 'app/pages/fmt/FMTCC0101M';      // 자금현수송 > 원화정사      > 신청(인도)
+import FMTCC0101P01 from 'app/pages/fmt/FMTCC0101P01';  // 자금현수송 > 원화정사      > 신청(인도) ~ (LP)호송금인수증등록
+import FMTCC0201M from 'app/pages/fmt/FMTCC0201M';      // 자금현수송 > 원화정사      > 결과(인수)
 
 import FMTFC0201M from 'app/pages/fmt/FMTFC0201M';      // 자금현수송 > 외화정사      > 인수도관리
 import FMTFC0201P01 from 'app/pages/fmt/FMTFC0201P01';  // 자금현수송 > 외화정사      > 인수도관리 ~ (LP)외화정사인수도(정사)
@@ -632,8 +645,20 @@ function ProtoRoutes() {
         { path: 'FMTCT0801P02', element: <FMTCT0801P02 /> },
 
         { path: 'FMTCT0901M',   element: <FMTCT0901M /> },
+        { path: 'FMTCT1501M',   element: <FMTCT1501M /> },
+        { path: 'FMTCT1501P02', element: <FMTCT1501P02 /> },
+        { path: 'FMTCT1001M',   element: <FMTCT1001M /> },
+        { path: 'FMTCT1001P01', element: <FMTCT1001P01 /> },
+        { path: 'FMTCT1001P02', element: <FMTCT1001P02 /> },
 
         { path: 'FMTCC0101M',   element: <FMTCC0101M /> },
+
+        { path: 'FMTCT1101M',   element: <FMTCT1101M /> },
+        { path: 'FMTCT1301M',   element: <FMTCT1301M /> },
+        { path: 'FMTCT1401M',   element: <FMTCT1401M /> },
+
+        { path: 'FMTCT1401P01', element: <FMTCT1401P01 /> },
+
         { path: 'FMTCC0101P01', element: <FMTCC0101P01 /> },
 
         { path: 'FMTCC0201M',   element: <FMTCC0201M /> },
