@@ -282,15 +282,19 @@ function STMGD0401P03() {
                               서무팀장
                             </td>
                             <td colSpan={1} rowSpan={2}>
-                              <div className="o-form _input wdth-70">
-                                <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                <i aria-hidden="true"></i>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
                               </div>
                             </td>
                             <td colSpan={1}>
                               점검자2
                             </td>
-                            <td colSpan={1}>
+                            <td colSpan={1} className="g-start">
                               [0000] 홍길동
                             </td>
                           </tr>
@@ -298,7 +302,7 @@ function STMGD0401P03() {
                             <td colSpan={1}>
                               점검자2
                             </td>
-                            <td colSpan={1}>
+                            <td colSpan={1} className="g-start">
                               [0000] 홍길동
                             </td>
                           </tr>
@@ -309,7 +313,7 @@ function STMGD0401P03() {
                             <td colSpan={1}>
                               점검자1
                             </td>
-                            <td colSpan={1}>
+                            <td colSpan={1} className="g-start">
                               [0000] 홍길동
                             </td>
                             <td colSpan={1} rowSpan={2}>
@@ -318,7 +322,7 @@ function STMGD0401P03() {
                             <td colSpan={1} rowSpan={2}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-70">
+                                  <div className="o-form _input">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -330,7 +334,7 @@ function STMGD0401P03() {
                             <td colSpan={1}>
                               점검자2
                             </td>
-                            <td colSpan={1}>
+                            <td colSpan={1} className="g-start">
                               [0000] 홍길동
                             </td>
                           </tr>
@@ -338,6 +342,11 @@ function STMGD0401P03() {
                       </table>
                     </div>
                   </div>
+                </div>
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>인사정보에 등록된 서무팀장이 자동으로 세팅됩니다.</li>
+                  </ul>
                 </div>
 
               </div>
@@ -394,7 +403,7 @@ function STMGD0401P03() {
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-70">
+                                  <div className="o-form _input">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -404,7 +413,7 @@ function STMGD0401P03() {
                             <td colSpan={1} rowSpan={2}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-70">
+                                  <div className="o-form _input">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -416,7 +425,7 @@ function STMGD0401P03() {
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-70">
+                                  <div className="o-form _input">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>

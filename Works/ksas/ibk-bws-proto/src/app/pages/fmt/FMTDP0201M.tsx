@@ -211,6 +211,8 @@ function FMTDP0201M() {
                           <col />
                           <col />
                           <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -220,7 +222,9 @@ function FMTDP0201M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">자금현송대행계약</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파출수납사유</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수행일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래처</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">고객번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">고객명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">자금현송대행업체</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약금액(회당)</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약기간</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
@@ -238,7 +242,7 @@ function FMTDP0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={16}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -250,7 +254,9 @@ function FMTDP0201M() {
                               <td>Y</td>
                               <td>기타</td>
                               <td>영업일</td>
-                              <td>한국교육방송공사</td>
+                              <td>011-123456</td>
+                              <td className="g-start">(주)이든키즈어린이집</td>
+                              <td className="g-start">한국교육방송공사</td>
                               <td className="g-end">30,000</td>
                               <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
                               <td>0466</td>
@@ -313,15 +319,13 @@ function FMTDP0201M() {
                           <col />
                           <col />
                           <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래처</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주소</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">고객명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수행직원</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이동수단</span></div></th>
                             <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래내역</span></div></th>
@@ -356,8 +360,7 @@ function FMTDP0201M() {
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>한국교육방송공사</td>
-                              <td className="g-start">서울특별시 서초구 서초대로 77길 17</td>
+                              <td className="g-start">(주)이든키즈어린이집</td>
                               <td className="g-start">김기업 외 2명</td>
                               <td>(287하 123) 승용차</td>
                               <td>입급</td>
@@ -410,7 +413,7 @@ function FMTDP0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`부점`} require={false} />
+                            <Label label={`등록부점`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0081] 을지로
@@ -423,6 +426,22 @@ function FMTDP0201M() {
                             [0081] 홍길동
                           </td>
 
+                          <th colSpan={1}>
+                            <Label label={`고객번호`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            011-123456
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`고객명`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            밝은누리어린이집
+                          </td>
+                        </tr>
+
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`방문일자`} require={true} />
                           </th>
@@ -438,16 +457,7 @@ function FMTDP0201M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`거래처`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            밝은누리어린이집
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`거래구분/금액`} require={true} />
+                            <Label label={`거래구분`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -456,7 +466,16 @@ function FMTDP0201M() {
                                   <XDropdown appendTo={document.body} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
+                              </div>
+                            </div>
+                          </td>
 
+                          <th colSpan={1}>
+                            <Label label={`금액`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
                                 <div className="o-form _input mode-required wdth-50 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
@@ -478,15 +497,18 @@ function FMTDP0201M() {
                               </div>
                             </div>
                           </td>
+                        </tr>
 
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`이동수단`} require={true} />
                           </th>
                           <td colSpan={3}>
-
-                            <div className="m-checks">
-                              <InputRadio name="RADIO:T_10" label="승용차(차량번호)" />
-                              <InputRadio name="RADIO:T_10" label="기타(사유입력)" />
+                            <div className="m-mixed-field">
+                              <div className="m-checks">
+                                <InputRadio name="RADIO:T_10" label="승용차(차량번호)" />
+                                <InputRadio name="RADIO:T_10" label="기타(사유입력)" />
+                              </div>
 
                               <div className="o-field">
                                 <div className="fields">
@@ -494,33 +516,6 @@ function FMTDP0201M() {
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`주소`} require={true} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-40">
-                                  <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" />
-                                  </span>
-                                </div>
-                                <div className="o-form _input mode-required wdth-auto">
-                                  <InputText placeholder="" value="서울특별시 중구 을지로 79" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <div className="o-form _input mode-required wdth-100">
-                                  <InputText placeholder="" value="기업은행 본점" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>

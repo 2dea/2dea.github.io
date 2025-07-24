@@ -552,7 +552,7 @@ function FMTCT0901M() {
                       <div className="main">
                         <dl className="m-defines">
                           <div className="group">
-                            <dt className="head">신청부점</dt>
+                            <dt className="head">상태</dt>
                             <dd className="data">
                               <span className="o-status-text type-20">미확정</span>
                               {/* <span className="o-status-text type-80">확정</span> */}
@@ -561,8 +561,21 @@ function FMTCT0901M() {
                         </dl>
                       </div>
 
+
                       <div className="binds">
                         <div className="m-mixed-field">
+                          <div className="o-field">
+                            <Label label={`통합단말합계`} require={false} />
+                            <div className="fields">
+                              <div className="string o-digit type-datetime">38,200</div>
+                            </div>
+                          </div>
+                          <div className="o-field">
+                            <Label label={`검증여부`} require={false} />
+                            <div className="fields">
+                              <span className="o-status-text type-20">불일치</span>
+                            </div>
+                          </div>
                           <div className="o-field">
                             <Label label={`시재업데이트일시`} require={false} />
                             <div className="fields">
@@ -575,7 +588,7 @@ function FMTCT0901M() {
                             <CommonButton label="검증" className="_solid-secondary" />
                           </div>
                         </div>
-                    </div>
+                      </div>
                     </div>
                   </div>
 
@@ -625,8 +638,11 @@ function FMTCT0901M() {
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권(한은불입대상)</span></div></th>
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미정사권</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일 변동액</span></div></th>
                               </tr>
                               <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
@@ -640,7 +656,7 @@ function FMTCT0901M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -657,6 +673,8 @@ function FMTCT0901M() {
                                   <td className="g-end">400,000</td>
                                   <td className="g-end">44.5</td>
                                   <td className="g-end">500,400,000</td>
+                                  <td className="g-end">13,874</td>
+                                  <td className="g-end">1,387,420</td>
                                 </tr>
                               ))}
                             </tbody>
@@ -672,6 +690,8 @@ function FMTCT0901M() {
                                 <td className="sumtotal-tcell"></td>
                                 <td className="sumtotal-tcell g-end">999,999</td>
                                 <td className="sumtotal-tcell"></td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
                                 <td className="sumtotal-tcell g-end">999,999</td>
                               </tr>
                             </tfoot>
@@ -728,19 +748,17 @@ function FMTCT0901M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통합단말합계</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검증여부</span></div></th>
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일변동액</span></div></th>
                               </tr>
                               <tr>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                               </tr>
                             </thead>
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -765,13 +783,6 @@ function FMTCT0901M() {
                                     <td className="g-end">400,000</td>
                                     <td className="g-end">44.5</td>
                                     <td className="g-end">20,000</td>
-                                    <td className="g-end">12.5</td>
-                                    <td className="p-x-cell-span">
-                                      {
-                                        (idx) % 3 === 0 &&
-                                        <>일치</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
-                                      }
-                                    </td>
                                     <td className="g-end">44.5</td>
                                     <td className="g-end">500,400,000</td>
                                   </tr>
@@ -793,10 +804,8 @@ function FMTCT0901M() {
                                 <td className="sumtotal-tcell"></td>
                                 <td className="sumtotal-tcell g-end">999,999</td>
                                 <td className="sumtotal-tcell g-end">999,999</td>
-                                <td className="sumtotal-tcell"></td>
-                                <td className="sumtotal-tcell"></td>
-                                <td className="sumtotal-tcell g-end">-999,999</td>
-                                <td className="sumtotal-tcell g-end">-999,999</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
+                                <td className="sumtotal-tcell g-end">999,999</td>
                               </tr>
                             </tfoot>
                           </table>

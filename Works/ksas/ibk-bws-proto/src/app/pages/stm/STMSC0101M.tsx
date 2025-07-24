@@ -119,7 +119,6 @@ function STMSC0101M() {
             <div className="m-binds type-end">
               <div className="group _primary">
                 <CommonButton label="삭제" className="_delete" />
-                <CommonButton label="수정" className="_solid-primary" />
                 <CommonButton label="자동연장" className="_solid-primary" />
                 <CommonButton label="종료" className="_solid-primary" />
                 <CommonButton label="해지" className="_solid-primary" />
@@ -287,6 +286,7 @@ function STMSC0101M() {
 
                   <div className="m-binds">
                     <div className="group">
+                      <CommonButton label="변경이력" className="_normal" />
                       <CommonButton label="신규" className="_create" />
                     </div>
                   </div>

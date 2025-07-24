@@ -201,6 +201,7 @@ function STMSC0201M() {
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
+                          <col className="wdth-10" />
                           <col />
                           <col />
                           <col />
@@ -216,6 +217,7 @@ function STMSC0201M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록연월</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
@@ -244,6 +246,7 @@ function STMSC0201M() {
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
                               <td><span className="o-digit type-date">2025-12</span></td>
                               <td>0034</td>
@@ -272,6 +275,12 @@ function STMSC0201M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">기본정보</span></h3>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="변경이력" className="_normal" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main">
@@ -338,7 +347,7 @@ function STMSC0201M() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`계약명`} require={true} />
+                            <Label label={`계약명`} require={false} />
                           </th>
                           <td colSpan={1}>
                             승강기 유지보수 도급계약
@@ -352,7 +361,7 @@ function STMSC0201M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`계약기간`} require={true} />
+                            <Label label={`계약기간`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span>
@@ -360,7 +369,7 @@ function STMSC0201M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`계약금액(원)`} require={true} />
+                            <Label label={`계약금액(원)`} require={false} />
                           </th>
                           <td colSpan={1} className="g-end">
                             10,000,000
@@ -374,7 +383,7 @@ function STMSC0201M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`근로형태`} require={true} />
+                            <Label label={`근로형태`} require={false} />
                           </th>
                           <td colSpan={3}>
 
@@ -386,7 +395,7 @@ function STMSC0201M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`인원/작업일 수`} require={true} />
+                            <Label label={`인원/작업일 수`} require={false} />
                           </th>
                           <td colSpan={3}>
                             일시적 (일수) : 25일
