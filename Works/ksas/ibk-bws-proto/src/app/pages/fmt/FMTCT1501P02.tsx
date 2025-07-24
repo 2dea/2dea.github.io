@@ -239,14 +239,18 @@ function FMTCT1501P02() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`현송원 사진`} require={true} />
+                            <Label label={`사진등록`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <div className="m-flex-list">
                               <div className="m-upload-image">
                                 <div className="main">
                                   <div className="o-object o-view-image ratio-portrait h-160">
+                                    {/* <img src={require("assets/images/media/STMKY0201P03_010.png")} alt="" /> */}
+                                    {/* <img src={require("assets/images/media/BEXPM0101P01_010.png")} alt="" /> */}
+                                    {/* <img src={require("assets/images/media/STMPR0101P02_010.png")} alt="" /> */}
                                     <img src={require("assets/images/temp/FMTCT0201P02_010.jpg")} alt="" />
+                                    {/* <img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" /> */}
                                   </div>
                                 </div>
                                 <div className="binds">

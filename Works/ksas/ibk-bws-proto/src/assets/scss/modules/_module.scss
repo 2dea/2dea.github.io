@@ -424,6 +424,8 @@
 
 .m-upload-image:has(.o-object.ratio-portrait.h-160)  { width: III(120); }
 .m-upload-image >.main .o-object.h-160  { height: III(160); }
+.m-upload-image >.main .o-object.ratio-portrait >*  { object-fit: cover; object-position: center; }
+
 
 .m-upload-image >.main .o-object:empty  { border-style: dashed; background: var(--color-ground-30); }
 .m-upload-image >.main .o-object:empty:before  { content: none; }

@@ -266,9 +266,17 @@ function FMTCT1001P01() {
                                   </div>
                                 </td>
                                 <td>
-                                  <div className="m-checks">
+                                  {/* <div className="m-checks">
                                     <InputRadio name="RADIO_10" label="사용" defaultChecked />
                                     <InputRadio name="RADIO_10" label="미사용" />
+                                  </div> */}
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _select wdth-50">
+                                        <XDropdown appendTo={document.body} className="bind" />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
                                   </div>
                                 </td>
                               </tr>
