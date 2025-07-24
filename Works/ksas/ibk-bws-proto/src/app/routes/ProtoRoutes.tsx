@@ -65,6 +65,9 @@ import FMTCT1401M from 'app/pages/fmt/FMTCT1401M';      // 자금현수송 > 원
 import FMTCT1401P01 from 'app/pages/fmt/FMTCT1401P01';  // 자금현수송 > 원화현수송     > 타행현수송신청관리 ~ (LP)타행현수송신청
 // import FMTCT0801P02 from 'app/pages/fmt/FMTCT0801P02';  // 자금현수송 > 원화현수송    > 타행현수송신청관리 ~ (LP)불입결정
 
+import FMTFT0801M from 'app/pages/fmt/FMTFT0801M';      // 자금현수송 > 외화현수송     > 외국통화견양집
+import FMTFT0801P02 from 'app/pages/fmt/FMTFT0801P02';  // 자금현수송 > 외화현수송     > 외국통화견양집 ~ (LP)화폐이미지보기
+
 import FMTCC0301M from 'app/pages/fmt/FMTCC0301M';      // 자금현수송 > 원화정사      > 관련조회 및 출력
 import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역
 import FMTFC0101P01 from 'app/pages/fmt/FMTFC0101P01';  // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역 ~ (LP)위조및변조화폐신고서등록
@@ -656,8 +659,10 @@ function ProtoRoutes() {
         { path: 'FMTCT1101M',   element: <FMTCT1101M /> },
         { path: 'FMTCT1301M',   element: <FMTCT1301M /> },
         { path: 'FMTCT1401M',   element: <FMTCT1401M /> },
-
         { path: 'FMTCT1401P01', element: <FMTCT1401P01 /> },
+
+        { path: 'FMTFT0801M',   element: <FMTFT0801M /> },
+        { path: 'FMTFT0801P02', element: <FMTFT0801P02 /> },
 
         { path: 'FMTCC0101P01', element: <FMTCC0101P01 /> },
 

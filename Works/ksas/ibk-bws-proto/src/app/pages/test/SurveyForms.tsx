@@ -126,36 +126,64 @@ function SurveyForms() {
                       <li>
                         <div className="m-survey">
                           <div className="header">
-                            <div className="subject"></div>
+                            <div className="subject">시설관리</div>
+                            <div className="binds">
+                              <div className="m-checks">
+                                <InputRadio name="RADIO_10" label="예" />
+                                <InputRadio name="RADIO_10" label="아니오" />
+                              </div>
+                            </div>
                           </div>
                           <div className="bodies">
                             <ol>
                               <li>
                                 <fieldset className="o-survey">
                                   <div className="fields">
-                                    ddddddddddddd
-                                  </div>
-                                  <div className="description">
-                                    <div className="o-board type-b">
-                                      <div className="board-container">
-                                        <div className="m-header">
-                                          <strong className="o-heading"><span className="label">비밀</span></strong>
-                                        </div>
+                                    <div className="term">
+                                      <div className="question">차주 안전작업허가제 대상작업 실시 예정이 있습니까?</div>
 
-                                        <ul className="m-bullets type-disc">
-                                          <li>블라블라블라</li>
-                                        </ul>
+                                      <div className="answer">
+                                        <div className="m-checks">
+                                          <InputRadio name="RADIO_10" label="양호" />
+                                          <InputRadio name="RADIO_10" label="불량" />
+                                          <InputRadio name="RADIO_10" label="해당사항 없음" />
+                                        </div>
                                       </div>
-                                      <div className="board-container">
-                                        <div className="m-header">
-                                          <strong className="o-heading"><span className="label">비밀</span></strong>
+                                    </div>
+                                    <div className="desc">
+                                      <div className="o-board type-b">
+                                        <div className="board-container">
+                                          <ul className="m-bullets type-disc">
+                                            <li>블라블라블라</li>
+                                          </ul>
                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </li>
 
-                                        <dl className="m-bullets type-disc">
-                                          <dt><strong className="o-heading">비밀</strong></dt>
-                                          <dd>블라블라블라</dd>
-                                          <dd>블라블라블라</dd>
-                                        </dl>
+                              <li>
+                                <fieldset className="o-survey">
+                                  <div className="fields">
+                                    <div className="term">
+                                      <div className="question">차주 안전작업허가제 대상작업 실시 예정이 있습니까?</div>
+
+                                      <div className="answer">
+                                        <div className="m-checks">
+                                          <InputRadio name="RADIO_10" label="양호" />
+                                          <InputRadio name="RADIO_10" label="불량" />
+                                          <InputRadio name="RADIO_10" label="해당사항 없음" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="desc">
+                                      <div className="o-board type-b">
+                                        <div className="board-container">
+                                          <ul className="m-bullets type-disc">
+                                            <li>블라블라블라</li>
+                                          </ul>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>

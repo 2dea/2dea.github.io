@@ -7,3 +7,10 @@
 .m-shop >.m-shop-list  { flex: 1; }
 
 .m-shop  { flex: 1; }
+
+
+.m-survey  { border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
+.m-survey >:first-child  { border-start-start-radius: inherit; border-start-end-radius: inherit; }
+.m-survey >:last-child  { border-end-start-radius: inherit; border-end-end-radius: inherit; }
+
+.m-survey .header  { border-bottom: $e10 solid var(--color-edge-40); background: var(--color-ground2-blue-30); }
