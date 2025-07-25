@@ -126,7 +126,24 @@ function BSPRQ0101M() {
 
         {/* <!-- /* Contents { @DEV } --> */}
         <div className="div-contents">
+          <div className="m-shop">
+            <div className="m-shop-list">
+              <div className="container">
+              </div>
+            </div>
 
+            <div className="details">
+              <div className="m-shop-detail">
+                <div className="container">
+                </div>
+              </div>
+
+              <div className="m-shop-basket">
+                <div className="container">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
       </div>
