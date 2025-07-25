@@ -169,6 +169,20 @@ function FileUploads() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
+                            <Label label={`첨부파일 (단일)(다운로드)`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-string-binds">
+                              <span className="string o-file">
+                                <span className="name">업무분장관리</span>
+                                <span className="ext">.xlsx</span>
+                              </span>
+                              <span className="binds justify-end"><CommonButton label="파일다운" className="_normal" /></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
                             <Label label={`첨부파일 예`} require={true} />
                           </th>
                           <td colSpan={1}>

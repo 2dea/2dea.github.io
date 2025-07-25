@@ -116,7 +116,7 @@ function FMTCT1401M() {
             <div className="m-binds type-end">
               <div className="group _utility">
                 <div className="m-print-binds">
-                  <CommonButton label="임금표출력" className="_texted" />
+                  <CommonButton label="입금표출력" className="_texted" />
                   <CommonButton label="신청출력" className="_texted" />
                   <CommonButton label="출력" className="_texted" />
                 </div>
@@ -390,20 +390,12 @@ function FMTCT1401M() {
                                 <Label label={`첨부파일`} require={false} />
                               </th>
                               <td colSpan={1}>
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input is-file">
-                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                      <i aria-hidden="true"></i>
-                                      <span className="inner-binds">
-                                        <ImageButton label="초기화" icon="remove" />
-                                      </span>
-                                    </div>
-                                    <div className="binds">
-                                      <input type="file" className="overlay" />
-                                      <CommonButton label="파일선택" className="_normal" />
-                                    </div>
-                                  </div>
+                                <div className="m-string-binds">
+                                  <span className="string o-file">
+                                    <span className="name">업무분장관리</span>
+                                    <span className="ext">.xlsx</span>
+                                  </span>
+                                  <span className="binds justify-end"><CommonButton label="파일다운" className="_normal" /></span>
                                 </div>
                               </td>
 
@@ -426,7 +418,7 @@ function FMTCT1401M() {
                       </div>
                     </div>
 
-                    <div className="main _primary rows-body-5i">
+                    <div className="main _primary rows-body-3i">
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -558,7 +550,7 @@ function FMTCT1401M() {
                             <em className="main">내국환정리</em>
                           </a>
                         </Tab>
-                        {/*<Tab aria-label="진행 예정" disabled> 진행 예정 [disabled] { @DEV } */}
+                        {/* <Tab aria-label="진행 예정" disabled> */} {/* 진행 예정 [disabled] { @DEV } */}
                         <Tab aria-label="진행 단계">
                           <span className="order" aria-hidden="true">
                             <span className="prefix"></span>
@@ -733,6 +725,12 @@ function FMTCT1401M() {
                       <div className="o-section">
                         <div className="m-header">
                           <h4 className="o-heading level4"><span className="label">내국환취결</span></h4>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="웹단말 내국환취결" className="_solid-primary" />
+                            </div>
+                          </div>
                         </div>
 
                         <div className="main">
@@ -796,16 +794,12 @@ function FMTCT1401M() {
                 </TabPanel>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  {/* 03.도착시각등록 { @DEV } */}
+                  {/* 03.자금현송명령부등록 { @DEV } */}
                   <div className="o-grid">
                     <div className="column">
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">도착시각등록</span></h4>
-
-                          <div className="o-helper style-strong">
-                            <em className="label">현송직원도착 시 도착시간을 등록해주세요.</em>
-                          </div>
+                          <h4 className="o-heading level4"><span className="label">자금현송명령부등록</span></h4>
 
                           <div className="m-binds">
                             <div className="group">
@@ -898,7 +892,14 @@ function FMTCT1401M() {
                                     <Label label={`출발시각`} require={false} />
                                   </th>
                                   <td colSpan={1}>
-                                    <span className="o-digit type-time">00:00</span>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input type-time mode-required wdth-30">
+                                          <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                          <i aria-hidden="true"></i>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </td>
                                   <th colSpan={1}>
                                     <Label label={`도착시각`} require={true} />
@@ -922,8 +923,8 @@ function FMTCT1401M() {
                                   <td colSpan={7}>
                                     <div className="o-field">
                                       <div className="fields">
-                                        <div className="o-form _input wdth-80">
-                                          <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <div className="o-form _input">
+                                          <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                                           <i aria-hidden="true"></i>
                                         </div>
                                       </div>

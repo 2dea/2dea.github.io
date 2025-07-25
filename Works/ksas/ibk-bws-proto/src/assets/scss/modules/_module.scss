@@ -1904,6 +1904,8 @@
 
 
 .m-string-binds  { display: flex; align-items: center; gap: $gap-element-30; }
+.m-string-binds >*  { flex: none; min-width: 0; }
+.m-string-binds >.string  { flex: 0 1 auto; }
 .m-string-binds .binds  { display: flex; align-items: center; gap: $gap-element-30; }
 .m-string-binds .justify-end  { margin-left: auto; }
 
