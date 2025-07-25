@@ -352,7 +352,7 @@ function FMTCT0701M() {
                                     <td>홍길동</td>
                                     <td>홍길동</td>
                                     <td>홍길동</td>
-                                    <td>결제요청</td>
+                                    <td>결재요청</td>
                                     <td className="g-start"></td>
                                   </tr>
                                 </>
@@ -584,7 +584,7 @@ function FMTCT0701M() {
                                     <td>홍길동</td>
                                     <td>홍길동</td>
                                     <td>홍길동</td>
-                                    <td>결제요청</td>
+                                    <td>결재요청</td>
                                     <td className="g-start"></td>
                                   </tr>
                                 </>

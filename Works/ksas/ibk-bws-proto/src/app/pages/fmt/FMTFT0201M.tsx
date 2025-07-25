@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 원화현수송 > 지점간 원화현수송신청관리
+ * @description 자금현수송 > 외화현수송 > 외화현수송신청관리
  */
 
 // dependency
@@ -36,12 +36,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTCT0801M() {
+function FMTFT0201M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화현수송' }, { label: '지점간 원화현수송신청관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '외화현수송' }, { label: '외화현수송신청관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function FMTCT0801M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">지점간 원화현수송신청관리</span>
+                <span className="label">외화현수송신청관리</span>
 
                 <FavoriteDiv />
               </h1>
@@ -117,31 +117,13 @@ function FMTCT0801M() {
               <div className="group _utility">
                 <div className="m-print-binds">
                   <CommonButton label="자금현송명령부출력" className="_texted" />
-                  <CommonButton label="자금청구서출력" className="_texted" />
+                  <CommonButton label="송부서출력" className="_texted" />
+                  <CommonButton label="신청출력" className="_texted" />
                 </div>
               </div>
 
               <div className="group _primary">
-                <CommonButton label="자금신청취소" className="_lined-primary" />
-                <CommonButton label="자금신청" className="_solid-primary _approve" />
-
-              </div>
-            </div>
-
-            {/* Step 2. 상대부점 결정내역 { @DEV } */}
-            <div className="m-binds type-end">
-              <div className="group _utility">
-                <div className="m-print-binds">
-                  <CommonButton label="자금현송명령부출력" className="_texted" />
-                  <CommonButton label="자금청구서출력" className="_texted" />
-                </div>
-              </div>
-
-              <div className="group _primary">
-                <CommonButton label="불입거절" className="_lined-primary" />
-                <CommonButton label="불입결정" className="_solid-primary" />
-                <CommonButton label="자금신청취소" className="_lined-primary" />
-                <CommonButton label="자금신청" className="_solid-primary _approve" />
+                <CommonButton label="취소" className="_cancel" />
               </div>
             </div>
 
@@ -181,7 +163,7 @@ function FMTCT0801M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`부점`} require={false} />
+                    <Label label={`신청부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} readOnly />
@@ -189,6 +171,26 @@ function FMTCT0801M() {
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
                         </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`관할업무센터`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`신청구분`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
@@ -222,19 +224,7 @@ function FMTCT0801M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">지점간 원화현수송 내역</span></h2>
-
-                  <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
-                    </em>
-                  </div>
-
-                  <div className="o-legend type-unit style-normal">
-                    <em className="label">(단위: 원)</em>
-                  </div>
+                  <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
 
                   <div className="m-binds">
                     <div className="group">
@@ -273,6 +263,15 @@ function FMTCT0801M() {
                           <col />
                           <col />
                           <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -281,37 +280,44 @@ function FMTCT0801M() {
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청시각</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요청일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화별 총 금액</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송요청일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청결재승인일시</span></div></th>
+                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재단계</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">처리상태</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정부점</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정일시</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정자</span></div></th>
+                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무센터결정일시</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무센터결정자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">불입 결정일시</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">불입 결정자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">명령부상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">취결</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정리</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송업체</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청시 별도승인</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청시 별도승인 내용</span></div></th>
+                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관할업무센터</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점 명령부</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정부점 명령부</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점명령부</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무센터명령부</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={22}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={31}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -324,23 +330,34 @@ function FMTCT0801M() {
                                 <td className="g-start">을지로</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td><span className="o-digit type-datetime">09:10:59</span></td>
-                                <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td>청구</td>
-                                <td>결정대기</td>
+                                <td>
+                                  USD(미국 달러): 10,000 EUR(유럽연합 유로): 16,000 JPY(일본 엔): 3,000
+                                </td>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+                                <td>결재승인(팀장)</td>
+                                <td><CommonButton label="취소" className="_normal" /></td>
+                                <td>업무센터결정</td>
                                 <td>012345</td>
                                 <td>홍길동</td>
-                                <td>0025</td>
-                                <td className="g-start">을지로</td>
+                                <td><CommonButton label="통화" className="_normal" /></td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>012345</td>
                                 <td>홍길동</td>
-                                <td>작성대기</td>
+                                <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
+                                <td>012345</td>
+                                <td>홍길동</td>
+                                <td>결재승인</td>
                                 <td>결재승인</td>
                                 <td>N</td>
                                 <td>Y</td>
+                                <td>2노선</td>
                                 <td className="g-start">(주)앤비앤코퍼레이션</td>
                                 <td className="g-start">부재(외부영업 등)</td>
-                                <td className="g-start"></td>
+                                <td className="g-start">별도승인 내용</td>
+                                <td>0810</td>
+                                <td className="g-start">프로세스혁신부</td>
                               </tr>
                             </>
                           ))}
@@ -357,9 +374,10 @@ function FMTCT0801M() {
           <Tabs className="m-tabs react-tabs" defaultIndex={0}>
             <div className="m-tab type2 type-step">
               <TabList className="lists">
-                <Tab className="link"><span className="label">Step 1. 신청내역</span></Tab>
-                <Tab className="link"><span className="label">Step 2. 상대부점 결정내역</span></Tab>
-                <Tab className="link"><span className="label">Step 3. 현송원 방문(자금현송명령부)</span></Tab>
+                <Tab className="link"><span className="label">Step 1. 영업점 신청내역</span></Tab>
+                <Tab className="link"><span className="label">Step 2. 업무센터 결정내역</span></Tab>
+                <Tab className="link"><span className="label">Step 3. 불입 결정내역</span></Tab>
+                <Tab className="link"><span className="label">Step 4. 현송원 방문(자금현송명령부)</span></Tab>
               </TabList>
             </div>
 
@@ -379,7 +397,7 @@ function FMTCT0801M() {
                           <tbody>
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`현송원 예외사항`} require={false} />
+                                <Label label={`비고`} require={false} />
                               </th>
                               <td colSpan={1}></td>
                             </tr>
@@ -477,7 +495,7 @@ function FMTCT0801M() {
                                 <td colSpan={1} className="sumtotal-tcell">합계</td>
                                 <td className="sumtotal-tcell"></td>
                                 <td className="sumtotal-tcell g-end"></td>
-                                <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액</td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액(원)</td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                               </tr>
                             </tfoot>
@@ -502,21 +520,14 @@ function FMTCT0801M() {
                           <colgroup>
                             <col className="head" />
                             <col className="data" />
-                            <col className="head" />
-                            <col className="data" />
                           </colgroup>
 
                           <tbody>
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`상대부점 결정여부`} require={false} />
+                                <Label label={`업무센터결정여부`} require={false} />
                               </th>
                               <td colSpan={1}>N</td>
-
-                              <th colSpan={1}>
-                                <Label label={`현송원 예외사항`} require={false} />
-                              </th>
-                              <td colSpan={1}></td>
                             </tr>
                           </tbody>
                         </table>
@@ -565,7 +576,7 @@ function FMTCT0801M() {
                               <tr>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                 <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청액</span></div></th>
-                                <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액</span></div></th>
+                                <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액(업무센터)</span></div></th>
                               </tr>
                               <tr>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
@@ -629,11 +640,178 @@ function FMTCT0801M() {
                               <tr className="sumtotal-trow">
                                 <td colSpan={1} className="sumtotal-tcell">합계</td>
                                 <td className="sumtotal-tcell"></td>
-                                <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액</td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액(원)</td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                                 <td className="sumtotal-tcell"></td>
-                                <td className="sumtotal-tcell sumtotal-tcell-strong">결정금액</td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong">결정금액(원)</td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </TabPanel>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h3 className="o-heading level3"><span className="label">불입결정 등록</span></h3>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <CommonButton label="영업점불입결정" className="_solid-primary" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main">
+                      <form className="m-data-form">
+                        <table className="table">
+                          <colgroup>
+                            <col className="head" />
+                            <col className="data" />
+                            <col className="head" />
+                            <col className="data" />
+                          </colgroup>
+
+                          <tbody>
+                            <tr>
+                              <th colSpan={1}>
+                                <Label label={`불입결정여부`} require={false} />
+                              </th>
+                              <td colSpan={1}>N</td>
+
+                              <th colSpan={1}>
+                                <Label label={`비고`} require={false} />
+                              </th>
+                              <td colSpan={1}></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-body-3i">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="table-container p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col className="wdth-10" />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                                <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청액</span></div></th>
+                                <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액(영업점)</span></div></th>
+                              </tr>
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
+                              <tr className="p-datatable-emptymessage">
+                                <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                              {[...Array(24)].map((e, idx) => (
+                                <>
+                                  {
+                                    (idx - 3) % 3 === 0 &&
+                                    <tr className="p-rowgroup-header">
+                                      <td colSpan={9} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                    </tr>
+                                  }
+                                  <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
+                                    <td>{idx + 1}</td>
+                                    <td className="p-x-cell-span">
+                                      {
+                                        (idx) % 3 === 0 &&
+                                        <>KOR(한국 원)</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                      }
+                                    </td>
+                                    <td>10000</td>
+                                    <td className="g-end">20,000</td>
+                                    <td className="g-end">400,000</td>
+                                    <td className="p-x-cell-span">
+                                      {
+                                        (idx) % 3 === 0 &&
+                                        <>KOR(한국 원)</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                      }
+                                    </td>
+                                    <td>10000</td>
+                                    <td className="g-end">20,000</td>
+                                    <td className="g-end">400,000</td>
+                                  </tr>
+                                  {
+                                    (idx - 2) % 3 === 0 &&
+                                    <tr className="p-rowgroup-footer">
+                                      <td colSpan={9} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                    </tr>
+                                  }
+                                </>
+                              ))}
+                            </tbody>
+
+                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                              <tr className="sumtotal-trow">
+                                <td colSpan={1} className="sumtotal-tcell">합계</td>
+                                <td className="sumtotal-tcell"></td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액(원)</td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
+                                <td className="sumtotal-tcell"></td>
+                                <td className="sumtotal-tcell sumtotal-tcell-strong">결정금액(원)</td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                               </tr>
@@ -662,7 +840,7 @@ function FMTCT0801M() {
                             <span className="suffix">단계. </span>
                           </span>
                           <a href="javascript:" className="label">
-                            <em className="main">현송직원확인(결점부점)</em>
+                            <em className="main">현송직원확인</em>
                           </a>
                         </Tab>
                         <Tab aria-label="진행 완료">
@@ -672,7 +850,7 @@ function FMTCT0801M() {
                             <span className="suffix">단계. </span>
                           </span>
                           <a href="javascript:" className="label">
-                            <em className="main">내국환취결(결점부점)</em>
+                            <em className="main">외국환취결</em>
                           </a>
                         </Tab>
                         <Tab aria-label="진행 단계">
@@ -682,9 +860,10 @@ function FMTCT0801M() {
                             <span className="suffix">단계. </span>
                           </span>
                           <a href="javascript:" className="label">
-                            <em className="main">출발시각(결점부점)</em>
+                            <em className="main">출발시각등록</em>
                           </a>
                         </Tab>
+                        {/* <Tab aria-label="진행 예정" disabled> */}{/* 진행 예정 [disabled] { @DEV } */}
                         <Tab aria-label="진행 단계">
                           <span className="order" aria-hidden="true">
                             <span className="prefix"></span>
@@ -692,17 +871,7 @@ function FMTCT0801M() {
                             <span className="suffix">단계. </span>
                           </span>
                           <a href="javascript:" className="label">
-                            <em className="main">내국환정리(신청부점)</em>
-                          </a>
-                        </Tab>
-                        <Tab aria-label="진행 예정" disabled>{/* 진행 예정 [disabled] { @DEV } */}
-                          <span className="order" aria-hidden="true">
-                            <span className="prefix"></span>
-                            <span className="count">5</span>
-                            <span className="suffix">단계. </span>
-                          </span>
-                          <a href="javascript:" className="label">
-                            <em className="main">도착시각(신청부점)</em>
+                            <em className="main">도착시각(업무센터)</em>
                           </a>
                         </Tab>
                       </TabList>
@@ -711,13 +880,19 @@ function FMTCT0801M() {
                 </div>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  {/* 01.현송직원확인(결점부점) { @DEV } */}
+                  {/* 01. 단계. 현송직원확인 { @DEV } */}
                   <div className="o-grid">
                     <div className="column">
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">현송직원확인(결점부점)</span></h4>
+                          <h4 className="o-heading level4"><span className="label">현송직원확인</span></h4>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="현송직원확인" className="_solid-primary" />
+                            </div>
+                          </div>
                         </div>
 
                         <div className="main">
@@ -856,19 +1031,47 @@ function FMTCT0801M() {
                 </TabPanel>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  {/* 02.출발시각(업무센터) { @DEV } */}
+                  {/* 02.단계. 외국환취결 { @DEV } */}
                   <div className="o-grid">
                     <div className="column">
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">내국환취결(결정부점)</span></h4>
+                          <h4 className="o-heading level4"><span className="label">외국환취결</span></h4>
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="웹단말 내국환정리" className="_solid-primary" />
+                              <CommonButton label="웹단말 외국환취결" className="_solid-primary" />
                             </div>
                           </div>
+                        </div>
+
+                        <div className="main">
+                          <form className="m-data-form">
+                            <table className="table">
+                              <colgroup>
+                                <col className="head" />
+                                <col className="data" />
+                              </colgroup>
+
+                              <tbody>
+                                <tr>
+                                  <th colSpan={1}>
+                                    <Label label={`진행상태`} require={false} />
+                                  </th>
+                                  <td colSpan={1}>
+                                    <span className="o-status-text style-inherit type-20">미처리</span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </form>
+                        </div>
+                      </div>
+
+                      <div className="o-section">
+                        <div className="m-header">
+                          <h4 className="o-heading level4"><span className="label">외국환정리(업무센터)</span></h4>
                         </div>
 
                         <div className="main">
@@ -899,22 +1102,18 @@ function FMTCT0801M() {
                 </TabPanel>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  {/* 03.단계. 출발시각(결점부점) { @DEV } */}
+                  {/* 03.단계. 출발시각등록 { @DEV } */}
                   <div className="o-grid">
                     <div className="column">
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h3 className="o-heading level3"><span className="label">출발시각(결점부점)</span></h3>
-
-                          <div className="o-helper style-strong">
-                            <em className="label">현송직원출발 시 출발시각을 등록해주세요.</em>
-                          </div>
+                          <h3 className="o-heading level3"><span className="label">출발시각등록</span></h3>
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="수정결재요청" className="_solid-primary _approve" />
-                              <CommonButton label="결재요청" className="_solid-primary _approve" />
+                              <CommonButton label="수정결재요청" className="_solid-primary" />
+                              <CommonButton label="결재요청" className="_solid-primary" />
                             </div>
                           </div>
                         </div>
@@ -985,12 +1184,6 @@ function FMTCT0801M() {
                                 </tr>
 
                                 <tr>
-                                  <th colSpan={1}>
-                                    <Label label={`금액`} require={false} />
-                                  </th>
-                                  <td colSpan={1} className="g-end">
-                                    30,000,000
-                                  </td>
                                   <th colSpan={1}>
                                     <Label label={`현송일자`} require={true} />
                                   </th>
@@ -1020,8 +1213,23 @@ function FMTCT0801M() {
                                   <th colSpan={1}>
                                     <Label label={`도착시각`} require={false} />
                                   </th>
-                                  <td colSpan={1}>
+                                  <td colSpan={3}>
 
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <th colSpan={1}>
+                                    <Label label={`통화별 총 금액`} require={false} />
+                                  </th>
+                                  <td colSpan={7}>
+                                    <div className="o-field">
+                                      <div className="fields">
+                                        <div className="o-form _input">
+                                          <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        </div>
+                                      </div>
+                                    </div>
                                   </td>
                                 </tr>
 
@@ -1051,67 +1259,13 @@ function FMTCT0801M() {
                 </TabPanel>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  {/* 04.단계. 내국환정리(신청부점) { @DEV } */}
+                  {/* 04.단계. 도착시각(업무센터) { @DEV } */}
                   <div className="o-grid">
                     <div className="column">
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">내국환정리(신청부점)</span></h4>
-
-                          <div className="m-binds">
-                            <div className="group">
-                              <CommonButton label="웹단말 내국환정리" className="_solid-primary" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="main">
-                          <form className="m-data-form">
-                            <table className="table">
-                              <colgroup>
-                                <col className="head" />
-                                <col className="data" />
-                              </colgroup>
-
-                              <tbody>
-                                <tr>
-                                  <th colSpan={1}>
-                                    <Label label={`진행상태`} require={false} />
-                                  </th>
-                                  <td colSpan={1}>
-                                    <span className="o-status-text style-inherit type-20">미처리</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </TabPanel>
-
-                <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  {/* 05.단계. 도착시각(신청부점) { @DEV } */}
-                  <div className="o-grid">
-                    <div className="column">
-
-                      <div className="o-section">
-                        <div className="m-header">
-                          <h3 className="o-heading level3"><span className="label">도착시각(신청부점)</span></h3>
-
-                          <div className="o-helper style-strong">
-                            <em className="label">현송직원도착 시 도착시각을 등록해주세요.</em>
-                          </div>
-
-                          <div className="m-binds">
-                            <div className="group">
-                              <CommonButton label="수정결재요청" className="_solid-primary _approve" />
-                              <CommonButton label="결재요청" className="_solid-primary _approve" />
-                            </div>
-                          </div>
+                          <h4 className="o-heading level4"><span className="label">도착시각(업무센터)</span></h4>
                         </div>
 
                         <div className="main">
@@ -1181,12 +1335,6 @@ function FMTCT0801M() {
 
                                 <tr>
                                   <th colSpan={1}>
-                                    <Label label={`금액`} require={false} />
-                                  </th>
-                                  <td colSpan={1} className="g-end">
-                                    30,000,000
-                                  </td>
-                                  <th colSpan={1}>
                                     <Label label={`현송일자`} require={false} />
                                   </th>
                                   <td colSpan={1}>
@@ -1199,33 +1347,19 @@ function FMTCT0801M() {
                                     <span className="o-digit type-time">00:00</span>
                                   </td>
                                   <th colSpan={1}>
-                                    <Label label={`도착시각`} require={true} />
+                                    <Label label={`도착시각`} require={false} />
                                   </th>
-                                  <td colSpan={1}>
-                                    <div className="o-field">
-                                      <div className="fields">
-                                        <div className="o-form _input type-time mode-required wdth-30">
-                                          <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
-                                          <i aria-hidden="true"></i>
-                                        </div>
-                                      </div>
-                                    </div>
+                                  <td colSpan={3}>
+                                    <span className="o-digit type-time">00:00</span>
                                   </td>
                                 </tr>
 
                                 <tr>
                                   <th colSpan={1}>
-                                    <Label label={`비고`} require={false} />
+                                    <Label label={`통화별 총 금액`} require={false} />
                                   </th>
                                   <td colSpan={7}>
-                                    <div className="o-field">
-                                      <div className="fields">
-                                        <div className="o-form _input">
-                                          <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
-                                          <i aria-hidden="true"></i>
-                                        </div>
-                                      </div>
-                                    </div>
+                                    USD(미국 달러): 10,000 EUR(유럽연합 유로): 16,000 JPY(일본 엔): 3,000
                                   </td>
                                 </tr>
                               </tbody>
@@ -1237,6 +1371,7 @@ function FMTCT0801M() {
                     </div>
                   </div>
                 </TabPanel>
+
               </Tabs>
 
             </TabPanel>
@@ -1249,4 +1384,4 @@ function FMTCT0801M() {
   );
 }
 
-export default FMTCT0801M;
+export default FMTFT0201M;

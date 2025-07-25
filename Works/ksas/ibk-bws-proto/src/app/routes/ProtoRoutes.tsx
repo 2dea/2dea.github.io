@@ -65,9 +65,16 @@ import FMTCT1401M from 'app/pages/fmt/FMTCT1401M';      // 자금현수송 > 원
 import FMTCT1401P01 from 'app/pages/fmt/FMTCT1401P01';  // 자금현수송 > 원화현수송     > 타행현수송신청관리 ~ (LP)타행현수송신청
 
 import FMTFT0101M from 'app/pages/fmt/FMTFT0101M';      // 자금현수송 > 외화현수송     > 외화현수송신청
+import FMTFT0201M from 'app/pages/fmt/FMTFT0201M';      // 자금현수송 > 외화현수송     > 외화현수송신청관리
+import FMTFT0201P01 from 'app/pages/fmt/FMTFT0201P01';  // 자금현수송 > 외화현수송     > 외화현수송신청관리 ~ (LP)영업점불입결정
+import FMTFT0201P03 from 'app/pages/fmt/FMTFT0201P03';  // 자금현수송 > 외화현수송     > 외화현수송신청관리 ~ (LP)일괄송부서출력
+
+import FMTFT1201M from 'app/pages/fmt/FMTFT1201M';      // 자금현수송 > 외화현수송     > 외화현수송신청관리(업무센터)
+import FMTFT1201P01 from 'app/pages/fmt/FMTFT1201P01';  // 자금현수송 > 외화현수송     > 외화현수송신청관리(업무센터) ~ (LP)업무센터결정
 
 import FMTFT0801M from 'app/pages/fmt/FMTFT0801M';      // 자금현수송 > 외화현수송     > 외국통화견양집
 import FMTFT0801P02 from 'app/pages/fmt/FMTFT0801P02';  // 자금현수송 > 외화현수송     > 외국통화견양집 ~ (LP)화폐이미지보기
+
 
 import FMTCC0301M from 'app/pages/fmt/FMTCC0301M';      // 자금현수송 > 원화정사      > 관련조회 및 출력
 import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역
@@ -663,6 +670,12 @@ function ProtoRoutes() {
         { path: 'FMTCT1401P01', element: <FMTCT1401P01 /> },
 
         { path: 'FMTFT0101M',   element: <FMTFT0101M /> },
+        { path: 'FMTFT0201M',   element: <FMTFT0201M /> },
+        { path: 'FMTFT0201P01', element: <FMTFT0201P01 /> },
+        { path: 'FMTFT0201P03', element: <FMTFT0201P03 /> },
+
+        { path: 'FMTFT1201M',   element: <FMTFT1201M /> },
+        { path: 'FMTFT1201P01', element: <FMTFT1201P01 /> },
 
         { path: 'FMTFT0801M',   element: <FMTFT0801M /> },
         { path: 'FMTFT0801P02', element: <FMTFT0801P02 /> },

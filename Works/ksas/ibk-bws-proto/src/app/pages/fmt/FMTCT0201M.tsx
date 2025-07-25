@@ -358,7 +358,7 @@ function FMTCT0201M() {
                                 <td className="g-end">9,999</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
-                                <td>결제승인(팀장)</td>
+                                <td>결재승인(팀장)</td>
                                 <td><CommonButton label="취소" className="_normal" /></td>
                                 <td>업무센터결정</td>
                                 <td>012345</td>
@@ -370,8 +370,8 @@ function FMTCT0201M() {
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>012345</td>
                                 <td>홍길동</td>
-                                <td>결제승인</td>
-                                <td>결제승인</td>
+                                <td>결재승인</td>
+                                <td>결재승인</td>
                                 <td>N</td>
                                 <td>Y</td>
                                 <td>2노선</td>
@@ -440,7 +440,7 @@ function FMTCT0201M() {
                       </div>
                     </div>
 
-                    <div className="main _primary rows-body-5i">
+                    <div className="main _primary rows-body-3i">
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -585,7 +585,7 @@ function FMTCT0201M() {
                       </div>
                     </div>
 
-                    <div className="main _primary rows-body-5i">
+                    <div className="main _primary rows-body-3i">
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
