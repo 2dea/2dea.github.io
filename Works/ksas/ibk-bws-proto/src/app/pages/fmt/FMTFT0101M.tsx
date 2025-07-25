@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 원화현수송 > 원화현수송신청
+ * @description 자금현수송 > 원화현수송 > 외화현수송신청
  */
 
 // dependency
@@ -36,12 +36,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTCT0101M() {
+function FMTFT0101M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화현수송' }, { label: '원화현수송신청' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화현수송' }, { label: '외화현수송신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function FMTCT0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">원화현수송신청</span>
+                <span className="label">외화현수송신청</span>
 
                 <FavoriteDiv />
               </h1>
@@ -405,4 +405,4 @@ function FMTCT0101M() {
   );
 }
 
-export default FMTCT0101M;
+export default FMTFT0101M;

@@ -63,7 +63,8 @@ import FMTCT1301M from 'app/pages/fmt/FMTCT1301M';      // 자금현수송 > 원
 
 import FMTCT1401M from 'app/pages/fmt/FMTCT1401M';      // 자금현수송 > 원화현수송     > 타행현수송신청관리
 import FMTCT1401P01 from 'app/pages/fmt/FMTCT1401P01';  // 자금현수송 > 원화현수송     > 타행현수송신청관리 ~ (LP)타행현수송신청
-// import FMTCT0801P02 from 'app/pages/fmt/FMTCT0801P02';  // 자금현수송 > 원화현수송    > 타행현수송신청관리 ~ (LP)불입결정
+
+import FMTFT0101M from 'app/pages/fmt/FMTFT0101M';      // 자금현수송 > 외화현수송     > 외화현수송신청
 
 import FMTFT0801M from 'app/pages/fmt/FMTFT0801M';      // 자금현수송 > 외화현수송     > 외국통화견양집
 import FMTFT0801P02 from 'app/pages/fmt/FMTFT0801P02';  // 자금현수송 > 외화현수송     > 외국통화견양집 ~ (LP)화폐이미지보기
@@ -660,6 +661,8 @@ function ProtoRoutes() {
         { path: 'FMTCT1301M',   element: <FMTCT1301M /> },
         { path: 'FMTCT1401M',   element: <FMTCT1401M /> },
         { path: 'FMTCT1401P01', element: <FMTCT1401P01 /> },
+
+        { path: 'FMTFT0101M',   element: <FMTFT0101M /> },
 
         { path: 'FMTFT0801M',   element: <FMTFT0801M /> },
         { path: 'FMTFT0801P02', element: <FMTFT0801P02 /> },

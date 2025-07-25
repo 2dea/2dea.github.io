@@ -107,6 +107,9 @@ function DEX() {
       2025/07/15 화
       FEMDA0101M
 
+
+      팝업에는 결재   _approval 아님 7/24 목 기억하기!
+
       <>blueline
 
 

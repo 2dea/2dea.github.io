@@ -695,7 +695,7 @@ function FMTCT0801M() {
                             <em className="main">내국환정리(신청부점)</em>
                           </a>
                         </Tab>
-                        <Tab aria-label="진행 예정">{/* 진행 예정 [disabled] { @DEV } */}
+                        <Tab aria-label="진행 예정" disabled>{/* 진행 예정 [disabled] { @DEV } */}
                           <span className="order" aria-hidden="true">
                             <span className="prefix"></span>
                             <span className="count">5</span>
