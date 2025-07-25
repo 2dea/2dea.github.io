@@ -109,6 +109,49 @@ function CMP001502P() {
 
               <div className="o-section">
                 <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="거래바로가기" className="_normal" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`제목`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            중요용지인수 취소
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`화면경로`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            중요용지용도품(영업점) &gt; 인수도 &gt; 중요용지인수
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
                   <h4 className="o-heading level2"><span className="label">결재상세내역</span></h4>
 
                   <div className="o-length">
@@ -218,6 +261,15 @@ function CMP001502P() {
                                 <div className="o-form _input mode-required">
                                   <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                                   <i aria-hidden="true"></i>
+
+                                  <div className="o-limit type-length">
+                                    <span className="head">글자수</span>
+                                    <span className="data">
+                                      <em className="value">0</em>
+                                      <span className="sep">/</span>
+                                      <span className="limits" aria-label="입력가능 글자수">100</span>
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                             </div>

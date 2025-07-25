@@ -343,9 +343,6 @@ function BSPDU0601M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청번호</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                                <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발생일자</span></div></th>
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
@@ -358,7 +355,7 @@ function BSPDU0601M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -370,12 +367,6 @@ function BSPDU0601M() {
                                 <td>046000005</td>
                                 <td>0022</td>
                                 <td className="g-start">종로6가</td>
-                                <td>0022</td>
-                                <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                                <td>다가</td>
-                                <td>221868620</td>
-                                <td>~</td>
-                                <td>221868620</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td>10000</td>
                                 <td>홍길동</td>
