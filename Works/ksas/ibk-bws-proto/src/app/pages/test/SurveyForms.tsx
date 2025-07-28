@@ -126,11 +126,14 @@ function SurveyForms() {
                       <li>
                         <div className="m-survey">
                           <div className="header">
-                            <div className="subject">시설관리</div>
+                            <div className="subject">
+                              <span className="order"><span className="count"></span></span>
+                              <span className="label">시설관리</span>
+                            </div>
                             <div className="binds">
                               <div className="m-checks">
-                                <InputRadio name="RADIO_10" label="예" />
-                                <InputRadio name="RADIO_10" label="아니오" />
+                                <InputRadio name="RADIO:S_010" label="예" />
+                                <InputRadio name="RADIO:S_010" label="아니오" />
                               </div>
                             </div>
                           </div>
@@ -140,13 +143,16 @@ function SurveyForms() {
                                 <fieldset className="o-survey">
                                   <div className="fields">
                                     <div className="term">
-                                      <div className="question">차주 안전작업허가제 대상작업 실시 예정이 있습니까?</div>
+                                      <div className="question">
+                                        <span className="order"><span className="count"></span></span>
+                                        <span className="label">블라블라블라?</span>
+                                      </div>
 
                                       <div className="answer">
                                         <div className="m-checks">
-                                          <InputRadio name="RADIO_10" label="양호" />
-                                          <InputRadio name="RADIO_10" label="불량" />
-                                          <InputRadio name="RADIO_10" label="해당사항 없음" />
+                                          <InputRadio name="RADIO:S_010" label="양호" />
+                                          <InputRadio name="RADIO:S_010" label="불량" />
+                                          <InputRadio name="RADIO:S_010" label="해당사항 없음" />
                                         </div>
                                       </div>
                                     </div>
@@ -164,16 +170,185 @@ function SurveyForms() {
                               </li>
 
                               <li>
-                                <fieldset className="o-survey">
+                                <fieldset className="o-survey" disabled>
                                   <div className="fields">
                                     <div className="term">
-                                      <div className="question">차주 안전작업허가제 대상작업 실시 예정이 있습니까?</div>
+                                      <div className="question">
+                                        <span className="order"><span className="count"></span></span>
+                                        <span className="label">블라블라블라?</span>
+                                      </div>
 
                                       <div className="answer">
                                         <div className="m-checks">
-                                          <InputRadio name="RADIO_10" label="양호" />
-                                          <InputRadio name="RADIO_10" label="불량" />
-                                          <InputRadio name="RADIO_10" label="해당사항 없음" />
+                                          <InputRadio name="RADIO:S_010" label="양호" />
+                                          <InputRadio name="RADIO:S_010" label="불량" />
+                                          <InputRadio name="RADIO:S_010" label="해당사항 없음" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="desc">
+                                      <div className="o-board type-b">
+                                        <div className="board-container">
+                                          <ul className="m-bullets type-disc">
+                                            <li>블라블라블라</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </li>
+
+                              <li>
+                                <fieldset className="o-survey" disabled>
+                                  <div className="caption">
+                                    <strong className="c-color-strong">안전작업허가제 대상작업(고소작업, 밀폐공간출입작업) 착수 여부 사전공유</strong>
+                                  </div>
+                                  <div className="fields">
+                                    <div className="term">
+                                      <div className="question">
+                                        <span className="order"><span className="count"></span></span>
+                                        <span className="label">차주 안전작업허가제 대상작업 실시 예정이 있습니까?</span>
+                                      </div>
+
+                                      <div className="answer">
+                                        <div className="m-checks">
+                                          <InputRadio name="RADIO:S_010" label="예" />
+                                          <InputRadio name="RADIO:S_010" label="아니오" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="desc">
+                                      <div className="o-board type-b">
+                                        <div className="board-container">
+                                          <ul className="m-bullets type-disc">
+                                            <li>고소작업 : 외벽 청소, 외벽 현수막 설치, 선큰 조형물 청소 등</li>
+                                            <li>밀폐공간출입작업 : 저수조 청소, 정화조 청소, 집수정 청소, 물탱크 청소 등</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </li>
+
+                              <li>
+                                <fieldset className="o-survey" disabled>
+                                  <div className="fields">
+                                    <div className="term">
+                                      <div className="question">
+                                        <span className="order"><span className="count"></span></span>
+                                        <span className="label">차주 예정되어 있는 안전작업허가제 대상작업의 실시장소 및 작업명을 입력해주세요.</span>
+                                      </div>
+
+                                      <div className="answer">
+                                        <div className="o-field">
+                                          <div className="fields">
+                                            <div className="o-form _input">
+                                              <InputTextarea placeholder="예시) 본점 지하-저수조 청소" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
+                                              <i aria-hidden="true"></i>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </li>
+
+                              <li>
+                                <fieldset className="o-survey" disabled>
+                                  <div className="fields">
+                                    <div className="term">
+                                      <div className="question">
+                                        <span className="order"><span className="count"></span></span>
+                                        <span className="label">차주 예정되어 있는 안전작업허가제 대상작업의 실시일정을 입력해주세요.</span>
+                                      </div>
+
+                                      <div className="answer">
+                                        <div className="o-field">
+                                          <div className="fields">
+                                            <div className="o-form _input type-date wdth-50">
+                                              <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                              <i aria-hidden="true"></i>
+                                            </div>
+                                            <span className="seps type-tilde">~</span>
+                                            <div className="o-form _input type-date wdth-50">
+                                              <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                              <i aria-hidden="true"></i>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div className="m-survey">
+                          <div className="header">
+                            <div className="subject">
+                              <span className="order"><span className="count"></span></span>
+                              <span className="label">긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목긴제목</span>
+                            </div>
+                            <div className="binds">
+                              <div className="m-checks">
+                                <InputRadio name="RADIO:S_010" label="예" />
+                                <InputRadio name="RADIO:S_010" label="아니오" />
+                              </div>
+                            </div>
+                          </div>
+                          <div className="bodies">
+                            <ol>
+                              <li>
+                                <fieldset className="o-survey">
+                                  <div className="fields">
+                                    <div className="term">
+                                      <div className="question">
+                                        <span className="order"><span className="count"></span></span>
+                                        <span className="label">블라블라블라?</span>
+                                      </div>
+
+                                      <div className="answer">
+                                        <div className="m-checks">
+                                          <InputRadio name="RADIO:S_010" label="양호" />
+                                          <InputRadio name="RADIO:S_010" label="불량" />
+                                          <InputRadio name="RADIO:S_010" label="해당사항 없음" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="desc">
+                                      <div className="o-board type-b">
+                                        <div className="board-container">
+                                          <ul className="m-bullets type-disc">
+                                            <li>블라블라블라</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </li>
+
+                              <li>
+                                <fieldset className="o-survey" disabled>
+                                  <div className="fields">
+                                    <div className="term">
+                                      <div className="question">
+                                        <span className="order"><span className="count"></span></span>
+                                        <span className="label">블라블라블라?</span>
+                                      </div>
+
+                                      <div className="answer">
+                                        <div className="m-checks">
+                                          <InputRadio name="RADIO:S_010" label="양호" />
+                                          <InputRadio name="RADIO:S_010" label="불량" />
+                                          <InputRadio name="RADIO:S_010" label="해당사항 없음" />
                                         </div>
                                       </div>
                                     </div>
@@ -194,6 +369,105 @@ function SurveyForms() {
                         </div>
                       </li>
                     </ol>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3">
+                    <span className="label">기타사항</span>
+                  </h5>
+                </div>
+
+                <div className="main">
+                  <div className="o-field">
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputTextarea placeholder="불량사항이 경미하거나 즉시 조치한 경우 내용을 기재해주세요&#13;점검결과 ‘해당없음’에 대한 내용 또는 별도 의견 필요 시 작성해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3">
+                    <span className="label">첨부파일</span>
+                  </h5>
+
+                  <div className="o-limit type-file">
+                    <span className="head">파일크기</span>
+                    <span className="data">
+                      <em className="value">1MB</em>
+                      <span className="sep">/</span>
+                      <span className="limits" aria-label="전체 업로드 제한용량">10MB</span>
+                    </span>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="파일선택" className="_normal" />
+                      <CommonButton label="파일삭제" className="_normal" />
+                      <CommonButton label="파일다운" className="_normal" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main rows-body-2i">
+                  <div className="o-grid-table type-upload js_dragovered">{/* [하드코딩] 드래그오버 시 'js_dragovered' 클래스네임 추가 { @DEV } */}
+                    <div className="table-container">
+                      <table>
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col className="wdth-auto" style={{ minWidth: 'calc(var(--rem) * 180)' }} />
+                          <col style={{ minWidth: 'calc(var(--rem) * 72)' }} />
+                        </colgroup>
+
+                        <thead>
+                          <tr>
+                            <th><InputCheck label="전체​선택" labelHidden /></th>
+                            <th>파일명</th>
+                            <th>파일크기</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td colSpan={3}>
+                              <div className="o-attach">
+                                <div className="summary">
+                                  <span className="wbr">첨부할 파일을 여기에 끌어다 놓거나, </span>
+                                  <span className="wbr">파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</span>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+
+                        <tbody>
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx}>
+                            <td><InputCheck label="선택" labelHidden /></td>
+                            <td className="g-start">
+                              <span className="o-file">
+                              {
+                                idx === 1 ?
+                                <span className="name">긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명긴파일명</span>
+                                :
+                                <span className="name">파일명</span>
+                              }
+                                <span className="ext">.xlsx</span>
+                              </span>
+                            </td>
+                            <td className="g-end">1023KB</td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>

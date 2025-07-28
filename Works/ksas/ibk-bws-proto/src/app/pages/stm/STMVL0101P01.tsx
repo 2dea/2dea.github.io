@@ -260,7 +260,7 @@ function STMVL0101P01() {
                 <div className="m-header">
                   <h5 className="o-heading level3">
                     <span className="label">수정기한 예외등록</span>
-                    <InputCheck label="체크" labelHidden defaultChecked />
+                    <InputCheck label="사용" labelHidden defaultChecked />
                   </h5>
                 </div>
 

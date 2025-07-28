@@ -11,21 +11,43 @@
 
 
 .o-survey  {}
+.o-survey:disabled  { color: inherit; filter: none; opacity: 0.4; cursor: default; pointer-events: none; }
+.o-survey >.caption  { --lh: var(--text-height-para); line-height: var(--lh); padding: $gap-element-70 $gap-element-70; background: var(--color-ground-40); text-align: center; }
 .o-survey >.fields  { display: flex; gap: $gap-element-90; padding: III(16 - 1); padding-left: III(64 - 1); }
 .o-survey >.fields >*  { flex: none; min-width: 0; }
 .o-survey >.fields >.desc  { flex-basis: calc(50% - III(8)); min-width: III(160); max-width: III(330); }
 .o-survey >.fields >.term  { flex: 1; }
-.o-survey >.fields >.term .question  { --lh: var(--text-height-para); font-size: $font-60; line-height: var(--lh); margin-bottom: $gap-element-80; }
+.o-survey >.fields >.term .question  { --lh: var(--text-height-para); font-size: $font-60; line-height: var(--lh); position: relative; min-height: 1lh; margin-bottom: $gap-element-80; }
+.o-survey >.fields >.term .question >.order  { font-weight: $bold-70; font-size: $font-40; display: inline-block; vertical-align: middle; margin-top: calc((1lh - $font-40) / -5); color: var(--color-text-20); }
+.o-survey >.fields >.term .question >.order >.count  { position: absolute; top: 0; left: III(15 - 63); }
 
 
 .m-survey  { border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
 .m-survey >:first-child  { border-start-start-radius: inherit; border-start-end-radius: inherit; }
 .m-survey >:last-child  { border-end-start-radius: inherit; border-end-end-radius: inherit; }
 
-.m-survey >.header  { display: flex; padding: 10px $gap-element-90; border-bottom: $e10 solid var(--color-edge-40); background: var(--color-ground2-blue-30); }
+.m-survey >.header  { display: flex; padding: III(10) $gap-element-90; border-bottom: $e10 solid var(--color-edge-40); background: var(--color-ground2-blue-30); }
 .m-survey >.header >*  { flex: none; min-width: 0; }
-.m-survey >.header .subject  { flex: 1; font-weight: $bold-70; font-size: $font-60; line-height: $line-60; display: flex; min-height: $height-form-50; align-items: center; padding: calc(($height-form-50 - 1lh) / 2) 0; }
+.m-survey >.header .subject  { flex: 1; font-weight: $bold-70; font-size: $font-60; line-height: $line-60; min-height: $height-form-50; padding: calc(($height-form-50 - 1lh) / 2) 0; }
 
 .m-survey >.bodies  {  }
 .m-survey >.bodies >* >:not(:last-child)  { border-bottom: $e10 solid var(--color-edge-30); }
+
+
+.m-survey-form >* >:not(:first-child)  { margin-top: $gap-element-50; }
+
+
+.m-survey-form li:has(.order >.count)  {
+  --width-int: (var(--width-bullet) / 42);
+  --width: calc(1em * var(--width-int));
+  --width-neg: calc(-1em * var(--width-int));
+}
+.m-survey-form .order >.count:before  { content: var(--content); text-align: left; text-align: start; white-space: nowrap; }
+.m-survey-form .order >.count:not(:empty):before  { content: none !important; }
+
+.m-survey-form :has(>li .order >.count)  { counter-reset: NUM_surveys; }
+.m-survey-form li:has(.order >.count)  { --content-main: counter(NUM_surveys); --content: var(--content-pre, "") var(--content-main, "") var(--content-suf, ".") var(--utf-nbsp); counter-increment: NUM_surveys; }
+
+.m-survey-form :has(>li .order >.count):where(li *)  { counter-reset: NUM_surveys-level2; }
+.m-survey-form li:has(.order >.count):where(li *)  { --content-pre: counter(NUM_surveys) "-"; --content-main: counter(NUM_surveys-level2); --content-suf: ""; --width-bullet: auto; counter-increment: NUM_surveys-level2; }
 

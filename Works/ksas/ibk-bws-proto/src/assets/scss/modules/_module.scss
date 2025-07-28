@@ -754,9 +754,9 @@
 .m-bullets.type-asterisk  { --content: "*" var(--utf-nbsp); --width-bullet: 30.969; }
 
 .m-bullets.type-decimal  { counter-reset: NUM_orders; }
-.m-bullets.type-decimal >*  { --content: var(--content-pre, "") counter(NUM_orders) var(--content-suf, ".") var(--utf-nbsp); --width-bullet: 71.578; }
+.m-bullets.type-decimal >*  { --content-main: counter(NUM_orders); --content: var(--content-pre, "") var(--content-main, "") var(--content-suf, ".") var(--utf-nbsp); --width-bullet: 71.578; counter-increment: NUM_orders; }
 .m-bullets.type-decimal >:where(:nth-child(-n + 9))  { --content-pre: "0"; --content-pre: ""; --width-bullet: 45.656; }
-.m-bullets.type-decimal >:before  { counter-increment: NUM_orders; text-align: left; text-align: start; }
+.m-bullets.type-decimal >:before  { text-align: left; text-align: start; }
 
 .m-bullets.type-decimal.level2 >*  { --content-pre: "("; --content-suf: ")"; --width-bullet: 92.125; }
 .m-bullets.type-decimal.level2 >:where(:nth-child(-n + 9))  { --width-bullet: 66.203; }
