@@ -96,9 +96,10 @@ function DEX() {
 
       {/*
       스케줄
+      <></>
 
-        # 152
-      외화시재금현황 > 시재금현황 2.8 #FMTFT0301M
+        # 169
+      외화시재금현황 > 시재금현황 2.8 #FMTFT0301M  # 169
 
       2025/07/25 [자금현수송] #92 이후로부터 FMTCT1401M
 
@@ -216,7 +217,7 @@ function DEX() {
 
 완료 메시지
 <td class="auth"><span class="name DEL">김진영</span></td>
-<td class="done"><span class="date done">2025-07-24</span></td>
+<td class="done"><span class="date done">2025-07-28</span></td>
 
 about:blank
 

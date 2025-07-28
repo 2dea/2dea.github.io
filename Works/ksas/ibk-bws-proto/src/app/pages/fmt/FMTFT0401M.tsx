@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 원화현수송 > 원화마감시간관리 > 실적내역
+ * @description 자금현수송 > 외화현수송 > 외화마감시간관리 > 실적내역
  */
 
 // dependency
@@ -36,12 +36,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTCT0401M() {
+function FMTFT0401M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화현수송' }, { label: '원화마감시간관리' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '외화현수송' }, { label: '외화마감시간관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function FMTCT0401M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">원화마감시간관리</span>
+                <span className="label">외화마감시간관리</span>
 
                 <FavoriteDiv />
               </h1>
@@ -155,6 +155,7 @@ function FMTCT0401M() {
                           <col />
                           <col />
                           <col className="wdth-50" />
+                          <col className="wdth-50" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -162,7 +163,8 @@ function FMTCT0401M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점정보</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">원화마감시간<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">외화마감시간(청구)<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">외화마감시간(불입)<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
@@ -172,7 +174,7 @@ function FMTCT0401M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -183,6 +185,16 @@ function FMTCT0401M() {
                               <td>{idx + 1}</td>
                               <td>0801</td>
                               <td className="g-start">프로세스혁신부</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input type-time wdth-30">
+                                      <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
@@ -219,14 +231,24 @@ function FMTCT0401M() {
                                 </div>
                               </div>
                             </td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input type-time wdth-30">
+                                    <Calendar placeholder="" value={Time} locale="ko" mask="99:99" appendTo={document.body} className="bind" onChange={(e) => setTime(e.value)} timeOnly />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
 
@@ -237,4 +259,4 @@ function FMTCT0401M() {
   );
 }
 
-export default FMTCT0401M;
+export default FMTFT0401M;

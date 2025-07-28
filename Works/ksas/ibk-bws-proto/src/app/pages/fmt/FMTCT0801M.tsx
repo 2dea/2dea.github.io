@@ -662,7 +662,7 @@ function FMTCT0801M() {
                             <span className="suffix">단계. </span>
                           </span>
                           <a href="javascript:" className="label">
-                            <em className="main">현송직원확인(결점부점)</em>
+                            <em className="main">현송직원확인(결정부점)</em>
                           </a>
                         </Tab>
                         <Tab aria-label="진행 완료">
@@ -672,7 +672,7 @@ function FMTCT0801M() {
                             <span className="suffix">단계. </span>
                           </span>
                           <a href="javascript:" className="label">
-                            <em className="main">내국환취결(결점부점)</em>
+                            <em className="main">내국환취결(결정부점)</em>
                           </a>
                         </Tab>
                         <Tab aria-label="진행 단계">
@@ -682,7 +682,7 @@ function FMTCT0801M() {
                             <span className="suffix">단계. </span>
                           </span>
                           <a href="javascript:" className="label">
-                            <em className="main">출발시각(결점부점)</em>
+                            <em className="main">출발시각(결정부점)</em>
                           </a>
                         </Tab>
                         <Tab aria-label="진행 단계">
@@ -711,13 +711,13 @@ function FMTCT0801M() {
                 </div>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  {/* 01.현송직원확인(결점부점) { @DEV } */}
+                  {/* 01.현송직원확인(결정부점) { @DEV } */}
                   <div className="o-grid">
                     <div className="column">
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">현송직원확인(결점부점)</span></h4>
+                          <h4 className="o-heading level4"><span className="label">현송직원확인(결정부점)</span></h4>
                         </div>
 
                         <div className="main">
@@ -899,13 +899,13 @@ function FMTCT0801M() {
                 </TabPanel>
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
-                  {/* 03.단계. 출발시각(결점부점) { @DEV } */}
+                  {/* 03.단계. 출발시각(결정부점) { @DEV } */}
                   <div className="o-grid">
                     <div className="column">
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h3 className="o-heading level3"><span className="label">출발시각(결점부점)</span></h3>
+                          <h3 className="o-heading level3"><span className="label">출발시각(결정부점)</span></h3>
 
                           <div className="o-helper style-strong">
                             <em className="label">현송직원출발 시 출발시각을 등록해주세요.</em>

@@ -73,10 +73,19 @@ import FMTFT1201M from 'app/pages/fmt/FMTFT1201M';      // 자금현수송 > 외
 import FMTFT1201P01 from 'app/pages/fmt/FMTFT1201P01';  // 자금현수송 > 외화현수송     > 외화현수송신청관리(업무센터) ~ (LP)업무센터결정
 
 import FMTFT0301M from 'app/pages/fmt/FMTFT0301M';      // 자금현수송 > 외화현수송     > 외화시재금현황
+import FMTFT1301M from 'app/pages/fmt/FMTFT1301M';      // 자금현수송 > 외화현수송     > 외화시재 및 보유현황
+import FMTFT0401M from 'app/pages/fmt/FMTFT0401M';      // 자금현수송 > 외화현수송     > 외화마감시간관리
+import FMTFT0601M from 'app/pages/fmt/FMTFT0601M';      // 자금현수송 > 외화현수송     > 자금현송명령부관리(업무센터)
+
+import FMTFT0701M from 'app/pages/fmt/FMTFT0701M';      // 자금현수송 > 외화현수송     > 외화통화정보
 
 import FMTFT0801M from 'app/pages/fmt/FMTFT0801M';      // 자금현수송 > 외화현수송     > 외국통화견양집
+import FMTFT0801P01 from 'app/pages/fmt/FMTFT0801P01';  // 자금현수송 > 외화현수송     > 외국통화견양집 ~ (LP)외화통화등록/수정
 import FMTFT0801P02 from 'app/pages/fmt/FMTFT0801P02';  // 자금현수송 > 외화현수송     > 외국통화견양집 ~ (LP)화폐이미지보기
 
+import FMTFT0901M from 'app/pages/fmt/FMTFT0901M';      // 자금현수송 > 외화현수송     > 지점간외화현수송신청관리
+import FMTFT0901P01 from 'app/pages/fmt/FMTFT0901P01';  // 자금현수송 > 외화현수송     > 지점간외화현수송신청관리 ~ (LP)자금신청
+import FMTFT0901P02 from 'app/pages/fmt/FMTFT0901P02';  // 자금현수송 > 외화현수송     > 지점간외화현수송신청관리 ~ (LP)불입결정
 
 import FMTCC0301M from 'app/pages/fmt/FMTCC0301M';      // 자금현수송 > 원화정사      > 관련조회 및 출력
 import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역
@@ -680,9 +689,18 @@ function ProtoRoutes() {
         { path: 'FMTFT1201P01', element: <FMTFT1201P01 /> },
 
         { path: 'FMTFT0301M',   element: <FMTFT0301M /> },
+        { path: 'FMTFT1301M',   element: <FMTFT1301M /> },
+        { path: 'FMTFT0401M',   element: <FMTFT0401M /> },
+        { path: 'FMTFT0601M',   element: <FMTFT0601M /> },
+        { path: 'FMTFT0701M',   element: <FMTFT0701M /> },
 
         { path: 'FMTFT0801M',   element: <FMTFT0801M /> },
+        { path: 'FMTFT0801P01', element: <FMTFT0801P01 /> },
         { path: 'FMTFT0801P02', element: <FMTFT0801P02 /> },
+
+        { path: 'FMTFT0901M',   element: <FMTFT0901M /> },
+        { path: 'FMTFT0901P01', element: <FMTFT0901P01 /> },
+        { path: 'FMTFT0901P02', element: <FMTFT0901P02 /> },
 
         { path: 'FMTCC0101P01', element: <FMTCC0101P01 /> },
 
