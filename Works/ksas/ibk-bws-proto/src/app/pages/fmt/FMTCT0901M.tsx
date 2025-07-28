@@ -919,14 +919,6 @@ function FMTCT0901M() {
                     <div className="m-header">
                       <h2 className="o-heading level2"><span className="label">자금현송명령부등록내역</span></h2>
 
-                      <div className="m-binds">
-                        <div className="group">
-                          <CommonButton label="행추가" className="_normal" />
-                          <CommonButton label="행삭제" className="_normal" />
-                          <CommonButton label="취소" className="_normal" />
-                        </div>
-                      </div>
-
                       <div className="o-length">
                         <span className="head">전체</span>
                         <em className="data">
@@ -936,6 +928,12 @@ function FMTCT0901M() {
                       </div>
 
                       <div className="m-binds">
+                        <div className="group">
+                          <CommonButton label="행추가" className="_normal" />
+                          <CommonButton label="행삭제" className="_normal" />
+                          <CommonButton label="취소" className="_normal" />
+                        </div>
+
                         <div className="group">
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
                           <ImageButton label="목록필터" icon="column-toggle" />

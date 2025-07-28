@@ -225,16 +225,24 @@ function FMTCT1501M() {
               <div className="o-grid">
                 <div className="column">
 
+                  <div className="o-board type-b">
+                    <div className="o-notice">
+                      <div className="binds">
+                        <div className="m-mixed-field">
+                          <div className="o-field">
+                            <Label label={`시재업데이트일시`} require={false} />
+                            <div className="fields">
+                              <div className="string o-digit type-datetime">2025-12-25 04:36:12</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="o-section">
                     <div className="m-header">
                       <h2 className="o-heading level2"><span className="label">노선별 부점정보</span></h2>
-
-                      <div className="o-field">
-                        <Label label={`시재업데이트일시`} require={false} />
-                        <div className="fields">
-                          <div className="string o-digit type-datetime">2025-12-25 04:36:12</div>
-                        </div>
-                      </div>
 
                       <div className="o-length">
                         <span className="head">전체</span>

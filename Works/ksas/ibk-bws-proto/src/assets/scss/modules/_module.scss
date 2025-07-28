@@ -932,6 +932,7 @@
 .o-notice >.main  { flex: 1; }
 .o-notice >.main >.inline-binds  { display: inline-flex; align-items: center; margin: 0 $gap-element-70; }
 .o-notice >.binds  { align-self: center; display: flex; align-items: center; height: $height-form-50; margin: calc((1lh - $height-form-50) / 2) 0; margin-left: $gap-element-70; }
+.o-notice >.binds:not(.main +*)  { margin-left: auto; }
 
 
 .m-defines  { display: flex; flex-wrap: wrap; gap: $gap-element-70 $gap-element-80; }

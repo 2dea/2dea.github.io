@@ -72,6 +72,8 @@ import FMTFT0201P03 from 'app/pages/fmt/FMTFT0201P03';  // 자금현수송 > 외
 import FMTFT1201M from 'app/pages/fmt/FMTFT1201M';      // 자금현수송 > 외화현수송     > 외화현수송신청관리(업무센터)
 import FMTFT1201P01 from 'app/pages/fmt/FMTFT1201P01';  // 자금현수송 > 외화현수송     > 외화현수송신청관리(업무센터) ~ (LP)업무센터결정
 
+import FMTFT0301M from 'app/pages/fmt/FMTFT0301M';      // 자금현수송 > 외화현수송     > 외화시재금현황
+
 import FMTFT0801M from 'app/pages/fmt/FMTFT0801M';      // 자금현수송 > 외화현수송     > 외국통화견양집
 import FMTFT0801P02 from 'app/pages/fmt/FMTFT0801P02';  // 자금현수송 > 외화현수송     > 외국통화견양집 ~ (LP)화폐이미지보기
 
@@ -476,7 +478,7 @@ import BSSTN0101P02 from 'app/pages/bss/BSSTN0101P02'; // 영업지원 > 채권�
 import BSSTN0101P03 from 'app/pages/bss/BSSTN0101P03'; // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링) ~ (LP)채권양도행내등기신청
 
 import BSSCR0101M from 'app/pages/bss/BSSCR0101M';     // 영업지원 > 캘린더신청             > 신청기간관리
-import BSSCR0101P01 from 'app/pages/bss/BSSCR0101P01'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)공지이미지관리
+// import BSSCR0101P01 from 'app/pages/bss/BSSCR0101P01'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)공지이미지관리
 import BSSCR0101P02 from 'app/pages/bss/BSSCR0101P02'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)달력카테고리관리
 import BSSCR0101P03 from 'app/pages/bss/BSSCR0101P03'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)부점선택
 import BSSCR0201M from 'app/pages/bss/BSSCR0201M';     // 영업지원 > 캘린더신청             > 신청관리
@@ -676,6 +678,8 @@ function ProtoRoutes() {
 
         { path: 'FMTFT1201M',   element: <FMTFT1201M /> },
         { path: 'FMTFT1201P01', element: <FMTFT1201P01 /> },
+
+        { path: 'FMTFT0301M',   element: <FMTFT0301M /> },
 
         { path: 'FMTFT0801M',   element: <FMTFT0801M /> },
         { path: 'FMTFT0801P02', element: <FMTFT0801P02 /> },
