@@ -415,7 +415,7 @@ function BSSPE0101M() {
 
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input mode-required wdth-50">
+                                  <div className="o-form _input wdth-50">
                                     <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                     <span className="inner-binds">
@@ -437,7 +437,7 @@ function BSSPE0101M() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`첨부파일(계약서)`} require={true} />
+                            <Label label={`첨부파일​(계약서)`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-section">
