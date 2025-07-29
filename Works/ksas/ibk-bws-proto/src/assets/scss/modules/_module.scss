@@ -686,7 +686,8 @@
 .o-length .data .value  { font-weight: $bold-70; color: var(--color-point-orange); }
 .o-length .foot  { color: var(--color-text-30); }
 
-.o-length:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
+.o-length:where(.o-pair-board >.header *),
+  .o-length:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
 
 
 .m-dialog-message  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-60; line-height: var(--lh); flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 100%; min-height: calc(var(--lh) * 1); margin: 0 auto; text-align: center; }
@@ -1023,15 +1024,28 @@
 .o-pair:where(.o-pair-board.type-icon *) >.head .o-icon:before  { font-size: $height-icon-50; background-position: 50%; }
 .o-pair:where(.o-pair-board.type-icon *) >.data  { font-size: $font-80; line-height: $line-80; }
 
+.o-pair:where(.o-pair-board.type-multi *) >.head  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
+.o-pair:where(.o-pair-board.type-multi *) >.data  { font-size: $font-60; line-height: $line-60; }
+
 
 .o-pair-board  { min-height: III(42); padding: III(12) III(24); background: var(--color-ground2-blue-30); background: linear-gradient(to top left, var(--color-ground2-blue-40), var(--color-ground2-blue-30)); border-radius: $radius-70; }
+.o-pair-board >.header  { display: flex; align-items: center; justify-content: flex-end; gap: $gap-element-80; margin-bottom: $gap-element-80; }
+.o-pair-board >.header >*  { flex: 0 1 auto; min-width: 0; }
+.o-pair-board >.header >.subject  { margin-right: auto; }
+.o-pair-board >.header >.subject >.label  { font-weight: $bold-70; color: var(--color-key1-70); }
 
 .o-pair-board.type-icon  { min-height: III(42); padding: III(12) III(24); background: var(--color-ground2-blue-30); background: linear-gradient(to top left, var(--color-ground2-blue-40), var(--color-ground2-blue-30)); border-radius: $radius-70; }
+
+.o-pair-board.type-multi  { padding: III(12) III(16); }
+
+
+.m-pairs:where(.o-pair-board.type-multi *)  { display: grid; grid-template-columns: repeat(2, 1fr); gap: III(10) $gap-element-90; }
 
 
 
 .m-board  { display: flex; flex-direction: column; gap: $gap-element-50; }
-.m-board >.bodies  { display: grid; grid-template-columns: repeat(auto-fit, minmax(III(200), 1fr)); gap: $gap-element-70; }
+.m-board >.bodies  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, III(200)), 1fr)); gap: $gap-element-70; }
+.m-board >.bodies:has(.o-pair-board.type-multi)  { --width-min: #{III(245)}; }
 
 
 

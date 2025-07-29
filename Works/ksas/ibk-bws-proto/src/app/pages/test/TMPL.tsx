@@ -1204,6 +1204,9 @@ function TMPL() {
                                     <a href="/proto/STMDM0301M" target="ibkbws_exam" className="o-link texted-button _primary">
                                       STMDM0301M<Icon icon="link" />
                                     </a>
+                                    <a href="/proto/STMPE0201M" target="ibkbws_exam" className="o-link texted-button _primary">
+                                      STMPE0201M<Icon icon="link" />
+                                    </a>
                                   </div>
                                 </li>
                                 <li>

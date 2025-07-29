@@ -604,6 +604,14 @@
 
 .g-flex-pass  { -webkit-box-flex: 0 !important; -ms-flex: none !important; flex: none !important; }
 
+
+.g-scroll  { overflow: auto; }
+.g-scroll-stable  { overflow: scroll; }
+.g-scroll-hidden  { overflow: hidden; }
+.scroll-x:where(.g-scroll, .g-scroll-stable)  { overflow-y: hidden; }
+.scroll-y:where(.g-scroll, .g-scroll-stable)  { overflow-x: hidden; }
+
+
 .g-fixed-data  { max-width: 0; }
 .g-fixed-table  { table-layout: fixed; }
 .g-auto-table  { table-layout: auto; }
