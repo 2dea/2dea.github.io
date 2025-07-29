@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function STMSE0201M() {
+function STMPE0201M() {
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
 
@@ -825,4 +825,4 @@ function STMSE0201M() {
   );
 }
 
-export default STMSE0201M;
+export default STMPE0201M;

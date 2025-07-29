@@ -397,14 +397,20 @@ import STMPR0501P02 from 'app/pages/stm/STMPR0501P02';   // 재난·안전관리
 import STMPR0501P03 from 'app/pages/stm/STMPR0501P03';   // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증현황관리 ~ (LP)방문증번호관리
 
 import STMSE0101M from 'app/pages/stm/STMSE0101M';       // 재난·안전관리 > 안전점검의날점검표        > 점검표등록
+import STMSE0101P01 from 'app/pages/stm/STMSE0101P01';   // 재난·안전관리 > 안전점검의날점검표        > 점검표등록 ~ (LP)점검표등록
+import STMSE0201M from 'app/pages/stm/STMSE0201M';       // 재난·안전관리 > 안전점검의날점검표        > 점검표등록현황
+import STMSE0201P01 from 'app/pages/stm/STMSE0201P01';   // 재난·안전관리 > 안전점검의날점검표        > 점검표등록현황 ~ (LP)점검표생성
 
 import STMPE0101M from 'app/pages/stm/STMPE0101M';       // 재난·안전관리 > 보안진단의날점검표        > 점검표등록
-import STMSE0201P01 from 'app/pages/stm/STMSE0201P01';   // 재난·안전관리 > 보안진단의날점검표        > 점검표등록 ~ (LP)점검표생성
+import STMPE0101P01 from 'app/pages/stm/STMPE0101P01';   // 재난·안전관리 > 보안진단의날점검표        > 점검표등록 ~ (LP)점검표등록
+import STMPE0201M from 'app/pages/stm/STMPE0201M';       // 재난·안전관리 > 보안진단의날점검표        > 점검표등록현황
 
 import STMAS0101M from 'app/pages/stm/STMAS0101M';       // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획
 import STMAS0201P01 from 'app/pages/stm/STMAS0201P01';   // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획현황 ~ (LP)등록기한관리
 
+import STMAS0201M from 'app/pages/stm/STMAS0201M';       // 재난·안전관리 > 자율보안체계             > 보안업무세부추진계획현황
 import STMAS0301M from 'app/pages/stm/STMAS0301M';       // 재난·안전관리 > 자율보안체계             > 보안업무심사분석
+import STMAS0401M from 'app/pages/stm/STMAS0401M';       // 재난·안전관리 > 자율보안체계             > 보안업무심사분석현황
 import STMHA0101M from 'app/pages/stm/STMHA0101M';       // 재난·안전관리 > 자율보안체계             > 위기상황시대응조편성
 import STMHA0201M from 'app/pages/stm/STMHA0201M';       // 재난·안전관리 > 자율보안체계             > 위기상황시대응조편성현황
 import STMHA0301M from 'app/pages/stm/STMHA0301M';       // 재난·안전관리 > 자율보안체계             > 위기상황시대응조편성현황
@@ -1010,14 +1016,20 @@ function ProtoRoutes() {
         { path: 'STMPR0501P03', element: <STMPR0501P03 /> },
 
         { path: 'STMSE0101M',   element: <STMSE0101M /> },
-
-        { path: 'STMPE0101M',   element: <STMPE0101M /> },
+        { path: 'STMSE0101P01', element: <STMSE0101P01 /> },
+        { path: 'STMSE0201M', element: <STMSE0201M /> },
         { path: 'STMSE0201P01', element: <STMSE0201P01 /> },
+
+        { path: 'STMPE0101M', element: <STMPE0101M /> },
+        { path: 'STMPE0101P01', element: <STMPE0101P01 /> },
+        { path: 'STMPE0201M', element: <STMPE0201M /> },
 
         { path: 'STMAS0101M',   element: <STMAS0101M /> },
         { path: 'STMAS0201P01', element: <STMAS0201P01 /> },
 
+        { path: 'STMAS0201M', element: <STMAS0201M /> },
         { path: 'STMAS0301M',   element: <STMAS0301M /> },
+        { path: 'STMAS0401M', element: <STMAS0401M /> },
         { path: 'STMHA0101M',   element: <STMHA0101M /> },
         { path: 'STMHA0201M',   element: <STMHA0201M /> },
         { path: 'STMHA0301M',   element: <STMHA0301M /> },
