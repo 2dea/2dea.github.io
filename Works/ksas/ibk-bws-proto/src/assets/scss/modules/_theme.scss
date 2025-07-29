@@ -7,4 +7,3 @@
 .o-grid:where(.o-grid *):where(.dom-wrapper.type-proto *) {
   outline: thick solid Blue;
 }
-.m-board:not(:only-child)  { margin-bottom: $margin-section-50; }

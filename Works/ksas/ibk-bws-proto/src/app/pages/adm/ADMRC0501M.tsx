@@ -170,59 +170,94 @@ function ADMRC0501M() {
                 <div className="column">
 
                   <div className="o-section">
-                    <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">정산(전/후) 작업 검증 자료 생성</span></h2>
-                    </div>
-
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
-                        <div className="table-container">
-                          <table>
-                            <colgroup>
-                              <col />
-                              <col />
-                              <col style={{ width: '15%' }} />
-                              <col style={{ width: '15%' }} />
-                              <col style={{ width: '15%' }} />
-                            </colgroup>
+                      <div className="m-data-creator">
+                        <div className="header">
+                          <strong className="heading">정산(전/후) 작업 검증 자료 생성</strong>
+                        </div>
 
-                            <thead>
-                              <tr>
-                                <th>구분</th>
-                                <th>인도수량합계</th>
-                                <th>집행금액합계</th>
-                                <th>환수금액합계</th>
-                                <th>정산금액</th>
-                              </tr>
-                            </thead>
+                        <div className="bodies">
+                          <ul className="m-grid-list flow-cols">
+                            <li className="colspan-2">
+                              <div className="main">
+                                <div className="order"><span className="count">1</span></div>
+                                <div className="subject">수입인지정산 전 일별창구재고이력, 수입인지재고내역(선납분), 수입인지 선납잔여금액 테이블 백업</div>
+                              </div>
+                            </li>
 
-                            <tbody>
-                              <tr>
-                                <td>본부</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                              </tr>
-                              <tr>
-                                <td>영업점</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                              </tr>
-                            </tbody>
+                            <li>
+                              <div className="main">
+                                <div className="order"><span className="count">2</span></div>
+                                <div className="subject">수입인지정산 전 수입인지비교대사 검증 1, 2 쿼리 수행(JYCO140B 수행 전)</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                                <CommonButton label="수입인지비교대사검증 (전)" className="_solid-primary" />
+                              </div>
+                            </li>
 
-                            <tfoot className="sumtotal-tfoot">
-                              <tr className="sumtotal-trow">
-                                <td>총합계</td>
-                                <td className="g-end">9,999</td>
-                                <td className="g-end">9,999</td>
-                                <td className="g-end">9,999</td>
-                                <td className="g-end">9,999</td>
-                              </tr>
-                            </tfoot>
-                          </table>
+                            <li>
+                              <div className="main">
+                                <div className="order"><span className="count">3</span></div>
+                                <div className="subject">수입인지정산 후납 자료 생성(JYCO140B)</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="main">
+                                <div className="order"><span className="count">4</span></div>
+                                <div className="subject">수입인지정산 전 수입인지비교대사 검증 1, 2 쿼리 수행(JYCO140B 수행 후)</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                                <CommonButton label="수입인지비교대사검증 (후)" className="_solid-primary" />
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="main">
+                                <div className="order"><span className="count">5</span></div>
+                                <div className="subject">부점별 선납입 금액 차감 처리(JYCO141B 수행 전)</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                                <CommonButton label="선납입 금액 차감 처리 (전)" className="_solid-primary" />
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="main">
+                                <div className="order"><span className="count">6</span></div>
+                                <div className="subject">대금정산 자료 생성(JYCO141B)</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="main">
+                                <div className="order"><span className="count">7</span></div>
+                                <div className="subject">부점별 선납입 금액 차감 처리(JYCO141B 수행 후)</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                                <CommonButton label="선납입 금액 차감 처리 (후)" className="_solid-primary" />
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div className="footer">
+                          <dl className="m-defines">
+                            <div className="group">
+                              <dt className="head">비교검증값</dt>
+                              <dd className="data">0</dd>
+                            </div>
+                          </dl>
                         </div>
                       </div>
                     </div>

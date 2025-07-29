@@ -417,6 +417,7 @@ import STMSC0201M from 'app/pages/stm/STMSC0201M';       // 재난·안전관리
 import STMSC0301M from 'app/pages/stm/STMSC0301M';       // 재난·안전관리 > 도급사업관리             > 안전보건협의체 회의록
 
 import STMSC0401P01 from 'app/pages/stm/STMSC0401P01';   // 재난·안전관리 > 도급사업관리             > 순회점검표 등록 ~ (LP)순회점검표 등록
+import STMSC0601P01 from 'app/pages/stm/STMSC0601P01';   // 재난·안전관리 > 도급사업관리             > 합동점검표 등록 ~ (LP)합동점검표 등록
 
 import STMKY0101M from 'app/pages/stm/STMKY0101M';       // 재난·안전관리 > 열쇠관리                 > 열쇠종류관리
 import STMKY0201M from 'app/pages/stm/STMKY0201M';       // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리
@@ -1029,6 +1030,7 @@ function ProtoRoutes() {
         { path: 'STMSC0301M',   element: <STMSC0301M /> },
 
         { path: 'STMSC0401P01',   element: <STMSC0401P01 /> },
+        { path: 'STMSC0601P01',   element: <STMSC0601P01 /> },
 
         { path: 'STMKY0101M',   element: <STMKY0101M /> },
         { path: 'STMKY0201M',   element: <STMKY0201M /> },

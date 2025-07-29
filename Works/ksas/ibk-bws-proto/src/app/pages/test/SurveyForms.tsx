@@ -145,7 +145,7 @@ function SurveyForms() {
                                     <div className="term">
                                       <div className="question">
                                         <span className="order"><span className="count"></span></span>
-                                        <span className="label">블라블라블라?</span>
+                                        <span className="label">문항문항문항?</span>
                                       </div>
 
                                       <div className="answer">
@@ -160,7 +160,7 @@ function SurveyForms() {
                                       <div className="o-board type-b">
                                         <div className="board-container">
                                           <ul className="m-bullets type-disc">
-                                            <li>블라블라블라</li>
+                                            <li>설명설명설명</li>
                                           </ul>
                                         </div>
                                       </div>
@@ -175,7 +175,7 @@ function SurveyForms() {
                                     <div className="term">
                                       <div className="question">
                                         <span className="order"><span className="count"></span></span>
-                                        <span className="label">블라블라블라?</span>
+                                        <span className="label">문항문항문항?</span>
                                       </div>
 
                                       <div className="answer">
@@ -190,7 +190,7 @@ function SurveyForms() {
                                       <div className="o-board type-b">
                                         <div className="board-container">
                                           <ul className="m-bullets type-disc">
-                                            <li>블라블라블라</li>
+                                            <li>설명설명설명</li>
                                           </ul>
                                         </div>
                                       </div>
@@ -311,7 +311,7 @@ function SurveyForms() {
                                     <div className="term">
                                       <div className="question">
                                         <span className="order"><span className="count"></span></span>
-                                        <span className="label">블라블라블라?</span>
+                                        <span className="label">문항문항문항?</span>
                                       </div>
 
                                       <div className="answer">
@@ -326,7 +326,7 @@ function SurveyForms() {
                                       <div className="o-board type-b">
                                         <div className="board-container">
                                           <ul className="m-bullets type-disc">
-                                            <li>블라블라블라</li>
+                                            <li>설명설명설명</li>
                                           </ul>
                                         </div>
                                       </div>
@@ -341,7 +341,7 @@ function SurveyForms() {
                                     <div className="term">
                                       <div className="question">
                                         <span className="order"><span className="count"></span></span>
-                                        <span className="label">블라블라블라?</span>
+                                        <span className="label">문항문항문항?</span>
                                       </div>
 
                                       <div className="answer">
@@ -356,7 +356,7 @@ function SurveyForms() {
                                       <div className="o-board type-b">
                                         <div className="board-container">
                                           <ul className="m-bullets type-disc">
-                                            <li>블라블라블라</li>
+                                            <li>설명설명설명</li>
                                           </ul>
                                         </div>
                                       </div>
@@ -386,6 +386,32 @@ function SurveyForms() {
                       <div className="o-form _input">
                         <InputTextarea placeholder="불량사항이 경미하거나 즉시 조치한 경우 내용을 기재해주세요&#13;점검결과 ‘해당없음’에 대한 내용 또는 별도 의견 필요 시 작성해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                         <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li className="c-color-strong">
+                      즉시 조치가 어려운 불량사항이 있는 경우
+
+                      <ul className="m-bullets type-hyphen">
+                        <li className="c-color-strong">별도로 ‘도급사업 순회·합동점검 결과표’를 작성하여 부서장 보고</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="m-aside">
+                  <div className="o-board type-c">
+                    <div className="o-notice">
+                      <div className="main">도급인 점검자와 수급인 점검자가 서명한 ‘합동점검 실시 기록부’를 스캔하고 첨부하여 결재 진행 바랍니다.</div>
+
+                      <div className="binds">
+                        <div className="m-checks">
+                          <InputCheck label="확인함" />
+                        </div>
                       </div>
                     </div>
                   </div>

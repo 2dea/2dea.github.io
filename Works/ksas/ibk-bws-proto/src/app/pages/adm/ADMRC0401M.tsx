@@ -177,76 +177,78 @@ function ADMRC0401M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
-                        <div className="table-container">
-                          <table>
-                            <colgroup>
-                              <col />
-                              <col />
-                              <col style={{ width: '15%' }} />
-                              <col style={{ width: '15%' }} />
-                              <col style={{ width: '15%' }} />
-                            </colgroup>
+                      <div className="m-data-creator">
+                        <div className="header">
+                          <strong className="heading">정산(전/후) 작업 검증 자료 생성</strong>
+                        </div>
 
-                            <thead>
-                              <tr>
-                                <th>구분</th>
-                                <th>인도수량합계</th>
-                                <th>집행금액합계</th>
-                                <th>환수금액합계</th>
-                                <th>정산금액</th>
-                              </tr>
-                            </thead>
+                        <div className="bodies">
+                          <ul className="m-grid-list flow-cols">
+                            <li className="colspan-2">
+                              <div className="main">
+                                <div className="order"><span className="count">1</span></div>
+                                <div className="subject">대금정산 전 기타대금 정산 내역 생성 누락 확인</div>
+                              </div>
+                            </li>
 
-                            <tbody>
-                              <tr>
-                                <td>본부</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                              </tr>
-                              <tr>
-                                <td>영업점</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                              </tr>
+                            <li className="colspan-2">
+                              <div className="main">
+                                <div className="order"><span className="count">2</span></div>
+                                <div className="subject">대금정산 전 예상금액 생성</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                                <CommonButton label="정산예상금액생성" className="_solid-primary" />
+                              </div>
+                            </li>
 
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                            </tbody>
+                            <li className="colspan-2">
+                              <div className="main">
+                                <div className="order"><span className="count">3</span></div>
+                                <div className="subject">작업 전 비목별 검증 자료 생성</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                                <CommonButton label="본부인도/폐기/기타 생성 (전)" className="_solid-primary" />
+                              </div>
+                            </li>
 
-                            <tfoot className="sumtotal-tfoot">
-                              <tr className="sumtotal-trow">
-                                <td>총합계</td>
-                                <td className="g-end">9,999</td>
-                                <td className="g-end">9,999</td>
-                                <td className="g-end">9,999</td>
-                                <td className="g-end">9,999</td>
-                              </tr>
-                            </tfoot>
-                          </table>
+                            <li className="colspan-2">
+                              <div className="main">
+                                <div className="order"><span className="count">4</span></div>
+                                <div className="subject">대금정산 자료 생성(JYC0120B)</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                              </div>
+                            </li>
+
+                            <li className="colspan-2">
+                              <div className="main">
+                                <div className="order"><span className="count">5</span></div>
+                                <div className="subject">작업 후 비목별 검증 자료 생성</div>
+                              </div>
+                              <div className="binds">
+                                <CommonButton label="취소" className="_cancel" />
+                                <CommonButton label="본부인도/폐기/기타 생성 (후)" className="_solid-primary" />
+                              </div>
+                            </li>
+
+                          </ul>
+                        </div>
+
+                        <div className="footer">
+                          <dl className="m-defines">
+                            <div className="group">
+                              <dt className="head">기타정산금액</dt>
+                              <dd className="data">10,000</dd>
+                            </div>
+
+                            <div className="group">
+                              <dt className="head">전/후 비교 차액</dt>
+                              <dd className="data">267,400</dd>
+                            </div>
+                          </dl>
                         </div>
                       </div>
                     </div>
@@ -314,8 +316,7 @@ function ADMRC0401M() {
                               ))}
                             </tbody>
 
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드
-            합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
                               <tr className="sumtotal-trow">
                                 <td colSpan={2} className="sumtotal-tcell">총계</td>
                                 <td className="sumtotal-tcell g-end">999</td>
@@ -396,8 +397,7 @@ function ADMRC0401M() {
 
                             <tbody className="p-datatable-tbody">
                               {[...Array(10)].map((e, idx) => (
-                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight
-              <$tr.trigger('click')> { @DEV } */}
+                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                                   <td>{idx + 1}</td>
                                   <td>소모품비</td>
                                   <td>영업점</td>
@@ -408,8 +408,7 @@ function ADMRC0401M() {
                               ))}
                             </tbody>
 
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드
-            합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
                               <tr className="sumtotal-trow">
                                 <td colSpan={2} className="sumtotal-tcell">총계</td>
                                 <td className="sumtotal-tcell"></td>

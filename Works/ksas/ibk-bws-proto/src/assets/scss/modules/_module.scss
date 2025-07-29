@@ -193,10 +193,14 @@
 .o-icon._new:before  { background-color: $tp; background-image: var(--obj-ico-new); background-size: 100%; }
 .o-icon._popup-close:before  { background-color: $tp; background-image: var(--obj-ico-popup-close); background-size: 100%; }
 .o-icon._rank-down:before  { background-color: $tp; background-image: var(--obj-ico-rank-down); background-size: 100%; }
+.o-icon._rank-hold:before  { background-color: $tp; background-image: var(--obj-ico-rank-hold); background-size: 100%; }
 .o-icon._rank-up:before  { background-color: $tp; background-image: var(--obj-ico-rank-up); background-size: 100%; }
 .o-icon._remove:before  { background-color: $tp; background-image: var(--obj-ico-remove); background-size: 100%; }
 .o-icon._sort-asc:before  { background-color: $tp; background-image: var(--obj-ico-sort-asc); background-size: 100%; }
 .o-icon._sort-dec:before  { background-color: $tp; background-image: var(--obj-ico-sort-dec); background-size: 100%; }
+.o-icon._status-range-20:before  { background-color: $tp; background-image: var(--obj-ico-status-range-20); background-size: 100%; }
+.o-icon._status-range-50:before  { background-color: $tp; background-image: var(--obj-ico-status-range-50); background-size: 100%; }
+.o-icon._status-range-80:before  { background-color: $tp; background-image: var(--obj-ico-status-range-80); background-size: 100%; }
 .o-icon._user-id:before  { background-color: $tp; background-image: var(--obj-ico-user-id); background-size: 100%; }
 .o-icon._user-pw:before  { background-color: $tp; background-image: var(--obj-ico-user-pw); background-size: 100%; }
 
@@ -451,6 +455,24 @@
 .m-flex-list:has(>.o-field):where(.m-binds +*) { margin-top: $gap-element-30; }
 
 
+.m-grid-list:not(.flow-cols)  { display: grid; grid-template-columns: repeat(2, 1fr); }
+.m-grid-list:not(.flow-cols) >.colspan-2  { grid-column: auto /span 2; }
+
+.m-grid-list:where(.flow-cols)  { display: flex; flex-wrap: wrap; }
+.m-grid-list:where(.flow-cols) >*  { flex: 0 1 50%; }
+.m-grid-list:where(.flow-cols) >.colspan-2  { flex-basis: 100%; }
+
+
+
+.m-data-creator  { border: $e10 solid var(--color-edge2-blue-30); }
+.m-data-creator >.bodies >* >*  { display: flex; align-items: center; gap: $gap-element-30; padding: III(9) $gap-element-80; border-bottom: $e10 solid var(--color-edge-30); }
+.m-data-creator >.bodies >* >* >*  { flex: none; display: flex; align-items: center; gap: $gap-element-30; min-width: 0; min-height: $height-form-50; }
+.m-data-creator >.bodies >* >* >.main  { flex: 1; }
+.m-data-creator >.bodies >* >* >.main .order  { width: III(30); text-align: center; }
+.m-data-creator >.bodies >* >* >.main .order .count  { font-weight: $bold-70; color: var(--color-text-20); }
+.m-data-creator >:is(.header, .footer)  { display: flex; justify-content: center; padding: $gap-element-70 $gap-element-80; background: var(--color-ground-40); }
+.m-data-creator >.header  { color: var(--color-key1-70); background-color: var(--color-ground2-blue-40); }
+.m-data-creator >.header .heading  { font-weight: $bold-70; font-size: $font-60; line-height: $line-60; }
 
 
 .m-image-list  { clear: both; }
@@ -941,6 +963,10 @@
 .m-defines >.group >.data +*  { margin-left: $gap-element-70; }
 
 .m-defines:where(.o-board *) >.group >.head:not(:has(.o-heading))  { font-size: $font-40; line-height: $line-40; }
+
+.m-defines:where(.m-data-creator >.footer *) >.group:not(:last-child):after  { content: ""; display: block; width: $e10; height: calc(1em - III(2)); background: var(--color-edge-40); margin-left: $gap-element-80; }
+.m-defines:where(.m-data-creator >.footer *) >.group >.head  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
+.m-defines:where(.m-data-creator >.footer *) >.group >.data  { font-weight: $bold-70; }
 
 
 .o-board  {
@@ -2321,6 +2347,8 @@
 .o-board:has(+.m-data-form)  { margin-bottom: $margin-section-20; }
 .o-board:has(+.m-step-form)  { margin-bottom: $margin-section-20; }
 .o-board:has(>.m-step)  { margin-bottom: $margin-section-50; }
+
+.m-board:not(:only-child)  { margin-bottom: $margin-section-50; }
 
 .m-tab:not(:only-child).type1  { margin-bottom: $margin-section-50; }
 .m-tab:not(:only-child).type2  { margin-bottom: $margin-section-30; }
