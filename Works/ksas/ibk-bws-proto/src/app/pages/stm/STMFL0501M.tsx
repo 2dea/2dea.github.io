@@ -370,7 +370,69 @@ function STMFL0501M() {
               <div className="o-section">
                 <div className="m-header">
                   <h4 className="o-heading level4"><span className="label">소방대 편성 임무(예시)</span></h4>
+                </div>
 
+                <div className="main">
+                  <div className="o-data-table">
+                    <div className="table-container">
+                      <table className="table">
+                        <colgroup>
+                          <col style={{ width: '20%' }} />
+                          <col style={{ width: '20%' }} />
+                          <col style={{ width: '20%' }} />
+                          <col style={{ width: 'auto' }} />
+                        </colgroup>
+
+                        <thead>
+                          <tr>
+                            <th colSpan={1}>조직</th>
+                            <th colSpan={1}>편성</th>
+                            <th colSpan={1}>인원</th>
+                            <th colSpan={1}>임무</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td colSpan={1}>대장</td>
+                            <td colSpan={1}>지점장</td>
+                            <td colSpan={1}>1</td>
+                            <td colSpan={1} className="g-start">총괄지휘</td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>부대장</td>
+                            <td colSpan={1}>서무담당팀장​(소방안전관리자)</td>
+                            <td colSpan={1}>1</td>
+                            <td colSpan={1} className="g-start">대장보좌</td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>지휘통제팀</td>
+                            <td colSpan={1}>서무책임자, 직원</td>
+                            <td colSpan={1}>지점정원 감안</td>
+                            <td colSpan={1} className="g-start">현장지휘 통제 및 팀별 임무조정</td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>화재진압팀</td>
+                            <td colSpan={1}>책임자, 직원</td>
+                            <td colSpan={1}>지점정원 감안</td>
+                            <td colSpan={1} className="g-start">초기 화재진압 활동</td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>대피유도팀</td>
+                            <td colSpan={1}>책임자, 직원</td>
+                            <td colSpan={1}>지점정원 감안</td>
+                            <td colSpan={1} className="g-start">고객 등 피난유도, 집결지 운영</td>
+                          </tr>
+                          <tr>
+                            <td colSpan={1}>응급구조원</td>
+                            <td colSpan={1}>책임자, 직원</td>
+                            <td colSpan={1}>지점정원 감안</td>
+                            <td colSpan={1} className="g-start">부상자 응급초치</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
 
