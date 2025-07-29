@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 // .o-section:not(.o-section *):not(.o-grid >.column >*)  {
-.o-section:not(.o-section *):not(.o-grid >.column >*):not(.m-tabs >.m-tabs-panel >*)  {
+.o-section:not(.o-section *):not(.o-grid >.column >*):not(.m-sections >*):not(.m-tabs >.m-tabs-panel >*)  {
   outline: thick solid Red;
 }
 .o-grid:where(.o-grid *):where(.dom-wrapper.type-proto *) {
