@@ -98,6 +98,23 @@ function DEX() {
       스케줄
       <></>
 
+      2025/07/90  STMPE0201M -> 참고해서
+       [ 진영 작업 할 화면 리스트 ]
+        STMSE0201M
+        STMAS0201M
+        STMAS0401M
+
+        [ 그냥 남은 화면들 메모 ]
+         자금현수송
+            key FMTFT0801M
+            FMTFT0801P02
+
+          [ 중요용지 ]
+            key BSPRQ0101M
+            BSPRQ0101P01
+
+
+
         # 169
       외화시재금현황 > 시재금현황 2.8 #FMTFT0301M  # 169
 
@@ -239,6 +256,7 @@ about:blank
 <td className="g-start">부산</td>
 
 <td>012345</td>
+<td>0034</td>
 <td>홍길동</td>
 
 

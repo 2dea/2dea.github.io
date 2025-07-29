@@ -86,6 +86,10 @@ import FMTFT0801P02 from 'app/pages/fmt/FMTFT0801P02';  // 자금현수송 > 외
 import FMTFT0901M from 'app/pages/fmt/FMTFT0901M';      // 자금현수송 > 외화현수송     > 지점간외화현수송신청관리
 import FMTFT0901P01 from 'app/pages/fmt/FMTFT0901P01';  // 자금현수송 > 외화현수송     > 지점간외화현수송신청관리 ~ (LP)자금신청
 import FMTFT0901P02 from 'app/pages/fmt/FMTFT0901P02';  // 자금현수송 > 외화현수송     > 지점간외화현수송신청관리 ~ (LP)불입결정
+import FMTFT1001M from 'app/pages/fmt/FMTFT1001M';      // 자금현수송 > 외화현수송     > 외화미취결내역알림
+import FMTFT1101M from 'app/pages/fmt/FMTFT1101M';      // 자금현수송 > 외화현수송     > 타행수출입신청관리
+import FMTFT1101P01 from 'app/pages/fmt/FMTFT1101P01';  // 자금현수송 > 외화현수송     > 타행수출입신청관리 ~ (LP)신청
+
 
 import FMTCC0301M from 'app/pages/fmt/FMTCC0301M';      // 자금현수송 > 원화정사      > 관련조회 및 출력
 import FMTFC0101M   from 'app/pages/fmt/FMTFC0101M';    // 자금현수송 > 외화정사      > 일일실적관리 > 실적내역
@@ -421,7 +425,9 @@ import STMSC0101P01 from 'app/pages/stm/STMSC0101P01';   // 재난·안전관리
 import STMSC0101P02 from 'app/pages/stm/STMSC0101P02';   // 재난·안전관리 > 도급사업관리             > 도급계약 현황 등록 ~ (LP)참고
 import STMSC0201M from 'app/pages/stm/STMSC0201M';       // 재난·안전관리 > 도급사업관리             > 도급계약 현황 확인
 import STMSC0301M from 'app/pages/stm/STMSC0301M';       // 재난·안전관리 > 도급사업관리             > 안전보건협의체 회의록
+import STMSC0401M from 'app/pages/stm/STMSC0401M';       // 재난·안전관리 > 도급사업관리             > 순회점검표 등록
 
+import STMSC0601M from 'app/pages/stm/STMSC0601M';       // 재난·안전관리 > 도급사업관리             > 합동점검표 등록
 import STMSC0401P01 from 'app/pages/stm/STMSC0401P01';   // 재난·안전관리 > 도급사업관리             > 순회점검표 등록 ~ (LP)순회점검표 등록
 import STMSC0601P01 from 'app/pages/stm/STMSC0601P01';   // 재난·안전관리 > 도급사업관리             > 합동점검표 등록 ~ (LP)합동점검표 등록
 
@@ -517,6 +523,8 @@ import BSSTI0201M from 'app/pages/bss/BSSTI0201M';     // 영업지원 > 연수�
 import BSSTI0301M from 'app/pages/bss/BSSTI0301M';     // 영업지원 > 연수원                > 연수원품목입출고취소
 import BSSTI0401M from 'app/pages/bss/BSSTI0401M';     // 영업지원 > 연수원                > 연수원입출고내역조회
 import BSSTI0501M from 'app/pages/bss/BSSTI0501M';     // 영업지원 > 연수원                > 연수원품목재고조회
+import BSSPE0101M from 'app/pages/bss/BSSPE0101M';     // 영업지원 > 제안서평가위원선정      > 제안서평가위원회생성
+import BSSPE0201M from 'app/pages/bss/BSSPE0201M';     // 영업지원 > 제안서평가위원선정      > 제안서평가위원위촉
 
 
 // proto 수수료관리
@@ -708,6 +716,10 @@ function ProtoRoutes() {
         { path: 'FMTFT0901M',   element: <FMTFT0901M /> },
         { path: 'FMTFT0901P01', element: <FMTFT0901P01 /> },
         { path: 'FMTFT0901P02', element: <FMTFT0901P02 /> },
+
+        { path: 'FMTFT1001M',   element: <FMTFT1001M /> },
+        { path: 'FMTFT1101M',   element: <FMTFT1101M /> },
+        { path: 'FMTFT1101P01', element: <FMTFT1101P01 /> },
 
         { path: 'FMTCC0101P01', element: <FMTCC0101P01 /> },
 
@@ -1017,19 +1029,19 @@ function ProtoRoutes() {
 
         { path: 'STMSE0101M',   element: <STMSE0101M /> },
         { path: 'STMSE0101P01', element: <STMSE0101P01 /> },
-        { path: 'STMSE0201M', element: <STMSE0201M /> },
+        { path: 'STMSE0201M',   element: <STMSE0201M /> },
         { path: 'STMSE0201P01', element: <STMSE0201P01 /> },
 
-        { path: 'STMPE0101M', element: <STMPE0101M /> },
+        { path: 'STMPE0101M',   element: <STMPE0101M /> },
         { path: 'STMPE0101P01', element: <STMPE0101P01 /> },
-        { path: 'STMPE0201M', element: <STMPE0201M /> },
+        { path: 'STMPE0201M',   element: <STMPE0201M /> },
 
         { path: 'STMAS0101M',   element: <STMAS0101M /> },
         { path: 'STMAS0201P01', element: <STMAS0201P01 /> },
 
-        { path: 'STMAS0201M', element: <STMAS0201M /> },
+        { path: 'STMAS0201M',   element: <STMAS0201M /> },
         { path: 'STMAS0301M',   element: <STMAS0301M /> },
-        { path: 'STMAS0401M', element: <STMAS0401M /> },
+        { path: 'STMAS0401M',   element: <STMAS0401M /> },
         { path: 'STMHA0101M',   element: <STMHA0101M /> },
         { path: 'STMHA0201M',   element: <STMHA0201M /> },
         { path: 'STMHA0301M',   element: <STMHA0301M /> },
@@ -1040,9 +1052,11 @@ function ProtoRoutes() {
         { path: 'STMSC0101P02', element: <STMSC0101P02 /> },
         { path: 'STMSC0201M',   element: <STMSC0201M /> },
         { path: 'STMSC0301M',   element: <STMSC0301M /> },
+        { path: 'STMSC0401M',   element: <STMSC0401M /> },
+        { path: 'STMSC0401P01', element: <STMSC0401P01 /> },
 
-        { path: 'STMSC0401P01',   element: <STMSC0401P01 /> },
-        { path: 'STMSC0601P01',   element: <STMSC0601P01 /> },
+        { path: 'STMSC0601M',   element: <STMSC0601M /> },
+        { path: 'STMSC0601P01', element: <STMSC0601P01 /> },
 
         { path: 'STMKY0101M',   element: <STMKY0101M /> },
         { path: 'STMKY0201M',   element: <STMKY0201M /> },
@@ -1145,6 +1159,8 @@ function ProtoRoutes() {
         { path: 'BSSTI0301M',   element: <BSSTI0301M /> },
         { path: 'BSSTI0401M',   element: <BSSTI0401M /> },
         { path: 'BSSTI0501M',   element: <BSSTI0501M /> },
+        { path: 'BSSPE0101M',   element: <BSSPE0101M /> },
+        { path: 'BSSPE0201M',   element: <BSSPE0201M /> },
       ],
     },
     { // 수수료관리

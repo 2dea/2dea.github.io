@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 외화현수송 > 지점간외화현수송신청관리 ~ (LP)불입결정
+ * @description 자금현수송 > 외화현수송 > 타행수출입신청관리 ~ (LP)신청
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTFT0901P02() {
+function FMTFT1101P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -92,7 +92,7 @@ function FMTFT0901P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-70p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,7 +101,7 @@ function FMTFT0901P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">불입결정</span></h3>}
+        header={<h3 className="o-heading"><span className="label">타행수출입신청</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -109,7 +109,129 @@ function FMTFT0901P02() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
+                  <h4 className="o-heading level2"><span className="label">신청기본정보</span></h4>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`신청부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0034] 을지로
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`신청자`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            [0801] 홍길동
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`구분`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-checks">
+                              <InputRadio name="RADIO:T_10" label="불입" />
+                              <InputRadio name="RADIO:T_10" label="청구" defaultChecked />
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`신청일자`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input type-date mode-required wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`상대은행`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-50">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`첨부파일`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input is-file mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                                <div className="binds">
+                                  <input type="file" className="overlay" />
+                                  <CommonButton label="파일선택" className="_normal" />
+                                </div>
+                                <div className="binds">
+                                  <CommonButton label="파일삭제" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">출납 및 현송정보</span></h4>
                 </div>
 
                 <div className="main">
@@ -129,13 +251,6 @@ function FMTFT0901P02() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청부점`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0034] 을지로
-                          </td>
-
-                          <th colSpan={1}>
                             <Label label={`현송일자`} require={true} />
                           </th>
                           <td colSpan={1}>
@@ -148,27 +263,9 @@ function FMTFT0901P02() {
                               </div>
                             </div>
                           </td>
-                          <th colSpan={1}>
-                            <Label label={`구분`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="m-checks">
-                              <InputRadio name="RADIO:T_10" label="불입" disabled />
-                              <InputRadio name="RADIO:T_10" label="청구" defaultChecked disabled />
-                            </div>
-                          </td>
 
                           <th colSpan={1}>
-                            <Label label={`상대부점`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            [0081] 명동역
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`현송업체`} require={true} />
+                            <Label label={`현송업체`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -182,57 +279,72 @@ function FMTFT0901P02() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`현송원 1`} require={true} />
+                            <Label label={`현송인원수`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`현송원 2`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-20">
+                                <div className="o-form _input mode-required wdth-30 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <div className="o-form _input mode-required wdth-40">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
-                                </div>
                               </div>
                             </div>
                           </td>
+
                           <th colSpan={1}>
-                            <Label label={`현송원 3`} require={true} />
+                            <Label label={`현송차량수`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-20">
+                                <div className="o-form _input mode-required wdth-30 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <div className="o-form _input mode-required wdth-40">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`출납원1`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`출납원2`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`출납원3`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-60">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
@@ -241,41 +353,27 @@ function FMTFT0901P02() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`책임자`} require={true} />
+                            <Label label={`출납원4`} require={false} />
                           </th>
-                          <td colSpan={7}>
+                          <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
                                 </div>
                               </div>
                             </div>
                           </td>
-                        </tr>
 
-                        <tr>
                           <th colSpan={1}>
-                            <Label label={`현송원예외사항(신청)`} require={true} />
+                            <Label label={`출납원5`} require={false} />
                           </th>
-                          <td colSpan={7}>
-                            신청시 등록한 내용
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`현송원예외사항`} require={false} />
-                          </th>
-                          <td colSpan={7}>
+                          <td colSpan={5}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input ">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <div className="o-form _input  wdth-60">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -292,7 +390,7 @@ function FMTFT0901P02() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">지점간 불입결정내역</span></h5>
+                  <h5 className="o-heading level3"><span className="label">신청내역</span></h5>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -328,37 +426,31 @@ function FMTFT0901P02() {
                           <col className="wdth-10" />
                           <col className="wdth-10" />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
                           <col className="wdth-50" />
                           <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col className="wdth-auto" />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청액</span></div></th>
-                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액</span></div></th>
-                          </tr>
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화코드<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">평균수납액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">평균지급액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -366,11 +458,7 @@ function FMTFT0901P02() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
                               <td><InputCheck label="선택" labelHidden /></td>
-                              <td>{idx + 1}</td>
-                              <td>KOR(한국 원)</td>
-                              <td>10000</td>
-                              <td className="g-end">20,000</td>
-                              <td className="g-end">400,000</td>
+                              <td><Icon icon="grid-added" /></td>
                               <td>
                                 <div className="o-field">
                                   <div className="fields">
@@ -407,25 +495,22 @@ function FMTFT0901P02() {
                                   </div>
                                 </div>
                               </td>
-                              <td className="g-end">400,000</td>
+                              <td className="g-end"></td>
+                              <td className="g-end"></td>
+                              <td className="g-end"></td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-80">
+                                      <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
                             </tr>
                           ))}
                         </tbody>
-
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                          <tr className="sumtotal-trow">
-                            <td colSpan={2} className="sumtotal-tcell">합계</td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액(원)</td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong"></td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong">결정금액(원)</td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
-                            <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
-
-                          </tr>
-                        </tfoot>
                       </table>
                     </div>
                   </div>
@@ -441,8 +526,8 @@ function FMTFT0901P02() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="저장" className="_solid-primary" />
+              <CommonButton label="임시저장" className="_solid-primary" />
+              <CommonButton label="결재요청" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -452,7 +537,7 @@ function FMTFT0901P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)불입결정 [wdth-70p(w1340)]</span>
+              <span className="label">(P)신청 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>
@@ -475,4 +560,4 @@ function FMTFT0901P02() {
   );
 }
 
-export default FMTFT0901P02;
+export default FMTFT1101P01;

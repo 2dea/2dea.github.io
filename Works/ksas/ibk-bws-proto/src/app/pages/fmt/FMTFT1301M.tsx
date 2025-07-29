@@ -180,7 +180,7 @@ function FMTFT1301M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`신청여부`} require={false} />
+                    <Label label={`신청구분`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />

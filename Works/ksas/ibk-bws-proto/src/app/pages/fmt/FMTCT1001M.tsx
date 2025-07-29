@@ -304,14 +304,7 @@ function FMTCT1501M() {
                                 </td>
                                 <td>
                                   {idx === 10 - 1 ?
-                                    <div className="o-field">
-                                      <div className="fields">
-                                        <div className="o-form _input wdth-40">
-                                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                          <i aria-hidden="true"></i>
-                                        </div>
-                                      </div>
-                                    </div>
+                                    <></>
                                     : `강남구청`}
                                 </td>
                                 <td className="g-start">강남지역본부</td>
