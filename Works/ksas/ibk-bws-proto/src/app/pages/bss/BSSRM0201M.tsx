@@ -434,8 +434,11 @@ function BSSRM0201M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="검색" icon="search" />
+                                  </span>
                                 </div>
                               </div>
                             </div>
