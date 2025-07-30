@@ -27,12 +27,14 @@ import CMP000301P from 'app/pages/cmp/CMP000301P';   // 공통 ~ (LP)파일업�
 import CMP000302P from 'app/pages/cmp/CMP000302P';   // 공통 ~ (LP)첨부파일
 import CMP000401P from 'app/pages/cmp/CMP000401P';   // 공통 ~ (LP)이미지업로드
 import CMP000501P from 'app/pages/cmp/CMP000501P';   // 공통 ~ (LP)직원조회
+import CMP000601P from 'app/pages/cmp/CMP000601P';   // 공통 ~ (LP)주소검색
 import CMP000801P from 'app/pages/cmp/CMP000801P';   // 공통 ~ (LP)도움말
 import CMP001101P from 'app/pages/cmp/CMP001101P';   // 공통 ~ (LP)이미지보기
 import CMP001201P from 'app/pages/cmp/CMP001201P';   // 공통 ~ (LP)알림발송
 import CMP001301P from 'app/pages/cmp/CMP001301P';   // 공통 ~ (LP)알림발송
 import CMP001401P from 'app/pages/cmp/CMP001401P';   // 공통 ~ (LP)업체조회
 import CMP001402P from 'app/pages/cmp/CMP001402P';   // 공통 ~ (LP)업체기본정보
+import CMP001501P from 'app/pages/cmp/CMP001501P';   // 공통 ~ (LP)결재요청
 import CMP001502P from 'app/pages/cmp/CMP001502P';   // 공통 ~ (LP)결재상세정보
 import CMP001601P from 'app/pages/cmp/CMP001601P';   // 공통 ~ (LP)반려
 
@@ -291,6 +293,7 @@ import BEXPM0101M from 'app/pages/bex/BEXPM0101M';      // 행내등기·우편�
 
 import BEXPM0201M from 'app/pages/bex/BEXPM0201M';      // 행내등기·우편물 > 우편물    > 우편물신청내역
 import BEXPM0601M from 'app/pages/bex/BEXPM0601M';      // 행내등기·우편물 > 우편물    > 우편물대행신청내역
+import BEXPM0701M from 'app/pages/bex/BEXPM0701M';      // 행내등기·우편물 > 우편물    > 부점별통신료/환부료관리
 import BEXPM0301M from 'app/pages/bex/BEXPM0301M';      // 행내등기·우편물 > 우편물    > 우편물검수
 import BEXPM0301P01 from 'app/pages/bex/BEXPM0301P01';  // 행내등기·우편물 > 우편물    > 우편물검수 ~ (LP)우편물일괄검수등록
 
@@ -648,12 +651,14 @@ function ProtoRoutes() {
         { path: 'CMP000302P', element: <CMP000302P /> },
         { path: 'CMP000401P', element: <CMP000401P /> },
         { path: 'CMP000501P', element: <CMP000501P /> },
+        { path: 'CMP000601P', element: <CMP000601P /> },
         { path: 'CMP000801P', element: <CMP000801P /> },
         { path: 'CMP001101P', element: <CMP001101P /> },
         { path: 'CMP001201P', element: <CMP001201P /> },
         { path: 'CMP001301P', element: <CMP001301P /> },
         { path: 'CMP001401P', element: <CMP001401P /> },
         { path: 'CMP001402P', element: <CMP001402P /> },
+        { path: 'CMP001501P', element: <CMP001501P /> },
         { path: 'CMP001502P', element: <CMP001502P /> },
         { path: 'CMP001601P', element: <CMP001601P /> },
       ],
@@ -918,6 +923,8 @@ function ProtoRoutes() {
 
         { path: 'BEXPM0201M',   element: <BEXPM0201M /> },
         { path: 'BEXPM0601M',   element: <BEXPM0601M /> },
+        { path: 'BEXPM0701M',   element: <BEXPM0701M /> },
+
         { path: 'BEXPM0301M',   element: <BEXPM0301M /> },
         { path: 'BEXPM0301P01', element: <BEXPM0301P01 /> },
 

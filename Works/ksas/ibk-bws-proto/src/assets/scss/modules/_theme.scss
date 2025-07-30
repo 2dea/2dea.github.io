@@ -7,3 +7,8 @@
 .o-grid:where(.o-grid *):where(.dom-wrapper.type-proto *) {
   outline: thick solid Blue;
 }
+
+
+// CMP000601P 주소검색
+.address-box {text-align: start;}
+.address-box .address-sub {font-size: $font-40; line-height: $line-40;}
