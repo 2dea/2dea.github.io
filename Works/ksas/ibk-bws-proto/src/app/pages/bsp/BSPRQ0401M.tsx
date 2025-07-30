@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(영업점) > 신청 > 중요용지신청
+ * @description 중요용지·용도품(영업점) > 신청 > 용도품신청
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSPRQ0101M() {
+function BSPRQ0401M() {
   // Dialog
   // const [visible, setVisible] = useState<boolean>(true);
 
@@ -46,7 +46,7 @@ function BSPRQ0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '신청' }, { label: '중요용지신청' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '신청' }, { label: '용도품신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -103,7 +103,7 @@ function BSPRQ0101M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">중요용지신청</span>
+                <span className="label">용도품신청</span>
 
                 <FavoriteDiv />
               </h1>
@@ -159,4 +159,4 @@ function BSPRQ0101M() {
   );
 }
 
-export default BSPRQ0101M;
+export default BSPRQ0401M;

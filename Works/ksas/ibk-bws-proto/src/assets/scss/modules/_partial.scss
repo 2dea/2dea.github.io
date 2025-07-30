@@ -1,12 +1,19 @@
 @charset "UTF-8";
 
 .m-shop  { display: flex; }
-.m-shop >*  { flex: none; display: flex; flex-direction: column; min-width: 0; border: $e10 solid var(--color-edge-40); }
-.m-shop >* >*  { flex: 1; }
+.m-shop >*  { flex: none; min-width: 0; border: $e10 solid var(--color-edge-40); }
+.m-shop >.lists  { flex: 1; display: flex; flex-direction: column; }
+// .m-shop >* >*  { flex: 1; }
 
 .m-shop >.m-shop-list  { flex: 1; }
 
-.m-shop  { flex: 1; }
+
+.m-shop >.results  { display: flex; }
+.m-shop >.results >*  { flex: none; display: flex; flex-direction: column; min-width: 0; }
+
+
+
+.m-shop  { flex: 1 0; flex-basis: 0; min-height: 0; }
 
 
 
@@ -19,7 +26,7 @@
 .o-survey >.fields >.term  { flex: 1; }
 .o-survey >.fields >.term .question  { --lh: var(--text-height-para); font-size: $font-60; line-height: var(--lh); position: relative; min-height: 1lh; margin-bottom: $gap-element-80; }
 .o-survey >.fields >.term .question >.order  { font-weight: $bold-70; font-size: $font-40; display: inline-block; vertical-align: middle; margin-top: calc((1lh - $font-40) / -5); color: var(--color-text-20); }
-.o-survey >.fields >.term .question >.order >.count  { position: absolute; top: 0; left: III(15 - 63); }
+.o-survey >.fields >.term .question >.order >.count  { position: absolute; top: 0; left: III(16 - 64); }
 
 
 .m-survey  { border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }

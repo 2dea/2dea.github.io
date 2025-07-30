@@ -129,7 +129,7 @@ import BSPRQ0101M from 'app/pages/bsp/BSPRQ0101M';      // 중요용지·용도�
 import BSPRQ0201M from 'app/pages/bsp/BSPRQ0201M';      // 중요용지·용도품(영업점) > 신청  > 중요용지신청내역
 import BSPRQ0301M from 'app/pages/bsp/BSPRQ0301M';      // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정
 import BSPRQ0301P02 from 'app/pages/bsp/BSPRQ0301P02';  // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정 > (LP)자동배송 신청 이력 조회
-
+import BSPRQ0401M from 'app/pages/bsp/BSPRQ0401M';      // 중요용지·용도품(영업점) > 신청  > 용도품신청
 import BSPRQ0501M from 'app/pages/bsp/BSPRQ0501M';      // 중요용지·용도품(영업점) > 신청  > 용도품신청내역
 
 import BSPFD0101M from 'app/pages/bsp/BSPFD0101M';      // 중요용지·용도품(영업점) > 조회  > 중요용지재고조회
@@ -763,6 +763,7 @@ function ProtoRoutes() {
         { path: 'BSPRQ0201M',   element: <BSPRQ0201M /> },
         { path: 'BSPRQ0301M',   element: <BSPRQ0301M /> },
         { path: 'BSPRQ0301P02', element: <BSPRQ0301P02 /> },
+        { path: 'BSPRQ0401M',   element: <BSPRQ0401M /> },
         { path: 'BSPRQ0501M',   element: <BSPRQ0501M /> },
 
         { path: 'BSPFD0101M',   element: <BSPFD0101M /> },
