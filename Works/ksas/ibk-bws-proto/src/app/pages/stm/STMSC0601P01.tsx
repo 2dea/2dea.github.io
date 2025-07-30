@@ -1238,7 +1238,7 @@ function STMSC0601P01() {
                     <div className="o-field">
                       <div className="fields">
                         <div className="o-form _input">
-                          <InputTextarea placeholder="불량사항이 경미하거나 즉시 조치한 경우 내용을 기재해주세요&#13;점검결과 ‘해당없음’에 대한 내용 또는 별도 의견 필요 시 작성해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                          <InputTextarea placeholder="불량사항이 경미하거나 즉시 조치한 경우 내용을 기재해주세요 &#13;점검결과 ‘해당없음’에 대한 내용 또는 별도 의견 필요 시 작성해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                           <i aria-hidden="true"></i>
                         </div>
                       </div>

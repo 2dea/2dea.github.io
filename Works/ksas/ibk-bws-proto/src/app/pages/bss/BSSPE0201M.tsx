@@ -390,19 +390,40 @@ function BSSPE0201M() {
                             <Label label={`평가위원지정`} require={true} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="초기화" icon="remove" />
-                                  </span>
+                            <div className="m-flex-list">
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="초기화" icon="remove" />
+                                    </span>
+                                  </div>
                                 </div>
+                              </div>
 
-                                <div className="o-form _input mode-required wdth-30 g-end">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="초기화" icon="remove" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="초기화" icon="remove" />
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                             </div>

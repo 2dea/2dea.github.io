@@ -163,6 +163,9 @@ function FileUploads() {
                                   <input type="file" className="overlay" />
                                   <CommonButton label="파일선택" className="_normal" />
                                 </div>
+                                <div className="binds">
+                                  <CommonButton label="파일다운" className="_normal" />
+                                </div>
                               </div>
                             </div>
                           </td>

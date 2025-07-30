@@ -993,7 +993,7 @@ function TMPL() {
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
-                                    <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                    <div className="binds"><ImageButton label="삭제" icon="delete" disabled /></div>
                                   </div>
                                 </div>
 
@@ -1033,6 +1033,49 @@ function TMPL() {
                                       <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                       <i aria-hidden="true"></i>
                                     </div>
+                                    <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <div className="m-flex-list">
+
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input mode-required wdth-50">
+                                      <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                      <span className="inner-binds">
+                                        <ImageButton label="초기화" icon="remove" />
+                                      </span>
+                                    </div>
+
+                                    <div className="o-form _input mode-required wdth-10 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+
+                                    <span className="units">명</span>
+                                    <div className="binds"><ImageButton label="삭제" icon="delete" disabled/></div>
+                                  </div>
+                                </div>
+
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-50">
+                                      <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                      <span className="inner-binds">
+                                        <ImageButton label="초기화" icon="remove" />
+                                      </span>
+                                    </div>
+
+                                    <div className="o-form _input wdth-10 g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                    <span className="units">명</span>
                                     <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
                                   </div>
                                 </div>
