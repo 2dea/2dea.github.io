@@ -126,6 +126,10 @@ function FEMCT0101M() {
                 <CommonButton label="계약등록" className="_solid-primary" />
               </div>
 
+              <div className="group _primary">
+                <CommonButton label="저장" className="_solid-primary" />
+              </div>
+
             </div>
           </div>
         </div>
@@ -815,6 +819,8 @@ function FEMCT0101M() {
                                   <col />
                                   <col />
                                   <col />
+                                  <col className="wdth-50" />
+                                  <col />
                                   <col />
                                   <col />
                                   <col />
@@ -827,15 +833,17 @@ function FEMCT0101M() {
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관할센터명</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산기준</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 금액</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산기준<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료금액<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                     <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점상태</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">개점일자</span></div></th>
+                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐점일자</span></div></th>
                                   </tr>
                                 </thead>
 
                                 <tbody className="p-datatable-tbody">
                                   <tr className="p-datatable-emptymessage">
-                                    <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                    <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                                   </tr>
                                 </tbody>
 
@@ -845,7 +853,7 @@ function FEMCT0101M() {
                                       {
                                         (idx - 3) % 3 === 0 &&
                                         <tr className="p-rowgroup-header">
-                                          <td colSpan={8} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                          <td colSpan={10} className="p-x-cell-blank"></td>{/* rowGroupHeaderTemplate={blankCellHeaderTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
                                         </tr>
                                       }
                                       <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
@@ -875,14 +883,38 @@ function FEMCT0101M() {
                                             <>시화공단기업금융센터</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                                           }
                                         </td>
-                                        <td>전담</td>
-                                        <td className="g-end">60,000,000</td>
+                                        <td>
+                                          {(idx) % 3 === 2 ?
+                                            <div className="o-field">
+                                              <div className="fields">
+                                                <div className="o-form _select wdth-30">
+                                                  <XDropdown appendTo={'self'} className="bind" />
+                                                  <i aria-hidden="true"></i>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            : `전담`}
+                                        </td>
+                                        <td className="g-end">
+                                          {(idx) % 3 === 2 ?
+                                            <div className="o-field">
+                                              <div className="fields">
+                                                <div className="o-form _input wdth-50 g-end">
+                                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                                  <i aria-hidden="true"></i>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            : `60,000,000`}
+                                        </td>
                                         <td>개점</td>
+                                        <td><span className="o-digit type-date">2024-09-16</span></td>
+                                        <td><span className="o-digit type-date">2024-09-16</span></td>
                                       </tr>
                                       {
                                         (idx - 2) % 3 === 0 &&
                                         <tr className="p-rowgroup-footer">
-                                          <td colSpan={8} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                                          <td colSpan={10} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
                                         </tr>
                                       }
                                     </>

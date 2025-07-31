@@ -114,11 +114,6 @@ function FMTCT1501M() {
             </div>
 
             <div className="m-binds type-end">
-
-              <div className="group _primary">
-                <CommonButton label="결재요청" className="_solid-primary _approve" />
-              </div>
-
               <div className="group _primary">
                 <CommonButton label="현송원관리" className="_solid-primary _approve" />
                 <CommonButton label="저장" className="_solid-primary" />
@@ -225,21 +220,6 @@ function FMTCT1501M() {
               <div className="o-grid">
                 <div className="column">
 
-                  <div className="o-board type-b">
-                    <div className="o-notice">
-                      <div className="binds">
-                        <div className="m-mixed-field">
-                          <div className="o-field">
-                            <Label label={`시재업데이트일시`} require={false} />
-                            <div className="fields">
-                              <div className="string o-digit type-datetime">2025-12-25 04:36:12</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                   <div className="o-section">
                     <div className="m-header">
                       <h2 className="o-heading level2"><span className="label">노선별 부점정보</span></h2>
@@ -250,6 +230,13 @@ function FMTCT1501M() {
                           <span className="value">8</span>
                           <span className="units">건</span>
                         </em>
+                      </div>
+
+                      <div className="o-field">
+                        <Label label={`최종 업로드일시`} require={false} />
+                        <div className="fields">
+                          <div className="string o-digit type-datetime">2025-12-25 04:36:12</div>
+                        </div>
                       </div>
 
                       <div className="m-binds">
@@ -297,6 +284,7 @@ function FMTCT1501M() {
                               <col />
                               <col />
                               <col />
+                              <col />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
@@ -305,6 +293,7 @@ function FMTCT1501M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송일자</span></div></th>
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관할업무센터</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화구분</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송업체</span></div></th>
@@ -339,7 +328,7 @@ function FMTCT1501M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={25}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={26}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -352,6 +341,7 @@ function FMTCT1501M() {
                                     <td>0810</td>
                                     <td className="g-start">프로세스혁신부</td>
                                     <td>불입</td>
+                                    <td>원화</td>
                                     <td>0554</td>
                                     <td className="g-start">을지로</td>
                                     <td className="g-start">(주)앤비앤코퍼레이션</td>
@@ -447,6 +437,7 @@ function FMTCT1501M() {
                               <col />
                               <col />
                               <col />
+                              <col />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
@@ -455,6 +446,7 @@ function FMTCT1501M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송일자</span></div></th>
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관할업무센터</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화구분</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송업체</span></div></th>
@@ -489,7 +481,7 @@ function FMTCT1501M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={25}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={26}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -508,6 +500,7 @@ function FMTCT1501M() {
                                     <td>0810</td>
                                     <td className="g-start">프로세스혁신부</td>
                                     <td>불입</td>
+                                    <td>원화</td>
                                     <td>0554</td>
                                     <td className="g-start">을지로</td>
                                     <td className="g-start">(주)앤비앤코퍼레이션</td>
