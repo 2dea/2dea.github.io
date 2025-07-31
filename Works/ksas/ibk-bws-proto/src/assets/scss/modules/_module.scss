@@ -689,6 +689,7 @@
 .o-length:where(.o-pair-board >.header *),
   .o-length:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
 
+.o-length:where(.m-length *)  { display: inline-flex; }
 
 .m-dialog-message  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-60; line-height: var(--lh); flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 100%; min-height: calc(var(--lh) * 1); margin: 0 auto; text-align: center; }
 .m-dialog-message >*  { flex: 1; display: inline-flex; flex-direction: column; justify-content: center; max-width: 100%; text-align: left; text-align: start; }
