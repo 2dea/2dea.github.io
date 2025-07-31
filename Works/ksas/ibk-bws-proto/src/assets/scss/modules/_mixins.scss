@@ -117,7 +117,7 @@
 }
 
 @mixin inc-sronly($user-select: null, $center: 1)  {
-  font-size: max($ss, $rss); line-height: 1; position: absolute; @if ($center == 1) { @include inc-abscenter(); max-width: 125%; } color: Transparent; pointer-events: none; user-select: $user-select; text-shadow: none; overflow-wrap: break-word;
+  font-size: max($ss, $rss); line-height: 1; position: absolute; @if ($center == 1) { @include inc-abscenter(); max-width: 125%; text-align: center; } color: Transparent; pointer-events: none; user-select: $user-select; text-shadow: none; overflow-wrap: break-word;
 }
 
 @mixin inc-ellipsis()  {

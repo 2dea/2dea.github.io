@@ -35,6 +35,8 @@ import { Checkbox } from 'primereact/checkbox';
 import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
 function BSPRQ0101M() {
   // Dialog
@@ -112,7 +114,6 @@ function BSPRQ0101M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>

@@ -5,16 +5,114 @@
 .page-index >.div-temp img  { max-width: none; }
 
 
-.m-shop  { display: flex; }
-.m-shop >*  { flex: none; min-width: 0; border: $e10 solid var(--color-edge-40); }
-.m-shop >.lists  { flex: 1; display: flex; flex-direction: column; }
-// .m-shop >* >*  { flex: 1; }
+.o-tab.type-c >.lists  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, III(120)), 1fr)); }
 
-.m-shop >.m-shop-list  { flex: 1; }
+.o-tab.type-c .link  { display: flex; align-items: center; justify-content: center; min-height: III(42); border: $e10 solid var(--color-edge-30); }
+.o-tab.type-c .link[aria-selected="true"]  { font-weight: $bold-70; border-color: $tp; color: var(--color-text-00); background: var(--color-icon-90); }
 
 
-.m-shop >.results  { display: flex; }
-.m-shop >.results >*  { flex: none; display: flex; flex-direction: column; min-width: 0; }
+.o-product  { display: flex; }
+.o-product >*  { flex: none; }
+.o-product >.main  { flex: 1; }
+.o-product >.main .caption  { font-size: $font-30; line-height: $line-30; display: flex; align-items: center; gap: $gap-element-70; margin-bottom: $gap-whitespace-30; color: var(--color-text-30); }
+.o-product >.main .subject  { --lh: var(--text-height-para); font-weight: $bold-70; line-height: var(--lh); display: flex; }
+
+.o-product:where(.m-shop-detail *) >.main .caption  { font-size: $font-40; line-height: $line-40; margin-bottom: $gap-whitespace-50; }
+.o-product:where(.m-shop-detail *) >.main .subject  { font-size: $font-60; }
+
+
+
+
+
+
+.m-shop-detail  { --m-margin-block: #{$gap-element-80}; --m-margin-inline: #{$gap-element-80}; display: flex; flex-direction: column; }
+.m-shop-detail >*  { padding: var(--m-margin-block) var(--m-margin-inline); }
+.m-shop-detail >.bodies  { padding-top: 0; }
+
+.m-shop-detail >.bodies >.figure  { margin-bottom: 12px; }
+.m-shop-detail >.bodies >.figure  { height: III(177); border: $e10 solid var(--color-edge-40); }
+.m-shop-detail >.bodies >.figure :has(.o-view-image),
+.m-shop-detail >.bodies >.figure .o-view-image  { height: 100%; }
+.m-shop-detail .o-view-image  { margin: 0 auto; }
+.m-shop-detail .o-view-image  { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; background: var(--color-ground) var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
+.m-shop-detail .o-view-image >*  { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; margin: auto; }
+
+.m-shop-detail >.bodies >.detail  {  }
+.m-shop-detail >.bodies >.detail >.summary  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; padding-top: 12px; border-top: $e10 solid var(--color-edge-30); }
+.m-shop-detail >.bodies >.detail >.summary >* >*  { display: block; }
+.m-shop-detail >.bodies >.detail >.summary .head  { font-weight: $bold-70; font-size: $font-30; line-height: $line-30; margin-bottom: 4px; }
+.m-shop-detail >.bodies >.detail >.summary .data  { font-size: $font-30; line-height: $line-30; }
+
+
+.o-rank  { display: flex; align-items: center; gap: $gap-element-30; }
+.o-rank >*  { flex: none; display: flex; align-items: center; min-width: 0; }
+.o-rank >* >*  { flex: none; display: flex; align-items: center; min-width: 0; }
+.o-rank >* >* >*  { flex: none; min-width: 0; }
+
+.o-rank >.order .rank  { font-weight: $bold-70; justify-content: center; width: 16px; text-align: center; }
+.o-rank >.order .status  { justify-content: center; position: relative; width: 24px; }
+.o-rank >.order .status .tag  { @include inc-sronly(); }
+.o-rank >.product  { flex: 1 0 0; gap: $gap-element-30; white-space: nowrap; }
+.o-rank >.product .id  { width: 42px; }
+.o-rank >.product .name  { flex: 1 0 0; overflow: hidden; text-overflow: ellipsis; }
+
+.o-rank:where(.m-shop-ranking *)  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); }
+
+
+.m-shop-ranking  { --m-margin-block: #{$gap-element-80}; --m-margin-inline: #{$gap-element-80}; display: flex; flex-direction: column; }
+.m-shop-ranking >*  { padding: var(--m-margin-block) var(--m-margin-inline); }
+
+.m-shop-ranking  { padding: var(--m-margin-block) 0; background: var(--color-ground-30); }
+.m-shop-ranking:where(* +*)  { border-top: $e10 solid var(--color-edge-40); }
+
+.m-shop-ranking >.header  { --m-margin-block: 0; display: flex; align-items: center; min-height: $height-form-50; margin-bottom: 8px; }
+.m-shop-ranking >.header .o-toggles  { flex: 1; }
+.m-shop-ranking >.header .o-toggles >*  { flex: 1; }
+
+.m-shop-ranking >.bodies  { --m-margin-block: 0; }
+.m-shop-ranking >.bodies >.ranking >*  { padding: 8px 0; }
+
+
+
+
+
+
+
+
+.m-cart  {  }
+.m-cart .amount  { display: flex; margin-top: $gap-element-50; }
+
+
+.m-shop-cart  { --m-margin-block: #{$gap-element-80}; --m-margin-inline: #{$gap-element-80}; display: flex; flex-direction: column; }
+.m-shop-cart >*  { padding: var(--m-margin-block) var(--m-margin-inline); }
+
+.m-shop-cart >.header  { --m-margin-block: #{$gap-element-70}; display: flex;  align-items: center; gap: $gap-element-70; border-bottom: $e10 solid var(--color-edge-40); background: var(--color-ground2-blue-30); }
+.m-shop-cart >.header >*  { flex: none; min-width: 0; }
+.m-shop-cart >.header >.primary  { flex: 1; }
+
+.m-shop-cart >.bodies  { flex: 1; flex-basis: 0; overflow: hidden auto; }
+.m-shop-cart >.bodies >.carts >:not(:first-child)  { padding-top: 8px; }
+.m-shop-cart >.bodies >.carts >:not(:last-child)  { padding-bottom: 8px; border-bottom: $e10 solid var(--color-edge-30); }
+
+.m-shop-cart >.footer  { padding-top: 0; }
+.m-shop-cart >.footer >.binds  { display: flex; }
+.m-shop-cart >.footer >.binds >*  { flex: 1; display: flex; }
+.m-shop-cart >.footer >.binds >* >*  { flex: 1; }
+
+
+.m-shop  { display: flex; gap: $margin-section-70; }
+.m-shop >*  { flex: none; min-width: 0; }
+.m-shop >.lists  { flex: 1; display: flex; flex-direction: column; min-width: III(1014); }
+
+
+.m-shop >.results  { display: flex; gap: $margin-section-50; }
+.m-shop >.results >*  { flex: none; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
+.m-shop >.results >* >:first-child  { flex: 1; border-start-start-radius: inherit; border-start-end-radius: inherit; }
+.m-shop >.results >* >:last-child  { border-end-start-radius: inherit; border-end-end-radius: inherit; }
+
+.m-shop >.results >.details  { width: III(260); }
+
+.m-shop >.results >.requests  { width: III(222); border-color: var(--color-edge2-blue-30); }
 
 
 

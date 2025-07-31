@@ -109,6 +109,8 @@ $width-layout-container:                calc(var(--rem) * var(--width-layout-con
   overscroll-behavior: contain;
 }
 .dom-header .div-nav-global  { @include inc-scrollbar-width(1, 3); }
+.m-shop  { @include inc-scrollbar-width(3, 4); }
+
 
 
 ::-webkit-resizer  { image-rendering: pixelated; background: var(--obj-sym-resizer-scrollable) 0 /100%; }
