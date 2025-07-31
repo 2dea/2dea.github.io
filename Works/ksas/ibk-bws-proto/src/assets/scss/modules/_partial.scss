@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.page-index  { background: var(--color-ground-70); }
+.page-index >.div-temp  { padding: $margin-layout-block $margin-layout-inline; padding-right: calc($margin-layout-inline - $width-scrollbar); }
+.page-index >.div-temp img  { max-width: none; }
+
+
 .m-shop  { display: flex; }
 .m-shop >*  { flex: none; min-width: 0; border: $e10 solid var(--color-edge-40); }
 .m-shop >.lists  { flex: 1; display: flex; flex-direction: column; }
