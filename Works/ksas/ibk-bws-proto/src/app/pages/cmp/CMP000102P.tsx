@@ -1,5 +1,5 @@
 /**
- * @description 영업지원 > 캘린더신청 > 신청기간관리 ~ (LP)공지이미지관리
+ * @description 공통 ~ (LP)미처리업무등록관리
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function BSSCR0101P01() {
+function CMP000102P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -92,7 +92,7 @@ function BSSCR0101P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,7 +101,7 @@ function BSSCR0101P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">공지이미지관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">미처리업무관리</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -111,9 +111,9 @@ function BSSCR0101P01() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`기준연도`} require={false} />
+                    <Label label={`업무구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select wdth-50">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -121,20 +121,10 @@ function BSSCR0101P01() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`공지차수`} require={false} />
+                    <Label label={`삭제여부`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select wdth-50">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`유형`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input wdth-50">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -149,22 +139,7 @@ function BSSCR0101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">공지등록내역</span></h4>
-
-                  <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
-                    </em>
-                  </div>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록출력" icon="print" />
-                    </div>
-                  </div>
+                  <h4 className="o-heading level2"><span className="label">미처리 업무 내역</span></h4>
                 </div>
 
                 <div className="main _primary rows-body-3i">
@@ -174,7 +149,6 @@ function BSSCR0101P01() {
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
-                          <col className="wdth-auto" />
                           <col />
                           <col />
                           <col />
@@ -187,25 +161,21 @@ function BSSCR0101P01() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공지썸네일</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준연도</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공지차수</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">유형</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공지기간</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">설명</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
-                          </tr>
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리업무 번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리업무명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관련거래번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관련거래명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제연월일</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정렬순서</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경일시</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -213,20 +183,14 @@ function BSSCR0101P01() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>
-                              <div className="o-view-image thumbnail-image">
-                                {/* <img src={require("assets/images/temp/")} alt="" /> */}
-                                <img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" />
-                              </div>
-                            </td>
-                            <td><span className="o-digit type-date">2025</span></td>
-                            <td>기본</td>
-                            <td>AA_03</td>
-                            <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
-                            <td className="g-start">전체 부점 공통 이미지 노출</td>
-                            <td>0801</td>
-                            <td>홍길동</td>
-                            <td><span className="o-digit type-date">2025-12</span></td>
+                            <td>10010</td>
+                            <td>외화 자금현수송 미작성</td>
+                            <td>중요용지</td>
+                            <td>70010</td>
+                            <td>중요용지 인수</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>7</td>
+                            <span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span>
                           </tr>
                         ))}
                         </tbody>
@@ -238,10 +202,11 @@ function BSSCR0101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">상세정보</span></h5>
+                  <h5 className="o-heading level3"><span className="label">미처리업무 상세내역</span></h5>
 
                   <div className="m-binds">
                     <div className="group">
+                      <CommonButton label="초기화" className="_normal" />
                       <CommonButton label="신규" className="_create" />
                     </div>
                   </div>
@@ -255,31 +220,25 @@ function BSSCR0101P01() {
                         <col className="data" />
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`등록자`} require={false} />
+                            <Label label={`미처리업번호`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0810] 홍길동
+                            1001
                           </td>
                           <th colSpan={1}>
-                            <Label label={`등록일자`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`기준연도`} require={true} />
+                            <Label label={`업무구분`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
+                                <div className="o-form _select wdth-50 mode-required">
                                   <XDropdown appendTo={document.body} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -287,24 +246,27 @@ function BSSCR0101P01() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`공지차수`} require={true} />
+                            <Label label={`미처리업무명`} require={true} />
                           </th>
                           <td colSpan={1}>
-                            <div className="m-checks">
-                              <InputRadio name="RADIO:10" label="신청" />
-                              <InputRadio name="RADIO:10" label="배송&middot;인수" />
-                              <InputRadio name="RADIO:10" label="기본" defaultChecked />
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50 mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
                             </div>
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`유형`} require={true} />
+                            <Label label={`관련거래번호`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-90 mode-required">
+                                <div className="o-form _input wdth-50 mode-required">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -312,80 +274,109 @@ function BSSCR0101P01() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`부점`} require={true} />
+                            <Label label={`관련거래명`} require={true} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-90 mode-required">
+                                <div className="o-form _input mode-required">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" />
-                                  </span>
                                 </div>
                               </div>
                             </div>
                           </td>
                         </tr>
+
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`공지기간`} require={false} />
+                            <Label label={`미처리업무조건`} require={true} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={5}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input type-date wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <span className="seps type-tilde">~</span>
-                                <div className="o-form _input type-date wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
+                                <div className="o-form _input mode-required">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
                           </td>
                         </tr>
+
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`설명`} require={false} />
+                            <Label label={`기준기타내용`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={5}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
                           </td>
                         </tr>
+
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`이미지​첨부 (626 x 177px)`} require={true} />
+                            <Label label={`미처리업담당자`} require={true} />
                           </th>
-                          <td colSpan={3}>
-                            <div className="m-flex-list">
-                              <div className="m-upload-image type-choose type-widthy">{/* .m-upload-image.type-choose { @DEV } */}
-                                <div className="main">
-                                  <div className="o-object style-fit"><img src={require("assets/images/common/img_empty-image.png")} alt="" /></div>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-90 mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
                                 </div>
-                                <div className="binds">
-                                  <CommonButton label="파일선택" className="_normal" />
-                                  <CommonButton label="파일삭제" className="_normal" />
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`삭제여부`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-checks">
+                              <InputCheck label="선택" labelHidden defaultChecked />
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`정렬순서`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-30 mode-required g-end">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
                           </td>
                         </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={5}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
                       </tbody>
                     </table>
                   </form>
                 </div>
-
               </div>
 
             </div>
@@ -395,18 +386,19 @@ function BSSCR0101P01() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>
+
       </Dialog>
 
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)공지이미지관리 [wdth-60p(w1150)]</span>
+              <span className="label">(P)미처리업무등록관리 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
@@ -429,4 +421,4 @@ function BSSCR0101P01() {
   );
 }
 
-export default BSSCR0101P01;
+export default CMP000102P;

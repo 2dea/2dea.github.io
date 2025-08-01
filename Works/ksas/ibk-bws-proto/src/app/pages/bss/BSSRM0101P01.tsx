@@ -226,7 +226,7 @@ function BSSRM0101P01() {
                   <div className="main">
                     <div className="o-field">
                       <div className="fields">
-                        <div className="o-form _input mode-required">
+                        <div className="o-form _input">
                           <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
                           <i aria-hidden="true"></i>
 

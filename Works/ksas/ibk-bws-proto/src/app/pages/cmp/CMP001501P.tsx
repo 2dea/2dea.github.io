@@ -92,7 +92,7 @@ function CMP001501P() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-60p"
+        className="layer-wrap wdth-70p"
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -111,7 +111,7 @@ function CMP001501P() {
               <form className="m-filter-form">
                 <div className="fieldset">
                   <div className="o-field">
-                    <Label label={`직원내역`} require={false} />
+                    <Label label={`부점코드/명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
@@ -145,7 +145,7 @@ function CMP001501P() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">부점코드/명</span></h4>
+                  <h4 className="o-heading level2"><span className="label">직원내역</span></h4>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -174,9 +174,9 @@ function CMP001501P() {
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소속</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직위</span></div></th>
                           </tr>
                         </thead>
 
@@ -191,9 +191,9 @@ function CMP001501P() {
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
                               <td className="g-start">프로세스혁신부</td>
-                              <td>부점장</td>
-                              <td>부장</td>
                               <td>홍길동</td>
+                              <td>부장</td>
+                              <td>감리역</td>
                             </tr>
                           ))}
                         </tbody>
@@ -220,7 +220,7 @@ function CMP001501P() {
                   <h4 className="o-heading level2"><span className="label">결재선</span></h4>
 
                   <div className="o-helper">
-                    <em className="label c-color-strong">소속부점 팀장 &rarr; 안전관리팀 팀장</em>
+                    <em className="label c-color-strong">출납책임자, 부점장 전결입니다.</em>
                   </div>
 
                   <div className="o-field">
@@ -257,18 +257,14 @@ function CMP001501P() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소속</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선택</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직위</span></div></th>
                           </tr>
                         </thead>
 
@@ -281,21 +277,28 @@ function CMP001501P() {
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td>{idx + 1}</td>
                               <td className="g-start">프로세스혁신부</td>
-                              <td>부점장</td>
-                              <td>부장</td>
                               <td>홍길동</td>
-                              <td>
-                                <CommonButton label="선택" className="_normal" />
-                              </td>
+                              <td>부장</td>
+                              <td>감리역</td>
                             </tr>
                           ))}
                         </tbody>
+
+                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                          <tr className="sumtotal-trow">
+                            <td colSpan={1} className="sumtotal-tcell">안전관리팀</td>
+                            <td className="sumtotal-tcell">안정원(대직 김준완)</td>
+                            <td className="sumtotal-tcell">팀장</td>
+                            <td className="sumtotal-tcell">부장</td>
+                          </tr>
+                        </tfoot>
+
                       </table>
                     </div>
                   </div>
                 </div>
+
               </div>
 
             </div>
@@ -304,11 +307,7 @@ function CMP001501P() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">결재선</span></h4>
-
-                  <div className="o-helper">
-                    <em className="label c-color-strong">소속부점 팀장 &rarr; 안전관리팀 팀장</em>
-                  </div>
+                  <h5 className="o-heading level3"><span className="label">결재선그룹</span></h5>
 
                   <div className="o-field">
                     <div className="fields">
@@ -317,71 +316,11 @@ function CMP001501P() {
                         <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
                         <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
                       </span>
-
-                      {/* <div className="o-form _input wdth-50">
-                        <span className="inner-binds type-find">
-                          <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                          <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
-                        </span>
-                      </div> */}
-                    </div>
-                  </div>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="즐겨찾기 저장" className="_normal" />
                     </div>
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-8i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
-                    <div className="table-container p-datatable-wrapper">
-                      <table className="p-datatable-table p-datatable-scrollable-table">
-                        <colgroup>
-                          <col className="wdth-10" />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                        </colgroup>
-
-                        <thead className="p-datatable-thead">
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소속</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선택</span></div></th>
-                          </tr>
-                        </thead>
-
-                        <tbody className="p-datatable-tbody">
-                          <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                          </tr>
-                        </tbody>
-
-                        <tbody className="p-datatable-tbody">
-                          {[...Array(24)].map((e, idx) => (
-                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                              <td>{idx + 1}</td>
-                              <td className="g-start">프로세스혁신부</td>
-                              <td>부점장</td>
-                              <td>부장</td>
-                              <td>홍길동</td>
-                              <td>
-                                <CommonButton label="선택" className="_normal" />
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                <div className="">
                 </div>
               </div>
 
@@ -445,7 +384,7 @@ function CMP001501P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)결재요청 [wdth-60p(w960)]</span>
+              <span className="label">(P)결재요청 [wdth-70p]</span>
             </h1>
           </div>
         </div>

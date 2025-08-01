@@ -24,8 +24,8 @@ import SurveyForms from 'app/pages/test/SurveyForms'; // SurveyForms
 // proto 공통
 import CMM000301M from 'app/pages/cmm/CMM000301M';   // 공통 ~ 메인
 
-import CMP000101P from 'app/pages/cmp/CMP000101P';   // 공통 ~ (LP)미처리업무관리
-
+import CMP000101P from 'app/pages/cmp/CMP000101P';   // 공통 ~ (LP)미처리업무등록관리
+import CMP000102P from 'app/pages/cmp/CMP000102P';   // 공통 ~ (LP)미처리업무관리
 import CMP000201P from 'app/pages/cmp/CMP000201P';   // 공통 ~ (LP)엑셀업로드
 import CMP000301P from 'app/pages/cmp/CMP000301P';   // 공통 ~ (LP)파일업로드
 import CMP000302P from 'app/pages/cmp/CMP000302P';   // 공통 ~ (LP)첨부파일
@@ -509,7 +509,7 @@ import BSSTN0101P02 from 'app/pages/bss/BSSTN0101P02'; // 영업지원 > 채권�
 import BSSTN0101P03 from 'app/pages/bss/BSSTN0101P03'; // 영업지원 > 채권양도통지(B2B팩토링) > 채권양도통지(B2B팩토링) ~ (LP)채권양도행내등기신청
 
 import BSSCR0101M from 'app/pages/bss/BSSCR0101M';     // 영업지원 > 캘린더신청             > 신청기간관리
-// import BSSCR0101P01 from 'app/pages/bss/BSSCR0101P01'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)공지이미지관리
+import BSSCR0101P01 from 'app/pages/bss/BSSCR0101P01'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)공지이미지관리
 import BSSCR0101P02 from 'app/pages/bss/BSSCR0101P02'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)달력카테고리관리
 import BSSCR0101P03 from 'app/pages/bss/BSSCR0101P03'; // 영업지원 > 캘린더신청             > 신청기간관리 ~ (LP)부점선택
 import BSSCR0201M from 'app/pages/bss/BSSCR0201M';     // 영업지원 > 캘린더신청             > 신청관리
@@ -655,6 +655,7 @@ function ProtoRoutes() {
         { path: 'CMM000301M', element: <CMM000301M /> },
 
         { path: 'CMP000101P', element: <CMP000101P /> },
+        { path: 'CMP000102P', element: <CMP000102P /> },
         { path: 'CMP000201P', element: <CMP000201P /> },
         { path: 'CMP000301P', element: <CMP000301P /> },
         { path: 'CMP000302P', element: <CMP000302P /> },
@@ -1156,6 +1157,7 @@ function ProtoRoutes() {
         { path: 'BSSTN0101P04', element: <BSSTN0101P04 /> },
 
         { path: 'BSSCR0101M',   element: <BSSCR0101M /> },
+        { path: 'BSSCR0101P01', element: <BSSCR0101P01 /> },
         { path: 'BSSCR0101P02', element: <BSSCR0101P02 /> },
         { path: 'BSSCR0101P03', element: <BSSCR0101P03 /> },
         { path: 'BSSCR0201M',   element: <BSSCR0201M /> },

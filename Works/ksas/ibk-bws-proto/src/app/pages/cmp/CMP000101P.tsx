@@ -124,7 +124,7 @@ function CMP000101P() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`직원명`} require={true} />
+                    <Label label={`직원명`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
@@ -170,39 +170,34 @@ function CMP000101P() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`업체명`} require={false} />
+                            <Label label={`개인미처리업무`} require={false} />
                           </th>
-                          <td colSpan={1}>
-                            (주)앤비앤코퍼레이션
+                          <td colSpan={3}>
+                            총 38건
                           </td>
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`구매담당자`} require={false} />
+                            <Label label={`결재업무`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            홍길동
+                            <div className="m-string-binds">
+                              <span className="string">0건</span>
+                              <span className="binds"><CommonButton label="결재" className="_normal" /></span>
+                            </div>
                           </td>
-                        </tr>
-                        <tr>
                           <th colSpan={1}>
-                            <Label label={`전화번호`} require={false} />
+                            <Label label={`기타업무`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            01012345678
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`이메일주소`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            123@naver.com
+                            38건
                           </td>
                         </tr>
                       </tbody>
@@ -212,6 +207,16 @@ function CMP000101P() {
               </div>
 
               <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">기타 미처리 업무 내역</span></h4>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="미처리업무관리" className="_normal" />
+                    </div>
+                  </div>
+                </div>
+
                 <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
@@ -224,32 +229,21 @@ function CMP000101P() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팀명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">실근무점</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현소속일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오출납여부</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출납책임자여부</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무구분</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리업무명</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리업무 담당자</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -257,16 +251,21 @@ function CMP000101P() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td>016400</td>
-                            <td>이정규</td>
-                            <td>0810</td>
-                            <td>프로세스혁신부</td>
-                            <td>0810</td>
-                            <td>일반</td>
-                            <td>프로세스혁신</td>
-                            <td>2023-07-14</td>
-                            <td>Y</td>
-                            <td>Y</td>
+                            <td>
+                              {(idx) % 3 === 0 ?
+                                <a href="javascript:" className="o-link _normal">중요용지</a> : <>업무지원</>
+                              }
+                            </td>
+                            <td className="g-start">
+                              {(idx) % 3 === 0 ?
+                                <a href="javascript:" className="o-link _normal">외화 자금현수송 미작성</a>: <>중요용지 미인수</>
+                              }
+                            </td>
+                            <td>0</td>
+                            <td><CommonButton label="거래" className="_normal" /></td>
+                            <td className="g-start">
+                              신청분인도: 신청직원 이외: 중요용지 담당자
+                            </td>
                           </tr>
                         ))}
                         </tbody>
@@ -276,18 +275,68 @@ function CMP000101P() {
                 </div>
               </div>
 
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3"><span className="label">기타 미처리 업무 상세내역</span></h5>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`미처리업무명`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            중요 용지 미인수
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`관련거래명`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            중요 용지 인수
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`미처리업무조건`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            인도일자 익일 17시 이후 미인수 분
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`기준기타내용`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            최근 1주일(영업일)
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={3}></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <div className="div-footer">
-          <div className="m-binds type-end">
-            <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="선택" className="_solid-primary" />
-            </div>
-          </div>
-        </div>
       </Dialog>
 
       <div className="roles" data-div-role="0">
