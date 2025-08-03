@@ -10,6 +10,8 @@
 .o-tab.type-c .link  { display: flex; align-items: center; justify-content: center; min-height: III(42); border: $e10 solid var(--color-edge-30); }
 .o-tab.type-c .link[aria-selected="true"]  { font-weight: $bold-70; border-color: $tp; color: var(--color-text-00); background: var(--color-icon-90); }
 
+.o-tab.type-c >.lists:has(:nth-child(9))  { grid-template-columns: repeat(5, 1fr); }
+
 
 .o-product  { display: flex; }
 .o-product >*  { flex: none; }
@@ -21,8 +23,41 @@
 .o-product:where(.m-shop-detail *) >.main .subject  { font-size: $font-60; }
 
 
+.m-product  { position: relative; }
+.m-product >.figures  { height: 182px; margin-bottom: 12px; border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
+.m-product >.figures .o-view-image  { width: 100%; height: 100%; border-radius: inherit; }
+.m-product >.figures .o-view-image >*  { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; margin: auto; }
+.m-product >.captions >.header  { display: flex; align-items: center; margin-bottom: 6px; }
+.m-product >.captions >.header >*  { flex: none; min-width: 0; }
+.m-product >.captions >.header >.primary  { flex: 1; }
+.m-product >.captions >.header >.primary .status  { position: absolute; left: 0; top: 0; right: 0; color: var(--color-text-00); background: var(--color-point-orange); border-radius: $radius-50 $radius-50 0 0; text-align: center; }
+.m-product >.captions >.header >.primary .status >.label  { font-size: $font-40; line-height: $line-40; display: block; padding: 4px; }
+.m-product >.captions >.header >.secondary .limits  { color: var(--color-text-30); }
+.m-product >.captions >.o-product .caption  { margin-bottom: 0; }
+.m-product >.captions >.o-product .subject  { line-height: inherit; height: 2lh; overflow: hidden; }
+.m-product >.actions  { margin-top: 8px; }
+.m-product >.actions .units  { font-size: $font-10; line-height: $line-10; color: var(--color-text-30); }
 
 
+.m-shop-list  {  }
+.m-shop-list >.container  {  }
+.m-shop-list >.container >*  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, 242px), var(--width-max, 242px),)); gap: 24px 16px; }
+
+
+.m-shop-table  {  }
+.m-shop-table .caption-primary  { display: flex; flex-direction: column; align-items: center; }
+.m-shop-table .caption-primary .status  { font-size: $font-30; line-height: $line-30; margin-bottom: $gap-element-30; color: var(--color-point-orange); }
+.m-shop-table .caption-primary .status:empty  { display: none; }
+.m-shop-table .caption-secondary  { display: flex; align-items: center; gap: $gap-element-30; }
+.m-shop-table .caption-secondary .limits  { font-size: $font-30; line-height: $line-30; color: var(--color-text-30); }
+.m-shop-table .product  { display: flex; align-items: center; gap: $gap-element-30; }
+.m-shop-table .product .caption  { font-size: $font-30; color: var(--color-text-30); }
+.m-shop-table .product:hover .subject  { text-decoration: underline; }
+.m-shop-table .actions .units  { font-size: $font-10; line-height: $line-10; color: var(--color-text-30); }
+
+.m-shop-table >.container  { border: 0 solid var(--color-edge-30); border-width: $e10 0; border-top-color: var(--color-edge-40); }
+.m-shop-table .table  { table-layout: fixed; border-collapse: collapse; width: 100%; border: hidden; text-align: center; white-space: nowrap; }
+.m-shop-table tr >*  { height: III(59); overflow: hidden; padding: 10px 12px; border: 0 solid var(--color-edge-30); border-width: 0 0 $e10; text-overflow: ellipsis; }
 
 
 .m-shop-detail  { --m-margin-block: #{$gap-element-80}; --m-margin-inline: #{$gap-element-80}; display: flex; flex-direction: column; }
@@ -102,7 +137,7 @@
 
 .m-shop  { display: flex; gap: $margin-section-70; }
 .m-shop >*  { flex: none; min-width: 0; }
-.m-shop >.lists  { flex: 1; display: flex; flex-direction: column; min-width: III(1014); }
+.m-shop >.lists  { flex: 1; display: flex; flex-direction: column; min-width: III(1016); }
 
 
 .m-shop >.results  { display: flex; gap: $margin-section-50; }
@@ -112,11 +147,12 @@
 
 .m-shop >.results >.details  { width: III(260); }
 
-.m-shop >.results >.requests  { width: III(222); border-color: var(--color-edge2-blue-30); }
+.m-shop >.results >.requests  { width: III(220); border-color: var(--color-edge2-blue-30); }
 
 
 
 .m-shop  { flex: 1 0; flex-basis: 0; min-height: 0; }
+.m-shop .o-section  { outline: 0 !important; }
 
 
 

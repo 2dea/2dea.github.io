@@ -393,13 +393,15 @@
 .o-figure >.body >*  { display: block; }
 
 
-.o-view-image  { background: var(--color-ground-70) var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
-.o-view-image:not(.o-object)  { width: fit-content; }
+.o-view-image  { display: block; background: var(--color-ground-70) var(--obj-sym-empty-image) no-repeat 50% /auto 26%; }
+.o-view-image:where(:not(.o-object))  { width: fit-content; }
 .o-view-image:before  { display: block; min-width: 100%; min-height: III(96); aspect-ratio: 4 / 3; background: inherit; background-size: calc(100% * 81 / 400) auto; border-radius: $radius-70; }
 .o-view-image >*  { display: block; }
 
-.o-view-image:empty  { border-radius: $radius-70; }
+.o-view-image:empty  { margin: 0 auto; border-radius: $radius-70; }
 .o-view-image:empty:before  { content: ""; }
+
+.o-view-image:where(.type-signature)  { width: 100%; }
 
 .o-view-image:where(.ratio-portrait)  { background-size: 26% auto; }
 .o-view-image:where(.ratio-portrait):before  { min-width: III(90); min-height: 100%; aspect-ratio: 3 / 4; background-size: auto calc(100% * 81 / 400); }
@@ -1742,6 +1744,9 @@
 
 .o-field >.fields >.binds  { position: relative; }
 .o-field >.fields >.binds .overlay  { position: absolute; inset: 0; z-index: 2; opacity: 0.0; }
+
+.o-field >.fields >.binds.justify-end  { margin-left: auto; }
+
 
 .o-field >.fields >.helper  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
 .o-field >.fields >.helper.style-strong  { color: var(--color-point-red); }
