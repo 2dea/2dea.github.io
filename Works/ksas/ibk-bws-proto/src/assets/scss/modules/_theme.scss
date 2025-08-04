@@ -13,8 +13,25 @@
 .address-box {text-align: start;}
 .address-box .address-sub {font-size: $font-40; line-height: $line-40;}
 
+// CMP001501P 결재선 그룹
+.o-grid ._row:has(.o-section > .main._primary):not(.column) { flex-direction: row; gap: 0 24px;} // reWrite
+:has(> .o-section)>.o-section.mini-section {margin-top: 0;} // reWrite
+
+.content-editor-box {display: flex; flex: 1 1 auto; }
+.content-editor-box .list {max-width: 157px; width:157px; border: 1px solid var(--color-edge-40);}
+.content-editor-box .list .item {display: flex; justify-content: space-between; align-items: center; width: inherit; padding: 5px 4px 5px 8px; border-bottom: 1px solid var(--color-edge-40);}
+.content-editor-box .list .item.state-edit {background-color: var(--design-background2-blue-40);}
+.content-editor-box .list .item:hover:not(.state-edit) {background-color: #ECECEE;}
+// .content-editor-box .list .item:hover {background-color: $color-grid-hover;}
+// .content-editor-box .list .item.state-edit:hover {background-color: $color-grid-hover;}
+
+.content-editor-box .list .item._active ._edit {display: none;}
+.content-editor-box .list .item._active .name {min-width: 0;}
+.content-editor-box .list .item._active .name[contenteditable="true"]:focus {outline: none;min-width: 0; border:0; background-color: #b1c7ff; }
+.content-editor-box .list .item._active .util {flex-shrink: 0;}
+
+
 // BSSCR0101P01 thumbnail-image in tbody
-.thumbnail-image {}
 .p-datatable-tbody .thumbnail-image {overflow:hidden; border-radius: 8px; border: 1px solid var(--color-edge-40);}
 .m-upload-image.type-widthy {width: 444px;}
 
