@@ -137,63 +137,20 @@ function FMTFT0801M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`현송일자`} require={true} />
+                    <Label label={`통화코드`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <div className="o-form _input mode-required">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
 
                   <div className="o-field">
-                    <Label label={`관할업무센터`} require={false} />
+                    <Label label={`권종명`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" disabled />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`부점`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`구분`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`정산기준`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`노선`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
+                      <div className="o-form _input mode-required">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -206,10 +163,146 @@ function FMTFT0801M() {
                 </div>
               </form>
 
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">화폐목록</span></h2>
+                </div>
+
+                <div className="card-list">
+                  <div className="item">
+                    <div className="img-area">
+                      <img src="" alt="" />
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                        <span className="name">매입 가능</span>
+                        <Icon icon="status-range-80" />
+                      </li>
+                      <li>
+                        <span className="name no">매도 금지</span>
+                        <Icon icon="status-range-20" />
+                      </li>
+                    </ul>
+                    <p className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div>
+                  <div className="item">
+                    <div className="img-area">
+                      <img src="" alt="" />
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                        <span className="name alert">매입 자제</span>
+                        <Icon icon="status-range-50" />
+                      </li>
+                      <li>
+                        <span className="name no">매입 금지</span>
+                        <Icon icon="status-range-20" />
+                      </li>
+                    </ul>
+                    <p className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div>
+                  <div className="item">
+                    <div className="img-area">
+                      <img src="" alt="" />
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                        <span className="name">매입 가능</span>
+                        <Icon icon="status-range-80" />
+                      </li>
+                      <li>
+                        <span className="name no">매도 금지</span>
+                        <Icon icon="status-range-20" />
+                      </li>
+                    </ul>
+                    <p className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div>
+                  <div className="item">
+                    <div className="img-area">
+                      <img src="" alt="" />
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                        <span className="name">매입 가능</span>
+                        <Icon icon="status-range-80" />
+                      </li>
+                      <li>
+                        <span className="name no">매도 금지</span>
+                        <Icon icon="status-range-20" />
+                      </li>
+                    </ul>
+                    <p className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div>
+                  <div className="item">
+                    <div className="img-area">
+                      <img src="" alt="" />
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                        <span className="name alert">매입 자제</span>
+                        <Icon icon="status-range-50" />
+                      </li>
+                      <li>
+                        <span className="name no">매입 금지</span>
+                        <Icon icon="status-range-20" />
+                      </li>
+                    </ul>
+                    <p className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div>
+                  <div className="item">
+                    <div className="img-area">
+                      <img src="" alt="" />
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                        <span className="name">매입 가능</span>
+                        <Icon icon="status-range-80" />
+                      </li>
+                      <li>
+                        <span className="name no">매도 금지</span>
+                        <Icon icon="status-range-20" />
+                      </li>
+                    </ul>
+                    <p className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div>
+                  <div className="item">
+                    <div className="img-area">
+                      <img src="" alt="" />
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                        <span className="name">매입 가능</span>
+                        <Icon icon="status-range-80" />
+                      </li>
+                      <li>
+                        <span className="name no">매도 금지</span>
+                        <Icon icon="status-range-20" />
+                      </li>
+                    </ul>
+                    <p className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div>
+
+
+                </div>
+
+              </div>
+
             </div>
           </div>
-
-          목록
 
         </div>
         {/* <!-- // Contents { @DEV } --> */}

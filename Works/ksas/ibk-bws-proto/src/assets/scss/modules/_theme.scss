@@ -8,6 +8,24 @@
   outline: thick solid Blue;
 }
 
+// mixin 말줄임표
+@mixin ellipsis($line: 1) {
+  @if ($line ==1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
 
 // CMP000601P 주소검색
 .address-box {text-align: start;}
@@ -34,6 +52,26 @@
 // BSSCR0101P01 thumbnail-image in tbody
 .p-datatable-tbody .thumbnail-image {overflow:hidden; border-radius: 8px; border: 1px solid var(--color-edge-40);}
 .m-upload-image.type-widthy {width: 444px;}
+
+
+// FMTFT0801M 외국통화견양집
+.card-list {display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, 373px), var(--width-max, 373px),)); gap: 24px 16px;}
+.card-list .item .img-area {height: 157px; border: 1px solid #ECECEE; border-radius: 4px; }
+// .card-list .item .img-area:not(:hover)  { opacity: 0.0; }
+.card-list .item .img-area:hover:not(:active)  {display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-overlay) }
+.card-list .item .img-area:before  {content: ""; display: block; width: 1em; height: 1em; background: none no-repeat 0 /500% auto;  background-position: 75%;background-color: $tp; background-image: var(--obj-ico-maximize); }
+.card-list .item .info-area {display: flex; align-items: center; margin: 12px 0 8px; justify-content: center; border: 1px solid #ECECEE; border-radius: 4px; }
+.card-list .item .info-area li + li::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 0; display: block; width: 1px; height: 10px; background-color: #ECECEE;}
+
+.card-list .item .info-area li {position: relative; display: flex; flex: 1; justify-content: center; padding: 8px 0;}
+.card-list .item .info-area .name {position: relative; display: flex; font-size: 13px;}
+.card-list .item .info-area .o-icon {margin-left: 10px;}
+// .card-list .item .info-area .name::after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 10px;}
+// .card-list .item .info-area .name::before {content: ''; display: inline-block;position: absolute;top: 50%; transform: translateY(-50%); width: 16px; height: 16px; right:-20px; background-color: blue;}
+.card-list .item .info-area .name.no {}
+.card-list .item .info-area .name.alert{}
+
+.card-list .item .text-area {font-size: 13px; color: #525252; @include ellipsis(2);}
 
 // primereact 달력
 .p-datepicker  {
