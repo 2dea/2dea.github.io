@@ -101,7 +101,7 @@ function FEMCT0201P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">지급상세검증</span></h3>}
+        header={<h3 className="o-heading"><span className="label">지급 상세검증</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -213,6 +213,24 @@ function FEMCT0201P02() {
                         </tr>
 
                         <tr>
+                          {/* 예외 체크시 필수 값으로 { @DEV } */}
+                          {/* <th colSpan={1}>
+                            <Label label={`(B)지급수수료 예외금액`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50 mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="m-checks">
+                                  <InputCheck label="예외" checked />
+                                </div>
+                              </div>
+                            </div>
+                          </td> */}
+
                           <th colSpan={1}>
                             <Label label={`(B)지급수수료 예외금액`} require={false} />
                           </th>
@@ -265,6 +283,20 @@ function FEMCT0201P02() {
                         </tr>
 
                         <tr>
+                          {/* 예외 체크시 필수 값으로 { @DEV } */}
+                          {/* <th colSpan={1}>
+                            <Label label={`지급수수료 예외사유`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td> */}
                           <th colSpan={1}>
                             <Label label={`지급수수료 예외사유`} require={false} />
                           </th>
@@ -401,8 +433,8 @@ function FEMCT0201P02() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">운송내역(USD)</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타통화내역</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기본요금</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기본요금<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 합계(VAT포함)</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금사유</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">예외</span></div></th>

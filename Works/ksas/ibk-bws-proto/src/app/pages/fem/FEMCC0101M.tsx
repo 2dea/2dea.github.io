@@ -143,14 +143,14 @@ function FEMCC0101M() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`계약기간`} require={false} />
+                    <Label label={`계약기간`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select">
+                      <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                       <span className="seps type-tilde">~</span>
-                      <div className="o-form _select">
+                      <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

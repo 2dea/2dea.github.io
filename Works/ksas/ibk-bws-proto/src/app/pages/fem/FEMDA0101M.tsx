@@ -143,14 +143,14 @@ function FEMDA0101M() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`계약기간`} require={false} />
+                    <Label label={`계약기간`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select">
+                      <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                       <span className="seps type-tilde">~</span>
-                      <div className="o-form _select">
+                      <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -657,8 +657,8 @@ function FEMDA0101M() {
                               <tr>
                                 <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준연월</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공급가액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기준연월<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공급가액<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">세액</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
                               </tr>

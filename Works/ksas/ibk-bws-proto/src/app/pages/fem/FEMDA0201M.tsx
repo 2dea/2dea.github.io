@@ -504,6 +504,25 @@ function FEMDA0201M() {
                         </tr>
 
                         <tr>
+                          {/* 예외 체크시 필수 값으로 { @DEV } */}
+                          {/*
+                          <th colSpan={1}>
+                            <Label label={`(B)지급수수료 예외금액`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50 mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="m-checks">
+                                  <InputCheck label="예외" checked />
+                                </div>
+                              </div>
+                            </div>
+                          </td> */}
+
                           <th colSpan={1}>
                             <Label label={`(B)지급수수료 예외금액`} require={false} />
                           </th>

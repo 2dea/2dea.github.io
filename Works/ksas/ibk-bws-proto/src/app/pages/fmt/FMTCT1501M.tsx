@@ -98,7 +98,7 @@ function FMTCT1501M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">자금현수송노선업로드</span>
+                <span className="label">자금현수송노선 업로드</span>
 
                 <FavoriteDiv />
               </h1>
