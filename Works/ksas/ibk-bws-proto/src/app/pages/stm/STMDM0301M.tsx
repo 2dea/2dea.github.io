@@ -138,7 +138,7 @@ function STMDM0301M() {
                       <li>
                         <div className="o-pair">
                           <strong className="head"><Icon icon="vehicle" />배차가능차량</strong>
-                          <span className="data"><a href="javascript:">9,999</a></span>
+                          <span className="data">9,999</span>
                         </div>
                       </li>
                     </ul>
@@ -149,7 +149,7 @@ function STMDM0301M() {
                       <li>
                         <div className="o-pair">
                           <strong className="head"><Icon icon="vehicle" />배차대기차량</strong>
-                          <span className="data"><a href="javascript:">9,999</a></span>
+                          <span className="data">9,999</span>
                         </div>
                       </li>
                     </ul>
@@ -160,7 +160,7 @@ function STMDM0301M() {
                       <li>
                         <div className="o-pair">
                           <strong className="head"><Icon icon="vehicle" />배차 이용 중</strong>
-                          <span className="data"><a href="javascript:">9,999</a></span>
+                          <span className="data">9,999</span>
                         </div>
                       </li>
                     </ul>
@@ -171,7 +171,7 @@ function STMDM0301M() {
                       <li>
                         <div className="o-pair">
                           <strong className="head"><Icon icon="repair" />재정비 중</strong>
-                          <span className="data"><a href="javascript:">9,999</a></span>
+                          <span className="data">9,999</span>
                         </div>
                       </li>
                     </ul>
