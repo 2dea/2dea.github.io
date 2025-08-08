@@ -101,7 +101,7 @@ function FMTFC0201P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">외화정사인수도(반납)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">외화정사 인수도(반납)</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -249,11 +249,11 @@ function FMTFC0201P02() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기반납수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">반납금액</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">적요</span></div></th>
                           </tr>

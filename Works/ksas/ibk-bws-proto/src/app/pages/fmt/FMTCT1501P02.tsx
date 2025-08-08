@@ -319,8 +319,8 @@ function FMTCT1501P02() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>

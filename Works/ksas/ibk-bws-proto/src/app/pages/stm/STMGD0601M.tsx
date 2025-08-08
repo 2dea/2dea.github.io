@@ -115,7 +115,7 @@ function STMGD0601M() {
             <div className="m-binds type-end">
               <div className="group _primary">
                 <CommonButton label="저장" className="_solid-primary" />
-                <CommonButton label="부점별 세팅비 산정결과" className="_solid-primary" />
+                <CommonButton label="부점별 세팅비 산정결과" className="_lined-primary" />
               </div>
             </div>
           </div>

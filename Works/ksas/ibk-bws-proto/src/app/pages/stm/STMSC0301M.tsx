@@ -116,12 +116,6 @@ function STMSC0301M() {
             </div>
 
             <div className="m-binds type-end">
-              <div className="group _utility">
-                <div className="m-print-binds">
-                  <CommonButton label="출력" className="_texted" />
-                </div>
-              </div>
-
               <div className="group _primary">
                 <CommonButton label="삭제" className="_delete" />
                 <CommonButton label="저장" className="_solid-primary" />

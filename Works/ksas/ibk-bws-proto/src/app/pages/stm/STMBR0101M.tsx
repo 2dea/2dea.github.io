@@ -130,15 +130,13 @@ function STMBR0101M() {
 
               {/* 영업점 { @DEV } */}
               <div className="group _primary">
-                <CommonButton label="결재취소요청" className="_solid-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
 
               {/* 안전관리팀 { @DEV } */}
               <div className="group _primary">
                 <CommonButton label="배차정보취소" className="_lined-primary" />
-                <CommonButton label="배차정보등록" className="_lined-primary" />
-                <CommonButton label="승인요청취소" className="_lined-primary" />
+                <CommonButton label="배차정보등록" className="_solid-primary" />
                 <CommonButton label="반려" className="_lined-primary" />
                 <CommonButton label="승인" className="_solid-primary" />
               </div>

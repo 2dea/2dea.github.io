@@ -264,6 +264,12 @@ function STMHA0101M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">등록내역</span></h3>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="신규" className="_create" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main">

@@ -112,6 +112,10 @@ function STMKY0301M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="과거내역조회" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -119,7 +123,6 @@ function STMKY0301M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="과거내역조회" className="_lined-primary" />
                 <CommonButton label="인수도등록" className="_solid-primary" />
                 <CommonButton label="인수도취소" className="_solid-primary" />
               </div>

@@ -113,6 +113,10 @@ function STMVL0101M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="감사자료다운로드" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -126,9 +130,8 @@ function STMVL0101M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="감사자료다운로드" className="_lined-primary" />
+                <CommonButton label="수정기한관리" className="_solid-primary" />
                 <CommonButton label="저장" className="_solid-primary" />
-                <CommonButton label="수정기간관리" className="_solid-primary" />
               </div>
             </div>
           </div>

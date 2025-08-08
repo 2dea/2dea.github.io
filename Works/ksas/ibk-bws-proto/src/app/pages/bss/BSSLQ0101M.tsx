@@ -267,12 +267,13 @@ function BSSLQ0101M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점수령희망일자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사전협의자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인자</span></div></th>
-                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접릭식계좌</span></div></th>
+                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">적립식계좌</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업기간(시작)</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업기간(종료)</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점수령예정일자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료결재상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인거절사유</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">특이사항</span></div></th>
@@ -335,6 +336,7 @@ function BSSLQ0101M() {
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>012345</td>
                               <td>홍길동</td>
+                              <td>결재승인</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td className="g-start">급여이체 통장 신규 요청</td>
                               <td className="g-start">특이사항</td>

@@ -116,8 +116,6 @@ function STMDM0101M() {
               <div className="group _primary">
                 <CommonButton label="삭제" className="_delete" />
                 <CommonButton label="수정" className="_lined-primary" />
-                <CommonButton label="반려" className="_lined-primary" />
-                <CommonButton label="승인" className="_solid-primary" />
                 <CommonButton label="신청" className="_solid-primary" />
               </div>
             </div>

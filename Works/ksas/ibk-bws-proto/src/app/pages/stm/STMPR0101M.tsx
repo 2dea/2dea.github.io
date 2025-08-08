@@ -112,6 +112,9 @@ function STMPR0101M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="하남IT센터신청안내" className="_lined-secondary" />
+              </div>
 
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
@@ -127,7 +130,6 @@ function STMPR0101M() {
 
               {/* 안전관리팀 { @DEV } */}
               <div className="group _primary">
-                <CommonButton label="하남IT센터신청안내" className="_lined-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
 

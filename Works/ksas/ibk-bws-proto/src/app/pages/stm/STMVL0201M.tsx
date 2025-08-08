@@ -403,12 +403,6 @@ function STMVL0201M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">알림발송 내용</span></h3>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="신규" className="_create" />
-                    </div>
-                  </div>
                 </div>
 
                 <div className="main">

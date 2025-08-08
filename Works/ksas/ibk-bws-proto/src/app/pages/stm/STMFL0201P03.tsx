@@ -148,7 +148,7 @@ function STMFL0201P03() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`반송사유`} require={true} />
+                            <Label label={`폐기사유`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">

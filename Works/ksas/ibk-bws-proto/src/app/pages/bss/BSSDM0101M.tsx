@@ -183,7 +183,7 @@ function BSSDM0101M() {
                   </div>
 
                   <div className="o-field colspan-3">
-                    <Label label={`기간`} require={false} />
+                    <Label label={`처리일자`} require={false} />
                     <div className="fields">
                       <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />

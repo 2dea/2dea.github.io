@@ -183,7 +183,6 @@ function BSPAQ0101P01() {
                             </div>
                           </td>
                         </tr>
-
                       </tbody>
                     </table>
                   </form>
@@ -198,7 +197,8 @@ function BSPAQ0101P01() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="완료" className="_solid-primary" />
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>

@@ -114,7 +114,6 @@ function STMGD0401M() {
             <div className="m-binds type-start">
               <div className="group">
                 <CommonButton label="점검표등록요청 알림발송" className="_lined-secondary" />
-                <CommonButton label="명령부 초기화" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -132,6 +131,7 @@ function STMGD0401M() {
               </div>
 
               <div className="group _primary">
+                <CommonButton label="명령부 초기화" className="_lined-primary" />
                 <CommonButton label="임시저장" className="_solid-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>

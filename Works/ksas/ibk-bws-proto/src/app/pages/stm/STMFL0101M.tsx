@@ -129,7 +129,7 @@ function STMFL0101M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="반려" className="_solid-primary" />
+                <CommonButton label="반려" className="_lined-primary" />
                 <CommonButton label="승인" className="_solid-primary" />
               </div>
             </div>

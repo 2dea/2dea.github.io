@@ -153,7 +153,7 @@ function BSSLQ0301P01() {
 
                             <li>
                               <div className="head">
-                                업무시작일자
+                                작업기간(시작)
                               </div>
 
                               <div className="data">
@@ -163,7 +163,7 @@ function BSSLQ0301P01() {
 
                             <li>
                               <div className="head">
-                                업무완료일자
+                                작업기간(종료)
                               </div>
 
                               <div className="data">
@@ -216,7 +216,7 @@ function BSSLQ0301P01() {
 
                             <li>
                               <div className="head">
-                                승인일자
+                                영업점서류발송일자
                               </div>
 
                               <div className="data">
@@ -226,31 +226,11 @@ function BSSLQ0301P01() {
 
                             <li>
                               <div className="head">
-                                업무시작일자
+                                영업점수령희망일자
                               </div>
 
                               <div className="data">
                                 2025-03-12
-                              </div>
-                            </li>
-
-                            <li>
-                              <div className="head">
-                                업무완료일자
-                              </div>
-
-                              <div className="data">
-                                2025-03-13
-                              </div>
-                            </li>
-
-                            <li>
-                              <div className="head">
-                                영업점수령예정일자
-                              </div>
-
-                              <div className="data">
-                                2025-03-14
                               </div>
                             </li>
                           </ul>
@@ -299,7 +279,7 @@ function BSSLQ0301P01() {
 
                             <li>
                               <div className="head">
-                                업무시작일자
+                                작업기간(시작)
                               </div>
 
                               <div className="data">
@@ -309,7 +289,7 @@ function BSSLQ0301P01() {
 
                             <li>
                               <div className="head">
-                                업무완료일자
+                                작업기간(종료)
                               </div>
 
                               <div className="data">

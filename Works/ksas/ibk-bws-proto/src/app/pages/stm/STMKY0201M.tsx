@@ -171,7 +171,7 @@ function STMKY0201M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`주관부서`} require={false} />
+                    <Label label={`주관부점`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -256,7 +256,7 @@ function STMKY0201M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주관부서</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주관부점</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
                           </tr>
                           <tr>

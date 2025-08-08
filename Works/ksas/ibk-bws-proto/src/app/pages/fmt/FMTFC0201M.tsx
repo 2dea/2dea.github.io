@@ -226,11 +226,24 @@ function FMTFC0201M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">인수도 내역</span></h2>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="일일실적등록" className="_solid-primary" />
+                      <CommonButton label="일일실적등록" className="_normal" />
                     </div>
 
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
                   </div>
                 </div>
 

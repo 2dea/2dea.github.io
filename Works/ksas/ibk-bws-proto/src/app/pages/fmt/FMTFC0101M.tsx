@@ -423,6 +423,13 @@ function FMTFC0101M() {
                   <div className="o-section">
                     <div className="m-header">
                       <h4 className="o-heading level4"><span className="label">위폐과부족 상세정보</span></h4>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
                     </div>
 
                     <div className="main _primary rows-body-3i">

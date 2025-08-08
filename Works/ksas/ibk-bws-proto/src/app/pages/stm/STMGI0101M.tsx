@@ -130,7 +130,7 @@ function STMGI0101M() {
 
               <div className="group _primary">
                 <CommonButton label="수정" className="_solid-primary" />
-                <CommonButton label="분실신고" className="_solid-primary" />
+                <CommonButton label="사고신고" className="_solid-primary" />
                 <CommonButton label="인수" className="_solid-primary" />
                 <CommonButton label="반납요청" className="_solid-primary" />
               </div>
@@ -314,7 +314,7 @@ function STMGI0101M() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
-                            <td>분실신고</td>
+                            <td>사고신고</td>
                             <td><a href="javascript:" className="o-link _normal">결재반려</a></td>
                             <td>홍길동</td>
                             <td>12가1234</td>

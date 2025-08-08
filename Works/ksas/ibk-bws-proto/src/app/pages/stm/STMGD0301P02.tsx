@@ -99,9 +99,9 @@ function STMGD0301P02() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">부점별당직비산정결과</span></h3>}
+        header={<h3 className="o-heading"><span className="label">부점별 당직비 산정결과</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">

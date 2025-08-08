@@ -139,7 +139,7 @@ function BSSLQ0101P03() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`접릭식계좌`} require={false} />
+                            <Label label={`적립식계좌`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <div className="m-mixed-field">
@@ -408,6 +408,7 @@ function BSSLQ0101P03() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
+              <CommonButton label="취소" className="_cancel" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>

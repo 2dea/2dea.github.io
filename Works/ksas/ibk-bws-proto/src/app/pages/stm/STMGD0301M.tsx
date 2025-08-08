@@ -114,8 +114,8 @@ function STMGD0301M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="직원별 당직비 산정결과" className="_solid-primary" />
-                <CommonButton label="부점별 당직비 산정결과" className="_solid-primary" />
+                <CommonButton label="직원별 당직비 산정결과" className="_lined-primary" />
+                <CommonButton label="부점별 당직비 산정결과" className="_lined-primary" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>

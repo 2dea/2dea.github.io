@@ -288,7 +288,7 @@ function BSPDU0101M() {
           <Tabs className="m-tabs react-tabs" defaultIndex={0}>
             <div className="m-tab type2 type-step">
               <TabList className="lists">
-                <Tab className="link"><span className="label">Step 1. 통합단말서손거래내역</span></Tab>
+                <Tab className="link"><span className="label">Step 1. 통합단말 서손거래내역</span></Tab>
                 <Tab className="link"><span className="label">Step 2. 일련번호 및 오손사유 입력</span></Tab>
                 <Tab className="link"><span className="label">Step 3. 결재요청</span></Tab>
               </TabList>

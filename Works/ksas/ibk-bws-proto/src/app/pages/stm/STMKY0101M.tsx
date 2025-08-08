@@ -232,7 +232,7 @@ function STMKY0101M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠구분</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠유형</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용유형</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주관부점</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>

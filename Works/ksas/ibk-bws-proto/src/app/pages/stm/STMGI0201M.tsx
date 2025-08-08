@@ -127,7 +127,7 @@ function STMGI0201M() {
 
               <div className="group _primary">
                 <CommonButton label="폐기" className="_solid-primary" />
-                <CommonButton label="분실접수" className="_solid-primary" />
+                <CommonButton label="사고접수" className="_solid-primary" />
                 <CommonButton label="인도" className="_solid-primary" />
                 <CommonButton label="반납요청반려" className="_lined-primary" />
                 <CommonButton label="반납요청승인" className="_solid-primary" />
@@ -353,6 +353,12 @@ function STMGI0201M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="신규" className="_create" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main">

@@ -200,7 +200,7 @@ function BSPRQ0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">자동배송 품목 등록 결재 대상</span></h2>
+                  <h2 className="o-heading level2"><span className="label">자동배송품목 등록대상</span></h2>
 
                   <div className="m-binds">
                     <div className="group">
@@ -313,7 +313,7 @@ function BSPRQ0301M() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h2 className="o-heading level2"><span className="label">자동배송 품목 제외 결재 대상</span></h2>
+                  <h2 className="o-heading level2"><span className="label">자동배송품목 제외대상</span></h2>
 
                   <div className="o-length">
                     <span className="head">전체</span>

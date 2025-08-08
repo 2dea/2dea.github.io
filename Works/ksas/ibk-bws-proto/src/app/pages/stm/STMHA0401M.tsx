@@ -111,14 +111,6 @@ function STMHA0401M() {
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
-
-            <div className="m-binds type-end">
-              <div className="group _utility">
-                <div className="m-print-binds">
-                  <CommonButton label="출력" className="_texted" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

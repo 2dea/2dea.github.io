@@ -101,7 +101,7 @@ function BSPRQ0301P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">자동배송 신청 이력 조회</span></h3>}
+        header={<h3 className="o-heading"><span className="label">이력 조회</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -267,7 +267,7 @@ function BSPRQ0301P02() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="확인" className="_lined-primary" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 가스분사기대장관리 > 가스분사기관리대장 ~ (LP)분실신고
+ * @description 재난·안전관리 > 가스분사기대장관리 > 가스분사기관리대장 ~ (LP)사고신고
  */
 
 // dependency
@@ -101,7 +101,7 @@ function STMGI0101P04() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">분실신고</span></h3>}
+        header={<h3 className="o-heading"><span className="label">사고신고</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -109,7 +109,7 @@ function STMGI0101P04() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">분실신고정보</span></h4>
+                  <h4 className="o-heading level2"><span className="label">사고신고정보</span></h4>
                 </div>
 
                 <div className="main">
@@ -180,7 +180,7 @@ function STMGI0101P04() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`분실사유`} require={true} />
+                            <Label label={`사고사유`} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -206,7 +206,7 @@ function STMGI0101P04() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">우리부점 분실신고 내역</span></h5>
+                  <h5 className="o-heading level3"><span className="label">우리부점 사고신고 내역</span></h5>
                 </div>
 
                 <div className="main _primary rows-body-5i">
@@ -299,7 +299,7 @@ function STMGI0101P04() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)분실신고 [wdth-50p(w960)]</span>
+              <span className="label">(P)사고신고 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>

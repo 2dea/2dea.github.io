@@ -169,7 +169,7 @@ function STMPR0301P05() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`재발방지 및 향후 관리방안`} require={true} />
+                            <Label label={`향후관리방안`} require={true} />
                           </th>
                           <td colSpan={5}>
                             <div className="o-field">

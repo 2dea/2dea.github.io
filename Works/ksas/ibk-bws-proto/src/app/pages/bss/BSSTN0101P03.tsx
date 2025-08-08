@@ -1,5 +1,5 @@
 /**
- * @description 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)등기번호수정
+ * @description 행내등기·우편물 > 등기우편물 > 등기우편물관리대장 ~ (LP)채권양도행내등기신청
  */
 
 // dependency
@@ -101,7 +101,7 @@ function BSSTN0101P03() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">등기번호수정</span></h3>}
+        header={<h3 className="o-heading"><span className="label">채권양도 행내등기 신청</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -325,7 +325,7 @@ function BSSTN0101P03() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)등기번호수정 [wdth-60p(w1150)]</span>
+              <span className="label">(P)채권양도행내등기신청 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>

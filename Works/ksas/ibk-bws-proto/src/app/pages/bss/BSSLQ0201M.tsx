@@ -215,38 +215,37 @@ function BSSLQ0201M() {
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
-                        <col className="wdth-10" />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -262,19 +261,17 @@ function BSSLQ0201M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점수령희망일자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사전협의자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인자</span></div></th>
-                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접릭식계좌</span></div></th>
+                            <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">적립식계좌</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무시작일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업기간(시작)</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업기간(종료)</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">영업점수령예정일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수결재상태</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무완료일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">승인거절사유</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">특이사항</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타요청사항</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">삭제일자</span></div></th>
-
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
@@ -297,7 +294,7 @@ function BSSLQ0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={32}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={31}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -328,14 +325,13 @@ function BSSLQ0201M() {
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>신청</td>
                               <td>012345</td>
                               <td>홍길동</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td className="g-start">급여이체 통장 신규 요청</td>
                               <td className="g-start">특이사항</td>
                               <td className="g-start">신입행 학생증 카드 마케팅</td>
                               <td className="g-start">비고</td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                           ))}
                         </tbody>
