@@ -440,6 +440,34 @@ function ADMNT0101M() {
                             </div>
                           </td>
                         </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`가로사이즈`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="m-mixed-field">
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50 g-end">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <span className="units">px</span>
+                                </div>
+                              </div>
+
+                              <div className="m-checks">
+                                <InputRadio name="RADIO:T_10" label="100" />
+                                <InputRadio name="RADIO:T_10" label="200" />
+                                <InputRadio name="RADIO:T_10" label="300" />
+                                <InputRadio name="RADIO:T_10" label="400" />
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+
                         <tr>
                           <th colSpan={1}>
                             <Label label={`URL링크주소`} require={false} />
@@ -481,7 +509,8 @@ function ADMNT0101M() {
                                   <i aria-hidden="true"></i>
                                 </div>
                                 <span className="units">px</span>
-                                <div className="binds">
+
+                                <div className="binds justify-end">
                                   <CommonButton label="참고" className="_normal" />
                                 </div>
                               </div>
