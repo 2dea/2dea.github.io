@@ -26,12 +26,24 @@
   }
 }
 
+// ** .p-dialog HSPHS1901P01 : h3 제목 클릭 후, 팝업 높이 값으로 하단 버튼 안 보임 이슈
+.p-dialog { max-height: 90% !important;}
 
-// CMP000601P 주소검색
+// ** FMTFT0801P02 화폐이미지 보기
+.m-flex-list-col .m-upload-image + .m-upload-image {margin-top: 16px;}
+.m-upload-image._large {width: 100%;}
+.m-upload-image._large > .main > .header > .label {font-size: 14px;}
+.m-upload-image._large > .main .o-object {height: 304px; }
+
+// ** CMP000601P 주소검색
 .address-box {text-align: start;}
 .address-box .address-sub {font-size: $font-40; line-height: $line-40;}
 
-// CMP001501P 결재선 그룹
+// ** CMP000901P : 메모(업무별)
+.layer-wrap :has(> .div-container._small) {min-height: auto;}
+.layer-wrap :has(> .div-container._small) .div-footer {padding-top: 24px;}
+
+// ** CMP001501P 결재선 그룹
 .o-grid ._row:has(.o-section > .main._primary):not(.column) { flex-direction: row; gap: 0 24px;} // reWrite
 :has(> .o-section)>.o-section.mini-section {margin-top: 0;} // reWrite
 
@@ -49,31 +61,33 @@
 .content-editor-box .list .item._active .util {flex-shrink: 0;}
 
 
-// BSSCR0101P01 thumbnail-image in tbody
+// ** BSSCR0101P01 thumbnail-image in tbody
 .p-datatable-tbody .thumbnail-image {overflow:hidden; border-radius: 8px; border: 1px solid var(--color-edge-40);}
 .m-upload-image.type-widthy {width: 444px;}
 
 
-// FMTFT0801M 외국통화견양집
+// ** FMTFT0801M 외국통화견양집
 .card-list {display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, 373px), var(--width-max, 373px),)); gap: 24px 16px;}
-.card-list .item .img-area {height: 157px; border: 1px solid #ECECEE; border-radius: 4px; }
-// .card-list .item .img-area:not(:hover)  { opacity: 0.0; }
-.card-list .item .img-area:hover:not(:active)  {display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-overlay) }
-.card-list .item .img-area:before  {content: ""; display: block; width: 1em; height: 1em; background: none no-repeat 0 /500% auto;  background-position: 75%;background-color: $tp; background-image: var(--obj-ico-maximize); }
 .card-list .item .info-area {display: flex; align-items: center; margin: 12px 0 8px; justify-content: center; border: 1px solid #ECECEE; border-radius: 4px; }
 .card-list .item .info-area li + li::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 0; display: block; width: 1px; height: 10px; background-color: #ECECEE;}
+
+.card-list .item .o-object {position: relative; height: 157px; border: 1px solid #ECECEE; border-radius: 4px; }
+.card-list .item .o-object:not(:has(img)) .o-image-button { display: none; }
+.card-list .item .o-image-button { position: absolute; min-width: 100%; min-height: 100%; background-color: var(--color-surface-overlay) !important; }
+.card-list .item .o-image-button:not(:hover)  { opacity: 0.0; }
+.card-list .item .o-image-button:before  { background-position: 75%; }
+
 
 .card-list .item .info-area li {position: relative; display: flex; flex: 1; justify-content: center; padding: 8px 0;}
 .card-list .item .info-area .name {position: relative; display: flex; font-size: 13px;}
 .card-list .item .info-area .o-icon {margin-left: 10px;}
 // .card-list .item .info-area .name::after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 10px;}
 // .card-list .item .info-area .name::before {content: ''; display: inline-block;position: absolute;top: 50%; transform: translateY(-50%); width: 16px; height: 16px; right:-20px; background-color: blue;}
-.card-list .item .info-area .name.no {}
-.card-list .item .info-area .name.alert{}
+
 
 .card-list .item .text-area {font-size: 13px; color: #525252; @include ellipsis(2);}
 
-// primereact 달력
+// **primereact 달력
 .p-datepicker  {
   table :not(tr >* *) {
       font-weight: revert;

@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 외화현수송 > 외국통화견양집 ~ (LP)화폐이미지보기
+ * @description 공통 ~ (LP)메모(업무별)
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTFT0801P02() {
+function CMP000901P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -92,48 +92,41 @@ function FMTFT0801P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-25p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={false}
+        modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">화폐이미지보기</span></h3>}
+        header={<h3 className="o-heading"><span className="label">메모(업무별)</span></h3>}
       >
-        <div className="div-container">
+        <div className="div-container _small">
 
           <div className="o-grid">
             <div className="column">
 
-              <div className="m-flex-list-col">
-                <div className="m-upload-image _large">
-                  <div className="main">
-                    <div className="header">
-                      <strong className="label">앞면</strong>
-                    </div>
-                    <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801P02.png")} alt="" />
-                      {/* <img src={require("assets/images/common/img_empty-image.png")} alt="" /> */}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="m-upload-image _large">
-                  <div className="main">
-                    <div className="header">
-                      <strong className="label">뒷면</strong>
-                    </div>
-                    <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801P02.png")} alt="" />
-                      <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
-                    </div>
-                  </div>
-                </div>
+              <div className="o-form _input">
+                <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
+                <i aria-hidden="true"></i>
               </div>
 
+              {/* <div className="text-box">
+                등록되어 있는 메모가 있는 경우입니다. 메모 텍스트는 reading 스타일로 행간이 넓은 타입을 사용해주세요.
+              </div> */}
+
+            </div>
+          </div>
+
+        </div>
+
+        <div className="div-footer">
+          <div className="m-binds type-end">
+            <div className="group">
+              <CommonButton label="삭제" className="_normal" />
+              <CommonButton label="저장" className="_solid-secondary" />
             </div>
           </div>
         </div>
@@ -143,7 +136,7 @@ function FMTFT0801P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)화폐이미지보기 [wdth-40p(w770)]</span>
+              <span className="label">(P)메모(업무별) [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
@@ -166,4 +159,4 @@ function FMTFT0801P02() {
   );
 }
 
-export default FMTFT0801P02;
+export default CMP000901P;

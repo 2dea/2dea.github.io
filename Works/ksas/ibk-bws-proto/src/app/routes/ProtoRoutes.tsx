@@ -33,6 +33,8 @@ import CMP000401P from 'app/pages/cmp/CMP000401P';   // 공통 ~ (LP)이미지�
 import CMP000501P from 'app/pages/cmp/CMP000501P';   // 공통 ~ (LP)직원조회
 import CMP000601P from 'app/pages/cmp/CMP000601P';   // 공통 ~ (LP)주소검색
 import CMP000801P from 'app/pages/cmp/CMP000801P';   // 공통 ~ (LP)도움말
+import CMP000901P from 'app/pages/cmp/CMP000901P';   // 공통 ~ (LP)메모(업무별)
+import CMP001001P from 'app/pages/cmp/CMP001001P';   // 공통 ~ (LP)메모(마이메뉴)
 import CMP001101P from 'app/pages/cmp/CMP001101P';   // 공통 ~ (LP)이미지보기
 import CMP001201P from 'app/pages/cmp/CMP001201P';   // 공통 ~ (LP)알림발송
 import CMP001301P from 'app/pages/cmp/CMP001301P';   // 공통 ~ (LP)알림발송
@@ -373,12 +375,12 @@ import STMGI0101M from 'app/pages/stm/STMGI0101M';       // 재난·안전관리
 import STMGI0101P01 from 'app/pages/stm/STMGI0101P01';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)수정
 import STMGI0101P02 from 'app/pages/stm/STMGI0101P02';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)반납요청
 import STMGI0101P03 from 'app/pages/stm/STMGI0101P03';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)인수등록
-import STMGI0101P04 from 'app/pages/stm/STMGI0101P04';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)분실신고
+import STMGI0101P04 from 'app/pages/stm/STMGI0101P04';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장 ~ (LP)사고신고
 
 import STMGI0201M from 'app/pages/stm/STMGI0201M';       // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자)
 import STMGI0201P01 from 'app/pages/stm/STMGI0201P01';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자) ~ (LP)폐기등록
 import STMGI0201P02 from 'app/pages/stm/STMGI0201P02';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자) ~ (LP)인도등록
-import STMGI0201P03 from 'app/pages/stm/STMGI0201P03';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자) ~ (LP)분실접수
+import STMGI0201P03 from 'app/pages/stm/STMGI0201P03';   // 재난·안전관리 > 가스분사기대장관리        > 가스분사기관리대장(관리자) ~ (LP)사고접수
 
 import STMGI0301M from 'app/pages/stm/STMGI0301M';       // 재난·안전관리 > 가스분사기대장관리        > 가스분사기이력조회
 
@@ -401,7 +403,7 @@ import STMPR0301M from 'app/pages/stm/STMPR0301M';       // 재난·안전관리
 import STMPR0301P01 from 'app/pages/stm/STMPR0301P01';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)기간연장
 import STMPR0301P02 from 'app/pages/stm/STMPR0301P02';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)출입구역변경
 import STMPR0301P03 from 'app/pages/stm/STMPR0301P03';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)재발급
-import STMPR0301P04 from 'app/pages/stm/STMPR0301P04';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)반납
+import STMPR0301P04 from 'app/pages/stm/STMPR0301P04';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)출입증반납
 import STMPR0301P05 from 'app/pages/stm/STMPR0301P05';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)방문증분실(미반납)
 import STMPR0401M from 'app/pages/stm/STMPR0401M';       // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증신청
 import STMPR0501M from 'app/pages/stm/STMPR0501M';       // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증현황관리
@@ -663,6 +665,8 @@ function ProtoRoutes() {
         { path: 'CMP000501P', element: <CMP000501P /> },
         { path: 'CMP000601P', element: <CMP000601P /> },
         { path: 'CMP000801P', element: <CMP000801P /> },
+        { path: 'CMP000901P', element: <CMP000901P /> },
+        { path: 'CMP001001P', element: <CMP001001P /> },
         { path: 'CMP001101P', element: <CMP001101P /> },
         { path: 'CMP001201P', element: <CMP001201P /> },
         { path: 'CMP001301P', element: <CMP001301P /> },
