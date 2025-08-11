@@ -227,7 +227,7 @@ function CMP000102P() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`미처리업번호`} require={false} />
+                            <Label label={`미처리업무번호`} require={false} />
                           </th>
                           <td colSpan={1}>
                             1001
@@ -322,7 +322,7 @@ function CMP000102P() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`미처리업담당자`} require={true} />
+                            <Label label={`미처리업무담당자`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">

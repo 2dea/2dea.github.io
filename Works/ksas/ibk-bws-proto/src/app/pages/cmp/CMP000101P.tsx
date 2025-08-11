@@ -253,18 +253,20 @@ function CMP000101P() {
                             <td>{idx + 1}</td>
                             <td>
                               {(idx) % 3 === 0 ?
-                                <a href="javascript:" className="o-link _normal">중요용지</a> : <>업무지원</>
+                                // <a href="javascript:" className="o-link _normal">중요용지</a> : <>업무지원</>
+                                <>중요용지</> : <>업무지원</>
                               }
                             </td>
                             <td className="g-start">
                               {(idx) % 3 === 0 ?
-                                <a href="javascript:" className="o-link _normal">외화 자금현수송 미작성</a>: <>중요용지 미인수</>
+                                // <a href="javascript:" className="o-link _normal">외화 자금현수송 미작성</a>: <>중요용지 미인수</>
+                                <>외화 자금현수송 미작성</>: <>중요용지 미인수</>
                               }
                             </td>
                             <td>0</td>
                             <td><CommonButton label="거래" className="_normal" /></td>
                             <td className="g-start">
-                              신청분인도: 신청직원 이외: 중요용지 담당자
+                              신청분인도 : 신청직원 이외 : 중요용지 담당자
                             </td>
                           </tr>
                         ))}

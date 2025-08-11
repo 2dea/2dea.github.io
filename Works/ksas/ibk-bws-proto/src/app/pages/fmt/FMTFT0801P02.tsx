@@ -115,7 +115,7 @@ function FMTFT0801P02() {
                       <strong className="label">앞면</strong>
                     </div>
                     <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801P02.png")} alt="" />
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       {/* <img src={require("assets/images/common/img_empty-image.png")} alt="" /> */}
                     </div>
                   </div>
@@ -127,7 +127,7 @@ function FMTFT0801P02() {
                       <strong className="label">뒷면</strong>
                     </div>
                     <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801P02.png")} alt="" />
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                   </div>

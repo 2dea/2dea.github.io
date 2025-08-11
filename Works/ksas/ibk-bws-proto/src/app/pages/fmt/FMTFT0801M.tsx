@@ -171,7 +171,7 @@ function FMTFT0801M() {
                 <div className="card-list">
                   <div className="item">
                     <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801M.png")} alt="" />
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                     <ul className="info-area">
@@ -190,7 +190,7 @@ function FMTFT0801M() {
                   </div>
                   <div className="item">
                     <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801M.png")} alt="" />
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                     <ul className="info-area">
@@ -209,7 +209,7 @@ function FMTFT0801M() {
                   </div>
                   <div className="item">
                     <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801M.png")} alt="" />
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                     <ul className="info-area">
@@ -228,7 +228,7 @@ function FMTFT0801M() {
                   </div>
                   <div className="item">
                     <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801M.png")} alt="" />
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                     <ul className="info-area">
@@ -247,7 +247,7 @@ function FMTFT0801M() {
                   </div>
                   <div className="item">
                     <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801M.png")} alt="" />
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                     <ul className="info-area">
@@ -266,7 +266,7 @@ function FMTFT0801M() {
                   </div>
                   <div className="item">
                     <div className="o-object style-fit">
-                      {/* <img src={require("assets/images/temp/FMTFT0801M.png")} alt="" /> */}
+                      {/* <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" /> */}
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                     <ul className="info-area">
@@ -285,7 +285,7 @@ function FMTFT0801M() {
                   </div>
                   <div className="item">
                     <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801M.png")} alt="" />
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                     <ul className="info-area">
@@ -304,7 +304,7 @@ function FMTFT0801M() {
                   </div>
                   <div className="item">
                     <div className="o-object style-fit">
-                      {/* <img src={require("assets/images/temp/FMTFT0801M.png")} alt="" /> */}
+                      {/* <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" /> */}
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
                     </div>
                     <ul className="info-area">

@@ -1306,6 +1306,7 @@
 
 .o-check.type-swoosh:hover:not(:active) >i  { color: var(--color-enabled-hover); }
 .o-check.type-swoosh:has(:checked):hover:not(:active) >i  { color: var(--color-checked-hover); }
+.o-check.type-swoosh:hover:not(:active) >:checked ~i  { color: var(--color-checked-hover); }
 .o-check.type-swoosh >:disabled ~i  { --surface: var(--surface-disabled); color: var(--color-enabled) !important; filter: none; }
 
 
