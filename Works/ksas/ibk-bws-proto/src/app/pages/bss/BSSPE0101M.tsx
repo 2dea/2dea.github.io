@@ -119,7 +119,7 @@ function BSSPE0101M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="삭제" className="_lined-primary" />
+                <CommonButton label="삭제" className="_delete-primary" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>

@@ -112,6 +112,11 @@ function BEXPM0101M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="우편번호검색" className="_lined-secondary" />
+                <CommonButton label="우편물 작성방법" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -119,8 +124,6 @@ function BEXPM0101M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="우편번호검색" className="_lined-primary" />
-                <CommonButton label="우편물 작성방법" className="_lined-primary" />
                 <CommonButton label="신청" className="_solid-primary" />
               </div>
             </div>

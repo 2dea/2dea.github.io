@@ -99,7 +99,7 @@ function FEMCT0201P04() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">세금계산서보기</span></h3>}
       >

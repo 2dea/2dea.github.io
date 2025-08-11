@@ -99,7 +99,7 @@ function BEXRM0201P05() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">서명이미지보기</span></h3>}
       >

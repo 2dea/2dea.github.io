@@ -126,7 +126,7 @@ function HSPHS1601M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="0원입고 등록" className="_solid-primary" />
+                <CommonButton label="0원입고 등록" className="_lined-primary" />
                 <CommonButton label="본부입고" className="_solid-primary" />
                 <CommonButton label="취소결재요청" className="_solid-primary" />
               </div>

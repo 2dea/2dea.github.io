@@ -107,6 +107,12 @@ function BEXRM0201M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+
+              <div className="group">
+                <CommonButton label="행내등기" className="_lined-secondary" />
+                <CommonButton label="이미지보기" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -114,10 +120,8 @@ function BEXRM0201M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="행내등기" className="_lined-primary" />
-                <CommonButton label="이미지보기" className="_lined-primary" />
-                <CommonButton label="인도취소" className="_lined-primary" />
-                <CommonButton label="인도" className="_solid-primary" />
+                <CommonButton label="인수취소" className="_lined-primary" />
+                <CommonButton label="인수" className="_solid-primary" />
                 <CommonButton label="인수정보등록" className="_solid-primary" />
                 <CommonButton label="로봇배송결과" className="_solid-primary" />
                 <CommonButton label="로봇배송등록" className="_solid-primary" />

@@ -126,8 +126,8 @@ function HSPDU0901M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="폐기등록" className="_solid-primary" />
                 <CommonButton label="품목폐지폐기등록" className="_solid-primary" />
+                <CommonButton label="폐기등록" className="_solid-primary" />
               </div>
             </div>
           </div>

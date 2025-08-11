@@ -268,6 +268,14 @@ function FEMCT0201M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">상세 내역</span></h3>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="지급 상세검증" className="_normal" />

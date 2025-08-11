@@ -112,6 +112,10 @@ function BEXRQ0201M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="여신자필서류(STP)다운" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -126,11 +130,9 @@ function BEXRQ0201M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="여신자필서류(STP)다운" className="_solid-primary" />
                 <CommonButton label="여신자필서류(STP)관리" className="_solid-primary" />
                 <CommonButton label="신청취소" className="_lined-primary" />
                 <CommonButton label="수정" className="_solid-primary" />
-
               </div>
             </div>
           </div>

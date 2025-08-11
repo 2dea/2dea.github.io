@@ -112,12 +112,6 @@ function HSPBT1601M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-
-              <div className="group">
-                <CommonButton label="배송지시취소" className="_lined-secondary" />
-                <CommonButton label="배송지시전송" className="_lined-secondary" />
-              </div>
-
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -128,6 +122,11 @@ function HSPBT1601M() {
                 <div className="m-print-binds">
                   <CommonButton label="출력" className="_texted" />
                 </div>
+              </div>
+
+              <div className="group _primary">
+                <CommonButton label="배송지시취소" className="_lined-primary" />
+                <CommonButton label="배송지시전송" className="_solid-primary" />
               </div>
 
             </div>

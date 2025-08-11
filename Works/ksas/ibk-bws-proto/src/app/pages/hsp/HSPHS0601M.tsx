@@ -126,7 +126,7 @@ function HSPHS0601M() {
 
               <div className="group _primary">
                 <CommonButton label="일련번호채번제외" className="_lined-primary" />
-                <CommonButton label="일련번호채번포함" className="_lined-primary" />
+                <CommonButton label="일련번호채번포함" className="_solid-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
                 </div>
             </div>

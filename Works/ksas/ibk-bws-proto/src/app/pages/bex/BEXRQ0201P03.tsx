@@ -99,9 +99,9 @@ function BEXRQ0201P03() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">행내등기변경이력</span></h3>}
+        header={<h3 className="o-heading"><span className="label">행내등기 변경이력</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">

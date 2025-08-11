@@ -216,6 +216,16 @@ function HSPDU0501M() {
                     </div>
                   </div>
 
+                  <div className="o-field">
+                    <Label label={`조회구분`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
                 <div className="binds">

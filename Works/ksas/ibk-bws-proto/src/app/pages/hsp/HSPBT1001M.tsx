@@ -125,7 +125,7 @@ function HSPBT1001M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="인도취소" className="_lined-primary" />
+                <CommonButton label="인도취소" className="_solid-primary" />
               </div>
             </div>
           </div>

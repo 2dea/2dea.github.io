@@ -115,7 +115,6 @@ function HSPBT1101M() {
 
               <div className="group">
                 <CommonButton label="본부반송" className="_lined-secondary" />
-                <CommonButton label="본부반송취소" className="_lined-secondary" />{/* "본부반송내역" 탭 활성화 시 출력 */}
               </div>
 
               <div className="group _assistive">
@@ -131,6 +130,7 @@ function HSPBT1101M() {
               </div>
 
               <div className="group _primary">
+                <CommonButton label="본부반송취소" className="_solid-primary" />{/* "본부반송내역" 탭 활성화 시 출력 */}
                 <CommonButton label="인도등록" className="_solid-primary" />
               </div>
             </div>

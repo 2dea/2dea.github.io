@@ -115,8 +115,8 @@ function BEXPM0301M() {
             <div className="m-binds type-end">
 
               <div className="group _primary">
-                <CommonButton label="검수수정" className="_solid-primary" />
                 <CommonButton label="검수취소" className="_lined-primary" />
+                <CommonButton label="검수수정" className="_solid-primary" />
                 <CommonButton label="검수등록" className="_solid-primary" />
                 <CommonButton label="신청수정" className="_solid-primary" />
               </div>
