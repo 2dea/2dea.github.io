@@ -486,6 +486,13 @@
     overflow: auto;
     // padding: var(--margin-block) var(--margin-inline);
     padding: var(--margin-block) var(--margin-inline);
+
+    &.p-dialog-top-left  {
+      .p-dialog  {
+        margin: 0 0;
+        transition-duration: 0s;
+      }
+    }
   }
 
   --radius: #{$radius-70};

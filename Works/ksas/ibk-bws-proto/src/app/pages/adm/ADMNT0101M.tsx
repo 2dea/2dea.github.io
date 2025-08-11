@@ -348,10 +348,32 @@ function ADMNT0101M() {
                                   <XDropdown appendTo={document.body} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
+                                <div className="o-form _select mode-required wdth-auto">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
                               </div>
                             </div>
                           </td>
                         </tr>
+
+                        {/* "공지메뉴-시재과부족현황조회" 선택시 해당 컬럼 노출 { @DEV }*/}
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`자금모점 선택`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-auto">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
                         <tr>
                           <th colSpan={1}>
                             <Label label={`공지기간`} require={true} />
@@ -447,6 +469,36 @@ function ADMNT0101M() {
                           </th>
                           <td colSpan={3}>
                             <div className="m-mixed-field">
+                              <div className="fields">
+                                <div className="o-form _select wdth-50">
+                                  <XDropdown appendTo={'self'} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+
+                              {/* 직접선택 시 { @DEV }*/}
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-30 g-end">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <span className="units">px</span>
+                                </div>
+                              </div>
+
+                            </div>
+
+                          </td>
+                        </tr>
+
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`(ex)가로사이즈`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="m-mixed-field">
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input wdth-50 g-end">
@@ -490,7 +542,7 @@ function ADMNT0101M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input wdth-30 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -504,7 +556,7 @@ function ADMNT0101M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input wdth-30 g-end">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
