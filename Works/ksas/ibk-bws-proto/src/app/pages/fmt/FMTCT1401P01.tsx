@@ -577,7 +577,7 @@ function FMTCT1401P01() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="임시저장" className="_solid-primary" />
-              <CommonButton label="결재요청" className="_solid-primary _approve" />
+              <CommonButton label="결재요청" className="_solid-primary" />
             </div>
           </div>
         </div>

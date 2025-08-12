@@ -121,12 +121,12 @@ function FMTCT0901M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="결재요청" className="_solid-primary _approve" />
+                <CommonButton label="결재요청" className="_solid-primary" />
               </div>
 
               <div className="group _primary">
                 <CommonButton label="저장" className="_solid-primary" />
-                <CommonButton label="확정" className="_solid-primary _approve" />
+                <CommonButton label="확정" className="_solid-primary" />
               </div>
             </div>
 

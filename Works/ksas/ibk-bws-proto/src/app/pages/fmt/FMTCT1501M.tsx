@@ -115,7 +115,7 @@ function FMTCT1501M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="현송원관리" className="_solid-primary _approve" />
+                <CommonButton label="현송원관리" className="_solid-primary" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>

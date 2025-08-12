@@ -115,7 +115,7 @@ function FMTCT0101M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="신청" className="_solid-primary _approve" />
+                <CommonButton label="신청" className="_solid-primary" />
               </div>
             </div>
 
@@ -232,7 +232,7 @@ function FMTCT0101M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _select mode-required wdth-70">
-                                  <XDropdown appendTo={document.body} className="bind"  disabled />
+                                  <XDropdown appendTo={document.body} className="bind" disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
 

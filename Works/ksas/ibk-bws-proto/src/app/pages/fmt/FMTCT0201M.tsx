@@ -1085,8 +1085,8 @@ function FMTCT0201M() {
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="수정결재요청" className="_solid-primary _approve" />
-                              <CommonButton label="결재요청" className="_solid-primary _approve" />
+                              <CommonButton label="수정결재요청" className="_solid-primary" />
+                              <CommonButton label="결재요청" className="_solid-primary" />
                             </div>
                           </div>
 

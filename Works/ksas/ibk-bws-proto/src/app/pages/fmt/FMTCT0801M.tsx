@@ -123,7 +123,7 @@ function FMTCT0801M() {
 
               <div className="group _primary">
                 <CommonButton label="자금신청취소" className="_lined-primary" />
-                <CommonButton label="자금신청" className="_solid-primary _approve" />
+                <CommonButton label="자금신청" className="_solid-primary" />
 
               </div>
             </div>
@@ -141,7 +141,7 @@ function FMTCT0801M() {
                 <CommonButton label="불입거절" className="_lined-primary" />
                 <CommonButton label="불입결정" className="_solid-primary" />
                 <CommonButton label="자금신청취소" className="_lined-primary" />
-                <CommonButton label="자금신청" className="_solid-primary _approve" />
+                <CommonButton label="자금신청" className="_solid-primary" />
               </div>
             </div>
 
@@ -913,8 +913,8 @@ function FMTCT0801M() {
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="수정결재요청" className="_solid-primary _approve" />
-                              <CommonButton label="결재요청" className="_solid-primary _approve" />
+                              <CommonButton label="수정결재요청" className="_solid-primary" />
+                              <CommonButton label="결재요청" className="_solid-primary" />
                             </div>
                           </div>
                         </div>
@@ -1108,8 +1108,8 @@ function FMTCT0801M() {
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="수정결재요청" className="_solid-primary _approve" />
-                              <CommonButton label="결재요청" className="_solid-primary _approve" />
+                              <CommonButton label="수정결재요청" className="_solid-primary" />
+                              <CommonButton label="결재요청" className="_solid-primary" />
                             </div>
                           </div>
                         </div>

@@ -124,9 +124,9 @@ function FMTCT1401M() {
 
               <div className="group _primary">
                 <CommonButton label="삭제" className="_delete" />
-                <CommonButton label="재신청" className="_solid-primary _approve" />
-                <CommonButton label="수정" className="_solid-primary _approve" />
-                <CommonButton label="신청" className="_solid-primary _approve" />
+                <CommonButton label="재신청" className="_solid-primary" />
+                <CommonButton label="수정" className="_solid-primary" />
+                <CommonButton label="신청" className="_solid-primary" />
               </div>
             </div>
 
@@ -803,8 +803,8 @@ function FMTCT1401M() {
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="수정결재요청" className="_solid-primary _approve" />
-                              <CommonButton label="결재요청" className="_solid-primary _approve" />
+                              <CommonButton label="수정결재요청" className="_solid-primary" />
+                              <CommonButton label="결재요청" className="_solid-primary" />
                             </div>
                           </div>
 
