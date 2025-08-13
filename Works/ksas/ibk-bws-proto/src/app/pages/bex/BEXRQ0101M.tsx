@@ -265,14 +265,27 @@ function BEXRQ0101M() {
                                   </div>
                                 </div>
 
+                                {/*
                                 <div className="m-checks">
                                   <InputRadio name="RADIO_10" label="서무대리" defaultChecked />
                                   <InputRadio name="RADIO_10" label="보관카드담당자" />
+                                </div> */}
+
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <CommonButton label="서무대리" className="_normal" />
+                                    <CommonButton label="보관카드담당자" className="_normal" />
+                                  </div>
+                                  <div className="group">
+                                    <CommonButton label="즐겨찾기" className="_normal" />
+                                  </div>
                                 </div>
 
-                                <div className="binds">
+                                {/* <div className="binds">
+                                  <CommonButton label="서무대리" className="_normal" />
+                                  <CommonButton label="보관카드담당자" className="_normal" />
                                   <CommonButton label="즐겨찾기" className="_normal" />
-                                </div>
+                                </div> */}
                               </div>
 
                               <div className="m-footer">
@@ -309,6 +322,7 @@ function BEXRQ0101M() {
                             </div>
                           </td>
                         </tr>
+
                         <tr>
                           <th colSpan={1}>
                             <Label label={`서류내용`} require={true} />
@@ -316,12 +330,11 @@ function BEXRQ0101M() {
                           <td colSpan={5}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-90">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <div className="o-form _input mode-required  wdth-90">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
                                 </div>
-
-                                <div className="o-form _select wdth-90">
+                                <div className="o-form _select  wdth-50">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>

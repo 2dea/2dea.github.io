@@ -253,7 +253,7 @@ function DEX() {
 
 완료 메시지
 <td class="auth"><span class="name DEL">김진영</span></td>
-<td class="done"><span class="date done">2025-07-28</span></td>
+<td class="done"><span class="date done">2025-08-13</span></td>
 
 about:blank
 

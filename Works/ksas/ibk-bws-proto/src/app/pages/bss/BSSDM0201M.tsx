@@ -120,7 +120,7 @@ function BSSDM0201M() {
             <div className="m-binds type-end">
               <div className="group _utility">
                 <div className="m-print-binds">
-                  <CommonButton label="인수도부출력" className="_texted" />
+                  <CommonButton label="인수증출력" className="_texted" />
                   <CommonButton label="출력" className="_texted" />
                 </div>
               </div>
@@ -522,11 +522,12 @@ function BSSDM0201M() {
                     </div>
 
                     <ol className="m-bullets type-decimal level1">
-                      <li><strong>최소 신청수량: 전표박스기준 20박스, 마대자루기준 5자루 이상 (정확한 수량 입력 바람)</strong></li>
-                      <li>인계자는 부점장으로 입력함.</li>
-                      <li><strong>&lt;제규정&gt;[문서사무취급세척] "본부(영업점) 문서분류 및 보존기간표" 참조 (<a href="javascript:" className="o-link _normal">시행문 보기</a>)</strong></li>
-                      <li className="c-color-strong"><strong>소량책자(3권 이하) 폐기는 행내등기/행내등기신청/소량책자폐기에서 신청바람</strong></li>
-                      <li className="c-color-strong"><strong>수거 일정은 수도권 1~2주, 기타지역 2~4주 정도 소요됩니다.</strong></li>
+                      <li>최소 신청수량: 전표박스기준 20박스, 마대자루기준 5자루 이상 입력해주세요.(정확한 수량 입력)</li>
+                      <li>인계자는 부점장으로 입력해주세요.</li>
+                      <li>&lt;제규정&gt;[문서사무취급세척] "본부(영업점) 문서분류 및 보존기간표" 참조 (<a href="javascript:" className="o-link _normal">시행문 보기</a>)</li>
+                      <li className="c-color-strong">소량책자(3권 이하) 폐기는 행내등기/행내등기신청/소량책자폐기에서 신청해주세요.</li>
+                      <li className="c-color-strong">수거 일정은 수도권 1~2주, 기타지역 2~4주 정도 소요됩니다.</li>
+                      <li>폐기업체 담당자는 전산신청 후 신청자 내선 번호로 일정 조율 연락바랍니다.</li>
                     </ol>
 
                   </div>

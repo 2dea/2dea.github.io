@@ -148,7 +148,7 @@ function FMTDP0201M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`방문일자`} require={false} />
+                    <Label label={`방문기간`} require={false} />
                     <div className="fields">
                       <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -324,7 +324,7 @@ function FMTDP0201M() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">방문기간</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">고객명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수행직원</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이동수단</span></div></th>
@@ -443,7 +443,7 @@ function FMTDP0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`방문일자`} require={true} />
+                            <Label label={`방문기간`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">

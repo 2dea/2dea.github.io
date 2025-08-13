@@ -124,7 +124,8 @@ function STMGD0401M() {
             <div className="m-binds type-end">
               <div className="group _utility">
                 <div className="m-print-binds">
-                  <CommonButton label="조회내역출력" className="_texted" />
+                  <CommonButton label="명령부출력(달력)" className="_texted" />
+                  <CommonButton label="명령부출력" className="_texted" />
                   <CommonButton label="점검표출력" className="_texted" />
                   <CommonButton label="열쇠인수도출력" className="_texted" />
                 </div>
@@ -132,7 +133,8 @@ function STMGD0401M() {
 
               <div className="group _primary">
                 <CommonButton label="명령부 초기화" className="_lined-primary" />
-                <CommonButton label="임시저장" className="_solid-primary" />
+                <CommonButton label="과거내역조회" className="_lined-primary" />
+                <CommonButton label="임시저장" className="_lined-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
             </div>

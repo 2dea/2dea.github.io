@@ -383,7 +383,7 @@ function HSPDU0801M() {
                               <col className="wdth-10" />
                               <col />
                               <col />
-                              <col className="wdth-auto" />
+                              <col />
                               <col />
                               <col />
                               <col />
@@ -396,36 +396,24 @@ function HSPDU0801M() {
                               <col />
                               <col />
                               <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
                               <tr>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기상태</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정정연월일</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기수량</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                                <th rowSpan={2} colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일련번호</span></div></th>
-                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기책임자</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유구분</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유내용</span></div></th>
-                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기취소책임자</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">포장구분</span></div></th>
-                              </tr>
-                              <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기상태</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정정연월일</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일련번호</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유구분</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기사유내용</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">포장구분</span></div></th>
                               </tr>
                             </thead>
 
@@ -445,19 +433,15 @@ function HSPDU0801M() {
                                 <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
                                 <td>정상</td>
                                 <td>결재승인</td>
-                                <td><span className="o-digit type-date"></span></td>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td className="g-end">2</td>
                                 <td className="g-end">131,333</td>
                                 <td></td>
                                 <td>10000</td>
                                 <td>~</td>
                                 <td>10000</td>
-                                <td>011465</td>
-                                <td>홍길동</td>
                                 <td>파손</td>
                                 <td className="g-start">폐기함2</td>
-                                <td>011465</td>
-                                <td>홍길동</td>
                                 <td></td>
                               </tr>
                             ))}

@@ -131,7 +131,7 @@ function HSPBT0201M() {
               </div> */}
 
               <div className="group _primary">
-                <CommonButton label="임시저장" className="_solid-primary" />
+                <CommonButton label="임시저장" className="_lined-primary" />
                 <CommonButton label="인도등록" className="_solid-primary" />
               </div>
             </div>

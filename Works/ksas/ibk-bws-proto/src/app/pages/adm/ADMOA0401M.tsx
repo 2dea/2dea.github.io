@@ -191,30 +191,28 @@ function ADMOA0401M() {
                           <col />
                           <col />
                           <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업ID</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상건수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">처리건수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류건수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">처리내용</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치작업ID</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이력관리일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치실행일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">STEP명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치작업상태구분코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치처리건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일시작일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일종료일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업시작일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업종료일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류메시지내용</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -222,17 +220,16 @@ function ADMOA0401M() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
-                              <td>BBS</td>
                               <td>JYC0180B</td>
                               <td>0</td>
+                              <td></td>
                               <td className="g-start">자기앞수표일자 전화 미적용 조정작업 배치</td>
+                              <td></td>
+                              <td className="g-end">30,000</td>
+                              <td></td>
+                              <td></td>
                               <td><span className="o-digit type-time">00:00:00</span></td>
                               <td><span className="o-digit type-time">00:00:00</span></td>
-                              <td><span className="o-digit type-time">00:00:00</span></td>
-                              <td>종료</td>
-                              <td className="g-end">30,000</td>
-                              <td className="g-end">30,000</td>
-                              <td className="g-end">30,000</td>
                               <td className="g-start">배치 적재수행 중 오류 발생</td>
                             </tr>
                           ))}
@@ -271,17 +268,17 @@ function ADMOA0401M() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업ID</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상건수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">처리건수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치작업ID</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이력관리일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치실행일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">STEP명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치작업상태구분코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치처리건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일시작일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일종료일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업시작일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업종료일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류메시지내용</span></div></th>
                           </tr>
                         </thead>
 
@@ -295,17 +292,17 @@ function ADMOA0401M() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>JYC0180B</td>
                               <td>0</td>
+                              <td></td>
                               <td className="g-start">자기앞수표일자 전화 미적용 조정작업 배치</td>
+                              <td></td>
+                              <td className="g-end">30,000</td>
+                              <td></td>
+                              <td></td>
                               <td><span className="o-digit type-time">00:00:00</span></td>
                               <td><span className="o-digit type-time">00:00:00</span></td>
-                              <td><span className="o-digit type-time">00:00:00</span></td>
-                              <td>종료</td>
-                              <td className="g-end">30,000</td>
-                              <td className="g-end">30,000</td>
-                              <td className="g-end">30,000</td>
+                              <td className="g-start">배치 적재수행 중 오류 발생</td>
                             </tr>
                           ))}
                         </tbody>
@@ -343,17 +340,17 @@ function ADMOA0401M() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업ID</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료시각</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대상건수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">처리건수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치작업ID</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">이력관리일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치실행일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">STEP명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치작업상태구분코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">배치처리건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일시작일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">파일종료일련번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업시작일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">작업종료일시</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오류메시지내용</span></div></th>
                           </tr>
                         </thead>
 
@@ -367,17 +364,17 @@ function ADMOA0401M() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>JYC0180B</td>
                               <td>0</td>
+                              <td></td>
                               <td className="g-start">자기앞수표일자 전화 미적용 조정작업 배치</td>
+                              <td></td>
+                              <td className="g-end">30,000</td>
+                              <td></td>
+                              <td></td>
                               <td><span className="o-digit type-time">00:00:00</span></td>
                               <td><span className="o-digit type-time">00:00:00</span></td>
-                              <td><span className="o-digit type-time">00:00:00</span></td>
-                              <td>종료</td>
-                              <td className="g-end">30,000</td>
-                              <td className="g-end">30,000</td>
-                              <td className="g-end">30,000</td>
+                              <td className="g-start">배치 적재수행 중 오류 발생</td>
                             </tr>
                           ))}
                         </tbody>

@@ -114,7 +114,7 @@ function STMVL0101M() {
           <div className="binds">
             <div className="m-binds type-start">
               <div className="group">
-                <CommonButton label="감사자료다운로드" className="_lined-secondary" />
+                <CommonButton label="등록기간관리" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -130,7 +130,7 @@ function STMVL0101M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="수정기한관리" className="_solid-primary" />
+                <CommonButton label="감사자료다운로드" className="_lined-primary" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
@@ -171,21 +171,6 @@ function STMVL0101M() {
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
                         </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field colspan-2">
-                    <Label label={`사용일자`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input type-date wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                      <span className="seps type-tilde">~</span>
-                      <div className="o-form _input type-date wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
@@ -363,10 +348,27 @@ function STMVL0101M() {
                     </em>
                   </div>
 
+                  <div className="o-field">
+                    <Label label={`사용일자`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input type-date wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <span className="seps type-tilde">~</span>
+                      <div className="o-form _input type-date wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                      <div className="binds">
+                        <CommonButton label="검색" className="_normal" />
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
-                      <CommonButton label="행복사" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />
                       <CommonButton label="취소" className="_normal" />
                       <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
@@ -412,7 +414,7 @@ function STMVL0101M() {
                               <th rowSpan={2} className="p-align-center p-x-frozen-last"><div className="p-column-header-content"><span className="p-column-title">차량번호</span></div></th>
                               <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용일자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                               <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                              <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">게시판<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                              <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계기판</span></div></th>
                               <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주행거리<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                               <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타</span></div></th>
                               <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>

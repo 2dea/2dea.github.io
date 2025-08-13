@@ -1,5 +1,5 @@
 /**
-* @description 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회 ~ (LP)등록기간관리
+* @description 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회 ~ (LP)수정기간등록
  */
 
 // dependency
@@ -101,7 +101,7 @@ function STMVL0101P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">등록기간관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">수정기간등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -110,7 +110,7 @@ function STMVL0101P01() {
               <form className="m-filter-form">
                 <div className="fieldset">
                   <div className="o-field colspan-2">
-                    <Label label={`등록기간`} require={false} />
+                    <Label label={`수정기간`} require={false} />
                     <div className="fields">
                       <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -162,21 +162,26 @@ function STMVL0101P01() {
                           <col />
                           <col />
                           <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록시작일자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">적용여부</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수정기간</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래일자</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -184,8 +189,9 @@ function STMVL0101P01() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>{idx + 1}</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td>N</td>
+                            <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
+                            <td>009211</td>
+                            <td className="g-start">프로세스혁신부</td>
                             <td>홍길동</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                           </tr>
@@ -200,7 +206,15 @@ function STMVL0101P01() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">등록시작일자 설정</span></h5>
+                  <h5 className="o-heading level3">
+                    <span className="label">수정기간 설정</span>
+                  </h5>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="신규" className="_create" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main">
@@ -214,7 +228,7 @@ function STMVL0101P01() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`등록시작일자`} require={true} />
+                            <Label label={`수정기간`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -223,8 +237,83 @@ function STMVL0101P01() {
                                   <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                   <i aria-hidden="true"></i>
                                 </div>
+                                <span className="seps type-tilde">~</span>
+                                <div className="o-form _input type-date mode-required wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                                  <i aria-hidden="true"></i>
+                                </div>
                               </div>
                             </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`부점`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+
+                            <div className="m-binds">
+                              <div className="group _start">
+                                <CommonButton label="전체삭제" className="_normal" disabled />
+                                <CommonButton label="추가" className="_normal" />
+                              </div>
+                            </div>
+
+                            <div className="m-flex-list">
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                            </div>
+
                           </td>
                         </tr>
                       </tbody>
@@ -234,7 +323,7 @@ function STMVL0101P01() {
 
                 <div className="m-footer">
                   <ul className="m-bullets type-disc">
-                    <li>전부점에 적용되는 기한입니다.</li>
+                    <li>예외적으로 수정이 필요한 특정부점에 적용되는 기간입니다.</li>
                   </ul>
                 </div>
 
@@ -246,12 +335,9 @@ function STMVL0101P01() {
 
         <div className="div-footer">
           <div className="m-binds type-end">
-            <div className="group">
-              <CommonButton label="수정기간등록" className="_lined-secondary" />
-            </div>
-
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
@@ -262,7 +348,7 @@ function STMVL0101P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)등록기간관리 [wdth-50p(w960)]</span>
+              <span className="label">(P)수정기간등록 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
