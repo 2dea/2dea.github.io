@@ -381,6 +381,9 @@
 
   --radius: #{$radius-70};
 
+  $width-90p: calc(var(--rem) * var(--width-90p));
+  $width-80p: calc(var(--rem) * var(--width-80p));
+
   $width-70p: calc(var(--rem) * var(--width-70p));
   $width-60p: calc(var(--rem) * var(--width-60p));
   $width-50p: calc(var(--rem) * var(--width-50p));
@@ -497,6 +500,9 @@
 
   --radius: #{$radius-70};
 
+  $width-90p: calc(var(--rem) * var(--width-90p));
+  $width-80p: calc(var(--rem) * var(--width-80p));
+
   $width-70p: calc(var(--rem) * var(--width-70p));
   $width-60p: calc(var(--rem) * var(--width-60p));
   $width-50p: calc(var(--rem) * var(--width-50p));
@@ -527,6 +533,14 @@
     position: absolute !important;
   }
 
+  &.wdth-90p {
+    min-width: $width-90p;
+  }
+
+  &.wdth-80p {
+    min-width: $width-80p;
+  }
+
   &.wdth-70p {
     min-width: $width-70p;
   }
@@ -550,6 +564,11 @@
 
   &.wdth-20p {
     width: $width-20p;
+    min-width: $width-20p;
+  }
+
+  &.wdth-auto {
+    width: auto;
     min-width: $width-20p;
   }
 

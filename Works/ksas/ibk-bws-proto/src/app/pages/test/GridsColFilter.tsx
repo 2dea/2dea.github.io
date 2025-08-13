@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)이미지보기
+ * @description TEST ~ (LP)공통 그리드컬럼필터
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function CMP001101P() {
+function GridsColFilter() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -91,38 +91,11 @@ function CMP001101P() {
 
   return (
     <>
-      <Dialog
-        className="layer-wrap case-viewimage wdth-auto" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
-        headerClassName="layer-head"
-        contentClassName="layer-body"
-        visible={visible}
-        style={{}}
-        onHide={() => { if (!visible) return; setVisible(false); }}
-        closeIcon={<Icon icon="popup-close" />}
-        modal={false}
-        // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">이미지보기</span></h3>}
-      >
-        <div className="div-container _small">
-
-          <div className="o-view-image">
-            {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg/640px-%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg" alt="" /> */}
-            {/* <img src={require("assets/images/media/STMKY0201P03_010.png")} alt="" /> */}
-            {/* <img src={require("assets/images/media/BEXPM0101P01_010.png")} alt="" /> */}
-            {/* <img src={require("assets/images/media/STMPR0101P02_010.png")} alt="" /> */}
-            {/* <img src={require("assets/images/temp/FMTCT0201P02_010.jpg")} alt="" /> */}
-            {/* <img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" /> */}
-            <img src={require("assets/images/common/img_empty-image.png")} alt="" />
-          </div>
-
-        </div>
-      </Dialog>
-
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)이미지보기 [case-viewimage wdth-auto]</span>
+              <span className="label">(P)공통 그리드컬럼필터 [case-viewimage wdth-25p(w480)]</span>
             </h1>
           </div>
         </div>
@@ -135,7 +108,18 @@ function CMP001101P() {
         <div className="div-contents">
           <div className="m-binds">
             <div className="group _start">
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => setVisible(true)} />
+              <CommonButton label="팝업 열기" icon="link" size={70} onClick={(e) => viewimageOverlay0.current.toggle(e)} />
+              <OverlayPanel className="o-overlaypanel case-viewimage wdth-25p" ref={viewimageOverlay0} closeIcon={<Icon icon="popup-close" />} showCloseIcon closeOnEscape dismissable={false}>
+                <div className="layer-head">
+                  <h3 className="o-heading"><span className="label">공통 그리드컬럼필터</span></h3>
+                </div>
+                <div className="layer-body">
+                  <div className="o-view-image">
+                    {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg/640px-%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg" alt="" /> */}
+                    <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+                  </div>
+                </div>
+              </OverlayPanel>
             </div>
           </div>
         </div>
@@ -145,4 +129,4 @@ function CMP001101P() {
   );
 }
 
-export default CMP001101P;
+export default GridsColFilter;

@@ -19,6 +19,7 @@ import ING from 'app/pages/test/ING';         // ING
 import DialogPopup from 'app/pages/test/DialogPopup'; // DialogPopup
 import LoadingBar from 'app/pages/test/LoadingBar';  // LoadingBar
 import FileUploads from 'app/pages/test/FileUploads'; // FileUploads
+import GridsColFilter from 'app/pages/test/GridsColFilter'; // GridsColFilter
 import SurveyForms from 'app/pages/test/SurveyForms'; // SurveyForms
 
 // proto 공통
@@ -32,6 +33,7 @@ import CMP000302P from 'app/pages/cmp/CMP000302P';   // 공통 ~ (LP)첨부파�
 import CMP000401P from 'app/pages/cmp/CMP000401P';   // 공통 ~ (LP)이미지업로드
 import CMP000501P from 'app/pages/cmp/CMP000501P';   // 공통 ~ (LP)직원조회
 import CMP000601P from 'app/pages/cmp/CMP000601P';   // 공통 ~ (LP)주소검색
+import CMP000701P from 'app/pages/cmp/CMP000701P';   // 공통 ~ (LP)공지사항
 import CMP000801P from 'app/pages/cmp/CMP000801P';   // 공통 ~ (LP)도움말
 import CMP000901P from 'app/pages/cmp/CMP000901P';   // 공통 ~ (LP)메모(업무별)
 import CMP001001P from 'app/pages/cmp/CMP001001P';   // 공통 ~ (LP)메모(마이메뉴)
@@ -644,6 +646,7 @@ function ProtoRoutes() {
       element: <Decorator />,
       children: [
         { path: 'SurveyForms', element: <SurveyForms /> },
+        { path: 'GridsColFilter', element: <GridsColFilter /> },
         { path: 'FileUploads', element: <FileUploads /> },
         { path: 'DialogPopup', element: <DialogPopup /> },
         { path: 'POPTMPL',     element: <POPTMPL /> },
@@ -666,6 +669,7 @@ function ProtoRoutes() {
         { path: 'CMP000401P', element: <CMP000401P /> },
         { path: 'CMP000501P', element: <CMP000501P /> },
         { path: 'CMP000601P', element: <CMP000601P /> },
+        { path: 'CMP000701P', element: <CMP000701P /> },
         { path: 'CMP000801P', element: <CMP000801P /> },
         { path: 'CMP000901P', element: <CMP000901P /> },
         { path: 'CMP001001P', element: <CMP001001P /> },

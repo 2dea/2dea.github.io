@@ -140,6 +140,7 @@
 .o-icon._file:before  { background-color: $tp; background-image: var(--obj-ico-file); }
 .o-icon._filter-alt:before,
   .o-icon._column-toggle:before  { background-color: $tp; background-image: var(--obj-ico-filter-alt); }
+.o-icon._globe-portal:before  { background-color: $tp; background-image: var(--obj-ico-globe-portal); }
 .o-icon._help:before,
   .o-icon._tooltip-help:before  { background-color: $tp; background-image: var(--obj-ico-help); }
 .o-icon._home:before  { background-color: $tp; background-image: var(--obj-ico-home); }
@@ -410,6 +411,9 @@
 .o-view-image.h-160 :is( object, img, svg )  { height: III(160); }
 
 .o-view-image.case-notice-calendar:before  { min-width: III(626); min-height: III(177); aspect-ratio: auto; }
+
+.o-view-image:where(.p-dialog.layer-wrap:is(.case-notice, .case-viewimage) *)  { margin: auto auto; }
+.o-view-image:where(.p-dialog.layer-wrap.case-viewimage *) :is( object, img, svg )  { max-width: none; }
 
 
 .m-figures  { display: grid; gap: $margin-section-50 $margin-section-70; }
@@ -1908,7 +1912,7 @@
 .m-data-form :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
 .m-data-form :where(table:not(td *)) tr >*  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
 // .m-data-form :where(table:not(td *)) [rowspan]:where(th, td)  { border-right-width: $e10; }
-.m-data-form :where(table:not(td *)).style-fill tr >*  { --margin-cell-block: #{III(8)}; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1); }
+.m-data-form.style-fill :where(table:not(td *)) tr >*  { --margin-cell-block: #{III(8)}; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1); }
 // .m-data-form :where(table:not(td *)) tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: $color-key1-40; }
 // .m-data-form :where(table:not(td *)) tr >:first-child  { border-left-width: $e10; }
 // .m-data-form :where(table:not(td *)) tr >:last-child  { border-right-width: $e10; }

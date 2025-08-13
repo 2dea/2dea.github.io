@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)이미지보기
+ * @description 공통 ~ (LP)공지사항
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function CMP001101P() {
+function CMP000701P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -92,7 +92,7 @@ function CMP001101P() {
   return (
     <>
       <Dialog
-        className="layer-wrap case-viewimage wdth-auto" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap case-notice wdth-40p" /* auto[Images Default] | 20% | 25% | 40%[Texts Default] | 50% | 60% | 70%  */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,7 +101,14 @@ function CMP001101P() {
         closeIcon={<Icon icon="popup-close" />}
         modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">이미지보기</span></h3>}
+        header={
+          <>
+            <h3 className="o-heading"><span className="label">공지사항</span></h3>
+            <div className="m-checks">
+              <InputCheck label="오늘 하루동안 열지 않기" />
+            </div>
+          </>
+        }
       >
         <div className="div-container _small">
 
@@ -122,7 +129,7 @@ function CMP001101P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)이미지보기 [case-viewimage wdth-auto]</span>
+              <span className="label">(P)공지사항 [case-viewimage wdth-auto]</span>
             </h1>
           </div>
         </div>
@@ -145,4 +152,4 @@ function CMP001101P() {
   );
 }
 
-export default CMP001101P;
+export default CMP000701P;

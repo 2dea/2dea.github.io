@@ -329,7 +329,7 @@ function ADMNT0101M() {
                           </th>
                           <td colSpan={3}>
                             <div className="m-checks">
-                              <InputCheck label="선택" labelHidden />
+                              <InputCheck label="중요" />
                             </div>
                           </td>
                         </tr>
@@ -405,7 +405,7 @@ function ADMNT0101M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -421,7 +421,7 @@ function ADMNT0101M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input mode-required">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={5} cols={80} />
                                   <i aria-hidden="true"></i>
 
                                   <div className="o-limit type-length">
@@ -471,7 +471,7 @@ function ADMNT0101M() {
                             <div className="m-mixed-field">
                               <div className="fields">
                                 <div className="o-form _select wdth-50">
-                                  <XDropdown appendTo={'self'} className="bind" />
+                                  <XDropdown appendTo={'self'} className="bind" />{/* 20% | 25% | 40%:default | 50% | 60% | 70% | 직접입력  { @DEV } */}
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -479,8 +479,8 @@ function ADMNT0101M() {
                               {/* 직접선택 시 { @DEV }*/}
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-30 g-end">
-                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <div className="o-form _input wdth-30">
+                                    <InputText placeholder="770" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                   <span className="units">px</span>
@@ -501,7 +501,7 @@ function ADMNT0101M() {
                             <div className="m-mixed-field">
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-50 g-end">
+                                  <div className="o-form _input wdth-30">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -510,10 +510,12 @@ function ADMNT0101M() {
                               </div>
 
                               <div className="m-checks">
-                                <InputRadio name="RADIO:T_10" label="100" />
-                                <InputRadio name="RADIO:T_10" label="200" />
-                                <InputRadio name="RADIO:T_10" label="300" />
-                                <InputRadio name="RADIO:T_10" label="400" />
+                                <InputRadio name="RADIO:T_10" label="20%" />
+                                <InputRadio name="RADIO:T_10" label="25%" />
+                                <InputRadio name="RADIO:T_10" label="40%" defaultChecked />
+                                <InputRadio name="RADIO:T_10" label="50%" />
+                                <InputRadio name="RADIO:T_10" label="60%" />
+                                <InputRadio name="RADIO:T_10" label="70%" />
                               </div>
                             </div>
 
@@ -528,7 +530,7 @@ function ADMNT0101M() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="http(s)://" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -542,7 +544,7 @@ function ADMNT0101M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-30 g-end">
+                                <div className="o-form _input wdth-30">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -556,7 +558,7 @@ function ADMNT0101M() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-30 g-end">
+                                <div className="o-form _input wdth-30">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -608,7 +610,7 @@ function ADMNT0101M() {
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input wdth-50 g-end">
+                                <div className="o-form _input wdth-50">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>

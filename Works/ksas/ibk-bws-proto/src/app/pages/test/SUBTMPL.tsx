@@ -830,6 +830,7 @@ function SUBTMPL() {
                                 <i className="o-icon _edit wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _file wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _filter-alt wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _globe-portal wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _help wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _tooltip-help wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _home wdth-50" aria-hidden="true"></i>
