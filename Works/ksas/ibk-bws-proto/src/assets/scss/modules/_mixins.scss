@@ -51,8 +51,10 @@
   background: $tp;
   border-radius: 0;
 
-  :before,
-  :after,
+  :where(
+    :before,
+    :after
+  ),
   *  {
     @if ($font == 1) {
       @include setResetFont();
@@ -122,6 +124,36 @@
 
 @mixin inc-ellipsis()  {
   text-overflow: ellipsis; white-space: nowrap;
+}
+
+@mixin inc-ellipsis2($line: 1) {
+  // @if ($line == null or $line == 1) {
+  //   word-break: break-all;
+
+  //   @if ($line == null) {
+  //     white-space: nowrap;
+  //   }
+  // }
+
+  @if ($line == null) {
+    word-break: break-all;
+    white-space: nowrap;
+  }
+
+  @else {
+    @if ($line == 1) {
+      word-break: break-all;
+    }
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @mixin setSymbolVariationSettings($fill: 0, $wght: 400, $opsz: 24)  {

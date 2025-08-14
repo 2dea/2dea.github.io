@@ -92,7 +92,7 @@ function CMP000701P() {
   return (
     <>
       <Dialog
-        className="layer-wrap case-notice wdth-40p" /* auto[Images Default] | 20% | 25% | 40%[Texts Default] | 50% | 60% | 70%  */
+        className="layer-wrap case-notice wdth-auto" /* auto[Images Default] | 20% | 25% | 40%[Texts Default] | 50% | 60% | 70%  */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -104,7 +104,7 @@ function CMP000701P() {
         header={
           <>
             <h3 className="o-heading"><span className="label">공지사항</span></h3>
-            <div className="m-checks">
+            <div className="config m-checks">
               <InputCheck label="오늘 하루동안 열지 않기" />
             </div>
           </>
@@ -112,14 +112,92 @@ function CMP000701P() {
       >
         <div className="div-container _small">
 
-          <div className="o-view-image">
-            {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg/640px-%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg" alt="" /> */}
-            {/* <img src={require("assets/images/media/STMKY0201P03_010.png")} alt="" /> */}
-            {/* <img src={require("assets/images/media/BEXPM0101P01_010.png")} alt="" /> */}
-            {/* <img src={require("assets/images/media/STMPR0101P02_010.png")} alt="" /> */}
-            {/* <img src={require("assets/images/temp/FMTCT0201P02_010.jpg")} alt="" /> */}
-            {/* <img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" /> */}
-            <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+          <div className="o-grid">
+            <div className="column">
+
+              <div className="m-noticeview">
+                <div className="notice-caption o-board type-b">
+                  <h4 className="subject"><span className="label">공지사항 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</span></h4>
+                  <ul className="copyright">
+                    <li>
+                      <strong className="head">등록부서</strong>
+                      <span className="data">프로세스혁신</span>
+                    </li>
+                    <li>
+                      <strong className="head">등록자</strong>
+                      <span className="data">홍길동</span>
+                    </li>
+                    <li>
+                      <strong className="head">등록일자</strong>
+                      <span className="data">2025-04-08</span>
+                    </li>
+                    <li>
+                      <strong className="head">조회수</strong>
+                      <span className="data">9</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="notice-image o-view-image">
+                  {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg/640px-%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C%EC%9C%A0%ED%86%B5%EC%A6%9D%EB%AA%85%EC%84%9C.jpg" alt="" /> */}
+                  {/* <img src={require("assets/images/media/STMKY0201P03_010.png")} alt="" /> */}
+                  {/* <img src={require("assets/images/media/BEXPM0101P01_010.png")} alt="" /> */}
+                  {/* <img src={require("assets/images/media/STMPR0101P02_010.png")} alt="" /> */}
+                  {/* <img src={require("assets/images/temp/FMTCT0201P02_010.jpg")} alt="" /> */}
+                  {/* <img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" /> */}
+                  <img src={require("assets/images/common/img_empty-image.png")} alt="" />
+                </div>
+
+                <div className="notice-contents">
+                  냉무
+                </div>
+
+                <div className="notice-link o-board type-c style-fit">
+                  <div className="o-notice">
+                    <span className="icons">
+                      <Icon icon="globe-portal" />
+                    </span>
+
+                    <div className="main links">
+                      <a href="javascript:" target="_blank" className="o-link _normal">http://test.ibk.co.kr/q=9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d&amp;seq=9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3"><span className="label">첨부파일</span></h5>
+                </div>
+
+                <div className="main">
+                  <div className="m-file-list type-upload">
+                    <ul>
+                      {[...Array(2)].map((e, idx) => (
+                      <li key={idx}>
+                        <div className="card">
+                          <div className="m-file">
+                            <span className="o-file">
+                              <span className="name">업무분장관리</span>
+                              <span className="ext">.xlsx</span>
+                            </span>
+                            <span className="o-limit type-file">
+                              <span className="head">파일크기</span>
+                            </span>
+                          </div>
+
+                          <div className="binds">
+                            <ImageButton label="다운로드" icon="download" />
+                          </div>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>

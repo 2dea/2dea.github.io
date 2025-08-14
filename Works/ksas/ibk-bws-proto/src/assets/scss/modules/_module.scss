@@ -320,7 +320,8 @@
 
 
 // .o-data  { display: inline-block; vertical-align: bottom; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.o-data  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+// .o-data  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.o-data  { @include inc-ellipsis2(1); }
 
 
 .o-file { display: inline-flex; max-width: 100%; }
@@ -964,6 +965,10 @@
 .o-notice >.binds  { align-self: center; display: flex; align-items: center; height: $height-form-50; margin: calc((1lh - $height-form-50) / 2) 0; margin-left: $gap-element-70; }
 .o-notice >.binds:not(.main +*)  { margin-left: auto; }
 
+.o-notice >.main.links .o-link  { @include inc-ellipsis2(1); font-size: $font-40; }
+
+.o-notice:where(.o-board.type-c *) >.icons .o-icon:before  { background-position: 50%; }
+
 
 .m-defines  { display: flex; flex-wrap: wrap; gap: $gap-element-70 $gap-element-80; }
 .m-defines >.group  { display: flex; align-items: center; }
@@ -1053,6 +1058,8 @@
 .m-board  { display: flex; flex-direction: column; gap: $gap-element-50; }
 .m-board >.bodies  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, III(200)), 1fr)); gap: $gap-element-70; }
 .m-board >.bodies:has(.o-pair-board.type-multi)  { --width-min: #{III(245)}; }
+
+
 
 
 

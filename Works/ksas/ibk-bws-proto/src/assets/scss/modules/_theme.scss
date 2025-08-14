@@ -8,24 +8,6 @@
   outline: thick solid Blue;
 }
 
-// mixin 말줄임표
-@mixin ellipsis($line: 1) {
-  @if ($line ==1) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  @else {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $line;
-  }
-}
-
 // // ** .p-dialog HSPHS1901P01 : h3 제목 클릭 후, 팝업 높이 값으로 하단 버튼 안 보임 이슈
 // .p-dialog { max-height: 90% !important;}
 
@@ -85,7 +67,7 @@
 // .card-list .item .info-area .name::before {content: ''; display: inline-block;position: absolute;top: 50%; transform: translateY(-50%); width: 16px; height: 16px; right:-20px; background-color: blue;}
 
 
-.card-list .item .text-area {font-size: 13px; color: #525252; @include ellipsis(2);}
+.card-list .item .text-area {font-size: 13px; color: #525252; @include inc-ellipsis2(2);}
 
 // **primereact 달력
 .p-datepicker  {

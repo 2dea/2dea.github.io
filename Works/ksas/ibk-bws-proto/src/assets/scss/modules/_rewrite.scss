@@ -468,7 +468,7 @@
   }
 }
 
-.p-dialog {
+:where(.p-dialog) {
   :has(>&) {
     --margin-block: calc(var(--rem) * 40);
     --margin-inline: calc(var(--rem) * 40);
@@ -521,7 +521,7 @@
   // max-height: calc(100% - var(--margin-block, 0%) * 2);
   max-height: 100%;
   max-height: 90%;
-  max-height: calc(100% - var(--margin-block, 0%) * 2);
+  max-height: calc(100vb - var(--margin-block, 0%) * 2);
   // margin: auto;
   margin: auto auto;
   background: $color-ground;
@@ -533,12 +533,19 @@
     position: absolute !important;
   }
 
+  &.wdth-100p {
+    width: calc(100vi - var(--margin-inline, 0%) * 2);
+    min-width: $width-80p;
+  }
+
   &.wdth-90p {
-    min-width: $width-90p;
+    width: $width-90p;
+    min-width: $width-80p;
   }
 
   &.wdth-80p {
-    min-width: $width-80p;
+    width: $width-80p;
+    min-width: $width-70p;
   }
 
   &.wdth-70p {
@@ -576,7 +583,7 @@
     overflow: hidden;
   }
 
-  .p-dialog-header {
+  :where(.p-dialog-header) {
     @include setReset();
 
     padding: $margin-section-40 $margin-popup-inline;
@@ -597,11 +604,21 @@
       min-height: $height-form-70;
 
       >* {
+        flex: none;
         min-width: 0;
+      }
+
+      .config  {
+        font-weight: $bold-40;
+        font-size: $font-50;
+        line-height: $line-50;
+        margin-left: auto;
+        margin-right: $gap-element-90;
       }
     }
 
     .o-heading {
+      flex: 1 0 0;
       font-size: $font-70;
       line-height: $line-70;
       padding-left: 0;
