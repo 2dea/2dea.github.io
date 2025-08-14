@@ -218,13 +218,14 @@ function ADMNT0101M() {
                           <col />
                           <col />
                           <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공지유형</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공지메뉴</span></div></th>
+                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공지메뉴</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">제목</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">공지기간</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부서</span></div></th>
@@ -235,12 +236,13 @@ function ADMNT0101M() {
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">1차메뉴</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">2차메뉴</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">3차메뉴</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -250,6 +252,7 @@ function ADMNT0101M() {
                               <td>{idx + 1}</td>
                               <td>텍스트</td>
                               <td className="g-start">영업점배송관리</td>
+                              <td className="g-start">우편물</td>
                               <td className="g-start">우편물</td>
                               <td className="g-start">[공지]중요용지 자동배송 품목 확대</td>
                               <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
@@ -721,10 +724,6 @@ function ADMNT0101M() {
 
           <div className="div-footer">
             <div className="m-binds type-end">
-              <div className="group">
-                <CommonButton label="전산요청목록(SR)" className="_lined-secondary" />
-              </div>
-
               <div className="group _primary">
                 <CommonButton label="미리보기" className="_lined-primary" />
                 <CommonButton label="삭제" className="_delete" />

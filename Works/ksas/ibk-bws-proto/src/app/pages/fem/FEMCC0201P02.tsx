@@ -92,7 +92,7 @@ function FEMCC0201P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-90p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -150,7 +150,7 @@ function FEMCC0201P02() {
                   <h4 className="o-heading level2"><span className="label">원화수수료 정산내역</span></h4>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -208,7 +208,7 @@ function FEMCC0201P02() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                          {[...Array(4)].map((e, idx) => (
+                          {[...Array(6)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
@@ -249,7 +249,7 @@ function FEMCC0201P02() {
                   <h5 className="o-heading level3"><span className="label">지급수수료 상세내역</span></h5>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -307,7 +307,7 @@ function FEMCC0201P02() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                          {[...Array(4)].map((e, idx) => (
+                          {[...Array(6)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
@@ -358,7 +358,7 @@ function FEMCC0201P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)지급수수료상세등록 [wdth-60p(w1150)]</span>
+              <span className="label">(P)지급수수료상세등록 [wdth-90p]</span>
             </h1>
           </div>
         </div>

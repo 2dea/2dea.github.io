@@ -92,7 +92,7 @@ function FEMCT0201P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-70p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-100p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -304,7 +304,7 @@ function FEMCT0201P02() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} disabled />
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={1} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -318,7 +318,7 @@ function FEMCT0201P02() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} />
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={1} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -364,7 +364,7 @@ function FEMCT0201P02() {
 
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-10i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -406,7 +406,7 @@ function FEMCT0201P02() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청<br />구분</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송업체</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 부담부점</span></div></th>
@@ -548,7 +548,7 @@ function FEMCT0201P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)지급상세검증 [wdth-70p(w1340)]</span>
+              <span className="label">(P)지급상세검증 [wdth-100p]</span>
             </h1>
           </div>
         </div>
