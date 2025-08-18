@@ -7,7 +7,8 @@
   --edge-cell: calc(var(--rem) * var(--edge-cell-int));
   --margin-cell-block: calc(var(--rem) * var(--margin-cell-block-int));
 
-  --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
+  --height-cell-box: (var(--rem) * var(--height-form-50));
+  --height-cell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
 }
 
 
@@ -311,9 +312,9 @@
 
 .o-heading.level1  { font-size: $font-70; line-height: $line-70; }
 
-.o-heading:not(.level1)  { --width-bullet: var(--rem) * 12; --gap: var(--rem) * var(--gap-element-30); padding-left: calc(var(--width-bullet) + var(--gap)); }
-.o-heading:not(.level1):before  { content: ""; }
-.o-heading:not(.level1):before  { font-size: calc(var(--width-bullet)); width: 1em; height: 1em; margin-left: calc(-1 * (var(--width-bullet) + var(--gap))); background: var(--obj-sym-heading-level2) no-repeat 50% /100%; }
+.o-heading:where([class*=" level"]:not(.level1))  { --width-bullet: var(--rem) * 12; --gap: var(--rem) * var(--gap-element-30); padding-left: calc(var(--width-bullet) + var(--gap)); }
+.o-heading:where([class*=" level"]:not(.level1)):before  { content: ""; }
+.o-heading:where([class*=" level"]:not(.level1)):before  { font-size: calc(var(--width-bullet)); width: 1em; height: 1em; margin-left: calc(-1 * (var(--width-bullet) + var(--gap))); background: var(--obj-sym-heading-level2) no-repeat 50% /100%; }
 .o-heading.level3:before  { background-image: var(--obj-sym-heading-level3); }
 .o-heading.level4:before  { background-image: var(--obj-sym-heading-level4); }
 
@@ -321,7 +322,7 @@
 
 // .o-data  { display: inline-block; vertical-align: bottom; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 // .o-data  { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.o-data  { @include inc-ellipsis2(1); }
+.o-data  { @include inc-ellipsis2(); }
 
 
 .o-file { display: inline-flex; max-width: 100%; }
@@ -2135,6 +2136,7 @@
 .o-grid-table  { @include setResetFont(); }
 .o-grid-table  { --edge: var(--edge-cell); --margin-block: var(--margin-cell-block); --margin-inline: #{III(7)}; --height: var(--height-cell); clear: both; }
 :has(>table):where(.o-grid-table, .o-grid-table *)  { border: var(--edge) solid var(--color-edge-40); }
+.o-grid-table .c-point-cell  { color: var(--color-point-orange); }
 .o-grid-table .table-container:is(.o-section >.main:not(._primary) *)  { overflow: auto; height: var(--height-section-main); }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >*  { width: 0; }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }  // ### min-width: 0;
@@ -2219,6 +2221,34 @@
 // .o-grid-table .o-form.wdth-70  { min-width: calc(var(--rem) * 160); }
 // .o-grid-table .o-form.wdth-80  { min-width: calc(var(--rem) * 180); }
 // .o-grid-table .o-form.wdth-90  { min-width: calc(var(--rem) * 210); }
+
+.o-grid-table.style-fit  {
+  --margin-cell-block-int: 2;
+  --margin-cell-block: calc(var(--rem) * var(--margin-cell-block-int));
+
+  --height-cell-box: 1lh;
+  --height-cell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
+  --height-headcell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
+
+  --height: var(--height-cell);
+
+  font-size: $font-40;
+  line-height: $line-40;
+}
+
+.o-section > .main:has(.o-grid-table.style-fit)  {
+  --margin-cell-block-int: 2;
+  --margin-cell-block: calc(var(--rem) * var(--margin-cell-block-int));
+
+  --height-cell-box: 1lh;
+  --height-cell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
+  --height-headcell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
+
+  --height: var(--height-cell);
+
+  font-size: $font-40;
+  line-height: $line-40;
+}
 
 
 

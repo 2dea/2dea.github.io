@@ -135,8 +135,12 @@ function FMTCT0101M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">기본정보</span></h2>
 
+                  <div className="o-helper style-normal">
+                    <em className="label">협송업체 선택 시 전용노선 신청일 경우 [1. 관할자금모점]으로, 건별 신청일 경우 [2~5 해당업체]로 신청해주세요.</em>
+                  </div>
+
                   <div className="o-legend type-helper style-normal">
-                    <em className="label"><strong className="c-color-text">마감시간(프로세스혁신부) : 23 : 00</strong></em>
+                    <em className="label"><strong className="c-color-text">마감시간(프로세스혁신부) : 23:00</strong></em>
                   </div>
                 </div>
 
@@ -228,7 +232,7 @@ function FMTCT0101M() {
                           <th colSpan={1}>
                             <Label label={`관할업무센터`} require={true} />
                           </th>
-                          <td colSpan={7}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _select mode-required wdth-70">
@@ -242,13 +246,11 @@ function FMTCT0101M() {
                               </div>
                             </div>
                           </td>
-                        </tr>
 
-                        <tr>
                           <th colSpan={1}>
                             <Label label={`비고`} require={false} />
                           </th>
-                          <td colSpan={7}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input ">
@@ -265,11 +267,11 @@ function FMTCT0101M() {
                   </form>
                 </div>
 
-                <div className="m-footer">
+                {/* <div className="m-footer">
                   <ul className="m-bullets type-disc">
                     <li>협송업체 선택 시 전용노선 신청일 경우 [1. 관할자금모점]으로, 건별 신청일 경우 [2~5 해당업체]로 신청해주세요.</li>
                   </ul>
-                </div>
+                </div> */}
 
               </div>
 
@@ -289,9 +291,7 @@ function FMTCT0101M() {
                     <div className="group">
                       <CommonButton label="손상권조회" className="_solid-primary" />
                     </div>
-                  </div>
 
-                  <div className="m-binds">
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
@@ -314,16 +314,17 @@ function FMTCT0101M() {
                         </colgroup>
 
                         <thead className="p-datatable-thead">
-                          <tr>
+                          {/* <tr>
                             <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권</span></div></th>
-                          </tr>
+                          </tr> */}
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권 수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권 금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권 수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권 금액</span></div></th>
                           </tr>
                         </thead>
 

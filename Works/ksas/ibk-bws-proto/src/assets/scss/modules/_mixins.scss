@@ -136,6 +136,7 @@
   // }
 
   @if ($line == null) {
+    display: block;
     word-break: break-all;
     white-space: nowrap;
   }
@@ -150,6 +151,7 @@
     -webkit-line-clamp: $line;
     word-wrap: break-word;
     overflow-wrap: anywhere;
+    white-space: normal;
   }
 
   overflow: hidden;
