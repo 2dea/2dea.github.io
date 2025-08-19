@@ -53,6 +53,7 @@ import FMTCT0201M from 'app/pages/fmt/FMTCT0201M';      // 자금현수송 > 원
 import FMTCT0201P01 from 'app/pages/fmt/FMTCT0201P01';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)현송직원확인
 import FMTCT0201P02 from 'app/pages/fmt/FMTCT0201P02';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)영업점불입결정
 import FMTCT0201P03 from 'app/pages/fmt/FMTCT0201P03';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)일괄송부서출력
+import FMTCT0201P04 from 'app/pages/fmt/FMTCT0201P04';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)신청내역수정
 import FMTCT1601M from 'app/pages/fmt/FMTCT1601M';      // 자금현수송 > 원화현수송    > 원화현수송신청관리(업무센터)
 import FMTCT1601P01 from 'app/pages/fmt/FMTCT1601P01';  // 자금현수송 > 원화현수송    > 원화현수송신청관리(업무센터) ~ (LP)업무센터결정
 import FMTCT0301M from 'app/pages/fmt/FMTCT0301M';      // 자금현수송 > 원화현수송    > 원화시재 및 보유현황
@@ -163,6 +164,9 @@ import BSPDU0101M from 'app/pages/bsp/BSPDU0101M';      // 중요용지·용도�
 import BSPDU0601M from 'app/pages/bsp/BSPDU0601M';      // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록
 import BSPDU0601P02 from 'app/pages/bsp/BSPDU0601P02';  // 중요용지·용도품(영업점) > 폐기    > 폐기중요용지발송등록 ~ (LP)오손발송(행내등기신청)
 import BSPDU0201M from 'app/pages/bsp/BSPDU0201M';      // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회
+import BSPDU0201P01 from 'app/pages/bsp/BSPDU0201P01';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손등록취소
+import BSPDU0201P05 from 'app/pages/bsp/BSPDU0201P05';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)폐기취소(영업점)
+import BSPDU0201P04 from 'app/pages/bsp/BSPDU0201P04';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손등록취소
 import BSPDU0201P02 from 'app/pages/bsp/BSPDU0201P02';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손이력조회
 import BSPDU0201P03 from 'app/pages/bsp/BSPDU0201P03';  // 중요용지·용도품(영업점) > 폐기    > 오손처리진행상태조회 ~ (LP)오손사유변경
 import BSPDU0301M from 'app/pages/bsp/BSPDU0301M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기
@@ -262,6 +266,7 @@ import HSPHP0301M from 'app/pages/hsp/HSPHP0301M';      // 중요용지·용도�
 import HSPHP0401M from 'app/pages/hsp/HSPHP0401M';      // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지본부입고
 import HSPHP0401P01 from 'app/pages/hsp/HSPHP0401P01';  // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지본부입고 ~ (LP)검수내역조회(총무부외)
 import HSPHP0501M from 'app/pages/hsp/HSPHP0501M';      // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지조달신청현황
+import HSPHP0501P01 from 'app/pages/hsp/HSPHP0501P01';  // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지조달신청현황 ~ (LP)중요용지 확정수량변경
 
 import HSPSA0101M from 'app/pages/hsp/HSPSA0101M';      // 중요용지·용도품(본부) > 용도품계정관리        > 용도품계정출금내역조회
 import HSPSA0201M from 'app/pages/hsp/HSPSA0201M';      // 중요용지·용도품(본부) > 용도품계정관리        > 용도품계정대사
@@ -694,6 +699,7 @@ function ProtoRoutes() {
         { path: 'FMTCT0201P01', element: <FMTCT0201P01 /> },
         { path: 'FMTCT0201P02', element: <FMTCT0201P02 /> },
         { path: 'FMTCT0201P03', element: <FMTCT0201P03 /> },
+        { path: 'FMTCT0201P04', element: <FMTCT0201P04 /> },
 
         { path: 'FMTCT1601M',   element: <FMTCT1601M /> },
         { path: 'FMTCT1601P01', element: <FMTCT1601P01 /> },
@@ -809,6 +815,9 @@ function ProtoRoutes() {
         { path: 'BSPDU0601M',   element: <BSPDU0601M /> },
         { path: 'BSPDU0601P02', element: <BSPDU0601P02 /> },
         { path: 'BSPDU0201M',   element: <BSPDU0201M /> },
+        { path: 'BSPDU0201P01', element: <BSPDU0201P01 /> },
+        { path: 'BSPDU0201P05', element: <BSPDU0201P05 /> },
+        { path: 'BSPDU0201P04', element: <BSPDU0201P04 /> },
         { path: 'BSPDU0201P02', element: <BSPDU0201P02 /> },
         { path: 'BSPDU0201P03', element: <BSPDU0201P03 /> },
         { path: 'BSPDU0301M',   element: <BSPDU0301M /> },
@@ -902,6 +911,7 @@ function ProtoRoutes() {
         { path: 'HSPHP0401M',   element: <HSPHP0401M /> },
         { path: 'HSPHP0401P01', element: <HSPHP0401P01 /> },
         { path: 'HSPHP0501M',   element: <HSPHP0501M /> },
+        { path: 'HSPHP0501P01', element: <HSPHP0501P01 /> },
         { path: 'HSPSA0101M',   element: <HSPSA0101M /> },
         { path: 'HSPSA0201M',   element: <HSPSA0201M /> },
 

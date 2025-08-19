@@ -116,12 +116,6 @@ function STMGD0701M() {
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
-
-            <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="경영실적포털 자료전송" className="_solid-primary" />
-              </div>
-            </div>
           </div>
         </div>
 
@@ -260,6 +254,13 @@ function STMGD0701M() {
                     </div>
                   </div>
                 </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>엑셀업로드 후 1시간 이내에 경영실적포털로 자동전송됩니다.</li>
+                  </ul>
+                </div>
+
               </div>
 
             </div>

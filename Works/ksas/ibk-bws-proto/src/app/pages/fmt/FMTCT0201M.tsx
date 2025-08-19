@@ -124,6 +124,7 @@ function FMTCT0201M() {
 
               <div className="group _primary">
                 <CommonButton label="삭제" className="_delete" />
+                <CommonButton label="수정" className="_lined-primary" />
               </div>
             </div>
 

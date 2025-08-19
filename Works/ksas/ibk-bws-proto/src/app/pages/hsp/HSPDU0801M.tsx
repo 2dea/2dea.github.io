@@ -129,6 +129,11 @@ function HSPDU0801M() {
                 <CommonButton label="구양식폐기등록" className="_solid-primary" />
                 <CommonButton label="품목폐지폐기등록" className="_solid-primary" />
               </div>
+
+              <div className="group _primary">
+                <CommonButton label="취소" className="_cancel" />
+              </div>
+
             </div>
           </div>
         </div>
@@ -270,7 +275,7 @@ function HSPDU0801M() {
             <div className="m-tab type2">
               <TabList className="lists">
                 <Tab className="link"><span className="label">폐기대상</span></Tab>
-                <Tab className="link"><span className="label">폐기완료</span></Tab>
+                <Tab className="link"><span className="label">폐기등록내역</span></Tab>
               </TabList>
             </div>
 
@@ -380,7 +385,6 @@ function HSPDU0801M() {
                           <table className="p-datatable-table p-datatable-scrollable-table">
                             <colgroup>
                               <col className="wdth-10" />
-                              <col className="wdth-10" />
                               <col />
                               <col />
                               <col />
@@ -400,7 +404,6 @@ function HSPDU0801M() {
 
                             <thead className="p-datatable-thead">
                               <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
@@ -419,14 +422,13 @@ function HSPDU0801M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={21}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={20}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
                               <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                <td><InputCheck label="선택" labelHidden /></td>
                                 <td>{idx + 1}</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td>0001</td>

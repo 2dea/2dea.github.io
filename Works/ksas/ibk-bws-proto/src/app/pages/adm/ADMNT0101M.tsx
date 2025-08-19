@@ -368,8 +368,8 @@ function ADMNT0101M() {
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select mode-required wdth-auto">
-                                  <XDropdown appendTo={document.body} className="bind" />
+                                <div className="o-form _select mode-required wdth-80">
+                                  <XMultiSelect appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>

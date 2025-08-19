@@ -252,6 +252,20 @@ function STMVL0101P01() {
                             <Label label={`부점`} require={true} />
                           </th>
                           <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required wdth-80">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                          {/* <td colSpan={1}>
 
                             <div className="m-binds">
                               <div className="group _start">
@@ -314,7 +328,7 @@ function STMVL0101P01() {
 
                             </div>
 
-                          </td>
+                          </td> */}
                         </tr>
                       </tbody>
                     </table>

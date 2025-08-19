@@ -123,6 +123,11 @@ function HSPHP0501M() {
                   <CommonButton label="출력" className="_texted" />
                 </div>
               </div>
+
+              <div className="group _primary">
+                <CommonButton label="확정수량변경" className="_solid-primary" />
+              </div>
+
             </div>
           </div>
         </div>

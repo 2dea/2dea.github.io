@@ -265,13 +265,16 @@ function BEXRQ0101M() {
                                   </div>
                                 </div>
 
-                                {/*
                                 <div className="m-checks">
                                   <InputRadio name="RADIO_10" label="서무대리" defaultChecked />
                                   <InputRadio name="RADIO_10" label="보관카드담당자" />
-                                </div> */}
+                                </div>
 
-                                <div className="m-binds">
+                                <div className="binds">
+                                  <CommonButton label="즐겨찾기" className="_normal" />
+                                </div>
+
+                                {/* <div className="m-binds">
                                   <div className="group">
                                     <CommonButton label="서무대리" className="_normal" />
                                     <CommonButton label="보관카드담당자" className="_normal" />
@@ -279,12 +282,6 @@ function BEXRQ0101M() {
                                   <div className="group">
                                     <CommonButton label="즐겨찾기" className="_normal" />
                                   </div>
-                                </div>
-
-                                {/* <div className="binds">
-                                  <CommonButton label="서무대리" className="_normal" />
-                                  <CommonButton label="보관카드담당자" className="_normal" />
-                                  <CommonButton label="즐겨찾기" className="_normal" />
                                 </div> */}
                               </div>
 
