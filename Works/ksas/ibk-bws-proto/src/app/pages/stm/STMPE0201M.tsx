@@ -148,7 +148,7 @@ function STMPE0201M() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-2">
+                  {/* <div className="o-field colspan-2">
                     <Label label={`점검기간`} require={true} />
                     <div className="fields">
                       <div className="o-form _input type-date mode-required wdth-50">
@@ -158,6 +158,16 @@ function STMPE0201M() {
                       <span className="seps type-tilde">~</span>
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div> */}
+
+                  <div className="o-field">
+                    <Label label={`점검연월`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" view="month" dateFormat="yy-mm" mask="9999-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>

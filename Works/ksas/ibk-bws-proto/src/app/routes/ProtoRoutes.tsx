@@ -256,8 +256,8 @@ import HSPDU0801P02 from 'app/pages/hsp/HSPDU0801P02';  // 중요용지·용도�
 import HSPDU0801P04 from 'app/pages/hsp/HSPDU0801P04';  // 중요용지·용도품(본부) > 폐기          > 본부중요용지일괄폐기 ~ (LP)폐기취소(본부)
 
 import HSPDU0901M from 'app/pages/hsp/HSPDU0901M';      // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기
-import HSPDU0901P01 from 'app/pages/hsp/HSPDU0901P01';  // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기 ~ (LP)용도품폐기
-import HSPDU0901P02 from 'app/pages/hsp/HSPDU0901P02';  // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기 ~ (LP)폐기취소(본부)
+import HSPDU0901P03 from 'app/pages/hsp/HSPDU0901P03';  // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기 ~ (LP)용도품폐기
+import HSPDU0901P04 from 'app/pages/hsp/HSPDU0901P04';  // 중요용지·용도품(본부) > 폐기          > 본부용도품일괄폐기 ~ (LP)폐기취소(본부)
 
 
 import HSPHP0101M from 'app/pages/hsp/HSPHP0101M';      // 중요용지·용도품(본부) > 본부조달관리(총무부외) > (총무부외)중요용지조달신청
@@ -902,8 +902,8 @@ function ProtoRoutes() {
 
 
         { path: 'HSPDU0901M',   element: <HSPDU0901M /> },
-        { path: 'HSPDU0901P01', element: <HSPDU0901P01 /> },
-        { path: 'HSPDU0901P02', element: <HSPDU0901P02 /> },
+        { path: 'HSPDU0901P03', element: <HSPDU0901P03 /> },
+        { path: 'HSPDU0901P04', element: <HSPDU0901P04 /> },
 
         { path: 'HSPHP0101M',   element: <HSPHP0101M /> },
         { path: 'HSPHP0201M',   element: <HSPHP0201M /> },

@@ -394,7 +394,7 @@ function FMTCT0201M() {
             </div>
           </div>
 
-          <Tabs className="m-tabs react-tabs" defaultIndex={0}>
+          <Tabs className="m-tabs react-tabs" defaultIndex={0} style={{ minHeight: 'calc(var(--rem) * 421)' }}>
             <div className="m-tab type2 type-step">
               <TabList className="lists">
                 <Tab className="link"><span className="label">Step 1. 영업점 신청내역</span></Tab>
@@ -566,14 +566,14 @@ function FMTCT0201M() {
                             <thead className="p-datatable-thead">
                               <tr>
                                 <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권신청액 수량</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권신청액 금액</span></div></th>
-                                <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">사용권결정액 수량</span></div></th>
-                                <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">사용권결정액 금액</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권신청액 수량</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권신청액 금액</span></div></th>
-                                <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">손상권결정액 수량</span></div></th>
-                                <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">손상권결정액 금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">(신청)사용권수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">(신청)사용권금액</span></div></th>
+                                <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">(결정)사용권수량</span></div></th>
+                                <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">(결정)사용권금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">(신청)손상권수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">(신청)손상권금액</span></div></th>
+                                <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">(결정)손상권수량</span></div></th>
+                                <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">(결정)손상권금액</span></div></th>
                               </tr>
                             </thead>
 
@@ -641,6 +641,7 @@ function FMTCT0201M() {
               </div>
             </TabPanel>
 
+            {/* <TabPanel className="m-tabs-panel react-tabs__tab-panel" style={{ minHeight: 'calc(var(--rem) * 382)' }}> */}
             <TabPanel className="m-tabs-panel react-tabs__tab-panel">
 
               <Tabs className="m-tabs react-tabs" defaultIndex={2}>
