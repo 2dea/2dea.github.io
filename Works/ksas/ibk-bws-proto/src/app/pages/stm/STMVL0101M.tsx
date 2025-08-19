@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
+ * @description 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회
  *
  */
 
@@ -47,7 +47,7 @@ function STMVL0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '업무용차량관리(운행일지등)' }, { label: '운행일지등록/조회' }];
+  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '업무용차량관리' }, { label: '운행일지등록/조회' }];
 
   // InputText
   const [value, setValue] = useState<string>('');

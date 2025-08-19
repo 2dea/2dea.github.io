@@ -359,16 +359,16 @@ import STMGD0601P01 from 'app/pages/stm/STMGD0601P01';   // 재난·안전관리
 
 import STMGD0701M from 'app/pages/stm/STMGD0701M';       // 재난·안전관리 > 기계경비당직관리          > SET시각등록
 
-import STMVL0101M from 'app/pages/stm/STMVL0101M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회
-import STMVL0101P01 from 'app/pages/stm/STMVL0101P01';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)등록기간관리
-import STMVL0101P02 from 'app/pages/stm/STMVL0101P02';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)차량별관리자지정
-import STMVL0101P03 from 'app/pages/stm/STMVL0101P03';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사관리
-import STMVL0101P04 from 'app/pages/stm/STMVL0101P04';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사정보등록
-import STMVL0101P05 from 'app/pages/stm/STMVL0101P05';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)임대회사연락처
+import STMVL0101M from 'app/pages/stm/STMVL0101M';       // 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회
+import STMVL0101P01 from 'app/pages/stm/STMVL0101P01';   // 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회  ~ (LP)등록기간관리
+import STMVL0101P02 from 'app/pages/stm/STMVL0101P02';   // 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회  ~ (LP)차량별관리자지정
+import STMVL0101P03 from 'app/pages/stm/STMVL0101P03';   // 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회  ~ (LP)임대회사관리
+import STMVL0101P04 from 'app/pages/stm/STMVL0101P04';   // 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회  ~ (LP)임대회사정보등록
+import STMVL0101P05 from 'app/pages/stm/STMVL0101P05';   // 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회  ~ (LP)임대회사연락처
 
-import STMVL0101P06 from 'app/pages/stm/STMVL0101P06';   // 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회  ~ (LP)수정기간등록
+import STMVL0101P06 from 'app/pages/stm/STMVL0101P06';   // 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회  ~ (LP)수정기간등록
 
-import STMVL0201M from 'app/pages/stm/STMVL0201M';       // 재난·안전관리 > 업무용차량관리(운행일지등) > 미등록운행일지알람
+import STMVL0201M from 'app/pages/stm/STMVL0201M';       // 재난·안전관리 > 업무용차량관리 > 미등록운행일지알람
 
 import STMDM0101M from 'app/pages/stm/STMDM0101M';       // 재난·안전관리 > 배차관리                > 배차신청
 import STMDM0101P01 from 'app/pages/stm/STMDM0101P01';   // 재난·안전관리 > 배차관리                > 배차신청 ~ (LP)배차신청유의사항
