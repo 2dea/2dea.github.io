@@ -170,6 +170,11 @@
     // gap: $gap-whitespace-30;
     gap: $gap-element-50;
 
+    .o-icon._breadcrumb-home:before  {
+      width: III(12);
+      height: III(12);
+    }
+
     .p-menuitem-separator {
       svg {
         display: none;
@@ -178,6 +183,10 @@
       &:after {
         content: "\203A";
         content: "›";
+      }
+
+      &:where(.p-breadcrumb-home.p-menuitem +*) {
+        display: none;
       }
     }
 

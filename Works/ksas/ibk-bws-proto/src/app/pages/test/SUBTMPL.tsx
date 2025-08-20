@@ -892,6 +892,7 @@ function SUBTMPL() {
                             <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _alert-octagram wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _breadcrumb-home wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-download wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-download-label wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-upload wdth-50" aria-hidden="true"></i>

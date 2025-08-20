@@ -182,6 +182,7 @@
 
 /* Icon Fixed */
 .o-icon._alert-octagram:before  { background-color: $tp; background-image: var(--obj-ico-alert-octagram); background-size: 100%; }
+.o-icon._breadcrumb-home:before  { background-color: $tp; background-image: var(--obj-ico-breadcrumb-home); background-size: 100%; }
 .o-icon._excel-download:before  { background-color: $tp; background-image: var(--obj-ico-excel-download); background-size: 100%; }
 .o-icon._excel-download-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-download-label); background-size: 100%; }
 .o-icon._excel-upload:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload); background-size: 100%; }
@@ -580,7 +581,7 @@
 
 
 /** Chips */
-.o-chip  { display: inline-flex; align-items: center; min-width: 1em; padding: III(2) III(7); border: $e10 solid currentColor; color: var(--theme); background: var(--color-ground); border-radius: $radius-abs-999; }
+.o-chip  { display: inline-flex; align-items: center; min-width: 1em; padding: III(2) III(7); border: $e10 solid currentColor; color: var(--theme); background: var(--color-ground); border-radius: $radius-abs-999; white-space: nowrap; }
 
 .o-chip:is([class*=" var-lined"])  { background-color: var(--color-ground); }
 .o-chip:is([class*=" var-solid"])  { border-color: $tp; color: var(--color-ground); background-color: var(--theme, Black); }
@@ -2310,7 +2311,7 @@
 .o-schedule  {  }
 .o-schedule .o-legend-tag  { font-size: $font-40; margin: calc((III(18) - III(10)) / 2) 0; }
 .o-schedule .time  { font-feature-settings: var(--text-feature-tnum); font-size: $font-40; color: var(--color-text-30); }
-.o-schedule .chip  { display: inline-flex; align-items: center; min-width: 1em; padding: III(2) III(7); border: $e10 solid currentColor; color: var(--theme); background: Transparent; border-radius: $radius-abs-999; }
+.o-schedule .chip  { display: inline-flex; align-items: center; min-width: 1em; padding: III(2) III(7); border: $e10 solid currentColor; color: var(--theme); background: Transparent; border-radius: $radius-abs-999; white-space: nowrap; }
 .o-schedule .chip  { font-size: $font-40; line-height: $line-40; padding: III(0) III(5); }
 .o-schedule .chip  { border-color: var(--color-edge-40); color: var(--color-text-30); background-color: $tp; }
 .o-schedule .chip .value  { color: var(--color-point-orange); }
