@@ -218,9 +218,9 @@ function ADMRC0401M() {
                                 <div className="order"><span className="count">4</span></div>
                                 <div className="subject">대금정산 자료 생성(JYC0120B)</div>
                               </div>
-                              <div className="binds">
+                              {/* <div className="binds">
                                 <CommonButton label="취소" className="_cancel" />
-                              </div>
+                              </div> */}
                             </li>
 
                             <li className="colspan-2">

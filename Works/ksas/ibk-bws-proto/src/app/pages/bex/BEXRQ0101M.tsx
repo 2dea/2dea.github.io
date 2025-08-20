@@ -327,11 +327,11 @@ function BEXRQ0101M() {
                           <td colSpan={5}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required  wdth-90">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                <div className="o-form _input mode-required wdth-90">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <div className="o-form _select  wdth-50">
+                                <div className="o-form _select mode-required wdth-50">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>

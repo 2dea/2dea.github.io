@@ -146,9 +146,12 @@ function BSSRM0101P02() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-70">
+                                <div className="o-form _input wdth-50 mode-required">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="검색" icon="search" />
+                                  </span>
                                 </div>
                               </div>
                             </div>

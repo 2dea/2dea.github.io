@@ -221,13 +221,12 @@ function STMSC0601M() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건물명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재일자</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                           </tr>
                           <tr>
@@ -250,13 +249,13 @@ function STMSC0601M() {
                               <td>{idx + 1}</td>
                               <td>0034</td>
                               <td className="g-start">을지로</td>
+                              <td>0034</td>
+                              <td>홍길동</td>
                               <td>수지IT센터</td>
                               <td>홍길동 외 2명</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>결재요청</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>0034</td>
-                              <td>홍길동</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                           ))}
