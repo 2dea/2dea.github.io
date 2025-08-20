@@ -92,7 +92,7 @@ function HSPDU0901P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,124 +101,131 @@ function HSPDU0901P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">품목폐지폐기등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">용도품폐기</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
-              <form className="m-filter-form">
-                <div className="fieldset">
-
-                  <div className="o-field colspan-2">
-                    <Label label={`입고부점`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input wdth-auto">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)}  readOnly />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                      <div className="o-form _input wdth-40">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`폐기일자`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input type-date wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`출급번호/품목명`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input mode-required">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`재고수량`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input wdth-50 g-end">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`폐기수량`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input mode-required wdth-50 g-end">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} disabled />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field colspan-2">
-                    <Label label={`폐기사유`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _select mode-required wdth-40">
-                        <XDropdown appendTo={document.body} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                      <div className="o-form _input mode-required wdth-auto">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`요청부점`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input mode-required wdth-70">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`요청자`} require={true} />
-                    <div className="fields">
-                      <div className="o-form _input mode-required wdth-70">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
                 </div>
 
-                <div className="binds">
-                  <CommonButton label="조회" className="_inquire" />
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`입고부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            [0810] 프로세스혁신
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`폐기일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`출급번호/품목명`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            [10482] 약속어음(기업어음증권)
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`재고수량`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">1,798</td>
+                          <th colSpan={1}>
+                            <Label label={`폐기수량`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">1,798</td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`폐기사유`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-40">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="o-form _input mode-required wdth-auto">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`요청부점`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required wdth-70">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`요청자`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required wdth-70">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </form>
                 </div>
-              </form>
+
+              </div>
 
 
               <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3"><span className="label">폐기등록</span></h5>
+                </div>
 
                 <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
@@ -297,7 +304,7 @@ function HSPDU0901P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)품목폐지폐기등록 [wdth-50p(w960)]</span>
+              <span className="label">(P)품목폐지폐기등록 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
