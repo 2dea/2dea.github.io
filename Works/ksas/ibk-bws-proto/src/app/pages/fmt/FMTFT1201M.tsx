@@ -140,7 +140,7 @@ function FMTFT1201M() {
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
-        <div className="div-contents">
+        <div className="div-contents style-tight">{/* '.div-contents' addClass('style-tight') { @DEV } */}
           <div className="o-grid">
             <div className="column">
 
@@ -261,9 +261,9 @@ function FMTFT1201M() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
+                <div className="main _primary rows-body-5i">
+                  <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table style-fit p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
@@ -366,11 +366,11 @@ function FMTFT1201M() {
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>결재승인(팀장)</td>
-                                <td><CommonButton label="취소" className="_normal" /></td>
+                                <td><a href="javascript:" className="o-link _normal">취소</a></td>
                                 <td>업무센터결정</td>
                                 <td>012345</td>
                                 <td>홍길동</td>
-                                <td><CommonButton label="통화" className="_normal" /></td>
+                                <td><a href="javascript:" className="o-link _normal">통화</a></td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>012345</td>
                                 <td>홍길동</td>
@@ -417,9 +417,9 @@ function FMTFT1201M() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
+                <div className="main _primary rows-auto">
+                  <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table style-fit p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
@@ -452,11 +452,11 @@ function FMTFT1201M() {
                           </tr>
                         </thead>
 
-                        <tbody className="p-datatable-tbody">
+                        {/* <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
                             <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
-                        </tbody>
+                        </tbody> */}
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
@@ -488,17 +488,32 @@ function FMTFT1201M() {
                                 <td className="g-end">20,000</td>
                                 <td className="g-end">400,000</td>
                               </tr>
-                              {
-                                (idx - 2) % 3 === 0 &&
-                                <tr className="p-rowgroup-footer">
-                                  <td colSpan={9} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
-                                </tr>
-                              }
+                            {
+                              (idx - 11) % 12 === 0 &&
+                              <tr className="p-rowgroup-footer subtotal-trow">
+                                <td className="subtotal-tcell g-start">소계</td>
+                                <td className="subtotal-tcell"></td>
+                                <td className="subtotal-tcell"></td>
+                                <td className="subtotal-tcell"></td>
+                                <td className="subtotal-tcell g-end">99</td>
+                                <td className="subtotal-tcell"></td>
+                                <td className="subtotal-tcell"></td>
+                                <td className="subtotal-tcell"></td>
+                                <td className="subtotal-tcell g-end">99</td>
+                                {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                              </tr>
+                            }
+                            {
+                              (idx - 2) % 3 === 0 &&
+                              <tr className="p-rowgroup-footer">
+                                <td colSpan={9} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
+                              </tr>
+                            }
                             </>
                           ))}
                         </tbody>
 
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                        {/* <tfoot className="p-datatable-tfoot sumtotal-tfoot">
                           <tr className="sumtotal-trow">
                             <td colSpan={1} className="sumtotal-tcell">합계</td>
                             <td className="sumtotal-tcell"></td>
@@ -510,7 +525,7 @@ function FMTFT1201M() {
                             <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                             <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                           </tr>
-                        </tfoot>
+                        </tfoot> */}
                       </table>
                     </div>
                   </div>

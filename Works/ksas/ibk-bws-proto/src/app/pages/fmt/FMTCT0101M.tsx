@@ -299,7 +299,7 @@ function FMTCT0101M() {
                   </div>
                 </div>
 
-                <div className="main _primary">
+                <div className="main _primary rows-auto">
                   <div className="m-total">
                     <dl className="m-defines">
                       <div className="group">
@@ -307,14 +307,15 @@ function FMTCT0101M() {
                         <dd className="data">200,000,000</dd>
                       </div>
 
-                      <div className="group">
+                      {/* <div className="group">
                         <dt className="head">결정금액합계</dt>
                         <dd className="data">200,000,000</dd>
-                      </div>
+                      </div> */}
                     </dl>
                   </div>
 
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  {/* 청구 { @DEV } */}
+                  <DataTable className="o-grid-table g-hide" />
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
@@ -414,6 +415,114 @@ function FMTCT0101M() {
                       </table>
                     </div>
                   </div>
+
+                  {/* 불입 { @DEV } */}
+                  <DataTable className="o-grid-table g-hide" />
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col />
+                          <col className="wdth-50" />
+                          <col />
+                          <col />
+                          <col className="wdth-50" />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권</span></div></th>
+                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                          </tr>
+                        </thead>
+
+                        {/* <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody> */}
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <>
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
+                                <td className="g-end">15만원권</td>
+                                <td>
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input type-spin wdth-50">
+                                        <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                          decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>대속</td>
+                                <td className="g-end">
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input type-spin wdth-50">
+                                        <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                          decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>대속</td>
+                                <td className="g-end">
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              {
+                                (idx - 2) % 3 === 0 &&
+                                <tr className="p-rowgroup-footer subtotal-trow">
+                                  <td className="subtotal-tcell g-end">소계</td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell g-end">99</td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell g-end">99,999</td>
+                                  {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                                </tr>
+                              }
+                            </>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 

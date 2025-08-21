@@ -319,7 +319,22 @@ function FMTCT0801P02() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-8i">
+
+                  <div className="m-total">
+                    <dl className="m-defines">
+                      <div className="group">
+                        <dt className="head">신청금액합계</dt>
+                        <dd className="data">200,000,000</dd>
+                      </div>
+
+                      <div className="group">
+                        <dt className="head">결정금액합계</dt>
+                        <dd className="data">200,000,000</dd>
+                      </div>
+                    </dl>
+                  </div>
+
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -356,11 +371,11 @@ function FMTCT0801P02() {
                           </tr>
                         </thead>
 
-                        <tbody className="p-datatable-tbody">
+                        {/* <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
                             <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
-                        </tbody>
+                        </tbody> */}
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
@@ -412,7 +427,7 @@ function FMTCT0801P02() {
                           ))}
                         </tbody>
 
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                        {/* <tfoot className="p-datatable-tfoot sumtotal-tfoot">
                           <tr className="sumtotal-trow">
                             <td colSpan={2} className="sumtotal-tcell">합계</td>
                             <td className="sumtotal-tcell"></td>
@@ -423,9 +438,8 @@ function FMTCT0801P02() {
                             <td className="sumtotal-tcell sumtotal-tcell-strong">결정금액</td>
                             <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                             <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
-
                           </tr>
-                        </tfoot>
+                        </tfoot> */}
                       </table>
                     </div>
                   </div>

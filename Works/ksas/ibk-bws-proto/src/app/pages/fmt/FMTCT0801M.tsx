@@ -374,12 +374,19 @@ function FMTCT0801M() {
                           <colgroup>
                             <col className="head" />
                             <col className="data" />
+                            <col className="head" />
+                            <col className="data" />
                           </colgroup>
 
                           <tbody>
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`현송원 예외사항`} require={false} />
+                                <Label label={`신청금액합계`} require={false} />
+                              </th>
+                              <td colSpan={1} className="g-end">2,000</td>
+
+                              <th colSpan={1}>
+                                <Label label={`현송원 예외사항(신청부점)`} require={false} />
                               </th>
                               <td colSpan={1}></td>
                             </tr>
@@ -393,7 +400,7 @@ function FMTCT0801M() {
                     <div className="m-header">
                       <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
-                      <div className="o-length">
+                      {/* <div className="o-length">
                         <span className="head">전체</span>
                         <em className="data">
                           <span className="value">8</span>
@@ -406,7 +413,7 @@ function FMTCT0801M() {
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
                           <ImageButton label="목록출력" icon="print" />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="main _primary rows-body-3i">
@@ -435,11 +442,11 @@ function FMTCT0801M() {
                               </tr>
                             </thead>
 
-                            <tbody className="p-datatable-tbody">
+                            {/* <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
                                 <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
-                            </tbody>
+                            </tbody> */}
 
                             <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
@@ -472,7 +479,7 @@ function FMTCT0801M() {
                               ))}
                             </tbody>
 
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            {/* <tfoot className="p-datatable-tfoot sumtotal-tfoot">
                               <tr className="sumtotal-trow">
                                 <td colSpan={1} className="sumtotal-tcell">합계</td>
                                 <td className="sumtotal-tcell"></td>
@@ -480,7 +487,7 @@ function FMTCT0801M() {
                                 <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액</td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                               </tr>
-                            </tfoot>
+                            </tfoot> */}
                           </table>
                         </div>
                       </div>
@@ -504,19 +511,28 @@ function FMTCT0801M() {
                             <col className="data" />
                             <col className="head" />
                             <col className="data" />
+                            <col className="head" />
+                            <col className="data" />
+                            <col className="head" />
+                            <col className="data" />
                           </colgroup>
 
                           <tbody>
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`상대부점 결정여부`} require={false} />
+                                <Label label={`신청금액합계`} require={false} />
                               </th>
-                              <td colSpan={1}>N</td>
+                              <td colSpan={1} className="g-end">2,000</td>
 
                               <th colSpan={1}>
-                                <Label label={`현송원 예외사항`} require={false} />
+                                <Label label={`상대부점 결정금액합계`} require={false} />
                               </th>
-                              <td colSpan={1}></td>
+                              <td colSpan={1} className="g-end">2,000</td>
+
+                              <th colSpan={1}>
+                                <Label label={`현송원 예외사항(결정부점)`} require={false} />
+                              </th>
+                              <td colSpan={3}></td>
                             </tr>
                           </tbody>
                         </table>
@@ -528,7 +544,7 @@ function FMTCT0801M() {
                     <div className="m-header">
                       <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
-                      <div className="o-length">
+                      {/* <div className="o-length">
                         <span className="head">전체</span>
                         <em className="data">
                           <span className="value">8</span>
@@ -541,7 +557,7 @@ function FMTCT0801M() {
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
                           <ImageButton label="목록출력" icon="print" />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="main _primary rows-body-3i">
@@ -579,11 +595,11 @@ function FMTCT0801M() {
                               </tr>
                             </thead>
 
-                            <tbody className="p-datatable-tbody">
+                            {/* <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
                                 <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
-                            </tbody>
+                            </tbody> */}
 
                             <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
@@ -625,7 +641,7 @@ function FMTCT0801M() {
                               ))}
                             </tbody>
 
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            {/* <tfoot className="p-datatable-tfoot sumtotal-tfoot">
                               <tr className="sumtotal-trow">
                                 <td colSpan={1} className="sumtotal-tcell">합계</td>
                                 <td className="sumtotal-tcell"></td>
@@ -637,7 +653,7 @@ function FMTCT0801M() {
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                               </tr>
-                            </tfoot>
+                            </tfoot> */}
                           </table>
                         </div>
                       </div>

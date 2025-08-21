@@ -233,13 +233,18 @@ function FMTCT0201P04() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
+                  <h3 className="o-heading level3"><span className="label">신청내역</span></h3>
 
                   <div className="o-helper style-strong">
                     <em className="label">[필수] 손상권조회 버튼을 클릭하여 통합단말 권종별 손상권 등록내역을 반드시 확인해주세요.</em>
                   </div>
 
                   <div className="m-binds">
+                    {/*
+                    <div className="group">
+                      <CommonButton label="자동생성" className="_lined-primary" />
+                    </div> */}
+
                     <div className="group">
                       <CommonButton label="손상권조회" className="_solid-primary" />
                     </div>
@@ -251,7 +256,17 @@ function FMTCT0201P04() {
                   </div>
                 </div>
 
-                <div className="main _primary">
+                <div className="main _primary rows-auto">
+
+                  <div className="m-total">
+                    <dl className="m-defines">
+                      <div className="group">
+                        <dt className="head">신청금액합계</dt>
+                        <dd className="data">200,000,000</dd>
+                      </div>
+                    </dl>
+                  </div>
+
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -280,11 +295,11 @@ function FMTCT0201P04() {
                           </tr>
                         </thead>
 
-                        <tbody className="p-datatable-tbody">
+                        {/* <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
                             <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
-                        </tbody>
+                        </tbody> */}
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
@@ -332,16 +347,6 @@ function FMTCT0201P04() {
                             </>
                           ))}
                         </tbody>
-
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                          <tr className="sumtotal-trow">
-                            <td colSpan={2} className="sumtotal-tcell">합계</td>
-                            <td className="sumtotal-tcell">신청금액</td>
-                            <td className="sumtotal-tcell g-end">999,999</td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell g-end"></td>
-                          </tr>
-                        </tfoot>
                       </table>
                     </div>
                   </div>
