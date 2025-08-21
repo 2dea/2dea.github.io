@@ -41,7 +41,7 @@ function STMVL0201M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '업무용차량관리' }, { label: '미등록운행일지알람' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '업무용차량관리' }, { label: '미등록운행일지알람' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function STMVL0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">

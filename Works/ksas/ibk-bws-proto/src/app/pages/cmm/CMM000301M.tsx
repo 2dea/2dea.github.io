@@ -46,7 +46,7 @@ function CMM000301M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물신청' }];
+  const paths: MenuItem[] = [{ label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
