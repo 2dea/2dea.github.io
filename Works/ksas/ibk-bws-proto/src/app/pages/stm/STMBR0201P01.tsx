@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 버스배차신청 > 배차일정표 ~ (LP)일정더보기
+ * @description 재난·안전관리 > 버스배차신청 > 버스배차일정표 ~ (LP)일정더보기
  */
 
 // dependency
@@ -101,7 +101,7 @@ function STMBR0201P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">3월 11일 배차일정표 (4건)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">3월 11일 버스배차일정표 (4건)</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">

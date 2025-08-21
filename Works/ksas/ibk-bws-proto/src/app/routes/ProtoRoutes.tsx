@@ -395,15 +395,15 @@ import STMGI0201P03 from 'app/pages/stm/STMGI0201P03';   // 재난·안전관리
 import STMGI0301M from 'app/pages/stm/STMGI0301M';       // 재난·안전관리 > 가스분사기대장관리        > 가스분사기이력조회
 
 
-import STMBR0101M from 'app/pages/stm/STMBR0101M';       // 재난·안전관리 > 버스배차신청             > 배차신청
-import STMBR0101P01 from 'app/pages/stm/STMBR0101P01';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)일괄신청하기
-import STMBR0101P03 from 'app/pages/stm/STMBR0101P03';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)배차정보등록
-import STMBR0101P02 from 'app/pages/stm/STMBR0101P02';   // 재난·안전관리 > 버스배차신청             > 배차신청 ~ (LP)배차결과
-import STMBR0201M from 'app/pages/stm/STMBR0201M';       // 재난·안전관리 > 버스배차신청             > 배차일정표
-import STMBR0201P01 from 'app/pages/stm/STMBR0201P01';   // 재난·안전관리 > 버스배차신청             > 배차일정표 ~ (LP)일정더보기
-import STMBR0201P02 from 'app/pages/stm/STMBR0201P02';   // 재난·안전관리 > 버스배차신청             > 배차일정표 ~ (LP)일정상세보기
-import STMBR0301M from 'app/pages/stm/STMBR0301M';       // 재난·안전관리 > 버스배차신청             > 배차집계
-import STMBR0301P01 from 'app/pages/stm/STMBR0301P01';   // 재난·안전관리 > 버스배차신청             > 배차집계  ~ (LP)단가표
+import STMBR0101M from 'app/pages/stm/STMBR0101M';       // 재난·안전관리 > 버스배차신청             > 버스배차신청
+import STMBR0101P01 from 'app/pages/stm/STMBR0101P01';   // 재난·안전관리 > 버스배차신청             > 버스배차신청 ~ (LP)일괄신청하기
+import STMBR0101P03 from 'app/pages/stm/STMBR0101P03';   // 재난·안전관리 > 버스배차신청             > 버스배차신청 ~ (LP)배차정보등록
+import STMBR0101P02 from 'app/pages/stm/STMBR0101P02';   // 재난·안전관리 > 버스배차신청             > 버스배차신청 ~ (LP)배차결과
+import STMBR0201M from 'app/pages/stm/STMBR0201M';       // 재난·안전관리 > 버스배차신청             > 버스배차일정표
+import STMBR0201P01 from 'app/pages/stm/STMBR0201P01';   // 재난·안전관리 > 버스배차신청             > 버스배차일정표 ~ (LP)일정더보기
+import STMBR0201P02 from 'app/pages/stm/STMBR0201P02';   // 재난·안전관리 > 버스배차신청             > 버스배차일정표 ~ (LP)일정상세보기
+import STMBR0301M from 'app/pages/stm/STMBR0301M';       // 재난·안전관리 > 버스배차신청             > 버스배차집계
+import STMBR0301P01 from 'app/pages/stm/STMBR0301P01';   // 재난·안전관리 > 버스배차신청             > 버스배차집계  ~ (LP)단가표
 
 import STMPR0101M from 'app/pages/stm/STMPR0101M';       // 재난·안전관리 > 출입증/방문증            > 출입증신청
 import STMPR0101P01 from 'app/pages/stm/STMPR0101P01';   // 재난·안전관리 > 출입증/방문증            > 출입증신청 ~ (LP)반려내역불러오기

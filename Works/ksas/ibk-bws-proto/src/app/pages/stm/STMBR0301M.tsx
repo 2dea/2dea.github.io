@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 버스배차신청 > 배차집계
+ * @description 재난·안전관리 > 버스배차신청 > 버스배차집계
  */
 
 // dependency
@@ -46,7 +46,7 @@ function STMBR0301M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '배차집계' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '버스배차집계' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -103,7 +103,7 @@ function STMBR0301M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">배차집계</span>
+                <span className="label">버스배차집계</span>
 
                 <FavoriteDiv />
               </h1>

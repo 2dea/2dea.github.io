@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 버스배차신청 > 배차집계  ~ (LP)단가표
+ * @description 재난·안전관리 > 버스배차신청 > 버스배차집계  ~ (LP)단가표
  */
 
 // dependency

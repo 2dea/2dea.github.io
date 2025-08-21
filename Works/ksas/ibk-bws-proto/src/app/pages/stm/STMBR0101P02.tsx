@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 버스배차신청 > 배차신청 ~ (LP)배차결과
+ * @description 재난·안전관리 > 버스배차신청 > 버스배차신청 ~ (LP)배차결과
  */
 
 // dependency
