@@ -1,0 +1,43 @@
+
+/* font */
+/* 나중에 참고 블로그 : https: //blog.naver.com/sijin921/221991347994 */
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+:root {
+  --root-em-int: 1;
+  --root-em: calc(1em * var(--root-em-int, 10) / 16);
+}
+
+html {
+  font-size: var(--root-em);
+  font-size: calc(100vw * var(--root-em-int) / 1920);
+  font-size: calc(100dvw * var(--root-em-int) / 1920);
+}
+
+/* @media
+  screen and (not (max-width: 1920px))  {
+    html  { font-size: var(--root-em, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
+} */
+/* http: //www.2dea.com/innodep/gaia/public/html/settings/1718_VideoUnitInfo.html */
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16em;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  font-family: 'S-CoreDream-3Light', sans-serif;
+  -webkit-text-size-adjust: none;
+  overflow-y: scroll;
+}
