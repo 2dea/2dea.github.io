@@ -300,6 +300,20 @@ function FMTCT0101M() {
                 </div>
 
                 <div className="main _primary">
+                  <div className="m-total">
+                    <dl className="m-defines">
+                      <div className="group">
+                        <dt className="head">신청금액합계</dt>
+                        <dd className="data">200,000,000</dd>
+                      </div>
+
+                      <div className="group">
+                        <dt className="head">결정금액합계</dt>
+                        <dd className="data">200,000,000</dd>
+                      </div>
+                    </dl>
+                  </div>
+
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -314,25 +328,24 @@ function FMTCT0101M() {
                         </colgroup>
 
                         <thead className="p-datatable-thead">
-                          {/* <tr>
+                          <tr>
                             <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권</span></div></th>
-                          </tr> */}
+                          </tr>
                           <tr>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권 수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권 금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권 수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권 금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                           </tr>
                         </thead>
 
-                        <tbody className="p-datatable-tbody">
+                        {/* <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
                             <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
-                        </tbody>
+                        </tbody> */}
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
@@ -351,7 +364,16 @@ function FMTCT0101M() {
                                     </div>
                                   </div>
                                 </td>
-                                <td className="g-end">0</td>
+                                <td className="g-end">
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
                                 <td>
                                   <div className="o-field">
                                     <div className="fields">
@@ -363,13 +385,22 @@ function FMTCT0101M() {
                                     </div>
                                   </div>
                                 </td>
-                                <td className="g-end">0</td>
+                                <td className="g-end">
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
                               </tr>
                               {
                                 (idx - 2) % 3 === 0 &&
                                 <tr className="p-rowgroup-footer subtotal-trow">
-                                  <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell g-start">소계</td>
+                                  <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell g-end">99</td>
                                     <td className="subtotal-tcell"></td>
@@ -380,16 +411,6 @@ function FMTCT0101M() {
                             </>
                           ))}
                         </tbody>
-
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                          <tr className="sumtotal-trow">
-                            <td colSpan={2} className="sumtotal-tcell">합계</td>
-                            <td className="sumtotal-tcell">신청금액</td>
-                            <td className="sumtotal-tcell g-end">999,999</td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell g-end"></td>
-                          </tr>
-                        </tfoot>
                       </table>
                     </div>
                   </div>

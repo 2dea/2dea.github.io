@@ -983,6 +983,14 @@
 .m-defines:where(.m-data-creator >.footer *) >.group >.head  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
 .m-defines:where(.m-data-creator >.footer *) >.group >.data  { font-weight: $bold-70; }
 
+.m-defines:where(.m-total *)  { align-self: center; }
+.m-defines:where(.m-total *) >.group:not(:last-child):after  { content: ""; display: block; width: $e10; height: calc(1em - III(2)); background: var(--color-edge-40); margin-left: $gap-element-80; }
+.m-defines:where(.m-total *) >.group >.head  { font-size: $font-40; line-height: $line-40; color: var(--color-key1-70); }
+.m-defines:where(.m-total *) >.group >.data  { font-weight: $bold-70; }
+
+
+.m-total  { display: flex; flex-direction: column; clear: both; padding: III(7) III(7); border: $e10 solid var(--color-edge2-blue-30); background: var(--color-ground-70); }
+
 
 .o-board  {
   --margin-block: #{$gap-element-80};
@@ -2137,7 +2145,9 @@
 .o-grid-table  { @include setResetFont(); }
 .o-grid-table  { --edge: var(--edge-cell); --margin-block: var(--margin-cell-block); --margin-inline: #{III(7)}; --height: var(--height-cell); clear: both; }
 :has(>table):where(.o-grid-table, .o-grid-table *)  { border: var(--edge) solid var(--color-edge-40); }
-.o-grid-table .c-point-cell  { color: var(--color-point-orange); }
+// .o-grid-table .c-point-cell  { color: var(--color-point-orange); }
+.o-grid-table .c-point-cell  { background-color: var(--color-ground2-skyblue-40); }
+.o-grid-table .c-divide-edge  { border-right-color: var(--color-key1-70, Navy); }
 .o-grid-table .table-container:is(.o-section >.main:not(._primary) *)  { overflow: auto; height: var(--height-section-main); }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >*  { width: 0; }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }  // ### min-width: 0;
@@ -2413,6 +2423,8 @@
 .o-board:has(+.m-data-form)  { margin-bottom: $margin-section-20; }
 .o-board:has(+.m-step-form)  { margin-bottom: $margin-section-20; }
 .o-board:has(>.m-step)  { margin-bottom: $margin-section-50; }
+
+.m-total  { margin-bottom: $margin-section-20; }
 
 .m-board:not(:only-child)  { margin-bottom: $margin-section-50; }
 

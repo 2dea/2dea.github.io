@@ -2304,6 +2304,20 @@ function TMPL() {
                   </div>
 
                   <div className="main _primary">
+                    <div className="m-total">
+                      <dl className="m-defines">
+                        <div className="group">
+                          <dt className="head">신청금액합계</dt>
+                          <dd className="data">200,000,000</dd>
+                        </div>
+
+                        <div className="group">
+                          <dt className="head">결정금액합계</dt>
+                          <dd className="data">200,000,000</dd>
+                        </div>
+                      </dl>
+                    </div>
+
                     <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                     <div className="o-grid-table p-datatable">
                       <div className="table-container p-datatable-wrapper">
