@@ -332,13 +332,11 @@ function STMHA0201M() {
                   </div>
                 </div>
 
-                <div className="main">
+                {/* <div className="main">
                   <div className="o-data-table">
                     <div className="table-container">
                       <table className="table">
                         <colgroup>
-                          {/* <col style={{ width: '25%' }} /> */}
-                          {/* <col style={{ width: 'auto' }} /> */}
                         </colgroup>
 
                         <thead>
@@ -355,7 +353,7 @@ function STMHA0201M() {
                         <tbody>
                           <tr>
                             <th colSpan={1}>
-                              신고자
+                              신고조
                             </th>
                             <td colSpan={1} className="g-start">
                               [0081] 홍길동
@@ -453,6 +451,48 @@ function STMHA0201M() {
                               [0081] 홍길동
                             </td>
                           </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div> */}
+
+                <div className="main _primary rows-body-3i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신고조</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">관찰조</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추적조</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현장보존조</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={4}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>[000000] 홍길동</td>
+                            <td>[000000] 홍길동</td>
+                            <td>[000000] 홍길동</td>
+                            <td>[000000] 홍길동</td>
+                          </tr>
+                        ))}
                         </tbody>
                       </table>
                     </div>

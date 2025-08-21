@@ -446,7 +446,7 @@ function STMVL0101M() {
                           </tbody>
 
                           <tbody className="p-datatable-tbody">
-                          {[...Array(2)].map((e, idx) => (
+                          {[...Array(12)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
@@ -510,6 +510,9 @@ function STMVL0101M() {
                               {
                                 idx === 1 ?
                                 <ImageButton label="파일보기" icon="attach" />
+                                :
+                                idx === 2 ?
+                                <ImageButton label="파일추가" icon="attach-add" />
                                 :
                                 <ImageButton label="파일업로드" icon="upload" />
                               }

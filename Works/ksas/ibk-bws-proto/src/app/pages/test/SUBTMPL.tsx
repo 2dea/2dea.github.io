@@ -815,6 +815,7 @@ function SUBTMPL() {
                                 <i className="o-icon _arrow-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-right wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-up wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _attach-add wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _attach wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _calendar wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _close wdth-50" aria-hidden="true"></i>

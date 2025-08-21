@@ -141,7 +141,7 @@ function CMP000601P() {
 
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-10i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -168,11 +168,23 @@ function CMP000601P() {
                         {[...Array(24)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td>04541</td>
-                            <td className="address-box">
+                            {/* <td className="address-box">
                               <p className="address-main">서울특별시 중구 을지로 79 (을지로2가, 기업은행)</p>
                               <p className="address-sub">
                                 <em className="o-chip var-lined-00 size-30"><span className="label">지번</span></em> <span>을지로2가 50</span>
                               </p>
+                            </td> */}
+                            <td>
+                              <a href="javascript:" className="o-zipcode">
+                                <p className="primary">
+                                  <em className="o-chip var-lined-00 size-30"><span className="label">도로명</span></em>
+                                  <span className="value">서울특별시 중구 을지로 79 (을지로2가, 기업은행)</span>
+                                </p>
+                                <p className="secondary">
+                                  <em className="o-chip var-lined-00 size-30"><span className="label">지번</span></em>
+                                  <span className="value">을지로2가 50</span>
+                                </p>
+                              </a>
                             </td>
                           </tr>
                         ))}
