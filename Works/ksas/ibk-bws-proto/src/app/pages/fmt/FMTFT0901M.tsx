@@ -228,7 +228,7 @@ function FMTFT0901M() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-3i">
                   <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table style-fit p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -658,7 +658,7 @@ function FMTFT0901M() {
               </div>
             </TabPanel>
 
-            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel" style={{ minHeight: 'calc(var(--rem) * 361)' }}>
 
               <Tabs className="m-tabs react-tabs" defaultIndex={2}>
                 <div className="o-board">

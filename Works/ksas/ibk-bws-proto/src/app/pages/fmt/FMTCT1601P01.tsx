@@ -263,26 +263,27 @@ function FMTCT1601P01() {
                         </colgroup>
 
                         <thead className="p-datatable-thead">
-                          <tr>
+                          {/* <tr>
                             <th rowSpan={3} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
                             <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권</span></div></th>
                             <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권</span></div></th>
+                          </tr> */}
+                          <tr>
+                            <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                            <th colSpan={2} className="p-align-center c-divide-edge"><div className="p-column-header-content"><span className="p-column-title">(신청)사용권</span></div></th>
+                            <th colSpan={2} className="p-align-center c-point-cell c-divide-edge"><div className="p-column-header-content"><span className="p-column-title">(결정)사용권</span></div></th>
+                            <th colSpan={2} className="p-align-center c-divide-edge"><div className="p-column-header-content"><span className="p-column-title">(신청)손상권</span></div></th>
+                            <th colSpan={2} className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">(결정)손상권</span></div></th>
                           </tr>
                           <tr>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청액</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액(업무센터)</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청액</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결정액(업무센터)</span></div></th>
-                          </tr>
-                          <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center c-divide-edge"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center c-point-cell c-divide-edge"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center c-divide-edge"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center c-point-cell"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
                           </tr>
                         </thead>
 
@@ -299,7 +300,7 @@ function FMTCT1601P01() {
                                 <td className="g-end">15만원권</td>
                                 <td>대속</td>
                                 <td className="g-end">2</td>
-                                <td className="g-end">100,000,000</td>
+                                <td className="g-end c-divide-edge">100,000,000</td>
                                 <td>
                                   <div className="o-field">
                                     <div className="fields">
@@ -311,7 +312,7 @@ function FMTCT1601P01() {
                                     </div>
                                   </div>
                                 </td>
-                                <td>
+                                <td className="c-divide-edge">
                                   <div className="o-field">
                                     <div className="fields">
                                       <div className="o-form _input wdth-50 g-end">
@@ -322,7 +323,7 @@ function FMTCT1601P01() {
                                   </div>
                                 </td>
                                 <td className="g-end">2</td>
-                                <td className="g-end">100,000,000</td>
+                                <td className="g-end c-divide-edge">100,000,000</td>
                                 <td>
                                   <div className="o-field">
                                     <div className="fields">
@@ -351,11 +352,11 @@ function FMTCT1601P01() {
                                   <td className="subtotal-tcell g-end">소계</td>
                                   <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell"></td>
-                                  <td className="subtotal-tcell g-end">99</td>
+                                  <td className="subtotal-tcell g-end c-divide-edge">99</td>
                                   <td className="subtotal-tcell"></td>
-                                  <td className="subtotal-tcell g-end">99</td>
+                                  <td className="subtotal-tcell g-end c-divide-edge">99</td>
                                   <td className="subtotal-tcell"></td>
-                                  <td className="subtotal-tcell g-end">99,999</td>
+                                  <td className="subtotal-tcell g-end c-divide-edge">99,999</td>
                                   <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell g-end">99</td>
                                   {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}

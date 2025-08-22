@@ -363,7 +363,7 @@ function FMTCT0201M() {
                                 <td>업무센터결정</td>
                                 <td>012345</td>
                                 <td>홍길동</td>
-                                <td><a href="javascript:" className="o-link _normal">통화</a></td>
+                                <td><CommonButton label="통화" className="_normal" /></td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>012345</td>
                                 <td>홍길동</td>

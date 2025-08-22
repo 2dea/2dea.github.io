@@ -394,7 +394,8 @@ function FMTCT0201M() {
             </div>
           </div>
 
-          <Tabs className="m-tabs react-tabs" defaultIndex={0} style={{ minHeight: 'calc(var(--rem) * 421)' }}>
+          {/* <Tabs className="m-tabs react-tabs" defaultIndex={0} style={{ minHeight: 'calc(var(--rem) * 421)' }}> */}
+          <Tabs className="m-tabs react-tabs" defaultIndex={0}>
             <div className="m-tab type2 type-step">
               <TabList className="lists">
                 <Tab className="link"><span className="label">Step 1. 영업점 신청내역</span></Tab>
@@ -427,7 +428,7 @@ function FMTCT0201M() {
                               <td colSpan={1} className="g-end">2,000</td>
 
                               <th colSpan={1}>
-                                <Label label={`신청비고(영업점 요청사항)`} require={false} />
+                                <Label label={`신청비고(영업점요청사항)`} require={false} />
                               </th>
                               <td colSpan={1}></td>
                             </tr>
@@ -438,7 +439,7 @@ function FMTCT0201M() {
                   </div>
 
                   {/* 청구 */}
-                  <div className="o-section">
+                  {/* <div className="o-section">
                     <div className="main _primary rows-auto">
                       <DataTable className="o-grid-table style-fit g-hide" />
                       <div className="o-grid-table style-fit p-datatable">
@@ -496,7 +497,8 @@ function FMTCT0201M() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+
                   {/* 불입 */}
                   <div className="o-section">
                     <div className="main _primary rows-auto">
@@ -753,7 +755,7 @@ function FMTCT0201M() {
                                 } />
                               </th>
                               <td colSpan={1} className="g-end">
-                                <div className="m-string-bind">
+                                <div className="m-string-binds">
                                   <span className="string">2,000</span>
                                   <span className="binds"><CommonButton label="영업점불입결정" className="_solid-primary" /></span>
                                 </div>
@@ -872,8 +874,7 @@ function FMTCT0201M() {
               </div>
             </TabPanel>
 
-            {/* <TabPanel className="m-tabs-panel react-tabs__tab-panel" style={{ minHeight: 'calc(var(--rem) * 382)' }}> */}
-            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel" style={{ minHeight: 'calc(var(--rem) * 361)' }}>
 
               <Tabs className="m-tabs react-tabs" defaultIndex={2}>
                 <div className="o-board">

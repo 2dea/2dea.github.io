@@ -1982,6 +1982,9 @@
 .m-string-binds .binds  { display: flex; align-items: center; gap: $gap-element-30; }
 .m-string-binds .justify-end  { margin-left: auto; }
 
+.m-string-binds:where(.g-end *)  { justify-content: flex-end; }
+.m-string-binds:where(.g-center *)  { justify-content: center; }
+
 
 
 

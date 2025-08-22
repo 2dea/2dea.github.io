@@ -409,7 +409,7 @@ function FMTFT0201M() {
                           <tbody>
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`신청비고(영업점 요청사항)`} require={false} />
+                                <Label label={`신청비고(영업점요청사항)`} require={false} />
                               </th>
                               <td colSpan={1}></td>
                             </tr>
@@ -765,7 +765,7 @@ function FMTFT0201M() {
                       </div> */}
                     </div>
 
-                    <div className="main _primary rows-body-3i">
+                    <div className="main _primary rows-auto">
                       <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table style-fit p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -886,7 +886,7 @@ function FMTFT0201M() {
               </div>
             </TabPanel>
 
-            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel" style={{ minHeight: 'calc(var(--rem) * 361)' }}>
 
               <Tabs className="m-tabs react-tabs" defaultIndex={2}>
                 <div className="o-board">

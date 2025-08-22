@@ -113,7 +113,7 @@ function FMTCT0801M() {
               </div>
             </div>
 
-            <div className="m-binds type-end">
+            {/* <div className="m-binds type-end">
               <div className="group _utility">
                 <div className="m-print-binds">
                   <CommonButton label="자금현송명령부출력" className="_texted" />
@@ -124,9 +124,8 @@ function FMTCT0801M() {
               <div className="group _primary">
                 <CommonButton label="자금신청취소" className="_lined-primary" />
                 <CommonButton label="자금신청" className="_solid-primary" />
-
               </div>
-            </div>
+            </div> */}
 
             {/* Step 2. 상대부점 결정내역 { @DEV } */}
             <div className="m-binds type-end">
@@ -153,7 +152,7 @@ function FMTCT0801M() {
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
-        <div className="div-contents">
+        <div className="div-contents style-tight">
           <div className="o-grid">
             <div className="column">
 
@@ -246,8 +245,8 @@ function FMTCT0801M() {
                 </div>
 
                 <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
+                  <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table style-fit p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
@@ -416,9 +415,9 @@ function FMTCT0801M() {
                       </div> */}
                     </div>
 
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
+                    <div className="main _primary rows-auto">
+                      <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table style-fit p-datatable">
                         <div className="table-container p-datatable-wrapper">
                           <table className="p-datatable-table p-datatable-scrollable-table">
                             <colgroup>
@@ -560,9 +559,9 @@ function FMTCT0801M() {
                       </div> */}
                     </div>
 
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
+                    <div className="main _primary rows-auto">
+                      <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table style-fit p-datatable">
                         <div className="table-container p-datatable-wrapper">
                           <table className="p-datatable-table p-datatable-scrollable-table">
                             <colgroup>
@@ -664,7 +663,7 @@ function FMTCT0801M() {
               </div>
             </TabPanel>
 
-            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel" style={{ minHeight: 'calc(var(--rem) * 361)' }}>
 
               <Tabs className="m-tabs react-tabs" defaultIndex={2}>
                 <div className="o-board">
