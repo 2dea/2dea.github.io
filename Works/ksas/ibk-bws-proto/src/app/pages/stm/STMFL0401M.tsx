@@ -311,11 +311,22 @@ function STMFL0401M() {
                             <Label label={`지휘통제팀`} require={true} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
+                            <div className="m-binds">
+                              <div className="group _start">
+                                <CommonButton label="전체삭제" className="_normal" disabled />
+                                <CommonButton label="추가" className="_normal" />
+                              </div>
+                            </div>
+
+                            <div className="m-flex-list">
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" disabled /></div>
                                 </div>
                               </div>
                             </div>
@@ -327,28 +338,49 @@ function STMFL0401M() {
                             <Label label={`화재진압팀`} require={true} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
+                            <div className="m-binds">
+                              <div className="group _start">
+                                <CommonButton label="전체삭제" className="_normal" disabled />
+                                <CommonButton label="추가" className="_normal" />
+                              </div>
+                            </div>
+
+                            <div className="m-flex-list">
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" disabled /></div>
                                 </div>
                               </div>
                             </div>
                           </td>
                         </tr>
 
-
                         <tr>
                           <th colSpan={1}>
                             <Label label={`대피유도팀`} require={true} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
+                            <div className="m-binds">
+                              <div className="group _start">
+                                <CommonButton label="전체삭제" className="_normal" disabled />
+                                <CommonButton label="추가" className="_normal" />
+                              </div>
+                            </div>
+
+                            <div className="m-flex-list">
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" disabled /></div>
                                 </div>
                               </div>
                             </div>
@@ -360,14 +392,68 @@ function STMFL0401M() {
                             <Label label={`응급구조원`} require={true} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
+
+                            <div className="m-binds">
+                              <div className="group _start">
+                                <CommonButton label="전체삭제" className="_normal" disabled />
+                                <CommonButton label="추가" className="_normal" />
                               </div>
                             </div>
+
+                            <div className="m-flex-list">
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" disabled /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                  <div className="binds"><ImageButton label="삭제" icon="delete" /></div>
+                                </div>
+                              </div>
+
+                            </div>
+
                           </td>
                         </tr>
                       </tbody>
