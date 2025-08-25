@@ -2041,8 +2041,10 @@
 
 .m-tab.type2  { --key: var(--color-button3-70); border-color: var(--color-edge-40); }
 .m-tab.type2 >*  { gap: calc($e10 + $gap-element-30); }
-.m-tab.type2 .link  { line-height: inherit; padding: calc($gap-element-50 - $e10) calc($gap-element-80 - $e10); border-color: $tp; color: var(--color-text-20); background-color: var(--color-ground-40); }
-.m-tab.type2 .link:not([aria-selected="true"], [aria-current]:not([aria-current="false"])):hover  { color: var(--color-text-30); background-color: var(--color-ground-70); }
+.m-tab.type2 .link  { line-height: inherit; padding: calc($gap-element-50 - $e10) calc($gap-element-80 - $e10); border-color: var(--color-icon-90); border-bottom-color: $tp; color: var(--color-text-30); }
+.m-tab.type2 .link:is([aria-disabled="true"], [aria-current]:not([aria-current="false"]))  { border-color: $tp; }
+.m-tab.type2 .link:is([aria-disabled="true"])  { color: var(--color-text-20); background-color: var(--color-ground-40) !important; filter: none; cursor: default; cursor: not-allowed; }
+.m-tab.type2 .link:not([aria-selected="true"], [aria-current]:not([aria-current="false"])):hover  { background-color: var(--color-ground-70); }
 
 
 

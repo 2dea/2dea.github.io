@@ -416,6 +416,7 @@ function STMPR0201M() {
                     <Tab className="link"><span className="label">02. 신분증사본</span></Tab>
                     <Tab className="link"><span className="label">03. 개인정보동의서</span></Tab>
                     <Tab className="link"><span className="label">04. 보안서약서</span></Tab>
+                    <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
                   </TabList>
                 </div>
 

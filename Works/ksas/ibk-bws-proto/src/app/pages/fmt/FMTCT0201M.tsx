@@ -402,6 +402,7 @@ function FMTCT0201M() {
                 <Tab className="link"><span className="label">Step 2. 업무센터 결정내역</span></Tab>
                 <Tab className="link"><span className="label">Step 3. 불입 결정내역</span></Tab>
                 <Tab className="link"><span className="label">Step 4. 현송원 방문(자금현송명령부)</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 

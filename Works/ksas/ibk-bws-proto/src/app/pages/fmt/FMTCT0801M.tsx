@@ -359,6 +359,7 @@ function FMTCT0801M() {
                 <Tab className="link"><span className="label">Step 1. 신청내역</span></Tab>
                 <Tab className="link"><span className="label">Step 2. 상대부점 결정내역</span></Tab>
                 <Tab className="link"><span className="label">Step 3. 현송원 방문(자금현송명령부)</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 

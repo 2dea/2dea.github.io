@@ -190,6 +190,7 @@ function FMTFT0301M() {
                 <Tab className="link"><span className="label">시재금현황</span></Tab>
                 <Tab className="link"><span className="label">시재금상세</span></Tab>
                 <Tab className="link"><span className="label">과부족현황</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 

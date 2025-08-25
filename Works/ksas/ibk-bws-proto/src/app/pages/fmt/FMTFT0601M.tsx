@@ -231,6 +231,7 @@ function FMTFT0601M() {
               <TabList className="lists">
                 <Tab className="link"><span className="label">등록정보</span></Tab>
                 <Tab className="link"><span className="label">자금현송명령부</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 

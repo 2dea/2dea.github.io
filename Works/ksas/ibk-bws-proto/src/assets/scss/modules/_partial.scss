@@ -35,24 +35,24 @@
 
 
 .m-product  { position: relative; }
-.m-product >.figures  { height: 182px; margin-bottom: 12px; border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
+.m-product >.figures  { height: III(182); margin-bottom: III(12); border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
 .m-product >.figures .o-view-image  { width: 100%; height: 100%; border-radius: inherit; }
 .m-product >.figures .o-view-image >*  { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; margin: auto; }
-.m-product >.captions >.header  { display: flex; align-items: center; margin-bottom: 6px; }
+.m-product >.captions >.header  { display: flex; align-items: center; margin-bottom: III(6); }
 .m-product >.captions >.header >*  { flex: none; min-width: 0; }
 .m-product >.captions >.header >.primary  { flex: 1; }
 .m-product >.captions >.header >.primary .status  { position: absolute; left: 0; top: 0; right: 0; color: var(--color-text-00); background: var(--color-point-orange); border-radius: $radius-50 $radius-50 0 0; text-align: center; }
-.m-product >.captions >.header >.primary .status >.label  { font-size: $font-40; line-height: $line-40; display: block; padding: 4px; }
+.m-product >.captions >.header >.primary .status >.label  { font-size: $font-40; line-height: $line-40; display: block; padding: III(4); }
 .m-product >.captions >.header >.secondary .limits  { color: var(--color-text-30); }
 .m-product >.captions >.o-product .caption  { margin-bottom: 0; }
 .m-product >.captions >.o-product .subject  { line-height: inherit; height: 2lh; overflow: hidden; }
-.m-product >.actions  { margin-top: 8px; }
+.m-product >.actions  { margin-top: III(8); }
 .m-product >.actions .units  { font-size: $font-10; line-height: $line-10; color: var(--color-text-30); }
 
 
 .m-shop-list  {  }
 .m-shop-list >.container  {  }
-.m-shop-list >.container >*  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, 242px), var(--width-max, 242px),)); gap: 24px 16px; }
+.m-shop-list >.container >*  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, III(242)), var(--width-max, III(242)),)); gap: III(24) III(16); }
 
 
 .m-shop-table  {  }
@@ -68,14 +68,17 @@
 
 .m-shop-table >.container  { border: 0 solid var(--color-edge-30); border-width: $e10 0; border-top-color: var(--color-edge-40); }
 .m-shop-table .table  { table-layout: fixed; border-collapse: collapse; width: 100%; border: hidden; text-align: center; white-space: nowrap; }
-.m-shop-table tr >*  { height: III(59); overflow: hidden; padding: 10px 12px; border: 0 solid var(--color-edge-30); border-width: 0 0 $e10; text-overflow: ellipsis; }
+.m-shop-table tr >*  { height: III(59); overflow: hidden; padding: III(10) III(12); border: 0 solid var(--color-edge-30); border-width: 0 0 $e10; text-overflow: ellipsis; }
 
 
 .m-shop-detail  { --m-margin-block: #{$gap-element-80}; --m-margin-inline: #{$gap-element-80}; display: flex; flex-direction: column; }
 .m-shop-detail >*  { padding: var(--m-margin-block) var(--m-margin-inline); }
-.m-shop-detail >.bodies  { padding-top: 0; }
+.m-shop-detail >.bodies  { flex: 1; display: flex; flex-direction: column; padding-top: 0; }
+.m-shop-detail >.bodies >.detail  { flex: 1 0 0; flex-basis: III(44); min-height: 0; overflow: auto scroll; }
+.m-shop-detail >.bodies >.detail  { --margin-block-end: var(--m-margin-block); --margin-inline-end: ((var(--m-margin-inline) - #{$width-scrollbar}) / 2); overflow: auto scroll; margin-right: calc(-1 * (var(--margin-inline-end) + $width-scrollbar)); margin-bottom: calc(-1 * var(--margin-block-end)); padding-right: calc(var(--margin-inline-end)); padding-bottom: var(--margin-block-end); }
+.m-shop-detail >.bodies >.detail:after  { content: ""; display: block; position: sticky; bottom: calc(-1 * var(--margin-block-end)); min-height: calc(1 * var(--margin-block-end)); margin-bottom: calc(-1 * var(--margin-block-end)); background: fnLinearGradient(); }
 
-.m-shop-detail >.bodies >.figure  { margin-bottom: 12px; }
+.m-shop-detail >.bodies >.figure  { margin-bottom: III(12); }
 .m-shop-detail >.bodies >.figure  { height: III(177); border: $e10 solid var(--color-edge-40); }
 .m-shop-detail >.bodies >.figure :has(.o-view-image),
 .m-shop-detail >.bodies >.figure .o-view-image  { height: 100%; }
@@ -84,9 +87,9 @@
 .m-shop-detail .o-view-image >*  { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; margin: auto; }
 
 .m-shop-detail >.bodies >.detail  {  }
-.m-shop-detail >.bodies >.detail >.summary  { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; padding-top: 12px; border-top: $e10 solid var(--color-edge-30); }
+.m-shop-detail >.bodies >.detail >.summary  { display: grid; grid-template-columns: repeat(2, 1fr); gap: III(12); margin-top: III(12); padding-top: III(12); border-top: $e10 solid var(--color-edge-30); }
 .m-shop-detail >.bodies >.detail >.summary >* >*  { display: block; }
-.m-shop-detail >.bodies >.detail >.summary .head  { font-weight: $bold-70; font-size: $font-30; line-height: $line-30; margin-bottom: 4px; }
+.m-shop-detail >.bodies >.detail >.summary .head  { font-weight: $bold-70; font-size: $font-30; line-height: $line-30; margin-bottom: III(4); }
 .m-shop-detail >.bodies >.detail >.summary .data  { font-size: $font-30; line-height: $line-30; }
 
 
@@ -95,11 +98,11 @@
 .o-rank >* >*  { flex: none; display: flex; align-items: center; min-width: 0; }
 .o-rank >* >* >*  { flex: none; min-width: 0; }
 
-.o-rank >.order .rank  { font-weight: $bold-70; justify-content: center; width: 16px; text-align: center; }
-.o-rank >.order .status  { justify-content: center; position: relative; width: 24px; }
+.o-rank >.order .rank  { font-weight: $bold-70; justify-content: center; width: III(16); text-align: center; }
+.o-rank >.order .status  { justify-content: center; position: relative; width: III(24); }
 .o-rank >.order .status .tag  { @include inc-sronly(); }
 .o-rank >.product  { flex: 1 0 0; gap: $gap-element-30; white-space: nowrap; }
-.o-rank >.product .id  { width: 42px; }
+.o-rank >.product .id  { width: III(42); }
 .o-rank >.product .name  { flex: 1 0 0; overflow: hidden; text-overflow: ellipsis; }
 
 .o-rank:where(.m-shop-ranking *)  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); }
@@ -111,12 +114,12 @@
 .m-shop-ranking  { padding: var(--m-margin-block) 0; background: var(--color-ground-30); }
 .m-shop-ranking:where(* +*)  { border-top: $e10 solid var(--color-edge-40); }
 
-.m-shop-ranking >.header  { --m-margin-block: 0; display: flex; align-items: center; min-height: $height-form-50; margin-bottom: 8px; }
+.m-shop-ranking >.header  { --m-margin-block: 0; display: flex; align-items: center; min-height: $height-form-50; margin-bottom: III(8); }
 .m-shop-ranking >.header .o-toggles  { flex: 1; }
 .m-shop-ranking >.header .o-toggles >*  { flex: 1; }
 
 .m-shop-ranking >.bodies  { --m-margin-block: 0; }
-.m-shop-ranking >.bodies >.ranking >*  { padding: 8px 0; }
+.m-shop-ranking >.bodies >.ranking >*  { padding: III(8) 0; }
 
 
 
@@ -137,8 +140,8 @@
 .m-shop-cart >.header >.primary  { flex: 1; }
 
 .m-shop-cart >.bodies  { flex: 1; flex-basis: 0; overflow: hidden auto; }
-.m-shop-cart >.bodies >.carts >:not(:first-child)  { padding-top: 8px; }
-.m-shop-cart >.bodies >.carts >:not(:last-child)  { padding-bottom: 8px; border-bottom: $e10 solid var(--color-edge-30); }
+.m-shop-cart >.bodies >.carts >:not(:first-child)  { padding-top: III(8); }
+.m-shop-cart >.bodies >.carts >:not(:last-child)  { padding-bottom: III(8); border-bottom: $e10 solid var(--color-edge-30); }
 
 .m-shop-cart >.footer  { padding-top: 0; }
 .m-shop-cart >.footer >.binds  { display: flex; }
@@ -164,6 +167,11 @@
 
 .m-shop  { flex: 1 0; flex-basis: 0; min-height: 0; }
 .m-shop .o-section  { outline: 0 !important; }
+
+
+
+.o-section >.main.rows-1fr:is(.m-shop >.lists *)  { --height-section-main: 0; --margin-block-end: #{$margin-layout-block}; --margin-inline-end: ((#{$margin-section-70} - #{$width-scrollbar}) / 2); overflow: auto scroll; margin-right: calc(-1 * (var(--margin-inline-end) + $width-scrollbar)); margin-bottom: calc(-1 * var(--margin-block-end)); padding-right: calc(var(--margin-inline-end)); padding-bottom: var(--margin-block-end); }
+.o-section >.main.rows-1fr:is(.m-shop >.lists *):after  { content: ""; display: block; position: sticky; bottom: calc(-1 * var(--margin-block-end)); min-height: calc(1 * var(--margin-block-end)); margin-bottom: calc(-1 * var(--margin-block-end)); background: fnLinearGradient(); }
 
 
 

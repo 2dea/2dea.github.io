@@ -359,6 +359,7 @@ function FMTCT1401M() {
               <TabList className="lists">
                 <Tab className="link"><span className="label">Step 1. 신청내역</span></Tab>
                 <Tab className="link"><span className="label">Step 2. 현송원 방문(자금현송명령부)</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 

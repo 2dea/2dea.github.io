@@ -213,6 +213,7 @@ function FMTCT1501M() {
               <TabList className="lists">
                 <Tab className="link"><span className="label">일반 노선등록</span></Tab>
                 <Tab className="link"><span className="label">추가 노선등록</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 
