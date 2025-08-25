@@ -1,0 +1,165 @@
+/* --- table  --- */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption {
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  line-height: 1px;
+  font-size: 1px;
+  color: transparent;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.table-wrap {}
+
+.table-box table {
+  color: #ffff;
+}
+.table-box thead {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #00854a; /* 디자인 색 확인 필요 */
+  /* border-bottom: 4rem solid #fff; */
+}
+.table-box thead::after {
+  content: "";
+  display: table-row;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  /* width: calc(100% - var(--edge)); */
+  height: 4rem;
+  background-color: #fff;
+}
+.table-box thead th {
+  /* font-size: 42rem; */
+  font-size: 38rem;
+}
+/* .table-box thead tr {
+  border-bottom: 4rem solid #fff;
+} */
+.table-box tbody {
+  border-bottom: 4rem solid #fff;
+}
+.table-box tbody td {
+  /* font-size: 52rem; */
+  font-size: 30rem;
+  text-align: center;
+  vertical-align: middle;
+  /* padding: 6rem 0; */
+  padding: 8rem 0;
+}
+.table-box tbody tr + tr {
+  border-top: 2rem solid rgba(255, 255, 255, 0.2);
+}
+
+.table-box tbody td .name {
+  /* font-size: 47rem; */
+  /* font-size: 40rem; */
+}
+.table-box tbody td .name-en {
+  /* font-size: 36rem; */
+  font-size: 28rem;
+}
+
+.table-box tbody td .pos {
+  /* font-size: 47rem; */
+}
+.table-box tbody td .positive {
+  color: #23f2ff;
+}
+.table-box tbody td .red {
+  color: #f15922;
+}
+
+.table-box .name-box {
+
+}
+
+/* --- 테이블 2개 --- */
+.table-wrap.table-wrap02 {
+  display: flex;
+  gap: 20rem;
+}
+
+
+
+/* --- card  --- */
+.card-list {
+  display: flex;
+  gap: 20rem;
+}
+
+.card-item {
+  width: 33.33%;
+
+}
+.card-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 16rem;
+  border-radius: 10rem;
+  background-color: #fff;
+}
+.card-area .img-box img {
+  width: 500rem;
+  height: 400rem;
+}
+.card-area .name-box {
+  display: flex;
+  align-items: center;
+  color: #00854a;
+}
+.card-area .name-box .name {
+  font-size: 24rem;
+  font-weight: 700;
+}
+.card-area .name-box .name-en {
+  position: relative;
+  font-size: 14rem;
+  margin-left: 5rem;
+  padding-left: 5rem;
+}
+.card-area .name-box .name-en::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 1rem;
+  height: 100%;
+  background-color: #00854a;
+}
+
+
+/* --- data-area ---*/
+.data-area ul,
+.data-area li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.data-area li .name {
+  color: #00854a;
+  background-color: #fff;
+  padding: 2rem 4rem;
+  border-radius: 10rem;
+}
+
+.data-area li .data {
+  color: #fff;
+}
+
+.data-area li .data.red {
+  color: red;
+}
