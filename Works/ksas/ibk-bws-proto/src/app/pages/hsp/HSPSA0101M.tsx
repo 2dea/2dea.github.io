@@ -291,6 +291,13 @@ function HSPSA0101M() {
                     </div>
                   </div>
                 </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>관리자 공지: 항목을 체크하고 거래구분 변경 후 저장하세요.</li>
+                  </ul>
+                </div>
+
               </div>
 
             </div>

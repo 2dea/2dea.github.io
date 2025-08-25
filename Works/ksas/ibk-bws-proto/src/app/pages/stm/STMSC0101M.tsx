@@ -391,7 +391,7 @@ function STMSC0101M() {
                                 <InputRadio name="RADIO:T_10" label="간헐적" />
                               </div>
 
-                              <div className="binds">
+                              <div className="binds justify-end">
                                 <CommonButton label="참고" className="_normal" />
                               </div>
                             </div>
@@ -416,6 +416,14 @@ function STMSC0101M() {
                               </div>
 
                             </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`계약상태`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+
                           </td>
                         </tr>
                         <tr>
@@ -446,6 +454,13 @@ function STMSC0101M() {
                     </table>
                   </form>
                 </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li className="c-color-strong"><em>계약 종료의 경우 비고내용만 수정이 가능합니다.</em></li>
+                  </ul>
+                </div>
+
               </div>
 
             </SplitterPanel>

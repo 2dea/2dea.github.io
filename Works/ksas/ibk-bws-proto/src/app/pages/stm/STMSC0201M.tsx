@@ -389,7 +389,7 @@ function STMSC0201M() {
 
                             <div className="m-string-binds">
                               <span className="string">일시적</span>
-                              <span className="binds"><CommonButton label="참고" className="_normal" /></span>
+                              <span className="binds justify-end"><CommonButton label="참고" className="_normal" /></span>
                             </div>
                           </td>
                         </tr>
@@ -399,6 +399,14 @@ function STMSC0201M() {
                           </th>
                           <td colSpan={3}>
                             일시적 (일수) : 25일
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`계약상태`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            해지
                           </td>
                         </tr>
                         <tr>
