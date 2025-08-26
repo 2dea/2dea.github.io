@@ -152,7 +152,7 @@ function STMGI0101M() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`악재교체일자`} require={false} />
+                    <Label label={`약제교체일자`} require={false} />
                     <div className="fields">
                       <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -204,8 +204,11 @@ function STMGI0101M() {
                     <Label label={`사용자`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
                       </div>
                     </div>
                   </div>

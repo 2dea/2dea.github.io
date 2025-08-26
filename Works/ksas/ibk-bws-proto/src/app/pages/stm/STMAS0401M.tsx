@@ -459,12 +459,10 @@ function STMAS0401M() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
                       </colgroup>
 
                       <tbody>
-                        <tr>
+                        {/* <tr>
                           <th colSpan={1}>
                             <Label label={`부점`} require={false} />
                           </th>
@@ -473,14 +471,14 @@ function STMAS0401M() {
                             <Label label={`등록자`} require={false} />
                           </th>
                           <td colSpan={1}>[0034] 을지로</td>
-                        </tr>
-                        <tr>
                           <th colSpan={1}>
                             <Label label={`등록일자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <span className="o-digit type-date">2025-12-25</span>
                           </td>
+                        </tr> */}
+                        <tr>
                           <th colSpan={1}>
                             <Label label={`대상연도`} require={false} />
                           </th>
@@ -490,9 +488,11 @@ function STMAS0401M() {
                           <th colSpan={1}>
                             <Label label={`내용`} require={false} />
                           </th>
-                          <td colSpan={3}>
-                            내용을 입력해주세요<br />
-                            내용을 입력해주세요
+                          <td colSpan={1}>
+                            <div className="o-rich-text">
+                              내용을 입력해주세요<br />
+                              내용을 입력해주세요
+                            </div>
                           </td>
                         </tr>
 
@@ -500,7 +500,7 @@ function STMAS0401M() {
                           <th colSpan={1}>
                             <Label label={`첨부파일`} require={false} />
                           </th>
-                          <td colSpan={3}>
+                          <td colSpan={1}>
 
                             <div className="o-section">
                               <div className="m-header">

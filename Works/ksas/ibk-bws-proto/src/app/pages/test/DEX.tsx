@@ -973,6 +973,27 @@ about:blank
           </div>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
+
+
+
+        <div className="main _primary">
+
+
+          <div className="m-total">
+            <dl className="m-defines">
+              <div className="group">
+                <dt className="head">신청금액합계</dt>
+                <dd className="data">200,000,000</dd>
+              </div>
+
+              <div className="group">
+                <dt className="head">결정금액합계</dt>
+                <dd className="data">200,000,000</dd>
+              </div>
+            </dl>
+          </div>
+
+        </div>
       </div>
 
       {/*

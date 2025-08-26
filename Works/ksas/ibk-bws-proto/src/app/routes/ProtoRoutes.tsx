@@ -446,11 +446,11 @@ import STMSC0101P01 from 'app/pages/stm/STMSC0101P01';   // 재난·안전관리
 import STMSC0101P02 from 'app/pages/stm/STMSC0101P02';   // 재난·안전관리 > 도급사업관리             > 도급계약 현황 등록 ~ (LP)참고
 import STMSC0201M from 'app/pages/stm/STMSC0201M';       // 재난·안전관리 > 도급사업관리             > 도급계약 현황 확인
 import STMSC0301M from 'app/pages/stm/STMSC0301M';       // 재난·안전관리 > 도급사업관리             > 안전보건협의체 회의록
-import STMSC0401M from 'app/pages/stm/STMSC0401M';       // 재난·안전관리 > 도급사업관리             > 순회점검표 등록
+import STMSC0401M from 'app/pages/stm/STMSC0401M';       // 재난·안전관리 > 도급사업관리             > 순회점검표등록
 
-import STMSC0601M from 'app/pages/stm/STMSC0601M';       // 재난·안전관리 > 도급사업관리             > 합동점검표 등록
-import STMSC0401P01 from 'app/pages/stm/STMSC0401P01';   // 재난·안전관리 > 도급사업관리             > 순회점검표 등록 ~ (LP)순회점검표 등록
-import STMSC0601P01 from 'app/pages/stm/STMSC0601P01';   // 재난·안전관리 > 도급사업관리             > 합동점검표 등록 ~ (LP)합동점검표 등록
+import STMSC0601M from 'app/pages/stm/STMSC0601M';       // 재난·안전관리 > 도급사업관리             > 합동점검표등록
+import STMSC0401P01 from 'app/pages/stm/STMSC0401P01';   // 재난·안전관리 > 도급사업관리             > 순회점검표등록 ~ (LP)순회점검표등록
+import STMSC0601P01 from 'app/pages/stm/STMSC0601P01';   // 재난·안전관리 > 도급사업관리             > 합동점검표등록 ~ (LP)합동점검표등록
 
 import STMKY0101M from 'app/pages/stm/STMKY0101M';       // 재난·안전관리 > 열쇠관리                 > 열쇠종류관리
 import STMKY0201M from 'app/pages/stm/STMKY0201M';       // 재난·안전관리 > 열쇠관리                 > 열쇠등록관리

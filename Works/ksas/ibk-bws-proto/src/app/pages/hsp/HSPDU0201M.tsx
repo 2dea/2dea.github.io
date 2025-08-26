@@ -178,14 +178,14 @@ function HSPDU0201M() {
                     </div>
                   </div>
 
-                  <div className="o-field">
+                  {/* <div className="o-field">
                     <Label label={`과거내역`} require={false} />
                     <div className="fields">
                       <div className="m-checks">
                         <InputCheck label="선택" labelHidden defaultChecked />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                 </div>
 

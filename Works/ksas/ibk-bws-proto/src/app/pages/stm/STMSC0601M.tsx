@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 도급사업관리 > 합동점검표 등록
+ * @description 재난·안전관리 > 도급사업관리 > 합동점검표등록
  */
 
 // dependency
@@ -41,7 +41,7 @@ function STMSC0601M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '합동점검표 등록' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '합동점검표등록' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -98,7 +98,7 @@ function STMSC0601M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">합동점검표 등록</span>
+                <span className="label">합동점검표등록</span>
 
                 <FavoriteDiv />
               </h1>
@@ -160,8 +160,7 @@ function STMSC0601M() {
                       </div>
                     </div>
                   </div>
-
-                  <div className="o-field">
+                  {/* <div className="o-field">
                     <Label label={`진행상태`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
@@ -169,7 +168,7 @@ function STMSC0601M() {
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                 </div>
 

@@ -171,14 +171,14 @@ function STMGI0201P01() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`총번호`} require={false} />
+                            <Label label={`가스분사기번호`} require={false} />
                           </th>
                           <td colSpan={1}>
                             123456
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`총형식`} require={false} />
+                            <Label label={`가스분사기형식`} require={false} />
                           </th>
                           <td colSpan={1}>
                             이지스-2
