@@ -61,7 +61,7 @@ main {
 }
 
 /* main-board */
-.main-board {
+.main {
   flex-grow: 1;
   width: 100%;
   height: calc(100% - 146rem - 68rem);

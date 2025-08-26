@@ -1,3 +1,8 @@
+/* --- common  --- */
+.style-col {
+  flex-direction: column;
+}
+
 /* --- table  --- */
 
 table {
@@ -82,8 +87,21 @@ caption {
   color: #f15922;
 }
 
-.table-box .name-box {
+/* table style-b:  */
+.table-bo0x.style-b {
 
+}
+.table-box.style-b tbody {
+  border-top: 4rem solid #fff;
+}
+.table-box tbody tr + tr {
+  border-top: 4rem solid #fff;
+}
+.table-box.style-b tbody tr:first-child {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.table-box.style-b tbody td {
+  border-left: 4rem solid #fff;
 }
 
 /* --- 테이블 2개 --- */
@@ -144,9 +162,6 @@ caption {
 /* --- data-area ---*/
 .data-area ul,
 .data-area li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .data-area li .name {
@@ -162,4 +177,49 @@ caption {
 
 .data-area li .data.red {
   color: red;
+}
+
+
+/* --- page-personal --- */
+.personal-wrap {
+  display: flex;
+  align-items: anchor-center;
+}
+.personal-img {
+  width: 700rem;
+  height: 800rem;
+}
+
+.personal-wrap .name-box {
+  color: #fff;
+}
+.personal-wrap .name-box .name {
+  font-size: 98rem;
+  letter-spacing: -1.9;
+}
+.personal-wrap .name-box .name-en {
+  font-size: 39rem;
+  letter-spacing: -0.7;
+}
+
+.data-area.style-row {
+  display: flex;
+}
+.data-area.big {
+  gap: 65rem;
+  font-size: 55rem;
+}
+.data-area.big .name {
+  margin-right: 65rem;
+  padding: 0 30rem;
+  border-radius: 50rem;
+}
+
+/* page layout */
+.personal-wrap .data-area.style-row.big {
+  margin: 30rem;
+}
+
+.personal-wrap .table-wrap {
+
 }
