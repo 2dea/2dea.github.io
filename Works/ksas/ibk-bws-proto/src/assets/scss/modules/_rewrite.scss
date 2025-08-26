@@ -880,6 +880,14 @@
       }
     }
 
+    tbody tr.p-x-status-20 {
+      background-image: linear-gradient(90deg, var(--color-point-red) $e30, $tp $e30);
+
+      >:first-child:not(:hover >*)  {
+        background-image: inherit;
+      }
+    }
+
     .p-x-frozen-last {
       position: sticky;
       z-index: 2;

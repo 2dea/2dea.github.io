@@ -2605,7 +2605,8 @@ function TMPL() {
 
                               <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
-                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                // <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : idx === 1 ? 'p-x-status-20' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                                   <td><InputCheck label="선택" labelHidden /></td>
                                   <td>{idx + 1}</td>
                                   <td>프로세스혁신</td>

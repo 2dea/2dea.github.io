@@ -1149,9 +1149,11 @@
 
 .o-button:where(.m-binds.type-start *),
   .o-button:where(.dom-nav .div-nav-local .m-binds *),
+  .o-button:where(.m-shop-cart >.header >.binds *),
   .o-button.size-30  { font-size: $font-40; line-height: $line-40; min-width: calc(4em - $e10 * 6); padding: calc(var(--margin-block)) calc(0.5em - $e10 * 2); }
 .o-button.size-60  { font-size: $font-50; line-height: $line-50; min-width: calc(4em + $e10 * 4); padding: calc(III(3) + III(2)) calc(0.5em + 0.25em); }
 .o-button:where(.m-binds.type-end >.group._primary *),
+  .o-button:where(.m-shop-cart >.footer >.binds *),
   /* .o-button.size-70  { font-size: $font-50; line-height: $line-50; gap: $gap-whitespace-50; min-width: calc(5em + $e10 * 2); padding: calc(var(--margin-block) + $e10 * 5) calc(0.5em + 0.25em); } */
   .o-button.size-70  { font-size: $font-50; line-height: $line-50; gap: $gap-whitespace-50; min-width: calc(5em - $e10 * 5); padding: calc(var(--margin-block) + $e10 * 2) 0.5em; }
 /*
