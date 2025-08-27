@@ -785,10 +785,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">1</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-up" />
                               <span className="tag">순위​상승</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -800,10 +800,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">2</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-down" />
                               <span className="tag">순위​하락</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -815,10 +815,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">3</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-hold" />
                               <span className="tag">순위​변동​없음</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -830,10 +830,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">4</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-up" />
                               <span className="tag">순위​상승</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -845,10 +845,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">5</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="new" />
                               <span className="tag">순위권​진입</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -865,10 +865,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">1</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-up" />
                               <span className="tag">순위​상승</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -880,10 +880,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">2</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-down" />
                               <span className="tag">순위​하락</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -895,10 +895,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">3</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-hold" />
                               <span className="tag">순위​변동​없음</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -910,10 +910,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">4</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-up" />
                               <span className="tag">순위​상승</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -925,10 +925,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">5</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="new" />
                               <span className="tag">순위권​진입</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>

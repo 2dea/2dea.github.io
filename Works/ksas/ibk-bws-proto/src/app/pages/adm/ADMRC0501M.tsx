@@ -170,7 +170,7 @@ function ADMRC0501M() {
                 <div className="column">
 
                   <div className="o-section">
-                    <div className="main _primary rows-auto">
+                    <div className="main">
                       <div className="m-data-creator">
                         <div className="header">
                           <strong className="heading">정산(전/후) 작업 검증 자료 생성</strong>
@@ -284,46 +284,45 @@ function ADMRC0501M() {
                       </div>
                     </div>
 
-                    <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                    <div className="main _primary rows-body-3i">
+                      <div className="o-data-table">
                         <div className="table-container">
-                          <table>
-                            <colgroup>
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                            </colgroup>
+                          <table className="table">
+                            <colgroup span={6}></colgroup>
 
                             <thead>
                               <tr>
-                                <th>전월-현월 재고수량</th>
-                                <th>현월 재고수량</th>
-                                <th>전월 재고수량</th>
-                                <th>2개월전 재고수량</th>
-                                <th>3개월전 재고수량</th>
-                                <th>4개월전 재고수량</th>
+                                <th colSpan={1}>전월-현월 재고수량</th>
+                                <th colSpan={1}>현월 재고수량</th>
+                                <th colSpan={1}>전월 재고수량</th>
+                                <th colSpan={1}>2개월전 재고수량</th>
+                                <th colSpan={1}>3개월전 재고수량</th>
+                                <th colSpan={1}>4개월전 재고수량</th>
                               </tr>
                             </thead>
 
                             <tbody>
                               <tr>
-                                <td className="g-end">0</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                              </tr>
+                              <tr>
+                                <td colSpan={1} className="g-end"></td>
+                                <td colSpan={1} className="g-end"></td>
+                                <td colSpan={1} className="g-end"></td>
+                                <td colSpan={1} className="g-end"></td>
+                                <td colSpan={1} className="g-end"></td>
+                                <td colSpan={1} className="g-end"></td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="main _primary rows-body-3i">
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -396,54 +395,45 @@ function ADMRC0501M() {
                       </div>
                     </div>
 
-                    <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                    <div className="main _primary rows-body-3i">
+                      <div className="o-data-table">
                         <div className="table-container">
-                          <table>
-                            <colgroup>
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                            </colgroup>
+                          <table className="table">
+                            <colgroup span={6}></colgroup>
 
                             <thead>
                               <tr>
-                                <th>전월-현월 재고수량</th>
-                                <th>현월 재고수량</th>
-                                <th>전월 재고수량</th>
-                                <th>2개월전 재고수량</th>
-                                <th>3개월전 재고수량</th>
-                                <th>4개월전 재고수량</th>
+                                <th colSpan={1}>전월-현월 재고수량</th>
+                                <th colSpan={1}>현월 재고수량</th>
+                                <th colSpan={1}>전월 재고수량</th>
+                                <th colSpan={1}>2개월전 재고수량</th>
+                                <th colSpan={1}>3개월전 재고수량</th>
+                                <th colSpan={1}>4개월전 재고수량</th>
                               </tr>
                             </thead>
 
                             <tbody>
                               <tr>
-                                <td className="g-end">0</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
                               </tr>
                               <tr>
-                                <td className="g-end">0</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
-                                <td className="g-end">999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
+                                <td colSpan={1} className="g-end">9,999</td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="main _primary rows-body-3i">
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -499,7 +489,7 @@ function ADMRC0501M() {
                       </div>
                     </div>
 
-                    <div className="main">
+                    {/* <div className="main">
                       <form className="m-data-form">
                         <table className="table">
                           <colgroup>
@@ -526,7 +516,7 @@ function ADMRC0501M() {
                           </tbody>
                         </table>
                       </form>
-                    </div>
+                    </div> */}
                   </div>
 
                 </div>
@@ -560,6 +550,20 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-body-5i">
+                      <div className="m-total">
+                        <dl className="m-defines">
+                          <div className="group">
+                            <dt className="head">정산금액 합계</dt>
+                            <dd className="data">200,000,000</dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">전/후 비교 차액</dt>
+                            <dd className="data">200,000,000</dd>
+                          </div>
+                        </dl>
+                      </div>
+
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -665,7 +669,7 @@ function ADMRC0501M() {
                     </div>
                   </div>
 
-                  <div className="o-section">
+                  {/* <div className="o-section">
 
                     <div className="main">
                       <form className="m-data-form">
@@ -693,7 +697,7 @@ function ADMRC0501M() {
                       </form>
                     </div>
 
-                  </div>
+                  </div> */}
 
 
 
@@ -701,7 +705,7 @@ function ADMRC0501M() {
               </div>
             </TabPanel>
 
-            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+            {/* <TabPanel className="m-tabs-panel react-tabs__tab-panel">
               <div className="o-grid">
                 <div className="column">
 
@@ -726,7 +730,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <DataTable className="o-grid-table g-hide" />
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
                           <table className="p-datatable-table p-datatable-scrollable-table">
@@ -772,7 +776,7 @@ function ADMRC0501M() {
 
                             <tbody className="p-datatable-tbody">
                             {[...Array(24)].map((e, idx) => (
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
                                 <td>{idx + 1}</td>
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td>20251111</td>
@@ -814,7 +818,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <DataTable className="o-grid-table g-hide" />
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
                           <table className="p-datatable-table p-datatable-scrollable-table">
@@ -862,7 +866,7 @@ function ADMRC0501M() {
 
                             <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
-                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
                                   <td><InputCheck label="선택" labelHidden /></td>
                                   <td>{idx + 1}</td>
                                   <td><span className="o-digit type-date">2025-12-25</span></td>
@@ -896,9 +900,9 @@ function ADMRC0501M() {
 
                 </div>
               </div>
-            </TabPanel>
+            </TabPanel> */}
 
-            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+            {/* <TabPanel className="m-tabs-panel react-tabs__tab-panel">
               <div className="o-grid">
 
                 <div className="column">
@@ -909,7 +913,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                      <div className="o-grid-table type-table">
                         <div className="table-container">
                           <table>
                             <colgroup>
@@ -980,7 +984,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                      <div className="o-grid-table type-table">
                         <div className="table-container">
                           <table>
                             <colgroup>
@@ -1043,7 +1047,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                      <div className="o-grid-table type-table">
                         <div className="table-container">
                           <table>
                             <colgroup>
@@ -1121,7 +1125,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                      <div className="o-grid-table type-table">
                         <div className="table-container">
                           <table>
                             <colgroup>
@@ -1189,7 +1193,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                      <div className="o-grid-table type-table">
                         <div className="table-container">
                           <table>
                             <colgroup>
@@ -1252,7 +1256,7 @@ function ADMRC0501M() {
                     </div>
 
                     <div className="main _primary rows-auto">
-                      <div className="o-grid-table type-table">{/* [하드코딩] */}
+                      <div className="o-grid-table type-table">
                         <div className="table-container">
                           <table>
                             <colgroup>
@@ -1310,7 +1314,7 @@ function ADMRC0501M() {
 
                 </div>
               </div>
-            </TabPanel>
+            </TabPanel> */}
 
           </Tabs>
         </div>

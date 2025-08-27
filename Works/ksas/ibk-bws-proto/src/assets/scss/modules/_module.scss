@@ -2432,6 +2432,8 @@
 .o-board:has(+.m-step-form)  { margin-bottom: $margin-section-20; }
 .o-board:has(>.m-step)  { margin-bottom: $margin-section-50; }
 
+.o-data-table:has(+.o-grid-table)  { margin-bottom: $margin-section-20; }
+
 .m-total  { margin-bottom: $margin-section-20; }
 
 .m-board:not(:only-child)  { margin-bottom: $margin-section-50; }

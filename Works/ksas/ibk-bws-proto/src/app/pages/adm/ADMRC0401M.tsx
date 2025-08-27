@@ -176,7 +176,7 @@ function ADMRC0401M() {
                       <h2 className="o-heading level2"><span className="label">정산(전/후) 작업 검증 자료 생성</span></h2>
                     </div>
 
-                    <div className="main _primary rows-auto">
+                    <div className="main">
                       <div className="m-data-creator">
                         <div className="header">
                           <strong className="heading">정산(전/후) 작업 검증 자료 생성</strong>
@@ -502,7 +502,7 @@ function ADMRC0401M() {
 
               </div>
 
-              <div className="o-grid">
+              {/* <div className="o-grid">
                 <div className="column">
 
                   <div className="o-section">
@@ -555,7 +555,7 @@ function ADMRC0401M() {
                   </div>
 
                 </div>
-              </div>
+              </div> */}
             </TabPanel>
 
             <TabPanel className="m-tabs-panel react-tabs__tab-panel">
@@ -583,6 +583,20 @@ function ADMRC0401M() {
                     </div>
 
                     <div className="main _primary rows-body-5i">
+                      <div className="m-total">
+                        <dl className="m-defines">
+                          <div className="group">
+                            <dt className="head">정산금액 합계</dt>
+                            <dd className="data">200,000,000</dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">전/후 비교 차액</dt>
+                            <dd className="data">200,000,000</dd>
+                          </div>
+                        </dl>
+                      </div>
+
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -666,7 +680,7 @@ function ADMRC0401M() {
                     </div>
                   </div>
 
-                  <div className="o-section">
+                  {/* <div className="o-section">
 
                     <div className="main">
                       <form className="m-data-form">
@@ -712,7 +726,7 @@ function ADMRC0401M() {
                       </form>
                     </div>
 
-                  </div>
+                  </div> */}
 
 
 
