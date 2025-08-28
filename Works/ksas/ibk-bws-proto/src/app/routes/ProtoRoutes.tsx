@@ -625,6 +625,7 @@ import ADMPH0101M from 'app/pages/adm/ADMPH0101M';      // 공통·결재 > 휴�
 
 import ADMOA0101M from 'app/pages/adm/ADMOA0101M';      // 공통·결재 > 운영관리     > 거래로그관리
 import ADMOA0201M from 'app/pages/adm/ADMOA0201M';      // 공통·결재 > 운영관리     > 전문로그관리
+import ADMOA0201P01 from 'app/pages/adm/ADMOA0201P01';  // 공통·결재 > 운영관리     > 전문로그관리 ~ (LP)전문로그상세
 import ADMOA0301M from 'app/pages/adm/ADMOA0301M';      // 공통·결재 > 운영관리     > 원장수정관리
 import ADMOA0401M from 'app/pages/adm/ADMOA0401M';      // 공통·결재 > 운영관리     > 배치모니터링관리
 
@@ -1285,6 +1286,7 @@ function ProtoRoutes() {
 
         { path: 'ADMOA0101M',   element: <ADMOA0101M /> },
         { path: 'ADMOA0201M',   element: <ADMOA0201M /> },
+        { path: 'ADMOA0201P01', element: <ADMOA0201P01 /> },
         { path: 'ADMOA0301M',   element: <ADMOA0301M /> },
         { path: 'ADMOA0401M',   element: <ADMOA0401M /> },
 
