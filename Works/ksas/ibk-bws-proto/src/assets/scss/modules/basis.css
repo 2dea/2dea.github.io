@@ -213,7 +213,7 @@ label,  [type="submit"],  [type="reset"],  [type="button"],  button,  summary,
   [role="button"],  [role="tab"]  { cursor: pointer; }
 
 hr  { clear: both; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; height: 0; overflow: visible; border-style: none; }
-pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-wrap: normal; word-break: normal; }
+pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-break: normal; word-wrap: normal; overflow-wrap: normal; }
 ul,  ol  { list-style-type: none; padding-left: 0; }
 a  { font-size: inherit; background-color: Transparent; color: inherit; text-decoration: none; }
 small  { font-size: inherit; }
@@ -239,7 +239,7 @@ label  { display: inline-block; }
 select  { text-transform: none; }
 select[multiple]  { padding-right: 0 !important; }
 option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
-textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: normal; }
+textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: keep-all; word-wrap: inherit; overflow-wrap: inherit; }
 summary  { display: list-item; }
 dialog  { padding: 0; border-style: none; }
 template  { display: none; }

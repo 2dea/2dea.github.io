@@ -92,14 +92,14 @@ function ADMOA0201P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-90p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-auto case-logdata" /* .case-logdata */ /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">전문로그상세</span></h3>}
       >
@@ -114,7 +114,7 @@ function ADMOA0201P01() {
                 </div>
 
                 <div className="main">
-                  <form className="m-data-form">
+                  <form className="m-data-form type-data">
                     <table className="table">
                       <colgroup>
                         <col className="head" />
@@ -126,7 +126,7 @@ function ADMOA0201P01() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`표준전문작성년월일`} require={false} />
+                            <Label label={`표준전문​작성연월일`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <span className="o-digit type-date">2025-12-25</span>
@@ -141,13 +141,13 @@ function ADMOA0201P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`요청응답구분코드`} require={false} />
+                            <Label label={`요청응답​구분코드`} require={false} />
                           </th>
                           <td colSpan={1}>
                             S
                           </td>
                           <th colSpan={1}>
-                            <Label label={`요청시스템구분코드`} require={false} />
+                            <Label label={`요청시스템​구분코드`} require={false} />
                           </th>
                           <td colSpan={1}>
                             BWS
@@ -156,13 +156,13 @@ function ADMOA0201P01() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`표준전문인터페이스ID`} require={false} />
+                            <Label label={`표준전문​인터페이스ID`} require={false} />
                           </th>
                           <td colSpan={1}>
                             BWS1135556774
                           </td>
                           <th colSpan={1}>
-                            <Label label={`표준전문요청일시`} require={false} />
+                            <Label label={`표준전문​요청일시`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <span className="o-digit type-datetime">2025-12-25 09:10:59</span>
@@ -171,28 +171,28 @@ function ADMOA0201P01() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`응답처리결과구분코드`} require={false} />
+                            <Label label={`응답처리결과​구분코드`} require={false} />
                           </th>
                           <td colSpan={1}>
                             BWS
                           </td>
                           <th colSpan={1}>
-                            <Label label={`표준전문오류코드`} require={false} />
+                            <Label label={`표준전문​오류코드`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            BWS1135556774
+                            iIl1ㅣ|oO0ㅇ (){`{`}{`}`}[]{`<`}{`>`}"'``'":;,.,.--++__/\ ~!@#$%^{`&`}*?
                           </td>
                         </tr>
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`오류발생시스템구분코드`} require={false} />
+                            <Label label={`오류발생시스템​구분코드`} require={false} />
                           </th>
                           <td colSpan={1}>
                             BWS1135556774
                           </td>
                           <th colSpan={1}>
-                            <Label label={`거래채널구분코드`} require={false} />
+                            <Label label={`거래채널​구분코드`} require={false} />
                           </th>
                           <td colSpan={1}>
                             OLT
@@ -207,7 +207,7 @@ function ADMOA0201P01() {
                             0810
                           </td>
                           <th colSpan={1}>
-                            <Label label={`조작자직원번호`} require={false} />
+                            <Label label={`조작자​직원번호`} require={false} />
                           </th>
                           <td colSpan={1}>
                             0436666
@@ -216,14 +216,14 @@ function ADMOA0201P01() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`전문내용`} require={false} />
+                            <Label label={`전문​내용`} require={false} />
                           </th>
                           <td colSpan={3}>
                             {/* <div className="o-rich-text"></div> */}
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={150} />
+                                <div className="o-form _input type-date">
+                                  <InputTextarea placeholder="" value={value}  className="bind" onChange={(e) => setValue(e.target.value)} rows={20} cols={80} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -242,8 +242,10 @@ function ADMOA0201P01() {
 
             <div className="column">
               <div className="o-section">
-                <div className="main">
-                  <form className="m-data-form">
+                <div className="m-header"></div>
+
+                <div className="main _primary rows-1fr">
+                  <form className="m-data-form type-data">
                     <table className="table">
                       <colgroup>
                         <col className="head" />
@@ -251,14 +253,18 @@ function ADMOA0201P01() {
                       </colgroup>
 
                       <tbody>
-                        <tr>
+                      {[...Array(36)].map((e, idx) => (
+                      <>
+                        <tr key={idx}>
                           <th colSpan={1}>
-                            <Label label={`표준전문길이`} require={false} />
+                            <Label label={`...`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            2025-0511545871123840
+                            ___
                           </td>
                         </tr>
+                      </>
+                      ))}
                       </tbody>
                     </table>
                   </form>
@@ -283,7 +289,7 @@ function ADMOA0201P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)전문로그상세 [wdth-90p(w770)]</span>
+              <span className="label">(P)전문로그상세 [wdth-auto]</span>
             </h1>
           </div>
         </div>
