@@ -33,7 +33,7 @@ caption {
   position: sticky;
   top: 0;
   z-index: 3;
-  background-color: #00854b;
+  background-color: #00854b; 
   /* border-bottom: 4rem solid #fff; */
 }
 .table-box thead::after {
@@ -99,7 +99,7 @@ caption {
 }
 
 /* --- 테이블 2개 --- */
-.table-wrap.table-duo {
+.table-wrap.table-wrap02 {
   display: flex;
   gap: 20rem;
 }
@@ -177,20 +177,9 @@ caption {
 .data-area li .data.red {
   color: red;
 }
-/* data-area
-  * sizeme
+/* data-area sizemedium
+* page-personal
 */
-.data-area.small {
-
-}
-.data-area.small .name {
-  padding: 0 5rem;
-  border-radius: 20rem;
-  font-size: 33rem;
-}
-.data-area.small .data {
-  font-size: 22rem;
-}
 
 .data-area.medium {
   font-size: 42rem;
@@ -246,46 +235,4 @@ caption {
 
 .personal-wrap .table-wrap {
 
-}
-
-/* page-event */
-.container-section[data-page="page-event"] {
-  width: 1920px;
-}
-.footer-event .inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.footer-event .footer-title {
-  /* font-size: 77rem; */
-  font-size: 60rem;
-  font-weight: 500;
-  letter-spacing: -3.8rem;
-}
-.footer-event .data-area li {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-event .name-area {
-  display: flex;
-}
-
-.footer-event .name-area .title {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 29rem;
-  border-radius: 24rem;
-  font-size: 66rem;
-  color: #00854b;
-  background-color: #fff;
-}
-
-.footer-event .name-box .name {
-  font-size: 77px;
-}
-.footer-event .name-box .name-en {
-  font-size: 68px;
 }
