@@ -404,6 +404,9 @@ function STMGI0201M() {
                                 </div>
                               </div>
                             </div>
+                            <ul className="m-bullets type-disc">
+                              <li>가스분사기 번호가 보이도록 이미지를 등록해주세요.</li>
+                            </ul>
                           </td>
 
                         </tr>
