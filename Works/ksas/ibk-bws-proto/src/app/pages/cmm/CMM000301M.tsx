@@ -96,9 +96,181 @@ function CMM000301M() {
 
   return (
     <>
-      <div className="roles page-index" data-div-role="0" style={{ background: 'var(--color-ground-70)' }}>
-        <div className="div-temp" style={{  }}>
-          <img src={require("assets/images/temp/CMM000301M_010.png")} alt="" />
+      <div className="roles page-home" data-div-role="0">
+        <div className="div-home">
+          <div className="home-primary">
+
+            <div className="home-header">
+              헤더
+            </div>
+
+            <div className="home-group _task">
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    <div className="heading">
+                      <strong className="label">나의 미처리 업무</strong>
+                    </div>
+                    <div className="data">
+                      <span className="value">3</span>
+                      <span className="units">건</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="center">
+                  <div className="banner"></div>
+                </div>
+              </div>
+
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+            </div>
+
+            <div className="home-group _ship">
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+            </div>
+
+            <div className="home-group _notice">
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="home-secondary">
+
+            <div className="home-group _setting">
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+            </div>
+
+            <div className="home-group _watch">
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+            </div>
+
+            <div className="home-group _quick">
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+
+              <div className="home-section">
+                <div className="header">
+                  <div className="primary">
+                    ddddd
+                  </div>
+                </div>
+
+                <div className="center">
+                  dddddddddddddddddddddddd
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </>
