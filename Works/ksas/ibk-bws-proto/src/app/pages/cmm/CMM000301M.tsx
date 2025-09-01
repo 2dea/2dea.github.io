@@ -105,35 +105,113 @@ function CMM000301M() {
             </div>
 
             <div className="home-group _task">
-              <div className="home-section">
+
+              <div className="home-section _my">
                 <div className="header">
                   <div className="primary">
                     <div className="heading">
                       <strong className="label">나의 미처리 업무</strong>
                     </div>
                     <div className="data">
-                      <span className="value">3</span>
+                      <span className="value">4,444</span>
                       <span className="units">건</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="center">
-                  <div className="banner"></div>
+                  <div className="contain">
+                    <table className="table">
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
+
+                      <tbody>
+                      {[...Array(3)].map((e, idx) => (
+                      <>
+                        <tr key={idx}>
+                          <td>
+                            <a href="javascript:" className="subject">
+                              <span className="main">외화 자금현송명령부 미등록</span>
+                              <em className="category">행내등기·우편물</em>
+                            </a>
+                          </td>
+                          <td>
+                            <div className="auth">
+                              <span className="main">홍길동</span>
+                              <em className="position">대리</em>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="data">
+                              <span className="value">4,444</span>
+                              <span className="units">건</span>
+                            </div>
+                          </td>
+                        </tr>
+                      </>
+                      ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
 
-              <div className="home-section">
+              <div className="home-section _branch">
                 <div className="header">
                   <div className="primary">
-                    ddddd
+                    <div className="heading">
+                      <strong className="label">나의 미처리 업무</strong>
+                    </div>
+                    <div className="data">
+                      <span className="value">4,444</span>
+                      <span className="units">건</span>
+                    </div>
                   </div>
                 </div>
 
                 <div className="center">
-                  dddddddddddddddddddddddd
+                  <div className="contain">
+                    <table className="table">
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
+
+                      <tbody>
+                      {[...Array(24)].map((e, idx) => (
+                      <>
+                        <tr key={idx}>
+                          <td>
+                            <a href="javascript:" className="subject">
+                              <span className="main">외화 자금현송명령부 미등록</span>
+                              <em className="category">행내등기·우편물</em>
+                            </a>
+                          </td>
+                          <td>
+                            <div className="auth">
+                              <span className="main">홍길동</span>
+                              <em className="position">대리</em>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="data">
+                              <span className="value">4,444</span>
+                              <span className="units">건</span>
+                            </div>
+                          </td>
+                        </tr>
+                      </>
+                      ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
+
             </div>
 
             <div className="home-group _ship">
