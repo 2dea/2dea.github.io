@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 원화현수송 > 자금현수송노선업로드 ~ (LP)현송원관리
+ * @description 자금현수송 > 원화현수송 > 자금현수송노선업로드 ~ (LP)현송대행지시서 스캔
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTCT1501P02() {
+function FMTCT1501P01() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -92,7 +92,7 @@ function FMTCT1501P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,7 +101,7 @@ function FMTCT1501P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">현송원관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">현송대행지시서 스캔</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -111,24 +111,43 @@ function FMTCT1501P02() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`직원번호`} require={false} />
+                    <Label label={`현송일자`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                      <div className="o-form _input type-date mode-required wdth-50">
+                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
                       </div>
                     </div>
                   </div>
 
                   <div className="o-field">
-                    <Label label={`사진등록`} require={false} />
+                    <Label label={`스캔여부`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`구분`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`노선명`} require={false} />
+                    <div className="fields">
+                      <div className="fields">
+                        <div className="o-form _input wdth-50">
+                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                          <i aria-hidden="true"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -142,7 +161,7 @@ function FMTCT1501P02() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">현송원 내역</span></h4>
+                  <h4 className="o-heading level2"><span className="label">현송대행지시서</span></h4>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -154,18 +173,14 @@ function FMTCT1501P02() {
 
                   <div className="m-binds">
                     <div className="group">
-                      <CommonButton label="일괄양식 다운로드" className="_normal" icon="excel-download-label" />
-                      <CommonButton label="일괄양식 업로드" className="_normal" icon="excel-upload-label" />
-                    </div>
-
-                    <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
                       <ImageButton label="목록출력" icon="print" />
                     </div>
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-7i">
+                <div className="main _primary">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -178,137 +193,54 @@ function FMTCT1501P02() {
                           <col />
                           <col />
                           <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송업체</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">스캔여부</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송대행지시서 관리</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종 등록자</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">스캔</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사진등록</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
-                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
-                              <td>{idx + 1}</td>
-                              <td>000001</td>
-                              <td>홍길동</td>
-                              <td><span className="o-digit type-tel">02-729-7610</span></td>
-                              <td>Y</td>
-                              <td>홍길동</td>
-                              <td><span className="o-digit type-date">9999-12-31</span></td>
-                            </tr>
+                            <>
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
+                                <td><span className="o-digit type-date">2025-12-25</span></td>
+                                <td>1노선</td>
+                                <td className="g-start">(주)앤비앤코퍼레이션</td>
+                                <td>일반 노선</td>
+                                <td>Y</td>
+                                <td><CommonButton label="BPR 조회" className="_normal" /></td>
+                                <td><CommonButton label="BPR 스캔" className="_normal" /></td>
+                                <td>012345</td>
+                                <td>홍길동</td>
+                              </tr>
+                            </>
                           ))}
                         </tbody>
                       </table>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">현송원 정보</span></h5>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="신규" className="_create" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
-
-                      <tbody>
-                        <tr>
-                          <th colSpan={1} rowSpan={3}>
-                            <Label label={`사진등록`} require={false} />
-                          </th>
-                          <td colSpan={1} rowSpan={3}>
-                            <div className="m-flex-list">
-                              <div className="m-upload-image">
-                                <div className="main">
-                                  <div className="o-object o-view-image ratio-portrait h-160">
-                                    {/* <img src={require("assets/images/media/STMKY0201P03_010.png")} alt="" /> */}
-                                    {/* <img src={require("assets/images/media/BEXPM0101P01_010.png")} alt="" /> */}
-                                    {/* <img src={require("assets/images/media/STMPR0101P02_010.png")} alt="" /> */}
-                                    <img src={require("assets/images/temp/FMTCT0201P02_010.jpg")} alt="" />
-                                    {/* <img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" /> */}
-                                  </div>
-                                </div>
-                                <div className="binds">
-                                  <CommonButton label="파일삭제" className="_normal" />
-                                  <CommonButton label="파일선택" className="_normal" />
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <th colSpan={1}>
-                            <Label label={`직원번호`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`직원명`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`전화번호`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required wdth-50">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
                 </div>
               </div>
 
@@ -320,7 +252,6 @@ function FMTCT1501P02() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
@@ -331,7 +262,7 @@ function FMTCT1501P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)현송원관리 [wdth-40p(w770)]</span>
+              <span className="label">(P)현송대행지시서 스캔 [wdth-50p(w1150)]</span>
             </h1>
           </div>
         </div>
@@ -354,4 +285,4 @@ function FMTCT1501P02() {
   );
 }
 
-export default FMTCT1501P02;
+export default FMTCT1501P01;

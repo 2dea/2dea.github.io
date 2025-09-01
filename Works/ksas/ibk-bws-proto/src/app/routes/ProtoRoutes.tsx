@@ -65,6 +65,7 @@ import FMTCT0801P02 from 'app/pages/fmt/FMTCT0801P02';  // 자금현수송 > 원
 
 import FMTCT0901M from 'app/pages/fmt/FMTCT0901M';      // 자금현수송 > 원화현수송     > 원화시재금현황
 import FMTCT1501M from 'app/pages/fmt/FMTCT1501M';      // 자금현수송 > 원화현수송     > 자금현수송노선업로드
+import FMTCT1501P01 from 'app/pages/fmt/FMTCT1501P01';  // 자금현수송 > 원화현수송     > 자금현수송노선업로드 ~ (LP)현송대행지시서 스캔
 import FMTCT1501P02 from 'app/pages/fmt/FMTCT1501P02';  // 자금현수송 > 원화현수송     > 자금현수송노선업로드 ~ (LP)현송원관리
 import FMTCT1001M from 'app/pages/fmt/FMTCT1001M';      // 자금현수송 > 원화현수송     > 자금현수송노선관리
 import FMTCT1001P01 from 'app/pages/fmt/FMTCT1001P01';  // 자금현수송 > 원화현수송     > 자금현수송노선관리 ~ (LP)자금현수송노선등록
@@ -141,6 +142,7 @@ import BSPRQ0301M from 'app/pages/bsp/BSPRQ0301M';      // 중요용지·용도�
 import BSPRQ0301P01 from 'app/pages/bsp/BSPRQ0301P01';  // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정 > (LP)자동배송 품목 등록 및 제외 확인
 import BSPRQ0301P02 from 'app/pages/bsp/BSPRQ0301P02';  // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정 > (LP)자동배송 신청 이력 조회
 import BSPRQ0401M from 'app/pages/bsp/BSPRQ0401M';      // 중요용지·용도품(영업점) > 신청  > 용도품신청
+import BSPRQ0401P01 from 'app/pages/bsp/BSPRQ0401P01';  // 중요용지·용도품(영업점) > 신청  > 용도품신청 > (LP)용도품신청안내
 import BSPRQ0501M from 'app/pages/bsp/BSPRQ0501M';      // 중요용지·용도품(영업점) > 신청  > 용도품신청내역
 
 import BSPFD0101M from 'app/pages/bsp/BSPFD0101M';      // 중요용지·용도품(영업점) > 조회  > 중요용지재고조회
@@ -716,6 +718,7 @@ function ProtoRoutes() {
 
         { path: 'FMTCT0901M',   element: <FMTCT0901M /> },
         { path: 'FMTCT1501M',   element: <FMTCT1501M /> },
+        { path: 'FMTCT1501P01', element: <FMTCT1501P01 /> },
         { path: 'FMTCT1501P02', element: <FMTCT1501P02 /> },
         { path: 'FMTCT1001M',   element: <FMTCT1001M /> },
         { path: 'FMTCT1001P01', element: <FMTCT1001P01 /> },
@@ -794,6 +797,7 @@ function ProtoRoutes() {
         { path: 'BSPRQ0301P01', element: <BSPRQ0301P01 /> },
         { path: 'BSPRQ0301P02', element: <BSPRQ0301P02 /> },
         { path: 'BSPRQ0401M',   element: <BSPRQ0401M /> },
+        { path: 'BSPRQ0401P01', element: <BSPRQ0401P01 /> },
         { path: 'BSPRQ0501M',   element: <BSPRQ0501M /> },
 
         { path: 'BSPFD0101M',   element: <BSPFD0101M /> },

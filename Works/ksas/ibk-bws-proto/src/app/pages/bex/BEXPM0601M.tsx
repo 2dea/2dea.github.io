@@ -175,10 +175,10 @@ function BEXPM0601M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`진행상태`} require={false} />
+                    <Label label={`등록자`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
+                      <div className="o-form _input wdth-50">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -225,8 +225,6 @@ function BEXPM0601M() {
                           <col />
                           <col />
                           <col />
-                          <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -237,8 +235,6 @@ function BEXPM0601M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청시각</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
                           </tr>
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
@@ -250,7 +246,7 @@ function BEXPM0601M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={10}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -265,8 +261,6 @@ function BEXPM0601M() {
                             <td className="g-start">프로세스혁신부</td>
                             <td>0092</td>
                             <td>홍길동</td>
-                            <td>신청</td>
-                            <td><span className="o-digit type-date">2025-12-25</span></td>
                           </tr>
                         ))}
                         </tbody>
@@ -281,21 +275,21 @@ function BEXPM0601M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">우편물 상세내역</span></h3>
 
-                  <div className="o-length">
+                  {/* <div className="o-length">
                     <span className="head">전체</span>
                     <em className="data">
                       <span className="value">8</span>
                       <span className="units">건</span>
                     </em>
-                  </div>
+                  </div> */}
 
                   <div className="m-binds">
 
-                    <div className="group">
+                    {/* <div className="group">
                       <CommonButton label="행추가" className="_normal" />
                       <CommonButton label="행삭제" className="_normal" />
                       <CommonButton label="취소" className="_normal" />
-                    </div>
+                    </div> */}
 
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />

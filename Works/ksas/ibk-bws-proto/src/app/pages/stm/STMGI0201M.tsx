@@ -393,6 +393,10 @@ function STMGI0201M() {
                             <Label label={`가스분사기이미지`} require={true} />
                           </th>
                           <td colSpan={1} rowSpan={5}>
+                            <ul className="m-bullets type-disc">
+                              <li>가스분사기 번호가 보이도록 이미지를 등록해주세요.</li>
+                            </ul>
+
                             <div className="m-flex-list">
                               <div className="m-upload-image type-choose">{/* .m-upload-image.type-choose { @DEV } */}
                                 <div className="main">
@@ -404,9 +408,6 @@ function STMGI0201M() {
                                 </div>
                               </div>
                             </div>
-                            <ul className="m-bullets type-disc">
-                              <li>가스분사기 번호가 보이도록 이미지를 등록해주세요.</li>
-                            </ul>
                           </td>
 
                         </tr>

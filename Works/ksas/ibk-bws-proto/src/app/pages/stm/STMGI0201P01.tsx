@@ -92,7 +92,7 @@ function STMGI0201P01() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -169,7 +169,7 @@ function STMGI0201P01() {
                           </td>
                         </tr>
 
-                        <tr>
+                        {/* <tr>
                           <th colSpan={1}>
                             <Label label={`가스분사기번호`} require={false} />
                           </th>
@@ -183,7 +183,7 @@ function STMGI0201P01() {
                           <td colSpan={1}>
                             이지스-2
                           </td>
-                        </tr>
+                        </tr> */}
 
                       </tbody>
                     </table>
@@ -286,7 +286,7 @@ function STMGI0201P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)폐기등록 [wdth-50p(w960)]</span>
+              <span className="label">(P)폐기등록 [wdth-60p(w1150)]</span>
             </h1>
           </div>
         </div>

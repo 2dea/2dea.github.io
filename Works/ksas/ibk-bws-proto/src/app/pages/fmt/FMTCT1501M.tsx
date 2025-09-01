@@ -115,6 +115,7 @@ function FMTCT1501M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
+                <CommonButton label="현송대행지시서 스캔" className="_solid-primary" />
                 <CommonButton label="현송원관리" className="_solid-primary" />
                 <CommonButton label="저장" className="_solid-primary" />
               </div>
@@ -190,6 +191,16 @@ function FMTCT1501M() {
 
                   <div className="o-field">
                     <Label label={`노선`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`현송업체`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
@@ -284,8 +295,6 @@ function FMTCT1501M() {
                               <col />
                               <col />
                               <col />
-                              <col />
-                              <col />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
@@ -300,7 +309,6 @@ function FMTCT1501M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송업체</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산기준<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
-                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송대행지시서 스캔</span></div></th>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송원(팀장)<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송원 2<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송원 3<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
@@ -311,8 +319,6 @@ function FMTCT1501M() {
                               <tr>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
@@ -329,7 +335,7 @@ function FMTCT1501M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={26}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={24}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -437,8 +443,6 @@ function FMTCT1501M() {
                               <col />
                               <col />
                               <col />
-                              <col />
-                              <col />
                             </colgroup>
 
                             <thead className="p-datatable-thead">
@@ -453,7 +457,6 @@ function FMTCT1501M() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송업체</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산기준</span></div></th>
-                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송대행지시서 스캔</span></div></th>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송원(팀장)<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송원 2<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송원 3<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
@@ -464,8 +467,6 @@ function FMTCT1501M() {
                               <tr>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">조회</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                                 <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화번호</span></div></th>
