@@ -101,7 +101,7 @@ function BSPRQ0401P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">중요용지신청 안내</span></h3>}
+        header={<h3 className="o-heading"><span className="label">용도품신청 안내</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -239,7 +239,7 @@ function BSPRQ0401P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)알림발송 [wdth-50p(w960)]</span>
+              <span className="label">(P)용도품신청안내 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>

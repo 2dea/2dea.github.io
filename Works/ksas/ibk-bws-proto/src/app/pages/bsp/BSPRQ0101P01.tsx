@@ -239,7 +239,7 @@ function BSPRQ0101P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)알림발송 [wdth-50p(w960)]</span>
+              <span className="label">(P)중요용지신청안내 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
