@@ -127,6 +127,7 @@ function BSPDU0201M() {
 
               <div className="group _primary">
                 <CommonButton label="오손사유변경" className="_lined-primary" />
+                <CommonButton label="취소" className="_cancel" />
               </div>
             </div>
           </div>

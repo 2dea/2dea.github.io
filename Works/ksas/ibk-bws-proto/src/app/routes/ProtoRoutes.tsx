@@ -179,11 +179,9 @@ import BSPDU0401M from 'app/pages/bsp/BSPDU0401M';      // 중요용지·용도�
 import BSPDU0401P02 from 'app/pages/bsp/BSPDU0401P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(영업점) ~ (LP)사고보고등록
 import BSPDU0501M from 'app/pages/bsp/BSPDU0501M';      // 중요용지·용도품(영업점) > 폐기    > 중요용지사고보고(본부)
 
-
-
-
 import BSPDU0301P02 from 'app/pages/bsp/BSPDU0301P02';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ 품목폐지폐기등록
 import BSPDU0301P03 from 'app/pages/bsp/BSPDU0301P03';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ 온누리상품권스캔등록
+import BSPDU0301P04 from 'app/pages/bsp/BSPDU0301P04';  // 중요용지·용도품(영업점) > 폐기    > 중요용지일괄폐기 ~ 온누리상품권 스캔내역
 
 
 // proto 중요용지·용도품(본부)
@@ -638,7 +636,8 @@ import ADMRC0401M from 'app/pages/adm/ADMRC0401M';      // 공통·결재 > 대�
 import ADMRC0401P01 from 'app/pages/adm/ADMRC0401P01';  // 공통·결재 > 대사관리      > 대금정산모니터링 ~ (LP)대금정산상세
 
 import ADMRC0501M from 'app/pages/adm/ADMRC0501M';      // 공통·결재 > 대사관리	     > 수입인지정산모니터링
-import ADMNT0101M from 'app/pages/adm/ADMNT0101M';      // 공통·결재 > 공지사항
+import ADMNT0101M from 'app/pages/adm/ADMNT0101M';      // 공통·결재 > 공지사항      > 공지사항
+import ADMNT0201M from 'app/pages/adm/ADMNT0201M';      // 공통·결재 > 공지사항      > 공지사항관리
 import ADMQA0101M from 'app/pages/adm/ADMQA0101M';      // 공통·결재 > Q/A
 
 function ProtoRoutes() {
@@ -830,6 +829,7 @@ function ProtoRoutes() {
         { path: 'BSPDU0301P01', element: <BSPDU0301P01 /> },
         { path: 'BSPDU0301P02', element: <BSPDU0301P02 /> },
         { path: 'BSPDU0301P03', element: <BSPDU0301P03 /> },
+        { path: 'BSPDU0301P04', element: <BSPDU0301P04 /> },
 
         { path: 'BSPDU0401M', element: <BSPDU0401M /> },
         { path: 'BSPDU0401P02', element: <BSPDU0401P02 /> },
@@ -1302,6 +1302,7 @@ function ProtoRoutes() {
 
         { path: 'ADMRC0501M',   element: <ADMRC0501M /> },
         { path: 'ADMNT0101M',   element: <ADMNT0101M /> },
+        { path: 'ADMNT0201M',   element: <ADMNT0201M /> },
 
         { path: 'ADMQA0101M',   element: <ADMQA0101M /> },
       ],

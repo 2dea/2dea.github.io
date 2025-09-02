@@ -109,6 +109,10 @@ function BSPDU0201P04() {
 
               <div className="o-section">
 
+                <div className="m-header">
+                  <h3 className="o-heading level3"><span className="label">오손등록 상세</span></h3>
+                </div>
+
                 <div className="main">
                   <form className="m-data-form">
                     <table className="table">
