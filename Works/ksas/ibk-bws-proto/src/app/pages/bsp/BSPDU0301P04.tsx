@@ -190,8 +190,8 @@ function BSPDU0301P04() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기수량</span></div></th>
                             <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
-                            {/* <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">ㅇㅇ</span></div></th> */}
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title"></span></div></th>
                           </tr>
                         </thead>
 

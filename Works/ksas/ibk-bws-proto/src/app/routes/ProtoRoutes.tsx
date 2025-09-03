@@ -634,8 +634,9 @@ import ADMRC0201M from 'app/pages/adm/ADMRC0201M';      // 공통·결재 > 대�
 import ADMRC0301M from 'app/pages/adm/ADMRC0301M';      // 공통·결재 > 대사관리	     > 창구로인도(비호스트)
 import ADMRC0401M from 'app/pages/adm/ADMRC0401M';      // 공통·결재 > 대사관리	     > 대금정산모니터링
 import ADMRC0401P01 from 'app/pages/adm/ADMRC0401P01';  // 공통·결재 > 대사관리      > 대금정산모니터링 ~ (LP)대금정산상세
-
 import ADMRC0501M from 'app/pages/adm/ADMRC0501M';      // 공통·결재 > 대사관리	     > 수입인지정산모니터링
+import ADMRC0601M from 'app/pages/adm/ADMRC0601M';      // 공통·결재 > 대사관리	     > 중요용지재고입력
+
 import ADMNT0101M from 'app/pages/adm/ADMNT0101M';      // 공통·결재 > 공지사항      > 공지사항
 import ADMNT0201M from 'app/pages/adm/ADMNT0201M';      // 공통·결재 > 공지사항      > 공지사항관리
 import ADMQA0101M from 'app/pages/adm/ADMQA0101M';      // 공통·결재 > Q/A
@@ -1299,8 +1300,9 @@ function ProtoRoutes() {
         { path: 'ADMRC0301M',   element: <ADMRC0301M /> },
         { path: 'ADMRC0401M',   element: <ADMRC0401M /> },
         { path: 'ADMRC0401P01', element: <ADMRC0401P01 /> },
+        { path: 'ADMRC0501M', element: <ADMRC0501M /> },
+        { path: 'ADMRC0601M', element: <ADMRC0601M /> },
 
-        { path: 'ADMRC0501M',   element: <ADMRC0501M /> },
         { path: 'ADMNT0101M',   element: <ADMNT0101M /> },
         { path: 'ADMNT0201M',   element: <ADMNT0201M /> },
 
