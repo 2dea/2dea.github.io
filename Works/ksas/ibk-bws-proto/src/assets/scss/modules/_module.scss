@@ -172,6 +172,7 @@
 
 /* Icon Filled */
 .o-icon._arrow-drop-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-down); }
+.o-icon._arrow-drop-right:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-right); }
 .o-icon._arrow-drop-up:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-up); }
 .o-icon._branch:before  { background-color: $tp; background-image: var(--obj-ico-branch); }
 .o-icon._move:before,
@@ -192,6 +193,11 @@
 .o-icon._folder:before  { background-color: $tp; background-image: var(--obj-ico-folder); background-size: 100%; }
 .o-icon._grid-added:before  { background-color: $tp; background-image: var(--obj-ico-grid-added); background-size: 100%; }
 .o-icon._grid-edited:before  { background-color: $tp; background-image: var(--obj-ico-grid-edited); background-size: 100%; }
+.o-icon._home-aside-contacts:before  { background-color: $tp; background-image: var(--obj-ico-home-aside-contacts); background-size: 100%; }
+.o-icon._home-aside-qna:before  { background-color: $tp; background-image: var(--obj-ico-home-aside-qna); background-size: 100%; }
+.o-icon._home-set-branch:before  { background-color: $tp; background-image: var(--obj-ico-home-set-branch); background-size: 100%; }
+.o-icon._home-set-notification:before  { background-color: $tp; background-image: var(--obj-ico-home-set-notification); background-size: 100%; }
+.o-icon._home-set-theme:before  { background-color: $tp; background-image: var(--obj-ico-home-set-theme); background-size: 100%; }
 .o-icon._mdi-lock:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); }
 .o-icon._mdi-lock-locked:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); background-position: 25%; }
 .o-icon._new:before  { background-color: $tp; background-image: var(--obj-ico-new); background-size: 100%; }
@@ -370,6 +376,7 @@
 .o-attach:where(.m-upload-file *)  { padding: III(48) III(24); }
 .o-attach:where(.m-upload-file *) .summary  { min-height: calc(var(--lh) * 2); min-height: calc(1lh * 2); margin-bottom: calc(-1 * var(--lh)); margin-bottom: -1lh; }
 .o-attach:where(.layer-wrap.case-upload-excel .m-upload-file *)  { padding: III(24) III(24); }
+.o-attach:where(.style-fit)  { padding: III(24) III(24); }
 
 .o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: III(90); margin: III(3) auto; padding: III(7) III(15); }
 .o-attach:where(.o-grid-table.type-upload:where(.o-section >.main.rows-body-2i >*) *)  { min-height: III(55); }
@@ -953,6 +960,7 @@
 
 
 .m-footer:where(* +:not(.o-section >*))  { margin-top: $gap-element-30; }
+.m-footer:where(.m-data-form.style-rawer >*)  { margin-top: $gap-element-90; }
 
 
 
@@ -1144,7 +1152,10 @@
 .o-button:is([class*=" _solid"], ._create, ._choose):not(._solid, ._inquire):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; }
 .o-button:is([class*=" _lined"], ._delete):not(._normal, ._cancel):not(:disabled, [aria-disabled="true"]):hover:not(:active)  { --theme: #{$color-button1-70}; background-color: var(--color-ground-40); }
 
-.o-button:is(:disabled, [aria-disabled="true"])  { color: var(--theme); filter: opacity(0.4); }
+// .o-button:is(:disabled, [aria-disabled="true"])  { color: var(--theme); filter: opacity(0.4); }
+.o-button:is(:disabled, [aria-disabled="true"]):where([class*=" _texted"])  { color: var(--theme); filter: opacity(0.4); }
+.o-button:is(:disabled, [aria-disabled="true"]):not([class*=" _texted"])  { border-color: $tp; color: var(--color-text-30) !important; background: var(--color-button-disabled); }
+.o-button:is(:disabled, [aria-disabled="true"]):not([class*=" _texted"]) .o-icon:before  { background-position: 0% !important; }
 
 
 .o-button:where(.m-binds.type-start *),
@@ -1186,7 +1197,7 @@
 
 .m-binds  { display: flex; align-items: center; justify-content: space-between; gap: $gap-element-70 calc($gap-element-80 * 1); clear: both; }
 .m-binds >*  { flex: 0 1 auto; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: $gap-element-30; }
-.m-binds >* >*  { flex: 0 1 auto; }
+// .m-binds >* >*  { flex: 0 1 auto; }
 
 .m-binds:has(>._utility)  { flex-wrap: wrap; }
 .m-binds:has(>._utility) >*  { flex-wrap: nowrap; }
@@ -1201,7 +1212,7 @@
 
 .m-binds >._around  { flex: 1; }
 .m-binds >._around >*  { flex: 1; }
-.m-binds >._around >* >*  { width: 100%; }
+// .m-binds >._around >* >*  { width: 100%; }
 
 .m-binds >._utility  { justify-content: flex-end; margin-left: auto; }
 
@@ -1724,6 +1735,8 @@
 .o-form.wdth-80  { width: var(--width-80); }
 .o-form.wdth-90  { width: var(--width-90); }
 
+.o-form.basis-100pc  { flex-basis: 100%; }
+
 
 .o-form.mode-string  { border-color: $tp; background: $tp; }
 .o-form.mode-required  { background-color: var(--color-ground-required); }
@@ -1797,7 +1810,7 @@
 
 
 
-.m-mixed-field  { display: flex; align-items: center; gap: $gap-element-90; }
+.m-mixed-field  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-90; gap: $gap-element-30 $gap-element-90; }
 .m-mixed-field .justify-end  { margin-left: auto; }
 
 
@@ -1930,7 +1943,7 @@
 .m-data-form :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
 .m-data-form :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
 .m-data-form :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
-.m-data-form :where(table:not(td *)) tr >*  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-40); border-width: 0 0 $e10; }
+.m-data-form :where(table:not(td *)) tr >*  { --margin-inline: var(--margin-cell-inline); height: var(--height-cell); padding: var(--margin-cell-block) var(--margin-inline); border: 0 solid var(--color-edge-40); border-width: 0 0 var(--edge-cell); }
 // .m-data-form :where(table:not(td *)) [rowspan]:where(th, td)  { border-right-width: $e10; }
 .m-data-form.style-fill :where(table:not(td *)) tr >*  { --margin-cell-block: #{III(8)}; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1); }
 // .m-data-form :where(table:not(td *)) tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: $color-key1-40; }
@@ -1938,14 +1951,19 @@
 // .m-data-form :where(table:not(td *)) tr >:last-child  { border-right-width: $e10; }
 .m-data-form :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: III(1) var(--margin-headcell-inline); color: $color-text-70; }
 .m-data-form :where(table:not(td *)) th:not(thead >* >*)  { background: var(--color-ground-40); }
-.m-data-form :where(table:not(td *)) [rowspan]:where(th:has(+th), td:has(+td))  { border-right-width: $e10; }
-.m-data-form :where(table:not(td *)) [rowspan]:where(th:is(th +*), td:is(td +*))  { border-left-width: $e10; }
+.m-data-form :where(table:not(td *)) [rowspan]:where(th:has(+th), td:has(+td))  { border-right-width: var(--edge-cell); }
+.m-data-form :where(table:not(td *)) [rowspan]:where(th:is(th +*), td:is(td +*))  { border-left-width: var(--edge-cell); }
 
 .m-data-form :where(table:not(td *)) td:where(.m-data-form.type-data *)  { --bold-40: 475; font-weight: var(--bold-40); font-family: var(--typo-tnum); word-break: break-all; }
 
 .m-data-form :where(table:not(td *)) tr >.surface  { background-color: var(--color-ground-40); }
 
 .m-data-form :where(table:not(td *))  { border-style: solid hidden; border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
+
+.m-data-form.style-rawer :where(table:not(td *)) tr >*  { --margin-cell-block: #{III(6)}; --margin-cell-inline: #{III(0)}; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 0); border-bottom-width: 0; }
+.m-data-form.style-rawer :where(table:not(td *)) tr >th  { vertical-align: top; padding-left: 0; padding-top: III(12); background-color: $tp; }
+.m-data-form.style-rawer :where(table:not(td *))  { margin: III(-6) 0; border-style: hidden hidden; }
+
 
 
 
@@ -2157,7 +2175,8 @@
 :has(>table):where(.o-grid-table, .o-grid-table *)  { border: var(--edge) solid var(--color-edge-40); }
 // .o-grid-table .c-point-cell  { color: var(--color-point-orange); }
 .o-grid-table .c-point-cell  { background-color: var(--color-ground2-skyblue-40); }
-.o-grid-table .c-divide-edge  { border-right-color: var(--color-key1-70, Navy); }
+// .o-grid-table .c-divide-edge  { border-right-color: var(--color-key1-70, Navy); }
+.o-grid-table .c-divide-edge  { border-right-color: var(--color-edge-40); }
 .o-grid-table .table-container:is(.o-section >.main:not(._primary) *)  { overflow: auto; height: var(--height-section-main); }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >*  { width: 0; }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }  // ### min-width: 0;
@@ -2211,7 +2230,7 @@
 .o-grid-table table >* >tr.subtotal-trow  { background-color: var(--color-ground2-blue-30); }
 .o-grid-table tbody >tr.js_clicked  { background-color: var(--color-grid-selected); background: linear-gradient(90deg, var(--color-grid-point) $e30, var(--color-grid-selected) $e30); }
 // .o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 2; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
-.o-grid-table tr >.js_freeze-column-last  { position: sticky; z-index: 2; border-right: $e30 double var(--color-point-yellow); background-color: inherit; }
+.o-grid-table tr >.js_freeze-column-last  { position: sticky; z-index: 2; /* border-right: $e10 solid var(--color-key1-70); */ background-color: inherit; }
 
 // .o-grid-table tbody >tr:is(:nth-child(3), :nth-child(6))  { background-color: var(--color-grid-selected); }
 // .o-grid-table tbody >tr:is(:nth-child(9), :nth-child(12))  { background-color: var(--color-ground2-blue-40); }
@@ -2293,6 +2312,7 @@
 }
 .o-calendar .table-container  { border: var(--edge) solid var(--color-edge-40); }
 .o-calendar :has(table)  { flex: 1 0 0; display: flex; flex-direction: column; min-height: 0; }
+.o-calendar :has(table)  { flex: 0 1 auto; }
 .o-calendar table  { table-layout: fixed; border-collapse: separate; width: 100%; min-height: 100%; white-space: normal; }
 .o-calendar table tr >*  { height: var(--height); padding: 0; border: 0 solid var(--color-edge-30); }
 .o-calendar table thead tr >*  { --height: var(--height-headcell); border-right: var(--edge) solid var(--color-edge-40); }
@@ -2422,6 +2442,8 @@
 
 
 
+
+.m-footer:where(.o-section >*) >* +*  { margin-top: $margin-section-20; }
 
 .m-filter-form:not(:only-child)  { margin-bottom: $margin-section-50; }
 .m-filter-form:has(+.o-board.style-fit)  { margin-bottom: $margin-section-20; }

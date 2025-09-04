@@ -289,9 +289,9 @@ function CMP001501P() {
                     <div className="o-field">
                       <div className="fields">
 
-                        <span className="inner-binds type-find">
-                          <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                          <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                        <span className="inner-binds type-move">
+                          <ImageButton label="상위 이동" icon="page-up" iconWidth={50} />
+                          <ImageButton label="하위 이동" icon="page-down" iconWidth={50} />
                         </span>
 
                         {/* <div className="o-form _input wdth-50">
@@ -370,9 +370,9 @@ function CMP001501P() {
                     <div className="o-field">
                       <div className="fields">
 
-                        <span className="inner-binds type-find">
-                          <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
-                          <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                        <span className="inner-binds type-move">
+                          <ImageButton label="상위 이동" icon="page-up" iconWidth={50} />
+                          <ImageButton label="하위 이동" icon="page-down" iconWidth={50} />
                         </span>
                       </div>
                     </div>
@@ -412,7 +412,7 @@ function CMP001501P() {
                 <div className="m-header">
                   <h4 className="o-heading level2">
                     <span className="label">부점장 부재 시 승인의견</span>
-                    <InputCheck label="체크" labelHidden />
+                    <InputCheck label="사용" labelHidden />
                   </h4>
 
                   <div className="m-binds">
@@ -492,6 +492,19 @@ function CMP001501P() {
                 </div>
 
                 <div className="m-footer">
+                  <div className="o-board type-a">
+                    <div className="board-container">
+                      <div className="m-header">
+                        <strong className="o-heading"><span className="label">예외등록 처리대상</span></strong>
+                      </div>
+
+                      <ol className="m-bullets type-decimal level1">
+                        <li>중요용지 출납책임자(팀장원칙) 사무분장이 미등록된 경우(중요용지관리세칙 제 6조 참조)</li>
+                        <li>중요용지 출납책임자 및 지점장 부재중(단순 자리비움 제외)이거나 당일자 근태 등록된 경우</li>
+                      </ol>
+                    </div>
+                  </div>
+
                   <ul className="m-bullets type-disc">
                     <li className="c-color-strong"><em>[자금현수송 신청] 부점장 부재 시 반드시 부점장과 연락 후 승인내용을 입력해주세요.</em></li>
                   </ul>

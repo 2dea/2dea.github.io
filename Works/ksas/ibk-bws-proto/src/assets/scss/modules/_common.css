@@ -182,6 +182,7 @@
   --design-button3-strong:              var(--palette-gray-700);
 
   --design-button-hover:                var(--palette-dimmed-008);
+  --design-button-disabled:             var(--palette-mono-200);
 
   --design-grid-selected:               var(--palette-green-200);
   --design-grid-point:                  var(--palette-green-500);
@@ -312,6 +313,8 @@
   --color-button3-40:           var(--design-button3-normal);
   --color-button3-70:           var(--design-button3-strong);
 
+  --color-button-disabled:      var(--design-button-disabled);
+
   --color-grid-selected:        var(--design-grid-selected);
   --color-grid-point:           var(--design-grid-point);
   --color-grid-evenrow:         var(--design-grid-evenrow);
@@ -332,6 +335,7 @@
 
   --dropshadow-40:              0 0 1px var(--color-shadow-alpha-10), 0 calc(var(--rem) * 1) 4px var(--color-shadow-alpha-10), 0 calc(var(--rem) * 2) 8px var(--color-shadow-alpha-20);
   --dropshadow-70:              0 0 4px var(--color-shadow-alpha-10), 0 calc(var(--rem) * 4) 8px var(--color-shadow-alpha-10), 0 calc(var(--rem) * 6) 12px var(--color-shadow-alpha-20);
+  --dropshadow-frozen:          inset calc(var(--rem) * 12) 0 8px -8px var(--color-shadow-alpha-20);
 
 
   --radius-50:                  4;

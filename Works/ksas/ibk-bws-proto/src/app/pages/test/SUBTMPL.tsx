@@ -871,6 +871,7 @@ function SUBTMPL() {
                             <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _arrow-drop-down wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _arrow-drop-right wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-drop-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _branch wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _move wdth-50" aria-hidden="true"></i>
@@ -902,6 +903,11 @@ function SUBTMPL() {
                                 <i className="o-icon _folder wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-added wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-edited wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-aside-contacts wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-aside-qna wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-set-branch wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-set-notification wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-set-theme wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-lock-locked wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _new wdth-50" aria-hidden="true"></i>

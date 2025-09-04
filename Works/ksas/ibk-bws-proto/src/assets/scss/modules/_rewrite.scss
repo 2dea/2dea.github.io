@@ -891,9 +891,24 @@
     .p-x-frozen-last {
       position: sticky;
       z-index: 2;
-      border-right: $e30 double var(--color-point-yellow);
+      // border-right: $e30 double var(--color-point-yellow);
+      // border-right: $e10 solid var(--color-key1-70);
       background-color: inherit;
       // position: sticky; z-index: 2; left: 0;
+
+      &:after  {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: calc(-1 * #{$e10});
+        transform: translateX(100%);
+        width: III(32);
+        box-shadow: $dropshadow-frozen;
+        pointer-events: none;
+        will-change: transform;
+        transition: box-shadow 0.3s;
+      }
     }
 
     tr:has(>td.p-x-cell-blank) {

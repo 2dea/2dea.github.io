@@ -1168,7 +1168,7 @@ function TMPL() {
                                 <li><a href="javascript:" className="o-link _normal">Links (._normal)</a></li>
                                 <li><a href="javascript:" className="o-link texted-button _normal">Links (a.texted-button._normal)(미사용)</a></li>
                                 <li><a href="javascript:" className="o-link texted-button _primary">Links (a.texted-button._primary)</a></li>
-                                <li><button type="button" className="o-link texted-button _normal">Links (button.texted-button._primary)(미사용)</button></li>
+                                <li><button type="button" className="o-link texted-button _normal">Links (button.texted-button._normal)(미사용)</button></li>
                                 <li><button type="button" className="o-link texted-button _primary">Links (button.texted-button._primary)(미사용)</button></li>
                               </ul>
                             </td>

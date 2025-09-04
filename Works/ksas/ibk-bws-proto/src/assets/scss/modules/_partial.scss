@@ -7,11 +7,121 @@
 
 .page-home:is(.dom-main *)  { display: flex; flex-direction: column; background: var(--color-ground-70); }
 .page-home .div-home  { flex: 1; padding: $margin-layout-block $margin-layout-inline; padding-right: calc($margin-layout-inline - $width-scrollbar); }
-.page-home .div-home  { display: grid; grid-template-columns: 2fr 1fr; }
-.page-home .div-home >*  { min-width: 0; min-height: 0; }
-.page-home .div-home >.home-header  { grid-column: 1 /2; grid-row: 1 /2; }
-.page-home .div-home >.home-primary  { grid-column: 1 /2; grid-row: 2 /3; }
-.page-home .div-home >.home-secondary  { grid-column: 2 /3; grid-row: 1 /span 2; }
+// .page-home .div-home  { display: grid; grid-template-columns: 2fr 1fr; }
+// .page-home .div-home >*  { min-width: 0; min-height: 0; }
+// .page-home .div-home >.home-header  { grid-column: 1 /2; grid-row: 1 /2; }
+// .page-home .div-home >.home-primary  { grid-column: 1 /2; grid-row: 2 /3; }
+// .page-home .div-home >.home-secondary  { grid-column: 2 /3; grid-row: 1 /span 2; }
+.page-home .div-home  { display: flex; gap: $margin-section-50; }
+.page-home .div-home >*  { flex: 0 1 auto; min-width: 0; width: calc((100% * 1 / 3) - ($margin-section-50 / 2)); }
+.page-home .div-home >*  { display: flex; flex-direction: column; gap: $margin-section-50; }
+.page-home .div-home >.home-primary  { flex: 1; }
+.page-home .div-home >.home-primary  { padding-top: III(16); }
+.page-home .div-home >.home-secondary  { padding-top: III(24); }
+
+.page-home .home-header  { display: flex; align-items: flex-end; gap: $margin-section-50; }
+.page-home .home-header >*  { flex: none; display: flex; gap: $gap-element-70; min-width: 0; }
+.page-home .home-header >.primary  { flex: 1; flex-direction: column; }
+.page-home .home-header .welcome  { font-weight: $bold-70; font-size: $font-80; line-height: $line-80; }
+.page-home .home-header .controls >*  { display: flex; align-items: center; gap: $gap-whitespace-50; }
+.page-home .home-header .controls >* >.head  { font-weight: $bold-70; color: var(--color-text-70); }
+.page-home .home-header .binds  { display: flex; align-items: center; gap: $gap-element-70; }
+.page-home .home-header .binds .button  { font-weight: $bold-70; display: flex; align-items: center; gap: $gap-element-70; height: III(54); padding: 0 III(15); border: $e10 solid $tp; background: var(--color-ground); border-radius: $radius-70; }
+.page-home .home-header .binds .button >.label  { order: -1; }
+.page-home .home-header .binds .button .o-icon:before  { font-size: III(30); }
+
+.page-home .home-group  { min-height: 0; }
+.page-home .home-group  { display: flex; gap: $margin-section-50; }
+.page-home .home-group >*  { flex: 1; min-width: 0; }
+
+.page-home .home-section  { display: flex; flex-direction: column; position: relative; }
+.page-home .home-section:where(.home-group:not(._setting) *)  { --m-margin-block: #{$margin-section-70}; --m-margin-block-start: #{$margin-section-40}; --m-margin-inline: #{$margin-section-70}; background: var(--color-ground); border-radius: $radius-70; }
+.page-home .home-section >*  { min-height: 0; }
+.page-home .home-section >:first-child  { border-start-start-radius: inherit; border-start-end-radius: inherit; }
+.page-home .home-section >.header  { display: flex; align-items: center; gap: $gap-element-90; }
+.page-home .home-section >.header >*  { min-width: 0; }
+.page-home .home-section >.header >.primary  { flex: 1; font-weight: $bold-70; display: flex; align-items: center; gap: $gap-element-90; }
+.page-home .home-section >.header >.primary >*  { min-width: 0; }
+.page-home .home-section >.header .heading  { flex: 1; }
+.page-home .home-section >.header .heading >.label:not(.home-group:where(._task, ._notice, ._setting) *)  { font-size: $font-70; line-height: $line-70; color: var(--color-text-70); }
+.page-home .home-section >.center  { flex: 1; display: flex; flex-direction: column; }
+.page-home .home-section >.center >.contain  { flex: 1; flex-direction: column; }
+.page-home .home-section >.center >.contain:not(:empty)  { display: flex; }
+
+.page-home :where(.home-group:not(._notice)) .home-section >.header  { padding: var(--m-margin-block) var(--m-margin-inline) 0; }
+.page-home :where(.home-group:not(._notice)) .home-section >.center >.contain  { padding: var(--m-margin-block-start) var(--m-margin-inline) var(--m-margin-block); }
+
+.page-home :where(.home-group:where(._task, ._quick))  { flex: 1; flex-basis: III(256); }
+.page-home :where(.home-group:where(._task, ._quick)) .home-section >.center >.contain  { overflow: auto; overflow: auto scroll; padding-right: calc(var(--m-margin-inline) - $width-scrollbar); }
+
+.page-home :is(.home-group:where(._task)) .home-section >.header  { padding: var(--m-margin-block) var(--m-margin-inline); color: var(--color-text-00); background: var(--color-key1-90); }
+.page-home :is(.home-group:where(._task)) .home-section._my >.header  { background-color: var(--color-key1-40); }
+.page-home :is(.home-group:where(._task)) .home-section._branch >.header  { background-color: var(--color-key1-70); }
+.page-home :is(.home-group:where(._task)) .home-section >.header .heading >.label  { font-size: $font-60; line-height: $line-60; }
+.page-home :is(.home-group:where(._task)) .home-section >.header .data >.value  { font-size: $font-90; line-height: $line-90; }
+.page-home :is(.home-group:where(._task)) .home-section >.header .data >.units  { @include getGlobalHidden(1); }
+.page-home :is(.home-group:where(._task)) .home-section >.center >.contain  { padding-left: $margin-section-50; }
+
+.page-home :is(.home-group:where(._task)) .table  { table-layout: fixed; border-collapse: collapse; width: 100%; }
+.page-home :is(.home-group:where(._task)) .table .subject  { display: flex; align-items: center; gap: $gap-element-80; }
+.page-home :is(.home-group:where(._task)) .table .subject >*  { flex: none; min-width: 0; }
+.page-home :is(.home-group:where(._task)) .table .subject .main  { font-weight: $bold-70; }
+.page-home :is(.home-group:where(._task)) .table .subject .main  { @include inc-ellipsis2(); flex: 0 1 auto; }
+.page-home :is(.home-group:where(._task)) .table .subject .category  { font-size: $font-30; line-height: $line-30; color: var(--color-text-30); }
+.page-home :is(.home-group:where(._task)) .table .subject:before  { content: ""; flex: none; font-size: $height-icon-30; display: block; width: 1em; height: 1em; background: red; }
+.page-home :is(.home-group:where(._task)) .table .auth  { font-size: $font-30; line-height: $line-30; color: var(--color-text-30); }
+.page-home :is(.home-group:where(._task)) .table .auth .position:before  { content: var(--utf-nbsp); }
+.page-home :is(.home-group:where(._task)) .table .data .value  { font-weight: $bold-70; color: var(--color-key1-40); }
+.page-home :is(.home-group:where(._task)) .table tr:not(:last-child)  { border-bottom: $e10 solid var(--color-edge-30); }
+.page-home :is(.home-group:where(._task)) .table tr >*  { padding: III(12) III(4); border: 0; white-space: nowrap; }
+.page-home :is(.home-group:where(._task)) .table tr >:first-child  { padding-left: 0; }
+.page-home :is(.home-group:where(._task)) .table tr >:last-child  { padding-right: 0; }
+
+.page-home :is(.home-group:where(._ship))  { gap: $gap-element-70; }
+.page-home :is(.home-group:where(._ship)) .home-section:before  { content: ""; position: absolute; right: 0; bottom: 0; width: III(135); height: III(128); background: url('../../../../src/assets/images/media/CMM000301M_010.png') no-repeat 0 /300%; }
+.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-true):before  { background-position: 50%; }
+.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-false):before  { background-position: 100%; }
+.page-home :is(.home-group:where(._ship)) .home-section >.header  { @include getGlobalHidden(); }
+.page-home :is(.home-group:where(._ship)) .home-section >.center >.contain  { padding-top: var(--m-margin-block); padding-bottom: III(20); }
+.page-home :is(.home-group:where(._ship)) .d-shipboard .wbr  { display: block; }
+.page-home :is(.home-group:where(._ship)) .d-shipboard .emph  { font-weight: $bold-70; color: var(--color-key1-40); }
+.page-home :is(.home-group:where(._ship)) .d-shipboard >.main  { --lh: var(--text-height-para); font-size: $font-60; line-height: var(--lh); }
+.page-home :is(.home-group:where(._ship)) .d-shipboard >.binds  { display: flex; gap: $gap-element-30; margin-top: $gap-element-80; }
+
+.page-home :is(.home-group:where(._notice)) .home-section  { flex-direction: row; align-items: center; gap: $gap-element-80; padding: $margin-section-40 var(--m-margin-inline); }
+.page-home :is(.home-group:where(._notice)) .home-section >*  { min-width: 0; }
+.page-home :is(.home-group:where(._notice)) .home-section >.center >.contain  { flex-direction: row; align-items: center; gap: $gap-element-80; }
+.page-home :is(.home-group:where(._notice)) .home-section >.aside  { display: flex; align-items: center; gap: $gap-element-90; }
+.page-home :is(.home-group:where(._notice)) .home-section >.aside:before  { content: ""; display: block; width: $e10; height: III(16); background: var(--color-edge-40); }
+.page-home :is(.home-group:where(._notice)) .d-notice  { display: flex; align-items: center; gap: $gap-element-80; padding: III(8) 0; }
+.page-home :is(.home-group:where(._notice)) .d-notice >.main  { @include inc-ellipsis2(); flex: 1; flex-basis: 0; min-width: 0; }
+.page-home :is(.home-group:where(._notice)) .d-notice >.date  { font-size: $font-30; line-height: $line-30; color: var(--color-text-30); }
+.page-home :is(.home-group:where(._notice)) .d-noticelist  { flex: 1; }
+.page-home :is(.home-group:where(._notice)) .d-noticelist  { display: flex; align-items: center; height: calc(1lh + III(8 * 2)); white-space: nowrap; }
+.page-home :is(.home-group:where(._notice)) .d-noticelist +.binds  { display: flex; align-items: center; gap: $gap-element-30; }
+
+.page-home :is(.home-group:where(._setting)) .home-section  { gap: $margin-section-30; }
+
+.page-home :is(.home-group:where(._watch)) .home-section  { min-height: III(244); }
+.page-home :is(.home-group:where(._watch)) .home-section >.center >.contain >:first-child  { flex: 1; }
+.page-home :is(.home-group:where(._watch)) .d-dates  { font-size: $font-30; line-height: $line-30; display: flex; gap: $gap-whitespace-50; }
+.page-home :is(.home-group:where(._watch)) .d-dates >.head  { font-weight: $bold-70; color: var(--color-key1-40); text-transform: uppercase; }
+.page-home :is(.home-group:where(._watch)) .d-watches  { display: flex; flex-direction: column; gap: $gap-element-70; }
+.page-home :is(.home-group:where(._watch)) .d-watches >.header  { display: flex; align-items: center; }
+.page-home :is(.home-group:where(._watch)) .d-watches >.header >.primary  { flex: 1; font-weight: $bold-70; }
+.page-home :is(.home-group:where(._watch)) .d-watches >.header .heading >.label  { color: var(--color-text-70); }
+.page-home :is(.home-group:where(._watch)) .d-watches >.center  { flex: 1; display: flex; flex-direction: column; padding: 0 $gap-element-90; background: var(--color-ground-40); border-radius: $radius-50; }
+.page-home :is(.home-group:where(._watch)) .d-watches .lists  { flex: 1; display: table; border-collapse: collapse; width: 100%; }
+.page-home :is(.home-group:where(._watch)) .d-watches .lists >*  { display: table-row; vertical-align: middle; }
+.page-home :is(.home-group:where(._watch)) .d-watches .lists >:not(:last-child)  { border-bottom: $e10 solid var(--color-edge-40); }
+.page-home :is(.home-group:where(._watch)) .d-watches .lists >* >*  { display: table-cell; vertical-align: inherit; padding: III(6) 0; }
+.page-home :is(.home-group:where(._watch)) .d-watches .lists >* >.head  { font-weight: $bold-70; font-size: $font-30; line-height: $line-30; width: 0; padding-right: III(8); color: var(--color-point-orange); white-space: nowrap; }
+.page-home :is(.home-group:where(._watch)) .d-watchboard  { display: flex; flex-direction: column; gap: $gap-element-70; }
+.page-home :is(.home-group:where(._watch)) .d-watchboard >.main  { flex: 1; display: flex; flex-wrap: wrap; gap: inherit; }
+.page-home :is(.home-group:where(._watch)) .d-watchboard >.main >*  { flex: 1; flex-basis: calc(50% - $gap-element-70 / 2); }
+
+.page-home :is(.home-group:where(._quick)) .home-section >.nav >.m-tab  { padding: var(--m-margin-block-start) var(--m-margin-inline) 0; }
+
 
 
 .m-noticeview  {  }
