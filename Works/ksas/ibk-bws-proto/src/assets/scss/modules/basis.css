@@ -127,6 +127,10 @@
   --text-shadow-radius: 0 0.1ex calc(var(--rem) * 1);
   --text-shadow-color:  rgba(0,0,0, 0.75);
   --text-shadow:        var(--text-shadow-radius) var(--text-shadow-color);
+  --text-shadow-from:   var(--bgcolor, var(--color-ground, Gainsboro));
+  --text-shadow-alpha:  0.75;
+  --text-shadow-color:  rgb(from var(--text-shadow-from) r g b / var(--text-shadow-alpha));
+  --text-shadow:        var(--text-shadow-radius) var(--text-shadow-color);
 
 
   --radius-abs-20:      2px;

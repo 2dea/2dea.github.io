@@ -681,7 +681,142 @@ function CMM000301M() {
                   </TabPanel>
 
                   <TabPanel className="contain m-tabs-panel react-tabs__tab-panel">
-                    grid
+                    <div className="o-section">
+                      <div className="m-header">
+                        <h2 className="o-heading level2"><span className="label">신청정보</span></h2>
+
+                        <div className="m-binds">
+                          <div className="group">
+                            <CommonButton label="우편번호검색" className="_normal" />
+                          </div>
+
+                          <div className="group">
+                            <CommonButton label="행추가" className="_normal" />
+                            <CommonButton label="행삭제" className="_normal" />
+                            <CommonButton label="취소" className="_normal" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="main _primary rows-body-2i">
+                        <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                        <div className="o-grid-table p-datatable">
+                          <div className="table-container p-datatable-wrapper">
+                            <table className="p-datatable-table p-datatable-scrollable-table">
+                              <colgroup>
+                                <col className="wdth-10" />
+                                <col />
+                                <col />
+                                <col />
+                                <col className="wdth-10" />
+                                <col className="wdth-10" />
+                                <col />
+                              </colgroup>
+
+                              <thead className="p-datatable-thead">
+                                <tr>
+                                  <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물종류<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물내용<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신처구분</span></div></th>
+                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">대외수신처</span></div></th>
+                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                                </tr>
+                              </thead>
+
+                              <tbody className="p-datatable-tbody">
+                                <tr className="p-datatable-emptymessage">
+                                  <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                </tr>
+                              </tbody>
+
+                              <tbody className="p-datatable-tbody">
+                                {[...Array(24)].map((e, idx) => (
+                                  <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                    <td><InputCheck label="선택" labelHidden /></td>
+                                    <td>
+                                      <div className="o-field">
+                                        <div className="fields">
+                                          <div className="o-form _select wdth-50">
+                                            <XDropdown appendTo={document.body} className="bind" />
+                                            <i aria-hidden="true"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div className="o-field">
+                                        <div className="fields">
+                                          <div className="o-form _input type-spin wdth-30">
+                                            <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                              decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                            <i aria-hidden="true"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div className="o-field">
+                                        <div className="fields">
+                                          <div className="o-form _input wdth-50">
+                                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                            <i aria-hidden="true"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div className="o-field">
+                                        <div className="fields">
+                                          <div className="o-form _select wdth-50">
+                                            <XDropdown appendTo={document.body} className="bind" />
+                                            <i aria-hidden="true"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div className="o-field">
+                                        <div className="fields">
+                                          <div className="o-form _select wdth-60">
+                                            <XDropdown appendTo={document.body} className="bind" />
+                                            <i aria-hidden="true"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div className="o-field">
+                                        <div className="fields">
+                                          <div className="o-form _input wdth-20">
+                                            <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                            <i aria-hidden="true"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="m-footer">
+                        <ul className="m-bullets type-disc">
+                          <li>우편번호검색은 업무 편의를 위해 제공하는 서비스입니다.</li>
+                        </ul>
+
+                        <div className="binds m-binds">
+                          <div className="group _center">
+                            <CommonButton label="신청" className="_solid-primary" size={70} />
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
                   </TabPanel>
                 </div>
               </Tabs>

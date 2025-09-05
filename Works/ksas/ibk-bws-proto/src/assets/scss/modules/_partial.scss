@@ -12,7 +12,7 @@
 // .page-home .div-home >.home-header  { grid-column: 1 /2; grid-row: 1 /2; }
 // .page-home .div-home >.home-primary  { grid-column: 1 /2; grid-row: 2 /3; }
 // .page-home .div-home >.home-secondary  { grid-column: 2 /3; grid-row: 1 /span 2; }
-.page-home .div-home  { display: flex; gap: $margin-section-50; }
+.page-home .div-home  { display: flex; gap: $margin-section-50; min-width: III(1320); }
 .page-home .div-home >*  { flex: 0 1 auto; min-width: 0; width: calc((100% * 1 / 3) - ($margin-section-50 / 2)); }
 .page-home .div-home >*  { display: flex; flex-direction: column; gap: $margin-section-50; }
 .page-home .div-home >.home-primary  { flex: 1; }
@@ -23,7 +23,7 @@
 .page-home .home-header >*  { flex: none; display: flex; gap: $gap-element-70; min-width: 0; }
 .page-home .home-header >.primary  { flex: 1; flex-direction: column; }
 .page-home .home-header .welcome  { font-weight: $bold-70; font-size: $font-80; line-height: $line-80; }
-.page-home .home-header .controls >*  { display: flex; align-items: center; gap: $gap-whitespace-50; }
+.page-home .home-header .controls >*  { display: flex; align-items: center; gap: $gap-whitespace-50; min-height: $height-form-50; }
 .page-home .home-header .controls >* >.head  { font-weight: $bold-70; color: var(--color-text-70); }
 .page-home .home-header .binds  { display: flex; align-items: center; gap: $gap-element-70; }
 .page-home .home-header .binds .button  { font-weight: $bold-70; display: flex; align-items: center; gap: $gap-element-70; height: III(54); padding: 0 III(15); border: $e10 solid $tp; background: var(--color-ground); border-radius: $radius-70; }
@@ -35,7 +35,8 @@
 .page-home .home-group >*  { flex: 1; min-width: 0; }
 
 .page-home .home-section  { display: flex; flex-direction: column; position: relative; }
-.page-home .home-section:where(.home-group:not(._setting) *)  { --m-margin-block: #{$margin-section-70}; --m-margin-block-start: #{$margin-section-40}; --m-margin-inline: #{$margin-section-70}; background: var(--color-ground); border-radius: $radius-70; }
+.page-home .home-section:where(.home-group:not(._setting) *)  { --m-margin-block: #{$margin-section-70}; --m-margin-block-start: #{$margin-section-40}; --m-margin-inline: #{$margin-section-70}; background: var(--bgcolor, var(--color-ground)); border-radius: $radius-70; }
+.page-home .home-section:where(.home-group:not(._setting) *)  { --bgcolor: var(--color-ground); text-shadow: var(--text-shadow); }
 .page-home .home-section >*  { min-height: 0; }
 .page-home .home-section >:first-child  { border-start-start-radius: inherit; border-start-end-radius: inherit; }
 .page-home .home-section >.header  { display: flex; align-items: center; gap: $gap-element-90; }
@@ -63,12 +64,14 @@
 .page-home :is(.home-group:where(._task)) .home-section >.center >.contain  { padding-left: $margin-section-50; }
 
 .page-home :is(.home-group:where(._task)) .table  { table-layout: fixed; border-collapse: collapse; width: 100%; }
-.page-home :is(.home-group:where(._task)) .table .subject  { display: flex; align-items: center; gap: $gap-element-80; }
+.page-home :is(.home-group:where(._task)) .table .subject  { display: flex; align-items: center; gap: $gap-element-30; }
 .page-home :is(.home-group:where(._task)) .table .subject >*  { flex: none; min-width: 0; }
 .page-home :is(.home-group:where(._task)) .table .subject .main  { font-weight: $bold-70; }
 .page-home :is(.home-group:where(._task)) .table .subject .main  { @include inc-ellipsis2(); flex: 0 1 auto; }
 .page-home :is(.home-group:where(._task)) .table .subject .category  { font-size: $font-30; line-height: $line-30; color: var(--color-text-30); }
-.page-home :is(.home-group:where(._task)) .table .subject:before  { content: ""; flex: none; font-size: $height-icon-30; display: block; width: 1em; height: 1em; background: red; }
+.page-home :is(.home-group:where(._task)) .table .subject .category:where(*+ *)  { margin-left: calc($gap-element-80 - $gap-element-30); }
+.page-home :is(.home-group:where(._task)) .table .subject:before  { content: ""; flex: none; font-size: $height-icon-30; display: block; width: 1em; height: 1em; background: Gold; }
+.page-home :is(.home-group:where(._task)) .table .subject:before  { background: var(--obj-ico-arrow-drop-right) no-repeat 25% /500%; }
 .page-home :is(.home-group:where(._task)) .table .auth  { font-size: $font-30; line-height: $line-30; color: var(--color-text-30); }
 .page-home :is(.home-group:where(._task)) .table .auth .position:before  { content: var(--utf-nbsp); }
 .page-home :is(.home-group:where(._task)) .table .data .value  { font-weight: $bold-70; color: var(--color-key1-40); }
