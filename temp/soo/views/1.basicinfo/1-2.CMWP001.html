@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>사업장정보 관리</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/ems_common.css">
+    <script type="text/javascript" src="../../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div class="contents">
+        <!-- 페이지헤더 -->
+        <section class="page_heading" style="position: static !important;">
+            <h1 class="h1">사업장정보 관리</h1>
+            <ul class="location">
+                <li class="ico_home"><a><span class="sr_only">홈</span></a></li>
+                <li>기준정보</li>
+                <li>E-일반현황 기준정보</li>
+                <li class="on">사업장정보 관리</li>
+            </ul>
+        </section>
+        <!--// 페이지헤더 -->
+
+        <!-- 그리드 -->
+        <form id="form1" name="form1" action="/esg-data-platform/ho7me.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+            <div class="searcher" style="position: static !important;">
+                <div class="searcher_items_wrap">
+                    <div class="select_set">
+                        <label class="label_bullet">이행연도</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="pfYrOpt" name="pfYrOpt" class="select round" data-width="fit" tabindex="-98">
+                        <option value="">전체</option><option value="2020">2020년</option><option value="2021">2021년</option><option value="2022">2022년</option><option value="2023">2023년</option><option value="2024">2024년</option><option value="2025">2025년</option><option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-41" aria-haspopup="listbox" aria-expanded="false" data-id="pfYrOpt" title="전체"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">전체</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-41" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <div class="select_set">
+                        <label class="label_bullet">그룹사</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="cmgrpCdOpt" name="cmgrpCdOpt" class="select round" data-width="fit" tabindex="-98">
+                            <option value="">전체</option>	
+                            <option value="00">BNK금융지주</option>
+                            <option value="01">BNK부산은행</option>
+                            <option value="02">BNK경남은행</option>
+                            <option value="03">BNK캐피탈</option>
+                            <option value="04">BNK투자증권</option>
+                            <option value="05">BNK저축은행</option>
+                            <option value="06">BNK자산운용</option>
+                            <option value="07">BNK신용정보</option>
+                            <option value="08">BNK시스템</option>
+                            <option value="09">BNK벤처투자</option>
+                        </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-42" aria-haspopup="listbox" aria-expanded="false" data-id="cmgrpCdOpt" title="전체"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">전체</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-42" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <button type="button" id="btn_sch" name="btn_sch" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>검색</span></button>
+                    <button type="button" id="btn_rst" name="btn_rst" class="btn_sm_gray"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg><span>초기화</span></button>
+                </div>
+                
+                <div class="searcher_items_wrap">
+                    <div class="select_set">
+                        <label class="label_bullet">자료복사</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="frYr" name="frYr" class="select round" data-width="fit" tabindex="-98">
+                            
+                        <option value="2020">2020년</option><option value="2021">2021년</option><option value="2022">2022년</option><option value="2023">2023년</option><option value="2024">2024년</option><option value="2025">2025년</option><option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-43" aria-haspopup="listbox" aria-expanded="false" data-id="frYr" title="2024년"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">2024년</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-43" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="toYr" name="toYr" class="select round" data-width="fit" tabindex="-98">
+                            
+                        <option value="2020">2020년</option><option value="2021">2021년</option><option value="2022">2022년</option><option value="2023">2023년</option><option value="2024">2024년</option><option value="2025">2025년</option><option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-44" aria-haspopup="listbox" aria-expanded="false" data-id="toYr" title="2025년"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">2025년</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-44" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <button type="button" id="btn_cpy" name="btn_cpy" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>복사</span></button>
+                </div>
+            </div>
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">목록</h3>
+                            <button type="button" class="btn_sm_gray adjust_grid_height"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code" style="transform:rotate(90deg)"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span>확장</span></button>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>
+                            <button type="button" id="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>적용</span></button>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <div class="table-responsive">
+                            <hr class="tr_selected" style="display:none;">
+                            <table class="table grid_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>순번</th>
+                                    <th>삭제</th>                                    
+                                    <th>이행연도</th>
+                                    <th>그룹사</th>
+                                    <th>사업장</th>
+                                    <th>사업자번호</th>
+                                    <th>본사여부</th>
+                                    <th>ATM입력여부</th>
+                                    <th>전력원단위여부</th>
+                                    <th>용수원단위여부</th>
+                                    <th>사업장면적</th>
+                                    <th>대표자</th>
+                                    <th>소재지</th>
+                                    <th>전화번호</th>
+                                    <th>담당자</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="selected">
+                                        <td>1</td>
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>2022</td>
+                                        <td>BNK금융지주</td>
+                                        <td>[001]본점</td>
+                                        <td>60585386</td>
+                                        <td>Y</td>
+                                        <td>N</td>
+                                        <td>N</td>
+                                        <td>N</td>
+                                        <td>3,487</td>
+                                        <td>빈대인</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>                                  
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>2022</td>
+                                        <td>BNK금융지주</td>
+                                        <td>[001]본점</td>
+                                        <td>60585386</td>
+                                        <td>Y</td>
+                                        <td>N</td>
+                                        <td>N</td>
+                                        <td>N</td>
+                                        <td>3,487</td>
+                                        <td>빈대인</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>                                  
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>2022</td>
+                                        <td>BNK금융지주</td>
+                                        <td>[001]본점</td>
+                                        <td>60585386</td>
+                                        <td>Y</td>
+                                        <td>N</td>
+                                        <td>N</td>
+                                        <td>N</td>
+                                        <td>3,487</td>
+                                        <td>빈대인</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>                                  
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>2022</td>
+                                        <td>BNK금융지주</td>
+                                        <td>[001]본점</td>
+                                        <td>60585386</td>
+                                        <td>Y</td>
+                                        <td>N</td>
+                                        <td>N</td>
+                                        <td>N</td>
+                                        <td>3,487</td>
+                                        <td>빈대인</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>                                  
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_footer">
+                            <span>[ 4 / 4 ]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	    </form>
+	    <!--// 그리드 -->
+
+        <!-- 상세 -->
+        <form id="form2" name="form2" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="pfYrForm" name="pfYrForm" value="">
+            <input type="hidden" id="cmgrpCdForm" name="cmgrpCdForm" value="">
+            <input type="hidden" id="brnoForm" name="brnoForm" value="">
+            <input type="hidden" id="pfYrPk" name="pfYrPk" value="">
+            <input type="hidden" id="cmgrpCdPk" name="cmgrpCdPk" value="">
+            <input type="hidden" id="brnoPk" name="brnoPk" value="">
+            <input type="hidden" id="cmgrpCdPop" name="cmgrpCdPop" value="">
+            <input type="hidden" id="enobPk" name="enobPk" value="">
+
+            <input type="hidden" id="empPno" name="empPno" value="">
+            <input type="hidden" id="empEmail" name="empEmail" value="">
+
+            <input type="hidden" id="brno" name="brno" value="">
+            <input type="hidden" id="buildNo" name="buildNo" value="">
+            <input type="hidden" id="wkplPno" name="wkplPno" value="">
+            <input type="hidden" id="wkplBgnDt" name="wkplBgnDt" value="">
+            <input type="hidden" id="wkplEndDt" name="wkplEndDt" value="">
+            <input type="hidden" id="prdcQty" name="prdcQty" value="">
+            <input type="hidden" id="empNop" name="empNop" value="">
+            <input type="hidden" id="slAmt" name="slAmt" value="">
+            <input type="hidden" id="enrEpnAmt" name="enrEpnAmt" value="">
+            <input type="hidden" id="captAmt" name="captAmt" value="">
+            <input type="hidden" id="mapFileSeq" name="mapFileSeq" value="">
+            <input type="hidden" id="picFileSeq" name="picFileSeq" value="">
+            <input type="hidden" id="batFileSeq" name="batFileSeq" value="">
+            <input type="hidden" id="prgFileSeq" name="prgFileSeq" value="">
+            <input type="hidden" id="fileKnd" name="fileKnd" value="">
+            <input type="hidden" id="cloCd" name="cloCd" value="">
+
+            <section class="section">
+                <div class="card has_scroll_body">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">상세</h3>
+                            <button type="button" class="btn_sm_gray adjust_table_height"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code" style="transform:rotate(90deg)"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span>확장</span></button>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_rst" name="btn_rst" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span>초기화</span></button>
+                            <button type="button" id="btn_del" name="btn_del" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg><span>삭제</span></button>
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>저장</span></button>
+                        </div>
+                    </div><!-- //card_head -->
+                    <div class="card_body scroll" style="height:335px;">
+                        <hr class="border_top_2px">
+                        <article class="div_table cols_4">
+                            <div class="col">
+                                <div class="dt requird">이행연도</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="pfYr" name="pfYr" class="select" tabindex="-98">
+                                        
+                                    <option value="2020">2020년</option><option value="2021">2021년</option><option value="2022">2022년</option><option value="2023">2023년</option><option value="2024">2024년</option><option value="2025">2025년</option><option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-36" aria-haspopup="listbox" aria-expanded="false" data-id="pfYr" title="2025년"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">2025년</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-36" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">그룹사</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="cmgrpCd" name="cmgrpCd" class="select" tabindex="-98">
+                                        <option value="">선택</option>                                        
+                                        <option value="00" selected="">BNK금융지주</option>                                    
+                                        <option value="01">BNK부산은행</option>                                        
+                                        <option value="02">BNK경남은행</option>                                        
+                                        <option value="03">BNK캐피탈</option>                                        
+                                        <option value="04">BNK투자증권</option>                                        
+                                        <option value="05">BNK저축은행</option>                                        
+                                        <option value="06">BNK자산운용</option>                                        
+                                        <option value="07">BNK신용정보</option>                                        
+                                        <option value="08">BNK시스템</option>                                        
+                                        <option value="09">BNK벤처투자</option>                                        
+                                    </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-37" aria-haspopup="listbox" aria-expanded="false" data-id="cmgrpCd" title="BNK금융지주"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">BNK금융지주</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-37" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">사업장</div>
+                                <div class="dd">
+                                    <div class="rst_input_wrap">
+                                        <input type="text" id="brnoVal" name="brnoVal" class="input" title="사업장" maxlength="20" readonly="">
+                                        <button type="button" id="btn_brno_rst" name="btn_brno_rst" class="ico_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="sr_only">초기화</span></button>
+                                    </div>
+                                    <button type="button" id="btn_brno_sch" name="btn_brno_sch" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>사업장</span></button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">본사여부</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="corpYn" name="corpYn" class="select" tabindex="-98">
+                                        <option value="N">N</option>
+                                        <option value="Y">Y</option>
+                                    </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-38" aria-haspopup="listbox" aria-expanded="false" data-id="corpYn" title="N"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">N</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-38" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">사업자등록번호</div>
+                                <div class="dd">
+                                    <input type="text" id="bno" name="bno" class="input" title="사업자등록번호" placeholder="('-' 없이 입력)" maxlength="10" num="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">대표자</div>
+                                <div class="dd">
+                                    <input type="text" id="reprNm" name="reprNm" class="input" title="대표자" maxlength="20" kor_eng="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">지정업종</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="btCd" name="btCd" class="select" tabindex="-98">                                        
+                                        <option value="64000">금융업</option>                                        
+                                        <option value="64100">은행및저축기관</option>                                        
+                                        <option value="64110">중앙은행</option>                                        
+                                        <option value="64120">일반은행</option>                                        
+                                    </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-39" aria-haspopup="listbox" aria-expanded="false" data-id="btCd" title="금융업"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">금융업</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-39" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">산업구분</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="btDiv" name="btDiv" class="select" tabindex="-98">                                        
+                                        <option value="CB">상업</option>                                        
+                                        <option value="GV">공공</option>                                        
+                                        <option value="MI">제조업</option>                                        
+                                    </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-40" aria-haspopup="listbox" aria-expanded="false" data-id="btDiv" title="상업"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">상업</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-40" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">ATM사용량 입력여부</div>
+                                <div class="dd">
+                                    <div class="selecting_set">
+                                        <label class="selecting">
+                                            <input type="radio" id="atmUseYn" name="atmUseYn" value="Y">
+                                            <span class="radiomark"></span>
+                                            <span class="text">예</span>
+                                        </label>
+                                    </div>
+                                    <div class="selecting_set">
+                                        <label class="selecting">
+                                            <input type="radio" id="atmUseYn" name="atmUseYn" value="N" checked="">
+                                            <span class="radiomark"></span>
+                                            <span class="text">아니오</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">전력 원단위 적용여부</div>
+                                <div class="dd">
+                                    <div class="selecting_set">
+                                        <label class="selecting">
+                                            <input type="radio" id="fwWonYn" name="fwWonYn" value="Y">
+                                            <span class="radiomark"></span>
+                                            <span class="text">예</span>
+                                        </label>
+                                    </div>
+                                    <div class="selecting_set">
+                                        <label class="selecting">
+                                            <input type="radio" id="fwWonYn" name="fwWonYn" value="N" checked="">
+                                            <span class="radiomark"></span>
+                                            <span class="text">아니오</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">용수 원단위 적용여부</div>
+                                <div class="dd">
+                                    <div class="selecting_set">
+                                        <label class="selecting">
+                                            <input type="radio" id="wtWonYn" name="wtWonYn" value="Y">
+                                            <span class="radiomark"></span>
+                                            <span class="text">예</span>
+                                        </label>
+                                    </div>
+                                    <div class="selecting_set">
+                                        <label class="selecting">
+                                            <input type="radio" id="wtWonYn" name="wtWonYn" value="N" checked="">
+                                            <span class="radiomark"></span>
+                                            <span class="text">아니오</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col_2">
+                                <div class="dt">사업장소재지</div>
+                                <div class="dd">
+                                    <div class="addr_input_wrap">
+                                        <input type="text" id="zipNo" name="zipNo" class="input" title="우편번호" maxlength="5" readonly="">
+                                        <input type="text" id="zipAddr" name="zipAddr" class="input" title="우편주소" maxlength="100" readonly="">
+                                        <input type="text" id="detlAddr" name="detlAddr" class="input" title="상세주소" maxlength="100" kor_eng_num="">
+                                        <button type="button" id="btn_zipNo_sch" name="btn_zipNo_sch" class="btn_secondary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>우편번호</span></button>
+                                        <button type="button" id="btn_zipNo_rst" name="btn_zipNo_rst" class="btn_underline"><span>초기화</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">사업장전화번호</div>
+                                <div class="dd">
+                                    <div class="tel_input_wrap">
+                                        <div class="dropdown bootstrap-select select bs3"><select id="wkplPnoVal1" name="wkplPnoVal1" class="select" tabindex="-98">
+                                            <option value="">선택</option>                                            
+                                            <option value="02">02</option>                                            
+                                            <option value="031">031</option>                                            
+                                            <option value="032">032</option>                                            
+                                            <option value="033">033</option>                                            
+                                            <option value="041">041</option>                                            
+                                            <option value="042">042</option>                                            
+                                            <option value="043">043</option>                                            
+                                            <option value="0502">0502</option>                                            
+                                            <option value="0506">0506</option>                                            
+                                            <option value="051">051</option>                                            
+                                            <option value="052">052</option>                                            
+                                            <option value="053">053</option>                                            
+                                            <option value="054">054</option>                                            
+                                            <option value="055">055</option>                                            
+                                            <option value="061">061</option>                                            
+                                            <option value="062">062</option>                                            
+                                            <option value="063">063</option>                                            
+                                            <option value="064">064</option>                                            
+                                            <option value="070">070</option>                                            
+                                            <option value="010">010</option>                                            
+                                            <option value="011">011</option>                                            
+                                            <option value="016">016</option>                                            
+                                            <option value="017">017</option>                                            
+                                            <option value="018">018</option>                                            
+                                            <option value="019">019</option>                                            
+                                            <option value="0130">0130</option>                                            
+                                        </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-41" aria-haspopup="listbox" aria-expanded="false" data-id="wkplPnoVal1" title="선택"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">선택</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-41" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                        <span class="dash">-</span>
+                                        <input type="text" id="wkplPnoVal2" name="wkplPnoVal2" class="input" title="사업장전화번호2" maxlength="4" num="">
+                                        <span class="dash">-</span>
+                                        <input type="text" id="wkplPnoVal3" name="wkplPnoVal3" class="input" title="사업장전화번호3" maxlength="4" num="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">사업장면적[m²]</div>
+                                <div class="dd">
+                                    <input type="text" id="wkplSize" name="wkplSize" class="input" title="사업장면적" style="text-align:right;" maxlength="24" num2="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">사업개시일</div>
+                                <div class="dd">
+                                    <div class="date_picker_wrap">
+                                        <input type="text" id="wkplBgnDtVal" name="wkplBgnDtVal" class="input date_picker" title="사업개시일" maxlength="10" num2="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">사업종료일</div>
+                                <div class="dd">
+                                    <div class="date_picker_wrap">
+                                        <input type="text" id="wkplEndDtVal" name="wkplEndDtVal" class="input date_picker" title="사업종료일" maxlength="10" num2="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">담당자(행번)</div>
+                                <div class="dd">
+                                    <div class="rst_input_wrap">
+                                        <input type="text" id="enob" name="enob" class="input" title="담당자(행번)" maxlength="7" num="">
+                                        <button type="button" id="btn_enob_rst" name="btn_enob_rst" class="ico_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="sr_only">초기화</span></button>
+                                    </div>
+                                    <button type="button" id="btn_enob_sch" name="btn_enob_sch" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>행번</span></button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">담당자명</div>
+                                <div class="dd">
+                                    <input type="text" id="empNm" name="empNm" class="input" title="담당자명" maxlength="20" kor_eng_num="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">소속점</div>
+                                <div class="dd">
+                                    <input type="text" id="blgBrnoVal" name="blgBrnoVal" class="input" title="소속점" maxlength="3" num="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">담당자부서</div>
+                                <div class="dd">
+                                    <input type="text" id="deptNm" name="deptNm" class="input" title="담당자부서" maxlength="20" kor_eng_num="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">담당자직위</div>
+                                <div class="dd">
+                                    <input type="text" id="empPosNm" name="empPosNm" class="input" title="담당자직위" maxlength="20" kor_eng_num="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">담당자직책</div>
+                                <div class="dd">
+                                    <input type="text" id="empJobNm" name="empJobNm" class="input" title="담당자직책" maxlength="20" kor_eng_num="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">담당자전화번호</div>
+                                <div class="dd">
+                                    <div class="tel_input_wrap">
+                                        <div class="dropdown bootstrap-select select bs3"><select id="empPnoVal1" name="empPnoVal1" class="select" tabindex="-98">
+                                            <option value="">선택</option>                                            
+                                            <option value="02">02</option>                                            
+                                            <option value="031">031</option>                                            
+                                            <option value="032">032</option>                                            
+                                            <option value="033">033</option>                                        
+                                            <option value="041">041</option>                                            
+                                            <option value="042">042</option>                                            
+                                            <option value="043">043</option>                                            
+                                            <option value="0502">0502</option>                                            
+                                            <option value="0506">0506</option>                                            
+                                            <option value="051">051</option>                                            
+                                            <option value="052">052</option>                                            
+                                            <option value="053">053</option>                                            
+                                            <option value="054">054</option>                                            
+                                            <option value="055">055</option>                                            
+                                            <option value="061">061</option>                                            
+                                            <option value="062">062</option>                                            
+                                            <option value="063">063</option>                                            
+                                            <option value="064">064</option>                                            
+                                            <option value="070">070</option>                                            
+                                            <option value="010">010</option>                                            
+                                            <option value="011">011</option>                                            
+                                            <option value="016">016</option>                                            
+                                            <option value="017">017</option>                                            
+                                            <option value="018">018</option>                                            
+                                            <option value="019">019</option>                                            
+                                            <option value="0130">0130</option>                                            
+                                        </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-42" aria-haspopup="listbox" aria-expanded="false" data-id="empPnoVal1" title="선택"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">선택</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-42" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                        <span class="dash">-</span>
+                                        <input type="text" id="empPnoVal2" name="empPnoVal2" class="input" title="담당자전화번호2" maxlength="4">
+                                        <span class="dash">-</span>
+                                        <input type="text" id="empPnoVal3" name="empPnoVal3" class="input" title="담당자전화번호3" maxlength="4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">담당자이메일</div>
+                                <div class="dd">
+                                    <div class="email_input_wrap">
+                                        <input type="text" id="empEmailVal1" name="empEmailVal1" class="input" title="담당자이메일1" maxlength="20">
+                                        <span class="at">@</span>
+                                        <input type="text" id="empEmailVal2" name="empEmailVal2" class="input" title="담당자이메일2" maxlength="19">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">주요생산품</div>
+                                <div class="dd">
+                                    <input type="text" id="prdcManu" name="prdcManu" class="input" title="주요생산품" maxlength="50" kor_eng_num2="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">연간생산량(개)</div>
+                                <div class="dd">
+                                    <input type="text" id="prdcQtyVal" name="prdcQtyVal" class="input" title="연간생산량" maxlength="25" style="text-align:right;" num2="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">상시종업원수(인)</div>
+                                <div class="dd">
+                                    <input type="text" id="empNopVal" name="empNopVal" class="input" title="상시종업원수" maxlength="20" style="text-align:right;" num="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">연간매출액(원)</div>
+                                <div class="dd">
+                                    <input type="text" id="slAmtVal" name="slAmtVal" class="input" title="연간매출액" maxlength="25" style="text-align:right;" num2="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">연간에너지비용액(원)</div>
+                                <div class="dd">
+                                    <input type="text" id="enrEpnAmtVal" name="enrEpnAmtVal" class="input" title="연간에너지비용액(원)" maxlength="25" style="text-align:right;" num2="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">자본금(원)</div>
+                                <div class="dd">
+                                    <input type="text" id="captAmtVal" name="captAmtVal" class="input" title="자본금" maxlength="25" style="text-align:right;" num2="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">소량배출여부</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="smEmYn" name="smEmYn" class="select" tabindex="-98">
+                                        <option value="">선택</option>
+                                        <option value="N">N</option>
+                                        <option value="Y">Y</option>
+                                    </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-43" aria-haspopup="listbox" aria-expanded="false" data-id="smEmYn" title="선택"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">선택</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-43" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">목표관리대상여부</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="goalMgYn" name="goalMgYn" class="select" tabindex="-98">
+                                        <option value="">선택</option>
+                                        <option value="N">N</option>
+                                        <option value="Y">Y</option>
+                                    </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-44" aria-haspopup="listbox" aria-expanded="false" data-id="goalMgYn" title="선택"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">선택</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-44" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">실적보고대상여부</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="outRetpYn" name="outRetpYn" class="select" tabindex="-98">
+                                        <option value="">선택</option>
+                                        <option value="N">N</option>
+                                        <option value="Y">Y</option>
+                                    </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-45" aria-haspopup="listbox" aria-expanded="false" data-id="outRetpYn" title="선택"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">선택</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-45" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="div_table cols_4">
+
+                            <div class="col_2">
+                                <div class="dt">약도</div>
+                                <div class="dd">
+                                    <div class="file_downloader">
+                                        <input type="text" id="mapFileVal" name="mapFileVal" class="input" title="약도" maxlength="650" readonly="">
+                                        <button type="button" id="btn_mapFile_dwn" name="btn_mapFile_dwn" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>다운로드</span></button>
+                                        <button type="button" id="btn_mapFile_del" name="btn_mapFile_del" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg><span>삭제</span></button>
+                                    </div>
+                                    <div class="file_uploader">
+                                        <label for="mapFile">파일선택</label>
+                                        <input type="file" id="mapFile" name="mapFile" title="약도" maxlength="650" style="display:none">
+                                        <input type="text" id="mapFileNm" name="mapFileNm" placeholder="선택된 파일 없음" readonly="readonly">
+                                        <span id="btn_mapFile_rst" class="ico_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="sr_only">초기화</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col_2">
+                                <div class="dt">사진</div>
+                                <div class="dd">
+                                    <div class="file_downloader">
+                                        <input type="text" id="picFileVal" name="picFileVal" class="input" title="사진" maxlength="650" readonly="">
+                                        <button type="button" id="btn_picFile_dwn" name="btn_picFile_dwn" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>다운로드</span></button>
+                                        <button type="button" id="btn_picFile_del" name="btn_picFile_del" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg><span>삭제</span></button>
+                                    </div>
+                                    <div class="file_uploader">
+                                        <label for="picFile">파일선택</label>
+                                        <input type="file" id="picFile" name="picFile" title="사진" maxlength="650" style="display:none">
+                                        <input type="text" id="picFileNm" name="picFileNm" placeholder="선택된 파일 없음" readonly="readonly">
+                                        <span id="btn_picFile_rst" class="ico_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="sr_only">초기화</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col_2">
+                                <div class="dt">배치도</div>
+                                <div class="dd">
+                                    <div class="file_downloader">
+                                        <input type="text" id="batFileVal" name="batFileVal" class="input" title="배치도" maxlength="650" readonly="">
+                                        <button type="button" id="btn_batFile_dwn" name="btn_batFile_dwn" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>다운로드</span></button>
+                                        <button type="button" id="btn_batFile_del" name="btn_batFile_del" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg><span>삭제</span></button>
+                                    </div>
+                                    <div class="file_uploader">
+                                        <label for="batFile">파일선택</label>
+                                        <input type="file" id="batFile" name="batFile" title="배치도" maxlength="650" style="display:none">
+                                        <input type="text" id="batFileNm" name="batFileNm" placeholder="선택된 파일 없음" readonly="readonly">
+                                        <span id="btn_batFile_rst" class="ico_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="sr_only">초기화</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col_2">
+                                <div class="dt">공정도</div>
+                                <div class="dd">
+                                    <div class="file_downloader">
+                                        <input type="text" id="prgFileVal" name="prgFileVal" class="input" title="공정도" maxlength="650" readonly="">
+                                        <button type="button" id="btn_prgFile_dwn" name="btn_prgFile_dwn" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>다운로드</span></button>
+                                        <button type="button" id="btn_prgFile_del" name="btn_prgFile_del" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg><span>삭제</span></button>
+                                    </div>
+                                    <div class="file_uploader">
+                                        <label for="prgFile">파일선택</label>
+                                        <input type="file" id="prgFile" name="prgFile" title="배치도" maxlength="650" style="display:none">
+                                        <input type="text" id="prgFileNm" name="prgFileNm" placeholder="선택된 파일 없음" readonly="readonly">
+                                        <span id="btn_prgFile_rst" class="ico_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="sr_only">초기화</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div><!-- //card_body -->
+                </div><!-- //card -->
+            </section>
+        </form>
+        <!--// 상세 -->
+    </div>  
+</body>
+
+</html>

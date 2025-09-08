@@ -1,0 +1,180 @@
+(<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" conten)t="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>사용자정보</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/ems_common.css">
+    <script type="text/javascript" src="../../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div class="contents" style="width: 100% !important;">
+        <!-- 페이지헤더 -->
+        <div class="page_heading" style="position: static !important;">
+            <h1 class="h1">사용자정보</h1>
+            <ul class="location">
+                <li class="ico_home"><a><span class="sr_only">홈</span></a></li>
+                <li>정보관리</li>
+                <li>사용자관리</li>
+                <li class="on">사용자정보</li>
+            </ul>
+        </div>
+        <!--// 페이지헤더 -->
+
+        <!-- 상세 -->
+        <form id="form2" name="form2" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="cmgrpCdPk" name="cmgrpCdPk" value="99">
+            <input type="hidden" id="usrIdPk" name="usrIdPk" value="admin">
+            <input type="hidden" id="cmgrpCdPop" name="cmgrpCdPop" value="">
+            <input type="hidden" id="usrIdPop" name="usrIdPop" value="">
+            <input type="hidden" id="brno" name="brno" value="   ">
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">상세</h3>
+                        </div>
+                        <div class="btns_wrap">
+                            <!-- <button type="button" id="btn_sch" name="btn_sch" class="btn_secondary round"><i data-feather="search"></i><span>조회</span></button> -->
+                            <button type="button" id="btn_pwd" name="btn_pwd" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span>비밀번호변경</span></button>
+                            <!-- <button type="button" id="btn_rst" name="btn_rst" class="btn_secondary round"><i data-feather="x"></i><span>초기화</span></button> -->
+                            <!-- <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><i data-feather="save"></i><span>저장</span></button> -->
+                        </div>
+                    </div>
+
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <article class="div_table cols_3 has_dt_wide">
+                            <div class="col">
+                                <div class="dt requird">사용자권한</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="usrLvCd" name="usrLvCd" class="select" tabindex="-98">
+                                        <option value="1">시스템관리자</option>
+                                        <option value="2" disabled="">운영관리자</option>
+                                        <option value="3" disabled="">그룹사관리자</option>                                        
+                                        <option value="4" disabled="">지점관리자</option>
+                                        <option value="5" disabled="">사용자</option>
+                                    </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-7" aria-haspopup="listbox" aria-expanded="false" data-id="usrLvCd" title="시스템관리자"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">시스템관리자</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-7" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">그룹사</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="cmgrpCd" name="cmgrpCd" class="select" tabindex="-98">                                        
+                                        <option disabled="" value="00" selected="">BNK금융지주</option>
+                                        <option disabled="" value="01">BNK부산은행</option>
+                                        <option disabled="" value="02">BNK경남은행</option>
+                                        <option disabled="" value="03">BNK캐피탈</option>
+                                        <option disabled="" value="04">BNK투자증권</option>                                        
+                                        <option disabled="" value="05">BNK저축은행</option>
+                                        <option disabled="" value="06">BNK자산운용</option>                                        
+                                        <option disabled="" value="07">BNK신용정보</option>                                        
+                                        <option disabled="" value="08">BNK시스템</option>                                        
+                                        <option disabled="" value="09">BNK벤처투자</option>
+                                        <option value="99">관리자</option>                                        
+                                    </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-8" aria-haspopup="listbox" aria-expanded="false" data-id="cmgrpCd" title="관리자"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">관리자</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-8" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">사업장</div>
+                                <div class="dd">
+                                    <input type="text" id="brnoVal" name="brnoVal" class="input" title="사업장" maxlength="20" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">사용자ID</div>
+                                <div class="dd">
+                                    <input type="text" id="usrId" name="usrId" class="input" title="사용자ID" maxlength="20" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">사용자명</div>
+                                <div class="dd">
+                                    <input type="text" id="usrNm" name="usrNm" class="input" title="사용자명" maxlength="20" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">비밀번호오류횟수</div>
+                                <div class="dd">
+                                    <input type="text" id="usrPwErrCnt" name="usrPwErrCnt" class="input" title="비밀번호오류횟수" style="text-align:right;" maxlength="3" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt requird">비밀번호초기화상태여부</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3"><select id="usrRstCd" name="usrRstCd" class="select" tabindex="-98"><option value="0">초기화아님</option>
+                                        
+                                        <option value="1" disabled="">초기화상태</option>
+                                    </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-9" aria-haspopup="listbox" aria-expanded="false" data-id="usrRstCd" title="초기화아님"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">초기화아님</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-9" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">소속점</div>
+                                <div class="dd">
+                                    <input type="text" id="blgBrnoVal" name="blgBrnoVal" class="input" title="소속점" maxlength="20" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">근무점</div>
+                                <div class="dd">
+                                    <input type="text" id="wrkBrnoVal" name="wrkBrnoVal" class="input" title="근무점" maxlength="20" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">부서</div>
+                                <div class="dd">
+                                    <input type="text" id="deptNm" name="deptNm" class="input" title="담당자부서" maxlength="10" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">최초등록사용자ID</div>
+                                <div class="dd">
+                                    <input type="text" id="frstRegUsrId" name="frstRegUsrId" class="input" title="최초등록사용자ID" maxlength="20" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">최초등록일시</div>
+                                <div class="dd">
+                                    <input type="text" id="frstRegDtm" name="frstRegDtm" class="input" title="최초등록일시" maxlength="19" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">최종수정사용자ID</div>
+                                <div class="dd">
+                                    <input type="text" id="lastChgUsrId" name="lastChgUsrId" class="input" title="최종수정사용자ID" maxlength="20" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">최종수정사용자IP</div>
+                                <div class="dd">
+                                    <input type="text" id="lastChgUsrIp" name="lastChgUsrIp" class="input" title="최종수정사용자IP" maxlength="15" readonly="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="dt">최종수정일시</div>
+                                <div class="dd">
+                                    <input type="text" id="lastChgDtm" name="lastChgDtm" class="input" title="최종수정일시" maxlength="19" readonly="">
+                                </div>
+                            </div>
+                        </article>
+                    </div><!-- //card_body -->
+                </div>
+            </section>
+	    </form>
+        <!--// 상세 -->
+    </div>  
+</body>
+
+</html>

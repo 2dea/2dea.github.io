@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>ATM연계정보 관리</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/ems_common.css">
+    <script type="text/javascript" src="../../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div class="contents" style="width: 100% !important;">
+        <!-- 페이지헤더 -->
+        <div class="page_heading" style="position: static !important;">
+            <h1 class="h1">ATM연계정보 관리</h1>
+            <ul class="location">
+                <li class="ico_home"><a><span class="sr_only">홈</span></a></li>
+                <li>기준정보</li>
+                <li>E-배출량산정 기준정보</li>
+                <li class="on">ATM연계정보 관리</li>
+            </ul>
+        </div>
+        <!--// 페이지헤더 -->
+
+        <!-- 그리드 -->
+        <form id="form1" name="form1" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+            <div class="searcher" style="position: static !important;">
+                <div class="searcher_items_wrap">
+                    <div class="select_set">
+                        <label class="label_bullet">이행연도</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="pfYrOpt" name="pfYrOpt" class="select round" data-width="fit" tabindex="-98">
+                        <option value="2020">2020년</option><option value="2021">2021년</option><option value="2022">2022년</option><option value="2023">2023년</option><option value="2024">2024년</option><option value="2025">2025년</option><option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-16" aria-haspopup="listbox" aria-expanded="false" data-id="pfYrOpt" title="2025년"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">2025년</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-16" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <div class="select_set">
+                        <label class="label_bullet">사용월</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="fuelUseMmOpt" name="fuelUseMmOpt" class="select round" data-width="fit" tabindex="-98">
+                            <option value="01" selected="">1월</option>
+                            <option value="02">2월</option>
+                            <option value="03">3월</option>
+                            <option value="04">4월</option>
+                            <option value="05">5월</option>
+                            <option value="06">6월</option>
+                            <option value="07">7월</option>
+                            <option value="08">8월</option>
+                            <option value="09">9월</option>
+                            <option value="10">10월</option>
+                            <option value="11">11월</option>
+                            <option value="12">12월</option>
+                        </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-17" aria-haspopup="listbox" aria-expanded="false" data-id="fuelUseMmOpt" title="1월"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">1월</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-17" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <div class="select_set">
+                        <label class="label_bullet">그룹사</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="cmgrpCdOpt" name="cmgrpCdOpt" class="select round" data-width="fit" tabindex="-98">                            
+                            <option value="00">BNK금융지주</option>                            
+                            <option value="01">BNK부산은행</option>                            
+                            <option value="02">BNK경남은행</option>                            
+                            <option value="03">BNK캐피탈</option>                            
+                            <option value="04">BNK투자증권</option>                            
+                            <option value="05">BNK저축은행</option>                            
+                            <option value="06">BNK자산운용</option>                            
+                            <option value="07">BNK신용정보</option>                            
+                            <option value="08">BNK시스템</option>                            
+                            <option value="09">BNK벤처투자</option>                            
+                        </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-18" aria-haspopup="listbox" aria-expanded="false" data-id="cmgrpCdOpt" title="BNK금융지주"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">BNK금융지주</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-18" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <div class="select_set">
+                        <label class="label_bullet">사업장</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="optList" name="optList" class="select round" data-width="fit" tabindex="-98">
+                            <option value="brnoOpt">점번</option>
+                        </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-19" aria-haspopup="listbox" aria-expanded="false" data-id="optList" title="점번"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">점번</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-19" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                        <input type="text" id="optForm" name="optForm" class="input round" placeholder="검색어를 입력하세요." maxlength="20" kor_eng_num="">
+                    </div>
+                    <div class="select_set">
+                        <label class="label_bullet">처리상태</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="" name="prcsStCdOpt" class="select round" data-width="fit" tabindex="-98">
+                            <option value="">전체</option>                            
+                            <option value="01">대기</option>                            
+                            <option value="02">재처리대기</option>                            
+                            <option value="03">처리중</option>                            
+                            <option value="04">완료</option>                            
+                        </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-20" aria-haspopup="listbox" aria-expanded="false" data-id="" title="전체"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">전체</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-20" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <button type="button" id="btn_sch" name="btn_sch" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>검색</span></button>
+                    <button type="button" id="btn_rst" name="btn_rst" class="btn_sm_gray round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg><span>초기화</span></button>
+                </div>
+            </div>
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">목록</h3>
+                            <button type="button" class="btn_sm_gray adjust_grid_height"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code" style="transform:rotate(90deg)"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span>확장</span></button>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>
+                            <button type="button" id="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>적용</span></button>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <div class="table-responsive">
+                            <hr class="tr_selected" style="display:none;">
+                            <table class="table grid_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>순번</th>
+                                    <th>이행연도</th>
+                                    <th>그룹사</th>
+                                    <th>사업장</th>
+                                    <th>배출시설</th>
+                                    <th>배출시설내역</th>
+                                    <th>활동자료</th>
+                                    <th>전력사용월</th>
+                                    <th>건수[건]</th>
+                                    <th>전력사용량</th>
+                                    <th>처리상태</th>
+                                    <th>처리결과</th>
+                                    <th></th>                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>                                        
+                                        <td colspan="12">조회된 데이터가 없습니다.</td>                                                                  
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_footer">
+                            <span>[ 4 / 4 ]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	    </form>
+	    <!--// 그리드 -->
+
+        <!-- 상세 -->
+        <form id="form2" name="form2" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+            <input type="hidden" id="cmgrpCdForm" name="cmgrpCdForm" value="">
+            <input type="hidden" id="brnoForm" name="brnoForm" value="">
+            <input type="hidden" id="pfYrForm" name="pfYrForm" value="">
+            <input type="hidden" id="emFacilCdForm" name="emFacilCdForm" value="">
+            <input type="hidden" id="emFacilSeqForm" name="emFacilSeqForm" value="">
+            <input type="hidden" id="dtlFacilSeqForm" name="dtlFacilSeqForm" value="">
+            <input type="hidden" id="fuelCdForm" name="fuelCdForm" value="">
+            <input type="hidden" id="fuelUseMmForm" name="fuelUseMmForm" value="">
+            <input type="hidden" id="prcsStCdForm" name="prcsStCdForm" value="">
+            <input type="hidden" id="prcsRsCdForm" name="prcsRsCdForm" value="">
+
+            <input type="hidden" id="enrUseKndCd" name="enrUseKndCd" value="14">
+            <input type="hidden" id="brnoConv" name="brnoConv" value="">
+            <input type="hidden" id="fuelUseQty" name="fuelUseQty" value="">
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">상세</h3>
+                            <button type="button" class="btn_sm_gray adjust_grid_height"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code" style="transform:rotate(90deg)"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span>확장</span></button>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_xls" name="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>
+                            <button type="button" id="btn_del" name="btn_del" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg><span>삭제</span></button>
+                            <!-- <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><i data-feather="save"></i><span>처리</span></button> -->
+                        </div>
+                    </div><!-- //card_head -->
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <div class="table-responsive">
+                            <hr class="tr_selected" style="display:none;">
+                            <table class="table grid_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>순번</th>
+                                    <th>이행연도</th>
+                                    <th>그룹사</th>
+                                    <th>사업장</th>
+                                    <th>배출시설</th>
+                                    <th>배출시설내역</th>
+                                    <th>활동자료</th>
+                                    <th>전력사용월</th>
+                                    <th>건수[건]</th>
+                                    <th>전력사용량</th>
+                                    <th>처리상태</th>
+                                    <th>처리결과</th>
+                                    <th></th>                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>                                        
+                                        <td colspan="12">조회된 데이터가 없습니다.</td>                                                                  
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_footer">
+                            <span>[ 4 / 4 ]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	    </form>
+        <!--// 상세 -->
+    </div>  
+</body>
+
+</html>

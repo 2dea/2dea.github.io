@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>공지사항/FAQ</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/ems_common.css">
+    <script type="text/javascript" src="../../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/common.js"></script>
+</head>
+
+<body class="no_scroll">   
+    <div id="main" class="popup">
+        <div class="popup_heading">
+            <h3 class="h3">공지사항/FAQ등록/수정</h3>
+        </div>
+        <form id="form2" name="form2" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="pfYrPk" name="pfYrPk" value="2022">
+            <input type="hidden" id="cmgrpCdForm" name="cmgrpCdForm" value="03">
+            <input type="hidden" id="pfYrForm" name="pfYrForm" value="2022">
+            <input type="hidden" id="cmgrpCdPk" name="cmgrpCdPk" value="03">
+            <input type="hidden" id="cmgrpCdPop" name="cmgrpCdPop" value="">
+            <input type="hidden" id="enobPk" name="enobPk" value="">
+            <input type="hidden" id="empPno" name="empPno" value="">
+            <input type="hidden" id="empEmail" name="empEmail" value="">
+            <input type="hidden" id="cnoOrg" name="cnoOrg" value="1801110722850">
+            <input type="hidden" id="buildNo" name="buildNo" value="">
+            <input type="hidden" id="corpPno" name="corpPno" value="">
+            <input type="hidden" id="prdcQty" name="prdcQty" value="1032629">
+            <input type="hidden" id="empNop" name="empNop" value="5520">
+            <input type="hidden" id="slAmt" name="slAmt" value="1985647">
+            <input type="hidden" id="enrEpnAmt" name="enrEpnAmt" value="27719">
+            <input type="hidden" id="captAmt" name="captAmt" value="6786">
+            <input type="hidden" id="cloCd" name="cloCd" value="0">
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">내용</h3>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><span>수정</span></button>
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>저장</span></button>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <article class="div_table cols_4">
+                            <div class="col">
+                                <div class="dt requird">구분</div>
+                                <div class="dd">
+                                    <div class="dropdown bootstrap-select select bs3">
+                                        <select id="pfYr" name="pfYr" class="select" tabindex="-98">                                        
+                                            <option value=""></option>                                            
+                                        </select>
+                                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-45" aria-haspopup="listbox" aria-expanded="false" data-id="pfYr" title="2022년">
+                                            <div class="filter-option">
+                                                <div class="filter-option-inner">
+                                                    <div class="filter-option-inner-inner"></div>
+                                                </div>
+                                            </div>
+                                            <span class="bs-caret">
+                                                <span class="caret"></span>
+                                            </span>
+                                        </button>
+                                        <div class="dropdown-menu open">
+                                            <div class="inner open" role="listbox" id="bs-select-45" tabindex="-1">
+                                                <ul class="dropdown-menu inner " role="presentation"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="col_2">
+                                <div class="dt requird">제목</div>
+                                <div class="dd">
+                                    <input type="text" id="reprNm" name="reprNm" class="input" title="제목" maxlength="20" kor_eng="">
+                                </div>
+                            </div>
+                            <div class="col_2">
+                                <div class="dt">내용</div>
+                                <div class="dd">
+                                    <textarea class="textarea" id="details" name="details" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </article>
+                    </div><!-- //card_body -->
+                </div><!-- //card -->
+            </section>
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">첨부파일</h3>
+                        </div>  
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <article class="div_table cols_1">
+                            <div class="col">
+                                <div class="dt">파일</div>
+                                <div class="dd">
+                                    <div class="file_uploader">
+                                        <label for="upFile">불러오기</label>
+                                        <input type="file" id="upFile" name="upFile" title="엑셀" maxlength="650" style="display:none">
+                                        <input type="text" id="upFileNm" name="upFileNm" placeholder="선택된 파일 없음" readonly="readonly">
+                                        <span id="btn_upFile_rst" class="ico_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="sr_only">초기화</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+
+</html>

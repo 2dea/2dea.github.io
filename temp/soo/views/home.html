@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>환경경영시스템</title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/ems_common.css">
+    <script type="text/javascript" src="../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header data-include1="header" id="header"></header>
+        <aside id="aside">
+            <div class="aside_top">
+                <button class="btn_toggle">▶</button>
+            </div>
+            <div class="aside_inner">
+                <ul class="side_nav">
+                    <li class="menu0"><a href="home.html"><span>홈</span></a></li>
+                    <li class="menu1">
+                        <a href="javascript:void(0);"><span>기준정보</span></a>
+                        <ul class="depth_2">
+                            <h3 class="heading">기준정보</h3>
+                            <div class="scroll_Y">
+                                <li class="menu1-1">
+                                    <a href="javascript:void(0);">사업장정보<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu1-1-1"><a href="111.html">법인정보</a></li>
+                                        <li class="menu1-1-2"><a href="#">사업장정보</a></li>
+                                        <li class="menu1-1-3"><a href="#">QA·QC담당자정보</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu1-2">
+                                    <a href="javascript:void(0);">온실가스·에너지<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu1-2-1"><a href="#">산정등급적용정보</a></li>
+                                        <li class="menu1-2-2"><a href="#">산정식관리</a></li>
+                                        <li class="menu1-2-3"><a href="123.html">배출계수관리</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="menu2 env">
+                        <a href="javascript:void(0);"><span>온실가스</span></a>
+                        <ul class="depth_2">
+                            <h3 class="heading">온실가스</h3>
+                            <div class="scroll_Y">
+                                <li class="menu2-1">
+                                    <a href="javascript:void(0);">시설관리<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu2-1-1"><a href="211.html">배출시설관리</a></li>
+                                        <li class="menu2-1-2"><a href="#">세부시설관리</a></li>
+                                        <li class="menu2-1-3"><a href="#">활동자료모니터링</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu2-2">
+                                    <a href="javascript:void(0);">온실가스·에너지실적관리<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu2-2-1"><a href="#">에너지사용량</a></li>
+                                        <li class="menu2-2-2"><a href="#">용수사용량</a></li>
+                                        <li class="menu2-2-3"><a href="#">폐기물사용량</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu2-3">
+                                    <a href="javascript:void(0);">사업장관리<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu2-3-1"><a href="#">기준배출량관리</a></li>
+                                        <li class="menu2-3-2"><a href="#">이행계획관리</a></li>
+                                        <li class="menu2-3-3"><a href="#">QA·QC활동계획</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu2-4">
+                                    <a href="javascript:void(0);">이행실적<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu2-4-1"><a href="#">QA·QC실적관리</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>               
+                    <li class="menu3 env">
+                        <a href="#"><span>환경경영체계</span></a>
+                        <ul class="depth_2">
+                            <h3 class="heading">환경경영체계</h3>
+                            <div class="scroll_Y">
+                                <li class="menu3-1">
+                                    <a href="javascript:void(0);">환경경영체계<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu3-1-1"><a href="#">경영시스템정보</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="menu4 env"><a href="#"><span>용수</span></a></li>
+                    <li class="menu5 env"><a href="#"><span>폐기물</span></a></li>
+                    <li class="menu6 social"><a href="#"><span>안전보건</span></a></li>
+                    <li class="menu7 gov"><a href="#"><span>윤리경영</span></a></li>
+
+                    <li class="menu8">
+                        <a href="javascript:void(0);"><span>시스템관리</span></a>
+                        <ul class="depth_2">
+                            <h3 class="heading">시스템관리</h3>
+                            <div class="scroll_Y">
+                                <li class="menu8-1">
+                                    <a href="javascript:void(0);">사용자관리<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu8-1-1"><a href="#">사용자정보</a></li>
+                                        <li class="menu8-1-2"><a href="#">사용자관리</a></li>
+                                        <li class="menu8-1-3"><a href="#">지점관리등록</a></li>
+                                        <li class="menu8-1-4"><a href="#">SSO사용자등록</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu8-2">
+                                    <a href="javascript:void(0);">메뉴관리<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu8-2-1"><a href="#">메뉴관리</a></li>
+                                        <li class="menu8-2-2"><a href="#">그룹권한관리</a></li>
+                                        <li class="menu8-2-3"><a href="#">사용자권한관리</a></li>
+                                        <li class="menu8-2-4"><a href="#">즐겨찾기관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu8-3">
+                                    <a href="javascript:void(0);">코드관리<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu8-3-1"><a href="#">공통코드관리</a></li>
+                                        <li class="menu8-3-2"><a href="#">지점코드관리</a></li>
+                                        <li class="menu8-3-3"><a href="#">우편번호관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu8-4">
+                                    <a href="javascript:void(0);">운영관리<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu8-4-1"><a href="#">접속로그관리</a></li>
+                                        <li class="menu8-4-2"><a href="#">레이아웃관리</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="menu9">
+                        <a href="javascript:void(0);"><span>즐겨찾기</span></a>
+                        <ul class="depth_2">
+                            <h3 class="heading">즐겨찾기</h3>
+                            <div class="scroll_Y">
+                                <li class="menu9-1">
+                                    <a href="javascript:void(0);">즐겨찾기<span class="arrow"></span></a>
+                                    <ul class="depth_3">
+                                        <li class="menu9-1-1"><a href="#">사용자정보</a></li>
+                                        <li class="menu9-1-2"><a href="#">메뉴관리</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>                     
+        </aside>
+        <main id="main">
+            <div class="contents">
+                <form id="form1" name="form1" method="post">
+                    <div class="searcher_hero">
+                        <div class="select_set">
+                            <label class="label_bullet">그룹사</label>
+                            <select class="select" id="">
+                                <option value="0">전체</option>
+                                <option value="1">BNK부산은행</option>
+                                <option value="2">BNK경남은행</option>
+                            </select>
+                        </div>
+                        <div class="select_set">
+                            <label class="label_bullet">이행연도</label>
+                            <select class="select" id="">
+                                <option value="1">2023년</option>
+                                <option value="2">2022년</option>
+                            </select>
+                        </div>
+                        <div class="input_set">
+                            <label class="label_bullet">지점</label>
+                            <input type="text" id="optForm" name="optForm" class="input" placeholder="전체" readonly />
+                        </div>
+                        <button type="button" id="btn_sch" name="btn_sch" class="btn_hero">조회</button>
+                    </div>
+                </form>
+
+                <!-- 차트 -->
+                <div class="hero cols_5">
+                    <div class="col pd_4">
+                        <div class="card has_chart">
+                            <div class="card_head">
+                                <div class="heading_wrap with_label">
+                                    <span class="label_e"></span>
+                                    <p class="tip">
+                                        <span class="tip_text">SCOPE 1, 2</span>
+                                    </p>
+                                    <h3 class="h3">전체-사용량</h3>
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <div class="count_area">
+                                    <p class="current"><strong class="current_num">432</strong><small class="unit">tCO2eq</small></p>
+                                    <p class="fluc"><span class="text_muted">전월대비</span><em class="fluc_down"><span class="sr_only">하락</span>46(12.23%)</em></p>
+                                </div>
+                                <div class="chart_area line_chart">
+                                    <canvas id="chartScope1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col pd_4">
+                        <div class="card has_chart">
+                            <div class="card_head">
+                                <div class="heading_wrap with_label">
+                                    <span class="label_e"></span>
+                                    <p class="tip">
+                                        <span class="tip_text">SCOPE 3</span>
+                                    </p>
+                                    <h3 class="h3">임직원출장</h3>
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <div class="count_area">
+                                    <p class="current"><strong class="current_num">432</strong><small class="unit">tCO2eq</small></p>
+                                    <p class="fluc"><span class="text_muted">전월대비</span><em class="fluc_down"><span class="sr_only">하락</span>46(12.23%)</em></p>
+                                </div>
+                                <div class="chart_area line_chart">
+                                    <canvas id="chartScope2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col pd_4">
+                        <div class="card has_chart">
+                            <div class="card_head">
+                                <div class="heading_wrap with_label">
+                                    <span class="label_e"></span>
+                                    <p class="tip">
+                                        <span class="tip_text">감축 목표 달성률</span>
+                                    </p>
+                                    <h3 class="h3">실적</h3>
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <div class="chart_area pie_chart">
+                                    <canvas id="myPieChart"></canvas>
+                                </div>
+                                <div class="percent_num">85<small>%</small></div>
+                                <div class="plate_area">
+                                    <p><span>목표</span><strong>- 651.0</strong></p>
+                                    <p style="border-left:1px solid #ddd;"><span>실적</span><strong class="text_red">- 578.3</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_2 pd_4">    
+                        <div class="slider slider_report_down">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <div href="#" class="slide_item flex_sb">
+                                            <div class="left_cont">
+                                                <h3 class="heading_3">2021</h3>
+                                                <div class="copy_wrap">
+                                                    <h4 class="tit_text">BNK금융그룹 지속가능경영보고서</h4>
+                                                    <p class="sub_text">ESG BNK, 함께하는 지속가능금융</p>
+                                                </div>
+                                                <div class="btn_wrap">
+                                                    <button type="button" class="button_down">국문 PDF<i data-feather="download" class="ico_18px"></i></button>
+                                                    <button type="button" class="button_down">영문 PDF<i data-feather="download" class="ico_18px"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="right_cont">
+                                                <div class="img_wrap">
+                                                    <img src="../resource/images/img_esg_report_2021.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div href="#" class="slide_item flex_sb">
+                                            <div class="left_cont">
+                                                <h3 class="heading_3">2021</h3>
+                                                <div class="copy_wrap">
+                                                    <h4 class="tit_text">BNK금융그룹 지속가능경영보고서</h4>
+                                                    <p class="sub_text">ESG BNK, 함께하는 지속가능금융</p>
+                                                </div>
+                                                <div class="btn_wrap">
+                                                    <button type="button" class="button_down">국문 PDF<i data-feather="download" class="ico_18px"></i></button>
+                                                    <button type="button" class="button_down">영문 PDF<i data-feather="download" class="ico_18px"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="right_cont">
+                                                <div class="img_wrap">
+                                                    <img src="../resource/images/img_esg_report_2021.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div href="#" class="slide_item flex_sb">
+                                            <div class="left_cont">
+                                                <h3 class="heading_3">2021</h3>
+                                                <div class="copy_wrap">
+                                                    <h4 class="tit_text">BNK금융그룹 지속가능경영보고서</h4>
+                                                    <p class="sub_text">ESG BNK, 함께하는 지속가능금융</p>
+                                                </div>
+                                                <div class="btn_wrap">
+                                                    <button type="button" class="button_down">국문 PDF<i data-feather="download" class="ico_18px"></i></button>
+                                                    <button type="button" class="button_down">영문 PDF<i data-feather="download" class="ico_18px"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="right_cont">
+                                                <div class="img_wrap">
+                                                    <img src="../resource/images/img_esg_report_2021.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer data-include3="footer" id="footer"></footer>
+    </div>
+
+    <!-- Page level plugins -->
+    <script src="../resource/library/swiper/swiper-bundle.min.js"></script>
+    <script src="../resource/library/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../resource/js/chart/scope1.js"></script>
+    <script src="../resource/js/chart/scope2.js"></script>
+    <script src="../resource/js/chart/scope3.js"></script>
+    <script src="../resource/js/chart/scope4.js"></script>
+    <script src="../resource/js/chart/chart-pie.js"></script>
+    <script src="../resource/js/chart/chart-bar.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // 토글 동작만 남김
+            $(document).on("click", "#aside .btn_toggle", function() {
+                $("#aside").toggleClass("open");
+
+                if ($("#aside").hasClass("open")) {
+                $(this).text("◀"); // 펼침
+                } else {
+                $(this).text("▶"); // 접힘
+                }
+            });
+        });
+
+        $(document).ready(function() {
+            $('.select').selectpicker();
+            $('[data-toggle="popover"]').popover();
+            feather.replace();
+        });
+        var swiper = new Swiper(".slider .swiper-container", {
+            pagination: {
+                el: ".slider .swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        $('#header').addClass('bg_white');
+        $('#main').addClass('border_btm');
+        $('.contents').addClass('pt_0');
+    </script>
+
+</body>
+</html>

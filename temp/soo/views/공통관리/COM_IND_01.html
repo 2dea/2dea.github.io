@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>ESG 지표 원장 관리</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/ems_common.css">
+    <script type="text/javascript" src="../../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header id="header">		
+            <!-- Header -->
+            <div class="header_inner">
+                <h1 class="logo" id="logo">
+                    <a href="/esg-data-platform/home.do">BNK금융지주 ESG데이터플랫폼(E)</a>
+                </h1>
+                <div class="util">
+                    <div class="hello">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <p class="hello_text">				
+                            <strong><a id="btn_user">관리자</a> 님</strong>				
+                            <span>최종사용시각 2025-08-20 17:37:15</span>				
+                        </p>
+                    </div>		
+                    <button type="button" id="btn_down_manual" class="btn_down"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>매뉴얼</span></button>
+                    <button type="button" id="btn_logout" class="btn_logout"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg><span>로그아웃</span></button>
+                    <button type="button" class="btn_allmenu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg><span>전체메뉴</span></button>		
+                </div>
+            </div>
+            <!--// Header -->
+
+            <!-- 전체메뉴 -->
+            <nav class="allmenu">
+                <h1><span>전체메뉴</span></h1>
+                <button type="button" class="btn_allmenu_close"><span class="sr_only">전체메뉴 닫기</span><span class="icon_x"></span></button>
+                <div class="allmenu_inner">		
+                    <div class="menu_section">
+                        <h2>기준정보<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></h2>
+                        <div class="depth_2">				
+                            <h3>E-일반현황 기준정보<span class="arrow"></span></h3>
+                            <ul class="depth_3">					
+                                <li><a class="menu_link manager" value="1110"ESG 지표 원장 관리리</a></li>					
+                                <li><a class="menu_link manager" value="1120">지표 카테고리 관리</a></li>					
+                                <li><a class="menu_link" value="1130">배출시설정보 관리</a></li>					
+                                <li><a class="menu_link" value="1140">세부시설정보 관리</a></li>					
+                                <li><a class="menu_link" value="1150">활동자료모니터링 관리</a></li>					
+                            </ul>				
+                            <h3>E-배출량산정 기준정보<span class="arrow"></span></h3>
+                            <ul class="depth_3">					
+                                <li><a class="menu_link manager" value="1210">산정등급적용정보 관리</a></li>					
+                                <li><a class="menu_link manager" value="1220">산정식정보 관리</a></li>					
+                                <li><a class="menu_link manager" value="1230">배출계수정보 관리</a></li>					
+                                <li><a class="menu_link manager" value="1240">ATM정보 관리</a></li>					
+                                <li><a class="menu_link manager" value="1250">유가정보 관리</a></li>					
+                                <li><a class="menu_link manager" value="1260">차량정보 관리</a></li>					
+                                <li><a class="menu_link" value="1270">출장정보 관리</a></li>					
+                                <li><a class="menu_link" value="1280">상품정보 관리</a></li>					
+                                <li><a class="menu_link" value="1290">제품정보 관리</a></li>					
+                                <li><a class="menu_link" value="1295">SCOPE 3 계수관리</a></li>					
+                            </ul>				
+                            <h3>E-배출량산정 연계정보<span class="arrow"></span></h3>
+                            <ul class="depth_3">					
+                                <li><a class="menu_link manager" value="1310">ATM연계정보 관리</a></li>					
+                                <li><a class="menu_link manager" value="1320">출장연계정보 관리</a></li>					
+                                <li><a class="menu_link manager" value="1330">차량연계정보 관리</a></li>					
+                            </ul>                        
+                        </div>
+                    </div>                
+                    <div class="menu_section">
+                        <h2>온실가스<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></h2>
+                        <div class="depth_2">                        
+                            <h3>SCOPE 1,2<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link" value="2110">전기/보일러 사용량 입력</a></li>                            
+                                <li><a class="menu_link" value="2120">차량-금액</a></li>                            
+                                <li><a class="menu_link" value="2130">차량-거리</a></li>                            
+                                <li><a class="menu_link" value="2140">원단위적용</a></li>                            
+                                <li><a class="menu_link" value="2150">전력-ATM</a></li>                            
+                            </ul>                        
+                            <h3>SCOPE 3<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link" value="2210">임직원출장</a></li>                            
+                                <li><a class="menu_link" value="2220">구매한상품</a></li>                            
+                                <li><a class="menu_link" value="2230">SCOPE 1,2 상위흐름</a></li>                            
+                                <li><a class="menu_link" value="2240">제품의사용</a></li>                            
+                            </ul>                        
+                            <h3>SCOPE 통계<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link" value="2310">온실가스인벤토리-총괄표</a></li>                            
+                                <li><a class="menu_link" value="2320">배출활동별 통계</a></li>                            
+                                <li><a class="menu_link" value="2330">목표관리 통계</a></li>                            
+                                <li><a class="menu_link" value="2340">미입력지점 통계</a></li>                            
+                                <li><a class="menu_link" value="2350">전년동월-비교표</a></li>                            
+                            </ul>                        
+                        </div>
+                    </div>                
+                    <div class="menu_section">
+                        <h2>환경경영<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></h2>
+                        <div class="depth_2">                        
+                            <h3>목표관리<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link" value="3110">기준배출량</a></li>                            
+                                <li><a class="menu_link" value="3120">목표관리</a></li>                            
+                                <li><a class="menu_link manager" value="3121">목표관리(그룹전체)</a></li>                            
+                                <li><a class="menu_link" value="3130">QA·QC담당자정보</a></li>                            
+                                <li><a class="menu_link" value="3140">경영시스템정보</a></li>                            
+                                <li><a class="menu_link" value="3150">QA·QC활동계획</a></li>                            
+                                <li><a class="menu_link" value="3160">QA·QC실적관리</a></li>                            
+                            </ul>                        
+                        </div>
+                    </div>                
+                    <div class="menu_section">
+                        <h2>용수<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></h2>
+                        <div class="depth_2">                        
+                            <h3>E-용수<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link" value="4110">용수-사용량</a></li>                            
+                                <li><a class="menu_link" value="4120">용수-원단위</a></li>                            
+                            </ul>
+                            </div>
+                    </div>                
+                    <div class="menu_section">
+                        <h2>폐기물<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></h2>
+                        <div class="depth_2">                        
+                            <h3>E-폐기물<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link" value="5110">폐기물-사용량</a></li>                            
+                            </ul>                        
+                        </div>
+                    </div>                
+                    <div class="menu_section">
+                        <h2>정보관리<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></h2>
+                        <div class="depth_2">                        
+                            <h3>사용자관리<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link" value="9110">사용자정보</a></li>                            
+                                <li><a class="menu_link manager" value="9120">사용자관리</a></li>                            
+                                <li><a class="menu_link manager" value="9130">지점관리등록</a></li>                            
+                            </ul>                        
+                            <h3>메뉴관리<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link manager" value="9210">메뉴관리</a></li>                            
+                                <li><a class="menu_link manager" value="9220">그룹권한관리</a></li>                            
+                                <li><a class="menu_link manager" value="9230">사용자권한관리</a></li>                            
+                                <li><a class="menu_link" value="9240">즐겨찾기관리</a></li>                            
+                            </ul>                        
+                            <h3>코드관리<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link manager" value="9310">공통코드관리</a></li>                            
+                                <li><a class="menu_link manager" value="9320">지점코드관리</a></li>                            
+                                <li><a class="menu_link manager" value="9330">우편번호관리</a></li>                            
+                            </ul>                        
+                            <h3>운영관리<span class="arrow"></span></h3>
+                            <ul class="depth_3">                            
+                                <li><a class="menu_link manager" value="9410">레이아웃관리</a></li>                            
+                                <li><a class="menu_link manager" value="9420">파일관리</a></li>                            
+                                <li><a class="menu_link manager" value="9430">공지사항</a></li>                            
+                            </ul>                        
+                        </div>
+                    </div>                
+                </div>
+            </nav>
+            <!--// 전체메뉴 -->
+
+            <form id="formMenu1" name="formMenu1" action="" method="post">
+                <input type="hidden" id="RSAModulus" name="RSAModulus" value="a1b351359a0e4c066a8f89aaa362176b0a715bf8d7fa912e6ac55a74c213c0d3fba015ada4f00bb0604d04b70b94da0056469c812df17582134571d9175fa581d793953d8a2c75ac50ac9011861bf308876157483e07c7ea6d85598f5d61056a2042b7c9f802dccacae1da57ddd403fd8511291eb812462ef691777a55031697">
+                <input type="hidden" id="RSAExponent" name="RSAExponent" value="10001">
+                <input type="hidden" id="mnuSeqRsa" name="mnuSeqRsa" value="">
+            </form>
+
+            <script nonce="" type="text/javaScript">
+            var g_codeList = [];
+            try{
+                g_codeList = JSON.parse('[{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"STS_CD","cmcd":"1","cmcdNm":"검토필요","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":0},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"STS_CD","cmcd":"2","cmcdNm":"검토완료","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PREV_GHG_CD","cmcd":"02","cmcdNm":"메탄","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_HOST","cmcd":"BTAT001","cmcdNm":"ATM정보연계(부산은행)","subgrpCd":"","cmcdStr1":"bwpcasap1","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MTEL_CD","cmcd":"010","cmcdNm":"010","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"NOTICE_CD","cmcd":"BZMN_NOTICE","cmcdNm":"메인공지사항여부","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PD_USE_KND_CD","cmcd":"01","cmcdNm":"인터넷뱅킹","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_ST_CD","cmcd":"01","cmcdNm":"대기","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_YN","cmcd":"BTAT001","cmcdNm":"ATM정보연계(부산은행)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MNU_KND_CD","cmcd":"1","cmcdNm":"대메뉴","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"01","cmcdNm":"정상처리","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"11","cmcdNm":"서울특별시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"02","cmcdNm":"㎘","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ACC_ST_CD","cmcd":"0","cmcdNm":"로그아웃상태","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"AVG_KND_CD","cmcd":"01","cmcdNm":"연평균","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"BT_CD","cmcd":"64000","cmcdNm":"금융업","subgrpCd":"CB","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"BT_DIV","cmcd":"CB","cmcdNm":"상업","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CALC_BAS_CD","cmcd":"01","cmcdNm":"철도노선도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CHR_SET","cmcd":"UTF-8","cmcdNm":"UTF-8","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CLO_CD","cmcd":"0","cmcdNm":"열림","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC","cmcd":"01","cmcdNm":"발열량","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC_OP","cmcd":"+","cmcdNm":"더하기","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"00","cmcdNm":"BNK금융지주","subgrpCd":"","cmcdStr1":"BSFG","cmcdStr2":"26","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CALC_HOW_CD","cmcd":"01","cmcdNm":"금액","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"COL_TYP_CD","cmcd":"01","cmcdNm":"문자","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CRLF_CD","cmcd":"01","cmcdNm":"LF","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"DTL_ACTYP_CD","cmcd":"01","cmcdNm":"제품활동자료1","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"DTL_ACTYR_CD","cmcd":"01","cmcdNm":"원료활동자료1","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_ACTY_CD","cmcd":"1001","cmcdNm":"고체연료연소","subgrpCd":"10","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0037","cmcdNm":"승용 자동차","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"DEL_CD","cmcd":"0","cmcdNm":"미삭제","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"DLY_TYP_CD","cmcd":"01","cmcdNm":"365","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EMLCLS_CD","cmcd":"10","cmcdNm":"고정연소","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41011","cmcdNm":"서울특별시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"00","cmcdNm":"일반(수기)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_DIV_CD","cmcd":"1","cmcdNm":"에너지","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FACIL_SCAL_CD","cmcd":"A","cmcdNm":"A","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FIXED_YEAR","cmcd":"2022","cmcdNm":"2022년","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0014","cmcdNm":"휘발유","subgrpCd":"CA","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_DIV_CD","cmcd":"F","cmcdNm":"연료","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"IF_KND_CD","cmcd":"CA","cmcdNm":"차량","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"LY_KND_CD","cmcd":"01","cmcdNm":"텍스트","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"01","cmcdNm":"A-1","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"02","cmcdNm":"02","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TIER_CD","cmcd":"0","cmcdNm":"해당없음","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TR_SRC_CD","cmcd":"01","cmcdNm":"폐기물 배출 및 처리실적보고서","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TR_KND_CD","cmcd":"01","cmcdNm":"연계","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USE_CD","cmcd":"1","cmcdNm":"사용","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_FAV_CD","cmcd":"0","cmcdNm":"미지정","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_LV_CD","cmcd":"1","cmcdNm":"시스템관리자","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"1","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VC_KND_CD","cmcd":"01","cmcdNm":"승용차","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":147,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_RST_CD","cmcd":"0","cmcdNm":"초기화아님","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VCTR_KND_CD","cmcd":"01","cmcdNm":"왕복","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":2,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":1},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VCTR_KND_CD","cmcd":"02","cmcdNm":"편도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":1,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_RST_CD","cmcd":"1","cmcdNm":"초기화상태","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VC_KND_CD","cmcd":"02","cmcdNm":"철도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":30,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USE_CD","cmcd":"0","cmcdNm":"미사용","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_LV_CD","cmcd":"2","cmcdNm":"운영관리자","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_FAV_CD","cmcd":"1","cmcdNm":"즐겨찾기지정","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TR_KND_CD","cmcd":"02","cmcdNm":"수기","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TR_SRC_CD","cmcd":"02","cmcdNm":"대도환경메일","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TIER_CD","cmcd":"1","cmcdNm":"1(UN_IPCC)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"031","cmcdNm":"031","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"02","cmcdNm":"A-2","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"LY_KND_CD","cmcd":"02","cmcdNm":"엑셀","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_DIV_CD","cmcd":"P","cmcdNm":"제품","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0018","cmcdNm":"실내 등유","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FIXED_YEAR","cmcd":"2023","cmcdNm":"2023년","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_DIV_CD","cmcd":"2","cmcdNm":"온실가스","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CHR_SET","cmcd":"EUC-KR","cmcdNm":"EUC-KR","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"01","cmcdNm":"차량-금액(수기)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41026","cmcdNm":"부산광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EMLCLS_CD","cmcd":"20","cmcdNm":"이동연소","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"DLY_TYP_CD","cmcd":"02","cmcdNm":"시간내","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"DEL_CD","cmcd":"1","cmcdNm":"삭제","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0038","cmcdNm":"승합 자동차","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_ACTY_CD","cmcd":"1002","cmcdNm":"기체연료연소","subgrpCd":"10","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CRLF_CD","cmcd":"02","cmcdNm":"CRLF","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"COL_TYP_CD","cmcd":"02","cmcdNm":"숫자","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CALC_HOW_CD","cmcd":"02","cmcdNm":"거리","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC_OP","cmcd":"-","cmcdNm":"빼기","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"01","cmcdNm":"BNK부산은행","subgrpCd":"","cmcdStr1":"BSBK","cmcdStr2":"26","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC","cmcd":"02","cmcdNm":"총발열량","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CLO_CD","cmcd":"1","cmcdNm":"마감","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CALC_BAS_CD","cmcd":"02","cmcdNm":"Ecotransit","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"BT_DIV","cmcd":"GV","cmcdNm":"공공","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"BT_CD","cmcd":"64100","cmcdNm":"은행및저축기관","subgrpCd":"CB","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"AVG_KND_CD","cmcd":"02","cmcdNm":"월평균","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ACC_ST_CD","cmcd":"1","cmcdNm":"로그인상태","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"03","cmcdNm":"kw","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"26","cmcdNm":"부산광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"02","cmcdNm":"미처리","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MNU_KND_CD","cmcd":"2","cmcdNm":"중메뉴","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"IF_KND_CD","cmcd":"AT","cmcdNm":"ATM","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_YN","cmcd":"BTAT002","cmcdNm":"ATM정보연계(경남은행)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_ST_CD","cmcd":"02","cmcdNm":"재처리대기","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PD_USE_KND_CD","cmcd":"02","cmcdNm":"모바일뱅킹","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MTEL_CD","cmcd":"011","cmcdNm":"011","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_HOST","cmcd":"BTAT002","cmcdNm":"ATM정보연계(경남은행)","subgrpCd":"","cmcdStr1":"bwpcasap1","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PREV_GHG_CD","cmcd":"03","cmcdNm":"아산화질소","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"STS_CD","cmcd":"3","cmcdNm":"검토중","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":2},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_ST_CD","cmcd":"03","cmcdNm":"처리중","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_YN","cmcd":"BTET001","cmcdNm":"출장정보연계(부산은행)","subgrpCd":"","cmcdStr1":"lyuhojin-ui-MacBookPro.local","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_HOST","cmcd":"BTET001","cmcdNm":"출장정보연계(부산은행)","subgrpCd":"","cmcdStr1":"lyuhojin-ui-MacBookPro.local","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"IF_KND_CD","cmcd":"BT","cmcdNm":"출장","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MNU_KND_CD","cmcd":"3","cmcdNm":"소메뉴","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MTEL_CD","cmcd":"016","cmcdNm":"016","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"03","cmcdNm":"사용가능 사업장 미존재","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"27","cmcdNm":"대구광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"04","cmcdNm":"ton-C/1000㎥","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ACC_ST_CD","cmcd":"2","cmcdNm":"강제로그아웃","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"BT_CD","cmcd":"64110","cmcdNm":"중앙은행","subgrpCd":"CB","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"BT_DIV","cmcd":"MI","cmcdNm":"제조업","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CALC_BAS_CD","cmcd":"03","cmcdNm":"거리데이터","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CLO_CD","cmcd":"2","cmcdNm":"TEST2","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC","cmcd":"03","cmcdNm":"배출계수","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"02","cmcdNm":"BNK경남은행","subgrpCd":"","cmcdStr1":"KNBK","cmcdStr2":"48","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC_OP","cmcd":"*","cmcdNm":"곱하기","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CALC_HOW_CD","cmcd":"03","cmcdNm":"구매량","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"COL_TYP_CD","cmcd":"03","cmcdNm":"일련번호","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_ACTY_CD","cmcd":"1003","cmcdNm":"액체연료연소","subgrpCd":"10","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0039","cmcdNm":"식각시설","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"DLY_TYP_CD","cmcd":"03","cmcdNm":"24/365","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41027","cmcdNm":"대구광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"02","cmcdNm":"차량-거리(수기)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FIXED_YEAR","cmcd":"2024","cmcdNm":"2024년","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0020","cmcdNm":"가스·디젤오일(경유)","subgrpCd":"CA","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_DIV_CD","cmcd":"R","cmcdNm":"원료","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"LY_KND_CD","cmcd":"03","cmcdNm":"기타","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"03","cmcdNm":"A-3","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"032","cmcdNm":"032","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TIER_CD","cmcd":"2","cmcdNm":"2(국가)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TR_SRC_CD","cmcd":"03","cmcdNm":"전국폐기물통계조사","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_LV_CD","cmcd":"3","cmcdNm":"그룹사관리자","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"3","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VC_KND_CD","cmcd":"03","cmcdNm":"버스","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":50,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":3},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VC_KND_CD","cmcd":"04","cmcdNm":"항공","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":150,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_LV_CD","cmcd":"4","cmcdNm":"지점관리자","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"4","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TR_SRC_CD","cmcd":"04","cmcdNm":"기타","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TIER_CD","cmcd":"3","cmcdNm":"3(사업장)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"033","cmcdNm":"033","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"04","cmcdNm":"A-4","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0021","cmcdNm":"보일러 등유","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"03","cmcdNm":"전력-원단위(수기)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41028","cmcdNm":"인천광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0055","cmcdNm":"일반 보일러시설","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_ACTY_CD","cmcd":"2002","cmcdNm":"이동연소(도로)","subgrpCd":"20","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC_OP","cmcd":"/","cmcdNm":"나누기","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"03","cmcdNm":"BNK캐피탈","subgrpCd":"","cmcdStr1":"BSCP","cmcdStr2":"26","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC","cmcd":"04","cmcdNm":"산화계수","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"BT_CD","cmcd":"64120","cmcdNm":"일반은행","subgrpCd":"CB","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"06","cmcdNm":"TJ/t-NH3","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"28","cmcdNm":"인천광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"04","cmcdNm":"배출시설 오류","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MTEL_CD","cmcd":"017","cmcdNm":"017","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_HOST","cmcd":"BTET002","cmcdNm":"출장정보연계(경남은행)","subgrpCd":"","cmcdStr1":"lyuhojin-ui-MacBookPro.local","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_YN","cmcd":"BTET002","cmcdNm":"출장정보연계(경남은행)","subgrpCd":"","cmcdStr1":"lyuhojin-ui-MacBookPro.local","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_ST_CD","cmcd":"04","cmcdNm":"완료","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":4},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_YN","cmcd":"BTFC001","cmcdNm":"차량정보연계(부산은행)","subgrpCd":"","cmcdStr1":"lyuhojin-ui-MacBookPro.local","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_HOST","cmcd":"BTFC001","cmcdNm":"차량정보연계(부산은행)","subgrpCd":"","cmcdStr1":"lyuhojin-ui-MacBookPro.local","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MTEL_CD","cmcd":"018","cmcdNm":"018","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"05","cmcdNm":"연료사용량 오류","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"29","cmcdNm":"광주광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"07","cmcdNm":"ton-C/TJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC","cmcd":"05","cmcdNm":"단위환산계수","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"04","cmcdNm":"BNK투자증권","subgrpCd":"","cmcdStr1":"BSFN","cmcdStr2":"26","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_ACTY_CD","cmcd":"6001","cmcdNm":"간접배출(외부전기사용)","subgrpCd":"60","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0059","cmcdNm":"전기동차","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EMLCLS_CD","cmcd":"60","cmcdNm":"간접배출","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41029","cmcdNm":"광주광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"04","cmcdNm":"전력-ATM(수기)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0022","cmcdNm":"액화석유가스(LPG)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"05","cmcdNm":"B ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"041","cmcdNm":"041","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TIER_CD","cmcd":"4","cmcdNm":"4(자동계측기)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"USR_LV_CD","cmcd":"5","cmcdNm":"사용자","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VC_KND_CD","cmcd":"05","cmcdNm":"지하철","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":33,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":5},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VC_KND_CD","cmcd":"06","cmcdNm":"선박","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":30,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"042","cmcdNm":"042","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"06","cmcdNm":"C-1","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0032","cmcdNm":"B-A유","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"05","cmcdNm":"출장(수기)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41030","cmcdNm":"대전광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EMLCLS_CD","cmcd":"70","cmcdNm":"기타","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0074","cmcdNm":"특수자동차","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_ACTY_CD","cmcd":"6002","cmcdNm":"간접배출(외부열사용)","subgrpCd":"60","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"05","cmcdNm":"BNK저축은행","subgrpCd":"","cmcdStr1":"BSSB","cmcdStr2":"26","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC","cmcd":"06","cmcdNm":"GWP","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"08","cmcdNm":"㎏N2O/t","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"30","cmcdNm":"대전광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"06","cmcdNm":"에너지사용량 변경불가","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MTEL_CD","cmcd":"019","cmcdNm":"019","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_HOST","cmcd":"BTFC002","cmcdNm":"차량정보연계(경남은행)","subgrpCd":"","cmcdStr1":"lyuhojin-ui-MacBookPro.local","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_YN","cmcd":"BTFC002","cmcdNm":"차량정보연계(경남은행)","subgrpCd":"","cmcdStr1":"lyuhojin-ui-MacBookPro.local","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":6},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MTEL_CD","cmcd":"0130","cmcdNm":"0130","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_HOST","cmcd":"BTEN001","cmcdNm":"직원정보연계","subgrpCd":"","cmcdStr1":"bwpcasap1","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"07","cmcdNm":"처리불가 사업장","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"31","cmcdNm":"울산광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"09","cmcdNm":"ton-C/t","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC","cmcd":"07","cmcdNm":"불확도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"06","cmcdNm":"BNK자산운용","subgrpCd":"","cmcdStr1":"BSGS","cmcdStr2":"11","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_ACTY_CD","cmcd":"7001","cmcdNm":"기타 ","subgrpCd":"70","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0075","cmcdNm":"특수차량","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41031","cmcdNm":"울산광역시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"11","cmcdNm":"차량-금액(연계)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0033","cmcdNm":"B-B유","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"07","cmcdNm":"C-2","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"043","cmcdNm":"043","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"VC_KND_CD","cmcd":"07","cmcdNm":"기타","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":30,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":7},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"0502","cmcdNm":"0502","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"08","cmcdNm":"C-3","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0034","cmcdNm":"B-C유","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"14","cmcdNm":"전력-ATM(연계)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41036","cmcdNm":"세종특별자치시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0083","cmcdNm":"화물 자동차","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"07","cmcdNm":"BNK신용정보","subgrpCd":"","cmcdStr1":"BSCI","cmcdStr2":"26","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CM_CALC","cmcd":"08","cmcdNm":"기타상수","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"10","cmcdNm":"ton","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"36","cmcdNm":"세종특별자치시","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"09","cmcdNm":"오류","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SVC_USE_HOST","cmcd":"BTBR001","cmcdNm":"지점정보연계","subgrpCd":"","cmcdStr1":"bwpcasap1","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"2","srtSno":8},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"11","cmcdNm":"유가정보 미존재","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"41","cmcdNm":"경기도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"12","cmcdNm":"㎏/㎡","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"08","cmcdNm":"BNK시스템","subgrpCd":"","cmcdStr1":"BSIS","cmcdStr2":"48","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0091","cmcdNm":"소규모배출시설","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41041","cmcdNm":"경기도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ENR_USE_KND_CD","cmcd":"15","cmcdNm":"출장(연계)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0035","cmcdNm":"프로판","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"09","cmcdNm":"C-4","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"0506","cmcdNm":"0506","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":9},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"051","cmcdNm":"051","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"10","cmcdNm":"C-5","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0036","cmcdNm":"부탄","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41042","cmcdNm":"강원도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0098","cmcdNm":"사업장단위전력사용시설","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"09","cmcdNm":"BNK벤처투자","subgrpCd":"","cmcdStr1":"BSVS","cmcdStr2":"11","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"13","cmcdNm":"㎏/ℓ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"42","cmcdNm":"강원도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"12","cmcdNm":"ATM정보 미존재","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":10},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"PRCS_RS_CD","cmcd":"13","cmcdNm":"출장지정보 미존재","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"43","cmcdNm":"충청북도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"14","cmcdNm":"㎦","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"CMGRP_CD","cmcd":"99","cmcdNm":"관리자","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"EM_FACIL_CD","cmcd":"0099","cmcdNm":"소량배출사업장","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41043","cmcdNm":"충청북도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0047","cmcdNm":"LNG(차량)","subgrpCd":"CA","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"MT_MTH_CD","cmcd":"11","cmcdNm":"D","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"052","cmcdNm":"052","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":11},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"053","cmcdNm":"053","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":12},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0048","cmcdNm":"CNG(차량)","subgrpCd":"CA","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":12},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41044","cmcdNm":"충청남도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":12},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"15","cmcdNm":"ton-C/GJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":12},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"44","cmcdNm":"충청남도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":12},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"45","cmcdNm":"전라북도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":13},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"16","cmcdNm":"㎞","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":13},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41045","cmcdNm":"전라북도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":13},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0049","cmcdNm":"LPG(차량)","subgrpCd":"CA","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":13},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"054","cmcdNm":"054","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":13},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"055","cmcdNm":"055","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":14},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0051","cmcdNm":"천연가스(LNG)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":14},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41046","cmcdNm":"전라남도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":14},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"17","cmcdNm":"ton-C/㎥","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":14},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"46","cmcdNm":"전라남도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":14},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"47","cmcdNm":"경상북도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":15},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"18","cmcdNm":"㎏/kg-mole","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":15},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41047","cmcdNm":"경상북도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":15},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0055","cmcdNm":"도시가스(LNG)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":15},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"061","cmcdNm":"061","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":15},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"062","cmcdNm":"062","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":16},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0056","cmcdNm":"도시가스(LPG)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":16},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41048","cmcdNm":"경상남도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":16},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"20","cmcdNm":"㎏/h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":16},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"48","cmcdNm":"경상남도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":16},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"SIDO_CD","cmcd":"50","cmcdNm":"제주특별자치도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":17},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"22","cmcdNm":"㎢","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":17},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"41050","cmcdNm":"제주특별자치도","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":17},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0058","cmcdNm":"부생연료 2호","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":17},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"063","cmcdNm":"063","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":17},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"064","cmcdNm":"064","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":18},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0061","cmcdNm":"전력","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":18},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"23","cmcdNm":"g/㎾h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":18},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"24","cmcdNm":"㎾h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":19},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0062","cmcdNm":"스팀","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":19},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"070","cmcdNm":"070","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":19},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0083","cmcdNm":"바이오가스","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":20},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"84000","cmcdNm":"미국","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":20},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"25","cmcdNm":"㎏-C/GJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":20},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"010","cmcdNm":"010","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":20},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"011","cmcdNm":"011","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":21},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"27","cmcdNm":"tCO2/㎦","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":21},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"FUEL_CD","cmcd":"0103","cmcdNm":"자가소비(전력)","subgrpCd":"CA","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":21},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"15600","cmcdNm":"중국","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":21},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"39200","cmcdNm":"일본","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":22},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"29","cmcdNm":"㎏/TJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":22},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"016","cmcdNm":"016","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":22},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"017","cmcdNm":"017","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":23},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"70400","cmcdNm":"베트남","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":23},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"30","cmcdNm":"원()","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":23},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"31","cmcdNm":"달러($)","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":24},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"018","cmcdNm":"018","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":24},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"70200","cmcdNm":"싱가포르","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":24},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"019","cmcdNm":"019","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":25},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"32","cmcdNm":"명","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":25},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"33","cmcdNm":"ton·㎞","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":26},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"TEL_CD","cmcd":"0130","cmcdNm":"0130","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":26},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"34","cmcdNm":"box","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":27},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"35","cmcdNm":"㎏/㎥","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":28},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"36","cmcdNm":"gCO2/인·㎞","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":29},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"37","cmcdNm":"㎏CO2eq/㎿h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":30},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"99000","cmcdNm":"유럽","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":30},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"ET_LOC_CD","cmcd":"60800","cmcdNm":"필리핀","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":31},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"40","cmcdNm":"MJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":31},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"41","cmcdNm":"TJ/GWh","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":32},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"42","cmcdNm":"TJ/1000㎦","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":33},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"43","cmcdNm":"1000ton","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":34},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"44","cmcdNm":"ft²","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":35},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"45","cmcdNm":"TJ/Gg","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":36},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"46","cmcdNm":"MJ/㎏","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":37},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"47","cmcdNm":"MJ/ℓ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":38},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"48","cmcdNm":"MJ/N㎥","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":39},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"49","cmcdNm":"MJ/㎾h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":40},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"50","cmcdNm":"㎏GHG/TJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":41},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"51","cmcdNm":"KVA","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":42},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"52","cmcdNm":"G㎉","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":43},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"53","cmcdNm":"G㎉/h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":44},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"54","cmcdNm":"ton/h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":45},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"55","cmcdNm":"㎥/h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":46},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"56","cmcdNm":"㎉/h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":47},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"57","cmcdNm":"%","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":48},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"59","cmcdNm":"℃","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":49},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"60","cmcdNm":"gCH4/㎏","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":50},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"61","cmcdNm":"gN2O/㎏","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":51},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"62","cmcdNm":"gN2O/t","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":52},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"63","cmcdNm":"㎏/㎾h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":53},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"64","cmcdNm":"㎏/LTO","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":54},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"65","cmcdNm":"㎏/m","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":55},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"67","cmcdNm":"㎏CH4","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":56},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"68","cmcdNm":"㎏CH4/GJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":57},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"69","cmcdNm":"㎏CH4/㎏BOD","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":58},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"70","cmcdNm":"㎏CH4/㎿h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":59},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"71","cmcdNm":"㎏CH4/t","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":60},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"72","cmcdNm":"㎏N2O/GJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":61},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"73","cmcdNm":"㎏N2O/㎿h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":62},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"74","cmcdNm":"㎏N2O-N/㎏N","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":63},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"75","cmcdNm":"㎞/대","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":64},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"76","cmcdNm":"㎡","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":65},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"77","cmcdNm":"mgBOD/ℓ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":66},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"78","cmcdNm":"mgCOD/ℓ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":67},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"79","cmcdNm":"mgN/ℓ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":68},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"80","cmcdNm":"TJ/㎦","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":69},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"81","cmcdNm":"ppm","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":70},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"82","cmcdNm":"tCH4/tCOD","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":71},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"83","cmcdNm":"tCH4/TJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":72},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"84","cmcdNm":"tCO2/GJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":73},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"85","cmcdNm":"tCO2/㎿h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":74},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"86","cmcdNm":"tCO2/t","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":75},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"87","cmcdNm":"tCO2/TJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":76},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"88","cmcdNm":"TJ/㎘","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":77},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"89","cmcdNm":"TJ/N㎥","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":78},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"90","cmcdNm":"TJ/t","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":79},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"91","cmcdNm":"tN2O/TJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":80},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"92","cmcdNm":"대","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":81},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"93","cmcdNm":"㎿h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":82},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"94","cmcdNm":"ℓ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":83},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"95","cmcdNm":"㎥","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":84},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"96","cmcdNm":"㎏","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":85},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"97","cmcdNm":"h","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":86},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"98","cmcdNm":"회","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":87},{"useCd":"1","delCd":"0","frstRegUsrId":"0000000","lastChgUsrId":"0000000","cdgrpCd":"UNIT_CD","cmcd":"99","cmcdNm":"GJ","subgrpCd":"","cmcdStr1":"","cmcdStr2":"","cmcdStr3":"","cmcdNum1":0,"cmcdNum2":0,"cmcdNum3":0.0,"usrLvCd":"5","srtSno":88}]');
+            }catch(e){
+                g_codeList = [];
+            }
+            var g_codeSet = (function(arr){
+                var len = arr.length;
+                var i;
+                var result = {};
+                var curr;
+
+                for( i = 0 ; i < len ; i++){
+                    curr = arr[i];
+                    if(curr.useCd == 1 && curr.delCd == 0) {
+                        if(!result[curr.cdgrpCd]){
+                            result[curr.cdgrpCd] = [];
+                        }
+
+                        result[curr.cdgrpCd].push(curr);
+                    }
+                }
+                return result;
+            })(g_codeList);
+
+            $(document).ready(function() {
+                feather.replace();
+            });
+
+            $(".menu_link").on("click", function(){
+                fnComm_goMenu($(this).attr("value"),'/esg-data-platform/home.do');
+            });
+
+            $("#btn_user").on("click", function(){
+                fnComm_goUrl('/esg-data-platform/home.do');
+            });
+
+            $("#btn_logout").on("click", function(){
+                logout('/esg-data-platform/logout.do');
+            });
+
+            $("#btn_login").on("click", function(){
+                fnComm_goUrl('/esg-data-platform/home.do');
+            });
+
+            $("#btn_down_manual").on("click", function(){
+                $.ajax({
+                    type:"POST"
+                    ,url:"/esg-data-platform/gms/cm/CMCM001/selectOne_manual.do"
+                    ,dataType:"json"
+                    ,success:fnCust_ajaxSucc_selectOne_manual
+                    ,error:fnComm_ajaxFail
+                });
+            });
+
+            function fnCust_ajaxSucc_selectOne_manual(data){
+                if(!data.errorFlag){
+                    if(data.message!=null&&data.message.toString()!=""){
+                        alert(data.message);
+                    }
+
+                    if(data.CMCM001VO==null){
+                        alert("매뉴얼이 업로드되어 있지 않습니다.\n관리자에게 문의하세요.");
+                    }
+                    console.log(data);
+                    var fileSeq = data.CMCM001VO.fileNm;
+                    var fileNm = data.CMCM001VO.fileNmorg;
+                    var downloadLink = document.createElement("a");
+
+                    downloadLink.href = "/esg-data-platform/download_file.do?fileSeq="+fileSeq;
+                    downloadLink.download = fileNm;
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                }
+                else{
+                    if(data.message!=null&&data.message.toString()!=""){
+                        alert(data.message);
+                    }
+                    else{
+                        fnComm_messageAlert(data.errorCode);
+                    }
+                    fnCust_resetForm2();
+                }
+            }
+
+            </script>
+
+            <script nonce="" type="text/javaScript">
+            <!--
+
+            function fnComm_goUrl(url) {
+                var form = document.createElement('form');
+                form.setAttribute("charset", "UTF-8");
+                form.setAttribute("method", "POST");
+                form.setAttribute("action", url);
+                document.body.appendChild(form);
+                form.submit();
+            }
+
+            function logout(url) {
+                if(confirm("로그아웃 하시겠습니까?")){
+                    fnComm_goUrl(url);
+                }
+            }
+            //-->
+            </script>
+
+        </header>
+
+        <aside id="aside">		
+            <!-- left menu -->
+            <ul class="side_nav">                
+                <li class="menu1">
+                    <a href="javascript:void(0);"><span>공통관리</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">공통관리</h3>
+                        <div class="scroll_Y">
+                            <li class="menu1-1">
+                                <a href="javascript:void(0);">ESG 지표 관리<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class=""><a class="menu_link" value="1110">ESG 지표 원장 관리</a></li>
+                                    <li class="on"><a class="menu_link" value="1120">지표 카테고리 관리</a></li>  
+                                    <li class=""><a class="menu_link" value="1130">ESG 목표 등록</a></li>                                  
+                                </ul>
+                            </li>                          				
+                            <li>
+                                <a>입력 관리<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="1310">전 그룹사 입력 현황</a></li>
+                                    <li class=""><a class="menu_link" value="1320">그룹사별 입력 현황</a></li>
+                                    <li class=""><a class="menu_link" value="1330">그룹사별 담당부서관리</a></li>
+                                    <li class=""><a class="menu_link" value="1340">그룹사별 승인자관리</a></li>                                                                   
+                                </ul>
+                            </li>				
+                        </div>
+                    </ul>
+                </li>	
+                <li class="">
+                    <a class=""><span>환경</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">환경</h3>
+                        <div class="scroll_Y">
+                            <li>
+                                <a>기준정보<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="2110">E-일반현황 기준정보</a></li>
+                                    <li class=""><a class="menu_link" value="2120">법인정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2130">사업장 정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2140">배출시설정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2150">세부시설정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2160">활동자료모니터링 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2170">E-배출량산정 기준정보</a></li>
+                                    <li class=""><a class="menu_link" value="2180">산정등급적용정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2190">산정식정보 관리</a></li>						
+                                    <li class=""><a class="menu_link" value="2210">배출계수정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2220">ATM 정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2230">유가정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2240">차량정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2250">출장정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2260">상품정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2270">제품정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2280">SCOPE3 계수관리</a></li>
+                                    <li class=""><a class="menu_link" value="2290">E-배출량산정 연계정보</a></li>
+                                    <li class=""><a class="menu_link" value="2310">ATM 연계정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2320">출장연계정보 관리</a></li>
+                                    <li class=""><a class="menu_link" value="2330">차량연계정보 관리</a></li>                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a>환경 데이터 등록/조회<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="2340">온실가스 배출량<br>(Scope 1, 2)</a></li>
+                                    <li class=""><a class="menu_link" value="2350">온길사드 배출량<br>(Scope 3)</a></li>
+                                    <li class=""><a class="menu_link" value="2360">금융배출량</a></li>
+                                    <li class=""><a class="menu_link" value="2370">에너지 사용량, 순환경제</a></li>
+                                    <li class=""><a class="menu_link" value="2380">환경경영 및 투자</a></li>						
+                                </ul>
+                            </li>
+                            <li>
+                                <a>환경 데이터 모니터링<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="2390">온실가스 배출량 / 에너지 사용량 조회</a></li>						
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a class=""><span class="arrow">사회</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">사회</h3>
+                        <div class="scroll_Y">		       
+                            <li>
+                                <a>사회데이터 등록/조회<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="3110">임직원/인적자원관리</a></li>
+                                    <li class=""><a class="menu_link" value="3120">고객/사회적 가치 및 정보보호</a></li>                                    					
+                                </ul>
+                            </li>				                         				
+                        </div>
+                    </ul>
+                </li>	
+                <li class="">
+                    <a class=""><span class="arrow">지배구조</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">지배구조</h3>
+                        <div class="scroll_Y">		       
+                            <li>
+                                <a>이사 정보 등록<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="4110">이사 정보 등록</a></li>                                                                       					
+                                </ul>
+                            </li>
+                            <li>
+                                <a>지배구조 데이터 등록/조회<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="4210">거버넌스 체계</a></li>
+                                    <li class=""><a class="menu_link" value="4220">경제성과 및 조세</a></li>
+                                    <li class=""><a class="menu_link" value="4230">윤리/준법/리스크</a></li>                                                                       					
+                                </ul>
+                            </li>				                         				
+                        </div>
+                    </ul>
+                </li>
+                <li class="">
+                    <a class=""><span class="arrow">ESG 금융</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">ESG 금융</h3>
+                        <div class="scroll_Y">		       
+                            <li>
+                                <a>ESG 금융실적 등록/조회<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="5110">ESG 금융 유형별 실적</a></li>
+                                    <li class=""><a class="menu_link" value="5120">상품등록</a></li>
+                                    <li class=""><a class="menu_link" value="5130">ESG 전략별 실적</a></li>                                                                       					
+                                </ul>
+                            </li>			                         				
+                        </div>
+                    </ul>
+                </li>
+                <li class="">
+                    <a class=""><span class="arrow">마이페이지</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">마이페이지</h3>
+                        <div class="scroll_Y">		       
+                            <li>
+                                <a>마이페이지<span class="arrow"></span></a>
+                                <ul class="depth_3">						
+                                    <li class=""><a class="menu_link" value="6110">마이페이지</a></li>                                                                       					
+                                </ul>
+                            </li>			                         				
+                        </div>
+                    </ul>
+                </li>
+                
+            </ul>
+            <!--// left menu -->
+
+            <script nonce="" type="text/javaScript">
+            /* var swiper = new Swiper(".scroll_Y", {
+                direction: "vertical",
+                slidePerView: "auto",
+                freeMode: true,
+                scrollbar: { el: ".swiper-scrollbar"},
+                mousewheel: true,
+            }); */
+
+            $("#btn_home").on("click", function(){
+                fnComm_goUrl('/esg-data-platform/home.do');
+            });
+
+            $(".menu_link").on("click", function(){
+                fnComm_goMenu($(this).attr("value"),'/esg-data-platform/home.do');
+            });
+
+            </script>
+
+        </aside>
+
+        <div id="main">
+            <div class="contents">
+                <!-- 페이지헤더 -->
+                <div class="page_heading">
+                    <h1 class="h1">ESG 지표 원장 관리</h1>
+                    <ul class="location">
+                        <li class="ico_home"><a><span class="sr_only">홈</span></a></li>
+                        <li>공통관리</li>
+                        <li>ESG 지표관리</li>          
+                        <li class="on">ESG 지표 원장관리</li>
+                    </ul>
+                </div>
+                <!--// 페이지헤더 -->
+
+                <!-- 그리드 -->
+                <form id="form1" name="form1" action="/esg-data-platform/home.do" method="post">
+                    <input type="hidden" id="errorFlag" name="errorFlag" value="">
+                    <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+                    <div class="searcher">
+                        <div class="searcher_items_wrap w100">
+                            <div class="select_set">
+                                <label class="label_bullet">영역</label>
+                                <div class="dropdown bootstrap-select select round bs3 fit-width">
+                                    <select id="pfYrOpt" name="pfYrOpt" class="select round" data-width="fit" tabindex="-98">					
+                				        <option value="">전체</option>
+                                        <option value="">E (환경)</option>
+                                        <option value="">S (사회)</option>
+                                        <option value="">G (지배구조)</option>
+                                        <option value="">F (ESG금융)</option>
+                                    </select>
+                                    <button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-46" aria-haspopup="listbox" aria-expanded="false" data-id="pfYrOpt" title="전체">
+                                        <div class="filter-option">
+                                            <div class="filter-option-inner">
+                                                <div class="filter-option-inner-inner">전체</div>
+                                            </div> 
+                                        </div>
+                                        <span class="bs-caret"><span class="caret">                                        
+                                        </span></span>
+                                    </button>
+                                    <div class="dropdown-menu open" style="max-height: 1608px; overflow: hidden; min-height: 102px;">
+                                        <div class="inner open" role="listbox" id="bs-select-46" tabindex="-1" aria-activedescendant="bs-select-46-0" style="max-height: 1598px; overflow-y: auto; min-height: 92px;">
+                                            <ul class="dropdown-menu inner " role="presentation" style="margin-top: 0px; margin-bottom: 0px;">
+                                                <li class="selected active">
+                                                    <a role="option" id="bs-select-46-0" tabindex="0" aria-setsize="8" aria-posinset="1" class="active selected" aria-selected="true">
+                                                        <span class="text">전체</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a role="option" id="bs-select-46-1" tabindex="0">
+                                                        <span class="text">E (환경)</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a role="option" id="bs-select-46-2" tabindex="0">
+                                                        <span class="text">S (사회)</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a role="option" id="bs-select-46-3" tabindex="0">
+                                                        <span class="text">G (지배구조)</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a role="option" id="bs-select-46-4" tabindex="0">
+                                                        <span class="text">F (ESG금융)</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="select_set">
+                                <label class="label_bullet">구분</label>
+                                <div class="dropdown bootstrap-select select round bs3 fit-width">
+                                    <select id="pfYrOpt" name="pfYrOpt" class="select round" data-width="fit" tabindex="-98">					
+                				        <option value="">전체</option>
+                                        <option value="">입력값</option>
+                                        <option value="">입력값/출력값</option>
+                                        <option value="">출력값</option>
+                                    </select>
+                                    <button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-46" aria-haspopup="listbox" aria-expanded="false" data-id="pfYrOpt" title="전체">
+                                        <div class="filter-option">
+                                            <div class="filter-option-inner">
+                                                <div class="filter-option-inner-inner">전체</div>
+                                            </div> 
+                                        </div>
+                                        <span class="bs-caret"><span class="caret">                                        
+                                        </span></span>
+                                    </button>
+                                    <div class="dropdown-menu open" style="max-height: 1608px; overflow: hidden; min-height: 102px;">
+                                        <div class="inner open" role="listbox" id="bs-select-46" tabindex="-1" aria-activedescendant="bs-select-46-0" style="max-height: 1598px; overflow-y: auto; min-height: 92px;">
+                                            <ul class="dropdown-menu inner " role="presentation" style="margin-top: 0px; margin-bottom: 0px;">
+                                                <li class="selected active">
+                                                    <a role="option" id="bs-select-46-0" tabindex="0" aria-setsize="8" aria-posinset="1" class="active selected" aria-selected="true">
+                                                        <span class="text">전체</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a role="option" id="bs-select-46-1" tabindex="0">
+                                                        <span class="text">입력값</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a role="option" id="bs-select-46-2" tabindex="0">
+                                                        <span class="text">입력값/출력값</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a role="option" id="bs-select-46-3" tabindex="0">
+                                                        <span class="text">출력값</span>
+                                                    </a>
+                                                </li>                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="select_set">
+                                <label class="label_bullet">상태</label>
+                                <div class="dropdown bootstrap-select select round bs3 fit-width">
+                                    <select id="pfYrOpt" name="pfYrOpt" class="select round" data-width="fit" tabindex="-98">					
+                				        <option value="">전체</option>
+                                        <option value="">비활성</option>
+                                    </select>
+                                    <button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-46" aria-haspopup="listbox" aria-expanded="false" data-id="pfYrOpt" title="전체">
+                                        <div class="filter-option">
+                                            <div class="filter-option-inner">
+                                                <div class="filter-option-inner-inner">전체</div>
+                                            </div> 
+                                        </div>
+                                        <span class="bs-caret"><span class="caret">                                        
+                                        </span></span>
+                                    </button>
+                                    <div class="dropdown-menu open" style="max-height: 1608px; overflow: hidden; min-height: 102px;">
+                                        <div class="inner open" role="listbox" id="bs-select-46" tabindex="-1" aria-activedescendant="bs-select-46-0" style="max-height: 1598px; overflow-y: auto; min-height: 92px;">
+                                            <ul class="dropdown-menu inner " role="presentation" style="margin-top: 0px; margin-bottom: 0px;">
+                                                <li class="selected active">
+                                                    <a role="option" id="bs-select-46-0" tabindex="0" aria-setsize="8" aria-posinset="1" class="active selected" aria-selected="true">
+                                                        <span class="text">전체</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a role="option" id="bs-select-46-1" tabindex="0">
+                                                        <span class="text">비활성</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <button type="button" id="btn_sch" name="btn_sch" class="btn_primary round ml_a"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>조회</span></button>
+                            <button type="button" id="btn_rst" name="btn_rst" class="btn_sm_gray round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg><span>초기화</span></button>
+                        </div>
+                    </div>
+
+                    <section class="section">
+                        <div class="card">
+                            <div class="card_head">
+                                <div class="heading_wrap">
+                                    <h3 class="table_h3">ESG 지표 원장</h3>
+                                </div>
+                                <div class="btns_wrap">
+                                    <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round" style="margin-left: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>등록/수정</span></button>
+                                    <button type="button" id="btn_del" name="btn_del" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg><span>삭제</span></button> 
+                                    <button type="button" id="btn_xls" name="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>                                               
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <hr class="border_top_2px">
+                                <div class="table-responsive">
+                                    <hr class="tr_selected" style="display:none;">
+                                    <table class="table grid_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>                                                                                                        
+                                        </colgroup>
+                                        <thead>                            
+                                            <tr>
+                                                <th rowspan="2">선택</th>
+                                                <th rowspan="2">지표<br>코드</th>
+                                                <th rowspan="2">영역</th>
+                                                <th rowspan="2">대<br>분<br>류</th>
+                                                <th rowspan="2">중<br>분<br>류</th>
+                                                <th rowspan="2">소<br>분<br>류</th>
+                                                <th rowspan="2">지<br>표<br>명</th>
+                                                <th rowspan="2">지표설명</th>
+                                                <th rowspan="2">구분</th>
+                                                <th rowspan="2">주기</th>
+                                                <th rowspan="2">단위</th>                                                
+                                                <th colspan="3">그룹사</th>
+                                                <th colspan="3">공시기준</th>
+                                                <th colspan="2">평가<br>기준</th>
+                                                <th rowspan="2">목표<br>등록<br>지표</th>
+                                                <th rowspan="2">증빙<br>첨부<br>필수</th>
+                                                <th rowspan="2">등록<br>일자</th>
+                                                <th rowspan="2">상태</th>                                        
+                                            </tr>
+                                            <tr>
+                                                <th>지주</th>
+                                                <th>부산<br>은행</th>
+                                                <th>....</th>
+                                                <th>GRI</th>
+                                                <th>SASB</th>
+                                                <th>IFRS S2</th>
+                                                <th>DJSI</th>
+                                                <th>KCGS</th>
+                                            </tr>                                            
+                                        </thead>
+                                        <tbody>
+                                            <tr class="selected">                                             
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_01" type="checkbox" value="1">
+                                                            <span class="checkmark bd0"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>                                 
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                     
+                                            </tr>
+                                            <tr>                                             
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_01" type="checkbox" value="1">
+                                                            <span class="checkmark bd0"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>                                 
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                     
+                                            </tr>
+                                            <tr>                                             
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_01" type="checkbox" value="1">
+                                                            <span class="checkmark bd0"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>                                 
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                     
+                                            </tr>
+                                            <tr>                                             
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_01" type="checkbox" value="1">
+                                                            <span class="checkmark bd0"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>                                 
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                     
+                                            </tr>
+                                            <tr>                                             
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_01" type="checkbox" value="1">
+                                                            <span class="checkmark bd0"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>                                 
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                     
+                                            </tr>
+                                            <tr>                                             
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_01" type="checkbox" value="1">
+                                                            <span class="checkmark bd0"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>                                 
+                                                <td>1</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>                     
+                                            </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                        </tbody>
+                                    </table>
+                                </div>                       
+                            </div>
+                        </div>
+                    </section>
+                </form>
+                <!--// 그리드 -->
+            </div>
+        </div>
+
+        <footer id="footer">
+            <!-- Footer -->
+            <div>
+                <p class="copyright">COPYRIGHT 2023 BNK FINANCIAL GROUP INC. ALL RIGHTS RESERVED.</p>
+            </div>
+            <!--// Footer -->
+	    </footer>
+    </div>
+</body>
+
+</html>

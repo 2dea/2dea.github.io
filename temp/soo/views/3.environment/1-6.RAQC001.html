@@ -1,0 +1,248 @@
+(<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" conten)t="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>QA-QC활동계획</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/ems_common.css">
+    <script type="text/javascript" src="../../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div class="contents" style="width: 100% !important;">
+        <!-- 페이지헤더 -->
+        <div class="page_heading" style="position: static !important;">
+            <h1 class="h1">QA-QC활동계획</h1>
+            <ul class="location">
+                <li class="ico_home"><a><span class="sr_only">홈</span></a></li>
+                <li>환경경영</li>
+                <li>목표관리</li>
+                <li class="on">QA-QC활동계획</li>
+            </ul>
+        </div>
+        <!--// 페이지헤더 -->
+
+        <!-- 그리드 -->
+        <form id="form1" name="form1" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+            <div class="searcher" style="position: static !important;">
+                <div class="searcher_items_wrap">
+                    <div class="select_set">
+                        <label class="label_bullet">이행연도</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="pfYrOpt" name="pfYrOpt" class="select round" data-width="fit" tabindex="-98">                            
+                        <option value="">전체</option><option value="2020">2020년</option><option value="2021">2021년</option><option value="2022">2022년</option><option value="2023">2023년</option><option value="2024">2024년</option><option value="2025">2025년</option><option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-22" aria-haspopup="listbox" aria-expanded="false" data-id="pfYrOpt" title="전체"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">전체</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-22" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <div class="select_set">
+                        <label class="label_bullet">그룹사</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="cmgrpCdOpt" name="cmgrpCdOpt" class="select round" data-width="fit" tabindex="-98">
+                            <option value="">전체</option>
+                            <option value="00">BNK금융지주</option>
+                            <option value="01">BNK부산은행</option>
+                            <option value="02">BNK경남은행</option>
+                            <option value="03">BNK캐피탈</option>
+                            <option value="04">BNK투자증권</option>                        
+                            <option value="05">BNK저축은행</option>
+                            <option value="06">BNK자산운용</option>                            
+                            <option value="07">BNK신용정보</option>                            
+                            <option value="08">BNK시스템</option>                            
+                            <option value="09">BNK벤처투자</option>
+                        </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-23" aria-haspopup="listbox" aria-expanded="false" data-id="cmgrpCdOpt" title="전체"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">전체</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-23" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <div class="select_set">
+                        <label class="label_bullet">사업장</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="optList" name="optList" class="select round" data-width="fit" tabindex="-98">
+                            <option value="brnmOpt">점명</option>
+                            <option value="brnoOpt">점번</option>
+                        </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-24" aria-haspopup="listbox" aria-expanded="false" data-id="optList" title="점명"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">점명</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-24" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                        <input type="text" id="optForm" name="optForm" class="input round" placeholder="검색어를 입력하세요." maxlength="20" kor_eng_num="">
+                    </div>
+                    <button type="button" id="btn_sch" name="btn_sch" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>검색</span></button>
+                    <button type="button" id="btn_rst" name="btn_rst" class="btn_sm_gray round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg><span>초기화</span></button>
+                </div>
+                <div class="searcher_items_wrap">
+                    <div class="select_set">
+                        <label class="label_bullet">자료복사</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="frYr" name="frYr" class="select round" data-width="fit" tabindex="-98">                            
+                        <option value="2020">2020년</option>
+                        <option value="2021">2021년</option>
+                        <option value="2022">2022년</option>
+                        <option value="2023">2023년</option>
+                        <option value="2024">2024년</option>
+                        <option value="2025">2025년</option>
+                        <option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-25" aria-haspopup="listbox" aria-expanded="false" data-id="frYr" title="2024년"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">2024년</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-25" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                        <input type="text" id="frBrno" name="frBrno" class="input round" placeholder="점번" maxlength="3" style="width:85px; margin-right:4px;" num="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="toYr" name="toYr" class="select round" data-width="fit" tabindex="-98">
+                            
+                        <option value="2020">2020년</option><option value="2021">2021년</option><option value="2022">2022년</option><option value="2023">2023년</option><option value="2024">2024년</option><option value="2025">2025년</option><option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-26" aria-haspopup="listbox" aria-expanded="false" data-id="toYr" title="2025년"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">2025년</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-26" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                        <input type="text" id="toBrno" name="toBrno" class="input round" placeholder="점번" maxlength="3" style="width:85px; margin-right:4px;" num="">
+                    </div>
+                    <button type="button" id="btn_cpy" name="btn_cpy" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>복사</span></button>
+                </div>
+            </div>
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">목록</h3>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>적용</span></button>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <div class="table-responsive">
+                            <hr class="tr_selected" style="display:none;">
+                            <table class="table grid_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>                                
+                                </colgroup>
+                                <thead>                            
+                                    <tr>
+                                        <th>순번</th>
+                                        <th>삭제</th>
+                                        <th>이행연도</th>
+                                        <th>그룹사</th>
+                                        <th>사업장</th>
+                                        <th>소량배출여부</th>
+                                        <th>품질관리(QC)활동계획</th>
+                                        <th>품질보증(QA)활동계획</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="selected">
+                                        <td>1</td>
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>2025</td>
+                                        <td>BNK금융지주</td>
+                                        <td>[001]본점</td>
+                                        <td>Y</td>
+                                        <td>QC</td>
+                                        <td>QA</td>
+                                    </tr>                                                                                                                                                                                                                                                                                                                                                                      
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_footer">
+                            <span>[ 4 / 4 ]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	    </form>
+	    <!--// 그리드 -->
+
+        <!-- 상세 -->
+        <form id="form2" name="form2" class="col form_right" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="cmgrpCdForm" name="cmgrpCdForm" value="">
+            <input type="hidden" id="brnoForm" name="brnoForm" value="">
+            <input type="hidden" id="pfYrForm" name="pfYrForm" value="">
+            <input type="hidden" id="cmgrpCdPk" name="cmgrpCdPk" value="">
+            <input type="hidden" id="brnoPk" name="brnoPk" value="">
+            <input type="hidden" id="pfYrPk" name="pfYrPk" value="">
+            <input type="hidden" id="cmgrpCdPop" name="cmgrpCdPop" value="">
+            <input type="hidden" id="brno" name="brno" value="">
+            <input type="hidden" id="cloCd" name="cloCd" value="">
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">상세</h3>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_rst" name="btn_rst" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span>초기화</span></button>
+                            <button type="button" id="btn_del" name="btn_del" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg><span>삭제</span></button>
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>저장</span></button>
+                        </div>
+                    </div><!-- //card_head -->
+
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <article class="div_table cols_1">
+                        <div class="col">
+                            <div class="dt requird">이행연도</div>
+                            <div class="dd">
+                                <div class="dropdown bootstrap-select select bs3"><select id="pfYr" name="pfYr" class="select" tabindex="-98">                                   
+                                <option value="2020">2020년</option><option value="2021">2021년</option><option value="2022">2022년</option><option value="2023">2023년</option><option value="2024">2024년</option><option value="2025">2025년</option><option value="2026">2026년</option></select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-27" aria-haspopup="listbox" aria-expanded="false" data-id="pfYr" title="2025년"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">2025년</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-27" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="dt requird">그룹사</div>
+                            <div class="dd">
+                                <div class="dropdown bootstrap-select select bs3"><select id="cmgrpCd" name="cmgrpCd" class="select" tabindex="-98">
+                                    <option value="">선택</option>
+                                    <option value="00" selected="">BNK금융지주</option>
+                                    <option value="01">BNK부산은행</option>
+                                    <option value="02">BNK경남은행</option>
+                                    <option value="03">BNK캐피탈</option>
+                                    <option value="04">BNK투자증권</option>                                    
+                                    <option value="05">BNK저축은행</option>
+                                    <option value="06">BNK자산운용</option>                                    
+                                    <option value="07">BNK신용정보</option>                                    
+                                    <option value="08">BNK시스템</option>                                    
+                                    <option value="09">BNK벤처투자</option>
+                                </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-28" aria-haspopup="listbox" aria-expanded="false" data-id="cmgrpCd" title="BNK금융지주"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">BNK금융지주</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-28" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="dt requird">사업장</div>
+                            <div class="dd">
+                                <div class="rst_input_wrap">
+                                    <input type="text" id="brnoVal" name="brnoVal" class="input" title="사업장" maxlength="20" readonly="">
+                                    <button type="button" id="btn_brno_rst" name="btn_brno_rst" class="ico_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="sr_only">초기화</span></button>
+                                </div>
+                                <button type="button" id="btn_brno_sch" name="btn_brno_sch" class="btn_tertiary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>사업장</span></button>
+                            </div>
+                        </div>
+                        <div class="col_2">
+                            <div class="dt">품질관리(QC)계획</div>
+                            <div class="dd">
+                                <textarea rows="7" id="qcPlanTxt" name="qcPlanTxt" class="textarea" title="품질관리계획" maxlength="300" placeholder="(300자 이내)"></textarea>
+                            </div>
+                        </div>
+                        <div class="col_2">
+                            <div class="dt">품질보증(QA)계획</div>
+                            <div class="dd">
+                                <textarea rows="7" id="qaPlanTxt" name="qaPlanTxt" class="textarea" title="품질보증계획" maxlength="300" placeholder="(300자 이내)"></textarea>
+                            </div>
+                        </div>
+                    </article>
+                </div><!-- //card_body -->
+                </div><!-- //card -->
+            </section>
+	    </form>
+        <!--// 상세 -->
+    </div>  
+</body>
+
+</html>
