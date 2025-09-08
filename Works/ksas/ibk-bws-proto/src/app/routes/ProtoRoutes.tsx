@@ -25,6 +25,8 @@ import SurveyForms from 'app/pages/test/SurveyForms'; // SurveyForms
 // proto 공통
 import CMM000301M from 'app/pages/cmm/CMM000301M';   // 공통 ~ 메인
 
+import CMP001801P from 'app/pages/cmp/CMP001801P';   // 공통 ~ (LP)점검대상 선택
+import CMP001701P from 'app/pages/cmp/CMP001701P';   // 공통 ~ (LP)마이페이지
 import CMP000101P from 'app/pages/cmp/CMP000101P';   // 공통 ~ (LP)미처리업무등록관리
 import CMP000102P from 'app/pages/cmp/CMP000102P';   // 공통 ~ (LP)미처리업무관리
 import CMP000201P from 'app/pages/cmp/CMP000201P';   // 공통 ~ (LP)엑셀업로드
@@ -670,6 +672,8 @@ function ProtoRoutes() {
       children: [
         { path: 'CMM000301M', element: <CMM000301M /> },
 
+        { path: 'CMP001801P', element: <CMP001801P /> },
+        { path: 'CMP001701P', element: <CMP001701P /> },
         { path: 'CMP000101P', element: <CMP000101P /> },
         { path: 'CMP000102P', element: <CMP000102P /> },
         { path: 'CMP000201P', element: <CMP000201P /> },

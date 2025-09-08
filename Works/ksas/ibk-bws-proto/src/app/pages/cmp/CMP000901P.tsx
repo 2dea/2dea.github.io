@@ -92,7 +92,7 @@ function CMP000901P() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-25p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,32 +101,150 @@ function CMP000901P() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">메모(업무별)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">공지(메모/알림) 관리</span></h3>}
       >
         <div className="div-container _small">
-
           <div className="o-grid">
             <div className="column">
 
-              <div className="o-form _input">
-                <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
-                <i aria-hidden="true"></i>
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">토지보상우편물 관련 메모(알림) 관리</span></h4>
+                </div>
+
+                <div className="main">
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`등록일자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-string-binds">
+                              <span className="o-digit type-date string">2025-12-25</span>
+                              <span className="binds"><CommonButton label="BPR 조회" className="_normal" /></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`우편물내용`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-rich-text">
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                              신세계백화점상품권 10만원권 신청 시 봉투가 불필요한 경우 연락 부탁드립니다.<br />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
               </div>
 
-              {/* <div className="text-box">
-                등록되어 있는 메모가 있는 경우입니다. 메모 텍스트는 reading 스타일로 행간이 넓은 타입을 사용해주세요.
-              </div> */}
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3"><span className="label">일자별 메모 내역</span></h5>
+                </div>
+
+                <div className="main _primary rows-body-5i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록시각</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td>{idx + 1}</td>
+                              <td><span className="o-digit type-date">2025-12-25</span></td>
+                              <td><span className="o-digit type-time">00:00:00</span></td>
+                              <td>012345</td>
+                              <td className="g-start">을지로</td>
+                              <td>012345</td>
+                              <td>홍길동</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">메모내용</span></h4>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="초기화" className="_normal" />
+                    </div>
+                  </div>
+                </div>
+
+                  <div className="main">
+                    <div className="o-field">
+                      <div className="fields">
+                        <div className="o-form _input mode-required">
+                          <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={3} cols={80} />
+                          <i aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
 
             </div>
           </div>
-
         </div>
 
         <div className="div-footer">
           <div className="m-binds type-end">
-            <div className="group">
-              <CommonButton label="삭제" className="_normal" />
-              <CommonButton label="저장" className="_solid-secondary" />
+            <div className="group _primary">
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="삭제" className="_delete" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -136,7 +254,7 @@ function CMP000901P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)메모(업무별) [wdth-50p(w960)]</span>
+              <span className="label">(P)메모(업무별) [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>

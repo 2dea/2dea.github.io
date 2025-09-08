@@ -935,6 +935,12 @@ function FMTCT0201M() {
                       <div className="o-section">
                         <div className="m-header">
                           <h4 className="o-heading level4"><span className="label">현송직원확인(업무센터)</span></h4>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="현송직원확인" className="_solid-primary" />
+                            </div>
+                          </div>
                         </div>
 
                         <div className="main">
@@ -1032,6 +1038,39 @@ function FMTCT0201M() {
                           </form>
                         </div>
 
+                      </div>
+
+                      <div className="o-section">
+                        <div className="m-header">
+                          <h4 className="o-heading level4"><span className="label">현송대행지시서 스캔</span></h4>
+                        </div>
+
+                        <div className="main">
+                          <form className="m-data-form">
+                            <table className="table">
+                              <colgroup>
+                                <col className="head" />
+                                <col className="data" />
+                              </colgroup>
+
+                              <tbody>
+                                <tr>
+                                  <th colSpan={1}>
+                                    <Label label={`스캔등록`} require={false} />
+                                  </th>
+                                  <td colSpan={1}>
+                                    <div className="m-binds">
+                                      <div className="group _start">
+                                        <CommonButton label="BPR 조회" className="_normal" />
+                                        <CommonButton label="BPR 스캔" className="_normal" />
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </form>
+                        </div>
                       </div>
 
                     </div>

@@ -101,7 +101,7 @@ function CMP000101P() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">업무지원시스템 통합 미처리업무관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">업무지원시스템 통합 미처리업무</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -208,16 +208,16 @@ function CMP000101P() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">기타 미처리 업무 내역</span></h4>
+                  <h4 className="o-heading level2"><span className="label">미처리 업무 내역</span></h4>
 
-                  <div className="m-binds">
+                  {/* <div className="m-binds">
                     <div className="group">
                       <CommonButton label="미처리업무관리" className="_normal" />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -225,7 +225,7 @@ function CMP000101P() {
                         <colgroup>
                           <col className="wdth-10" />
                           <col />
-                          <col />
+                          <col className="wdth-auto" />
                           <col />
                           <col />
                           <col />
@@ -292,7 +292,7 @@ function CMP000101P() {
                         <col className="data" />
                       </colgroup>
 
-                      <tbody>
+                      {/* <tbody>
                         <tr>
                           <th colSpan={1}>
                             <Label label={`미처리업무명`} require={false} />
@@ -329,12 +329,112 @@ function CMP000101P() {
                           </th>
                           <td colSpan={3}></td>
                         </tr>
+                      </tbody> */}
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`미처리업무명`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`관련거래명`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`미처리업무담당자`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`미처리업무조건`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`기준기타내용`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   </form>
                 </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+
+        <div className="div-footer">
+          <div className="m-binds type-end">
+            <div className="group _primary">
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>

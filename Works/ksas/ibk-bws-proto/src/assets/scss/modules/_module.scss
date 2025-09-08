@@ -1998,7 +1998,7 @@
 .m-with-bind >.binds  { margin: III(-4) 0; margin: calc((1lh - $height-form-30) / 2) 0; }
 
 
-.m-string-binds  { display: flex; align-items: center; gap: $gap-element-30; }
+.m-string-binds  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; }
 .m-string-binds >*  { flex: none; min-width: 0; }
 .m-string-binds >.string  { flex: 0 1 auto; }
 .m-string-binds .binds  { display: flex; align-items: center; gap: $gap-element-30; }

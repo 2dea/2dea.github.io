@@ -1,5 +1,5 @@
 /**
- * @description TEST ~ (LP)공통 그리드컬럼필터
+ * @description 공통 ~ (LP)점검대상 선택
  */
 
 // dependency
@@ -36,13 +36,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function GridsColFilter() {
+function CMP001801P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
-  const gridscolfilterOverlay0 = useRef(null);
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -92,11 +91,77 @@ function GridsColFilter() {
 
   return (
     <>
+      <Dialog
+        className="layer-wrap wdth-25p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        headerClassName="layer-head"
+        contentClassName="layer-body"
+        visible={visible}
+        style={{}}
+        onHide={() => { if (!visible) return; setVisible(false); }}
+        closeIcon={<Icon icon="popup-close" />}
+        modal={true}
+        // footer={<></>}
+        header={<h3 className="o-heading"><span className="label">점검대상 선택</span></h3>}
+      >
+        <div className="div-container">
+          <div className="o-grid">
+            <div className="column">
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">점검대상</span></h4>
+                </div>
+
+                <div className="main _primary rows-body-3i">
+                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col className="wdth-10" />
+                          <col className="wdth-auto" />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검대상</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">선택</span></div></th>
+                          </tr>
+                        </thead>
+
+                        <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={3}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody>
+
+                        <tbody className="p-datatable-tbody">
+                        {[...Array(24)].map((e, idx) => (
+                          <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td className="g-start">동수원지점 3층</td>
+                            <td><CommonButton label="선택" className="_normal" /></td>
+                          </tr>
+                        ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </Dialog>
+
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)공통 그리드컬럼필터 [case-viewimage wdth-25p(w480)]</span>
+              <span className="label">(P)점검대상 선택 [wdth-25p]</span>
             </h1>
           </div>
         </div>
@@ -109,31 +174,7 @@ function GridsColFilter() {
         <div className="div-contents">
           <div className="m-binds">
             <div className="group _start">
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={(e) => gridscolfilterOverlay0.current.toggle(e)} />
-              <OverlayPanel className="o-gridscolfilter" ref={gridscolfilterOverlay0} closeOnEscape dismissable={false}>
-                <div className="o-gridscolfilter-center">
-                  <ul className="o-gridscolfilter-items">
-                  <>
-                  {[...Array(24)].map((e, idx) => (
-                    <li key={idx} className="o-gridscolfilter-item" role="listbox">
-                      <InputCheck label="선택" defaultChecked />
-                    </li>
-                  ))}
-                  </>
-                  </ul>
-                </div>
-
-                <div className="o-gridscolfilter-footer">
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="초기화" className="_texted" size={30} />
-                    </div>
-                    <div className="group _primary">
-                      <CommonButton label="확인" className="_normal" size={30} onClick={(e) => gridscolfilterOverlay0.current.hide(e)} />
-                    </div>
-                  </div>
-                </div>
-              </OverlayPanel>
+              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => setVisible(true)} />
             </div>
           </div>
         </div>
@@ -143,4 +184,4 @@ function GridsColFilter() {
   );
 }
 
-export default GridsColFilter;
+export default CMP001801P;

@@ -1,5 +1,5 @@
 /**
- * @description TEST ~ (LP)공통 그리드컬럼필터
+ * @description 공통 ~ (LP)마이페이지
  */
 
 // dependency
@@ -36,13 +36,12 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function GridsColFilter() {
+function CMP001701P() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
   // OverlayPanel
   const viewimageOverlay0 = useRef(null);
-  const gridscolfilterOverlay0 = useRef(null);
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -92,11 +91,49 @@ function GridsColFilter() {
 
   return (
     <>
+      <Dialog
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        headerClassName="layer-head"
+        contentClassName="layer-body"
+        visible={visible}
+        style={{}}
+        onHide={() => { if (!visible) return; setVisible(false); }}
+        closeIcon={<Icon icon="popup-close" />}
+        modal={true}
+        // footer={<></>}
+        header={<h3 className="o-heading"><span className="label">마이페이지</span></h3>}
+      >
+        <div className="div-container">
+          <div className="o-grid">
+            <div className="column">
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">설정</span></h4>
+                </div>
+
+                <div className="main"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div className="div-footer">
+          <div className="m-binds type-end">
+            <div className="group _primary">
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="저장" className="_solid-primary" />
+            </div>
+          </div>
+        </div>
+      </Dialog>
+
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)공통 그리드컬럼필터 [case-viewimage wdth-25p(w480)]</span>
+              <span className="label">(P)마이페이지 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>
@@ -109,31 +146,7 @@ function GridsColFilter() {
         <div className="div-contents">
           <div className="m-binds">
             <div className="group _start">
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={(e) => gridscolfilterOverlay0.current.toggle(e)} />
-              <OverlayPanel className="o-gridscolfilter" ref={gridscolfilterOverlay0} closeOnEscape dismissable={false}>
-                <div className="o-gridscolfilter-center">
-                  <ul className="o-gridscolfilter-items">
-                  <>
-                  {[...Array(24)].map((e, idx) => (
-                    <li key={idx} className="o-gridscolfilter-item" role="listbox">
-                      <InputCheck label="선택" defaultChecked />
-                    </li>
-                  ))}
-                  </>
-                  </ul>
-                </div>
-
-                <div className="o-gridscolfilter-footer">
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="초기화" className="_texted" size={30} />
-                    </div>
-                    <div className="group _primary">
-                      <CommonButton label="확인" className="_normal" size={30} onClick={(e) => gridscolfilterOverlay0.current.hide(e)} />
-                    </div>
-                  </div>
-                </div>
-              </OverlayPanel>
+              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => setVisible(true)} />
             </div>
           </div>
         </div>
@@ -143,4 +156,4 @@ function GridsColFilter() {
   );
 }
 
-export default GridsColFilter;
+export default CMP001701P;

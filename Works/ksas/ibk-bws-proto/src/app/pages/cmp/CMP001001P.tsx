@@ -101,19 +101,23 @@ function CMP001001P() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">메모(마이메뉴)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">메모</span></h3>}
       >
         <div className="div-container _small">
 
           <div className="o-grid">
             <div className="column">
 
-              {/* <div className="o-form _input">
-                <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
-                <i aria-hidden="true"></i>
+              {/* <div className="o-field">
+                <div className="fields">
+                  <div className="o-form _input">
+                    <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} cols={80} />
+                    <i aria-hidden="true"></i>
+                  </div>
+                </div>
               </div> */}
 
-              <div className="text-box">
+              <div className="o-rich-text">
                 등록되어 있는 메모가 있는 경우입니다. 메모 텍스트는 reading 스타일로 행간이 넓은 타입을 사용해주세요.
               </div>
 
@@ -124,9 +128,14 @@ function CMP001001P() {
 
         <div className="div-footer">
           <div className="m-binds type-end">
+            {/* <div className="group">
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="저장" className="_solid-primary" />
+            </div> */}
+
             <div className="group">
-              <CommonButton label="삭제" className="_normal" />
-              <CommonButton label="저장" className="_solid-secondary" />
+              <CommonButton label="삭제" className="_delete" />
+              <CommonButton label="수정" className="_solid-secondary" />
             </div>
           </div>
         </div>
@@ -136,7 +145,7 @@ function CMP001001P() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)메모(마이메뉴) [wdth-50p(w960)]</span>
+              <span className="label">(P)메모(마이메뉴) [wdth-25p]</span>
             </h1>
           </div>
         </div>
