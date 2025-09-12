@@ -419,6 +419,10 @@ import STMPR0301P02 from 'app/pages/stm/STMPR0301P02';   // 재난·안전관리
 import STMPR0301P03 from 'app/pages/stm/STMPR0301P03';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)재발급
 import STMPR0301P04 from 'app/pages/stm/STMPR0301P04';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)출입증반납
 import STMPR0301P05 from 'app/pages/stm/STMPR0301P05';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)방문증분실(미반납)
+import STMPR0301P06 from 'app/pages/stm/STMPR0301P06';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)분실
+import STMPR0301P07 from 'app/pages/stm/STMPR0301P07';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)반려내역
+import STMPR0301P08 from 'app/pages/stm/STMPR0301P08';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)이력조회
+import STMPR0301P09 from 'app/pages/stm/STMPR0301P09';   // 재난·안전관리 > 출입증/방문증            > 출입증현황관리 ~ (LP)출입증발급 상세
 import STMPR0401M from 'app/pages/stm/STMPR0401M';       // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증신청
 import STMPR0501M from 'app/pages/stm/STMPR0501M';       // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증현황관리
 import STMPR0501P01 from 'app/pages/stm/STMPR0501P01';   // 재난·안전관리 > 출입증/방문증            > 부서행사용방문증현황관리 ~ (LP)반납
@@ -1077,6 +1081,10 @@ function ProtoRoutes() {
         { path: 'STMPR0301P03', element: <STMPR0301P03 /> },
         { path: 'STMPR0301P04', element: <STMPR0301P04 /> },
         { path: 'STMPR0301P05', element: <STMPR0301P05 /> },
+        { path: 'STMPR0301P06', element: <STMPR0301P06 /> },
+        { path: 'STMPR0301P07', element: <STMPR0301P07 /> },
+        { path: 'STMPR0301P08', element: <STMPR0301P08 /> },
+        { path: 'STMPR0301P09', element: <STMPR0301P09 /> },
 
         { path: 'STMPR0401M',   element: <STMPR0401M /> },
         { path: 'STMPR0501M',   element: <STMPR0501M /> },
