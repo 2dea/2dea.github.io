@@ -170,8 +170,14 @@ function BSPRQ0401M() {
               <Tabs className="o-section" defaultIndex={0}>
                 <div className="m-header">
                   <div className="m-checks justify-start">
-                    <InputCheck label="우리부점 BEST" />
-                    <InputCheck label="전체 BEST" />
+                    <InputCheck moduleId="BSPRQ0401M-tooltip-10" label="우리부점 BEST" />
+                    <InputCheck moduleId="BSPRQ0401M-tooltip-20" label="전체 BEST" />
+                    <Tooltip className="o-tooltip" target="#BSPRQ0401M-tooltip-10" position="top">
+                      우리 부점의 신청횟수가 많은 순으로 품목이 노출됩니다.
+                    </Tooltip>
+                    <Tooltip className="o-tooltip" target="#BSPRQ0401M-tooltip-20" position="top">
+                      전 부점의 신청횟수가 많은 순으로 품목이 노출됩니다.
+                    </Tooltip>
                   </div>
 
                   <TabList className="o-toggles type-tab">
@@ -730,6 +736,10 @@ function BSPRQ0401M() {
                     </div>
 
                     <div className="detail">
+                      {/* <div className="empty-data">
+                        <p className="o-rich-text">선택된 품목이 없습니다.</p>
+                      </div> */}
+
                       <div className="o-product">
                         <div className="main">
                           <em className="caption">

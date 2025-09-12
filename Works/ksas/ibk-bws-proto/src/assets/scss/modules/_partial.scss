@@ -139,8 +139,8 @@
 
 
 .o-tab.type-c >.lists  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, III(120)), 1fr)); overflow: hidden; border-radius: $radius-50; }
-.o-tab.type-c >.lists  { padding: $e10 0 0 $e10; }
-.o-tab.type-c >.lists >*  { margin: calc(-1 * $e10) 0 0 calc(-1 * $e10); }
+.o-tab.type-c >.lists  { padding: $e10 0 0 $e10; background: var(--color-ground-40); }
+.o-tab.type-c >.lists >*  { margin: calc(-1 * $e10) 0 0 calc(-1 * $e10); background: var(--color-ground); }
 
 .o-tab.type-c .link  { display: flex; align-items: center; justify-content: center; min-height: III(42); border: $e10 solid var(--color-edge-30); }
 .o-tab.type-c .link[aria-selected="true"]  { font-weight: $bold-70; position: relative; border-color: $tp; color: var(--color-text-00); background: var(--color-icon-90); border-radius: $radius-50; }
@@ -162,10 +162,13 @@
 
 
 .m-product  { position: relative; padding-bottom: III(8); border-radius: $radius-50; }
-.m-product:where(li.is-selected *)  { background: var(--color-ground-40); }
-.m-product >.figures  { height: III(182); overflow: hidden; margin-bottom: III(12); border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
+.m-product:where(li.is-selected *)  { background: var(--color-dimmed-hover); }
+.m-product >.figures  { height: III(182); overflow: hidden; margin-bottom: III(12); border: $e10 solid var(--color-edge-40); border-color: var(--color-ground-40); border-radius: $radius-50; }
+.m-product >.figures:where(.m-product:has(>.captions >.header >.primary .status:not(:empty)) *)  { padding-top: III(24); }
 .m-product >.figures .o-view-image  { width: 100%; height: 100%; border-radius: inherit; }
+.m-product >.figures .o-view-image:not(:empty)  { background: var(--color-ground-40); }
 .m-product >.figures .o-view-image >*  { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; margin: auto; }
+.m-product >.figures .o-view-image >*  { object-fit: contain; object-position: center; }
 .m-product >.captions  { padding: 0 III(8); }
 .m-product >.captions >.header  { display: flex; align-items: center; margin-bottom: III(6); }
 .m-product >.captions >.header >*  { flex: none; min-width: 0; }
@@ -224,8 +227,9 @@
 .m-shop-detail >.header .heading  { font-weight: $bold-70; font-size: $font-60; line-height: $line-60; color: var(--color-text-70); }
 .m-shop-detail >.bodies  { flex: 1; display: flex; flex-direction: column; padding-top: 0; }
 .m-shop-detail >.bodies >.detail  { flex: 1 0 0; flex-basis: III(44); min-height: 0; overflow: auto scroll; }
-.m-shop-detail >.bodies >.detail  { --margin-block-end: var(--m-margin-block); --margin-inline-end: ((var(--m-margin-inline) - #{$width-scrollbar}) / 2); overflow: auto scroll; margin-right: calc(-1 * (var(--margin-inline-end) + $width-scrollbar)); margin-bottom: calc(-1 * var(--margin-block-end)); padding-right: calc(var(--margin-inline-end)); padding-bottom: var(--margin-block-end); }
+.m-shop-detail >.bodies >.detail  { --margin-block-end: var(--m-margin-block); --margin-inline-end: ((var(--m-margin-inline) - #{$width-scrollbar}) / 2); display: flex; flex-direction: column; overflow: auto scroll; margin-right: calc(-1 * (var(--margin-inline-end) + $width-scrollbar)); margin-bottom: calc(-1 * var(--margin-block-end)); padding-right: calc(var(--margin-inline-end)); padding-bottom: var(--margin-block-end); }
 .m-shop-detail >.bodies >.detail:after  { content: ""; display: block; position: sticky; bottom: calc(-1 * var(--margin-block-end)); min-height: calc(1 * var(--margin-block-end)); margin-bottom: calc(-1 * var(--margin-block-end)); background: fnLinearGradient(); }
+.m-shop-detail >.bodies >.detail .empty-data  { flex: 1; font-size: $font-40; display: flex; align-items: center; justify-content: center; padding: $gap-element-70; background: var(--color-ground-30); color: var(--color-text-30); }
 
 .m-shop-detail >.bodies >.figure  { margin-bottom: III(12); }
 .m-shop-detail >.bodies >.figure  { height: III(177); border: $e10 solid var(--color-edge-40); }
@@ -247,11 +251,13 @@
 .o-rank >* >*  { flex: none; display: flex; align-items: center; min-width: 0; }
 .o-rank >* >* >*  { flex: none; min-width: 0; }
 
-.o-rank >.order .rank  { font-weight: $bold-70; justify-content: center; width: III(16); text-align: center; }
+.o-rank >.order .rank  { font-weight: $bold-70; justify-content: center; width: III(16); color: var(--color-point-orange); text-align: center; }
 .o-rank >.order .status  { justify-content: center; position: relative; width: III(24); }
 .o-rank >.order .status .tag  { @include inc-sronly(); }
 .o-rank >.product  { flex: 1 0 0; gap: $gap-element-30; white-space: nowrap; }
-.o-rank >.product .id  { width: III(42); color: var(--color-text-40); }
+.o-rank >.product .id  { width: III(42); width: III(48); color: var(--color-text-30); }
+.o-rank >.product .id:before  { content: "["; }
+.o-rank >.product .id:after  { content: "]"; }
 // .o-rank >.product .name  { flex: 1 0 0; overflow: hidden; text-overflow: ellipsis; }
 .o-rank >.product .name  { @include inc-ellipsis2(1); flex: 1 0 0; }
 
@@ -271,12 +277,6 @@
 
 .m-shop-ranking >.bodies  { --m-margin-block: 0; }
 .m-shop-ranking >.bodies >.ranking >*  { padding: III(8) 0; }
-
-
-
-
-
-
 
 
 .m-cart  {  }
@@ -369,3 +369,7 @@
 .m-survey-form :has(>li .order >.count):where(li *)  { counter-reset: NUM_surveys-level2; }
 .m-survey-form li:has(.order >.count):where(li *)  { --survey-bul-content-pre: counter(NUM_surveys) "-"; --survey-bul-content-main: counter(NUM_surveys-level2); --survey-bul-content-suf: ""; --survey-bul-width-bullet: auto; counter-increment: NUM_surveys-level2; }
 
+
+.m-mypage  { display: flex; flex-direction: column; }
+.m-mypage >.header  { margin-bottom: $margin-section-50; }
+.m-mypage >.header .o-board  { font-size: $font-40; color: var(--color-text-30); }
