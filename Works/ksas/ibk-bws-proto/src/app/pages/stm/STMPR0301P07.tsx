@@ -128,58 +128,47 @@ function STMPR0301P07() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`신청부점`} require={false} />
+                            <Label label={`직원구분`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0001] 을지로
+                            자회사(상주)
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`신청자`} require={false} />
+                            <Label label={`출입증번호(사원번호)`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0001] 홍길동
+                            A13245
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`신청일자`} require={false} />
+                            <Label label={`프로젝트명`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <span className="o-digit type-date">2025-12-25</span>
+                            업무지원시스템
                           </td>
                         </tr>
+
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`사유`} require={true} />
+                            <Label label={`회사명`} require={false} />
                           </th>
-                          <td colSpan={5}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _select wdth-50 mode-required">
-                                  <XDropdown appendTo={document.body} className="bind" />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                          <td colSpan={1}>
+                            (주)회사명
                           </td>
-                        </tr>
-                        <tr>
+
                           <th colSpan={1}>
-                            <Label label={`향후관리방안`} require={true} />
+                            <Label label={`성명`} require={false} />
                           </th>
-                          <td colSpan={5}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input mode-required">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
+                          <td colSpan={1}>
+                            김준완
+                          </td>
+
+                          <th colSpan={1}>
+                            <Label label={`휴대전화번호`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <span className="o-digit type-tel">010-1234-5678</span>
                           </td>
                         </tr>
                       </tbody>
@@ -190,7 +179,7 @@ function STMPR0301P07() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">분실(미반납) 대상</span></h4>
+                  <h4 className="o-heading level2"><span className="label">반려내역</span></h4>
                 </div>
 
                 <div className="main _primary rows-body-5i">
@@ -211,25 +200,26 @@ function STMPR0301P07() {
                           <col />
                           <col />
                           <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원구분</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입증번호(사원번호)</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">회사명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">성명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">휴대전화번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우리부점결재</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">IT센터결재</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">안전관리팀결재</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입기간</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계속사용</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입건물</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">층수</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">프로젝트명</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입건물/층수</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출입사유</span></div></th>
                           </tr>
                           <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상태</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">시작일자</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">종료일자</span></div></th>
                           </tr>
@@ -237,7 +227,7 @@ function STMPR0301P07() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={13}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -245,42 +235,43 @@ function STMPR0301P07() {
                           {[...Array(24)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
-                              <td>자회사(상주)</td>
-                              <td>AM123</td>
-                              <td className="g-start">(주)회사명</td>
-                              <td>홍길동</td>
-                              <td><span className="o-digit type-tel">010-7329-7610</span></td>
+                              <td>재발급</td>
+                              <td>
+                              {
+                                idx === 1 ?
+                                <a href="javascript:" className="o-link _normal">결재반려</a>
+                                :
+                                `결재승인`
+                              }
+                              </td>
+                              <td>이익준</td>
+                              <td>
+                              {
+                                idx === 1 ?
+                                <a href="javascript:" className="o-link _normal">결재반려</a>
+                                :
+                                `결재승인`
+                              }
+                              </td>
+                              <td>이익준</td>
+                              <td>
+                              {
+                                idx === 1 ?
+                                <a href="javascript:" className="o-link _normal">결재반려</a>
+                                :
+                                `결재승인`
+                              }
+                              </td>
+                              <td>천영서</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>Y</td>
-                              <td>본점</td>
-                              <td>전체</td>
-                              <td className="g-start">기업시스템</td>
-                              <td className="g-start"></td>
+                              <td>수지IT센터(7, 11) 외 1건</td>
+                              <td className="g-start">사유1</td>
                             </tr>
                           ))}
                         </tbody>
                       </table>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-section">
-                <div className="o-board type-a">
-                  <div className="board-container">
-                    <div className="m-header">
-                      <strong className="o-heading"><span className="label">출입증관리의무</span></strong>
-
-                      <div className="m-checks justify-start">
-                        <InputCheck label="확인함" />
-                      </div>
-                    </div>
-
-                    <ul className="m-bullets">
-                      <li><p>출입증을 발급받은 자는 분실, 훼손되지 않도록 관리하여야 합니다. 관리자는 출입증을 발급받은 자가 퇴직, 및 근무종료 등 당행 출입사유 해제 시 실물을 회수하여 안전관리팀으로 반납하여, 반납이 불가한 경우 「분실(미반납) 사유서」를 작성하여 안전관리팀으로 제출하시기 바랍니다. <em className="c-color-label">[보안업무규정 제90조(출입증관리) 및 제90조의3(상세출입증관리)]</em></p></li>
-                    </ul>
-
                   </div>
                 </div>
               </div>
@@ -293,8 +284,7 @@ function STMPR0301P07() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="저장" className="_solid-primary" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>
