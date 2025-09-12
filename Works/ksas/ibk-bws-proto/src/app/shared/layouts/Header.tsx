@@ -6,13 +6,29 @@
 import React, { useRef, useState } from 'react';
 
 // components
+import Icon from 'app/shared/modules/OIcon';
 import CommonButton from 'app/shared/modules/OButton';
 import ImageButton from 'app/shared/modules/OImageButton';
 import { Tooltip } from 'primereact/tooltip';
+import { AutoComplete } from "primereact/autocomplete";
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function Header() {
+  // AutoComplete
+  const [AutoCompleteValue, setAutoCompleteValue] = useState('');
+  const [AutoCompleteItems, setAutoCompleteItems] = useState([]);
+  const AutoCompleteSearch = (evt) => {
+    setAutoCompleteItems([...Array(10).keys()].map(item => evt.query + '-' + item));
+  };
+  const itemTemplate = (item) => {
+    return (
+      <>
+        <span className="p-autocomplete-cell">재난·안전관리 › <mark className="keyword">열쇠</mark>관리 › <mark className="keyword">열쇠</mark>종류관리</span>
+      </>
+    );
+  };
+
   // 레이아웃 버튼
   const [isSwitched, setIsSwitced] = useState(false);
   const handlerChangeLayout = () => {
@@ -136,7 +152,7 @@ function Header() {
 
       <Tabs role="navigation" id="Navigator" className="dom-nav" defaultIndex={0}>
         <div className="div-search">
-          <div className="o-field">
+          {/* <div className="o-field">
             <div className="fields">
               <span className="o-form _input">
                 <i aria-hidden="true" className="o-icon _search"></i>
@@ -155,6 +171,18 @@ function Header() {
               <li>item</li>
               <li>item</li>
             </ul>
+          </div> */}
+          <div className="o-field">
+            <div className="fields">
+              <div className="o-form _input">
+                <Icon icon="search" />
+                <AutoComplete className="bind" placeholder="메뉴명을 입력해주세요" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                <i aria-hidden="true"></i>
+                <span className="inner-binds">
+                  <ImageButton label="초기화" icon="remove" />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -341,14 +369,22 @@ function Header() {
 
           <TabPanel className="div-nav-local _person">
             <ul className="lists">
-              <li>
-                {/* <Tooltip target=".custom-target-icon" mouseTrack mouseTrackTop={10} />
-                <Tooltip target="#custom-target-icon" mouseTrack mouseTrackTop={10} />
-                <span className="custom-target-icon" data-pr-tooltip="No notifications" data-pr-position="mouse">순서 재정렬</span>
-                <ImageButton label="순서 재정렬" id="custom-target-icon" title="" icon="move" data-pr-tooltip="No notifications" data-pr-position="top" /> */}
-                <ImageButton label="순서 재정렬" icon="move" className={'g-cursor-grab'} />
-                <ImageButton label="메모작성" icon="memo" />
+            {[...Array(32)].map((e, idx) => (
+            <>
+              <li key={idx} className={`${idx === 1 ? 'is-selected' : ''}`}>
+                <div className="menu">
+                  <ImageButton label="순서 재정렬" icon="move" className={'g-cursor-grab'} />
+                  <a href="javascript:" className="main"><span className="label">가나다라마바사아자차카타파하하(18글자예요)</span></a>
+                  {
+                    idx % 3 === 2 ?
+                    <ImageButton label="메모보기" icon="memo" />
+                    :
+                    <ImageButton label="메모작성" icon="memo-empty" />
+                  }
+                </div>
               </li>
+            </>
+            ))}
             </ul>
 
             <div className="m-binds">
@@ -356,7 +392,7 @@ function Header() {
                 <CommonButton label="위로" className="_normal" />
                 <CommonButton label="아래로" className="_normal" />
                 <CommonButton label="삭제" className="_normal" />
-                <CommonButton label="저장" className="_normal" />
+                <CommonButton label="저장" className="_normal" disabled />
               </span>
             </div>
           </TabPanel>

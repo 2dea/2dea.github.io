@@ -908,8 +908,10 @@ function SUBTMPL() {
                                 <i className="o-icon _home-set-branch wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _home-set-notification wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _home-set-theme wdth-50" aria-hidden="true"></i>
-                                <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-lock-locked wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _memo-empty wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _memo wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _new wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _popup-close wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _rank-down wdth-50" aria-hidden="true"></i>

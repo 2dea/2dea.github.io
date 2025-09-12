@@ -599,6 +599,7 @@
 .g-light  { font-weight: var(--bold-40, 400) !important; }
 .g-regular  { font-weight: inherit !important; }
 
+.g-color-transparent  { color: Transparent !important; }
 .g-color-inherit  { color: inherit !important; }
 
 

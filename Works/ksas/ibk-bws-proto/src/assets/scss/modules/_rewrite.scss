@@ -348,26 +348,90 @@
   color: inherit;
   border-radius: $radius-50;
   box-shadow: $dropshadow-40;
+
+  .p-multiselect-header {
+    display: none;
+  }
+
+  [data-pc-section$="wrapper"] {
+    padding: III(6) III(4);
+  }
+
+  [role="listbox"] {
+    display: table;
+    // border-spacing: 0 III(2);
+    border-collapse: collapse;
+    table-layout: fixed;
+    min-width: 100%;
+    padding: 0;
+
+    [role="option"] {
+      display: table-row;
+      height: III(30);
+      padding: 0;
+      color: var(--color-text-40);
+      border-radius: $radius-50;
+      white-space: nowrap;
+
+      &:where(.p-highlight) {
+        color: var(--color-key1-40);
+        background-color: inherit;
+      }
+
+      &:hover {
+        background: var(--color-dimmed-hover);
+      }
+
+      >* {
+        display: table-cell;
+        vertical-align: middle;
+        padding: III(0) III(2);
+        color: inherit;
+
+        &:first-child {
+          padding-left: III(8);
+          border-start-start-radius: inherit;
+          border-end-start-radius: inherit;
+        }
+
+        &:last-child {
+          padding-right: III(8);
+          border-start-end-radius: inherit;
+          border-end-end-radius: inherit;
+
+          &:where(:not(.p-multiselect-checkbox):not(.p-autocomplete-panel *)) {
+            @include inc-ellipsis2();
+            display: table-cell;
+            max-width: III(234);
+          }
+        }
+      }
+    }
+  }
 }
 
 .p-autocomplete-panel.p-component {
   .p-autocomplete-items {
-    display: table;
-    border-spacing: 0 III(2);
-    width: 100%;
+    // display: table;
+    // border-spacing: 0 III(2);
+    // width: 100%;
 
     .p-autocomplete-item {
-      display: table-row;
-      color: inherit;
+      // display: table-row;
+      // color: inherit;
     }
 
     .p-autocomplete-cell {
-      display: table-cell;
-      padding: III(4) III(3);
+      // display: table-cell;
+      // padding: III(4) III(3);
 
       &.sep {
         color: var(--color-edge-40);
       }
+    }
+
+    .keyword {
+      font-weight: $bold-70;
     }
   }
 }
@@ -414,7 +478,7 @@
     }
 
     &:hover {
-      background: $color-grid-hover;
+      background: $color-dimmed-hover;
     }
   }
 
