@@ -505,6 +505,7 @@
 .m-image-list .card >:last-of-type  { border-radius: 0 0 var(--radius) var(--radius); }
 .m-image-list .card:has(:checked)  { border-color: var(--color-control-40); box-shadow: $dropshadow-40; }
 .m-image-list .card .o-check  { position: absolute; z-index: 3; inset: 0; /* pointer-events: none; */ }
+.m-image-list .card .o-check input  { left: 0; top: 0; transform: translateY(0); width: 100%; height: 100%; }
 .m-image-list .card .o-check >i  { visibility: hidden; }
 // .m-image-list .card >.image  { width: 100%; aspect-ratio: 1 / 1; }
 // .m-image-list .card >.image >*  { @include inc-abscenter(); position: relative; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: cover; }
@@ -1283,8 +1284,8 @@
 .o-check  { --height: 1em; --lh: var(--text-height-rel); --gap-col: #{$gap-element-30}; }
 .o-check  { display: inline-block; display: inline-flex; align-items: baseline; vertical-align: middle; position: relative; max-width: 100%; min-height: var(--height-outer, calc(var(--lh, 1lh))); padding-left: var(--height-outer, var(--height)); text-align: left; text-align: start; }
 .o-check >*  { flex: none; min-width: 0; vertical-align: inherit; vertical-align: -webkit-baseline-middle; }
-.o-check >i,
-  .o-check input  { position: absolute; transform: translateY(-50%); left: 0; top: calc(var(--lh, 1lh) / 2); width: var(--height); height: var(--height); margin: 0 calc((var(--height-outer, var(--height)) - var(--height)) / 2); }
+.o-check input,
+  .o-check >i  { position: absolute; transform: translateY(-50%); left: 0; top: calc(var(--lh, 1lh) / 2); width: var(--height); height: var(--height); margin: 0 calc((var(--height-outer, var(--height)) - var(--height)) / 2); }
 .o-check input  { z-index: 1; cursor: inherit; }
 .o-check .o-icon  { font-size: inherit; line-height: inherit; }
 .o-check >.label  { flex: 0 1 auto; align-self: center; overflow: hidden; padding-left: var(--gap-col); }
@@ -1966,7 +1967,7 @@
 .m-data-form :where(table:not(td *))  { border-style: solid hidden; border: $e10 solid var(--color-edge-40); border-top-color: $color-key1-40; }
 
 .m-data-form.style-rawer :where(table:not(td *)) tr >*  { --margin-cell-block: #{III(6)}; --margin-cell-inline: #{III(0)}; --height-cell: calc(var(--rem) * var(--height-form-50) + var(--margin-cell-block) * 2 + var(--edge-cell) * 0); border-bottom-width: 0; }
-.m-data-form.style-rawer :where(table:not(td *)) tr >th  { vertical-align: top; padding-left: 0; padding-top: III(12); background-color: $tp; }
+.m-data-form.style-rawer :where(table:not(td *)) tr >th  { font-weight: $bold-70; vertical-align: top; padding-left: 0; padding-top: III(12); color: var(--color-text-30); background-color: $tp; }
 .m-data-form.style-rawer :where(table:not(td *))  { margin: III(-6) 0; border-style: hidden hidden; }
 
 
