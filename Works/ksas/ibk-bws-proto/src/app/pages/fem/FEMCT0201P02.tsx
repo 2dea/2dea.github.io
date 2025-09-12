@@ -129,6 +129,14 @@ function FEMCT0201P02() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
+                            <Label label={`계약정보`} require={false} />
+                          </th>
+                          <td colSpan={7}>
+                            자금현수송대행계약서(2024-04-01 ~ 2025-03-31)
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
                             <Label label={`지급명`} require={false} />
                           </th>
                           <td colSpan={3}>
