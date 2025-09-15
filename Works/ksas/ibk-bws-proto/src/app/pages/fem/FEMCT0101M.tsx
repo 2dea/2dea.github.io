@@ -330,12 +330,12 @@ function FEMCT0101M() {
               </div>
 
               <Tabs className="m-tabs react-tabs" defaultIndex={0}>
-                <div className="m-tab type1">
+                {/* <div className="m-tab type1">
                   <TabList className="lists">
                     <Tab className="link"><span className="label">계약정보</span></Tab>
                     <Tab className="link"><span className="label">부점별수수료율</span></Tab>
                   </TabList>
-                </div>
+                </div> */}
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
 
@@ -628,6 +628,12 @@ function FEMCT0101M() {
                       <div className="o-section">
                         <div className="m-header">
                           <h3 className="o-heading level3"><span className="label">종류별 할인금액</span></h3>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="부점별 수수료율" className="_normal" />
+                            </div>
+                          </div>
                         </div>
 
                         <div className="main">

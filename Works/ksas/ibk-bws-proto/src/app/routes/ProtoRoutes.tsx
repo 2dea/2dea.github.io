@@ -567,7 +567,9 @@ import FEMDA0201P04 from 'app/pages/fem/FEMDA0201P04';  // 수수료관리 > 물
 
 import FEMCT0101M from 'app/pages/fem/FEMCT0101M';      // 수수료관리 > 자금현수송수수료 > 계약서관리
 import FEMCT0101P01 from 'app/pages/fem/FEMCT0101P01';  // 수수료관리 > 자금현수송수수료 > 계약서관리       ~ (LP)중도해지
+import FEMCT0101P02 from 'app/pages/fem/FEMCT0101P02';  // 수수료관리 > 자금현수송수수료 > 계약서관리       ~ (LP)부점별 수수료율
 import FEMCT0201M from 'app/pages/fem/FEMCT0201M';      // 수수료관리 > 자금현수송수수료 > 월별금액검증
+import FEMCT0201P06 from 'app/pages/fem/FEMCT0201P06';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)계약정보불러오기
 import FEMCT0201P01 from 'app/pages/fem/FEMCT0201P01';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)월별지급검증등록
 import FEMCT0201P02 from 'app/pages/fem/FEMCT0201P02';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)지급상세검증
 import FEMCT0201P03 from 'app/pages/fem/FEMCT0201P03';  // 수수료관리 > 자금현수송수수료 > 월별금액검증     ~ (LP)세금계산서불러오기
@@ -1241,8 +1243,10 @@ function ProtoRoutes() {
 
         { path: 'FEMCT0101M',   element: <FEMCT0101M /> },
         { path: 'FEMCT0101P01', element: <FEMCT0101P01 /> },
+        { path: 'FEMCT0101P02', element: <FEMCT0101P02 /> },
 
         { path: 'FEMCT0201M',   element: <FEMCT0201M /> },
+        { path: 'FEMCT0201P06', element: <FEMCT0201P06 /> },
         { path: 'FEMCT0201P01', element: <FEMCT0201P01 /> },
         { path: 'FEMCT0201P02', element: <FEMCT0201P02 /> },
         { path: 'FEMCT0201P03', element: <FEMCT0201P03 /> },

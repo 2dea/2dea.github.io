@@ -304,6 +304,7 @@ function FEMCT0201M() {
                           <col className="wdth-10" />
                           <col className="wdth-10" />
                           <col />
+                          <col className="wdth-50" />
                           <col />
                           <col />
                           <col />
@@ -321,8 +322,9 @@ function FEMCT0201M() {
                           <tr>
                             <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산기준</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급대상연월</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약정보 불러오기<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">정산기준<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급업체</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지급명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자등록번호</span></div></th>
@@ -338,7 +340,7 @@ function FEMCT0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={14}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={15}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -347,10 +349,23 @@ function FEMCT0201M() {
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
-                              <td>개뱔</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>(주)앤비앤코퍼레이션</td>
-                              <td>(수도권)물류운송대행계약서</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input mode-required wdth-90">
+                                      <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                      <i aria-hidden="true"></i>
+                                      <span className="inner-binds">
+                                        <ImageButton label="검색" icon="search" />
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>개별</td>
+                              <td className="g-start">(주)앤비앤코퍼레이션</td>
+                              <td className="g-start">(수도권)물류운송대행계약서</td>
                               <td>999-99-99999</td>
                               <td className="g-end">1,000,000,000</td>
                               <td className="g-end">1,000,000,000</td>
@@ -364,28 +379,32 @@ function FEMCT0201M() {
                           <tr>
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td><Icon icon="grid-added" /></td>
-                            <td>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _select wdth-50">
-                                    <XDropdown appendTo={'self'} className="bind" />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _select wdth-70">
+                                  <div className="o-form _input mode-required wdth-90">
+                                    <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                    <i aria-hidden="true"></i>
+                                    <span className="inner-binds">
+                                      <ImageButton label="검색" icon="search" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _select wdth-40">
                                     <XDropdown appendTo={'self'} className="bind" />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
                               </div>
                             </td>
-                            <td>(수도권)물류운송대행계약서</td>
+                            <td className="g-start">(주)앤비앤코퍼레이션</td>
+                            <td className="g-start">(수도권)물류운송대행계약서</td>
                             <td>999-99-99999</td>
                             <td className="g-end">1,000,000,000</td>
                             <td className="g-end">1,000,000,000</td>

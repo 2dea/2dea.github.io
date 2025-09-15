@@ -108,12 +108,11 @@ function Header() {
 
           <div className="div-nav-global">
             <ul>
-              <li><a href="javascript:" className="link"><span className="label">원화정산</span></a></li>
-              <li><a href="javascript:" className="link" aria-current="true"><span className="label">중요용지용도품(영업점)</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">중요용지용도품(본부)</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">행내등기우편물</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">안전관리</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">비상계획안전기획</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">자금현수송</span></a></li>
+              <li><a href="javascript:" className="link" aria-current="true"><span className="label">중요용지·용도품</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">중요용지·용도품(본부)</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">행내등기·우편물</span></a></li>
+              <li><a href="javascript:" className="link"><span className="label">재난·안전관리</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">영업지원</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">수수료관리</span></a></li>
               <li><a href="javascript:" className="link"><span className="label">공통·결재</span></a></li>

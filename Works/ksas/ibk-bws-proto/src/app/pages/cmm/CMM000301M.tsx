@@ -612,7 +612,7 @@ function CMM000301M() {
                                 </div>
 
                                 <div className="m-footer">
-                                  <p className="o-helper"><em className="c-color-point">도착예정일자 : YYYY-MM-DD</em> 신청일자에 실물 발송한 경우</p>
+                                  <p className="o-helper"><strong className="emph">도착예정일자: <span className="g-bold c-color-point">YYYY-MM-DD</span></strong> 신청일자에 실물을 발송한 경우에 한함</p>
                                 </div>
                             </td>
                           </tr>

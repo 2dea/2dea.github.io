@@ -385,8 +385,8 @@ function BEXRQ0301M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">진행정보</span></h3>
 
-                  <div className="o-legend type-helper style-normal">
-                    <em className="label"><strong className="c-color-text">도착예정일자 : YYYY-MM-DD</strong> (신청일자에 실물 발송한 경우)</em>
+                  <div className="o-helper style-normal">
+                    <em className="label"><strong className="emph">도착예정일자: <span className="g-bold c-color-point">YYYY-MM-DD</span></strong> 신청일자에 실물을 발송한 경우에 한함</em>
                   </div>
                 </div>
 

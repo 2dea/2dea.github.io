@@ -223,8 +223,7 @@ a  { font-size: inherit; background-color: Transparent; color: inherit; text-dec
 small  { font-size: inherit; }
 q:before,  q:after  { content: ""; content: none; }
 abbr[title]  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
-strong:where(table *),
-  b  { font-weight: bolder; font-weight: var(--bold-70, 650); }
+b  { font-weight: bolder; font-weight: var(--bold-70, 650); }
 mark  { background-color: Transparent; color: inherit; }
 br  { letter-spacing: 0 !important; }
 ins,  del  { text-decoration: none; }
