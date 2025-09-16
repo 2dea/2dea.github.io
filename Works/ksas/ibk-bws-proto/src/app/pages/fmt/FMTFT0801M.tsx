@@ -188,7 +188,7 @@ function FMTFT0801M() {
                       주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
                     </p>
                   </div>
-                  <div className="item">
+                  <div className="item is-selected">
                     <div className="o-object style-fit">
                       <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                       <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
