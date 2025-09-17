@@ -542,7 +542,7 @@ function FMTFT1101M() {
                   <div className="o-grid">
                     <div className="column">
 
-                      <div className="o-section">
+                      {/* <div className="o-section">
                         <div className="m-header">
                           <h4 className="o-heading level4"><span className="label">수입송금</span></h4>
 
@@ -573,6 +573,46 @@ function FMTFT1101M() {
                               </tbody>
                             </table>
                           </form>
+                        </div>
+                      </div> */}
+
+                      <div className="o-section">
+                        <div className="m-header">
+                          <h4 className="o-heading level4"><span className="label">수입송금</span></h4>
+                        </div>
+
+                        <div className="main">
+                          <div className="o-board type-c style-fit">
+                            <div className="o-notice">
+                              <span className="icons">
+                                <Icon icon="alert-octagram" />
+                              </span>
+
+                              <div className="main">
+                                <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">수입송금 바로가기<Icon icon="link" /></a></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-section">
+                        <div className="m-header">
+                          <h4 className="o-heading level4"><span className="label">수출입금</span></h4>
+                        </div>
+
+                        <div className="main">
+                          <div className="o-board type-c style-fit">
+                            <div className="o-notice">
+                              <span className="icons">
+                                <Icon icon="alert-octagram" />
+                              </span>
+
+                              <div className="main">
+                                <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">수출입금 바로가기<Icon icon="link" /></a></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
 

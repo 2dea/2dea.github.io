@@ -725,69 +725,49 @@ function FMTCT1401M() {
                     <div className="column">
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">내국환취결</span></h4>
+                          <h4 className="o-heading level4"><span className="label">내국환정리</span></h4>
 
-                          <div className="m-binds">
+                          {/* <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="웹단말 내국환취결" className="_solid-primary" />
+                              <CommonButton label="웹단말 내국환정리" className="_solid-primary" />
                             </div>
-                          </div>
+                          </div> */}
                         </div>
 
                         <div className="main">
-                          <form className="m-data-form">
-                            <table className="table">
-                              <colgroup>
-                                <col className="head" />
-                                <col className="data" />
-                              </colgroup>
+                          <div className="o-board type-c style-fit">
+                            <div className="o-notice">
+                              <span className="icons">
+                                <Icon icon="alert-octagram" />
+                              </span>
 
-                              <tbody>
-                                <tr>
-                                  <th colSpan={1}>
-                                    <Label label={`진행상태`} require={false} />
-                                  </th>
-                                  <td colSpan={1}>
-                                    처리완료
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
+                              <div className="main">
+                                취결된 금액을 정리해주세요.
+                                <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">내국환정리 바로가기<Icon icon="link" /></a></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">내국환정리</span></h4>
-
-                          <div className="m-binds">
-                            <div className="group">
-                              <CommonButton label="웹단말 내국환정리" className="_solid-primary" />
-                            </div>
-                          </div>
+                          <h4 className="o-heading level4"><span className="label">내국환취결</span></h4>
                         </div>
 
                         <div className="main">
-                          <form className="m-data-form">
-                            <table className="table">
-                              <colgroup>
-                                <col className="head" />
-                                <col className="data" />
-                              </colgroup>
+                          <div className="o-board type-c style-fit">
+                            <div className="o-notice">
+                              <span className="icons">
+                                <Icon icon="alert-octagram" />
+                              </span>
 
-                              <tbody>
-                                <tr>
-                                  <th colSpan={1}>
-                                    <Label label={`진행상태`} require={false} />
-                                  </th>
-                                  <td colSpan={1}>
-                                    <span className="o-status-text style-inherit type-20">미처리</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
+                              <div className="main">
+                                내국환 취결해주세요.
+                                <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">내국환취결 바로가기<Icon icon="link" /></a></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
