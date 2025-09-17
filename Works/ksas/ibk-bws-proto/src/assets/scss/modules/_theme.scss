@@ -49,7 +49,7 @@
 
 
 // ** FMTFT0801M 외국통화견양집
-.card-list {display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, III(354)), 1fr)); gap: III(24) III(16);}
+.card-list {display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(354)), 1fr)); gap: III(24) III(16);}
 .card-list .item { transition: 0.25s $timing-func-ease-slower; }
 .card-list .item >* { transition: inherit; }
 .card-list .item .info-area {display: flex; align-items: center; margin: 12px 0 8px; justify-content: center; border: 1px solid #ECECEE; border-radius: 4px; }

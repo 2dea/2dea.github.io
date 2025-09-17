@@ -62,7 +62,8 @@ import FMTCT1601M from 'app/pages/fmt/FMTCT1601M';      // 자금현수송 > 원
 import FMTCT1601P01 from 'app/pages/fmt/FMTCT1601P01';  // 자금현수송 > 원화현수송    > 원화현수송신청관리(업무센터) ~ (LP)업무센터결정
 import FMTCT0301M from 'app/pages/fmt/FMTCT0301M';      // 자금현수송 > 원화현수송    > 원화시재 및 보유현황
 import FMTCT0401M from 'app/pages/fmt/FMTCT0401M';      // 자금현수송 > 원화현수송    > 원화마감시간관리
-import FMTCT0701M from 'app/pages/fmt/FMTCT0701M';      // 자금현수송 > 원화현수송    > 자금현송명령부관리(업무센터)
+import FMTCT0701M from 'app/pages/fmt/FMTCT0701M';      // 자금현수송 > 원화현수송    > 자금현송명령부(업무센터)
+import FMTCT1701M from 'app/pages/fmt/FMTCT1701M';      // 자금현수송 > 원화현수송    > 자금현송명령부현황
 import FMTCT0801M from 'app/pages/fmt/FMTCT0801M';      // 자금현수송 > 원화현수송    > 지점간 원화현수송신청관리
 import FMTCT0801P01 from 'app/pages/fmt/FMTCT0801P01';  // 자금현수송 > 원화현수송    > 지점간 원화현수송신청관리 ~ (LP)신청
 import FMTCT0801P02 from 'app/pages/fmt/FMTCT0801P02';  // 자금현수송 > 원화현수송    > 지점간 원화현수송신청관리 ~ (LP)불입결정
@@ -91,7 +92,8 @@ import FMTFT1201P01 from 'app/pages/fmt/FMTFT1201P01';  // 자금현수송 > 외
 import FMTFT0301M from 'app/pages/fmt/FMTFT0301M';      // 자금현수송 > 외화현수송     > 외화시재금현황
 import FMTFT1301M from 'app/pages/fmt/FMTFT1301M';      // 자금현수송 > 외화현수송     > 외화시재 및 보유현황
 import FMTFT0401M from 'app/pages/fmt/FMTFT0401M';      // 자금현수송 > 외화현수송     > 외화마감시간관리
-import FMTFT0601M from 'app/pages/fmt/FMTFT0601M';      // 자금현수송 > 외화현수송     > 자금현송명령부관리(업무센터)
+import FMTFT0601M from 'app/pages/fmt/FMTFT0601M';      // 자금현수송 > 외화현수송     > 자금현송명령부(업무센터)
+import FMTFT1401M from 'app/pages/fmt/FMTFT1401M';      // 자금현수송 > 외화현수송     > 자금현송명령부현황
 
 import FMTFT0701M from 'app/pages/fmt/FMTFT0701M';      // 자금현수송 > 외화현수송     > 외화통화정보
 
@@ -726,6 +728,7 @@ function ProtoRoutes() {
         { path: 'FMTCT0401M',   element: <FMTCT0401M /> },
 
         { path: 'FMTCT0701M',   element: <FMTCT0701M /> },
+        { path: 'FMTCT1701M',   element: <FMTCT1701M /> },
         { path: 'FMTCT0801M',   element: <FMTCT0801M /> },
         { path: 'FMTCT0801P01', element: <FMTCT0801P01 /> },
         { path: 'FMTCT0801P02', element: <FMTCT0801P02 /> },
@@ -757,6 +760,7 @@ function ProtoRoutes() {
         { path: 'FMTFT1301M',   element: <FMTFT1301M /> },
         { path: 'FMTFT0401M',   element: <FMTFT0401M /> },
         { path: 'FMTFT0601M',   element: <FMTFT0601M /> },
+        { path: 'FMTFT1401M',   element: <FMTFT1401M /> },
         { path: 'FMTFT0701M',   element: <FMTFT0701M /> },
 
         { path: 'FMTFT0801M',   element: <FMTFT0801M /> },
