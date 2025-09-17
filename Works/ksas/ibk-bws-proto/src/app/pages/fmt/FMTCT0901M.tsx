@@ -361,7 +361,7 @@ function FMTCT0901M() {
                                         <>50,000</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                                       }
                                     </td>
-                                    <td className="g-end">12.5</td>
+                                    <td>자루</td>
                                     <td className="g-end">400,000</td>
                                     <td className="g-end">44.5</td>
                                     <td className="g-end">44.5</td>
@@ -779,7 +779,7 @@ function FMTCT0901M() {
                                         <>50,000</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
                                       }
                                     </td>
-                                    <td className="g-end">20,000</td>
+                                    <td>자루</td>
                                     <td className="g-end">12.5</td>
                                     <td className="g-end">400,000</td>
                                     <td className="g-end">44.5</td>

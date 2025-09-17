@@ -924,7 +924,6 @@ function FMTFT0201M() {
                             <em className="main">출발시각등록</em>
                           </a>
                         </Tab>
-                        {/* <Tab aria-label="진행 예정" disabled> */}{/* 진행 예정 [disabled] { @DEV } */}
                         <Tab aria-label="진행 단계">
                           <span className="order" aria-hidden="true">
                             <span className="prefix"></span>
@@ -933,6 +932,16 @@ function FMTFT0201M() {
                           </span>
                           <a href="javascript:" className="label">
                             <em className="main">도착시각(업무센터)</em>
+                          </a>
+                        </Tab>
+                        <Tab aria-label="진행 예정" disabled>{/* 진행 예정(비활성) 예시 [disabled] { @DEV } */}
+                          <span className="order" aria-hidden="true">
+                            <span className="prefix"></span>
+                            <span className="count">N</span>
+                            <span className="suffix">단계. </span>
+                          </span>
+                          <a href="javascript:" className="label">
+                            <em className="main">비활성스텝</em>
                           </a>
                         </Tab>
                       </TabList>

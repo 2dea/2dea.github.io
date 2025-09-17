@@ -551,7 +551,6 @@ function FMTCT1401M() {
                             <em className="main">내국환정리</em>
                           </a>
                         </Tab>
-                        {/* <Tab aria-label="진행 예정" disabled> */} {/* 진행 예정 [disabled] { @DEV } */}
                         <Tab aria-label="진행 단계">
                           <span className="order" aria-hidden="true">
                             <span className="prefix"></span>
@@ -560,6 +559,16 @@ function FMTCT1401M() {
                           </span>
                           <a href="javascript:" className="label">
                             <em className="main">자금현송명령부등록</em>
+                          </a>
+                        </Tab>
+                        <Tab aria-label="진행 예정" disabled>{/* 진행 예정(비활성) 예시 [disabled] { @DEV } */}
+                          <span className="order" aria-hidden="true">
+                            <span className="prefix"></span>
+                            <span className="count">N</span>
+                            <span className="suffix">단계. </span>
+                          </span>
+                          <a href="javascript:" className="label">
+                            <em className="main">비활성스텝</em>
                           </a>
                         </Tab>
                       </TabList>
