@@ -848,8 +848,8 @@
 .o-steps:is([role="tablist"]) >:is([aria-selected="true"]) .label .main  { color: var(--theme); }
 .o-steps >:not(:has(~[aria-label="진행 단계"])):after  { background-color: var(--color-edge-40); }
 .o-steps >:not([aria-label="진행 단계"]) .order:after  { opacity: 0.0; }
-.o-steps >:is([aria-label="진행 예정"]) .order .count  { border-color: var(--color-edge-40); color: var(--color-text-20); background-color: var(--color-ground); }
-.o-steps >:is([aria-label="진행 예정"]) .label .main  { color: var(--color-text-disabled); }
+.o-steps >:is([aria-label="진행 예정"], [aria-disabled="true"]) .order .count  { border-color: var(--color-edge-40); color: var(--color-text-20); background-color: var(--color-ground); }
+.o-steps >:is([aria-label="진행 예정"], [aria-disabled="true"]) .label .main  { color: var(--color-text-disabled); }
 
 .o-steps >* .label[aria-disabled="true"]  { color: inherit; filter: none; }
 .o-steps >* .label[aria-current] .main  { display: flex; align-items: center; }
@@ -1172,6 +1172,7 @@
 .o-button.size-60  { font-size: $font-50; line-height: $line-50; min-width: calc(4em + $e10 * 4); padding: calc(III(3) + III(2)) calc(0.5em + 0.25em); }
 .o-button:where(.m-binds.type-end >.group._primary *),
   .o-button:where(.m-shop-cart >.footer >.binds *),
+  .o-button:where(.m-carousel .carousel-navigation *),
   /* .o-button.size-70  { font-size: $font-50; line-height: $line-50; gap: $gap-whitespace-50; min-width: calc(5em + $e10 * 2); padding: calc(var(--margin-block) + $e10 * 5) calc(0.5em + 0.25em); } */
   .o-button.size-70  { font-size: $font-50; line-height: $line-50; gap: $gap-whitespace-50; min-width: calc(5em - $e10 * 5); padding: calc(var(--margin-block) + $e10 * 2) 0.5em; }
 /*

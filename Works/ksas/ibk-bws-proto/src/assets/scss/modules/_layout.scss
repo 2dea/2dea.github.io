@@ -186,6 +186,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-header .div-skip .o-ogp *  { width: auto; }
 
 /** Layout */
+.dom-popup  { display: block; position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; background-color: inherit; }
 .dom-wrapper  { display: grid; grid-template-columns: auto 200px 800px auto; grid-template-rows: minmax($height-layout-header, auto) 1fr minmax($height-layout-footer, auto); }
 .dom-wrapper  { grid-template-columns: 0 18.75% 81.25% 0; }
 .dom-wrapper  { grid-template-columns: 0 minmax(24rem, 36rem) auto 0; }
@@ -706,6 +707,12 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main * ~.div-footer:before  { content: ""; position: absolute; left: III(-8); right: III(-8); height: $margin-section-50; background: $color-ground; }
 .dom-main * ~.div-footer:before  { bottom: calc(100% + $e10); background: fnLinearGradient(); }
 
+
+
+
+
+
+
 .layer-wrap .div-middle  {
   margin: calc(-1 * $margin-section-50) calc(-1 * $margin-popup-inline) $margin-popup-inline;
   margin-right: calc(-1 * ($margin-popup-inline - var(--width-scrollbar)));
@@ -740,6 +747,54 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .layer-wrap.type-dialog .layer-body  { min-height: III(98); padding-top: 0; }
 .layer-wrap.type-dialog .div-container  { padding: 0 $margin-popup-inline $margin-section-30; }
 .layer-wrap.type-dialog .div-footer .m-binds >*  { justify-content: center; }
+
+
+
+.m-carousel  { flex: 1; display: flex; flex-direction: column; gap: III(12); width: 100%; background: var(--color-ground); }
+.m-carousel >*  { min-height: 0; }
+.m-carousel >.swiper-wrapper  { flex: 1; }
+.m-carousel >.carousel-footer  { display: flex; align-items: center; gap: III(12); padding-top: III(12); border-top: $e10 solid var(--color-edge-40); background-color: inherit; }
+.m-carousel >.carousel-footer >*  { flex: 1; min-width: 0; }
+.m-carousel >.carousel-footer:before  { content: ""; flex: 1; }
+.m-carousel >.carousel-footer .carousel-pagination  { font-feature-settings: var(--text-feature-tnum); display: flex; justify-content: center; gap: $gap-whitespace-50; }
+.m-carousel >.carousel-footer .carousel-pagination >*  { display: flex; gap: inherit; }
+.m-carousel >.carousel-footer .carousel-pagination .total  { color: var(--color-text-20); }
+.m-carousel >.carousel-footer .carousel-pagination .total .seps:before  { content: "/"; }
+.m-carousel >.carousel-footer .carousel-pagination .total .seps .label  { display: none; }
+.m-carousel >.carousel-footer .carousel-navigation  { display: flex; justify-content: flex-end; gap: $gap-whitespace-50; }
+
+.m-carousel:where(.swiper-autoheight) >.swiper-wrapper  { display: flex; align-items: center; }
+.m-carousel:where(.swiper-autoheight) >.swiper-wrapper >.swiper-slide:not(.swiper-slide-active)  { max-height: 0; overflow: hidden; }
+
+.m-carousel >.carousel-footer .carousel-pagination:where(.swiper-wrapper:has(>:only-child) ~* .swiper-pagination-lock)  { display: flex; }
+.m-carousel >.carousel-footer .carousel-navigation:where(.swiper-wrapper:has(>:only-child) ~* *)  { visibility: hidden; }
+
+.m-carousel .d-figure  { display: flex; flex-direction: column; align-items: center; }
+.m-carousel .d-figure >.contain  { position: relative; }
+.m-carousel .d-figure >.contain img  { display: block; }
+
+.pop-wrap  { --d-margin-pop-block: #{III(20)}; --d-margin-pop-inline: #{III(20)}; display: flex; flex-direction: column; background: var(--color-ground); }
+.pop-wrap >*  { min-height: 0; }
+.pop-body  { flex: 1; display: flex; flex-direction: column; }
+.pop-body >*  { min-height: 0; }
+.pop-body >.div-center  { flex: 1; display: flex; flex-direction: column; padding: var(--d-margin-pop-block) var(--d-margin-pop-inline-ovr, var(--d-margin-pop-inline)); }
+
+.pop-body >.div-center  { --d-margin-pop-inline-ovr: calc(var(--d-margin-pop-inline) - var(--width-scrollbar)); flex-basis: 0; overflow: auto; overflow: hidden scroll; scrollbar-gutter: stable both-edges; }
+.m-carousel:where(.pop-body >.div-center .swiper-initialized)  { overflow: clip; }
+.m-carousel:where(.pop-body >.div-center .swiper-initialized) >.carousel-footer  { position: sticky; z-index: 10; bottom: 0; }
+.m-carousel:where(.pop-body >.div-center .swiper-initialized) >.carousel-footer:after  { content: ""; position: absolute; left: 0; top: 100%; min-width: 100%; height: var(--d-margin-pop-block); background: inherit; }
+
+.o-layer:where(.type-popup)  { position: absolute; left: 0; top: 0; min-width: 100%; max-width: 100%; min-height: 100%; background-color: inherit; }
+.o-layer:where(.type-popup)  { display: flex; flex-direction: column; }
+.o-layer:where(.type-popup) >*  { flex: 1; min-height: 0; }
+
+@media
+  screen and (not (min-width: calc(390px)))  {
+    .m-carousel >.carousel-footer:before  { content: none; }
+    .m-carousel >.carousel-footer .carousel-pagination  { justify-content: normal; }
+}
+
+
 
 
 .div-contents.style-tight  {

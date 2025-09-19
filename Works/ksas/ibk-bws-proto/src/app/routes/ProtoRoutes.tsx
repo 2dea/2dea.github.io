@@ -39,6 +39,7 @@ import CMP000501P from 'app/pages/cmp/CMP000501P';   // 공통 ~ (LP)직원조�
 import CMP000601P from 'app/pages/cmp/CMP000601P';   // 공통 ~ (LP)주소검색
 import CMP000701P from 'app/pages/cmp/CMP000701P';   // 공통 ~ (LP)공지사항
 import CMP000801P from 'app/pages/cmp/CMP000801P';   // 공통 ~ (LP)도움말
+import CMP000802P from 'app/pages/cmp/CMP000802P';   // 공통 ~ (LP)도움말
 import CMP000901P from 'app/pages/cmp/CMP000901P';   // 공통 ~ (LP)메모(업무별)
 import CMP001001P from 'app/pages/cmp/CMP001001P';   // 공통 ~ (LP)메모(마이메뉴)
 import CMP001101P from 'app/pages/cmp/CMP001101P';   // 공통 ~ (LP)이미지보기
@@ -674,6 +675,12 @@ function ProtoRoutes() {
         { path: 'TMPL',        element: <TMPL /> },
         { path: 'DEX',         element: <DEX /> },
         { path: 'ING',         element: <ING /> },
+      ],
+    },
+    {
+      path: '/proto',
+      children: [
+        { path: 'CMP000802P', element: <CMP000802P /> },
       ],
     },
     { // 공통

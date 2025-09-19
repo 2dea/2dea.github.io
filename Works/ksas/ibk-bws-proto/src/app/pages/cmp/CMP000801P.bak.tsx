@@ -89,41 +89,46 @@ function CMP000801P() {
   // Checkbox
   const [checked, setChecked] = useState<boolean>(false);
 
-  // const newWindow = (url: string, target: string, w: number, h: number, s: number, p: number) => {
-  //   let win;
-
-  //   if(p === 1) {
-  //     let vw, vh;
-
-  //     if(self.innerHeight) {
-  //       vw = self.innerWidth;
-  //       vh = self.innerHeight;
-  //     }
-  //     else if(document.documentElement && document.documentElement.clientHeight) {
-  //       vw = document.documentElement.clientWidth;
-  //       vh = document.documentElement.clientHeight;
-  //     }
-  //     else if(document.body) {
-  //       vw = document.body.clientWidth;
-  //       vh = document.body.clientHeight;
-  //     }
-
-  //     let x = (vw-w) / 2;
-  //     let y = (vh-h) / 2;
-
-  //     win = window.open(url, target, 'left='+x+', top='+y+', width='+w+', height='+h+', scrollbars='+s+', resizable=0, status=1');
-
-  //   } else {
-  //     win = window.open(url, target, 'width='+w+', height='+h+', scrollbars='+s+', resizable=0, status=1');
-  //   }
-
-  //   win.focus();
-
-  //   return win;
-  // }
-
   return (
     <>
+      <Dialog
+        className="layer-wrap wdth-60p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        headerClassName="layer-head"
+        contentClassName="layer-body"
+        visible={visible}
+        style={{}}
+        onHide={() => { if (!visible) return; setVisible(false); }}
+        closeIcon={<Icon icon="popup-close" />}
+        modal={false}
+        // footer={<></>}
+        header={<h3 className="o-heading"><span className="label">도움말</span></h3>}
+        resizable={false}/* resizable={false} { @DEV } */
+      >
+        <div className="div-container">
+          <div className="o-grid">
+            <div className="column">
+              <div className="o-section">
+                <div className="main">
+                  <figure className="o-figure">
+                    <div className="body">
+                      <img src={require("assets/images/temp/CMP000801P_010.png")} alt="" />
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="div-footer">
+          <div className="m-binds type-end">
+            <div className="group _primary">
+              <CommonButton label="확인" className="_solid-primary" />
+            </div>
+          </div>
+        </div>
+      </Dialog>
+
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="m-title">
@@ -141,11 +146,7 @@ function CMP000801P() {
         <div className="div-contents">
           <div className="m-binds">
             <div className="group _start">
-              {/* <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => testest('./CMP000802P', 'IBKBWS_User_Manual')} /> */}
-              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => {
-                // window.open('./CMP000802P', '_blank', 'width=1056, height=857, scrollbars=0, resizable=0, status=1');
-                window.open('./CMP000802P', '_blank', 'width=1056, height=858, scrollbars=0, resizable=0, status=1');
-              }} />
+              <CommonButton label="팝업 열기" icon="link" size={70} onClick={() => setVisible(true)} />
             </div>
           </div>
         </div>

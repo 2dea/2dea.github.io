@@ -253,7 +253,7 @@ template  { display: none; }
     cursor: text;
 }
 [aria-disabled="true"],
-  [disabled]  {
+  [disabled]:where(:not(form, fieldset))  {
     color: GrayText;
     -webkit-text-fill-color: currentColor;
     filter: blur(0.5px);
@@ -261,4 +261,6 @@ template  { display: none; }
     cursor: default;
     cursor: not-allowed;
 }
+[aria-disabled="true"] *,
+  [disabled]:where(:not(form, fieldset)) *  { cursor: inherit; }
 [hidden]  { display: none !important; }

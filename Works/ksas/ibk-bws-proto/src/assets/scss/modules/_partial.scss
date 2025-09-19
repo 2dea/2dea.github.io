@@ -232,7 +232,7 @@
 .m-shop-detail >.bodies >.detail .empty-data  { flex: 1; font-size: $font-40; display: flex; align-items: center; justify-content: center; padding: $gap-element-70; background: var(--color-ground-30); color: var(--color-text-30); }
 
 .m-shop-detail >.bodies >.figure  { margin-bottom: III(12); }
-.m-shop-detail >.bodies >.figure  { height: III(177); border: $e10 solid var(--color-edge-40); }
+.m-shop-detail >.bodies >.figure  { height: III(176); border: $e10 solid var(--color-edge-40); }
 .m-shop-detail >.bodies >.figure :has(.o-view-image),
 .m-shop-detail >.bodies >.figure .o-view-image  { height: 100%; }
 .m-shop-detail .o-view-image  { margin: 0 auto; }
@@ -312,6 +312,9 @@
 .m-shop >.results >* >:last-child  { border-end-start-radius: inherit; border-end-end-radius: inherit; }
 
 .m-shop >.results >.details  { width: III(260); }
+// .m-shop >.results >.details .m-shop-ranking  { overflow: auto; }
+.m-shop >.results >.details >*  { overflow: auto; overflow: hidden auto; }
+.m-shop >.results >.details .m-shop-detail  { flex-basis: III(360); }
 
 .m-shop >.results >.requests  { width: III(220); border-color: var(--color-edge2-blue-30); }
 
