@@ -102,6 +102,38 @@ function ADMAU0102M() {
 
                 <FavoriteDiv />
               </h1>
+
+              <div className="asides">
+                <div className="consults">
+
+                  <div className="m-consult">
+                    <span className="header">
+                      <strong className="heading">안전문의</strong>
+                    </span>
+                    <span className="bodies">
+                      <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000, 1234</span></span></span>
+                    </span>
+                  </div>
+
+                  <div className="m-consult">
+                    <span className="header">
+                      <strong className="heading">권한문의</strong>
+                    </span>
+                    <span className="bodies">
+                      <span className="o-consult"><strong className="head">프로세스혁신부</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">1234</span></span></span>
+                      <span className="o-consult"><strong className="head">IT정보부</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000</span></span></span>
+                    </span>
+                  </div>
+
+                </div>
+
+                <div className="comments">
+                  <span className="o-icon-text">
+                    <Icon icon="consult-alert" />
+                    <em className="label">반드시 조회 후 신청해주세요.</em>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -121,7 +153,7 @@ function ADMAU0102M() {
         </div>
 
         {/* <!-- /* Consults { @DEV } --> */}
-        <ConsultsDiv visible={false} heading="문의" divName="안전관리팀" telNumber="0000" asideLabel="반드시 조회 후 신청해주세요." />
+        <ConsultsDiv visible={true} heading="문의" divName="안전관리팀" telNumber="0000" asideLabel="반드시 조회 후 신청해주세요." />
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
@@ -440,7 +472,7 @@ function ADMAU0102M() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input mode-required">
-                                    <InputText placeholder="" value="AAABB0000C00" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <InputText placeholder="" value="문의" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                   <span className="helper"><em>예시) 당직관련 문의, 명령부 문의, 장애 문의 등</em></span>
@@ -450,12 +482,12 @@ function ADMAU0102M() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`담당부서명`} require={true} />
+                              <Label label={`담당부서명`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input mode-required wdth-90">
+                                  <div className="o-form _input wdth-90">
                                     <InputText placeholder="" value="원화현수송신청" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -468,12 +500,12 @@ function ADMAU0102M() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`전화/내선번호`} require={true} />
+                              <Label label={`전화/내선번호`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input mode-required wdth-90">
+                                  <div className="o-form _input wdth-90">
                                     <InputText placeholder="" value="02-3355-3292" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -502,8 +534,8 @@ function ADMAU0102M() {
                   </div>
                   <div className="m-footer">
                     <ul className="m-bullets type-disc">
-                      <li>각 업무화면 상단에 입력하신 문의 내용이 노출되니다. 예시를 참고해주세요.</li>
-                      <li>예시) <em className="c-color-strong">문의 : 안전관리팀(7483, 1234) OO문의 : 안전관리팀(783) 등록하신 한줄내용이 노출됩니다.</em></li>
+                      <li>각 업무화면 상단에 입력하신 문의 내용이 노출됩니다. 예시를 참고해주세요.</li>
+                      <li>예시) <em className="c-color-strong">OO문의/OO문의 : 안전관리팀(7483, 1234) | 안전관리팀(783) [등록하신 한줄내용이 노출됩니다.]</em></li>
                     </ul>
                   </div>
 
@@ -531,28 +563,12 @@ function ADMAU0102M() {
                         <tbody>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`문의`} require={true} />
+                              <Label label={`담당부서명`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input mode-required">
-                                    <InputText placeholder="" value="AAABB0000C00" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                  {/* <span className="helper"><em>예시) 당직관련 문의, 명령부 문의, 장애 문의 등</em></span> */}
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th colSpan={1}>
-                              <Label label={`담당부서명`} require={true} />
-                            </th>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input mode-required wdth-90">
+                                  <div className="o-form _input wdth-90">
                                     <InputText placeholder="" value="원화현수송신청" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -565,12 +581,12 @@ function ADMAU0102M() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`전화/내선번호`} require={true} />
+                              <Label label={`전화/내선번호`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input mode-required wdth-90">
+                                  <div className="o-form _input wdth-90">
                                     <InputText placeholder="" value="02-3355-3292" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -607,28 +623,12 @@ function ADMAU0102M() {
                         <tbody>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`문의`} require={true} />
+                              <Label label={`담당부서명`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input mode-required">
-                                    <InputText placeholder="" value="AAABB0000C00" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                  {/* <span className="helper"><em>예시) 당직관련 문의, 명령부 문의, 장애 문의 등</em></span> */}
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th colSpan={1}>
-                              <Label label={`담당부서명`} require={true} />
-                            </th>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input mode-required wdth-90">
+                                  <div className="o-form _input wdth-90">
                                     <InputText placeholder="" value="원화현수송신청" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -641,7 +641,7 @@ function ADMAU0102M() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`전화/내선번호`} require={true} />
+                              <Label label={`전화/내선번호`} require={false} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
@@ -687,7 +687,7 @@ function ADMAU0102M() {
                         <tbody>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={<>이미지첨부 <span className="g-nowrap">(000 * 000px)</span></>} require={true} />
+                              <Label label={<>이미지첨부{/*  <span className="g-nowrap">(000 * 000px)</span> */}</>} require={true} />
                             </th>
                             <td colSpan={1}>
 

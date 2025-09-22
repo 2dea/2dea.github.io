@@ -285,7 +285,7 @@
 
 
 .o-consult  { display: inline-flex; }
-.o-consult >.head  { font-weight: inherit; margin-right: $gap-element-50; }
+.o-consult >.head  { font-weight: inherit; margin-right: $gap-element-30; }
 .o-consult >.data  { font-weight: $bold-70; color: var(--color-key1-40); }
 .o-consult >.data .o-icon:before  { background-position: 50%; }
 
@@ -294,7 +294,7 @@
 
 
 .m-consult  { display: flex; gap: $gap-element-70; }
-.m-consult >*  { display: flex; }
+.m-consult >*  { display: flex; gap: inherit; }
 .m-consult >.header .heading  { color: var(--color-text-70); }
 .m-consult >.aside:not(:only-child)  { font-size: $font-40; margin-left: $gap-element-30; color: var(--color-text-30); }
 

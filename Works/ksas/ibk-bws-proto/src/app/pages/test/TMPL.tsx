@@ -118,6 +118,38 @@ function TMPL() {
 
                 <FavoriteDiv />
               </h1>
+
+              <div className="asides">
+                <div className="consults">
+
+                  <div className="m-consult">
+                    <span className="header">
+                      <strong className="heading">안전문의</strong>
+                    </span>
+                    <span className="bodies">
+                      <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000, 1234</span></span></span>
+                    </span>
+                  </div>
+
+                  <div className="m-consult">
+                    <span className="header">
+                      <strong className="heading">권한문의</strong>
+                    </span>
+                    <span className="bodies">
+                      <span className="o-consult"><strong className="head">프로세스혁신부</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">1234</span></span></span>
+                      <span className="o-consult"><strong className="head">IT정보부</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000</span></span></span>
+                    </span>
+                  </div>
+
+                </div>
+
+                <div className="comments">
+                  <span className="o-icon-text">
+                    <Icon icon="consult-alert" />
+                    <em className="label">반드시 조회 후 신청해주세요.</em>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 

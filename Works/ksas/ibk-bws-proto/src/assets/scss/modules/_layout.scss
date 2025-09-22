@@ -449,6 +449,14 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 //   :has(.div-header)  { background-color: gold; }
 // }
 
+.dom-main .div-header .m-title  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-50 $gap-element-90; }
+.dom-main .div-header .m-title >*  { flex: 0 1 auto; overflow: hidden; }
+.dom-main .div-header .m-title >.asides  { display: flex; align-items: center; gap: $gap-element-80; }
+.dom-main .div-header .m-title >.asides >*  { display: flex; align-items: center; gap: inherit; }
+.dom-main .div-header .m-title >.asides .consults .heading  { font-weight: $bold-70; color: var(--color-text-70); }
+.dom-main .div-header .m-title >.asides .comments .label  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
+
+
 
 .dom-main >.roles  { flex: 1 0 0; overflow: auto scroll; padding: 0; }
 .dom-main >.roles :where(:has(.div-contents))  { flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit; }
