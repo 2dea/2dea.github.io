@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 원화현수송 > 자금현수송노선업로드 ~ (LP)현송대행지시서 스캔
+ * @description 공통·결재 > 권한관리 > 생성관리 > (T)화면관리 ~ (LP)업무담당자문의처
  */
 
 // dependency
@@ -36,7 +36,7 @@ import { DataTable } from 'primereact/datatable';
 import { Splitter, SplitterPanel } from 'primereact/splitter';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-function FMTCT1501P01() {
+function ADMAU0102P02() {
   // Dialog
   const [visible, setVisible] = useState<boolean>(true);
 
@@ -101,7 +101,7 @@ function FMTCT1501P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">현송대행지시서 스캔</span></h3>}
+        header={<h3 className="o-heading"><span className="label">업무담당자문의처</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -110,52 +110,45 @@ function FMTCT1501P01() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field colspan-2">
-                    <Label label={`현송기간`} require={true} />
+                  <div className="o-field">
+                    <Label label={`업무구분`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                        <i aria-hidden="true"></i>
-                      </div>
-                      <span className="seps type-tilde">~</span>
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
 
-                  {/* <div className="o-field">
-                    <Label label={`스캔여부`} require={false} />
+                  <div className="o-field">
+                    <Label label={`부서`} require={false} />
                     <div className="fields">
-                      <div className="o-form _select">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`담당자`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`팝업노출여부`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select wdth-50">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
-                  </div> */}
-
-                  {/* <div className="o-field">
-                    <Label label={`구분`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* <div className="o-field">
-                    <Label label={`노선명`} require={false} />
-                    <div className="fields">
-                      <div className="fields">
-                        <div className="o-form _input wdth-50">
-                          <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                          <i aria-hidden="true"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
+                  </div>
 
                 </div>
 
@@ -164,9 +157,9 @@ function FMTCT1501P01() {
                 </div>
               </form>
 
-              <div className="o-section">
+               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">현송대행지시서 등록내역</span></h4>
+                  <h3 className="o-heading level2"><span className="label">등록내역</span></h3>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -176,13 +169,6 @@ function FMTCT1501P01() {
                     </em>
                   </div>
 
-                  <div className="m-binds">
-                    <div className="group">
-                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
-                      <ImageButton label="목록필터" icon="column-toggle" />
-                      <ImageButton label="목록출력" icon="print" />
-                    </div>
-                  </div>
                 </div>
 
                 <div className="main _primary">
@@ -192,6 +178,12 @@ function FMTCT1501P01() {
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                           <col />
                           <col />
                           <col />
@@ -200,12 +192,19 @@ function FMTCT1501P01() {
 
                         <thead className="p-datatable-thead">
                           <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종등록자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업무구분(1차)</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">담당업무(2차)</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부서명</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">담당자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">내용</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화/내선번호</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">팝업노출여부</span></div></th>
                           </tr>
                           <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부서코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부서명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
@@ -213,97 +212,38 @@ function FMTCT1501P01() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
-                            <>
-                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
-                                <td>{idx + 1}</td>
-                                <td><span className="o-digit type-date">2025-12-25</span></td>
-                                <td className="g-start wdth-auto">-</td>
-                                {/* <td><CommonButton label="BPR 조회" className="_normal" /></td>
-                                <td><CommonButton label="BPR 스캔" className="_normal" /></td> */}
-                                <td>012345</td>
-                                <td>홍길동</td>
-                              </tr>
-                            </>
+                            <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
+                              <td>{idx + 1}</td>
+                              <td className="g-start">자금현수송</td>
+                              <td className="g-start">원화현수송</td>
+                              <td>0810</td>
+                              <td className="g-start">프로세스혁신부</td>
+                              <td>000000</td>
+                              <td>홍길동</td>
+                              <td className="g-start">-</td>
+                              <td>4306</td>
+                              <td>Y</td>
+                            </tr>
                           ))}
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="o-section">
-                <div className="m-header">
-                  <h4 className="o-heading level3"><span className="label">현송대행지시서 스캔등록</span></h4>
-
-                  <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="신규" className="_create" />
-                    </div>
-                  </div>
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>선택된 내역의 부서명과 해당 전화/내선번호가 문의 전화번호 입력폼에 세팅됩니다.</li>
+                  </ul>
                 </div>
 
-                <div className="main">
-                  <form className="m-data-form">
-                    <table className="table">
-                      <colgroup>
-                        <col className="head" />
-                        <col className="data" />
-                        <col className="head" />
-                        <col className="data" />
-                      </colgroup>
-
-                      <tbody>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`현송일자`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input type-date mode-required wdth-50">
-                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
-                            <Label label={`BPR 스캔등록`} require={true} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="m-inline-binds">
-                              <CommonButton label="① 스캔등록" className="_normal" />
-                              <CommonButton label="② 스캔조회" className="_normal" />
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th colSpan={1}>
-                            <Label label={`비고`} require={false} />
-                          </th>
-                          <td colSpan={3}>
-                            <div className="o-field">
-                              <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                                  <i aria-hidden="true"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
-                </div>
               </div>
 
             </div>
@@ -314,8 +254,7 @@ function FMTCT1501P01() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="삭제" className="_delete" />
-              <CommonButton label="저장" className="_solid-primary" />
+              <CommonButton label="선택" className="_solid-primary" />
             </div>
           </div>
         </div>
@@ -325,7 +264,7 @@ function FMTCT1501P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)현송대행지시서 스캔 [wdth-50p(w1150)]</span>
+              <span className="label">(P)업무담당자문의처 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>
@@ -348,4 +287,4 @@ function FMTCT1501P01() {
   );
 }
 
-export default FMTCT1501P01;
+export default ADMAU0102P02;

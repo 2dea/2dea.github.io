@@ -617,6 +617,7 @@ import ADMAU0101M from 'app/pages/adm/ADMAU0101M';      // 공통·결재 > 권�
 import ADMAU0101P01 from 'app/pages/adm/ADMAU0101P01';  // 공통·결재 > 권한관리    > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
 import ADMAU0102M from 'app/pages/adm/ADMAU0102M';      // 공통·결재 > 권한관리    > 생성관리 > (T)화면관리
 // import ADMAU0102P01 from 'app/pages/adm/ADMAU0102P01';  // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리 ~ (LP)미리보기
+import ADMAU0102P02 from 'app/pages/adm/ADMAU0102P02';  // 공통·결재 > 권한관리 > 생성관리 > (T)화면관리 ~ (LP)업무담당자문의처
 import ADMAU0103M from 'app/pages/adm/ADMAU0103M';      // 공통·결재 > 권한관리    > 생성관리 > (T)팝업관리
 import ADMAU0104M from 'app/pages/adm/ADMAU0104M';      // 공통·결재 > 권한관리    > 생성관리 > (T)권한관리
 import ADMAU0201M from 'app/pages/adm/ADMAU0201M';      // 공통·결재 > 권한관리    > 매핑관리 > (T)메뉴별 화면관리
@@ -1307,6 +1308,7 @@ function ProtoRoutes() {
         { path: 'ADMAU0101P01', element: <ADMAU0101P01 /> },
         { path: 'ADMAU0102M',   element: <ADMAU0102M /> },
         // { path: 'ADMAU0102P01', element: <ADMAU0102P01 /> },
+        { path: 'ADMAU0102P02', element: <ADMAU0102P02 /> },
         { path: 'ADMAU0103M',   element: <ADMAU0103M /> },
         { path: 'ADMAU0104M',   element: <ADMAU0104M /> },
         { path: 'ADMAU0201M',   element: <ADMAU0201M /> },
