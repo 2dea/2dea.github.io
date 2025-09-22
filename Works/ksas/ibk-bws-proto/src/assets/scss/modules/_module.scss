@@ -138,6 +138,10 @@
 .o-icon._du-left:before  { background-color: $tp; background-image: var(--obj-ico-du-left); }
 .o-icon._du-right:before  { background-color: $tp; background-image: var(--obj-ico-du-right); }
 .o-icon._du-up:before  { background-color: $tp; background-image: var(--obj-ico-du-up); }
+.o-icon._du2-down:before  { background-color: $tp; background-image: var(--obj-ico-du2-down); }
+.o-icon._du2-left:before  { background-color: $tp; background-image: var(--obj-ico-du2-left); }
+.o-icon._du2-right:before  { background-color: $tp; background-image: var(--obj-ico-du2-right); }
+.o-icon._du2-up:before  { background-color: $tp; background-image: var(--obj-ico-du2-up); }
 .o-icon._edit:before  { background-color: $tp; background-image: var(--obj-ico-edit); }
 .o-icon._file:before  { background-color: $tp; background-image: var(--obj-ico-file); }
 .o-icon._filter-alt:before,
@@ -169,6 +173,7 @@
 .o-icon._tel:before,
   .o-icon._contacts:before  { background-color: $tp; background-image: var(--obj-ico-tel); }
 .o-icon._upload:before  { background-color: $tp; background-image: var(--obj-ico-upload); }
+.o-icon._watching:before  { background-color: $tp; background-image: var(--obj-ico-watching); }
 
 /* Icon Filled */
 .o-icon._arrow-drop-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-down); }
@@ -185,6 +190,7 @@
 /* Icon Fixed */
 .o-icon._alert-octagram:before  { background-color: $tp; background-image: var(--obj-ico-alert-octagram); background-size: 100%; }
 .o-icon._breadcrumb-home:before  { background-color: $tp; background-image: var(--obj-ico-breadcrumb-home); background-size: 100%; }
+.o-icon._arrow-drop2-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop2-down); background-size: 300%; }
 .o-icon._excel-download:before  { background-color: $tp; background-image: var(--obj-ico-excel-download); background-size: 100%; }
 .o-icon._excel-download-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-download-label); background-size: 100%; }
 .o-icon._excel-upload:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload); background-size: 100%; }
@@ -1391,6 +1397,7 @@
 // .o-image-check._menu-toggle:after   { content: ""; position: absolute; left: 0; width: $e20; height: calc(100% - $e10 * 2); background: $color-ground; }
 .o-image-check._menu-toggle >i   { display: flex; position: absolute; right: III(6); }
 .o-image-check._menu-toggle >i:before   { content: ""; font-size: $height-icon-30; display: block; width: 1em; height: 1em; background: var(--obj-ico-menu-toggle) no-repeat 0% /500%; opacity: 0.4; transition-property: opacity; }
+.o-image-check._menu-toggle >i:before   { background-image: var(--obj-ico-arrow-left); background-position: 50%; opacity: 1.0; }
 .o-image-check._menu-toggle:hover >i:before   { opacity: 1.0; animation: ANI_jump 1.5s var(--timing-func-ease-faster) 0s 3; }
 
 .o-image-check._menu-toggle >:checked ~i   { transform: rotateY(-540deg); }

@@ -828,6 +828,10 @@ function SUBTMPL() {
                                 <i className="o-icon _du-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-right wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-up wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du2-down wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du2-left wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du2-right wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du2-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _edit wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _file wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _filter-alt wdth-50" aria-hidden="true"></i>
@@ -857,6 +861,7 @@ function SUBTMPL() {
                                 <i className="o-icon _task-single wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _tel wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _upload wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _watching wdth-50" aria-hidden="true"></i>
                               </div>
                             </td>
                           </tr>
@@ -895,6 +900,7 @@ function SUBTMPL() {
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _alert-octagram wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _breadcrumb-home wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _arrow-drop2-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-download wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-download-label wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-upload wdth-50" aria-hidden="true"></i>
