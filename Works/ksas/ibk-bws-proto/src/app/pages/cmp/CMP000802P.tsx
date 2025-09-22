@@ -129,7 +129,9 @@ function CMP000802P() {
                     },
                   }}
                   grabCursor={true}
-                  effect="creative"
+                  speed={0}
+                  // effect="creative"
+                  effect="fade"
                   creativeEffect={{
                     prev: {
                       shadow: true,

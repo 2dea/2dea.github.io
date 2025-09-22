@@ -144,6 +144,7 @@ import FMTCD0101M from 'app/pages/fmt/FMTCD0101M';      // 자금현수송 > 외
 // proto 중요용지·용도품(본부)
 import BSPRQ0101M from 'app/pages/bsp/BSPRQ0101M';      // 중요용지·용도품(영업점) > 신청  > 중요용지신청
 import BSPRQ0101P01 from 'app/pages/bsp/BSPRQ0101P01';  // 중요용지·용도품(영업점) > 신청  > 중요용지신청 > (LP)중요용지신청안내
+import BSPRQ0101P03 from 'app/pages/bsp/BSPRQ0101P03';  // 중요용지·용도품(영업점) > 신청  > 중요용지신청 > (LP)중요용지신청주의사항
 import BSPRQ0201M from 'app/pages/bsp/BSPRQ0201M';      // 중요용지·용도품(영업점) > 신청  > 중요용지신청내역
 import BSPRQ0301M from 'app/pages/bsp/BSPRQ0301M';      // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정
 import BSPRQ0301P01 from 'app/pages/bsp/BSPRQ0301P01';  // 중요용지·용도품(영업점) > 신청  > 중요용지자동배송설정 > (LP)자동배송 품목 등록 및 제외 확인
@@ -164,6 +165,7 @@ import BSPFD0901P01 from 'app/pages/bsp/BSPFD0901P01';  // 중요용지·용도�
 
 import BSPAQ0101M from 'app/pages/bsp/BSPAQ0101M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지인수
 import BSPAQ0101P01 from 'app/pages/bsp/BSPAQ0101P01';  // 중요용지·용도품(영업점) > 인수도 > 중요용지인수 > (LP)대량폐기결정
+import BSPAQ0101P02 from 'app/pages/bsp/BSPAQ0101P02';  // 중요용지·용도품(영업점) > 인수도 > 중요용지인수 > (LP)중요용지인수주의사항
 import BSPAQ0201M from 'app/pages/bsp/BSPAQ0201M';      // 중요용지·용도품(영업점) > 인수도 > 용도품인수
 import BSPAQ0301M from 'app/pages/bsp/BSPAQ0301M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지서무계 → 창구
 import BSPAQ0401M from 'app/pages/bsp/BSPAQ0401M';      // 중요용지·용도품(영업점) > 인수도 > 중요용지창구 → 서무계
@@ -817,6 +819,7 @@ function ProtoRoutes() {
       children: [
         { path: 'BSPRQ0101M',   element: <BSPRQ0101M /> },
         { path: 'BSPRQ0101P01', element: <BSPRQ0101P01 /> },
+        { path: 'BSPRQ0101P03', element: <BSPRQ0101P03 /> },
         { path: 'BSPRQ0201M',   element: <BSPRQ0201M /> },
         { path: 'BSPRQ0301M',   element: <BSPRQ0301M /> },
         { path: 'BSPRQ0301P01', element: <BSPRQ0301P01 /> },
@@ -837,6 +840,7 @@ function ProtoRoutes() {
 
         { path: 'BSPAQ0101M',   element: <BSPAQ0101M /> },
         { path: 'BSPAQ0101P01', element: <BSPAQ0101P01 /> },
+        { path: 'BSPAQ0101P02', element: <BSPAQ0101P02 /> },
         { path: 'BSPAQ0201M',   element: <BSPAQ0201M /> },
         { path: 'BSPAQ0301M',   element: <BSPAQ0301M /> },
         { path: 'BSPAQ0401M',   element: <BSPAQ0401M /> },

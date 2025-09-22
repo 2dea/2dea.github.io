@@ -124,8 +124,11 @@ function FMTFT0301M() {
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
               <div className="group _primary">
-                <CommonButton label="저장" className="_solid-primary" />
+                <CommonButton label="확정취소" className="_lined-primary" />
                 <CommonButton label="확정" className="_solid-primary" />
+              </div>
+              <div className="group _primary">
+                <CommonButton label="저장" className="_solid-primary" />
               </div>
             </div>
 
@@ -189,6 +192,7 @@ function FMTFT0301M() {
               <TabList className="lists">
                 <Tab className="link"><span className="label">시재금현황</span></Tab>
                 <Tab className="link"><span className="label">시재금상세</span></Tab>
+                <Tab className="link"><span className="label">시재금상세(검증)</span></Tab>
                 <Tab className="link"><span className="label">과부족현황</span></Tab>
                 <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
@@ -414,6 +418,141 @@ function FMTFT0301M() {
               <div className="o-grid">
                 <div className="column">
 
+                  <div className="o-section">
+                    <div className="m-header">
+                      <h2 className="o-heading level2"><span className="label">시재금상세</span></h2>
+
+                      <div className="o-length">
+                        <span className="head">전체</span>
+                        <em className="data">
+                          <span className="value">8</span>
+                          <span className="units">건</span>
+                        </em>
+                      </div>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록필터" icon="column-toggle" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="main _primary rows-body-3i">
+                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table p-datatable">
+                        <div className="table-container p-datatable-wrapper">
+                          <table className="p-datatable-table p-datatable-scrollable-table">
+                            <colgroup>
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                              <col />
+                            </colgroup>
+
+                            <thead className="p-datatable-thead">
+                              <tr>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">통화</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신권 및 정사권</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미정사권</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수출권</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
+                                <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">당일 변동액</span></div></th>
+                              </tr>
+                              <tr>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                              </tr>
+                            </thead>
+
+                            <tbody className="p-datatable-tbody">
+                              <tr className="p-datatable-emptymessage">
+                                <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                              </tr>
+                            </tbody>
+
+                            <tbody className="p-datatable-tbody">
+                              {[...Array(24)].map((e, idx) => (
+                                <>
+                                  <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
+                                    <td className="p-x-cell-span">{/* 그리드 로우그룹/rowspan 'p-x-cell-span' 클래스네임 추가 필요(border 숨김) { @DEV } */}
+                                      {
+                                        (idx) % 3 === 0 &&
+                                        <>USD</>/* 그리드 로우그룹/rowspan 최상위 셀만 데이터 출력 { @DEV } */
+                                      }
+                                    </td>
+                                    <td>50</td>
+                                    <td className="g-end">20,000</td>
+                                    <td className="g-end">400,000</td>
+                                    <td className="g-end">20,000</td>
+                                    <td className="g-end">400,000</td>
+                                    <td className="g-end">20,000</td>
+                                    <td className="g-end">400,000</td>
+                                    <td className="g-end">20,000,000</td>
+                                    <td className="g-end">20,000</td>
+                                    <td className="g-end">20,000,000</td>
+                                  </tr>
+                                  {
+                                    (idx - 2) % 3 === 0 &&
+                                    <tr className="p-rowgroup-footer subtotal-trow">
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell g-start">합계</td>
+                                      <td className="subtotal-tcell g-end">20,000</td>
+                                      <td className="subtotal-tcell g-end">400,000</td>
+                                      <td className="subtotal-tcell g-end">20,000</td>
+                                      <td className="subtotal-tcell g-end">400,000</td>
+                                      <td className="subtotal-tcell g-end">20,000</td>
+                                      <td className="subtotal-tcell g-end">400,000</td>
+                                      <td className="subtotal-tcell g-end">20,000,000</td>
+                                      <td className="subtotal-tcell g-end">20,000</td>
+                                      <td className="subtotal-tcell g-end">20,000,000</td>
+                                      {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                                    </tr>
+                                  }
+                                </>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </TabPanel>
+
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+              <div className="o-grid">
+                <div className="column">
+
                   <div className="o-board type-b">
                     <div className="o-notice">
                       <div className="main">
@@ -428,11 +567,10 @@ function FMTFT0301M() {
                         </dl>
                       </div>
 
-
                       <div className="binds">
                         <div className="m-mixed-field">
                           <div className="o-field">
-                            <Label label={`시재업데이트일시`} require={false} />
+                            <Label label={`확정일시`} require={false} />
                             <div className="fields">
                               <div className="string o-digit type-datetime">2025-12-25 04:36:12</div>
                             </div>

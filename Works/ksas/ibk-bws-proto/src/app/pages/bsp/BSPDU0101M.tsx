@@ -119,6 +119,13 @@ function BSPDU0101M() {
             </div>
 
             <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="오손불일치(전체)출력" className="_texted" />
+                  <CommonButton label="출력" className="_texted" />
+                </div>
+              </div>
+
               <div className="group _primary">
                 <CommonButton label="선택" className="_solid-primary" />
                 <CommonButton label="추가" className="_solid-primary" />

@@ -815,6 +815,8 @@
 .m-bullets:where(.o-board:not(.style-fit) .board-container *)  { --margin-bullets: 8; }
 .m-bullets:where(.m-footer *)  { --fs-int: var(--font-40-int); color: $color-text-30; }
 .m-bullets:where(.o-section >.m-footer *)  { --margin-bullets: 4; }
+.m-bullets:where(.o-section >.main >*)  { --margin-bullets: 8; }
+.m-bullets:where(.style-lg)  { --fs-int: var(--font-60-int); }
 
 .m-bullets >:has(.o-consult)  { color: $color-text-70; }
 
