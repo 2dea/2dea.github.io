@@ -107,10 +107,6 @@ function HSPPC0401M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-              <div className="group">
-                <CommonButton label="CC처리내역 선택" className="_lined-secondary" />
-              </div>
-
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -190,6 +186,7 @@ function HSPPC0401M() {
                     <div className="group">
                       <CommonButton label="예산잔액체크" className="_normal" />
                       <CommonButton label="처리완료" className="_normal" />
+                      <CommonButton label="CC처리내역 선택" className="_normal" />
                     </div>
 
                     <div className="group">
@@ -431,6 +428,14 @@ function HSPPC0401M() {
                                 </div>
                               </div>
                             </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`CC처리내역선택`} require={false} />
+                          </th>
+                          <td colSpan={5}>
+                            CC처리내역 선택한 경우만 행 노출
                           </td>
                         </tr>
                       </tbody>
