@@ -26,7 +26,7 @@ html  { scroll-behavior: auto !important; }
 
 // ** CMP000901P : 메모(업무별)
 .layer-wrap :has(> .div-container._small) {min-height: auto;}
-.layer-wrap :has(> .div-container._small) .div-footer {padding-top: 24px;}
+.layer-wrap :has(> .div-container._small) .div-footer {padding-top: III(24);}
 
 // ** CMP001501P 결재선 그룹
 .o-grid ._row:has(.o-section > .main._primary):not(.column) { flex-direction: row; gap: 0 24px;} // reWrite

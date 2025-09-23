@@ -1213,6 +1213,7 @@
 
 .m-binds  { display: flex; align-items: center; justify-content: space-between; gap: $gap-element-70 calc($gap-element-80 * 1); clear: both; }
 .m-binds >*  { flex: 0 1 auto; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: $gap-element-30; }
+.m-binds >:where(.group.gap-none)  { gap: 0; }
 // .m-binds >* >*  { flex: 0 1 auto; }
 
 .m-binds:has(>._utility)  { flex-wrap: wrap; }
@@ -1242,7 +1243,7 @@
 
 
 .m-shuttle-binds  { display: flex; flex-direction: column; justify-content: center; }
-.m-shuttle-binds >.group  { display: flex; flex-direction: column; justify-content: center; gap: $gap-element-80; }
+.m-shuttle-binds >.group  { display: flex; flex-direction: column; justify-content: center; gap: $gap-element-80; min-width: III(60); }
 
 
 .m-divider  { display: flex; flex-direction: column; align-items: center; justify-content: center; clear: both; position: relative; }
@@ -2061,11 +2062,12 @@
 .m-tab  { --key: var(--color-key1-70); --duration: 0.3s; display: flex; align-items: flex-start; clear: both; border-bottom: $e10 solid var(--key); transition: var(--duration) var(--timing-func-ease-faster); }
 .m-tab *,  .m-tab :before,  .m-tab :after  { transition: inherit; }
 
-.m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; justify-content: center; gap: $gap-whitespace-50; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
+.m-tab .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; gap: $gap-whitespace-50; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
 .m-tab .link:is([aria-selected="true"], [aria-current]:not([aria-current="false"]))  { font-weight: $bold-70; border-color: $tp; color: var(--color-text-00); background-color: var(--key); }
 .m-tab .link >*  { min-width: 0; }
 .m-tab .link.o-icon >.label  { @include inc-sronly(); }
 
+.m-tab .link  { justify-content: center; }
 .m-tab >*  { flex: none; display: flex; min-width: 0; }
 .m-tab >* >*  { flex: none; display: flex; align-items: center; position: relative; min-width: 0; }
 .m-tab >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
@@ -2098,11 +2100,12 @@
 .m-mdi  { --key: var(--color-key1-70); --duration: 0.35s; display: flex; align-items: flex-start; clear: both; border-bottom: $e10 solid var(--key); transition: var(--duration) var(--timing-func-ease-faster); }
 .m-mdi *,  .m-mdi :before,  .m-mdi :after  { transition: inherit; }
 
-.m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; justify-content: center; gap: $gap-whitespace-50; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
+.m-mdi .link  { font-size: inherit; line-height: $height-icon-30; display: flex; align-items: center; gap: $gap-whitespace-50; position: relative; padding: 0.5em; border: $e10 solid var(--key); border-bottom-color: $tp; background: $color-ground; border-radius: $radius-50 $radius-50 0 0; cursor: pointer; text-align: center; white-space: nowrap; transition: all 0.15s; transition-property: border-color, background-color, color, opacity, filter; }
 .m-mdi .link:is([aria-selected="true"], [aria-current]:not([aria-current="false"]))  { font-weight: $bold-70; border-color: $tp; color: var(--color-text-00); background-color: var(--key); }
 .m-mdi .link >*  { min-width: 0; }
 .m-mdi .link.o-icon >.label  { @include inc-sronly(); }
 
+.m-mdi .link  { justify-content: normal; }
 .m-mdi >*  { flex: none; display: flex; min-width: 0; }
 .m-mdi >* >*  { flex: none; display: flex; align-items: center; position: relative; min-width: 0; }
 .m-mdi >* >:not(:first-child)  { margin-left: calc(-1 * $e10); }
@@ -2170,6 +2173,7 @@
 .m-mdi-list:has(.data-lists >:nth-child(1)) >.data-empty  { display: none; }
 
 
+
 .m-tabular  { display: table; /* table-layout: fixed; */ clear: both; width: 100%; }
 .m-tabular >*  { --radius: #{$radius-50}; display: table-row; vertical-align: top; border-radius: var(--radius); }
 .m-tabular >* >*  { display: table-cell; vertical-align: inherit; padding: III(6) III(3); white-space: nowrap; }
@@ -2179,7 +2183,19 @@
 .m-tabular.type-listbox >:hover:not(:active)  { background: $color-dimmed-hover; }
 
 
+.m-editlist  { height: 100%; width: III(168); overflow: auto; border: $e10 solid var(--color-edge-40); }
+.m-editlist >*  { padding: III(4) 0; border-bottom: $e10 solid var(--color-edge-40); }
+.m-editlist >:last-child  { margin-bottom: calc(-1 * $e10); }
+.m-editlist >:hover  { background: var(--color-dimmed-hover); }
 
+.m-editlist .o-form  { padding-right: III(3); border-color: $tp !important; background: $tp !important; }
+.m-editlist .o-form .o-image-button:before  { background-position: 0% !important; }
+
+.m-editlist .o-form input:read-only  { pointer-events: none; }
+.m-editlist .o-form:not(:has(input:read-only)) .o-image-button._edit  { display: none; }
+.m-editlist >:not(.is-selected) .o-form .o-image-button  { display: none; }
+
+.m-editlist >.is-selected  { background: var(--color-ground2-blue-30); }
 
 
 
@@ -2195,6 +2211,7 @@
 :has(>table):where(.o-grid-table, .o-grid-table *)  { border: var(--edge) solid var(--color-edge-40); }
 // .o-grid-table .c-point-cell  { color: var(--color-point-orange); }
 .o-grid-table .c-point-cell  { background-color: var(--color-ground2-skyblue-40); }
+.o-grid-table .c-point-row  { background: var(--color-ground2-skyblue-40) !important; }
 // .o-grid-table .c-divide-edge  { border-right-color: var(--color-key1-70, Navy); }
 .o-grid-table .c-divide-edge  { border-right-color: var(--color-edge-40); }
 .o-grid-table .table-container:is(.o-section >.main:not(._primary) *)  { overflow: auto; height: var(--height-section-main); }
@@ -2243,6 +2260,7 @@
 
 .o-grid-table:where(:not(.type-table.case-data)) tbody:where(:not(:has([rowspan]))):not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
+.o-grid-table table >* >tr >.tcell-strong  { background-color: var(--color-ground2-skyblue-30); }
 .o-grid-table table >* >tr >.tcell-strong  { background-color: var(--color-ground2-skyblue-30); }
 
 .o-grid-table table >* >tr >.sumtotal-tcell-strong  { color: var(--color-key1-90); background-color: var(--color-ground-70); }

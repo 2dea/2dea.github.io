@@ -1,5 +1,5 @@
 /**
- * @description 공통 ~ (LP)결재요청
+ * @description 공통 ~ (LP)주소검색
  */
 
 // dependency
@@ -106,7 +106,7 @@ function CMP001501P() {
         <div className="div-container">
           <div className="o-grid">
 
-            <div className="column _views">
+            <div className="column">
 
               <form className="m-filter-form">
                 <div className="fieldset">
@@ -204,196 +204,6 @@ function CMP001501P() {
 
               </div>
 
-            </div>
-
-            <div className="m-shuttle-binds">
-              <div className="group">
-                <CommonButton label="추가" icon="du-right" className="_normal" />
-                <CommonButton label="취소" icon="du-left" className="_normal" />
-              </div>
-            </div>
-
-            <div className="column">
-
-              <div className="o-grid">
-
-                <div className="column flex-auto">
-
-                  <div className="o-section">
-                    <div className="m-header">
-                      <h4 className="o-heading level2"><span className="label">결재선</span></h4>
-
-                      <div className="o-helper">
-                        <em className="label c-color-strong">소속부점 팀장 → 안전관리팀 팀장 전결</em>
-                      </div>
-
-                      <div className="m-binds">
-                        <div className="group gap-none">
-                          <ImageButton label="상위 이동" icon="page-up" iconWidth={50} />
-                          <ImageButton label="하위 이동" icon="page-down" iconWidth={50} />
-                        </div>
-                        <div className="group">
-                          <CommonButton label="즐겨찾기 저장" className="_normal" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="main _primary rows-body-6i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
-                        <div className="table-container p-datatable-wrapper">
-                          <table className="p-datatable-table p-datatable-scrollable-table">
-                            <colgroup>
-                              <col />
-                              <col />
-                              <col />
-                              <col />
-                            </colgroup>
-
-                            <thead className="p-datatable-thead">
-                              <tr>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소속</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
-                                <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직위</span></div></th>
-                              </tr>
-                            </thead>
-
-                            <tbody className="p-datatable-tbody">
-                              <tr className="p-datatable-emptymessage">
-                                <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                              </tr>
-                            </tbody>
-
-                            <tbody className="p-datatable-tbody">
-                              {[...Array(8)].map((e, idx) => (
-                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                  <td className="g-start">프로세스혁신부</td>
-                                  <td>홍길동</td>
-                                  <td>부장</td>
-                                  <td>감리역</td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="column">
-
-                  <div className="o-section">
-                    <div className="m-header">
-                      <h5 className="o-heading level3"><span className="label">즐겨찾기</span></h5>
-
-                      <div className="m-binds">
-                        <div className="group gap-none">
-                          <ImageButton label="상위 이동" icon="page-up" iconWidth={50} />
-                          <ImageButton label="하위 이동" icon="page-down" iconWidth={50} />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="main _primary rows-body-6i">
-                      <ul className="m-editlist" role="listbox">
-                        <li>
-                          <div className="o-form _input">
-                            <InputText placeholder="결재선 이름 입력" value="기본결재선" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                            <i aria-hidden="true"></i>
-                            <span className="inner-binds">
-                              <ImageButton label="결재선 이름변경" icon="edit" />
-                              <ImageButton label="즐겨찾기 제외" icon="delete" />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="is-selected">
-                          <div className="o-form _input">
-                            <InputText placeholder="결재선 이름 입력" value="중요결재선중요결재선중요결재선" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                            <i aria-hidden="true"></i>
-                            <span className="inner-binds">
-                              <ImageButton label="결재선 이름변경" icon="edit" />
-                              <ImageButton label="즐겨찾기 제외" icon="delete" />
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-form _input">
-                            <InputText placeholder="결재선 이름 입력" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
-                            <i aria-hidden="true"></i>
-                            <span className="inner-binds">
-                              <ImageButton label="결재선 이름변경" icon="edit" />
-                              <ImageButton label="즐겨찾기 제외" icon="delete" />
-                            </span>
-                          </div>
-                        </li>
-                        <li className="is-selected">
-                          <div className="o-form _input">
-                            <InputText placeholder="결재선 이름 입력" value="결재선그룹1" className="bind" onChange={(e) => setValue(e.target.value)} onFocus={(e) => e.target.select()} />
-                            <i aria-hidden="true"></i>
-                            <span className="inner-binds">
-                              <ImageButton label="결재선 이름변경" icon="edit" />
-                              <ImageButton label="즐겨찾기 제외" icon="delete" />
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div className="o-section">
-                <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">접수</span></h4>
-                </div>
-
-                <div className="main _primary rows-auto">
-                  <div className="o-grid-table type-table">{/* [하드코딩] */}
-                    <div className="table-container">
-                      <table>
-                        <colgroup>
-                          <col />
-                          <col />
-                          <col />
-                          <col />
-                        </colgroup>
-
-                        <thead>
-                          <tr>
-                            <th>소속</th>
-                            <th>직원명</th>
-                            <th>직책</th>
-                            <th>직위</th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          <tr className="c-point-row">
-                            <td className="g-start">안전관리팀</td>
-                            <td>안정원(대직 김준완)</td>
-                            <td>팀장</td>
-                            <td>부장</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div className="o-grid">
-
-            <div className="column _views">
-
               <div className="o-section">
                 <div className="m-header">
                   <h4 className="o-heading level2"><span className="label">결재의견</span></h4>
@@ -458,10 +268,145 @@ function CMP001501P() {
             </div>
 
             <div className="m-shuttle-binds">
-              <div className="group"></div>
+              <div className="group">
+                <CommonButton label="추가" icon="du-right" className="_normal" />
+                <CommonButton label="취소" icon="du-left" className="_normal" />
+              </div>
             </div>
 
             <div className="column">
+
+              <div className="o-section _row">
+
+                <div className="o-section">
+                  <div className="m-header">
+                    <h4 className="o-heading level2"><span className="label">결재선</span></h4>
+
+                    <div className="o-helper">
+                      <em className="label c-color-strong">출납책임자, 부점장 전결입니다.</em>
+                    </div>
+
+                    <div className="o-field">
+                      <div className="fields">
+
+                        <span className="inner-binds type-move">
+                          <ImageButton label="상위 이동" icon="page-up" iconWidth={50} />
+                          <ImageButton label="하위 이동" icon="page-down" iconWidth={50} />
+                        </span>
+
+                        {/* <div className="o-form _input wdth-50">
+                          <span className="inner-binds type-find">
+                            <ImageButton label="이전 탐색" icon="page-up" iconWidth={50} />
+                            <ImageButton label="다음 탐색" icon="page-down" iconWidth={50} />
+                          </span>
+                        </div> */}
+                      </div>
+                    </div>
+
+                    <div className="m-binds">
+                      <div className="group">
+                        <CommonButton label="결재선그룹추가" className="_normal" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="main _primary rows-body-8i">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="table-container p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col />
+                            <col />
+                            <col />
+                          </colgroup>
+
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">소속</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직책</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직위</span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                            {[...Array(24)].map((e, idx) => (
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td className="g-start">프로세스혁신부</td>
+                                <td>홍길동</td>
+                                <td>부장</td>
+                                <td>감리역</td>
+                              </tr>
+                            ))}
+                          </tbody>
+
+                          <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            <tr className="sumtotal-trow">
+                              <td colSpan={1} className="sumtotal-tcell">안전관리팀</td>
+                              <td className="sumtotal-tcell">안정원(대직 김준완)</td>
+                              <td className="sumtotal-tcell">팀장</td>
+                              <td className="sumtotal-tcell">부장</td>
+                            </tr>
+                          </tfoot>
+
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="o-section mini-section">
+                  <div className="m-header">
+                    <h5 className="o-heading level3"><span className="label">결재선그룹</span></h5>
+
+                    <div className="o-field">
+                      <div className="fields">
+
+                        <span className="inner-binds type-move">
+                          <ImageButton label="상위 이동" icon="page-up" iconWidth={50} />
+                          <ImageButton label="하위 이동" icon="page-down" iconWidth={50} />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="content-editor-box">
+                    <ul className="list">
+                      <li className="item state-edit _able">
+                        <span className="name">기본결재선</span>
+                        <span className="util">
+                          <button type="button" title="수정" className="o-image-button o-icon _edit"><span className="label">수정</span></button>
+                          <button type="button" title="삭제" className="o-image-button o-icon _delete"><span className="label">삭제</span></button>
+                        </span>
+                      </li>
+                      <li className="item">
+                        <span className="name">중요결재선</span>
+                        <span className="util">
+                          <button type="button" title="수정" className="o-image-button o-icon _edit"><span className="label">수정</span></button>
+                          <button type="button" title="삭제" className="o-image-button o-icon _delete"><span className="label">삭제</span></button>
+                        </span>
+                      </li>
+                      <li className="item state-edit _active">
+                        <span className="name" contentEditable="true">기본결재선</span>
+                        <span className="util">
+                          <button type="button" title="수정" className="o-image-button o-icon _edit"><span className="label">수정</span></button>
+                          <button type="button" title="삭제" className="o-image-button o-icon _delete"><span className="label">삭제</span></button>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
 
               <div className="o-section">
                 <div className="m-header">
@@ -477,8 +422,8 @@ function CMP001501P() {
                   </div>
                 </div>
 
-                <fieldset className="main" disabled>
-                  <div className="m-data-form">
+                <div className="main">
+                  <form className="m-data-form">
                     <table className="table">
                       <colgroup>
                         <col className="head" />
@@ -543,8 +488,8 @@ function CMP001501P() {
 
                       </tbody>
                     </table>
-                  </div>
-                </fieldset>
+                  </form>
+                </div>
 
                 <div className="m-footer">
                   <div className="o-board type-a">
@@ -570,6 +515,7 @@ function CMP001501P() {
             </div>
 
           </div>
+
         </div>
 
         <div className="div-footer">

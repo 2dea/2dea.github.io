@@ -410,3 +410,11 @@
 .m-mypage  { display: flex; flex-direction: column; }
 .m-mypage >.header  { margin-bottom: $margin-section-50; }
 .m-mypage >.header .o-board  { font-size: $font-40; color: var(--color-text-30); }
+
+.o-imagemap  { display: flex; flex-direction: column; align-items: center; }
+.o-imagemap >.contain  { position: relative; }
+.o-imagemap >.contain img  { display: block; }
+// .o-imagemap .map-image  { display: inline-block; vertical-align: middle; max-width: var(--breakpoint-max); }
+// .o-imagemap .map-image >img  { display: block; margin: 0 auto; }
+.o-imagemap .map-anchor  { position: absolute; overflow: hidden; color: Transparent; user-select: none; white-space: nowrap; }
+.o-imagemap .map-anchor.debug { border: thick solid rgba(255,0,0, 0.5); }

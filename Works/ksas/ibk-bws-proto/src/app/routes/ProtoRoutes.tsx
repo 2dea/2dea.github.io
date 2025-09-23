@@ -59,6 +59,7 @@ import FMTCT0201P01 from 'app/pages/fmt/FMTCT0201P01';  // 자금현수송 > 원
 import FMTCT0201P02 from 'app/pages/fmt/FMTCT0201P02';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)영업점불입결정
 import FMTCT0201P03 from 'app/pages/fmt/FMTCT0201P03';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)일괄송부서출력
 import FMTCT0201P04 from 'app/pages/fmt/FMTCT0201P04';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)신청내역수정
+import FMTCT0201P05 from 'app/pages/fmt/FMTCT0201P05';  // 자금현수송 > 원화현수송    > 원화현수송신청관리 ~ (LP)자금현송규정및감사내용확인
 import FMTCT1601M from 'app/pages/fmt/FMTCT1601M';      // 자금현수송 > 원화현수송    > 원화현수송신청관리(업무센터)
 import FMTCT1601P01 from 'app/pages/fmt/FMTCT1601P01';  // 자금현수송 > 원화현수송    > 원화현수송신청관리(업무센터) ~ (LP)업무센터결정
 import FMTCT0301M from 'app/pages/fmt/FMTCT0301M';      // 자금현수송 > 원화현수송    > 원화시재 및 보유현황
@@ -730,6 +731,7 @@ function ProtoRoutes() {
         { path: 'FMTCT0201P02', element: <FMTCT0201P02 /> },
         { path: 'FMTCT0201P03', element: <FMTCT0201P03 /> },
         { path: 'FMTCT0201P04', element: <FMTCT0201P04 /> },
+        { path: 'FMTCT0201P05', element: <FMTCT0201P05 /> },
 
         { path: 'FMTCT1601M',   element: <FMTCT1601M /> },
         { path: 'FMTCT1601P01', element: <FMTCT1601P01 /> },
