@@ -309,6 +309,8 @@ function ADMAU0102M() {
                         <colgroup>
                           <col className="head" />
                           <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
                         </colgroup>
 
                         <tbody>
@@ -316,7 +318,7 @@ function ADMAU0102M() {
                             <th colSpan={1}>
                               <Label label={`화면ID`} require={true} />
                             </th>
-                            <td colSpan={1}>
+                            <td colSpan={3}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input mode-required wdth-70">
@@ -334,7 +336,7 @@ function ADMAU0102M() {
                             <th colSpan={1}>
                               <Label label={`화면명`} require={true} />
                             </th>
-                            <td colSpan={1}>
+                            <td colSpan={3}>
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input mode-required">
@@ -359,38 +361,7 @@ function ADMAU0102M() {
                                 </div>
                               </div>
                             </td>
-                          </tr>
-                          <tr>
-                            <th colSpan={1}>
-                              <Label label={`화면경로명`} require={true} />
-                            </th>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input mode-required">
-                                    <InputText placeholder="" value="fmt/ct" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th colSpan={1}>
-                              <Label label={`화면URL`} require={true} />
-                            </th>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input mode-required">
-                                    <InputText placeholder="" value="fmt/ct/0101" className="bind" onChange={(e) => setValue(e.target.value)} />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
+
                             <th colSpan={1}>
                               <Label label={`정렬순서`} require={true} />
                             </th>
@@ -407,6 +378,36 @@ function ADMAU0102M() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
+                              <Label label={`화면경로명`} require={true} />
+                            </th>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required">
+                                    <InputText placeholder="" value="fmt/ct" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+
+                            <th colSpan={1}>
+                              <Label label={`화면URL`} require={true} />
+                            </th>
+                            <td colSpan={1}>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input mode-required">
+                                    <InputText placeholder="" value="fmt/ct/0101" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <th colSpan={1}>
                               <Label label={`등록자`} require={false} />
                             </th>
                             <td colSpan={1}>
@@ -419,8 +420,7 @@ function ADMAU0102M() {
                                 </div>
                               </div>
                             </td>
-                          </tr>
-                          <tr>
+
                             <th colSpan={1}>
                               <Label label={`등록일자`} require={false} />
                             </th>
@@ -445,14 +445,14 @@ function ADMAU0102M() {
                   <div className="m-header">
                     <h3 className="o-heading level3">
                       <span className="label">문의 전화번호</span>
-                      <InputCheck label="사용" labelHidden defaultChecked />
+                      {/* <InputCheck label="사용" labelHidden defaultChecked /> */}
                     </h3>
 
-                    <div className="m-binds">
+                    {/* <div className="m-binds">
                       <div className="group">
                         <CommonButton label="추가" className="_normal" disabled />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="main">
@@ -466,49 +466,16 @@ function ADMAU0102M() {
                         <tbody>
                           <tr>
                             <th colSpan={1}>
-                              <Label label={`문의`} require={true} />
+                              <Label label={`문의제목`} require={true} />
                             </th>
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input mode-required">
+                                  <div className="o-form _input mode-required wdth-50">
                                     <InputText placeholder="" value="문의" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                   <span className="helper"><em>예시) 당직관련 문의, 명령부 문의, 장애 문의 등</em></span>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th colSpan={1}>
-                              <Label label={`담당부서명`} require={false} />
-                            </th>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-90">
-                                    <InputText placeholder="" value="원화현수송신청" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                  <div className="binds justify-end">
-                                    <CommonButton label="업무담당자문의처" className="_normal" />
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th colSpan={1}>
-                              <Label label={`전화/내선번호`} require={false} />
-                            </th>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-90">
-                                    <InputText placeholder="" value="02-3355-3292" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                    <i aria-hidden="true"></i>
-                                  </div>
                                 </div>
                               </div>
                             </td>
@@ -521,87 +488,106 @@ function ADMAU0102M() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input">
-                                    <InputText placeholder="" value="내용을 입력해주세요" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <InputText placeholder="내용을 입력해주세요" value="" className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
                                 </div>
                               </div>
                             </td>
                           </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`사용여부`} require={true} />
+                            </th>
+                            <td colSpan={1}>
+                              <div className="m-checks">
+                                <InputRadio name="RADIO_10" label="Y" />
+                                <InputRadio name="RADIO_10" label="N" defaultChecked />
+                              </div>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                     </form>
-                  </div>
-                  <div className="m-footer">
-                    <ul className="m-bullets type-disc">
-                      <li>각 업무화면 상단에 입력하신 문의 내용이 노출됩니다. 예시를 참고해주세요.</li>
-                      <li>예시) <em className="c-color-strong">OO문의/OO문의 : 안전관리팀(7483, 1234) | 안전관리팀(783) [등록하신 한줄내용이 노출됩니다.]</em></li>
-                    </ul>
                   </div>
 
                 </div>
 
                 <div className="o-section">
                   <div className="m-header">
-
                     <div className="m-binds">
                       <div className="group">
+                        <CommonButton label="추가" className="_normal" />
                         <CommonButton label="삭제" className="_normal" />
                       </div>
                     </div>
-
                   </div>
 
-                  <div className="main">
-                    <form className="m-data-form">
-                      <table className="table">
-                        <colgroup>
-                          <col className="head" />
-                          <col className="data" />
-                        </colgroup>
+                  <div className="main _primary rows-body-3i">
+                    <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                    <div className="o-grid-table p-datatable">
+                      <div className="table-container p-datatable-wrapper">
+                        <table className="p-datatable-table p-datatable-scrollable-table">
+                          <colgroup>
+                            <col className="wdth-10" />
+                            <col className="wdth-10" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                          </colgroup>
 
-                        <tbody>
-                          <tr>
-                            <th colSpan={1}>
-                              <Label label={`담당부서명`} require={false} />
-                            </th>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-90">
-                                    <InputText placeholder="" value="원화현수송신청" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                  <div className="binds justify-end">
-                                    <CommonButton label="업무담당자문의처" className="_normal" />
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th colSpan={1}>
-                              <Label label={`전화/내선번호`} require={false} />
-                            </th>
-                            <td colSpan={1}>
-                              <div className="o-field">
-                                <div className="fields">
-                                  <div className="o-form _input wdth-90">
-                                    <InputText placeholder="" value="02-3355-3292" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </form>
+                          <thead className="p-datatable-thead">
+                            <tr>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="선택" labelHidden /></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                              <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부서명</span></div></th>
+                              <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">담당자</span></div></th>
+                              <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">전화/내선번호</span></div></th>
+                            </tr>
+                            <tr>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부서코드</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부서명</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                              <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            </tr>
+                          </thead>
+
+                          <tbody className="p-datatable-tbody">
+                            <tr className="p-datatable-emptymessage">
+                              <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            </tr>
+                          </tbody>
+
+                          <tbody className="p-datatable-tbody">
+                            {[...Array(24)].map((e, idx) => (
+                              <tr key={idx} className={`${idx === 2 ? 'p-x-mode-edited' : idx === 0 ? 'p-highlight' : ''}`}>{/* 수정된 행 tr.p-x-mode-edited | 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <td><InputCheck label="선택" labelHidden /></td>
+                                <td>{idx + 1}</td>
+                                <td>0810</td>
+                                <td className="g-start">프로세스혁신부</td>
+                                <td>000000</td>
+                                <td>홍길동</td>
+                                <td>4306</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="m-footer">
+                    <ul className="m-bullets type-disc">
+                      <li>각 업무화면 상단에 입력하신 문의 내용이 노출됩니다. 예시를 참고해주세요.</li>
+                      <li>예시) <em className="c-color-strong">OO문의/OO문의 : 안전관리팀(7483, 1234) | 프로세스혁신부(783) [등록하신 한줄내용이 노출됩니다.]</em></li>
+                    </ul>
                   </div>
 
                 </div>
 
-                <div className="o-section">
+                {/* <div className="o-section">
                   <div className="m-header">
 
                     <div className="m-binds">
@@ -659,13 +645,13 @@ function ADMAU0102M() {
                     </form>
                   </div>
 
-                </div>
+                </div> */}
 
                 <div className="o-section">
                   <div className="m-header">
                     <h3 className="o-heading level3">
                       <span className="label">도움말</span>
-                      <InputCheck label="사용" labelHidden defaultChecked />
+                      {/* <InputCheck label="사용" labelHidden defaultChecked /> */}
                     </h3>
 
                     <div className="m-binds">
@@ -767,6 +753,17 @@ function ADMAU0102M() {
                                 </div>
                               </div>
 
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`사용여부`} require={true} />
+                            </th>
+                            <td colSpan={1}>
+                              <div className="m-checks">
+                                <InputRadio name="RADIO_10" label="Y" />
+                                <InputRadio name="RADIO_10" label="N" defaultChecked />
+                              </div>
                             </td>
                           </tr>
                         </tbody>

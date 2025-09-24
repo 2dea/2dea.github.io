@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-*,  :before,  :after  { transition-duration: 0s !important; }
-html  { scroll-behavior: auto !important; }
+// *,  :before,  :after  { transition-duration: 0s !important; }
+// html  { scroll-behavior: auto !important; }
 
 // .o-section:not(.o-section *):not(.o-grid >.column >*)  {
 .o-section:not(.o-section *):not(.home-section *):not(.o-grid >.column >*):not(.m-sections >*):not(.m-tabs >.m-tabs-panel >*)  {

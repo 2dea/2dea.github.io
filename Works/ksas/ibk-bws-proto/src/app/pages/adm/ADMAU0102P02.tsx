@@ -157,7 +157,7 @@ function ADMAU0102P02() {
                 </div>
               </form>
 
-               <div className="o-section">
+              <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level2"><span className="label">등록내역</span></h3>
 

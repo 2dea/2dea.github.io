@@ -2195,6 +2195,7 @@
 .m-editlist .o-form:not(:has(input:read-only)) .o-image-button._edit  { display: none; }
 .m-editlist >:not(.is-selected) .o-form .o-image-button  { display: none; }
 
+.m-editlist >:not(.is-selected)  { cursor: pointer; }
 .m-editlist >.is-selected  { background: var(--color-ground2-blue-30); }
 
 
