@@ -1705,7 +1705,7 @@
 
 
 .o-form:where(.type-num, .type-date, .type-time) input  { font-feature-settings: var(--text-feature-tnum); }
-.o-form:where(.type-num, .type-date, .type-time):has(input:focus) input  {
+.o-form:where(.type-num, .type-date, .type-time):has(input:focus) input:not(:read-only)  {
   --bold-40:        475;
   font-weight: var(--bold-40);
   font-family: var(--typo-tnum);

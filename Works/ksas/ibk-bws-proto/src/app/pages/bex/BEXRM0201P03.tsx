@@ -101,7 +101,7 @@ function BEXRM0201P03() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">등기우편물인수정보등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">등기우편물 인수정보등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -154,6 +154,12 @@ function BEXRM0201P03() {
               <div className="o-section">
                 <div className="m-header">
                   <h4 className="o-heading level2"><span className="label">일괄적용항목</span></h4>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="초기화" className="_normal" />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="main">
@@ -240,8 +246,12 @@ function BEXRM0201P03() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value="[999999] 홍길동" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
+                                </div>
+
+                                <div className="m-checks">
+                                  <InputCheck label="선택" labelHidden defaultChecked />
                                 </div>
                               </div>
                             </div>
@@ -252,9 +262,13 @@ function BEXRM0201P03() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <div className="o-form type-date _input">
+                                  <InputText placeholder="" value="2025-12-25 09:10:59" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
+                                </div>
+
+                                <div className="m-checks">
+                                  <InputCheck label="선택" labelHidden defaultChecked />
                                 </div>
                               </div>
                             </div>
@@ -301,6 +315,9 @@ function BEXRM0201P03() {
                   </div>
 
                   <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="행삭제" className="_normal" />
+                    </div>
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
@@ -388,7 +405,6 @@ function BEXRM0201P03() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
