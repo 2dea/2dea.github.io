@@ -128,10 +128,10 @@ function BEXRM0201P01() {
                             <Label label={`접수일자`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <span className="o-digit type-datetime">2025-12-25 09:10:59</span>
+                            <span className="o-digit type-date">2025-12-25 </span>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`접수자`} require={true} />
+                            <Label label={`접수자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 홍길동
@@ -152,21 +152,36 @@ function BEXRM0201P01() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`바코드정보`} require={true} />
+                            <Label label={`접수장소`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select mode-required">
+                                <div className="o-form _select mode-required wdth-50">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <div className="binds type-tooltip">
-                                  <Tooltip className="o-tooltip" target="#BEXRM0201P01-tooltip-10" position="top">
-                                    입력 후 엔터(Enter)시 연속 거래 가능
-                                  </Tooltip>
-                                  <ImageButton id="BEXRM0201P01-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`바코드정보`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-60 mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
                                 </div>
+                                <div className="binds type-tooltip">
+                                    <Tooltip className="o-tooltip" target="#BEXRM0201P01-tooltip-10" position="top">
+                                      입력 후 엔터(Enter)시 연속 거래 가능
+                                    </Tooltip>
+                                    <ImageButton id="BEXRM0201P01-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                                  </div>
                               </div>
                             </div>
                           </td>

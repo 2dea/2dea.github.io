@@ -356,13 +356,18 @@ function STMGD0401M() {
                       <strong className="o-heading"><span className="label">유의사항</span></strong>
                     </div>
 
-                    <ul className="m-bullets type-disc">
+                    {/* <ul className="m-bullets type-disc">
                       <li>익월 명령부 등록시 당월 점검표가 25일까지 모두 등록되어 있어야 합니다.</li>
                       <li>점검표 등록은 1일부터 순차적으로 등록해야합니다.</li>
                       <li>당일 점검표 등록은 전월 점검표가 모두 등록되어 있어야 합니다.</li>
                       <li>당직가능업무: 공사, 청소 등 불가피한 경우만 해당됩니다.</li>
                       <li className="c-color-strong"><em>월 초 점검표 등록, 대직자 등록 비활성화시 명령부 결재상태를 확인해주세요.</em></li>
                       <li className="c-color-strong"><em>점검표 결재 승인 후 대직자 변경이 필요한 경우 점검표 재등록 반려결재 후 변경가능합니다.</em></li>
+                    </ul> */}
+
+                    <ul className="m-bullets type-disc">
+                      <li>익월 명령부는 당월 점검표가 25일까지 순차적으로 모두 등록·승인되어 있어야 합니다.</li>
+                      <li>점검표 결재 상태에 따라 대직자 등록·변경이 제한되며, 점검표 결재 승인 후 변경이 필요한 경우 점검표 재등록(반려결재) 후 변경 가능합니다.</li>
                     </ul>
                   </div>
                 </div>
