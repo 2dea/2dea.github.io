@@ -2483,6 +2483,7 @@
 
 
 .m-footer:where(.o-section >*) >* +*  { margin-top: $margin-section-20; }
+.m-footer:where(.o-section >*) >* +.m-binds  { margin-top: $margin-section-50; }
 
 .m-filter-form:not(:only-child)  { margin-bottom: $margin-section-50; }
 .m-filter-form:has(+.o-board.style-fit)  { margin-bottom: $margin-section-20; }

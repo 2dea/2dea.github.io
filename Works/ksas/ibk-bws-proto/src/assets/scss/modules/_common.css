@@ -189,6 +189,8 @@
   --design-grid-evenrow:                var(--design-background-weak);
   --design-grid-hover:                  var(--palette-dimmed-008);
 
+  --design-theme-primary-heavy:         var(--palette-blue-900);
+
 }
 
 :root  {
@@ -326,6 +328,8 @@
   --color-edge-focus:           var(--design-primary-normal);
 
   --color-edge2-blue-30:        var(--design-line2-blue-30);
+
+  --color-theme-key1-90:        var(--design-theme-primary-heavy);
 
   --color-shadow:               var(--design-common-black);
 

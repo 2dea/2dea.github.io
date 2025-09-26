@@ -100,7 +100,7 @@ function Header() {
               </dd>
               <dd>
                 <span className="settings">
-                  <ImageButton label="설정" icon="settings" />
+                  <ImageButton label="설정" icon="settings" onClick={(e) => { document.body.classList.toggle('theme-heavy') }} />
                 </span>
               </dd>
             </dl>

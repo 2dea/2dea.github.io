@@ -354,7 +354,7 @@ function CMM000301M() {
                     >
                       <SwiperSlide>{/* Empty Data  { @DEV } */}
                         <div className="d-notice">
-                          <p className="main _empty">메인에 노출된 공지사항이 없습니다.</p>
+                          <p className="main _empty">홈화면에 노출된 공지사항이 없습니다.</p>
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -568,7 +568,7 @@ function CMM000301M() {
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _input wdth-50">
+                                  <div className="o-form _input wdth-70">
                                     <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -583,7 +583,7 @@ function CMM000301M() {
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _select wdth-50">
+                                  <div className="o-form _select wdth-70">
                                     <XDropdown appendTo={'self'} className="bind" disabled />
                                     <i aria-hidden="true"></i>
                                   </div>
@@ -634,7 +634,7 @@ function CMM000301M() {
                             <td colSpan={1}>
                               <div className="o-field">
                                 <div className="fields">
-                                  <div className="o-form _select wdth-50">
+                                  <div className="o-form _select wdth-80">
                                     <XDropdown appendTo={'self'} className="bind" />
                                     <i aria-hidden="true"></i>
                                   </div>
