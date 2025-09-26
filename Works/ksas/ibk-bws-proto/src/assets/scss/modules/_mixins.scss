@@ -9,8 +9,12 @@
 // @function fnLinearGradient($dir: bottom, $start: $color-ground-alpha-00)  {
 //   @return linear-gradient(to $dir, $start, $end);
 // }
-@function fnLinearGradient($deg: 180deg, $start: $color-ground-alpha-00, $end: $color-ground, $start-stop: null, $end-stop: 65%)  {
+@function fnLinearGradient($deg: 180deg, $start: $color-ground-alpha-00, $end: var(--color-ground), $start-stop: null, $end-stop: 65%)  {
   @return linear-gradient($deg, $start $start-stop, $end $end-stop);
+}
+
+@function fnScrollShadow($deg: 180deg, $color: var(--color-ground), $end-stop: 65%, $start-stop: null)  {
+  @return linear-gradient($deg, rgb(from $color r g b / 0.0) $start-stop, $color $end-stop);
 }
 
 @mixin most-outer-selector($new-class) {

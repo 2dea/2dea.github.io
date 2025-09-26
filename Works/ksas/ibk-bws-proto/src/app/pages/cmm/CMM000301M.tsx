@@ -352,6 +352,11 @@ function CMM000301M() {
                         mainNoticeCarouselRef.current = swiper;
                       }}
                     >
+                      <SwiperSlide>{/* Empty Data  { @DEV } */}
+                        <div className="d-notice">
+                          <p className="main _empty">메인에 노출된 공지사항이 없습니다.</p>
+                        </div>
+                      </SwiperSlide>
                       <SwiperSlide>
                         <div className="d-notice">
                           <a href="javascript:" className="main o-link _normal">업무지원시스템 리뉴얼 오픈 이벤트</a>
@@ -527,6 +532,12 @@ function CMM000301M() {
                   <div className="primary">
                     <div className="heading">
                       <strong className="label">빠른발송신청</strong>
+                    </div>
+                  </div>
+
+                  <div className="secondary">
+                    <div className="binds more">
+                      <CommonButton label="더보기" className="_texted" icon="arrow-right" size={30} />
                     </div>
                   </div>
                 </div>
