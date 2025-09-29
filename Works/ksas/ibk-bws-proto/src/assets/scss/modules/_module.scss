@@ -1409,8 +1409,10 @@
 .o-approve  { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: III(118); text-align: center; }
 .o-approve:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 .o-approve:before  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
-.o-approve:before  { content: "check"; font-size: III(18); display: flex; align-items: center; justify-content: center; width: III(24); max-width: none; height: III(24); color: var(--color-key1-40); background-color: var(--color-ground2-blue-30); border-radius: 50%; animation: none; }
-.o-approve >*  { width: 100%; min-height: 0; margin-top: III(10); }
+.o-approve:before  { content: "check"; font-size: III(18); display: flex; align-items: center; justify-content: center; width: III(24); max-width: none; height: III(24); margin-bottom: III(10); color: var(--color-key1-40); background-color: var(--color-ground2-blue-30); border-radius: 50%; animation: none; }
+.o-approve:where(:not([aria-label])):before  { display: none; }
+// .o-approve >*  { width: 100%; min-height: 0; margin-top: III(10); }
+.o-approve >*  { width: 100%; min-height: 0; }
 
 .o-approve .main >*  { display: block; }
 .o-approve .main >* >*  { display: block; }
@@ -1418,6 +1420,9 @@
 
 .o-approve .aside  { position: relative; margin-top: $gap-element-30; }
 .o-approve .aside >.substitute  { font-size: $font-30; line-height: $line-30; position: absolute; left: 0; right: 0; color: var(--color-key1-40); }
+
+.o-approve:is(.o-data-table.type-approve.case-choose *)  { cursor: pointer; }
+.o-approve.is-selected  { background-color: var(--color-ground2-blue-40); }
 
 .o-approve:where([aria-label="결재 대기"])  { background-color: var(--color-ground2-blue-40);  animation: ANI_approveBlink 1s step-end 0s 60; }
 .o-approve:where([aria-label="결재 예정"], [aria-label="결재 대기"]):before  { color: var(--color-icon-40); background-color: var(--color-ground-40); }
@@ -1698,7 +1703,7 @@
 .o-form .inner-string.type-time-cert  { font-feature-settings: var(--text-feature-tnum); font-size: $font-30; line-height: $line-30; color: var(--color-point-red); }
 
 // .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { visibility: hidden; }
-.o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { display: none; }
+.o-form:has(input:where(:not([value]), [value=""], :read-only)) :has(>.o-image-button._remove)  { display: none; }
 
 
 .o-form .o-limit.type-length  { font-size: $font-10; line-height: $line-10; margin: III(2) var(--margin-inline) III(4) auto; }
@@ -1801,7 +1806,7 @@
 // .o-field >.fields >:not(.o-form)  { min-width: 0; }
 .o-field >.fields >*  { min-width: 0; }
 
-.o-field >.fields >.binds  { position: relative; }
+.o-field >.fields >.binds  { display: flex; gap: $gap-element-30; position: relative; }
 .o-field >.fields >.binds .overlay  { position: absolute; inset: 0; z-index: 2; opacity: 0.0; }
 
 .o-field >.fields >.binds.justify-end  { margin-left: auto; }

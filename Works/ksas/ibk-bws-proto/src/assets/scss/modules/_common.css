@@ -588,6 +588,8 @@
 .g-runin  { display: run-in !important; }
 .g-inline  { display: inline !important; }
 
+.g-invisible  { visibility: hidden !important; }
+
 .g-static  { position: static !important; }
 .g-relative  { position: relative !important; }
 .g-stick  { position: -webkit-sticky !important; position: sticky !important; }

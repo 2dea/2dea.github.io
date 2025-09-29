@@ -402,6 +402,7 @@ function ADMSM0101M() {
                     <div className="group">
                       <CommonButton label="변경이력" className="_normal" />
                       <CommonButton label="결재선재지정" className="_normal" />
+                      <CommonButton label="대직자변경" className="_normal" />
                     </div>
                   </div>
                 </div>

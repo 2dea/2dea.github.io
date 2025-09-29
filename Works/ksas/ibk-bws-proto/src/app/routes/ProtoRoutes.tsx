@@ -603,6 +603,7 @@ import ADMCM0101M from 'app/pages/adm/ADMCM0101M';      // 공통·결재 > 코�
 
 import ADMSM0101M from 'app/pages/adm/ADMSM0101M';      // 공통·결재 > 결재관리    > 결재내역관리
 import ADMSM0101P01 from 'app/pages/adm/ADMSM0101P01';  // 공통·결재 > 결재관리    > 결재내역관리 ~ (LP)변경이력
+import ADMSM0101P02 from 'app/pages/adm/ADMSM0101P02';  // 공통·결재 > 결재관리    > 결재내역관리 ~ (LP)대직자변경
 
 import ADMPA0101M from 'app/pages/adm/ADMPA0101M';      // 공통·결재 > 인사정보    > 부점관리
 import ADMPA0201M from 'app/pages/adm/ADMPA0201M';      // 공통·결재 > 인사정보    > 팀정보관리
@@ -1293,6 +1294,7 @@ function ProtoRoutes() {
         { path: 'ADMCM0101M',   element: <ADMCM0101M /> },
         { path: 'ADMSM0101M',   element: <ADMSM0101M /> },
         { path: 'ADMSM0101P01', element: <ADMSM0101P01 /> },
+        { path: 'ADMSM0101P02', element: <ADMSM0101P02 /> },
         { path: 'FEMDA0201P02', element: <FEMDA0201P02 /> },
         { path: 'FEMDA0201P03', element: <FEMDA0201P03 /> },
 
