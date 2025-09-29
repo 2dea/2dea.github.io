@@ -307,7 +307,19 @@ function BSPAQ0401M() {
                                 <tr>
                                   <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                                   <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호</span></div></th>
-                                  <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                                  <th className="p-align-center">
+                                    <div className="p-column-header-content">
+                                      <span className="p-column-title">
+                                        수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em>
+                                        <span className="binds type-tooltip">
+                                          <Tooltip className="o-tooltip" target="#BSPAQ0401M-tooltip-10" position="top">
+                                            수량은 최소 1 이상이어야 하며, 복수 행 입력 시 일부 행은 0으로 처리 가능합니다.
+                                          </Tooltip>
+                                          <ImageButton id="BSPAQ0401M-tooltip-10" label="툴팁​도움말" title="" icon="tooltip-help" className="g-cursor-help" />
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </th>
                                   <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 </tr>
                               </thead>

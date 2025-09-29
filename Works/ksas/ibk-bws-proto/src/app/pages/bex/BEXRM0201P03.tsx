@@ -454,7 +454,7 @@ function BEXRM0201P03() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">일괄신청내역</span></h5>
+                  <h5 className="o-heading level3"><span className="label">등기우편물 인수정보(일괄)</span></h5>
 
                   <div className="o-length">
                     <span className="head">전체</span>
