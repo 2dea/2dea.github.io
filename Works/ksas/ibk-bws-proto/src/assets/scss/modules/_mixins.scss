@@ -6,6 +6,10 @@
   // @return calc($root-em * $int);
 }
 
+@function hex($color: transparent, $alpha: 1.0)  {
+  @return rgb(from $color r g b / $alpha);
+}
+
 // @function fnLinearGradient($dir: bottom, $start: $color-ground-alpha-00)  {
 //   @return linear-gradient(to $dir, $start, $end);
 // }

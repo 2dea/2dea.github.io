@@ -854,6 +854,8 @@
     padding: .25em .5rem;
     top: -9999px;
     left: -9999px;
+
+    z-index: 500;
   }
 
   .p-tooltip.p-tooltip-right,

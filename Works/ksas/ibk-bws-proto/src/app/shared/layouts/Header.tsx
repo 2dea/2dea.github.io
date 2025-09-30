@@ -3,7 +3,7 @@
  */
 
 // dependency
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // components
 import Icon from 'app/shared/modules/OIcon';
@@ -53,6 +53,55 @@ function Header() {
   // 뎁스3 메뉴 열기
   const [checked, setChecked] = useState(false);
 
+  useEffect(() => {
+    document.querySelectorAll('.div-nav-global').forEach(($global) => {
+      // $global.addEventListener('pointerleave', (evt) => {
+      //   $global.classList.remove('is-hovered');
+      // });
+
+      $global.querySelectorAll('li:has(.depthnav)').forEach(($nav1) => {
+        $nav1.addEventListener('pointerleave', (evt) => {
+          $global.classList.remove('is-hovered');
+        });
+      });
+
+      // $global.querySelectorAll('a.link').forEach(($links) => {
+      //   $links.addEventListener('click', (evt) => {
+      //     let sel = '[aria-current]';
+      //     let $current = $links.closest(`:has(>${sel})`).querySelector(sel);
+      //     // let $link1 = $current.closest(`:has(>* >${sel})`).querySelectorAll(sel);
+      //     // console.log(...$link1)
+
+      //     $current.closest(`:has(>* >${sel})`).querySelectorAll(sel).forEach(($link1) => {
+      //       $link1.setAttribute('aria-current', 'false');
+      //     });
+      //     $current.setAttribute('aria-current', 'true');
+
+      //     $global.classList.add('is-hovered');
+      //   });
+      // });
+
+      $global.querySelectorAll('a.link').forEach(($links) => {
+        let sel = '[aria-current]';
+        let $link1 = $links.closest(`:has(>* >${sel})`).querySelectorAll(sel);
+
+        $links.addEventListener('click', (evt) => {
+          let currentTarget = evt.currentTarget as HTMLAnchorElement;
+          let $toggle = document.querySelector('.dom-nav .controls .toggle input') as HTMLInputElement;
+          let $current = $links.closest(`:has(>${sel})`).querySelector(sel);
+
+          $link1.forEach((el) => el.setAttribute('aria-current', 'false'));
+          $current.setAttribute('aria-current', 'true');
+          $global.classList.add('is-hovered');
+
+          if( currentTarget.ariaCurrent ) {
+            $toggle.checked = false;
+          }
+        });
+      });
+    });
+  });
+
   return (
     <>
       <header role="banner" id="Header" className="dom-header">
@@ -100,7 +149,7 @@ function Header() {
               </dd>
               <dd>
                 <span className="settings">
-                  <ImageButton label="설정" icon="settings" onClick={(e) => { document.body.classList.toggle('theme-heavy') }} />
+                  <ImageButton label="설정" icon="settings" onClick={(e) => { document.getElementById('Document').classList.toggle('theme-heavy') }} />
                 </span>
               </dd>
             </dl>
@@ -108,14 +157,358 @@ function Header() {
 
           <div className="div-nav-global">
             <ul>
-              <li><a href="javascript:" className="link"><span className="label">자금현수송</span></a></li>
-              <li><a href="javascript:" className="link" aria-current="true"><span className="label">중요용지·용도품</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">중요용지·용도품(본부)</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">행내등기·우편물</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">재난·안전관리</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">영업지원</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">수수료관리</span></a></li>
-              <li><a href="javascript:" className="link"><span className="label">공통·결재</span></a></li>
+              <li>
+                <a href="javascript:" className="link" aria-current="false"><span className="label">자금현수송</span></a>
+
+                <div className="depthnav">
+                  <div className="header">
+                    <div className="primary">
+                      <strong className="subject" aria-hidden="true"><span className="label">자금현수송</span></strong>
+                      <p className="description">
+                        <small className="label">
+                          현금·외화 등의 안전한 운송 및 정산업무를 지원합니다.
+                          {/* 영업점에서 사용하는 중요용지와 용도품을 신청·관리할 수 있습니다. */}
+                          {/* 중요용지와 용도품의 재고, 배송, 조달을 총괄 관리합니다. */}
+                          {/* 등기와 우편물 접수·관리 등 행내 우편 업무를 처리합니다.  */}
+                          {/* 시설·보안·차량 등 안전과 관련된 전반적인 관리 기능을 제공합니다. */}
+                          {/* 영업점 운영을 돕는 문서, 서식, 우편물, 교육 지원 기능을 제공합니다. */}
+                          {/* 물류, 현송 등 업무와 관련된 각종 수수료를 정산·관리합니다. */}
+                          {/* 결재 및 공지사항 등 공통 관리 기능을 제공합니다. */}
+                        </small>
+                      </p>
+                      <i className="visual" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div className="center">
+                    <ul className="nav depth-2">
+                      {[...Array(13)].map((e, depth2Idx) => (
+                      <li key={depth2Idx}>
+                        <div className="contain">
+                          <span className="link"><span className="label">2뎁스메뉴명</span></span>
+
+                          <ul className="nav depth-3">
+                            {[...Array(8)].map((e, depth3Idx) => (
+                            <li key={depth3Idx}>
+                              <a href="javascript:" className="link"><span className="label">3뎁스메뉴명</span></a>
+                            </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:" className="link" aria-current="true"><span className="label">중요용지·용도품</span></a>
+
+                <div className="depthnav">
+                  <div className="header">
+                    <div className="primary">
+                      <strong className="subject" aria-hidden="true"><span className="label">중요용지·용도품</span></strong>
+                      <p className="description">
+                        <small className="label">
+                          {/* 현금·외화 등의 안전한 운송 및 정산업무를 지원합니다. */}
+                          영업점에서 사용하는 중요용지와 용도품을 신청·관리할 수 있습니다.
+                          {/* 중요용지와 용도품의 재고, 배송, 조달을 총괄 관리합니다. */}
+                          {/* 등기와 우편물 접수·관리 등 행내 우편 업무를 처리합니다.  */}
+                          {/* 시설·보안·차량 등 안전과 관련된 전반적인 관리 기능을 제공합니다. */}
+                          {/* 영업점 운영을 돕는 문서, 서식, 우편물, 교육 지원 기능을 제공합니다. */}
+                          {/* 물류, 현송 등 업무와 관련된 각종 수수료를 정산·관리합니다. */}
+                          {/* 결재 및 공지사항 등 공통 관리 기능을 제공합니다. */}
+                        </small>
+                      </p>
+                      <i className="visual" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div className="center">
+                    <ul className="nav depth-2">
+                      {[...Array(13)].map((e, depth2Idx) => (
+                      <li key={depth2Idx}>
+                        <div className="contain">
+                          <span className="link"><span className="label">2뎁스메뉴명</span></span>
+
+                          <ul className="nav depth-3">
+                            {[...Array(8)].map((e, depth3Idx) => (
+                            <li key={depth3Idx}>
+                              <a href="javascript:" className="link"><span className="label">3뎁스메뉴명</span></a>
+                            </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:" className="link" aria-current="false"><span className="label">중요용지·용도품(본부)</span></a>
+
+                <div className="depthnav">
+                  <div className="header">
+                    <div className="primary">
+                      <strong className="subject" aria-hidden="true"><span className="label">중요용지·용도품(본부)</span></strong>
+                      <p className="description">
+                        <small className="label">
+                          {/* 현금·외화 등의 안전한 운송 및 정산업무를 지원합니다. */}
+                          {/* 영업점에서 사용하는 중요용지와 용도품을 신청·관리할 수 있습니다. */}
+                          중요용지와 용도품의 재고, 배송, 조달을 총괄 관리합니다.
+                          {/* 등기와 우편물 접수·관리 등 행내 우편 업무를 처리합니다.  */}
+                          {/* 시설·보안·차량 등 안전과 관련된 전반적인 관리 기능을 제공합니다. */}
+                          {/* 영업점 운영을 돕는 문서, 서식, 우편물, 교육 지원 기능을 제공합니다. */}
+                          {/* 물류, 현송 등 업무와 관련된 각종 수수료를 정산·관리합니다. */}
+                          {/* 결재 및 공지사항 등 공통 관리 기능을 제공합니다. */}
+                        </small>
+                      </p>
+                      <i className="visual" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div className="center">
+                    <ul className="nav depth-2">
+                      {[...Array(13)].map((e, depth2Idx) => (
+                      <li key={depth2Idx}>
+                        <div className="contain">
+                          <span className="link"><span className="label">2뎁스메뉴명</span></span>
+
+                          <ul className="nav depth-3">
+                            {[...Array(8)].map((e, depth3Idx) => (
+                            <li key={depth3Idx}>
+                              <a href="javascript:" className="link"><span className="label">3뎁스메뉴명</span></a>
+                            </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:" className="link" aria-current="false"><span className="label">행내등기·우편물</span></a>
+
+                <div className="depthnav">
+                  <div className="header">
+                    <div className="primary">
+                      <strong className="subject" aria-hidden="true"><span className="label">행내등기·우편물</span></strong>
+                      <p className="description">
+                        <small className="label">
+                          {/* 현금·외화 등의 안전한 운송 및 정산업무를 지원합니다. */}
+                          {/* 영업점에서 사용하는 중요용지와 용도품을 신청·관리할 수 있습니다. */}
+                          {/* 중요용지와 용도품의 재고, 배송, 조달을 총괄 관리합니다. */}
+                          등기와 우편물 접수·관리 등 행내 우편 업무를 처리합니다.
+                          {/* 시설·보안·차량 등 안전과 관련된 전반적인 관리 기능을 제공합니다. */}
+                          {/* 영업점 운영을 돕는 문서, 서식, 우편물, 교육 지원 기능을 제공합니다. */}
+                          {/* 물류, 현송 등 업무와 관련된 각종 수수료를 정산·관리합니다. */}
+                          {/* 결재 및 공지사항 등 공통 관리 기능을 제공합니다. */}
+                        </small>
+                      </p>
+                      <i className="visual" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div className="center">
+                    <ul className="nav depth-2">
+                      {[...Array(13)].map((e, depth2Idx) => (
+                      <li key={depth2Idx}>
+                        <div className="contain">
+                          <span className="link"><span className="label">2뎁스메뉴명</span></span>
+
+                          <ul className="nav depth-3">
+                            {[...Array(8)].map((e, depth3Idx) => (
+                            <li key={depth3Idx}>
+                              <a href="javascript:" className="link"><span className="label">3뎁스메뉴명</span></a>
+                            </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:" className="link" aria-current="false"><span className="label">재난·안전관리</span></a>
+
+                <div className="depthnav">
+                  <div className="header">
+                    <div className="primary">
+                      <strong className="subject" aria-hidden="true"><span className="label">재난·안전관리</span></strong>
+                      <p className="description">
+                        <small className="label">
+                          {/* 현금·외화 등의 안전한 운송 및 정산업무를 지원합니다. */}
+                          {/* 영업점에서 사용하는 중요용지와 용도품을 신청·관리할 수 있습니다. */}
+                          {/* 중요용지와 용도품의 재고, 배송, 조달을 총괄 관리합니다. */}
+                          {/* 등기와 우편물 접수·관리 등 행내 우편 업무를 처리합니다.  */}
+                          시설·보안·차량 등 안전과 관련된 전반적인 관리 기능을 제공합니다.
+                          {/* 영업점 운영을 돕는 문서, 서식, 우편물, 교육 지원 기능을 제공합니다. */}
+                          {/* 물류, 현송 등 업무와 관련된 각종 수수료를 정산·관리합니다. */}
+                          {/* 결재 및 공지사항 등 공통 관리 기능을 제공합니다. */}
+                        </small>
+                      </p>
+                      <i className="visual" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div className="center">
+                    <ul className="nav depth-2">
+                      {[...Array(13)].map((e, depth2Idx) => (
+                      <li key={depth2Idx}>
+                        <div className="contain">
+                          <span className="link"><span className="label">2뎁스메뉴명</span></span>
+
+                          <ul className="nav depth-3">
+                            {[...Array(8)].map((e, depth3Idx) => (
+                            <li key={depth3Idx}>
+                              <a href="javascript:" className="link"><span className="label">3뎁스메뉴명</span></a>
+                            </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:" className="link" aria-current="false"><span className="label">영업지원</span></a>
+
+                <div className="depthnav">
+                  <div className="header">
+                    <div className="primary">
+                      <strong className="subject" aria-hidden="true"><span className="label">영업지원</span></strong>
+                      <p className="description">
+                        <small className="label">
+                          {/* 현금·외화 등의 안전한 운송 및 정산업무를 지원합니다. */}
+                          {/* 영업점에서 사용하는 중요용지와 용도품을 신청·관리할 수 있습니다. */}
+                          {/* 중요용지와 용도품의 재고, 배송, 조달을 총괄 관리합니다. */}
+                          {/* 등기와 우편물 접수·관리 등 행내 우편 업무를 처리합니다.  */}
+                          {/* 시설·보안·차량 등 안전과 관련된 전반적인 관리 기능을 제공합니다. */}
+                          영업점 운영을 돕는 문서, 서식, 우편물, 교육 지원 기능을 제공합니다.
+                          {/* 물류, 현송 등 업무와 관련된 각종 수수료를 정산·관리합니다. */}
+                          {/* 결재 및 공지사항 등 공통 관리 기능을 제공합니다. */}
+                        </small>
+                      </p>
+                      <i className="visual" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div className="center">
+                    <ul className="nav depth-2">
+                      {[...Array(13)].map((e, depth2Idx) => (
+                      <li key={depth2Idx}>
+                        <div className="contain">
+                          <span className="link"><span className="label">2뎁스메뉴명</span></span>
+
+                          <ul className="nav depth-3">
+                            {[...Array(8)].map((e, depth3Idx) => (
+                            <li key={depth3Idx}>
+                              <a href="javascript:" className="link"><span className="label">3뎁스메뉴명</span></a>
+                            </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:" className="link" aria-current="false"><span className="label">수수료관리</span></a>
+
+                <div className="depthnav">
+                  <div className="header">
+                    <div className="primary">
+                      <strong className="subject" aria-hidden="true"><span className="label">수수료관리</span></strong>
+                      <p className="description">
+                        <small className="label">
+                          {/* 현금·외화 등의 안전한 운송 및 정산업무를 지원합니다. */}
+                          {/* 영업점에서 사용하는 중요용지와 용도품을 신청·관리할 수 있습니다. */}
+                          {/* 중요용지와 용도품의 재고, 배송, 조달을 총괄 관리합니다. */}
+                          {/* 등기와 우편물 접수·관리 등 행내 우편 업무를 처리합니다.  */}
+                          {/* 시설·보안·차량 등 안전과 관련된 전반적인 관리 기능을 제공합니다. */}
+                          {/* 영업점 운영을 돕는 문서, 서식, 우편물, 교육 지원 기능을 제공합니다. */}
+                          물류, 현송 등 업무와 관련된 각종 수수료를 정산·관리합니다.
+                          {/* 결재 및 공지사항 등 공통 관리 기능을 제공합니다. */}
+                        </small>
+                      </p>
+                      <i className="visual" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div className="center">
+                    <ul className="nav depth-2">
+                      {[...Array(13)].map((e, depth2Idx) => (
+                      <li key={depth2Idx}>
+                        <div className="contain">
+                          <span className="link"><span className="label">2뎁스메뉴명</span></span>
+
+                          <ul className="nav depth-3">
+                            {[...Array(8)].map((e, depth3Idx) => (
+                            <li key={depth3Idx}>
+                              <a href="javascript:" className="link"><span className="label">3뎁스메뉴명</span></a>
+                            </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="javascript:" className="link" aria-current="false"><span className="label">공통·결재</span></a>
+
+                <div className="depthnav">
+                  <div className="header">
+                    <div className="primary">
+                      <strong className="subject" aria-hidden="true"><span className="label">공통·결재</span></strong>
+                      <p className="description">
+                        <small className="label">
+                          {/* 현금·외화 등의 안전한 운송 및 정산업무를 지원합니다. */}
+                          {/* 영업점에서 사용하는 중요용지와 용도품을 신청·관리할 수 있습니다. */}
+                          {/* 중요용지와 용도품의 재고, 배송, 조달을 총괄 관리합니다. */}
+                          {/* 등기와 우편물 접수·관리 등 행내 우편 업무를 처리합니다.  */}
+                          {/* 시설·보안·차량 등 안전과 관련된 전반적인 관리 기능을 제공합니다. */}
+                          {/* 영업점 운영을 돕는 문서, 서식, 우편물, 교육 지원 기능을 제공합니다. */}
+                          {/* 물류, 현송 등 업무와 관련된 각종 수수료를 정산·관리합니다. */}
+                          결재 및 공지사항 등 공통 관리 기능을 제공합니다.
+                        </small>
+                      </p>
+                      <i className="visual" aria-hidden="true"></i>
+                    </div>
+                  </div>
+
+                  <div className="center">
+                    <ul className="nav depth-2">
+                      {[...Array(13)].map((e, depth2Idx) => (
+                      <li key={depth2Idx}>
+                        <div className="contain">
+                          <span className="link"><span className="label">2뎁스메뉴명</span></span>
+
+                          <ul className="nav depth-3">
+                            {[...Array(8)].map((e, depth3Idx) => (
+                            <li key={depth3Idx}>
+                              <a href="javascript:" className="link"><span className="label">3뎁스메뉴명</span></a>
+                            </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
 
