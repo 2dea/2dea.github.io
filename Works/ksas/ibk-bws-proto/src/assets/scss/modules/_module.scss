@@ -553,7 +553,7 @@
 // .o-tooltip:focus-visible >*  { outline: $e20 solid var(--color-edge-70); outline-offset: $e10; }
 
 .o-tooltip  { font-size: calc(var(--rem) * 20); min-width: 1em; max-width: calc(var(--rem) * 234); }
-.o-tooltip .p-tooltip-text  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); margin: -1px -1px; padding: $gap-element-50 $gap-element-70; color: var(--color-text-00); background-color: var(--color-text-40); border-radius: $radius-50; }
+.o-tooltip .p-tooltip-text  { --lh: var(--text-height-para); font-weight: $bold-30; font-size: $font-40; line-height: var(--lh); margin: -1px -1px; padding: $gap-element-50 $gap-element-70; color: var(--color-text-00); background-color: var(--color-text-40); border-radius: $radius-50; }
 .o-tooltip .p-tooltip-arrow  { color: var(--color-text-40); }
 .o-tooltip.p-tooltip-right .p-tooltip-arrow { border-right-color: $cc; }
 .o-tooltip.p-tooltip-left .p-tooltip-arrow { border-left-color: $cc; }

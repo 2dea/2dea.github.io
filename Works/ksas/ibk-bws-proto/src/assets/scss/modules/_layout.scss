@@ -247,7 +247,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-header >.roles:before  { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: III(var(--height-header-divider)); background: var(--theme-header-divider, var(--color-key1-40)); }
 
 .dom-header .div-root  { grid-column: 1; grid-row: span 2; display: flex; align-items: center; justify-content: center; gap: III(6); position: relative; min-width: $width-layout-nav; /* padding: III(4) 0 0 III(88); */ }
-.dom-header .div-root  { background: var(--theme-header-logo, var(--obj-img-logo-light)) no-repeat 50% calc(50% - III(var(--height-header-divider))) /III(188) III(24); pointer-events: none; user-select: none; }
+.dom-header .div-root  { background: var(--theme-header-logo, var(--obj-img-logo-light)) no-repeat 50% calc(50% - III(var(--height-header-divider))) /III(188) III(24); user-select: none; }
+.dom-header .div-root:not(a, button)  { pointer-events: none; }
 // .dom-header .div-root:after  { @include inc-abscenter(); content: ""; position: absolute; width: III(204); height: III(26); image-rendering: pixelated; background: var(--theme-header-logo) no-repeat; }
 .dom-header .div-root >*  { font-size: III(17); color: $tp; }
 .dom-header .div-root .logo  { font-size: III(20); }

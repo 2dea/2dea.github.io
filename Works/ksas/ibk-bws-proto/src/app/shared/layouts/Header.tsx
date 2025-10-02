@@ -87,7 +87,6 @@ function Header() {
 
         $links.addEventListener('click', (evt) => {
           let currentTarget = evt.currentTarget as HTMLAnchorElement;
-          let $toggle = document.querySelector('.dom-nav .controls .toggle input') as HTMLInputElement;
           let $current = $links.closest(`:has(>${sel})`).querySelector(sel);
 
           $link1.forEach((el) => el.setAttribute('aria-current', 'false'));
@@ -95,7 +94,11 @@ function Header() {
           $global.classList.add('is-hovered');
 
           if( currentTarget.ariaCurrent ) {
+            let $toggle = document.querySelector('.dom-nav .controls .toggle input') as HTMLInputElement;
+            let $localnav1 = document.querySelector('.dom-nav .div-tablist .link._total') as HTMLLIElement;
+
             $toggle.checked = false;
+            $localnav1.dispatchEvent(new Event('click'));
           }
         });
       });
@@ -114,10 +117,14 @@ function Header() {
         </div>
 
         <div className="roles">
-          <div className="div-root">
+          {/* <div className="div-root">
             <span className="logo"><span className="inner"><em className="symbol">IBK</em></span></span>
             <strong className="system"><span className="inner">업무지원시스템</span></strong>
-          </div>
+          </div> */}
+          <a href="javascript:" className="div-root">
+            <span className="logo"><span className="inner"><em className="symbol">IBK</em></span></span>
+            <strong className="system"><span className="inner">업무지원시스템</span></strong>
+          </a>
 
           <div className="div-account">
             <dl>
@@ -126,6 +133,10 @@ function Header() {
                 <span className="user">
                   <span className="name">김기업</span>
                   <em className="id" aria-label="아이디">04123</em>
+
+                  <span className="binds">
+                    <CommonButton label="로그아웃" size={30} className="_normal" />
+                  </span>
                 </span>
               </dd>
               <dd>
