@@ -104,8 +104,8 @@ function ADMOA0201P01() {
         header={<h3 className="o-heading"><span className="label">전문로그상세</span></h3>}
       >
         <div className="div-container">
-          <div className="o-grid">
-            <div className="column">
+          <Splitter gutterSize={0} className="o-grid">
+            <SplitterPanel minSize={32.5} className="column">
 
               <div className="o-section">
 
@@ -238,9 +238,9 @@ function ADMOA0201P01() {
 
               </div>
 
-            </div>
+            </SplitterPanel>
 
-            <div className="column">
+            <SplitterPanel minSize={17.5} className="column">
               <div className="o-section">
                 <div className="m-header"></div>
 
@@ -271,9 +271,8 @@ function ADMOA0201P01() {
                 </div>
               </div>
 
-            </div>
-
-          </div>
+            </SplitterPanel>
+          </Splitter>
         </div>
 
         <div className="div-footer">
