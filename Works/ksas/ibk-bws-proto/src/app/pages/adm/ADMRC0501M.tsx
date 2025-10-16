@@ -1,5 +1,5 @@
 /**
- * @description 공통·결재 > 대사관리 > 대금정산모니터링
+ * @description 공통·결재 > 대사관리 > 수입인지정산모니터링
  */
 
 // dependency
@@ -98,7 +98,7 @@ function ADMRC0501M() {
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">대금정산모니터링</span>
+                <span className="label">수입인지정산모니터링</span>
 
                 <FavoriteDiv />
               </h1>
@@ -139,7 +139,7 @@ function ADMRC0501M() {
                 </div>
               </div>
 
-              <div className="o-field">
+              {/* <div className="o-field">
                 <Label label={`기준일자`} require={true} />
                 <div className="fields">
                   <div className="o-form _input type-date mode-required wdth-50">
@@ -147,7 +147,7 @@ function ADMRC0501M() {
                     <i aria-hidden="true"></i>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
             </div>
 
@@ -160,7 +160,7 @@ function ADMRC0501M() {
             <div className="m-tab type2">
               <TabList className="lists">
                 <Tab className="link"><span className="label">정산(전/후)금액 비교</span></Tab>
-                <Tab className="link"><span className="label">정산(전/후)상세 비교</span></Tab>
+                <Tab className="link"><span className="label">프로시저(전/후)상세 비교</span></Tab>
               </TabList>
             </div>
 
@@ -191,7 +191,7 @@ function ADMRC0501M() {
                                 <div className="subject">수입인지정산 전 수입인지비교대사 검증 1, 2 쿼리 수행(JYCO140B 수행 전)</div>
                               </div>
                               <div className="binds">
-                                <CommonButton label="취소" className="_cancel" />
+                                {/* <CommonButton label="취소" className="_cancel" /> */}
                                 <CommonButton label="수입인지비교대사검증 (전)" className="_solid-primary" />
                               </div>
                             </li>
@@ -202,7 +202,7 @@ function ADMRC0501M() {
                                 <div className="subject">수입인지정산 후납 자료 생성(JYCO140B)</div>
                               </div>
                               <div className="binds">
-                                <CommonButton label="취소" className="_cancel" />
+                                {/* <CommonButton label="취소" className="_cancel" /> */}
                               </div>
                             </li>
 
@@ -212,7 +212,7 @@ function ADMRC0501M() {
                                 <div className="subject">수입인지정산 전 수입인지비교대사 검증 1, 2 쿼리 수행(JYCO140B 수행 후)</div>
                               </div>
                               <div className="binds">
-                                <CommonButton label="취소" className="_cancel" />
+                                {/* <CommonButton label="취소" className="_cancel" /> */}
                                 <CommonButton label="수입인지비교대사검증 (후)" className="_solid-primary" />
                               </div>
                             </li>
@@ -223,7 +223,7 @@ function ADMRC0501M() {
                                 <div className="subject">부점별 선납입 금액 차감 처리(JYCO141B 수행 전)</div>
                               </div>
                               <div className="binds">
-                                <CommonButton label="취소" className="_cancel" />
+                                {/* <CommonButton label="취소" className="_cancel" /> */}
                                 <CommonButton label="선납입 금액 차감 처리 (전)" className="_solid-primary" />
                               </div>
                             </li>
@@ -234,7 +234,7 @@ function ADMRC0501M() {
                                 <div className="subject">대금정산 자료 생성(JYCO141B)</div>
                               </div>
                               <div className="binds">
-                                <CommonButton label="취소" className="_cancel" />
+                                {/* <CommonButton label="취소" className="_cancel" /> */}
                               </div>
                             </li>
 
@@ -244,7 +244,7 @@ function ADMRC0501M() {
                                 <div className="subject">부점별 선납입 금액 차감 처리(JYCO141B 수행 후)</div>
                               </div>
                               <div className="binds">
-                                <CommonButton label="취소" className="_cancel" />
+                                {/* <CommonButton label="취소" className="_cancel" /> */}
                                 <CommonButton label="선납입 금액 차감 처리 (후)" className="_solid-primary" />
                               </div>
                             </li>
@@ -552,10 +552,10 @@ function ADMRC0501M() {
                     <div className="main _primary rows-body-5i">
                       <div className="m-total">
                         <dl className="m-defines">
-                          <div className="group">
+                          {/* <div className="group">
                             <dt className="head">정산금액 합계</dt>
                             <dd className="data">200,000,000</dd>
-                          </div>
+                          </div> */}
 
                           <div className="group">
                             <dt className="head">전/후 비교 차액</dt>

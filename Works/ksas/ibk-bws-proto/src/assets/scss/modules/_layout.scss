@@ -296,7 +296,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
     .dom-header .div-nav-global .link  { padding-left: 0.625em; padding-right: 0.625em; }
 }
 
-.dom-header .div-nav-global .depthnav  { display: flex; position: fixed; z-index: 25; left: 0; top: calc(var(--rem) * var(--height-layout-header)); width: 100%; height: calc(100vh * 3 / 5); overflow: hidden; background: var(--color-ground); box-shadow: $dropshadow-70; }
+.dom-header .div-nav-global .depthnav  { display: flex; position: fixed; z-index: 25; left: 0; top: calc(var(--rem) * var(--height-layout-header)); width: 100%; height: calc(100vh * 3 / 5); height: III(448); max-height: calc(100% - $height-layout-header); overflow: hidden; background: var(--color-ground); box-shadow: $dropshadow-70; }
 .dom-header .div-nav-global .depthnav  { font-weight: $bold-40; font-size: $font-50; line-height: $line-50; color: var(--color-text-40); transition: 0.25s $timing-func-ease-faster; transition: none; }
 .dom-header .div-nav-global .depthnav:where(:not(.div-nav-global >* >:hover *)),
   .dom-header .div-nav-global:is(.is-hovered) .depthnav  { z-index: auto; height: 0; /* opacity: 0.0; */ }
@@ -713,9 +713,10 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .o-grid  { --gap-grid: #{$margin-section-70}; display: flex; margin: 0 calc(-1 * var(--gap-grid) / 2) auto; }
 .o-grid:only-child  { flex: 1 1; }
-.o-grid:has(.o-section >.main._primary)  { flex: 1.5 1.5; }
+// .o-grid:has(.o-section >.main._primary)  { flex: 1.5 1.5; }
 // .o-grid:has(.o-section >.main._primary):first-child  { flex: 3 3; }
-.o-grid:has(.o-section >.main._primary):first-child  { flex: 3 3; }
+.o-grid:has(.o-section >.main._primary)  { flex: 4 4; }
+.o-grid:has(.o-section >.main._primary:not([class*=" rows-body-"])):first-child  { flex: 8 8; }
 .o-grid >.column  { flex: 1 0 0; display: flex; flex-direction: column; min-width: 0; padding: 0 calc(var(--gap-grid) / 2); }
 // .o-grid >.column._views  { flex: 0 1 auto; width: calc(var(--rem) * 626 + var(--gap-grid)); }
 .o-grid >.column  { min-width: calc(var(--rem) * 254 + var(--gap-grid)); }

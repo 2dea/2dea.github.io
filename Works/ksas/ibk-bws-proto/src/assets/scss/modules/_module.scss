@@ -824,7 +824,7 @@
 .m-bullets:where(.o-section >.main >*)  { --margin-bullets: 8; }
 .m-bullets:where(.style-lg)  { --fs-int: var(--font-60-int); }
 
-.m-bullets >:has(.o-consult)  { color: $color-text-70; }
+// .m-bullets >:has(.o-consult)  { color: $color-text-70; }
 
 .m-bullets >dt  { padding-left: 0; }
 .m-bullets >dt:before  { content: none; }

@@ -686,6 +686,11 @@
     // padding: var(--margin-block) var(--margin-inline);
     padding: var(--margin-block) var(--margin-inline);
 
+    // &:where(body:has(.dom-nav .div-tablist .toggle :checked) *) {
+    //   padding-top: III(120 + 12);
+    //   padding-bottom: III(12);
+    // }
+
     &.p-dialog-top-left  {
       .p-dialog  {
         margin: 0 0;

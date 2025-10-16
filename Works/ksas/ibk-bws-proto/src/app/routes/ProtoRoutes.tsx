@@ -614,6 +614,7 @@ import ADMPA0401M from 'app/pages/adm/ADMPA0401M';      // 공통·결재 > 인�
 import ADMPA0501M from 'app/pages/adm/ADMPA0501M';      // 공통·결재 > 인사정보    > 업무담당자문의처관리
 import ADMPA0601M from 'app/pages/adm/ADMPA0601M';      // 공통·결재 > 인사정보    > 실근무지관리
 import ADMPA0601P01 from 'app/pages/adm/ADMPA0601P01';  // 공통·결재 > 인사정보    > 직원관리 ~ (LP)실근무지조회
+import ADMPA0701M from 'app/pages/adm/ADMPA0701M';      // 공통·결재 > 인사정보    > 인사제외처리관리
 
 import ADMAU0101M from 'app/pages/adm/ADMAU0101M';      // 공통·결재 > 권한관리    > 생성관리 > (T)메뉴관리
 import ADMAU0101P01 from 'app/pages/adm/ADMAU0101P01';  // 공통·결재 > 권한관리    > 생성관리 > (T)메뉴관리 ~ (LP)상위메뉴선택
@@ -1307,6 +1308,7 @@ function ProtoRoutes() {
         { path: 'ADMPA0501M',   element: <ADMPA0501M /> },
         { path: 'ADMPA0601M',   element: <ADMPA0601M /> },
         { path: 'ADMPA0601P01', element: <ADMPA0601P01 /> },
+        { path: 'ADMPA0701M',   element: <ADMPA0701M /> },
 
         { path: 'ADMAU0101M',   element: <ADMAU0101M /> },
         { path: 'ADMAU0101P01', element: <ADMAU0101P01 /> },
