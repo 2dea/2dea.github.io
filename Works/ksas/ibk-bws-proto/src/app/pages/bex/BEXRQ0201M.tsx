@@ -147,6 +147,15 @@ function BEXRQ0201M() {
           <div className="o-grid">
             <div className="column">
 
+              <div className="o-board type-a style-fit">
+                <div className="board-container">
+                  <ul className="m-bullets type-disc">
+                    <li>여신자필서류(STP)를 타서류로 또는 타서류를 여신자필서류(STP)로 잘못 신청하거나 신청 받을 시 인수가 완료된 상태의 행내등기의 서류구분 변경이 가능하며, 우리부점과 상대부점 결재승인 완료 시 서류구분 변경이 완료됩니다.</li>
+                    <li>서류구분은 총 1회만 변경할 수 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
+
               <form className="m-filter-form">
                 <div className="fieldset">
 

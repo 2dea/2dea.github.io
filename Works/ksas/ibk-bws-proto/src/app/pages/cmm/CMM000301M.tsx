@@ -245,9 +245,9 @@ function CMM000301M() {
 
             </div>
 
-            <div className="home-group _ship">
+            {/* <div className="home-group _ship">
 
-              <div className="home-section _bsp1 is-busy-true">{/* ._bsp1.is-busy-true */}
+              <div className="home-section _bsp1 is-busy-true">
                 <div className="header">
                   <div className="primary">
                     <div className="heading">
@@ -273,7 +273,7 @@ function CMM000301M() {
                 </div>
               </div>
 
-              <div className="home-section _bsp2 is-busy-false">{/* ._bsp2.is-busy-false */}
+              <div className="home-section _bsp2 is-busy-false">
                 <div className="header">
                   <div className="primary">
                     <div className="heading">
@@ -299,7 +299,7 @@ function CMM000301M() {
                 </div>
               </div>
 
-              <div className="home-section _fmt1 is-busy-true">{/* ._fmt1.is-busy-true */}
+              <div className="home-section _fmt1 is-busy-true">
                 <div className="header">
                   <div className="primary">
                     <div className="heading">
@@ -320,6 +320,175 @@ function CMM000301M() {
                       <div className="binds">
                         <CommonButton label="원화현수송" className="_normal" size={30} />
                         <CommonButton label="외화현수송" className="_normal" size={30} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div> */}
+
+            {/*
+            <div className="home-group _ship">
+
+              <div className="home-section _fmt1 is-busy-false">
+                <div className="header">
+                  <div className="primary">
+                    <div className="heading">
+                      <strong className="label">원화/외화 자금 배송정보</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="center">
+                  <div className="contain">
+                    <div className="d-shipboard">
+                      <div className="main">
+                        <p>
+                          <span className="wbr"></span>
+                          <span className="wbr">배송중인 <em className="emph">원화/외화 자금</em>이 없어요.</span>
+                        </p>
+                      </div>
+                      <div className="binds">
+                        <CommonButton label="원화현수송 신청" className="_normal" size={30} />
+                        <CommonButton label="외화현수송 신청" className="_normal" size={30} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="home-section _bsp1 is-busy-false">
+                <div className="header">
+                  <div className="primary">
+                    <div className="heading">
+                      <strong className="label">중요용지 배송정보</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="center">
+                  <div className="contain">
+                    <div className="d-shipboard">
+                      <div className="main">
+                        <p>
+                          <span className="wbr"></span>
+                          <span className="wbr">배송중인 <em className="emph">중요용지</em>가 없어요.</span>
+                        </p>
+                      </div>
+                      <div className="binds">
+                        <CommonButton label="중요용지 신청" className="_normal" size={30} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="home-section _bsp2 is-busy-false">
+                <div className="header">
+                  <div className="primary">
+                    <div className="heading">
+                      <strong className="label">용도품 배송정보</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="center">
+                  <div className="contain">
+                    <div className="d-shipboard">
+                      <div className="main">
+                        <p>
+                          <span className="wbr"></span>
+                          <span className="wbr">배송중인 <em className="emph">용도품</em>이 없어요.</span>
+                        </p>
+                      </div>
+                      <div className="binds">
+                        <CommonButton label="용도품 신청" className="_normal" size={30} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+             */}
+
+            <div className="home-group _ship">
+
+              <div className="home-section _fmt1 is-busy-true">
+                <div className="header">
+                  <div className="primary">
+                    <div className="heading">
+                      <strong className="label">원화/외화 자금 배송정보</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="center">
+                  <div className="contain">
+                    <div className="d-shipboard">
+                      <div className="main">
+                        <p>
+                          <span className="wbr"><strong className="o-digit type-date">2025-12-25</strong></span>
+                          <span className="wbr">현송원 방문 예정이에요.</span>
+                          <span className="wbr"><em className="emph">원화<small>(청구/불입)</small>, 외화<small>(청구/불입)</small></em></span>
+                        </p>
+                      </div>
+                      <div className="binds">
+                        <CommonButton label="원화현수송 신청관리" className="_normal" size={30} />
+                        <CommonButton label="외화현수송 신청관리" className="_normal" size={30} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="home-section _bsp1 is-busy-true">
+                <div className="header">
+                  <div className="primary">
+                    <div className="heading">
+                      <strong className="label">중요용지 배송정보</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="center">
+                  <div className="contain">
+                    <div className="d-shipboard">
+                      <div className="main">
+                        <p>
+                          <span className="wbr"><strong className="o-digit type-date">2025-12-25</strong></span>
+                          <span className="wbr"><em className="emph">중요용지</em>가 배송 예정이에요.</span>
+                        </p>
+                      </div>
+                      <div className="binds">
+                        <CommonButton label="중요용지 인수" className="_normal" size={30} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="home-section _bsp2 is-busy-true">
+                <div className="header">
+                  <div className="primary">
+                    <div className="heading">
+                      <strong className="label">용도품 배송정보</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="center">
+                  <div className="contain">
+                    <div className="d-shipboard">
+                      <div className="main">
+                        <p>
+                          <span className="wbr"><strong className="o-digit type-date">2025-12-25</strong></span>
+                          <span className="wbr"><em className="emph">용도품</em>이 배송 예정이에요.</span>
+                        </p>
+                      </div>
+                      <div className="binds">
+                        <CommonButton label="용도품 인수" className="_normal" size={30} />
                       </div>
                     </div>
                   </div>

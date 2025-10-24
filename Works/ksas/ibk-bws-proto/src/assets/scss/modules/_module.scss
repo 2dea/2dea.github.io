@@ -1090,7 +1090,9 @@
 
 
 .m-board  { display: flex; flex-direction: column; gap: $gap-element-50; }
-.m-board >.bodies  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, III(200)), 1fr)); gap: $gap-element-70; }
+.m-board >.bodies  { display: grid; grid-template-columns: repeat(var(--size, auto-fit), minmax(var(--width-min, III(200)), 1fr)); gap: $gap-element-70; }
+.m-board >.bodies:has(.o-pair-board.type-normal)  { --size: auto-fill; }
+.m-board >.bodies:has(.o-pair-board.type-normal:nth-child(4))  { --size: auto-fit; }
 .m-board >.bodies:has(.o-pair-board.type-multi)  { --width-min: #{III(245)}; }
 
 
@@ -2620,16 +2622,20 @@
 
 
 
-.m-print-form  { display: flex; gap: 8px; }
-.m-print-form >*  { flex: 1; min-width: 0; }
-.m-print-form .o-form  { min-width: var(--width-50); }
-.m-print-form .card  { display: flex; flex-direction: column; background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 4px; }
-.m-print-form .card >.header  { font-size: 13px; line-height: $line-40; background: var(--color-ground-70); padding: 6px; text-align: center; }
-// .m-print-form .card >.bodies  { display: flex; padding: 8px 16px; gap: 16px; justify-content: center; }
-.m-print-form .card >.bodies  { flex-wrap: wrap; gap: 8px 12px; padding: 8px 16px; justify-content: center; }
-.m-print-form .card >.bodies >*  { flex: 1; min-width: 0; }
-.m-print-form .card >.bodies:has(.o-form.wdth-auto) >*  { flex: none; }
-.m-print-form .card >.bodies >:has(.o-form.wdth-auto)  { flex: auto; }
+// .m-print-form  { display: flex; gap: III(8); }
+// .m-print-form >*  { flex: 1; min-width: 0; }
+// .m-print-form .o-form  { min-width: var(--width-50); }
+.m-print-form  { display: grid; grid-template-columns: repeat(var(--size, auto-fit), minmax(var(--width-min, III(200)), 1fr)); gap: III(8); }
+.m-print-form >*  { min-width: 0; }
+.m-print-form .o-form  { flex: 1; }
+.m-print-form .card  { display: flex; flex-direction: column; background: #F8FAFC; border: $e10 solid #CBD5E1; border-radius: $radius-50; }
+.m-print-form .card >.header  { font-size: $font-40; line-height: $line-40; background: var(--color-ground-70); padding: III(6); text-align: center; }
+// // .m-print-form .card >.bodies  { display: flex; padding: 8px 16px; gap: 16px; justify-content: center; }
+// .m-print-form .card >.bodies  { flex-wrap: wrap; gap: III(8) III(12); padding: III(8) III(16); justify-content: center; }
+// .m-print-form .card >.bodies >*  { flex: 1; min-width: 0; }
+// .m-print-form .card >.bodies:has(.o-form.wdth-auto) >*  { flex: none; }
+// .m-print-form .card >.bodies >:has(.o-form.wdth-auto)  { flex: auto; }
+.m-print-form .card >.bodies  { display: grid; grid-template-columns: repeat(var(--size, auto-fit), minmax(var(--width-min, III(160)), 1fr)); gap: III(8) III(12); padding: III(8) III(16); }
 
 
 

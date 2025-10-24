@@ -82,15 +82,31 @@
 
 .page-home :is(.home-group:where(._ship))  { gap: $gap-element-70; }
 .page-home :is(.home-group:where(._ship)) .home-section  { --m-margin-block: #{$margin-section-70}; }
-.page-home :is(.home-group:where(._ship)) .home-section:before  { content: ""; position: absolute; right: 0; bottom: 0; width: III(135); height: III(128); background: url('../../../../src/assets/images/media/CMM000301M_010.png') no-repeat 0 /300%; }
-.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-true):before  { background-position: 50%; }
-.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-false):before  { background-position: 100%; }
+// .page-home :is(.home-group:where(._ship)) .home-section:before  { content: ""; position: absolute; right: 0; bottom: 0; width: III(135); height: III(128); background: url('../../../../src/assets/images/media/CMM000301M_010.png') no-repeat 0 /300%; }
+// .page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-true):before  { background-position: 50%; }
+// .page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-false):before  { background-position: 100%; }
+// .page-home :is(.home-group:where(._ship)) .home-section >.header  { @include getGlobalHidden(); }
+// .page-home :is(.home-group:where(._ship)) .home-section >.center >.contain  { padding-top: var(--m-margin-block); padding-bottom: III(20); }
+// .page-home :is(.home-group:where(._ship)) .d-shipboard .wbr  { display: block; }
+// .page-home :is(.home-group:where(._ship)) .d-shipboard .emph  { font-weight: $bold-70; color: var(--color-key1-40); }
+// .page-home :is(.home-group:where(._ship)) .d-shipboard >.main  { --lh: var(--text-height-para); font-size: $font-60; line-height: var(--lh); display: inline-block; position: relative; margin: III(-4); padding: III(4); background: rgb(from var(--color-ground) r g b / 0.65); border-radius: $radius-50; }
+// .page-home :is(.home-group:where(._ship)) .d-shipboard >.binds  { display: flex; gap: $gap-element-30; margin-top: $gap-element-80; }
+.page-home :is(.home-group:where(._ship)) .home-section:before  { content: ""; position: absolute; right: 0; bottom: 50%; transform: translateY(50%); width: III(120); height: III(156); background: url('../../../../src/assets/images/media/CMM000301M_020.png') no-repeat 0 /500%; }
+.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-false):before  { background-position: 0%; }
+.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-true):before  { background-position: 100%; }
+.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-true._fmt1):before  { background-position: 50%; }
+.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-true._bsp1):before  { background-position: 75%; }
+.page-home :is(.home-group:where(._ship)) .home-section:where(.is-busy-true._bsp2):before  { background-position: 100%; }
 .page-home :is(.home-group:where(._ship)) .home-section >.header  { @include getGlobalHidden(); }
-.page-home :is(.home-group:where(._ship)) .home-section >.center >.contain  { padding-top: var(--m-margin-block); padding-bottom: III(20); }
+.page-home :is(.home-group:where(._ship)) .home-section >.center >.contain  { padding-top: var(--m-margin-block); padding-bottom: var(--m-margin-block); }
+.page-home :is(.home-group:where(._ship)) .d-shipboard  { display: flex; flex-direction: column; gap: $gap-element-80; margin: auto 0; }
 .page-home :is(.home-group:where(._ship)) .d-shipboard .wbr  { display: block; }
+.page-home :is(.home-group:where(._ship)) .d-shipboard .o-digit  { color: var(--color-point-orange); }
 .page-home :is(.home-group:where(._ship)) .d-shipboard .emph  { font-weight: $bold-70; color: var(--color-key1-40); }
-.page-home :is(.home-group:where(._ship)) .d-shipboard >.main  { --lh: var(--text-height-para); font-size: $font-60; line-height: var(--lh); display: inline-block; position: relative; margin: III(-4); padding: III(4); background: rgb(from var(--color-ground) r g b / 0.65); border-radius: $radius-50; }
-.page-home :is(.home-group:where(._ship)) .d-shipboard >.binds  { display: flex; gap: $gap-element-30; margin-top: $gap-element-80; }
+.page-home :is(.home-group:where(._ship)) .d-shipboard .emph small  { font-size: $font-50; }
+.page-home :is(.home-group:where(._ship)) .d-shipboard >.main  { --lh: var(--text-height-para); font-size: $font-60; line-height: var(--lh); display: inline-block; position: relative; min-height: 3lh; text-shadow: III(1) III(1) var(--bgcolor, var(--color-ground)); text-shadow: III(-1) III(-1) var(--bgcolor, var(--color-ground)), III(1) III(1) var(--bgcolor, var(--color-ground)), III(2) III(2) 1px var(--bgcolor, var(--color-ground)); }
+.page-home :is(.home-group:where(._ship)) .d-shipboard >.main >* >.wbr  { min-height: 1lh; }
+.page-home :is(.home-group:where(._ship)) .d-shipboard >.binds  { display: flex; flex-wrap: wrap; gap: $gap-element-30; margin-top: auto; }
 
 .page-home :is(.home-group:where(._notice)) .home-section  { flex-direction: row; align-items: center; gap: $gap-element-80; padding: $margin-section-40 var(--m-margin-inline); }
 .page-home :is(.home-group:where(._notice)) .home-section >*  { min-width: 0; }

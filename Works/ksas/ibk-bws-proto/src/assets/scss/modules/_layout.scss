@@ -802,7 +802,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .layer-wrap :has(>.div-container)  { min-height: calc(1lh * 10); }
 .layer-wrap .div-container  { flex: 1; display: flex; flex-direction: column; }
 
-.layer-wrap.type-dialog  { width: auto; min-width: calc(var(--rem) * var(--width-20p)); max-width: calc(var(--rem) * var(--width-25p)); }
+.layer-wrap.type-dialog  { width: auto; min-width: calc(var(--rem) * var(--width-20p)); max-width: calc(var(--rem) * var(--width-40p)); }
 .layer-wrap.type-dialog .layer-head  { border-color: $tp; padding-top: $margin-section-30; padding-bottom: $margin-section-30; }
 .layer-wrap.type-dialog .layer-body  { min-height: III(98); padding-top: 0; }
 .layer-wrap.type-dialog .div-container  { padding: 0 $margin-popup-inline $margin-section-30; }

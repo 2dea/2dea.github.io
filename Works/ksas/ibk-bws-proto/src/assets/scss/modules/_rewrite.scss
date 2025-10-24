@@ -318,6 +318,10 @@
 // }
 
 :where(.o-form) {
+  .p-disabled:is(.p-dropdown, .p-multiselect) {
+    opacity: revert;
+  }
+
   .p-placeholder {
     color: revert;
   }
