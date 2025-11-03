@@ -301,6 +301,7 @@ function STMKY0301M() {
                                 <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경후보관책임자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">예외승인</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고(사유)</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수도이력조회</span></div></th>
                               </tr>
                               <tr>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보관기간</span></div></th>
@@ -316,7 +317,7 @@ function STMKY0301M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -358,6 +359,7 @@ function STMKY0301M() {
                                 <td>N</td>
                                 <td><InputCheck label="선택" labelHidden /></td>
                                 <td className="g-start"></td>
+                                <td><CommonButton label="이력" className="_normal" /></td>
                               </tr>
                             ))}
                             </tbody>

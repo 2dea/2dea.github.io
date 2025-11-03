@@ -23,6 +23,7 @@ import GridsColFilter from 'app/pages/test/GridsColFilter'; // GridsColFilter
 import SurveyForms from 'app/pages/test/SurveyForms'; // SurveyForms
 
 // proto 공통
+import CMM000201M from 'app/pages/cmm/CMM000201M';   // 공통 ~ 관리자로그인
 import CMP001901P from 'app/pages/cmp/CMP001901P';   // 공통 ~ (LP)부점 로그인 선택
 
 import CMM000301M from 'app/pages/cmm/CMM000301M';   // 공통 ~ 메인
@@ -475,6 +476,7 @@ import STMKY0301M from 'app/pages/stm/STMKY0301M';       // 재난·안전관리
 import STMKY0301P03 from 'app/pages/stm/STMKY0301P03';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)과거내역조회
 import STMKY0301P01 from 'app/pages/stm/STMKY0301P01';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)열쇠인수도취소
 import STMKY0301P02 from 'app/pages/stm/STMKY0301P02';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)사용열쇠(보관담당자)예외승인안내
+import STMKY0301P04 from 'app/pages/stm/STMKY0301P04';   // 재난·안전관리 > 열쇠관리                 > 열쇠인수도관리 ~ (LP)인수도이력조회
 import STMKY0401M from 'app/pages/stm/STMKY0401M';       // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리
 import STMKY0401P01 from 'app/pages/stm/STMKY0401P01';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)열쇠이미지보기
 import STMKY0401P02 from 'app/pages/stm/STMKY0401P02';   // 재난·안전관리 > 열쇠관리                 > 예비열쇠관리 ~ (LP)예비열쇠위탁요청
@@ -686,6 +688,7 @@ function ProtoRoutes() {
     {
       path: '/proto',
       children: [
+        { path: 'CMM000201M', element: <CMM000201M /> },
         { path: 'CMP000802P', element: <CMP000802P /> },
       ],
     },
@@ -1154,6 +1157,7 @@ function ProtoRoutes() {
         { path: 'STMKY0301P03', element: <STMKY0301P03 /> },
         { path: 'STMKY0301P01', element: <STMKY0301P01 /> },
         { path: 'STMKY0301P02', element: <STMKY0301P02 /> },
+        { path: 'STMKY0301P04', element: <STMKY0301P04 /> },
 
         { path: 'STMKY0401M',   element: <STMKY0401M /> },
         { path: 'STMKY0401P01', element: <STMKY0401P01 /> },

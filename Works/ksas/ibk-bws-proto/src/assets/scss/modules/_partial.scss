@@ -217,8 +217,9 @@
 .o-empty-data:where(.m-shop-table *)  { border-style: hidden; }
 
 .m-shop-list  {  }
-.m-shop-list >.container  {  }
-.m-shop-list >.container >:not(.o-empty-data)  { display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(242)), 1fr)); gap: III(16); /* gap: III(24) III(16); */ }
+// .m-shop-list >.container  {  }
+// .m-shop-list >.container >:not(.o-empty-data)  { display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(242)), 1fr)); gap: III(16); /* gap: III(24) III(16); */ }
+.m-shop-list >* >:not(.o-empty-data)  { display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(242)), 1fr)); gap: III(16); /* gap: III(24) III(16); */ }
 
 
 .m-shop-table  {  }
