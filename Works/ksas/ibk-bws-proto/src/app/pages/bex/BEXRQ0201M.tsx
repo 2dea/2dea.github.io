@@ -438,7 +438,7 @@ function BEXRQ0201M() {
 
                               <span className="addition">
                                 <span className="item name">제갈공명</span>
-                                <span className="item date">2025-03-10</span>
+                                <span className="item date">2025-03-10 23:59:59</span>
                               </span>
                             </span>
                           </li>

@@ -844,7 +844,7 @@
 .o-steps .order .count:after  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
 .o-steps .order .count:after  { content: "check"; font-size: III(18); display: flex; align-items: center; justify-content: center; position: absolute; left: 0; top: 0; width: 100%; max-width: none; height: 100%; background-color: inherit; }
 .o-steps .order .suffix  { @include getGlobalHidden(); }
-.o-steps .label .addition  { font-size: $font-40; line-height: $line-40; display: flex; align-items: center; color: var(--color-text-30); }
+.o-steps .label .addition  { font-size: $font-30; line-height: $line-30; display: flex; align-items: center; color: var(--color-text-30); }
 .o-steps .label .addition >.item  { flex: none; display: flex; align-items: center; }
 .o-steps >:after  { position: absolute; width: $e10; height: $e10; background: var(--theme, Black); }
 
@@ -890,9 +890,10 @@
 .o-steps:where(.axis-rows.basis-type-addition) >*  { min-width: III(160); }
 .o-steps:where(.axis-rows.type-normal) .label  { display: block; text-align: center; }
 .o-steps:where(.axis-rows.type-normal) .label >*  { display: block; }
-.o-steps:where(.axis-rows.type-normal) .label .addition  { gap: $gap-element-50; margin-top: $gap-element-30; }
-.o-steps:where(.axis-rows.type-normal) .label .addition >.item  { gap: $gap-element-50; }
-.o-steps:where(.axis-rows.type-normal) .label .addition >.item +.item:before  { content: ""; display: inline-block; width: $e10; height: III(10); background: var(--color-edge-40); }
+.o-steps:where(.axis-rows.type-normal) .label .addition  { justify-content: center; align-items: center; gap: $gap-element-50; margin-top: $gap-element-30; }
+// .o-steps:where(.axis-rows.type-normal) .label .addition >.item  { gap: $gap-element-50; }
+// .o-steps:where(.axis-rows.type-normal) .label .addition >.item +.item:before  { content: ""; display: inline-block; width: $e10; height: III(10); background: var(--color-edge-40); }
+.o-steps:where(.axis-rows.type-normal) .label .addition  { flex-direction: column; gap: 0; }
 
 .o-steps:where(.axis-rows.type-normal) >:not(:last-child):after  { content: ""; left: 50%; top: calc(III(30) / 2); width: 100%; }
 
