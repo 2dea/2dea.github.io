@@ -19,6 +19,10 @@
 .page-home .div-home >.home-primary  { padding-top: III(12); min-width: III(768); }
 .page-home .div-home >.home-secondary  { padding-top: III(20); min-width: III(412); }
 
+.page-home .div-home._empty  { padding-top: 0; padding-bottom: 0; background: url('../../../../src/assets/images/media/CMM000301M_000.png') no-repeat content-box 100% calc(100% + III(64)) /auto #{III(1098)}; }
+// .page-home .div-home._empty >*  { display: none; }
+
+
 .page-home .home-header  { display: flex; align-items: flex-end; gap: $margin-section-50; }
 .page-home .home-header >*  { flex: none; display: flex; gap: $gap-element-70; min-width: 0; }
 .page-home .home-header >.primary  { flex: 1; flex-direction: column; }

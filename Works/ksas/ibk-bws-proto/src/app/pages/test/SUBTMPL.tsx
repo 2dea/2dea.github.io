@@ -924,6 +924,7 @@ function SUBTMPL() {
                                 <i className="o-icon _rank-hold wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _rank-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _remove wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _shield-secure wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-asc wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-dec wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _status-range-20 wdth-50" aria-hidden="true"></i>
