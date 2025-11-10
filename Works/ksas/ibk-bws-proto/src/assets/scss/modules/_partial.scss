@@ -83,6 +83,7 @@
 .page-home :is(.home-group:where(._task)) .table tr >*  { padding: III(12) III(4); border: 0; white-space: nowrap; }
 .page-home :is(.home-group:where(._task)) .table tr >:first-child  { padding-left: 0; }
 .page-home :is(.home-group:where(._task)) .table tr >:last-child  { padding-right: 0; }
+.page-home :is(.home-group:where(._task)) .table tr.g-cursor-pointer:hover >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
 .page-home :is(.home-group:where(._ship))  { gap: $gap-element-70; }
 .page-home :is(.home-group:where(._ship)) .home-section  { --m-margin-block: #{$margin-section-70}; }
@@ -156,11 +157,12 @@
 .m-noticeview >:not(:first-child) { margin-top: $gap-element-90; }
 
 .m-noticeview >.notice-caption .subject  { font-weight: $bold-70; font-size: $font-60; line-height: $line-60; text-align: center; }
-.m-noticeview >.notice-caption .copyright  { font-size: $font-40; line-height: $line-40; display: flex; justify-content: center; gap: $gap-element-80; margin-top: $gap-element-70; }
+.m-noticeview >.notice-caption .copyright  { /* font-size: $font-40; line-height: $line-40; */ display: flex; justify-content: center; gap: $gap-element-80; margin-top: $gap-element-70; }
 .m-noticeview >.notice-caption .copyright >*  { display: flex; flex-wrap: wrap; }
 .m-noticeview >.notice-caption .copyright >* >.head  { margin-right: $gap-element-30; color: var(--color-text-30); white-space: nowrap; }
 
 .m-noticeview >.notice-contents  { --lh: var(--text-height-para); line-height: var(--lh); min-height: 3lh; }
+.m-noticeview >.notice-contents  { font-size: $font-60; }
 
 
 .o-tab.type-c >.lists  { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--width-min, III(120)), 1fr)); overflow: hidden; border-radius: $radius-50; }

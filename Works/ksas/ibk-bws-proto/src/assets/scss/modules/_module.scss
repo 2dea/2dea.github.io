@@ -1197,6 +1197,8 @@
  */
   .o-button.size-50  { font-size: $font-50; line-height: $line-50; }
 
+.o-button.wdth-auto  { min-width: 1em; }
+
 
 /** Image Button */
 .o-image-button  { font-weight: var(--bold-40, 400); font-size: $ss; line-height: 1; display: inline-block; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; position: relative; min-width: 1em; min-height: 1em; padding: 0; border: 0; background: none; border-radius: 0; box-shadow: none; text-decoration: none; text-align: center; white-space: normal; }
@@ -1710,7 +1712,8 @@
 .o-form .inner-string.type-time-cert  { font-feature-settings: var(--text-feature-tnum); font-size: $font-30; line-height: $line-30; color: var(--color-point-red); }
 
 // .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { visibility: hidden; }
-.o-form:has(input:where(:not([value]), [value=""], :read-only)) :has(>.o-image-button._remove)  { display: none; }
+// .o-form:has(input:where(:not([value]), [value=""], :read-only)) :has(>.o-image-button._remove)  { display: none; }
+.o-form:has(input:where(:not([value]), [value=""], :read-only)) .o-image-button._remove  { display: none; }
 
 
 .o-form .o-limit.type-length  { font-size: $font-10; line-height: $line-10; margin: III(2) var(--margin-inline) III(4) auto; }
@@ -1751,7 +1754,8 @@
 .o-form:where(.is-proto) .inner-binds >.o-image-button  { position: absolute; right: 0; pointer-events: none; cursor: pointer; }
 
 .o-form:where(:has(.inner-binds >.o-image-button._remove)) .p-autocomplete-input  { padding-right: $height-form-30; }
-.o-form:where(:has(.p-autocomplete-input)) .inner-binds:has(>.o-image-button._remove)  { position: absolute; right: 0; }
+.o-form:where(:has(.p-autocomplete-input)) .inner-binds:has(>.o-image-button._remove)  { position: relative; }
+.o-form:where(:has(.p-autocomplete-input)) .o-image-button._remove  { position: absolute; right: 100%; }
 
 
 // .o-form[style*="width:"],
@@ -2314,14 +2318,14 @@
 // .o-grid-table .o-form.wdth-90  { min-width: calc(var(--rem) * 210); }
 
 .o-grid-table.style-fit  {
-  --margin-cell-block-int: 2;
-  --margin-cell-block: calc(var(--rem) * var(--margin-cell-block-int));
+  // --margin-cell-block-int: 2;
+  // --margin-cell-block: calc(var(--rem) * var(--margin-cell-block-int));
 
-  --height-cell-box: 1lh;
-  --height-cell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
-  --height-headcell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
+  // --height-cell-box: 1lh;
+  // --height-cell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
+  // --height-headcell: calc(var(--height-cell-box) + var(--margin-cell-block) * 2 + var(--edge-cell) * 1);
 
-  --height: var(--height-cell);
+  // --height: var(--height-cell);
 
   font-size: $font-40;
   line-height: $line-40;
@@ -2337,8 +2341,8 @@
 
   --height: var(--height-cell);
 
-  font-size: $font-40;
-  line-height: $line-40;
+  // font-size: $font-40;
+  // line-height: $line-40;
 }
 
 

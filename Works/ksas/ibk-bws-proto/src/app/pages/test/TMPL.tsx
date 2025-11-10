@@ -758,10 +758,13 @@ function TMPL() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input mode-required">
-                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                    <AutoComplete className="bind" removeTokenIcon={<Icon icon="remove" />} value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                     <span className="inner-binds">
                                       <ImageButton label="초기화" icon="remove" />
+                                    </span>
+                                    <span className="inner-binds">
+                                      <CommonButton label="검색" className="_normal wdth-auto" />
                                     </span>
                                   </div>
                                 </div>

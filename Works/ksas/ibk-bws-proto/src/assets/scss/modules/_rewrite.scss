@@ -318,6 +318,7 @@
 // }
 
 :where(.o-form) {
+  .react-select--is-disabled,
   .p-disabled:is(.p-dropdown, .p-multiselect) {
     opacity: revert;
   }
@@ -326,10 +327,12 @@
     color: revert;
   }
 
+  .react-select--is-disabled,
   .p-placeholder:not(:disabled) {
     color: var(--color-text-placeholder);
   }
 
+  &:has(:is(.bind, .p-inputtext).react-select--is-disabled),
   &:has(:is(.bind, .p-inputtext).p-disabled) {
     color: $color-text-disabled;
     background-color: var(--color-ground-disabled);

@@ -104,7 +104,16 @@ function CMM000201M() {
           <i className="visual" aria-hidden="true"></i>
 
           <div className="d-header">
-            IBK업무지원시스템
+            <div className="div-branding">
+              <h1 className="system">
+                <span className="logo"></span>
+                <span className="name">IBK업무지원시스템</span>
+              </h1>
+
+              <div className="service">
+                <h2 className="name">로그인</h2>
+              </div>
+            </div>
           </div>
 
           <div className="d-center">
