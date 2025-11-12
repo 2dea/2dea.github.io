@@ -646,6 +646,12 @@
 .g-valign-top  { vertical-align: top; }
 .g-valign-center  { vertical-align: center; }
 
+.g-axis-center  { justify-content: center !important; }
+.g-axis-end  { justify-content: end !important; }
+.g-axis-start  { justify-content: start !important; }
+.g-axis-stretch  { justify-content: stretch !important; }
+
+
 .g-middle  { display: inline-flex; align-items: center; }
 
 .g-word-pred  { word-break: break-all; word-break: break-word; }

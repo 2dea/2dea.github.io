@@ -13,6 +13,7 @@ import { Tooltip } from 'primereact/tooltip';
 import { AutoComplete } from "primereact/autocomplete";
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import XDropdown from 'app/shared/modules/XDropdown';
 
 function Header() {
   // AutoComplete
@@ -133,6 +134,11 @@ function Header() {
                 <span className="user">
                   <span className="name">김기업</span>
                   <em className="id" aria-label="아이디">04123</em>
+
+                  <span className="o-form _select wdth-50">
+                    <XDropdown appendTo={'self'} className="bind" />
+                    <i aria-hidden="true"></i>
+                  </span>
 
                   <span className="binds">
                     <CommonButton label="로그아웃" size={30} className="_normal" />

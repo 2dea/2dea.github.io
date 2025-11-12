@@ -263,6 +263,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-header .div-account >dl >dd  { display: flex; align-items: center; position: relative; }
 .dom-header .div-account >dl >dd:not(:first-of-type):before  { content: ""; position: absolute; width: $e10; height: calc(1em - III(1)); margin-left: calc(-1 * $e10); background: var(--color-edge-70); }
 .dom-header .div-account >dl >dd >*  { padding: 0 $gap-element-80; }
+.dom-header .div-account >dl >dd >* >*  { flex: none; }
 .dom-header .div-account >dl >dd >:has(>.o-image-button:only-child)  { padding: 0 $gap-element-70; }
 
 .dom-header .div-account .user  { gap: $gap-whitespace-50; }

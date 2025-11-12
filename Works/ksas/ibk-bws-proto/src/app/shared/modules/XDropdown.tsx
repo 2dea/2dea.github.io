@@ -84,6 +84,7 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
           }),
           menu: (base) => ({
             ...base,
+            zIndex: 9999,
             margin: 'calc(var(--rem) * 2) 0',
             border: 'var(--e10) solid var(--color-edge-40)',
             background: 'var(--color-ground)',
@@ -122,6 +123,11 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
             ...base,
             flex: 1,
             background: 'inherit',
+          }),
+          placeholder: (base) => ({
+            ...base,
+            margin: 0,
+            padding: 0,
           }),
           valueContainer: (base) => ({
             ...base,

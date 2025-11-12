@@ -374,10 +374,10 @@
 .m-survey >:first-child  { border-start-start-radius: inherit; border-start-end-radius: inherit; }
 .m-survey >:last-child  { border-end-start-radius: inherit; border-end-end-radius: inherit; }
 
-.m-survey >.header  { display: flex; padding: III(10) $gap-element-90; gap: $gap-element-80; border-bottom: $e10 solid var(--color-edge-40); background: var(--color-ground2-blue-30); }
+.m-survey >.header  { display: flex; align-items: center; padding: III(10) $gap-element-90; gap: $gap-element-80; border-bottom: $e10 solid var(--color-edge-40); background: var(--color-ground2-blue-30); }
 .m-survey >.header >*  { flex: none; min-width: 0; }
 .m-survey >.header .subject  { flex: 1; font-weight: $bold-70; font-size: $font-60; line-height: $line-60; min-height: $height-form-50; padding: calc(($height-form-50 - 1lh) / 2) 0; }
-.m-survey >.header .binds  { align-self: center; }
+// .m-survey >.header .binds  { align-self: center; }
 
 .m-survey >.bodies  {  }
 .m-survey >.bodies >* >:not(:last-child)  { border-bottom: $e10 solid var(--color-edge-30); }
