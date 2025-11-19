@@ -19,6 +19,7 @@ interface XDropdownProps {
   style?: React.CSSProperties;
   hidden?: boolean;
   disabled?: boolean;
+  menuWidth?: number;
 }
 
 // const options = [
@@ -27,7 +28,7 @@ interface XDropdownProps {
 //   { value: 'vanilla', label: 'Vanilla' },
 // ];
 
-function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }: XDropdownProps) {
+function XDropdown({ placeholder, appendTo, className, style, hidden, disabled, menuWidth=120 }: XDropdownProps) {
   const [selectedOption, setSelectedOption] = useState(null);
   const items: XDropdownProps[] = [
     { value: '0', label: '전체' },
@@ -81,11 +82,16 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
           menuPortal: (base) => ({
             ...base,
             zIndex: 9999,
+            // margin: '0 calc(-1 * var(--e10))',
           }),
           menu: (base) => ({
             ...base,
             zIndex: 9999,
-            margin: 'calc(var(--rem) * 2) 0',
+            // minWidth: `calc(var(--rem) * (${menuWidth} - 2))`,
+            minWidth: `calc(100% + (var(--e10) * 2))`,
+            width: 'max-content',
+            // margin: 'calc(var(--rem) * 2) 0',
+            margin: 'calc(var(--e10) + 2px) calc(-1 * var(--e10))',
             border: 'var(--e10) solid var(--color-edge-40)',
             background: 'var(--color-ground)',
             borderRadius: 'calc(var(--rem) * var(--radius-50))',
@@ -95,14 +101,13 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
             ...base,
             maxHeight: 'calc(var(--rem) * (30 * 8 + 6 * 2))',
             padding: 'calc(var(--rem) * 6) calc(var(--rem) * 4)',
-
           }),
           option: (base) => ({
             ...base,
             minHeight: 'calc(var(--rem) * 30)',
             overflow: 'hidden',
             padding: 'calc(var(--rem) * 6) calc(var(--rem) * 8)',
-            paddingInlineEnd: 0,
+            // paddingInlineEnd: 0,
             borderRadius: 'calc(var(--rem) * var(--radius-50))',
             whiteSpace: 'nowrap',
 
@@ -131,8 +136,8 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
           }),
           valueContainer: (base) => ({
             ...base,
-            paddingInlineStart: 'var(--margin-inline, 8px)',
-            // paddingInlineEnd: 'var(--margin-inline, 8px)',
+            margin: 0,
+            padding: 'var(--margin-block, 8px) var(--margin-inline, 8px)',
             paddingInlineEnd: 0,
           }),
           singleValue: (base) => ({
@@ -145,7 +150,11 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled }
           }),
           dropdownIndicator: (base) => ({
             ...base,
-            padding: 'calc(var(--rem) * (var(--height-form-30) - var(--height-icon-30)) / 2)',
+            padding: 'calc((var(--height-form) - var(--height-icon)) / 2 - var(--e10))',
+
+            '& .o-icon:before': {
+              fontSize: 'var(--height-icon)',
+            },
           }),
         }}
 

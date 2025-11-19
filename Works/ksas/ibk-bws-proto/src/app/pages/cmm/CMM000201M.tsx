@@ -118,7 +118,103 @@ function CMM000201M() {
 
           <div className="d-center">
             <div className="contain">
-              form
+              <div className="d-signin">
+                <div className="center">
+                  {/* 외주직원 */}
+                  {/*
+                  <fieldset className="m-signin">
+                    <legend className="header">
+                      <strong className="heading">
+                        <Icon icon="shield-secure" width={70} />
+                        <span className="label">직원 로그인</span>
+                      </strong>
+                    </legend>
+
+                    <div className="main">
+                      <div className="o-field type-id">
+                        <Label label={`아이디`} require={false} />
+
+                        <div className="fields">
+                          <div className="o-form _input">
+                            <Icon icon="user-id" />
+                            <InputText placeholder="아이디" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                            <i aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-field type-pw">
+                        <Label label={`비밀번호`} require={false} />
+
+                        <div className="fields">
+                          <div className="o-form _input">
+                            <Icon icon="user-pw" />
+                            <InputText type="password" placeholder="비밀번호" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                            <i aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-field type-submit m-binds">
+                        <div className="group">
+                          <CommonButton label="로그인" className="_solid-primary" />
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                   */}
+
+                  <fieldset className="m-signin">
+                    <legend className="header">
+                      <strong className="heading">
+                        <Icon icon="shield-secure" width={70} />
+                        <span className="label">관리자(SM) 로그인</span>
+                      </strong>
+                    </legend>
+
+                    {/* SM */}
+                    <div className="main">
+                      <div className="o-field type-id">
+                        <Label label={`직원번호`} require={false} />
+
+                        <div className="fields">
+                          <div className="o-form _input">
+                            <Icon icon="user-id" />
+                            <InputText placeholder="직원번호" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                            <i aria-hidden="true"></i>
+                          </div>
+                          <div className="o-form _select wdth-60">
+                            <XDropdown placeholder="담당자" appendTo={'self'} menuWidth={140} className="bind" />
+                            <i aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-field type-pw">
+                        <Label label={`관리자 OTP`} require={false} />
+
+                        <div className="fields">
+                          <div className="o-form _input">
+                            <Icon icon="user-pw" />
+                            <InputText type="password" placeholder="관리자 OTP" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                            <i aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-field type-submit m-binds">
+                        <div className="group">
+                          <CommonButton label="로그인" className="_solid-primary" />
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                {/* <div className="footer">
+                  비밀번호 변경(잠금해제) : 본인 업무(단말) PC에서 해제 - [PC 바탕화면] - [PC 로그인 비밀번호 변경] - [직원번호, MTOP 입력]
+                </div> */}
+              </div>
             </div>
           </div>
         </div>

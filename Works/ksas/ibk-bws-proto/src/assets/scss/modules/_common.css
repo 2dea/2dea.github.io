@@ -366,13 +366,25 @@
   --height-icon-30:             16;
   --height-icon-50:             20;
   --height-icon-70:             24;
-  --height-icon-70:             var(--height-icon-50);
+  /* --height-icon-70:             var(--height-icon-50); */
 
   --height-ctrl-50:             18;
 
   --height-form-30:             24;
   --height-form-50:             26;
   --height-form-70:             30;
+
+  --bd:                         var(--e10);
+
+  --ht-icon-50:                 ;
+
+  --wd-icon-50:                 ;
+
+  --pdi-section-50:             ;
+
+  --mgbs-layout:                ;
+
+  --listbox-ht-option-50:       30;
 
 
   --timing-func-ease-slower:    cubic-bezier(0.4,0,0.2,1);

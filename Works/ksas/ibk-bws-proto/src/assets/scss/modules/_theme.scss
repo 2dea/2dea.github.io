@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-*,  :before,  :after  { transition-duration: 0s !important; }
+// *,  :before,  :after  { transition-duration: 0s !important; }
+:where(:not(.dom-main .div-tablist *, .swiper *)),
+  :where(:not(.dom-main .div-tablist *, .swiper *)):before,
+  :where(:not(.dom-main .div-tablist *, .swiper *)):after  { transition-duration: 0s !important; }
 html  { scroll-behavior: auto !important; }
 
 // .o-section:not(.o-section *):not(.o-grid >.column >*)  {

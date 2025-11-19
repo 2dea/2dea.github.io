@@ -152,6 +152,41 @@
 .page-home :is(.home-group:where(._quick)) .m-data-form >.m-footer  { margin-top: auto; }
 
 
+.m-signin  { display: flex; flex-direction: column; align-items: center }
+.m-signin .o-label  { @include getGlobalHidden(1); display: none; }
+.m-signin .o-form  {
+  --margin-block: #{III(12)};
+  --margin-inline: #{calc($gap-element-80 - $e10)};
+  --height-form: #{III(44)};
+  --height-icon: #{$height-icon-50};
+}
+.m-signin .o-button  { --margin-block: #{III(11)}; flex: 1; font-size: $font-60; line-height: $line-60; }
+.m-signin .m-binds >.group  { flex: 1; }
+
+.m-signin >.header  { display: flex; justify-content: center; width: 100%; margin-bottom: III(20); }
+.m-signin >.header .heading  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; display: flex; align-items: center; }
+.m-signin >.header .heading .o-icon  { margin-right: $gap-element-50; }
+.m-signin >.main  { display: flex; flex-direction: column; gap: $gap-element-70; width: III(380); }
+.m-signin >.main .m-binds:not(:first-child)  { margin-top: $gap-element-30; }
+
+.d-signin  { display: flex; flex-direction: column; gap: $gap-element-80; }
+.d-signin >.center  { padding: III(29) III(23); border: $e10 solid var(--color-edge-30); background: var(--color-ground-40); border-radius: $radius-70; }
+.d-signin >.footer  { padding: III(23) III(23); border: $e10 solid var(--color-edge-30); background: var(--color-ground-30); border-radius: $radius-70; }
+
+
+.page-singin  { --d-height-header: #{III(72)}; --d-margin-block: var(--d-height-header); flex: 1; display: flex; flex-direction: column; }
+.page-singin:not(:has(>.d-header))  { --d-height-header: #{III(0)}; }
+.page-singin >.d-header  { position: absolute; left: 0; top: 0; min-width: 100%; min-height: var(--d-height-header); padding: III(23) $gap-element-80; }
+.page-singin >.d-center  { flex: 1; display: flex; flex-direction: column; justify-content: center; margin: $gap-element-80 auto; padding: var(--d-margin-block) $gap-element-80; }
+.page-singin >.d-center >.contain  { width: III(768 - 24); max-width: III(452 - 24); max-width: 100%; margin: $gap-element-80 auto; padding: var(--d-margin-block) $gap-element-80; }
+
+.page-singin >.d-header  { color: var(--color-text-00); background: var(--color-key1-70); }
+.page-singin >.d-header .div-branding  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; display: flex; justify-content: center; gap: $e10; }
+.page-singin >.d-header .div-branding >*  { display: flex; align-items: center; position: relative; padding: 0 $gap-element-90; }
+.page-singin >.d-header .div-branding >:not(:first-child):before  { content: ""; display: inline-block; position: absolute; right: 100%; width: $e10; height: calc(1em - III(1)); background: var(--color-ground2-blue-40); }
+
+.frame-signin:where(.dom-frame)  { position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; background-color: inherit; background-color: var(--color-ground); }
+
 
 .m-noticeview  {  }
 .m-noticeview >:not(:first-child) { margin-top: $gap-element-90; }

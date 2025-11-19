@@ -410,6 +410,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav .div-nav-local._total >.m-binds >*  { flex-wrap: nowrap; }
 
 .dom-nav .div-nav-local._person .menu  { display: flex; align-items: center; border-radius: $radius-50; }
+.dom-nav .div-nav-local._person .menu:has(.o-check)  { padding-left: $gap-element-30; }
 .dom-nav .div-nav-local._person .menu >*  { flex: none; min-width: 0; }
 .dom-nav .div-nav-local._person .menu >.main  { flex: 1; flex-basis: 0; padding: III(8) $gap-element-50; }
 .dom-nav .div-nav-local._person .menu >.main >.label  { @include inc-ellipsis2(); }
@@ -507,6 +508,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-main .div-header .m-title >.asides >*  { display: flex; align-items: center; gap: inherit; }
 .dom-main .div-header .m-title >.asides .consults .heading  { font-weight: $bold-70; color: var(--color-text-70); }
 .dom-main .div-header .m-title >.asides .comments .label  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
+.dom-main .div-header .m-title >.asides .comments:where(.consults:not(:has(.m-consult:last-child >.bodies)) +*) .o-icon._consult-alert  { display: none; }
 
 
 
