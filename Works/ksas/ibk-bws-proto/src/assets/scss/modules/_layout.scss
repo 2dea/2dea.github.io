@@ -317,7 +317,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-header .div-nav-global .depthnav >.header  { position: relative; width: $width-layout-nav; padding: III(40) III(40); padding-left: III(60); background: var(--color-ground-30); }
 .dom-header .div-nav-global .depthnav >.header >.primary >*  { position: relative; z-index: 4; }
 .dom-header .div-nav-global .depthnav >.header .subject  { font-weight: $bold-70; font-size: $font-80; line-height: $line-80; display: block; }
-.dom-header .div-nav-global .depthnav >.header .description  { --lh: var(--text-height-para); font-size: $font-40; line-height: var(--lh); display: block; margin-top: $gap-element-50; color: var(--color-text-30); }
+.dom-header .div-nav-global .depthnav >.header .description  { --lh: var(--text-height-par); font-size: $font-40; line-height: var(--lh); display: block; margin-top: $gap-element-50; color: var(--color-text-30); }
 .dom-header .div-nav-global .depthnav >.header .visual  { position: absolute; z-index: auto; left: III(4); bottom: 0; width: III(214); height: III(139); overflow: hidden; }
 .dom-header .div-nav-global .depthnav >.header .visual:before  { content: ""; display: block; transform: rotate(-7deg); width: III(216); height: III(216); background: var(--obj-sym-logo) no-repeat 0 /100%; opacity: 0.12; }
 .dom-header .div-nav-global .depthnav >.center  { flex: 1; position: relative; height: 100%; overflow: auto; overflow: auto scroll; padding: $margin-layout-block $margin-layout-inline; padding-right: calc($margin-layout-inline - $width-scrollbar); }

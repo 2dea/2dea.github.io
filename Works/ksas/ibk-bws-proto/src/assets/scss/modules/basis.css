@@ -120,7 +120,7 @@
   --text-height-int:    var(--line-50-int);
   --text-height:        var(--text-height-int, 16) / var(--text-size-int, 12);
   --text-height-rel:    calc(1em * 16 / 12);
-  --text-height-para:   calc(1em * 18 / 12);
+  --text-height-par:    calc(1em * 18 / 12);
 
   --text-spacing:       0;
 
@@ -171,7 +171,7 @@
     /* --text-height:        round(down, calc(1em * var(--text-height-int, 16) / var(--text-size-int, 12)), 2px);
     --text-height:        remove-unit(round(down, calc(1em * var(--text-height-int, 16) / var(--text-size-int, 12)), 2px)); */
     --text-height-rel:    round(down, calc(1em * 16 / 12), 2px);
-    --text-height-para:   round(down, calc(1em * 18 / 12), 2px);
+    --text-height-par:    round(down, calc(1em * 18 / 12), 2px);
   }
 }
 
