@@ -100,7 +100,7 @@ function CMM000201M() {
   return (
     <>
       <div className="dom-frame frame-signin">
-        <div className="page-singin">
+        <div className="page-signin">
           <i className="visual" aria-hidden="true"></i>
 
           <div className="d-header">

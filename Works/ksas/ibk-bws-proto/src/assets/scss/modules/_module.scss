@@ -1816,8 +1816,8 @@
 .o-field >.fields  { display: flex; align-items: center; gap: $gap-element-30; min-height: $height-form-50; margin: 0; }
 .o-field >.fields:not(.basis-pass)  { flex-wrap: wrap; }
 // // .o-field >.fields >:not(.o-form)  { min-width: 0; }
-// .o-field >.fields >*  { min-width: 0; }
-.o-field >.fields >*  { min-width: 1.5em; }
+.o-field >.fields >*  { min-width: 0; }
+.o-field >.fields >.o-form  { min-width: 1.5em; }
 
 .o-field >.fields >.binds  { display: flex; gap: $gap-element-30; position: relative; }
 .o-field >.fields >.binds .overlay  { position: absolute; inset: 0; z-index: 2; opacity: 0.0; }
@@ -2321,6 +2321,7 @@
 // .o-grid-table .o-form.wdth-70  { min-width: calc(var(--rem) * 160); }
 // .o-grid-table .o-form.wdth-80  { min-width: calc(var(--rem) * 180); }
 // .o-grid-table .o-form.wdth-90  { min-width: calc(var(--rem) * 210); }
+.o-grid-table .o-form[class*=" wdth-"]:not(.type-time):not(.o-field >* >*)  { width: 100%; }
 
 .o-grid-table.style-fit  {
   // --margin-cell-block-int: 2;

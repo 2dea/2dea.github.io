@@ -81,7 +81,7 @@ function XDropdown({ placeholder, appendTo, className, style, hidden, disabled, 
         styles={{
           menuPortal: (base) => ({
             ...base,
-            zIndex: 9999,
+            zIndex: 'calc(var(--zx-overlay-listbox, 9999))',
             // margin: '0 calc(-1 * var(--e10))',
           }),
           menu: (base) => ({

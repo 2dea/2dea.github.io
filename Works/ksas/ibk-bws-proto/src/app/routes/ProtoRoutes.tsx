@@ -22,6 +22,10 @@ import FileUploads from 'app/pages/test/FileUploads'; // FileUploads
 import GridsColFilter from 'app/pages/test/GridsColFilter'; // GridsColFilter
 import SurveyForms from 'app/pages/test/SurveyForms'; // SurveyForms
 
+// proto 에러
+import ERR400     from 'app/pages/err/ERR400';       // 에러 ~ 4xx
+import ERR500     from 'app/pages/err/ERR500';       // 에러 ~ 5xx
+
 // proto 공통
 import CMM000201M from 'app/pages/cmm/CMM000201M';   // 공통 ~ 관리자로그인
 import CMP001901P from 'app/pages/cmp/CMP001901P';   // 공통 ~ (LP)부점 로그인 선택
@@ -684,6 +688,13 @@ function ProtoRoutes() {
         { path: 'TMPL',        element: <TMPL /> },
         { path: 'DEX',         element: <DEX /> },
         { path: 'ING',         element: <ING /> },
+      ],
+    },
+    {
+      path: '/error',
+      children: [
+        { path: 'ERR400', element: <ERR400 /> },
+        { path: 'ERR500', element: <ERR500 /> },
       ],
     },
     {

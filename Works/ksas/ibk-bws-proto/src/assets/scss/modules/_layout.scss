@@ -297,7 +297,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
     .dom-header .div-nav-global .link  { padding-left: 0.625em; padding-right: 0.625em; }
 }
 
-.dom-header .div-nav-global .depthnav  { display: flex; position: fixed; z-index: 25; left: 0; top: calc(var(--rem) * var(--height-layout-header)); width: 100%; height: calc(100vh * 3 / 5); height: III(448); max-height: calc(100% - $height-layout-header); overflow: hidden; background: var(--color-ground); box-shadow: $dropshadow-70; }
+.dom-header .div-nav-global .depthnav  { display: flex; position: fixed; left: 0; top: calc(var(--rem) * var(--height-layout-header)); width: 100%; height: calc(100vh * 3 / 5); height: III(448); max-height: calc(100% - $height-layout-header); overflow: hidden; background: var(--color-ground); box-shadow: $dropshadow-70; }
 .dom-header .div-nav-global .depthnav  { font-weight: $bold-40; font-size: $font-50; line-height: $line-50; color: var(--color-text-40); transition: 0.25s $timing-func-ease-faster; transition: none; }
 .dom-header .div-nav-global .depthnav:where(:not(.div-nav-global >* >:hover *)),
   .dom-header .div-nav-global:is(.is-hovered) .depthnav  { z-index: auto; height: 0; /* opacity: 0.0; */ }
@@ -359,7 +359,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav .div-tablist .m-tab .link:is([aria-selected="true"], [aria-current]:not([aria-current="false"])) .o-icon:before  { background-position: 50%; }
 .dom-nav .div-tablist .lists  { gap: var(--gap); overflow: hidden; padding: III(3); border: $e10 solid var(--theme-nav-tablist-edge, var(--color-edge-40)); background: var(--theme-nav-tablist-back, var(--color-ground-40)); border-radius: var(--radius); }
 .dom-nav .div-tablist .lists >*  { flex: 1; border-radius: inherit; }
-.dom-nav .div-tablist .controls >:has(>.toggle)  { position: absolute; z-index: 20; left: 100%; top: 50%; transform: translateY(-50%); }
+.dom-nav .div-tablist .controls >:has(>.toggle)  { position: absolute; left: 100%; top: 50%; transform: translateY(-50%); }
 
 .dom-nav .div-nav-local  { flex: 1 0 0; display: flex; flex-direction: column; position: relative; overflow: auto scroll; margin-top: calc(-1 * $e20); padding: $e20 $gap-element-90 0; padding-right: calc($gap-element-90 - $width-scrollbar - $e10); }
 // @include setScrollGutterStable(".dom-nav .div-nav-local", 1000); /* 2025-08-07 크롬 브라우저 에러 */
@@ -873,8 +873,28 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 /* Z-Index */
-.dom-main .div-header  { z-index: 10; }
-.dom-main .div-footer  { z-index: 10; }
-.layer-wrap .div-footer  { z-index: 10; }
+:root  {
+  --zx-init: 10;
 
-.o-layer._popup.type-univ  { z-index: 100; }
+  --zx-main-footer: (var(--zx-init) + 0);
+  --zx-main-header: (var(--zx-main-footer) + 0);
+
+  --zx-nav-tablist-controls: (var(--zx-main-header) + 10);
+
+  --zx-overlay-listbox: (var(--zx-header-nav-global) - 5);
+
+  --zx-header-nav-global: (var(--zx-nav-tablist-controls) + 10);
+
+  --zx-layer: (var(--zx-init) * 10);
+  --zx-layer-footer: (var(--zx-main-footer));
+}
+
+.dom-main .div-footer  { z-index: calc(var(--zx-main-footer)); }
+.dom-main .div-header  { z-index: calc(var(--zx-main-header)); }
+
+.dom-nav .div-tablist .controls >:has(>.toggle)  { z-index: calc(var(--zx-nav-tablist-controls)); }
+
+.dom-header .div-nav-global .depthnav  { z-index: calc(var(--zx-header-nav-global)); }
+
+.o-layer._popup.type-univ  { z-index: calc(var(--zx-layer)); }
+.layer-wrap .div-footer  { z-index: calc(var(--zx-layer-footer)); }
