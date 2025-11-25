@@ -100,12 +100,15 @@ function CMP000701P() {
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
         modal={false}
+        // resizable={false}
+        // draggable={false}
         // footer={<></>}
         header={
           <>
             <h3 className="o-heading"><span className="label">공지사항</span></h3>
             <div className="config m-checks">
               <InputCheck label="오늘 하루동안 열지 않기" />
+              {/* <InputCheck label="일주일동안 열지 않기" /> */}
             </div>
           </>
         }
@@ -145,6 +148,7 @@ function CMP000701P() {
                   {/* <img src={require("assets/images/media/STMPR0101P02_010.png")} alt="" /> */}
                   {/* <img src={require("assets/images/temp/FMTCT0201P02_010.jpg")} alt="" /> */}
                   {/* <img src={require("assets/images/temp/BSSCR0301M_010.png")} alt="" /> */}
+                  {/* <img src={require("assets/images/tutorial/CMM000301M_010.png")} alt="" /> */}
                   <img src={require("assets/images/common/img_empty-image.png")} alt="" />
                 </div>
 
