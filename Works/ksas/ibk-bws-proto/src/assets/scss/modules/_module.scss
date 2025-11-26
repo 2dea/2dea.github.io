@@ -729,7 +729,7 @@
 .m-dialog-message >*  { flex: 1; display: inline-flex; flex-direction: column; justify-content: center; max-width: 100%; text-align: left; text-align: start; }
 
 
-.o-tabular  { display: table; border-collapse: collapse; width: 100%; }
+.o-tabular  { display: table; border-collapse: collapse; border-spacing: 0; width: 100%; }
 .o-tabular >*  { display: table-row; vertical-align: middle; }
 .o-tabular >* >*  { display: table-cell; vertical-align: inherit; }
 // .o-tabular >.colgroup  { display: table-column-group; }
@@ -1712,10 +1712,6 @@
 .o-form .inner-string  { padding-right: $gap-element-70; }
 .o-form .inner-string.type-time-cert  { font-feature-settings: var(--text-feature-tnum); font-size: $font-30; line-height: $line-30; color: var(--color-point-red); }
 
-// .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { visibility: hidden; }
-// .o-form:has(input:where(:not([value]), [value=""], :read-only)) :has(>.o-image-button._remove)  { display: none; }
-.o-form:has(input:where(:not([value]), [value=""], :read-only)) .o-image-button._remove:not(.is-visible-readonly)  { display: none; }
-
 
 .o-form .o-limit.type-length  { font-size: $font-10; line-height: $line-10; margin: III(2) var(--margin-inline) III(4) auto; }
 
@@ -1757,6 +1753,12 @@
 .o-form:where(:has(.inner-binds >.o-image-button._remove)) .p-autocomplete-input  { padding-right: $height-form-30; }
 .o-form:where(:has(.p-autocomplete-input)) .inner-binds:has(>.o-image-button._remove)  { position: relative; }
 .o-form:where(:has(.p-autocomplete-input)) .o-image-button._remove  { position: absolute; right: 100%; }
+
+// .o-form:has(input:where(:not([value]), [value=""])) :has(>.o-image-button._remove)  { visibility: hidden; }
+// .o-form:has(input:where(:not([value]), [value=""], :read-only)) :has(>.o-image-button._remove)  { display: none; }
+// .o-form:has(input:where(:not([value]), [value=""], :read-only)) .o-image-button._remove:not(.is-visible-readonly)  { display: none; }
+.o-form:has(input:where(.p-autocomplete-input:where(:read-only, :disabled))) .o-image-button._remove:not(.is-visible-readonly)  { display: none; }
+.o-form:has(input:where(:not([value]), [value=""])) .o-image-button._remove:not(.is-visible-readonly)  { display: none; }
 
 
 // .o-form[style*="width:"],
@@ -1946,7 +1948,7 @@
 
 
 .o-data-table  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
-.o-data-table :where(table:not(td *))  { border-collapse: collapse; width: 100%; /* min-width: 100%; */ background: $color-ground; text-align: center; }
+.o-data-table :where(table:not(td *))  { border-collapse: collapse; border-spacing: 0; width: 100%; /* min-width: 100%; */ background: $color-ground; text-align: center; }
 .o-data-table :where(table:not(td *)):has(>colgroup[span])  { table-layout: fixed; }
 .o-data-table :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
 .o-data-table :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
@@ -1978,7 +1980,7 @@
 
 
 .m-data-form  { --margin-cell-inline: #{III(7)}; --margin-headcell-inline: #{III(11)}; clear: both; }
-.m-data-form :where(table:not(td *))  { table-layout: fixed; border-collapse: collapse; width: 100%; background: $color-ground; }
+.m-data-form :where(table:not(td *))  { table-layout: fixed; border-collapse: collapse; border-spacing: 0; width: 100%; background: $color-ground; }
 .m-data-form :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--margin-cell-inline) * 2 + $e10); }
 .m-data-form :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--margin-headcell-inline) * 2 + $e10); }
 .m-data-form :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
@@ -2243,7 +2245,7 @@
 .o-grid-table .wdth-10:where(tr >*, col)  { width: calc(var(--rem) * 50); }  // ### min-width: ?;
 .o-grid-table .wdth-50:where(tr >*, col)  { width: calc(var(--rem) * 120); }  // ### min-width: ?;
 .o-grid-table .wdth-auto:where(tr >*, col)  { width: auto; }
-.o-grid-table table  { border-collapse: separate; width: 100%; background: $color-ground; text-align: center; }
+.o-grid-table table  { border-collapse: separate; border-spacing: 0; width: 100%; background: $color-ground; text-align: center; }
 .o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
 // // .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
 .o-grid-table thead  { font-size: $font-40; line-height: $line-40; position: relative; color: var(--color-key1-70); background: var(--color-ground-40); }
@@ -2283,7 +2285,6 @@
 .o-grid-table:where(:not(.type-table.case-data)) tbody:where(:not(:has([rowspan]))):not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
 
 .o-grid-table table >* >tr >.tcell-strong  { background-color: var(--color-ground2-skyblue-30); }
-.o-grid-table table >* >tr >.tcell-strong  { background-color: var(--color-ground2-skyblue-30); }
 
 .o-grid-table table >* >tr >.sumtotal-tcell-strong  { color: var(--color-key1-90); background-color: var(--color-ground-70); }
 .o-grid-table table >* >tr.daytotal-trow  { background-color: var(--color-ground2-orange-40); }
@@ -2311,7 +2312,7 @@
 .o-grid-table .o-form:is(tr >:where(.g-end) *):only-child  { margin-left: auto; }
 
 // .o-grid-table .o-form[class*=" wdth-"]:not(.type-date, .type-time)  { flex: auto; }
-.o-grid-table .o-form[class*=" wdth-"]:not(.type-time)  { flex: auto; }
+.o-grid-table .o-form[class*=" wdth-"]:not(.type-time):not(.abs-width)  { flex: auto; }
 // .o-grid-table .o-form.wdth-10  { min-width: calc(var(--rem) * 50); }
 // .o-grid-table .o-form.wdth-20  { min-width: calc(var(--rem) * 60); }
 // .o-grid-table .o-form.wdth-30  { min-width: calc(var(--rem) * 80); }
@@ -2321,7 +2322,7 @@
 // .o-grid-table .o-form.wdth-70  { min-width: calc(var(--rem) * 160); }
 // .o-grid-table .o-form.wdth-80  { min-width: calc(var(--rem) * 180); }
 // .o-grid-table .o-form.wdth-90  { min-width: calc(var(--rem) * 210); }
-.o-grid-table .o-form[class*=" wdth-"]:not(.type-time):not(.o-field >* >*)  { width: 100%; }
+.o-grid-table .o-form[class*=" wdth-"]:not(.type-time):not(.abs-width):not(.o-field >* >*)  { width: 100%; }
 
 .o-grid-table.style-fit  {
   // --margin-cell-block-int: 2;
@@ -2374,7 +2375,7 @@
 .o-calendar .table-container  { border: var(--edge) solid var(--color-edge-40); }
 .o-calendar :has(table)  { flex: 1 0 0; display: flex; flex-direction: column; min-height: 0; }
 .o-calendar :has(table)  { flex: 0 1 auto; }
-.o-calendar table  { table-layout: fixed; border-collapse: separate; width: 100%; min-height: 100%; white-space: normal; }
+.o-calendar table  { table-layout: fixed; border-collapse: separate; border-spacing: 0; width: 100%; min-height: 100%; white-space: normal; }
 .o-calendar table tr >*  { height: var(--height); padding: 0; border: 0 solid var(--color-edge-30); }
 .o-calendar table thead tr >*  { --height: var(--height-headcell); border-right: var(--edge) solid var(--color-edge-40); }
 .o-calendar table tbody tr >*  { border-width: 0 var(--edge) var(--edge) 0; }
@@ -2450,7 +2451,7 @@
 .m-schedule .day-memo  { font-size: $font-40; line-height: $line-40; }
 .m-schedule .day-memo .o-legend.type-legend >.o-legend-tag  { margin-right: $gap-element-70; }
 
-.m-schedule :where(.schedule-container) >*  { display: table; border-collapse: collapse; width: 100%; }
+.m-schedule :where(.schedule-container) >*  { display: table; border-collapse: collapse; border-spacing: 0; width: 100%; }
 .m-schedule :where(.schedule-container) >* >*  { display: table-row; vertical-align: top; }
 .m-schedule :where(.schedule-container) >* >* >*  { display: table-cell; vertical-align: inherit; }
 .m-schedule :where(.schedule-container) >* >* >* >*  { display: grid; min-height: III(36); align-items: center; }

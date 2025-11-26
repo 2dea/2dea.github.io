@@ -140,7 +140,7 @@
 .page-home :is(.home-group:where(._task)) .home-section >.header .data >.units  { @include getGlobalHidden(1); }
 .page-home :is(.home-group:where(._task)) .home-section >.center >.contain  { padding-left: $margin-section-50; }
 
-.page-home :is(.home-group:where(._task)) .table  { table-layout: fixed; border-collapse: collapse; width: 100%; }
+.page-home :is(.home-group:where(._task)) .table  { table-layout: fixed; border-collapse: collapse; border-spacing: 0; width: 100%; }
 .page-home :is(.home-group:where(._task)) .table .subject  { display: flex; align-items: center; gap: $gap-element-30; }
 .page-home :is(.home-group:where(._task)) .table .subject >*  { flex: none; min-width: 0; }
 .page-home :is(.home-group:where(._task)) .table .subject .main  { font-weight: $bold-70; }
@@ -202,7 +202,8 @@
 
 .page-home :is(.home-group:where(._setting)) .home-section  { gap: $margin-section-30; }
 
-.page-home :is(.home-group:where(._watch)) .home-section  { min-height: III(228); }
+// .page-home :is(.home-group:where(._watch)) .home-section  { min-height: III(228); }
+.page-home :is(.home-group:where(._watch)) .home-section  { min-height: III(210); }
 .page-home :is(.home-group:where(._watch)) .home-section >.center >.contain >:first-child  { flex: 1; }
 .page-home :is(.home-group:where(._watch)) .d-dates  { font-size: $font-30; line-height: $line-30; display: flex; gap: $gap-whitespace-50; }
 .page-home :is(.home-group:where(._watch)) .d-dates >.head  { font-weight: $bold-70; color: var(--color-key1-40); text-transform: uppercase; }
@@ -211,7 +212,7 @@
 .page-home :is(.home-group:where(._watch)) .d-watches >.header >.primary  { flex: 1; font-weight: $bold-70; }
 .page-home :is(.home-group:where(._watch)) .d-watches >.header .heading >.label  { color: var(--color-text-70); }
 .page-home :is(.home-group:where(._watch)) .d-watches >.center  { flex: 1; display: flex; flex-direction: column; padding: 0 $gap-element-90; background: var(--color-ground-40); border-radius: $radius-50; }
-.page-home :is(.home-group:where(._watch)) .d-watches .lists  { flex: 1; display: table; border-collapse: collapse; width: 100%; }
+.page-home :is(.home-group:where(._watch)) .d-watches .lists  { flex: 1; display: table; border-collapse: collapse; border-spacing: 0; width: 100%; }
 .page-home :is(.home-group:where(._watch)) .d-watches .lists >*  { display: table-row; vertical-align: middle; }
 .page-home :is(.home-group:where(._watch)) .d-watches .lists >:not(:last-child)  { border-bottom: $e10 solid var(--color-edge-40); }
 .page-home :is(.home-group:where(._watch)) .d-watches .lists >* >*  { display: table-cell; vertical-align: inherit; padding: III(6) 0; }
@@ -317,7 +318,7 @@
 .m-shop-table .summary >* >.head:after  { content: var(--utf-nbsp) ":" var(--utf-nbsp); }
 
 .m-shop-table >.container  { border: 0 solid var(--color-edge-30); border-width: $e10 0; border-top-color: var(--color-edge-40); }
-.m-shop-table .table  { table-layout: fixed; border-collapse: collapse; width: 100%; border: hidden; text-align: center; white-space: nowrap; }
+.m-shop-table .table  { table-layout: fixed; border-collapse: collapse; border-spacing: 0; width: 100%; border: hidden; text-align: center; white-space: nowrap; }
 .m-shop-table tr >*  { height: III(59); overflow: hidden; padding: III(10) III(12); border: 0 solid var(--color-edge-30); border-width: 0 0 $e10; text-overflow: ellipsis; }
 .m-shop-table tr.is-selected  { background: var(--color-ground-40); }
 

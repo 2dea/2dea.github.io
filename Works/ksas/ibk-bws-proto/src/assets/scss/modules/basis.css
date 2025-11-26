@@ -231,9 +231,12 @@ img,  object  { image-rendering: -o-crisp-edges; image-rendering: -moz-crisp-edg
 iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; border-style: none; }
 audio:not([controls])  { display: none; height: 0; }
 svg:not(:root)  { overflow: hidden; }
-table  { table-layout: auto; empty-cells: show; border-spacing: 0; border-width: 0; }
-table :not(tr >* *)  { font-weight: inherit; color: inherit; background-color: inherit; text-align: inherit; }
-th,  td  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; padding: 0.125em; border: 0 solid; border-width: 1px; }
+table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-style: hidden; }
+thead,  tbody,  tfoot  { vertical-align: middle; background-color: inherit; }
+caption,  tr >:not([align])  { text-align: inherit; }
+tr,  tr >:not([valign])  { vertical-align: inherit; }
+tr:not([bgcolor]),  tr >:not([bgcolor])  { background-color: inherit; }
+tr >:not([border] >* >* >*)  { border: 1px solid; }
 fieldset  { min-width: 0; padding: 0; border-style: none; }
 legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
 label  { display: inline-block; }
