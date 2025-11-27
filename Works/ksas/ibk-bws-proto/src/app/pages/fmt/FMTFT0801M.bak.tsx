@@ -168,124 +168,90 @@ function FMTFT0801M() {
                   <h2 className="o-heading level2"><span className="label">화폐목록</span></h2>
                 </div>
 
-                <div className="m-specimen-list">
-                  <ul className="lists">
-                    {/* <li>
-                      <div className="m-specimen">
-                        <div className="figure">
-                          <div className="o-object">
-                            <>
-                              <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
-                              <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
-                            </>
-                          </div>
-                        </div>
-
-                        <div className="caption">
-                          <div className="main">
-                            <div className="notice">
-                              <strong className="o-icon-text">
-                                <span className="label">매입 자제</span>
-                                <Icon icon="status-range-50" />
-                              </strong>
-
-                              <strong className="o-icon-text">
-                                <span className="label">매도 금지</span>
-                                <Icon icon="status-range-20" />
-                              </strong>
-                            </div>
-                          </div>
-
-                          <div className="aside">
-                            <div className="remarks">
-                              &bull; 주의사항을 여기에 표시해줍니다.<br />
-                              &bull; 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.<br />
-                              <br />
-                              100자 까지 입/출력<br />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li> */}
-
-                  {[...Array(11)].map((e, idx) => (
-                  <>
-                    <li key={idx}>
-                      <div className={`m-specimen${idx === 1 ? ' is-selected' : ''}`}>
-                        <div className="figure">
-                          <div className="o-object">
-                          {
-                            idx === 2 ?
-                            <></>
-                            :
-                            <>
-                              <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
-                              <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
-                            </>
-                          }
-                          </div>
-                        </div>
-
-                        <div className="caption">
-                          <div className="main">
-                            <div className="notice">
-                              <strong className="o-icon-text">
-                              {
-                                idx % 3 === 1 ?
-                                <>
-                                  <span className="label">매입 자제</span>
-                                  <Icon icon="status-range-50" />
-                                </>
-                                : idx % 3 === 2 ?
-                                <>
-                                  <span className="label">매입 금지</span>
-                                  <Icon icon="status-range-20" />
-                                </>
-                                :
-                                <>
-                                  <span className="label">매입 가능</span>
-                                  <Icon icon="status-range-80" />
-                                </>
-                              }
-                              </strong>
-
-                              <strong className="o-icon-text">
-                              {
-                                idx % 3 === 1 ?
-                                <>
-                                  <span className="label">매도 자제</span>
-                                  <Icon icon="status-range-50" />
-                                </>
-                                : idx % 3 === 0 ?
-                                <>
-                                  <span className="label">매도 금지</span>
-                                  <Icon icon="status-range-20" />
-                                </>
-                                :
-                                <>
-                                  <span className="label">매도 가능</span>
-                                  <Icon icon="status-range-80" />
-                                </>
-                              }
-                              </strong>
-                            </div>
-                          </div>
-
-                          <div className="aside">
-                            <div className="remarks">
-                              &bull; 주의사항을 여기에 표시해줍니다.<br />
-                              &bull; 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.<br />
-                              <br />
-                              100자 까지 입/출력<br />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </>
-                  ))}
-                  </ul>
-
+                <div className="m-specimen card-list">
+                  {/* <div className="item">
+                    <div className="o-object style-fit">
+                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
+                      <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                        <span className="name">매입 가능</span>
+                        <Icon icon="status-range-80" />
+                      </li>
+                      <li>
+                        <span className="name no">매도 금지</span>
+                        <Icon icon="status-range-20" />
+                      </li>
+                    </ul>
+                    <p className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div> */}
+                {[...Array(11)].map((e, idx) => (
+                  <div key={idx} className={`item ${idx === 1 ? 'is-selected' : ''}`}>
+                    <div className="o-object style-fit">
+                    {
+                      idx === 2 ?
+                      <></>
+                      :
+                      <>
+                        <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
+                        <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
+                      </>
+                    }
+                    </div>
+                    <ul className="info-area">
+                      <li>
+                      {
+                        idx % 3 === 1 ?
+                        <>
+                          <span className="name alert">매입 자제</span>
+                          <Icon icon="status-range-50" />
+                        </>
+                        : idx % 3 === 2 ?
+                        <>
+                          <span className="name no">매입 금지</span>
+                          <Icon icon="status-range-20" />
+                        </>
+                        :
+                        <>
+                          <span className="name">매입 가능</span>
+                          <Icon icon="status-range-80" />
+                        </>
+                      }
+                      </li>
+                      <li>
+                      {
+                        idx % 3 === 1 ?
+                        <>
+                          <span className="name alert">매도 자제</span>
+                          <Icon icon="status-range-50" />
+                        </>
+                        : idx % 3 === 0 ?
+                        <>
+                          <span className="name no">매도 금지</span>
+                          <Icon icon="status-range-20" />
+                        </>
+                        :
+                        <>
+                          <span className="name">매도 가능</span>
+                          <Icon icon="status-range-80" />
+                        </>
+                      }
+                      </li>
+                    </ul>
+                    <Tooltip className="o-tooltip" target={`#FMTFC0101P01-tooltip-specimen-${idx + 1}`} position="top">
+                      &bull; 주의사항을 여기에 표시해줍니다.<br />
+                      &bull; 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.<br />
+                      <br />
+                      100자 까지 입/출력<br />
+                    </Tooltip>
+                    <p id={`FMTFC0101P01-tooltip-specimen-${idx + 1}`} className="text-area">
+                      주의사항을 여기에 표시해줍니다. 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.개행을 위한 예시입니다. 예시입니다
+                    </p>
+                  </div>
+                ))}
                 </div>
 
               </div>

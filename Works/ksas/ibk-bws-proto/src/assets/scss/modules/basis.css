@@ -232,7 +232,7 @@ iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-beh
 audio:not([controls])  { display: none; height: 0; }
 svg:not(:root)  { overflow: hidden; }
 table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-style: hidden; }
-thead,  tbody,  tfoot  { vertical-align: middle; background-color: inherit; }
+caption,  thead,  tbody,  tfoot  { vertical-align: middle; background-color: inherit; }
 caption,  tr >:not([align])  { text-align: inherit; }
 tr,  tr >:not([valign])  { vertical-align: inherit; }
 tr:not([bgcolor]),  tr >:not([bgcolor])  { background-color: inherit; }

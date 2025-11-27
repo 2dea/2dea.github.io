@@ -1716,8 +1716,10 @@
 .o-form .o-limit.type-length  { font-size: $font-10; line-height: $line-10; margin: III(2) var(--margin-inline) III(4) auto; }
 
 
-.o-form:where(.type-num, .type-date, .type-time) input  { font-feature-settings: var(--text-feature-tnum); }
-.o-form:where(.type-num, .type-date, .type-time):has(input:focus) input:not(:read-only)  {
+// .o-form:where(.type-num, .type-date, .type-time) input  { font-feature-settings: var(--text-feature-tnum); }
+// .o-form:where(.type-num, .type-date, .type-time):has(input:focus) input:not(:read-only)  {
+.o-form input:where(.o-form:is(.type-num, .type-date, .type-time) *, .p-inputmask)  { font-feature-settings: var(--text-feature-tnum); }
+.o-form input:where(.o-form:is(.type-num, .type-date, .type-time) *, .p-inputmask):not(:read-only):focus  {
   --bold-40:        475;
   font-weight: var(--bold-40);
   font-family: var(--typo-tnum);

@@ -59,7 +59,7 @@ pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
 address,  em,  cite,  dfn,  var,  optgroup  { font-style: inherit; }
 a  { font-size: inherit; background-color: Transparent; color: inherit; text-decoration: none; }
 table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-style: hidden; }
-thead,  tbody,  tfoot  { vertical-align: middle; background-color: inherit; }
+caption,  thead,  tbody,  tfoot  { vertical-align: middle; background-color: inherit; }
 caption,  tr >:not([align])  { text-align: inherit; }
 tr,  tr >:not([valign])  { vertical-align: inherit; }
 tr:not([bgcolor]),  tr >:not([bgcolor])  { background-color: inherit; }
@@ -79,7 +79,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 
 
 .o-index-table  { --height: 25px; clear: both; }
-.o-index-table table  { border-collapse: separate; position: relative; min-width: 100%; background: var(--color-ground); }
+.o-index-table table  { border-collapse: separate; border-spacing: 0; position: relative; min-width: 100%; background: var(--color-ground); }
 .o-index-table table :not(tr >* *)  { transition-duration: 0.15s; transition-timing-function: cubic-bezier(0.2,0,0,1); }
 .o-index-table col  { min-width: 2em; }
 .o-index-table thead  { text-align: center; }
@@ -3502,6 +3502,7 @@ a[href]:not([href=""], [href$="#"], [href$="undefined"])  { cursor: pointer; }
 			<td class="auth"><span class="name DEL"></span></td>
 			<td class="done"><span class="date DEL">2025-08-24</span></td>
 			<td class="note">
+				<p class="modify">[2025-11-27] ["화폐목록" 영역] 디자인 수정, 전체 구조 수정</p>
 				<p class="modify">[2025-10-02] ["화폐목록" 영역] 툴팁(주의사항) 추가</p>
 				<p class="modify">[2025-09-16] ["화폐목록" 영역] '.item' 요소 선택("is-selected" 클래스네임) 예시 추가</p>
 				<p class="__CLASSNAME__"></p>

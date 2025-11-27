@@ -54,31 +54,147 @@ html  { scroll-behavior: auto !important; }
 .m-upload-image.type-widthy {width: 444px;}
 
 
+// // ** FMTFT0801M 외국통화견양집
+// .card-list {display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(354)), 1fr)); gap: III(24) III(16);}
+// .card-list .item { transition: 0.25s $timing-func-ease-slower; }
+// .card-list .item >* { transition: inherit; }
+// .card-list .item .info-area {display: flex; align-items: center; margin: 12px 0 8px; justify-content: center; border: 1px solid #ECECEE; border-radius: 4px; }
+// .card-list .item .info-area li + li::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 0; display: block; width: 1px; height: 10px; background-color: #ECECEE;}
+
+// .card-list .item .o-object {position: relative; height: III(157); border: 1px solid #ECECEE; border-radius: $radius-50; }
+// .card-list .item .o-object img { object-fit: contain; object-position: center; }
+// .card-list .item .o-object .o-image-button:where(:not(img +*), .noimage +*) { display: none; }
+// .card-list .item .o-image-button { position: absolute; top: 0; right: 0; width: III(34); height: III(34); background-color: var(--color-surface-overlay) !important; border-start-start-radius: 0; border-end-end-radius: 0; }
+// .card-list .item .o-image-button:not(.o-object:hover *)  { opacity: 0.0; }
+// .card-list .item .o-image-button:before  { background-position: 75%; }
+
+// .card-list .item .info-area li {position: relative; display: flex; flex: 1; justify-content: center; padding: 8px 0;}
+// .card-list .item .info-area .name {position: relative; display: flex; font-size: 13px;}
+// .card-list .item .info-area .o-icon {margin-left: 10px;}
+// // .card-list .item .info-area .name::after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 10px;}
+// // .card-list .item .info-area .name::before {content: ''; display: inline-block;position: absolute;top: 50%; transform: translateY(-50%); width: 16px; height: 16px; right:-20px; background-color: blue;}
+
+// .card-list .item .text-area {font-size: 13px; color: #525252; @include inc-ellipsis2(2);}
+
+// .card-list .item.is-selected .o-object,
+// .card-list .item.is-selected .info-area  { border-color: var(--color-control-40); box-shadow: $dropshadow-40; }
+
 // ** FMTFT0801M 외국통화견양집
-.card-list {display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(354)), 1fr)); gap: III(24) III(16);}
-.card-list .item { transition: 0.25s $timing-func-ease-slower; }
-.card-list .item >* { transition: inherit; }
-.card-list .item .info-area {display: flex; align-items: center; margin: 12px 0 8px; justify-content: center; border: 1px solid #ECECEE; border-radius: 4px; }
-.card-list .item .info-area li + li::before {content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 0; display: block; width: 1px; height: 10px; background-color: #ECECEE;}
+.m-specimen  {
+  display: flex;
+  overflow: hidden;
+  border: $e10 solid var(--color-edge-40);
+  border-radius: $radius-70;
 
-.card-list .item .o-object {position: relative; height: III(157); border: 1px solid #ECECEE; border-radius: $radius-50; }
-.card-list .item .o-object img { object-fit: contain; object-position: center; }
-.card-list .item .o-object .o-image-button:where(:not(img +*), .noimage +*) { display: none; }
-.card-list .item .o-image-button { position: absolute; top: 0; right: 0; width: III(34); height: III(34); background-color: var(--color-surface-overlay) !important; border-start-start-radius: 0; border-end-end-radius: 0; }
-.card-list .item .o-image-button:not(.o-object:hover *)  { opacity: 0.0; }
-.card-list .item .o-image-button:before  { background-position: 75%; }
+  &:where(.is-selected >*),
+  &.is-selected  {
+    border-color: var(--color-control-40);
+    box-shadow: $dropshadow-40;
+  }
 
-.card-list .item .info-area li {position: relative; display: flex; flex: 1; justify-content: center; padding: 8px 0;}
-.card-list .item .info-area .name {position: relative; display: flex; font-size: 13px;}
-.card-list .item .info-area .o-icon {margin-left: 10px;}
-// .card-list .item .info-area .name::after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 10px;}
-// .card-list .item .info-area .name::before {content: ''; display: inline-block;position: absolute;top: 50%; transform: translateY(-50%); width: 16px; height: 16px; right:-20px; background-color: blue;}
+  >*  {
+    flex: none;
+    min-width: 0;
+  }
 
-.card-list .item .text-area {font-size: 13px; color: #525252; @include inc-ellipsis2(2);}
+  .figure  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: III(374);
 
-.card-list .item.is-selected .o-object,
-.card-list .item.is-selected .info-area  { border-color: var(--color-control-40); box-shadow: $dropshadow-40; }
+    .o-object  {
+      position: relative;
+      width: 100%;
+      height: III(158);
 
+      >*  {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &:not(:empty)  {
+        background-color: var(--color-ground);
+      }
+
+      .o-image-button  {
+        position: absolute; right: $gap-element-30; bottom: $gap-element-30; width: III(34); height: III(34); background-color: var(--color-surface-overlay) !important;
+
+        &:not(.o-object:hover *)  { opacity: 0.0; }
+
+        &:before  { background-position: 75%; }
+      }
+    }
+  }
+
+  .caption  {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: $gap-element-90;
+    border-left: $e10 solid var(--color-edge-40);
+    background: var(--color-ground-40);
+
+    >*  {
+      min-height: 0;
+    }
+
+    >.main  {
+      &:not(:last-child)  {
+        margin-bottom: $gap-element-80;
+      }
+
+      .notice  {
+        display: flex;
+        align-items: center;
+        gap: $gap-element-80;
+
+        .o-icon-text  {
+          .o-icon  {
+            margin-left: $gap-element-30;
+          }
+        }
+      }
+    }
+
+    >.aside  {
+      flex: 1;
+      flex-basis: 0;
+
+      .remarks  {
+        --lh: var(--text-height-par);
+
+        font-size: $font-40;
+        line-height: var(--lh);
+        height: 100%;
+        min-height: III(96);
+        overflow: auto;
+        padding: $gap-element-70;
+        color: var(--color-text-30);
+        background: var(--color-ground-70);
+        border-radius: $radius-50;
+      }
+    }
+  }
+}
+
+.m-specimen-list  {
+  clear: both;
+
+  >.lists  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(600)), 1fr));
+    gap: $gap-element-90;
+
+    >*  {
+      display: flex;
+
+      >*  {
+        flex: 1;
+      }
+    }
+  }
+}
 
 // **primereact 달력
 .p-datepicker  {
