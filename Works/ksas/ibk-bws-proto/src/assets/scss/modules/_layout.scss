@@ -148,7 +148,7 @@ html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable bot
 *  { letter-spacing: var(--text-spacing); }
 // :before,  :after  { border-radius: inherit; letter-spacing: inherit; animation: inherit; transition: inherit; }
 :before,  :after  { border-radius: inherit; letter-spacing: inherit; }
-html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); }
+html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); accent-color: var(--color-key1-70, #0078d7); }
 body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); }
 /* @media
   screen and (not (max-width: 1920px))  {
@@ -813,10 +813,10 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 
 
-.m-carousel  { flex: 1; display: flex; flex-direction: column; gap: III(12); width: 100%; background: var(--color-ground); }
+.m-carousel  { flex: 1; display: flex; flex-direction: column; width: 100%; background: var(--color-ground); }
 .m-carousel >*  { min-height: 0; }
 .m-carousel >.swiper-wrapper  { flex: 1; }
-.m-carousel >.carousel-footer  { display: flex; align-items: center; gap: III(12); padding-top: III(12); border-top: $e10 solid var(--color-edge-40); background-color: inherit; }
+.m-carousel >.carousel-footer  { display: flex; align-items: center; gap: III(12); margin-top: III(12); padding-top: III(12); border-top: $e10 solid var(--color-edge-40); background-color: inherit; }
 .m-carousel >.carousel-footer >*  { flex: 1; min-width: 0; }
 .m-carousel >.carousel-footer:before  { content: ""; flex: 1; }
 .m-carousel >.carousel-footer .carousel-pagination  { font-feature-settings: var(--text-feature-tnum); display: flex; justify-content: center; gap: $gap-whitespace-50; }
@@ -856,6 +856,23 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
     .m-carousel >.carousel-footer:before  { content: none; }
     .m-carousel >.carousel-footer .carousel-pagination  { justify-content: normal; }
 }
+
+// :has(.m-tutorial):is(.p-dialog-content)  { position: relative; }
+// .m-tutorial .swiper  { position: static; }
+// .m-tutorial .swiper-wrapper  { position: static; }
+
+:has(.m-tutorial):is(.p-dialog-content.layer-body)  { min-height: III(666); }
+.m-tutorial .carousel-footer  { margin-top: 0; padding: 0; border-top: 0 none; }
+.m-tutorial .carousel-footer .carousel-pagination  { gap: 0; margin: 0; padding: 0; }
+.m-tutorial .carousel-footer .carousel-pagination *  { width: auto; height: auto; margin: 0; padding: 0; background: Transparent; opacity: 1.0; }
+.m-tutorial .carousel-footer .carousel-pagination  { font-size: III(18); flex-wrap: wrap; justify-content: normal; position: absolute; z-index: 10; left: III(50); top: III(30); bottom: auto; max-width: calc(15em + III(10)); margin: III(-4); }
+.m-tutorial .carousel-footer .carousel-pagination .swiper-pagination-bullet  { padding: III(4); border-radius: 1em; }
+.m-tutorial .carousel-footer .carousel-pagination .swiper-pagination-bullet:before  { content: ""; font-size: calc(1em - III(4 * 2)); width: 1em; height: 1em; border: $e10 solid var(--color-edge-40); background: var(--color-ground-30); border-radius: inherit; }
+.m-tutorial .carousel-footer .carousel-pagination .swiper-pagination-bullet-active:before  { width: 2em; border-color: Transparent; background-color: var(--color-icon-70); }
+.m-tutorial .carousel-footer .carousel-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover:before  { border-color: var(--color-edge-70); }
+.m-tutorial .carousel-footer .carousel-navigation  { justify-content: space-between; position: absolute; z-index: 10; left: III(8); top: 50%; right: III(8); transform: translateY(III(44 / -2)); height: 0; }
+.m-tutorial .carousel-footer .carousel-navigation .o-image-button  { font-size: III(44); border-color: var(--color-edge-40); background-color: var(--color-ground); border-radius: 50%; }
+.m-tutorial .carousel-footer .carousel-navigation .o-image-button:not(:disabled)  { box-shadow: $dropshadow-40; }
 
 
 

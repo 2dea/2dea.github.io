@@ -21,6 +21,7 @@ import LoadingBar from 'app/pages/test/LoadingBar';  // LoadingBar
 import FileUploads from 'app/pages/test/FileUploads'; // FileUploads
 import GridsColFilter from 'app/pages/test/GridsColFilter'; // GridsColFilter
 import SurveyForms from 'app/pages/test/SurveyForms'; // SurveyForms
+import TutorialPage from 'app/pages/test/TutorialPage'; // TutorialPage
 
 // proto 에러
 import ERR400     from 'app/pages/err/ERR400';       // 에러 ~ 4xx
@@ -680,6 +681,7 @@ function ProtoRoutes() {
       path: '/test',
       element: <Decorator />,
       children: [
+        { path: 'TutorialPage', element: <TutorialPage /> },
         { path: 'SurveyForms', element: <SurveyForms /> },
         { path: 'GridsColFilter', element: <GridsColFilter /> },
         { path: 'FileUploads', element: <FileUploads /> },

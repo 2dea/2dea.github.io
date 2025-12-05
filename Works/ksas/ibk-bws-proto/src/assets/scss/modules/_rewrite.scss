@@ -745,16 +745,28 @@
   &.wdth-100p {
     width: calc(100vi - var(--margin-inline, 0%) * 2);
     min-width: $width-80p;
+
+    &.case-tutorial {
+      min-width: $width-90p;
+    }
   }
 
   &.wdth-90p {
     width: $width-90p;
     min-width: $width-80p;
+
+    &.case-tutorial {
+      min-width: $width-90p;
+    }
   }
 
   &.wdth-80p {
     width: $width-80p;
     min-width: $width-70p;
+
+    &.case-tutorial {
+      min-width: $width-80p;
+    }
   }
 
   &.wdth-70p {

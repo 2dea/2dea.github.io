@@ -28,8 +28,8 @@ html  { scroll-behavior: auto !important; }
 .address-box .address-sub {font-size: $font-40; line-height: $line-40;}
 
 // ** CMP000901P : 메모(업무별)
-.layer-wrap :has(> .div-container._small) {min-height: auto;}
-.layer-wrap :has(> .div-container._small) .div-footer {padding-top: III(24);}
+.layer-wrap :has(> .div-container:where(._small)) {min-height: auto;}
+.layer-wrap :has(> .div-container:where(._small)) .div-footer {padding-top: III(24);}
 
 // ** CMP001501P 결재선 그룹
 .o-grid ._row:has(.o-section > .main._primary):not(.column) { flex-direction: row; gap: 0 24px;} // reWrite
@@ -183,7 +183,7 @@ html  { scroll-behavior: auto !important; }
 
   >.lists  {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(600)), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(var(--width-min, III(590)), 1fr));
     gap: $gap-element-90;
 
     >*  {
