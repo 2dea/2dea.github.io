@@ -10,10 +10,10 @@
   @return rgb(from $color r g b / $alpha);
 }
 
-// @function fnLinearGradient($dir: bottom, $start: $color-ground-alpha-00)  {
+// @function fnLinearGradient($dir: bottom, $start: var(--color-ground-alpha-00))  {
 //   @return linear-gradient(to $dir, $start, $end);
 // }
-@function fnLinearGradient($deg: 180deg, $start: $color-ground-alpha-00, $end: var(--color-ground), $start-stop: null, $end-stop: 65%)  {
+@function fnLinearGradient($deg: 180deg, $start: var(--color-ground-alpha-00), $end: var(--color-ground), $start-stop: null, $end-stop: 65%)  {
   @return linear-gradient($deg, $start $start-stop, $end $end-stop);
 }
 

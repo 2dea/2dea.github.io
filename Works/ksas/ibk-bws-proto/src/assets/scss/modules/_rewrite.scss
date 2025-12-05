@@ -303,7 +303,7 @@
 //     @include setReset(1);
 
 //     // .p-dropdown-label  {
-//     //   &.p-placeholder:not(:disabled)  { color: $color-text-placeholder; }
+//     //   &.p-placeholder:not(:disabled)  { color: var(--color-text-placeholder); }
 //     // }
 
 //     .p-dropdown-trigger  { width: auto; }
@@ -314,7 +314,7 @@
 //   .p-placeholder  { color: revert; }
 //   .p-placeholder:not(:disabled)  { color: var(--color-text-placeholder); }
 
-//   &:has(:is(.bind, .p-inputtext).p-disabled)  { color: $color-text-disabled; background-color: var(--color-ground-disabled); filter: none; }
+//   &:has(:is(.bind, .p-inputtext).p-disabled)  { color: var(--color-text-disabled); background-color: var(--color-ground-disabled); filter: none; }
 // }
 
 :where(.o-form) {
@@ -334,7 +334,7 @@
 
   &:has(:is(.bind, .p-inputtext).react-select--is-disabled),
   &:has(:is(.bind, .p-inputtext).p-disabled) {
-    color: $color-text-disabled;
+    color: var(--color-text-disabled);
     background-color: var(--color-ground-disabled);
     filter: none;
   }
@@ -540,7 +540,7 @@
     }
 
     &:hover {
-      background: $color-dimmed-hover;
+      background: var(--color-dimmed-hover);
     }
   }
 
@@ -733,7 +733,7 @@
   max-height: calc(100vb - var(--margin-block, 0%) * 2);
   // margin: auto;
   margin: auto auto;
-  background: $color-ground;
+  background: var(--color-ground);
   border-radius: var(--radius);
   box-shadow: $dropshadow-70;
   pointer-events: auto;
@@ -995,7 +995,7 @@
     font-size: $font-40;
     line-height: $line-40;
     // height: calc(var(--height-cell) * 3);
-    color: $color-text-30;
+    color: var(--color-text-30);
   }
 
   .p-column-header-content {
@@ -1016,7 +1016,7 @@
 
   // .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover  {
   .p-sortable-column:not(.p-sortable-disabled):hover:not(:active) {
-    background-image: linear-gradient($color-grid-hover, $color-grid-hover);
+    background-image: linear-gradient(var(--color-grid-hover), var(--color-grid-hover));
     cursor: row-resize;
   }
 
@@ -1029,7 +1029,7 @@
 
     // &:not(.p-highlight):not(.p-sortable-disabled):hover  {
     &:not(.p-sortable-disabled):hover:not(:active) {
-      background-image: linear-gradient($color-grid-hover, $color-grid-hover);
+      background-image: linear-gradient(var(--color-grid-hover), var(--color-grid-hover));
       cursor: row-resize;
     }
 
@@ -1202,7 +1202,7 @@
       border-width: revert;
 
       .p-disabled  {
-        color: $color-text-disabled;
+        color: var(--color-text-disabled);
         opacity: 0.4;
       }
     }

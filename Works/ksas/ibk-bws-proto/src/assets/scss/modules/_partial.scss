@@ -156,7 +156,7 @@
 .page-home :is(.home-group:where(._task)) .table tr >*  { padding: III(12) III(4); border: 0; white-space: nowrap; }
 .page-home :is(.home-group:where(._task)) .table tr >:first-child  { padding-left: 0; }
 .page-home :is(.home-group:where(._task)) .table tr >:last-child  { padding-right: 0; }
-.page-home :is(.home-group:where(._task)) .table tr.g-cursor-pointer:hover >*  { background-image: linear-gradient($color-grid-hover, $color-grid-hover); }
+.page-home :is(.home-group:where(._task)) .table tr.g-cursor-pointer:hover >*  { background-image: linear-gradient(var(--color-grid-hover), var(--color-grid-hover)); }
 
 .page-home :is(.home-group:where(._ship))  { gap: $gap-element-70; }
 .page-home :is(.home-group:where(._ship)) .home-section  { --m-margin-block: #{$margin-section-70}; }
