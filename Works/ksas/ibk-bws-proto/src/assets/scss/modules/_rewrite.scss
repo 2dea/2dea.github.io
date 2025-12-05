@@ -1183,3 +1183,233 @@
 :has(>.p-datatable-scrollable-table):is(.o-section >.main:not(._primary) *)  { height: var(--height-section-main); }
 
 
+
+// **primereact 달력
+.p-datepicker  {
+  table :not(tr >* *) {
+      font-weight: revert;
+      color: revert;
+      background-color: revert;
+      text-align: revert;
+    }
+  th,
+    td {
+      -moz-box-sizing: revert;
+      -webkit-box-sizing: revert;
+      box-sizing: revert;
+      padding: revert;
+      border: revert;
+      border-width: revert;
+
+      .p-disabled  {
+        color: $color-text-disabled;
+        opacity: 0.4;
+      }
+    }
+}
+
+.p-calendar {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+  .p-inputtext {
+    flex: 1 1 auto;
+    width: 1%;
+  }
+
+  .p-datepicker {
+    min-width: 100%;
+  }
+
+  .p-datepicker-touch-ui {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 80vw;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.p-calendar-w-btn-right {
+  .p-inputtext {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .p-datepicker-trigger {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.p-calendar-w-btn-left {
+  .p-inputtext {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .p-datepicker-trigger {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.p-fluid {
+  .p-calendar {
+    display: flex;
+
+    .p-inputtext {
+      width: 1%;
+    }
+  }
+}
+
+.p-datepicker {
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  td {
+    >span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+
+  button {
+    min-width: 0;
+  }
+}
+
+.p-datepicker-inline {
+  display: inline-block;
+  position: static;
+  overflow-x: auto;
+}
+
+.p-datepicker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button.p-datepicker-prev,
+  button.p-datepicker-next {
+    min-width: III(28) !important;
+    width: III(28) !important;
+    height: III(28) !important;
+
+    .p-icon {
+      width: III(14);
+      height: III(14);
+    }
+  }
+  .p-datepicker-title {
+    display: flex;
+    margin: 0 auto;
+    gap: 0 8px;
+  }
+
+  .p-datepicker-month {
+    order: 2;
+  }
+
+  .p-datepicker-year {
+    order: 1;
+  }
+}
+
+.p-datepicker-prev {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-datepicker-next {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-datepicker-multiple-month {
+  .p-datepicker-group-container {
+    display: flex;
+    display: flex;
+
+    .p-datepicker-group {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.p-monthpicker-month {
+  width: 33.3%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-datepicker-buttonbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-timepicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+
+  >div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.p-datepicker-touch-ui {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 80vw;
+  transform: translate(-50%, -50%);
+}
+
+.p-yearpicker-year {
+  width: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}

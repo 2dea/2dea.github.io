@@ -108,28 +108,24 @@ function FMTFT0801P02() {
           <div className="o-grid">
             <div className="column">
 
-              <div className="m-flex-list-col">
-                <div className="m-upload-image _large">
-                  <div className="main">
-                    <div className="header">
-                      <strong className="label">앞면</strong>
-                    </div>
-                    <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
-                      {/* <img src={require("assets/images/common/img_empty-image.png")} alt="" /> */}
-                    </div>
-                  </div>
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading"><span className="label">앞면</span></h4>
                 </div>
 
-                <div className="m-upload-image _large">
-                  <div className="main">
-                    <div className="header">
-                      <strong className="label">뒷면</strong>
-                    </div>
-                    <div className="o-object style-fit">
-                      <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
-                      <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
-                    </div>
+                <div className="main">
+                  <div className="o-object style-fill o-view-image case-currency"></div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading"><span className="label">뒷면</span></h4>
+                </div>
+
+                <div className="main">
+                  <div className="o-object style-fill o-view-image case-currency">
+                    <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
                   </div>
                 </div>
               </div>
