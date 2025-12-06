@@ -1,2 +1,16 @@
 @charset "UTF-8";
 
+
+// *,  :before,  :after  { transition-duration: 0s !important; }
+:where(:not(.dom-main .div-tablist *, .swiper *)),
+  :where(:not(.dom-main .div-tablist *, .swiper *)):before,
+  :where(:not(.dom-main .div-tablist *, .swiper *)):after  { transition-duration: 0s !important; }
+html  { scroll-behavior: auto !important; }
+
+// // .o-section:not(.o-section *):not(.o-grid >.column >*)  {
+// .o-section:not(.o-section *):not(.home-section *):not(.o-grid >.column >*):not(.m-sections >*):not(.m-tabs >.m-tabs-panel >*)  {
+//   outline: thick solid Red;
+// }
+// .o-grid:where(.o-grid *):where(.dom-wrapper.type-proto *) {
+//   outline: thick solid Blue;
+// }
