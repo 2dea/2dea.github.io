@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@function III($int)  {
+@function px($int)  {
   // @return #{($int / $root-em-int)}rem;
   @return calc(1rem / $root-em-int * $int);
   // @return calc($root-em * $int);
@@ -303,7 +303,7 @@
   // @include setTextStyle($font-l, $line-l, $wght: $bold-70);
   // @include setTextStyle($font-l, $wght: $bold-70);
   // @include setTextStyle(calc(var(--rem) * var(--font-16px)), calc(var(--rem) * var(--line-16px)));
-  // margin-top: III(-1);
+  // margin-top: px(-1);
 
-  // @debug III(-24);
+  // @debug px(-24);
 }

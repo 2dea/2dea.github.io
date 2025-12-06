@@ -118,7 +118,7 @@
 
 
 .p-splitter-gutter {
-  --width: #{III(6)};
+  --width: #{px(6)};
   flex-grow: 0;
   flex-shrink: 0;
   display: flex;
@@ -153,7 +153,7 @@
 
     >.p-splitter-gutter-handle {
       width: 100%;
-      height: III(24);
+      height: px(24);
       background: #e5e7eb;
     }
   }
@@ -178,8 +178,8 @@
     &:after {
       content: "";
       display: block;
-      height: III(4);
-      width: III(4);
+      height: px(4);
+      width: px(4);
       background: var(--color-point-skyblue);
       border-radius: 50%;
 
@@ -190,22 +190,22 @@
     }
 
     >.p-splitter-gutter-handle {
-      height: III(24);
+      height: px(24);
       background: var(--color-ground);
 
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: III(10);
-      border-radius: III(24);
+      gap: px(10);
+      border-radius: px(24);
 
       &:before,
       &:after {
         content: "";
         display: block;
-        height: III(4);
-        width: III(4);
+        height: px(4);
+        width: px(4);
         background: var(--color-point-skyblue);
         border-radius: 50%;
       }
@@ -225,8 +225,8 @@
     gap: $gap-element-50;
 
     .o-icon._breadcrumb-home:before  {
-      width: III(12);
-      height: III(12);
+      width: px(12);
+      height: px(12);
     }
 
     .p-menuitem-separator {
@@ -283,7 +283,7 @@
 //       min-width: 0;
 //     }
 
-//     .o-image-button:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - III(8)); margin: 0 -1px; background: var(--color-edge-40); }
+//     .o-image-button:before  { content: ""; display: inline-block; width: $e10; height: calc(100% - px(8)); margin: 0 -1px; background: var(--color-edge-40); }
 //     .o-image-button:has(._sum-minus)  { order: -1; flex-direction: row-reverse; }
 //   }
 
@@ -389,8 +389,8 @@
     content: "";
     display: inline-block;
     width: $e10;
-    height: calc(100% - III(8));
-    margin: 0 III(-1);
+    height: calc(100% - px(8));
+    margin: 0 px(-1);
     background: var(--color-edge-40);
     pointer-events: none;
   }
@@ -404,7 +404,7 @@
 .p-autocomplete-panel.p-component,
 .p-dropdown-panel.p-component,
 .p-multiselect-panel.p-component {
-  margin: calc(1px + III(2)) 0;
+  margin: calc(1px + px(2)) 0;
   border: $e10 solid var(--color-edge-40);
   color: inherit;
   border-radius: $radius-50;
@@ -415,13 +415,13 @@
   }
 
   [data-pc-section$="wrapper"] {
-    padding: III(6) III(4);
+    padding: px(6) px(4);
   }
 
   [role="listbox"] {
     display: table;
     border-collapse: collapse;
-    // border-spacing: 0 III(2);
+    // border-spacing: 0 px(2);
     border-spacing: 0;
     table-layout: fixed;
     min-width: 100%;
@@ -429,7 +429,7 @@
 
     [role="option"] {
       display: table-row;
-      height: III(30);
+      height: px(30);
       padding: 0;
       color: var(--color-text-40);
       border-radius: $radius-50;
@@ -447,24 +447,24 @@
       >* {
         display: table-cell;
         vertical-align: middle;
-        padding: III(0) III(2);
+        padding: px(0) px(2);
         color: inherit;
 
         &:first-child {
-          padding-left: III(8);
+          padding-left: px(8);
           border-start-start-radius: inherit;
           border-end-start-radius: inherit;
         }
 
         &:last-child {
-          padding-right: III(8);
+          padding-right: px(8);
           border-start-end-radius: inherit;
           border-end-end-radius: inherit;
 
           &:where(:not(.p-multiselect-checkbox):not(.p-autocomplete-panel *)) {
             @include inc-ellipsis2();
             display: table-cell;
-            max-width: III(234);
+            max-width: px(234);
           }
         }
       }
@@ -475,7 +475,7 @@
 .p-autocomplete-panel.p-component {
   .p-autocomplete-items {
     // display: table;
-    // border-spacing: 0 III(2);
+    // border-spacing: 0 px(2);
     // width: 100%;
 
     .p-autocomplete-item {
@@ -485,7 +485,7 @@
 
     .p-autocomplete-cell {
       // display: table-cell;
-      // padding: III(4) III(3);
+      // padding: px(4) px(3);
 
       &.sep {
         color: var(--color-edge-40);
@@ -500,8 +500,8 @@
 
 
 .o-gridscolfilter {
-  min-width: III(160);
-  max-width: III(216);
+  min-width: px(160);
+  max-width: px(216);
   margin: $e10 0 !important;
   border: $e10 solid var(--color-edge-40);
   border-radius: $radius-50;
@@ -514,9 +514,9 @@
 
   .o-check {
     display: flex;
-    // gap: III(4);
+    // gap: px(4);
     margin: 0;
-    padding: III(6) III(8);
+    padding: px(6) px(8);
     border-radius: $radius-50;
 
     input {
@@ -549,15 +549,15 @@
   }
 
   .o-gridscolfilter-center {
-    max-height: III(250);
+    max-height: px(250);
     overflow: auto;
     overflow: hidden auto;
-    padding: III(5) III(3);
+    padding: px(5) px(3);
   }
 
   .o-gridscolfilter-footer {
-    margin: 0 III(3);
-    padding: III(5) 0;
+    margin: 0 px(3);
+    padding: px(5) 0;
     border-top: $e10 solid var(--color-edge-30);
   }
 
@@ -639,7 +639,7 @@
     padding: 0;
 
     .layer-head {
-      padding: calc($margin-section-50 - III(2)) $margin-popup-inline;
+      padding: calc($margin-section-50 - px(2)) $margin-popup-inline;
       padding-right: calc($height-form-70 + $margin-popup-inline - $margin-section-30);
       border-bottom: $e10 solid var(--color-edge-40);
 
@@ -659,7 +659,7 @@
     }
 
     .layer-body {
-      // min-height: III(200);
+      // min-height: px(200);
       overflow: auto scroll;
       padding: $margin-section-50 $margin-popup-inline $margin-popup-block;
       padding-right: calc($margin-popup-inline - var(--width-scrollbar));
@@ -667,7 +667,7 @@
   }
 
   .p-overlaypanel-close {
-    top: III(8);
+    top: px(8);
     right: calc($margin-popup-inline - $margin-section-30);
   }
 }
@@ -695,8 +695,8 @@
     padding: var(--margin-block) var(--margin-inline);
 
     // &:where(body:has(.dom-nav .div-tablist .toggle :checked) *) {
-    //   padding-top: III(120 + 12);
-    //   padding-bottom: III(12);
+    //   padding-top: px(120 + 12);
+    //   padding-bottom: px(12);
     // }
 
     &.p-dialog-top-left  {
@@ -859,7 +859,7 @@
   .p-dialog-content {
     display: flex;
     flex-direction: column;
-    // min-height: III(200);
+    // min-height: px(200);
     overflow: auto scroll;
     padding: $margin-section-50 $margin-popup-inline $margin-popup-block;
     padding-right: calc($margin-popup-inline - var(--width-scrollbar));
@@ -1117,7 +1117,7 @@
         right: 0;
         bottom: calc(-1 * #{$e10});
         transform: translateX(100%);
-        width: III(32);
+        width: px(32);
         box-shadow: $dropshadow-frozen;
         pointer-events: none;
         will-change: transform;
@@ -1306,13 +1306,13 @@
 
   button.p-datepicker-prev,
   button.p-datepicker-next {
-    min-width: III(28) !important;
-    width: III(28) !important;
-    height: III(28) !important;
+    min-width: px(28) !important;
+    width: px(28) !important;
+    height: px(28) !important;
 
     .p-icon {
-      width: III(14);
-      height: III(14);
+      width: px(14);
+      height: px(14);
     }
   }
   .p-datepicker-title {
