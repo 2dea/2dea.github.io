@@ -6,6 +6,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { PrimeReactProvider } from 'primereact/api';
 
+import 'assets/scss/modules/glyph.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import 'primereact/resources/primereact.css';

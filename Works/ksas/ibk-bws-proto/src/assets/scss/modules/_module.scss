@@ -248,8 +248,8 @@
 
 
 /** Texts */
-.o-text-error  { color: var(--color-error); }
-.o-text-strong  { font-weight: $bold-70; color: var(--color-point-red); }
+.o-text-error  { color: var(--color-error) !important; }
+.o-text-strong  { font-weight: $bold-70 !important; color: var(--color-point-red) !important; }
 
 .o-caption-text  { font-weight: $bold-70; font-size: $font-70; line-height: $line-70; display: block; color: var(--color-text-70); }
 .o-caption-text:not(.align-inherit)  { text-align: center; }

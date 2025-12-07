@@ -235,6 +235,18 @@
 .page-home :is(.home-group:where(._quick)) .m-data-form >.m-footer  { margin-top: auto; }
 
 
+/** 주소검색
+ ---------- */
+
+.o-zipcode  { display: flex; flex-direction: column; gap: $gap-element-30; text-align: left; text-align: start; }
+.o-zipcode >*  { display: flex; align-items: center; }
+.o-zipcode .secondary  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
+.o-zipcode .o-chip  { margin-right: $gap-whitespace-50; }
+.o-zipcode .o-chip:is(.primary *)  { @include getGlobalHidden(); }
+
+.o-zipcode:where(.o-grid-table *)  { padding: { top: px(4); bottom: px(4); } }
+
+
 /** 공지사항
  ---------- */
 
