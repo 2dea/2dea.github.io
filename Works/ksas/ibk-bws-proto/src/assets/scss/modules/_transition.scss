@@ -5,6 +5,10 @@
 :where(:not(.dom-main .div-tablist *, .swiper *)),
   :where(:not(.dom-main .div-tablist *, .swiper *)):before,
   :where(:not(.dom-main .div-tablist *, .swiper *)):after  { transition-duration: 0s !important; }
+
+.p-component-overlay  { z-index: 100; animation-duration: 0s !important; }
+.p-component-overlay-enter  { animation-duration: 0s !important; }
+
 html  { scroll-behavior: auto !important; }
 
 // // .o-section:not(.o-section *):not(.o-grid >.column >*)  {
