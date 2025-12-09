@@ -239,7 +239,7 @@
  ---------- */
 
 .o-zipcode  { display: flex; flex-direction: column; gap: $gap-element-30; text-align: left; text-align: start; }
-.o-zipcode >*  { display: flex; align-items: center; }
+.o-zipcode >*  { display: flex; align-items: center; position: relative; }
 .o-zipcode .secondary  { font-size: $font-40; line-height: $line-40; color: var(--color-text-30); }
 .o-zipcode .o-chip  { margin-right: $gap-whitespace-50; }
 .o-zipcode .o-chip:is(.primary *)  { @include getGlobalHidden(); }
@@ -523,10 +523,16 @@
 .m-theme-select >*  { display: flex; flex-wrap: wrap; gap: $gap-element-90; }
 .m-theme-select >* >*  { flex: 1; min-width: var(--width-card); }
 
+.m-theme-select .card .figure .caption:before  { content: ""; }
+.m-theme-select .card .figure .caption:after  { content: ""; font-size: px(18); display: flex; align-items: center; justify-content: center; position: absolute; top: 0; width: 100%; max-width: none; height: 100%; background-color: inherit; }
+.m-theme-select .card .figure .caption:after  { font-weight: $bold-40; position: absolute; top: px(-29); width: px(24); height: px(24); color: var(--color-text-00); background: var(--color-key1-40); border-radius: 50%; }
+.m-theme-select .card .figure .caption:after  { background: var(--obj-sym-checked) no-repeat 50% /1em; filter: invert(100%); }
+
 .m-theme-select .card:hover .figure img  { border-color: var(--color-edge-70); }
 .m-theme-select .card:has(:checked) .figure img  { border-color: var(--color-key1-40); box-shadow: $dropshadow-40; }
 .m-theme-select .card:has(:checked) .figure .caption  { color: var(--color-key1-40); }
 .m-theme-select .card:not(:has(:checked)) .figure .caption:before  { opacity: 0.0; }
+.m-theme-select .card:not(:has(:checked)) .figure .caption:after  { opacity: 0.0; }
 
 .m-checkslist  { clear: both; padding: 0 $gap-element-90; border: $e10 solid var(--color-edge-40); border-radius: $radius-50; }
 .m-checkslist .check-container  { display: flex; align-items: center; gap: $gap-element-80; }

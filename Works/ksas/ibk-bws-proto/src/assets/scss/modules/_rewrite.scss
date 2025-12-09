@@ -330,6 +330,12 @@
     filter: none;
   }
 
+  .bind:not(span, div) {
+    // &:focus {
+    //   outline: 2px solid;
+    // }
+  }
+
   .bind:where(span, div) {
     display: flex;
     align-items: center;
@@ -354,7 +360,15 @@
       border-radius: inherit;
       box-shadow: none;
       filter: inherit;
+
+      // &:not(.react-select__control) {
+      //   outline: 0;
+      // }
     }
+
+    // &:focus-within {
+    //   outline: 2px solid;
+    // }
 
     .p-dropdown-trigger,
     .p-multiselect-trigger,
@@ -367,6 +381,13 @@
     .p-multiselect-panel {
       min-width: 100%;
     }
+  }
+
+  &:has(.bind:focus-within) {
+    // outline: 2px solid;
+    // box-shadow: $dropshadow-40;
+    // box-shadow: $dropshadow-40, 0 0 0 1px rgba(#91c5ff, calc(100 / 100));
+    box-shadow: 0 0 0 2px rgba(#2968F9, calc(30 / 100));
   }
 
   .p-inputtext:not(input, select, textarea),

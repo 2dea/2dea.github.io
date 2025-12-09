@@ -223,7 +223,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
 .dom-header .div-account  { grid-column: 2; font-size: $font-40; line-height: $line-40; display: flex; justify-content: flex-end; /* position: absolute; */ left: 0; top: 0; right: 0; height: calc(var(--rem) * var(--height-header-account)); }
 .dom-header .div-account .o-icon:before  { background-position: var(--theme-header-icon-pos, 0%); }
-.dom-header .div-account >dl  { --gap: #{$e10}; display: flex; align-items: center; gap: var(--gap); }
+.dom-header .div-account >dl  { --gap: #{$e10}; display: flex; align-items: center; gap: var(--gap); position: relative; }
 .dom-header .div-account >dl >*  { min-width: 0; }
 .dom-header .div-account >dl >* >*  { display: flex; align-items: center; }
 .dom-header .div-account >dl >dt  { @include getGlobalHidden(1); }
@@ -319,6 +319,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .dom-nav .div-search:focus-within  { box-shadow: $dropshadow-40; }
 .dom-nav .div-search:not(:focus-within) .result  { display: none; }
 .dom-nav .div-search .p-autocomplete-panel  { min-width: px(268) !important; }
+
+.dom-nav .div-search:focus-within .o-form  { box-shadow: none; }
 
 
 .dom-nav .div-tablist  { margin: 0 $gap-element-90; margin-right: calc($gap-element-90 - $e10); padding: $gap-element-70 0; }

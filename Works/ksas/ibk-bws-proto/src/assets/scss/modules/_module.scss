@@ -349,7 +349,7 @@
 
 
 /** 파일용량 / 문자수 */
-.o-limit  { font-size: $font-40; line-height: $line-40; display: inline-flex; max-width: 100%; white-space: nowrap; }
+.o-limit  { font-size: $font-40; line-height: $line-40; display: inline-flex; position: relative; max-width: 100%; white-space: nowrap; }
 .o-limit >.head  { @include getGlobalHidden(); }
 .o-limit >.data  { display: flex; gap: $gap-whitespace-30; }
 .o-limit >.data >:not(.value)  { color: var(--color-text-20); }
@@ -863,7 +863,11 @@
 .o-steps .label .addition >.item  { flex: none; display: flex; align-items: center; }
 .o-steps >:after  { position: absolute; width: $e10; height: $e10; background: var(--theme, Black); }
 
+.o-steps .order .count:after  { content: ""; background: var(--obj-sym-checked) no-repeat 50% /1em; filter: invert(100%); }
+
+
 // .o-steps >:not([aria-label="진행 완료"]):after  { background-color: var(--color-edge-40); }
+.o-steps >:is([aria-label="진행 완료"]) .order .count  { color: $tp; }
 .o-steps >:not([aria-label="진행 완료"]) .order .count:after  { opacity: 0.0; }
 .o-steps >:is([aria-label="진행 단계"]) .order .count  { z-index: 3; }
 .o-steps >:is([aria-label="진행 단계"]) .label .main  { font-weight: $bold-70; }
@@ -1327,6 +1331,11 @@
 .o-check.type-swoosh:hover:not(:active) >:checked ~i  { color: var(--color-checked-hover); }
 .o-check.type-swoosh >:disabled ~i  { --surface: var(--surface-disabled); color: var(--color-enabled) !important; filter: none; }
 
+.o-check.type-swoosh >input:not([type="radio"]:not(.mode-checkbox)) ~i:before  { content: "" !important; background: var(--obj-sym-checked) no-repeat 50% /1em; }
+.o-check.type-swoosh >input:not([type="radio"]:not(.mode-checkbox)):checked:is(:disabled) ~i:before  { filter: grayscale(1.0) opacity(0.2) brightness(0.9); }
+.o-check.type-swoosh >input:not([type="radio"]:not(.mode-checkbox)):checked:not(:disabled) ~i:before  { filter: var(--filter-control-40); }
+.o-check.type-swoosh >input:not([type="radio"]:not(.mode-checkbox)):checked:not(:disabled):not(:active):hover ~i:before  { filter: var(--filter-control-70); }
+
 
 .o-check.type-icon  { --height-int: var(--height-icon-50); --height-outer: calc(var(--rem) * var(--height-form-50)); width: var(--height-outer, var(--height)); height: var(--height-outer, var(--height)); }
 // .o-check:not(.type-icon) .o-icon  { visibility: hidden; }
@@ -1368,7 +1377,7 @@
 .o-image-check._menu-toggle >:checked ~i   { transform: rotateY(-540deg); }
 
 
-.o-approve  { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: px(118); text-align: center; }
+.o-approve  { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; min-height: px(118); text-align: center; }
 .o-approve:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 .o-approve:before  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
 .o-approve:before  { content: "check"; font-size: px(18); display: flex; align-items: center; justify-content: center; width: px(24); max-width: none; height: px(24); margin-bottom: px(10); color: var(--color-key1-40); background-color: var(--color-ground2-blue-30); border-radius: 50%; animation: none; }
@@ -1388,6 +1397,12 @@
 
 .o-approve:where([aria-label="결재 대기"])  { background-color: var(--color-ground2-blue-40);  animation: ANI_approveBlink 1s step-end 0s 60; }
 .o-approve:where([aria-label="결재 예정"], [aria-label="결재 대기"]):before  { color: var(--color-icon-40); background-color: var(--color-ground-40); }
+
+.o-approve  { padding-top: px(34); }
+.o-approve:before  { content: ""; position: absolute; top: px(22); }
+.o-approve:after  { content: ""; font-size: px(18); display: flex; align-items: center; justify-content: center; width: px(24); max-width: none; height: px(24); margin-bottom: px(10); border-radius: 50%; animation: none; }
+.o-approve:after  { position: absolute; top: px(22); background: var(--obj-sym-checked) no-repeat 50% /1em; filter: var(--filter-control-40); }
+.o-approve:where([aria-label="결재 예정"], [aria-label="결재 대기"]):after  { filter: grayscale(1.0) opacity(0.2) brightness(0.9); }
 
 :has(.o-approve):is(.o-data-table.type-approve tr >*)  { padding: 0; }
 
