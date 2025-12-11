@@ -78,6 +78,7 @@
 .o-icon:where(.o-image-button.size-50):before,  .o-icon:where(.o-image-button.size-50) >:is( object, img, svg ),
   .o-icon:where(.m-header .m-binds .o-image-button):before,  .o-icon:where(.m-header .m-binds .o-image-button) >:is( object, img, svg ),
   .o-icon:where(.m-file-list .card >.binds .o-image-button):before,  .o-icon:where(.m-file-list .card >.binds .o-image-button) >:is( object, img, svg ),
+  .o-icon:where(.m-flex-list.case-icon *):before,  .o-icon:where(.m-flex-list.case-icon *) >:is( object, img, svg ),
   .o-icon.wdth-50:before,  .o-icon.wdth-50 >:is( object, img, svg )  { font-size: $height-icon-50; }
 .o-icon:where(.o-image-button.size-70):before,  .o-icon:where(.o-image-button.size-70) >:is( object, img, svg ),
   .o-icon.wdth-70:before,  .o-icon.wdth-70 >:is( object, img, svg )  { font-size: $height-icon-70; }
@@ -94,6 +95,7 @@
 .o-icon:where(.o-image-button.size-50):before,
 .o-icon:where(.m-header .m-binds .o-image-button):before,
 .o-icon:where(.m-file-list .card >.binds .o-image-button):before,
+.o-icon:where(.m-flex-list.case-icon *):before,
 .o-icon.wdth-50:before  {
   @include icon-flexed(20);
 }
@@ -331,6 +333,8 @@
 .o-heading:where([class*=" level"]:not(.level1)):before  { font-size: calc(var(--width-bullet)); width: 1em; height: 1em; margin-left: calc(-1 * (var(--width-bullet) + var(--gap))); background: var(--obj-sym-heading-level2) no-repeat 50% /100%; }
 .o-heading.level3:before  { background-image: var(--obj-sym-heading-level3); }
 .o-heading.level4:before  { background-image: var(--obj-sym-heading-level4); }
+
+.o-heading .o-check >.label  { font-weight: $bold-40; font-size: $font-50; line-height: $line-50; }
 
 
 

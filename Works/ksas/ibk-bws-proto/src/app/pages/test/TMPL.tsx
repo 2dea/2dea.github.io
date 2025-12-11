@@ -1150,6 +1150,130 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
+                              <Label label={`.o-icon [선 (그룹아이콘)]`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-flex-list flow-inline case-icon">
+                                <Icon icon="alert-circle" />
+                                <Icon icon="consult-alert" />
+                                <Icon icon="arrow-down" />
+                                <Icon icon="arrow-left" />
+                                <Icon icon="arrow-right" />
+                                <Icon icon="arrow-up" />
+                                <Icon icon="attach-add" />
+                                <Icon icon="attach" />
+                                <Icon icon="calendar" />
+                                <Icon icon="close" />
+                                <Icon icon="column-toggle" />
+                                <Icon icon="consult" />
+                                <Icon icon="contacts" />
+                                <Icon icon="delete" />
+                                <Icon icon="download" />
+                                <Icon icon="du-down" />
+                                <Icon icon="du-left" />
+                                <Icon icon="du-right" />
+                                <Icon icon="du-up" />
+                                <Icon icon="du2-down" />
+                                <Icon icon="du2-left" />
+                                <Icon icon="du2-right" />
+                                <Icon icon="du2-up" />
+                                <Icon icon="edit" />
+                                <Icon icon="file" />
+                                <Icon icon="filter-alt" />
+                                <Icon icon="globe-portal" />
+                                <Icon icon="help" />
+                                <Icon icon="tooltip-help" />
+                                <Icon icon="home" />
+                                <Icon icon="image-upload" />
+                                <Icon icon="image" />
+                                <Icon icon="link" />
+                                <Icon icon="lock" />
+                                <Icon icon="maximize" />
+                                <Icon icon="mdi-close" />
+                                <Icon icon="menu-alt" />
+                                <Icon icon="menu-toggle" />
+                                <Icon icon="menu" />
+                                <Icon icon="page-down" />
+                                <Icon icon="page-up" />
+                                <Icon icon="print" />
+                                <Icon icon="refresh" />
+                                <Icon icon="search" />
+                                <Icon icon="settings" />
+                                {/* <Icon icon="sort" /> */}
+                                <Icon icon="sum-minus" />
+                                <Icon icon="sum-plus" />
+                                <Icon icon="task-multi" />
+                                <Icon icon="task-single" />
+                                <Icon icon="tel" />
+                                <Icon icon="upload" />
+                                <Icon icon="watching" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`.o-icon [면 (그룹아이콘)]`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-flex-list flow-inline case-icon">
+                                <Icon icon="arrow-drop-down" />
+                                <Icon icon="arrow-drop-right" />
+                                <Icon icon="arrow-drop-up" />
+                                <Icon icon="branch" />
+                                <Icon icon="move" />
+                                <Icon icon="repair" />
+                                <Icon icon="sort" />
+                                <Icon icon="star" />
+                                <Icon icon="favorite" />
+                                <Icon icon="vehicle" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`.o-icon [고정 (단일아이콘)]`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-flex-list flow-inline case-icon">
+                                <Icon icon="alert-octagram" />
+                                <Icon icon="breadcrumb-home" />
+                                <Icon icon="arrow-drop2-down" />
+                                <Icon icon="excel-download" />
+                                <Icon icon="excel-download-label" />
+                                <Icon icon="excel-upload" />
+                                <Icon icon="excel-upload-label" />
+                                <Icon icon="folder-open" />
+                                <Icon icon="folder" />
+                                <Icon icon="grid-added" />
+                                <Icon icon="grid-edited" />
+                                <Icon icon="home-aside-contacts" />
+                                <Icon icon="home-aside-qna" />
+                                <Icon icon="home-set-branch" />
+                                <Icon icon="home-set-notification" />
+                                <Icon icon="home-set-theme" />
+                                <Icon icon="mdi-lock-locked" />
+                                <Icon icon="mdi-lock" />
+                                <Icon icon="memo-empty" />
+                                <Icon icon="memo" />
+                                <Icon icon="new" />
+                                <Icon icon="popup-close" />
+                                <Icon icon="rank-down" />
+                                <Icon icon="rank-hold" />
+                                <Icon icon="rank-up" />
+                                <Icon icon="remove" />
+                                <Icon icon="shield-secure" />
+                                <Icon icon="sort-asc" />
+                                <Icon icon="sort-dec" />
+                                <Icon icon="status-range-20" />
+                                <Icon icon="status-range-50" />
+                                <Icon icon="status-range-80" />
+                                <Icon icon="user-id" />
+                                <Icon icon="user-pw" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
                               <Label label={`.o-chip`} require={false} />
                             </th>
                             <td colSpan={5}>

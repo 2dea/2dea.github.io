@@ -163,8 +163,10 @@
   }
 
   @supports (font-variation-settings: 'wght' 700) {
-    /* --typo-sans:        'Noto Sans', 'Noto Sans KR', 'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR'; */
     --typo-sans:        'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
+    /* --typo-sans:        'Noto Sans', 'Noto Sans KR', 'Asta Sans', 'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR'; */
+
+    /* --text-spacing:       -0.05em; */
   }
 
   @supports (line-height: round(down, 1, 1)) {

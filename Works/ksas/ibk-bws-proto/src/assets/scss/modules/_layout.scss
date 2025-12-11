@@ -271,9 +271,14 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 // // .dom-header .div-nav-global .depthnav:where(.div-nav-global >:hover >:hover *)  { transition: none; }
 .dom-header .div-nav-global .depthnav >*  { min-width: 0; }
 
+/*
 .dom-header .div-nav-global .depthnav  { height: 0; transition: none; }
 .dom-header .div-nav-global:not(.is-hovered) .depthnav:is(.div-nav-global >* >:hover *),
   .dom-header .div-nav-global:not(.is-hovered) .depthnav:hover  { height: calc(100vh * 3 / 5); height: px(448); }
+ */
+
+.dom-header .div-nav-global .depthnav:where(:not(.div-nav-global >* >:hover *)),
+  .dom-header .div-nav-global:is(.is-hovered) .depthnav  { z-index: auto; height: 0; box-shadow: none; transition: height 0.01s !important; }
 
 .dom-header .div-nav-global .depthnav .link  { display: flex; align-items: center; color: inherit; }
 .dom-header .div-nav-global .depthnav .link >*  { @include inc-ellipsis2(); flex: 1; min-width: 0; }
