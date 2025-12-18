@@ -178,7 +178,7 @@
 }
 
 /** Type Selector */
-*  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+*  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 0 solid; }
 :before,  :after  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; }
 /* @media
   screen and (prefers-reduced-motion: reduce)  {
@@ -194,7 +194,7 @@ html  {
 }
 body  {
   font-family: inherit; font-family: var(--typo-base, inherit); font-size: 0.8em; line-height: inherit;
-  overflow-y: auto; margin: 0; color: WindowText; background: Transparent;
+  overflow-y: auto; margin: 0; color: CanvasText; background: Transparent; accent-color: Highlight;
   word-break: break-word; word-break: keep-all; word-wrap: break-word; overflow-wrap: anywhere; letter-spacing: normal;
   overscroll-behavior: inherit;
 }
@@ -202,7 +202,7 @@ body  {
   body  { word-wrap: break-word; }
 } */
 
-input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; color: inherit; text-shadow: inherit; }
+input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; border: 1px solid ButtonBorder; color: inherit; text-shadow: inherit; }
 pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
 pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
 h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }

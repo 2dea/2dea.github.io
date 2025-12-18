@@ -61,6 +61,12 @@
   }
 }
 
+button {
+  &:where(.p-component *) {
+    border-width: 0;
+  }
+}
+
 .p-link {
   text-align: left;
   background-color: transparent;
@@ -100,6 +106,7 @@
 .p-button {
   min-width: 0;
   min-height: 0;
+  border-width: 0;
   background-color: transparent;
 }
 

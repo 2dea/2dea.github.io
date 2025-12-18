@@ -311,7 +311,10 @@
 .o-link.texted-button._primary:hover  { --theme: var(--color-key1-70); }
 .o-link.texted-button._primary:not(:hover) .o-icon:before  { background-position: 50%; }
 
-.o-link.texted-button._normal  { --theme: var(--color-link1-40); }
+.o-link.texted-button._secondary  { --theme: var(--color-link1-40); }
+.o-link.texted-button._secondary:hover  { --theme: inherit; }
+
+.o-link.texted-button._normal  { --theme: inherit; }
 .o-link.texted-button._normal:hover  { --theme: inherit; }
 
 .o-link:not(.texted-button)._normal  { --theme: inherit; text-decoration: underline; }
@@ -1291,7 +1294,7 @@
 .o-check  { border-radius: $radius-50; transition: 0.12s; }
 .o-check >*  { transition: inherit; }
 .o-check:has([type="radio"]:not(.mode-checkbox)) >:not(.label)  { border-radius: 50%; }
-.o-check input  { appearance: none; /* opacity: 0.001; */ }
+.o-check input  { appearance: none; /* opacity: 0.001; */ border-width: 0; }
 .o-check >i  { --surface: Transparent; display: flex; align-items: center; border-radius: calc(var(--rem) * 2); }
 .o-check >i:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 .o-check >i:before  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }

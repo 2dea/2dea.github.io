@@ -146,11 +146,11 @@ html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable bot
 /** Define Fonts
  --------------- */
 
-*  { letter-spacing: var(--text-spacing); }
+*  { border-color: var(--color-edge-40, currentColor); letter-spacing: var(--text-spacing); }
 // :before,  :after  { border-radius: inherit; letter-spacing: inherit; animation: inherit; transition: inherit; }
 :before,  :after  { border-radius: inherit; letter-spacing: inherit; }
 html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); accent-color: var(--color-key1-70, #0078d7); }
-body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); }
+body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-40); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); accent-color: var(--accent, DodgerBlue); }
 /* @media
   screen and (not (max-width: 1920px))  {
     html  { font-size: var(--root-em-base, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
