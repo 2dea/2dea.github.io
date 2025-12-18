@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+// var(--cell-pdbs, var(--cell-pdb))    var(--cell-pdie, var(--cell-pdi))    var(--cell-pdbe, var(--cell-pdb))    var(--cell-pdis, var(--cell-pdi))
 @property --color-scrollbar-hidden-track  {
   syntax: '<color>';
   inherits: true;
