@@ -46,7 +46,7 @@ function HSPBT0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지자동배송인도' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지자동배송인도' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function HSPBT0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -131,7 +131,7 @@ function HSPBT0201M() {
               </div> */}
 
               <div className="group _primary">
-                <CommonButton label="임시저장" className="_solid-primary" />
+                <CommonButton label="임시저장" className="_lined-primary" />
                 <CommonButton label="인도등록" className="_solid-primary" />
               </div>
             </div>

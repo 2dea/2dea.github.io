@@ -101,7 +101,7 @@ function FMTCC0101P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">호송금인수증등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">호송금인수증 등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -281,7 +281,8 @@ function FMTCC0101P01() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="확인" className="_solid-primary" />
+              <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
         </div>

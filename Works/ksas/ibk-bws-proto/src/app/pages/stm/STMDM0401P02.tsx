@@ -133,7 +133,27 @@ function STMDM0401P02() {
                     </div>
                   </div>
 
-                  <div className="o-field colspan-2">
+                  <div className="o-field">
+                    <Label label={`소유구분`} require={true} />
+                    <div className="fields">
+                      <div className="o-form _select mode-required wdth-50">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="o-field">
+                    <Label label={`차량 NO`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input wdth-50">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  {/* <div className="o-field colspan-2">
                     <Label label={`소유/차량NO`} require={true} />
                     <div className="fields">
                       <div className="o-form _select mode-required wdth-50">
@@ -144,7 +164,7 @@ function STMDM0401P02() {
                         <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="o-field colspan-3">
                     <Label label={`차종`} require={false} />

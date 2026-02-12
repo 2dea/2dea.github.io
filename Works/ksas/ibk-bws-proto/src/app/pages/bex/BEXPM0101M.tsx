@@ -46,7 +46,7 @@ function BEXPM0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물신청' }];
+  const paths: MenuItem[] = [{ label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function BEXPM0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -112,6 +112,11 @@ function BEXPM0101M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="우편번호검색" className="_lined-secondary" />
+                <CommonButton label="우편물 작성방법" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -119,8 +124,6 @@ function BEXPM0101M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="우편번호검색" className="_lined-primary" />
-                <CommonButton label="우편물 작성방법" className="_lined-primary" />
                 <CommonButton label="신청" className="_solid-primary" />
               </div>
             </div>

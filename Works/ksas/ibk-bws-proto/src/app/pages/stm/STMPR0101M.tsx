@@ -46,7 +46,7 @@ function STMPR0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '출입증/방문증' }, { label: '출입증신청' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '출입증/방문증' }, { label: '출입증신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMPR0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -112,6 +112,9 @@ function STMPR0101M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="하남IT센터신청안내" className="_lined-secondary" />
+              </div>
 
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
@@ -127,7 +130,6 @@ function STMPR0101M() {
 
               {/* 안전관리팀 { @DEV } */}
               <div className="group _primary">
-                <CommonButton label="하남IT센터신청안내" className="_lined-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
 
@@ -495,6 +497,7 @@ function STMPR0101M() {
                     <Tab className="link"><span className="label">02. 신분증사본</span></Tab>
                     <Tab className="link"><span className="label">03. 개인정보동의서</span></Tab>
                     <Tab className="link"><span className="label">04. 보안서약서</span></Tab>
+                    <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
                   </TabList>
                 </div>
 

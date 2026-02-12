@@ -101,7 +101,7 @@ function BSSTN0101P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">채권양도일괄검수등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">채권양도 일괄검수 등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">

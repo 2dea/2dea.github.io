@@ -46,7 +46,7 @@ function TMPL() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품' }, { label: '본부부서조달관리(총무부 외)' }, { label: '(706520)(총무부 외) 중요용지 조달신청 접수' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품' }, { label: '본부부서조달관리(총무부 외)' }, { label: '(706520)(총무부 외) 중요용지 조달신청 접수' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -110,7 +110,7 @@ function TMPL() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -118,6 +118,38 @@ function TMPL() {
 
                 <FavoriteDiv />
               </h1>
+
+              <div className="asides">
+                <div className="consults">
+
+                  <div className="m-consult">
+                    <span className="header">
+                      <strong className="heading">안전문의</strong>
+                    </span>
+                    <span className="bodies">
+                      <span className="o-consult"><strong className="head">안전관리팀</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000, 1234</span></span></span>
+                    </span>
+                  </div>
+
+                  <div className="m-consult">
+                    <span className="header">
+                      <strong className="heading">권한문의</strong>
+                    </span>
+                    <span className="bodies">
+                      <span className="o-consult"><strong className="head">프로세스혁신부</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">1234</span></span></span>
+                      <span className="o-consult"><strong className="head">IT정보부</strong> <span className="data o-icon-text"><Icon icon="consult" /><span className="label">0000</span></span></span>
+                    </span>
+                  </div>
+
+                </div>
+
+                <div className="comments">
+                  <span className="o-icon-text">
+                    <Icon icon="consult-alert" />
+                    <em className="label">반드시 조회 후 신청해주세요.</em>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -547,7 +579,7 @@ function TMPL() {
                     </div>
 
                     <div className="o-legend type-helper style-normal">
-                      <em className="label"><strong className="c-color-text">도착예정일자 : YYYY-MM-DD</strong> (신청일자에 실물 발송한 경우)</em>
+                      <em className="label"><strong className="emph">도착예정일자: <span className="g-bold c-color-point">YYYY-MM-DD</span></strong> 신청일자에 실물을 발송한 경우에 한함</em>
                     </div>
 
                     <div className="o-legend type-helper style-strong">
@@ -726,10 +758,13 @@ function TMPL() {
                               <div className="o-field">
                                 <div className="fields">
                                   <div className="o-form _input mode-required">
-                                    <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                    <AutoComplete className="bind" removeTokenIcon={<Icon icon="remove" />} value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                     <i aria-hidden="true"></i>
                                     <span className="inner-binds">
                                       <ImageButton label="초기화" icon="remove" />
+                                    </span>
+                                    <span className="inner-binds">
+                                      <CommonButton label="검색" className="_normal wdth-auto" />
                                     </span>
                                   </div>
                                 </div>
@@ -1115,6 +1150,130 @@ function TMPL() {
                           </tr>
                           <tr>
                             <th colSpan={1}>
+                              <Label label={`.o-icon [선 (그룹아이콘)]`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-flex-list flow-inline case-icon">
+                                <Icon icon="alert-circle" />
+                                <Icon icon="consult-alert" />
+                                <Icon icon="arrow-down" />
+                                <Icon icon="arrow-left" />
+                                <Icon icon="arrow-right" />
+                                <Icon icon="arrow-up" />
+                                <Icon icon="attach-add" />
+                                <Icon icon="attach" />
+                                <Icon icon="calendar" />
+                                <Icon icon="close" />
+                                <Icon icon="column-toggle" />
+                                <Icon icon="consult" />
+                                <Icon icon="contacts" />
+                                <Icon icon="delete" />
+                                <Icon icon="download" />
+                                <Icon icon="du-down" />
+                                <Icon icon="du-left" />
+                                <Icon icon="du-right" />
+                                <Icon icon="du-up" />
+                                <Icon icon="du2-down" />
+                                <Icon icon="du2-left" />
+                                <Icon icon="du2-right" />
+                                <Icon icon="du2-up" />
+                                <Icon icon="edit" />
+                                <Icon icon="file" />
+                                <Icon icon="filter-alt" />
+                                <Icon icon="globe-portal" />
+                                <Icon icon="help" />
+                                <Icon icon="tooltip-help" />
+                                <Icon icon="home" />
+                                <Icon icon="image-upload" />
+                                <Icon icon="image" />
+                                <Icon icon="link" />
+                                <Icon icon="lock" />
+                                <Icon icon="maximize" />
+                                <Icon icon="mdi-close" />
+                                <Icon icon="menu-alt" />
+                                <Icon icon="menu-toggle" />
+                                <Icon icon="menu" />
+                                <Icon icon="page-down" />
+                                <Icon icon="page-up" />
+                                <Icon icon="print" />
+                                <Icon icon="refresh" />
+                                <Icon icon="search" />
+                                <Icon icon="settings" />
+                                {/* <Icon icon="sort" /> */}
+                                <Icon icon="sum-minus" />
+                                <Icon icon="sum-plus" />
+                                <Icon icon="task-multi" />
+                                <Icon icon="task-single" />
+                                <Icon icon="tel" />
+                                <Icon icon="upload" />
+                                <Icon icon="watching" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`.o-icon [면 (그룹아이콘)]`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-flex-list flow-inline case-icon">
+                                <Icon icon="arrow-drop-down" />
+                                <Icon icon="arrow-drop-right" />
+                                <Icon icon="arrow-drop-up" />
+                                <Icon icon="branch" />
+                                <Icon icon="move" />
+                                <Icon icon="repair" />
+                                <Icon icon="sort" />
+                                <Icon icon="star" />
+                                <Icon icon="favorite" />
+                                <Icon icon="vehicle" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
+                              <Label label={`.o-icon [고정 (단일아이콘)]`} require={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-flex-list flow-inline case-icon">
+                                <Icon icon="alert-octagram" />
+                                <Icon icon="breadcrumb-home" />
+                                <Icon icon="arrow-drop2-down" />
+                                <Icon icon="excel-download" />
+                                <Icon icon="excel-download-label" />
+                                <Icon icon="excel-upload" />
+                                <Icon icon="excel-upload-label" />
+                                <Icon icon="folder-open" />
+                                <Icon icon="folder" />
+                                <Icon icon="grid-added" />
+                                <Icon icon="grid-edited" />
+                                <Icon icon="home-aside-contacts" />
+                                <Icon icon="home-aside-qna" />
+                                <Icon icon="home-set-branch" />
+                                <Icon icon="home-set-notification" />
+                                <Icon icon="home-set-theme" />
+                                <Icon icon="mdi-lock-locked" />
+                                <Icon icon="mdi-lock" />
+                                <Icon icon="memo-empty" />
+                                <Icon icon="memo" />
+                                <Icon icon="new" />
+                                <Icon icon="popup-close" />
+                                <Icon icon="rank-down" />
+                                <Icon icon="rank-hold" />
+                                <Icon icon="rank-up" />
+                                <Icon icon="remove" />
+                                <Icon icon="shield-secure" />
+                                <Icon icon="sort-asc" />
+                                <Icon icon="sort-dec" />
+                                <Icon icon="status-range-20" />
+                                <Icon icon="status-range-50" />
+                                <Icon icon="status-range-80" />
+                                <Icon icon="user-id" />
+                                <Icon icon="user-pw" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colSpan={1}>
                               <Label label={`.o-chip`} require={false} />
                             </th>
                             <td colSpan={5}>
@@ -1166,10 +1325,12 @@ function TMPL() {
                               <ul>
                                 <li><a href="javascript:" className="o-link texted-button _primary">바로가기<Icon icon="link" /></a></li>
                                 <li><a href="javascript:" className="o-link _normal">Links (._normal)</a></li>
-                                <li><a href="javascript:" className="o-link texted-button _normal">Links (a.texted-button._normal)(미사용)</a></li>
+                                <li><a href="javascript:" className="o-link texted-button _normal">Links (a.texted-button._normal)</a></li>
                                 <li><a href="javascript:" className="o-link texted-button _primary">Links (a.texted-button._primary)</a></li>
-                                <li><button type="button" className="o-link texted-button _normal">Links (button.texted-button._primary)(미사용)</button></li>
+                                <li><a href="javascript:" className="o-link texted-button _secondary">Links (a.texted-button._secondary)(미사용)</a></li>
+                                <li><button type="button" className="o-link texted-button _normal">Links (button.texted-button._normal)(미사용)</button></li>
                                 <li><button type="button" className="o-link texted-button _primary">Links (button.texted-button._primary)(미사용)</button></li>
+                                <li><button type="button" className="o-link texted-button _secondary">Links (button.texted-button._secondary)(미사용)</button></li>
                               </ul>
                             </td>
                           </tr>
@@ -1683,7 +1844,7 @@ function TMPL() {
 
                                 <span className="addition">
                                   <span className="item name">제갈공명</span>
-                                  <span className="item date">2025-03-10</span>
+                                  <span className="item date">2025-03-10 23:59:59</span>
                                 </span>
                               </span>
                             </li>
@@ -2304,6 +2465,20 @@ function TMPL() {
                   </div>
 
                   <div className="main _primary">
+                    <div className="m-total">
+                      <dl className="m-defines">
+                        <div className="group">
+                          <dt className="head">신청금액합계</dt>
+                          <dd className="data">200,000,000</dd>
+                        </div>
+
+                        <div className="group">
+                          <dt className="head">결정금액합계</dt>
+                          <dd className="data">200,000,000</dd>
+                        </div>
+                      </dl>
+                    </div>
+
                     <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                     <div className="o-grid-table p-datatable">
                       <div className="table-container p-datatable-wrapper">
@@ -2591,7 +2766,8 @@ function TMPL() {
 
                               <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
-                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                // <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                                <tr key={idx} className={`${idx === 0 ? 'p-highlight' : idx === 1 ? 'p-x-status-20' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                                   <td><InputCheck label="선택" labelHidden /></td>
                                   <td>{idx + 1}</td>
                                   <td>프로세스혁신</td>

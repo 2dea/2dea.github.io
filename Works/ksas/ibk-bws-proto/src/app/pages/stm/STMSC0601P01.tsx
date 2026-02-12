@@ -1,5 +1,5 @@
 /**
-  * @description 재난·안전관리 > 도급사업관리 > 합동점검표 등록 ~ (LP)합동점검표 등록
+  * @description 재난·안전관리 > 도급사업관리 > 합동점검표등록 ~ (LP)합동점검표등록
  */
 
 // dependency
@@ -101,7 +101,7 @@ function STMSC0601P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">합동점검표 등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">합동점검표등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -1371,7 +1371,7 @@ function STMSC0601P01() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)합동점검표 등록 [wdth-40p(w770)]</span>
+              <span className="label">(P)합동점검표등록 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>

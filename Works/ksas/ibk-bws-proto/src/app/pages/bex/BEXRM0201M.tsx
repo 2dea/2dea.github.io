@@ -41,7 +41,7 @@ function BEXRM0201M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '등기우편물' }, { label: '등기우편물관리대장' }];
+  const paths: MenuItem[] = [{ label: '행내등기·우편물' }, { label: '등기우편물' }, { label: '등기우편물관리대장' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function BEXRM0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -107,6 +107,12 @@ function BEXRM0201M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+
+              <div className="group">
+                <CommonButton label="행내등기" className="_lined-secondary" />
+                <CommonButton label="이미지보기" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -114,10 +120,8 @@ function BEXRM0201M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="행내등기" className="_lined-primary" />
-                <CommonButton label="이미지보기" className="_lined-primary" />
-                <CommonButton label="인도취소" className="_lined-primary" />
-                <CommonButton label="인도" className="_solid-primary" />
+                <CommonButton label="인수취소" className="_lined-primary" />
+                <CommonButton label="인수" className="_solid-primary" />
                 <CommonButton label="인수정보등록" className="_solid-primary" />
                 <CommonButton label="로봇배송결과" className="_solid-primary" />
                 <CommonButton label="로봇배송등록" className="_solid-primary" />

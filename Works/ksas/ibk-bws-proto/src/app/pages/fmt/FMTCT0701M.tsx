@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 원화현수송 > 자금현송명령부관리(업무센터)
+ * @description 자금현수송 > 원화현수송 > 자금현송명령부(업무센터)
  */
 
 // dependency
@@ -41,7 +41,7 @@ function FMTCT0701M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화현수송' }, { label: '자금현송명령부관리(업무센터)' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '원화현수송' }, { label: '자금현송명령부(업무센터)' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,11 +94,11 @@ function FMTCT0701M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">자금현송명령부관리(업무센터)</span>
+                <span className="label">자금현송명령부(업무센터)</span>
 
                 <FavoriteDiv />
               </h1>
@@ -122,7 +122,7 @@ function FMTCT0701M() {
 
               <div className="group _primary">
                 <CommonButton label="저장" className="_solid-primary" />
-                <CommonButton label="결재요청" className="_solid-primary _approve" />
+                <CommonButton label="결재요청" className="_solid-primary" />
               </div>
             </div>
 
@@ -195,9 +195,9 @@ function FMTCT0701M() {
                   </div>
 
                   <div className="o-field">
-                    <Label label={`상대부점`} require={true} />
+                    <Label label={`상대부점`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
+                      <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
@@ -216,6 +216,16 @@ function FMTCT0701M() {
                       </div>
                     </div>
                   </div>
+
+                  <div className="o-field">
+                    <Label label={`현송업체`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="binds">
@@ -227,12 +237,13 @@ function FMTCT0701M() {
           </div>
 
           <Tabs className="m-tabs react-tabs" defaultIndex={0}>
-            <div className="m-tab type2 type-step">
+            {/* <div className="m-tab type2 type-step">
               <TabList className="lists">
                 <Tab className="link"><span className="label">등록정보</span></Tab>
                 <Tab className="link"><span className="label">자금현송명령부</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
-            </div>
+            </div> */}
 
             <TabPanel className="m-tabs-panel react-tabs__tab-panel">
               <div className="o-grid">
@@ -440,7 +451,13 @@ function FMTCT0701M() {
                                 </div>
                               </td>
                               <th colSpan={1}>
-                                <Label label={`출발시각`} require={true} />
+                                <Label label={`출발시각`} require={false} />
+                              </th>
+                              <td colSpan={1}>
+                                11:20
+                              </td>
+                              <th colSpan={1}>
+                                <Label label={`도착시각`} require={true} />
                               </th>
                               <td colSpan={1}>
                                 <div className="o-field">
@@ -451,12 +468,6 @@ function FMTCT0701M() {
                                     </div>
                                   </div>
                                 </div>
-                              </td>
-                              <th colSpan={1}>
-                                <Label label={`도착시각`} require={false} />
-                              </th>
-                              <td colSpan={1}>
-
                               </td>
                             </tr>
                           </tbody>
@@ -475,7 +486,7 @@ function FMTCT0701M() {
 
                   <div className="o-section">
                     <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">자금현송명령부</span></h2>
+                      <h2 className="o-heading level2"><span className="label">자금현송명령부현황</span></h2>
 
                       <div className="o-length">
                         <span className="head">전체</span>

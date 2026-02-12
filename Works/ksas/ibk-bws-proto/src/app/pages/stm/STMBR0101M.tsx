@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 버스배차신청 > 배차신청
+ * @description 재난·안전관리 > 버스배차신청 > 버스배차신청
  */
 
 // dependency
@@ -46,7 +46,7 @@ function STMBR0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '배차신청' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '버스배차신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,11 +99,11 @@ function STMBR0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">배차신청</span>
+                <span className="label">버스배차신청</span>
 
                 <FavoriteDiv />
               </h1>
@@ -130,15 +130,13 @@ function STMBR0101M() {
 
               {/* 영업점 { @DEV } */}
               <div className="group _primary">
-                <CommonButton label="결재취소요청" className="_solid-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
 
               {/* 안전관리팀 { @DEV } */}
               <div className="group _primary">
                 <CommonButton label="배차정보취소" className="_lined-primary" />
-                <CommonButton label="배차정보등록" className="_lined-primary" />
-                <CommonButton label="승인요청취소" className="_lined-primary" />
+                <CommonButton label="배차정보등록" className="_solid-primary" />
                 <CommonButton label="반려" className="_lined-primary" />
                 <CommonButton label="승인" className="_solid-primary" />
               </div>

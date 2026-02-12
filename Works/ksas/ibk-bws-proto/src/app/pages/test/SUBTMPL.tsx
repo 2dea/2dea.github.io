@@ -815,6 +815,7 @@ function SUBTMPL() {
                                 <i className="o-icon _arrow-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-right wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-up wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _attach-add wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _attach wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _calendar wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _close wdth-50" aria-hidden="true"></i>
@@ -827,9 +828,14 @@ function SUBTMPL() {
                                 <i className="o-icon _du-left wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-right wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _du-up wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du2-down wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du2-left wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du2-right wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _du2-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _edit wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _file wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _filter-alt wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _globe-portal wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _help wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _tooltip-help wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _home wdth-50" aria-hidden="true"></i>
@@ -855,6 +861,7 @@ function SUBTMPL() {
                                 <i className="o-icon _task-single wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _tel wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _upload wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _watching wdth-50" aria-hidden="true"></i>
                               </div>
                             </td>
                           </tr>
@@ -869,6 +876,7 @@ function SUBTMPL() {
                             <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _arrow-drop-down wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _arrow-drop-right wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _arrow-drop-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _branch wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _move wdth-50" aria-hidden="true"></i>
@@ -891,6 +899,8 @@ function SUBTMPL() {
                             <td>
                               <div className="m-flex-list flow-inline">
                                 <i className="o-icon _alert-octagram wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _breadcrumb-home wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _arrow-drop2-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-download wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-download-label wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _excel-upload wdth-50" aria-hidden="true"></i>
@@ -899,14 +909,22 @@ function SUBTMPL() {
                                 <i className="o-icon _folder wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-added wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _grid-edited wdth-50" aria-hidden="true"></i>
-                                <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-aside-contacts wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-aside-qna wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-set-branch wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-set-notification wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _home-set-theme wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _mdi-lock-locked wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _mdi-lock wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _memo-empty wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _memo wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _new wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _popup-close wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _rank-down wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _rank-hold wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _rank-up wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _remove wdth-50" aria-hidden="true"></i>
+                                <i className="o-icon _shield-secure wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-asc wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _sort-dec wdth-50" aria-hidden="true"></i>
                                 <i className="o-icon _status-range-20 wdth-50" aria-hidden="true"></i>

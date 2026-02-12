@@ -125,16 +125,9 @@ function FEMCT0101P01() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`계약구분`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            지방
-                          </td>
-
-                          <th colSpan={1}>
                             <Label label={`계약명`} require={false} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             (지방)물류운송대행계약서
                           </td>
                         </tr>
@@ -162,7 +155,7 @@ function FEMCT0101P01() {
                             <span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`총 계약금액`} require={false} />
+                            <Label label={`전담 총 계약금액`} require={false} />
                           </th>
                           <td colSpan={1}>
                             8,000,000,000

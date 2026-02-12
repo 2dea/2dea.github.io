@@ -43,7 +43,7 @@ function DEX() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품' }, { label: '본부부서조달관리(총무부 외)' }, { label: '(706520)(총무부 외) 중요용지 조달신청 접수' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품' }, { label: '본부부서조달관리(총무부 외)' }, { label: '(706520)(총무부 외) 중요용지 조달신청 접수' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -97,17 +97,24 @@ function DEX() {
       {/*
       스케줄
       <></>
+
+      08/11 월 ADMNT0101M 가로사이즈 체크 하기
+      08/08 금
+      FMTFT0801P02 화폐이미지보기
+
         2025/08/01  업무우선순위
-          <피그마> CMP001701P 	설정(마이페이지) ->  있음
+          <피그마> CMP001701P 설정(마이페이지) ->  있음
+
           <완료 80%> CMP000101P 미처리업무관리 #2 : 완료 90% 08/01: UI 확인 필요 : 기획서 공통 > #2 : 2-1, 3-1 버튼 및 텍스트 링크
           <완료>CMP000901P	 메모(업무별) ppt #17
 
           [공통]
             a. <완료 08/01: 80%> CMP000601P 주소검색 (chip )
             b. <완료 08/01>BSSRM0101P01 : 	공지(메모/알림)관리
-            c. 진행 중 7/31 <피그마> CMP001501P : 결재요청(출납책임자, 부점장) ->
-                : content editor -> td를 true 로 input 처럼 사용~ ppt #24
             d. <완료 08/01> CMP000101P 미처리업무관리, CMP000102P	미처리업무등록관리
+            c. <완료 80% 08/04 : 결재선그룹 - border-bottom 값, hover색상, state-edit 높이 값 체크 필요 > <피그마> CMP001501P : 결재요청(출납책임자, 부점장) ->
+                  [기획내용확인필요 #23] 7-1 안전관리팀 팀장 그리드 맨 하단에 고정...?
+                : content editor -> td를 true 로 input 처럼 사용~ ppt #24
 
           [영업지원]
             <완료 70%> BSSCR0101P01 : 캘린더신청 > 공지이미지관리   #103
@@ -116,14 +123,17 @@ function DEX() {
           [중요용지·용도품(영업점)]
             <완료 07/31>BSPRQ0101P01 : 중요용지신청안내
 
-            외국통화견양집
+            외국통화견양집 2.10 #175
 
           [ 검색해보기 ]
           cr lf: 윈도우 vs OS
 
           BSPRQ0401M
 
-          //
+          // vscode: Emmet commands and keybindings
+
+          GNB, LNB
+          수정사항                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ```1
 
 -----------------------------------// ----------------------------------------
 
@@ -230,23 +240,20 @@ function DEX() {
 
 
       2025-06-20 금 :
-        - ing:영업점 시작 했음:
-            확인필요 후 , 월요일 06-23 완료 처리 예정:
+
+        버튼 메모:ㅣ FEMDA0201M : 불일치 + 오른쪽 위치 한 '검증' 버튼
               1. BSPDU0301P01  버튼 ' 온누리스캔내역 조회' 등..
               2. BSPDU0301P03: 유의사항 UI 체크확인 필요 및 버튼 ' 스캔등록 ' 의 버튼들 Order Lists
-
-          메모: 열쇠등록관리( STMKY0201M ) 기획업데이트 적용 완료
-        - done본부 #211 HSPDU0801P04 이후 부터~ 폐기취소(본부)
 
         placeHolder: 내용 / 비고 / 메모 / 사항 placeholder="내용을 입력해주세요"
 
       2025-16-18 수 : 업데이트 내용: 모든 팝업에 modal={true} 기본: dim  처리 있음
         예외: '확인' 버튼만 있는 경우! -> modal={false}  -> 조회성 모달!
-      ~ 6/17 행내등기
+
 
 완료 메시지
 <td class="auth"><span class="name DEL">김진영</span></td>
-<td class="done"><span class="date done">2025-07-28</span></td>
+<td class="done"><span class="date done">2025-08-13</span></td>
 
 about:blank
 
@@ -966,6 +973,27 @@ about:blank
           </div>
         </div>
         {/* <!-- // Contents { @DEV } --> */}
+
+
+
+        <div className="main _primary">
+
+
+          <div className="m-total">
+            <dl className="m-defines">
+              <div className="group">
+                <dt className="head">신청금액합계</dt>
+                <dd className="data">200,000,000</dd>
+              </div>
+
+              <div className="group">
+                <dt className="head">결정금액합계</dt>
+                <dd className="data">200,000,000</dd>
+              </div>
+            </dl>
+          </div>
+
+        </div>
       </div>
 
       {/*

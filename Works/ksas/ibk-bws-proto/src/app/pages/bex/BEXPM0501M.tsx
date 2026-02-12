@@ -1,5 +1,5 @@
 /**
- * @description 행내등기·우편물 > 우편물 > 등기번호등록/조회
+ * @description 행내등기·우편물 > 우편물 > 등기번호조회
  */
 
 // dependency
@@ -41,7 +41,7 @@ function BEXPM0501M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '우편물' }, { label: '등기번호등록/조회' }];
+  const paths: MenuItem[] = [{ label: '행내등기·우편물' }, { label: '우편물' }, { label: '등기번호조회' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,11 +94,11 @@ function BEXPM0501M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">등기번호등록/조회</span>
+                <span className="label">등기번호조회</span>
 
                 <FavoriteDiv />
               </h1>

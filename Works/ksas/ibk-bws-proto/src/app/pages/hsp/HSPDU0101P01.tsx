@@ -99,7 +99,7 @@ function HSPDU0101P01() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
         header={<h3 className="o-heading"><span className="label">오손이력조회</span></h3>}
       >
@@ -246,6 +246,14 @@ function HSPDU0101P01() {
                 </div>
               </div>
 
+            </div>
+          </div>
+        </div>
+
+        <div className="div-footer">
+          <div className="m-binds type-end">
+            <div className="group _primary">
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>

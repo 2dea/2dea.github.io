@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" conten)t="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>사용자권한관리</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/ems_common.css">
+    <script type="text/javascript" src="../../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div class="contents" style="width: 100% !important;">
+        <!-- 페이지헤더 -->
+        <div class="page_heading" style="position: static !important;">
+            <h1 class="h1">사용자권한관리</h1>
+            <ul class="location">
+                <li class="ico_home"><a><span class="sr_only">홈</span></a></li>
+                <li>정보관리</li>
+                <li>메뉴관리</li>
+                <li class="on">사용자권한관리</li>
+            </ul>
+        </div>
+        <!--// 페이지헤더 -->
+
+        <!-- 그리드 -->
+        <form id="form1" name="form1" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+            <div class="searcher" style="position: static !important;">
+                <div class="searcher_items_wrap">
+                    <div class="select_set">
+                        <label class="label_bullet">그룹사</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="cmgrpCdOpt" name="cmgrpCdOpt" class="select round" data-width="fit" tabindex="-98">
+                            <option value="">전체</option>                            
+                            <option value="00">BNK금융지주</option>
+                            <option value="01">BNK부산은행</option>
+                            <option value="02">BNK경남은행</option>
+                            <option value="03">BNK캐피탈</option>
+                            <option value="04">BNK투자증권</option>
+                            <option value="05">BNK저축은행</option>                            
+                            <option value="06">BNK자산운용</option>
+                            <option value="07">BNK신용정보</option>
+                            <option value="08">BNK시스템</option>                            
+                            <option value="09">BNK벤처투자</option>
+                            <option value="99">관리자</option>                            
+                        </select><button type="button" class="btn dropdown-toggle btn-default bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-9" aria-haspopup="listbox" aria-expanded="false" data-id="cmgrpCdOpt" title="전체"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">전체</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-9" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                    </div>
+                    <div class="select_set">
+                        <label class="label_bullet">사용자</label>
+                        <div class="dropdown bootstrap-select select round bs3 fit-width"><select id="optList" name="optList" class="select round" data-width="fit" tabindex="-98">
+                            <option value="usrIdOpt">사용자ID</option>
+                            <option value="usrNmOpt">사용자명</option>
+                        </select><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="combobox" aria-owns="bs-select-10" aria-haspopup="listbox" aria-expanded="false" data-id="optList" title="사용자ID"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">사용자ID</div></div> </div><span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><div class="inner open" role="listbox" id="bs-select-10" tabindex="-1"><ul class="dropdown-menu inner " role="presentation"></ul></div></div></div>
+                        <input type="text" id="optForm" name="optForm" class="input round" placeholder="검색어를 입력하세요." maxlength="20" kor_eng_num2="">
+                    </div>
+                    <button type="button" id="btn_sch" name="btn_sch" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>검색</span></button>
+                    <button type="button" id="btn_rst" name="btn_rst" class="btn_sm_gray round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg><span>초기화</span></button>
+                </div>
+            </div>
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">사용자 목록</h3>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>적용</span></button>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <div class="table-responsive">
+                            <hr class="tr_selected" style="display:none;">
+                            <table class="table grid_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>                                                                                                       
+                                </colgroup>
+                                <thead>                            
+                                    <tr>
+                                        <th>순번</th>
+                                        <th>그룹사</th>
+                                        <th>사용자ID</th>
+                                        <th>사용자명</th>
+                                        <th>사용자권한</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="selected">
+                                        <td>1</td>       
+                                        <td>BNK금융지주</td>
+                                        <td>BSFG_001</td>
+                                        <td>본점</td>
+                                        <td>시스템관리자</td>                                                                              
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>BNK금융지주</td>
+                                        <td>BSFG_001</td>
+                                        <td>본점</td>
+                                        <td>시스템관리자</td>                                                                              
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>BNK금융지주</td>
+                                        <td>BSFG_001</td>
+                                        <td>본점</td>
+                                        <td>시스템관리자</td>                                                                              
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>BNK금융지주</td>
+                                        <td>BSFG_001</td>
+                                        <td>본점</td>
+                                        <td>시스템관리자</td>                                                                              
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>BNK금융지주</td>
+                                        <td>BSFG_001</td>
+                                        <td>본점</td>
+                                        <td>시스템관리자</td>                                                                              
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>BNK금융지주</td>
+                                        <td>BSFG_001</td>
+                                        <td>본점</td>
+                                        <td>시스템관리자</td>                                                                              
+                                    </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_footer">
+                            <span>[ 4 / 4 ]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	    </form>
+
+        <form id="form2" name="form2" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">메뉴 목록</h3>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>적용</span></button>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <div class="table-responsive">
+                            <hr class="tr_selected" style="display:none;">
+                            <table class="table grid_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>                                                                                                       
+                                </colgroup>
+                                <thead>                            
+                                    <tr>
+                                        <th>순번</th>
+                                        <th>선택</th>
+                                        <th>대메뉴</th>
+                                        <th>중메뉴</th>
+                                        <th>소메뉴</th>
+                                        <th>메뉴경로</th>
+                                        <th>사용자권한</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="selected">
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>기준정보</td>
+                                        <td>E-일반현황 기준정보</td>
+                                        <td>법인정보 관리</td>
+                                        <td>gms/bz/CMCP001/init.do</td>
+                                        <td>운영관리자</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>기준정보</td>
+                                        <td>E-일반현황 기준정보</td>
+                                        <td>법인정보 관리</td>
+                                        <td>gms/bz/CMCP001/init.do</td>
+                                        <td>운영관리자</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>기준정보</td>
+                                        <td>E-일반현황 기준정보</td>
+                                        <td>법인정보 관리</td>
+                                        <td>gms/bz/CMCP001/init.do</td>
+                                        <td>운영관리자</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>기준정보</td>
+                                        <td>E-일반현황 기준정보</td>
+                                        <td>법인정보 관리</td>
+                                        <td>gms/bz/CMCP001/init.do</td>
+                                        <td>운영관리자</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>기준정보</td>
+                                        <td>E-일반현황 기준정보</td>
+                                        <td>법인정보 관리</td>
+                                        <td>gms/bz/CMCP001/init.do</td>
+                                        <td>운영관리자</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>기준정보</td>
+                                        <td>E-일반현황 기준정보</td>
+                                        <td>법인정보 관리</td>
+                                        <td>gms/bz/CMCP001/init.do</td>
+                                        <td>운영관리자</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>기준정보</td>
+                                        <td>E-일반현황 기준정보</td>
+                                        <td>법인정보 관리</td>
+                                        <td>gms/bz/CMCP001/init.do</td>
+                                        <td>운영관리자</td>                                                                             
+                                    </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_footer">
+                            <span>[ 4 / 4 ]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	    </form>
+	    <!--// 그리드 -->
+    </div>  
+</body>
+
+</html>

@@ -41,7 +41,7 @@ function ADMRC0401M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '공통·결재' }, { label: '대사관리' }, { label: '대금정산모니터링' }];
+  const paths: MenuItem[] = [{ label: '공통·결재' }, { label: '대사관리' }, { label: '대금정산모니터링' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function ADMRC0401M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -176,7 +176,7 @@ function ADMRC0401M() {
                       <h2 className="o-heading level2"><span className="label">정산(전/후) 작업 검증 자료 생성</span></h2>
                     </div>
 
-                    <div className="main _primary rows-auto">
+                    <div className="main">
                       <div className="m-data-creator">
                         <div className="header">
                           <strong className="heading">정산(전/후) 작업 검증 자료 생성</strong>
@@ -218,9 +218,9 @@ function ADMRC0401M() {
                                 <div className="order"><span className="count">4</span></div>
                                 <div className="subject">대금정산 자료 생성(JYC0120B)</div>
                               </div>
-                              <div className="binds">
+                              {/* <div className="binds">
                                 <CommonButton label="취소" className="_cancel" />
-                              </div>
+                              </div> */}
                             </li>
 
                             <li className="colspan-2">
@@ -502,7 +502,7 @@ function ADMRC0401M() {
 
               </div>
 
-              <div className="o-grid">
+              {/* <div className="o-grid">
                 <div className="column">
 
                   <div className="o-section">
@@ -555,7 +555,7 @@ function ADMRC0401M() {
                   </div>
 
                 </div>
-              </div>
+              </div> */}
             </TabPanel>
 
             <TabPanel className="m-tabs-panel react-tabs__tab-panel">
@@ -583,6 +583,20 @@ function ADMRC0401M() {
                     </div>
 
                     <div className="main _primary rows-body-5i">
+                      <div className="m-total">
+                        <dl className="m-defines">
+                          <div className="group">
+                            <dt className="head">정산금액 합계</dt>
+                            <dd className="data">200,000,000</dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">전/후 비교 차액</dt>
+                            <dd className="data">200,000,000</dd>
+                          </div>
+                        </dl>
+                      </div>
+
                       <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                       <div className="o-grid-table p-datatable">
                         <div className="table-container p-datatable-wrapper">
@@ -666,7 +680,7 @@ function ADMRC0401M() {
                     </div>
                   </div>
 
-                  <div className="o-section">
+                  {/* <div className="o-section">
 
                     <div className="main">
                       <form className="m-data-form">
@@ -712,7 +726,7 @@ function ADMRC0401M() {
                       </form>
                     </div>
 
-                  </div>
+                  </div> */}
 
 
 

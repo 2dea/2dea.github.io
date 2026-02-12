@@ -46,7 +46,7 @@ function BSSRM0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '영업지원' }, { label: '토지보상우편물' }, { label: '토지보상우편물(본부)' }];
+  const paths: MenuItem[] = [{ label: '영업지원' }, { label: '토지보상우편물' }, { label: '토지보상우편물(본부)' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function BSSRM0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -612,6 +612,28 @@ function BSSRM0201M() {
               <div className="o-section">
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">거래이력</span></h3>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="알림이력" className="_normal" />
+                    </div>
+
+                    <div className="group">
+                      <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                      <ImageButton label="목록필터" icon="column-toggle" />
+                      <ImageButton label="목록출력" icon="print" />
+                    </div>
+                  </div>
+
+
                 </div>
 
                 <div className="main _primary rows-body-3i">

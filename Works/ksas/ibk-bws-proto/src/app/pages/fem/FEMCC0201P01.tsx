@@ -112,7 +112,7 @@ function FEMCC0201P01() {
                   <h4 className="o-heading level2"><span className="label">계약정보(지급대상) 내역</span></h4>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-body-12i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">

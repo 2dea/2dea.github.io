@@ -319,7 +319,7 @@ function FMTFT0901P02() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-3i">
+                <div className="main _primary rows-auto">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -412,7 +412,7 @@ function FMTFT0901P02() {
                           ))}
                         </tbody>
 
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                        {/* <tfoot className="p-datatable-tfoot sumtotal-tfoot">
                           <tr className="sumtotal-trow">
                             <td colSpan={2} className="sumtotal-tcell">합계</td>
                             <td className="sumtotal-tcell"></td>
@@ -423,9 +423,8 @@ function FMTFT0901P02() {
                             <td className="sumtotal-tcell sumtotal-tcell-strong">결정금액(원)</td>
                             <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                             <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
-
                           </tr>
-                        </tfoot>
+                        </tfoot> */}
                       </table>
                     </div>
                   </div>

@@ -46,7 +46,7 @@ function STMGD0401M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '기계경비당직관리' }, { label: '기계경비보안관리' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '기계경비당직관리' }, { label: '기계경비보안관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMGD0401M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -114,7 +114,6 @@ function STMGD0401M() {
             <div className="m-binds type-start">
               <div className="group">
                 <CommonButton label="점검표등록요청 알림발송" className="_lined-secondary" />
-                <CommonButton label="명령부 초기화" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -125,14 +124,17 @@ function STMGD0401M() {
             <div className="m-binds type-end">
               <div className="group _utility">
                 <div className="m-print-binds">
-                  <CommonButton label="조회내역출력" className="_texted" />
+                  <CommonButton label="명령부출력(달력)" className="_texted" />
+                  <CommonButton label="명령부출력" className="_texted" />
                   <CommonButton label="점검표출력" className="_texted" />
                   <CommonButton label="열쇠인수도출력" className="_texted" />
                 </div>
               </div>
 
               <div className="group _primary">
-                <CommonButton label="임시저장" className="_solid-primary" />
+                <CommonButton label="명령부 초기화" className="_lined-primary" />
+                <CommonButton label="과거내역조회" className="_lined-primary" />
+                <CommonButton label="임시저장" className="_lined-primary" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
             </div>
@@ -354,13 +356,18 @@ function STMGD0401M() {
                       <strong className="o-heading"><span className="label">유의사항</span></strong>
                     </div>
 
-                    <ul className="m-bullets type-disc">
+                    {/* <ul className="m-bullets type-disc">
                       <li>익월 명령부 등록시 당월 점검표가 25일까지 모두 등록되어 있어야 합니다.</li>
                       <li>점검표 등록은 1일부터 순차적으로 등록해야합니다.</li>
                       <li>당일 점검표 등록은 전월 점검표가 모두 등록되어 있어야 합니다.</li>
                       <li>당직가능업무: 공사, 청소 등 불가피한 경우만 해당됩니다.</li>
                       <li className="c-color-strong"><em>월 초 점검표 등록, 대직자 등록 비활성화시 명령부 결재상태를 확인해주세요.</em></li>
                       <li className="c-color-strong"><em>점검표 결재 승인 후 대직자 변경이 필요한 경우 점검표 재등록 반려결재 후 변경가능합니다.</em></li>
+                    </ul> */}
+
+                    <ul className="m-bullets type-disc">
+                      <li>익월 명령부는 당월 점검표가 25일까지 순차적으로 모두 등록·승인되어 있어야 합니다.</li>
+                      <li>점검표 결재 상태에 따라 대직자 등록·변경이 제한되며, 점검표 결재 승인 후 변경이 필요한 경우 점검표 재등록(반려결재) 후 변경 가능합니다.</li>
                     </ul>
                   </div>
                 </div>

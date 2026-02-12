@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>레이아웃관리</title>
+    <link rel="stylesheet" type="text/css" href="../../resource/css/ems_common.css">
+    <script type="text/javascript" src="../../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div class="contents" style="width: 100% !important;">
+        <!-- 페이지헤더 -->
+        <div class="page_heading" style="position: static !important;">
+            <h1 class="h1">레이아웃관리</h1>
+            <ul class="location">
+                <li class="ico_home"><a><span class="sr_only">홈</span></a></li>
+                <li>정보관리</li>
+                <li>운영관리</li>
+                <li class="on">레이아웃관리</li>
+            </ul>
+        </div>
+        <!--// 페이지헤더 -->
+
+        <!-- 그리드 -->
+        <form id="form1" name="form1" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">레이아웃목록</h3>
+                            <button type="button" class="btn_sm_gray adjust_grid_height"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code" style="transform:rotate(90deg)"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span>확장</span></button>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_sel" name="btn_add" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>조회</span></button>
+                            <button type="button" id="btn_add" name="btn_add" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span>추가</span></button>
+                            <button type="button" id="btn_xls" name="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>적용</span></button>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <div class="table-responsive">
+                            <hr class="tr_selected" style="display:none;">
+                            <table class="table grid_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>                                                                                                                                            
+                                </colgroup>
+                                <thead>                            
+                                    <tr>
+                                        <th>순번</th>
+                                        <th>삭제</th>
+                                        <th>레이아웃ID</th>
+                                        <th>레이아웃명</th>
+                                        <th>서브ID</th>
+                                        <th>레이아웃종류</th>
+                                        <th>구분자</th>
+                                        <th>개행방식</th>
+                                        <th>인코딩</th>
+                                        <th>시트번호</th>
+                                        <th>시작라인</th>
+                                        <th>사용여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="selected">
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>                                 
+                                        <td>MANUAL</td>
+                                        <td>매뉴얼</td>
+                                        <td></td>
+                                        <td>엑셀</td>
+                                        <td></td>
+                                        <td>LF</td>
+                                        <td>UTF-8</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>Y</td>                                                                             
+                                    </tr>                                                                           
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>                                 
+                                        <td>MANUAL</td>
+                                        <td>매뉴얼</td>
+                                        <td></td>
+                                        <td>엑셀</td>
+                                        <td></td>
+                                        <td>LF</td>
+                                        <td>UTF-8</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>Y</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>                                 
+                                        <td>MANUAL</td>
+                                        <td>매뉴얼</td>
+                                        <td></td>
+                                        <td>엑셀</td>
+                                        <td></td>
+                                        <td>LF</td>
+                                        <td>UTF-8</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>Y</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>                                 
+                                        <td>MANUAL</td>
+                                        <td>매뉴얼</td>
+                                        <td></td>
+                                        <td>엑셀</td>
+                                        <td></td>
+                                        <td>LF</td>
+                                        <td>UTF-8</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>Y</td>                                                                             
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>       
+                                        <td>
+                                            <div class="checking-set">
+                                                <label class="checking">
+                                                    <input name="ch_01" type="checkbox" value="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </td>                                 
+                                        <td>MANUAL</td>
+                                        <td>매뉴얼</td>
+                                        <td></td>
+                                        <td>엑셀</td>
+                                        <td></td>
+                                        <td>LF</td>
+                                        <td>UTF-8</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>Y</td>                                                                             
+                                    </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_footer">
+                            <span>[ 4 / 4 ]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	    </form>
+
+        <form id="form2" name="form2" action="/esg-data-platform/home.do" method="post">
+            <input type="hidden" id="errorFlag" name="errorFlag" value="">
+            <input type="hidden" id="s_SAVENAME" name="s_SAVENAME" value="">
+
+            <section class="section">
+                <div class="card">
+                    <div class="card_head">
+                        <div class="heading_wrap">
+                            <h3 class="h3">상세레이아웃</h3>
+                            <button type="button" class="btn_sm_gray adjust_grid_height"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code" style="transform:rotate(90deg)"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span>확장</span></button>
+                        </div>
+                        <div class="btns_wrap">
+                            <button type="button" id="btn_add" name="btn_add" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span>추가</span></button>
+                            <button type="button" id="btn_xls" name="btn_xls" class="btn_secondary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span>엑셀다운로드</span></button>
+                            <button type="button" id="btn_sav" name="btn_sav" class="btn_primary round"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span>적용</span></button>
+                        </div>
+                    </div>
+                    <div class="card_body">
+                        <hr class="border_top_2px">
+                        <div class="table-responsive">
+                            <hr class="tr_selected" style="display:none;">
+                            <table class="table grid_table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>                                                                                                                                                                            
+                                </colgroup>
+                                <thead>                            
+                                    <tr>
+                                        <th>순번</th>
+                                        <th>삭제</th>
+                                        <th>레이아웃ID</th>
+                                        <th>컬럼ID</th>
+                                        <th>컬럼명</th>
+                                        <th>컬럼파트</th>
+                                        <th>컬럼타입</th>
+                                        <th>컬럼사이즈</th>
+                                        <th>초기값</th>
+                                        <th>정렬순번</th>
+                                        <th>사용여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="selected">
+                                        <td colspan="11">조회된 데이터가 없습니다 </td>                                                                                                                         
+                                    </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="grid_footer">
+                            <span>[ 4 / 4 ]</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	    </form>
+	    <!--// 그리드 -->
+    </div>  
+</body>
+
+</html>

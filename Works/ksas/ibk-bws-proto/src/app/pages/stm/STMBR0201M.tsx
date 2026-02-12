@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 버스배차신청 > 배차일정표
+ * @description 재난·안전관리 > 버스배차신청 > 버스배차일정표
  */
 
 // dependency
@@ -46,7 +46,7 @@ function STMBR0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '배차일정표' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '버스배차신청' }, { label: '버스배차일정표' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,11 +99,11 @@ function STMBR0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">배차일정표</span>
+                <span className="label">버스배차일정표</span>
 
                 <FavoriteDiv />
               </h1>

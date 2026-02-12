@@ -46,7 +46,7 @@ function HSPHS1701M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '본부재고관리' }, { label: '용도품본부재고조회' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품(본부)' }, { label: '본부재고관리' }, { label: '용도품본부재고조회' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function HSPHS1701M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -112,11 +112,6 @@ function HSPHS1701M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-
-              <div className="group">
-                <CommonButton label="고가용도품결재관리" className="_lined-secondary" />
-              </div>
-
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -127,6 +122,10 @@ function HSPHS1701M() {
                 <div className="m-print-binds">
                   <CommonButton label="출력" className="_texted" />
                 </div>
+              </div>
+
+              <div className="group _primary">
+                <CommonButton label="고가용도품결재관리" className="_solid-primary" />
               </div>
             </div>
           </div>

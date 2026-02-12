@@ -46,7 +46,7 @@ function STMGI0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '가스분사기대장관리' }, { label: '가스분사기관리대장' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '가스분사기대장관리' }, { label: '가스분사기관리대장' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMGI0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -130,7 +130,7 @@ function STMGI0101M() {
 
               <div className="group _primary">
                 <CommonButton label="수정" className="_solid-primary" />
-                <CommonButton label="분실신고" className="_solid-primary" />
+                <CommonButton label="사고신고" className="_solid-primary" />
                 <CommonButton label="인수" className="_solid-primary" />
                 <CommonButton label="반납요청" className="_solid-primary" />
               </div>
@@ -152,7 +152,7 @@ function STMGI0101M() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`악재교체일자`} require={false} />
+                    <Label label={`약제교체일자`} require={false} />
                     <div className="fields">
                       <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -204,8 +204,11 @@ function STMGI0101M() {
                     <Label label={`사용자`} require={false} />
                     <div className="fields">
                       <div className="o-form _input">
-                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
+                        <span className="inner-binds">
+                          <ImageButton label="초기화" icon="remove" />
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -314,7 +317,7 @@ function STMGI0101M() {
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
-                            <td>분실신고</td>
+                            <td>사고신고</td>
                             <td><a href="javascript:" className="o-link _normal">결재반려</a></td>
                             <td>홍길동</td>
                             <td>12가1234</td>

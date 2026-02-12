@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
-
 /*
 // @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 // https://gwfh.mranftl.com/fonts/roboto-mono?subsets=latin
+// @import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
  */
 
 
@@ -30,7 +32,7 @@
   font-weight: 100 700;
   font-display: block;
   src: local("♥"),
-    url('../../../../src/assets/fonts/MaterialSymbols/MaterialSymbolsOutlined.woff2') format("woff2-variations");
+    url('../../../../src/assets/fonts/MaterialSymbols/MaterialSymbolsOutlined.woff2?v=20251205') format("woff2-variations");
 }
 
 @font-face  {
@@ -39,7 +41,7 @@
   font-weight: 100 700;
   font-display: block;
   src: local("♥"),
-    url('../../../../src/assets/fonts/MaterialSymbols/MaterialSymbolsRounded.woff2') format("woff2-variations");
+    url('../../../../src/assets/fonts/MaterialSymbols/MaterialSymbolsRounded.woff2?v=20251205') format("woff2-variations");
 }
 
 @font-face  {
@@ -48,7 +50,7 @@
   font-weight: 100 700;
   font-display: block;
   src: local("♥"),
-    url('../../../../src/assets/fonts/MaterialSymbols/MaterialSymbolsSharp.woff2') format("woff2-variations");
+    url('../../../../src/assets/fonts/MaterialSymbols/MaterialSymbolsSharp.woff2?v=20251205') format("woff2-variations");
 }
 
 

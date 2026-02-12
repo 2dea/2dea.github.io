@@ -41,7 +41,7 @@ function STMSC0101M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '도급계약 현황 등록' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '도급계약 현황 등록' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function STMSC0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -391,7 +391,7 @@ function STMSC0101M() {
                                 <InputRadio name="RADIO:T_10" label="간헐적" />
                               </div>
 
-                              <div className="binds">
+                              <div className="binds justify-end">
                                 <CommonButton label="참고" className="_normal" />
                               </div>
                             </div>
@@ -416,6 +416,14 @@ function STMSC0101M() {
                               </div>
 
                             </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`계약상태`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+
                           </td>
                         </tr>
                         <tr>
@@ -446,6 +454,13 @@ function STMSC0101M() {
                     </table>
                   </form>
                 </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li className="c-color-strong"><em>계약 종료의 경우 비고내용만 수정이 가능합니다.</em></li>
+                  </ul>
+                </div>
+
               </div>
 
             </SplitterPanel>

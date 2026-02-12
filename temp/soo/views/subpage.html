@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>환경경영시스템</title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/ems_common.css">
+    <script type="text/javascript" src="../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../resource/library/nice-select/nice-select.min.js"></script>
+    <script type="text/javascript" src="../resource/library/feather/feather.min.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header data-include1="header"  id="header" class="theme_green"></header>
+        <aside id="aside" class="theme_green">
+            <ul class="side_nav">
+                <li class="menu0"><a href="home.html"><span>홈</span></a></li>
+                <li class="menu1">
+                    <a href="javascript:void(0);"><span>기준정보</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">기준정보</h3>
+                        <div class="scroll_Y">
+                            <li class="menu1-1">
+                                <a href="javascript:void(0);">사업장정보<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu1-1-1"><a href="111.html">법인정보</a></li>
+                                    <li class="menu1-1-2"><a href="#">사업장정보</a></li>
+                                    <li class="menu1-1-3"><a href="#">QA·QC담당자정보</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu1-2">
+                                <a href="javascript:void(0);">온실가스·에너지<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu1-2-1"><a href="#">산정등급적용정보</a></li>
+                                    <li class="menu1-2-2"><a href="#">산정식관리</a></li>
+                                    <li class="menu1-2-3"><a href="123.html">배출계수관리</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="menu2 env">
+                    <a href="javascript:void(0);"><span>온실가스</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">온실가스</h3>
+                        <div class="scroll_Y">
+                            <li class="menu2-1">
+                                <a href="javascript:void(0);">시설관리<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu2-1-1"><a href="211.html">배출시설관리</a></li>
+                                    <li class="menu2-1-2"><a href="#">세부시설관리</a></li>
+                                    <li class="menu2-1-3"><a href="#">활동자료모니터링</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu2-2">
+                                <a href="javascript:void(0);">온실가스·에너지실적관리<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu2-2-1"><a href="#">에너지사용량</a></li>
+                                    <li class="menu2-2-2"><a href="#">용수사용량</a></li>
+                                    <li class="menu2-2-3"><a href="#">폐기물사용량</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu2-3">
+                                <a href="javascript:void(0);">사업장관리<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu2-3-1"><a href="#">기준배출량관리</a></li>
+                                    <li class="menu2-3-2"><a href="#">이행계획관리</a></li>
+                                    <li class="menu2-3-3"><a href="#">QA·QC활동계획</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu2-4">
+                                <a href="javascript:void(0);">이행실적<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu2-4-1"><a href="#">QA·QC실적관리</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>               
+                <li class="menu3 env">
+                    <a href="#"><span>환경경영</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">환경경영</h3>
+                        <div class="scroll_Y">
+                            <li class="menu3-1">
+                                <a href="javascript:void(0);">환경경영체계<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu3-1-1"><a href="#">경영시스템정보</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="menu4 env"><a href="#"><span>용수</span></a></li>
+                <li class="menu5 env"><a href="#"><span>폐기물</span></a></li>
+                <li class="menu8">
+                    <a href="javascript:void(0);"><span>시스템관리</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">시스템관리</h3>
+                        <div class="scroll_Y">
+                            <li class="menu8-1">
+                                <a href="javascript:void(0);">사용자관리<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu8-1-1"><a href="#">사용자정보</a></li>
+                                    <li class="menu8-1-2"><a href="#">사용자관리</a></li>
+                                    <li class="menu8-1-3"><a href="#">지점관리등록</a></li>
+                                    <li class="menu8-1-4"><a href="#">SSO사용자등록</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu8-2">
+                                <a href="javascript:void(0);">메뉴관리<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu8-2-1"><a href="#">메뉴관리</a></li>
+                                    <li class="menu8-2-2"><a href="#">그룹권한관리</a></li>
+                                    <li class="menu8-2-3"><a href="#">사용자권한관리</a></li>
+                                    <li class="menu8-2-4"><a href="#">즐겨찾기관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu8-3">
+                                <a href="javascript:void(0);">코드관리<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu8-3-1"><a href="#">공통코드관리</a></li>
+                                    <li class="menu8-3-2"><a href="#">지점코드관리</a></li>
+                                    <li class="menu8-3-3"><a href="#">우편번호관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu8-4">
+                                <a href="javascript:void(0);">운영관리<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu8-4-1"><a href="#">접속로그관리</a></li>
+                                    <li class="menu8-4-2"><a href="#">레이아웃관리</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="menu9">
+                    <a href="javascript:void(0);"><span>즐겨찾기</span></a>
+                    <ul class="depth_2">
+                        <h3 class="heading">즐겨찾기</h3>
+                        <div class="scroll_Y">
+                            <li class="menu9-1">
+                                <a href="javascript:void(0);">즐겨찾기<span class="arrow"></span></a>
+                                <ul class="depth_3">
+                                    <li class="menu9-1-1"><a href="#">사용자정보</a></li>
+                                    <li class="menu9-1-2"><a href="#">메뉴관리</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>               
+        </aside>
+        <main id="main" class="theme_green">
+            <div class="contents">
+                <div class="page_heading">
+                    <h1 class="h1">법인정보 관리</h1>
+                    <ul class="location">
+                        <li class="ico_home"><a href=""></a><span class="sr_only">홈</span></li>
+                        <li>기준정보</li>
+                        <li>사업장정보</li>
+                        <li class="on">법인정보</li>
+                    </ul>
+                </div>
+                <form id="form1" name="form1" method="post">
+                    <div class="searcher">
+                        <div class="searcher_items_wrap">
+                            <div class="select_set">
+                                <label class="label_bullet">그룹사</label>
+                                <select class="select round" id="" data-width="fit">
+                                    <option value="all">전체</option>
+                                    <option value="01">BNK금융지주</option>
+                                    <option value="02">부산은행</option>
+                                    <option value="03">경남은행</option>
+                                    <option value="04">BNK캐피탈</option>
+                                    <option value="05">BNK투자증권</option>
+                                    <option value="06">BNK저축은행</option>
+                                    <option value="07">BNK자산운용</option>
+                                    <option value="08">BNK벤처투자</option>
+                                    <option value="09">BNK신용정보</option>
+                                    <option value="10">BNK시스템</option>
+                                </select>
+                            </div>
+                            <div class="select_set">
+                                <label class="label_bullet">이행년도</label>
+                                <select class="select round" id="" data-width="fit">
+                                    <option value="all">전체</option>
+                                    <option value="01">2023</option>
+                                    <option value="02">2022</option>
+                                    <option value="03">2021</option>
+                                    <option value="04">2020</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn_primary round"><i data-feather="search"></i><span>검색</span></button>
+                            <button type="button" class="btn_sm_gray round"><i data-feather="rotate-cw"></i><span>초기화</span></button>
+                        </div>
+                        <div class="searcher_items_wrap">
+                            <div class="select_set mr_0">
+                                <label class="label_bullet">자료복사</label>
+                                <select class="select round" id="" data-width="fit">
+                                    <option value="01">2022년</option>
+                                    <option value="01">2021년</option>
+                                    <option value="01">2020년</option>
+                                </select>
+                                <i data-feather="arrow-right" class="ico_14px" style="color:#555; margin-right:2px; margin-left:-6px;"></i>
+                                <select class="select round" id="" data-width="fit">
+                                    <option value="01">2023년</option>
+                                </select>
+                                <button type="button" class="btn_primary round"><i data-feather="copy"></i><span>복사</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="section">
+                        <div class="card">
+                            <div class="card_head">
+                                <div class="heading_wrap">
+                                    <h3 class="h3">목록</h3>
+                                    <button type="button" class="btn_sm_gray adjust_grid_height"><i data-feather="code" style="transform:rotate(90deg)"></i><span>확장</span></button>
+                                </div>
+                                <div class="btns_wrap">
+                                    <button type="button" id="btn_xls" class="btn_secondary round"><i data-feather="download"></i><span>엑셀다운로드</span></button>
+                                    <button type="button" id="btn_sav" class="btn_primary round"><i data-feather="save"></i><span>적용</span></button>
+                                </div>
+                            </div>
+                            <div class="card_body">
+                                <hr class="border_top_2px">
+                                <div class="table-responsive">
+                                    <hr class="tr_selected" style="display:none;">
+                                    <table class="table grid_table">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th>순번</th>
+                                            <th>삭제</th>
+                                            <th>그룹사</th>
+                                            <th>이행연도</th>
+                                            <th>법인번호</th>
+                                            <th>법인명</th>
+                                            <th>대표자</th>
+                                            <th>소재지</th>
+                                            <th>전화번호</th>
+                                            <th>담당자</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_01" type="checkbox" value="1">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>2023</td>
+                                                <td>BNK금융지주</td>
+                                                <td>0001</td>
+                                                <td>기타</td>
+                                                <td>스팀</td>
+                                                <td>A</td>
+                                                <td>250</td>
+                                                <td>12.3</td>
+                                                <td>12.3</td>
+                                            </tr>
+                                            <tr class="selected">
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_02" type="checkbox" value="2" checked>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>2023</td>
+                                                <td>BNK부산은행 서면롯데1번가지점</td>
+                                                <td>0342</td>
+                                                <td>기타</td>
+                                                <td>스팀</td>
+                                                <td>A</td>
+                                                <td>250</td>
+                                                <td>12.3</td>
+                                                <td>12.3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_02" type="checkbox" value="2">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>2023</td>
+                                                <td>BNK부산은행 범내골지점</td>
+                                                <td>0233</td>
+                                                <td>기타</td>
+                                                <td>스팀</td>
+                                                <td>A</td>
+                                                <td>250</td>
+                                                <td>12.3</td>
+                                                <td>12.3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checking-set">
+                                                        <label class="checking">
+                                                            <input name="ch_02" type="checkbox" value="2">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>2023</td>
+                                                <td>BNK캐피탈</td>
+                                                <td>0005</td>
+                                                <td>기타</td>
+                                                <td>스팀</td>
+                                                <td>A</td>
+                                                <td>250</td>
+                                                <td>12.3</td>
+                                                <td>12.3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="grid_footer">
+                                    <span>[ 4 / 4 ]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+                <form id="form2" name="form2" method="post">
+
+                </form>
+                <section class="section">
+                    <div class="card">
+                        <div class="card_head">
+                            <div class="heading_wrap">
+                                <h3 class="h3">상세</h3>
+                            </div>
+                            <div class="btns_wrap">
+                                <button class="btn_secondary round"><i data-feather="x"></i><span>취소</span></button>
+                                <button class="btn_secondary round"><i data-feather="trash-2"></i><span>삭제</span></button>
+                                <button class="btn_primary round"><i data-feather="save"></i><span>저장</span></button>
+                            </div>
+                        </div>
+
+                        <div class="card_body">
+                            <hr class="border_top_2px">
+                            <div class="div_table cols_4">
+                                <!--  row-1  -->
+                                <div class="col">
+                                    <div class="dt requird">그룹사</div>
+                                    <div class="dd">
+                                        <select class="selectpicker" data-width="fit">
+                                            <option value="선택">선택</option>
+                                            <option value="01">BNK금융지주</option>
+                                            <option value="02">부산은행</option>
+                                            <option value="03">경남은행</option>
+                                            <option value="04">BNK캐피탈</option>
+                                            <option value="05">BNK투자증권</option>
+                                            <option value="06">BNK저축은행</option>
+                                            <option value="07">BNK자산운용</option>
+                                            <option value="08">BNK벤처투자</option>
+                                            <option value="09">BNK신용정보</option>
+                                            <option value="10">BNK시스템</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt requird">법인등록번호</div>
+                                    <div class="dd">
+                                        <input type="text" class="input" placeholder="('-'없이 입력)">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt requird">이행년도</div>
+                                    <div class="dd">
+                                        <select class="select" id="">
+                                            <option value="2023">2023년</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt requird">법인명</div>
+                                    <div class="dd"><input type="text" class="input" value=""></div>
+                                </div>
+                                <!--  row-2  -->
+                                <div class="col">
+                                    <div class="dt requird">대표자</div>
+                                    <div class="dd"><input type="text" class="input" value=""></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">지정업종</div>
+                                    <div class="dd">
+                                        <select class="select" id="">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col_2">
+                                    <div class="dt">법인소재지</div>
+                                    <div class="dd">
+                                        <input type="text" class="input" value="" readonly>
+                                        <input type="text" class="input" value="" readonly>
+                                        <input type="text" class="input" placeholder="">
+                                        <button type="button" class="btn_secondary"><i data-feather="search"></i><span>우편번호</span></button>
+                                        <button type="button" class="btn_underline">초기화</button>
+                                    </div>
+                                </div>
+                                <!--  row-3  -->
+                                <div class="col">
+                                    <div class="dt requird">법인전화번호</div>
+                                    <div class="dd">
+                                        <div class="tel_input_wrap">
+                                            <select class="select" id="">
+                                                <option value="">선택</option>
+                                                <option value="">051</option>
+                                            </select>
+                                            <span class="dash">-</span>
+                                            <input type="text" class="input">
+                                            <span class="dash">-</span>
+                                            <input type="text" class="input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">담당자</div>
+                                    <div class="dd">
+                                        <div class="rst_input_wrap">
+                                            <input type="text" id="empNm" name="empNm" class="input" title="담당자" maxlength="20" readonly>
+                                            <button type="button" id="btn_enob_rst" name="btn_enob_rst" class="ico_btn"><i data-feather="x"></i><span class="sr_only">초기화</span></button>
+                                        </div>
+                                        <button type="button" id="btn_enob_sch" name="btn_enob_sch" class="btn_tertiary"><i data-feather="search"></i><span>행번</span></button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">소속점</div>
+                                    <div class="dd"><input type="text" class="input" value="" readonly></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">작업점</div>
+                                    <div class="dd">
+                                        <input type="text" class="input" value="" readonly>
+                                    </div>
+                                </div>
+                                <!--  row-4  -->
+                                <div class="col">
+                                    <div class="dt">담당자부서</div>
+                                    <div class="dd"><input type="text" class="input" value="" readonly></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">담당자직위</div>
+                                    <div class="dd"><input type="text" class="input" value="" readonly></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">담당자직급</div>
+                                    <div class="dd"><input type="text" class="input" value="" readonly></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">담당자직책</div>
+                                    <div class="dd"><input type="text" class="input" value="" readonly></div>
+                                </div>
+                                <!--  row-5 -->
+                                <div class="col">
+                                    <div class="dt">담당업무</div>
+                                    <div class="dd"><input type="text" class="input" value="" readonly></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">사무분담</div>
+                                    <div class="dd"><input type="text" class="input" value="" readonly></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">담당자전화번호</div>
+                                    <div class="dd">
+                                        <div class="tel_input_wrap">
+                                            <select class="select" id="">
+                                                <option value="">선택</option>
+                                                <option value="">051</option>
+                                            </select>
+                                            <span class="dash">-</span>
+                                            <input type="text" class="input" readonly>
+                                            <span class="dash">-</span>
+                                            <input type="text" class="input" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">담당자 휴대전화번호</div>
+                                    <div class="dd">
+                                        <div class="tel_input_wrap">
+                                            <select class="select" id="">
+                                                <option value="">선택</option>
+                                                <option value="">010</option>
+                                            </select>
+                                            <span class="dash">-</span>
+                                            <input type="text" class="input" readonly>
+                                            <span class="dash">-</span>
+                                            <input type="text" class="input" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  row-6 -->
+                                <div class="col">
+                                    <div class="dt">담당자이메일</div>
+                                    <div class="dd">
+                                        <div class="email_input_wrap">
+                                            <input type="text" class="input" value="">
+                                            <span class="at">@</span>
+                                            <input type="text" class="input" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col"> 
+                                    <div class="dt">주요생산품</div>
+                                    <div class="dd"><input type="text" class="input" value=""></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">연간생산량(개)</div>
+                                    <div class="dd"><input type="text" class="input" value=""></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">상시종업원수(인)</div>
+                                    <div class="dd"><input type="text" class="input" value=""></div>
+                                </div>
+                                <!--  row-7 -->
+                                <div class="col">
+                                    <div class="dt">연간매출액(원)</div>
+                                    <div class="dd"><input type="text" class="input" value=""></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">연간에너지비용액(원)</div>
+                                    <div class="dd"><input type="text" class="input" value=""></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">자본금(원)</div>
+                                    <div class="dd"><input type="text" class="input" value=""></div>
+                                </div>
+                                <div class="col">
+                                    <div class="dt">중소기업여부</div>
+                                    <div class="dd">
+                                        <select class="select" id="">
+                                            <option value="">선택</option>
+                                            <option value="">N</option>
+                                            <option value="">Y</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer data-include3="footer" id="footer" class="footer"></footer>
+    </div><!-- / #app -->
+
+    <!-- Page level plugins -->
+    <script src="../resource/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- page custom scripts -->
+    <script>
+        $(document).ready(function() {
+            menuOn(1,1,1)
+            feather.replace()
+            $('[data-toggle="tooltip"]').tooltip()
+            $('.select').selectpicker();
+            $('.date_picker').datepicker({
+                language: "ko",
+                autoclose: true
+            });
+        });
+
+        function fileChange() {
+            var cur = $("#fileUpload").val().split("\\");
+            $("#fileNm").val(cur[cur.length - 1]);
+        }
+
+    </script>
+    
+</body>
+
+</html>

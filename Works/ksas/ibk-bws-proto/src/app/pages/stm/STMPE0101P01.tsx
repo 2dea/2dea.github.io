@@ -665,10 +665,6 @@ function STMPE0101P01() {
                     <h5 className="o-heading level3">
                       <span className="label">IT보안</span>
                     </h5>
-
-                    <div className="o-legend type-helper style-normal">
-                      <em className="label">IT보안 문의전화 : 정보보호총괄부 3889, 5475</em>
-                    </div>
                   </div>
 
                   <div className="main">
@@ -680,6 +676,9 @@ function STMPE0101P01() {
                               <div className="subject">
                                 <span className="order"><span className="count"></span></span>
                                 <span className="label">PC(보조기억매체 포함) 보안 및 비밀번호 관리</span>
+                              </div>
+                              <div className="contacts">
+                                IT보안 문의전화 : 정보보호운영부(5475)
                               </div>
                             </div>
                             <div className="bodies">
@@ -734,6 +733,9 @@ function STMPE0101P01() {
                               <div className="subject">
                                 <span className="order"><span className="count"></span></span>
                                 <span className="label">해킹 등 보안사고 예방</span>
+                              </div>
+                              <div className="contacts">
+                                IT보안 문의전화 : 정보보호운영부(3785)
                               </div>
                             </div>
                             <div className="bodies">
@@ -1643,10 +1645,6 @@ function STMPE0101P01() {
                     <h5 className="o-heading level3">
                       <span className="label">IT보안</span>
                     </h5>
-
-                    <div className="o-legend type-helper style-normal">
-                      <em className="label">IT보안 문의전화 : 정보보호총괄부 3889, 5475</em>
-                    </div>
                   </div>
 
                   <div className="main">
@@ -1658,6 +1656,9 @@ function STMPE0101P01() {
                               <div className="subject">
                                 <span className="order"><span className="count"></span></span>
                                 <span className="label">IT외주직원 보안통제</span>
+                              </div>
+                              <div className="contacts">
+                                IT보안 문의전화 : 정보보호총괄부(3889)
                               </div>
                             </div>
                             <div className="bodies">
@@ -1717,6 +1718,9 @@ function STMPE0101P01() {
                                 <span className="order"><span className="count"></span></span>
                                 <span className="label">PC(보조기억매체 포함) 보안 및 비밀번호 관리</span>
                               </div>
+                              <div className="contacts">
+                                IT보안 문의전화 : 정보보호운영부(5475)
+                              </div>
                             </div>
                             <div className="bodies">
                               <ol>
@@ -1770,6 +1774,9 @@ function STMPE0101P01() {
                               <div className="subject">
                                 <span className="order"><span className="count"></span></span>
                                 <span className="label">해킹 등 보안사고 예방</span>
+                              </div>
+                              <div className="contacts">
+                                IT보안 문의전화 : 정보보호운영부(3785)
                               </div>
                             </div>
                             <div className="bodies">

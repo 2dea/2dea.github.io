@@ -185,6 +185,16 @@ function BEXPM0301P01() {
                     </em>
                   </div>
 
+                  <div className="o-field">
+                    <Label label={`바코드정보`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _input wdth-60">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
                       <CommonButton label="행추가" className="_normal" />
@@ -223,11 +233,11 @@ function BEXPM0301P01() {
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">바코드정보<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일련번호<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청자</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총발송수량</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">총통신료<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                           </tr>
@@ -236,14 +246,12 @@ function BEXPM0301P01() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={12}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={11}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -262,13 +270,21 @@ function BEXPM0301P01() {
                                 </div>
                               </div>
                             </td>
+                            <td>
+                              <div className="o-field">
+                                <div className="fields">
+                                  <div className="o-form _input wdth-50">
+                                    <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                    <i aria-hidden="true"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td>0092</td>
                             <td className="g-start">부산</td>
-                            <td>0092</td>
+                            <td>000000</td>
                             <td>홍길동</td>
-                            <td>0092</td>
-                            <td className="g-start">부산</td>
                             <td className="g-end">10</td>
                             <td>
                               <div className="o-field">
@@ -351,7 +367,8 @@ function BEXPM0301P01() {
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td><span className="o-digit type-time">00:00</span></td>
+                              <td><span className="o-digit type-time">00:00:00</span></td>
+
                               <td>익일특급</td>
                               <td>일반수신자</td>
                               <td></td>

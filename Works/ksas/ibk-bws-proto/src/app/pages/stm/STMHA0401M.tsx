@@ -41,7 +41,7 @@ function STMHA0401M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '자율보안체계' }, { label: '분임보안담당관인수인계서현황' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '자율보안체계' }, { label: '분임보안담당관인수인계서현황' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function STMHA0401M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -109,14 +109,6 @@ function STMHA0401M() {
             <div className="m-binds type-start">
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
-              </div>
-            </div>
-
-            <div className="m-binds type-end">
-              <div className="group _utility">
-                <div className="m-print-binds">
-                  <CommonButton label="출력" className="_texted" />
-                </div>
               </div>
             </div>
           </div>

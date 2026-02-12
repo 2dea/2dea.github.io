@@ -46,7 +46,7 @@ function FEMCT0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '수수료관리' }, { label: '자금현수송수수료' }, { label: '계약서관리' }];
+  const paths: MenuItem[] = [{ label: '수수료관리' }, { label: '자금현수송수수료' }, { label: '계약서관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function FEMCT0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -147,14 +147,14 @@ function FEMCT0101M() {
                 <div className="fieldset">
 
                   <div className="o-field colspan-2">
-                    <Label label={`계약기간`} require={false} />
+                    <Label label={`계약기간`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select">
+                      <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
                       <span className="seps type-tilde">~</span>
-                      <div className="o-form _select">
+                      <div className="o-form _select mode-required">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>
@@ -330,12 +330,12 @@ function FEMCT0101M() {
               </div>
 
               <Tabs className="m-tabs react-tabs" defaultIndex={0}>
-                <div className="m-tab type1">
+                {/* <div className="m-tab type1">
                   <TabList className="lists">
                     <Tab className="link"><span className="label">계약정보</span></Tab>
                     <Tab className="link"><span className="label">부점별수수료율</span></Tab>
                   </TabList>
-                </div>
+                </div> */}
 
                 <TabPanel className="m-tabs-panel react-tabs__tab-panel">
 
@@ -628,6 +628,12 @@ function FEMCT0101M() {
                       <div className="o-section">
                         <div className="m-header">
                           <h3 className="o-heading level3"><span className="label">종류별 할인금액</span></h3>
+
+                          <div className="m-binds">
+                            <div className="group">
+                              <CommonButton label="부점별 수수료율" className="_normal" />
+                            </div>
+                          </div>
                         </div>
 
                         <div className="main">

@@ -48,7 +48,7 @@ function BSPRQ0401M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '신청' }, { label: '용도품신청' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품(영업점)' }, { label: '신청' }, { label: '용도품신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -101,7 +101,7 @@ function BSPRQ0401M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -170,8 +170,14 @@ function BSPRQ0401M() {
               <Tabs className="o-section" defaultIndex={0}>
                 <div className="m-header">
                   <div className="m-checks justify-start">
-                    <InputCheck label="우리부점 BEST" />
-                    <InputCheck label="전체 BEST" />
+                    <InputCheck moduleId="BSPRQ0401M-tooltip-10" label="우리부점 BEST" />
+                    <InputCheck moduleId="BSPRQ0401M-tooltip-20" label="전체 BEST" />
+                    <Tooltip className="o-tooltip" target="#BSPRQ0401M-tooltip-10" position="top">
+                      우리 부점의 신청횟수가 많은 순으로 품목이 노출됩니다.
+                    </Tooltip>
+                    <Tooltip className="o-tooltip" target="#BSPRQ0401M-tooltip-20" position="top">
+                      전 부점의 신청횟수가 많은 순으로 품목이 노출됩니다.
+                    </Tooltip>
                   </div>
 
                   <TabList className="o-toggles type-tab">
@@ -183,6 +189,12 @@ function BSPRQ0401M() {
                 <div className="main _primary rows-1fr">
                   <TabPanel className="m-shop-list">
                     <div className="container">
+                      {/*
+                      <div className="o-empty-data">
+                        <p>조회결과가 없습니다.</p>
+                      </div>
+                       */}{/* EMPTY_DATA { @DEV } */}
+
                       <ul>
                         <li>
                           <div className="m-product">
@@ -196,20 +208,21 @@ function BSPRQ0401M() {
                                   <em className="status"><span className="label">2025-12-25 신청완료</span></em>
                                   <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
                                 </div>
-                                <div className="secondary">
-                                  <div className="limits">
-                                    한도 : 1~3
-                                  </div>
-                                </div>
                               </div>
 
                               <div className="o-product">
                                 <div className="main">
-                                  <em className="caption">
-                                    <span className="product">00626</span>
-                                  </em>
-                                  <a href="javascript:" className="subject">전표꽂이</a>
+                                  <a href="javascript:" className="subject">[00626] 전표꽂이</a>
                                 </div>
+                              </div>
+
+                              <div className="footer">
+                                <ul className="summary">
+                                  <li>
+                                    <strong className="head">한도</strong>
+                                    <span className="data">1,000~10,000,000</span>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
 
@@ -221,7 +234,7 @@ function BSPRQ0401M() {
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <span className="units type-legend">단위: 매</span>
+                                  <span className="units type-legend">단위: BOX</span>
                                   <span className="binds justify-end">
                                     <CommonButton label="담기" className="_solid-secondary" />
                                   </span>
@@ -243,20 +256,21 @@ function BSPRQ0401M() {
                                   <em className="status"><span className="label">2025-12-25 신청완료</span></em>
                                   <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
                                 </div>
-                                <div className="secondary">
-                                  <div className="limits">
-                                    한도 : 1~3
-                                  </div>
-                                </div>
                               </div>
 
                               <div className="o-product">
                                 <div className="main">
-                                  <em className="caption">
-                                    <span className="product">00626</span>
-                                  </em>
-                                  <a href="javascript:" className="subject">팩스토너CRG328(캐논 MF4550, MF4553D, MF4870D, MF4776N)</a>
+                                  <a href="javascript:" className="subject">[00626] 팩스토너CRG328(캐논 MF4550, MF4553D, MF4870D, MF4776N)</a>
                                 </div>
+                              </div>
+
+                              <div className="footer">
+                                <ul className="summary">
+                                  <li>
+                                    <strong className="head">한도</strong>
+                                    <span className="data">1,000~10,000,000</span>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
 
@@ -268,7 +282,7 @@ function BSPRQ0401M() {
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <span className="units type-legend">단위: 매</span>
+                                  <span className="units type-legend">단위: BOX</span>
                                   <span className="binds justify-end">
                                     <CommonButton label="담기" className="_solid-secondary" />
                                   </span>
@@ -278,7 +292,7 @@ function BSPRQ0401M() {
                           </div>
                         </li>
 
-                        <li>
+                        <li className="is-selected">
                           <div className="m-product">
                             <div className="figures">
                               <a href="javascript:" className="o-view-image"><img src={require("assets/images/media/STMKY0201P03_010.png")} alt="" /></a>
@@ -290,20 +304,21 @@ function BSPRQ0401M() {
                                   <em className="status"></em>
                                   <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
                                 </div>
-                                <div className="secondary">
-                                  <div className="limits">
-                                    한도 : 1~3
-                                  </div>
-                                </div>
                               </div>
 
                               <div className="o-product">
                                 <div className="main">
-                                  <em className="caption">
-                                    <span className="product">00626</span>
-                                  </em>
-                                  <a href="javascript:" className="subject">전표꽂이</a>
+                                  <a href="javascript:" className="subject">[00626] 전표꽂이</a>
                                 </div>
+                              </div>
+
+                              <div className="footer">
+                                <ul className="summary">
+                                  <li>
+                                    <strong className="head">한도</strong>
+                                    <span className="data">1,000~10,000,000</span>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
 
@@ -315,7 +330,7 @@ function BSPRQ0401M() {
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <span className="units type-legend">단위: 매</span>
+                                  <span className="units type-legend">단위: BOX</span>
                                   <span className="binds justify-end">
                                     <CommonButton label="담기" className="_solid-secondary" />
                                   </span>
@@ -337,20 +352,21 @@ function BSPRQ0401M() {
                                   <em className="status"></em>
                                   <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
                                 </div>
-                                <div className="secondary">
-                                  <div className="limits">
-                                    한도 : 1~3
-                                  </div>
-                                </div>
                               </div>
 
                               <div className="o-product">
                                 <div className="main">
-                                  <em className="caption">
-                                    <span className="product">00626</span>
-                                  </em>
-                                  <a href="javascript:" className="subject">전표꽂이</a>
+                                  <a href="javascript:" className="subject">[00626] 전표꽂이</a>
                                 </div>
+                              </div>
+
+                              <div className="footer">
+                                <ul className="summary">
+                                  <li>
+                                    <strong className="head">한도</strong>
+                                    <span className="data">1,000~10,000,000</span>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
 
@@ -362,7 +378,7 @@ function BSPRQ0401M() {
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <span className="units type-legend">단위: 매</span>
+                                  <span className="units type-legend">단위: BOX</span>
                                   <span className="binds justify-end">
                                     <CommonButton label="담기" className="_solid-secondary" />
                                   </span>
@@ -384,20 +400,21 @@ function BSPRQ0401M() {
                                   <em className="status"></em>
                                   <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
                                 </div>
-                                <div className="secondary">
-                                  <div className="limits">
-                                    한도 : 1~3
-                                  </div>
-                                </div>
                               </div>
 
                               <div className="o-product">
                                 <div className="main">
-                                  <em className="caption">
-                                    <span className="product">00626</span>
-                                  </em>
-                                  <a href="javascript:" className="subject">전표꽂이</a>
+                                  <a href="javascript:" className="subject">[00626] 전표꽂이</a>
                                 </div>
+                              </div>
+
+                              <div className="footer">
+                                <ul className="summary">
+                                  <li>
+                                    <strong className="head">한도</strong>
+                                    <span className="data">1,000~10,000,000</span>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
 
@@ -409,7 +426,7 @@ function BSPRQ0401M() {
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <span className="units type-legend">단위: 매</span>
+                                  <span className="units type-legend">단위: BOX</span>
                                   <span className="binds justify-end">
                                     <CommonButton label="담기" className="_solid-secondary" />
                                   </span>
@@ -431,20 +448,21 @@ function BSPRQ0401M() {
                                   <em className="status"></em>
                                   <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
                                 </div>
-                                <div className="secondary">
-                                  <div className="limits">
-                                    한도 : 1~3
-                                  </div>
-                                </div>
                               </div>
 
                               <div className="o-product">
                                 <div className="main">
-                                  <em className="caption">
-                                    <span className="product">00626</span>
-                                  </em>
-                                  <a href="javascript:" className="subject">전표꽂이</a>
+                                  <a href="javascript:" className="subject">[00626] 전표꽂이</a>
                                 </div>
+                              </div>
+
+                              <div className="footer">
+                                <ul className="summary">
+                                  <li>
+                                    <strong className="head">한도</strong>
+                                    <span className="data">1,000~10,000,000</span>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
 
@@ -456,7 +474,7 @@ function BSPRQ0401M() {
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <span className="units type-legend">단위: 매</span>
+                                  <span className="units type-legend">단위: BOX</span>
                                   <span className="binds justify-end">
                                     <CommonButton label="담기" className="_solid-secondary" />
                                   </span>
@@ -478,20 +496,21 @@ function BSPRQ0401M() {
                                   <em className="status"></em>
                                   <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
                                 </div>
-                                <div className="secondary">
-                                  <div className="limits">
-                                    한도 : 1~3
-                                  </div>
-                                </div>
                               </div>
 
                               <div className="o-product">
                                 <div className="main">
-                                  <em className="caption">
-                                    <span className="product">00626</span>
-                                  </em>
-                                  <a href="javascript:" className="subject">전표꽂이</a>
+                                  <a href="javascript:" className="subject">[00626] 전표꽂이</a>
                                 </div>
+                              </div>
+
+                              <div className="footer">
+                                <ul className="summary">
+                                  <li>
+                                    <strong className="head">한도</strong>
+                                    <span className="data">1,000~10,000,000</span>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
 
@@ -503,7 +522,7 @@ function BSPRQ0401M() {
                                       decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                     <i aria-hidden="true"></i>
                                   </div>
-                                  <span className="units type-legend">단위: 매</span>
+                                  <span className="units type-legend">단위: BOX</span>
                                   <span className="binds justify-end">
                                     <CommonButton label="담기" className="_solid-secondary" />
                                   </span>
@@ -518,11 +537,17 @@ function BSPRQ0401M() {
 
                   <TabPanel className="m-shop-table">
                     <div className="container">
+                      {/*
+                      <div className="o-empty-data">
+                        <p>조회결과가 없습니다.</p>
+                      </div>
+                       */}{/* EMPTY_DATA { @DEV } */}
+
                       <table className="table">
                         <colgroup>
                           <col style={{ width: 'calc(var(--rem) * 150)' }} />
-                          <col style={{ width: 'calc(var(--rem) * 120)' }} />
                           <col style={{ width: 'auto' }} />
+                          <col style={{ width: 'calc(var(--rem) * 140)' }} />
                           <col style={{ width: 'calc(var(--rem) * 260)' }} />
                         </colgroup>
 
@@ -535,17 +560,17 @@ function BSPRQ0401M() {
                               </div>
                             </td>
                             <td className="g-start">
-                              <div className="caption-secondary">
-                                <span className="limits">
-                                  한도 : 1~3
-                                </span>
-                              </div>
+                                <a href="javascript:" className="product">
+                                  <span className="subject">[00626] 전표꽂이</span>
+                                </a>
                             </td>
                             <td className="g-start">
-                                <a href="javascript:" className="product">
-                                  <em className="caption">00626</em>
-                                  <span className="subject">전표꽂이</span>
-                                </a>
+                              <ul className="summary">
+                                <li>
+                                  <strong className="head">한도</strong>
+                                  <span className="data">1,000~10,000,000</span>
+                                </li>
+                              </ul>
                             </td>
                             <td className="g-end">
                               <div className="actions">
@@ -556,7 +581,7 @@ function BSPRQ0401M() {
                                         decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                       <i aria-hidden="true"></i>
                                     </div>
-                                    <span className="units type-legend">단위: 매</span>
+                                    <span className="units type-legend">단위: BOX</span>
                                     <span className="binds justify-end">
                                       <CommonButton label="담기" className="_solid-secondary" />
                                     </span>
@@ -573,17 +598,17 @@ function BSPRQ0401M() {
                               </div>
                             </td>
                             <td className="g-start">
-                              <div className="caption-secondary">
-                                <span className="limits">
-                                  한도 : 1~3
-                                </span>
-                              </div>
+                                <a href="javascript:" className="product">
+                                  <span className="subject">[00626] 팩스토너CRG328(캐논 MF4550, MF4553D, MF4870D, MF4776N), 팩스토너CRG328(캐논 MF4550, MF4553D, MF4870D, MF4776N)</span>
+                                </a>
                             </td>
                             <td className="g-start">
-                                <a href="javascript:" className="product">
-                                  <em className="caption">00626</em>
-                                  <span className="subject">팩스토너CRG328(캐논 MF4550, MF4553D, MF4870D, MF4776N), 팩스토너CRG328(캐논 MF4550, MF4553D, MF4870D, MF4776N)</span>
-                                </a>
+                              <ul className="summary">
+                                <li>
+                                  <strong className="head">한도</strong>
+                                  <span className="data">1,000~10,000,000</span>
+                                </li>
+                              </ul>
                             </td>
                             <td className="g-end">
                               <div className="actions">
@@ -594,7 +619,45 @@ function BSPRQ0401M() {
                                         decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                       <i aria-hidden="true"></i>
                                     </div>
-                                    <span className="units type-legend">단위: 매</span>
+                                    <span className="units type-legend">단위: BOX</span>
+                                    <span className="binds justify-end">
+                                      <CommonButton label="담기" className="_solid-secondary" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr className="is-selected">{/* tr.is-selected { @DEV } */}
+                            <td>
+                              <div className="caption-primary">
+                                <em className="status"></em>
+                                <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
+                              </div>
+                            </td>
+                            <td className="g-start">
+                                <a href="javascript:" className="product">
+                                  <span className="subject">[00626] 전표꽂이</span>
+                                </a>
+                            </td>
+                            <td className="g-start">
+                              <ul className="summary">
+                                <li>
+                                  <strong className="head">한도</strong>
+                                  <span className="data">1,000~10,000,000</span>
+                                </li>
+                              </ul>
+                            </td>
+                            <td className="g-end">
+                              <div className="actions">
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input type-spin wdth-50">
+                                      <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                        decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                    <span className="units type-legend">단위: BOX</span>
                                     <span className="binds justify-end">
                                       <CommonButton label="담기" className="_solid-secondary" />
                                     </span>
@@ -611,17 +674,17 @@ function BSPRQ0401M() {
                               </div>
                             </td>
                             <td className="g-start">
-                              <div className="caption-secondary">
-                                <span className="limits">
-                                  한도 : 1~3
-                                </span>
-                              </div>
+                                <a href="javascript:" className="product">
+                                  <span className="subject">[00626] 전표꽂이</span>
+                                </a>
                             </td>
                             <td className="g-start">
-                                <a href="javascript:" className="product">
-                                  <em className="caption">00626</em>
-                                  <span className="subject">전표꽂이</span>
-                                </a>
+                              <ul className="summary">
+                                <li>
+                                  <strong className="head">한도</strong>
+                                  <span className="data">1,000~10,000,000</span>
+                                </li>
+                              </ul>
                             </td>
                             <td className="g-end">
                               <div className="actions">
@@ -632,45 +695,7 @@ function BSPRQ0401M() {
                                         decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
                                       <i aria-hidden="true"></i>
                                     </div>
-                                    <span className="units type-legend">단위: 매</span>
-                                    <span className="binds justify-end">
-                                      <CommonButton label="담기" className="_solid-secondary" />
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div className="caption-primary">
-                                <em className="status"></em>
-                                <em className="o-chip var-lined-00 size-30"><span className="label">소모품(소모품비품목)</span></em>
-                              </div>
-                            </td>
-                            <td className="g-start">
-                              <div className="caption-secondary">
-                                <span className="limits">
-                                  한도 : 1~3
-                                </span>
-                              </div>
-                            </td>
-                            <td className="g-start">
-                                <a href="javascript:" className="product">
-                                  <em className="caption">00626</em>
-                                  <span className="subject">전표꽂이</span>
-                                </a>
-                            </td>
-                            <td className="g-end">
-                              <div className="actions">
-                                <div className="o-field">
-                                  <div className="fields">
-                                    <div className="o-form _input type-spin wdth-50">
-                                      <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
-                                        decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
-                                      <i aria-hidden="true"></i>
-                                    </div>
-                                    <span className="units type-legend">단위: 매</span>
+                                    <span className="units type-legend">단위: BOX</span>
                                     <span className="binds justify-end">
                                       <CommonButton label="담기" className="_solid-secondary" />
                                     </span>
@@ -711,6 +736,10 @@ function BSPRQ0401M() {
                     </div>
 
                     <div className="detail">
+                      {/* <div className="empty-data">
+                        <p className="o-rich-text">선택된 품목이 없습니다.</p>
+                      </div> */}
+
                       <div className="o-product">
                         <div className="main">
                           <em className="caption">
@@ -766,10 +795,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">1</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-up" />
                               <span className="tag">순위​상승</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -781,10 +810,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">2</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-down" />
                               <span className="tag">순위​하락</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -796,10 +825,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">3</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-hold" />
                               <span className="tag">순위​변동​없음</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -811,10 +840,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">4</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-up" />
                               <span className="tag">순위​상승</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -826,10 +855,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">5</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="new" />
                               <span className="tag">순위권​진입</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -846,10 +875,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">1</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-up" />
                               <span className="tag">순위​상승</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -861,10 +890,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">2</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-down" />
                               <span className="tag">순위​하락</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -876,10 +905,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">3</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-hold" />
                               <span className="tag">순위​변동​없음</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -891,10 +920,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">4</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="rank-up" />
                               <span className="tag">순위​상승</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>
@@ -906,10 +935,10 @@ function BSPRQ0401M() {
                         <div className="o-rank">
                           <span className="order">
                             <span className="rank">5</span>
-                            <span className="status">
+                            {/* <span className="status">
                               <Icon icon="new" />
                               <span className="tag">순위권​진입</span>
-                            </span>
+                            </span> */}
                           </span>
                           <span className="product">
                             <span className="id">22237</span>

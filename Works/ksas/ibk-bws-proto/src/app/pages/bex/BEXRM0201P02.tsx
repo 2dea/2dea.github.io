@@ -125,39 +125,30 @@ function BEXRM0201P02() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`등록일시`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="m-string-binds">
-                              <span className="o-digit type-datetime string">2025-12-25 09:10:59</span>
-                              <span className="binds"><CommonButton label="현재시각" className="_normal" /></span>
-                            </div>
-                          </td>
-                          <th colSpan={1}>
                             <Label label={`등록자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 홍길동
                           </td>
-                        </tr>
-                        <tr>
                           <th colSpan={1}>
                             <Label label={`로봇배송결과`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _select mode-required wdth-50">
+                                <div className="o-form _select mode-required wdth-80">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
                           </td>
+                        </tr>
+                        <tr>
                           <th colSpan={1}>
-                            <Label label={`비고`} require={false} />
+                            <Label label={`비고내용`} require={false} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
@@ -167,6 +158,17 @@ function BEXRM0201P02() {
                             </div>
                           </td>
                         </tr>
+                        {/* <tr>
+                          <th colSpan={1}>
+                            <Label label={`등록일시`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="m-string-binds">
+                              <span className="o-digit type-datetime string">2025-12-25 09:10:59</span>
+                              <span className="binds"><CommonButton label="현재시각" className="_normal" /></span>
+                            </div>
+                          </td>
+                        </tr> */}
                       </tbody>
                     </table>
                   </form>

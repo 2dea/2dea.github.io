@@ -41,7 +41,7 @@ function FMTDP0201M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '파출수납' }, { label: '창구를거치지않은예금의입출금대장' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '파출수납' }, { label: '창구를거치지않은예금의입출금대장' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function FMTDP0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -148,7 +148,7 @@ function FMTDP0201M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`방문일자`} require={false} />
+                    <Label label={`등록기간`} require={false} />
                     <div className="fields">
                       <div className="o-form _input type-date wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
@@ -318,7 +318,6 @@ function FMTDP0201M() {
                           <col />
                           <col />
                           <col />
-                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
@@ -343,7 +342,6 @@ function FMTDP0201M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수행직원</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">감리역</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점장</span></div></th>
                           </tr>
@@ -351,7 +349,7 @@ function FMTDP0201M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -372,7 +370,6 @@ function FMTDP0201M() {
                               <td>홍길동</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>결재승인</td>
-                              <td>홍길동</td>
                               <td>감리역</td>
                               <td>부점장</td>
                             </tr>
@@ -443,7 +440,7 @@ function FMTDP0201M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`방문일자`} require={true} />
+                            <Label label={`방문기간`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">

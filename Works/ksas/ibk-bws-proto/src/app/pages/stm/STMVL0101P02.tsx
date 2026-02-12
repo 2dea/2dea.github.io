@@ -1,5 +1,5 @@
 /**
-* @description 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회 ~ (LP)차량별관리자지정
+* @description 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회 ~ (LP)차량별관리자지정
  */
 
 // dependency
@@ -101,7 +101,7 @@ function STMVL0101P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">차량별관리자지정</span></h3>}
+        header={<h3 className="o-heading"><span className="label">관리자 지정</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">

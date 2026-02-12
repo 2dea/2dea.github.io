@@ -1,5 +1,5 @@
 /**
-* @description 재난·안전관리 > 업무용차량관리(운행일지등) > 운행일지등록/조회 ~ (LP)임대회사정보등록
+* @description 재난·안전관리 > 업무용차량관리 > 운행일지등록/조회 ~ (LP)임대회사정보등록
  */
 
 // dependency
@@ -135,14 +135,15 @@ function STMVL0101P04() {
                             <Label label={`콜센터전화번호`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            <div className="o-field">
+                            <span className="o-digit type-tel">02-729-7610</span>
+                            {/* <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input wdth-60">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
-                            </div>
+                            </div> */}
                           </td>
                         </tr>
                         <tr>

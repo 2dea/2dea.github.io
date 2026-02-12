@@ -112,7 +112,7 @@ function HSPDU0301P02() {
                   <h4 className="o-heading level2"><span className="label">감사자등록</span></h4>
 
                   <div className="o-helper style-strong">
-                    <em className="label">감시자를 선택해 주세요.</em>
+                    <em className="label">감사자를 선택해 주세요.</em>
                   </div>
                 </div>
 
@@ -127,7 +127,7 @@ function HSPDU0301P02() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`감시자`} require={true} />
+                            <Label label={`감사자`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">

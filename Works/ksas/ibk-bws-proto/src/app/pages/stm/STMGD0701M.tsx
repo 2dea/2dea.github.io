@@ -46,7 +46,7 @@ function STMGD0701M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '기계경비당직관리' }, { label: 'SET시각등록' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '기계경비당직관리' }, { label: 'SET시각등록' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMGD0701M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -114,12 +114,6 @@ function STMGD0701M() {
             <div className="m-binds type-start">
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
-              </div>
-            </div>
-
-            <div className="m-binds type-end">
-              <div className="group _primary">
-                <CommonButton label="경영실적포털 자료전송" className="_solid-primary" />
               </div>
             </div>
           </div>
@@ -260,6 +254,13 @@ function STMGD0701M() {
                     </div>
                   </div>
                 </div>
+
+                <div className="m-footer">
+                  <ul className="m-bullets type-disc">
+                    <li>엑셀업로드 후 1시간 이내에 경영실적포털로 자동전송됩니다.</li>
+                  </ul>
+                </div>
+
               </div>
 
             </div>

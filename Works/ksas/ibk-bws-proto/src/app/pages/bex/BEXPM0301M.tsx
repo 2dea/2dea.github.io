@@ -41,7 +41,7 @@ function BEXPM0301M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물검수' }];
+  const paths: MenuItem[] = [{ label: '행내등기·우편물' }, { label: '우편물' }, { label: '우편물검수' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function BEXPM0301M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -115,8 +115,9 @@ function BEXPM0301M() {
             <div className="m-binds type-end">
 
               <div className="group _primary">
-                <CommonButton label="검수수정" className="_solid-primary" />
+                <CommonButton label="미도착취소" className="_lined-primary" />
                 <CommonButton label="검수취소" className="_lined-primary" />
+                <CommonButton label="검수수정" className="_solid-primary" />
                 <CommonButton label="검수등록" className="_solid-primary" />
                 <CommonButton label="신청수정" className="_solid-primary" />
               </div>
@@ -308,8 +309,6 @@ function BEXPM0301M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물구분</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일련번호</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
-                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수자</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">최종변경직원</span></div></th>
@@ -340,17 +339,12 @@ function BEXPM0301M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={36}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={31}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -360,7 +354,7 @@ function BEXPM0301M() {
                             <td><InputCheck label="선택" labelHidden /></td>
                             <td>{idx + 1}</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
-                            <td><span className="o-digit type-time">00:00</span></td>
+                            <td><span className="o-digit type-time">00:00:00</span></td>
                             <td>0092</td>
                             <td className="g-start">프로세스혁신부</td>
                             <td>0092</td>
@@ -368,11 +362,6 @@ function BEXPM0301M() {
                             <td>신청</td>
                             <td>반송카드</td>
                             <td>0092-1111</td>
-                            <td>0092</td>
-                            <td>홍길동</td>
-                            <td>0092</td>
-                            <td>홍길동</td>
-                            <td><span className="o-digit type-tel">02-729-7610</span></td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td>0092</td>
                             <td>홍길동</td>
@@ -567,19 +556,7 @@ function BEXPM0301M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">우편물 상세내역</span></h3>
 
-                  <div className="o-length">
-                    <span className="head">전체</span>
-                    <em className="data">
-                      <span className="value">8</span>
-                      <span className="units">건</span>
-                    </em>
-                  </div>
-
                   <div className="m-binds">
-                    <div className="group">
-                      <CommonButton label="일괄적용" className="_normal" />
-                    </div>
-
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
@@ -609,7 +586,7 @@ function BEXPM0301M() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우편물내용<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신처구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수신자명<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                           </tr>
                         </thead>
 
@@ -620,7 +597,7 @@ function BEXPM0301M() {
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
-                          {[...Array(3)].map((e, idx) => (
+                          {[...Array(1)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
                               <td>{idx + 1}</td>
                               <td>보통카드</td>

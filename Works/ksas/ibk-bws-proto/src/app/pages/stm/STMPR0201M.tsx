@@ -46,7 +46,7 @@ function STMPR0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '출입증/방문증' }, { label: '출입증신청내역' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '출입증/방문증' }, { label: '출입증신청내역' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMPR0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -416,6 +416,7 @@ function STMPR0201M() {
                     <Tab className="link"><span className="label">02. 신분증사본</span></Tab>
                     <Tab className="link"><span className="label">03. 개인정보동의서</span></Tab>
                     <Tab className="link"><span className="label">04. 보안서약서</span></Tab>
+                    <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
                   </TabList>
                 </div>
 

@@ -365,7 +365,7 @@ function BSSCR0101P01() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`이미지​첨부 (626 x 177px)`} require={true} />
+                            <Label label={<>이미지첨부 <span className="g-nowrap">(626 * 177px)</span></>} require={true} />
                           </th>
                           <td colSpan={3}>
                             <div className="m-flex-list">

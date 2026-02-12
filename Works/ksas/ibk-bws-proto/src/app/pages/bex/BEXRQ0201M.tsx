@@ -46,7 +46,7 @@ function BEXRQ0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '행내등기' }, { label: '행내등기현황관리' }];
+  const paths: MenuItem[] = [{ label: '행내등기·우편물' }, { label: '행내등기' }, { label: '행내등기현황관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function BEXRQ0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -112,6 +112,10 @@ function BEXRQ0201M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="여신자필서류(STP)다운" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -126,11 +130,9 @@ function BEXRQ0201M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="여신자필서류(STP)다운" className="_solid-primary" />
                 <CommonButton label="여신자필서류(STP)관리" className="_solid-primary" />
                 <CommonButton label="신청취소" className="_lined-primary" />
                 <CommonButton label="수정" className="_solid-primary" />
-
               </div>
             </div>
           </div>
@@ -144,6 +146,15 @@ function BEXRQ0201M() {
         <div className="div-contents">
           <div className="o-grid">
             <div className="column">
+
+              <div className="o-board type-a style-fit">
+                <div className="board-container">
+                  <ul className="m-bullets type-disc">
+                    <li>여신자필서류(STP)를 타서류로 또는 타서류를 여신자필서류(STP)로 잘못 신청하거나 신청 받을 시 인수가 완료된 상태의 행내등기의 서류구분 변경이 가능하며, 우리부점과 상대부점 결재승인 완료 시 서류구분 변경이 완료됩니다.</li>
+                    <li>서류구분은 총 1회만 변경할 수 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
 
               <form className="m-filter-form">
                 <div className="fieldset">
@@ -391,8 +402,8 @@ function BEXRQ0201M() {
                 <div className="m-header">
                   <h3 className="o-heading level3"><span className="label">진행정보</span></h3>
 
-                  <div className="o-legend type-helper style-normal">
-                    <em className="label"><strong className="c-color-text">도착예정일자 : YYYY-MM-DD</strong> (신청일자에 실물 발송한 경우)</em>
+                  <div className="o-helper style-normal">
+                    <em className="label"><strong className="emph">도착예정일자: <span className="g-bold c-color-point">YYYY-MM-DD</span></strong> 신청일자에 실물을 발송한 경우에 한함</em>
                   </div>
                 </div>
 
@@ -427,7 +438,7 @@ function BEXRQ0201M() {
 
                               <span className="addition">
                                 <span className="item name">제갈공명</span>
-                                <span className="item date">2025-03-10</span>
+                                <span className="item date">2025-03-10 23:59:59</span>
                               </span>
                             </span>
                           </li>

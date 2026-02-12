@@ -104,10 +104,31 @@ function FMTFT0801P02() {
         header={<h3 className="o-heading"><span className="label">화폐이미지보기</span></h3>}
       >
         <div className="div-container">
+
           <div className="o-grid">
             <div className="column">
 
-              앞면 이미지
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading"><span className="label">앞면</span></h4>
+                </div>
+
+                <div className="main">
+                  <div className="o-object style-fill o-view-image case-currency"></div>
+                </div>
+              </div>
+
+              <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading"><span className="label">뒷면</span></h4>
+                </div>
+
+                <div className="main">
+                  <div className="o-object style-fill o-view-image case-currency">
+                    <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
+                  </div>
+                </div>
+              </div>
 
             </div>
           </div>

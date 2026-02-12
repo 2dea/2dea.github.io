@@ -1,0 +1,182 @@
+
+/* font */
+/* 나중에 참고 블로그 : https: //blog.naver.com/sijin921/221991347994 */
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'eScoreDream';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+  font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+  --root-em-int: 1;
+  --root-em: calc(1em * var(--root-em-int, 10) / 16);
+  --rem: var(--root-em);
+
+  --color-scrollbar-track-edge: Transparent;
+  --margin-scrollbar: calc(var(--rem) * 3);
+}
+
+html {
+  font-size: var(--root-em);
+  font-size: calc(100vw * var(--root-em-int) / 1920);
+  font-size: calc(100dvw * var(--root-em-int) / 1920);
+
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+/* @media
+  screen and (not (max-width: 1920px))  {
+    html  { font-size: var(--root-em, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
+} */
+/* http: //www.2dea.com/innodep/gaia/public/html/settings/1718_VideoUnitInfo.html */
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16em;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  font-family: 'S-CoreDream-3Light', sans-serif;
+  -webkit-text-size-adjust: none;
+  overflow-y: scroll;
+}
+
+
+* {
+  scroll-behavior: inherit;
+  scrollbar-width: inherit;
+}
+body > * {
+    box-sizing: border-box;
+
+    /* scroll */
+  --color-scrollbar-track-edge: Transparent;
+  --margin-scrollbar: calc(var(--rem) * 2);
+  --width-scrollbar: calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
+}
+
+
+::-webkit-resizer {
+  image-rendering: pixelated;
+  background: var(--obj-sym-resizer-scrollable) 0 /100%;
+}
+
+::-webkit-scrollbar {
+  width: var(--width-scrollbar, 12rem);
+  height: var(--width-scrollbar, 12rem);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--color-scrollbar-track, rgba(0, 0, 0, 0.05));
+  outline: 1px solid var(--color-scrollbar-corner-edge, rgba(255, 255, 255, 0.05));
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-scrollbar-track, rgba(0, 0, 0, 0.05));
+  border: 1px solid;
+  border-color: var(--color-scrollbar-track-edge, Transparent);
+  border-radius: var(--radius-scrollbar-track, 2px);
+  will-change: background-color;
+}
+
+::-webkit-scrollbar-thumb {
+  min-width: 50px;
+  min-height: 50px;
+  border: var(--margin-scrollbar, 3px) solid Transparent;
+  background-clip: padding-box;
+  background-color: var(--color-scrollbar-thumb, rgba(0, 0, 0, 0.3));
+  outline: 1px solid var(--color-scrollbar-thumb-edge, rgba(255, 255, 255, 0.3));
+  outline-offset: calc(-1 * var(--margin-scrollbar, 3px));
+  border-radius: var(--width-scrollbar, 12px);
+  will-change: background-color, outline-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-scrollbar-thumb-hover, rgba(0, 0, 0, 0.4));
+  outline-color: rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-scrollbar-thumb-active, rgba(0, 0, 0, 0.5));
+  outline-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ---- 공통 ----*/
+body> * {
+  font-weight: 500; /* 디자인 기준 보통 */
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  width: inherit;
+}

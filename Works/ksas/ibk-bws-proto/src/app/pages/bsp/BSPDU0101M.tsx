@@ -46,7 +46,7 @@ function BSPDU0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '폐기' }, { label: '오손등록' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품(영업점)' }, { label: '폐기' }, { label: '오손등록' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function BSPDU0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -119,6 +119,13 @@ function BSPDU0101M() {
             </div>
 
             <div className="m-binds type-end">
+              <div className="group _utility">
+                <div className="m-print-binds">
+                  <CommonButton label="오손불일치(전체)출력" className="_texted" />
+                  <CommonButton label="출력" className="_texted" />
+                </div>
+              </div>
+
               <div className="group _primary">
                 <CommonButton label="선택" className="_solid-primary" />
                 <CommonButton label="추가" className="_solid-primary" />
@@ -288,9 +295,10 @@ function BSPDU0101M() {
           <Tabs className="m-tabs react-tabs" defaultIndex={0}>
             <div className="m-tab type2 type-step">
               <TabList className="lists">
-                <Tab className="link"><span className="label">Step 1. 통합단말서손거래내역</span></Tab>
+                <Tab className="link"><span className="label">Step 1. 통합단말 서손거래내역</span></Tab>
                 <Tab className="link"><span className="label">Step 2. 일련번호 및 오손사유 입력</span></Tab>
                 <Tab className="link"><span className="label">Step 3. 결재요청</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 

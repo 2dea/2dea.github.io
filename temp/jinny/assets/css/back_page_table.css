@@ -1,0 +1,238 @@
+/* --- common  --- */
+.style-col {
+  flex-direction: column;
+}
+
+/* --- table  --- */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption {
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  line-height: 1px;
+  font-size: 1px;
+  color: transparent;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.table-wrap {}
+
+.table-box table {
+  color: #ffff;
+}
+.table-box thead {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #00854b; 
+  /* border-bottom: 4rem solid #fff; */
+}
+.table-box thead::after {
+  content: "";
+  display: table-row;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  /* width: calc(100% - var(--edge)); */
+  height: 4rem;
+  background-color: #fff;
+}
+.table-box thead th {
+  /* font-size: 42rem; */
+  font-size: 38rem;
+}
+.table-box tbody td {
+  /* font-size: 52rem; */
+  font-size: 30rem;
+  text-align: center;
+  vertical-align: middle;
+  /* padding: 6rem 0; */
+  padding: 8rem 0;
+}
+.table-box tbody tr + tr {
+  border-top: 2rem solid rgba(255, 255, 255, 0.2);
+}
+
+.table-box tbody td .name {
+  /* font-size: 47rem; */
+  /* font-size: 40rem; */
+}
+.table-box tbody td .name-en {
+  /* font-size: 36rem; */
+  font-size: 28rem;
+}
+
+.table-box tbody td .pos {
+  /* font-size: 47rem; */
+}
+.table-box tbody td .positive {
+  color: #23f2ff;
+}
+.table-box tbody td .red {
+  color: #f15922;
+}
+
+/* table style-b:  */
+.table-box.style-b table {
+  border: 4rem solid #fff;
+}
+.table-box.style-b tbody {
+  border-top: 4rem solid #fff;
+}
+.table-box.style-b tbody tr + tr {
+  border-top: 4rem solid #fff;
+}
+.table-box.style-b tbody tr:first-child {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.table-box.style-b tbody td {
+  border-left: 4rem solid #fff;
+}
+
+/* --- 테이블 2개 --- */
+.table-wrap.table-wrap02 {
+  display: flex;
+  gap: 20rem;
+}
+
+
+
+/* --- card  --- */
+.card-list {
+  display: flex;
+  gap: 46rem;
+}
+.card-list .data-area {
+  display: flex;
+  justify-content: space-around;
+  margin: 20rem 0 0;
+}
+.card-list .data-area li {
+  display: inline-flex;
+  flex-direction: column;
+
+}
+.card-list .data-area .data {
+  display: flex;
+  justify-content: center;
+  margin-top: 14rem;
+}
+
+.profile-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20rem 10rem 25rem;
+  border-radius: 10rem;
+  background-color: #fff;
+}
+.profile-area .img-box img {
+  /* width: 500rem;
+  height: 400rem; */
+}
+.profile-area .name-box {
+  display: flex;
+  align-items: baseline;
+  margin-top: 25rem;
+  margin-left: 38rem;
+  font-weight: 600;
+  color: #00854b;
+}
+.profile-area .name-box .name {
+  font-size: 68rem;
+  /* font-weight: 700; */
+}
+.profile-area .name-box .name-en {
+  /* position: relative; */
+  margin-left: 8rem;
+  font-size: 33rem;
+}
+.profile-area .name-box .name-en::before {
+  /* content: ''; */
+  position: absolute;
+  display: inline-block;
+  width: 4rem;
+  height: 100%;
+  background-color: #00854b;
+}
+
+
+/* --- data-area ---*/
+.data-area li .name {
+  color: #00854b;
+  background-color: #fff;
+}
+.data-area li .data {
+  color: #fff;
+}
+.data-area li .data.red {
+  color: red;
+}
+/* data-area sizemedium
+* page-personal
+*/
+
+.data-area.medium {
+  font-size: 42rem;
+  height: 56rem;
+}
+.data-area.medium .name {
+  padding: 5rem 20rem 1rem;
+  border-radius: 28rem;
+}
+
+
+.data-area.big {
+  gap: 65rem;
+  font-size: 55rem;
+}
+.data-area.big .name {
+  margin-right: 65rem;
+  padding: 0 30rem;
+  border-radius: 50rem;
+}
+
+/* --- page-personal --- */
+.personal-wrap {
+  display: flex;
+  align-items: anchor-center;
+}
+.personal-img {
+  width: 700rem;
+  height: 800rem;
+}
+
+.personal-wrap .name-box {
+  color: #fff;
+}
+.personal-wrap .name-box .name {
+  font-size: 98rem;
+  letter-spacing: -1.9;
+}
+.personal-wrap .name-box .name-en {
+  font-size: 39rem;
+  letter-spacing: -0.7;
+}
+
+.data-area.style-row {
+  display: flex;
+}
+
+
+/* page layout */
+.personal-wrap .data-area.style-row.big {
+  margin: 30rem;
+}
+
+.personal-wrap .table-wrap {
+
+}

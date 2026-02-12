@@ -1,0 +1,96 @@
+/* layout */
+
+.wrapper {
+  position: relative;
+  /* overflow: hidden; */
+  width: initial;
+  width:100%;
+  height: 100%;
+  height: 100vh;
+  background-color: #00854b;
+
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+
+  /* outline: 1px solid red;   *//* test */
+
+}
+
+.container-section {
+  display: flex;
+  flex-direction: column;
+  /* width:100%;
+  height: 100%; */
+  /* max-width: 1920rem;
+  max-height: 1080rem; */
+  margin: 0 auto;
+  padding: 22rem 25rem 21rem;
+  background: url('../images/bg_01.png') no-repeat center top;
+  background-size: cover;
+
+  outline: 1px solid skyblue; /* test */
+}
+
+/* main-header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 146rem; /* 임시 */
+  padding: 0 20rem;
+  box-sizing: border-box;
+}
+.main-header .main-title {
+  width: 490rem;
+  height: 106rem;
+}
+.main-header .sub-title {
+  font-size: 62rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+main {
+  --color-scrollbar-track-edge: Transparent;
+  --margin-scrollbar: calc(var(--rem) * 2);
+  --width-scrollbar: calc(var(--rem) * 4 + var(--margin-scrollbar) * 2);
+
+  scroll-behavior: auto;
+  overscroll-behavior: contain;
+}
+
+/* main-board */
+.main {
+  flex-grow: 1;
+  width: 100%;
+  height: calc(100% - 146rem - 68rem);
+  height: calc(100vh- 146rem - 68rem);
+  margin-top: 20rem;
+  overflow: auto auto;
+    /* overflow: auto scroll; */
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /* outline: 1px solid blue;  */ /* test */
+}
+
+
+/* footer */
+footer {
+  /* height: 93rem; */
+  padding: 0 20rem;
+  border-top: 4rem solid #ffff;
+}
+.footer-logo {
+  width: 200rem;
+  height: 76rem;
+  margin-top: 10rem;
+}
+
+footer.footer-event {
+  padding: 0 17rem;
+  color: #fff;
+}

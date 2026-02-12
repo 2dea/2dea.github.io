@@ -46,7 +46,7 @@ function STMKY0301M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '열쇠인수도관리' }, { label: '열쇠인수도관리' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '열쇠인수도관리' }, { label: '열쇠인수도관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMKY0301M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -112,6 +112,10 @@ function STMKY0301M() {
 
           <div className="binds">
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="과거내역조회" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -119,7 +123,6 @@ function STMKY0301M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="과거내역조회" className="_lined-primary" />
                 <CommonButton label="인수도등록" className="_solid-primary" />
                 <CommonButton label="인수도취소" className="_solid-primary" />
               </div>
@@ -298,6 +301,7 @@ function STMKY0301M() {
                                 <th colSpan={5} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">변경후보관책임자<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">예외승인</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고(사유)</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수도이력조회</span></div></th>
                               </tr>
                               <tr>
                                 <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">보관기간</span></div></th>
@@ -313,7 +317,7 @@ function STMKY0301M() {
 
                             <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
-                                <td colSpan={17}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                                <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
                             </tbody>
 
@@ -355,6 +359,7 @@ function STMKY0301M() {
                                 <td>N</td>
                                 <td><InputCheck label="선택" labelHidden /></td>
                                 <td className="g-start"></td>
+                                <td><CommonButton label="이력" className="_normal" /></td>
                               </tr>
                             ))}
                             </tbody>

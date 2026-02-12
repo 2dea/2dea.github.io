@@ -1,248 +1,37 @@
 @charset "UTF-8";
 
-// .o-section:not(.o-section *):not(.o-grid >.column >*)  {
-.o-section:not(.o-section *):not(.o-grid >.column >*):not(.m-sections >*):not(.m-tabs >.m-tabs-panel >*)  {
-  outline: thick solid Red;
-}
-.o-grid:where(.o-grid *):where(.dom-wrapper.type-proto *) {
-  outline: thick solid Blue;
-}
+
+.dom-wrapper:where(.theme-heavy)  {
+  --theme-header-back: var(--color-key1-70);
+
+  --theme-header-text: var(--color-text-00);
+  --theme-header-text-30: var(--color-text-00);
+  --theme-header-text-key: var(--color-point-orange);
+  --theme-header-icon-pos: 25%;
+
+  --theme-header-divider: var(--color-point-skyblue);
+
+  --theme-header-logo: var(--obj-img-logo-heavy);
+
+  --theme-header-nav-text: var(--color-ground2-blue-40);
+  --theme-header-nav-text-key: var(--cc);
 
 
-// CMP000601P 주소검색
-.address-box {text-align: start;}
-.address-box .address-sub {font-size: $font-40; line-height: $line-40;}
+  --theme-nav-back: var(--color-theme-key1-90);
 
-// BSSCR0101P01 thumbnail-image in tbody
-.thumbnail-image {}
-.p-datatable-tbody .thumbnail-image {overflow:hidden; border-radius: 8px; border: 1px solid var(--color-edge-40);}
-.m-upload-image.type-widthy {width: 444px;}
+  --theme-nav-text: var(--color-text-00);
+  --theme-nav-text-30: var(--color-text-00);
 
-// primereact 달력
-.p-datepicker  {
-  table :not(tr >* *) {
-      font-weight: revert;
-      color: revert;
-      background-color: revert;
-      text-align: revert;
-    }
-  th,
-    td {
-      -moz-box-sizing: revert;
-      -webkit-box-sizing: revert;
-      box-sizing: revert;
-      padding: revert;
-      border: revert;
-      border-width: revert;
+  --theme-nav-divider: var(--tp);
 
-      .p-disabled  {
-        color: $color-text-disabled;
-        opacity: 0.4;
-      }
-    }
-}
+  --theme-nav-search-icon-pos: 75%;
 
-.p-calendar {
-  position: relative;
-  display: inline-flex;
-  max-width: 100%;
-  .p-inputtext {
-    flex: 1 1 auto;
-    width: 1%;
-  }
+  --theme-nav-tablist-back: Transparent;
+  --theme-nav-tablist-edge: rgb(from var(--color-edge-40) r g b / var(--alpha-dimmed-08));
 
-  .p-datepicker {
-    min-width: 100%;
-  }
+  --theme-nav-total-back: rgb(from var(--color-ground) r g b / var(--alpha-dimmed-08));
 
-  .p-datepicker-touch-ui {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 80vw;
-    transform: translate(-50%, -50%);
-  }
-}
+  --theme-nav-total-edge: rgb(from var(--color-edge-30) r g b / var(--alpha-dimmed-08));
 
-.p-calendar-w-btn-right {
-  .p-inputtext {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .p-datepicker-trigger {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-}
-
-.p-calendar-w-btn-left {
-  .p-inputtext {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .p-datepicker-trigger {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-}
-
-.p-fluid {
-  .p-calendar {
-    display: flex;
-
-    .p-inputtext {
-      width: 1%;
-    }
-  }
-}
-
-.p-datepicker {
-  width: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  td {
-    >span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      margin: 0 auto;
-      overflow: hidden;
-      position: relative;
-    }
-  }
-
-  button {
-    min-width: 0;
-  }
-}
-
-.p-datepicker-inline {
-  display: inline-block;
-  position: static;
-  overflow-x: auto;
-}
-
-.p-datepicker-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  button.p-datepicker-prev,
-  button.p-datepicker-next {
-    min-width: III(28) !important;
-    width: III(28) !important;
-    height: III(28) !important;
-
-    .p-icon {
-      width: III(14);
-      height: III(14);
-    }
-  }
-  .p-datepicker-title {
-    display: flex;
-    margin: 0 auto;
-    gap: 0 8px;
-  }
-
-  .p-datepicker-month {
-    order: 2;
-  }
-
-  .p-datepicker-year {
-    order: 1;
-  }
-}
-
-.p-datepicker-prev {
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.p-datepicker-next {
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.p-datepicker-multiple-month {
-  .p-datepicker-group-container {
-    display: flex;
-    display: flex;
-
-    .p-datepicker-group {
-      flex: 1 1 auto;
-    }
-  }
-}
-
-.p-monthpicker-month {
-  width: 33.3%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-}
-
-.p-datepicker-buttonbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.p-timepicker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-  }
-
-  >div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-.p-datepicker-touch-ui {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 80vw;
-  transform: translate(-50%, -50%);
-}
-
-.p-yearpicker-year {
-  width: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
+  --theme-nav-control: var(--theme-nav-back);
 }

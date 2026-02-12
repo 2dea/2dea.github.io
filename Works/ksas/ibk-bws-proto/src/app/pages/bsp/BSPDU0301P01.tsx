@@ -272,7 +272,7 @@ function BSPDU0301P01() {
                       <CommonButton label="온누리스캔내역 조회" className="_normal" />
                     </div>
                     <div className="group">
-                      <CommonButton label="행추가" className="_normal" />
+                      {/* <CommonButton label="행추가" className="_normal" /> */}
                       <CommonButton label="행삭제" className="_normal" />
                       <CommonButton label="취소" className="_normal" />
                     </div>

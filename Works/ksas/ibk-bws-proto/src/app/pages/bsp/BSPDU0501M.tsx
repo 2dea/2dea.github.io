@@ -46,7 +46,7 @@ function BSPDU0501M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(영업점)' }, { label: '폐기' }, { label: '중요용지사고보고(본부)' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품(영업점)' }, { label: '폐기' }, { label: '중요용지사고보고(본부)' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function BSPDU0501M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -127,6 +127,7 @@ function BSPDU0501M() {
 
               <div className="group _primary">
                 <CommonButton label="반려" className="_lined-primary" />
+                <CommonButton label="검사부" className="_solid-primary" />
                 <CommonButton label="접수" className="_solid-primary" />
               </div>
             </div>
@@ -145,13 +146,9 @@ function BSPDU0501M() {
               <form className="m-filter-form">
                 <div className="fieldset">
 
-                  <div className="o-field colspan-4">
-                    <Label label={`기간`} require={true} />
+                  <div className="o-field colspan-2">
+                    <Label label={`사고보고등록일자`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select mode-required">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
                       <div className="o-form _input type-date mode-required wdth-50">
                         <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                         <i aria-hidden="true"></i>
@@ -165,16 +162,16 @@ function BSPDU0501M() {
                   </div>
 
                   <div className="o-field colspan-2">
-                    <Label label={`부점`} require={true} />
+                    <Label label={`부점`} require={false} />
                     <div className="fields">
-                      <div className="o-form _input mode-required">
+                      <div className="o-form _input">
                         <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                         <span className="inner-binds">
                           <ImageButton label="초기화" icon="remove" />
                         </span>
                       </div>
-                      <div className="o-form _select mode-required">
+                      <div className="o-form _select">
                         <XDropdown appendTo={'self'} className="bind" />
                         <i aria-hidden="true"></i>
                       </div>

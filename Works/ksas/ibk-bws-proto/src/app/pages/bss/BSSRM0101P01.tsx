@@ -101,7 +101,7 @@ function BSSRM0101P01() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">공지(메모/알림)관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">공지(메모/알림) 관리</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -252,7 +252,7 @@ function BSSRM0101P01() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="삭제" className="_lined-primary" />
+              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>

@@ -41,7 +41,7 @@ function HSPPC0401M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '대금정산' }, { label: '대금정산품의' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품(본부)' }, { label: '대금정산' }, { label: '대금정산품의' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function HSPPC0401M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -107,10 +107,6 @@ function HSPPC0401M() {
 
           <div className="binds">
             <div className="m-binds type-start">
-              <div className="group">
-                <CommonButton label="CC처리내역 선택" className="_lined-secondary" />
-              </div>
-
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
@@ -190,6 +186,7 @@ function HSPPC0401M() {
                     <div className="group">
                       <CommonButton label="예산잔액체크" className="_normal" />
                       <CommonButton label="처리완료" className="_normal" />
+                      <CommonButton label="CC처리내역 선택" className="_normal" />
                     </div>
 
                     <div className="group">
@@ -431,6 +428,14 @@ function HSPPC0401M() {
                                 </div>
                               </div>
                             </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`CC처리내역선택`} require={false} />
+                          </th>
+                          <td colSpan={5}>
+                            CC처리내역 선택한 경우만 행 노출
                           </td>
                         </tr>
                       </tbody>

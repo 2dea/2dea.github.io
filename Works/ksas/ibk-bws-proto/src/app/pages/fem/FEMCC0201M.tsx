@@ -46,7 +46,7 @@ function FEMCC0201M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '수수료관리' }, { label: '원화정사수수료' }, { label: '지급결의' }];
+  const paths: MenuItem[] = [{ label: '수수료관리' }, { label: '원화정사수수료' }, { label: '지급결의' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function FEMCC0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -494,6 +494,25 @@ function FEMCC0201M() {
                         </tr>
 
                         <tr>
+                          {/* 예외 체크시 필수 값으로 { @DEV } */}
+                          {/*
+                          <th colSpan={1}>
+                            <Label label={`(B)지급수수료 예외금액`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50 mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="m-checks">
+                                  <InputCheck label="예외" checked />
+                                </div>
+                              </div>
+                            </div>
+                          </td> */}
+
                           <th colSpan={1}>
                             <Label label={`(B)지급수수료 예외금액`} require={false} />
                           </th>
@@ -533,6 +552,22 @@ function FEMCC0201M() {
                         </tr>
 
                         <tr>
+                          {/* 예외 체크시 필수 값으로 { @DEV } */}
+                          {/*
+                          <th colSpan={1}>
+                            <Label label={`지급수수료 예외사유`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={8} cols={80} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td> */}
+
                           <th colSpan={1}>
                             <Label label={`지급수수료 예외사유`} require={false} />
                           </th>
@@ -546,6 +581,7 @@ function FEMCC0201M() {
                               </div>
                             </div>
                           </td>
+
                           <th colSpan={1}>
                             <Label label={`첨부파일`} require={false} />
                           </th>

@@ -101,7 +101,7 @@ function HSPDU0201P03() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">오손중요용지행내등기신청</span></h3>}
+        header={<h3 className="o-heading"><span className="label">오손중요용지 행내등기 신청</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -206,7 +206,7 @@ function HSPDU0201P03() {
                       <tbody>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`발송일자`} require={true} />
+                            <Label label={`발송일자`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <span className="o-digit type-date">2025-12-25</span>
@@ -214,13 +214,13 @@ function HSPDU0201P03() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`발송부점`} require={true} />
+                            <Label label={`발송부점`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 프로세스혁신
                           </td>
                           <th colSpan={1}>
-                            <Label label={`발송자`} require={true} />
+                            <Label label={`발송자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 홍길동
@@ -228,13 +228,13 @@ function HSPDU0201P03() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`인수자`} require={true} />
+                            <Label label={`인수자`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 홍길동
                           </td>
                           <th colSpan={1}>
-                            <Label label={`인수부점`} require={true} />
+                            <Label label={`인수부점`} require={false} />
                           </th>
                           <td colSpan={1}>
                             [0810] 부산
@@ -242,13 +242,13 @@ function HSPDU0201P03() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`건수`} require={true} />
+                            <Label label={`건수`} require={false} />
                           </th>
                           <td colSpan={1}>
                             1
                           </td>
                           <th colSpan={1}>
-                            <Label label={`서류구분`} require={true} />
+                            <Label label={`서류구분`} require={false} />
                           </th>
                           <td colSpan={1}>
                             일반서류
@@ -256,7 +256,7 @@ function HSPDU0201P03() {
                         </tr>
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`서류내용`} require={true} />
+                            <Label label={`서류내용`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">

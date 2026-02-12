@@ -41,7 +41,7 @@ function FMTFT0801M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '외화현수송' }, { label: '외국통화견양집' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '외화현수송' }, { label: '외국통화견양집' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function FMTFT0801M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -137,63 +137,20 @@ function FMTFT0801M() {
                 <div className="fieldset">
 
                   <div className="o-field">
-                    <Label label={`현송일자`} require={true} />
+                    <Label label={`통화코드`} require={true} />
                     <div className="fields">
-                      <div className="o-form _input type-date mode-required wdth-50">
-                        <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
+                      <div className="o-form _input mode-required">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
                   </div>
 
                   <div className="o-field">
-                    <Label label={`관할업무센터`} require={false} />
+                    <Label label={`권종명`} require={true} />
                     <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" disabled />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`부점`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _input">
-                        <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
-                        <i aria-hidden="true"></i>
-                        <span className="inner-binds">
-                          <ImageButton label="초기화" icon="remove" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`구분`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`정산기준`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
-                        <i aria-hidden="true"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="o-field">
-                    <Label label={`노선`} require={false} />
-                    <div className="fields">
-                      <div className="o-form _select">
-                        <XDropdown appendTo={'self'} className="bind" />
+                      <div className="o-form _input mode-required">
+                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
@@ -206,10 +163,135 @@ function FMTFT0801M() {
                 </div>
               </form>
 
+              <div className="o-section">
+                <div className="m-header">
+                  <h2 className="o-heading level2"><span className="label">화폐목록</span></h2>
+                </div>
+
+                <div className="m-specimen-list">
+                  <ul className="lists">
+                    {/* <li>
+                      <div className="m-specimen">
+                        <div className="figure">
+                          <div className="o-object">
+                            <>
+                              <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
+                              <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
+                            </>
+                          </div>
+                        </div>
+
+                        <div className="caption">
+                          <div className="main">
+                            <div className="notice">
+                              <strong className="o-icon-text">
+                                <span className="label">매입 자제</span>
+                                <Icon icon="status-range-50" />
+                              </strong>
+
+                              <strong className="o-icon-text">
+                                <span className="label">매도 금지</span>
+                                <Icon icon="status-range-20" />
+                              </strong>
+                            </div>
+                          </div>
+
+                          <div className="aside">
+                            <div className="remarks">
+                              &bull; 주의사항을 여기에 표시해줍니다.<br />
+                              &bull; 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.<br />
+                              <br />
+                              100자 까지 입/출력<br />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li> */}
+
+                  {[...Array(11)].map((e, idx) => (
+                  <>
+                    <li key={idx}>
+                      <div className={`m-specimen${idx === 1 ? ' is-selected' : ''}`}>
+                        <div className="figure">
+                          <div className="o-object">
+                          {
+                            idx === 2 ?
+                            <></>
+                            :
+                            <>
+                              <img src={require("assets/images/temp/FMTFT0801P02_010.png")} alt="" />
+                              <ImageButton label="화폐​이미지​보기" icon="maximize" size={50} />
+                            </>
+                          }
+                          </div>
+                        </div>
+
+                        <div className="caption">
+                          <div className="main">
+                            <div className="notice">
+                              <strong className="o-icon-text">
+                              {
+                                idx % 3 === 1 ?
+                                <>
+                                  <span className="label">매입 자제</span>
+                                  <Icon icon="status-range-50" />
+                                </>
+                                : idx % 3 === 2 ?
+                                <>
+                                  <span className="label">매입 금지</span>
+                                  <Icon icon="status-range-20" />
+                                </>
+                                :
+                                <>
+                                  <span className="label">매입 가능</span>
+                                  <Icon icon="status-range-80" />
+                                </>
+                              }
+                              </strong>
+
+                              <strong className="o-icon-text">
+                              {
+                                idx % 3 === 1 ?
+                                <>
+                                  <span className="label">매도 자제</span>
+                                  <Icon icon="status-range-50" />
+                                </>
+                                : idx % 3 === 0 ?
+                                <>
+                                  <span className="label">매도 금지</span>
+                                  <Icon icon="status-range-20" />
+                                </>
+                                :
+                                <>
+                                  <span className="label">매도 가능</span>
+                                  <Icon icon="status-range-80" />
+                                </>
+                              }
+                              </strong>
+                            </div>
+                          </div>
+
+                          <div className="aside">
+                            <div className="remarks">
+                              &bull; 주의사항을 여기에 표시해줍니다.<br />
+                              &bull; 주의사항은 외화통화등록/수정 팝업에서 작성할 수 있으며 개행을 위한 예시입니다.<br />
+                              <br />
+                              100자 까지 입/출력<br />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </>
+                  ))}
+                  </ul>
+
+                </div>
+
+              </div>
+
             </div>
           </div>
-
-          목록
 
         </div>
         {/* <!-- // Contents { @DEV } --> */}

@@ -1,5 +1,5 @@
 /**
- * @description 중요용지·용도품(본부) > 폐기 > 본부용도품일괄폐기 ~ (LP)폐기취소(본부)
+ * @description 중요용지·용도품(본부) > 폐기 > 본부용도품일괄폐기 ~ (LP)용도품폐기
  */
 
 // dependency
@@ -92,7 +92,7 @@ function HSPDU0901P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,13 +101,16 @@ function HSPDU0901P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">폐기취소(본부)</span></h3>}
+        header={<h3 className="o-heading"><span className="label">용도품폐기</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
             <div className="column">
 
               <div className="o-section">
+                <div className="m-header">
+                  <h4 className="o-heading level2"><span className="label">기본정보</span></h4>
+                </div>
 
                 <div className="main">
                   <form className="m-data-form">
@@ -125,16 +128,59 @@ function HSPDU0901P02() {
                             <Label label={`입고부점`} require={false} />
                           </th>
                           <td colSpan={1}>
-                            [0810] 프로세스혁신 / 일반
+                            [0810] 프로세스혁신
                           </td>
-                          <th colSpan={1}>
-                            <Label label={`폐기취소사유`} require={true} />
-                          </th>
 
+                          <th colSpan={1}>
+                            <Label label={`폐기일자`} require={false} />
+                          </th>
                           <td colSpan={1}>
+                            <span className="o-digit type-date">2025-12-25</span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`출급번호/품목명`} require={true} />
+                          </th>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required">
+                                <div className="o-form _input mode-required wdth-80">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`재고수량`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">1,798</td>
+                          <th colSpan={1}>
+                            <Label label={`폐기수량`} require={false} />
+                          </th>
+                          <td colSpan={1} className="g-end">1,798</td>
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`폐기사유`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select mode-required wdth-40">
+                                  <XDropdown appendTo={document.body} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="o-form _input mode-required wdth-auto">
                                   <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
@@ -142,24 +188,62 @@ function HSPDU0901P02() {
                             </div>
                           </td>
                         </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`요청부점`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-70">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`요청자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-70">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
                       </tbody>
                     </table>
                   </form>
                 </div>
               </div>
 
-              <div className="o-section">
 
-                <div className="main _primary rows-body-3i">
+              <div className="o-section">
+                <div className="m-header">
+                  <h5 className="o-heading level3"><span className="label">폐기등록</span></h5>
+                </div>
+
+                <div className="main _primary rows-body-5i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
                           <col className="wdth-10" />
-                          <col />
-                          <col />
-                          <col />
+                          <col className="wdth-10" />
                           <col />
                           <col />
                           <col />
@@ -168,37 +252,39 @@ function HSPDU0901P02() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기일자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">출급번호</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">품목명</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기금액</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">거래자</span></div></th>
-                          </tr>
-                          <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><InputCheck label="전체​선택" labelHidden /></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기수량<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">재고단가</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">폐기금액</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(2)].map((e, idx) => (
                             <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                              <td><InputCheck label="선택" labelHidden /></td>
                               <td>{idx + 1}</td>
-                              <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>66661</td>
-                              <td className="g-start">비정액 자기앞수표(1억원 이하)</td>
-                              <td className="g-end">2</td>
-                              <td className="g-end">131,333</td>
-                              <td>66661</td>
-                              <td>홍길동</td>
+                              <td className="g-end">1,030</td>
+                              <td>
+                                <div className="o-field">
+                                  <div className="fields">
+                                    <div className="o-form _input wdth-40  g-end">
+                                      <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                      <i aria-hidden="true"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td className="g-end">1,030</td>
+                              <td className="g-end">1,030</td>
                             </tr>
                           ))}
                         </tbody>
@@ -227,7 +313,7 @@ function HSPDU0901P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)폐기취소(본부) [wdth-50p(w960)]</span>
+              <span className="label">(P)용도품폐기 [wdth-40p(w770)]</span>
             </h1>
           </div>
         </div>

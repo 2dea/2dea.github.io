@@ -41,7 +41,7 @@ function FMTFT0201M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '외화현수송' }, { label: '외화현수송신청관리' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '외화현수송' }, { label: '외화현수송신청관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function FMTFT0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -123,7 +123,7 @@ function FMTFT0201M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="취소" className="_cancel" />
+                <CommonButton label="삭제" className="_delete" />
               </div>
             </div>
 
@@ -135,7 +135,7 @@ function FMTFT0201M() {
         {/* <!-- // Consults { @DEV } --> */}
 
         {/* <!-- /* Contents { @DEV } --> */}
-        <div className="div-contents">
+        <div className="div-contents style-tight">
           <div className="o-grid">
             <div className="column">
 
@@ -226,6 +226,18 @@ function FMTFT0201M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">신청내역</span></h2>
 
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
+
+                  <div className="o-legend type-unit style-normal">
+                    <em className="label">(단위: 원)</em>
+                  </div>
+
                   <div className="m-binds">
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
@@ -236,8 +248,8 @@ function FMTFT0201M() {
                 </div>
 
                 <div className="main _primary rows-body-3i">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                  <div className="o-grid-table p-datatable">
+                  <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                  <div className="o-grid-table style-fit p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
@@ -337,11 +349,11 @@ function FMTFT0201M() {
                                 <td><span className="o-digit type-date">2025-12-25</span></td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>결재승인(팀장)</td>
-                                <td><CommonButton label="취소" className="_normal" /></td>
+                                <td><a href="javascript:" className="o-link _normal">취소</a></td>
                                 <td>업무센터결정</td>
                                 <td>012345</td>
                                 <td>홍길동</td>
-                                <td><CommonButton label="통화" className="_normal" /></td>
+                                <td><a href="javascript:" className="o-link _normal">통화</a></td>
                                 <td><span className="o-digit type-datetime">2025-12-25 09:10:59</span></td>
                                 <td>012345</td>
                                 <td>홍길동</td>
@@ -378,6 +390,7 @@ function FMTFT0201M() {
                 <Tab className="link"><span className="label">Step 2. 업무센터 결정내역</span></Tab>
                 <Tab className="link"><span className="label">Step 3. 불입 결정내역</span></Tab>
                 <Tab className="link"><span className="label">Step 4. 현송원 방문(자금현송명령부)</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 
@@ -397,7 +410,7 @@ function FMTFT0201M() {
                           <tbody>
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`비고`} require={false} />
+                                <Label label={`신청비고(영업점요청사항)`} require={false} />
                               </th>
                               <td colSpan={1}></td>
                             </tr>
@@ -411,7 +424,7 @@ function FMTFT0201M() {
                     <div className="m-header">
                       <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
-                      <div className="o-length">
+                      {/* <div className="o-length">
                         <span className="head">전체</span>
                         <em className="data">
                           <span className="value">8</span>
@@ -424,12 +437,12 @@ function FMTFT0201M() {
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
                           <ImageButton label="목록출력" icon="print" />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
+                    <div className="main _primary rows-auto">
+                      <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table style-fit p-datatable">
                         <div className="table-container p-datatable-wrapper">
                           <table className="p-datatable-table p-datatable-scrollable-table">
                             <colgroup>
@@ -453,11 +466,11 @@ function FMTFT0201M() {
                               </tr>
                             </thead>
 
-                            <tbody className="p-datatable-tbody">
+                            {/* <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
                                 <td colSpan={5}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
-                            </tbody>
+                            </tbody> */}
 
                             <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
@@ -481,6 +494,17 @@ function FMTFT0201M() {
                                     <td className="g-end">400,000</td>
                                   </tr>
                                   {
+                                    (idx - 2) % 3 === 0 &&
+                                    <tr className="p-rowgroup-footer subtotal-trow">
+                                      <td className="subtotal-tcell">소계</td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell g-end">99,999</td>
+                                      {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                                    </tr>
+                                  }
+                                  {
                                   (idx - 2) % 3 === 0 &&
                                   <tr className="p-rowgroup-footer">
                                     <td colSpan={5} className="p-x-cell-blank"></td>{/* rowGroupFooterTemplate={blankCellFooterTemplate} :: 그리드 로우그룹/rowspan 커스텀 템플릿 추가 필요 { @DEV } */}
@@ -490,7 +514,7 @@ function FMTFT0201M() {
                               ))}
                             </tbody>
 
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            {/* <tfoot className="p-datatable-tfoot sumtotal-tfoot">
                               <tr className="sumtotal-trow">
                                 <td colSpan={1} className="sumtotal-tcell">합계</td>
                                 <td className="sumtotal-tcell"></td>
@@ -498,7 +522,7 @@ function FMTFT0201M() {
                                 <td className="sumtotal-tcell sumtotal-tcell-strong">신청금액(원)</td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                               </tr>
-                            </tfoot>
+                            </tfoot> */}
                           </table>
                         </div>
                       </div>
@@ -520,6 +544,8 @@ function FMTFT0201M() {
                           <colgroup>
                             <col className="head" />
                             <col className="data" />
+                            <col className="head" />
+                            <col className="data" />
                           </colgroup>
 
                           <tbody>
@@ -528,6 +554,10 @@ function FMTFT0201M() {
                                 <Label label={`업무센터결정여부`} require={false} />
                               </th>
                               <td colSpan={1}>N</td>
+                              <th colSpan={1}>
+                                <Label label={`결정비고(업무센터작성)`} require={false} />
+                              </th>
+                              <td colSpan={1}></td>
                             </tr>
                           </tbody>
                         </table>
@@ -539,7 +569,7 @@ function FMTFT0201M() {
                     <div className="m-header">
                       <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
-                      <div className="o-length">
+                      {/* <div className="o-length">
                         <span className="head">전체</span>
                         <em className="data">
                           <span className="value">8</span>
@@ -552,12 +582,12 @@ function FMTFT0201M() {
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
                           <ImageButton label="목록출력" icon="print" />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
+                    <div className="main _primary rows-auto">
+                      <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table style-fit p-datatable">
                         <div className="table-container p-datatable-wrapper">
                           <table className="p-datatable-table p-datatable-scrollable-table">
                             <colgroup>
@@ -590,11 +620,11 @@ function FMTFT0201M() {
                               </tr>
                             </thead>
 
-                            <tbody className="p-datatable-tbody">
+                            {/* <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
                                 <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
-                            </tbody>
+                            </tbody> */}
 
                             <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
@@ -626,6 +656,21 @@ function FMTFT0201M() {
                                     <td className="g-end">20,000</td>
                                     <td className="g-end">400,000</td>
                                   </tr>
+                                  {
+                                    (idx - 2) % 3 === 0 &&
+                                    <tr className="p-rowgroup-footer subtotal-trow">
+                                      <td className="subtotal-tcell">소계</td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell"></td>
+                                      <td className="subtotal-tcell g-end">99,999</td>
+                                      {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                                    </tr>
+                                  }
                                 {
                                   (idx - 2) % 3 === 0 &&
                                   <tr className="p-rowgroup-footer">
@@ -636,7 +681,7 @@ function FMTFT0201M() {
                               ))}
                             </tbody>
 
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            {/* <tfoot className="p-datatable-tfoot sumtotal-tfoot">
                               <tr className="sumtotal-trow">
                                 <td colSpan={1} className="sumtotal-tcell">합계</td>
                                 <td className="sumtotal-tcell"></td>
@@ -648,7 +693,7 @@ function FMTFT0201M() {
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                               </tr>
-                            </tfoot>
+                            </tfoot> */}
                           </table>
                         </div>
                       </div>
@@ -666,12 +711,6 @@ function FMTFT0201M() {
                   <div className="o-section">
                     <div className="m-header">
                       <h3 className="o-heading level3"><span className="label">불입결정 등록</span></h3>
-
-                      <div className="m-binds">
-                        <div className="group">
-                          <CommonButton label="영업점불입결정" className="_solid-primary" />
-                        </div>
-                      </div>
                     </div>
 
                     <div className="main">
@@ -689,10 +728,15 @@ function FMTFT0201M() {
                               <th colSpan={1}>
                                 <Label label={`불입결정여부`} require={false} />
                               </th>
-                              <td colSpan={1}>N</td>
+                              <td colSpan={1}>
+                                <div className="m-string-binds">
+                                  <span className="string">N</span>
+                                  <span className="binds justify-end"><CommonButton label="영업점불입결정" className="_solid-primary" /></span>
+                                </div>
+                              </td>
 
                               <th colSpan={1}>
-                                <Label label={`비고`} require={false} />
+                                <Label label={`결정비고(영업점작성)`} require={false} />
                               </th>
                               <td colSpan={1}></td>
                             </tr>
@@ -706,7 +750,7 @@ function FMTFT0201M() {
                     <div className="m-header">
                       <h3 className="o-heading level3"><span className="label">상세정보</span></h3>
 
-                      <div className="o-length">
+                      {/* <div className="o-length">
                         <span className="head">전체</span>
                         <em className="data">
                           <span className="value">8</span>
@@ -719,12 +763,12 @@ function FMTFT0201M() {
                           <ImageButton label="엑셀​다운로드" icon="excel-download" />
                           <ImageButton label="목록출력" icon="print" />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
-                    <div className="main _primary rows-body-3i">
-                      <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
-                      <div className="o-grid-table p-datatable">
+                    <div className="main _primary rows-auto">
+                      <DataTable className="o-grid-table style-fit g-hide" />{/* Unused { @DEV } */}
+                      <div className="o-grid-table style-fit p-datatable">
                         <div className="table-container p-datatable-wrapper">
                           <table className="p-datatable-table p-datatable-scrollable-table">
                             <colgroup>
@@ -757,11 +801,11 @@ function FMTFT0201M() {
                               </tr>
                             </thead>
 
-                            <tbody className="p-datatable-tbody">
+                            {/* <tbody className="p-datatable-tbody">
                               <tr className="p-datatable-emptymessage">
                                 <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                               </tr>
-                            </tbody>
+                            </tbody> */}
 
                             <tbody className="p-datatable-tbody">
                               {[...Array(24)].map((e, idx) => (
@@ -793,6 +837,23 @@ function FMTFT0201M() {
                                     <td className="g-end">20,000</td>
                                     <td className="g-end">400,000</td>
                                   </tr>
+
+                                  {
+                                    (idx - 11) % 12 === 0 &&
+                                    <tr className="p-rowgroup-footer subtotal-trow">
+                                      <td className="subtotal-tcell g-start">소계</td>
+                                        <td className="subtotal-tcell"></td>
+                                        <td className="subtotal-tcell"></td>
+                                        <td className="subtotal-tcell"></td>
+                                        <td className="subtotal-tcell g-end">99,999</td>
+                                        <td className="subtotal-tcell"></td>
+                                        <td className="subtotal-tcell"></td>
+                                        <td className="subtotal-tcell"></td>
+                                        <td className="subtotal-tcell g-end">99,999</td>
+                                      {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                                    </tr>
+                                  }
+
                                   {
                                     (idx - 2) % 3 === 0 &&
                                     <tr className="p-rowgroup-footer">
@@ -803,7 +864,7 @@ function FMTFT0201M() {
                               ))}
                             </tbody>
 
-                            <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                            {/* <tfoot className="p-datatable-tfoot sumtotal-tfoot">
                               <tr className="sumtotal-trow">
                                 <td colSpan={1} className="sumtotal-tcell">합계</td>
                                 <td className="sumtotal-tcell"></td>
@@ -815,7 +876,7 @@ function FMTFT0201M() {
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end"></td>
                                 <td className="sumtotal-tcell sumtotal-tcell-strong g-end">999,999</td>
                               </tr>
-                            </tfoot>
+                            </tfoot> */}
                           </table>
                         </div>
                       </div>
@@ -826,7 +887,7 @@ function FMTFT0201M() {
               </div>
             </TabPanel>
 
-            <TabPanel className="m-tabs-panel react-tabs__tab-panel">
+            <TabPanel className="m-tabs-panel react-tabs__tab-panel" style={{ minHeight: 'calc(var(--rem) * 361)' }}>
 
               <Tabs className="m-tabs react-tabs" defaultIndex={2}>
                 <div className="o-board">
@@ -863,7 +924,6 @@ function FMTFT0201M() {
                             <em className="main">출발시각등록</em>
                           </a>
                         </Tab>
-                        {/* <Tab aria-label="진행 예정" disabled> */}{/* 진행 예정 [disabled] { @DEV } */}
                         <Tab aria-label="진행 단계">
                           <span className="order" aria-hidden="true">
                             <span className="prefix"></span>
@@ -872,6 +932,16 @@ function FMTFT0201M() {
                           </span>
                           <a href="javascript:" className="label">
                             <em className="main">도착시각(업무센터)</em>
+                          </a>
+                        </Tab>
+                        <Tab aria-label="진행 예정" disabled>{/* 진행 예정(비활성) 예시 [disabled] { @DEV } */}
+                          <span className="order" aria-hidden="true">
+                            <span className="prefix"></span>
+                            <span className="count">N</span>
+                            <span className="suffix">단계. </span>
+                          </span>
+                          <a href="javascript:" className="label">
+                            <em className="main">비활성스텝</em>
                           </a>
                         </Tab>
                       </TabList>
@@ -1037,44 +1107,50 @@ function FMTFT0201M() {
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">외국환취결</span></h4>
+                          <h4 className="o-heading level4"><span className="label">외국환정리</span></h4>
 
-                          <div className="m-binds">
+                          {/* <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="웹단말 외국환취결" className="_solid-primary" />
+                              <CommonButton label="웹단말 외국환정리" className="_solid-primary" />
                             </div>
-                          </div>
+                          </div> */}
                         </div>
 
                         <div className="main">
-                          <form className="m-data-form">
-                            <table className="table">
-                              <colgroup>
-                                <col className="head" />
-                                <col className="data" />
-                              </colgroup>
+                          <div className="o-board type-c style-fit">
+                            <div className="o-notice">
+                              <span className="icons">
+                                <Icon icon="alert-octagram" />
+                              </span>
 
-                              <tbody>
-                                <tr>
-                                  <th colSpan={1}>
-                                    <Label label={`진행상태`} require={false} />
-                                  </th>
-                                  <td colSpan={1}>
-                                    <span className="o-status-text style-inherit type-20">미처리</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
+                              <div className="main">
+                                취결된 금액을 정리해주세요.
+                                <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">외국환정리 바로가기<Icon icon="link" /></a></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">외국환정리(업무센터)</span></h4>
+                          <h4 className="o-heading level4"><span className="label">외국환취결</span></h4>
                         </div>
 
                         <div className="main">
+                          <div className="o-board type-c style-fit">
+                            <div className="o-notice">
+                              <span className="icons">
+                                <Icon icon="alert-octagram" />
+                              </span>
+
+                              <div className="main">
+                                업무센터로 취결해주세요.
+                                <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">외국환취결 바로가기<Icon icon="link" /></a></span>
+                              </div>
+                            </div>
+                          </div>
+
                           <form className="m-data-form">
                             <table className="table">
                               <colgroup>
@@ -1089,6 +1165,7 @@ function FMTFT0201M() {
                                   </th>
                                   <td colSpan={1}>
                                     <span className="o-status-text style-inherit type-20">미처리</span>
+                                    {/* <>처리완료</> */}
                                   </td>
                                 </tr>
                               </tbody>

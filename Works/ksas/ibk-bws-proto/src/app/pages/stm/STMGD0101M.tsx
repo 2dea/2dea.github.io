@@ -46,7 +46,7 @@ function STMGD0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '기계경비당직관리' }, { label: '당직신청관리' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '기계경비당직관리' }, { label: '당직신청관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function STMGD0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -404,7 +404,7 @@ function STMGD0101M() {
                       <strong className="o-heading"><span className="label">유의사항</span></strong>
                     </div>
 
-                    <ul className="m-bullets type-disc">
+                    {/* <ul className="m-bullets type-disc">
                       <li>당직가능업무: 공사, 청소 등 불가피한 경우만 해당됩니다.</li>
                       <li className="c-color-strong"><em>당직구분은 일직과 숙직이 있으며, 각 2인 1조로 당직근무 실시</em></li>
                       <li className="c-color-strong"><em>용역 경비원의 당직근무 수행불가</em></li>
@@ -412,6 +412,11 @@ function STMGD0101M() {
                       <li>당직실시의 경우 세팅비는 별도로 지급이 불가</li>
                       <li>일직: 09:00 ~ 18:00 / 숙직: 18:00 ~ 09:00(익일)</li>
                       <li className="c-color-strong"><em>익월 1영업일 오후 4시까지 결재완료된 건만 반영됩니다.</em></li>
+                    </ul> */}
+
+                    <ul className="m-bullets type-disc">
+                      <li>당직은 일직(09:00~18:00), 숙직(18:00~익일 09:00) 각 2인 1조로 근무하며, 공사&middot;청소 등 불가피한 경우에만 가능합니다. (용역 경비원 제외)</li>
+                      <li>근무 중 PC는 반드시 OFF를 유지해야 하고, 익월 1영업일 16시까지 결재완료된 건만 당직비가 반영됩니다. (당직실시의 경우 세팅비 별도 지급 불가)</li>
                     </ul>
                   </div>
                 </div>

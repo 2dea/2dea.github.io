@@ -41,7 +41,7 @@ function FMTCT1401M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화현수송' }, { label: '타행현수송신청관리' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '원화현수송' }, { label: '타행현수송신청관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function FMTCT1401M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -124,9 +124,9 @@ function FMTCT1401M() {
 
               <div className="group _primary">
                 <CommonButton label="삭제" className="_delete" />
-                <CommonButton label="재신청" className="_solid-primary _approve" />
-                <CommonButton label="수정" className="_solid-primary _approve" />
-                <CommonButton label="신청" className="_solid-primary _approve" />
+                <CommonButton label="재신청" className="_solid-primary" />
+                <CommonButton label="수정" className="_solid-primary" />
+                <CommonButton label="신청" className="_solid-primary" />
               </div>
             </div>
 
@@ -359,6 +359,7 @@ function FMTCT1401M() {
               <TabList className="lists">
                 <Tab className="link"><span className="label">Step 1. 신청내역</span></Tab>
                 <Tab className="link"><span className="label">Step 2. 현송원 방문(자금현송명령부)</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
             </div>
 
@@ -550,7 +551,6 @@ function FMTCT1401M() {
                             <em className="main">내국환정리</em>
                           </a>
                         </Tab>
-                        {/* <Tab aria-label="진행 예정" disabled> */} {/* 진행 예정 [disabled] { @DEV } */}
                         <Tab aria-label="진행 단계">
                           <span className="order" aria-hidden="true">
                             <span className="prefix"></span>
@@ -559,6 +559,16 @@ function FMTCT1401M() {
                           </span>
                           <a href="javascript:" className="label">
                             <em className="main">자금현송명령부등록</em>
+                          </a>
+                        </Tab>
+                        <Tab aria-label="진행 예정" disabled>{/* 진행 예정(비활성) 예시 [disabled] { @DEV } */}
+                          <span className="order" aria-hidden="true">
+                            <span className="prefix"></span>
+                            <span className="count">N</span>
+                            <span className="suffix">단계. </span>
+                          </span>
+                          <a href="javascript:" className="label">
+                            <em className="main">비활성스텝</em>
                           </a>
                         </Tab>
                       </TabList>
@@ -724,69 +734,49 @@ function FMTCT1401M() {
                     <div className="column">
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">내국환취결</span></h4>
+                          <h4 className="o-heading level4"><span className="label">내국환정리</span></h4>
 
-                          <div className="m-binds">
+                          {/* <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="웹단말 내국환취결" className="_solid-primary" />
+                              <CommonButton label="웹단말 내국환정리" className="_solid-primary" />
                             </div>
-                          </div>
+                          </div> */}
                         </div>
 
                         <div className="main">
-                          <form className="m-data-form">
-                            <table className="table">
-                              <colgroup>
-                                <col className="head" />
-                                <col className="data" />
-                              </colgroup>
+                          <div className="o-board type-c style-fit">
+                            <div className="o-notice">
+                              <span className="icons">
+                                <Icon icon="alert-octagram" />
+                              </span>
 
-                              <tbody>
-                                <tr>
-                                  <th colSpan={1}>
-                                    <Label label={`진행상태`} require={false} />
-                                  </th>
-                                  <td colSpan={1}>
-                                    처리완료
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
+                              <div className="main">
+                                취결된 금액을 정리해주세요.
+                                <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">내국환정리 바로가기<Icon icon="link" /></a></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
                       <div className="o-section">
                         <div className="m-header">
-                          <h4 className="o-heading level4"><span className="label">내국환정리</span></h4>
-
-                          <div className="m-binds">
-                            <div className="group">
-                              <CommonButton label="웹단말 내국환정리" className="_solid-primary" />
-                            </div>
-                          </div>
+                          <h4 className="o-heading level4"><span className="label">내국환취결</span></h4>
                         </div>
 
                         <div className="main">
-                          <form className="m-data-form">
-                            <table className="table">
-                              <colgroup>
-                                <col className="head" />
-                                <col className="data" />
-                              </colgroup>
+                          <div className="o-board type-c style-fit">
+                            <div className="o-notice">
+                              <span className="icons">
+                                <Icon icon="alert-octagram" />
+                              </span>
 
-                              <tbody>
-                                <tr>
-                                  <th colSpan={1}>
-                                    <Label label={`진행상태`} require={false} />
-                                  </th>
-                                  <td colSpan={1}>
-                                    <span className="o-status-text style-inherit type-20">미처리</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
+                              <div className="main">
+                                내국환 취결해주세요.
+                                <span className="inline-binds"><a href="javascript:" className="o-link texted-button _primary">내국환취결 바로가기<Icon icon="link" /></a></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -803,8 +793,8 @@ function FMTCT1401M() {
 
                           <div className="m-binds">
                             <div className="group">
-                              <CommonButton label="수정결재요청" className="_solid-primary _approve" />
-                              <CommonButton label="결재요청" className="_solid-primary _approve" />
+                              <CommonButton label="수정결재요청" className="_solid-primary" />
+                              <CommonButton label="결재요청" className="_solid-primary" />
                             </div>
                           </div>
 

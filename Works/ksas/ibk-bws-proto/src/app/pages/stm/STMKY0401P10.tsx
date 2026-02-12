@@ -101,7 +101,7 @@ function STMKY0401P10() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">예비열쇠보관확인증관리</span></h3>}
+        header={<h3 className="o-heading"><span className="label">예비열쇠 보관확인증 관리</span></h3>}
       >
         <div className="div-container">
           <Tabs className="m-tabs react-tabs" defaultIndex={0}>
@@ -391,8 +391,8 @@ function STMKY0401P10() {
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                                 <th colSpan={7} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">우리부점</span></div></th>
                                 <th colSpan={6} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">상대부점</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송일자</span></div></th>
-                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수령일자</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">요청승인일자</span></div></th>
+                                <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송승인일자</span></div></th>
                                 <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">열쇠상태</span></div></th>
                               </tr>
                               <tr>

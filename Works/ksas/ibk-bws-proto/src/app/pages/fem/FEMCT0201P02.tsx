@@ -92,7 +92,7 @@ function FEMCT0201P02() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-70p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-100p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,7 +101,7 @@ function FEMCT0201P02() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">지급상세검증</span></h3>}
+        header={<h3 className="o-heading"><span className="label">지급 상세검증</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -127,6 +127,14 @@ function FEMCT0201P02() {
                       </colgroup>
 
                       <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`계약정보`} require={false} />
+                          </th>
+                          <td colSpan={7}>
+                            자금현수송대행계약서(2024-04-01 ~ 2025-03-31)
+                          </td>
+                        </tr>
                         <tr>
                           <th colSpan={1}>
                             <Label label={`지급명`} require={false} />
@@ -213,6 +221,24 @@ function FEMCT0201P02() {
                         </tr>
 
                         <tr>
+                          {/* 예외 체크시 필수 값으로 { @DEV } */}
+                          {/* <th colSpan={1}>
+                            <Label label={`(B)지급수수료 예외금액`} require={true} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input wdth-50 mode-required">
+                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="m-checks">
+                                  <InputCheck label="예외" checked />
+                                </div>
+                              </div>
+                            </div>
+                          </td> */}
+
                           <th colSpan={1}>
                             <Label label={`(B)지급수수료 예외금액`} require={false} />
                           </th>
@@ -265,6 +291,20 @@ function FEMCT0201P02() {
                         </tr>
 
                         <tr>
+                          {/* 예외 체크시 필수 값으로 { @DEV } */}
+                          {/* <th colSpan={1}>
+                            <Label label={`지급수수료 예외사유`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td> */}
                           <th colSpan={1}>
                             <Label label={`지급수수료 예외사유`} require={false} />
                           </th>
@@ -272,7 +312,7 @@ function FEMCT0201P02() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} disabled />
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={1} disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -286,7 +326,7 @@ function FEMCT0201P02() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={2} />
+                                  <InputTextarea placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} rows={1} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
@@ -332,7 +372,7 @@ function FEMCT0201P02() {
 
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-10i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -374,7 +414,7 @@ function FEMCT0201P02() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청구분</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청<br />구분</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">노선</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">현송업체</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 부담부점</span></div></th>
@@ -401,8 +441,8 @@ function FEMCT0201P02() {
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">합계</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">운송내역(USD)</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기타통화내역</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기본요금</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">기본요금<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금<em className="o-require-tag"><span className="tag">(필수입력)</span></em></span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수수료 합계(VAT포함)</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">추가요금사유</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">예외</span></div></th>
@@ -516,7 +556,7 @@ function FEMCT0201P02() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)지급상세검증 [wdth-70p(w1340)]</span>
+              <span className="label">(P)지급상세검증 [wdth-100p]</span>
             </h1>
           </div>
         </div>

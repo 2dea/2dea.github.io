@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>환경경영시스템</title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/ems_login.css">
+    <script type="text/javascript" src="../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+    <!-- 로그인 -->
+    <section id="login">
+        <h1 class="logo"><span class="sr_only">BNK 금융지주 환경경영시스템</span></h1>
+        <div class="login_contents">
+            <div class="slogan_img">
+                <img src="../resource/images/login_slogan_text.png" alt="ESG BNK, 함께하는 지속가능금융">
+            </div>
+            <form action="" class="login_form">
+                <fieldset>
+                    <legend class="sr_only">로그인</legend>
+                    <select class="select" id="">
+                        <option value="0">전체</option>
+                        <option value="1">BNK부산은행</option>
+                        <option value="2">BNK경남은행</option>
+                    </select>
+                    <div class="input_set">
+                        <input type="text" class="with_ico" placeholder="행번">  
+                        <span class="ico_id"></span>
+                    </div>
+                    <div class="input_set">
+                        <input type="password" class="with_ico" placeholder="비밀번호">
+                        <span class="ico_pw"></span>
+                    </div>
+                    <div class="checking-set">
+                        <label class="checking" style="display:none;">
+                            <input name="ch_01" type="checkbox" value="1">
+                            <span class="checkmark"></span>
+                            <span class="text">행번저장</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <button class="btn_login" type="button" onclick="location.href='home.html';">로그인</button>
+            </form>
+        </div>
+        <p class="copyright">COPYRIGHT 2023 BNK FINANCIAL GROUP INC. ALL RIGHTS RESERVED.</p>
+        <span class="bg_object_1"></span>
+        <span class="bg_object_2"></span>
+        <span class="bg_object_3"></span>
+    </section>
+    <!-- //로그인 -->
+
+    <script>
+      $(document).ready(function() {
+        $('.select').selectpicker();
+      });    
+    </script>
+    
+</body>
+
+</html>

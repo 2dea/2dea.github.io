@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/** SASS Variables
+ ----------------- */
+
 $root-em-int:        16;
 
 $bold-30:            var(--bold-30);
@@ -165,6 +168,7 @@ $color-shadow-alpha-20:      var(--color-shadow-alpha-20);
 
 $dropshadow-40:              var(--dropshadow-40);
 $dropshadow-70:              var(--dropshadow-70);
+$dropshadow-frozen:          var(--dropshadow-frozen);
 
 
 $radius-50:                  calc(var(--rem) * var(--radius-50));

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>환경경영시스템</title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/login2.css">
+    <script type="text/javascript" src="../resource/library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../resource/library/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/datepicker.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap/datepicker.ko.min.js"></script>
+    <script type="text/javascript" src="../resource/library/bootstrap-select/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+    <div class="background-pattern">
+        <div class="login-container">
+        <div class="left-section">
+            <h4>함께하는 지속가능경영</h4>
+            <h1><span class="esg">ESG</span> <span class="bnk">BNK</span></h1>
+            <p class="subtitle">Sustainable Finance</p>
+            <p class="bold">TOGETHER</p>
+        </div>
+
+        <div class="login-box">
+            <form>
+            <label for="bank">은행</label>
+            <select id="bank">
+                <option value="busan">BNK부산은행</option>
+                <option value="kyongnam">BNK경남은행</option>
+            </select>
+
+            <label for="username">행번</label>
+            <input type="text" id="username" placeholder="행번을 입력해 주세요">
+
+            <label for="password">비밀번호</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" placeholder="비밀번호를 입력해 주세요">
+                <span class="toggle-eye">👁️</span>
+            </div>
+
+            <button type="submit">로그인</button>
+            </form>
+        </div>
+        </div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $('.select').selectpicker();
+      });    
+    </script>
+    
+</body>
+
+</html>

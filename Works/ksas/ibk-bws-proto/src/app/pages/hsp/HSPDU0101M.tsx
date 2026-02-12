@@ -46,7 +46,7 @@ function HSPDU0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '폐기' }, { label: '폐기대상중요용지총괄현황' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품(본부)' }, { label: '폐기' }, { label: '폐기대상중요용지총괄현황' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function HSPDU0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -170,7 +170,9 @@ function HSPDU0101M() {
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
-                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
                           <col />
                           <col />
                           <col />
@@ -180,30 +182,40 @@ function HSPDU0101M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송등록</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">센터접수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진척률(%)</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">센터접수</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진척률(%)</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오손수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오손수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오손수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오손수량</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={8}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(2)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                            <td>{idx + 1}</td>
-                            <td>영업점</td>
-                            <td className="g-end">100</td>
-                            <td className="g-end">100</td>
-                            <td className="g-end">100</td>
-                            <td className="g-end">90.7</td>
+                            <td className="g-end">46</td>
+                            <td className="g-end">77</td>
+                            <td className="g-end">46</td>
+                            <td className="g-end">77</td>
+                            <td className="g-end">46</td>
+                            <td className="g-end">77</td>
+                            <td className="g-end">46</td>
+                            <td className="g-end">77</td>
                           </tr>
                         ))}
                         </tbody>
@@ -254,22 +266,31 @@ function HSPDU0101M() {
                           <col />
                           <col />
                           <col />
+                          <col />
+                          <col />
                         </colgroup>
 
                         <thead className="p-datatable-thead">
                           <tr>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">구분</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">발송등록</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">센터접수</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리</span></div></th>
-                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진척률(%)</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">접수</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">미처리</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진척률(%)</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오손수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건수</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">오손수량</span></div></th>
                           </tr>
                         </thead>
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={3}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={9}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
@@ -282,7 +303,9 @@ function HSPDU0101M() {
                             <td className="g-end">1</td>
                             <td className="g-end">0</td>
                             <td className="g-end">10</td>
-                            <td className="g-end">100</td>
+                            <td className="g-end">10</td>
+                            <td className="g-end">10</td>
+                            <td className="g-end">10</td>
                           </tr>
                         ))}
                         </tbody>
@@ -315,6 +338,19 @@ function HSPDU0101M() {
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
                         <colgroup>
+                          <col className="wdth-10" />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
+                          <col />
                           <col />
                           <col />
                           <col />
@@ -326,6 +362,17 @@ function HSPDU0101M() {
 
                         <thead className="p-datatable-thead">
                           <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청부점</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">신청일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">처리구분</span></div></th>
+                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">진행상태</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건수</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">문서종류</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">서류내용</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수시각</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">검수자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">인수시각</span></div></th>
@@ -333,6 +380,10 @@ function HSPDU0101M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">행내등기신청번호</span></div></th>
                           </tr>
                           <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점코드</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점명</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
                             <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
@@ -342,20 +393,33 @@ function HSPDU0101M() {
 
                         <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
-                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                            <td colSpan={20}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
                         </tbody>
 
                         <tbody className="p-datatable-tbody">
                         {[...Array(1)].map((e, idx) => (
                           <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
+                            <td>{idx + 1}</td>
+                            <td>0000001</td>
+                            <td>홍길동</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td>미처리</td>
+                            <td>0000001</td>
+                            <td>홍길동</td>
+                            <td>최종인수</td>
+                            <td className="g-end">3</td>
+                            <td>폐기중요용지</td>
+                            <td>A4체크카드</td>
+                            <td><span className="o-digit type-date">2025-12-25</span></td>
+                            <td><span className="o-digit type-time">00:00:00</span></td>
                             <td>0000001</td>
                             <td>홍길동</td>
                             <td><span className="o-digit type-date">2025-12-25</span></td>
                             <td><span className="o-digit type-time">00:00:00</span></td>
                             <td>0000001</td>
                             <td>홍길동</td>
-                            <td>0000001</td>
+                            <td>2025005000146</td>
                           </tr>
                         ))}
                         </tbody>

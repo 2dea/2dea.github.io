@@ -46,7 +46,7 @@ function BEXRQ0101M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '행내등기·우편물' }, { label: '행내등기' }, { label: '행내등기신청' }];
+  const paths: MenuItem[] = [{ label: '행내등기·우편물' }, { label: '행내등기' }, { label: '행내등기신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function BEXRQ0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -273,10 +273,20 @@ function BEXRQ0101M() {
                                 <div className="binds">
                                   <CommonButton label="즐겨찾기" className="_normal" />
                                 </div>
+
+                                {/* <div className="m-binds">
+                                  <div className="group">
+                                    <CommonButton label="서무대리" className="_normal" />
+                                    <CommonButton label="보관카드담당자" className="_normal" />
+                                  </div>
+                                  <div className="group">
+                                    <CommonButton label="즐겨찾기" className="_normal" />
+                                  </div>
+                                </div> */}
                               </div>
 
                               <div className="m-footer">
-                                <p className="o-helper">도착예정일자: YYYY-MM-DD 신청일자에 실물 발송한 경우</p>
+                                <p className="o-helper"><strong className="emph">도착예정일자: <span className="g-bold c-color-point">YYYY-MM-DD</span></strong> 신청일자에 실물을 발송한 경우에 한함</p>
                               </div>
                           </td>
                         </tr>
@@ -309,6 +319,7 @@ function BEXRQ0101M() {
                             </div>
                           </td>
                         </tr>
+
                         <tr>
                           <th colSpan={1}>
                             <Label label={`서류내용`} require={true} />
@@ -320,8 +331,7 @@ function BEXRQ0101M() {
                                   <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                 </div>
-
-                                <div className="o-form _select wdth-90">
+                                <div className="o-form _select mode-required wdth-50">
                                   <XDropdown appendTo={'self'} className="bind" />
                                   <i aria-hidden="true"></i>
                                 </div>

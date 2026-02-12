@@ -41,7 +41,7 @@ function FMTCC0101M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화정사' }, { label: '신청(인도)' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '원화정사' }, { label: '신청(인도)' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function FMTCC0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -108,15 +108,19 @@ function FMTCC0101M() {
           <div className="binds">
 
             <div className="m-binds type-start">
+              <div className="group">
+                <CommonButton label="호송금인수증등록" className="_lined-secondary" />
+              </div>
+
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
               </div>
             </div>
 
             <div className="m-binds type-end">
+
               <div className="group _primary">
-                <CommonButton label="호송금인수등록" className="_lined-primary" />
-                <CommonButton label="취소" className="_cancel" />
+                <CommonButton label="취소요청" className="_cancel" />
                 <CommonButton label="결재요청" className="_solid-primary" />
               </div>
             </div>
@@ -401,6 +405,14 @@ function FMTCC0101M() {
               <div className="o-section">
                 <div className="m-header">
                   <h5 className="o-heading level3"><span className="label">신청정보</span></h5>
+
+                  <div className="o-length">
+                    <span className="head">전체</span>
+                    <em className="data">
+                      <span className="value">8</span>
+                      <span className="units">건</span>
+                    </em>
+                  </div>
 
                   <div className="m-binds">
                     <div className="group">

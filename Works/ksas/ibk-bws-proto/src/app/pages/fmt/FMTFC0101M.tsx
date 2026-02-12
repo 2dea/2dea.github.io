@@ -41,7 +41,7 @@ function FMTFC0101M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '외화정사' }, { label: '일일실적관리' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '외화정사' }, { label: '일일실적관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function FMTFC0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -423,6 +423,13 @@ function FMTFC0101M() {
                   <div className="o-section">
                     <div className="m-header">
                       <h4 className="o-heading level4"><span className="label">위폐과부족 상세정보</span></h4>
+
+                      <div className="m-binds">
+                        <div className="group">
+                          <ImageButton label="엑셀​다운로드" icon="excel-download" />
+                          <ImageButton label="목록출력" icon="print" />
+                        </div>
+                      </div>
                     </div>
 
                     <div className="main _primary rows-body-3i">

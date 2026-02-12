@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 도급사업관리 > 합동점검표 등록
+ * @description 재난·안전관리 > 도급사업관리 > 합동점검표등록
  */
 
 // dependency
@@ -41,7 +41,7 @@ function STMSC0601M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '합동점검표 등록' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '합동점검표등록' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,11 +94,11 @@ function STMSC0601M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">합동점검표 등록</span>
+                <span className="label">합동점검표등록</span>
 
                 <FavoriteDiv />
               </h1>
@@ -160,8 +160,7 @@ function STMSC0601M() {
                       </div>
                     </div>
                   </div>
-
-                  <div className="o-field">
+                  {/* <div className="o-field">
                     <Label label={`진행상태`} require={false} />
                     <div className="fields">
                       <div className="o-form _select">
@@ -169,7 +168,7 @@ function STMSC0601M() {
                         <i aria-hidden="true"></i>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                 </div>
 
@@ -221,13 +220,12 @@ function STMSC0601M() {
                         <thead className="p-datatable-thead">
                           <tr>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">부점</span></div></th>
+                            <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">건물명</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">점검일자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재일자</span></div></th>
-                            <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
                           </tr>
                           <tr>
@@ -250,13 +248,13 @@ function STMSC0601M() {
                               <td>{idx + 1}</td>
                               <td>0034</td>
                               <td className="g-start">을지로</td>
+                              <td>0034</td>
+                              <td>홍길동</td>
                               <td>수지IT센터</td>
                               <td>홍길동 외 2명</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                               <td>결재요청</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
-                              <td>0034</td>
-                              <td>홍길동</td>
                               <td><span className="o-digit type-date">2025-12-25</span></td>
                             </tr>
                           ))}

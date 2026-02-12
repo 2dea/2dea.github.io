@@ -41,7 +41,7 @@ function FMTDP0101M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '파출수납' }, { label: '계약현황' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '파출수납' }, { label: '계약현황' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function FMTDP0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -238,7 +238,7 @@ function FMTDP0101M() {
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약기간</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록부점</span></div></th>
                             <th colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록자</span></div></th>
-                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록기간</span></div></th>
                             <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">특이사항</span></div></th>
                           </tr>
                           <tr>
@@ -370,7 +370,7 @@ function FMTDP0101M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`파출수납 사유`} require={true} />
+                            <Label label={`파출수납사유`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -420,7 +420,7 @@ function FMTDP0101M() {
                           <th colSpan={1}>
                             <Label label={`자금현송대행계약`} require={true} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={3}>
                             <div className="m-checks">
                               <InputRadio name="RADIO:T_20" label="Y" />
                               <InputRadio name="RADIO:T_20" label="N" />
@@ -442,25 +442,6 @@ function FMTDP0101M() {
                           </td>
 
                           <th colSpan={1}>
-                            <Label label={`계약기간`} require={false} />
-                          </th>
-                          <td colSpan={1}>
-                            <div className="o-field">
-                              <div className="fields">
-                                  <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled/>
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                  <span className="seps type-tilde">~</span>
-                                  <div className="o-form _input type-date wdth-50">
-                                    <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} disabled />
-                                    <i aria-hidden="true"></i>
-                                  </div>
-                                </div>
-                            </div>
-                          </td>
-
-                          <th colSpan={1}>
                             <Label label={`계약금액(회당)`} require={false} />
                           </th>
                           <td colSpan={1}>
@@ -477,34 +458,27 @@ function FMTDP0101M() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`주소`} require={true} />
+                            <Label label={`계약기간`} require={false} />
                           </th>
                           <td colSpan={3}>
-                            <div className="o-field">
+                            <div className="o-field ">
                               <div className="fields">
-                                <div className="o-form _input mode-required wdth-40">
-                                  <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
-                                  <i aria-hidden="true"></i>
-                                  <span className="inner-binds">
-                                    <ImageButton label="검색" icon="search" />
-                                  </span>
-                                </div>
-                                <div className="o-form _input mode-required wdth-auto">
-                                  <InputText placeholder="" value="서울특별시 중구 을지로 79" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                   <i aria-hidden="true"></i>
                                 </div>
-                                <div className="o-form _input mode-required wdth-100">
-                                  <InputText placeholder="" value="기업은행 본점" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <span className="seps type-tilde">~</span>
+                                <div className="o-form _input type-date wdth-50">
+                                  <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                   <i aria-hidden="true"></i>
                                 </div>
                               </div>
                             </div>
                           </td>
-
-                          <th colSpan={1} rowSpan={2}>
+                          <th colSpan={1} rowSpan={3}>
                             <Label label={`품의문`} require={true} />
                           </th>
-                          <td colSpan={3} rowSpan={2}>
+                          <td colSpan={3} rowSpan={3}>
                             <div className="o-section">
                               <div className="m-header">
                                 <div className="o-limit type-file">
@@ -581,6 +555,36 @@ function FMTDP0101M() {
                               </div>
                             </div>
                           </td>
+
+                        </tr>
+
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`주소`} require={true} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required wdth-40">
+                                  <InputText placeholder="" value="00000" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="검색" icon="search" />
+                                  </span>
+                                </div>
+                                <div className="o-form _input mode-required wdth-auto">
+                                  <InputText placeholder="" value="서울특별시 중구 을지로 79" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                                <div className="o-form _input mode-required wdth-100">
+                                  <InputText placeholder="" value="기업은행 본점" className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+
                         </tr>
 
                         <tr>

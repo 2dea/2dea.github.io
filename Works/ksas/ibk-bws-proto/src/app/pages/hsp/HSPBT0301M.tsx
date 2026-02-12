@@ -46,7 +46,7 @@ function HSPBT0301M() {
   const viewimageOverlay2 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지신청분인도' }];
+  const paths: MenuItem[] = [{ label: '중요용지·용도품(본부)' }, { label: '영업점배송관리' }, { label: '중요용지신청분인도' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -99,7 +99,7 @@ function HSPBT0301M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -117,7 +117,6 @@ function HSPBT0301M() {
                 <CommonButton label="본부반송" className="_lined-secondary" />
                 <CommonButton label="일련번호조회" className="_lined-secondary" />
                 <CommonButton label="중복일련번호 체크" className="_lined-secondary" />
-                <CommonButton label="본부반송취소" className="_lined-secondary" />
               </div>
 
               <div className="group _assistive">
@@ -133,7 +132,8 @@ function HSPBT0301M() {
               </div>
 
               <div className="group _primary">
-                <CommonButton label="임시저장" className="_solid-primary" />
+                <CommonButton label="본부반송취소" className="_solid-primary" />
+                <CommonButton label="임시저장" className="_lined-primary" />
                 <CommonButton label="인도등록" className="_solid-primary" />
               </div>
             </div>

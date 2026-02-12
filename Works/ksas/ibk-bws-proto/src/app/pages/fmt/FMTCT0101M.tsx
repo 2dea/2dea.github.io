@@ -41,7 +41,7 @@ function FMTCT0101M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '원화현수송' }, { label: '원화현수송신청' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '원화현수송' }, { label: '원화현수송신청' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function FMTCT0101M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -115,7 +115,7 @@ function FMTCT0101M() {
 
             <div className="m-binds type-end">
               <div className="group _primary">
-                <CommonButton label="신청" className="_solid-primary _approve" />
+                <CommonButton label="신청" className="_solid-primary" />
               </div>
             </div>
 
@@ -135,8 +135,12 @@ function FMTCT0101M() {
                 <div className="m-header">
                   <h2 className="o-heading level2"><span className="label">기본정보</span></h2>
 
+                  <div className="o-helper style-normal">
+                    <em className="label">협송업체 선택 시 전용노선 신청일 경우 [1. 관할자금모점]으로, 건별 신청일 경우 [2~5 해당업체]로 신청해주세요.</em>
+                  </div>
+
                   <div className="o-legend type-helper style-normal">
-                    <em className="label"><strong className="c-color-text">마감시간(프로세스혁신부) : 23 : 00</strong></em>
+                    <em className="label"><strong className="c-color-text">마감시간(프로세스혁신부) : 23:00</strong></em>
                   </div>
                 </div>
 
@@ -228,11 +232,11 @@ function FMTCT0101M() {
                           <th colSpan={1}>
                             <Label label={`관할업무센터`} require={true} />
                           </th>
-                          <td colSpan={7}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _select mode-required wdth-70">
-                                  <XDropdown appendTo={document.body} className="bind"  disabled />
+                                  <XDropdown appendTo={document.body} className="bind" disabled />
                                   <i aria-hidden="true"></i>
                                 </div>
 
@@ -242,13 +246,11 @@ function FMTCT0101M() {
                               </div>
                             </div>
                           </td>
-                        </tr>
 
-                        <tr>
                           <th colSpan={1}>
                             <Label label={`비고`} require={false} />
                           </th>
-                          <td colSpan={7}>
+                          <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input ">
@@ -265,11 +267,11 @@ function FMTCT0101M() {
                   </form>
                 </div>
 
-                <div className="m-footer">
+                {/* <div className="m-footer">
                   <ul className="m-bullets type-disc">
                     <li>협송업체 선택 시 전용노선 신청일 경우 [1. 관할자금모점]으로, 건별 신청일 경우 [2~5 해당업체]로 신청해주세요.</li>
                   </ul>
-                </div>
+                </div> */}
 
               </div>
 
@@ -289,9 +291,7 @@ function FMTCT0101M() {
                     <div className="group">
                       <CommonButton label="손상권조회" className="_solid-primary" />
                     </div>
-                  </div>
 
-                  <div className="m-binds">
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
@@ -299,8 +299,23 @@ function FMTCT0101M() {
                   </div>
                 </div>
 
-                <div className="main _primary">
-                  <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
+                <div className="main _primary rows-auto">
+                  <div className="m-total">
+                    <dl className="m-defines">
+                      <div className="group">
+                        <dt className="head">신청금액합계</dt>
+                        <dd className="data">200,000,000</dd>
+                      </div>
+
+                      {/* <div className="group">
+                        <dt className="head">결정금액합계</dt>
+                        <dd className="data">200,000,000</dd>
+                      </div> */}
+                    </dl>
+                  </div>
+
+                  {/* 청구 { @DEV } */}
+                  <DataTable className="o-grid-table g-hide" />
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
                       <table className="p-datatable-table p-datatable-scrollable-table">
@@ -327,11 +342,11 @@ function FMTCT0101M() {
                           </tr>
                         </thead>
 
-                        <tbody className="p-datatable-tbody">
+                        {/* <tbody className="p-datatable-tbody">
                           <tr className="p-datatable-emptymessage">
                             <td colSpan={6}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
                           </tr>
-                        </tbody>
+                        </tbody> */}
 
                         <tbody className="p-datatable-tbody">
                           {[...Array(24)].map((e, idx) => (
@@ -350,7 +365,16 @@ function FMTCT0101M() {
                                     </div>
                                   </div>
                                 </td>
-                                <td className="g-end">0</td>
+                                <td className="g-end">
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
                                 <td>
                                   <div className="o-field">
                                     <div className="fields">
@@ -362,13 +386,22 @@ function FMTCT0101M() {
                                     </div>
                                   </div>
                                 </td>
-                                <td className="g-end">0</td>
+                                <td className="g-end">
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
                               </tr>
                               {
                                 (idx - 2) % 3 === 0 &&
                                 <tr className="p-rowgroup-footer subtotal-trow">
-                                  <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell g-start">소계</td>
+                                  <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell"></td>
                                   <td className="subtotal-tcell g-end">99</td>
                                     <td className="subtotal-tcell"></td>
@@ -379,19 +412,117 @@ function FMTCT0101M() {
                             </>
                           ))}
                         </tbody>
-
-                        <tfoot className="p-datatable-tfoot sumtotal-tfoot">{/* footerColumnGroup={totalSumFooterGroupTemplate} :: 그리드 합계 테이블푸터그룹 커스텀 템플릿 추가 필요 { @DEV } */}
-                          <tr className="sumtotal-trow">
-                            <td colSpan={2} className="sumtotal-tcell">합계</td>
-                            <td className="sumtotal-tcell">신청금액</td>
-                            <td className="sumtotal-tcell g-end">999,999</td>
-                            <td className="sumtotal-tcell"></td>
-                            <td className="sumtotal-tcell g-end"></td>
-                          </tr>
-                        </tfoot>
                       </table>
                     </div>
                   </div>
+
+                  {/* 불입 { @DEV } */}
+                  <DataTable className="o-grid-table g-hide" />
+                  <div className="o-grid-table p-datatable">
+                    <div className="table-container p-datatable-wrapper">
+                      <table className="p-datatable-table p-datatable-scrollable-table">
+                        <colgroup>
+                          <col />
+                          <col className="wdth-50" />
+                          <col />
+                          <col />
+                          <col className="wdth-50" />
+                          <col />
+                          <col />
+                        </colgroup>
+
+                        <thead className="p-datatable-thead">
+                          <tr>
+                            <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">권종</span></div></th>
+                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사용권</span></div></th>
+                            <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">손상권</span></div></th>
+                          </tr>
+                          <tr>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">수량</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">단위</span></div></th>
+                            <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">금액</span></div></th>
+                          </tr>
+                        </thead>
+
+                        {/* <tbody className="p-datatable-tbody">
+                          <tr className="p-datatable-emptymessage">
+                            <td colSpan={7}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
+                          </tr>
+                        </tbody> */}
+
+                        <tbody className="p-datatable-tbody">
+                          {[...Array(24)].map((e, idx) => (
+                            <>
+                              <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>
+                                <td className="g-end">15만원권</td>
+                                <td>
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input type-spin wdth-50">
+                                        <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                          decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>대속</td>
+                                <td className="g-end">
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input type-spin wdth-50">
+                                        <InputNumber className="bind" inputId="horizontal-buttons" value={InputNumberValue} onValueChange={(e) => setInputNumberValue(e.value)} showButtons buttonLayout="horizontal" step={1} min={0} max={9999}
+                                          decrementButtonClassName="o-image-button" incrementButtonClassName="o-image-button" decrementButtonIcon={<Icon icon="sum-minus" />} incrementButtonIcon={<Icon icon="sum-plus" />} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>대속</td>
+                                <td className="g-end">
+                                  <div className="o-field">
+                                    <div className="fields">
+                                      <div className="o-form _input g-end">
+                                        <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                        <i aria-hidden="true"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              {
+                                (idx - 2) % 3 === 0 &&
+                                <tr className="p-rowgroup-footer subtotal-trow">
+                                  <td className="subtotal-tcell g-end">소계</td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell g-end">99</td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell"></td>
+                                  <td className="subtotal-tcell g-end">99,999</td>
+                                  {/* rowGroupFooterTemplate={totalSubCellFooterTemplate} :: 그리드 소계 로우그룹 커스텀 템플릿 추가 필요 { @DEV } */}
+                                </tr>
+                              }
+                            </>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 

@@ -41,7 +41,7 @@ function STMDM0301M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '배차관리' }, { label: '배차관리' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '배차관리' }, { label: '배차관리' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function STMDM0301M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -109,14 +109,6 @@ function STMDM0301M() {
             <div className="m-binds type-start">
               <div className="group _assistive">
                 <CommonButton label="도움말" className="_normal" icon="help" />
-              </div>
-            </div>
-
-            <div className="m-binds type-end">
-              <div className="group _utility">
-                <div className="m-print-binds">
-                  <CommonButton label="출력" className="_texted" />
-                </div>
               </div>
             </div>
           </div>
@@ -138,7 +130,7 @@ function STMDM0301M() {
                       <li>
                         <div className="o-pair">
                           <strong className="head"><Icon icon="vehicle" />배차가능차량</strong>
-                          <span className="data"><a href="javascript:">9,999</a></span>
+                          <span className="data">9,999</span>
                         </div>
                       </li>
                     </ul>
@@ -149,7 +141,7 @@ function STMDM0301M() {
                       <li>
                         <div className="o-pair">
                           <strong className="head"><Icon icon="vehicle" />배차대기차량</strong>
-                          <span className="data"><a href="javascript:">9,999</a></span>
+                          <span className="data">9,999</span>
                         </div>
                       </li>
                     </ul>
@@ -160,7 +152,7 @@ function STMDM0301M() {
                       <li>
                         <div className="o-pair">
                           <strong className="head"><Icon icon="vehicle" />배차 이용 중</strong>
-                          <span className="data"><a href="javascript:">9,999</a></span>
+                          <span className="data">9,999</span>
                         </div>
                       </li>
                     </ul>
@@ -171,7 +163,7 @@ function STMDM0301M() {
                       <li>
                         <div className="o-pair">
                           <strong className="head"><Icon icon="repair" />재정비 중</strong>
-                          <span className="data"><a href="javascript:">9,999</a></span>
+                          <span className="data">9,999</span>
                         </div>
                       </li>
                     </ul>
@@ -485,6 +477,7 @@ function STMDM0301M() {
 
                   <div className="m-binds">
                     <div className="group">
+                      <CommonButton label="저장" className="_solid-primary" />
                       <CommonButton label="재정비완료" className="_solid-primary" />
                     </div>
                   </div>

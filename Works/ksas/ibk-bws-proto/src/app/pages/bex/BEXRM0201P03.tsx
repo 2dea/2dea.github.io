@@ -92,7 +92,7 @@ function BEXRM0201P03() {
   return (
     <>
       <Dialog
-        className="layer-wrap wdth-40p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
+        className="layer-wrap wdth-50p" /* 40p: 770, 50p: 960, 60p: 1150, 70p: 1340, 80p: 1540, 90p: 1730 */
         headerClassName="layer-head"
         contentClassName="layer-body"
         visible={visible}
@@ -101,7 +101,7 @@ function BEXRM0201P03() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">등기우편물인수정보등록</span></h3>}
+        header={<h3 className="o-heading"><span className="label">등기우편물 인수정보등록</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -154,10 +154,16 @@ function BEXRM0201P03() {
               <div className="o-section">
                 <div className="m-header">
                   <h4 className="o-heading level2"><span className="label">일괄적용항목</span></h4>
+
+                  {/* <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="초기화" className="_normal" />
+                    </div>
+                  </div> */}
                 </div>
 
                 <div className="main">
-                  <form className="m-data-form">
+                  {/* <form className="m-data-form">
                     <table className="table">
                       <colgroup>
                         <col className="head" />
@@ -240,8 +246,12 @@ function BEXRM0201P03() {
                             <div className="o-field">
                               <div className="fields">
                                 <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                  <InputText placeholder="" value="[999999] 홍길동" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
+                                </div>
+
+                                <div className="m-checks">
+                                  <InputCheck label="선택" labelHidden defaultChecked />
                                 </div>
                               </div>
                             </div>
@@ -252,9 +262,13 @@ function BEXRM0201P03() {
                           <td colSpan={1}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input">
-                                  <InputText placeholder="" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                <div className="o-form type-date _input">
+                                  <InputText placeholder="" value="2025-12-25 09:10:59" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
                                   <i aria-hidden="true"></i>
+                                </div>
+
+                                <div className="m-checks">
+                                  <InputCheck label="선택" labelHidden defaultChecked />
                                 </div>
                               </div>
                             </div>
@@ -276,21 +290,171 @@ function BEXRM0201P03() {
                         </tr>
                       </tbody>
                     </table>
+                  </form> */}
+
+                  <form className="m-data-form">
+                    <table className="table">
+                      <colgroup>
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
+                      </colgroup>
+
+                      <tbody>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`발송자`} require={true} />
+                          </th>
+                          <td colSpan={5}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input mode-required">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+
+                                <div className="binds justify-end">
+                                  <CommonButton label="초기화" className="_normal" />
+                                  <CommonButton label="일괄적용" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`등록구분`} require={false} />
+                          </th>
+                          <td colSpan={5}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _select">
+                                  <XDropdown appendTo={'self'} className="bind" />
+                                  <i aria-hidden="true"></i>
+                                </div>
+
+                                <div className="binds justify-end">
+                                  <CommonButton label="초기화" className="_normal" />
+                                  <CommonButton label="일괄적용" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`수취자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`수취부점`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
+                                  <i aria-hidden="true"></i>
+                                  <span className="inner-binds">
+                                    <ImageButton label="초기화" icon="remove" />
+                                  </span>
+                                </div>
+
+                                <div className="binds justify-end">
+                                  <CommonButton label="초기화" className="_normal" />
+                                  <CommonButton label="일괄적용" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`수령자`} require={false} />
+                          </th>
+                          <td colSpan={1}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="" value="[999999] 홍길동" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                  <i aria-hidden="true"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <th colSpan={1}>
+                            <Label label={`수령일시`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form type-date _input">
+                                  <InputText placeholder="" value="2025-12-25 09:10:59" className="bind" onChange={(e) => setValue(e.target.value)} readOnly />
+                                  <i aria-hidden="true"></i>
+                                </div>
+
+                                <div className="binds justify-end">
+                                  <CommonButton label="초기화" className="_normal g-invisible" />
+                                  <CommonButton label="일괄적용" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`비고`} require={false} />
+                          </th>
+                          <td colSpan={5}>
+                            <div className="o-field">
+                              <div className="fields">
+                                <div className="o-form _input">
+                                  <InputText placeholder="내용을 입력해주세요" value={value} className="bind" onChange={(e) => setValue(e.target.value)} />
+                                </div>
+
+                                <div className="binds justify-end">
+                                  <CommonButton label="초기화" className="_normal" />
+                                  <CommonButton label="일괄적용" className="_normal" />
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </form>
                 </div>
               </div>
 
-              <div className="m-divider">
+              {/* <div className="m-divider">
                 <div className="m-binds">
                   <div className="group">
                     <CommonButton label="일괄적용" icon="du-down" className="_normal" />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">일괄신청내역</span></h5>
+                  <h5 className="o-heading level3"><span className="label">등기우편물 인수정보(일괄)</span></h5>
 
                   <div className="o-length">
                     <span className="head">전체</span>
@@ -301,6 +465,9 @@ function BEXRM0201P03() {
                   </div>
 
                   <div className="m-binds">
+                    <div className="group">
+                      <CommonButton label="행삭제" className="_normal" />
+                    </div>
                     <div className="group">
                       <ImageButton label="엑셀​다운로드" icon="excel-download" />
                       <ImageButton label="목록출력" icon="print" />
@@ -388,7 +555,6 @@ function BEXRM0201P03() {
           <div className="m-binds type-end">
             <div className="group _primary">
               <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>
@@ -399,7 +565,7 @@ function BEXRM0201P03() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)등기우편물인수정보등록 [wdth-40p(w770)]</span>
+              <span className="label">(P)등기우편물인수정보등록 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>

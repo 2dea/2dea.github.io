@@ -144,7 +144,7 @@ function HSPDU0801P02() {
                           <td colSpan={3}>
                             <div className="o-field">
                               <div className="fields">
-                                <div className="o-form _input mode-required">
+                                <div className="o-form _input mode-required wdth-50">
                                   <AutoComplete className="bind" value={AutoCompleteValue} suggestions={AutoCompleteItems} itemTemplate={itemTemplate} completeMethod={AutoCompleteSearch} onChange={(e) => setAutoCompleteValue(e.target.value)} />
                                   <i aria-hidden="true"></i>
                                   <span className="inner-binds">

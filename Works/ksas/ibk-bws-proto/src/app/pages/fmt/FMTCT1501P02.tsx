@@ -165,7 +165,7 @@ function FMTCT1501P02() {
                   </div>
                 </div>
 
-                <div className="main _primary rows-body-5i">
+                <div className="main _primary rows-body-7i">
                   <DataTable className="o-grid-table g-hide" />{/* Unused { @DEV } */}
                   <div className="o-grid-table p-datatable">
                     <div className="table-container p-datatable-wrapper">
@@ -234,14 +234,16 @@ function FMTCT1501P02() {
                       <colgroup>
                         <col className="head" />
                         <col className="data" />
+                        <col className="head" />
+                        <col className="data" />
                       </colgroup>
 
                       <tbody>
                         <tr>
-                          <th colSpan={1}>
+                          <th colSpan={1} rowSpan={3}>
                             <Label label={`사진등록`} require={false} />
                           </th>
-                          <td colSpan={1}>
+                          <td colSpan={1} rowSpan={3}>
                             <div className="m-flex-list">
                               <div className="m-upload-image">
                                 <div className="main">
@@ -260,8 +262,6 @@ function FMTCT1501P02() {
                               </div>
                             </div>
                           </td>
-                        </tr>
-                        <tr>
                           <th colSpan={1}>
                             <Label label={`직원번호`} require={true} />
                           </th>
@@ -319,8 +319,8 @@ function FMTCT1501P02() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="취소" className="_cancel" />
+              <CommonButton label="삭제" className="_delete" />
               <CommonButton label="저장" className="_solid-primary" />
             </div>
           </div>

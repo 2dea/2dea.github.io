@@ -99,9 +99,9 @@ function BEXRM0201P08() {
         style={{}}
         onHide={() => { if (!visible) return; setVisible(false); }}
         closeIcon={<Icon icon="popup-close" />}
-        modal={true}
+        modal={false}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">등기우편물거래이력</span></h3>}
+        header={<h3 className="o-heading"><span className="label">등기우편물 거래이력</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -403,8 +403,7 @@ function BEXRM0201P08() {
         <div className="div-footer">
           <div className="m-binds type-end">
             <div className="group _primary">
-              <CommonButton label="취소" className="_cancel" />
-              <CommonButton label="등록" className="_solid-primary" />
+              <CommonButton label="확인" className="_solid-primary" />
             </div>
           </div>
         </div>

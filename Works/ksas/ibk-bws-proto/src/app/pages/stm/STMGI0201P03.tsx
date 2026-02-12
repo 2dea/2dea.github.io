@@ -1,5 +1,5 @@
 /**
- * @description 재난·안전관리 > 가스분사기관리대장(관리자) > 가스분사기관리대장(관리자) ~ (LP)분실접수
+ * @description 재난·안전관리 > 가스분사기관리대장(관리자) > 가스분사기관리대장(관리자) ~ (LP)사고접수
  */
 
 // dependency
@@ -101,7 +101,7 @@ function STMGI0201P03() {
         closeIcon={<Icon icon="popup-close" />}
         modal={true}
         // footer={<></>}
-        header={<h3 className="o-heading"><span className="label">분실접수</span></h3>}
+        header={<h3 className="o-heading"><span className="label">사고접수</span></h3>}
       >
         <div className="div-container">
           <div className="o-grid">
@@ -109,7 +109,7 @@ function STMGI0201P03() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h4 className="o-heading level2"><span className="label">분실접수정보</span></h4>
+                  <h4 className="o-heading level2"><span className="label">사고접수정보</span></h4>
                 </div>
 
                 <div className="main">
@@ -177,7 +177,7 @@ function STMGI0201P03() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`분실사유`} require={false} />
+                            <Label label={`사고사유`} require={false} />
                           </th>
                           <td colSpan={3}>
                             <div className="o-field">
@@ -205,7 +205,7 @@ function STMGI0201P03() {
 
               <div className="o-section">
                 <div className="m-header">
-                  <h5 className="o-heading level3"><span className="label">다른부점 분실접수 내역</span></h5>
+                  <h5 className="o-heading level3"><span className="label">다른부점 사고접수 내역</span></h5>
                 </div>
 
                 <div className="main _primary rows-body-5i">
@@ -298,7 +298,7 @@ function STMGI0201P03() {
         <div className="div-header">
           <div className="m-title">
             <h1 className="o-heading level1">
-              <span className="label">(P)분실접수 [wdth-50p(w960)]</span>
+              <span className="label">(P)사고접수 [wdth-50p(w960)]</span>
             </h1>
           </div>
         </div>

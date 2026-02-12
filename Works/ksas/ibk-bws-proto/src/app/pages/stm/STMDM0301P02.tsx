@@ -136,13 +136,13 @@ function STMDM0301P02() {
 
                         <tr>
                           <th colSpan={1}>
-                            <Label label={`출발전운행거리`} require={false} />
+                            <Label label={`출발 전 운행거리`} require={false} />
                           </th>
                           <td colSpan={1} className="g-end">
                             1,111
                           </td>
                           <th colSpan={1}>
-                            <Label label={`출발후운행거리`} require={true} />
+                            <Label label={`출발 후 운행거리`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -184,7 +184,7 @@ function STMDM0301P02() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`주유전운행거리`} require={false} />
+                            <Label label={`주유 전 운행거리`} require={false} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">
@@ -197,7 +197,7 @@ function STMDM0301P02() {
                             </div>
                           </td>
                           <th colSpan={1}>
-                            <Label label={`주유후운행거리`} require={true} />
+                            <Label label={`주유 후 운행거리`} require={true} />
                           </th>
                           <td colSpan={1}>
                             <div className="o-field">

@@ -41,7 +41,7 @@ function STMSC0201M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '도급계약 현황 확인' }];
+  const paths: MenuItem[] = [{ label: '재난·안전관리' }, { label: '도급사업관리' }, { label: '도급계약 현황 확인' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,7 +94,7 @@ function STMSC0201M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
@@ -389,7 +389,7 @@ function STMSC0201M() {
 
                             <div className="m-string-binds">
                               <span className="string">일시적</span>
-                              <span className="binds"><CommonButton label="참고" className="_normal" /></span>
+                              <span className="binds justify-end"><CommonButton label="참고" className="_normal" /></span>
                             </div>
                           </td>
                         </tr>
@@ -399,6 +399,14 @@ function STMSC0201M() {
                           </th>
                           <td colSpan={3}>
                             일시적 (일수) : 25일
+                          </td>
+                        </tr>
+                        <tr>
+                          <th colSpan={1}>
+                            <Label label={`계약상태`} require={false} />
+                          </th>
+                          <td colSpan={3}>
+                            해지
                           </td>
                         </tr>
                         <tr>

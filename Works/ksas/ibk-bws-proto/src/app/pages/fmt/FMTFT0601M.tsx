@@ -1,5 +1,5 @@
 /**
- * @description 자금현수송 > 외화현수송 > 자금현송명령부관리(업무센터)
+ * @description 자금현수송 > 외화현수송 > 자금현송명령부(업무센터)
  */
 
 // dependency
@@ -41,7 +41,7 @@ function FMTFT0601M() {
   const viewimageOverlay0 = useRef(null);
 
   // BreadCrumb
-  const paths: MenuItem[] = [{ label: '홈' }, { label: '자금현수송' }, { label: '외화현수송' }, { label: '자금현송명령부관리(업무센터)' }];
+  const paths: MenuItem[] = [{ label: '자금현수송' }, { label: '외화현수송' }, { label: '자금현송명령부(업무센터)' }];
 
   // InputText
   const [value, setValue] = useState<string>('');
@@ -94,11 +94,11 @@ function FMTFT0601M() {
       <div className="roles" data-div-role="0">
         <div className="div-header">
           <div className="main">
-            <BreadCrumb model={paths} className="o-breadcrumb" aria-label="Breadcurmb trail" />
+            <BreadCrumb model={paths} home={{ icon: 'o-icon _breadcrumb-home' }} className="o-breadcrumb" aria-label="Breadcurmb trail" />
 
             <div className="m-title">
               <h1 className="o-heading level1">
-                <span className="label">자금현송명령부관리(업무센터)</span>
+                <span className="label">자금현송명령부(업무센터)</span>
 
                 <FavoriteDiv />
               </h1>
@@ -122,7 +122,7 @@ function FMTFT0601M() {
 
               <div className="group _primary">
                 <CommonButton label="저장" className="_solid-primary" />
-                <CommonButton label="결재요청" className="_solid-primary _approve" />
+                <CommonButton label="결재요청" className="_solid-primary" />
               </div>
             </div>
 
@@ -216,6 +216,16 @@ function FMTFT0601M() {
                       </div>
                     </div>
                   </div>
+
+                  <div className="o-field">
+                    <Label label={`현송업체`} require={false} />
+                    <div className="fields">
+                      <div className="o-form _select">
+                        <XDropdown appendTo={'self'} className="bind" />
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="binds">
@@ -227,12 +237,13 @@ function FMTFT0601M() {
           </div>
 
           <Tabs className="m-tabs react-tabs" defaultIndex={0}>
-            <div className="m-tab type2 type-step">
+            {/* <div className="m-tab type2 type-step">
               <TabList className="lists">
                 <Tab className="link"><span className="label">등록정보</span></Tab>
                 <Tab className="link"><span className="label">자금현송명령부</span></Tab>
+                <Tab className="link" disabled><span className="label">비활성탭</span></Tab>
               </TabList>
-            </div>
+            </div> */}
 
             <TabPanel className="m-tabs-panel react-tabs__tab-panel">
               <div className="o-grid">
@@ -418,12 +429,12 @@ function FMTFT0601M() {
 
                             <tr>
                               <th colSpan={1}>
-                                <Label label={`현송일자`} require={false} />
+                                <Label label={`현송일자`} require={true} />
                               </th>
                               <td colSpan={1}>
                                 <div className="o-field">
                                   <div className="fields">
-                                    <div className="o-form _input type-date wdth-50">
+                                    <div className="o-form _input type-date mode-required wdth-50">
                                       <Calendar placeholder="" value={Date} locale="ko" dateFormat="yy-mm-dd" mask="9999-99-99" appendTo={document.body} className="bind" onChange={(e) => setDate(e.value)} showIcon icon={<Icon icon="calendar" />} />
                                       <i aria-hidden="true"></i>
                                     </div>
@@ -466,7 +477,7 @@ function FMTFT0601M() {
 
                   <div className="o-section">
                     <div className="m-header">
-                      <h2 className="o-heading level2"><span className="label">자금현송명령부등록정보</span></h2>
+                      <h2 className="o-heading level2"><span className="label">자금현송명령부현황</span></h2>
 
                       <div className="o-length">
                         <span className="head">전체</span>
