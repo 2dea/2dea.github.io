@@ -4,6 +4,7 @@ import App from './App.tsx'
 
 import '/src/assets/style/typo.css';
 import '/src/assets/style/public.scss';
+import '/src/pages/spp/resource/system.scss';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
