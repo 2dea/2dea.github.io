@@ -4,7 +4,6 @@
 @use "./mixins" as *;
 
 
-// var(--cell-pdbs, var(--cell-pdb))    var(--cell-pdie, var(--cell-pdi))    var(--cell-pdbe, var(--cell-pdb))    var(--cell-pdis, var(--cell-pdi))
 @property --color-scrollbar-hidden-track  {
   syntax: '<color>';
   inherits: true;
@@ -150,11 +149,72 @@ html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable bot
 /** Define Fonts
  --------------- */
 
-*  { border-color: var(--color-edge-40, currentColor); letter-spacing: var(--text-spacing); }
-// :before,  :after  { border-radius: inherit; letter-spacing: inherit; animation: inherit; transition: inherit; }
-:before,  :after  { border-radius: inherit; letter-spacing: inherit; }
+@layer LAY-base {
+  @layer local-univ {
+
+    *  {
+      --mnh: ;
+      --vlh: ;
+      --mxh: ;
+
+      --mnw: ;
+      --vlw: ;
+      --mxw: ;
+
+      --mg: 0;
+      --mgi: var(--mg);
+      --mgb: var(--mg);
+      --mgis: var(--mgi);
+      --mgbs: var(--mgb);
+      --mgie: var(--mgi);
+      --mgbe: var(--mgb);
+
+      --pd: 0;
+      --pdi: var(--pd);
+      --pdb: var(--pd);
+      --pdis: var(--pdi);
+      --pdbs: var(--pdb);
+      --pdie: var(--pdi);
+      --pdbe: var(--pdb);
+
+      --bw: 0;
+      --bwi: var(--bw);
+      --bwb: var(--bw);
+      --bwis: var(--bwi);
+      --bwbs: var(--bwb);
+      --bwie: var(--bwi);
+      --bwbe: var(--bwb);
+
+      --br: 0;
+      --brs: var(--br);
+      --bre: var(--br);
+      --brss: var(--brs);
+      --brse: var(--bre);
+      --bree: var(--brs);
+      --bres: var(--bre);
+
+      min-height: var(--mnh);
+      height: var(--vlh);
+      max-height: var(--mxh);
+      min-width: var(--mnw);
+      width: var(--vlw);
+      max-width: var(--mxw);
+      margin: var(--mgbs) var(--mgie) var(--mgbe) var(--mgis);
+      padding: var(--pdbs) var(--pdie) var(--pdbe) var(--pdis);
+      border: 0 solid;
+      border-width: var(--bwbs) var(--bwie) var(--bwbe) var(--bwis);
+      border-color: var(--color-edge-40, currentColor);
+      border-radius: var(--brss) var(--brse) var(--bree) var(--bres);
+    }
+    :before,  :after  { background-color: inherit; border-radius: inherit; }
+
+  }
+}
+.css-var-root  {
+  --ant-border-radius: 4px;
+}
 html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); accent-color: var(--color-key1-70, #0078d7); }
-body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-400); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); accent-color: var(--accent, DodgerBlue); }
+body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-400); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--color-text-40); background: var(--color-surface, WhiteSmoke); accent-color: var(--accent, DodgerBlue); letter-spacing: var(--text-spacing); }
 /* @media
   screen and (not (max-width: 1920px))  {
     html  { font-size: var(--root-em-base, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
