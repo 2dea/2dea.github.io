@@ -13,8 +13,8 @@
   --vi:                 1dvi;
   --vb:                 1dvb;
 
-  --height-window-maximum:      100vh;
-  --height-window-viewport:     var(--height-window-variable, calc(var(--vb) * 100));
+  --ht-window-maximum:      100vh;
+  --ht-window-viewport:     var(--ht-window-variable, calc(var(--vb) * 100));
 
 
   --bold-400:           500;
@@ -131,14 +131,14 @@
   --text-shadow-radius: 0 0.1ex calc(var(--rem) * 1);
   --text-shadow-color:  rgba(0,0,0, 0.75);
   --text-shadow:        var(--text-shadow-radius) var(--text-shadow-color);
-  --text-shadow-from:   var(--bgcolor, var(--color-ground, Gainsboro));
+  --text-shadow-from:   var(--bgcolor, var(--cl-ground, Gainsboro));
   --text-shadow-alpha:  0.75;
   --text-shadow-color:  rgb(from var(--text-shadow-from) r g b / var(--text-shadow-alpha));
   --text-shadow:        var(--text-shadow-radius) var(--text-shadow-color);
 
 
-  --radius-abs-20:      2px;
-  --radius-abs-999:     8em;
+  --round-abs-20:      2px;
+  --round-abs-999:     8em;
 
   --blur-abs-50:        1.5px;
 
@@ -163,14 +163,6 @@
   @supports (line-height: round(down, 1, 1)) {
     --text-height-rel:    round(down, calc(1em * 15 / 12), 2px);
     --text-height-par:    round(down, calc(1em * 17 / 11), 2px);
-  }
-
-  @supports not (top: 1dvb) {
-    --height-window-viewport:     100dvh;
-  }
-
-  @supports not (top: 1dvh) {
-    --height-window-viewport:     var(--height-window-variable, var(--height-window-maximum, 100vh));
   }
 }
 

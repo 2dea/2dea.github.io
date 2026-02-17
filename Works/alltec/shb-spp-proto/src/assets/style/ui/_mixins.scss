@@ -8,9 +8,8 @@
 
 /** Length-Unit PX to REM */
 @function px($int)  {
-  // @return #{($int / $root-em-int)}rem;
-  @return calc(1rem / $root-em-int * $int);
-  // @return calc($root-em * $int);
+  // @return calc(1rem / $root-em-int * $int);
+  @return #{calc(var(--rem) * $int)};
 }
 
 
@@ -21,16 +20,16 @@
 
 
 /** 리니어 그래디언트 */
-// @function fnLinearGradient($dir: bottom, $start: var(--color-ground-alpha-00))  {
+// @function fnLinearGradient($dir: bottom, $start: var(--cl-ground-alpha-00))  {
 //   @return linear-gradient(to $dir, $start, $end);
 // }
-@function fnLinearGradient($deg: 180deg, $start: var(--color-ground-alpha-00), $end: var(--color-ground), $start-stop: null, $end-stop: 65%)  {
+@function fnLinearGradient($deg: 180deg, $start: var(--cl-ground-alpha-00), $end: var(--cl-ground), $start-stop: null, $end-stop: 65%)  {
   @return linear-gradient($deg, $start $start-stop, $end $end-stop);
 }
 
 
 /** 스크롤 섀도우 */
-@function fnScrollShadow($deg: 180deg, $color: var(--color-ground), $end-stop: 65%, $start-stop: null)  {
+@function fnScrollShadow($deg: 180deg, $color: var(--cl-ground), $end-stop: 65%, $start-stop: null)  {
   @return linear-gradient($deg, rgb(from $color r g b / 0.0) $start-stop, $color $end-stop);
 }
 
@@ -132,19 +131,19 @@
 //   #{$selector}:where( :hover, :focus-within )#{$comb}::-webkit-scrollbar-thumb  { transition-duration: 0.15s; }
 // }
 @mixin setScrollGutterStable($selector: ".g-scroll-gutter-stable", $end: 800, $start: 150)  {
-  #{$selector}  { transition: --color-scrollbar-hidden-track #{$end}ms, --color-scrollbar-hidden-thumb #{$end}ms, --color-scrollbar-hidden-thumb-edge #{$end}ms; }
+  #{$selector}  { transition: --cl-scrollbar-hidden-track #{$end}ms, --cl-scrollbar-hidden-thumb #{$end}ms, --cl-scrollbar-hidden-thumb-edge #{$end}ms; }
   #{$selector}:hover,
-    #{$selector}:focus-within  { --color-scrollbar-hidden-track: var(--color-scrollbar-track); --color-scrollbar-hidden-thumb: var(--color-scrollbar-thumb); --color-scrollbar-hidden-thumb-edge: var(--color-scrollbar-thumb-edge); transition: --color-scrollbar-hidden-track #{$start}ms, --color-scrollbar-hidden-thumb #{$start}ms, --color-scrollbar-hidden-thumb-edge #{$start}ms; }
+    #{$selector}:focus-within  { --cl-scrollbar-hidden-track: var(--cl-scrollbar-track); --cl-scrollbar-hidden-thumb: var(--cl-scrollbar-thumb); --cl-scrollbar-hidden-thumb-edge: var(--cl-scrollbar-thumb-edge); transition: --cl-scrollbar-hidden-track #{$start}ms, --cl-scrollbar-hidden-thumb #{$start}ms, --cl-scrollbar-hidden-thumb-edge #{$start}ms; }
   #{$selector}::-webkit-scrollbar-corner  { background-color: Transparent; outline-color: Transparent; }
-  #{$selector}::-webkit-scrollbar-track  { background-color: var(--color-scrollbar-hidden-track); border-color: Transparent; will-change: background-color; }
-  #{$selector}::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--color-scrollbar-hidden-thumb); outline-color: var(--color-scrollbar-hidden-thumb-edge, Transparent); will-change: background-color, outline-color; }
+  #{$selector}::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-hidden-track); border-color: Transparent; will-change: background-color; }
+  #{$selector}::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--cl-scrollbar-hidden-thumb); outline-color: var(--cl-scrollbar-hidden-thumb-edge, Transparent); will-change: background-color, outline-color; }
 }
 
 
 /** 스크롤바 크기 */
 @mixin inc-scrollbar-width($margin: 3, $thumb: 6)  {
-  --margin-scrollbar:    calc(var(--rem) * #{$margin});
-  --width-scrollbar:     calc(var(--rem) * #{$thumb} + var(--margin-scrollbar) * 2);
+  --mg-scrollbar:    calc(var(--rem) * #{$margin});
+  --wd-scrollbar:     calc(var(--rem) * #{$thumb} + var(--mg-scrollbar) * 2);
 }
 
 
@@ -216,13 +215,13 @@
 
 
 /** 폰트아이콘 속성 (Google Material Icons) */
-@mixin setSymbolStyle($fill: 0, $wght: 400, $opsz: 24, $size: $height-icon-30)  {
+@mixin setSymbolStyle($fill: 0, $wght: 400, $opsz: 24, $size: $ht-icon-30)  {
   font-family: 'wf-MaterialSymbolsRounded-Var', sans-serif; @include setSymbolVariationSettings($fill, $wght, $opsz); font-size: $size; display: inline-flex; max-width: 1em; overflow: hidden; text-transform: uppercase;
 }
 
 
 /** 폰트아이콘 모든 속성 (Google Material Icons) */
-@mixin inc-symbol($fill: 0, $wght: 300, $opsz: 24, $size: $height-icon-30)  {
+@mixin inc-symbol($fill: 0, $wght: 300, $opsz: 24, $size: $ht-icon-30)  {
   direction: ltr; font: normal normal calc(var(--rem) * 24) /1 'wf-MaterialSymbolsOutlined-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
   @include setSymbolStyle($fill, $wght, $opsz, $size);
 }

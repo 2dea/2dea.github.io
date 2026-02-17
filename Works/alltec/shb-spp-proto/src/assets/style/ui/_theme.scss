@@ -5,36 +5,36 @@
 
 
 .dom-wrapper:where(.theme-heavy)  {
-  --theme-header-back: var(--color-key1-70);
+  --theme-header-back: var(--cl-key1-70);
 
-  --theme-header-text: var(--color-text-00);
-  --theme-header-text-30: var(--color-text-00);
-  --theme-header-text-key: var(--color-point-orange);
+  --theme-header-text: var(--cl-text-00);
+  --theme-header-text-30: var(--cl-text-00);
+  --theme-header-text-key: var(--cl-point-orange);
   --theme-header-icon-pos: 25%;
 
-  --theme-header-divider: var(--color-point-skyblue);
+  --theme-header-divider: var(--cl-point-skyblue);
 
   --theme-header-logo: var(--obj-img-logo-heavy);
 
-  --theme-header-nav-text: var(--color-ground2-blue-40);
+  --theme-header-nav-text: var(--cl-ground2-blue-40);
   --theme-header-nav-text-key: var(--cc);
 
 
-  --theme-nav-back: var(--color-theme-key1-90);
+  --theme-nav-back: var(--cl-theme-key1-90);
 
-  --theme-nav-text: var(--color-text-00);
-  --theme-nav-text-30: var(--color-text-00);
+  --theme-nav-text: var(--cl-text-00);
+  --theme-nav-text-30: var(--cl-text-00);
 
   --theme-nav-divider: var(--tp);
 
   --theme-nav-search-icon-pos: 75%;
 
   --theme-nav-tablist-back: Transparent;
-  --theme-nav-tablist-edge: rgb(from var(--color-edge-40) r g b / var(--alpha-dimmed-08));
+  --theme-nav-tablist-edge: rgb(from var(--cl-edge-40) r g b / var(--alpha-dimmed-08));
 
-  --theme-nav-total-back: rgb(from var(--color-ground) r g b / var(--alpha-dimmed-08));
+  --theme-nav-total-back: rgb(from var(--cl-ground) r g b / var(--alpha-dimmed-08));
 
-  --theme-nav-total-edge: rgb(from var(--color-edge-30) r g b / var(--alpha-dimmed-08));
+  --theme-nav-total-edge: rgb(from var(--cl-edge-30) r g b / var(--alpha-dimmed-08));
 
   --theme-nav-control: var(--theme-nav-back);
 }

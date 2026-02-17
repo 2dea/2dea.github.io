@@ -42,8 +42,8 @@ $line-90:            var(--line-90);
 
 $text-shadow:        var(--text-shadow);
 
-$radius-abs-20:      var(--radius-abs-20);
-$radius-abs-999:     var(--radius-abs-999);
+$round-abs-20:      var(--round-abs-20);
+$round-abs-999:     var(--round-abs-999);
 
 
 $tp:                         var(--tp, Transparent);
@@ -60,111 +60,111 @@ $alpha-dimmed-12:            var(--alpha-dimmed-12);
 $alpha-dimmed-65:            var(--alpha-dimmed-65);
 $alpha-dimmed-overlay:       var(--alpha-dimmed-overlay);
 
-$color-abs-white:            var(--color-abs-white);
-$color-abs-black:            var(--color-abs-black);
+$cl-abs-white:            var(--cl-abs-white);
+$cl-abs-black:            var(--cl-abs-black);
 
-$color-white:                var(--color-white);
-$color-black:                var(--color-black);
+$cl-white:                var(--cl-white);
+$cl-black:                var(--cl-black);
 
-$color-dimmed-overlay:       var(--color-dimmed-overlay);
-$color-dimmed-hover:         var(--color-dimmed-hover);
+$cl-dimmed-overlay:       var(--cl-dimmed-overlay);
+$cl-dimmed-hover:         var(--cl-dimmed-hover);
 
-$color-surface:              var(--color-surface);
-$color-surface-overlay:      var(--color-surface-overlay);
+$cl-surface:              var(--cl-surface);
+$cl-surface-overlay:      var(--cl-surface-overlay);
 
-$color-ground:               var(--color-ground);
-$color-ground-alpha-00:      var(--color-ground-alpha-00);
-$color-ground-30:            var(--color-ground-30);
-$color-ground-40:            var(--color-ground-40);
-$color-ground-70:            var(--color-ground-70);
-$color-ground-90:            var(--color-ground-90);
-$color-ground-required:      var(--color-ground-required);
-$color-ground-disabled:      var(--color-ground-disabled);
+$cl-ground:               var(--cl-ground);
+$cl-ground-alpha-00:      var(--cl-ground-alpha-00);
+$cl-ground-30:            var(--cl-ground-30);
+$cl-ground-40:            var(--cl-ground-40);
+$cl-ground-70:            var(--cl-ground-70);
+$cl-ground-90:            var(--cl-ground-90);
+$cl-ground-required:      var(--cl-ground-required);
+$cl-ground-disabled:      var(--cl-ground-disabled);
 
-$color-ground2-blue-30:      var(--color-ground2-blue-30);
-$color-ground2-blue-40:      var(--color-ground2-blue-40);
-$color-ground2-orange-40:    var(--color-ground2-orange-40);
-$color-ground2-yellow-40:    var(--color-ground2-yellow-40);
+$cl-ground2-blue-30:      var(--cl-ground2-blue-30);
+$cl-ground2-blue-40:      var(--cl-ground2-blue-40);
+$cl-ground2-orange-40:    var(--cl-ground2-orange-40);
+$cl-ground2-yellow-40:    var(--cl-ground2-yellow-40);
 
-$color-key1-40:              var(--color-key1-40);
-$color-key1-70:              var(--color-key1-70);
-$color-key1-90:              var(--color-key1-90);
+$cl-key1-40:              var(--cl-key1-40);
+$cl-key1-70:              var(--cl-key1-70);
+$cl-key1-90:              var(--cl-key1-90);
 /*
-$color-key2-40:              var(--color-key2-40);
-$color-key2-70:              var(--color-key2-70);
-$color-key2-90:              var(--color-key2-90);
+$cl-key2-40:              var(--cl-key2-40);
+$cl-key2-70:              var(--cl-key2-70);
+$cl-key2-90:              var(--cl-key2-90);
  */
 
 /*
-$color-point-40:             var(--color-point-40);
-$color-point-70:             var(--color-point-70);
+$cl-point-40:             var(--cl-point-40);
+$cl-point-70:             var(--cl-point-70);
  */
-$color-point-red:            var(--color-point-red);
-$color-point-orange:         var(--color-point-orange);
-$color-point-yellow:         var(--color-point-yellow);
-$color-point-skyblue:        var(--color-point-skyblue);
+$cl-point-red:            var(--cl-point-red);
+$cl-point-orange:         var(--cl-point-orange);
+$cl-point-yellow:         var(--cl-point-yellow);
+$cl-point-skyblue:        var(--cl-point-skyblue);
 
-$color-required:             var(--color-required);
-$color-delete:               var(--color-delete);
-$color-error:                var(--color-error);
+$cl-required:             var(--cl-required);
+$cl-delete:               var(--cl-delete);
+$cl-error:                var(--cl-error);
 
 /*
-$color-status-80:            var(--color-status-80);
-$color-status-50:            var(--color-status-50);
-$color-status-20:            var(--color-status-20);
+$cl-status-80:            var(--cl-status-80);
+$cl-status-50:            var(--cl-status-50);
+$cl-status-20:            var(--cl-status-20);
  */
 
-$color-text-00:              var(--color-text-00);
-$color-text-20:              var(--color-text-20);
-$color-text-30:              var(--color-text-30);
-$color-text-40:              var(--color-text-40);
-$color-text-70:              var(--color-text-70);
-$color-text-placeholder:     var(--color-text-placeholder, DarkGrey);
-$color-text-disabled:        var(--color-text-disabled);
+$cl-text-00:              var(--cl-text-00);
+$cl-text-20:              var(--cl-text-20);
+$cl-text-30:              var(--cl-text-30);
+$cl-text-40:              var(--cl-text-40);
+$cl-text-70:              var(--cl-text-70);
+$cl-text-placeholder:     var(--cl-text-placeholder, DarkGrey);
+$cl-text-disabled:        var(--cl-text-disabled);
 
-$color-icon-00:              var(--color-icon-00);
-$color-icon-40:              var(--color-icon-40);
-$color-icon-70:              var(--color-icon-70);
-$color-icon-90:              var(--color-icon-90);
-$color-icon-disabled:        var(--color-icon-disabled);
+$cl-icon-00:              var(--cl-icon-00);
+$cl-icon-40:              var(--cl-icon-40);
+$cl-icon-70:              var(--cl-icon-70);
+$cl-icon-90:              var(--cl-icon-90);
+$cl-icon-disabled:        var(--cl-icon-disabled);
 
-$color-control-40:           var(--color-control-40);
-$color-control-70:           var(--color-control-70);
+$cl-control-40:           var(--cl-control-40);
+$cl-control-70:           var(--cl-control-70);
 
-$color-link1-40:             var(--color-link1-40);
-$color-link1-70:             var(--color-link1-70);
+$cl-link1-40:             var(--cl-link1-40);
+$cl-link1-70:             var(--cl-link1-70);
 
 /*
-$color-button-40:            var(--color-button-40);
-$color-button-70:            var(--color-button-70);
+$cl-button-40:            var(--cl-button-40);
+$cl-button-70:            var(--cl-button-70);
  */
-$color-button1-40:           var(--color-button1-40);
-$color-button1-70:           var(--color-button1-70);
+$cl-button1-40:           var(--cl-button1-40);
+$cl-button1-70:           var(--cl-button1-70);
 
-$color-button2-30:           var(--color-button2-30);
-$color-button2-40:           var(--color-button2-40);
-$color-button2-70:           var(--color-button2-70);
+$cl-button2-30:           var(--cl-button2-30);
+$cl-button2-40:           var(--cl-button2-40);
+$cl-button2-70:           var(--cl-button2-70);
 
-$color-button3-30:           var(--color-button3-30);
-$color-button3-40:           var(--color-button3-40);
-$color-button3-70:           var(--color-button3-70);
+$cl-button3-30:           var(--cl-button3-30);
+$cl-button3-40:           var(--cl-button3-40);
+$cl-button3-70:           var(--cl-button3-70);
 
-$color-grid-selected:        var(--color-grid-selected);
-$color-grid-point:           var(--color-grid-point);
-$color-grid-evenrow:         var(--color-grid-evenrow);
-$color-grid-hover:           var(--color-grid-hover);
+$cl-grid-selected:        var(--cl-grid-selected);
+$cl-grid-point:           var(--cl-grid-point);
+$cl-grid-evenrow:         var(--cl-grid-evenrow);
+$cl-grid-hover:           var(--cl-grid-hover);
 
-$color-edge-30:              var(--color-edge-30);
-$color-edge-40:              var(--color-edge-40);
-$color-edge-70:              var(--color-edge-70);
-$color-edge-focus:           var(--color-edge-focus);
+$cl-edge-30:              var(--cl-edge-30);
+$cl-edge-40:              var(--cl-edge-40);
+$cl-edge-70:              var(--cl-edge-70);
+$cl-edge-focus:           var(--cl-edge-focus);
 
-$color-edge2-blue-30:        var(--color-edge2-blue-30);
+$cl-edge2-blue-30:        var(--cl-edge2-blue-30);
 
-$color-shadow:               var(--color-shadow);
+$cl-shadow:               var(--cl-shadow);
 
-$color-shadow-alpha-10:      var(--color-shadow-alpha-10);
-$color-shadow-alpha-20:      var(--color-shadow-alpha-20);
+$cl-shadow-alpha-10:      var(--cl-shadow-alpha-10);
+$cl-shadow-alpha-20:      var(--cl-shadow-alpha-20);
 
 
 $dropshadow-40:              var(--dropshadow-40);
@@ -172,8 +172,8 @@ $dropshadow-70:              var(--dropshadow-70);
 $dropshadow-frozen:          var(--dropshadow-frozen);
 
 
-$radius-50:                  calc(var(--rem) * var(--radius-50));
-$radius-70:                  calc(var(--rem) * var(--radius-70));
+$br-50:                  calc(var(--rem) * var(--br-50));
+$br-70:                  calc(var(--rem) * var(--br-70));
 
 
 $gap-whitespace-30:          calc(var(--rem) * var(--gap-whitespace-30));
@@ -185,27 +185,27 @@ $gap-element-70:             calc(var(--rem) * var(--gap-element-70));
 $gap-element-80:             calc(var(--rem) * var(--gap-element-80));
 $gap-element-90:             calc(var(--rem) * var(--gap-element-90));
 
-$margin-section-20:          calc(var(--rem) * var(--margin-section-20));
-$margin-section-30:          calc(var(--rem) * var(--margin-section-30));
-$margin-section-40:          calc(var(--rem) * var(--margin-section-40));
-$margin-section-50:          calc(var(--rem) * var(--margin-section-50));
-$margin-section-70:          calc(var(--rem) * var(--margin-section-70));
-$margin-section-80:          calc(var(--rem) * var(--margin-section-80));
+$mg-section-20:          calc(var(--rem) * var(--mg-section-20));
+$mg-section-30:          calc(var(--rem) * var(--mg-section-30));
+$mg-section-40:          calc(var(--rem) * var(--mg-section-40));
+$mg-section-50:          calc(var(--rem) * var(--mg-section-50));
+$mg-section-70:          calc(var(--rem) * var(--mg-section-70));
+$mg-section-80:          calc(var(--rem) * var(--mg-section-80));
 
-$height-icon-10:             calc(var(--rem) * var(--height-icon-10));
-$height-icon-30:             calc(var(--rem) * var(--height-icon-30));
-$height-icon-50:             calc(var(--rem) * var(--height-icon-50));
-$height-icon-70:             calc(var(--rem) * var(--height-icon-70));
+$ht-icon-10:             calc(var(--rem) * var(--ht-icon-10));
+$ht-icon-30:             calc(var(--rem) * var(--ht-icon-30));
+$ht-icon-50:             calc(var(--rem) * var(--ht-icon-50));
+$ht-icon-70:             calc(var(--rem) * var(--ht-icon-70));
 
-$height-ctrl-50:             calc(var(--rem) * var(--height-ctrl-50));
+$ht-ctrl-50:             calc(var(--rem) * var(--ht-ctrl-50));
 
-$height-form-30:             calc(var(--rem) * var(--height-form-30, 26));
-$height-form-50:             calc(var(--rem) * var(--height-form-50, 30));
-$height-form-70:             calc(var(--rem) * var(--height-form-70, 44));
+$ht-form-30:             calc(var(--rem) * var(--ht-form-30, 26));
+$ht-form-50:             calc(var(--rem) * var(--ht-form-50, 30));
+$ht-form-70:             calc(var(--rem) * var(--ht-form-70, 44));
 
 $timing-func-ease-slower:    var(--timing-func-ease-slower);
 $timing-func-ease-faster:    var(--timing-func-ease-faster);
 
 
-$width-scrollbar:            var(--width-scrollbar);
+$wd-scrollbar:            var(--wd-scrollbar);
 
