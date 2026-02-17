@@ -10,84 +10,84 @@
   --root-em:            (1rem / var(--root-em-int));
   --rem:                var(--root-em);
 
-  --round:              4.9406564584124654e-323;
+  --vi:                 1dvi;
+  --vb:                 1dvb;
 
   --height-window-maximum:      100vh;
-  --height-window-viewport:     var(--height-window-variable, 100vb);
+  --height-window-viewport:     var(--height-window-variable, calc(var(--vb) * 100));
 
 
-  --bold-30:            400;
-  --bold-40:            500;
-  --bold-50:            565;
-  --bold-70:            700;
+  --bold-400:           500;
+  --bold-700:           700;
 
 
-  --font-10px:          10;
+  /* --font-10px:          10;
   --font-11px:          11;
   --font-12px:          12;
-  --font-13px:          13;
+  --font-13px:          13; */
   --font-14px:          14;
-  --font-15px:          15;
+  /* --font-15px:          15;
   --font-16px:          16;
   --font-20px:          20;
   --font-24px:          24;
-  --font-36px:          36;
+  --font-36px:          36; */
 
-  --line-10px:          12;
+  /* --line-10px:          12;
   --line-11px:          14;
   --line-12px:          16;
-  --line-13px:          16;
-  --line-14px:          18;
-  --line-15px:          20;
+  --line-13px:          16; */
+  --line-14px:          16;
+  /* --line-14px:          18; */
+  /* --line-15px:          20;
   --line-16px:          20;
   --line-20px:          26;
   --line-24px:          30;
-  --line-36px:          42;
+  --line-36px:          42; */
 
-  --font-10-int:        var(--font-10px);
+  /* --font-10-int:        var(--font-10px);
   --font-30-int:        var(--font-12px);
-  --font-40-int:        var(--font-13px);
+  --font-40-int:        var(--font-13px); */
   --font-50-int:        var(--font-14px);
-  --font-60-int:        var(--font-16px);
+  /* --font-60-int:        var(--font-16px);
   --font-70-int:        var(--font-20px);
   --font-80-int:        var(--font-24px);
-  --font-90-int:        var(--font-36px);
+  --font-90-int:        var(--font-36px); */
 
-  --line-10-int:        var(--line-10px);
+  /* --line-10-int:        var(--line-10px);
   --line-30-int:        var(--line-12px);
-  --line-40-int:        var(--line-13px);
+  --line-40-int:        var(--line-13px); */
   --line-50-int:        var(--line-14px);
-  --line-60-int:        var(--line-16px);
+  /* --line-60-int:        var(--line-16px);
   --line-70-int:        var(--line-20px);
   --line-80-int:        var(--line-24px);
-  --line-90-int:        var(--line-36px);
+  --line-90-int:        var(--line-36px); */
 
-  --font-10:            calc(var(--rem) * var(--font-10-int));
+  /* --font-10:            calc(var(--rem) * var(--font-10-int));
   --font-30:            calc(var(--rem) * var(--font-30-int));
-  --font-40:            calc(var(--rem) * var(--font-40-int));
-  --font-50:            calc(var(--rem) * var(--font-50-int));
-  --font-60:            calc(var(--rem) * var(--font-60-int));
+  --font-40:            calc(var(--rem) * var(--font-40-int)); */
+  /* --font-50:            calc(var(--rem) * var(--font-50-int)); */
+  /* --font-60:            calc(var(--rem) * var(--font-60-int));
   --font-70:            calc(var(--rem) * var(--font-70-int));
   --font-80:            calc(var(--rem) * var(--font-80-int));
-  --font-90:            calc(var(--rem) * var(--font-90-int));
+  --font-90:            calc(var(--rem) * var(--font-90-int)); */
 
-  --line-abs-10:        calc(var(--rem) * var(--line-10-int));
+  /* --line-abs-10:        calc(var(--rem) * var(--line-10-int));
   --line-abs-30:        calc(var(--rem) * var(--line-30-int));
   --line-abs-40:        calc(var(--rem) * var(--line-40-int));
   --line-abs-50:        calc(var(--rem) * var(--line-50-int));
   --line-abs-60:        calc(var(--rem) * var(--line-60-int));
   --line-abs-70:        calc(var(--rem) * var(--line-70-int));
   --line-abs-80:        calc(var(--rem) * var(--line-80-int));
-  --line-abs-90:        calc(var(--rem) * var(--line-90-int));
+  --line-abs-90:        calc(var(--rem) * var(--line-90-int)); */
 
-  --line-10:            calc(var(--line-10-int) / var(--font-10-int));
+  /* --line-10:            calc(var(--line-10-int) / var(--font-10-int));
   --line-30:            calc(var(--line-30-int) / var(--font-30-int));
   --line-40:            calc(var(--line-40-int) / var(--font-40-int));
   --line-50:            calc(var(--line-50-int) / var(--font-50-int));
   --line-60:            calc(var(--line-60-int) / var(--font-60-int));
   --line-70:            calc(var(--line-70-int) / var(--font-70-int));
   --line-80:            calc(var(--line-80-int) / var(--font-80-int));
-  --line-90:            calc(var(--line-90-int) / var(--font-90-int));
+  --line-90:            calc(var(--line-90-int) / var(--font-90-int)); */
 
 
   --typo-system:        -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum';
@@ -119,8 +119,12 @@
   --text-size:          1em / var(--root-em-int, 16) * var(--text-size-int, 15);
   --text-height-int:    var(--line-50-int);
   --text-height:        var(--text-height-int, 16) / var(--text-size-int, 12);
-  --text-height-rel:    calc(1em * 16 / 12);
-  --text-height-par:    calc(1em * 18 / 12);
+
+  --text-height-rel:    calc(16 / 12);
+  --text-height-par:    calc(18 / 12);
+
+  --lhr:                var(--text-height-rel);
+  --lhp:                var(--text-height-par);
 
   --text-spacing:       0;
 
@@ -142,130 +146,124 @@
   --utf-jwsp:           "\200B";
 
 
-  @media
-    screen and (-webkit-min-device-pixel-ratio: 1.25),
-    screen and (min-resolution: 120dpi)  {
-      /* --color-ground:   Lime !important; */
-      --bold-30:        365;
-      --bold-40:        450;
-      --bold-50:        535;
-      --bold-70:        675;
+  @supports not (top: 1dvb) {
+    --vi:               1dvw;
+    --vb:               1dvh;
   }
 
-  @media
-    screen and (not (-webkit-max-device-pixel-ratio: 1.5)),
-    screen and (not (max-resolution: 144dpi))  {
-      /* --color-ground:   Gold !important; */
-      --bold-30:        335;
-      --bold-40:        400;
-      --bold-50:        500;
-      --bold-70:        650;
+  @supports not (top: 1dvh) {
+    --vi:               1vw;
+    --vb:               1vh;
   }
 
   @supports (font-variation-settings: 'wght' 700) {
     --typo-sans:        'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
-    /* --typo-sans:        'Noto Sans', 'Noto Sans KR', 'Asta Sans', 'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR'; */
-
-    /* --text-spacing:       -0.05em; */
   }
 
   @supports (line-height: round(down, 1, 1)) {
-    /* --text-height:        round(down, calc(1em * var(--text-height-int, 16) / var(--text-size-int, 12)), 2px);
-    --text-height:        remove-unit(round(down, calc(1em * var(--text-height-int, 16) / var(--text-size-int, 12)), 2px)); */
-    --text-height-rel:    round(down, calc(1em * 16 / 12), 2px);
-    --text-height-par:    round(down, calc(1em * 18 / 12), 2px);
+    --text-height-rel:    round(down, calc(1em * 15 / 12), 2px);
+    --text-height-par:    round(down, calc(1em * 17 / 11), 2px);
+  }
+
+  @supports not (top: 1dvb) {
+    --height-window-viewport:     100dvh;
+  }
+
+  @supports not (top: 1dvh) {
+    --height-window-viewport:     var(--height-window-variable, var(--height-window-maximum, 100vh));
   }
 }
 
-/** Type Selector */
-*  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 0 solid; }
-:before,  :after  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; }
-/* @media
-  screen and (prefers-reduced-motion: reduce)  {
-    *,
-      :before,  :after  { scroll-behavior: auto !important; transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
-} */
+@layer LAY-base {
 
-html  {
-  direction: ltr; font: 125% /calc(16 / 12) '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
-  -ms-text-underline-position: below; text-underline-position: under; text-underline-offset: auto;
-  -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -webkit-font-smoothing: subpixel-antialiased;
-  -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: hsla(0,0%,0%, 0.0);
-}
-body  {
-  font-family: inherit; font-family: var(--typo-base, inherit); font-size: 0.8em; line-height: inherit;
-  overflow-y: auto; margin: 0; color: CanvasText; background: Transparent; accent-color: Highlight;
-  word-break: break-word; word-break: keep-all; word-wrap: break-word; overflow-wrap: anywhere; letter-spacing: normal;
-  overscroll-behavior: inherit;
-}
-/* @supports not (overflow-wrap: anywhere) {
-  body  { word-wrap: break-word; }
-} */
+  /** Type Selector */
+  *  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 0 solid; }
+  :before,  :after  { -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; }
+  /* @media
+    screen and (prefers-reduced-motion: reduce)  {
+      *,
+        :before,  :after  { scroll-behavior: auto !important; transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
+  } */
 
-input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: middle; min-height: 2em; max-height: 100vh; max-height: 100dvh; max-height: 100vb; border: 1px solid ButtonBorder; color: inherit; text-shadow: inherit; }
-pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
-pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
-h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }
-address,  em,  cite,  dfn,  var,  optgroup  { font-style: inherit; }
-article,  section,  nav,  aside,  header,  footer,
-  figure,  figcaption,  main,  details,  dialog  { display: block; }
-video,  audio,  progress,  canvas  { display: inline-block; vertical-align: baseline; }
-img,  iframe,  embed,  object,  video,  audio,
-  legend,  input,  button,  select,  textarea,  progress,  canvas  { max-width: 100%; }
-h1,  h2,  h3,  h4,  h5,  h6,
-  p,  hr,  pre,  blockquote,  ul,  ol,  dl,  dd,  figure,
-  form,  fieldset,  input,  button,  select,  textarea  { margin: 0; }
-label,  [type="submit"],  [type="reset"],  [type="button"],  button,  summary,
-  [role="button"],  [role="tab"]  { cursor: pointer; }
+  html  {
+    direction: ltr; font: 125% /calc(16 / 12) '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
+    -ms-text-underline-position: below; text-underline-position: under; text-underline-offset: auto;
+    -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -webkit-font-smoothing: subpixel-antialiased;
+    -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: hsla(0,0%,0%, 0.0);
+  }
+  body  {
+    font-family: inherit; font-family: var(--typo-base, inherit); font-size: 0.8em; line-height: inherit;
+    overflow-y: auto; margin: 0; color: CanvasText; background: Transparent; accent-color: Highlight;
+    word-break: break-word; word-break: keep-all; word-wrap: break-word; overflow-wrap: anywhere; letter-spacing: normal;
+    overscroll-behavior: inherit;
+  }
 
-hr  { clear: both; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; height: 0; overflow: visible; border-style: none; }
-pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-break: normal; word-wrap: normal; overflow-wrap: normal; }
-ul,  ol  { list-style-type: none; padding-left: 0; }
-a  { font-size: inherit; background-color: Transparent; color: inherit; text-decoration: none; }
-small  { font-size: inherit; }
-q:before,  q:after  { content: ""; content: none; }
-abbr[title]  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
-b  { font-weight: bolder; font-weight: var(--bold-70, 650); }
-mark  { background-color: Transparent; color: inherit; }
-br  { letter-spacing: 0 !important; }
-ins,  del  { text-decoration: none; }
-img,  object  { image-rendering: -o-crisp-edges; image-rendering: -moz-crisp-edges; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; vertical-align: middle; transform: translateZ(0); backface-visibility: hidden; border-style: none; }
-iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; border-style: none; }
-audio:not([controls])  { display: none; height: 0; }
-svg:not(:root)  { overflow: hidden; }
-table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-style: hidden; }
-caption,  thead,  tbody,  tfoot  { vertical-align: middle; background-color: inherit; }
-caption,  tr >:not([align])  { text-align: inherit; }
-tr,  tr >:not([valign])  { vertical-align: inherit; }
-tr:not([bgcolor]),  tr >:not([bgcolor])  { background-color: inherit; }
-tr >:not([border] >* >* >*)  { border: 1px solid; }
-fieldset  { min-width: 0; padding: 0; border-style: none; }
-legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
-label  { display: inline-block; }
-[type="range"],  [type="color"],  [type="checkbox"],  [type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
-[type="submit"],  [type="reset"],  [type="button"],  button  { -webkit-appearance: button; min-width: 3em; overflow: visible; padding: 0.375ex 0.4em; text-transform: none; }
-select  { text-transform: none; }
-select[multiple]  { padding-right: 0 !important; }
-option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
-textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: keep-all; word-wrap: inherit; overflow-wrap: inherit; }
-summary  { display: list-item; }
-dialog  { padding: 0; border-style: none; }
-template  { display: none; }
+  input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: -0.125em; vertical-align: inherit; min-height: 1em; max-height: 100vh; max-height: 100dvh; border: 1px solid ButtonBorder; color: inherit; text-shadow: inherit; }
+  pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
+  pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
+  h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }
+  address,  em,  cite,  dfn,  var,  optgroup  { font-style: inherit; }
+  article,  section,  nav,  aside,  header,  footer,
+    figure,  figcaption,  main,  details,  dialog  { display: block; }
+  video,  audio,  progress,  canvas  { display: inline-block; vertical-align: baseline; }
+  img,  iframe,  embed,  object,  video,  audio,
+    legend,  input,  button,  select,  textarea,  progress,  canvas  { max-width: 100%; }
+  h1,  h2,  h3,  h4,  h5,  h6,
+    p,  hr,  pre,  blockquote,  ul,  ol,  dl,  dd,  figure,
+    form,  fieldset,  input,  button,  select,  textarea  { margin: 0; }
+  label,  [type="submit"],  [type="reset"],  [type="button"],  button,  summary,
+    [role="button"],  [role="tab"]  { cursor: pointer; }
 
-[contenteditable=""],
-  [contenteditable="true"],
-  [readonly]  {
-    cursor: text;
+  hr  { clear: both; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; height: 0; overflow: visible; border-style: none; }
+  pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-break: normal; word-wrap: normal; overflow-wrap: normal; }
+  ul,  ol  { list-style-type: none; padding-left: 0; }
+  a  { font-size: inherit; background-color: Transparent; color: inherit; text-decoration: none; }
+  small  { font-size: inherit; }
+  q:before,  q:after  { content: ""; content: none; }
+  abbr[title]  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
+  b  { font-weight: bolder; font-weight: var(--bold-700, 650); }
+  mark  { background-color: Transparent; color: inherit; }
+  br  { letter-spacing: 0 !important; }
+  ins,  del  { text-decoration: none; }
+  img,  object  { image-rendering: -o-crisp-edges; image-rendering: -moz-crisp-edges; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; vertical-align: -0.125em; vertical-align: inherit; transform: translateZ(0); backface-visibility: hidden; border-style: none; }
+  iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; border-style: none; }
+  audio:not([controls])  { display: none; height: 0; }
+  svg:not(:root)  { overflow: hidden; }
+  table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-style: hidden; }
+  caption,  thead,  tbody,  tfoot  { vertical-align: middle; background-color: inherit; }
+  caption,  tr >:not([align])  { text-align: inherit; }
+  tr,  tr >:not([valign])  { vertical-align: inherit; }
+  tr:not([bgcolor]),  tr >:not([bgcolor])  { background-color: inherit; }
+  tr >:not([border] >* >* >*)  { border: 1px solid; }
+  fieldset  { min-width: 0; padding: 0; border-style: none; }
+  legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
+  label  { display: inline-block; }
+  [type="range"],  [type="color"],  [type="checkbox"],  [type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
+  [type="submit"],  [type="reset"],  [type="button"],  button  { -webkit-appearance: button; min-width: 1em; overflow: visible; padding: 0; text-transform: none; }
+  select  { text-transform: none; }
+  select[multiple]  { padding-right: 0 !important; }
+  option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
+  textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: keep-all; word-wrap: inherit; overflow-wrap: inherit; }
+  summary  { display: list-item; }
+  dialog  { padding: 0; border-style: none; }
+  template  { display: none; }
+
+  [contenteditable=""],
+    [contenteditable="true"],
+    [readonly]  {
+      cursor: text;
+  }
+  [aria-disabled="true"],
+    [disabled]:where(:not(form, fieldset))  {
+      color: GrayText;
+      -webkit-text-fill-color: currentColor;
+      filter: blur(0.5px);
+      opacity: 1.0;
+      cursor: default;
+      cursor: not-allowed;
+  }
+  [aria-disabled="true"] *,
+    [disabled]:where(:not(form, fieldset)) *  { cursor: inherit; }
+  [hidden]  { display: none !important; }
+
 }
-[aria-disabled="true"],
-  [disabled]:where(:not(form, fieldset))  {
-    color: GrayText;
-    -webkit-text-fill-color: currentColor;
-    filter: blur(0.5px);
-    opacity: 1.0;
-    cursor: default;
-    cursor: not-allowed;
-}
-[aria-disabled="true"] *,
-  [disabled]:where(:not(form, fieldset)) *  { cursor: inherit; }
-[hidden]  { display: none !important; }
