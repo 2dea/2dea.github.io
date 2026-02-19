@@ -18,7 +18,7 @@
 
 
   --bold-400:           500;
-  --bold-700:           700;
+  --bold-700:           600;
 
 
   /* --font-10px:          10;
@@ -156,9 +156,9 @@
     --vb:               1vh;
   }
 
-  @supports (font-variation-settings: 'wght' 700) {
+  /* @supports (font-variation-settings: 'wght' 700) {
     --typo-sans:        'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
-  }
+  } */
 
   @supports (line-height: round(down, 1, 1)) {
     --text-height-rel:    round(down, calc(1em * 15 / 12), 2px);
