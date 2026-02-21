@@ -6,6 +6,7 @@ import RoleMainHeaderFavorite from "@/layout/RoleMainHeaderFavorite";
 import RoleMainHeaderManual from "@/layout/RoleMainHeaderManual";
 
 import SppButton from "@/pages/spp/component/Button/SppButton";
+import { Tabs } from "antd";
 
 function TmpTsProg() {
   return (
@@ -60,10 +61,16 @@ function TmpTsProg() {
                 </div>
 
                 <div className="div-center">
-                  <div className="o-grid">
+<Tabs>
+  <Tabs.TabPane tab="Tab 1" key="item-1" children={<>abc</>} />
+  <Tabs.TabPane tab="Tab 2" key="item-2">
+    Content 2
+  </Tabs.TabPane>
+</Tabs>
+                  <div className="m-grid">
                     <div className="column">
 
-                      <div className="o-section">
+                      <div className="m-section">
                         <div className="m-header">
                           <div className="primary">
                             <h2 className="o-heading level2"><span className="label">계약내역</span></h2>

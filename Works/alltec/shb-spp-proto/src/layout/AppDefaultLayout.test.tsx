@@ -77,10 +77,10 @@ function AppDefaultLayout() {
                 </div>
 
                 <div className="div-center">
-                  <div className="o-grid">
+                  <div className="m-grid">
                     <div className="column">
 
-                      <div className="o-section">
+                      <div className="m-section">
                         <div className="m-header">
                           <div className="primary">
                             <h2 className="o-heading level2"><span className="label">계약내역</span></h2>

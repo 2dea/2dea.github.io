@@ -9,10 +9,10 @@
 
 // html  { scroll-behavior: auto !important; }
 
-// // .o-section:not(.o-section *):not(.o-grid >.column >*)  {
-// .o-section:not(.o-section *):not(.home-section *):not(.o-grid >.column >*):not(.m-sections >*):not(.m-tabs >.m-tabs-panel >*)  {
+// // .m-section:not(.m-section *):not(.m-grid >.column >*)  {
+// .m-section:not(.m-section *):not(.home-section *):not(.m-grid >.column >*):not(.m-scrolls >*):not(.m-tabs >.m-tabs-panel >*)  {
 //   outline: thick solid Red;
 // }
-// .o-grid:where(.o-grid *):where(.dom-wrapper.type-proto *) {
+// .m-grid:where(.m-grid *):where(.dom-wrapper.type-proto *) {
 //   outline: thick solid Blue;
 // }

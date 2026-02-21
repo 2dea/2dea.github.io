@@ -4,6 +4,22 @@
 @use "./mixins" as *;
 
 
+.m-scrolls  { overflow: auto; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :root  {
   --edge-cell-int: 1;
   --mg-cell-block-int: 4;
@@ -398,7 +414,7 @@
 .o-attach:where(.style-fit)  { padding: px(24) px(24); }
 
 .o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: px(90); margin: px(3) auto; padding: px(7) px(15); }
-.o-attach:where(.o-grid-table.type-upload:where(.o-section >.main.rows-body-2i >*) *)  { min-height: px(55); }
+.o-attach:where(.o-grid-table.type-upload:where(.m-section >.main.rows-body-2i >*) *)  { min-height: px(55); }
 .o-attach:where(.o-grid-table.type-upload *) .summary .wbr  { display: block; }
 
 
@@ -517,15 +533,15 @@
 .m-image-list .card >.caption >.secondary  { font-size: $font-30; line-height: $line-30; margin-top: $gap-element-30; color: var(--cl-text-20); }
 
 // // .layer-wrap .m-image-list >:not(:has(>:nth-child(n+8))) .card  { outline: 1px solid Red; }
-// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2)))  { grid-template-columns: 1fr; gap: $gap-element-50; }
-// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card  { flex-direction: row; }
-// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >:first-of-type  { border-radius: var(--radius) 0 0 var(--radius); }
-// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >:last-of-type  { border-radius: 0 var(--radius) var(--radius) 0; }
-// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >.image  { width: px(133); height: px(100); }
-// .layer-wrap:where(:has(.o-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >.caption  { border-width: 0 0 0 $e10; }
+// .layer-wrap:where(:has(.m-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2)))  { grid-template-columns: 1fr; gap: $gap-element-50; }
+// .layer-wrap:where(:has(.m-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card  { flex-direction: row; }
+// .layer-wrap:where(:has(.m-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >:first-of-type  { border-radius: var(--radius) 0 0 var(--radius); }
+// .layer-wrap:where(:has(.m-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >:last-of-type  { border-radius: 0 var(--radius) var(--radius) 0; }
+// .layer-wrap:where(:has(.m-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >.image  { width: px(133); height: px(100); }
+// .layer-wrap:where(:has(.m-section.type-upload-image)) .m-image-list >:not(:has(>:nth-child(n+2))) .card >.caption  { border-width: 0 0 0 $e10; }
 .layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) { width: calc(var(--rem) * var(--wd-25p)) !important; min-width: calc(var(--rem) * var(--wd-25p)) !important; }
 .layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .o-attach .summary .wbr { display: block; }
-.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) :is(.m-checks, .o-limit):where(.o-section.type-upload-image >.m-header *) { visibility: hidden; }
+.layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) :is(.m-checks, .o-limit):where(.m-section.type-upload-image >.m-header *) { visibility: hidden; }
 .layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list >* { grid-template-columns: 1fr; gap: $gap-element-50; }
 .layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card  { flex-direction: row; }
 .layer-wrap:where(.case-upload-image:not(:has(.m-image-list >* >:nth-child(2)))) .m-image-list .card >:first-of-type  { border-radius: var(--radius) 0 0 var(--radius); }
@@ -845,8 +861,8 @@
 .m-bullets:where(.o-board:not(.style-fit) *)  { color: var(--cl-text-30); }
 .m-bullets:where(.o-board:not(.style-fit) .board-container *)  { --mg-bullets: 8; }
 .m-bullets:where(.m-footer *)  { --fs-int: var(--font-40-int); color: var(--cl-text-30); }
-.m-bullets:where(.o-section >.m-footer *)  { --mg-bullets: 4; }
-.m-bullets:where(.o-section >.main >*)  { --mg-bullets: 8; }
+.m-bullets:where(.m-section >.m-footer *)  { --mg-bullets: 4; }
+.m-bullets:where(.m-section >.main >*)  { --mg-bullets: 8; }
 .m-bullets:where(.style-lg)  { --fs-int: var(--font-60-int); }
 
 // .m-bullets >:has(.o-consult)  { color: var(--cl-text-70); }
@@ -2204,7 +2220,7 @@
 .o-grid-table .c-point-row  { background: var(--cl-ground2-skyblue-40) !important; }
 // .o-grid-table .c-divide-edge  { border-right-color: var(--cl-key1-70, Navy); }
 .o-grid-table .c-divide-edge  { border-right-color: var(--cl-edge-40); }
-.o-grid-table .table-container:is(.o-section >.main:not(._primary) *)  { overflow: auto; height: var(--ht-section-main); }
+.o-grid-table .table-container:is(.m-section >.main:not(._primary) *)  { overflow: auto; height: var(--ht-section-main); }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >*  { width: 0; }
 .o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }  // ### min-width: 0;
 .o-grid-table .wdth-0:where(tr >*, col)  { width: 0; min-width: 0; }
@@ -2304,7 +2320,7 @@
   line-height: $line-40;
 }
 
-.o-section > .main:has(.o-grid-table.style-fit)  {
+.m-section > .main:has(.o-grid-table.style-fit)  {
   --mg-cell-block-int: 2;
   --mg-cell-block: calc(var(--rem) * var(--mg-cell-block-int));
 
@@ -2333,8 +2349,8 @@
 
 
 /* Margin */
-.m-footer:where(.o-section >*) >* +*  { margin-top: $mg-section-20; }
-.m-footer:where(.o-section >*) >* +.m-binds  { margin-top: $mg-section-50; }
+.m-footer:where(.m-section >*) >* +*  { margin-top: $mg-section-20; }
+.m-footer:where(.m-section >*) >* +.m-binds  { margin-top: $mg-section-50; }
 
 .m-filter-form:not(:only-child)  { margin-bottom: $mg-section-50; }
 .m-filter-form:has(+.o-board.style-fit)  { margin-bottom: $mg-section-20; }

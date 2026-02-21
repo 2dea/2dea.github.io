@@ -159,11 +159,6 @@ button {
   background-color: transparent;
 }
 
-[role="tabpanel"]:not(.p-tabview-panel):not(.react-tabs__tab-panel--selected) {
-  display: none !important;
-}
-
-
 .p-splitter-gutter {
   --width: #{px(6)};
   flex-grow: 0;
@@ -567,7 +562,7 @@ button {
 }
 
 
-.o-gridscolfilter {
+.m-gridscolfilter {
   min-width: px(160);
   max-width: px(216);
   margin: $e10 0 !important;
@@ -616,20 +611,20 @@ button {
     padding: 0;
   }
 
-  .o-gridscolfilter-center {
+  .m-gridscolfilter-center {
     max-height: px(250);
     overflow: auto;
     overflow: hidden auto;
     padding: px(5) px(3);
   }
 
-  .o-gridscolfilter-footer {
+  .m-gridscolfilter-footer {
     margin: 0 px(3);
     padding: px(5) 0;
     border-top: $e10 solid var(--cl-edge-30);
   }
 
-  .o-gridscolfilter-items {
+  .m-gridscolfilter-items {
     display: flex;
     flex-direction: column;
   }
@@ -1236,18 +1231,18 @@ button {
 
 
 
-// .o-section >.main._primary:has(.p-datatable-scrollable-table),
-//   .o-section >.main._primary :has(.p-datatable-scrollable-table):not(:has(>.p-datatable-scrollable-table))  { display: flex; flex-direction: column; }
-// .o-section >.main._primary :has(.p-datatable-scrollable-table)  { flex: 1 0 0; }
-// .o-section >.main._primary :has(>.p-datatable-scrollable-table)  { flex-basis: var(--ht-section-main); overflow: auto; }
+// .m-section >.main._primary:has(.p-datatable-scrollable-table),
+//   .m-section >.main._primary :has(.p-datatable-scrollable-table):not(:has(>.p-datatable-scrollable-table))  { display: flex; flex-direction: column; }
+// .m-section >.main._primary :has(.p-datatable-scrollable-table)  { flex: 1 0 0; }
+// .m-section >.main._primary :has(>.p-datatable-scrollable-table)  { flex-basis: var(--ht-section-main); overflow: auto; }
 
-:has(.p-datatable-scrollable-table):is(.o-section >.main._primary),
-  :has(.p-datatable-scrollable-table):is(.o-section >.main._primary *):not(:has(>.p-datatable-scrollable-table))  { display: flex; flex-direction: column; }
-:has(.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex: 1 0 0; }
-:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)  { flex-basis: var(--ht-section-main); min-width: 100%; min-height: 0; overflow: auto; /* resize: both; */ }
-:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]  { --cl-scrollbar-track: rgba(240,240,240, 0.88); flex-basis: auto; min-height: var(--ht-section-main); border-radius: $round-abs-20; }
-:has(>.p-datatable-scrollable-table):is(.o-section >.main._primary *)[style*="width:"][style*="height:"]:hover  { --cl-scrollbar-track: rgba(255,255,255, 0.88); box-shadow: $dropshadow-40; }
-:has(>.p-datatable-scrollable-table):is(.o-section >.main:not(._primary) *)  { height: var(--ht-section-main); }
+:has(.p-datatable-scrollable-table):is(.m-section >.main._primary),
+  :has(.p-datatable-scrollable-table):is(.m-section >.main._primary *):not(:has(>.p-datatable-scrollable-table))  { display: flex; flex-direction: column; }
+:has(.p-datatable-scrollable-table):is(.m-section >.main._primary *)  { flex: 1 0 0; }
+:has(>.p-datatable-scrollable-table):is(.m-section >.main._primary *)  { flex-basis: var(--ht-section-main); min-width: 100%; min-height: 0; overflow: auto; /* resize: both; */ }
+:has(>.p-datatable-scrollable-table):is(.m-section >.main._primary *)[style*="width:"][style*="height:"]  { --cl-scrollbar-track: rgba(240,240,240, 0.88); flex-basis: auto; min-height: var(--ht-section-main); border-radius: $round-abs-20; }
+:has(>.p-datatable-scrollable-table):is(.m-section >.main._primary *)[style*="width:"][style*="height:"]:hover  { --cl-scrollbar-track: rgba(255,255,255, 0.88); box-shadow: $dropshadow-40; }
+:has(>.p-datatable-scrollable-table):is(.m-section >.main:not(._primary) *)  { height: var(--ht-section-main); }
 
 
 
