@@ -13,15 +13,17 @@ type BreadcrumbItem =
 
 export interface SppBreadcrumbProps
   extends Omit<BreadcrumbProps, "items"> {
-  itemsArray?: BreadcrumbItem[]
+    spec?: string;
+    itemsArray?: BreadcrumbItem[];
 }
 
-export const SppBreadcrumb: React.FC<SppBreadcrumbProps> = ({
-  className = "m-breadcrumb",
+export const SppBreadcrumb = ({
+  spec = "m-breadcrumb",
+  className = "",
   separator = "›",
   itemsArray = [],
   ...rest
-}) => {
+}: SppBreadcrumbProps) => {
   const items: BreadcrumbProps["items"] = [
     { title: <HomeOutlined /> },
     ...itemsArray.map((item) =>
@@ -33,7 +35,7 @@ export const SppBreadcrumb: React.FC<SppBreadcrumbProps> = ({
 
   return (
     <Breadcrumb
-      className={className}
+      className={`${spec} ${className}`.trim()}
       separator={separator}
       items={items}
       {...rest}

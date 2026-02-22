@@ -9,7 +9,7 @@
 /** Length-Unit PX to REM */
 @function px($int)  {
   // @return calc(1rem / $root-em-int * $int);
-  @return #{calc(var(--rem) * $int)};
+  @return #{calc(var(--rem) * (#{$int}))};
 }
 
 
