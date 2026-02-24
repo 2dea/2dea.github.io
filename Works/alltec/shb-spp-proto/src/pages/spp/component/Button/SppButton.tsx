@@ -9,6 +9,7 @@ export interface SppButtonProps extends ButtonProps {
   style?: React.CSSProperties;
 
   spec?: string;
+  specType?: string;
   // face?: string | "normal" | "solid-0" | "inquire" | "solid-1" | "solid-2" | "create" | "solid-3" | "lined-1" | "cancel" | "delete" | "lined-2" | "lined-3" | "filled-status-00" | "filled-status-20" | "filled-status-80" | "texted-0" | "linked-0";
   face?: "normal" | "inquire" | "solid-1" | "create" | "solid-3" | "lined-1" | "cancel" | "delete" | "lined-2" | "lined-3" | "filled-status-00" | "filled-status-20" | "filled-status-80" | "texted-0" | "linked-0";
 };
@@ -16,6 +17,7 @@ export interface SppButtonProps extends ButtonProps {
 export const SppButton = ({
   htmlType="button",
   spec="d-button",
+  specType="",
   face="normal",
   className="",
   // label = <>버튼</>,
@@ -27,7 +29,12 @@ export const SppButton = ({
     <>
       <Button
         htmlType={htmlType}
-        className={`${spec}${face && ' _' + face} ${className}`.trim()}
+        className={`
+          ${spec}
+          ${specType && ' type-' + specType}
+          ${face && ' _' + face}
+          ${className}
+          `.replace(/\s+/g, ' ').trim()}
         type={type}
         {...rest}
       />

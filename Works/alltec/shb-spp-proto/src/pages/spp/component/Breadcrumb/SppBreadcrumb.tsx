@@ -18,10 +18,10 @@ export interface SppBreadcrumbProps
 }
 
 export const SppBreadcrumb = ({
-  spec = "m-breadcrumb",
-  className = "",
-  separator = "›",
-  itemsArray = [],
+  spec="m-breadcrumb",
+  className="",
+  separator="›",
+  itemsArray=[],
   ...rest
 }: SppBreadcrumbProps) => {
   const items: BreadcrumbProps["items"] = [
@@ -34,12 +34,17 @@ export const SppBreadcrumb = ({
   ]
 
   return (
-    <Breadcrumb
-      className={`${spec} ${className}`.trim()}
-      separator={separator}
-      items={items}
-      {...rest}
-    />
+    <>
+      <Breadcrumb
+        className={`
+          ${spec}
+          ${className}
+          `.replace(/\s+/g, ' ').trim()}
+        separator={separator}
+        items={items}
+        {...rest}
+      />
+    </>
   )
 }
 

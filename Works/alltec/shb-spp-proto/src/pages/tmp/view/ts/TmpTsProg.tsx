@@ -5,11 +5,14 @@ import RoleMainHeaderTitle from "@/layout/RoleMainHeaderTitle";
 import RoleMainHeaderFavorite from "@/layout/RoleMainHeaderFavorite";
 import RoleMainHeaderManual from "@/layout/RoleMainHeaderManual";
 
-import SppTypoLabel from "@/pages/spp/component/Typo/SppTypoLabel";
-import SppButton from "@/pages/spp/component/Button/SppButton";
-import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
+import SppTypoLabel from "@/pages/spp/component/TypoLabel/SppTypoLabel";
 
-import { Badge, Tabs } from "antd";
+import SppButton from "@/pages/spp/component/Button/SppButton";
+
+import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
+import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
+
+import { AutoComplete, Badge, Tabs } from "antd";
 
 function TmpTsProg() {
   return (
@@ -73,7 +76,6 @@ function TmpTsProg() {
 
                   <Tabs
                     type="card"
-                    size="large"
                     className="m-tabs type-1"
                     defaultActiveKey="2"
                     items={[
@@ -96,7 +98,6 @@ function TmpTsProg() {
 
                             <Tabs
                               type="line"
-                              size="large"
                               className="m-tabs type-2"
                               defaultActiveKey="1"
                               items={[
@@ -129,11 +130,21 @@ function TmpTsProg() {
 
                   <SppAutoComplete placeholder="" width="50" className="mode-required" />
 
+                  <AutoComplete className="      mode-required         aaaaaaaaa bbbbbbbbbbbbb           cccccccccccccc    ddddd    " />
+
                   <div className="m-grid">
                     <div className="column">
 
                       <div className="m-filter-form">
                         <div className="fieldset">
+
+                          <div className="m-field">
+                            <SppTypoLabel label={`조회기간`} required={true} wrapper="header" />
+
+                            <div className="main">
+                              <SppDatePicker placeholder="" width="80" className="mode-required" picker="date" />
+                            </div>
+                          </div>
 
                           <div className="m-field">
                             <SppTypoLabel label={`직원`} required={true} wrapper="header" />

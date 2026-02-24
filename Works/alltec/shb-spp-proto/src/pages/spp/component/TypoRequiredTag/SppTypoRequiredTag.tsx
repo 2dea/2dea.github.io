@@ -13,7 +13,10 @@ export const SppTypoRequiredTag = ({
 }: SppTypoRequiredTagProps) => {
   const content = (
     <em
-      className={`${spec} ${className}`.trim()}
+      className={`
+        ${spec}
+        ${className}
+        `.replace(/\s+/g, ' ').trim()}
     >
       <span className="tag">({label})</span>
     </em>

@@ -1,28 +1,32 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
-import { AutoComplete, type AutoCompleteProps } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
+import { DatePicker, type DatePickerProps } from "antd";
 
-export interface SppAutoCompleteProps extends AutoCompleteProps {
+// const dateFormat = 'YYYY.MM.DD';
+// const monthFormat = 'YYYY.MM';
+const dateFormat = 'YYYY-MM-DD';
+const monthFormat = 'YYYY-MM';
+
+export interface SppDatePickerProps extends DatePickerProps {
   spec?: string;
   specType?: string;
   face?: string;
   width?: "auto" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
 };
 
-export const SppAutoComplete = ({
+export const SppDatePicker = ({
   spec="d-form",
-  specType="autocomp",
+  specType="date",
   face="",
   width="",
   className="",
+  picker,
   allowClear=true,
-  prefix=<SearchOutlined />,
   ...rest
-}: SppAutoCompleteProps) => {
+}: SppDatePickerProps) => {
   return (
     <>
-      <AutoComplete
+      <DatePicker
         className={`
           ${spec}
           ${specType && ' type-' + specType}
@@ -30,12 +34,17 @@ export const SppAutoComplete = ({
           ${width && ' wd-' + width}
           ${className}
           `.replace(/\s+/g, ' ').trim()}
+        picker={picker}
+        format={{
+          format: (picker === 'month') ? monthFormat : dateFormat,
+          type: 'mask',
+        }}
+        // showTime
         allowClear={allowClear}
-        prefix={prefix}
         {...rest}
       />
     </>
   );
 };
 
-export default SppAutoComplete;
+export default SppDatePicker;

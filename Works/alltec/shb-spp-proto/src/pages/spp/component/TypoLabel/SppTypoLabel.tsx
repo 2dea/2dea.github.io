@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
-import SppTypoRequiredTag from "@/pages/spp/component/Typo/SppTypoRequiredTag";
+import SppTypoRequiredTag from "@/pages/spp/component/TypoRequiredTag/SppTypoRequiredTag";
 
 export interface SppTypoLabelProps {
   label?: React.ReactNode;
@@ -10,7 +10,7 @@ export interface SppTypoLabelProps {
   rootStyle?: React.CSSProperties;
   labelStyle?: React.CSSProperties;
   append?: React.ReactNode;
-  wrapper?: "header" | "section" | "none";
+  wrapper?: "header" | "none";
 };
 
 export const SppTypoLabel = ({
@@ -27,15 +27,15 @@ export const SppTypoLabel = ({
     header: (children: React.ReactNode) => (
       <div className="header">{children}</div>
     ),
-    section: (children: React.ReactNode) => (
-      <section>{children}</section>
-    ),
     none: (children: React.ReactNode) => <>{children}</>,
   }
 
   const content = (
     <div
-      className={`${spec} ${className}`.trim()}
+      className={`
+        ${spec}
+        ${className}
+        `.replace(/\s+/g, ' ').trim()}
       style={rootStyle}
     >
       <span className="label" style={labelStyle}>
