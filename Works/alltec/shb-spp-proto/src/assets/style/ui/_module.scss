@@ -7,6 +7,24 @@
 .m-scrolls  { overflow: auto; }
 
 
+/** Icons
+ -------- */
+
+/** Default Icons */
+// .o-sym  { direction: ltr; font: normal normal calc(var(--rem) * 24) /1 'wf-MaterialSymbolsOutlined-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+// .o-sym  { font-family: 'wf-MaterialSymbolsRounded-Var', sans-serif; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; font-size: var(--ht-icon-30); display: inline-flex; max-width: 1em; overflow: hidden; text-transform: uppercase; }
+// .o-sym.type-fill  { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+// .o-sym.type-norm  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+// .o-sym.size-50  { font-size: $ht-icon-50; }
+// .o-sym.size-30  { font-size: $ht-icon-30; }
+
+.o-sym:where(.type-font)  { @include inc-symbol(); }
+.o-sym:where(.type-font):where(.style-fill)  { @include setSymbolVariationSettings(1); }
+.o-sym:where(.type-font):where(.style-line)  { @include setSymbolVariationSettings(); }
+// .o-sym.size-50  { font-size: $ht-icon-50; }
+// .o-sym.size-30  { font-size: $ht-icon-30; }
+
+
 .d-button  {
   --wdn: ;
   --wd: ;

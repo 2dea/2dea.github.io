@@ -1,11 +1,11 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 import SppBreadcrumb from "@/pages/spp/component/Breadcrumb/SppBreadcrumb";
 import RoleMainHeaderTitle from "@/layout/RoleMainHeaderTitle";
 import RoleMainHeaderFavorite from "@/layout/RoleMainHeaderFavorite";
 import RoleMainHeaderManual from "@/layout/RoleMainHeaderManual";
 
-import SppTypoLabel from "@/pages/spp/component/TypoLabel/SppTypoLabel";
+import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
 
 import SppButton from "@/pages/spp/component/Button/SppButton";
 
@@ -23,7 +23,7 @@ function TmpTsProg() {
                     <SppBreadcrumb itemsArray={['조회사유등록결재', '등록', '전일조회사유등록']} />
 
                     <div className="m-title">
-                      <RoleMainHeaderTitle label="전일조회사유등록" />
+                      <RoleMainHeaderTitle label={`전일조회사유등록`} />
 
                       <div className="utile _user">
                         <RoleMainHeaderFavorite render={true} />
@@ -40,11 +40,11 @@ function TmpTsProg() {
                         <CommonButton label="공지사항" className="_lined-secondary" />
                         <CommonButton label="결재선변경관리" className="_lined-secondary" />
                         <CommonButton label="결재바로가기" className="_lined-secondary" /> */}
-                        <SppButton color="green" variant="filled" face="filled-status-80">적정</SppButton>
-                        <SppButton color="default" variant="outlined" face="normal">저장</SppButton>
-                        <SppButton color="geekblue" variant="outlined" face="lined-1">저장</SppButton>
-                        <SppButton color="cyan" variant="outlined" face="lined-2">저장</SppButton>
-                        <SppButton color="volcano" variant="outlined" face="lined-3">저장</SppButton>
+                        <SppButton color="green" variant="filled" specName="filled-status-80">적정</SppButton>
+                        <SppButton color="default" variant="outlined" specName="normal">저장</SppButton>
+                        <SppButton color="geekblue" variant="outlined" specName="lined-1">저장</SppButton>
+                        <SppButton color="cyan" variant="outlined" specName="lined-2">저장</SppButton>
+                        <SppButton color="volcano" variant="outlined" specName="lined-3">저장</SppButton>
                       </div>
                     </div>
 
@@ -55,12 +55,12 @@ function TmpTsProg() {
                         <CommonButton label="삭제" className="_delete" />
                         <CommonButton label="취소" className="_cancel" />
                         <CommonButton label="결재요청" className="_solid-primary" /> */}
-                        <SppButton color="red" variant="filled" face="filled-status-20">부적정</SppButton>
-                        <SppButton color="default" variant="filled" face="filled-status-00">적정</SppButton>
-                        <SppButton color="default" variant="solid" face="inquire">저장</SppButton>
-                        <SppButton color="geekblue" variant="solid" face="solid-1">저장</SppButton>
-                        <SppButton color="cyan" variant="solid" face="create">저장</SppButton>
-                        <SppButton color="volcano" variant="solid" face="solid-3">저장</SppButton>
+                        <SppButton color="red" variant="filled" specName="filled-status-20">부적정</SppButton>
+                        <SppButton color="default" variant="filled" specName="filled-status-00">적정</SppButton>
+                        <SppButton color="default" variant="solid" specName="inquire">저장</SppButton>
+                        <SppButton color="geekblue" variant="solid" specName="solid-1">저장</SppButton>
+                        <SppButton color="cyan" variant="solid" specName="create">저장</SppButton>
+                        <SppButton color="volcano" variant="solid" specName="solid-3">저장</SppButton>
                       </div>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ function TmpTsProg() {
                         <div className="fieldset">
 
                           <div className="m-field">
-                            <SppTypoLabel label={`조회기간`} required={true} wrapper="header" />
+                            <SppObjLabel required={true} wrapper="header" />
 
                             <div className="main">
                               <SppDatePicker placeholder="" width="80" className="mode-required" picker="date" />
@@ -147,7 +147,7 @@ function TmpTsProg() {
                           </div>
 
                           <div className="m-field">
-                            <SppTypoLabel label={`직원`} required={true} wrapper="header" />
+                            <SppObjLabel label={`직원`} required={true} wrapper="header" />
 
                             <div className="main">
                               <SppAutoComplete placeholder="" value={`[88888888] 제갈공명`} width="80" className="mode-required" />
@@ -155,7 +155,7 @@ function TmpTsProg() {
                           </div>
 
                           <div className="m-field">
-                            <SppTypoLabel label={`부서`} required={true} wrapper="header" />
+                            <SppObjLabel label={`부서`} required={true} wrapper="header" />
 
                             <div className="main">
                               <SppAutoComplete placeholder="" value={`[4444] 디지털금융센터`} width="90" className="mode-required" />
@@ -165,7 +165,7 @@ function TmpTsProg() {
                         </div>
 
                         <div className="binds">
-                          <SppButton color="default" variant="solid" face="inquire">조회</SppButton>
+                          <SppButton color="default" variant="solid" specName="inquire">조회</SppButton>
                         </div>
                       </div>
 
@@ -302,7 +302,7 @@ function TmpTsProg() {
 
                             <div className="m-binds">
                               <div className="group">
-                                <SppButton face="inquire" className="eeeeeeeeeeeeee">저장</SppButton>
+                                <SppButton specName="inquire" className="eeeeeeeeeeeeee">저장</SppButton>
                                 <SppButton color="default" variant="text">저장</SppButton>
                                 <SppButton color="default" variant="link">저장</SppButton>
                                 <button type="button"><span className="label">저장</span></button>

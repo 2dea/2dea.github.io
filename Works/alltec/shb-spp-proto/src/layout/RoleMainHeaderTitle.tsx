@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 export interface RoleMainHeaderTitleProps {
-  label?: React.ReactNode;
+  label?: ReactNode;
 };
 
 export const RoleMainHeaderTitle = ({

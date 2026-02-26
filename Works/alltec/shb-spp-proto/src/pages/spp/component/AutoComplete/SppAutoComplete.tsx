@@ -1,32 +1,34 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+
+import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
 
 import { AutoComplete, type AutoCompleteProps } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
 export interface SppAutoCompleteProps extends AutoCompleteProps {
-  spec?: string;
-  specType?: string;
-  face?: string;
+  model?: string;
+  modelType?: string;
+  specName?: string;
   width?: "auto" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
 };
 
 export const SppAutoComplete = ({
-  spec="d-form",
-  specType="autocomp",
-  face="",
+  model="d-form",
+  modelType="autocomp",
+  specName="",
   width="",
   className="",
   allowClear=true,
-  prefix=<SearchOutlined />,
+  prefix=<><SearchOutlined />{/* <SppObjSymbol label="pageview" /> */}<SppObjSymbol label={`search`} /></>,
   ...rest
 }: SppAutoCompleteProps) => {
   return (
     <>
       <AutoComplete
         className={`
-          ${spec}
-          ${specType && ' type-' + specType}
-          ${face && ' _' + face}
+          ${model}
+          ${modelType && ' type-' + modelType}
+          ${specName && ' _' + specName}
           ${width && ' wd-' + width}
           ${className}
           `.replace(/\s+/g, ' ').trim()}

@@ -221,7 +221,11 @@
 
 
 /** 폰트아이콘 모든 속성 (Google Material Icons) */
-@mixin inc-symbol($fill: 0, $wght: 300, $opsz: 24, $size: $ht-icon-30)  {
+@mixin inc-symbol($fill: 0, $wght: var(--fw), $opsz: 24, $size: var(--fs))  {
+  --fs: calc(1em + 4px);
+  --fw: var(--bold-400, 400);
+  --fw: 400;
+
   direction: ltr; font: normal normal calc(var(--rem) * 24) /1 'wf-MaterialSymbolsOutlined-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
   @include setSymbolStyle($fill, $wght, $opsz, $size);
 }

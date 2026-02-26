@@ -21,46 +21,29 @@
   --bold-700:           600;
 
 
-  /* --font-10px:          10;
-  --font-11px:          11;
   --font-12px:          12;
-  --font-13px:          13; */
+  --font-13px:          13;
   --font-14px:          14;
-  /* --font-15px:          15;
   --font-16px:          16;
   --font-20px:          20;
-  --font-24px:          24;
-  --font-36px:          36; */
 
-  /* --line-10px:          12;
-  --line-11px:          14;
   --line-12px:          16;
-  --line-13px:          16; */
-  --line-14px:          16;
-  /* --line-14px:          18; */
-  /* --line-15px:          20;
-  --line-16px:          20;
+  --line-13px:          18;
+  --line-14px:          18;
+  --line-16px:          22;
   --line-20px:          26;
-  --line-24px:          30;
-  --line-36px:          42; */
 
-  /* --font-10-int:        var(--font-10px);
   --font-30-int:        var(--font-12px);
-  --font-40-int:        var(--font-13px); */
+  --font-40-int:        var(--font-13px);
   --font-50-int:        var(--font-14px);
-  /* --font-60-int:        var(--font-16px);
+  --font-60-int:        var(--font-16px);
   --font-70-int:        var(--font-20px);
-  --font-80-int:        var(--font-24px);
-  --font-90-int:        var(--font-36px); */
 
-  /* --line-10-int:        var(--line-10px);
   --line-30-int:        var(--line-12px);
-  --line-40-int:        var(--line-13px); */
+  --line-40-int:        var(--line-13px);
   --line-50-int:        var(--line-14px);
-  /* --line-60-int:        var(--line-16px);
+  --line-60-int:        var(--line-16px);
   --line-70-int:        var(--line-20px);
-  --line-80-int:        var(--line-24px);
-  --line-90-int:        var(--line-36px); */
 
   /* --font-10:            calc(var(--rem) * var(--font-10-int));
   --font-30:            calc(var(--rem) * var(--font-30-int));
@@ -161,8 +144,8 @@
   } */
 
   @supports (line-height: round(down, 1, 1)) {
-    --text-height-rel:    round(down, calc(1em * 15 / 12), 2px);
-    --text-height-par:    round(down, calc(1em * 17 / 11), 2px);
+    --text-height-rel:    round(down, calc(1em * 16.667 / 12), 2px);
+    --text-height-par:    round(down, calc(1em * 18.5 / 12), 2px);
   }
 }
 

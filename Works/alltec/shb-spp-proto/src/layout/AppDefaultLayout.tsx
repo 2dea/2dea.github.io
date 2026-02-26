@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 import DomHeader from "@/layout/DomHeader";
 import DomFooter from "@/layout/DomFooter";

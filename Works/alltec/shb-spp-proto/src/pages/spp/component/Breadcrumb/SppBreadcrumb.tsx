@@ -1,24 +1,28 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 import { Breadcrumb, type BreadcrumbProps } from "antd"
 import { HomeOutlined } from "@ant-design/icons"
 
 type BreadcrumbItem =
-  | React.ReactNode
+  | ReactNode
   | {
-      title: React.ReactNode
+      title: ReactNode
       href?: string
       onClick?: () => void
     }
 
 export interface SppBreadcrumbProps
   extends Omit<BreadcrumbProps, "items"> {
-    spec?: string;
+    model?: string;
+    modelType?: string;
+    specName?: string;
     itemsArray?: BreadcrumbItem[];
 }
 
 export const SppBreadcrumb = ({
-  spec="m-breadcrumb",
+  model="m-breadcrumb",
+  modelType="",
+  specName="",
   className="",
   separator="›",
   itemsArray=[],
@@ -37,7 +41,9 @@ export const SppBreadcrumb = ({
     <>
       <Breadcrumb
         className={`
-          ${spec}
+          ${model}
+          ${modelType && ' type-' + modelType}
+          ${specName && ' _' + specName}
           ${className}
           `.replace(/\s+/g, ' ').trim()}
         separator={separator}
