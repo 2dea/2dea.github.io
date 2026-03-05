@@ -24,7 +24,7 @@
   font-display: block;
   src: local("♥"),
     /* url('../../../public/fonts/MaterialSymbols/MaterialSymbolsOutlined.woff2') format("woff2-variations"); */
-    url('/fonts/MaterialSymbols/MaterialSymbolsOutlined.woff2') format("woff2-variations");
+    url('/fonts/MaterialSymbols/MaterialSymbolsOutlined.woff2?v=v316') format("woff2-variations");
 }
 
 @font-face  {
@@ -33,7 +33,7 @@
   font-weight: 100 700;
   font-display: block;
   src: local("♥"),
-    url('/fonts/MaterialSymbols/MaterialSymbolsRounded.woff2') format("woff2-variations");
+    url('/fonts/MaterialSymbols/MaterialSymbolsRounded.woff2?v=v318') format("woff2-variations");
 }
 
 @font-face  {
@@ -42,7 +42,7 @@
   font-weight: 100 700;
   font-display: block;
   src: local("♥"),
-    url('/fonts/MaterialSymbols/MaterialSymbolsSharp.woff2') format("woff2-variations");
+    url('/fonts/MaterialSymbols/MaterialSymbolsSharp.woff2?v=v313') format("woff2-variations");
 }
 
 

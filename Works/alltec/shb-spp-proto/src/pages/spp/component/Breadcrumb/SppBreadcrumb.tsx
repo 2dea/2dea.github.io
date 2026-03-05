@@ -41,11 +41,13 @@ export const SppBreadcrumb = ({
     <>
       <Breadcrumb
         className={`
-          ${model}
-          ${modelType && ' type-' + modelType}
-          ${specName && ' _' + specName}
-          ${className}
-          `.replace(/\s+/g, ' ').trim()}
+            ${model}
+            ${modelType && ' type-' + modelType}
+            ${specName && ' _' + specName}
+            ${className}
+          `
+          .replace(/\s+/g, ' ')
+          .trim()}
         separator={separator}
         items={items}
         {...rest}

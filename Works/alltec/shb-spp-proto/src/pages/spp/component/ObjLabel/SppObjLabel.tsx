@@ -37,11 +37,13 @@ export const SppObjLabel = ({
   const content = (
     <div
       className={`
-        ${model}
-        ${modelType && ' type-' + modelType}
-        ${specName && ' _' + specName}
-        ${className}
-        `.replace(/\s+/g, ' ').trim()}
+          ${model}
+          ${modelType && ' type-' + modelType}
+          ${specName && ' _' + specName}
+          ${className}
+        `
+        .replace(/\s+/g, ' ')
+        .trim()}
       style={rootStyle}
     >
       <span className="label" style={labelStyle}>

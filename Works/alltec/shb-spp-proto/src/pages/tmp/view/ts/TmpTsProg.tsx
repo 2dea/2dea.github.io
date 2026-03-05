@@ -20,47 +20,22 @@ function TmpTsProg() {
               <div className="nodes" data-node-no="0">
                 <div className="div-header">
                   <div className="prime">
-                    <SppBreadcrumb itemsArray={['조회사유등록결재', '등록', '전일조회사유등록']} />
+                    <SppBreadcrumb itemsArray={['개인(신용)​정보보호', '주민번호, 민감정보 관리', '주민등록번호, 민감정보 처리현황 목록']} />
 
                     <div className="m-title">
-                      <RoleMainHeaderTitle label={`전일조회사유등록`} />
+                      <RoleMainHeaderTitle label={`전일조회사유등록`} render={false} />
 
-                      <div className="utile _user">
-                        <RoleMainHeaderFavorite render={true} />
+                      <RoleMainHeaderFavorite render={true} />
 
-                        <RoleMainHeaderManual render={true} />
-                      </div>
+                      <RoleMainHeaderManual render={true} />
                     </div>
                   </div>
 
                   <div className="extra">
-                    <div className="m-binds type-start">
-                      <div className="group">
-                        {/* <CommonButton label="알림전송" className="_lined-secondary" />
-                        <CommonButton label="공지사항" className="_lined-secondary" />
-                        <CommonButton label="결재선변경관리" className="_lined-secondary" />
-                        <CommonButton label="결재바로가기" className="_lined-secondary" /> */}
-                        <SppButton color="green" variant="filled" specName="filled-status-80">적정</SppButton>
-                        <SppButton color="default" variant="outlined" specName="normal">저장</SppButton>
-                        <SppButton color="geekblue" variant="outlined" specName="lined-1">저장</SppButton>
-                        <SppButton color="cyan" variant="outlined" specName="lined-2">저장</SppButton>
-                        <SppButton color="volcano" variant="outlined" specName="lined-3">저장</SppButton>
-                      </div>
-                    </div>
-
                     <div className="m-binds type-end">
                       <div className="group _primary">
-                        {/* <CommonButton label="업무지원반려" className="_lined-primary" />
-                        <CommonButton label="업무지원결정" className="_lined-primary" />
-                        <CommonButton label="삭제" className="_delete" />
-                        <CommonButton label="취소" className="_cancel" />
-                        <CommonButton label="결재요청" className="_solid-primary" /> */}
-                        <SppButton color="red" variant="filled" specName="filled-status-20">부적정</SppButton>
-                        <SppButton color="default" variant="filled" specName="filled-status-00">적정</SppButton>
-                        <SppButton color="default" variant="solid" specName="inquire">저장</SppButton>
-                        <SppButton color="geekblue" variant="solid" specName="solid-1">저장</SppButton>
-                        <SppButton color="cyan" variant="solid" specName="create">저장</SppButton>
-                        <SppButton color="volcano" variant="solid" specName="solid-3">저장</SppButton>
+                        <SppButton color="purple" variant="outlined" specName="lined-1">미처리현황조회</SppButton>
+                        <SppButton color="purple" variant="solid" specName="solid-1">최종반려</SppButton>
                       </div>
                     </div>
                   </div>
@@ -142,7 +117,9 @@ function TmpTsProg() {
                             <SppObjLabel required={true} wrapper="header" />
 
                             <div className="main">
-                              <SppDatePicker placeholder="" width="80" className="mode-required" picker="date" />
+                              <SppDatePicker placeholder="" className="mode-required" picker="date" />
+                              <span className="seps type-string _tilde"><span className="string">~</span></span>
+                              <SppDatePicker placeholder="" className="mode-required" picker="date" />
                             </div>
                           </div>
 
@@ -169,13 +146,48 @@ function TmpTsProg() {
                         </div>
                       </div>
 
+                      <div className="o-board _m-defines">
+                        <dl className="m-defines">
+                          <div className="group">
+                            <dt className="head">신청부점</dt>
+                            <dd className="data">
+                              [0034] 을지로
+                            </dd>
+                            <dd className="data">
+                              2025-01-21
+                            </dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">신청자</dt>
+                            <dd className="data">
+                              [000000] 홍길동
+                            </dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">신청연도</dt>
+                            <dd className="data">
+                              <em className="o-chip var-lined-01"><span className="label">2025년</span></em>
+                            </dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">신청상태</dt>
+                            <dd className="data">
+                              <em className="o-chip var-lined-01"><span className="label">신청마감</span></em>
+                            </dd>
+                          </div>
+                        </dl>
+                      </div>
+
                       <div className="m-section">
                         <div className="m-header">
-                          <div className="primary">
+                          <div className="prime">
                             <h2 className="o-heading level2"><span className="label">계약내역</span></h2>
                           </div>
 
-                          <div className="secondary">
+                          <div className="extra">
                             <div className="o-length">
                               <span className="head">전체</span>
                               <em className="data">
@@ -187,7 +199,7 @@ function TmpTsProg() {
                         </div>
 
                         <div className="main">
-                          <div className="o-data-form">
+                          <div className="o-dataform">
                             <div className="table-wrapper">
                               <table className="table">
                                 <colgroup>
@@ -251,6 +263,40 @@ function TmpTsProg() {
                                       SppButton
                                     </th>
                                     <td colSpan={5}>
+                                      <div className="extra">
+                                        <div className="m-binds type-start">
+                                          <div className="group">
+                                            {/* <CommonButton label="알림전송" className="_lined-secondary" />
+                                            <CommonButton label="공지사항" className="_lined-secondary" />
+                                            <CommonButton label="결재선변경관리" className="_lined-secondary" />
+                                            <CommonButton label="결재바로가기" className="_lined-secondary" /> */}
+                                            <SppButton color="green" variant="filled" specName="filled-status-80">적정</SppButton>
+                                            <SppButton color="default" variant="outlined" specName="normal">저장</SppButton>
+                                            <SppButton color="purple" variant="outlined" specName="lined-1">저장</SppButton>
+                                            <SppButton color="geekblue" variant="outlined" specName="lined-2">저장</SppButton>
+                                            <SppButton color="cyan" variant="outlined" specName="lined-3">저장</SppButton>
+                                            <SppButton color="volcano" variant="outlined" specName="lined-4">저장</SppButton>
+                                          </div>
+                                        </div>
+
+                                        <div className="m-binds type-end">
+                                          <div className="group _primary">
+                                            {/* <CommonButton label="업무지원반려" className="_lined-primary" />
+                                            <CommonButton label="업무지원결정" className="_lined-primary" />
+                                            <CommonButton label="삭제" className="_delete" />
+                                            <CommonButton label="취소" className="_cancel" />
+                                            <CommonButton label="결재요청" className="_solid-primary" /> */}
+                                            <SppButton color="default" variant="filled" specName="filled-status-00">적정</SppButton>
+                                            <SppButton color="red" variant="filled" specName="filled-status-20">부적정</SppButton>
+                                            <SppButton color="default" variant="solid" specName="inquire">저장</SppButton>
+                                            <SppButton color="purple" variant="solid" specName="solid-1">저장</SppButton>
+                                            <SppButton color="geekblue" variant="solid" specName="create">저장</SppButton>
+                                            <SppButton color="cyan" variant="solid" specName="solid-3">저장</SppButton>
+                                            <SppButton color="volcano" variant="solid" specName="solid-4">저장</SppButton>
+                                          </div>
+                                        </div>
+                                      </div>
+
                                       <div className="m-binds">
                                         <div className="group">
                                           <SppButton color="default" variant="solid">저장</SppButton>
@@ -287,11 +333,11 @@ function TmpTsProg() {
 
                       <div className="m-section">
                         <div className="m-header">
-                          <div className="primary">
+                          <div className="prime">
                             <h2 className="o-heading level2"><span className="label">계약내역</span></h2>
                           </div>
 
-                          <div className="secondary">
+                          <div className="extra">
                             <div className="o-length">
                               <span className="head">전체</span>
                               <em className="data">
@@ -315,14 +361,14 @@ function TmpTsProg() {
                                 <SppButton color="cyan" variant="solid">저장</SppButton>
                                 <SppButton color="green" variant="solid">저장</SppButton>
                                 <SppButton color="magenta" variant="solid">저장</SppButton>
-                                <SppButton color="pink" variant="solid">저장</SppButton>
+                                <SppButton color="pink" variant="solid">장</SppButton>
                                 <SppButton color="red" variant="solid">저장</SppButton>
                                 <SppButton color="orange" variant="solid">저장</SppButton>
                                 <SppButton color="yellow" variant="solid">저장</SppButton>
                                 <SppButton color="volcano" variant="solid">저장</SppButton>
-                                <SppButton color="geekblue" variant="solid">저장</SppButton>
-                                <SppButton color="lime" variant="solid">저장</SppButton>
-                                <SppButton color="gold" variant="solid">저장</SppButton>
+                                <SppButton color="geekblue" variant="solid" size="large">저장</SppButton>
+                                <SppButton color="lime" variant="solid" size="small">저장</SppButton>
+                                <SppButton color="gold" variant="solid" size="middle">저장</SppButton>
                               </div>
                             </div>
                           </div>

@@ -18,7 +18,7 @@ export const SppDatePicker = ({
   model="d-form",
   modelType="date",
   specName="",
-  width="",
+  width="50",
   className="",
   picker,
   allowClear=true,
@@ -28,12 +28,14 @@ export const SppDatePicker = ({
     <>
       <DatePicker
         className={`
-          ${model}
-          ${modelType && ' type-' + modelType}
-          ${specName && ' _' + specName}
-          ${width && ' wd-' + width}
-          ${className}
-          `.replace(/\s+/g, ' ').trim()}
+            ${model}
+            ${modelType && ' type-' + modelType}
+            ${specName && ' _' + specName}
+            ${width && ' wd-' + width}
+            ${className}
+          `
+          .replace(/\s+/g, ' ')
+          .trim()}
         picker={picker}
         format={{
           format: (picker === 'month') ? monthFormat : dateFormat,

@@ -3,7 +3,6 @@ import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type R
 import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
 
 import { AutoComplete, type AutoCompleteProps } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
 
 export interface SppAutoCompleteProps extends AutoCompleteProps {
   model?: string;
@@ -19,19 +18,21 @@ export const SppAutoComplete = ({
   width="",
   className="",
   allowClear=true,
-  prefix=<><SearchOutlined />{/* <SppObjSymbol label="pageview" /> */}<SppObjSymbol label={`search`} /></>,
+  prefix=<><SppObjSymbol label={`search`} specName="pre-autocomp" /></>,
   ...rest
 }: SppAutoCompleteProps) => {
   return (
     <>
       <AutoComplete
         className={`
-          ${model}
-          ${modelType && ' type-' + modelType}
-          ${specName && ' _' + specName}
-          ${width && ' wd-' + width}
-          ${className}
-          `.replace(/\s+/g, ' ').trim()}
+            ${model}
+            ${modelType && ' type-' + modelType}
+            ${specName && ' _' + specName}
+            ${width && ' wd-' + width}
+            ${className}
+          `
+          .replace(/\s+/g, ' ')
+          .trim()}
         allowClear={allowClear}
         prefix={prefix}
         {...rest}

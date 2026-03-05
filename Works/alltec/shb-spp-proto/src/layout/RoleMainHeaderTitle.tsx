@@ -2,15 +2,17 @@ import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type R
 
 export interface RoleMainHeaderTitleProps {
   label?: ReactNode;
+  render?: boolean;
 };
 
 export const RoleMainHeaderTitle = ({
-  label
+  label,
+  render=false
 }: RoleMainHeaderTitleProps) => {
   return (
     <>
       {
-        (label) &&
+        (render && label) &&
           <h1 className="o-heading level1">
             <span className="label">{label}</span>
           </h1>

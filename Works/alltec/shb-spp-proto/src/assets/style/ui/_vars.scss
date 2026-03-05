@@ -7,9 +7,7 @@
 $root-em-int:        16;
 
 $bold-30:            var(--bold-30);
-$bold-400:            var(--bold-400);
 $bold-50:            var(--bold-50);
-$bold-700:            var(--bold-700);
 $bold-80:            var(--bold-80);
 $bold-90:            var(--bold-90);
 
@@ -39,6 +37,17 @@ $line-60:            var(--line-60);
 $line-70:            var(--line-70);
 $line-80:            var(--line-80);
 $line-90:            var(--line-90);
+
+
+
+
+
+
+
+
+
+$bold-400:            var(--bold-400);
+$bold-700:            var(--bold-700);
 
 $text-shadow:        var(--text-shadow);
 
@@ -75,7 +84,7 @@ $cl-surface-overlay:      var(--cl-surface-overlay);
 $cl-ground:               var(--cl-ground);
 $cl-ground-alpha-00:      var(--cl-ground-alpha-00);
 $cl-ground-30:            var(--cl-ground-30);
-$cl-ground-40:            var(--cl-ground-40);
+$cl-ground-50:            var(--cl-ground-50);
 $cl-ground-70:            var(--cl-ground-70);
 $cl-ground-90:            var(--cl-ground-90);
 $cl-ground-required:      var(--cl-ground-required);
@@ -116,8 +125,8 @@ $cl-status-20:            var(--cl-status-20);
 
 $cl-text-00:              var(--cl-text-00);
 $cl-text-20:              var(--cl-text-20);
-$cl-text-30:              var(--cl-text-30);
 $cl-text-40:              var(--cl-text-40);
+$cl-text-50:              var(--cl-text-50);
 $cl-text-70:              var(--cl-text-70);
 $cl-text-placeholder:     var(--cl-text-placeholder, DarkGrey);
 $cl-text-disabled:        var(--cl-text-disabled);
@@ -155,7 +164,7 @@ $cl-grid-evenrow:         var(--cl-grid-evenrow);
 $cl-grid-hover:           var(--cl-grid-hover);
 
 $cl-edge-30:              var(--cl-edge-30);
-$cl-edge-40:              var(--cl-edge-40);
+$cl-edge-50:              var(--cl-edge-50);
 $cl-edge-70:              var(--cl-edge-70);
 $cl-edge-focus:           var(--cl-edge-focus);
 
@@ -167,7 +176,7 @@ $cl-shadow-alpha-10:      var(--cl-shadow-alpha-10);
 $cl-shadow-alpha-20:      var(--cl-shadow-alpha-20);
 
 
-$dropshadow-40:              var(--dropshadow-40);
+$dropshadow-50:              var(--dropshadow-50);
 $dropshadow-70:              var(--dropshadow-70);
 $dropshadow-frozen:          var(--dropshadow-frozen);
 
@@ -209,3 +218,17 @@ $timing-func-ease-faster:    var(--timing-func-ease-faster);
 
 $wd-scrollbar:            var(--wd-scrollbar);
 
+
+$mgb-pop:                    calc(var(--rem) * var(--mgb-pop));
+$mgi-pop:                   calc(var(--rem) * var(--mgi-pop));
+
+$ht-pop-header:                   calc(var(--rem) * var(--ht-pop-header));
+
+
+$mgb-dom:                   calc(var(--rem) * var(--mgb-dom));
+$mgi-dom:                  calc(var(--rem) * var(--mgi-dom));
+
+$ht-dom-header:                  calc(var(--rem) * var(--ht-dom-header));
+$ht-dom-footer:                  calc(var(--rem) * var(--ht-dom-footer));
+$wd-dom-nav:                      calc(var(--rem) * var(--wd-dom-nav));
+$wd-dom-container:                calc(var(--rem) * var(--wd-dom-container));

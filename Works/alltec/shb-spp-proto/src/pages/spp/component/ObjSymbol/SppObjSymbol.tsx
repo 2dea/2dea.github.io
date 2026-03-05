@@ -1,9 +1,16 @@
 import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 export const resLabel = {
+  arrowMdiBackward: 'keyboard_arrow_left',
+  arrowMdiForward: 'keyboard_arrow_right',
   closeMdi: 'close_small',
+  closeMdiTab: 'tab_close',
   closePopup: 'close',
+  favoriteHeader: 'kid_star',
   helpManual: 'help',
+  homeMdi: 'home_app_logo',
+  signoutHeader: 'exit_to_app',
+  toggleNavMenu: '',
 };
 
 export interface SppObjSymbolProps {
@@ -11,7 +18,8 @@ export interface SppObjSymbolProps {
   model?: string;
   modelType?: "font" | "icon" | "image" | "";
   specName?: string;
-  size?: "30" | "50" | "70" | "";
+  symbolStyle?: "line" | "fill" | "";
+  height?: "30" | "50" | "70" | "";
   className?: string;
   ariaHidden?: boolean | "false" | "true" | undefined;
 };
@@ -22,19 +30,23 @@ export const SppObjSymbol = ({
   model="o-sym",
   modelType="font",
   specName="",
-  size="",
+  symbolStyle="",
+  height="",
   className=""
 }: SppObjSymbolProps) => {
   const content = (
     <i
       aria-hidden={ariaHidden}
       className={`
-        ${model}
-        ${modelType && ' type-' + modelType}
-        ${specName ?? ' _' + specName}
-        ${size && ' size-' + size}
-        ${className}
-        `.replace(/\s+/g, ' ').trim()}
+          ${model}
+          ${modelType && ' type-' + modelType}
+          ${specName && ' _' + specName}
+          ${symbolStyle && ' style-' + symbolStyle}
+          ${height && ' size-' + height}
+          ${className}
+        `
+        .replace(/\s+/g, ' ')
+        .trim()}
     >
       {label}
     </i>

@@ -14,8 +14,8 @@ export const RoleMainHeaderFavorite = ({
     <>
       {
         (render) &&
-          <div className="favorite">
-            <SppButton color="default" variant="text" icon={<SppObjSymbol label={`kid_star`} className="style-fill" />} modelType="image" title="즐겨찾기 추가/해제"></SppButton>
+          <div className="favorite-util">
+            <SppButton color="default" variant="text" size="small" icon={<SppObjSymbol label={resLabel.favoriteHeader} />} modelType="symbol" title="즐겨찾기 추가/해제"></SppButton>{/* addClass('-checked') */}
           </div>
       }
     </>

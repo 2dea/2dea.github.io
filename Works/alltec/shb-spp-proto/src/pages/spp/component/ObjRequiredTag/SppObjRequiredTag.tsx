@@ -10,7 +10,7 @@ export interface SppObjRequiredTagProps {
 
 export const SppObjRequiredTag = ({
   label=(<>필수입력</>),
-  model="o-required-tag",
+  model="o-reqtag",
   modelType="",
   specName="",
   className=""
@@ -18,11 +18,13 @@ export const SppObjRequiredTag = ({
   const content = (
     <em
       className={`
-        ${model}
-        ${modelType && ' type-' + modelType}
-        ${specName && ' _' + specName}
-        ${className}
-        `.replace(/\s+/g, ' ').trim()}
+          ${model}
+          ${modelType && ' type-' + modelType}
+          ${specName && ' _' + specName}
+          ${className}
+        `
+        .replace(/\s+/g, ' ')
+        .trim()}
     >
       <span className="tag">({label})</span>
     </em>

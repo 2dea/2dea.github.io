@@ -15,8 +15,8 @@ export const RoleMainHeaderManual = ({
     <>
       {
         (render) &&
-          <div className="manual">
-            <SppButton color="default" variant="filled" icon={<QuestionCircleOutlined />}>매뉴얼</SppButton>
+          <div className="manual-util">
+            <SppButton color="default" variant="filled" size="small" icon={<QuestionCircleOutlined />}>매뉴얼</SppButton>
           </div>
       }
     </>

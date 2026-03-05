@@ -10,8 +10,8 @@ export interface SppButtonProps extends ButtonProps {
 
   model?: string;
   modelType?: string;
-  // face?: string | "normal" | "solid-0" | "inquire" | "solid-1" | "solid-2" | "create" | "solid-3" | "lined-1" | "cancel" | "delete" | "lined-2" | "lined-3" | "filled-status-00" | "filled-status-20" | "filled-status-80" | "texted-0" | "linked-0";
-  specName?: "normal" | "inquire" | "solid-1" | "create" | "solid-3" | "lined-1" | "cancel" | "delete" | "lined-2" | "lined-3" | "filled-status-00" | "filled-status-20" | "filled-status-80" | "texted-0" | "linked-0";
+  // face?: string | "normal" | "solid-0" | "inquire" | "solid-1" | "solid-2" | "create" | "solid-3" | "solid-4" | "lined-1" | "cancel" | "delete" | "lined-2" | "lined-3" | "lined-4" | "filled-status-00" | "filled-status-20" | "filled-status-80" | "texted-0" | "linked-0";
+  specName?: "normal" | "inquire" | "solid-1" | "create" | "solid-3" | "solid-4" | "lined-1" | "cancel" | "delete" | "lined-2" | "lined-3" | "lined-4" | "filled-status-00" | "filled-status-20" | "filled-status-80" | "texted-0" | "linked-0";
 };
 
 export const SppButton = ({
@@ -30,11 +30,13 @@ export const SppButton = ({
       <Button
         htmlType={htmlType}
         className={`
-          ${model}
-          ${modelType && ' type-' + modelType}
-          ${specName && ' _' + specName}
-          ${className}
-          `.replace(/\s+/g, ' ').trim()}
+            ${model}
+            ${modelType && ' type-' + modelType}
+            ${specName && ' _' + specName}
+            ${className}
+          `
+          .replace(/\s+/g, ' ')
+          .trim()}
         type={type}
         {...rest}
       />

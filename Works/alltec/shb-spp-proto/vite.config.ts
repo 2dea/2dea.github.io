@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import svgr from "vite-plugin-svgr";
 // import { dirname } from "node:path"
 // import { fileURLToPath } from "node:url"
 
@@ -8,7 +9,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   // // const root = dirname(fileURLToPath(import.meta.url));
   // plugins: [react()],
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths(), svgr()],
   server: {
     port: 3030,
   },

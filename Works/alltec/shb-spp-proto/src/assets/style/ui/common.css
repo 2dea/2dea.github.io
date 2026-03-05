@@ -227,8 +227,10 @@
 
   --cl-ground:               var(--design-common-white);
   --cl-ground-alpha-00:      rgb(from var(--cl-ground) r g b / 0.0);
-  --cl-ground-30:            var(--design-background-weak);
-  --cl-ground-40:            var(--design-background-normal);
+  --cl-ground-20:            var(--design-background-weak);
+  /* --cl-ground-30:            var(--design-background-weak); */
+  /* --cl-ground-50:            var(--design-background-normal); */
+  --cl-ground-50:            var(--design-background-normal);
   --cl-ground-70:            var(--design-background-strong);
   --cl-ground-90:            var(--design-background-heavy);
   --cl-ground-required:      var(--design-background2-yellow-40);
@@ -282,14 +284,17 @@
 
   --cl-text-00:              var(--design-label-white);
   --cl-text-20:              var(--design-label-assistive);
-  --cl-text-30:              var(--design-label-alternative);
-  --cl-text-40:              var(--design-label-normal);
+  --cl-text-40:              var(--design-label-alternative);
+  /* --cl-text-50:              var(--design-label-normal); */
+  --cl-text-50:              var(--design-label-normal);
   --cl-text-70:              var(--design-label-strong);
   --cl-text-placeholder:     var(--design-label-assistive);
   --cl-text-disabled:        var(--design-label-disabled);
 
   --cl-icon-00:              var(--design-icon-white);
-  --cl-icon-40:              var(--design-icon-normal);
+  --cl-icon-30:              var(--design-icon-normal);
+  /* --cl-icon-40:              var(--design-icon-normal); */
+  --cl-icon-50:              var(--design-icon-strong);
   --cl-icon-70:              var(--design-icon-strong);
   --cl-icon-90:              var(--design-icon-heavy);
   --cl-icon-disabled:        var(--design-line-weak);
@@ -323,7 +328,7 @@
   --cl-grid-hover:           var(--design-grid-hover);
 
   --cl-edge-30:              var(--design-line-weak);
-  --cl-edge-40:              var(--design-line-normal);
+  --cl-edge-50:              var(--design-line-normal);
   --cl-edge-70:              var(--design-line-strong);
   --cl-edge-focus:           var(--design-primary-normal);
 
@@ -343,7 +348,7 @@
   --filter-control-70:          brightness(0) saturate(100%) invert(26%) sepia(90%) saturate(3044%) hue-rotate(219deg) brightness(83%) contrast(101%);
 
 
-  --dropshadow-40:              0 0 1px var(--cl-shadow-alpha-10), 0 calc(var(--rem) * 1) 4px var(--cl-shadow-alpha-10), 0 calc(var(--rem) * 2) 8px var(--cl-shadow-alpha-20);
+  --dropshadow-50:              0 0 1px var(--cl-shadow-alpha-10), 0 calc(var(--rem) * 1) 4px var(--cl-shadow-alpha-10), 0 calc(var(--rem) * 2) 8px var(--cl-shadow-alpha-20);
   --dropshadow-70:              0 0 4px var(--cl-shadow-alpha-10), 0 calc(var(--rem) * 4) 8px var(--cl-shadow-alpha-10), 0 calc(var(--rem) * 6) 12px var(--cl-shadow-alpha-20);
   --dropshadow-frozen:          inset calc(var(--rem) * 12) 0 8px -8px var(--cl-shadow-alpha-20);
 
@@ -372,23 +377,13 @@
   --ht-icon-30:             16;
   --ht-icon-50:             20;
   --ht-icon-70:             24;
-  /* --ht-icon-70:             var(--ht-icon-50); */
+  --ht-icon-70:             var(--ht-icon-50);
 
   --ht-ctrl-50:             18;
 
   --ht-form-30:             24;
-  --ht-form-50:             26;
-  --ht-form-70:             30;
-
-  --bd:                         var(--e10);
-
-  --ht-icon-50:                 ;
-
-  --wd-icon-50:                 ;
-
-  --pdi-section-50:             ;
-
-  --mgbs-layout:                ;
+  --ht-form-50:             32;
+  --ht-form-70:             40;
 
   --listbox-ht-option-50:       30;
 

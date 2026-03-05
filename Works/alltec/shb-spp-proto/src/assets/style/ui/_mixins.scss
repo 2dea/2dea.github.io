@@ -12,9 +12,12 @@
   @return #{calc(var(--rem) * (#{$int}))};
 }
 
+@function fs($int)  {
+  @return px(var(--font-#{$int}-int));
+}
 
 /** Color-Code HEXA to RGBA */
-@function hex($color: transparent, $alpha: 1.0)  {
+@function clmix($color: transparent, $alpha: 1.0)  {
   @return rgb(from $color r g b / $alpha);
 }
 
@@ -58,6 +61,12 @@
 
 
 /** 글꼴 초기화 */
+@mixin font($fs: 40, $fw: null)  {
+  font-weight: var(--bold-#{$fw});
+  font-size: fs($fs);
+  line-height: var(--lhr);
+}
+
 @mixin setResetFont()  {
   font-family: inherit;
   font-feature-settings: inherit;
@@ -166,13 +175,7 @@
 
 
 /** 말줄임표 */
-@mixin inc-ellipsis()  {
-  text-overflow: ellipsis; white-space: nowrap;
-}
-
-
-/** 말줄임표 */
-@mixin inc-ellipsis2($line: null) {
+@mixin inc-ellipsis($line: null) {
   // @if ($line == null or $line == 1) {
   //   word-break: break-all;
 
@@ -209,23 +212,19 @@
  ------------ */
 
 /** 폰트아이콘 옵션 (Google Material Icons) */
-@mixin setSymbolVariationSettings($fill: 0, $wght: 400, $opsz: 24)  {
+@mixin setSymbolVariationSettings($fill: var(--fvs-fill, 0), $wght: var(--fvs-wght, 400), $opsz: var(--fvs-opsz, 24))  {
   font-variation-settings: 'FILL' $fill, 'wght' $wght, 'GRAD' 0, 'opsz' $opsz;
 }
 
 
 /** 폰트아이콘 속성 (Google Material Icons) */
-@mixin setSymbolStyle($fill: 0, $wght: 400, $opsz: 24, $size: $ht-icon-30)  {
+@mixin setSymbolStyle($fill: var(--fvs-fill, 0), $wght: var(--fvs-wght, 400), $opsz: var(--fvs-opsz, 24), $size: var(--fs, #{$ht-icon-30}))  {
   font-family: 'wf-MaterialSymbolsRounded-Var', sans-serif; @include setSymbolVariationSettings($fill, $wght, $opsz); font-size: $size; display: inline-flex; max-width: 1em; overflow: hidden; text-transform: uppercase;
 }
 
 
 /** 폰트아이콘 모든 속성 (Google Material Icons) */
-@mixin inc-symbol($fill: 0, $wght: var(--fw), $opsz: 24, $size: var(--fs))  {
-  --fs: calc(1em + 4px);
-  --fw: var(--bold-400, 400);
-  --fw: 400;
-
+@mixin inc-symbol($fill: var(--fvs-fill, 0), $wght: var(--fvs-wght, 400), $opsz: var(--fvs-opsz, 24), $size: var(--fs, #{$ht-icon-30}))  {
   direction: ltr; font: normal normal calc(var(--rem) * 24) /1 'wf-MaterialSymbolsOutlined-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; display: inline-block; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
   @include setSymbolStyle($fill, $wght, $opsz, $size);
 }

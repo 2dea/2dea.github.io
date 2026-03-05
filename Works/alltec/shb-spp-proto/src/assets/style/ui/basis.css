@@ -73,7 +73,7 @@
   --line-90:            calc(var(--line-90-int) / var(--font-90-int)); */
 
 
-  --typo-system:        -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum';
+  --typo-system:        -apple-system, BlinkMacSystemFont, ui-sans-serif, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum';
   --typo-emoji:         'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
   --typo-serif:         'wf-NotoSerifKR', 'Noto Serif KR', 'Noto Serif CJK KR', 'AppleMyungjo', '바탕', 'Batang';
@@ -88,7 +88,7 @@
   --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
   --typo-tnum:          var(--typo-mono-latin), var(--typo-sans), var(--typo-system), sans-serif;
-  --typo-base:          var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
+  --typo-base:          var(--typo-brand), var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
 
 
   --text-feature-base:  normal;
@@ -144,7 +144,7 @@
   } */
 
   @supports (line-height: round(down, 1, 1)) {
-    --text-height-rel:    round(down, calc(1em * 16.667 / 12), 2px);
+    --text-height-rel:    round(down, calc(1em * 16.66667 / 12), 2px);
     --text-height-par:    round(down, calc(1em * 18.5 / 12), 2px);
   }
 }
@@ -214,7 +214,7 @@
     caption,  tr >:not([align])  { text-align: inherit; }
     tr,  tr >:not([valign])  { vertical-align: inherit; }
     tr:not([bgcolor]),  tr >:not([bgcolor])  { background-color: inherit; }
-    tr >:not([border] >* >* >*)  { border: 1px solid; }
+    /* tr >:not([border] >* >* >*)  { border: 1px solid; } */
     fieldset  { min-width: 0; padding: 0; border-style: none; }
     legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
     label  { display: inline-block; }
