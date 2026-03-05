@@ -23,7 +23,8 @@
 }
 
 :root  {
-  --typo-brand:                     'OneShinhan Light', 'OneShinhan', 'OneShinhan Medium';
+  --typo-brand-res:                 'OneShinhan Light', 'OneShinhan', 'OneShinhan Medium';
+  --typo-brand:                     var(--typo-brand-res), sans-serif;
 
 
   --breakpoint-min:                 320;

@@ -88,7 +88,7 @@
   --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
   --typo-tnum:          var(--typo-mono-latin), var(--typo-sans), var(--typo-system), sans-serif;
-  --typo-base:          var(--typo-brand), var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
+  --typo-base:          var(--typo-brand-res), var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
 
 
   --text-feature-base:  normal;
@@ -186,7 +186,7 @@
     article,  section,  nav,  aside,  header,  footer,
       figure,  figcaption,  main,  details,  dialog  { display: block; }
     video,  audio,  progress,  canvas  { display: inline-block; vertical-align: baseline; }
-    img,  iframe,  embed,  object,  video,  audio,
+    img,  iframe,  embed,  object,  video,  audio,  svg,
       legend,  input,  button,  select,  textarea,  progress,  canvas  { max-width: 100%; }
     h1,  h2,  h3,  h4,  h5,  h6,
       p,  hr,  pre,  blockquote,  ul,  ol,  dl,  dd,  figure,
