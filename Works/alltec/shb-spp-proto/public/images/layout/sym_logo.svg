@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 135" fill="currentColor" aria-hidden="true" data-symbol="logo">
-<g id="ShieldOuter" fill="none" stroke="currentColor" stroke-width="0" stroke-linejoin="round" stroke-linecap="round">
-  <path id="ShieldOuter" d="M 67.537524,7.7527428
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 135" fill="none" aria-hidden="true" data-symbol="logo">
+<g id="Shield" fill="none" stroke="currentColor" stroke-width="0" stroke-linejoin="round" stroke-linecap="round">
+  <path id="ShieldOuter" fill="#fff" stroke="currentColor" stroke-width="1.25" d="M 67.537524,7.7527428
        C 65.377715,10.81881 61.88976,13.23868 58.806275,15.293366
          47.509071,22.821273 33.811054,24.553782 20.57399,24.553782
        v 37.967702
@@ -18,7 +18,7 @@
        c -12.5645,0 -24.955871,-1.692775 -36.115622,-7.919227
          C 76.260613,15.2276 73.765313,13.533534 71.638568,11.577872
          70.375154,10.416097 69.087454,8.4755508 67.537524,7.7527428 Z"></path>
-  <path id="ShieldInner" fill="red" d="M 110.00314,29.580864
+  <path id="ShieldInner" fill="currentColor" stroke="currentColor" stroke-width="0" d="M 110.00314,29.580864
        c -0.48846,3.737489 0,7.859306 0,11.641665
        l -0.02,23.756355
        c 0,7.97668 -0.0986,15.568529 -3.91975,22.810299
@@ -40,7 +40,7 @@
          1.97118,0.290373 3.9664,0.549498 5.95313,0.685553
          1.15357,0.079 2.46136,-0.05184 3.57187,0.27642 Z"></path>
 </g>
-<g id="Logo" fill="" stroke="currentColor" stroke-width="0" stroke-linejoin="round" stroke-linecap="round">
+<g id="Logo" fill="#fff" stroke="currentColor" stroke-width="0" stroke-linejoin="round" stroke-linecap="round">
   <path id="LogoEss" d="M 57.48336,28.58061
        c -8.352214,1.301253 -16.074413,9.030859 -16.656908,17.536711
        -0.284595,4.155835 1.2265,8.297199 3.616585,11.641663

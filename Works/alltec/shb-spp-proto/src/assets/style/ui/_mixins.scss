@@ -23,9 +23,6 @@
 
 
 /** 리니어 그래디언트 */
-// @function fnLinearGradient($dir: bottom, $start: var(--cl-ground-alpha-00))  {
-//   @return linear-gradient(to $dir, $start, $end);
-// }
 @function fnLinearGradient($deg: 180deg, $start: var(--cl-ground-alpha-00), $end: var(--cl-ground), $start-stop: null, $end-stop: 65%)  {
   @return linear-gradient($deg, $start $start-stop, $end $end-stop);
 }
@@ -60,13 +57,13 @@
 }
 
 
-/** 글꼴 초기화 */
 @mixin font($fs: 40, $fw: null)  {
-  font-weight: var(--bold-#{$fw});
+  @if ($fw != null) { font-weight: var(--bold-#{$fw}); }
   font-size: fs($fs);
   line-height: var(--lhr);
 }
 
+/** 글꼴 초기화 */
 @mixin setResetFont()  {
   font-family: inherit;
   font-feature-settings: inherit;

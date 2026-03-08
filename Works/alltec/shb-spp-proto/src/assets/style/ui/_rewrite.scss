@@ -68,8 +68,22 @@
       }
     }
 
-    .ant-btn-icon  {
+    :where([class*="ant-"][class*="-icon"])  {
       display: inline-flex;
+    }
+  }
+
+  &.d-form  {
+    :where([class*="ant-"][class*="-prefix"])  {
+      display: inline-flex;
+    }
+  }
+
+  &.m-tabs  {
+    :where(.ant-tabs-tab-btn)  {
+      display: flex;
+      align-items: center;
+      gap: #{px(var(--gap-element-30))};
     }
   }
 }

@@ -23,8 +23,13 @@
 }
 
 :root  {
-  --typo-brand-res:                 'OneShinhan Light', 'OneShinhan', 'OneShinhan Medium';
-  --typo-brand:                     var(--typo-brand-res), sans-serif;
+  --typo-serif-app:     '';
+  --typo-mono-app:      'wf-D2Coding', 'D2Coding';
+  // --typo-sans-app:      'wf-Pretendard', 'Pretendard';
+  
+  --typo-brand-res:     '원신한', 'OneShinhan', 'OneShinhan Light', 'OneShinhan Medium', 'OneShinhan ExtraBold';
+  --typo-brand-400:     'OneShinhan Light';
+  --typo-brand-700:     'OneShinhan Medium';
 
 
   --breakpoint-min:                 320;
@@ -62,6 +67,10 @@
   --ht-dom-footer:               0;
   --wd-dom-nav:                  192;
   --wd-dom-container:            1656;
+
+  /* @supports (font-variation-settings: 'wght' 700) {
+    --typo-sans-app:      'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard';
+  } */
 }
 
 
@@ -177,7 +186,7 @@ html  { scroll-behavior: auto; }
   }
 }
 html  { font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16)); accent-color: var(--cl-key1-70, #0078d7); }
-body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-400); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--cl-text-50); background: var(--cl-surface, WhiteSmoke); accent-color: var(--accent, DodgerBlue); letter-spacing: var(--text-spacing); }
+body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature, normal); font-optical-sizing: auto; font-weight: var(--bold-400); font-size: calc(var(--text-size)); line-height: calc(var(--text-height)); color: var(--cl-text-50); background: var(--cl-surface, WhiteSmoke); accent-color: var(--accent, DodgerBlue); word-spacing: var(--word-spacing); letter-spacing: var(--text-spacing); }
 /* @media
   screen and (not (max-width: 1920px))  {
     html  { font-size: var(--root-em-base, calc(10em / 16)); font-size: calc(100vw * var(--root-em-int) / 1920); font-size: calc(100lvw * var(--root-em-int) / 1920); }
@@ -235,7 +244,8 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 
   .div-branding  {
     .system  {
-      @include font(70, 700);
+      @include font(70, 800);
+      font-family: var(--typo-header);
       display: flex;
       align-items: center;
       color: var(--cl-theme-key1);
