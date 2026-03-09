@@ -21,6 +21,7 @@ export interface SppObjSymbolProps {
   symbolStyle?: "line" | "fill" | "";
   height?: "30" | "50" | "70" | "";
   className?: string;
+  rootStyle?: CSSProperties;
   ariaHidden?: boolean | "false" | "true" | undefined;
 };
 
@@ -32,7 +33,8 @@ export const SppObjSymbol = ({
   specName="",
   symbolStyle="",
   height="",
-  className=""
+  className="",
+  rootStyle
 }: SppObjSymbolProps) => {
   const content = (
     <i
@@ -47,6 +49,7 @@ export const SppObjSymbol = ({
         `
         .replace(/\s+/g, ' ')
         .trim()}
+      style={rootStyle}
     >
       {label}
     </i>

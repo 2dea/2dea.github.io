@@ -1,0 +1,69 @@
+import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+
+import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
+
+import { Select, type SelectProps } from "antd";
+
+const defaultTagPlaceholder = (omittedValues: any[]) => (
+  `+ ${omittedValues.length}개 항목 선택`
+);
+
+export interface SppSelectProps extends SelectProps {
+  model?: string;
+  modelType?: string;
+  specName?: string;
+  width?: "auto" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+};
+
+export const SppSelect = ({
+  model="d-form",
+  modelType="select",
+  specName="single",
+  width="",
+  className="",
+  placeholder="선택",
+  allowClear,
+  showSearch,
+  mode,
+  maxTagCount="responsive",
+  maxTagPlaceholder,
+  options=[
+    { value: '0', label: '전체' },
+    { value: '1', label: '예' },
+    { value: '2', label: '아니오' },
+    { value: '3', label: '비활성옵션', disabled: true },
+    { value: '4', label: '클래스리스트', className: 'c-color-strong' },
+    { value: '5', label: <><SppObjSymbol label={resLabel.favoriteHeader} symbolStyle="fill" rootStyle={{ '--mgie': 'calc(var(--rem) * (4))', verticalAlign: '-0.15em' } as CSSProperties} /><span className="label" title="커스텀옵션">커스텀옵션</span></> },
+    { value: '6', label: '아주긴옵션아주긴옵션아주긴옵션아주긴옵션아주긴옵션아주긴옵션아주긴옵션아주긴옵션아주긴옵션' },
+    { value: '7', label: '일곱글자까지는' },
+    { value: '8', label: <><span className="label" title="9항목&uarr;스크롤">9항목&uarr;스크롤</span></> },
+    { value: '9', label: '`선택` 플레이스홀더 디폴트' },
+  ],
+  ...rest
+}: SppSelectProps) => {
+  return (
+    <>
+      <Select
+        placeholder={placeholder}
+        className={`
+            ${model}
+            ${modelType && ' type-' + modelType}
+            ${specName && ' _' + specName}
+            ${width && ' wd-' + width}
+            ${className}
+          `
+          .replace(/\s+/g, ' ')
+          .trim()}
+        allowClear={allowClear}
+        showSearch={showSearch}
+        mode={mode}
+        maxTagCount={maxTagCount}
+        maxTagPlaceholder={maxTagPlaceholder ?? defaultTagPlaceholder}
+        options={options}
+        {...rest}
+      />
+    </>
+  );
+};
+
+export default SppSelect;

@@ -6,6 +6,7 @@ export interface SppObjRequiredTagProps {
   modelType?: string;
   specName?: string;
   className?: string;
+  rootStyle?: CSSProperties;
 };
 
 export const SppObjRequiredTag = ({
@@ -13,7 +14,8 @@ export const SppObjRequiredTag = ({
   model="o-reqtag",
   modelType="",
   specName="",
-  className=""
+  className="",
+  rootStyle
 }: SppObjRequiredTagProps) => {
   const content = (
     <em
@@ -25,6 +27,7 @@ export const SppObjRequiredTag = ({
         `
         .replace(/\s+/g, ' ')
         .trim()}
+      style={rootStyle}
     >
       <span className="tag">({label})</span>
     </em>

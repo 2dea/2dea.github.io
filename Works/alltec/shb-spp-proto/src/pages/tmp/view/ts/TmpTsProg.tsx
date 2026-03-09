@@ -13,6 +13,10 @@ import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete"
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
 
 import { AutoComplete, Badge, Tabs } from "antd";
+import SppSelect from "@/pages/spp/component/Select/SppSelect";
+import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
+import SppInputText from "@/pages/spp/component/InputText/SppInputText";
+import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
 function TmpTsProg() {
   return (
@@ -136,6 +140,52 @@ function TmpTsProg() {
 
                             <div className="main">
                               <SppAutoComplete placeholder="" value={`[4444] 디지털금융센터`} width="90" className="mode-required" />
+                            </div>
+                          </div>
+
+                          <div className="m-field">
+                            <SppObjLabel label={`싱글셀렉트`} required={true} wrapper="header" />
+
+                            <div className="main">
+                              <SppSelect width="50" className="mode-required"
+                                // options={[
+                                //   { value: '0', label: '전체' },
+                                //   { value: '1', label: '예' },
+                                //   { value: '2', label: '아니오' },
+                                // ]}
+                                // defaultValue={['0']}
+                              />
+                            </div>
+                          </div>
+
+                          <div className="m-field">
+                            <SppObjLabel label={`멀티셀렉트`} required={true} wrapper="header" />
+
+                            <div className="main">
+                              <SppMultiSelect width="90" className="mode-required"
+                                // options={[
+                                //   { value: '0', label: '전체' },
+                                //   { value: '1', label: '예' },
+                                //   { value: '2', label: '아니오' },
+                                // ]}
+                                // defaultValue={['0', '2']}
+                              />
+                            </div>
+                          </div>
+
+                          <div className="m-field">
+                            <SppObjLabel label={`인풋`} required={true} wrapper="header" />
+
+                            <div className="main">
+                              <SppInputText placeholder="" width="50" className="mode-required" />
+                            </div>
+                          </div>
+
+                          <div className="m-field">
+                            <SppObjLabel label={`텍스트에리어`} required={true} wrapper="header" />
+
+                            <div className="main">
+                              <SppTextArea placeholder="" className="mode-required" />
                             </div>
                           </div>
 

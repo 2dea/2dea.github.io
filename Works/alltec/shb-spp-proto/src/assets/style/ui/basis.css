@@ -80,15 +80,17 @@
   --typo-serif:         var(--typo-serif-app, ''), 'wf-NotoSerifKR', 'Noto Serif KR', 'Noto Serif CJK KR', 'AppleMyungjo', '바탕', 'Batang';
   --typo-mono:          var(--typo-mono-app, ''), 'Noto Sans Mono KR', 'Noto Sans Mono CJK KR', 'Monaco', 'Consolas', 'Courier New', 'Lucida Console', 'Courier', '바탕체', 'BatangChe';
   --typo-sans:          var(--typo-sans-app, ''), 'wf-NotoSansLatin-Var', 'wf-NotoSansLatin', 'Noto Sans', 'wf-NotoSansKR-Var', 'wf-NotoSansKR', 'Noto Sans KR', 'Noto Sans CJK KR';
+  /* --typo-sans:          ''; */
   --typo-mono-latin:    'wf-RobotoMono-Var', 'wf-RobotoMono';
   --typo-sans-latin:    'wf-Inter', 'wf-OpenSans';
 
   --typo-quot:          var(--typo-serif), serif;
   --typo-code:          var(--typo-mono), monospace;
-  --typo-header:        var(--typo-brand-700, ''), var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-password:      'wf-charDisc', var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-number:        'wf-OpenSansNum', var(--typo-sans), var(--typo-system), sans-serif;
   --typo-tnum:          var(--typo-mono-latin), var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-header:        var(--typo-brand-700, ''), var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
+  --typo-brand:         var(--typo-brand-400, ''), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-base:          var(--typo-brand-400, ''), var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
 
 

@@ -17,6 +17,14 @@
   --ant-border-radius-lg: 8px;
   --ant-border-radius-outer: 4px;
 
+  // --ant-color-border: #d9d9d9;
+  // --ant-color-border-disabled: #d9d9d9;
+  // --ant-color-border-secondary: #f0f0f0;
+
+  --ant-color-border: var(--cl-edge-50);
+  --ant-color-border-disabled: #d9d9d9;
+  --ant-color-border-secondary: var(--cl-edge-30);
+
   &.ant-btn  {
     --ant-button-font-weight: var(--bold-400);
 
@@ -57,13 +65,20 @@
     line-height: var(--lhr);
 
     &:not(.type-symbol)  {
-      --ant-button-padding-inline: 0;
-      --ant-button-padding-inline-lg: 0;
-      --ant-button-padding-inline-sm: 0;
+      --icon-gap: var(--gap-whitespace-30);
+
+      --ant-button-padding-inline: calc((4em - 3em - 2px) / 2);
+      --ant-button-padding-inline-lg: calc((5em - 4em - 2px) / 2);
+      --ant-button-padding-inline-sm: var(--ant-button-padding-inline);
+      --ant-button-icon-gap: #{px(var(--icon-gap))};
 
       min-width: 4em;
 
       &:where(.m-binds.type-end >.group._primary *) {
+        --icon-gap: var(--gap-whitespace-50);
+
+        --ant-button-padding-inline: var(--ant-button-padding-inline-lg);
+
         min-width: 5em;
       }
     }
@@ -71,11 +86,61 @@
     :where([class*="ant-"][class*="-icon"])  {
       display: inline-flex;
     }
+
+    &:where(.ant-btn-color-purple)  {
+      --ant-purple: #722ED1;
+      --ant-purple-1: #f9f0ff;
+      --ant-purple-2: #efdbff;
+      --ant-purple-3: #d3adf7;
+      --ant-purple-4: #b37feb;
+      --ant-purple-5: #9254de;
+      --ant-purple-6: #722ed1;
+      --ant-purple-7: #531dab;
+      --ant-purple-8: #391085;
+      --ant-purple-9: #22075e;
+      --ant-purple-10: #120338;
+      --ant-button-purple-shadow-color: 0 2px 0 rgba(155,5,255,0.06);
+
+  --palette-blue-001:                   #F0F4FF;
+  --palette-blue-050:                   #E6EDFE;
+  --palette-blue-100:                   #D7E3FE;
+  --palette-blue-200:                   #B2C9FF;
+  --palette-blue-300:                   #8AADFF;
+  --palette-blue-400:                   #5587FC;
+  --palette-blue-500:                   #2968F9;
+  --palette-blue-600:                   #1850D4;
+  --palette-blue-700:                   #2149A3;
+  --palette-blue-800:                   #032168;
+  --palette-blue-900:                   #01133C;
+
+      --ant-purple: #032168;
+      --ant-purple-1: #bec0c5;
+      --ant-purple-2: #8e9ec4;
+      --ant-purple-3: #5b7ac2;
+      --ant-purple-4: #09359b;
+      --ant-purple-5: #042a81;
+      --ant-purple-6: #032168;
+      --ant-purple-7: #031a50;
+      --ant-purple-8: #021238;
+      --ant-purple-9: #010e2c;
+      --ant-purple-10: #000c25;
+      --ant-button-purple-shadow-color: 0 2px 0 rgba(155,5,255,0.06);
+    }
+  }
+
+  &.ant-select-dropdown  {
+    :where(.rc-virtual-list-scrollbar)  {
+      width: px(4) !important;
+    }
   }
 
   &.d-form  {
     :where([class*="ant-"][class*="-prefix"])  {
       display: inline-flex;
+
+      &:empty  {
+        margin-inline-end: 0  ;
+      }
     }
   }
 

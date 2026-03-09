@@ -26,7 +26,7 @@
   --typo-serif-app:     '';
   --typo-mono-app:      'wf-D2Coding', 'D2Coding';
   // --typo-sans-app:      'wf-Pretendard', 'Pretendard';
-  
+
   --typo-brand-res:     '원신한', 'OneShinhan', 'OneShinhan Light', 'OneShinhan Medium', 'OneShinhan ExtraBold';
   --typo-brand-400:     'OneShinhan Light';
   --typo-brand-700:     'OneShinhan Medium';
@@ -211,7 +211,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 .role-skip a:before  { content: ""; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 .role-skip a strong  { position: static; }
 .role-skip a strong:before  { content: "» "; }
-.role-skip a[id]  { text-align: center; font-weight: 700; font-size: 16px; font-family: 'Tahoma', 'Geneva', 'Dotum', 'AppleGothic', sans-serif; font-family: inherit; }
+.role-skip a[id]  { text-align: center; font-weight: var(--bold-700, 700); font-size: 16px; font-family: 'Tahoma', 'Geneva', 'Dotum', 'AppleGothic', sans-serif; font-family: inherit; }
 .role-skip a[id]:focus,
   .role-skip a[id]:active  { left: 0; top: 0; padding: 0.5em 0; width: 100%; height: auto; color: #ffffff; background: #404040; background-color: var(--cl-point-40, var(--cl-key1-40, #404040)); }
 .role-skip .o-ogp *  { width: auto; }
@@ -328,7 +328,7 @@ body  { font-family: var(--typo-base); font-feature-settings: var(--text-feature
 }
 
 .role-localnav  {
-  @include font(60);
+  @include font(60, 700);
   flex: 1 0 0;
   position: relative;
   overflow: auto;
