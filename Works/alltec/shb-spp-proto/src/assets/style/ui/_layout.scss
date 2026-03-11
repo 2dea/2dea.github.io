@@ -22,128 +22,9 @@
   initial-value: Transparent;
 }
 
-html  {
-  --typo-serif-app:     '';
-  --typo-mono-app:      'wf-D2Coding', 'D2Coding';
-  // --typo-sans-app:      'wf-Pretendard', 'Pretendard';
 
-  --typo-brand-res:     '원신한', 'OneShinhan', 'OneShinhan Light', 'OneShinhan Medium', 'OneShinhan ExtraBold';
-  --typo-brand-700:     'OneShinhan Medium';
-  --typo-brand-400:     'OneShinhan Light';
-  // --typo-brand-body:    var(--typo-brand-400, '');
-
-  /* @supports (font-variation-settings: 'wght' 700) {
-    --typo-sans-app:      'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard';
-  } */
-
-
-  --breakpoint-min:                 320;
-  --breakpoint-max:                 1280;
-  --breakpoint-max:                 1272;
-
-
-  --br-scrollbar-track:             2px;
-  --cl-scrollbar-track:             rgba(0,0,0, 0.05);
-  --cl-scrollbar-track:             Transparent;
-  --cl-scrollbar-track-edge:        Transparent;
-  --cl-scrollbar-corner-edge:       Transparent;
-  --cl-scrollbar-thumb:             rgba(0,0,0, 0.3);
-  --cl-scrollbar-thumb-hover:       rgba(0,0,0, 0.4);
-  --cl-scrollbar-thumb-active:      rgba(0,0,0, 0.5);
-  --cl-scrollbar-thumb-edge:        rgba(255,255,255, 0.3);
-
-  --cl-theme-key1:               #303060;
-  --cl-theme-key1:               #2c3c4c;
-
-  --mg-scrollbar:                   calc(var(--px, 1px) * 3);
-  --wd-scrollbar:                   calc(var(--px, 1px) * 6 + var(--mg-scrollbar) * 2);
-
-
-  --filter-root-contrast:           0.96;
-  --filter-root-brightness:         0.96;
-  --filter-root:                    contrast(var(--filter-root-contrast, 1)) brightness(var(--filter-root-brightness, 1));
-
-  @media
-    screen and (color-gamut: rec2020),
-    screen and (color-gamut: p3)  {
-      --filter-root: none;
-    }
-
-
-  --mgb-pop:                 20;
-  --mgi-pop:                24;
-
-  --ht-pop-header:                46;
-
-
-  --mgb-dom:                20;
-  --mgi-dom:               32;
-
-  --ht-dom-header:               64;
-  --ht-dom-footer:               0;
-  --wd-dom-nav:                  192;
-  --wd-dom-container:            1656;
-}
-
-
-
-/** Scrollbars
+/** Box Models
  ------------- */
-
-// // .dom-wrapper >:not(.dom-container)  {
-// //   @include inc-scrollbar-width(2, 4);
-// // }
-
-// .g-scroll-width-thin,
-//   :has(>[role="listbox"]),
-//   :has(> *>[role="listbox"]),
-//   .m-grid  {
-//     --cl-scrollbar-track: rgba(240,240,240, 0.52);
-// }
-
-// .g-scroll-width-thin,
-//   :has(>[role="listbox"]),
-//   :has(>* >[role="listbox"])  {
-//     @include inc-scrollbar-width(2, 4);
-//     --cl-scrollbar-track-edge: Transparent;
-
-//   scroll-behavior: auto;
-//   overscroll-behavior: contain;
-// }
-
-body :where(:not(:has([class|="role"]), [class|="role"], :has(.div-center), .div-center))  {
-  @include inc-scrollbar-width(2, 4);
-}
-.role-localnav  {
-  @include inc-scrollbar-width(3, 4);
-}
-[class^="ant-table"],
-  .table-wrapper:where(.o-gridtable)  {
-    @include inc-scrollbar-width(2, 6);
-  }
-
-
-::-webkit-resizer  { image-rendering: pixelated; background: var(--obj-sym-resizer-scrollable) 0 /100%; }
-::-webkit-scrollbar  { width: var(--wd-scrollbar, 12px); height: var(--wd-scrollbar, 12px); }
-::-webkit-scrollbar-corner  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid var(--cl-scrollbar-corner-edge, rgba(255,255,255, 0.05)); border-radius: 2px; }
-::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid; border-color: var(--cl-scrollbar-track-edge, Transparent); border-radius: var(--br-scrollbar-track, 2px); will-change: background-color; }
-::-webkit-scrollbar-thumb  { min-width: 24px; min-height: 24px; border: var(--mg-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--cl-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--cl-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--mg-scrollbar, 3px)); border-radius: var(--wd-scrollbar, 12px); will-change: background-color, outline-color; }
-::-webkit-scrollbar-thumb:hover  { background-color: var(--cl-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
-::-webkit-scrollbar-thumb:active  { background-color: var(--cl-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
-
-.g-scroll-gutter-stable  { transition: 0.8s; transition-property: --cl-scrollbar-hidden-track, --cl-scrollbar-hidden-thumb, --cl-scrollbar-hidden-thumb-edge; }
-.g-scroll-gutter-stable:hover,
-  .g-scroll-gutter-stable:focus-within  { --cl-scrollbar-hidden-track: var(--cl-scrollbar-track); --cl-scrollbar-hidden-thumb: var(--cl-scrollbar-thumb); --cl-scrollbar-hidden-thumb-edge: var(--cl-scrollbar-thumb-edge); transition-duration: 0.15s; }
-.g-scroll-gutter-stable::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-hidden-track); }
-.g-scroll-gutter-stable::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--cl-scrollbar-hidden-thumb); outline-color: var(--cl-scrollbar-hidden-thumb-edge, Transparent); }
-
-*  { scroll-behavior: inherit; scrollbar-width: inherit; }
-html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable both-edges; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--cl-scrollbar-thumb) var(--cl-scrollbar-track); overscroll-behavior: auto none; */ }
-html  { scroll-behavior: auto; }
-
-
-/** Define Fonts
- --------------- */
 
 @layer LAY-base {
   @layer local-univ {
@@ -211,6 +92,130 @@ html  { scroll-behavior: auto; }
 
   }
 }
+
+html  {
+  --typo-serif-app:     '';
+  --typo-mono-app:      'wf-D2Coding', 'D2Coding';
+  // --typo-sans-app:      'wf-Pretendard', 'Pretendard';
+
+  --typo-brand-res:     '원신한', 'OneShinhan', 'OneShinhan Light', 'OneShinhan Medium', 'OneShinhan ExtraBold';
+  --typo-brand-700:     'OneShinhan Medium';
+  --typo-brand-400:     'OneShinhan Light';
+  // --typo-brand-body:    var(--typo-brand-400, '');
+
+
+  --breakpoint-min:                 320;
+  --breakpoint-max:                 1280;
+  --breakpoint-max:                 1272;
+
+
+  --br-scrollbar-track:             2px;
+  --cl-scrollbar-track:             rgba(0,0,0, 0.05);
+  --cl-scrollbar-track:             Transparent;
+  --cl-scrollbar-track-edge:        Transparent;
+  --cl-scrollbar-corner-edge:       Transparent;
+  --cl-scrollbar-thumb:             rgba(0,0,0, 0.3);
+  --cl-scrollbar-thumb-hover:       rgba(0,0,0, 0.4);
+  --cl-scrollbar-thumb-active:      rgba(0,0,0, 0.5);
+  --cl-scrollbar-thumb-edge:        rgba(255,255,255, 0.3);
+
+  --cl-theme-key1:               #303060;
+  --cl-theme-key1:               #2c3c4c;
+
+  --mg-scrollbar:                   calc(var(--px, 1px) * 3);
+  --wd-scrollbar:                   calc(var(--px, 1px) * 6 + var(--mg-scrollbar) * 2);
+
+
+  --filter-root-contrast:           0.96;
+  --filter-root-brightness:         0.96;
+  --filter-root:                    contrast(var(--filter-root-contrast, 1)) brightness(var(--filter-root-brightness, 1));
+
+
+  --mgb-pop:                 20;
+  --mgi-pop:                24;
+
+  --ht-pop-header:                46;
+
+
+  --mgb-dom:                20;
+  --mgi-dom:               32;
+
+  --ht-dom-header:               64;
+  --ht-dom-footer:               0;
+  --wd-dom-nav:                  192;
+  --wd-dom-container:            1656;
+
+
+  /* @supports (font-variation-settings: 'wght' 700) {
+    --typo-sans-app:      'wf-Pretendard-Var', 'Pretendard Variable', 'wf-Pretendard', 'Pretendard';
+  } */
+
+  @media
+    screen and (color-gamut: rec2020),
+    screen and (color-gamut: p3)  {
+      --filter-root: none;
+    }
+}
+
+
+/** Scrollbars
+ ------------- */
+
+::-webkit-resizer  { image-rendering: pixelated; background: var(--obj-sym-resizer-scrollable) 0 /100%; }
+::-webkit-scrollbar  { width: var(--wd-scrollbar, 12px); height: var(--wd-scrollbar, 12px); }
+::-webkit-scrollbar-corner  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid var(--cl-scrollbar-corner-edge, rgba(255,255,255, 0.05)); border-radius: 2px; }
+::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid; border-color: var(--cl-scrollbar-track-edge, Transparent); border-radius: var(--br-scrollbar-track, 2px); will-change: background-color; }
+::-webkit-scrollbar-thumb  { min-width: 24px; min-height: 24px; border: var(--mg-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--cl-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--cl-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--mg-scrollbar, 3px)); border-radius: var(--wd-scrollbar, 12px); will-change: background-color, outline-color; }
+::-webkit-scrollbar-thumb:hover  { background-color: var(--cl-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
+::-webkit-scrollbar-thumb:active  { background-color: var(--cl-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
+
+.g-scroll-gutter-stable  { transition: 0.8s; transition-property: --cl-scrollbar-hidden-track, --cl-scrollbar-hidden-thumb, --cl-scrollbar-hidden-thumb-edge; }
+.g-scroll-gutter-stable:hover,
+  .g-scroll-gutter-stable:focus-within  { --cl-scrollbar-hidden-track: var(--cl-scrollbar-track); --cl-scrollbar-hidden-thumb: var(--cl-scrollbar-thumb); --cl-scrollbar-hidden-thumb-edge: var(--cl-scrollbar-thumb-edge); transition-duration: 0.15s; }
+.g-scroll-gutter-stable::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-hidden-track); }
+.g-scroll-gutter-stable::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--cl-scrollbar-hidden-thumb); outline-color: var(--cl-scrollbar-hidden-thumb-edge, Transparent); }
+
+// // .dom-wrapper >:not(.dom-container)  {
+// //   @include inc-scrollbar-width(2, 4);
+// // }
+
+// .g-scroll-width-thin,
+//   :has(>[role="listbox"]),
+//   :has(> *>[role="listbox"]),
+//   .m-grid  {
+//     --cl-scrollbar-track: rgba(240,240,240, 0.52);
+// }
+
+// .g-scroll-width-thin,
+//   :has(>[role="listbox"]),
+//   :has(>* >[role="listbox"])  {
+//     @include inc-scrollbar-width(2, 4);
+//     --cl-scrollbar-track-edge: Transparent;
+
+//   scroll-behavior: auto;
+//   overscroll-behavior: contain;
+// }
+
+body :where(:not(:has([class|="role"]), [class|="role"], :has(.div-center), .div-center))  {
+  @include inc-scrollbar-width(2, 4);
+}
+.role-localnav  {
+  @include inc-scrollbar-width(3, 4);
+}
+[class^="ant-table"],
+  .table-wrapper:where(.o-gridtable)  {
+    @include inc-scrollbar-width(2, 6);
+  }
+
+
+*  { scroll-behavior: inherit; scrollbar-width: inherit; }
+html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable both-edges; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--cl-scrollbar-thumb) var(--cl-scrollbar-track); overscroll-behavior: auto none; */ }
+html  { scroll-behavior: auto; }
+
+
+/** Layouts
+ ---------- */
+
 html  {
   font-size: 100%; font-size: calc(16em / 16); font-size: var(--root-em-base, calc(16em / 16));
   accent-color: var(--cl-key1-70, #0078d7);
