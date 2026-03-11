@@ -4,11 +4,6 @@
 @use "./mixins" as *;
 
 
-@supports not selector(html:has(body)) {
-  // *  { outline: 1px solid Red; }
-}
-
-
 .css-var-root  {
   --ant-font-family: inherit;
   --ant-border-radius: 4px;
@@ -101,18 +96,6 @@
       --ant-purple-10: #120338;
       --ant-button-purple-shadow-color: 0 2px 0 rgba(155,5,255,0.06);
 
-  --palette-blue-001:                   #F0F4FF;
-  --palette-blue-050:                   #E6EDFE;
-  --palette-blue-100:                   #D7E3FE;
-  --palette-blue-200:                   #B2C9FF;
-  --palette-blue-300:                   #8AADFF;
-  --palette-blue-400:                   #5587FC;
-  --palette-blue-500:                   #2968F9;
-  --palette-blue-600:                   #1850D4;
-  --palette-blue-700:                   #2149A3;
-  --palette-blue-800:                   #032168;
-  --palette-blue-900:                   #01133C;
-
       --ant-purple: #032168;
       --ant-purple-1: #bec0c5;
       --ant-purple-2: #8e9ec4;
@@ -137,9 +120,11 @@
   &.d-form  {
     :where([class*="ant-"][class*="-prefix"])  {
       display: inline-flex;
+    }
 
+    :where([class*="ant-"][class*="-suffix"])  {
       &:empty  {
-        margin-inline-end: 0  ;
+        margin-inline-start: 0;
       }
     }
   }
@@ -740,7 +725,7 @@
 // .o-overlaypanel {
 //   --mg-block: calc(var(--rem) * 40);
 //   --mg-inline: calc(var(--rem) * 40);
-//   --mg-inline: var(--wd-scrollbar);
+//   --mg-inline: var(--wd-scrollbar-val);
 
 //   --wd-90p: 1730;
 //   --wd-80p: 1540;
@@ -840,7 +825,7 @@
 //   :has(>&) {
 //     --mg-block: calc(var(--rem) * 40);
 //     --mg-inline: calc(var(--rem) * 40);
-//     --mg-inline: var(--wd-scrollbar);
+//     --mg-inline: var(--wd-scrollbar-val);
 
 //     --wd-90p: 1730;
 //     --wd-80p: 1540;

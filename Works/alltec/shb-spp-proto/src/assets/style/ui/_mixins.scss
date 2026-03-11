@@ -148,8 +148,8 @@
 
 /** 스크롤바 크기 */
 @mixin inc-scrollbar-width($margin: 3, $thumb: 6)  {
-  --mg-scrollbar:    calc(var(--rem) * #{$margin});
-  --wd-scrollbar:     calc(var(--rem) * #{$thumb} + var(--mg-scrollbar) * 2);
+  --mg-scrollbar:     calc(var(--px, 1px) * #{$margin});
+  --wd-scrollbar:     calc(var(--px, 1px) * #{$thumb} + var(--mg-scrollbar) * 2);
 }
 
 

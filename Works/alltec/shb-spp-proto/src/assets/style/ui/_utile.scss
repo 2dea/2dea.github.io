@@ -4,3 +4,13 @@
 @use "./mixins" as *;
 
 
+@supports not (top: 1lh) {
+  // *  { outline: 1px solid Red; }
+}
+
+
+@supports not selector(html:has(body)) {
+  // *  { outline: 1px solid Red; }
+}
+
+

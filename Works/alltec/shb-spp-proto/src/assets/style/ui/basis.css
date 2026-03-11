@@ -5,13 +5,15 @@
 
 /** Global Custom-Properties */
 :root  {
+  --px:                 1px;
+
+  --vi:                 1dvi;
+  --vb:                 1dvb;
+
   --root-em-int:        16;
   --root-em-base:       calc(1em * var(--root-em-int, 16) / 16);
   --root-em:            (1rem / var(--root-em-int));
   --rem:                var(--root-em);
-
-  --vi:                 1dvi;
-  --vb:                 1dvb;
 
   --ht-window-maximum:      100vh;
   --ht-window-viewport:     var(--ht-window-variable, calc(var(--vb) * 100));
@@ -91,7 +93,7 @@
   --typo-tnum:          var(--typo-mono-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-header:        var(--typo-brand-700, ''), var(--typo-sans-latin), var(--typo-sans), var(--typo-system), sans-serif;
   --typo-brand:         var(--typo-brand-400, ''), var(--typo-sans), var(--typo-system), sans-serif;
-  --typo-base:          var(--typo-brand-400, ''), var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
+  --typo-base:          var(--typo-brand-body, ''), var(--typo-sans), var(--typo-system), var(--typo-emoji), sans-serif;
 
 
   --text-feature-base:  normal;
