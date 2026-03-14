@@ -136,7 +136,138 @@
       gap: #{px(var(--gap-element-30))};
     }
   }
+
+  &:is(.o-gridtable >*)  {
+    :where(.ant-table-css-var) {
+      // .css-var-root.ant-table-css-var {
+      // --ant-table-header-bg: #fafafa;
+      // --ant-table-header-color: rgba(0, 0, 0, 0.88);
+      // --ant-table-header-sort-active-bg: #f0f0f0;
+      // --ant-table-header-sort-hover-bg: #f0f0f0;
+      // --ant-table-body-sort-bg: #fafafa;
+      // --ant-table-row-hover-bg: #fafafa;
+      // --ant-table-row-selected-bg: #e6f4ff;
+      // --ant-table-row-selected-hover-bg: #bae0ff;
+      // --ant-table-row-expanded-bg: rgba(0, 0, 0, 0.02);
+      // --ant-table-cell-padding-block: 16px;
+      // --ant-table-cell-padding-inline: 16px;
+      // --ant-table-cell-padding-block-md: 12px;
+      // --ant-table-cell-padding-inline-md: 8px;
+      // --ant-table-cell-padding-block-sm: 8px;
+      // --ant-table-cell-padding-inline-sm: 8px;
+      // --ant-table-border-color: #f0f0f0;
+      // --ant-table-header-border-radius: 8px;
+      // --ant-table-footer-bg: #fafafa;
+      // --ant-table-footer-color: rgba(0, 0, 0, 0.88);
+      // --ant-table-cell-font-size: 14px;
+      // --ant-table-cell-font-size-md: 14px;
+      // --ant-table-cell-font-size-sm: 14px;
+      // --ant-table-header-split-color: #f0f0f0;
+      // --ant-table-fixed-header-sort-active-bg: #f0f0f0;
+      // --ant-table-header-filter-hover-bg: rgba(0, 0, 0, 0.06);
+      // --ant-table-filter-dropdown-menu-bg: #ffffff;
+      // --ant-table-filter-dropdown-bg: #ffffff;
+      // --ant-table-expand-icon-bg: #ffffff;
+      // --ant-table-selection-column-width: 32px;
+      // --ant-table-sticky-scroll-bar-bg: rgba(0, 0, 0, 0.25);
+      // --ant-table-sticky-scroll-bar-border-radius: 100px;
+      // --ant-table-expand-icon-margin-top: 2.5px;
+      // --ant-table-header-icon-color: rgba(0, 0, 0, 0.29250000000000004);
+      // --ant-table-header-icon-hover-color: rgba(0, 0, 0, 0.5720000000000001);
+      // --ant-table-expand-icon-half-inner: 7px;
+      // --ant-table-expand-icon-size: 17px;
+      // --ant-table-expand-icon-scale: 0.9411764705882353;
+
+      --ant-table-border-color: var(--ant-color-border-secondary);
+      // border: 1px solid Red;
+    }
+
+    &.ant-table-wrapper  {
+      :where(.ant-table)  {
+        font-size: inherit;
+        line-height: var(--lhr);
+        scrollbar-color: auto;
+      }
+    }
+  }
+
+  .ant-table  {
+    table  { text-align: center; }
+    table >* >tr >:where(:not([align]))  { text-align: inherit; }
+
+    &.ant-table-middle  {
+      --ant-table-cell-padding-block-md: 6px;
+      --ant-table-cell-padding-inline-md: 6px;
+
+      // --lh:
+      // --ht-cell-box: 100px;
+      // --ht-cell: var(--ht-cell-box);
+
+      .ant-table-thead  {
+        --ant-table-cell-padding-block-md: 4px;
+        --ant-table-cell-padding-inline-md: 4px;
+      }
+    }
+
+    .ant-table-thead  {
+      --ant-table-header-bg: var(--cl-ground-70);
+      --ant-table-header-color: var(--cl-key1-70);
+      --ant-table-border-color: var(--cl-edge-50);
+
+      position: relative;;
+
+      &:after  {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        inset: auto 0 0 0;
+        border-bottom:  var(--ant-line-width) var(--ant-line-type) var(--cl-key1-70);
+      }
+    }
+
+    .ant-table-cell:is(.ant-table-middle *)  {
+      // height: var(--ht-cell);
+      height: 45px;
+    }
+  }
+
+  .ant-table.ant-table-bordered:where(.ant-table-fixed-header) >.ant-table-container >.ant-table-body  {
+    border-width: 0 var(--ant-line-width)  var(--ant-line-width) 0;
+  }
+
+  .ant-table.ant-table-bordered:where(.ant-table-fixed-header) >.ant-table-container >.ant-table-header >table >thead >tr >th  {
+    &.ant-table-cell-scrollbar  {
+      max-width: 0;
+      width: var(--wd-scrollbar);
+      padding: 0 calc(var(--wd-scrollbar) / 2);
+    }
+  }
+
+  .ant-table-tbody .ant-table-row:where(:nth-child(odd)) {
+    background: rgba(#808080, 0.03);
+  }
+
+  .ant-table-tbody .ant-table-row.ant-table-row-selected > .ant-table-cell {
+    background: none;
+  }
+
+  .ant-table-tbody .ant-table-row.ant-table-row-selected > .ant-table-cell-row-hover {
+    background: var(--ant-table-row-hover-bg);
+  }
+
+  .ant-table-tbody .ant-table-row.row-highlight > .ant-table-cell {
+    background: var(--ant-table-row-selected-bg);
+  }
+
+  .ant-table-tbody .ant-table-row.row-highlight > .ant-table-cell-row-hover {
+    background: var(--ant-table-row-selected-hover-bg);
+  }
+
+  .ant-table-pagination.ant-pagination  {
+    --ant-margin: #{px(var(--mg-section-40))};
+  }
 }
+
 
 
 

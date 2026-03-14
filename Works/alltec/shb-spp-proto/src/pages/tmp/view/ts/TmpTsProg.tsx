@@ -12,14 +12,73 @@ import SppButton from "@/pages/spp/component/Button/SppButton";
 import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
 
-import { AutoComplete, Badge, Tabs } from "antd";
+import { AutoComplete, Badge, Tabs, type TableColumnsType, type TableProps } from "antd";
 import SppSelect from "@/pages/spp/component/Select/SppSelect";
 import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppInputText from "@/pages/spp/component/InputText/SppInputText";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
+import SppTable from "@/pages/spp/component/Table/SppTable";
+
+type TableRowSelection<T extends object = object> = TableProps<T>['rowSelection'];
+
+interface DataType {
+  key: React.Key;
+  name: string;
+  age: number;
+  address: string;
+}
+
+const columns: TableColumnsType<DataType> = [
+  { title: 'Name', dataIndex: 'name' },
+  { title: 'Age', dataIndex: 'age' },
+  { title: 'Address', dataIndex: 'address', className: 'g-start' },
+
+  { title: 'Column 8', dataIndex: 'address', key: '8' },
+  { title: 'Column 9', dataIndex: 'address', key: '9' },
+  { title: 'Column 10', dataIndex: 'address', key: '10' },
+  { title: 'Column 11', dataIndex: 'address', key: '11' },
+  { title: 'Column 12', dataIndex: 'address', key: '12' },
+  { title: 'Column 13', dataIndex: 'address', key: '13' },
+  { title: 'Column 14', dataIndex: 'address', key: '14' },
+  { title: 'Column 15', dataIndex: 'address', key: '15' },
+  { title: 'Column 16', dataIndex: 'address', key: '16' },
+  { title: 'Column 17', dataIndex: 'address', key: '17' },
+  { title: 'Column 18', dataIndex: 'address', key: '18' },
+  { title: 'Column 19', dataIndex: 'address', key: '19' },
+  { title: 'Column 20', dataIndex: 'address', key: '20' },];
+
+const dataSource = Array.from<DataType>({ length: 46 }).map<DataType>((_, i) => ({
+  key: i,
+  name: `Edward King ${i}`,
+  age: 32,
+  address: `London, Park Lane no. ${i}`,
+}));
+
 
 function TmpTsProg() {
-  return (
+  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  const start = () => {
+    setLoading(true);
+    // ajax request after empty completing
+    setTimeout(() => {
+      setSelectedRowKeys([]);
+      setLoading(false);
+    }, 1000);
+  };
+
+  const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
+    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
+    setSelectedRowKeys(newSelectedRowKeys);
+  };
+
+  const rowSelection: TableRowSelection<DataType> = {
+    selectedRowKeys,
+    onChange: onSelectChange,
+  };
+
+    return (
     <>
               <div className="nodes" data-node-no="0">
                 <div className="div-header">
@@ -425,89 +484,7 @@ function TmpTsProg() {
                         </div>
 
                         <div className="main _primary">
-                          <div className="o-grid-table p-datatable">
-                            <div className="container p-datatable-wrapper">
-                              <table className="p-datatable-table p-datatable-scrollable-table">
-                                <colgroup>
-                                  <col className="wdth-10" />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                  <col />
-                                </colgroup>
-
-                                <thead className="p-datatable-thead">
-                                  <tr>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">순번</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약명</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">업체명</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">사업자등록번호</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약상태</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">계약기간</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">지폐수수료</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">주화수수료</span></div></th>
-                                    <th rowSpan={2} colSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">결재상태</span></div></th>
-                                    <th colSpan={3} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록정보</span></div></th>
-                                    <th colSpan={4} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">해지정보</span></div></th>
-                                    <th rowSpan={2} className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">비고</span></div></th>
-                                  </tr>
-                                  <tr>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">등록일자</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원번호</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">직원명</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">해지일자</span></div></th>
-                                    <th className="p-align-center"><div className="p-column-header-content"><span className="p-column-title">해지사유</span></div></th>
-                                  </tr>
-                                </thead>
-
-                                <tbody className="p-datatable-tbody">
-                                  <tr className="p-datatable-emptymessage">
-                                    <td colSpan={18}><div className="gridtable-empty">등록된 데이터가 없습니다.</div></td>
-                                  </tr>
-                                </tbody>
-
-                                <tbody className="p-datatable-tbody">
-                                  {[...Array(24)].map((e, idx) => (
-                                    <tr key={idx} className={`${idx === 0 ? 'p-highlight' : ''}`}>{/* 그리드 최초 진입시 첫번째 행 tr.p-highlight <$tr.trigger('click')> { @DEV } */}
-                                      <td>{idx + 1}</td>
-                                      <td className="g-start">(수도권)물류운송대행계약서</td>
-                                      <td className="g-start">(주)앤비앤코퍼레이션</td>
-                                      <td>999-99-99999</td>
-                                      <td>정상</td>
-                                      <td><span className="o-digit type-date">2025-12-25 ~ 2025-12-25</span></td>
-                                      <td className="g-end">1,000,000,000</td>
-                                      <td className="g-end">1,000,000,000</td>
-                                      <td>정상</td>
-                                      <td>결재반려</td>
-                                      <td>10000</td>
-                                      <td>홍길동</td>
-                                      <td><span className="o-digit type-date">2025-12-25</span></td>
-                                      <td>10000</td>
-                                      <td>홍길동</td>
-                                      <td><span className="o-digit type-date">2025-12-25</span></td>
-                                      <td className="g-start"></td>
-                                      <td className="g-start"></td>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
+                          <SppTable<DataType> rowSelection={rowSelection} columns={columns} dataSource={dataSource} paginationFlag scroll={{ x: 'max-content' }} />
                         </div>
                       </div>
 

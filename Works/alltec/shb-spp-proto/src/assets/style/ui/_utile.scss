@@ -14,3 +14,25 @@
 }
 
 
+.o-gridtable  {
+  display: flex;
+  flex-direction: column;
+
+  &:where(.m-section >.main._primary >*)  {
+    flex: 1 0 0;
+
+    :has(.ant-table-body)  {
+      flex: 1 0 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ant-table-body  {
+      flex: 1 0 0;
+    }
+  }
+
+  .table-footer:where(* +*)  {
+    margin-top: #{px(var(--mg-section-40))};
+  }
+}

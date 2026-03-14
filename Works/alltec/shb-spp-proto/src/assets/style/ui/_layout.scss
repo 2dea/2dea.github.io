@@ -26,7 +26,7 @@
 /** Box Models
  ------------- */
 
-@layer LAY-base {
+// @layer LAY-base {
   @layer local-univ {
 
     :where(body :not(tr:is([border] >* >*, [cellpadding] >* >*) >*))  {
@@ -82,7 +82,6 @@
       // max-width: var(--wdx);
       margin: var(--mgbs) var(--mgie) var(--mgbe) var(--mgis);
       padding: var(--pdbs) var(--pdie) var(--pdbe) var(--pdis);
-      // padding: calc(var(--pdbs) - var(--bwbs, 0px)) calc(var(--pdie) - var(--bwie, 0px)) calc(var(--pdbe) - var(--bwbe, 0px)) calc(var(--pdis) - var(--bwis, 0px));
       border: 0 solid;
       border-width: var(--bwbs) var(--bwie) var(--bwbe) var(--bwis);
       border-color: var(--cl-edge-50, currentColor);
@@ -91,7 +90,7 @@
     // :before,  :after  { background-color: inherit; border-radius: inherit; }
 
   }
-}
+// }
 
 html  {
   --typo-serif-app:     '';
@@ -205,10 +204,10 @@ body :where(:not(:has([class|="role"]), [class|="role"], :has(.div-center), .div
 [class^="ant-table"],
   .table-wrapper:where(.o-gridtable)  {
     @include inc-scrollbar-width(2, 6);
+    --cl-scrollbar-track: rgba(240,240,240, 0.52);
   }
 
-
-*  { scroll-behavior: inherit; scrollbar-width: inherit; }
+*  { scroll-behavior: inherit; }
 html  { overflow: auto; scroll-behavior: smooth; /* scrollbar-gutter: stable both-edges; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--cl-scrollbar-thumb) var(--cl-scrollbar-track); overscroll-behavior: auto none; */ }
 html  { scroll-behavior: auto; }
 
@@ -379,6 +378,9 @@ body  {
 
 .role-localnav  {
   @include font(60, 700);
+
+  --herit-wd-scrollbar: var(--wd-scrollbar);
+
   flex: 1 0 0;
   position: relative;
   overflow: auto;
@@ -386,14 +388,17 @@ body  {
   color: var(--cl-text-00);
   background: var(--cl-theme-key1);
 
+  >*  {
+    min-width: calc(px(var(--wd-dom-nav)) - $e10 - var(--herit-wd-scrollbar));
+  }
+
   .link  {
-    --lh: 1lh;
+    // --lh: 1lh;
     --box: var(--lh, 1lh);
 
     --bwbe: #{$e10};
 
     --pdi: #{px(10)};
-    --pdb: 0.5lh;
     --pdb: calc(var(--box) / 2);
 
     display: flex;
@@ -436,13 +441,12 @@ body  {
   }
 
   .link  {
-    --lh: 1lh;
+    // --lh: 1lh;
     --box: var(--lh, 1lh);
 
     --bwbe: #{$e10};
 
     --pdi: #{px(10)};
-    --pdb: 0.5lh;
     --pdb: calc(var(--box) / 2);
 
     display: flex;
@@ -535,8 +539,14 @@ body  {
 
   &:where(:has(>.nodes))  {
     flex-direction: row;
+  }
 
-    >*  { min-width: 0; }
+  >:where(.nodes) {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    // min-height: 100%;
   }
 
   :where(:has(.div-center))  {
@@ -600,34 +610,34 @@ body  {
       }
     }
   }
-
-  .div-center  {
-    --pdi: #{px(var(--mgi-dom))};
-    --pdb: #{px(var(--mgb-dom))};
-    --pdie: calc(var(--pdi) - var(--wd-scrollbar));
-    --pdbe: var(--pdb);
-
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    overflow: auto scroll;
-    overscroll-behavior: contain;
-    // scroll-padding-block-end: var(--pdbe);
-
-    // :where(:has(.m-grid))  { flex: 1 0 0; display: flex; flex-direction: column; }
-
-    // .m-grid  {
-    //   flex: 1 0 0;
-    // }
-
-    :where(:has(.m-section >.main._primary))  { flex: 1 0 0; display: flex; flex-direction: column; }
-
-    .m-section:where(:has(>.main._primary))  {
-      flex: 1 0 0;
-    }
-  }
 }
 
+
+.div-center  {
+  --pdi: #{px(var(--mgi-dom))};
+  --pdb: #{px(var(--mgb-dom))};
+  --pdie: calc(var(--pdi) - var(--wd-scrollbar));
+  --pdbe: var(--pdb);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto scroll;
+  overscroll-behavior: contain;
+  // scroll-padding-block-end: var(--pdbe);
+
+  // :where(:has(.m-grid))  { flex: 1 0 0; display: flex; flex-direction: column; }
+
+  // .m-grid  {
+  //   flex: 1 0 0;
+  // }
+
+  :where(:has(.m-section >.main._primary))  { flex: 1 0 0; display: flex; flex-direction: column; }
+
+  .m-section:where(:has(>.main._primary))  {
+    flex: 1 0 0;
+  }
+}
 
 
 .m-grid  {
@@ -640,10 +650,14 @@ body  {
   >.column  {
     --pdi: calc(var(--gap-grid) / 2);
 
-    flex: 1;
+    flex: calc(6 / 12 * 10);
     display: flex;
     flex-direction: column;
     min-width: 0;
+
+    &:where(* +*)  {
+      flex: calc(6 / 12 * 10);
+    }
   }
 }
 
@@ -656,7 +670,12 @@ body  {
   >.main  { margin-bottom: 0; }
   >.main ~*  { margin-top: $gap-element-50; margin-bottom: 0; }
 
-  >.main._primary  { flex: 1 0 0; }
+  >.main  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  >.main:where(._primary)  { flex: 1 0 0; }
 }
 
 

@@ -152,7 +152,7 @@
   }
 }
 
-@layer LAY-base {
+/* @layer LAY-base { */
   @layer global-univ {
 
     /** Type Selector */
@@ -194,8 +194,8 @@
     h1,  h2,  h3,  h4,  h5,  h6,
       p,  hr,  pre,  blockquote,  ul,  ol,  dl,  dd,  figure,
       form,  fieldset,  input,  button,  select,  textarea  { margin: 0; }
-    label,  [type="submit"],  [type="reset"],  [type="button"],  button,  summary,
-      [role="button"],  [role="tab"]  { cursor: pointer; }
+    label,  :where([type="submit"],  [type="reset"],  [type="button"]),  button,  summary,
+      :where([role="button"],  [role="tab"])  { cursor: pointer; }
 
     hr  { clear: both; -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit; height: 0; overflow: visible; border-style: none; }
     pre  { overflow: auto; -webkit-overflow-scrolling: touch; padding: 0; -o-tab-size: 4; -moz-tab-size: 4; tab-size: 4; word-break: normal; word-wrap: normal; overflow-wrap: normal; }
@@ -203,39 +203,35 @@
     a  { font-size: inherit; background-color: Transparent; color: inherit; text-decoration: none; }
     small  { font-size: inherit; }
     q:before,  q:after  { content: ""; content: none; }
-    abbr[title]  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
+    abbr:where([title])  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
     b  { font-weight: bolder; font-weight: var(--bold-700, 650); }
     mark  { background-color: Transparent; color: inherit; }
     br  { letter-spacing: 0 !important; }
     ins,  del  { text-decoration: none; }
     img,  object  { image-rendering: -o-crisp-edges; image-rendering: -moz-crisp-edges; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; vertical-align: -0.125em; vertical-align: inherit; transform: translateZ(0); backface-visibility: hidden; border-style: none; }
     iframe  { vertical-align: top; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; border-style: none; }
-    audio:not([controls])  { display: none; height: 0; }
-    svg:not(:root)  { overflow: hidden; }
+    audio:where(:not([controls]))  { display: none; height: 0; }
+    svg:where(:not(:root))  { overflow: hidden; }
     table  { table-layout: auto; empty-cells: show; border-collapse: separate; border-style: hidden; }
     caption,  thead,  tbody,  tfoot  { vertical-align: middle; background-color: inherit; }
-    caption,  tr >:not([align])  { text-align: inherit; }
-    tr,  tr >:not([valign])  { vertical-align: inherit; }
-    tr:not([bgcolor]),  tr >:not([bgcolor])  { background-color: inherit; }
+    caption,  tr >:where(:not([align]))  { text-align: inherit; }
+    tr,  tr >:where(:not([valign]))  { vertical-align: inherit; }
+    tr:where(:not([bgcolor])),  tr >:where(:not([bgcolor]))  { background-color: inherit; }
     /* tr >:not([border] >* >* >*)  { border: 1px solid; } */
     fieldset  { min-width: 0; padding: 0; border-style: none; }
     legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
     label  { display: inline-block; }
-    [type="range"],  [type="color"],  [type="checkbox"],  [type="radio"]  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
-    [type="submit"],  [type="reset"],  [type="button"],  button  { -webkit-appearance: button; min-width: 1em; overflow: visible; padding: 0; text-transform: none; }
+    :where([type="range"],  [type="color"],  [type="checkbox"],  [type="radio"])  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
+    :where([type="submit"],  [type="reset"],  [type="button"]),  button  { -webkit-appearance: button; min-width: 1em; overflow: visible; padding: 0; text-transform: none; }
     select  { text-transform: none; }
-    select[multiple]  { padding-right: 0 !important; }
-    option:not([hidden])  { display: block !important; color: inherit; white-space: nowrap; }
+    select:where([multiple])  { padding-right: 0 !important; }
+    option:where(:not([hidden]))  { display: block !important; color: inherit; white-space: nowrap; }
     textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: keep-all; word-wrap: inherit; overflow-wrap: inherit; }
     summary  { display: list-item; }
     dialog  { padding: 0; border-style: none; }
     template  { display: none; }
 
-    [contenteditable=""],
-      [contenteditable="true"],
-      [readonly]  {
-        cursor: text;
-    }
+    :where([contenteditable=""],  [contenteditable="true"],  [readonly])  { cursor: text; }
     [aria-disabled="true"],
       [disabled]:where(:not(form, fieldset))  {
         color: GrayText;
@@ -250,4 +246,4 @@
     [hidden]  { display: none !important; }
 
   }
-}
+/* } */
