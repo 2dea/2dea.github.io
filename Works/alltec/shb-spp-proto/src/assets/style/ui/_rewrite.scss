@@ -223,6 +223,10 @@
         inset: auto 0 0 0;
         border-bottom:  var(--ant-line-width) var(--ant-line-type) var(--cl-key1-70);
       }
+
+      .ant-table-cell  {
+        text-align: center !important;
+      }
     }
 
     .ant-table-cell:is(.ant-table-middle *)  {

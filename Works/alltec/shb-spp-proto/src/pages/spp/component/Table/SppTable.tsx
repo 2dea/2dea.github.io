@@ -12,6 +12,7 @@ type ScrollBehaviorType = 'auto' | 'instant' | 'smooth';
 interface SppTableProps<T extends object = any> extends Omit<TableProps<T>, 'pagination'> {
   pagination?: false | TablePaginationConfig;
   heightSectionTest?: string | number;
+  heightSectionFixed?: boolean;
   heightSectionBasis?: string | number;
   rowNoFlag?: boolean;
   rowNoDescFlag?: boolean;
@@ -64,7 +65,7 @@ function hasColumnKey(columns: any[] | undefined, key: string) {
     .includes(key as any);
 }
 
-const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, heightSectionBasis, ...props }: SppTableProps<T>, ref: any) => {
+const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, heightSectionFixed=true, heightSectionBasis, ...props }: SppTableProps<T>, ref: any) => {
   const wrapRef = useRef<HTMLDivElement | null>(null);
   const tableRef = useRef<any>(null);
   const prevDataSourceRef = useRef<any>(null);
@@ -430,9 +431,11 @@ const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, height
           section: {
             ...(props.styles as any)?.section,
             // outline: (props.styles as any)?.section?.outline ?? '1px solid red',
+            '--ht-gridtable':
+              (heightSectionFixed && (heightSectionBasis === 'auto' ? 'auto' : typeof heightSectionBasis === 'number' ? heightSectionBasis + 12 + 'px' : 45 * 4 + 12 + 'px')),
             minHeight:
               (props.styles as any)?.section?.minHeight ??
-              (heightSectionBasis && typeof heightSectionBasis === 'number' && heightSectionBasis + 12) ??
+              (heightSectionBasis && typeof heightSectionBasis === 'number' ? heightSectionBasis + 12 : heightSectionBasis) ??
               45 * 4 + 12,
           },
         }}
