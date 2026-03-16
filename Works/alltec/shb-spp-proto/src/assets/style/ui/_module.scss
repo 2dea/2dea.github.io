@@ -24,6 +24,33 @@
 // .o-sym.size-50  { font-size: $ht-icon-50; }
 // .o-sym.size-30  { font-size: $ht-icon-30; }
 
+.o-sym:where(.type-icon)  {
+  // @include symbol-common();
+  @include icon-flexed();
+  @include icon-filled();
+  @include icon-fixed();
+
+  @include inc-symbol();
+
+  --fs: #{px(16)};
+  // width: 1em;
+  // height: 1em;
+
+  &:where(.d-button.type-symbol *)  { --fs: #{px(20)}; }
+
+  &:before  {
+    content: "";
+    width: 1em;
+    height: 1em;
+  }
+
+  /* Icon Fixed */
+  &._excel-download:before  { background-color: $tp; background-image: var(--obj-ico-excel-download); background-size: 100%; }
+  &._excel-download-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-download-label); background-size: 100%; }
+  &._excel-upload:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload); background-size: 100%; }
+  &._excel-upload-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload-label); background-size: 100%; }
+}
+
 
 /** Require Tags */
 .o-reqtag  { order: -1; position: relative; color: var(--cl-required); white-space: nowrap; }
@@ -444,12 +471,6 @@
 //   @include icon-filled();
 //   @include icon-fixed();
 // }
-.o-sym:where(.type-icon)  {
-  // @include symbol-common();
-  @include icon-flexed();
-  @include icon-filled();
-  @include icon-fixed();
-}
 .o-icon:where(.o-image-button.size-50):before,
 .o-icon:where(.m-header .m-binds .o-image-button):before,
 .o-icon:where(.m-file-list .card >.binds .o-image-button):before,
@@ -464,108 +485,108 @@
 }
 
 
-/* Icon Flexed */
-.o-icon._alert-circle:before,
-  .o-icon._consult-alert:before  { background-color: $tp; background-image: var(--obj-ico-alert-circle); }
-.o-icon._arrow-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-down); }
-.o-icon._arrow-left:before  { background-color: $tp; background-image: var(--obj-ico-arrow-left); }
-.o-icon._arrow-right:before  { background-color: $tp; background-image: var(--obj-ico-arrow-right); }
-.o-icon._arrow-up:before  { background-color: $tp; background-image: var(--obj-ico-arrow-up); }
-.o-icon._attach-add:before  { background-color: $tp; background-image: var(--obj-ico-attach-add); }
-.o-icon._attach:before  { background-color: $tp; background-image: var(--obj-ico-attach); }
-.o-icon._calendar:before  { background-color: $tp; background-image: var(--obj-ico-calendar); }
-.o-icon._close:before  { background-color: $tp; background-image: var(--obj-ico-close); }
-.o-icon._consult:before  { background-color: $tp; background-image: var(--obj-ico-consult); }
-.o-icon._delete:before  { background-color: $tp; background-image: var(--obj-ico-delete); }
-.o-icon._download:before  { background-color: $tp; background-image: var(--obj-ico-download); }
-.o-icon._du-down:before  { background-color: $tp; background-image: var(--obj-ico-du-down); }
-.o-icon._du-left:before  { background-color: $tp; background-image: var(--obj-ico-du-left); }
-.o-icon._du-right:before  { background-color: $tp; background-image: var(--obj-ico-du-right); }
-.o-icon._du-up:before  { background-color: $tp; background-image: var(--obj-ico-du-up); }
-.o-icon._du2-down:before  { background-color: $tp; background-image: var(--obj-ico-du2-down); }
-.o-icon._du2-left:before  { background-color: $tp; background-image: var(--obj-ico-du2-left); }
-.o-icon._du2-right:before  { background-color: $tp; background-image: var(--obj-ico-du2-right); }
-.o-icon._du2-up:before  { background-color: $tp; background-image: var(--obj-ico-du2-up); }
-.o-icon._edit:before  { background-color: $tp; background-image: var(--obj-ico-edit); }
-.o-icon._file:before  { background-color: $tp; background-image: var(--obj-ico-file); }
-.o-icon._filter-alt:before,
-  .o-icon._column-toggle:before  { background-color: $tp; background-image: var(--obj-ico-filter-alt); }
-.o-icon._globe-portal:before  { background-color: $tp; background-image: var(--obj-ico-globe-portal); }
-.o-icon._help:before,
-  .o-icon._tooltip-help:before  { background-color: $tp; background-image: var(--obj-ico-help); }
-.o-icon._home:before  { background-color: $tp; background-image: var(--obj-ico-home); }
-.o-icon._image-upload:before  { background-color: $tp; background-image: var(--obj-ico-image-upload); }
-.o-icon._image:before  { background-color: $tp; background-image: var(--obj-ico-image); }
-.o-icon._link:before  { background-color: $tp; background-image: var(--obj-ico-link); }
-.o-icon._lock:before  { background-color: $tp; background-image: var(--obj-ico-lock); }
-.o-icon._maximize:before  { background-color: $tp; background-image: var(--obj-ico-maximize); }
-.o-icon._mdi-close:before  { background-color: $tp; background-image: var(--obj-ico-mdi-close); }
-.o-icon._menu-alt:before  { background-color: $tp; background-image: var(--obj-ico-menu-alt); }
-.o-icon._menu-toggle:before  { background-color: $tp; background-image: var(--obj-ico-menu-toggle); }
-.o-icon._menu:before  { background-color: $tp; background-image: var(--obj-ico-menu); }
-.o-icon._page-down:before  { background-color: $tp; background-image: var(--obj-ico-page-down); }
-.o-icon._page-up:before  { background-color: $tp; background-image: var(--obj-ico-page-up); }
-.o-icon._print:before  { background-color: $tp; background-image: var(--obj-ico-print); }
-.o-icon._refresh:before  { background-color: $tp; background-image: var(--obj-ico-refresh); }
-.o-icon._search:before  { background-color: $tp; background-image: var(--obj-ico-search); }
-.o-icon._settings:before  { background-color: $tp; background-image: var(--obj-ico-settings); }
-// .o-icon._sort:before  { background-color: $tp; background-image: var(--obj-ico-sort); }
-.o-icon._sum-minus:before  { background-color: $tp; background-image: var(--obj-ico-sum-minus); }
-.o-icon._sum-plus:before  { background-color: $tp; background-image: var(--obj-ico-sum-plus); }
-.o-icon._task-multi:before  { background-color: $tp; background-image: var(--obj-ico-task-multi); }
-.o-icon._task-single:before  { background-color: $tp; background-image: var(--obj-ico-task-single); }
-.o-icon._tel:before,
-  .o-icon._contacts:before  { background-color: $tp; background-image: var(--obj-ico-tel); }
-.o-icon._upload:before  { background-color: $tp; background-image: var(--obj-ico-upload); }
-.o-icon._watching:before  { background-color: $tp; background-image: var(--obj-ico-watching); }
+// /* Icon Flexed */
+// .o-icon._alert-circle:before,
+//   .o-icon._consult-alert:before  { background-color: $tp; background-image: var(--obj-ico-alert-circle); }
+// .o-icon._arrow-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-down); }
+// .o-icon._arrow-left:before  { background-color: $tp; background-image: var(--obj-ico-arrow-left); }
+// .o-icon._arrow-right:before  { background-color: $tp; background-image: var(--obj-ico-arrow-right); }
+// .o-icon._arrow-up:before  { background-color: $tp; background-image: var(--obj-ico-arrow-up); }
+// .o-icon._attach-add:before  { background-color: $tp; background-image: var(--obj-ico-attach-add); }
+// .o-icon._attach:before  { background-color: $tp; background-image: var(--obj-ico-attach); }
+// .o-icon._calendar:before  { background-color: $tp; background-image: var(--obj-ico-calendar); }
+// .o-icon._close:before  { background-color: $tp; background-image: var(--obj-ico-close); }
+// .o-icon._consult:before  { background-color: $tp; background-image: var(--obj-ico-consult); }
+// .o-icon._delete:before  { background-color: $tp; background-image: var(--obj-ico-delete); }
+// .o-icon._download:before  { background-color: $tp; background-image: var(--obj-ico-download); }
+// .o-icon._du-down:before  { background-color: $tp; background-image: var(--obj-ico-du-down); }
+// .o-icon._du-left:before  { background-color: $tp; background-image: var(--obj-ico-du-left); }
+// .o-icon._du-right:before  { background-color: $tp; background-image: var(--obj-ico-du-right); }
+// .o-icon._du-up:before  { background-color: $tp; background-image: var(--obj-ico-du-up); }
+// .o-icon._du2-down:before  { background-color: $tp; background-image: var(--obj-ico-du2-down); }
+// .o-icon._du2-left:before  { background-color: $tp; background-image: var(--obj-ico-du2-left); }
+// .o-icon._du2-right:before  { background-color: $tp; background-image: var(--obj-ico-du2-right); }
+// .o-icon._du2-up:before  { background-color: $tp; background-image: var(--obj-ico-du2-up); }
+// .o-icon._edit:before  { background-color: $tp; background-image: var(--obj-ico-edit); }
+// .o-icon._file:before  { background-color: $tp; background-image: var(--obj-ico-file); }
+// .o-icon._filter-alt:before,
+//   .o-icon._column-toggle:before  { background-color: $tp; background-image: var(--obj-ico-filter-alt); }
+// .o-icon._globe-portal:before  { background-color: $tp; background-image: var(--obj-ico-globe-portal); }
+// .o-icon._help:before,
+//   .o-icon._tooltip-help:before  { background-color: $tp; background-image: var(--obj-ico-help); }
+// .o-icon._home:before  { background-color: $tp; background-image: var(--obj-ico-home); }
+// .o-icon._image-upload:before  { background-color: $tp; background-image: var(--obj-ico-image-upload); }
+// .o-icon._image:before  { background-color: $tp; background-image: var(--obj-ico-image); }
+// .o-icon._link:before  { background-color: $tp; background-image: var(--obj-ico-link); }
+// .o-icon._lock:before  { background-color: $tp; background-image: var(--obj-ico-lock); }
+// .o-icon._maximize:before  { background-color: $tp; background-image: var(--obj-ico-maximize); }
+// .o-icon._mdi-close:before  { background-color: $tp; background-image: var(--obj-ico-mdi-close); }
+// .o-icon._menu-alt:before  { background-color: $tp; background-image: var(--obj-ico-menu-alt); }
+// .o-icon._menu-toggle:before  { background-color: $tp; background-image: var(--obj-ico-menu-toggle); }
+// .o-icon._menu:before  { background-color: $tp; background-image: var(--obj-ico-menu); }
+// .o-icon._page-down:before  { background-color: $tp; background-image: var(--obj-ico-page-down); }
+// .o-icon._page-up:before  { background-color: $tp; background-image: var(--obj-ico-page-up); }
+// .o-icon._print:before  { background-color: $tp; background-image: var(--obj-ico-print); }
+// .o-icon._refresh:before  { background-color: $tp; background-image: var(--obj-ico-refresh); }
+// .o-icon._search:before  { background-color: $tp; background-image: var(--obj-ico-search); }
+// .o-icon._settings:before  { background-color: $tp; background-image: var(--obj-ico-settings); }
+// // .o-icon._sort:before  { background-color: $tp; background-image: var(--obj-ico-sort); }
+// .o-icon._sum-minus:before  { background-color: $tp; background-image: var(--obj-ico-sum-minus); }
+// .o-icon._sum-plus:before  { background-color: $tp; background-image: var(--obj-ico-sum-plus); }
+// .o-icon._task-multi:before  { background-color: $tp; background-image: var(--obj-ico-task-multi); }
+// .o-icon._task-single:before  { background-color: $tp; background-image: var(--obj-ico-task-single); }
+// .o-icon._tel:before,
+//   .o-icon._contacts:before  { background-color: $tp; background-image: var(--obj-ico-tel); }
+// .o-icon._upload:before  { background-color: $tp; background-image: var(--obj-ico-upload); }
+// .o-icon._watching:before  { background-color: $tp; background-image: var(--obj-ico-watching); }
 
-/* Icon Filled */
-.o-icon._arrow-drop-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-down); }
-.o-icon._arrow-drop-right:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-right); }
-.o-icon._arrow-drop-up:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-up); }
-.o-icon._branch:before  { background-color: $tp; background-image: var(--obj-ico-branch); }
-.o-icon._move:before,
-  .o-icon._sort:before  { background-color: $tp; background-image: var(--obj-ico-move); }
-.o-icon._repair:before  { background-color: $tp; background-image: var(--obj-ico-repair); }
-.o-icon._star:before,
-  .o-icon._favorite:before  { background-color: $tp; background-image: var(--obj-ico-star); }
-.o-icon._vehicle:before  { background-color: $tp; background-image: var(--obj-ico-vehicle); }
+// /* Icon Filled */
+// .o-icon._arrow-drop-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-down); }
+// .o-icon._arrow-drop-right:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-right); }
+// .o-icon._arrow-drop-up:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop-up); }
+// .o-icon._branch:before  { background-color: $tp; background-image: var(--obj-ico-branch); }
+// .o-icon._move:before,
+//   .o-icon._sort:before  { background-color: $tp; background-image: var(--obj-ico-move); }
+// .o-icon._repair:before  { background-color: $tp; background-image: var(--obj-ico-repair); }
+// .o-icon._star:before,
+//   .o-icon._favorite:before  { background-color: $tp; background-image: var(--obj-ico-star); }
+// .o-icon._vehicle:before  { background-color: $tp; background-image: var(--obj-ico-vehicle); }
 
-/* Icon Fixed */
-.o-icon._alert-octagram:before  { background-color: $tp; background-image: var(--obj-ico-alert-octagram); background-size: 100%; }
-.o-icon._breadcrumb-home:before  { background-color: $tp; background-image: var(--obj-ico-breadcrumb-home); background-size: 100%; }
-.o-icon._arrow-drop2-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop2-down); background-size: 300%; }
-.o-icon._excel-download:before  { background-color: $tp; background-image: var(--obj-ico-excel-download); background-size: 100%; }
-.o-icon._excel-download-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-download-label); background-size: 100%; }
-.o-icon._excel-upload:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload); background-size: 100%; }
-.o-icon._excel-upload-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload-label); background-size: 100%; }
-.o-icon._folder-open:before  { background-color: $tp; background-image: var(--obj-ico-folder-open); background-size: 100%; }
-.o-icon._folder:before  { background-color: $tp; background-image: var(--obj-ico-folder); background-size: 100%; }
-.o-icon._grid-added:before  { background-color: $tp; background-image: var(--obj-ico-grid-added); background-size: 100%; }
-.o-icon._grid-edited:before  { background-color: $tp; background-image: var(--obj-ico-grid-edited); background-size: 100%; }
-.o-icon._home-aside-contacts:before  { background-color: $tp; background-image: var(--obj-ico-home-aside-contacts); background-size: 100%; }
-.o-icon._home-aside-qna:before  { background-color: $tp; background-image: var(--obj-ico-home-aside-qna); background-size: 100%; }
-.o-icon._home-set-branch:before  { background-color: $tp; background-image: var(--obj-ico-home-set-branch); background-size: 100%; }
-.o-icon._home-set-notification:before  { background-color: $tp; background-image: var(--obj-ico-home-set-notification); background-size: 100%; }
-.o-icon._home-set-theme:before  { background-color: $tp; background-image: var(--obj-ico-home-set-theme); background-size: 100%; }
-.o-icon._mdi-lock-locked:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); background-position: 25%; background-size: 500%; }
-.o-icon._mdi-lock:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); background-size: 500%; }
-.o-icon._memo-empty:before  { background-color: $tp; background-image: var(--obj-ico-memo); background-size: 300%; }
-.o-icon._memo:before  { background-color: $tp; background-image: var(--obj-ico-memo); background-position: 50%; background-size: 300%; }
-.o-icon._new:before  { background-color: $tp; background-image: var(--obj-ico-new); background-size: 100%; }
-.o-icon._popup-close:before  { background-color: $tp; background-image: var(--obj-ico-popup-close); background-size: 100%; }
-.o-icon._rank-down:before  { background-color: $tp; background-image: var(--obj-ico-rank-down); background-size: 100%; }
-.o-icon._rank-hold:before  { background-color: $tp; background-image: var(--obj-ico-rank-hold); background-size: 100%; }
-.o-icon._rank-up:before  { background-color: $tp; background-image: var(--obj-ico-rank-up); background-size: 100%; }
-.o-icon._remove:before  { background-color: $tp; background-image: var(--obj-ico-remove); background-size: 100%; }
-.o-icon._shield-secure:before  { background-color: $tp; background-image: var(--obj-ico-shield-secure); background-size: 100%; }
-.o-icon._sort-asc:before  { background-color: $tp; background-image: var(--obj-ico-sort-asc); background-size: 100%; }
-.o-icon._sort-dec:before  { background-color: $tp; background-image: var(--obj-ico-sort-dec); background-size: 100%; }
-.o-icon._status-range-20:before  { background-color: $tp; background-image: var(--obj-ico-status-range-20); background-size: 100%; }
-.o-icon._status-range-50:before  { background-color: $tp; background-image: var(--obj-ico-status-range-50); background-size: 100%; }
-.o-icon._status-range-80:before  { background-color: $tp; background-image: var(--obj-ico-status-range-80); background-size: 100%; }
-.o-icon._user-id:before  { background-color: $tp; background-image: var(--obj-ico-user-id); background-size: 100%; }
-.o-icon._user-pw:before  { background-color: $tp; background-image: var(--obj-ico-user-pw); background-size: 100%; }
+// /* Icon Fixed */
+// .o-icon._alert-octagram:before  { background-color: $tp; background-image: var(--obj-ico-alert-octagram); background-size: 100%; }
+// .o-icon._breadcrumb-home:before  { background-color: $tp; background-image: var(--obj-ico-breadcrumb-home); background-size: 100%; }
+// .o-icon._arrow-drop2-down:before  { background-color: $tp; background-image: var(--obj-ico-arrow-drop2-down); background-size: 300%; }
+// .o-icon._excel-download:before  { background-color: $tp; background-image: var(--obj-ico-excel-download); background-size: 100%; }
+// .o-icon._excel-download-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-download-label); background-size: 100%; }
+// .o-icon._excel-upload:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload); background-size: 100%; }
+// .o-icon._excel-upload-label:before  { background-color: $tp; background-image: var(--obj-ico-excel-upload-label); background-size: 100%; }
+// .o-icon._folder-open:before  { background-color: $tp; background-image: var(--obj-ico-folder-open); background-size: 100%; }
+// .o-icon._folder:before  { background-color: $tp; background-image: var(--obj-ico-folder); background-size: 100%; }
+// .o-icon._grid-added:before  { background-color: $tp; background-image: var(--obj-ico-grid-added); background-size: 100%; }
+// .o-icon._grid-edited:before  { background-color: $tp; background-image: var(--obj-ico-grid-edited); background-size: 100%; }
+// .o-icon._home-aside-contacts:before  { background-color: $tp; background-image: var(--obj-ico-home-aside-contacts); background-size: 100%; }
+// .o-icon._home-aside-qna:before  { background-color: $tp; background-image: var(--obj-ico-home-aside-qna); background-size: 100%; }
+// .o-icon._home-set-branch:before  { background-color: $tp; background-image: var(--obj-ico-home-set-branch); background-size: 100%; }
+// .o-icon._home-set-notification:before  { background-color: $tp; background-image: var(--obj-ico-home-set-notification); background-size: 100%; }
+// .o-icon._home-set-theme:before  { background-color: $tp; background-image: var(--obj-ico-home-set-theme); background-size: 100%; }
+// .o-icon._mdi-lock-locked:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); background-position: 25%; background-size: 500%; }
+// .o-icon._mdi-lock:before  { background-color: $tp; background-image: var(--obj-ico-mdi-lock); background-size: 500%; }
+// .o-icon._memo-empty:before  { background-color: $tp; background-image: var(--obj-ico-memo); background-size: 300%; }
+// .o-icon._memo:before  { background-color: $tp; background-image: var(--obj-ico-memo); background-position: 50%; background-size: 300%; }
+// .o-icon._new:before  { background-color: $tp; background-image: var(--obj-ico-new); background-size: 100%; }
+// .o-icon._popup-close:before  { background-color: $tp; background-image: var(--obj-ico-popup-close); background-size: 100%; }
+// .o-icon._rank-down:before  { background-color: $tp; background-image: var(--obj-ico-rank-down); background-size: 100%; }
+// .o-icon._rank-hold:before  { background-color: $tp; background-image: var(--obj-ico-rank-hold); background-size: 100%; }
+// .o-icon._rank-up:before  { background-color: $tp; background-image: var(--obj-ico-rank-up); background-size: 100%; }
+// .o-icon._remove:before  { background-color: $tp; background-image: var(--obj-ico-remove); background-size: 100%; }
+// .o-icon._shield-secure:before  { background-color: $tp; background-image: var(--obj-ico-shield-secure); background-size: 100%; }
+// .o-icon._sort-asc:before  { background-color: $tp; background-image: var(--obj-ico-sort-asc); background-size: 100%; }
+// .o-icon._sort-dec:before  { background-color: $tp; background-image: var(--obj-ico-sort-dec); background-size: 100%; }
+// .o-icon._status-range-20:before  { background-color: $tp; background-image: var(--obj-ico-status-range-20); background-size: 100%; }
+// .o-icon._status-range-50:before  { background-color: $tp; background-image: var(--obj-ico-status-range-50); background-size: 100%; }
+// .o-icon._status-range-80:before  { background-color: $tp; background-image: var(--obj-ico-status-range-80); background-size: 100%; }
+// .o-icon._user-id:before  { background-color: $tp; background-image: var(--obj-ico-user-id); background-size: 100%; }
+// .o-icon._user-pw:before  { background-color: $tp; background-image: var(--obj-ico-user-pw); background-size: 100%; }
 
 
 
@@ -682,7 +703,7 @@
 
 
 /** Headings */
-.o-heading  { @include symbol-bullet(); font-weight: $bold-700; font-size: $font-60; line-height: $line-60; display: block; display: flex; align-items: center; position: relative; color: var(--cl-text-70); }
+.o-heading  { @include symbol-bullet(); @include font(60, 700); display: block; display: flex; align-items: center; position: relative; color: var(--cl-text-70); }
 .o-heading:before  { position: absolute; text-align: center; }
 .o-heading >.label  { overflow: hidden; text-overflow: ellipsis; }
 .o-heading .label +.o-check  { line-height: $ht-ctrl-50; margin-left: $gap-element-30; }

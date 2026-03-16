@@ -18,6 +18,7 @@ import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppInputText from "@/pages/spp/component/InputText/SppInputText";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 import SppTable from "@/pages/spp/component/Table/SppTable";
+import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
 
 type TableRowSelection<T extends object = object> = TableProps<T>['rowSelection'];
 
@@ -478,6 +479,10 @@ function TmpTsProg() {
                                 <SppButton color="geekblue" variant="solid" size="large">저장</SppButton>
                                 <SppButton color="lime" variant="solid" size="small">저장</SppButton>
                                 <SppButton color="gold" variant="solid" size="middle">저장</SppButton>
+                              </div>
+                              <div className="group">
+                                <SppButton color="default" variant="text" icon={<SppObjSymbol label={resLabel.excelUploadSection} modelType="icon" specName="excel-upload" />} modelType="symbol" title="엑셀​업로드"></SppButton>
+                                <SppButton color="default" variant="text" icon={<SppObjSymbol label={resLabel.excelDownloadSection} modelType="icon" specName="excel-download" />} modelType="symbol" title="엑셀​다운로드"></SppButton>
                               </div>
                             </div>
                           </div>
