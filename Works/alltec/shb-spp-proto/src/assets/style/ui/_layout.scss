@@ -820,7 +820,10 @@ body  {
 // .m-header:where(.m-section >*)  { min-height: $ht-form-50; }
 
 .m-header  {
-  display: flex; align-items: center; justify-content: flex-end; gap: $gap-element-50 $gap-element-70;
+  --gapc: #{px(var(--gap-element-70))};
+  --gapr: #{px(var(--gap-element-50))};
+
+  display: flex; align-items: center; justify-content: flex-end; gap: var(--gapr) var(--gapc);
 
   >:not(:empty)  { flex: none; display: flex; align-items: center; gap: inherit; min-height: $ht-form-50; min-width: 0; }
 
@@ -829,6 +832,8 @@ body  {
   // .o-heading  { @include inc-ellipsis(1); flex: 0 1 auto; min-width: 0; }
 
   .m-binds  { gap: inherit; }
+
+  .d-button:where(.type-symbol:where(.sym-help)):where(.o-heading +.m-inline-binds *)  { left: calc(-1 * var(--gapc)); }
 }
 
 

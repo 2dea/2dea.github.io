@@ -63,7 +63,7 @@
 
 
 /** Labels */
-.o-label  { --lh: var(--lhr); --gap-col: #{px(var(--gap-element-30))}; line-height: var(--lh); display: inline-block; display: inline-flex; align-items: center; gap: 0 var(--gap-col); max-width: 100%; }
+.o-label  { --lh: var(--lhr); --gapc: #{px(var(--gap-element-30))}; line-height: var(--lh); display: inline-block; display: inline-flex; align-items: center; gap: 0 var(--gapc); max-width: 100%; }
 .o-label >*  { flex: 0 1 auto; min-width: 0; height: 100%; }
 .o-label >.label  { flex: 0 1 auto; display: block; position: relative; }
 .o-label .o-reqtag  { position: relative; }
@@ -78,6 +78,8 @@
 // .o-label:where(.o-dataform >* >* >* >th >*) >.label +*  { align-self: flex-end; margin-left: auto; }
 // .o-label:where(.o-dataform >* >* >* >th >*) .o-reqtag  { position: absolute; }
 // .o-label:where(.o-dataform >* >* >* >th >*) >.label:has(.o-reqtag) +*  { padding-left: $gap-element-70; }
+
+.o-label .d-button:where(.type-symbol:where(.sym-help))  { margin-left: calc(-1 * var(--gapc)); }
 
 
 /** Buttons */
@@ -1074,7 +1076,7 @@
 .o-helper.style-normal  { color: var(--cl-text-40); }
 .o-helper.style-strong  { color: var(--cl-point-red); }
 
-.o-helper:where(.m-header *)  { font-size: $font-40; line-height: $line-40; }
+.o-helper:where(.m-header *)  { @include font(40); }
 .o-helper:where(.m-footer *)  { font-size: $font-40; line-height: $line-40; color: var(--cl-text-40); }
 
 

@@ -34,10 +34,10 @@ const columns: TableColumnsType<DataType> = [
   { title: 'Age', dataIndex: 'age' },
   { title: 'Address', dataIndex: 'address', className: 'g-start' },
 
-  { title: 'Column 8', dataIndex: 'address', key: '8' },
-  { title: 'Column 9', dataIndex: 'address', key: '9' },
-  { title: 'Column 10', dataIndex: 'address', key: '10' },
-  { title: 'Column 11', dataIndex: 'address', key: '11' },
+  { title: <><SppObjLabel label="Column 8" required={false} /></>, dataIndex: 'address', key: '8' },
+  { title: <><SppObjLabel label="Column 9" required={true} /></>, dataIndex: 'address', key: '9' },
+  { title: <><SppObjLabel label="Column 10" required={false} append={<SppButton color="default" variant="text" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} /></>, dataIndex: 'address', key: '10' },
+  { title: <><SppObjLabel label="Column 11" required={true} append={<SppButton color="default" variant="text" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} /></>, dataIndex: 'address', key: '11' },
   { title: 'Column 12', dataIndex: 'address', key: '12' },
   { title: 'Column 13', dataIndex: 'address', key: '13' },
   { title: 'Column 14', dataIndex: 'address', key: '14' },
@@ -295,6 +295,7 @@ function TmpTsProg() {
                         <div className="m-header">
                           <div className="prime">
                             <h2 className="o-heading level2"><span className="label">계약내역</span></h2>
+                            <div className="o-helper style-strong"><em className="label">권한허용 상태의 직원만 일괄적용이 가능합니다.</em></div>
                           </div>
 
                           <div className="extra">
@@ -445,6 +446,9 @@ function TmpTsProg() {
                         <div className="m-header">
                           <div className="prime">
                             <h2 className="o-heading level2"><span className="label">계약내역</span></h2>
+                            <div className="m-inline-binds">
+                              <SppButton color="default" variant="text" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>
+                            </div>
                           </div>
 
                           <div className="extra">
