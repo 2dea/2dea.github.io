@@ -232,6 +232,7 @@
   }
 
   .ant-table.ant-table-bordered:where(.ant-table-fixed-header) >.ant-table-container >.ant-table-body  {
+    // overscroll-behavior: contain;
     border-width: 0 var(--ant-line-width)  var(--ant-line-width) 0;
   }
 

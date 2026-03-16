@@ -80,7 +80,7 @@ function DomHeader() {
               <div className="div-control">
                 <div className="menu-toggle">
                   <label className="o-image-check _menu-toggle">
-                    <input type="checkbox" title="메뉴영역 확장/축소" value="" className="bind" /><SppObjSymbol label={resLabel.toggleNavMenu} />
+                    <input type="checkbox" title="메뉴영역 확장/축소" value="" className="bind" /><SppObjSymbol label={resLabel.toggleNavMenu} modelType="icon" />
                     <span className="label">메뉴 확장/축소</span>
                   </label>
                 </div>

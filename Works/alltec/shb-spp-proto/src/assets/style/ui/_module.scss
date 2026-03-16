@@ -124,11 +124,10 @@
 
 
 .m-filter-form  {
-  --br: #{px(var(--br-50))};
-
   --bw: #{$e10};
 
-  --pd: calc(#{px(var(--gap-element-80))} - var(--bw));
+  --pdi: calc(#{px(var(--gap-element-80))} - var(--bw));
+  --pdb: calc(#{px(var(--gap-element-80))} - var(--bw));
 
   display: flex;
   align-items: flex-end;
@@ -136,18 +135,18 @@
   clear: both;
   border-color: var(--cl-edge-70);
   background: var(--cl-ground-20);
+  border-radius: px(var(--br-50));
 
   >*  { flex: 0 1 auto; min-width: 0; min-height: $ht-form-50; }
 
   .fieldset  {
     --gapc: #{px(var(--gap-element-70))};
     --gapr: #{px(var(--gap-element-50))};
-    --mgi: calc(-1 * var(--gapc));
-    --mgb: calc(-1 * var(--gapr));
 
     flex: 1 0 0;
     display: flex;
     flex-wrap: wrap;
+    margin: calc(-1 * var(--gapr)) calc(-1 * var(--gapc));
 
     >*  {
       --pdi: calc(var(--gapc));
@@ -201,6 +200,7 @@
 
       justify-content: normal;
       min-width: px(120);
+      padding-inline-end: var(--pdie);
       cursor: inherit;
 
       &:where(:not(.-selected))  {
@@ -437,9 +437,15 @@
 .o-icon:where(.o-image-button.size-30):before,  .o-icon:where(.o-image-button.size-30) >:is( object, img, svg ),
   .o-icon.wdth-30:before,  .o-icon.wdth-30 >:is( object, img, svg )  { font-size: $ht-icon-30; }
 
-:root  {
-  @include symbol-common();
-  @include symbol-bullet();
+// :root  {
+//   @include symbol-common();
+//   @include symbol-bullet();
+//   @include icon-flexed();
+//   @include icon-filled();
+//   @include icon-fixed();
+// }
+.o-sym:where(.type-icon)  {
+  // @include symbol-common();
   @include icon-flexed();
   @include icon-filled();
   @include icon-fixed();
@@ -676,7 +682,7 @@
 
 
 /** Headings */
-.o-heading  { font-weight: $bold-700; font-size: $font-60; line-height: $line-60; display: block; display: flex; align-items: center; position: relative; color: var(--cl-text-70); }
+.o-heading  { @include symbol-bullet(); font-weight: $bold-700; font-size: $font-60; line-height: $line-60; display: block; display: flex; align-items: center; position: relative; color: var(--cl-text-70); }
 .o-heading:before  { position: absolute; text-align: center; }
 .o-heading >.label  { overflow: hidden; text-overflow: ellipsis; }
 .o-heading .label +.o-check  { line-height: $ht-ctrl-50; margin-left: $gap-element-30; }
