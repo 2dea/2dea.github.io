@@ -1,6 +1,6 @@
 {
   "short_name": "신한정보보호포털",
-  "name": "신한정보보호포털 마크업",
+  "name": "신한 정보보호포털 시스템 (마크업)",
   "icons": [
     {
       "src": "favicon.ico",
@@ -14,7 +14,7 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
+  "display": "browser",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }

@@ -28,6 +28,7 @@ export const SppButton = ({
   return (
     <>
       <Button
+        {...rest}
         htmlType={htmlType}
         className={`
             ${model}
@@ -38,7 +39,7 @@ export const SppButton = ({
           .replace(/\s+/g, ' ')
           .trim()}
         type={type}
-        {...rest}
+        onClick={rest?.onClick}
       />
     </>
   );

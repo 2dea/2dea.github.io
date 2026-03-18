@@ -27,6 +27,7 @@ export const SppDatePicker = ({
   return (
     <>
       <DatePicker
+        {...rest}
         className={`
             ${model}
             ${modelType && ' type-' + modelType}
@@ -43,7 +44,6 @@ export const SppDatePicker = ({
         }}
         // showTime
         allowClear={allowClear}
-        {...rest}
       />
     </>
   );

@@ -40,6 +40,7 @@ export const SppBreadcrumb = ({
   return (
     <>
       <Breadcrumb
+        {...rest}
         className={`
             ${model}
             ${modelType && ' type-' + modelType}
@@ -50,7 +51,6 @@ export const SppBreadcrumb = ({
           .trim()}
         separator={separator}
         items={items}
-        {...rest}
       />
     </>
   )

@@ -44,6 +44,7 @@ export const SppSelect = ({
   return (
     <>
       <Select
+        {...rest}
         placeholder={placeholder}
         className={`
             ${model}
@@ -60,7 +61,6 @@ export const SppSelect = ({
         maxTagCount={maxTagCount}
         maxTagPlaceholder={maxTagPlaceholder ?? defaultTagPlaceholder}
         options={options}
-        {...rest}
       />
     </>
   );

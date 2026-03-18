@@ -24,6 +24,7 @@ export const SppInputText = ({
   return (
     <>
       <Input
+        {...rest}
         className={`
             ${model}
             ${modelType && ' type-' + modelType}
@@ -35,7 +36,6 @@ export const SppInputText = ({
           .trim()}
         allowClear={allowClear}
         suffix={suffix}
-        {...rest}
       />
     </>
   );

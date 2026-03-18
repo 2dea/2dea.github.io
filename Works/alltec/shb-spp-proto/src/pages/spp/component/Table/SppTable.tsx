@@ -424,8 +424,8 @@ const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, height
   return (
     <div ref={wrapRef} className="o-gridtable">
       <Table<T>
-        {...props}
         ref={tableRef}
+        {...props}
         styles={{
           ...props.styles,
           section: {

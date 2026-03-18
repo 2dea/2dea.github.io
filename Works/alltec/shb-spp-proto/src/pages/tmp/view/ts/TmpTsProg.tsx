@@ -20,6 +20,8 @@ import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
 
+import PopupSample from "./popup/PopupSample";
+
 type TableRowSelection<T extends object = object> = TableProps<T>['rowSelection'];
 
 interface DataType {
@@ -34,10 +36,10 @@ const columns: TableColumnsType<DataType> = [
   { title: 'Age', dataIndex: 'age' },
   { title: 'Address', dataIndex: 'address', className: 'g-start' },
 
-  { title: <><SppObjLabel label="Column 8" required={false} /></>, dataIndex: 'address', key: '8' },
-  { title: <><SppObjLabel label="Column 9" required={true} /></>, dataIndex: 'address', key: '9' },
-  { title: <><SppObjLabel label="Column 10" required={false} append={<SppButton color="default" variant="text" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} /></>, dataIndex: 'address', key: '10' },
-  { title: <><SppObjLabel label="Column 11" required={true} append={<SppButton color="default" variant="text" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} /></>, dataIndex: 'address', key: '11' },
+  { title: <SppObjLabel label="Column 8" required={false} />, dataIndex: 'address', key: '8' },
+  { title: <SppObjLabel label="Column 9" required={true} />, dataIndex: 'address', key: '9' },
+  { title: <SppObjLabel label="Column 10" required={false} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, dataIndex: 'address', key: '10' },
+  { title: <SppObjLabel label="Column 11" required={true} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, dataIndex: 'address', key: '11' },
   { title: 'Column 12', dataIndex: 'address', key: '12' },
   { title: 'Column 13', dataIndex: 'address', key: '13' },
   { title: 'Column 14', dataIndex: 'address', key: '14' },
@@ -57,6 +59,8 @@ const dataSource = Array.from<DataType>({ length: 46 }).map<DataType>((_, i) => 
 
 
 function TmpTsProg() {
+  const [isOpenPopupSample, setIsOpenPopupSample] = useState(false);
+
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -98,8 +102,8 @@ function TmpTsProg() {
                   <div className="extra">
                     <div className="m-binds type-end">
                       <div className="group _primary">
-                        <SppButton color="purple" variant="outlined" specName="lined-1">미처리현황조회</SppButton>
-                        <SppButton color="purple" variant="solid" specName="solid-1">최종반려</SppButton>
+                        <SppButton variant="outlined" color="purple" specName="lined-1">미처리현황조회</SppButton>
+                        <SppButton variant="solid" color="purple" specName="solid-1">최종반려</SppButton>
                       </div>
                     </div>
                   </div>
@@ -171,7 +175,7 @@ function TmpTsProg() {
 
                   <AutoComplete className="      mode-required         aaaaaaaaa bbbbbbbbbbbbb           cccccccccccccc    ddddd    " />
 
-                  <div className="m-grid">
+                  <div className="m-grid _primary">
                     <div className="column">
 
                       <div className="m-filter-form">
@@ -252,7 +256,7 @@ function TmpTsProg() {
                         </div>
 
                         <div className="binds">
-                          <SppButton color="default" variant="solid" specName="inquire">조회</SppButton>
+                          <SppButton variant="solid" color="default" specName="inquire">조회</SppButton>
                         </div>
                       </div>
 
@@ -371,6 +375,19 @@ function TmpTsProg() {
 
                                   <tr>
                                     <th colSpan={1}>
+                                      팝업
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
                                       SppButton
                                     </th>
                                     <td colSpan={5}>
@@ -381,12 +398,12 @@ function TmpTsProg() {
                                             <CommonButton label="공지사항" className="_lined-secondary" />
                                             <CommonButton label="결재선변경관리" className="_lined-secondary" />
                                             <CommonButton label="결재바로가기" className="_lined-secondary" /> */}
-                                            <SppButton color="green" variant="filled" specName="filled-status-80">적정</SppButton>
-                                            <SppButton color="default" variant="outlined" specName="normal">저장</SppButton>
-                                            <SppButton color="purple" variant="outlined" specName="lined-1">저장</SppButton>
-                                            <SppButton color="geekblue" variant="outlined" specName="lined-2">저장</SppButton>
-                                            <SppButton color="cyan" variant="outlined" specName="lined-3">저장</SppButton>
-                                            <SppButton color="volcano" variant="outlined" specName="lined-4">저장</SppButton>
+                                            <SppButton variant="filled" color="green" specName="filled-status-80">적정</SppButton>
+                                            <SppButton variant="outlined" color="default" specName="normal">저장</SppButton>
+                                            <SppButton variant="outlined" color="purple" specName="lined-1">저장</SppButton>
+                                            <SppButton variant="outlined" color="geekblue" specName="lined-2">저장</SppButton>
+                                            <SppButton variant="outlined" color="cyan" specName="lined-3">저장</SppButton>
+                                            <SppButton variant="outlined" color="volcano" specName="lined-4">저장</SppButton>
                                           </div>
                                         </div>
 
@@ -397,13 +414,13 @@ function TmpTsProg() {
                                             <CommonButton label="삭제" className="_delete" />
                                             <CommonButton label="취소" className="_cancel" />
                                             <CommonButton label="결재요청" className="_solid-primary" /> */}
-                                            <SppButton color="default" variant="filled" specName="filled-status-00">적정</SppButton>
-                                            <SppButton color="red" variant="filled" specName="filled-status-20">부적정</SppButton>
-                                            <SppButton color="default" variant="solid" specName="inquire">저장</SppButton>
-                                            <SppButton color="purple" variant="solid" specName="solid-1">저장</SppButton>
-                                            <SppButton color="geekblue" variant="solid" specName="create">저장</SppButton>
-                                            <SppButton color="cyan" variant="solid" specName="solid-3">저장</SppButton>
-                                            <SppButton color="volcano" variant="solid" specName="solid-4">저장</SppButton>
+                                            <SppButton variant="filled" color="default" specName="filled-status-00">적정</SppButton>
+                                            <SppButton variant="filled" color="red" specName="filled-status-20">부적정</SppButton>
+                                            <SppButton variant="solid" color="default" specName="inquire">저장</SppButton>
+                                            <SppButton variant="solid" color="purple" specName="solid-1">저장</SppButton>
+                                            <SppButton variant="solid" color="geekblue" specName="create">저장</SppButton>
+                                            <SppButton variant="solid" color="cyan" specName="solid-3">저장</SppButton>
+                                            <SppButton variant="solid" color="volcano" specName="solid-4">저장</SppButton>
                                           </div>
                                         </div>
                                       </div>
@@ -447,7 +464,7 @@ function TmpTsProg() {
                           <div className="prime">
                             <h2 className="o-heading level2"><span className="label">계약내역</span></h2>
                             <div className="m-inline-binds">
-                              <SppButton color="default" variant="text" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>
+                              <SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>
                             </div>
                           </div>
 
@@ -485,8 +502,8 @@ function TmpTsProg() {
                                 <SppButton color="gold" variant="solid" size="middle">저장</SppButton>
                               </div>
                               <div className="group">
-                                <SppButton color="default" variant="text" icon={<SppObjSymbol label={resLabel.excelUploadSection} modelType="icon" specName="excel-upload" />} modelType="symbol" title="엑셀​업로드"></SppButton>
-                                <SppButton color="default" variant="text" icon={<SppObjSymbol label={resLabel.excelDownloadSection} modelType="icon" specName="excel-download" />} modelType="symbol" title="엑셀​다운로드"></SppButton>
+                                <SppButton variant="text" color="default" icon={<SppObjSymbol label={resLabel.excelUploadSection} modelType="icon" specName="excel-upload" />} modelType="symbol" title="엑셀​업로드"></SppButton>
+                                <SppButton variant="text" color="default" icon={<SppObjSymbol label={resLabel.excelDownloadSection} modelType="icon" specName="excel-download" />} modelType="symbol" title="엑셀​다운로드"></SppButton>
                               </div>
                             </div>
                           </div>
@@ -501,6 +518,13 @@ function TmpTsProg() {
                   </div>
                 </div>
               </div>
+
+              {/* {isOpenPopupSample && ( */}
+                <PopupSample
+                  open={isOpenPopupSample}
+                  onCancel={(e) => setIsOpenPopupSample(false)}
+                />
+              {/* )} */}
     </>
   );
 }

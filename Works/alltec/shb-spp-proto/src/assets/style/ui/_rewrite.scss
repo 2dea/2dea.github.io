@@ -271,6 +271,89 @@
   .ant-table-pagination.ant-pagination  {
     --ant-margin: #{px(var(--mg-section-40))};
   }
+
+  &.d-layer:where(.layer-popup)  {
+    --mgi-layer: 0%;
+    --mgb-layer: 0%;
+
+    --ant-modal-content-padding-inline: 24px;
+
+    --wd-90: 1680;
+    --wd-80: 1480;
+    --wd-70: 1280;
+    --wd-60: 1100;
+    --wd-50: 900;
+    --wd-40: 720;
+    --wd-25: 420;
+    --wd-20: 320;
+
+    --wd-30: 520;
+    --wd-15: 240;
+
+    $wd-90: calc(px(var(--wd-90)) + var(--ant-modal-content-padding-inline) * 2);
+    $wd-80: calc(px(var(--wd-80)) + var(--ant-modal-content-padding-inline) * 2);
+    $wd-70: calc(px(var(--wd-70)) + var(--ant-modal-content-padding-inline) * 2);
+    $wd-60: calc(px(var(--wd-60)) + var(--ant-modal-content-padding-inline) * 2);
+    $wd-50: calc(px(var(--wd-50)) + var(--ant-modal-content-padding-inline) * 2);
+    $wd-40: calc(px(var(--wd-40)) + var(--ant-modal-content-padding-inline) * 2);
+    $wd-25: calc(px(var(--wd-25)) + var(--ant-modal-content-padding-inline) * 2);
+    $wd-20: calc(px(var(--wd-20)) + var(--ant-modal-content-padding-inline) * 2);
+
+    $wd-30: calc(px(var(--wd-30)) + var(--ant-modal-content-padding-inline) * 2);
+    $wd-15: calc(px(var(--wd-15)) + var(--ant-modal-content-padding-inline) * 2);
+
+     :where(.ant-modal)  {
+      &:where(:not(.-def-width *))  {
+        min-width: $wd-15;
+        width: max-content;
+        max-width: $wd-30;
+
+        // &:where(.wd-15:not(.-def-width) *)  { min-width: $wd-15; }
+        &:where(.wd-20 *)  { min-width: $wd-20; }
+        &:where(.wd-25 *)  { min-width: $wd-25; }
+        &:where(.wd-30 *)  { min-width: $wd-30; }
+        &:where(.wd-40 *)  { width: $wd-40; max-width: none; }
+        &:where(.wd-50 *)  { width: $wd-50; max-width: none; }
+        &:where(.wd-60 *)  { width: $wd-60; max-width: none; }
+        &:where(.wd-70 *)  { width: $wd-70; max-width: none; }
+        &:where(.wd-80 *)  { width: $wd-80; max-width: none; }
+        &:where(.wd-90 *)  { width: $wd-90; max-width: none; }
+        &:where(.wd-100p *)  { min-width: 100%; }
+      }
+
+      .ant-modal-header  {
+        padding: 0 px(16) 0 0;
+
+        &:has(>:where(:not(:empty)))  {
+          padding-block-end: px(16);
+          border-bottom: $e10 solid;
+          border-color: var(--cl-edge-70);
+        }
+      }
+
+      .ant-modal-title:where(:not(:empty))  {
+        display: flex;
+        align-items: center;
+        min-height: px(26);
+
+        >*  {
+          flex: none;
+          display: flex;
+          align-items: center;
+          min-width: 0;
+        }
+
+        >.prime  {
+          @include inc-ellipsis();
+          flex: 1 0 0;
+        }
+      }
+
+      .ant-modal-footer  {
+        .m-binds >:only-child  { justify-content: center; }
+      }
+    }
+  }
 }
 
 

@@ -77,7 +77,7 @@ function AppDefaultLayout() {
                 </div>
 
                 <div className="div-center">
-                  <div className="m-grid">
+                  <div className="m-grid _primary">
                     <div className="column">
 
                       <div className="m-section">

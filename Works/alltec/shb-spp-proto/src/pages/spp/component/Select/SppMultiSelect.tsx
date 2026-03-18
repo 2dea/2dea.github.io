@@ -44,6 +44,7 @@ export const SppMultiSelect = ({
   return (
     <>
       <Select
+        {...rest}
         placeholder={placeholder}
         className={`
             ${model}
@@ -64,7 +65,6 @@ export const SppMultiSelect = ({
         maxTagCount={maxTagCount}
         maxTagPlaceholder={maxTagPlaceholder ?? defaultTagPlaceholder}
         options={options}
-        {...rest}
       />
     </>
   );

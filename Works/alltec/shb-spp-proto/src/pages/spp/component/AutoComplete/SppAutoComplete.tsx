@@ -24,6 +24,7 @@ export const SppAutoComplete = ({
   return (
     <>
       <AutoComplete
+        {...rest}
         className={`
             ${model}
             ${modelType && ' type-' + modelType}
@@ -35,7 +36,6 @@ export const SppAutoComplete = ({
           .trim()}
         allowClear={allowClear}
         prefix={prefix}
-        {...rest}
       />
     </>
   );
