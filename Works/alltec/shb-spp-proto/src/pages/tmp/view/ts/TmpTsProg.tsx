@@ -1,89 +1,74 @@
 import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
-import SppBreadcrumb from "@/pages/spp/component/Breadcrumb/SppBreadcrumb";
 import RoleMainHeaderTitle from "@/layout/RoleMainHeaderTitle";
 import RoleMainHeaderFavorite from "@/layout/RoleMainHeaderFavorite";
 import RoleMainHeaderManual from "@/layout/RoleMainHeaderManual";
+import SppBreadcrumb from "@/pages/spp/component/Breadcrumb/SppBreadcrumb";
 
-import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
-
-import SppButton from "@/pages/spp/component/Button/SppButton";
+import { Badge, Tabs } from "antd";
+import type { ColumnsType, TableRowSelection } from "antd/es/table/interface";
 
 import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
+import SppButton from "@/pages/spp/component/Button/SppButton";
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
-
-import { AutoComplete, Badge, Tabs, type TableColumnsType, type TableProps } from "antd";
-import SppSelect from "@/pages/spp/component/Select/SppSelect";
-import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppInputText from "@/pages/spp/component/InputText/SppInputText";
-import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
-import SppTable from "@/pages/spp/component/Table/SppTable";
+import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
+import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
 import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
+import SppSelect from "@/pages/spp/component/Select/SppSelect";
+import SppTable from "@/pages/spp/component/Table/SppTable";
+import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
 import PopupSample from "./popup/PopupSample";
-
-type TableRowSelection<T extends object = object> = TableProps<T>['rowSelection'];
-
-interface DataType {
-  key: React.Key;
-  name: string;
-  age: number;
-  address: string;
-}
-
-const columns: TableColumnsType<DataType> = [
-  { title: 'Name', dataIndex: 'name' },
-  { title: 'Age', dataIndex: 'age' },
-  { title: 'Address', dataIndex: 'address', className: 'g-start' },
-
-  { title: <SppObjLabel label="Column 8" required={false} />, dataIndex: 'address', key: '8' },
-  { title: <SppObjLabel label="Column 9" required={true} />, dataIndex: 'address', key: '9' },
-  { title: <SppObjLabel label="Column 10" required={false} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, dataIndex: 'address', key: '10' },
-  { title: <SppObjLabel label="Column 11" required={true} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, dataIndex: 'address', key: '11' },
-  { title: 'Column 12', dataIndex: 'address', key: '12' },
-  { title: 'Column 13', dataIndex: 'address', key: '13' },
-  { title: 'Column 14', dataIndex: 'address', key: '14' },
-  { title: 'Column 15', dataIndex: 'address', key: '15' },
-  { title: 'Column 16', dataIndex: 'address', key: '16' },
-  { title: 'Column 17', dataIndex: 'address', key: '17' },
-  { title: 'Column 18', dataIndex: 'address', key: '18' },
-  { title: 'Column 19', dataIndex: 'address', key: '19' },
-  { title: 'Column 20', dataIndex: 'address', key: '20' },];
-
-const dataSource = Array.from<DataType>({ length: 46 }).map<DataType>((_, i) => ({
-  key: i,
-  name: `Edward King ${i}`,
-  age: 32,
-  address: `London, Park Lane no. ${i}`,
-}));
 
 
 function TmpTsProg() {
   const [isOpenPopupSample, setIsOpenPopupSample] = useState(false);
 
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  const start = () => {
-    setLoading(true);
-    // ajax request after empty completing
-    setTimeout(() => {
-      setSelectedRowKeys([]);
-      setLoading(false);
-    }, 1000);
-  };
-
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
     console.log('selectedRowKeys changed: ', newSelectedRowKeys);
     setSelectedRowKeys(newSelectedRowKeys);
   };
-
-  const rowSelection: TableRowSelection<DataType> = {
+  const rowSelection: TableRowSelection<any> = {
     selectedRowKeys,
     onChange: onSelectChange,
   };
 
-    return (
+  // interface TmpTsProgTable1010 {}
+  const columns: ColumnsType<any> = [
+    { title: 'Name', dataIndex: 'name' },
+    { title: 'Age', dataIndex: 'age' },
+    { title: 'Address', dataIndex: 'address', className: 'g-start' },
+
+    { title: <SppObjLabel label="Column 8" required={false} />, dataIndex: 'address', key: '8' },
+    { title: <SppObjLabel label="Column 9" required={true} />, dataIndex: 'address', key: '9' },
+    { title: <SppObjLabel label="Column 10" required={false} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, dataIndex: 'address', key: '10' },
+    { title: <SppObjLabel label="Column 11" required={true} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, dataIndex: 'address', key: '11' },
+    { title: '인풋', dataIndex: 'testTableInput', key: 'testTableInput',
+      render: (value, row) => {
+        return <SppDatePicker />
+      },
+    },
+    { title: 'Column 12', dataIndex: 'address', key: '12' },
+    { title: 'Column 13', dataIndex: 'address', key: '13' },
+    { title: 'Column 14', dataIndex: 'address', key: '14' },
+    { title: 'Column 15', dataIndex: 'address', key: '15' },
+    { title: 'Column 16', dataIndex: 'address', key: '16' },
+    { title: 'Column 17', dataIndex: 'address', key: '17' },
+    { title: 'Column 18', dataIndex: 'address', key: '18' },
+    { title: 'Column 19', dataIndex: 'address', key: '19' },
+    { title: 'Column 20', dataIndex: 'address', key: '20' },
+  ];
+
+  const dataSource = Array.from<any>({ length: 46 }).map<any>((_, i) => ({
+    key: i,
+    name: `Edward King ${i}`,
+    age: 32,
+    address: `London, Park Lane no. ${i}`,
+  }));
+
+  return (
     <>
               <div className="nodes" data-node-no="0">
                 <div className="div-header">
@@ -172,8 +157,6 @@ function TmpTsProg() {
                   />
 
                   <SppAutoComplete placeholder="" width="50" className="mode-required" />
-
-                  <AutoComplete className="      mode-required         aaaaaaaaa bbbbbbbbbbbbb           cccccccccccccc    ddddd    " />
 
                   <div className="m-grid _primary">
                     <div className="column">
@@ -510,7 +493,7 @@ function TmpTsProg() {
                         </div>
 
                         <div className="main _primary">
-                          <SppTable<DataType> rowSelection={rowSelection} columns={columns} dataSource={dataSource} paginationFlag scroll={{ x: 'max-content' }} />
+                          <SppTable<any> rowSelection={rowSelection} columns={columns} dataSource={dataSource} paginationFlag scroll={{ x: 'max-content' }} />
                         </div>
                       </div>
 

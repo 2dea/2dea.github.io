@@ -153,7 +153,7 @@
 }
 
 /* @layer LAY-base { */
-  @layer global-univ {
+  /* @layer global-univ { */
 
     /** Type Selector */
     *  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -164,9 +164,9 @@
           :before,  :after  { scroll-behavior: auto !important; transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
     } */
 
-  }
+  /* } */
 
-  @layer global-type {
+  /* @layer global-type { */
 
     html  {
       direction: ltr; font: 125% /calc(16 / 12) '애플 SD 산돌고딕 Neo', 'Apple SD Gothic Neo', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
@@ -181,8 +181,8 @@
       overscroll-behavior: inherit;
     }
 
-    input,  button,  select,  textarea  { font-family: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-weight: inherit; font-size: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: -0.125em; vertical-align: inherit; min-height: 1em; max-height: 100vh; max-height: 100dvh; border: 1px solid ButtonBorder; color: inherit; text-shadow: inherit; word-spacing: inherit; letter-spacing: inherit; }
-    pre,  code,  samp,  kbd  { font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); font-size: inherit; }
+    input,  button,  select,  textarea  { font: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: -0.125em; vertical-align: inherit; min-height: 1em; max-height: 100vh; max-height: 100dvh; color: inherit; text-shadow: inherit; word-spacing: inherit; letter-spacing: inherit; }
+    pre,  code,  samp,  kbd  { font: inherit; font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); }
     pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
     h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }
     address,  em,  cite,  dfn,  var,  optgroup  { font-style: inherit; }
@@ -245,5 +245,5 @@
       [disabled]:where(:not(form, fieldset)) *  { cursor: inherit; }
     [hidden]  { display: none !important; }
 
-  }
+  /* } */
 /* } */

@@ -2,8 +2,19 @@ import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type R
 
 import SppModal, { type SppModalProps } from "@/pages/spp/component/Modal/SppModal";
 
-import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
+import { Badge, Tabs } from "antd";
+import type { ColumnsType, TableRowSelection } from "antd/es/table/interface";
+
+import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
 import SppButton from "@/pages/spp/component/Button/SppButton";
+import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
+import SppInputText from "@/pages/spp/component/InputText/SppInputText";
+import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
+import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
+import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
+import SppSelect from "@/pages/spp/component/Select/SppSelect";
+import SppTable from "@/pages/spp/component/Table/SppTable";
+import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
 export interface PopupSampleProps extends SppModalProps {};
 

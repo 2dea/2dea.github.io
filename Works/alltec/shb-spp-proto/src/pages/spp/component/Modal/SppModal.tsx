@@ -4,7 +4,6 @@ import SppModalHeader from "./SppModalHeader";
 import SppModalFooter from "./SppModalFooter";
 
 import { Modal, type ModalProps } from "antd"
-import SppButton from "../Button/SppButton";
 
 export interface SppModalProps extends ModalProps {
   headerTitle?: ReactNode;

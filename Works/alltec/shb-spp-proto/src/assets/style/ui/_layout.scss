@@ -159,7 +159,7 @@
  ------------- */
 
 // @layer LAY-base {
-  @layer local-univ {
+  // @layer local-univ {
 
     :where(body :not(tr:is([border] >* >*, [cellpadding] >* >*) >*))  {
     // :where(
@@ -222,7 +222,7 @@
     }
     // :before,  :after  { background-color: inherit; border-radius: inherit; }
 
-  }
+  // }
 // }
 
 html  {
