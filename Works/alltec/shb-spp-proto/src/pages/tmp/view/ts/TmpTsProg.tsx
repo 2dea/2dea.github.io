@@ -11,7 +11,7 @@ import type { ColumnsType, TableRowSelection } from "antd/es/table/interface";
 import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
 import SppButton from "@/pages/spp/component/Button/SppButton";
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
-import SppInputText from "@/pages/spp/component/InputText/SppInputText";
+import SppInputText from "@/pages/spp/component/Input/SppInputText";
 import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
 import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
@@ -493,7 +493,13 @@ function TmpTsProg() {
                         </div>
 
                         <div className="main _primary">
-                          <SppTable<any> rowSelection={rowSelection} columns={columns} dataSource={dataSource} paginationFlag scroll={{ x: 'max-content' }} />
+                          <SppTable<any>
+                            rowSelection={rowSelection}
+                            columns={columns}
+                            dataSource={dataSource}
+                            paginationFlag
+                            scroll={{ x: 'max-content' }}
+                          />
                         </div>
                       </div>
 

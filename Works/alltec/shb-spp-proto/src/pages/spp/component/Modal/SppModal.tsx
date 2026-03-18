@@ -42,9 +42,9 @@ export const SppModal = ({
   footerAppendButton,
   maskClosable=false,
   keyboard=true,
-  cancelButtonProps={ color: 'purple', variant: 'outlined', className: 'd-button _cancel', },
+  cancelButtonProps={ variant: 'outlined', color: 'purple', className: 'd-button _cancel', },
   cancelText="닫기",
-  okButtonProps={ color: 'purple', variant: 'solid', className: 'd-button _solid-1', },
+  okButtonProps={ variant: 'solid', color: 'purple', className: 'd-button _solid-1', },
   okText="확인",
   // open,
   ...props

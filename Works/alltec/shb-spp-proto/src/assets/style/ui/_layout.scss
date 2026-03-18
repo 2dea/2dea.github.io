@@ -161,7 +161,7 @@
 // @layer LAY-base {
   // @layer local-univ {
 
-    :where(body :not(tr:is([border] >* >*, [cellpadding] >* >*) >*))  {
+    body :where(:not(tr:is([border] >* >*, [cellpadding] >* >*) >*))  {
     // :where(
     //   body :not(
     //     tr:is([border] >* >*, [cellpadding] >* >*) >*,

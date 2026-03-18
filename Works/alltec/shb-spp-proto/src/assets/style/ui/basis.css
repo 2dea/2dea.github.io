@@ -203,7 +203,7 @@
     a  { font-size: inherit; background-color: Transparent; color: inherit; text-decoration: none; }
     small  { font-size: inherit; }
     q:before,  q:after  { content: ""; content: none; }
-    abbr:where([title])  { border-bottom-style: none; text-decoration: underline; text-decoration: underline dotted; }
+    abbr:where([title])  { border-bottom-style: none; border-block-end-style: none; text-decoration: underline; text-decoration: underline dotted; }
     b  { font-weight: bolder; font-weight: var(--bold-700, 650); }
     mark  { background-color: Transparent; color: inherit; }
     br  { letter-spacing: 0 !important; }

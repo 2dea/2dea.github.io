@@ -261,7 +261,7 @@ const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, height
           pageSize={pageSize}
           total={total}
           showSizeChanger
-          pageSizeOptions={[10, 20, 50, 100, 200]}
+          pageSizeOptions={[10, 20, 50, 100]}
           onChange={(page, size) => {
             pageChange(page, size ?? pageSize);
           }}
