@@ -248,6 +248,14 @@
     .ant-table-cell  {
       &:is(.ant-table-thead *)  {
         text-align: center !important;
+
+        .o-label  {
+          line-height: inherit;
+
+          .o-reqtag  {
+            position: absolute;
+          }
+        }
       }
 
       &:is(.ant-table-middle *)  {
