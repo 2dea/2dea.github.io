@@ -10,6 +10,19 @@
   --vi:                 1dvi;
   --vb:                 1dvb;
 
+  --wd-g-1:             (100 * 1 / 12);
+  --wd-g-2:             (100 * 2 / 12);
+  --wd-g-3:             (100 * 3 / 12);
+  --wd-g-4:             (100 * 4 / 12);
+  --wd-g-5:             (100 * 5 / 12);
+  --wd-g-6:             (100 * 6 / 12);
+  --wd-g-7:             (100 * 7 / 12);
+  --wd-g-8:             (100 * 8 / 12);
+  --wd-g-9:             (100 * 9 / 12);
+  --wd-g-10:            (100 * 10 / 12);
+  --wd-g-11:            (100 * 11 / 12);
+  --wd-g-12:            (100 * 12 / 12);
+
   --root-em-int:        16;
   --root-em-base:       calc(1em * var(--root-em-int, 16) / 16);
   --root-em:            (1rem / var(--root-em-int));
@@ -147,7 +160,7 @@
   }
 
   @supports (line-height: round(down, 1, 1)) {
-    --text-height-rel:    round(down, calc(1em * 16.66667 / 12), 2px);
+    --text-height-rel:    round(down, calc(1em * 50 / 3 / 12), 2px);
     --text-height-par:    round(down, calc(1em * 18.5 / 12), 2px);
   }
 }
@@ -181,7 +194,7 @@
       overscroll-behavior: inherit;
     }
 
-    input,  button,  select,  textarea  { font: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: -0.125em; vertical-align: inherit; min-height: 1em; max-height: 100vh; max-height: 100dvh; color: inherit; text-shadow: inherit; word-spacing: inherit; letter-spacing: inherit; }
+    input,  button,  select,  textarea  { font: inherit; -moz-font-feature-settings: inherit; -webkit-font-feature-settings: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; line-height: calc(16 / 12); line-height: inherit; vertical-align: -0.125em; vertical-align: inherit; min-height: 1em; max-height: 100vh; max-height: 100dvh; color: inherit; text-shadow: inherit; word-break: break-all; word-spacing: inherit; letter-spacing: inherit; }
     pre,  code,  samp,  kbd  { font: inherit; font-family: monospace, monospace; font-family: var(--typo-code, monospace, monospace); }
     pre *,  code *,  samp *,  kbd *  { font-family: inherit; }
     h1,  h2,  h3,  h4,  h5,  h6,  strong,  th,  optgroup,  option  { font-weight: inherit; font-size: inherit; }
@@ -221,12 +234,12 @@
     fieldset  { min-width: 0; padding: 0; border-style: none; }
     legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
     label  { display: inline-block; }
-    :where([type="range"],  [type="color"],  [type="checkbox"],  [type="radio"])  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; }
-    :where([type="submit"],  [type="reset"],  [type="button"]),  button  { -webkit-appearance: button; min-width: 1em; overflow: visible; padding: 0; text-transform: none; }
+    :where([type="range"],  [type="color"],  [type="checkbox"],  [type="radio"])  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; word-break: inherit; }
+    :where([type="submit"],  [type="reset"],  [type="button"]),  button  { -webkit-appearance: button; min-width: 1em; overflow: visible; padding: 0.25em 0.33333em; text-transform: none; word-break: inherit; }
     select  { text-transform: none; }
     select:where([multiple])  { padding-right: 0 !important; }
     option:where(:not([hidden]))  { display: block !important; color: inherit; white-space: nowrap; }
-    textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-break: keep-all; word-wrap: inherit; overflow-wrap: inherit; }
+    textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-wrap: inherit; overflow-wrap: inherit; }
     summary  { display: list-item; }
     dialog  { padding: 0; border-style: none; }
     template  { display: none; }

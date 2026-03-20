@@ -432,11 +432,11 @@ const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, height
             ...(props.styles as any)?.section,
             // outline: (props.styles as any)?.section?.outline ?? '1px solid red',
             '--ht-gridtable':
-              (heightSectionFixed && (heightSectionBasis === 'auto' ? 'auto' : typeof heightSectionBasis === 'number' ? heightSectionBasis + 12 + 'px' : 45 * 4 + 12 + 'px')),
+              (heightSectionFixed && (heightSectionBasis === 'auto' ? 'auto' : typeof heightSectionBasis === 'number' ? heightSectionBasis + 12 + 'px' : 1 * 41 + 3 * 41 + 12 + 'px')),
             minHeight:
               (props.styles as any)?.section?.minHeight ??
               (heightSectionBasis && typeof heightSectionBasis === 'number' ? heightSectionBasis + 12 : heightSectionBasis) ??
-              45 * 4 + 12,
+              1 * 41 + 3 * 41 + 12,
           },
         }}
         size="middle"
@@ -445,7 +445,8 @@ const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, height
         // scroll={props.scroll ?? { y: tableHeight }}
         scroll={{
           ...props.scroll,
-          x: props.scroll?.x ?? 'auto',
+          // x: props.scroll?.x ?? 'auto',
+          x: props.scroll?.x ?? 'max-content',
           y: (props.scroll?.y === undefined ? undefined : props.scroll?.y) ?? 'none',
         }}
         className={[props.className, 'spp-table-ellipsis'].filter(Boolean).join(' ')}

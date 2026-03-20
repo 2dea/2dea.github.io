@@ -4,8 +4,20 @@
 @use "./mixins" as *;
 
 
+// textarea.ant-input:where(.d-form *)  {
+//   line-height: var(--lhp);
+// }
+
 .css-var-root  {
+  --em: (1em / var(--text-size-int));
+  // --ant-control-height: (var(--ht-form) / var(--text-size-int));
+  --ant-control-height: calc(var(--em) * (var(--ht-form)));
+
+  --lh: calc(var(--ant-control-height) - 10px);
+  --ant-line-height: var(--lh);
+  --ant-font-height: var(--lh);
   --ant-font-family: inherit;
+
   --ant-border-radius: 4px;
   --ant-border-radius-xs: 2px;
   --ant-border-radius-sm: 4px;
@@ -111,6 +123,9 @@
     }
   }
 
+  &.ant-pagination  {
+    --ant-pagination-item-size: var(--ant-control-height);
+  }
   &.ant-select-dropdown  {
     :where(.rc-virtual-list-scrollbar)  {
       width: px(4) !important;
@@ -118,6 +133,9 @@
   }
 
   &.d-form  {
+    text-align: left;
+    text-align: start;
+
     :where([class*="ant-"][class*="-prefix"])  {
       display: inline-flex;
     }
@@ -196,8 +214,8 @@
     table >* >tr >:where(:not([align]))  { text-align: inherit; }
 
     &.ant-table-middle  {
-      --ant-table-cell-padding-block-md: 6px;
-      --ant-table-cell-padding-inline-md: 6px;
+      --ant-table-cell-padding-block-md: 5px;
+      --ant-table-cell-padding-inline-md: 10px;
 
       // --lh:
       // --ht-cell-box: 100px;
@@ -205,15 +223,17 @@
 
       .ant-table-thead  {
         --ant-table-cell-padding-block-md: 4px;
-        --ant-table-cell-padding-inline-md: 4px;
       }
     }
 
     .ant-table-thead  {
+      --fs-int: var(--font-40-int);
       --ant-table-header-bg: var(--cl-ground-70);
       --ant-table-header-color: var(--cl-key1-70);
       --ant-table-border-color: var(--cl-edge-50);
 
+      font-size: px(var(--fs-int));
+      line-height: calc((var(--fs-int) + 3) / var(--fs-int));
       position: relative;;
 
       &:after  {
@@ -223,16 +243,42 @@
         inset: auto 0 0 0;
         border-bottom:  var(--ant-line-width) var(--ant-line-type) var(--cl-key1-70);
       }
+    }
 
-      .ant-table-cell  {
+    .ant-table-cell  {
+      &:is(.ant-table-thead *)  {
         text-align: center !important;
+      }
+
+      &:is(.ant-table-middle *)  {
+        --ht-cell: 41px;
+
+        height: var(--ht-cell);
+
+        &:where(.ant-table-wrapper.style-fit *)  {
+          --ht-cell: 35px;
+        }
+      }
+
+      &:where(:not(.ant-table-cell-ellipsis))  {
+        white-space: nowrap;
+      }
+
+      .cell-ellipsis  {
+        @include inc-ellipsis();
       }
     }
 
-    .ant-table-cell:is(.ant-table-middle *)  {
-      // height: var(--ht-cell);
-      height: 45px;
+    .ant-table-cell-ellipsis:where(.ant-table.ant-table-bordered *) {
+      min-width: var(--ant-table-selection-column-width);
+      max-width: calc(var(--ant-table-selection-column-width) + var(--ant-padding-xs) * 2);
+      word-break: break-all;
     }
+    .ant-table-cell-ellipsis:where(.ant-table.ant-table-bordered *) {
+      min-width: calc(var(--ant-table-selection-column-width) + var(--ant-padding-xs) * 2);
+      max-width: calc(1em - 2px + var(--ant-table-selection-column-width) + var(--ant-padding-xs) * 2);
+    }
+
   }
 
   .ant-table.ant-table-bordered:where(.ant-table-fixed-header) >.ant-table-container >.ant-table-body  {

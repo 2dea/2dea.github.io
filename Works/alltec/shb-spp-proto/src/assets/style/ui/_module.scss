@@ -115,6 +115,9 @@
   max-width: var(--wdx);
   padding-left: var(--pdis);
   padding-right: var(--pdie);
+  word-break: break-all;
+
+  :disabled  { filter: none; }
 
   &:where(.wd-10)  { --wd: #{px(50)}; }
   &:where(.wd-20)  { --wd: #{px(60)}; }
@@ -125,6 +128,11 @@
   &:where(.wd-70)  { --wd: #{px(160)}; }
   &:where(.wd-80)  { --wd: #{px(180)}; }
   &:where(.wd-90)  { --wd: #{px(210)}; }
+
+  // &:where(.o-gridtable *)  {
+  //   min-width: var(--wd);
+  //   width: 100%;
+  // }
 
   &:where(.mode-required)  { background-color: var(--cl-ground-required); }
 
@@ -287,8 +295,11 @@
     }
 
     >.lists  {
+      --wd-scrollbar: 0px;
+
       flex-grow: 1;
       overflow: auto hidden;
+      overscroll-behavior: contain;
       scrollbar-width: none;
     }
   }
@@ -686,20 +697,21 @@
 .o-link  { --theme: var(--cl-link1-40); display: inline-flex; align-items: center; color: var(--theme); border-radius: $br-50; text-decoration: none; text-underline-offset: auto; }
 .o-link:hover  { --theme: inherit; text-decoration: underline; }
 
-.o-link:not(.o-link)  { gap: $gap-whitespace-30; }
+.o-link._link-primary  { --theme: var(--cl-key1-40); text-decoration: underline; }
+.o-link._link-primary:hover  { --theme: var(--cl-key1-70); }
 
-.o-link.texted-button._primary  { --theme: var(--cl-key1-40); }
-.o-link.texted-button._primary:hover  { --theme: var(--cl-key1-70); }
-.o-link.texted-button._primary:not(:hover) .o-icon:before  { background-position: 50%; }
+.o-link.type-texted._primary  { --theme: var(--cl-key1-40); }
+.o-link.type-texted._primary:hover  { --theme: var(--cl-key1-70); }
+.o-link.type-texted._primary:not(:hover) .o-icon:before  { background-position: 50%; }
 
-.o-link.texted-button._secondary  { --theme: var(--cl-link1-40); }
-.o-link.texted-button._secondary:hover  { --theme: inherit; }
+.o-link.type-texted._secondary  { --theme: var(--cl-link1-40); }
+.o-link.type-texted._secondary:hover  { --theme: inherit; }
 
-.o-link.texted-button._normal  { --theme: inherit; }
-.o-link.texted-button._normal:hover  { --theme: inherit; }
+.o-link.type-texted._normal  { --theme: inherit; }
+.o-link.type-texted._normal:hover  { --theme: inherit; }
 
-.o-link:not(.texted-button)._normal  { --theme: inherit; text-decoration: underline; }
-.o-link:not(.texted-button)._normal:hover  { --theme: var(--cl-key1-40); }
+.o-link:not(.type-texted)._normal  { --theme: inherit; text-decoration: underline; }
+.o-link:not(.type-texted)._normal:hover  { --theme: var(--cl-key1-40); }
 
 // .o-link:is(.o-grid-table tr >* *)  { white-space: nowrap; }
 

@@ -44,6 +44,12 @@
     }
   // }
 
+  :where(.ant-table-cell)  {
+    >*  {
+      white-space: normal;
+    }
+  }
+
   .table-footer:where(* +*)  {
     margin-top: #{px(var(--mg-section-40))};
   }

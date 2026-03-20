@@ -35,6 +35,9 @@ export const PopupSample = (props: PopupSampleProps) => {
             <SppButton variant="outlined" color="purple" specName="lined-1" onClick={() => alert(1)}>footerAppendButton</SppButton>
           </>
         }
+        cancelText="취소"
+        okText="저장"
+        onOk={ (e) => alert('ok') }
         // width={1024}
         // wrapWidth="50"
         // open
