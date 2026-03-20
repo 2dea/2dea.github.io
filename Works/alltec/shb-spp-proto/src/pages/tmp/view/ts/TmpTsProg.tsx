@@ -131,7 +131,7 @@ function TmpTsProg() {
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객명', render: (v, r, i) => { return `홍길동` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `3510010000` }, },
     { dataIndex: 'data1010', width: 219, ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
-    { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: '조회용도', render: (v, r, i) => { return (
+    { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: <SppObjLabel label="조회용도" required={true} />, render: (v, r, i) => { return (
       <SppMultiSelect placeholder="조회용도 선택" width="60"
         options={[
           { value: '0', label: '수신업무(펀드,방카,신탁 등)' },
@@ -145,7 +145,7 @@ function TmpTsProg() {
         ]}
       />
     ) }, },
-    { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: '조회목적', render: (v, r, i) => { return (
+    { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: <SppObjLabel label="조회목적" required={true} />, render: (v, r, i) => { return (
       <SppSelect placeholder="조회목적 선택" width="60"
         options={[
           { value: '0', label: '상담' },
@@ -154,7 +154,7 @@ function TmpTsProg() {
         ]}
       />
     ) }, },
-    { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: '조회사유', render: (v, r, i) => { return (
+    { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: <SppObjLabel label="조회사유" required={true} />, render: (v, r, i) => { return (
       <SppTextArea placeholder="" rows={3} value={`이러저러한 사유로 고객정보를 조회하였음`} readOnly />
     ) }, },
     { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: '반려사유', render: (v, r, i) => { return (
@@ -200,7 +200,7 @@ function TmpTsProg() {
 
                   <Tabs
                     type="card"
-                    className="m-tabs type-1"
+                    className="m-tabs type-1 _primary"
                     defaultActiveKey="2"
                     items={[
                       {
@@ -222,7 +222,7 @@ function TmpTsProg() {
 
                             <Tabs
                               type="line"
-                              className="m-tabs type-2"
+                              className="m-tabs type-2  _primary"
                               defaultActiveKey="1"
                               items={[
                                 {
@@ -597,9 +597,9 @@ function TmpTsProg() {
                             <SppObjLabel label={`조회기간`} required={true} wrapper="header" />
 
                             <div className="main">
-                              <SppDatePicker placeholder="" picker="date" className="mode-required" />
+                              <SppDatePicker placeholder="" className="mode-required" picker="date" />
                               <span className="seps type-string _tilde"><span className="string">~</span></span>
-                              <SppDatePicker placeholder="" picker="date" className="mode-required" />
+                              <SppDatePicker placeholder="" className="mode-required" picker="date" />
                             </div>
                           </div>
 
@@ -623,7 +623,7 @@ function TmpTsProg() {
                           <div className="group">
                             <dt className="head">총 건수</dt>
                             <dd className="data">
-                              10
+                              9,999
                             </dd>
                           </div>
 
