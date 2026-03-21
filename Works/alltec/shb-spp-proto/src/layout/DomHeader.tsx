@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import React, { useEffect, useMemo, useRef, useState, } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import SVGSymbolLogo from "@/assets/object/sym_logo.svg?react";
 import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";

@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import React, { useEffect, useMemo, useRef, useState, } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import RoleMainHeaderTitle from "@/layout/RoleMainHeaderTitle";
 import RoleMainHeaderFavorite from "@/layout/RoleMainHeaderFavorite";
@@ -163,6 +164,53 @@ function TmpTsProg() {
   ];
   const table2020DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
 
+  const table2030Columns: ColumnsType<any> = [
+    { dataIndex: 'data1010', width: 64, ellipsis: false, align: 'center', title: '순번', render: (v, r, i) => { return `${i + 1}` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회일자(또는 휴가/연수/기타 종료일자)', render: (v, r, i) => { return `2026-04-19` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'end', title: '내 미처리 건수', render: (v, r, i) => { return ( <strong className="g-bold c-color-point">9,999</strong> ) }, },
+  ];
+  const table2030DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
+
+  const table2040Columns: ColumnsType<any> = [
+    { dataIndex: 'data1010', width: 64, ellipsis: false, align: 'center', title: '순번', render: (v, r, i) => { return `${i + 1}` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회일자', render: (v, r, i) => { return `2026-04-19` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회시각', render: (v, r, i) => { return `13:58:46` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객번호', render: (v, r, i) => { return <a href="#" className="o-link _link-primary"><span className="label">798745156</span></a> }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객명', render: (v, r, i) => { return `홍길동` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `3510010000` }, },
+    { dataIndex: 'data1010', width: 219, ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
+    { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: <SppObjLabel label="조회용도" required={true} />, render: (v, r, i) => { return (
+      <SppMultiSelect placeholder="조회용도 선택" width="60"
+        options={[
+          { value: '0', label: '수신업무(펀드,방카,신탁 등)' },
+          { value: '1', label: '여신업무' },
+          { value: '2', label: '외환업무' },
+          { value: '3', label: '부수대행/전자금융' },
+          { value: '4', label: '담당고객 기일관리' },
+          { value: '5', label: '마케팅' },
+          { value: '6', label: '내부통제(감사부,준법감시부,여신감리부 등)' },
+          { value: '7', label: '기타(단순업무문의 등)' },
+        ]}
+      />
+    ) }, },
+    { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: <SppObjLabel label="조회목적" required={true} />, render: (v, r, i) => { return (
+      <SppSelect placeholder="조회목적 선택" width="60"
+        options={[
+          { value: '0', label: '상담' },
+          { value: '1', label: '고객요청' },
+          { value: '2', label: '기타' },
+        ]}
+      />
+    ) }, },
+    { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: <SppObjLabel label="조회사유" required={true} />, render: (v, r, i) => { return (
+      <SppTextArea placeholder="" rows={3} value={`이러저러한 사유로 고객정보를 조회하였음`} readOnly />
+    ) }, },
+    { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: '반려사유', render: (v, r, i) => { return (
+      <SppTextArea placeholder="" rows={3} className="mode-string" value={`이러이러한 이유와 저러저러한 사유로 반려하고 싶으나 뭔가 이유가 있었을 거라 나는 생각하긴 하지만 그래도 이러이러한 이유와 저러저러한 사유로 반려`} readOnly />
+    ) }, },
+  ];
+  const table2040DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
+
   return (
     <>
               <div className="nodes" data-node-no="0">
@@ -295,8 +343,8 @@ function TmpTsProg() {
                                   <div className="main">
                                     <SppTable<any>
                                       // rowSelection={rowSelection}
-                                      columns={table2010Columns}
-                                      dataSource={table2010DataSource}
+                                      columns={table2030Columns}
+                                      dataSource={table2030DataSource}
                                       pagination={false}
                                       heightSectionBasis={ 1 * 35 + 3 * 35 }
                                       // scroll={{ x: 4096 }}
@@ -328,8 +376,8 @@ function TmpTsProg() {
                                   <div className="main _primary">
                                     <SppTable<any>
                                       rowSelection={rowSelection}
-                                      columns={table2020Columns}
-                                      dataSource={table2020DataSource}
+                                      columns={table2040Columns}
+                                      dataSource={table2040DataSource}
                                       paginationFlag
                                       heightSectionBasis={ 1 * 41 + 3 * 81 }
                                       // scroll={{ x: 4096 }}

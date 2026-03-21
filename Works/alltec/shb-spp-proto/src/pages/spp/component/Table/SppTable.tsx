@@ -1,5 +1,7 @@
-import React, { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from "react";
-import type { CSSProperties, Key, ReactElement, ReactNode } from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
+import type { Key, ReactElement } from 'react';
+
+import { SppEllipsisTooltipCell } from "./SppTableEllipsisTooltip";
 
 // import { IudType } from '@/type/common.type';
 import { CheckCircleOutlined, DeleteOutlined, EditOutlined, PlusCircleOutlined } from '@ant-design/icons';
@@ -36,7 +38,7 @@ const rowNoColumns: ColumnsType<any> = [
     dataIndex: 'rowNo',
     key: 'rowNo',
     align: 'center',
-    width: '60px',
+    width: 64,
   },
 ];
 
@@ -47,7 +49,7 @@ export const IUD_COLUMN: any = {
   dataIndex: 'iudType',
   key: 'iudType',
   align: 'center',
-  width: '40px',
+  width: 48,
   // render: (value: IudType) => {
   //   if (value === IudType.I) return <PlusCircleOutlined />;
   //   if (value === IudType.U) return <CheckCircleOutlined />;
