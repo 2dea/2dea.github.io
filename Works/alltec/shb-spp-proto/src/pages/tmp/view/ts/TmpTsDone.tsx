@@ -40,7 +40,7 @@ function TmpTsProg() {
   const table9010Columns: ColumnsType<any> = [
     { dataIndex: 'data1010', width: 64, ellipsis: false, align: 'center', title: '순번', render: (v, r, i) => { return `${i + 1}` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회일자', render: (v, r, i) => { return `2026-04-19` }, },
-    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회시각', render: (v, r, i) => { return `13:58:46` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회시각', render: (v, r, i) => { return `13:57:48` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객번호', render: (v, r, i) => { return <a href="#" className="o-link _link-primary"><span className="label">798745156</span></a> }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객명', render: (v, r, i) => { return `홍길동` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `3510010000` }, },
@@ -119,19 +119,19 @@ function TmpTsProg() {
 
   const table2010Columns: ColumnsType<any> = [
     { dataIndex: 'data1010', width: 64, ellipsis: false, align: 'center', title: '순번', render: (v, r, i) => { return `${i + 1}` }, },
-    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회일자(또는 휴가/연수/기타 종료일자)', render: (v, r, i) => { return `2026-04-19` }, },
-    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'end', title: '내 미처리 건수', render: (v, r, i) => { return ( <strong className="g-bold c-color-point">9,999</strong> ) }, },
+    { dataIndex: 'data1010', width: 250, ellipsis: true, align: 'center', title: '조회일자(또는 휴가/연수/기타 종료일자)', render: (v, r, i) => { return `2026-04-19` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: true, align: 'end', title: '내 미처리 건수', render: (v, r, i) => { return ( <strong className="g-bold c-color-point">9,999</strong> ) }, },
   ];
   const table2010DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
 
   const table2020Columns: ColumnsType<any> = [
     { dataIndex: 'data1010', width: 64, ellipsis: false, align: 'center', title: '순번', render: (v, r, i) => { return `${i + 1}` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회일자', render: (v, r, i) => { return `2026-04-19` }, },
-    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회시각', render: (v, r, i) => { return `13:58:46` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회시각', render: (v, r, i) => { return `13:57:48` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객번호', render: (v, r, i) => { return <a href="#" className="o-link _link-primary"><span className="label">798745156</span></a> }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객명', render: (v, r, i) => { return `홍길동` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `3510010000` }, },
-    { dataIndex: 'data1010', width: 219, ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
+    { dataIndex: 'data1010', width: '12%', ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
     { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: <SppObjLabel label="조회용도" required={true} />, render: (v, r, i) => { return (
       <SppMultiSelect placeholder="조회용도 선택" width="60"
         options={[
@@ -163,6 +163,105 @@ function TmpTsProg() {
     ) }, },
   ];
   const table2020DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
+
+  const table2030Columns: ColumnsType<any> = [
+    { dataIndex: 'data1010', width: 64, ellipsis: false, align: 'center', title: '순번', render: (v, r, i) => { return `${i + 1}` }, },
+    { dataIndex: 'data1010', width: 250, ellipsis: true, align: 'center', title: '조회일자(또는 휴가/연수/기타 종료일자)', render: (v, r, i) => { return `2026-04-19` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '부서코드', render: (v, r, i) => { return `0000` }, },
+    { dataIndex: 'data1010', width: '30%', ellipsis: true, align: 'start', title: '부서명', render: (v, r, i) => { return `봉은사로` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: true, align: 'end', title: '내 미처리 건수', render: (v, r, i) => { return ( <strong className="g-bold c-color-point">9,999</strong> ) }, },
+    { dataIndex: 'data1010', width: '', ellipsis: true, align: 'end', title: '부서 총 건수', render: (v, r, i) => { return `9,999` }, },
+  ];
+  const table2030DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
+
+  const table2040Columns: ColumnsType<any> = [
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회일자', render: (v, r, i) => { return `2026-04-19` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회시각', render: (v, r, i) => { return `13:57:48` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '직원명', render: (v, r, i) => { return `김신한` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객번호', render: (v, r, i) => { return <a href="#" className="o-link _link-primary"><span className="label">798745156</span></a> }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객명', render: (v, r, i) => { return `홍길동` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `3510010000` }, },
+    { dataIndex: 'data1010', width: '12%', ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
+    { dataIndex: 'data1010', width: 160, ellipsis: true, align: 'start', title: '조회용도', render: (v, r, i) => { return `수신업무(펀드,방카,신탁 등), 내부통제(감사부,준법감시부,여신감리부 등)` }, },
+    { dataIndex: 'data1010', width: 160, ellipsis: true, align: 'center', title: '조회목적', render: (v, r, i) => { return `상담` }, },
+    { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: '조회사유', render: (v, r, i) => { return (
+      <SppTextArea placeholder="" rows={3} value={`이러저러한 사유로 고객정보를 조회하였음`} readOnly />
+    ) }, },
+    { title: '적정성상태', children: [
+      { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '현장대리인', render: (v, r, i) => { return (
+        <div className="m-inline-binds item-justify">
+          {i === 1 ?
+            <em className="o-chip var-status-80"><span className="label">적정</span></em>
+            :
+            ``
+          }
+          {i === 2 ?
+            <em className="o-chip var-status-20"><span className="label">부적정</span></em>
+            :
+            ``
+          }
+        </div>
+      ) }, },
+      { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: <SppObjLabel label="정보보호담당자" required={true} />, render: (v, r, i) => { return (
+        <div className="m-inline-binds item-justify">
+          {i === 1 ?
+            <SppButton variant="filled" color="green" specName="filled-status-80">적정</SppButton>
+            :
+            <SppButton variant="filled" color="default" specName="filled-status-00">적정</SppButton>
+          }
+          {i === 2 ?
+            <SppButton variant="filled" color="red" specName="filled-status-20">부적정</SppButton>
+            :
+            <SppButton variant="filled" color="default" specName="filled-status-00">부적정</SppButton>
+          }
+        </div>
+      ) }, },
+    ], },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '반려', render: (v, r, i) => { return (
+      <div className="m-inline-binds item-justify">
+        <SppButton variant="outlined" color="default" specName="normal">반려</SppButton>
+      </div>
+    ) }, },
+  ];
+  const table2040DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
+
+  const table2050Columns: ColumnsType<any> = [
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '반려취소', render: (v, r, i) => { return (
+      <div className="m-inline-binds item-justify">
+        <SppButton variant="outlined" color="default" specName="normal">반려취소</SppButton>
+      </div>
+    ) }, },
+    { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: '반려사유', render: (v, r, i) => { return (
+      <SppTextArea placeholder="" rows={3} className="mode-string" value={`이러이러한 이유와 저러저러한 사유로 반려하고 싶으나 뭔가 이유가 있었을 거라 나는 생각하긴 하지만 그래도 이러이러한 이유와 저러저러한 사유로 반려`} readOnly />
+    ) }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회일자', render: (v, r, i) => { return `2026-04-19` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '조회시각', render: (v, r, i) => { return `13:57:48` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '직원명', render: (v, r, i) => { return `김신한` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객번호', render: (v, r, i) => { return <a href="#" className="o-link _link-primary"><span className="label">798745156</span></a> }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객명', render: (v, r, i) => { return `홍길동` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `3510010000` }, },
+    { dataIndex: 'data1010', width: '12%', ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
+    { dataIndex: 'data1010', width: 160, ellipsis: true, align: 'start', title: '조회용도', render: (v, r, i) => { return `수신업무(펀드,방카,신탁 등), 내부통제(감사부,준법감시부,여신감리부 등)` }, },
+    { dataIndex: 'data1010', width: 160, ellipsis: true, align: 'center', title: '조회목적', render: (v, r, i) => { return `상담` }, },
+    { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: '조회사유', render: (v, r, i) => { return (
+      <SppTextArea placeholder="" rows={3} value={`이러저러한 사유로 고객정보를 조회하였음`} readOnly />
+    ) }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '적정성상태', render: (v, r, i) => { return (
+      <div className="m-inline-binds item-justify">
+        {i === 1 ?
+          <em className="o-chip var-status-80"><span className="label">적정</span></em>
+          :
+          ``
+        }
+        {i === 2 ?
+          <em className="o-chip var-status-20"><span className="label">부적정</span></em>
+          :
+          ``
+        }
+      </div>
+    ) }, },
+  ];
+  const table2050DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
 
   return (
     <>
@@ -252,8 +351,6 @@ function TmpTsProg() {
                       },
                     ]}
                   />
-
-                  <SppAutoComplete placeholder="" width="50" className="mode-required" />
 
                   <div className="m-grid _primary">
                     <div className="column">
@@ -362,14 +459,14 @@ function TmpTsProg() {
                           <div className="group">
                             <dt className="head">신청연도</dt>
                             <dd className="data">
-                              <em className="o-chip var-lined-01"><span className="label">2025년</span></em>
+                              <em className="o-chip var-lined-1"><span className="label">2025년</span></em>
                             </dd>
                           </div>
 
                           <div className="group">
                             <dt className="head">신청상태</dt>
                             <dd className="data">
-                              <em className="o-chip var-lined-01"><span className="label">신청마감</span></em>
+                              <em className="o-chip var-lined-1"><span className="label">신청마감</span></em>
                             </dd>
                           </div>
                         </dl>
@@ -588,6 +685,8 @@ function TmpTsProg() {
                     </div>
                   </div>
 
+
+
                   <div className="m-grid _primary">
                     <div className="column">
 
@@ -644,7 +743,7 @@ function TmpTsProg() {
                         </dl>
                       </div>
 
-                      <div className="m-section g-wd-5">
+                      <div className="m-section g-wd-max">
                         <div className="m-header">
                           <div className="prime">
                             <h2 className="o-heading level2"><span className="label">조회일자별 미처리 건수</span></h2>
@@ -657,6 +756,7 @@ function TmpTsProg() {
                             columns={table2010Columns}
                             dataSource={table2010DataSource}
                             pagination={false}
+                            heightSectionFixed
                             heightSectionBasis={ 1 * 35 + 3 * 35 }
                             // scroll={{ x: 4096 }}
                             className="style-fit"
@@ -699,8 +799,212 @@ function TmpTsProg() {
                     </div>
                   </div>
 
+
+
+                  <div className="m-grid">
+                    <div className="column">
+
+                      <div className="m-filter-form">
+                        <div className="fieldset">
+
+                          <div className="m-field">
+                            <SppObjLabel label={`조회기간`} required={true} wrapper="header" />
+
+                            <div className="main">
+                              <SppDatePicker placeholder="" className="mode-required" picker="date" />
+                              <span className="seps type-string _tilde"><span className="string">~</span></span>
+                              <SppDatePicker placeholder="" className="mode-required" picker="date" />
+                            </div>
+                          </div>
+
+                          <div className="m-field">
+                            <SppObjLabel label={`부서`} required={false} wrapper="header" />
+
+                            <div className="main">
+                              <SppSelect width="90"
+                                // options={[
+                                //   { value: '0', label: '전체' },
+                                //   { value: '1', label: '예' },
+                                //   { value: '2', label: '아니오' },
+                                // ]}
+                                defaultValue={['0']}
+                              />
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div className="binds">
+                          <SppButton variant="solid" color="default" specName="inquire">조회</SppButton>
+                        </div>
+                      </div>
+
+                      <div className="o-board _m-defines">
+                        <dl className="m-defines">
+                          <div className="group">
+                            <dt className="head">총 건수</dt>
+                            <dd className="data">
+                              9,999
+                            </dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">결재요청중</dt>
+                            <dd className="data">
+                              10
+                            </dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">결재완료</dt>
+                            <dd className="data">
+                              10
+                            </dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">미등록</dt>
+                            <dd className="data">
+                              10
+                            </dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">등록중</dt>
+                            <dd className="data">
+                              0
+                            </dd>
+                          </div>
+                        </dl>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <Tabs
+                    type="card"
+                    className="m-tabs type-1 _primary"
+                    defaultActiveKey="1"
+                    items={[
+                      {
+                        key: '1',
+                        label: <><span className="label">미결재내역</span></>,
+                        children: (
+                          <>
+
+                            <div className="m-grid _primary">
+                              <div className="column">
+
+                                <div className="m-section">
+                                  <div className="m-header">
+                                    <div className="prime">
+                                      <h2 className="o-heading level2"><span className="label">조회일자별 미결재 건수</span></h2>
+                                    </div>
+                                  </div>
+
+                                  <div className="main">
+                                    <SppTable<any>
+                                      // rowSelection={rowSelection}
+                                      columns={table2030Columns}
+                                      dataSource={table2030DataSource}
+                                      pagination={false}
+                                      heightSectionFixed
+                                      heightSectionBasis={ 1 * 35 + 3 * 35 }
+                                      // scroll={{ x: 4096 }}
+                                      className="style-fit"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div className="m-section">
+                                  <div className="m-header">
+                                    <div className="prime">
+                                      <h3 className="o-heading level3"><span className="label">조회사유 미결재내역</span></h3>
+                                    </div>
+
+                                    <div className="extra">
+                                      <div className="m-binds">
+                                        <div className="group">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2">일괄적정</SppButton>
+                                          <SppButton variant="outlined" color="volcano" specName="lined-4">일괄부적정</SppButton>
+                                        </div>
+                                        <div className="group">
+                                          <SppButton variant="text" color="default" icon={<SppObjSymbol label={resLabel.excelDownloadSection} modelType="icon" specName="excel-download" />} modelType="symbol" title="엑셀​다운로드"></SppButton>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="main _primary">
+                                    <SppTable<any>
+                                      rowSelection={rowSelection}
+                                      columns={table2040Columns}
+                                      dataSource={table2040DataSource}
+                                      paginationFlag
+                                      heightSectionBasis={ 2 * 41 + 3 * 81 }
+                                      // scroll={{ x: 4096 }}
+                                    />
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+
+                          </>
+                        ),
+                      },
+                      {
+                        key: '2',
+                        // label: <>반려내역</>,
+                        label: <><span className="label">반려내역</span> <Badge showZero={true} count={1000} /></>,
+                        children: (
+                          <>
+
+                            <div className="m-grid _primary">
+                              <div className="column">
+
+                                <div className="m-section">
+                                  <div className="m-header">
+                                    <div className="prime">
+                                      <h2 className="o-heading level2"><span className="label">조회사유 반려내역</span></h2>
+
+                                      <div className="o-helper style-strong"><em className="label">반려내역 확인 후 반드시 [최종반려] 처리가 완료되어야 미결재내역에 대한 [승인] 처리가 가능합니다.</em></div>
+                                    </div>
+
+                                    <div className="extra">
+                                      <div className="m-binds">
+                                        <div className="group">
+                                          <SppButton variant="text" color="default" icon={<SppObjSymbol label={resLabel.excelDownloadSection} modelType="icon" specName="excel-download" />} modelType="symbol" title="엑셀​다운로드"></SppButton>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="main _primary">
+                                    <SppTable<any>
+                                      rowSelection={rowSelection}
+                                      columns={table2050Columns}
+                                      dataSource={table2050DataSource}
+                                      paginationFlag
+                                      heightSectionBasis={ 1 * 41 + 3 * 81 }
+                                      // scroll={{ x: 4096 }}
+                                    />
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+
+                          </>
+                        ),
+                      },
+                    ]}
+                  />
+
                 </div>
               </div>
+
+
 
               {/* {isOpenPopupSample && ( */}
                 <PopupSample

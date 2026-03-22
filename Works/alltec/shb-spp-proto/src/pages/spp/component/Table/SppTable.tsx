@@ -67,7 +67,7 @@ function hasColumnKey(columns: any[] | undefined, key: string) {
     .includes(key as any);
 }
 
-const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, heightSectionFixed=true, heightSectionBasis, ...props }: SppTableProps<T>, ref: any) => {
+const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, heightSectionFixed=false, heightSectionBasis, ...props }: SppTableProps<T>, ref: any) => {
   const wrapRef = useRef<HTMLDivElement | null>(null);
   const tableRef = useRef<any>(null);
   const prevDataSourceRef = useRef<any>(null);
