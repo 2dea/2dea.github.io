@@ -506,21 +506,21 @@ function TmpTsProg() {
                                 <tbody>
                                   <tr>
                                     <th colSpan={1}>
-                                      head
+                                      <SppObjLabel label={`head`} required={false} />
                                     </th>
                                     <td colSpan={1}>
                                       data
                                     </td>
 
                                     <th colSpan={1}>
-                                      head
+                                      <SppObjLabel label={`head`} required={false} />
                                     </th>
                                     <td colSpan={1}>
                                       data
                                     </td>
 
                                     <th colSpan={1}>
-                                      head
+                                      <SppObjLabel label={`head`} required={false} />
                                     </th>
                                     <td colSpan={1}>
                                       data
@@ -529,21 +529,21 @@ function TmpTsProg() {
 
                                   <tr>
                                     <th colSpan={1}>
-                                      AutoComplete
+                                      <SppObjLabel label={`AutoComplete`} required={false} />
                                     </th>
                                     <td colSpan={1}>
                                       <SppAutoComplete placeholder="" className="mode-required" />
                                     </td>
 
                                     <th colSpan={1}>
-                                      head
+                                      <SppObjLabel label={`head`} required={false} />
                                     </th>
                                     <td colSpan={1}>
                                       data
                                     </td>
 
                                     <th colSpan={1}>
-                                      head
+                                      <SppObjLabel label={`head`} required={false} />
                                     </th>
                                     <td colSpan={1}>
                                       data
@@ -552,7 +552,7 @@ function TmpTsProg() {
 
                                   <tr>
                                     <th colSpan={1}>
-                                      팝업
+                                      <SppObjLabel label={`팝업`} required={true} />
                                     </th>
                                     <td colSpan={5}>
                                       <div className="m-binds">
@@ -565,7 +565,7 @@ function TmpTsProg() {
 
                                   <tr>
                                     <th colSpan={1}>
-                                      SppButton
+                                      <SppObjLabel label={`SppButton`} required={false} />
                                     </th>
                                     <td colSpan={5}>
                                       <div className="extra">
