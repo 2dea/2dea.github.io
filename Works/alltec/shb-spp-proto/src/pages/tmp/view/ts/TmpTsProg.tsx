@@ -11,11 +11,13 @@ import type { ColumnsType, TableRowSelection } from "antd/es/table/interface";
 
 import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
 import SppButton from "@/pages/spp/component/Button/SppButton";
+import SppCheckbox from "@/pages/spp/component/Checkbox/SppCheckbox";
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
 import SppInputText from "@/pages/spp/component/Input/SppInputText";
 import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
 import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
+import SppRadio from "@/pages/spp/component/Radio/SppRadio";
 import SppSelect from "@/pages/spp/component/Select/SppSelect";
 import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
@@ -263,6 +265,38 @@ function TmpTsProg() {
   ];
   const table2050DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
 
+  const table2070Columns: ColumnsType<any> = [
+    { dataIndex: 'data1010', width: '', ellipsis: true, align: 'start', title: '타이틀', render: (v, r, i) => { return (
+      <SppRadio
+        options={[
+          { value: '0', label: '사용' },
+          { value: '1', label: '미사용' },
+        ]}
+        defaultValue={'0'}
+      />
+    ) }, },
+    { dataIndex: 'data1010', width: '', ellipsis: true, align: 'start', title: '타이틀', render: (v, r, i) => { return (
+      <SppRadio
+        // options={[
+        //   { value: '0', label: '사용' },
+        //   { value: '1', label: '미사용' },
+        // ]}
+        // defaultValue={'0'}
+      />
+    ) }, },
+    { dataIndex: 'data1010', width: '', ellipsis: true, align: 'start', title: '타이틀', render: (v, r, i) => { return (
+      // <Checkbox.Group
+      //   options={[
+      //     { value: '0', label: '사용' },
+      //     { value: '1', label: '미사용' },
+      //   ]}
+      //   defaultValue={['0', '1']}
+      // />
+      <SppCheckbox></SppCheckbox>
+    ) }, },
+  ];
+  const table2070DataSource = Array.from<any>({ length: 1 }).map<any>((_, i) => ({}));
+
   return (
     <>
               <div className="nodes" data-node-no="0">
@@ -294,54 +328,82 @@ function TmpTsProg() {
                   <div className="m-grid _primary">
                     <div className="column">
 
-                      <div className="m-filter-form">
-                        <div className="fieldset">
+                      <div className="m-section">
+                        <div className="main">
+                          <div className="o-dataform">
+                            <div className="table-wrapper">
+                              <table className="table">
+                                <colgroup>
+                                  <col className="head" />
+                                  <col className="data" />
+                                  <col className="head" />
+                                  <col className="data" />
+                                </colgroup>
 
-                          <div className="m-field">
-                            <SppObjLabel label={`조회기간`} required={true} wrapper="header" />
+                                <tbody>
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`My 개인(신용)정보 조회권한`} required={false} />
+                                    </th>
+                                    <td colSpan={3}>
+                                      허용중
+                                    </td>
+                                  </tr>
 
-                            <div className="main">
-                              <SppDatePicker placeholder="" className="mode-required" picker="date" />
-                              <span className="seps type-string _tilde"><span className="string">~</span></span>
-                              <SppDatePicker placeholder="" className="mode-required" picker="date" />
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`직원`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      [00000001] 김신한
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`직위`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      본부장
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`적용일자`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      2026-04-19
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`만료일자`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      2026-04-19
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
                           </div>
-
-                          <div className="m-field">
-                            <SppObjLabel label={`부서`} required={false} wrapper="header" />
-
-                            <div className="main">
-                              <SppAutoComplete placeholder="" width="90" value={`[4444] 디지털금융센터`} disabled />
-                            </div>
-                          </div>
-
-                        </div>
-
-                        <div className="binds">
-                          <SppButton variant="solid" color="default" specName="inquire">조회</SppButton>
                         </div>
                       </div>
 
                       <div className="o-board _m-defines">
                         <dl className="m-defines">
                           <div className="group">
-                            <dt className="head">총 건수</dt>
+                            <dt className="head">[0507] Tech기획부 부서 허용화면</dt>
                             <dd className="data">
                               9,999
                             </dd>
                           </div>
 
                           <div className="group">
-                            <dt className="head">미등록</dt>
+                            <dt className="head">직원 허용화면</dt>
                             <dd className="data">
                               10
                             </dd>
-                          </div>
-
-                          <div className="group">
-                            <dt className="head">등록</dt>
                             <dd className="data">
-                              0
+                              (문의 : 정보보호본부 개인(신용)정보권한관리 담당자)
                             </dd>
                           </div>
                         </dl>
@@ -359,11 +421,11 @@ function TmpTsProg() {
                             // rowSelection={rowSelection}
                             columns={table2010Columns}
                             dataSource={table2010DataSource}
-                            pagination={false}
-                            heightSectionFixed
-                            heightSectionBasis={ 1 * 35 + 3 * 35 }
+                            // pagination={false}
+                            paginationFlag
+                            // heightSectionFixed
+                            // heightSectionBasis={ 1 * 41 + 3 * 41 }
                             // scroll={{ x: 4096 }}
-                            className="style-fit"
                           />
                         </div>
                       </div>
@@ -388,13 +450,15 @@ function TmpTsProg() {
                           </div>
                         </div>
 
-                        <div className="main _primary">
+                        <div className="main">
                           <SppTable<any>
-                            rowSelection={rowSelection}
-                            columns={table2020Columns}
-                            dataSource={table2020DataSource}
-                            paginationFlag
-                            heightSectionBasis={ 1 * 41 + 3 * 81 }
+                            // rowSelection={rowSelection}
+                            columns={table2070Columns}
+                            dataSource={table2070DataSource}
+                            pagination={false}
+                            // paginationFlag
+                            // heightSectionFixed
+                            heightSectionBasis={ 0 }
                             // scroll={{ x: 4096 }}
                           />
                         </div>

@@ -11,11 +11,13 @@ import type { ColumnsType, TableRowSelection } from "antd/es/table/interface";
 
 import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
 import SppButton from "@/pages/spp/component/Button/SppButton";
+import SppCheckbox from "@/pages/spp/component/Checkbox/SppCheckbox";
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
 import SppInputText from "@/pages/spp/component/Input/SppInputText";
 import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
 import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
+import SppRadio from "@/pages/spp/component/Radio/SppRadio";
 import SppSelect from "@/pages/spp/component/Select/SppSelect";
 import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
@@ -426,7 +428,7 @@ function TmpTsProg() {
                             <SppObjLabel label={`텍스트에리어`} required={true} wrapper="header" />
 
                             <div className="main">
-                              <SppTextArea placeholder="" className="mode-required" />
+                              <SppTextArea placeholder="" rows={1} className="mode-required" />
                             </div>
                           </div>
 
@@ -675,7 +677,9 @@ function TmpTsProg() {
                             rowSelection={rowSelection}
                             columns={columns}
                             dataSource={dataSource}
+                            // pagination={false}
                             paginationFlag
+                            // heightSectionFixed
                             // heightSectionBasis={ 1 * 41 + 3 * 41 }
                             // scroll={{ x: 4096 }}
                           />
@@ -756,6 +760,7 @@ function TmpTsProg() {
                             columns={table2010Columns}
                             dataSource={table2010DataSource}
                             pagination={false}
+                            // paginationFlag
                             heightSectionFixed
                             heightSectionBasis={ 1 * 35 + 3 * 35 }
                             // scroll={{ x: 4096 }}
@@ -789,7 +794,9 @@ function TmpTsProg() {
                             rowSelection={rowSelection}
                             columns={table2020Columns}
                             dataSource={table2020DataSource}
+                            // pagination={false}
                             paginationFlag
+                            // heightSectionFixed
                             heightSectionBasis={ 1 * 41 + 3 * 81 }
                             // scroll={{ x: 4096 }}
                           />
@@ -908,6 +915,7 @@ function TmpTsProg() {
                                       columns={table2030Columns}
                                       dataSource={table2030DataSource}
                                       pagination={false}
+                                      // paginationFlag
                                       heightSectionFixed
                                       heightSectionBasis={ 1 * 35 + 3 * 35 }
                                       // scroll={{ x: 4096 }}
@@ -940,7 +948,9 @@ function TmpTsProg() {
                                       rowSelection={rowSelection}
                                       columns={table2040Columns}
                                       dataSource={table2040DataSource}
+                                      // pagination={false}
                                       paginationFlag
+                                      // heightSectionFixed
                                       heightSectionBasis={ 2 * 41 + 3 * 81 }
                                       // scroll={{ x: 4096 }}
                                     />
@@ -985,7 +995,9 @@ function TmpTsProg() {
                                       rowSelection={rowSelection}
                                       columns={table2050Columns}
                                       dataSource={table2050DataSource}
+                                      // pagination={false}
                                       paginationFlag
+                                      // heightSectionFixed
                                       heightSectionBasis={ 1 * 41 + 3 * 81 }
                                       // scroll={{ x: 4096 }}
                                     />

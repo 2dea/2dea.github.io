@@ -141,7 +141,7 @@
 /** Tables
  --------- */
 
-.o-dataform  { --fs-headcell-int: var(--font-40-int); --mg-cell-inline: #{px(10)}; --mg-headcell-inline: #{px(10)}; clear: both; }
+.o-dataform  { --fs-headcell-int: var(--font-40-int); --mg-cell-inline: #{px(10)}; --mg-headcell-inline: #{px(10)}; clear: both; white-space: normal; }
 .o-dataform :where(table:not(td *))  { table-layout: fixed; border-collapse: collapse; border-spacing: 0; width: 100%; background: var(--cl-ground); }
 .o-dataform :where(table:not(td *)) col  { width: calc(1em * var(--em) * 1.173077 + var(--mg-cell-inline) * 2 + $e10); }
 .o-dataform :where(table:not(td *)) col.head  { font-size: px(var(--fs-headcell-int)); width: calc(1em * var(--em-headcell) * 0.86419 + var(--mg-headcell-inline) * 2 + $e10); }

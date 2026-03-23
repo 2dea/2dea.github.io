@@ -7,7 +7,13 @@ export interface SppRadioProps extends RadioGroupProps {
   options?: { value: any; label: ReactNode }[];
 }
 
-const SppRadio = ({ options, ...props }: SppRadioProps) => {
+const SppRadio = ({
+  options=[
+    { value: '0', label: 'Y' },
+    { value: '1', label: 'N' },
+  ],
+  ...props
+}: SppRadioProps) => {
   return (
     <Radio.Group {...props}>
       {options &&

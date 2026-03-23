@@ -8,11 +8,13 @@ import type { ColumnsType, TableRowSelection } from "antd/es/table/interface";
 
 import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
 import SppButton from "@/pages/spp/component/Button/SppButton";
+import SppCheckbox from "@/pages/spp/component/Checkbox/SppCheckbox";
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
 import SppInputText from "@/pages/spp/component/Input/SppInputText";
 import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
 import SppObjSymbol, { resLabel } from "@/pages/spp/component/ObjSymbol/SppObjSymbol";
+import SppRadio from "@/pages/spp/component/Radio/SppRadio";
 import SppSelect from "@/pages/spp/component/Select/SppSelect";
 import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
