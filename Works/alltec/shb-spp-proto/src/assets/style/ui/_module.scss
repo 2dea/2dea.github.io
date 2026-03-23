@@ -125,6 +125,8 @@ table  {
   --wdx: ;
 
   white-space: normal;
+
+  &:disabled  { filter: none; }
 }
 
 

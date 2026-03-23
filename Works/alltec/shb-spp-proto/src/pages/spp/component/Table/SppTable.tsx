@@ -39,6 +39,7 @@ const rowNoColumns: ColumnsType<any> = [
     key: 'rowNo',
     align: 'center',
     width: 64,
+    ellipsis: false,
   },
 ];
 
@@ -50,6 +51,7 @@ export const IUD_COLUMN: any = {
   key: 'iudType',
   align: 'center',
   width: 48,
+  ellipsis: false,
   // render: (value: IudType) => {
   //   if (value === IudType.I) return <PlusCircleOutlined />;
   //   if (value === IudType.U) return <CheckCircleOutlined />;
@@ -451,7 +453,7 @@ const SppTable = forwardRef(<T extends object = any>({ heightSectionTest, height
           x: props.scroll?.x ?? 'max-content',
           y: (props.scroll?.y === undefined ? undefined : props.scroll?.y) ?? 'none',
         }}
-        className={[props.className, 'spp-table-ellipsis'].filter(Boolean).join(' ')}
+        // className={[props.className, 'spp-table-ellipsis'].filter(Boolean).join(' ')}
         components={{
           ...(props.components ?? {}),
           body: {

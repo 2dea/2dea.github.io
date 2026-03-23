@@ -396,7 +396,7 @@ function TmpTsProg() {
                                 //   { value: '1', label: '예' },
                                 //   { value: '2', label: '아니오' },
                                 // ]}
-                                // defaultValue={['0']}
+                                // defaultValue={'0'}
                               />
                             </div>
                           </div>
@@ -834,7 +834,7 @@ function TmpTsProg() {
                                 //   { value: '1', label: '예' },
                                 //   { value: '2', label: '아니오' },
                                 // ]}
-                                defaultValue={['0']}
+                                defaultValue={'0'}
                               />
                             </div>
                           </div>
@@ -1021,7 +1021,7 @@ function TmpTsProg() {
               {/* {isOpenPopupSample && ( */}
                 <PopupSample
                   open={isOpenPopupSample}
-                  onCancel={(e) => setIsOpenPopupSample(false)}
+                  onCancel={() => setIsOpenPopupSample(false)}
                 />
               {/* )} */}
     </>

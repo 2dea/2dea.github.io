@@ -32,6 +32,10 @@
   --ant-color-border-disabled: #d9d9d9;
   --ant-color-border-secondary: var(--cl-edge-30);
 
+  &:where(:disabled), :where(:disabled)  {
+    filter: none;
+  }
+
   &.ant-btn  {
     --ant-button-font-weight: var(--bold-400);
 
@@ -277,7 +281,7 @@
       }
     }
 
-    .ant-table-cell-ellipsis:where(.ant-table.ant-table-bordered *) {
+    .ant-table-cell-ellipsis {
       min-width: var(--ant-table-selection-column-width);
       max-width: calc(var(--ant-table-selection-column-width) + var(--ant-padding-xs) * 2);
       word-break: break-all;
