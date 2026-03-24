@@ -19,40 +19,37 @@ import SppSelect from "@/pages/spp/component/Select/SppSelect";
 import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
-export interface PopupSampleProps extends SppModalProps {};
+export interface Help1010Props extends SppModalProps {};
 
-export const PopupSample = (props: PopupSampleProps) => {
+export const Help1010 = (props: Help1010Props) => {
   return (
     <>
       <SppModal
         {...props}
-        title="팝업샘플"
-        headerAppendExtra={
-          <>
-            <SppButton variant="outlined" color="default" specName="normal">headerAppendExtra</SppButton>
-          </>
-        }
-        footerAppendButton={
-          <>
-            <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={() => alert(2)}>footerAppendButton</SppButton>
-            <SppButton variant="outlined" color="purple" specName="lined-1" onClick={() => alert(1)}>footerAppendButton</SppButton>
-          </>
-        }
-        cancelText="취소"
-        okText="저장"
-        // cancelButtonRender={false}
-        // okButtonRender={false}
+        title="도움말"
+        cancelButtonRender={false}
         onOk={ (e) => alert('ok') }
-        // width={1024}
         // wrapWidth="50"
         // open
       >
         <div className="div-center">
-          {`{ `}Contents{` }`}
+          <div className="m-grid">
+            <div className="column">
+
+              <div className="o-board _help-popup">
+                <ul className="o-bullets type-disc">
+                  <li>본 화면은 귀 부서에서 사용 가능한 개인(신용)정보 조회화면만 목록에 출력됩니다. <br />(문의 : 정보보호본부 개인(신용)정보 권한관리 담당자)</li>
+                  <li><strong className="emph _user">김신한</strong>님의 통합단말에서 사용할 수 있는 개인(신용)정보 화면을 조회하는 화면입니다.</li>
+                  <li>근무부서나 직위 등 중요한 정보가 변경될 경우 초기화되어 다시 설정해야 합니다.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
         </div>
       </SppModal>
     </>
   )
 }
 
-export default PopupSample;
+export default Help1010;

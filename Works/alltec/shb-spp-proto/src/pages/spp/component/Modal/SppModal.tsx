@@ -7,7 +7,7 @@ import SppModalFooter from "./SppModalFooter";
 import { Modal, type ModalProps } from "antd"
 
 export interface SppModalProps extends ModalProps {
-  headerTitle?: ReactNode;
+  // headerTitle?: ReactNode;
   model?: string;
   modelType?: string;
   specName?: string;
@@ -17,10 +17,12 @@ export interface SppModalProps extends ModalProps {
   headerAppendPrimeTitle?: ReactNode;
   headerAppendExtra?: ReactNode;
   footerAppendButton?: ReactNode;
+  cancelButtonRender?: boolean;
+  okButtonRender?: boolean;
 };
 
 export const SppModal = ({
-  headerTitle=<>팝업 타이틀</>,
+  // headerTitle=<>팝업 타이틀</>,
   model="d-layer layer-popup",
   modelType="univ",
   specName="",
@@ -33,9 +35,9 @@ export const SppModal = ({
     <SppModalFooter
       children={
         <>
-          <CancelBtn />
+          {cancelButtonRender && <CancelBtn />}
           {footerAppendButton}
-          <OkBtn />
+          {okButtonRender && <OkBtn />}
         </>
       }
     />
@@ -43,8 +45,10 @@ export const SppModal = ({
   footerAppendButton,
   maskClosable=false,
   keyboard=true,
+  cancelButtonRender=true,
   cancelButtonProps={ variant: 'outlined', color: 'purple', className: 'd-button _cancel', },
   cancelText="닫기",
+  okButtonRender=true,
   okButtonProps={ variant: 'solid', color: 'purple', className: 'd-button _solid-1', },
   okText="확인",
   // open,
@@ -67,7 +71,7 @@ export const SppModal = ({
         width={(props.width !== undefined) ? props.width : !wrapWidth ? 520 : ''}
         title={
           <SppModalHeader
-            title={headerTitle}
+            title={props.title ?? '팝업 타이틀'}
             appendPrime={headerAppendPrime}
             appendPrimeTitle={headerAppendPrimeTitle}
             appendExtra={headerAppendExtra}

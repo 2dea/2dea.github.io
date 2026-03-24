@@ -136,6 +136,16 @@
     }
   }
 
+  .ant-checkbox  {
+    align-self: flex-start;
+    padding: calc((var(--ant-line-height) - var(--ant-control-interactive-size)) / 2) 0;
+  }
+
+  .ant-radio  {
+    align-self: flex-start;
+    padding: calc((var(--ant-line-height) - (1px * var(--ant-radio-radio-size))) / 2) 0;
+  }
+
   &.d-form  {
     text-align: left;
     text-align: start;

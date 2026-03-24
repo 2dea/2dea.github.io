@@ -23,10 +23,14 @@ import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
 import PopupSample from "./popup/PopupSample";
+import Table2070 from "./popup/Table2070";
+import Help1010 from "./popup/Help1010";
 
 
 function TmpTsProg() {
   const [isOpenPopupSample, setIsOpenPopupSample] = useState(false);
+  const [isOpenTable2070, setIsOpenTable2070] = useState(false);
+  const [isOpenHelp1010, setIsOpenHelp1010] = useState(false);
 
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
@@ -265,6 +269,111 @@ function TmpTsProg() {
   ];
   const table2050DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
 
+  const table2060Columns: ColumnsType<any> = [
+    { dataIndex: 'data1010', width: 64, ellipsis: false, align: 'center', title: '순번', render: (v, r, i) => { return `${i + 1}` }, },
+    { dataIndex: 'data1010', width: 120, ellipsis: false, align: 'center', title: '허용여부', render: (v, r, i) => { return `불가` }, },
+    { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `1234567890` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'start', title: '화면설명', render: (v, r, i) => { return ( `화면명 및 화면설명` ) }, },
+  ];
+  const table2060DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
+
+  const table2070Columns: ColumnsType<any> = [
+    { dataIndex: 'data1010', width: 'calc(100% * 1 / 6)', ellipsis: true, align: 'start', title: 'Banking System', render: (v, r, i) => { return (
+      <>
+        {/* <SppRadio
+          groupClassName="axis-cols"
+          options={[
+            { value: '0', label: '사용' },
+            { value: '1', label: '미사용' },
+          ]}
+          defaultValue={'0'}
+        /> */}
+        <div className="m-checks axis-cols items-ellipsis">
+          <div className="item"><SppCheckbox>전체</SppCheckbox></div>
+          <div className="item"><SppCheckbox>NEXT통합단말(개발)</SppCheckbox></div>
+          <div className="item"><SppCheckbox>NEXT통합단말(테스트/(구)연수겸용)</SppCheckbox></div>
+          <div className="item"><SppCheckbox>방카슈랑스</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+        </div>
+      </>
+    ) }, },
+    { dataIndex: 'data1010', width: 'calc(100% * 1 / 6)', ellipsis: true, align: 'start', title: 'Business System', render: (v, r, i) => { return (
+      <>
+        <div className="m-checks axis-cols items-ellipsis">
+          <div className="item"><SppCheckbox>전체</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+        </div>
+      </>
+    ) }, },
+    { dataIndex: 'data1010', width: 'calc(100% * 1 / 6)', ellipsis: true, align: 'start', title: 'Management System', render: (v, r, i) => { return (
+      <>
+        <div className="m-checks axis-cols items-ellipsis">
+          <div className="item"><SppCheckbox>전체</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+        </div>
+      </>
+    ) }, },
+    { dataIndex: 'data1010', width: 'calc(100% * 1 / 6)', ellipsis: true, align: 'start', title: 'Credit System', render: (v, r, i) => { return (
+      <>
+        <div className="m-checks axis-cols items-ellipsis">
+          <div className="item"><SppCheckbox>전체</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+        </div>
+      </>
+    ) }, },
+    { dataIndex: 'data1010', width: 'calc(100% * 1 / 6)', ellipsis: true, align: 'start', title: 'HR/컴플라이언스 System', render: (v, r, i) => { return (
+      <>
+        <div className="m-checks axis-cols items-ellipsis">
+          <div className="item"><SppCheckbox>전체</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+        </div>
+      </>
+    ) }, },
+    { dataIndex: 'data1010', width: 'calc(100% * 1 / 6)', ellipsis: true, align: 'start', title: 'ICT System', render: (v, r, i) => { return (
+      <>
+        <div className="m-checks axis-cols items-ellipsis">
+          <div className="item"><SppCheckbox>전체</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+          <div className="item"><SppCheckbox>캔버스메뉴명</SppCheckbox></div>
+        </div>
+      </>
+    ) }, },
+  ];
+  const table2070DataSource = Array.from<any>({ length: 1 }).map<any>((_, i) => ({}));
+
   return (
     <>
               <div className="nodes" data-node-no="0">
@@ -478,7 +587,8 @@ function TmpTsProg() {
                         <div className="m-header">
                           <div className="prime">
                             <h2 className="o-heading level2"><span className="label">계약내역</span></h2>
-                            <div className="o-helper style-strong"><em className="label">권한허용 상태의 직원만 일괄적용이 가능합니다.</em></div>
+
+                            <div className="o-helper style-strong"><strong className="label">권한허용 상태의 직원만 일괄적용이 가능합니다.</strong></div>
                           </div>
 
                           <div className="extra">
@@ -560,6 +670,8 @@ function TmpTsProg() {
                                       <div className="m-binds">
                                         <div className="group align-start">
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2070(true)}>캔버스 메뉴권한관리</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1010(true)}>도움말 (통합단말화면)</SppButton>
                                         </div>
                                       </div>
                                     </td>
@@ -774,7 +886,7 @@ function TmpTsProg() {
                           <div className="prime">
                             <h3 className="o-heading level3"><span className="label">고객정보 조회내역</span></h3>
 
-                            <div className="o-helper style-strong"><em className="label">조회사유 일괄적용 및 결재요청은 조회일자가 동일한 경우만 가능합니다.</em></div>
+                            <div className="o-helper style-strong"><strong className="label">조회사유 일괄적용 및 결재요청은 조회일자가 동일한 경우만 가능합니다.</strong></div>
                           </div>
 
                           <div className="extra">
@@ -978,7 +1090,7 @@ function TmpTsProg() {
                                     <div className="prime">
                                       <h2 className="o-heading level2"><span className="label">조회사유 반려내역</span></h2>
 
-                                      <div className="o-helper style-strong"><em className="label">반려내역 확인 후 반드시 [최종반려] 처리가 완료되어야 미결재내역에 대한 [승인] 처리가 가능합니다.</em></div>
+                                      <div className="o-helper style-strong"><strong className="label">반려내역 확인 후 반드시 [최종반려] 처리가 완료되어야 미결재내역에 대한 [승인] 처리가 가능합니다.</strong></div>
                                     </div>
 
                                     <div className="extra">
@@ -1013,6 +1125,142 @@ function TmpTsProg() {
                     ]}
                   />
 
+
+
+                  <div className="m-grid _primary">
+                    <div className="column">
+
+                      <div className="m-section">
+                        <div className="main">
+                          <div className="o-dataform">
+                            <div className="table-wrapper">
+                              <table className="table">
+                                <colgroup>
+                                  <col className="head" />
+                                  <col className="data" />
+                                  <col className="head" />
+                                  <col className="data" />
+                                </colgroup>
+
+                                <tbody>
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`My 개인(신용)정보 조회권한`} required={false} />
+                                    </th>
+                                    <td colSpan={3}>
+                                      허용중
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`직원`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      [00000001] 김신한
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`직위`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      본부장
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`적용일자`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      2026-04-19
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`만료일자`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      2026-04-19
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="o-board _m-defines">
+                        <dl className="m-defines">
+                          <div className="group">
+                            <dt className="head">[0507] Tech기획부 부서 허용화면</dt>
+                            <dd className="data">
+                              9,999
+                            </dd>
+                          </div>
+
+                          <div className="group">
+                            <dt className="head">직원 허용화면</dt>
+                            <dd className="data">
+                              10
+                            </dd>
+                            <dd className="data">
+                              (문의 : 정보보호본부 개인(신용)정보권한관리 담당자)
+                            </dd>
+                          </div>
+                        </dl>
+                      </div>
+
+                      <div className="m-section">
+                        <div className="m-header">
+                          <div className="prime">
+                            <h2 className="o-heading level2"><span className="label">통합단말 화면</span></h2>
+
+                            <div className="m-inline-binds">
+                              <SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말" onClick={(e) => setIsOpenHelp1010(true)}></SppButton>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="main _primary">
+                          <SppTable<any>
+                            // rowSelection={rowSelection}
+                            columns={table2060Columns}
+                            dataSource={table2060DataSource}
+                            // pagination={false}
+                            paginationFlag
+                            // heightSectionFixed
+                            // heightSectionBasis={ 1 * 41 + 3 * 41 }
+                            // scroll={{ x: 4096 }}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="m-section">
+                        <div className="m-header">
+                          <div className="prime">
+                            <h3 className="o-heading level3"><span className="label">허용중인 캔버스 메뉴</span></h3>
+                          </div>
+                        </div>
+
+                        <div className="main">
+                          <SppTable<any>
+                            // rowSelection={rowSelection}
+                            columns={table2070Columns}
+                            dataSource={table2070DataSource}
+                            pagination={false}
+                            // paginationFlag
+                            // heightSectionFixed
+                            heightSectionBasis={ 1 * 41 + 1 * 41 - 12 }
+                            // scroll={{ x: 4096 }}
+                            scroll={{ y: 208 }}
+                          />
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
@@ -1022,6 +1270,20 @@ function TmpTsProg() {
                 <PopupSample
                   open={isOpenPopupSample}
                   onCancel={() => setIsOpenPopupSample(false)}
+                />
+              {/* )} */}
+
+              {/* {isOpenTable2070 && ( */}
+                <Table2070
+                  open={isOpenTable2070}
+                  onCancel={() => setIsOpenTable2070(false)}
+                />
+              {/* )} */}
+
+              {/* {isOpenHelp1010 && ( */}
+                <Help1010
+                  open={isOpenHelp1010}
+                  onCancel={() => setIsOpenHelp1010(false)}
                 />
               {/* )} */}
     </>

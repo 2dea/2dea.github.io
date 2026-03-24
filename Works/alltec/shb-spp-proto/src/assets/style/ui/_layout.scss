@@ -758,6 +758,12 @@ body  {
   //   flex: 1 0 0;
   // }
 
+  &:where(.ant-modal-body >*)  {
+    --pdi: #{px(var(--mgi-pop))};
+
+    margin: 0 calc(-1 * var(--pdi));
+  }
+
   :where(:has(.m-section >.main._primary))  { flex: 1 0 0; display: flex; flex-direction: column; }
 
   .m-section:where(:has(>.main._primary))  {
