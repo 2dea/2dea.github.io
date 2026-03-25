@@ -25,6 +25,7 @@ import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 import PopupSample from "./popup/PopupSample";
 import Table2060 from "./popup/Table2060";
 import Table2070 from "./popup/Table2070";
+import Table2071 from "./popup/Table2071";
 import Help1010 from "./popup/Help1010";
 import Help1020 from "./popup/Help1020";
 
@@ -33,6 +34,7 @@ function TmpTsProg() {
   const [isOpenPopupSample, setIsOpenPopupSample] = useState(false);
   const [isOpenTable2060, setIsOpenTable2060] = useState(false);
   const [isOpenTable2070, setIsOpenTable2070] = useState(false);
+  const [isOpenTable2071, setIsOpenTable2071] = useState(false);
   const [isOpenHelp1010, setIsOpenHelp1010] = useState(false);
   const [isOpenHelp1020, setIsOpenHelp1020] = useState(false);
 
@@ -706,6 +708,7 @@ function TmpTsProg() {
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2060(true)}>통합단말 화면권한관리</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2070(true)}>캔버스 메뉴권한관리</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2071(true)}>권한설정 추가인증</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1010(true)}>도움말 (통합단말화면)</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1020(true)}>조회권한관리 안내</SppButton>
                                         </div>
@@ -808,6 +811,11 @@ function TmpTsProg() {
                             </div>
 
                             <div className="m-binds">
+                              <div className="group">
+                                <SppButton variant="outlined" color="default" specName="normal">행추가</SppButton>
+                                <SppButton variant="outlined" color="default" specName="normal">행삭제</SppButton>
+                                <SppButton variant="outlined" color="default" specName="normal">취소</SppButton>
+                              </div>
                               <div className="group">
                                 <SppButton variant="outlined" color="default" icon={<SppObjSymbol label={resLabel.excelUploadLabel} modelType="icon" specName="excel-upload-label" />} specName="normal">엑셀양식​업로드</SppButton>
                                 <SppButton variant="outlined" color="default" icon={<SppObjSymbol label={resLabel.excelDownloadLabel} modelType="icon" specName="excel-download-label" />} specName="normal">엑셀양식​다운로드</SppButton>
@@ -1462,6 +1470,13 @@ function TmpTsProg() {
                 <Table2070
                   open={isOpenTable2070}
                   onCancel={() => setIsOpenTable2070(false)}
+                />
+              {/* )} */}
+
+              {/* {isOpenTable2071 && ( */}
+                <Table2071
+                  open={isOpenTable2071}
+                  onCancel={() => setIsOpenTable2071(false)}
                 />
               {/* )} */}
 
