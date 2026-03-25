@@ -764,9 +764,9 @@ body  {
     margin: 0 calc(-1 * var(--pdi));
   }
 
-  :where(:has(.m-section >.main._primary))  { flex: 1 0 0; display: flex; flex-direction: column; }
+  :where(:has(.m-section._primary >.main))  { flex: 1 0 0; display: flex; flex-direction: column; }
 
-  .m-section:where(:has(>.main._primary))  {
+  .m-section:where(._primary)  {
     flex: 1 0 0;
   }
 }
@@ -807,7 +807,7 @@ body  {
     flex-direction: column;
   }
 
-  >.main:where(._primary)  { flex: 1 0 0; }
+  >.main:where(.m-section._primary >*)  { flex: 1 0 0; }
 }
 
 

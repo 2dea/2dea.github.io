@@ -274,7 +274,7 @@
   // &:where(.m-section >.main >*)  {
     flex: 0 0 auto;
 
-  &:where(.m-section >.main._primary >*)  {
+  &:where(.m-section._primary >.main >*)  {
     flex-grow: 1;
   }
 
@@ -287,7 +287,7 @@
     .ant-table-body  {
       flex: 1 0 auto;
 
-      &:where(.ant-table-container[style*="--ht-gridtable:"]:not([style*="--ht-gridtable: auto;"]) *, :where(.m-section >.main._primary *))  {
+      &:where(.ant-table-container[style*="--ht-gridtable:"]:not([style*="--ht-gridtable: auto;"]) *, :where(.m-section._primary >.main *))  {
         flex-basis: 0;
       }
     }

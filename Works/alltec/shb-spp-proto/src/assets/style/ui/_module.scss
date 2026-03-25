@@ -102,7 +102,8 @@ table  {
 .o-label  { --lh: var(--lhr); --gapc: #{px(var(--gap-element-30))}; line-height: var(--lh); display: inline-block; display: inline-flex; align-items: center; gap: 0 var(--gapc); max-width: 100%; }
 .o-label >*  { flex: 0 1 auto; min-width: 0; height: 100%; }
 .o-label >.label  { flex: 0 1 auto; display: block; position: relative; }
-.o-label .o-reqtag  { position: relative; }
+// .o-label .o-reqtag  { position: relative; }
+.o-label .o-reqtag  { position: absolute; }
 
 // .o-label >.binds  { display: flex; align-items: center; position: relative; }
 // .o-label >.binds >*  { margin-top: calc((var(--lh) - $ht-form-30) / 2); margin-bottom: calc((var(--lh) - $ht-form-30) / 2); }
@@ -189,7 +190,10 @@ table  {
 .m-field >.main >*  { min-width: 0; }
 .m-field >.main >.d-form  { min-width: 1.5em; }
 
+.m-field >.header  { padding-inline-end: calc(1em * 6 / var(--font-50-int)); }
 .m-field:where(.m-filter-form *) >.header  { font-weight: $bold-700; color: var(--cl-text-70); }
+.m-field:where(.m-filter-form *) >.header  { flex: none; display: flex; justify-content: flex-end; min-width: calc(1em * 60 / var(--font-50-int)); }
+.m-field:where(.m-filter-form *) >.main  { flex: none; }
 
 // .m-field >.main >.binds  { display: flex; gap: $gap-element-30; position: relative; }
 
@@ -2485,150 +2489,6 @@ table  {
 .m-editlist >.is-selected  { background: var(--cl-ground2-blue-30); }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.o-grid-table  { @include setResetFont(); }
-.o-grid-table  { --edge: var(--edge-cell); --mg-block: var(--mg-cell-block); --mg-inline: #{px(7)}; --height: var(--ht-cell); clear: both; }
-.o-grid-table :where(thead, tbody, tfoot, tr, th, td)  { font-weight: inherit; color: inherit; background-color: inherit; }
-:has(>table):where(.o-grid-table, .o-grid-table *)  { border: var(--edge) solid var(--cl-edge-50); }
-// .o-grid-table .c-point-cell  { color: var(--cl-point-orange); }
-.o-grid-table .c-point-cell  { background-color: var(--cl-ground2-skyblue-40); }
-.o-grid-table .c-point-row  { background: var(--cl-ground2-skyblue-40) !important; }
-// .o-grid-table .c-divide-edge  { border-right-color: var(--cl-key1-70, Navy); }
-.o-grid-table .c-divide-edge  { border-right-color: var(--cl-edge-50); }
-.o-grid-table .table-container:is(.m-section >.main:not(._primary) *)  { overflow: auto; height: var(--ht-section-main); }
-.o-grid-table :has(>.wdth-auto:where(tr >*, col)) >*  { width: 0; }
-.o-grid-table :has(>.wdth-auto:where(tr >*, col)) >:where(.wdth-50, .wdth-70, .wdth-90)  { width: auto; }  // ### min-width: 0;
-.o-grid-table .wdth-0:where(tr >*, col)  { width: 0; min-width: 0; }
-.o-grid-table .wdth-10:where(tr >*, col)  { width: calc(var(--rem) * 50); }  // ### min-width: ?;
-.o-grid-table .wdth-50:where(tr >*, col)  { width: calc(var(--rem) * 120); }  // ### min-width: ?;
-.o-grid-table .wdth-auto:where(tr >*, col)  { width: auto; }
-.o-grid-table table  { border-collapse: separate; border-spacing: 0; width: 100%; background: var(--cl-ground); text-align: center; }
-.o-grid-table col  { width: auto; min-width: calc(var(--rem) * 50); }
-// // .o-grid-table col:last-child:not(.wdth-auto ~*)  { width: auto; }
-.o-grid-table thead  { font-size: $font-40; line-height: $line-40; position: relative; color: var(--cl-key1-70); background: var(--cl-ground-50); }
-.o-grid-table thead:not(.freeze-pane)  { position: sticky; z-index: 3; top: 0; }
-.o-grid-table tfoot  { font-weight: $bold-700; position: relative; }
-.o-grid-table tfoot:not(.freeze-pane)  { position: sticky; z-index: 3; bottom: 0; }
-.o-grid-table th:not(tbody *)  { font-weight: $bold-700; }
-
-// .o-grid-table tr >*  { min-width: 0; height: var(--height); padding: var(--mg-block) var(--mg-inline); border: 0 solid var(--cl-edge-30); border-width: 0 var(--edge) var(--edge) 0; }
-.o-grid-table tr >*  { min-width: 0; height: var(--height); padding: var(--mg-block) var(--mg-inline); border: 0 solid var(--cl-edge-30); }
-.o-grid-table tr >*  { white-space: nowrap; }
-// .o-grid-table tr >* >*  { white-space: normal; }
-// .o-grid-table tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: var(--edge); }
-// .o-grid-table tr >:first-child  { border-left-width: var(--edge); }
-.o-grid-table thead tr >*  { --mg-block: var(--mg-headcell-block, var(--mg-cell-block)); --mg-inline: #{px(9)}; --height: var(--ht-headcell, var(--ht-cell)); }
-
-.o-grid-table tr >*  { border-width: 0 var(--edge) var(--edge) 0; }
-.o-grid-table thead:after,
-.o-grid-table tfoot:before  { --edge-cell: (var(--rem) * (var(--edge-cell-int) - 0.02)); content: ""; display: table-row; position: absolute; z-index: 3; width: calc(100% - var(--edge)); height: calc(var(--edge)); margin-top: calc(-1 * var(--edge)); background: Navy; }
-.o-grid-table thead:after  { background-color: var(--cl-key1-70, Navy); }
-.o-grid-table tfoot:before  { background-color: var(--cl-text-50, Navy); }
-
-.o-grid-table thead >* >*  { padding-left: px(11); padding-right: px(11); border-color: var(--cl-edge-50); }
-// // .o-grid-table thead >tr:last-child >*  { border-bottom-color: var(--cl-key1-70); }
-// .o-grid-table thead >tr >:where(:last-child >*, :not(:last-child) >[rowspan]:not([rowspan="1"]))  { border-bottom-color: var(--cl-key1-70); }
-// // .o-grid-table tbody >* >*  { white-space: nowrap; }
-// // .o-grid-table tbody >* >* >*  { white-space: normal; }
-.o-grid-table:where(:not(.type-table.case-data):not(.style-even-trow-basic)) tbody:where(:not(:has([rowspan]))) >tr:nth-child(even)  { background: var(--cl-grid-evenrow); }
-/* .o-grid-table tbody:first-of-type >tr:nth-child(even)  { background-color: var(--cl-grid-evenrow); background-color: red; }
-.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(odd)  { background-color: var(--cl-grid-evenrow); background-color: red; }
-.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~* >tr:nth-child(even)  { background-color: var(--cl-grid-evenrow); background-color: inherit; }
-.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(even)  { background-color: var(--cl-grid-evenrow); background-color: red; }
-.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(odd)  { background-color: var(--cl-grid-evenrow); background-color: inherit; }
-.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(odd)  { background-color: var(--cl-grid-evenrow); background-color: red; }
-.o-grid-table tbody:has(>:last-child:not(:nth-child(2n))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~:where(:has(>:last-child:not(:nth-child(2n)))) ~* >tr:nth-child(even)  { background-color: var(--cl-grid-evenrow); background-color: inherit; } */
-
-.o-grid-table:where(:not(.type-table.case-data)) tbody:where(:not(:has([rowspan]))):not(:has(.gridtable-empty)) >tr:hover:not(:active) >*  { background-image: linear-gradient(var(--cl-grid-hover), var(--cl-grid-hover)); }
-
-.o-grid-table table >* >tr >.tcell-strong  { background-color: var(--cl-ground2-skyblue-30); }
-
-.o-grid-table table >* >tr >.sumtotal-tcell-strong  { color: var(--cl-key1-90); background-color: var(--cl-ground-70); }
-.o-grid-table table >* >tr.daytotal-trow  { background-color: var(--cl-ground2-orange-40); }
-.o-grid-table table >* >tr.subtotal-trow  { background-color: var(--cl-ground2-blue-30); }
-.o-grid-table tbody >tr.js_clicked  { background-color: var(--cl-grid-selected); background: linear-gradient(90deg, var(--cl-grid-point) $e30, var(--cl-grid-selected) $e30); }
-// .o-grid-table tr >.js_last-freeze-pane  { position: sticky; z-index: 2; border-right: $e30 double var(--cl-point-yellow); background-color: inherit; }
-.o-grid-table tr >.js_freeze-column-last  { position: sticky; z-index: 2; /* border-right: $e10 solid var(--cl-key1-70); */ background-color: inherit; }
-
-// .o-grid-table tbody >tr:is(:nth-child(3), :nth-child(6))  { background-color: var(--cl-grid-selected); }
-// .o-grid-table tbody >tr:is(:nth-child(9), :nth-child(12))  { background-color: var(--cl-ground2-blue-40); }
-
-// .o-grid-table tbody >tr >*  { min-width: 180px; }
-
-// .o-grid-table thead  { position: sticky; z-index: 3; top: 0; }
-// .o-grid-table tr >:nth-child(3)  { position: sticky; z-index: 2; left: 0; border-right: $e30 double var(--cl-point-yellow); background-color: inherit; }
-
-.o-grid-table:where(.type-table.case-data) tbody th  { background-color: var(--cl-ground-20); }
-
-
-
-.o-grid-table .table-container:where(.type-upload.js_dragovered >*)  { box-shadow: 0 0 $e10 $e10 var(--cl-edge2-blue-30); }
-.o-grid-table table:where(.type-upload >* >*)  { table-layout: fixed; }
-
-.o-grid-table .o-form:not(tr >:where(.g-start, .g-end) *):only-child  { margin-left: auto; margin-right: auto; }
-.o-grid-table .o-form:is(tr >:where(.g-end) *):only-child  { margin-left: auto; }
-
-// .o-grid-table .o-form[class*=" wdth-"]:not(.type-date, .type-time)  { flex: auto; }
-.o-grid-table .o-form[class*=" wdth-"]:not(.type-time):not(.abs-width)  { flex: auto; }
-// .o-grid-table .o-form.wdth-10  { min-width: calc(var(--rem) * 50); }
-// .o-grid-table .o-form.wdth-20  { min-width: calc(var(--rem) * 60); }
-// .o-grid-table .o-form.wdth-30  { min-width: calc(var(--rem) * 80); }
-// .o-grid-table .o-form.wdth-40  { min-width: calc(var(--rem) * 100); }
-// .o-grid-table .o-form.wdth-50  { min-width: calc(var(--rem) * 120); }
-// .o-grid-table .o-form.wdth-60  { min-width: calc(var(--rem) * 140); }
-// .o-grid-table .o-form.wdth-70  { min-width: calc(var(--rem) * 160); }
-// .o-grid-table .o-form.wdth-80  { min-width: calc(var(--rem) * 180); }
-// .o-grid-table .o-form.wdth-90  { min-width: calc(var(--rem) * 210); }
-.o-grid-table .o-form[class*=" wdth-"]:not(.type-time):not(.abs-width):not(.o-field >* >*)  { width: 100%; }
-
-.o-grid-table.style-fit  {
-  // --mg-cell-block-int: 2;
-  // --mg-cell-block: calc(var(--rem) * var(--mg-cell-block-int));
-
-  // --ht-cell-box: 1lh;
-  // --ht-cell: calc(var(--ht-cell-box) + var(--mg-cell-block) * 2 + var(--edge-cell) * 1);
-  // --ht-headcell: calc(var(--ht-cell-box) + var(--mg-cell-block) * 2 + var(--edge-cell) * 1);
-
-  // --height: var(--ht-cell);
-
-  font-size: $font-40;
-  line-height: $line-40;
-}
-
-.m-section > .main:has(.o-grid-table.style-fit)  {
-  --mg-cell-block-int: 2;
-  --mg-cell-block: calc(var(--rem) * var(--mg-cell-block-int));
-
-  --ht-cell-box: 1lh;
-  --ht-cell: calc(var(--ht-cell-box) + var(--mg-cell-block) * 2 + var(--edge-cell) * 1);
-  --ht-headcell: calc(var(--ht-cell-box) + var(--mg-cell-block) * 2 + var(--edge-cell) * 1);
-
-  --height: var(--ht-cell);
-
-  // font-size: $font-40;
-  // line-height: $line-40;
-}
 
 
 /*
