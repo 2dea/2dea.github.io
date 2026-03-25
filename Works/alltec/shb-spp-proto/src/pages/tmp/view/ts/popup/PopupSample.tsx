@@ -22,6 +22,16 @@ import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 export interface PopupSampleProps extends SppModalProps {};
 
 export const PopupSample = (props: PopupSampleProps) => {
+  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
+  const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
+    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
+    setSelectedRowKeys(newSelectedRowKeys);
+  };
+  const rowSelection: TableRowSelection<any> = {
+    selectedRowKeys,
+    onChange: onSelectChange,
+  };
+
   return (
     <>
       <SppModal

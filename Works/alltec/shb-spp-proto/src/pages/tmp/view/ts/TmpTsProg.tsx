@@ -23,6 +23,7 @@ import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
 import PopupSample from "./popup/PopupSample";
+import Table2060 from "./popup/Table2060";
 import Table2070 from "./popup/Table2070";
 import Help1010 from "./popup/Help1010";
 import Help1020 from "./popup/Help1020";
@@ -30,6 +31,7 @@ import Help1020 from "./popup/Help1020";
 
 function TmpTsProg() {
   const [isOpenPopupSample, setIsOpenPopupSample] = useState(false);
+  const [isOpenTable2060, setIsOpenTable2060] = useState(false);
   const [isOpenTable2070, setIsOpenTable2070] = useState(false);
   const [isOpenHelp1010, setIsOpenHelp1010] = useState(false);
   const [isOpenHelp1020, setIsOpenHelp1020] = useState(false);
@@ -275,7 +277,7 @@ function TmpTsProg() {
     { dataIndex: 'data1010', width: 64, ellipsis: false, align: 'center', title: '순번', render: (v, r, i) => { return `${i + 1}` }, },
     { dataIndex: 'data1010', width: 120, ellipsis: false, align: 'center', title: '허용여부', render: (v, r, i) => { return `불가` }, },
     { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `1234567890` }, },
-    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'start', title: '화면설명', render: (v, r, i) => { return ( `화면명 및 화면설명` ) }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'start', title: '화면명', render: (v, r, i) => { return ( `화면명 및 화면설명` ) }, },
   ];
   const table2060DataSource = Array.from<any>({ length: 10 }).map<any>((_, i) => ({}));
 
@@ -381,7 +383,7 @@ function TmpTsProg() {
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '직원번호', render: (v, r, i) => { return `00000001` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '직원명', render: (v, r, i) => { return `김신한` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '직위', render: (v, r, i) => { return `S프로(파트장)` }, },
-    { dataIndex: 'data1010', width: 140, ellipsis: false, align: 'center', title: <SppObjLabel label={`조회권한`} required={false} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, render: (v, r, i) => { return (
+    { dataIndex: 'data1010', width: 140, ellipsis: false, align: 'center', title: <SppObjLabel label={`조회권한`} required={false} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말" onClick={(e) => setIsOpenHelp1020(true)}></SppButton>} />, render: (v, r, i) => { return (
       <SppSelect width="50"
         options={[
           { value: '1', label: '권한요청' },
@@ -393,11 +395,11 @@ function TmpTsProg() {
         ]}
       />
     ) }, },
-    { dataIndex: 'data1010', width: '12%', ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
-    { dataIndex: 'data1010', width: 160, ellipsis: false, align: 'center', title: '조회사유', render: (v, r, i) => { return (
-      <SppTextArea placeholder="" rows={1} value={`이러저러한 사유로 고객정보를 조회하였음`} readOnly />
-    ) }, },
-    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객번호', render: (v, r, i) => { return <a href="#" className="o-link _link-primary"><span className="label">798745156</span></a> }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '상태', render: (v, r, i) => { return `요청중` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'end', title: '허용메뉴수', render: (v, r, i) => { return `9,999` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'end', title: '허용화면수', render: (v, r, i) => { return `9,999` }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '캔버스 메뉴권한', render: (v, r, i) => { return <a href="#" className="o-link _link-primary" onClick={(e) => { e.preventDefault(); setIsOpenTable2070(true); }}><span className="label">메뉴권한관리</span></a> }, },
+    { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '통합단말 화면권한', render: (v, r, i) => { return <a href="#" className="o-link _link-primary" onClick={(e) => { e.preventDefault(); setIsOpenTable2060(true); }}><span className="label">화면권한관리</span></a> }, },
     { title: '등록자', children: [
       { dataIndex: 'data1010', width: '6%', ellipsis: false, align: 'center', title: '직원번호', render: (v, r, i) => { return `12345678` }, },
       { dataIndex: 'data1010', width: '6%', ellipsis: false, align: 'center', title: '직원명', render: (v, r, i) => { return `이신한` }, },
@@ -583,6 +585,13 @@ function TmpTsProg() {
                 <PopupSample
                   open={isOpenPopupSample}
                   onCancel={() => setIsOpenPopupSample(false)}
+                />
+              {/* )} */}
+
+              {/* {isOpenTable2060 && ( */}
+                <Table2060
+                  open={isOpenTable2060}
+                  onCancel={() => setIsOpenTable2060(false)}
                 />
               {/* )} */}
 

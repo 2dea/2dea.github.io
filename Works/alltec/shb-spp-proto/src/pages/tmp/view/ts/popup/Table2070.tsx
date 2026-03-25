@@ -22,6 +22,16 @@ import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 export interface Table2070Props extends SppModalProps {};
 
 export const Table2070 = (props: Table2070Props) => {
+  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
+  const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
+    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
+    setSelectedRowKeys(newSelectedRowKeys);
+  };
+  const rowSelection: TableRowSelection<any> = {
+    selectedRowKeys,
+    onChange: onSelectChange,
+  };
+
   const table2070Columns: ColumnsType<any> = [
     { dataIndex: 'data1010', width: 'calc(100% * 1 / 6)', ellipsis: true, align: 'start', title: 'Banking System', render: (v, r, i) => { return (
       <>

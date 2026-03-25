@@ -22,6 +22,16 @@ import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 export interface Help1020Props extends SppModalProps {};
 
 export const Help1020 = (props: Help1020Props) => {
+  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
+  const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
+    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
+    setSelectedRowKeys(newSelectedRowKeys);
+  };
+  const rowSelection: TableRowSelection<any> = {
+    selectedRowKeys,
+    onChange: onSelectChange,
+  };
+
   return (
     <>
       <SppModal
@@ -37,7 +47,7 @@ export const Help1020 = (props: Help1020Props) => {
         cancelButtonRender={false}
         onOk={ (e) => alert('ok') }
         // wrapWidth="50"
-        open
+        // open
       >
         <div className="div-center">
           <div className="m-grid">

@@ -22,6 +22,16 @@ import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 export interface Help1010Props extends SppModalProps {};
 
 export const Help1010 = (props: Help1010Props) => {
+  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
+  const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
+    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
+    setSelectedRowKeys(newSelectedRowKeys);
+  };
+  const rowSelection: TableRowSelection<any> = {
+    selectedRowKeys,
+    onChange: onSelectChange,
+  };
+
   return (
     <>
       <SppModal
