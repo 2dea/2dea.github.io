@@ -150,6 +150,10 @@
     text-align: left;
     text-align: start;
 
+    *  {
+      text-align: inherit;
+    }
+
     &:where(._file)  {
       :where(.ant-input:read-only)  {
         cursor: default;

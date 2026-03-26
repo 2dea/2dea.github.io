@@ -24,6 +24,7 @@ import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
 import PopupSample from "./popup/PopupSample";
+import SppAp0002P01 from "./popup/SppAp0002P01";
 import Table2060 from "./popup/Table2060";
 import Table2070 from "./popup/Table2070";
 import Table2071 from "./popup/Table2071";
@@ -33,6 +34,7 @@ import Help1020 from "./popup/Help1020";
 
 function TmpTsProg() {
   const [isOpenPopupSample, setIsOpenPopupSample] = useState(false);
+  const [isOpenSppAp0002P01, setIsOpenSppAp0002P01] = useState(false);
   const [isOpenTable2060, setIsOpenTable2060] = useState(false);
   const [isOpenTable2070, setIsOpenTable2070] = useState(false);
   const [isOpenTable2071, setIsOpenTable2071] = useState(false);
@@ -722,6 +724,7 @@ function TmpTsProg() {
                                       <div className="m-binds">
                                         <div className="group align-start">
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppAp0002P01(true)}>신청서</SppButton>
                                         </div>
                                       </div>
                                     </td>
@@ -828,6 +831,111 @@ function TmpTsProg() {
                                   </tr>
                                 </tbody>
                               </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="m-section">
+                        <div className="main">
+                          <div className="o-board type-1">
+                            <div className="board-container">
+                              <div className="m-header">
+                                <div className="prime">
+                                  <strong className="o-heading"><span className="label">유의사항</span></strong>
+                                </div>
+                              </div>
+
+                              <ul className="o-bullets type-disc">
+                                <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
+                                <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                                <li>
+                                  블라블라블라
+
+                                  <ul className="o-bullets type-hyphen">
+                                    <li>블라블라블라</li>
+                                    <li>
+                                      블라블라블라
+
+                                      <ul className="o-bullets type-asterisk">
+                                        <li>블라블라블라</li>
+                                        <li>블라블라블라</li>
+                                      </ul>
+                                    </li>
+                                    <li>블라블라블라</li>
+                                  </ul>
+                                </li>
+                                <li>블라블라블라</li>
+                              </ul>
+                            </div>
+
+                            <div className="board-container">
+                              <div className="m-header">
+                                <div className="prime">
+                                  <strong className="o-heading"><span className="label">Order Lists</span></strong>
+                                </div>
+                              </div>
+
+                              <ol className="o-bullets type-decimal level1">
+                                <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
+                                <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                                <li>블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라 블라블라블라</li>
+                                <li>
+                                  블라블라블라
+
+                                  <ol className="o-bullets type-decimal level2">
+                                    <li>블라블라블라</li>
+                                    <li>블라블라블라</li>
+                                  </ol>
+                                </li>
+                                <li className="g-abshidden"></li>
+                                <li className="g-abshidden"></li>
+                                <li className="g-abshidden"></li>
+                                <li className="g-abshidden"></li>
+                                <li>블라블라블라</li>
+                                <li>블라블라블라</li>
+                                <li>블라블라블라</li>
+                                <li>블라블라블라</li>
+                              </ol>
+                            </div>
+
+                            <div className="board-container">
+                              <div className="m-header">
+                                <div className="prime">
+                                  <strong className="o-heading"><span className="label">유의사항</span></strong>
+                                </div>
+                              </div>
+
+                              <ul className="o-bullets type-disc">
+                                <li>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 <em className="c-color-strong">인수직원의 부점정보를 확인해주세요.</em></li>
+                                <li><em className="c-color-strong">행내등기 대상</em>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                              </ul>
+
+                              <div className="board-container type-sub">
+                                <div className="m-header">
+                                  <div className="prime">
+                                    <strong className="o-heading"><span className="label">여신자필서류(STP)</span></strong>
+                                  </div>
+                                </div>
+
+                                <ul className="o-bullets type-disc">
+                                  <li><em className="c-color-strong">NET점 고객의 여신자필 서류를 대신 받아 전달</em>할 경우, <em className="c-color-strong">영업점 간 비용이 정산</em>됩니다.(발송지점 비용 1만원 ↓, 인수지점 비용 1만원 ↑)</li>
+                                  <li><em className="c-color-strong">자점 고객이 NET점 방문 시</em> 고객에게 받을 서류를 미리 세팅하여 NET점에 보내는 경우 <em className="c-color-strong">서류구분을 [일반서류]로 선택</em> 후 신청해주세요.</li>
+                                </ul>
+                              </div>
+
+                              <div className="board-container type-sub">
+                                <div className="m-header">
+                                  <div className="prime">
+                                    <strong className="o-heading"><span className="label">유의사항</span></strong>
+                                  </div>
+                                </div>
+
+                                <ul className="o-bullets type-disc">
+                                  <li className="c-color-strong"><em>인수직원이 타 부점에 있는 경우가 있으니 정확한 배송을 위해 인수직원의 부점정보를 확인해주세요.</em></li>
+                                  <li><strong className="c-color-strong">행내등기 대상</strong>은 서류 종류로 <em className="c-color-strong">은행업무와 관련이 있는 중요 우편물에 한해 신청 가능</em>합니다.</li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1498,6 +1606,13 @@ function TmpTsProg() {
                 <PopupSample
                   open={isOpenPopupSample}
                   onCancel={() => setIsOpenPopupSample(false)}
+                />
+              {/* )} */}
+
+              {/* {isOpenSppAp0002P01 && ( */}
+                <SppAp0002P01
+                  open={isOpenSppAp0002P01}
+                  onCancel={() => setIsOpenSppAp0002P01(false)}
                 />
               {/* )} */}
 
