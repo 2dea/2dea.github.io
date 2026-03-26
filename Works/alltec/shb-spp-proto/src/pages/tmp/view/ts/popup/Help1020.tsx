@@ -10,6 +10,7 @@ import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete"
 import SppButton from "@/pages/spp/component/Button/SppButton";
 import SppCheckbox from "@/pages/spp/component/Checkbox/SppCheckbox";
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
+import SppInputFile from "@/pages/spp/component/Input/SppInputFile";
 import SppInputText from "@/pages/spp/component/Input/SppInputText";
 import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
@@ -22,6 +23,8 @@ import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 export interface Help1020Props extends SppModalProps {};
 
 export const Help1020 = (props: Help1020Props) => {
+  const [testValueFile1010, setTestValueFile1010] = useState<File | null>(null);
+
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
     console.log('selectedRowKeys changed: ', newSelectedRowKeys);

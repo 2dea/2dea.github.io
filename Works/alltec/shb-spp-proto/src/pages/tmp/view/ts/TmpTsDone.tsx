@@ -13,6 +13,7 @@ import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete"
 import SppButton from "@/pages/spp/component/Button/SppButton";
 import SppCheckbox from "@/pages/spp/component/Checkbox/SppCheckbox";
 import SppDatePicker from "@/pages/spp/component/DatePicker/SppDatePicker";
+import SppInputFile from "@/pages/spp/component/Input/SppInputFile";
 import SppInputText from "@/pages/spp/component/Input/SppInputText";
 import SppMultiSelect from "@/pages/spp/component/Select/SppMultiSelect";
 import SppObjLabel from "@/pages/spp/component/ObjLabel/SppObjLabel";
@@ -37,6 +38,8 @@ function TmpTsProg() {
   const [isOpenTable2071, setIsOpenTable2071] = useState(false);
   const [isOpenHelp1010, setIsOpenHelp1010] = useState(false);
   const [isOpenHelp1020, setIsOpenHelp1020] = useState(false);
+
+  const [testValueFile1010, setTestValueFile1010] = useState<File | null>(null);
 
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
@@ -194,8 +197,8 @@ function TmpTsProg() {
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객명', render: (v, r, i) => { return `홍길동` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `3510010000` }, },
     { dataIndex: 'data1010', width: '12%', ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
-    { dataIndex: 'data1010', width: 160, ellipsis: true, align: 'start', title: '조회용도', render: (v, r, i) => { return `수신업무(펀드,방카,신탁 등), 내부통제(감사부,준법감시부,여신감리부 등)` }, },
-    { dataIndex: 'data1010', width: 160, ellipsis: true, align: 'center', title: '조회목적', render: (v, r, i) => { return `상담` }, },
+    { dataIndex: 'data1010', width: '10%', ellipsis: true, align: 'start', title: '조회용도', render: (v, r, i) => { return `수신업무(펀드,방카,신탁 등), 내부통제(감사부,준법감시부,여신감리부 등)` }, },
+    { dataIndex: 'data1010', width: '5%', ellipsis: true, align: 'center', title: '조회목적', render: (v, r, i) => { return `상담` }, },
     { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: '조회사유', render: (v, r, i) => { return (
       <SppTextArea placeholder="" rows={3} value={`이러저러한 사유로 고객정보를 조회하였음`} readOnly />
     ) }, },
@@ -253,8 +256,8 @@ function TmpTsProg() {
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '고객명', render: (v, r, i) => { return `홍길동` }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: '화면번호', render: (v, r, i) => { return `3510010000` }, },
     { dataIndex: 'data1010', width: '12%', ellipsis: true, align: 'start', title: '화면명', render: (v, r, i) => { return `[NEXT CRM] 고객종합정보 고객종합정보` }, },
-    { dataIndex: 'data1010', width: 160, ellipsis: true, align: 'start', title: '조회용도', render: (v, r, i) => { return `수신업무(펀드,방카,신탁 등), 내부통제(감사부,준법감시부,여신감리부 등)` }, },
-    { dataIndex: 'data1010', width: 160, ellipsis: true, align: 'center', title: '조회목적', render: (v, r, i) => { return `상담` }, },
+    { dataIndex: 'data1010', width: '10%', ellipsis: true, align: 'start', title: '조회용도', render: (v, r, i) => { return `수신업무(펀드,방카,신탁 등), 내부통제(감사부,준법감시부,여신감리부 등)` }, },
+    { dataIndex: 'data1010', width: '5%', ellipsis: true, align: 'center', title: '조회목적', render: (v, r, i) => { return `상담` }, },
     { dataIndex: 'data1010', width: 290, ellipsis: false, align: 'center', title: '조회사유', render: (v, r, i) => { return (
       <SppTextArea placeholder="" rows={3} value={`이러저러한 사유로 고객정보를 조회하였음`} readOnly />
     ) }, },
@@ -684,10 +687,10 @@ function TmpTsProg() {
                                     </td>
 
                                     <th colSpan={1}>
-                                      <SppObjLabel label={`head`} required={false} />
+                                      <SppObjLabel label={`InputFile`} required={false} />
                                     </th>
                                     <td colSpan={1}>
-                                      data
+                                      <SppInputFile value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} />
                                     </td>
 
                                     <th colSpan={1}>
@@ -700,17 +703,56 @@ function TmpTsProg() {
 
                                   <tr>
                                     <th colSpan={1}>
-                                      <SppObjLabel label={`팝업`} required={true} />
+                                      <SppObjLabel label={`공통팝업`} required={true} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          {/* <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton> */}
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`Ap팝업`} required={true} />
                                     </th>
                                     <td colSpan={5}>
                                       <div className="m-binds">
                                         <div className="group align-start">
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`Ck팝업`} required={true} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`Au팝업`} required={true} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1010(true)}>도움말 (통합단말화면)</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1020(true)}>조회권한관리 안내</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2060(true)}>통합단말 화면권한관리</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2070(true)}>캔버스 메뉴권한관리</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2071(true)}>권한설정 추가인증</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1010(true)}>도움말 (통합단말화면)</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1020(true)}>조회권한관리 안내</SppButton>
                                         </div>
                                       </div>
                                     </td>
@@ -791,7 +833,7 @@ function TmpTsProg() {
                         </div>
                       </div>
 
-                      <div className="m-section">
+                      <div className="m-section _primary">
                         <div className="m-header">
                           <div className="prime">
                             <h3 className="o-heading level3"><span className="label">계약내역</span></h3>
@@ -828,7 +870,7 @@ function TmpTsProg() {
                           </div>
                         </div>
 
-                        <div className="main _primary">
+                        <div className="main">
                           <SppTable<any>
                             rowSelection={rowSelection}
                             columns={columns}
@@ -925,7 +967,7 @@ function TmpTsProg() {
                         </div>
                       </div>
 
-                      <div className="m-section">
+                      <div className="m-section _primary">
                         <div className="m-header">
                           <div className="prime">
                             <h3 className="o-heading level3"><span className="label">고객정보 조회내역</span></h3>
@@ -945,7 +987,7 @@ function TmpTsProg() {
                           </div>
                         </div>
 
-                        <div className="main _primary">
+                        <div className="main">
                           <SppTable<any>
                             rowSelection={rowSelection}
                             columns={table2020Columns}
@@ -1080,7 +1122,7 @@ function TmpTsProg() {
                                   </div>
                                 </div>
 
-                                <div className="m-section">
+                                <div className="m-section _primary">
                                   <div className="m-header">
                                     <div className="prime">
                                       <h3 className="o-heading level3"><span className="label">조회사유 미결재내역</span></h3>
@@ -1099,7 +1141,7 @@ function TmpTsProg() {
                                     </div>
                                   </div>
 
-                                  <div className="main _primary">
+                                  <div className="main">
                                     <SppTable<any>
                                       rowSelection={rowSelection}
                                       columns={table2040Columns}
@@ -1129,7 +1171,7 @@ function TmpTsProg() {
                             <div className="m-grid _primary">
                               <div className="column">
 
-                                <div className="m-section">
+                                <div className="m-section _primary">
                                   <div className="m-header">
                                     <div className="prime">
                                       <h2 className="o-heading level2"><span className="label">조회사유 반려내역</span></h2>
@@ -1146,7 +1188,7 @@ function TmpTsProg() {
                                     </div>
                                   </div>
 
-                                  <div className="main _primary">
+                                  <div className="main">
                                     <SppTable<any>
                                       rowSelection={rowSelection}
                                       columns={table2050Columns}
@@ -1255,7 +1297,7 @@ function TmpTsProg() {
                         </dl>
                       </div>
 
-                      <div className="m-section">
+                      <div className="m-section _primary">
                         <div className="m-header">
                           <div className="prime">
                             <h2 className="o-heading level2"><span className="label">통합단말 화면</span></h2>
@@ -1266,7 +1308,7 @@ function TmpTsProg() {
                           </div>
                         </div>
 
-                        <div className="main _primary">
+                        <div className="main">
                           <SppTable<any>
                             // rowSelection={rowSelection}
                             columns={table2060Columns}
@@ -1394,7 +1436,7 @@ function TmpTsProg() {
                         </dl>
                       </div>
 
-                      <div className="m-section">
+                      <div className="m-section _primary">
                         <div className="m-header">
                           <div className="prime">
                             <h2 className="o-heading level2"><span className="label">권한설정내역</span></h2>
@@ -1430,7 +1472,7 @@ function TmpTsProg() {
                           </div>
                         </div>
 
-                        <div className="main _primary">
+                        <div className="main">
                           <SppTable<any>
                             rowSelection={rowSelection}
                             columns={table2080Columns}

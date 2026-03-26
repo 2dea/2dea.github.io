@@ -150,6 +150,12 @@
     text-align: left;
     text-align: start;
 
+    &:where(._file)  {
+      :where(.ant-input:read-only)  {
+        cursor: default;
+      }
+    }
+
     :where([class*="ant-"][class*="-prefix"])  {
       display: inline-flex;
     }
@@ -157,6 +163,40 @@
     :where([class*="ant-"][class*="-suffix"])  {
       &:empty  {
         margin-inline-start: 0;
+      }
+
+      .inner-binds  {
+        display: flex;
+        margin-block: -5px;
+        margin-inline: 0 -8px;
+
+        >*  {
+          flex: none;
+          position: relative;
+
+          &:not(:hover)  {
+            border-block-color: Transparent;
+            background: Transparent;
+          }
+
+          &:hover  {
+            z-index: 1;
+          }
+
+          &:not(:last-child)  {
+            margin-inline-end: -1px;
+            border-radius: 0;
+          }
+
+          &:last-child  {
+            border-start-start-radius: 0;
+            border-end-start-radius: 0;
+
+            &:not(:hover)  {
+              border-inline-end-color: Transparent;
+            }
+          }
+        }
       }
     }
   }
