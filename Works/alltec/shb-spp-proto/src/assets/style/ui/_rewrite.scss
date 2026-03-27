@@ -155,8 +155,17 @@
     }
 
     &:where(._file)  {
+      :where(.ant-input)  {
+        text-overflow: ellipsis;
+      }
+
       :where(.ant-input:read-only)  {
         cursor: default;
+      }
+
+      :where(.string.size)  {
+        font-size: 0.9285714285714286em;
+        color: var(--cl-text-30, var(--cl-text-40));
       }
     }
 

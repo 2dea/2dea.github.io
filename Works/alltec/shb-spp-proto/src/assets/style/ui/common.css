@@ -288,6 +288,7 @@
 
   --cl-text-00:              var(--design-label-white);
   --cl-text-20:              var(--design-label-assistive);
+  --cl-text-30:              var(--palette-mono-500);
   --cl-text-40:              var(--design-label-alternative);
   /* --cl-text-50:              var(--design-label-normal); */
   --cl-text-50:              var(--design-label-normal);
