@@ -4,15 +4,3 @@
 @use "./mixins" as *;
 
 
-.p-component-overlay  { z-index: 100; animation-duration: 0s !important; }
-.p-component-overlay-enter  { animation-duration: 0s !important; }
-
-// html  { scroll-behavior: auto !important; }
-
-// // .m-section:not(.m-section *):not(.m-grid >.column >*)  {
-// .m-section:not(.m-section *):not(.home-section *):not(.m-grid >.column >*):not(.m-scrolls >*):not(.m-tabs >.m-tabs-panel >*)  {
-//   outline: thick solid Red;
-// }
-// .m-grid:where(.m-grid *):where(.dom-wrapper.type-proto *) {
-//   outline: thick solid Blue;
-// }

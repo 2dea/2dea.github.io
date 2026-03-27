@@ -244,12 +244,13 @@
     fieldset  { min-width: 0; padding: 0; border-style: none; }
     legend  { display: table; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; padding: 0; color: inherit; white-space: normal; }
     label  { display: inline-block; }
+    :where([type="password"])  { font-family: var(--typo-password, inherit); }
     :where([type="range"],  [type="color"],  [type="checkbox"],  [type="radio"])  { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 0; padding: 0; word-break: inherit; }
     :where([type="submit"],  [type="reset"],  [type="button"]),  button  { -webkit-appearance: button; min-width: 1em; overflow: visible; padding: 0.25em 0.33333em; text-transform: none; word-break: inherit; }
     select  { text-transform: none; }
     select:where([multiple])  { padding-right: 0 !important; }
     option:where(:not([hidden]))  { display: block !important; color: inherit; white-space: nowrap; }
-    textarea  { line-height: inherit; overflow: auto; -webkit-overflow-scrolling: touch; word-wrap: inherit; overflow-wrap: inherit; }
+    textarea  { overflow: auto; -webkit-overflow-scrolling: touch; word-wrap: inherit; overflow-wrap: inherit; }
     summary  { display: list-item; }
     dialog  { padding: 0; border-style: none; }
     template  { display: none; }

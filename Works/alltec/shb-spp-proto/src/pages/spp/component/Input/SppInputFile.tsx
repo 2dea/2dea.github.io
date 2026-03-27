@@ -135,7 +135,7 @@ const SppInputFile = (props: SppInputFileProps) => {
               </button>
             }
             {fileSizeRender && hasFile && value &&
-              <span className="string size">{fileSizeLabel}</span>
+              <span className="string size" title="파일크기">{fileSizeLabel}</span>
             }
             {selectButtonRender &&
               <span className="inner-binds">
