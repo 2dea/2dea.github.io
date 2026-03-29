@@ -278,11 +278,56 @@
     flex-grow: 1;
   }
 
-    :has(.ant-table-body)  {
+  // :has(.ant-table-body)  {
+  //   flex: 1 0 auto;
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
+  :where(.ant-table-wrapper)  {
+    display: flex;
+    flex-direction: column;
+
+    &:where(.m-section._primary *)  {
       flex: 1 0 auto;
+    }
+
+    >:where(.ant-spin-nested-loading)  {
       display: flex;
       flex-direction: column;
+
+      &:where(.m-section._primary *)  {
+        flex: 1 0 auto;
+      }
+
+      >:where(.ant-spin-container)  {
+        display: flex;
+        flex-direction: column;
+
+        &:where(.m-section._primary *)  {
+          flex: 1 0 auto;
+        }
+      }
     }
+  }
+
+  :where(.ant-table)  {
+    display: flex;
+    flex-direction: column;
+
+    &:where(.m-section._primary *)  {
+      flex: 1 0 auto;
+    }
+  }
+
+  :where(.ant-table-container)  {
+    display: flex;
+    flex-direction: column;
+
+    &:where(.m-section._primary *)  {
+      flex: 1 0 auto;
+    }
+  }
 
     .ant-table-body  {
       flex: 1 0 auto;

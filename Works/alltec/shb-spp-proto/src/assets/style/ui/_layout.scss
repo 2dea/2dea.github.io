@@ -4,23 +4,23 @@
 @use "./mixins" as *;
 
 
-// @property --cl-scrollbar-hidden-track  {
-//   syntax: '<color>';
-//   inherits: true;
-//   initial-value: Transparent;
-// }
+@property --cl-scrollbar-hidden-track  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
 
-// @property --cl-scrollbar-hidden-thumb  {
-//   syntax: '<color>';
-//   inherits: true;
-//   initial-value: Transparent;
-// }
+@property --cl-scrollbar-hidden-thumb  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
 
-// @property --cl-scrollbar-hidden-thumb-edge  {
-//   syntax: '<color>';
-//   inherits: true;
-//   initial-value: Transparent;
-// }
+@property --cl-scrollbar-hidden-thumb-edge  {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: Transparent;
+}
 
 @property --br  {
   syntax: '<length-percentage>+';
@@ -158,72 +158,15 @@
 /** Box Models
  ------------- */
 
-// @layer LAY-base {
-  // @layer local-univ {
-
-    body :where(:not(tr:is([border] >* >*, [cellpadding] >* >*) >*))  {
-    // :where(
-    //   body :not(
-    //     tr:is([border] >* >*, [cellpadding] >* >*) >*,
-    //     :where([class*=" o-"], [class^="o-"], [class*=" m-"], [class^="m-"]),
-    //     :where(:is([class*=" o-"], [class^="o-"], [class*=" m-"], [class^="m-"]) *),
-    //     [class^="ant-"]
-    //   )
-    // ),
-    // :where([class*=" o-"], [class^="o-"], [class*=" m-"], [class^="m-"]),
-    // :where(:is([class*=" o-"], [class^="o-"], [class*=" m-"], [class^="m-"]) :not([class^="ant-"]))  {
-      // --htn: ;
-      // --ht: ;
-      // --htx: ;
-
-      // --wdn: ;
-      // --wd: ;
-      // --wdx: ;
-
-      // --gap: 0px;
-      // --gapc: var(--gap);
-      // --gapr: var(--gap);
-
-      // --brss: var(--br);
-      // --brse: var(--br);
-      // --bree: var(--br);
-      // --bres: var(--br);
-
-      // --bwis: var(--bw);
-      // --bwbs: var(--bw);
-      // --bwie: var(--bw);
-      // --bwbe: var(--bw);
-
-      // --pdis: var(--pdi);
-      // --pdbs: var(--pdb);
-      // --pdie: var(--pdi);
-      // --pdbe: var(--pdb);
-
-      // --mgis: var(--mgi);
-      // --mgbs: var(--mgb);
-      // --mgie: var(--mgi);
-      // --mgbe: var(--mgb);
-
-      // min-height: var(--htn);
-      // height: var(--ht);
-      // max-height: var(--htx);
-      // min-width: var(--wdn);
-      // width: var(--wd);
-      // max-width: var(--wdx);
-      // margin-inline: var(--mgi);
-      // margin-block: var(--mgb);
-      padding-inline: var(--pdi);
-      padding-block: var(--pdb);
-      border: 0 solid;
-      border-width: var(--bw);
-      border-color: var(--cl-edge-50, currentColor);
-      // border-radius: var(--br);
-      border-radius: var(--brss) var(--brse) var(--bree) var(--bres);
-    }
-    // :before,  :after  { background-color: inherit; border-radius: inherit; }
-
-  // }
+// body :where(:not(tr:is([border] >* >*, [cellpadding] >* >*) >*))  {
+//   padding-inline: var(--pdi);
+//   padding-block: var(--pdb);
+//   border: 0 solid;
+//   border-width: var(--bw);
+//   border-color: var(--cl-edge-50, currentColor);
+//   border-radius: var(--brss) var(--brse) var(--bree) var(--bres);
 // }
+
 
 html  {
   --typo-serif-app:     '';
@@ -260,7 +203,7 @@ html  {
 
   --filter-root-contrast:           0.96;
   --filter-root-brightness:         0.96;
-  --filter-root:                    contrast(var(--filter-root-contrast, 1)) brightness(var(--filter-root-brightness, 1));
+  // --filter-root:                    contrast(var(--filter-root-contrast, 1)) brightness(var(--filter-root-brightness, 1));
 
 
   --mgb-pop:                 20;
@@ -293,33 +236,28 @@ html  {
 /** Scrollbars
  ------------- */
 
-::-webkit-resizer  { image-rendering: pixelated; background: var(--obj-sym-resizer-scrollable) 0 /100%; }
-::-webkit-scrollbar  { width: var(--wd-scrollbar, 12px); height: var(--wd-scrollbar, 12px); }
-::-webkit-scrollbar-corner  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid var(--cl-scrollbar-corner-edge, rgba(255,255,255, 0.05)); border-radius: 2px; }
-::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid; border-color: var(--cl-scrollbar-track-edge, Transparent); border-radius: var(--br-scrollbar-track, 2px); will-change: background-color; }
-::-webkit-scrollbar-thumb  { min-width: 24px; min-height: 24px; border: var(--mg-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--cl-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--cl-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--mg-scrollbar, 3px)); border-radius: var(--wd-scrollbar, 12px); will-change: background-color, outline-color; }
-::-webkit-scrollbar-thumb:hover  { background-color: var(--cl-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
-::-webkit-scrollbar-thumb:active  { background-color: var(--cl-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
+:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-resizer  { image-rendering: pixelated; background: var(--obj-sym-resizer-scrollable) 0 /100%; }
+:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar  { width: var(--wd-scrollbar, 12px); height: var(--wd-scrollbar, 12px); }
+:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-corner  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid var(--cl-scrollbar-corner-edge, rgba(255,255,255, 0.05)); border-radius: 2px; }
+:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid; border-color: var(--cl-scrollbar-track-edge, Transparent); border-radius: var(--br-scrollbar-track, 2px); will-change: background-color; }
+:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb  { min-width: 24px; min-height: 24px; border: var(--mg-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--cl-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--cl-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--mg-scrollbar, 3px)); border-radius: var(--wd-scrollbar, 12px); will-change: background-color, outline-color; }
+:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb:hover  { background-color: var(--cl-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
+:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb:active  { background-color: var(--cl-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
 
-.g-scroll-gutter-stable  { transition: 0.8s; transition-property: --cl-scrollbar-hidden-track, --cl-scrollbar-hidden-thumb, --cl-scrollbar-hidden-thumb-edge; }
-.g-scroll-gutter-stable:hover,
-  .g-scroll-gutter-stable:focus-within  { --cl-scrollbar-hidden-track: var(--cl-scrollbar-track); --cl-scrollbar-hidden-thumb: var(--cl-scrollbar-thumb); --cl-scrollbar-hidden-thumb-edge: var(--cl-scrollbar-thumb-edge); transition-duration: 0.15s; }
-.g-scroll-gutter-stable::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-hidden-track); }
-.g-scroll-gutter-stable::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--cl-scrollbar-hidden-thumb); outline-color: var(--cl-scrollbar-hidden-thumb-edge, Transparent); }
+:where(.scroll-gutter-stable)  { transition: 0.8s; transition-property: --cl-scrollbar-hidden-track, --cl-scrollbar-hidden-thumb, --cl-scrollbar-hidden-thumb-edge; }
+:where(.scroll-gutter-stable):hover,
+  :where(.scroll-gutter-stable):focus-within  { --cl-scrollbar-hidden-track: var(--cl-scrollbar-track); --cl-scrollbar-hidden-thumb: var(--cl-scrollbar-thumb); --cl-scrollbar-hidden-thumb-edge: var(--cl-scrollbar-thumb-edge); transition-duration: 0.15s; }
+:where(.scroll-gutter-stable)::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-hidden-track); }
+:where(.scroll-gutter-stable)::-webkit-scrollbar-thumb:not(:hover):not(:active)  { background-color: var(--cl-scrollbar-hidden-thumb); outline-color: var(--cl-scrollbar-hidden-thumb-edge, Transparent); }
 
-// .g-scroll-width-thin,
-//   :has(>[role="listbox"]),
-//   :has(>* >[role="listbox"])  {
-//     @include inc-scrollbar-width(2, 4);
-//     --cl-scrollbar-track-edge: Transparent;
 
-//   scroll-behavior: auto;
-//   overscroll-behavior: contain;
+// body :where(:not(:has([class|="role"]), [class|="role"], :has(.div-center), .div-center))  {
+//   @include inc-scrollbar-width(2, 4);
 // }
-
-body :where(:not(:has([class|="role"]), [class|="role"], :has(.div-center), .div-center))  {
-  @include inc-scrollbar-width(2, 4);
-}
+.role-subnav,
+  textarea  {
+    @include inc-scrollbar-width(2, 4);
+  }
 .role-localnav  {
   @include inc-scrollbar-width(3, 4);
 }
@@ -459,9 +397,11 @@ body  {
   justify-content: flex-end;
   gap: $gap-element-50 $gap-element-70;
   margin: var(--herit-wd-scrollbar) var(--herit-wd-scrollbar) 0 0;
+  padding-inline: var(--pdi);
   padding-inline-end: calc(var(--pdi) - var(--herit-wd-scrollbar));
   color: var(--cl-text-00);
   background: var(--cl-theme-key1);
+  border-radius: var(--brss, 0) var(--brse, 0) var(--bree, 0) var(--bres, 0);
 
   >:not(:empty)  { flex: none; display: flex; align-items: center; gap: inherit; min-height: $ht-form-50; min-width: 0; }
 
@@ -526,19 +466,20 @@ body  {
     align-items: center;
     box-sizing: content-box;
     min-height: calc((var(--box) * 2));
-    border-bottom-width: #{$e10};
-    border-color: clmix(var(--cl-edge-50), 0.3);
+    padding-inline: var(--pdi);
+    padding-block: var(--pdb);
+    border-bottom: #{$e10} solid clmix(var(--cl-edge-50), 0.3);
   }
 
   .navbar  {  }
 
-  &:has(.link:where(.-hover):hover)  {
-    +:where(.role-subnav)  {
-      --pdis: calc(var(--wd-scrollbar) + 2px);
-      width: max-content;
-      padding-inline-start: var(--pdis);
-    }
-  }
+  // &:has(.link:where(.-hover):hover)  {
+  //   +:where(.role-subnav)  {
+  //     --pdis: calc(var(--wd-scrollbar) + 2px);
+  //     width: max-content;
+  //     padding-inline-start: var(--pdis);
+  //   }
+  // }
 }
 
 .role-subnav  {
@@ -556,6 +497,7 @@ body  {
   overflow: hidden;
   padding-inline-start: var(--pdis);
   color: var(--cl-text-70);
+  border-radius: var(--brss, 0) var(--brse, 0) var(--bree, 0) var(--bres, 0);
   box-shadow: $dropshadow-70;
 
   z-index: 30;
@@ -576,8 +518,9 @@ body  {
     align-items: center;
     box-sizing: content-box;
     min-height: calc((var(--box) * 2));
-    border-bottom-width: #{$e10};
-    border-color: clmix(var(--cl-edge-50), 0.3);
+    padding-inline: var(--pdi);
+    padding-block: var(--pdb);
+    border-bottom: #{$e10} solid clmix(var(--cl-edge-50), 0.3);
   }
 
   .navbar  {
@@ -606,12 +549,12 @@ body  {
       }
     }
 
-    &:has(.link:where(.-hover):hover)  {
-      +:where(.div-cascade)  {
-        --pdis: calc(var(--wd-scrollbar) + #{px(12)} + 2px);
-        width: max-content;
-      }
-    }
+    // &:has(.link:where(.-hover):hover)  {
+    //   +:where(.div-cascade)  {
+    //     --pdis: calc(var(--wd-scrollbar) + #{px(12)} + 2px);
+    //     width: max-content;
+    //   }
+    // }
   }
 }
 
@@ -649,6 +592,8 @@ body  {
     --pdb: #{px(12)} 0;
 
     position: relative;
+    padding-inline: var(--pdi);
+    padding-block: var(--pdb);
 
     &:before  {
       content: "";
@@ -661,26 +606,19 @@ body  {
 }
 
 .role-main  {
-  flex: 1 0 0;
+  flex: 1 0 auto;
+  flex-direction: row;
 
-  &:where(:has(>.nodes))  {
-    flex-direction: row;
-  }
-
-  >:where(.nodes) {
-    flex: 1 0 0;
+  >.nodes {
+    flex: 0 0 100%;
     display: flex;
     flex-direction: column;
     min-width: 0;
     // min-height: 100%;
   }
 
-  :where(:has(.div-center))  {
-    flex: 1 0 0; display: flex; flex-direction: column; background-color: inherit;
-  }
-
-  .div-center  {
-    flex: 1 0 0;
+  :where(.div-center)  {
+    flex: 1 0 auto;
   }
 
   .div-header  {
@@ -691,10 +629,12 @@ body  {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: $gap-element-90;
     box-sizing: content-box;
     min-height: px(var(--ht-form));
-    border-bottom-width: $e10;
-    border-color: var(--cl-edge-30);
+    padding-inline: var(--pdi);
+    padding-block: var(--pdb);
+    border-bottom: $e10 solid var(--cl-edge-30);
     background: var(--cl-ground-50);
 
     >*  {
@@ -745,11 +685,14 @@ body  {
   --pdb: #{px(var(--mgb-dom))};
   --pdie: calc(var(--pdi) - var(--herit-wd-scrollbar));
 
+  flex-basis: 0;
   display: flex;
   flex-direction: column;
   min-height: 0;
   overflow: auto scroll;
   // overscroll-behavior: contain;
+  padding-inline: var(--pdi);
+  padding-block: var(--pdb);
   padding-inline-end: var(--pdie);
 
   // :where(:has(.m-grid))  { flex: 1 0 0; display: flex; flex-direction: column; }
@@ -762,12 +705,50 @@ body  {
     --pdi: #{px(var(--mgi-pop))};
 
     margin: 0 calc(-1 * var(--pdi));
+    padding-inline: var(--pdi);
   }
 
-  :where(:has(.m-section._primary >.main))  { flex: 1 0 0; display: flex; flex-direction: column; }
+  :where(.m-tabs._primary)  {
+    flex: 1 0 auto;
+  }
 
-  .m-section:where(._primary)  {
-    flex: 1 0 0;
+  :where(.m-grid._primary)  {
+    flex: 1 0 auto;
+  }
+}
+
+
+.m-tabs  {
+  display: flex;
+  flex-direction: column;
+
+  :where(.ant-tabs-content-holder)  {
+    display: flex;
+    flex-direction: column;
+
+    &:where(.m-tabs._primary *)  {
+      flex: 1 0 auto;
+    }
+  }
+
+  :where(.ant-tabs-content)  {
+    display: flex;
+    flex-direction: row;
+
+    &:where(.m-tabs._primary *)  {
+      flex: 1 0 auto;
+    }
+  }
+
+  :where(.ant-tabs-tabpane)  {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    // &:where(.m-tabs._primary *)  {
+    //   flex: 1 0 auto;
+    // }
   }
 }
 
@@ -786,10 +767,15 @@ body  {
     display: flex;
     flex-direction: column;
     min-width: 0;
+    padding-inline: var(--pdi);
 
     &:where(* +*)  {
       flex: 12;
     }
+  }
+
+  :where(.m-section._primary)  {
+    flex: 1 0 auto;
   }
 }
 
@@ -807,7 +793,7 @@ body  {
     flex-direction: column;
   }
 
-  >.main:where(.m-section._primary >*)  { flex: 1 0 0; }
+  >.main:where(.m-section._primary >*)  { flex: 1 0 auto; }
 }
 
 
@@ -851,17 +837,21 @@ body  {
 
 
 /* Margin */
-:has(>.m-section) >*  { margin-bottom: $mg-section-50; }
-:has(>.m-section) >.m-section  { margin-bottom: 0; }
-:has(>.m-section) >.m-section ~*  { margin-top: $mg-section-50; margin-bottom: 0; }
+// :has(>.m-section) >*  { margin-bottom: $mg-section-50; }
+// :has(>.m-section) >.m-section  { margin-bottom: 0; }
+// :has(>.m-section) >.m-section ~*  { margin-top: $mg-section-50; margin-bottom: 0; }
 
-:has(>.m-grid) >*  { margin-bottom: $mg-section-50; }
-:has(>.m-grid) >.m-grid  { margin-bottom: 0; }
-:has(>.m-grid) >.m-grid ~*  { margin-top: $mg-section-50; margin-bottom: 0; }
+// :has(>.m-grid) >*  { margin-bottom: $mg-section-50; }
+// :has(>.m-grid) >.m-grid  { margin-bottom: 0; }
+// :has(>.m-grid) >.m-grid ~*  { margin-top: $mg-section-50; margin-bottom: 0; }
 
-:has(>.m-tabs) >*  { margin-bottom: $mg-section-50; }
-:has(>.m-tabs) >.m-tabs  { margin-bottom: 0; }
-:has(>.m-tabs) >.m-tabs ~*  { margin-top: $mg-section-50; margin-bottom: 0; }
+// :has(>.m-tabs) >*  { margin-bottom: $mg-section-50; }
+// :has(>.m-tabs) >.m-tabs  { margin-bottom: 0; }
+// :has(>.m-tabs) >.m-tabs ~*  { margin-top: $mg-section-50; margin-bottom: 0; }
+
+.div-center >:where(:not(:last-child))  { margin-bottom: $mg-section-50; }
+.m-tabs >:where(:not(:last-child))  { margin-bottom: $mg-section-50; }
+:where(.m-grid >.column >:not(:last-child))  { margin-bottom: $mg-section-50; }
 
 
 

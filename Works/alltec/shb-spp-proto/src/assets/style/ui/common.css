@@ -400,7 +400,7 @@
 
 }
 
-:root  {
+.o-sym  {
   --obj-sym-arrow-left:                   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' color='%23292A2D'%3E%3Cpath fill='currentColor' d='M560-280 360-480l200-200v400Z'/%3E%3C/svg%3E");
   --obj-sym-arrow-drop-up:                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' color='%23292A2D'%3E%3Cpath fill='currentColor' d='m280-400 200-200 200 200H280Z'/%3E%3C/svg%3E");
   --obj-sym-arrow-right:                  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' color='%23292A2D'%3E%3Cpath fill='currentColor' d='M400-280v-400l200 200-200 200Z'/%3E%3C/svg%3E");

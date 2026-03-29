@@ -215,7 +215,9 @@ table  {
   align-items: flex-end;
   gap: px(var(--gap-element-90));
   clear: both;
-  border-color: var(--cl-edge-70);
+  padding-inline: var(--pdi);
+  padding-block: var(--pdb);
+  border: var(--bw) solid var(--cl-edge-70);
   background: var(--cl-ground-20);
   border-radius: px(var(--br-50));
   white-space: normal;
@@ -237,6 +239,8 @@ table  {
 
       min-width: 0;
       min-height: 0;
+      padding-inline: var(--pdi);
+      padding-block: var(--pdb);
     }
   }
 }
@@ -266,7 +270,10 @@ table  {
     justify-content: center;
     height: px(32);
     min-width: px(40);
+    padding-inline: var(--pdi);
     background: var(--cl-ground-20);
+    border: var(--bw) solid var(--cl-edge-50);
+    border-radius: var(--brss, 0) var(--brse, 0) var(--bree, 0) var(--bres, 0);
 
     & ~[aria-label="화면 닫기"]  {
       position: absolute;

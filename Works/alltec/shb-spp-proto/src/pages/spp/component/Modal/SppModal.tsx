@@ -68,6 +68,7 @@ export const SppModal = ({
           `
           .replace(/\s+/g, ' ')
           .trim()}
+        wrapClassName={[props.wrapClassName, 'c-scrollbar'].filter(Boolean).join(' ')}
         width={(props.width !== undefined) ? props.width : !wrapWidth ? 520 : ''}
         title={
           <SppModalHeader

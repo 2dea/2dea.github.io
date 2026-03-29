@@ -360,6 +360,7 @@
 
   .ant-table.ant-table-bordered:where(.ant-table-fixed-header) >.ant-table-container >.ant-table-body  {
     // overscroll-behavior: contain;
+    border: 0 solid var(--cl-edge-50);
     border-width: 0 var(--ant-line-width)  var(--ant-line-width) 0;
   }
 
