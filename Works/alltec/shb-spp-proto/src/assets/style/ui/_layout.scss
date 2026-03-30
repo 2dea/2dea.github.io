@@ -203,7 +203,7 @@ html  {
 
   --filter-root-contrast:           0.96;
   --filter-root-brightness:         0.96;
-  // --filter-root:                    contrast(var(--filter-root-contrast, 1)) brightness(var(--filter-root-brightness, 1));
+  --filter-root:                    contrast(var(--filter-root-contrast, 1)) brightness(var(--filter-root-brightness, 1));
 
 
   --mgb-pop:                 20;
@@ -339,7 +339,7 @@ body  {
 .dom-aside  { position: relative; grid-row: 2 /3; grid-column: 4 /5; }
 .dom-footer  { position: relative; grid-row: 3 /4; grid-column: 1 /span 5; }
 
-.dom-wrapper  { height: 100%; }
+.dom-wrapper  { min-width: calc(var(--px) * var(--breakpoint-max)); height: 100%; }
 
 
 /** Header */
@@ -659,6 +659,10 @@ body  {
       }
     }
 
+    >.extra  {
+      flex: 1 0 auto;
+    }
+
     .favorite-util  {
       .o-sym:where(.d-button[title="즐겨찾기 추가/해제"] *)  {
         --fvs-fill: 1;
@@ -671,7 +675,7 @@ body  {
         color: #fdd33a;
       }
 
-      &:where(.m-title:has(.o-heading) *)  {
+      &:where(.o-heading ~*)  {
         order: -1;
       }
     }

@@ -4,21 +4,6 @@
 @use "./mixins" as *;
 
 
-@supports not (top: 1lh) {
-  // *  { outline: 1px solid Red; }
-
-  .role-localnav  {
-    --lhr: calc(1em * 22 / 16);
-    --lh: var(--lhr);
-  }
-}
-
-
-@supports not selector(html:has(body)) {
-  // *  { outline: 1px solid Red; }
-}
-
-
 /** Text-Level
  ------------- */
 

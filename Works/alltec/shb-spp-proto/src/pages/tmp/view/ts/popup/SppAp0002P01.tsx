@@ -425,7 +425,7 @@ export const PopupSample = (props: PopupSampleProps) => {
 
               <div className="m-section">
                 <div className="main">
-                  <div className="o-board type-1">
+                  <div className="o-board type-1 -has-board-container">
                     <div className="board-container">
                       <div className="m-header">
                         <div className="prime">

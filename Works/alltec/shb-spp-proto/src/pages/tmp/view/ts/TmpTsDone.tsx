@@ -435,6 +435,9 @@ function TmpTsProg() {
                     <div className="m-binds type-end">
                       <div className="group _primary">
                         <SppButton variant="outlined" color="geekblue" specName="lined-2">조회사유 당일등록</SppButton>
+                      </div>
+                      <div className="group _primary">
+                        {/* <SppButton variant="outlined" color="geekblue" specName="lined-2">조회사유 당일등록</SppButton> */}
                         <SppButton variant="outlined" color="purple" specName="lined-1">미처리현황조회</SppButton>
                         <SppButton variant="solid" color="purple" specName="solid-1">최종반려</SppButton>
                       </div>
@@ -839,7 +842,7 @@ function TmpTsProg() {
 
                       <div className="m-section">
                         <div className="main">
-                          <div className="o-board type-1">
+                          <div className="o-board type-1 -has-board-container">
                             <div className="board-container">
                               <div className="m-header">
                                 <div className="prime">
