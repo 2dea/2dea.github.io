@@ -85,7 +85,7 @@
 
       min-width: 4em;
 
-      &:where(.m-binds.type-end >.group._primary *) {
+      &:where(.m-binds.type-end >.group._primary *, .m-binds.type-end:where(.ant-modal-footer *) *) {
         --icon-gap: var(--gap-whitespace-50);
 
         --ant-button-padding-inline: var(--ant-button-padding-inline-lg);
@@ -137,13 +137,45 @@
   }
 
   .ant-checkbox  {
+    --ht: var(--ant-control-interactive-size);
+
     align-self: flex-start;
-    padding: calc((var(--ant-line-height) - var(--ant-control-interactive-size)) / 2) 0;
+    padding: calc((var(--ant-line-height) - var(--ht)) / 2) 0;
+
+    & ~.ant-checkbox-label  {
+      display: inline-flex; align-items: center; gap: $gap-element-30; min-width: 0;
+
+      >.o-label  { flex: none; line-height: inherit; }
+    }
+
+    &:where(.d-check:has(.ant-checkbox-label >.d-form) *)  {
+      --ant-line-height: #{px(var(--ht-form))};
+
+      & ~.ant-checkbox-label  {
+        >.o-label  { line-height: px(var(--ht-form)); }
+      }
+    }
   }
 
   .ant-radio  {
+    --ht: (1px * var(--ant-radio-radio-size));
+
     align-self: flex-start;
-    padding: calc((var(--ant-line-height) - (1px * var(--ant-radio-radio-size))) / 2) 0;
+    padding: calc((var(--ant-line-height) - var(--ht)) / 2) 0;
+
+    & ~.ant-radio-label  {
+      display: inline-flex; align-items: center; gap: $gap-element-30; min-width: 0;
+
+      >.o-label  { flex: none; line-height: inherit; }
+    }
+
+    &:where(.d-check:has(.ant-radio-label >.d-form) *)  {
+      --ant-line-height: #{px(var(--ht-form))};
+
+      & ~.ant-radio-label  {
+        >.o-label  { line-height: px(var(--ht-form)); }
+      }
+    }
   }
 
   &.d-form  {
@@ -443,6 +475,11 @@
         &:where(.wd-80 *)  { width: $wd-80; max-width: none; }
         &:where(.wd-90 *)  { width: $wd-90; max-width: none; }
         &:where(.wd-100p *)  { min-width: 100%; }
+      }
+
+      .ant-modal-body  {
+        word-wrap: inherit;
+        overflow-wrap: inherit;
       }
 
       .ant-modal-header  {

@@ -12,7 +12,7 @@ export interface SppTextAreaProps extends TextAreaProps {
   model?: string;
   modelType?: string;
   specName?: string;
-  width?: "auto" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+  width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
   isCountVisible?: boolean;
 };
 

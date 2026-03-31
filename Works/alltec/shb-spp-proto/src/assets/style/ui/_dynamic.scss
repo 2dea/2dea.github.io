@@ -4,6 +4,11 @@
 @use "./mixins" as *;
 
 
+@supports (touch-action: none) {
+  // *  { outline: 1px solid Red; }
+}
+
+
 @supports not (top: 1lh) {
   // *  { outline: 1px solid Red; }
 
@@ -16,6 +21,8 @@
 
 @supports not selector(html:has(body)) {
   // *  { outline: 1px solid Red; }
+
+  .d-check >:is(.ant-checkbox-label, .ant-radio-label) >.d-form  { margin-block: calc((var(--ant-line-height) - px(var(--ht-form))) / 2); }
 }
 
 

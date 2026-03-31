@@ -20,9 +20,9 @@ import SppSelect from "@/pages/spp/component/Select/SppSelect";
 import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
-export interface PopupSampleProps extends SppModalProps {};
+export interface SppAp0002P01Props extends SppModalProps {};
 
-export const PopupSample = (props: PopupSampleProps) => {
+export const SppAp0002P01 = (props: SppAp0002P01Props) => {
   const [testValueFile1010, setTestValueFile1010] = useState<File | null>(null);
 
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
@@ -465,4 +465,4 @@ export const PopupSample = (props: PopupSampleProps) => {
   )
 }
 
-export default PopupSample;
+export default SppAp0002P01;

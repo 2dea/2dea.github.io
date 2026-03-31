@@ -24,7 +24,11 @@ import SppTable from "@/pages/spp/component/Table/SppTable";
 import SppTextArea from "@/pages/spp/component/TextArea/SppTextArea";
 
 import PopupSample from "./popup/PopupSample";
+import SppCm0000P01 from "./popup/SppCm0000P01";
+import SppCm0000P02 from "./popup/SppCm0000P02";
+import SppCm0000P03 from "./popup/SppCm0000P03";
 import SppAp0002P01 from "./popup/SppAp0002P01";
+import SppCr0001P02 from "./popup/SppCr0001P02";
 import Table2060 from "./popup/Table2060";
 import Table2070 from "./popup/Table2070";
 import Table2071 from "./popup/Table2071";
@@ -34,7 +38,11 @@ import Help1020 from "./popup/Help1020";
 
 function TmpTsProg() {
   const [isOpenPopupSample, setIsOpenPopupSample] = useState(false);
+  const [isOpenSppCm0000P01, setIsOpenSppCm0000P01] = useState(false);
+  const [isOpenSppCm0000P02, setIsOpenSppCm0000P02] = useState(false);
+  const [isOpenSppCm0000P03, setIsOpenSppCm0000P03] = useState(false);
   const [isOpenSppAp0002P01, setIsOpenSppAp0002P01] = useState(false);
+  const [isOpenSppCr0001P02, setIsOpenSppCr0001P02] = useState(false);
   const [isOpenTable2060, setIsOpenTable2060] = useState(false);
   const [isOpenTable2070, setIsOpenTable2070] = useState(false);
   const [isOpenTable2071, setIsOpenTable2071] = useState(false);
@@ -677,10 +685,28 @@ function TmpTsProg() {
                                     </td>
 
                                     <th colSpan={1}>
-                                      <SppObjLabel label={`head`} required={false} />
+                                      <SppObjLabel label={`.m-field`} required={false} />
                                     </th>
                                     <td colSpan={1}>
-                                      data
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppDatePicker placeholder="50" />
+                                          <SppInputText placeholder="auto" width="auto" />
+                                          <SppAutoComplete placeholder="100p" width="100p" />
+                                          <SppSelect placeholder="auto" width="auto" />
+                                          <SppInputText placeholder="auto" width="auto" />
+                                          <SppInputText placeholder="100p" width="100p" />
+                                          <SppSelect placeholder="auto" width="auto" />
+                                          <SppInputText placeholder="justify" width="justify" />
+                                          <SppInputText placeholder="justify" width="justify" />
+                                          <SppInputText placeholder="100p" width="100p" />
+                                          <SppAutoComplete placeholder="항목명 입력" />
+                                          <span className="binds">
+                                            <SppButton>추가</SppButton>
+                                            <SppButton>삭제</SppButton>
+                                          </span>
+                                        </div>
+                                      </div>
                                     </td>
                                   </tr>
 
@@ -700,10 +726,20 @@ function TmpTsProg() {
                                     </td>
 
                                     <th colSpan={1}>
-                                      <SppObjLabel label={`head`} required={false} />
+                                      <SppObjLabel label={`.m-form`} required={false} />
                                     </th>
                                     <td colSpan={1}>
-                                      data
+                                      <div className="m-form">
+                                        <SppCheckbox defaultChecked>
+                                          추가
+                                        </SppCheckbox>
+
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppInputText width="50" />
+                                          </div>
+                                        </div>
+                                      </div>
                                     </td>
                                   </tr>
 
@@ -714,7 +750,10 @@ function TmpTsProg() {
                                     <td colSpan={5}>
                                       <div className="m-binds">
                                         <div className="group align-start">
-                                          {/* <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton> */}
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P01(true)}>파일첨부</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P02(true)}>반려</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P03(true)}>알림발송</SppButton>
                                         </div>
                                       </div>
                                     </td>
@@ -742,6 +781,20 @@ function TmpTsProg() {
                                       <div className="m-binds">
                                         <div className="group align-start">
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`Cr팝업`} required={true} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCr0001P02(true)}>동의서 신규등록</SppButton>
                                         </div>
                                       </div>
                                     </td>
@@ -1613,10 +1666,38 @@ function TmpTsProg() {
                 />
               {/* )} */}
 
+              {/* {isOpenSppCm0000P01 && ( */}
+                <SppCm0000P01
+                  open={isOpenSppCm0000P01}
+                  onCancel={() => setIsOpenSppCm0000P01(false)}
+                />
+              {/* )} */}
+
+              {/* {isOpenSppCm0000P02 && ( */}
+                <SppCm0000P02
+                  open={isOpenSppCm0000P02}
+                  onCancel={() => setIsOpenSppCm0000P02(false)}
+                />
+              {/* )} */}
+
+              {/* {isOpenSppCm0000P03 && ( */}
+                <SppCm0000P03
+                  open={isOpenSppCm0000P03}
+                  onCancel={() => setIsOpenSppCm0000P03(false)}
+                />
+              {/* )} */}
+
               {/* {isOpenSppAp0002P01 && ( */}
                 <SppAp0002P01
                   open={isOpenSppAp0002P01}
                   onCancel={() => setIsOpenSppAp0002P01(false)}
+                />
+              {/* )} */}
+
+              {/* {isOpenSppCr0001P02 && ( */}
+                <SppCr0001P02
+                  open={isOpenSppCr0001P02}
+                  onCancel={() => setIsOpenSppCr0001P02(false)}
                 />
               {/* )} */}
 

@@ -218,7 +218,8 @@ html  {
   --ht-dom-header:               64;
   --ht-dom-footer:               0;
   --wd-dom-nav:                  192;
-  --wd-dom-container:            1656;
+
+  --sp-dom-header:               var(--wd-scrollbar);
 
 
   /* @supports (font-variation-settings: 'wght' 700) {
@@ -272,7 +273,12 @@ html  {
 // *  { scroll-behavior: inherit; }
 // html  { overflow: auto; scroll-behavior: smooth; scrollbar-gutter: stable both-edges; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--cl-scrollbar-thumb) var(--cl-scrollbar-track); overscroll-behavior: auto none; }
 html  { overflow: auto; scroll-behavior: smooth; }
-html  { scroll-behavior: auto; }
+html  { scroll-behavior: auto; overscroll-behavior: none; }
+@media
+  screen and (pointer: coarse) and (hover: none)  {
+    // *  { outline: 1px solid Red; }
+    html  { overscroll-behavior: auto; }
+  }
 
 
 /** Layouts
@@ -308,7 +314,7 @@ body  {
 [class|="dom"]  { background-color: inherit; }
 .roles:where([class|="dom"]:not(.dom-container) >*)  { background-color: var(--cl-ground); }
 
-[class|="dom"]  { --herit-wd-scrollbar: var(--wd-scrollbar); display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+[class|="dom"]  { /* --herit-wd-scrollbar: var(--wd-scrollbar); */ display: flex; flex-direction: column; min-width: 0; min-height: 0; }
 .roles:where([class|="dom"] >*)  { flex: 1; display: flex; flex-direction: column; min-height: 0; }
 [class|="role"]  { flex: none; display: flex; flex-direction: column; min-height: 0; }
 .g-overlay:where([class|="dom"] >*)  { min-height: 0; opacity: 0.001; }
@@ -339,7 +345,7 @@ body  {
 .dom-aside  { position: relative; grid-row: 2 /3; grid-column: 4 /5; }
 .dom-footer  { position: relative; grid-row: 3 /4; grid-column: 1 /span 5; }
 
-.dom-wrapper  { min-width: calc(var(--px) * var(--breakpoint-max)); height: 100%; }
+.dom-wrapper  { height: 100%; }
 
 
 /** Header */
@@ -353,6 +359,7 @@ body  {
 
 .role-banner  {
   width: px(var(--wd-dom-nav));
+  width: px(var(--wd-dom-nav-var));
 
   .div-branding  {
     .system  {
@@ -370,6 +377,7 @@ body  {
       }
 
       .logo  {
+        padding: var(--pd-dom-header-logo-var, 0px) 0 0 var(--pd-dom-header-logo-var, 0px);
         width: px(64);
       }
 
@@ -396,9 +404,10 @@ body  {
   align-items: center;
   justify-content: flex-end;
   gap: $gap-element-50 $gap-element-70;
-  margin: var(--herit-wd-scrollbar) var(--herit-wd-scrollbar) 0 0;
+  margin: var(--sp-dom-header) var(--sp-dom-header) 0 var(--sp-dom-header-var, 0px);
   padding-inline: var(--pdi);
-  padding-inline-end: calc(var(--pdi) - var(--herit-wd-scrollbar));
+  padding-inline-start: calc(var(--pdi) - var(--sp-dom-header-var, 0px));
+  padding-inline-end: calc(var(--pdi) - var(--sp-dom-header));
   color: var(--cl-text-00);
   background: var(--cl-theme-key1);
   border-radius: var(--brss, 0) var(--brse, 0) var(--bree, 0) var(--bres, 0);
@@ -421,11 +430,11 @@ body  {
 
 
 /** Global Navigation */
-.dom-wrapper  { --duration-nav-toggle: 0.3s; grid-template-columns: 0 px(var(--wd-dom-nav)) auto 0 0; transition: grid-template-columns var(--duration-nav-toggle) var(--timing-func-ease-faster); }/* ### */
-.dom-wrapper:has(.role-nav-core .menu-toggle :checked)  { grid-template-columns: 0 0 auto 0 0; }
+.dom-wrapper  { --wd-dom-nav-var: var(--wd-dom-nav); --duration-nav-toggle: 0.3s; grid-template-columns: 0 px(var(--wd-dom-nav-var)) minmax(calc(var(--px) * var(--breakpoint-max) - px(var(--wd-dom-nav-var))), auto) 0 0; transition: grid-template-columns var(--duration-nav-toggle) var(--timing-func-ease-faster); }/* ### */
+.dom-wrapper:has(.role-nav-core .menu-toggle :checked)  { --wd-dom-nav-var: 0; --sp-dom-header-var: var(--sp-dom-header); --pd-dom-header-logo-var: #{px(10)}; }
 .dom-nav  {
   position: relative;
-  border-right-width: $e10;
+  border-right: $e10 solid var(--cl-edge-50);
 
   .role-nav-core  {
     .div-control  {
@@ -442,7 +451,7 @@ body  {
 .role-localnav  {
   @include font(60, 700);
 
-  --herit-wd-scrollbar: var(--wd-scrollbar);
+  // --herit-wd-scrollbar: var(--wd-scrollbar);
 
   flex: 1 0 0;
   position: relative;
@@ -452,7 +461,7 @@ body  {
   background: var(--cl-theme-key1);
 
   >*  {
-    min-width: calc(px(var(--wd-dom-nav)) - $e10 - var(--herit-wd-scrollbar));
+    min-width: calc(px(var(--wd-dom-nav)) - $e10 - var(--wd-scrollbar));
   }
 
   .link  {
@@ -684,10 +693,10 @@ body  {
 
 
 .div-center  {
-  --herit-wd-scrollbar: var(--wd-scrollbar);
+  // --herit-wd-scrollbar: var(--wd-scrollbar);
   --pdi: #{px(var(--mgi-dom))};
   --pdb: #{px(var(--mgb-dom))};
-  --pdie: calc(var(--pdi) - var(--herit-wd-scrollbar));
+  --pdie: calc(var(--pdi) - var(--wd-scrollbar));
 
   flex-basis: 0;
   display: flex;
@@ -708,6 +717,7 @@ body  {
   &:where(.ant-modal-body >*)  {
     --pdi: #{px(var(--mgi-pop))};
 
+    overflow: visible;
     margin: 0 calc(-1 * var(--pdi));
     padding-inline: var(--pdi);
   }

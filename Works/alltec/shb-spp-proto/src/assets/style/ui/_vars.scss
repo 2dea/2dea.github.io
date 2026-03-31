@@ -211,7 +211,7 @@ $ht-form-30:             calc(var(--rem) * var(--ht-form-30, 24));
 $ht-form-50:             calc(var(--rem) * var(--ht-form-50, 30));
 $ht-form-70:             calc(var(--rem) * var(--ht-form-70, 36));
 
-$ht-form-50:             calc(var(--rem) * var(--ht-form));
+$ht-form:                calc(var(--rem) * var(--ht-form));
 
 
 $timing-func-ease-slower:    var(--timing-func-ease-slower);
@@ -233,4 +233,3 @@ $mgi-dom:                  calc(var(--rem) * var(--mgi-dom));
 $ht-dom-header:                  calc(var(--rem) * var(--ht-dom-header));
 $ht-dom-footer:                  calc(var(--rem) * var(--ht-dom-footer));
 $wd-dom-nav:                      calc(var(--rem) * var(--wd-dom-nav));
-$wd-dom-container:                calc(var(--rem) * var(--wd-dom-container));

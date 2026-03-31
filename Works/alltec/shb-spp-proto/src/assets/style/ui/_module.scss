@@ -144,15 +144,25 @@ table  {
 // }
 
 .d-form  {
+  --wd-form-10: #{px(50)};
+  --wd-form-20: #{px(60)};
+  --wd-form-30: #{px(80)};
+  --wd-form-40: #{px(100)};
+  --wd-form-50: #{px(120)};
+  --wd-form-60: #{px(140)};
+  --wd-form-70: #{px(160)};
+  --wd-form-80: #{px(180)};
+  --wd-form-90: #{px(210)};
+  --wd-form: var(--wd-form-50);
+
   --wdn:    3.5em;
-  --wd:     100%;
   --wdx:    100%;
 
   --pdis:   #{px(7)};
   --pdie:   #{px(7)};
 
   min-width: var(--wdn);
-  width: var(--wd);
+  width: var(--wd, 100%);
   max-width: var(--wdx);
   padding-left: var(--pdis);
   padding-right: var(--pdie);
@@ -161,15 +171,18 @@ table  {
 
   :disabled  { filter: none; }
 
-  &:where(.wd-10)  { --wd: #{px(50)}; }
-  &:where(.wd-20)  { --wd: #{px(60)}; }
-  &:where(.wd-30)  { --wd: #{px(80)}; }
-  &:where(.wd-40)  { --wd: #{px(100)}; }
-  &:where(.wd-50)  { --wd: #{px(120)}; }
-  &:where(.wd-60)  { --wd: #{px(140)}; }
-  &:where(.wd-70)  { --wd: #{px(160)}; }
-  &:where(.wd-80)  { --wd: #{px(180)}; }
-  &:where(.wd-90)  { --wd: #{px(210)}; }
+  &:where(.wd-auto)  { --wd: auto; }
+  &:where(.wd-justify)  { --wd: auto; }
+  &:where(.wd-10)  { --wd: var(--wd-form-10) }
+  &:where(.wd-20)  { --wd: var(--wd-form-20) }
+  &:where(.wd-30)  { --wd: var(--wd-form-30) }
+  &:where(.wd-40)  { --wd: var(--wd-form-40) }
+  &:where(.wd-50)  { --wd: var(--wd-form-50) }
+  &:where(.wd-60)  { --wd: var(--wd-form-60) }
+  &:where(.wd-70)  { --wd: var(--wd-form-70) }
+  &:where(.wd-80)  { --wd: var(--wd-form-80) }
+  &:where(.wd-90)  { --wd: var(--wd-form-90) }
+  &:where(.wd-100p)  { --wd: 100%; }
 
   // &:where(.o-gridtable *)  {
   //   min-width: var(--wd);
@@ -188,10 +201,20 @@ table  {
 .m-field >.main  { flex: 1; display: flex; align-items: center; gap: px(var(--gap-element-30)); min-width: 0; min-height: px(var(--ht-form)); margin: 0; }
 .m-field >.main:not(.basis-pass)  { flex-wrap: wrap; }
 .m-field >.main >*  { min-width: 0; }
+
 .m-field >.main >.d-form  { min-width: 1.5em; }
+.m-field >.main >.d-form:where(:not(
+    [style^="width:"], [style*="/width:"], [style*=";width:"], [style*=" width:"],
+    [class^="wd-"], [class*=" wd-"]
+  ))  { flex: 1 1 0; }
+.m-field >.main >.d-form:where([class~="wd-auto"])  { flex: 1 1 auto; }
+.m-field >.main >.d-form:where([class~="wd-justify"])  { flex: 1 1 var(--wd-form); }
+
+.m-field >.main >.binds  { display: flex; align-items: center; gap: inherit; }
+.m-field >.main >.binds >*  { flex: none; }
 
 .m-field >.header  { padding-inline-end: calc(1em * 6 / var(--font-50-int)); }
-.m-field:where(.m-filter-form *) >.header  { font-weight: $bold-700; color: var(--cl-text-70); }
+.m-field:where(.m-filter-form *, .m-agreementfield *) >.header  { font-weight: $bold-700; color: var(--cl-text-70); }
 .m-field:where(.m-filter-form *) >.header  { flex: none; display: flex; justify-content: flex-end; min-width: calc(1em * 60 / var(--font-50-int)); }
 .m-field:where(.m-filter-form *) >.main  { flex: none; }
 
@@ -203,6 +226,19 @@ table  {
 // .m-field >.main >.helper.style-strong  { color: var(--cl-point-red); }
 // .m-field >.main >.helper strong,
 // .m-field >.main >strong.helper  { font-weight: $bold-700; }
+
+.m-field:where(.m-survey-field >*, .m-agreementfield >*, .axis-cols)  { flex-direction: column; align-items: normal; }
+.m-field:where(.m-survey-field >*, .m-agreementfield >*, .axis-cols) >*  { min-height: 0; }
+
+.m-field:where(:not(.m-survey-field >*, .m-agreementfield >*, .axis-cols))  { align-items: center; }
+.m-field:where(:not(.m-survey-field >*, .m-agreementfield >*, .axis-cols)) >*  { flex: none; min-width: 0; }
+.m-field:where(:not(.m-survey-field >*, .m-agreementfield >*, .axis-cols)) >.main  { flex: 1; }
+
+
+.m-survey-field  { display: flex; flex-direction: column; gap: $gap-element-70; }
+
+.m-agreementfield  { display: flex; flex-direction: column; gap: $gap-element-70; }
+
 
 
 .m-filter-form  {
@@ -1078,12 +1114,14 @@ table  {
 
 
 /** 지시문 객체 */
+.o-helper  { font-weight: $bold-400; white-space: normal; }
 .o-helper .emph  { color: var(--cl-text-50); }
 .o-helper.style-normal  { color: var(--cl-text-40); }
 .o-helper.style-strong  { color: var(--cl-point-red); }
 
+.o-helper:where(.o-label *)  { @include font(30); }
 .o-helper:where(.m-header *)  { @include font(40); }
-.o-helper:where(.m-footer *)  { font-size: $font-40; line-height: $line-40; color: var(--cl-text-40); }
+.o-helper:where(.m-footer *)  { @include font(40); color: var(--cl-text-40); }
 
 
 /** 범례 객체 */
