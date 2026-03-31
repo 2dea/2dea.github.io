@@ -51,6 +51,16 @@ export const PopupSample = (props: PopupSampleProps) => {
             <SppButton variant="outlined" color="purple" specName="lined-1" onClick={() => alert(1)}>footerAppendButton</SppButton>
           </>
         }
+        footerAppend1Button={
+          <>
+            <SppButton variant="outlined" color="purple" specName="lined-1" onClick={() => alert(1)}>footerAppend1Button</SppButton>
+          </>
+        }
+        footerAppend2Button={
+          <>
+            <SppButton variant="outlined" color="purple" specName="lined-1" onClick={() => alert(1)}>footerAppend2Button</SppButton>
+          </>
+        }
         cancelText="취소"
         okText="저장"
         // cancelButtonRender={false}

@@ -47,15 +47,15 @@ export const SppButtonGroup = ({
           </div>
         )}
 
-        {children1 && (
-          <div className={`group ${children1ClassName && ' _' + children1ClassName}`.replace(/\s+/g, ' ').trim()}>
-            {children1}
-          </div>
-        )}
-
         {children && (
           <div className={`group ${childrenClassName && ' _' + childrenClassName}`.replace(/\s+/g, ' ').trim()}>
             {children}
+          </div>
+        )}
+
+        {children1 && (
+          <div className={`group ${children1ClassName && ' _' + children1ClassName}`.replace(/\s+/g, ' ').trim()}>
+            {children1}
           </div>
         )}
       </div>

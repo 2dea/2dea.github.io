@@ -17,6 +17,8 @@ export interface SppModalProps extends ModalProps {
   headerAppendPrimeTitle?: ReactNode;
   headerAppendExtra?: ReactNode;
   footerAppendButton?: ReactNode;
+  footerAppend1Button?: ReactNode;
+  footerAppend2Button?: ReactNode;
   cancelButtonRender?: boolean;
   okButtonRender?: boolean;
 };
@@ -33,6 +35,12 @@ export const SppModal = ({
   headerAppendExtra,
   footer=(_, { OkBtn, CancelBtn }) => (
     <SppModalFooter
+      children2={
+        <>{footerAppend2Button}</>
+      }
+      children1={
+        <>{footerAppend1Button}</>
+      }
       children={
         <>
           {cancelButtonRender && <CancelBtn />}
@@ -43,6 +51,8 @@ export const SppModal = ({
     />
   ),
   footerAppendButton,
+  footerAppend1Button,
+  footerAppend2Button,
   maskClosable=false,
   keyboard=true,
   cancelButtonRender=true,
