@@ -41,6 +41,7 @@ export const SppTextArea = ({
           `
           .replace(/\s+/g, ' ')
           .trim()}
+        spellCheck={rest.spellCheck || "false"}
         rows={rows}
         // suffix={suffix}
         showCount={showCount}

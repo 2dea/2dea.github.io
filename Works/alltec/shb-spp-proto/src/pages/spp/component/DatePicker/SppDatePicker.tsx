@@ -38,6 +38,7 @@ export const SppDatePicker = ({
           `
           .replace(/\s+/g, ' ')
           .trim()}
+        placeholder={rest.placeholder || ""}
         picker={picker}
         format={{
           format: (picker === 'month') ? monthFormat : dateFormat,

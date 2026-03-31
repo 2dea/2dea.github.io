@@ -35,6 +35,7 @@ export const SppInputText = ({
           `
           .replace(/\s+/g, ' ')
           .trim()}
+        spellCheck={rest.spellCheck || "false"}
         allowClear={allowClear}
         suffix={suffix}
       />

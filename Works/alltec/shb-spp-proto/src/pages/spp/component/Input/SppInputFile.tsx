@@ -14,6 +14,7 @@ export interface SppInputFileProps {
   className?: string;
   fileSizeRender?: boolean;
   removeButtonRender?: boolean;
+  downloadButtonRender?: boolean;
   selectButtonRender?: boolean;
   selectButtonProps?: {};
   selectButtonText?: string;
@@ -36,6 +37,7 @@ const SppInputFile = (props: SppInputFileProps) => {
     className="",
     fileSizeRender=true,
     removeButtonRender=true,
+    downloadButtonRender=false,
     selectButtonRender=true,
     selectButtonProps={ variant: 'outlined', color: 'default', specName: 'normal', },
     selectButtonText="파일선택",
@@ -137,10 +139,14 @@ const SppInputFile = (props: SppInputFileProps) => {
             {fileSizeRender && hasFile && value &&
               <span className="string size" title="파일크기">{fileSizeLabel}</span>
             }
-            {selectButtonRender &&
+            {(downloadButtonRender || selectButtonRender) &&
               <span className="inner-binds">
-                <SppButton {...selectButtonProps} disabled={disabled} onClick={() => { fileInputRef.current?.click() }}>{selectButtonText}</SppButton>
-                {/* <SppButton variant="outlined" color="default" specName="normal" disabled={disabled || !hasFile} onClick={handleRemove}>파일제거</SppButton> */}
+                {selectButtonRender &&
+                  <SppButton {...selectButtonProps} disabled={disabled} onClick={() => { fileInputRef.current?.click() }}>{selectButtonText}</SppButton>
+                }
+                {downloadButtonRender &&
+                  <SppButton {...selectButtonProps} onClick={() => { alert('DOWNLOADS') }}>다운로드</SppButton>
+                }
               </span>
             }
           </>
