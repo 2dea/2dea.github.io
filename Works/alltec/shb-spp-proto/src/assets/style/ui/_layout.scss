@@ -543,7 +543,9 @@ body  {
 
   .div-cascade  {
     flex: none;
+    min-width: px(var(--wd-dom-nav));
     width: max-content;
+    max-width: calc(var(vi) * 50 - px(var(--wd-dom-nav, 0)));
 
     +:where(.div-cascade)  {
       --pdis: calc(var(--wd-scrollbar) + #{px(12)} + 2px);

@@ -230,6 +230,8 @@
 .m-form  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-70; gap: $gap-element-30 $gap-element-70; }
 .m-form.axis-cols  { flex-direction: column; align-items: normal; }
 .m-form .justify-end  { margin-inline-start: auto; }
+.m-form >.wd-auto:where(.m-field)  { flex: 1 1 auto; }
+.m-form >.wd-fill:where(.m-field)  { flex: 1 1 px(240); }
 
 
 
