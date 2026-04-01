@@ -59,13 +59,13 @@ export const SppAp0002P01 = (props: SppAp0002P01Props) => {
 
   const tableSppAp0002M1020Columns: ColumnsType<any> = [
     { dataIndex: 'data1010', width: 140, ellipsis: false, align: 'center', title: <SppObjLabel label="부서 총 인원" required={false} />, render: (v, r, i) => { return (
-      <SppInputText placeholder="" width="50" className="g-end" />
+      <SppInputText placeholder="" width="50" align="end" />
     ) }, },
     { dataIndex: 'data1010', width: 140, ellipsis: false, align: 'center', title: <SppObjLabel label="변경 전" required={false} />, render: (v, r, i) => { return (
-      <SppInputText placeholder="" width="50" className="g-end" />
+      <SppInputText placeholder="" width="50" align="end" />
     ) }, },
     { dataIndex: 'data1010', width: 140, ellipsis: false, align: 'center', title: <SppObjLabel label="변경 후" required={false} />, render: (v, r, i) => { return (
-      <SppInputText placeholder="" width="50" className="g-end" />
+      <SppInputText placeholder="" width="50" align="end" />
     ) }, },
     { dataIndex: 'data1010', width: '', ellipsis: false, align: 'center', title: <SppObjLabel label="요청사유" required={false} />, render: (v, r, i) => { return (
       <SppInputText placeholder="" width="100p" />

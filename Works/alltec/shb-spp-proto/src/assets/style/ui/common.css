@@ -652,23 +652,26 @@
 .g-fixed-table  { table-layout: fixed; }
 .g-auto-table  { table-layout: auto; }
 
-.g-justify  { text-align: justify !important; }
-.g-center  { text-align: center !important; }
 .g-end  { text-align: right !important; text-align: end !important; }
+.g-center  { text-align: center !important; }
 .g-start  { text-align: left !important; text-align: start !important; }
+.g-ta-justify  { text-align: justify !important; text-justify: auto; }
+.g-ta-inherit  { text-align: inherit !important; text-justify: inherit; }
 
-.g-valign-super  { vertical-align: super; }
-.g-valign-sub  { vertical-align: sub; }
-.g-valign-txtbottom  { vertical-align: text-bottom; }
-.g-valign-txttop  { vertical-align: text-top; }
-.g-valign-bottom  { vertical-align: bottom; }
-.g-valign-top  { vertical-align: top; }
-.g-valign-center  { vertical-align: center; }
+.g-va-sub  { vertical-align: sub; }
+.g-va-sup  { vertical-align: super; }
+.g-va-txtbottom  { vertical-align: text-bottom; }
+.g-va-txttop  { vertical-align: text-top; }
+.g-va-bottom  { vertical-align: bottom; }
+.g-va-middle  { vertical-align: middle; }
+.g-va-top  { vertical-align: top; }
+.g-va-baseline  { vertical-align: baseline; }
+.g-va-inherit  { vertical-align: inherit; }
 
-.g-axis-center  { justify-content: center !important; }
 .g-axis-end  { justify-content: end !important; }
+.g-axis-center  { justify-content: center !important; }
 .g-axis-start  { justify-content: start !important; }
-.g-axis-stretch  { justify-content: stretch !important; }
+.g-axis-stretch  { justify-content: stretch !important; justify-content: normal !important; }
 
 
 .g-middle  { display: inline-flex; align-items: center; }

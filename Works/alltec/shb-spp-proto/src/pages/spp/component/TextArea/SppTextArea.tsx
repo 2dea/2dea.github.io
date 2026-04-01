@@ -13,6 +13,7 @@ export interface SppTextAreaProps extends TextAreaProps {
   modelType?: string;
   specName?: string;
   width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+  align?: "justify" | "start" | "center" | "end" | "inherit" | "";
   isCountVisible?: boolean;
 };
 
@@ -22,6 +23,7 @@ export const SppTextArea = ({
   specName="",
   rows=2,
   width="100p",
+  align="",
   className="",
   // suffix=<></>,
   showCount=true,
@@ -37,6 +39,7 @@ export const SppTextArea = ({
             ${modelType && ' type-' + modelType}
             ${specName && ' _' + specName}
             ${width && ' wd-' + width}
+            ${align && ' g-' + (!/start|center|end/g.test(align) ? 'ta-' : '') + align}
             ${className}
           `
           .replace(/\s+/g, ' ')

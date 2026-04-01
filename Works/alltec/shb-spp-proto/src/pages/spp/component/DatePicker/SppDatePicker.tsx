@@ -13,6 +13,7 @@ export interface SppDatePickerProps extends DatePickerProps {
   modelType?: string;
   specName?: string;
   width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+  align?: "justify" | "start" | "center" | "end" | "inherit" | "";
 };
 
 export const SppDatePicker = ({
@@ -20,6 +21,7 @@ export const SppDatePicker = ({
   modelType="date",
   specName="",
   width="50",
+  align="",
   className="",
   picker,
   allowClear=true,
@@ -34,6 +36,7 @@ export const SppDatePicker = ({
             ${modelType && ' type-' + modelType}
             ${specName && ' _' + specName}
             ${width && ' wd-' + width}
+            ${align && ' g-' + (!/start|center|end/g.test(align) ? 'ta-' : '') + align}
             ${className}
           `
           .replace(/\s+/g, ' ')

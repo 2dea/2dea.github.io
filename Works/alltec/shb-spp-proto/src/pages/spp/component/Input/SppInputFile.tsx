@@ -11,6 +11,7 @@ export interface SppInputFileProps {
   modelType?: string;
   specName?: string;
   width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+  align?: "justify" | "start" | "center" | "end" | "inherit" | "";
   className?: string;
   fileSizeRender?: boolean;
   removeButtonRender?: boolean;
@@ -34,6 +35,7 @@ const SppInputFile = (props: SppInputFileProps) => {
     modelType="input",
     specName="file",
     width="",
+    align="",
     className="",
     fileSizeRender=true,
     removeButtonRender=true,
@@ -115,6 +117,7 @@ const SppInputFile = (props: SppInputFileProps) => {
             ${modelType && ' type-' + modelType}
             ${specName && ' _' + specName}
             ${width && ' wd-' + width}
+            ${align && ' g-' + (!/start|center|end/g.test(align) ? 'ta-' : '') + align}
             ${className}
           `
           .replace(/\s+/g, ' ')

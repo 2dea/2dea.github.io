@@ -14,6 +14,7 @@ export interface SppSelectProps extends SelectProps {
   modelType?: string;
   specName?: string;
   width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+  align?: "justify" | "start" | "center" | "end" | "inherit" | "";
 };
 
 export const SppSelect = ({
@@ -21,6 +22,7 @@ export const SppSelect = ({
   modelType="select",
   specName="single",
   width="",
+  align="",
   className="",
   placeholder="선택",
   allowClear,
@@ -52,6 +54,7 @@ export const SppSelect = ({
             ${modelType && ' type-' + modelType}
             ${specName && ' _' + specName}
             ${width && ' wd-' + width}
+            ${align && ' g-' + (!/start|center|end/g.test(align) ? 'ta-' : '') + align}
             ${className}
           `
           .replace(/\s+/g, ' ')

@@ -10,6 +10,7 @@ export interface SppAutoCompleteProps extends AutoCompleteProps {
   modelType?: string;
   specName?: string;
   width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+  align?: "justify" | "start" | "center" | "end" | "inherit" | "";
 };
 
 export const SppAutoComplete = ({
@@ -17,6 +18,7 @@ export const SppAutoComplete = ({
   modelType="autocomp",
   specName="",
   width="",
+  align="",
   className="",
   allowClear=true,
   prefix=<><SppObjSymbol label={`search`} specName="pre-autocomp" /></>,
@@ -31,6 +33,7 @@ export const SppAutoComplete = ({
             ${modelType && ' type-' + modelType}
             ${specName && ' _' + specName}
             ${width && ' wd-' + width}
+            ${align && ' g-' + (!/start|center|end/g.test(align) ? 'ta-' : '') + align}
             ${className}
           `
           .replace(/\s+/g, ' ')

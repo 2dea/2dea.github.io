@@ -10,6 +10,7 @@ export interface SppInputTextProps extends InputProps {
   modelType?: string;
   specName?: string;
   width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+  align?: "justify" | "start" | "center" | "end" | "inherit" | "";
 };
 
 export const SppInputText = ({
@@ -17,6 +18,7 @@ export const SppInputText = ({
   modelType="input",
   specName="text",
   width="",
+  align="",
   className="",
   allowClear,
   suffix=<></>,
@@ -31,6 +33,7 @@ export const SppInputText = ({
             ${modelType && ' type-' + modelType}
             ${specName && ' _' + specName}
             ${width && ' wd-' + width}
+            ${align && ' g-' + (!/start|center|end/g.test(align) ? 'ta-' : '') + align}
             ${className}
           `
           .replace(/\s+/g, ' ')
