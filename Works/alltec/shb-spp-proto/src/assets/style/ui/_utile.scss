@@ -72,7 +72,7 @@
 .o-link:not(.type-texted)._normal  { --theme: inherit; text-decoration: underline; }
 .o-link:not(.type-texted)._normal:hover  { --theme: var(--cl-key1-40); }
 
-// .o-link:is(.o-grid-table tr >* *)  { white-space: nowrap; }
+// .o-link:is(.o-gridtable tr >* *)  { white-space: nowrap; }
 
 
 /** Headings */
@@ -261,6 +261,40 @@
 // .o-dataform.style-rawer :where(table:not(td *))  { margin: px(-6) 0; border-style: hidden hidden; }
 
 
+
+.o-datatable  { --mg-cell-inline: #{px(7)}; --mg-headcell-inline: #{px(11)}; clear: both; }
+.o-datatable :where(table:not(td *))  { border-collapse: collapse; border-spacing: 0; width: 100%; /* min-width: 100%; */ background: var(--cl-ground); text-align: center; }
+.o-datatable :where(table:not(td *)):has(>colgroup[span])  { table-layout: fixed; }
+.o-datatable :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--mg-cell-inline) * 2 + $e10); }
+.o-datatable :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--mg-headcell-inline) * 2 + $e10); }
+.o-datatable :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
+.o-datatable :where(table:not(td *)) tr >*  { --mg-inline: var(--mg-cell-inline); height: var(--ht-cell); padding: var(--mg-cell-block) var(--mg-inline); border: 0 solid var(--cl-edge-30); border-width: 0 $e10 $e10; }
+.o-datatable :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: px(1) var(--mg-headcell-inline); color: var(--cl-text-70); }
+.o-datatable :where(table:not(td *)) th:not(thead >* >*)  { background: var(--cl-ground-20); }
+.o-datatable :where(table:not(td *)) thead  { background: var(--cl-ground-50); }
+
+.o-datatable :where(table:not(td *)) .subtotal-tcell  { font-weight: $bold-700; background: var(--cl-ground2-skyblue-40); }
+
+.o-datatable :where(table:not(td *)) >*  { position: relative; }
+.o-datatable :where(table:not(td *)) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
+
+.o-datatable :where(table:not(td *))  { border: hidden; }
+.o-datatable :where(table:not(td *)) +table  { border-top: $e10 solid var(--cl-edge-70); }
+.o-datatable :has(>:where(table:not(td *)))  { border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
+.o-datatable >.table-wrapper  { overflow: auto; }
+
+.o-datatable.style-fill,
+  :has(.table):where(.o-datatable.style-fill *)  { flex: 1; display: flex; flex-direction: column; }
+.o-datatable.style-fill .table  { flex: 1; }
+
+.o-datatable:where(.type-approve) :where(table:not(td *)) tbody:not(:last-child):after  { background-color: var(--cl-edge-30); }
+.o-datatable:where(.type-approve) :where(table:not(td *)) .approve-tfoot  { font-size: $font-30; line-height: $line-30; background-color: var(--cl-ground-20); }
+.o-datatable:where(.type-approve) :where(table:not(td *)) .approve-tfoot .o-digit.type-time  { color: var(--cl-text-40); }
+
+.o-datatable +.o-datatable  { margin-top: $mg-section-40; }
+
+
+
 .o-gridtable  {
   display: flex;
   flex-direction: column;
@@ -402,9 +436,9 @@
 .o-attach:where(.layer-wrap.case-upload-excel .m-upload-file *)  { padding: px(24) px(24); }
 .o-attach:where(.style-fit)  { padding: px(24) px(24); }
 
-.o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: px(90); margin: px(3) auto; padding: px(7) px(15); }
-.o-attach:where(.o-grid-table.type-upload:where(.m-section >.main.rows-body-2i >*) *)  { min-height: px(55); }
-.o-attach:where(.o-grid-table.type-upload *) .summary .wbr  { display: block; }
+.o-attach:where(.o-gridtable.type-upload *)  { min-width: 21em; min-height: px(90); margin: px(3) auto; padding: px(7) px(15); }
+.o-attach:where(.o-gridtable.type-upload:where(.m-section >.main.rows-body-2i >*) *)  { min-height: px(55); }
+.o-attach:where(.o-gridtable.type-upload *) .summary .wbr  { display: block; }
 
 
 

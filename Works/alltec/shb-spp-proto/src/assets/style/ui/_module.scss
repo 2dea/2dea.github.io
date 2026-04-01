@@ -2417,66 +2417,66 @@ table  {
 
 
 
-/** Tables
- --------- */
+// /** Tables
+//  --------- */
 
-.o-data-table  { --mg-cell-inline: #{px(7)}; --mg-headcell-inline: #{px(11)}; clear: both; }
-.o-data-table :where(table:not(td *))  { border-collapse: collapse; border-spacing: 0; width: 100%; /* min-width: 100%; */ background: var(--cl-ground); text-align: center; }
-.o-data-table :where(table:not(td *)):has(>colgroup[span])  { table-layout: fixed; }
-.o-data-table :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--mg-cell-inline) * 2 + $e10); }
-.o-data-table :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--mg-headcell-inline) * 2 + $e10); }
-.o-data-table :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
-.o-data-table :where(table:not(td *)) tr >*  { --mg-inline: var(--mg-cell-inline); height: var(--ht-cell); padding: var(--mg-cell-block) var(--mg-inline); border: 0 solid var(--cl-edge-30); border-width: 0 $e10 $e10; }
-.o-data-table :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: px(1) var(--mg-headcell-inline); color: var(--cl-text-70); }
-.o-data-table :where(table:not(td *)) th:not(thead >* >*)  { background: var(--cl-ground-20); }
-.o-data-table :where(table:not(td *)) thead  { background: var(--cl-ground-50); }
+// .o-data-table  { --mg-cell-inline: #{px(7)}; --mg-headcell-inline: #{px(11)}; clear: both; }
+// .o-data-table :where(table:not(td *))  { border-collapse: collapse; border-spacing: 0; width: 100%; /* min-width: 100%; */ background: var(--cl-ground); text-align: center; }
+// .o-data-table :where(table:not(td *)):has(>colgroup[span])  { table-layout: fixed; }
+// .o-data-table :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--mg-cell-inline) * 2 + $e10); }
+// .o-data-table :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--mg-headcell-inline) * 2 + $e10); }
+// .o-data-table :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
+// .o-data-table :where(table:not(td *)) tr >*  { --mg-inline: var(--mg-cell-inline); height: var(--ht-cell); padding: var(--mg-cell-block) var(--mg-inline); border: 0 solid var(--cl-edge-30); border-width: 0 $e10 $e10; }
+// .o-data-table :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: px(1) var(--mg-headcell-inline); color: var(--cl-text-70); }
+// .o-data-table :where(table:not(td *)) th:not(thead >* >*)  { background: var(--cl-ground-20); }
+// .o-data-table :where(table:not(td *)) thead  { background: var(--cl-ground-50); }
 
-.o-data-table :where(table:not(td *)) .subtotal-tcell  { font-weight: $bold-700; background: var(--cl-ground2-skyblue-40); }
+// .o-data-table :where(table:not(td *)) .subtotal-tcell  { font-weight: $bold-700; background: var(--cl-ground2-skyblue-40); }
 
-.o-data-table :where(table:not(td *)) >*  { position: relative; }
-.o-data-table :where(table:not(td *)) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
+// .o-data-table :where(table:not(td *)) >*  { position: relative; }
+// .o-data-table :where(table:not(td *)) tbody:not(:last-child):after  { content: ""; display: table-row; position: absolute; z-index: 3; width: 100%; height: $e10; margin-top: calc(-1 * $e10); background: Black; }
 
-.o-data-table :where(table:not(td *))  { border: hidden; }
-.o-data-table :where(table:not(td *)) +table  { border-top: $e10 solid var(--cl-edge-70); }
-.o-data-table :has(>:where(table:not(td *)))  { border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
-.o-data-table >.table-container  { overflow: auto; }
+// .o-data-table :where(table:not(td *))  { border: hidden; }
+// .o-data-table :where(table:not(td *)) +table  { border-top: $e10 solid var(--cl-edge-70); }
+// .o-data-table :has(>:where(table:not(td *)))  { border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
+// .o-data-table >.table-container  { overflow: auto; }
 
-.o-data-table.style-fill,
-  :has(.table):where(.o-data-table.style-fill *)  { flex: 1; display: flex; flex-direction: column; }
-.o-data-table.style-fill .table  { flex: 1; }
+// .o-data-table.style-fill,
+//   :has(.table):where(.o-data-table.style-fill *)  { flex: 1; display: flex; flex-direction: column; }
+// .o-data-table.style-fill .table  { flex: 1; }
 
-.o-data-table:where(.type-approve) :where(table:not(td *)) tbody:not(:last-child):after  { background-color: var(--cl-edge-30); }
-.o-data-table:where(.type-approve) :where(table:not(td *)) .approve-tfoot  { font-size: $font-30; line-height: $line-30; background-color: var(--cl-ground-20); }
-.o-data-table:where(.type-approve) :where(table:not(td *)) .approve-tfoot .o-digit.type-time  { color: var(--cl-text-40); }
+// .o-data-table:where(.type-approve) :where(table:not(td *)) tbody:not(:last-child):after  { background-color: var(--cl-edge-30); }
+// .o-data-table:where(.type-approve) :where(table:not(td *)) .approve-tfoot  { font-size: $font-30; line-height: $line-30; background-color: var(--cl-ground-20); }
+// .o-data-table:where(.type-approve) :where(table:not(td *)) .approve-tfoot .o-digit.type-time  { color: var(--cl-text-40); }
 
-.o-data-table +.o-data-table  { margin-top: $mg-section-40; }
+// .o-data-table +.o-data-table  { margin-top: $mg-section-40; }
 
 
-// .o-dataform  { --mg-cell-inline: #{px(7)}; --mg-headcell-inline: #{px(11)}; clear: both; }
-// .o-dataform :where(table:not(td *))  { table-layout: fixed; border-collapse: collapse; border-spacing: 0; width: 100%; background: var(--cl-ground); }
-// .o-dataform :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--mg-cell-inline) * 2 + $e10); }
-// .o-dataform :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--mg-headcell-inline) * 2 + $e10); }
-// .o-dataform :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
-// .o-dataform :where(table:not(td *)) tr >*  { --mg-inline: var(--mg-cell-inline); height: var(--ht-cell); padding: var(--mg-cell-block) var(--mg-inline); border: 0 solid var(--cl-edge-50); border-width: 0 0 var(--edge-cell); }
-// // .o-dataform :where(table:not(td *)) [rowspan]:where(th, td)  { border-right-width: $e10; }
-// .o-dataform.style-fill :where(table:not(td *)) tr >*  { --mg-cell-block: #{px(8)}; --ht-cell: calc(var(--rem) * var(--ht-form-50) + var(--mg-cell-block) * 2 + var(--edge-cell) * 1); }
-// // .o-dataform :where(table:not(td *)) tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: var(--cl-key1-40); }
-// // .o-dataform :where(table:not(td *)) tr >:first-child  { border-left-width: $e10; }
-// // .o-dataform :where(table:not(td *)) tr >:last-child  { border-right-width: $e10; }
-// .o-dataform :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: px(1) var(--mg-headcell-inline); color: var(--cl-text-70); }
-// .o-dataform :where(table:not(td *)) th:not(thead >* >*)  { background: var(--cl-ground-50); }
-// .o-dataform :where(table:not(td *)) [rowspan]:where(th:has(+th), td:has(+td))  { border-right-width: var(--edge-cell); }
-// .o-dataform :where(table:not(td *)) [rowspan]:where(th:is(th +*), td:is(td +*))  { border-left-width: var(--edge-cell); }
+// // .o-dataform  { --mg-cell-inline: #{px(7)}; --mg-headcell-inline: #{px(11)}; clear: both; }
+// // .o-dataform :where(table:not(td *))  { table-layout: fixed; border-collapse: collapse; border-spacing: 0; width: 100%; background: var(--cl-ground); }
+// // .o-dataform :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--mg-cell-inline) * 2 + $e10); }
+// // .o-dataform :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--mg-headcell-inline) * 2 + $e10); }
+// // .o-dataform :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
+// // .o-dataform :where(table:not(td *)) tr >*  { --mg-inline: var(--mg-cell-inline); height: var(--ht-cell); padding: var(--mg-cell-block) var(--mg-inline); border: 0 solid var(--cl-edge-50); border-width: 0 0 var(--edge-cell); }
+// // // .o-dataform :where(table:not(td *)) [rowspan]:where(th, td)  { border-right-width: $e10; }
+// // .o-dataform.style-fill :where(table:not(td *)) tr >*  { --mg-cell-block: #{px(8)}; --ht-cell: calc(var(--rem) * var(--ht-form-50) + var(--mg-cell-block) * 2 + var(--edge-cell) * 1); }
+// // // .o-dataform :where(table:not(td *)) tr:first-child:not(:where(thead, tbody) ~* >*) >*  { border-top-width: $e10; border-top-color: var(--cl-key1-40); }
+// // // .o-dataform :where(table:not(td *)) tr >:first-child  { border-left-width: $e10; }
+// // // .o-dataform :where(table:not(td *)) tr >:last-child  { border-right-width: $e10; }
+// // .o-dataform :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: px(1) var(--mg-headcell-inline); color: var(--cl-text-70); }
+// // .o-dataform :where(table:not(td *)) th:not(thead >* >*)  { background: var(--cl-ground-50); }
+// // .o-dataform :where(table:not(td *)) [rowspan]:where(th:has(+th), td:has(+td))  { border-right-width: var(--edge-cell); }
+// // .o-dataform :where(table:not(td *)) [rowspan]:where(th:is(th +*), td:is(td +*))  { border-left-width: var(--edge-cell); }
 
-// .o-dataform :where(table:not(td *)) td:where(.o-dataform.type-data *)  { --bold-400: 475; font-weight: var(--bold-400); font-family: var(--typo-tnum); word-break: break-all; }
+// // .o-dataform :where(table:not(td *)) td:where(.o-dataform.type-data *)  { --bold-400: 475; font-weight: var(--bold-400); font-family: var(--typo-tnum); word-break: break-all; }
 
-// .o-dataform :where(table:not(td *)) tr >.surface  { background-color: var(--cl-ground-50); }
+// // .o-dataform :where(table:not(td *)) tr >.surface  { background-color: var(--cl-ground-50); }
 
-// .o-dataform :where(table:not(td *))  { border-style: solid hidden; border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
+// // .o-dataform :where(table:not(td *))  { border-style: solid hidden; border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
 
-// .o-dataform.style-rawer :where(table:not(td *)) tr >*  { --mg-cell-block: #{px(6)}; --mg-cell-inline: #{px(0)}; --ht-cell: calc(var(--rem) * var(--ht-form-50) + var(--mg-cell-block) * 2 + var(--edge-cell) * 0); border-bottom-width: 0; }
-// .o-dataform.style-rawer :where(table:not(td *)) tr >th  { font-weight: $bold-700; vertical-align: top; padding-left: 0; padding-top: px(12); color: var(--cl-text-40); background-color: $tp; }
-// .o-dataform.style-rawer :where(table:not(td *))  { margin: px(-6) 0; border-style: hidden hidden; }
+// // .o-dataform.style-rawer :where(table:not(td *)) tr >*  { --mg-cell-block: #{px(6)}; --mg-cell-inline: #{px(0)}; --ht-cell: calc(var(--rem) * var(--ht-form-50) + var(--mg-cell-block) * 2 + var(--edge-cell) * 0); border-bottom-width: 0; }
+// // .o-dataform.style-rawer :where(table:not(td *)) tr >th  { font-weight: $bold-700; vertical-align: top; padding-left: 0; padding-top: px(12); color: var(--cl-text-40); background-color: $tp; }
+// // .o-dataform.style-rawer :where(table:not(td *))  { margin: px(-6) 0; border-style: hidden hidden; }
 
 
 .o-depth  { display: flex; align-items: center; gap: $gap-element-50; }
