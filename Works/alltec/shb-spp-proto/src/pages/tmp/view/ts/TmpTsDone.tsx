@@ -671,158 +671,9 @@ function TmpTsProg() {
                                 <tbody>
                                   <tr>
                                     <th colSpan={1}>
-                                      <SppObjLabel label={`head`} required={false} />
-                                    </th>
-                                    <td colSpan={1}>
-                                      data
-                                    </td>
-
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`head`} required={false} />
-                                    </th>
-                                    <td colSpan={1}>
-                                      data
-                                    </td>
-
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`.m-field`} required={false} />
-                                    </th>
-                                    <td colSpan={1}>
-                                      <div className="m-field">
-                                        <div className="main">
-                                          <SppDatePicker placeholder="50" />
-                                          <SppInputText placeholder="auto" width="auto" />
-                                          <SppAutoComplete placeholder="100p" width="100p" />
-                                          <SppSelect placeholder="auto" width="auto" />
-                                          <SppInputText placeholder="auto" width="auto" />
-                                          <SppInputText placeholder="100p" width="100p" />
-                                          <SppSelect placeholder="auto" width="auto" />
-                                          <SppInputText placeholder="justify" width="justify" />
-                                          <SppInputText placeholder="justify" width="justify" />
-                                          <SppInputText placeholder="100p" width="100p" />
-                                          <SppAutoComplete placeholder="항목명 입력" />
-                                          <span className="binds">
-                                            <SppButton>추가</SppButton>
-                                            <SppButton>삭제</SppButton>
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`AutoComplete`} required={false} />
-                                    </th>
-                                    <td colSpan={1}>
-                                      <SppAutoComplete placeholder="" className="mode-required" />
-                                    </td>
-
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`InputFile`} required={false} />
-                                    </th>
-                                    <td colSpan={1}>
-                                      <SppInputFile value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} />
-                                    </td>
-
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`.m-form`} required={false} />
-                                    </th>
-                                    <td colSpan={1}>
-                                      <div className="m-form">
-                                        <SppCheckbox defaultChecked>
-                                          추가
-                                        </SppCheckbox>
-
-                                        <div className="m-field">
-                                          <div className="main">
-                                            <SppInputText width="50" />
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`공통팝업`} required={true} />
-                                    </th>
-                                    <td colSpan={5}>
-                                      <div className="m-binds">
-                                        <div className="group align-start">
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P01(true)}>파일첨부</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P02(true)}>반려</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P03(true)}>알림발송</SppButton>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`Ap팝업`} required={true} />
-                                    </th>
-                                    <td colSpan={5}>
-                                      <div className="m-binds">
-                                        <div className="group align-start">
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppAp0002P01(true)}>신청서</SppButton>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`Ck팝업`} required={true} />
-                                    </th>
-                                    <td colSpan={5}>
-                                      <div className="m-binds">
-                                        <div className="group align-start">
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`Cr팝업`} required={true} />
-                                    </th>
-                                    <td colSpan={5}>
-                                      <div className="m-binds">
-                                        <div className="group align-start">
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCr0001P02(true)}>동의서 신규등록</SppButton>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <th colSpan={1}>
-                                      <SppObjLabel label={`Au팝업`} required={true} />
-                                    </th>
-                                    <td colSpan={5}>
-                                      <div className="m-binds">
-                                        <div className="group align-start">
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1010(true)}>도움말 (통합단말화면)</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1020(true)}>조회권한관리 안내</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2060(true)}>통합단말 화면권한관리</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2070(true)}>캔버스 메뉴권한관리</SppButton>
-                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2071(true)}>권한설정 추가인증</SppButton>
-                                        </div>
-                                      </div>
-                                    </td>
-                                  </tr>
-
-                                  <tr>
-                                    <th colSpan={1}>
                                       <SppObjLabel label={`SppButton`} required={false} />
                                     </th>
-                                    <td colSpan={5}>
+                                    <td colSpan={1}>
                                       <div className="extra">
                                         <div className="m-binds type-start">
                                           <div className="group">
@@ -884,6 +735,232 @@ function TmpTsProg() {
                                         </div>
                                       </div>
                                       */}
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`.m-filelist`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-filelist">
+                                        <ul>
+                                          {[...Array(2)].map((e, idx) => (
+                                          <li key={idx}>
+                                            <div className="card">
+                                              <SppCheckbox title="선택" />
+
+                                              <div className="m-file">
+                                                <a href="javascript:" className="o-file" title="##파일명.ext##">
+                                                  <span className="name">파일명</span>
+                                                  <span className="ext">.ext</span>
+                                                </a>
+                                                <span className="o-limit type-file" title="파일크기">
+                                                  <span className="head">파일크기</span>
+                                                  <span className="data">
+                                                    <em className="value">(1,023KB)</em>
+                                                  </span>
+                                                </span>
+                                              </div>
+
+                                              <div className="binds">
+                                                <SppButton variant="text" color="default" icon={<SppObjSymbol label={`delete`} />} modelType="symbol" title="파일삭제"></SppButton>
+                                                <SppButton variant="text" color="default" icon={<SppObjSymbol label={`download`} />} modelType="symbol" title="다운로드"></SppButton>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          ))}
+
+                                          <li>
+                                            <div className="card">
+                                              <SppObjSymbol label={`attach_file`} />
+
+                                              <div className="m-file">
+                                                <a href="javascript:" className="o-file" title="##업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리.xlsx##">
+                                                  <span className="name">업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리</span>
+                                                  <span className="ext">.xlsx</span>
+                                                </a>
+                                                <span className="o-limit type-file" title="파일크기">
+                                                  <span className="head">파일크기</span>
+                                                  <span className="data">
+                                                    <em className="value">(99.9MB)</em>
+                                                  </span>
+                                                </span>
+                                              </div>
+
+                                              <div className="binds">
+                                                <SppButton>다운로드</SppButton>
+                                              </div>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`.m-field`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppDatePicker placeholder="50" />
+                                          <SppInputText placeholder="auto" width="auto" />
+                                          <SppAutoComplete placeholder="100p" width="100p" />
+                                          <SppSelect placeholder="auto" width="auto" />
+                                          <SppInputText placeholder="auto" width="auto" />
+                                          <SppInputText placeholder="100p" width="100p" />
+                                          <SppSelect placeholder="auto" width="auto" />
+                                          <SppInputText placeholder="justify" width="justify" />
+                                          <SppInputText placeholder="justify" width="justify" />
+                                          <SppInputText placeholder="100p" width="100p" />
+                                          <SppAutoComplete placeholder="항목명 입력" />
+                                          <span className="binds">
+                                            <SppButton>추가</SppButton>
+                                            <SppButton>삭제</SppButton>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`.m-string-binds`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-string-binds">
+                                        <span className="string">대상</span>
+                                        <span className="binds justify-end"><SppButton>위수탁시스템</SppButton></span>
+                                      </div>
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`.m-string-binds.type-file`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-string-binds type-file">
+                                        <span className="string o-file" title="##업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리.xlsx##">
+                                          <span className="name">업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리</span>
+                                          <span className="ext">.xlsx</span>
+                                        </span>
+                                        <span className="binds justify-end">
+                                          <SppButton>업로드</SppButton>
+                                          <SppButton>다운로드</SppButton>
+                                        </span>
+                                      </div>
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`.m-form`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-form">
+                                        <SppCheckbox defaultChecked>
+                                          추가
+                                        </SppCheckbox>
+
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppInputText width="50" />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`AutoComplete`} required={true} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <SppAutoComplete placeholder="" className="mode-required" />
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`InputFile`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <SppInputFile value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} />
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`head`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      DATA
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`공통팝업`} required={false} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P01(true)}>파일첨부</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P02(true)}>반려</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCm0000P03(true)}>알림발송</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`Ap팝업`} required={false} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppAp0002P01(true)}>신청서</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`Ck팝업`} required={false} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`Cr팝업`} required={false} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenSppCr0001P02(true)}>동의서 신규등록</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`Au팝업`} required={false} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-binds">
+                                        <div className="group align-start">
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenPopupSample(true)}>팝업샘플</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1010(true)}>도움말 (통합단말화면)</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenHelp1020(true)}>조회권한관리 안내</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2060(true)}>통합단말 화면권한관리</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2070(true)}>캔버스 메뉴권한관리</SppButton>
+                                          <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2071(true)}>권한설정 추가인증</SppButton>
+                                        </div>
+                                      </div>
                                     </td>
                                   </tr>
                                 </tbody>

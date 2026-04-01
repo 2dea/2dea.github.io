@@ -349,6 +349,78 @@
 }
 
 
+/** Files
+ -------- */
+
+/** 파일명 */
+.o-file { display: inline-flex; max-width: 100%; }
+.o-file >* { flex: none; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.o-file >.name { flex: 0 1 auto; }
+.o-file >.ext { margin-left: -0.05em; }
+
+.o-file:is(a):hover { text-decoration: underline; }
+.o-file:is(a):where(.m-filelist *) { color: var(--cl-text-70); }
+.o-file:is(a):not(:active):where(.m-filelist *) { opacity: 0.88; }
+
+
+/** 파일용량 / 문자수 */
+.o-limit  { font-size: $font-40; line-height: $line-40; display: inline-flex; position: relative; max-width: 100%; white-space: nowrap; }
+.o-limit >.head  { @include getGlobalHidden(); }
+.o-limit >.data  { display: flex; gap: $gap-whitespace-30; }
+.o-limit >.data >:not(.value)  { color: var(--cl-text-20); }
+
+.o-limit:where(.type-file, .type-length)  { overflow: hidden; }
+
+
+/** 파일명 + 파일크기 */
+.m-file  { display: flex; align-items: center; }
+.m-file >*  { flex: none; min-width: 0; }
+.m-file >.o-file  { flex: 0 1 auto; }
+.m-file >.o-limit  { @include font(30, 400); color: var(--cl-text-20); }
+
+
+/** 파일 목록 */
+.m-filelist  { clear: both; }
+.m-filelist .card  { display: flex; align-items: center; gap: $gap-element-30; min-height: px(36); padding: calc(px(2) - $e10) calc($gap-element-70 - $e10); border: $e10 solid var(--cl-edge-50); background: var(--cl-ground-50); border-radius: $br-50; }
+.m-filelist .card >*  { flex: none; min-width: 0; }
+.m-filelist .card .d-check  { margin-right: $gap-element-30; }
+.m-filelist .m-file  { flex: 1 0 0; gap: $gap-element-30; }
+.m-filelist .binds  { display: flex; align-items: center; gap: inherit; margin-inline: $gap-element-30 calc(-1 * $gap-element-30); }
+
+.m-filelist >* >* +*  { margin-top: $gap-element-50; }
+
+
+/** 파일업로드 영역 (드래그앤드롭) */
+.o-attach  { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: px(15) px(15); border: $e10 dashed var(--cl-edge-70); background: var(--cl-ground-20); border-radius: $br-50; transition: 0.3s; }
+.o-attach .summary  { --lh: var(--text-height-par); font-size: $font-40; line-height: var(--lh); color: var(--cl-text-40); text-align: center; }
+.o-attach .binds +.summary  { margin-top: $mg-section-50; }
+
+.o-attach.js_dragovered  { background-color: var(--cl-ground2-blue-30); }
+
+.o-attach:where(.m-upload-file *)  { padding: px(48) px(24); }
+.o-attach:where(.m-upload-file *) .summary  { min-height: calc(var(--lh) * 2); min-height: calc(1lh * 2); margin-bottom: calc(-1 * var(--lh)); margin-bottom: -1lh; }
+.o-attach:where(.layer-wrap.case-upload-excel .m-upload-file *)  { padding: px(24) px(24); }
+.o-attach:where(.style-fit)  { padding: px(24) px(24); }
+
+.o-attach:where(.o-grid-table.type-upload *)  { min-width: 21em; min-height: px(90); margin: px(3) auto; padding: px(7) px(15); }
+.o-attach:where(.o-grid-table.type-upload:where(.m-section >.main.rows-body-2i >*) *)  { min-height: px(55); }
+.o-attach:where(.o-grid-table.type-upload *) .summary .wbr  { display: block; }
+
+
+
+.m-string-binds  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; column-gap: 0; }
+.m-string-binds >*  { flex: none; min-width: 0; }
+.m-string-binds >.string  { flex: 0 1 auto; padding-inline-end: $gap-element-50; }
+
+.m-string-binds .binds  { display: flex; align-items: center; gap: $gap-element-30; }
+.m-string-binds .justify-end  { margin-left: auto; }
+
+.m-string-binds:where(.type-file)  { flex-wrap: nowrap; }
+
+.m-string-binds:where(.g-end *)  { justify-content: flex-end; }
+.m-string-binds:where(.g-center *)  { justify-content: center; }
+
+
 /** 설문
  ------- */
 
