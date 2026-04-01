@@ -791,6 +791,30 @@ function TmpTsProg() {
                                               </div>
                                             </div>
                                           </li>
+
+                                          <li>
+                                            <div className="card">
+                                              <SppObjSymbol label={`attach_file`} />
+
+                                              <div className="m-file">
+                                                <a href="javascript:" className="o-file" title="##파일명.ext##">
+                                                  <span className="name">파일명</span>
+                                                  <span className="ext">.ext</span>
+                                                </a>
+                                                <span className="o-limit type-file" title="파일크기">
+                                                  <span className="head">파일크기</span>
+                                                  <span className="data">
+                                                    <em className="value">(101MB)</em>
+                                                  </span>
+                                                </span>
+                                              </div>
+
+                                              <div className="binds">
+                                                <SppButton variant="text" color="default" icon={<SppObjSymbol label={`delete`} />} modelType="symbol" title="파일삭제"></SppButton>
+                                                <SppButton variant="text" color="default" icon={<SppObjSymbol label={`download`} />} modelType="symbol" title="다운로드"></SppButton>
+                                              </div>
+                                            </div>
+                                          </li>
                                         </ul>
                                       </div>
                                     </td>
@@ -802,7 +826,8 @@ function TmpTsProg() {
                                       <div className="m-field">
                                         <div className="main">
                                           <SppDatePicker placeholder="50" />
-                                          <SppInputText placeholder="auto" width="auto" />
+                                          <SppInputText placeholder="auto end" width="auto" align="end" />
+                                          <span className="string type-amount _percent"><span className="label">%</span></span>
                                           <SppAutoComplete placeholder="100p" width="100p" />
                                           <SppSelect placeholder="auto" width="auto" />
                                           <SppInputText placeholder="auto" width="auto" />
@@ -1075,6 +1100,14 @@ function TmpTsProg() {
                         </div>
                       </div>
 
+                    </div>
+                  </div>
+
+
+
+                  <div className="m-grid _primary">
+                    <div className="column">
+
                       <div className="m-section _primary">
                         <div className="m-header">
                           <div className="prime">
@@ -1123,6 +1156,93 @@ function TmpTsProg() {
                             // heightSectionBasis={ 1 * 41 + 3 * 41 }
                             // scroll={{ x: 4096 }}
                           />
+                        </div>
+                      </div>
+
+                      <div className="m-section">
+                        <div className="m-header">
+                          <div className="prime">
+                            <h4 className="o-heading level4"><span className="label">데이터테이블</span></h4>
+                          </div>
+
+                          <div className="extra">
+                            <div className="m-legend">
+                              <header className="header g-hidden"><strong>범례</strong></header>
+
+                              <div className="o-legend type-univ type-units style-normal"><em className="label">(단위 : 건, 백만)</em></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="main">
+                          <div className="o-datatable">
+                            <div className="table-wrapper">
+                              <table className="table">
+                                <colgroup>
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                  <col style={{ width: '' }} />
+                                </colgroup>
+
+                                <thead>
+                                  <tr>
+                                    <th colSpan={1} rowSpan={2}>항목</th>
+                                    <th colSpan={1} rowSpan={2}>전체</th>
+                                    <th colSpan={3} rowSpan={1}>연도별</th>
+                                    <th colSpan={3} rowSpan={1}>월별</th>
+                                    <th colSpan={3} rowSpan={1}>일별</th>
+                                  </tr>
+                                  <tr>
+                                    <th colSpan={1} rowSpan={1}>전년도</th>
+                                    <th colSpan={1} rowSpan={1}>당해연도</th>
+                                    <th colSpan={1} rowSpan={1}>증감</th>
+                                    <th colSpan={1} rowSpan={1}>전월</th>
+                                    <th colSpan={1} rowSpan={1}>당월</th>
+                                    <th colSpan={1} rowSpan={1}>증감</th>
+                                    <th colSpan={1} rowSpan={1}>전일</th>
+                                    <th colSpan={1} rowSpan={1}>당일</th>
+                                    <th colSpan={1} rowSpan={1}>증감</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody className="g-end">
+                                  <tr className="subtotal-tcell">
+                                    <th>결재건수</th>
+                                    <td>69,965</td>
+                                    <td>38,965</td>
+                                    <td>31,965</td>
+                                    <td>-7,965</td>
+                                    <td>88</td>
+                                    <td>68</td>
+                                    <td>-28</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>-2</td>
+                                  </tr>
+                                  <tr>
+                                    <th colSpan={1} rowSpan={1}>HEAD</th>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                         </div>
                       </div>
 

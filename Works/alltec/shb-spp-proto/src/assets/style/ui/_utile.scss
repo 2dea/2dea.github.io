@@ -265,12 +265,9 @@
 .o-datatable  { --mg-cell-inline: #{px(7)}; --mg-headcell-inline: #{px(11)}; clear: both; }
 .o-datatable :where(table:not(td *))  { border-collapse: collapse; border-spacing: 0; width: 100%; /* min-width: 100%; */ background: var(--cl-ground); text-align: center; }
 .o-datatable :where(table:not(td *)):has(>colgroup[span])  { table-layout: fixed; }
-.o-datatable :where(table:not(td *)) col  { width: calc(1em * var(--em) * 0.80246 + var(--mg-cell-inline) * 2 + $e10); }
-.o-datatable :where(table:not(td *)) col.head  { font-size: $font-40; width: calc(1em * var(--em) * 0.86419 + var(--mg-headcell-inline) * 2 + $e10); }
-.o-datatable :where(table:not(td *)) col.head:not(.aut)  { width: calc(var(--rem) * 120); }
 .o-datatable :where(table:not(td *)) tr >*  { --mg-inline: var(--mg-cell-inline); height: var(--ht-cell); padding: var(--mg-cell-block) var(--mg-inline); border: 0 solid var(--cl-edge-30); border-width: 0 $e10 $e10; }
-.o-datatable :where(table:not(td *)) th  { font-size: $font-40; line-height: $line-40; padding: px(1) var(--mg-headcell-inline); color: var(--cl-text-70); }
-.o-datatable :where(table:not(td *)) th:not(thead >* >*)  { background: var(--cl-ground-20); }
+.o-datatable :where(table:not(td *)) th  { font-weight: $bold-700; padding: px(1) var(--mg-headcell-inline); color: var(--cl-text-70); }
+.o-datatable :where(table:not(td *)) th:not(thead >* >*)  { font-weight: inherit; background: var(--cl-ground-20); text-align: left; text-align: start; }
 .o-datatable :where(table:not(td *)) thead  { background: var(--cl-ground-50); }
 
 .o-datatable :where(table:not(td *)) .subtotal-tcell  { font-weight: $bold-700; background: var(--cl-ground2-skyblue-40); }

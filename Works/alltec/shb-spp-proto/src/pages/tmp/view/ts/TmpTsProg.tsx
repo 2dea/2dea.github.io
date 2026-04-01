@@ -1166,7 +1166,11 @@ function TmpTsProg() {
                           </div>
 
                           <div className="extra">
-                            범례
+                            <div className="m-legend">
+                              <header className="header g-hidden"><strong>범례</strong></header>
+
+                              <div className="o-legend type-univ type-units style-normal"><em className="label">(단위 : 건, 백만)</em></div>
+                            </div>
                           </div>
                         </div>
 
@@ -1209,7 +1213,7 @@ function TmpTsProg() {
                                 </thead>
 
                                 <tbody className="g-end">
-                                  <tr>
+                                  <tr className="subtotal-tcell">
                                     <th>결재건수</th>
                                     <td>69,965</td>
                                     <td>38,965</td>
@@ -1223,7 +1227,7 @@ function TmpTsProg() {
                                     <td>-2</td>
                                   </tr>
                                   <tr>
-                                    <th colSpan={1} rowSpan={1}>DATA</th>
+                                    <th colSpan={1} rowSpan={1}>HEAD</th>
                                     <td colSpan={1} rowSpan={1}>DATA</td>
                                     <td colSpan={1} rowSpan={1}>DATA</td>
                                     <td colSpan={1} rowSpan={1}>DATA</td>
