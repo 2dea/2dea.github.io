@@ -188,28 +188,16 @@ table  {
 // }
 
 .d-form  {
-  --wd-form-10: #{px(50)};
-  --wd-form-20: #{px(60)};
-  --wd-form-30: #{px(80)};
-  --wd-form-40: #{px(100)};
-  --wd-form-50: #{px(120)};
-  --wd-form-60: #{px(140)};
-  --wd-form-70: #{px(160)};
-  --wd-form-80: #{px(180)};
-  --wd-form-90: #{px(210)};
-  --wd-form: var(--wd-form-50);
-
   --wdn:    3.5em;
   --wdx:    100%;
 
-  --pdis:   #{px(7)};
-  --pdie:   #{px(7)};
+  --pdis-form:   #{px(7)};
+  --pdie-form:   #{px(7)};
 
   min-width: var(--wdn);
   width: var(--wd, 100%);
   max-width: var(--wdx);
-  padding-left: var(--pdis);
-  padding-right: var(--pdie);
+  padding-inline: var(--pdis-form) var(--pdie-form);
   white-space: normal;
   word-break: break-all;
 
@@ -217,15 +205,20 @@ table  {
 
   &:where(.wd-auto)  { --wd: auto; }
   &:where(.wd-justify)  { --wd: auto; }
-  &:where(.wd-10)  { --wd: var(--wd-form-10) }
-  &:where(.wd-20)  { --wd: var(--wd-form-20) }
-  &:where(.wd-30)  { --wd: var(--wd-form-30) }
-  &:where(.wd-40)  { --wd: var(--wd-form-40) }
-  &:where(.wd-50)  { --wd: var(--wd-form-50) }
-  &:where(.wd-60)  { --wd: var(--wd-form-60) }
-  &:where(.wd-70)  { --wd: var(--wd-form-70) }
-  &:where(.wd-80)  { --wd: var(--wd-form-80) }
-  &:where(.wd-90)  { --wd: var(--wd-form-90) }
+  &:where(.wd-10 )  { --wd: #{px(var(--wd-form-10 ))}; }
+  &:where(.wd-20 )  { --wd: #{px(var(--wd-form-20 ))}; }
+  &:where(.wd-30 )  { --wd: #{px(var(--wd-form-30 ))}; }
+  &:where(.wd-40 )  { --wd: #{px(var(--wd-form-40 ))}; }
+  &:where(.wd-50 )  { --wd: #{px(var(--wd-form-50 ))}; }
+  &:where(.wd-60 )  { --wd: #{px(var(--wd-form-60 ))}; }
+  &:where(.wd-70 )  { --wd: #{px(var(--wd-form-70 ))}; }
+  &:where(.wd-80 )  { --wd: #{px(var(--wd-form-80 ))}; }
+  &:where(.wd-90 )  { --wd: #{px(var(--wd-form-90 ))}; }
+  &:where(.wd-100)  { --wd: #{px(var(--wd-form-100))}; }
+  &:where(.wd-110)  { --wd: #{px(var(--wd-form-110))}; }
+  &:where(.wd-120)  { --wd: #{px(var(--wd-form-120))}; }
+  &:where(.wd-130)  { --wd: #{px(var(--wd-form-130))}; }
+  &:where(.wd-140)  { --wd: #{px(var(--wd-form-140))}; }
   &:where(.wd-100p)  { --wd: 100%; }
 
   // &:where(.o-gridtable *)  {
@@ -252,7 +245,7 @@ table  {
     [class^="wd-"], [class*=" wd-"]
   ))  { flex: 1 1 0; }
 .m-field >.main >.d-form:where([class~="wd-auto"])  { flex: 1 1 auto; }
-.m-field >.main >.d-form:where([class~="wd-justify"])  { flex: 1 1 var(--wd-form); }
+.m-field >.main >.d-form:where([class~="wd-justify"])  { flex: 1 1 px(var(--wd-form)); }
 
 .m-field >.main >.binds  { display: flex; align-items: center; gap: inherit; }
 .m-field >.main >.binds >*  { flex: none; }

@@ -865,10 +865,10 @@ body  {
 // :has(>.m-tabs) >.m-tabs  { margin-bottom: 0; }
 // :has(>.m-tabs) >.m-tabs ~*  { margin-top: $mg-section-50; margin-bottom: 0; }
 
-.div-center >:where(:not(:last-child))  { margin-bottom: $mg-section-50; }
-.m-tabs >:where(:not(:last-child))  { margin-bottom: $mg-section-50; }
-:where(.m-grid >.column >:not(:last-child))  { margin-bottom: $mg-section-50; }
-
+:not(:last-child):where(.div-center >*)  { margin-bottom: $mg-section-50; }
+:not(:last-child):where(.ant-tabs-tabpane >*)  { margin-bottom: $mg-section-50; }
+:not(:last-child):where(.m-grid >.column >*)  { margin-bottom: $mg-section-50; }
+:not(:last-child):where(.m-section >.main >.m-section)  { margin-bottom: $mg-section-50; }
 
 
 

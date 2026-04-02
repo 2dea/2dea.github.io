@@ -231,7 +231,7 @@
 .m-form.axis-cols  { flex-direction: column; align-items: normal; }
 .m-form .justify-end  { margin-inline-start: auto; }
 .m-form >.wd-auto:where(.m-field)  { flex: 1 1 auto; }
-.m-form >.wd-fill:where(.m-field)  { flex: 1 1 px(240); }
+.m-form >.wd-fill:where(.m-field)  { flex: 1 1 px(var(--wd-form-100)); }
 
 
 
@@ -279,15 +279,16 @@
 
 .o-datatable :where(table:not(td *))  { border: hidden; }
 .o-datatable :where(table:not(td *)) +table  { border-top: $e10 solid var(--cl-edge-70); }
-.o-datatable :has(>:where(table:not(td *)))  { border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
-.o-datatable >.table-wrapper  { overflow: auto; }
+// .o-datatable :has(>:where(table:not(td *)))  { border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
+.o-datatable >.table-wrapper  { overflow: auto; border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
+.o-datatable >.table-container  { overflow: auto; border: $e10 solid var(--cl-edge-50); border-top-color: var(--cl-key1-40); }
 
 .o-datatable.style-fill,
   :has(.table):where(.o-datatable.style-fill *)  { flex: 1; display: flex; flex-direction: column; }
 .o-datatable.style-fill .table  { flex: 1; }
 
 .o-datatable:where(.type-approve) :where(table:not(td *)) tbody:not(:last-child):after  { background-color: var(--cl-edge-30); }
-.o-datatable:where(.type-approve) :where(table:not(td *)) .approve-tfoot  { font-size: $font-30; line-height: $line-30; background-color: var(--cl-ground-20); }
+.o-datatable:where(.type-approve) :where(table:not(td *)) .approve-tfoot  { @include font(30); background-color: var(--cl-ground-20); }
 .o-datatable:where(.type-approve) :where(table:not(td *)) .approve-tfoot .o-digit.type-time  { color: var(--cl-text-40); }
 
 .o-datatable +.o-datatable  { margin-top: $mg-section-40; }
@@ -406,7 +407,7 @@
 
 
 /** 파일명 + 파일크기 */
-.m-file  { display: flex; align-items: center; }
+.m-file  { display: flex; align-items: center; gap: $gap-element-30; }
 .m-file >*  { flex: none; min-width: 0; }
 .m-file >.o-file  { flex: 0 1 auto; }
 .m-file >.o-limit  { @include font(30, 400); color: var(--cl-text-20); }
@@ -417,7 +418,7 @@
 .m-filelist .card  { display: flex; align-items: center; gap: $gap-element-30; min-height: px(36); padding: calc(px(2) - $e10) calc($gap-element-70 - $e10); border: $e10 solid var(--cl-edge-50); background: var(--cl-ground-50); border-radius: $br-50; }
 .m-filelist .card >*  { flex: none; min-width: 0; }
 .m-filelist .card .d-check  { margin-right: $gap-element-30; }
-.m-filelist .m-file  { flex: 1 0 0; gap: $gap-element-30; }
+.m-filelist .m-file  { flex: 1 0 0; }
 .m-filelist .binds  { display: flex; align-items: center; gap: inherit; margin-inline: $gap-element-30 calc(-1 * $gap-element-30); }
 
 .m-filelist >* >* +*  { margin-top: $gap-element-50; }

@@ -9,7 +9,7 @@ export interface SppInputTextProps extends InputProps {
   model?: string;
   modelType?: string;
   specName?: string;
-  width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | "";
+  width?: "auto" | "justify" | "10" | "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90" | "100p" | string | number;
   align?: "justify" | "start" | "center" | "end" | "inherit" | "";
 };
 

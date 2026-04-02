@@ -392,6 +392,23 @@
 
   --ht-form:                var(--ht-form-50);
 
+  --wd-form-10:             50;
+  --wd-form-20:             60;
+  --wd-form-30:             80;
+  --wd-form-40:             100;
+  --wd-form-50:             120;
+  --wd-form-60:             140;
+  --wd-form-70:             160;
+  --wd-form-80:             180;
+  --wd-form-90:             210;
+  --wd-form-100:            240;
+  --wd-form-110:            270;
+  --wd-form-120:            300;
+  --wd-form-130:            330;
+  --wd-form-140:            360;
+
+  --wd-form:                var(--wd-form-50);
+
   --listbox-ht-option-50:       30;
 
 

@@ -71,7 +71,7 @@ export const PopupSample = (props: PopupSampleProps) => {
         // open
       >
         <div className="div-center">
-          {`{ `}Contents{` }`}
+          {`{ Contents }`}
         </div>
       </SppModal>
     </>

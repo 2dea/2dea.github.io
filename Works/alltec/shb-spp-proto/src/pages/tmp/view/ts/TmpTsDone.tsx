@@ -445,7 +445,6 @@ function TmpTsProg() {
                         <SppButton variant="outlined" color="geekblue" specName="lined-2">조회사유 당일등록</SppButton>
                       </div>
                       <div className="group _primary">
-                        {/* <SppButton variant="outlined" color="geekblue" specName="lined-2">조회사유 당일등록</SppButton> */}
                         <SppButton variant="outlined" color="purple" specName="lined-1">미처리현황조회</SppButton>
                         <SppButton variant="solid" color="purple" specName="solid-1">최종반려</SppButton>
                       </div>
@@ -482,6 +481,16 @@ function TmpTsProg() {
                         label: <><span className="label">반려내역</span> <Badge showZero={true} count={1000} /></>,
                         children: (
                           <>
+                            <div className="m-extra-binds">
+                              <div className="m-binds type-end">
+                                <div className="group _primary">
+                                  <SppButton variant="outlined" color="geekblue" specName="lined-2">조회사유 당일등록</SppButton>
+                                  <SppButton variant="outlined" color="purple" specName="lined-1">미처리현황조회</SppButton>
+                                  <SppButton variant="solid" color="purple" specName="solid-1">최종반려</SppButton>
+                                </div>
+                              </div>
+                            </div>
+
                             <div>탭패널 2</div>
 
                             <Tabs
@@ -862,9 +871,17 @@ function TmpTsProg() {
                                     </th>
                                     <td colSpan={1}>
                                       <div className="m-string-binds type-file">
-                                        <span className="string o-file" title="##업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리.xlsx##">
-                                          <span className="name">업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리</span>
-                                          <span className="ext">.xlsx</span>
+                                        <span className="string m-file">
+                                          <span className="o-file" title="##업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리.xlsx##">
+                                            <span className="name">업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리</span>
+                                            <span className="ext">.xlsx</span>
+                                          </span>
+                                          <span className="o-limit type-file" title="파일크기">
+                                            <span className="head">파일크기</span>
+                                            <span className="data">
+                                              <em className="value">(1,023MB)</em>
+                                            </span>
+                                          </span>
                                         </span>
                                         <span className="binds justify-end">
                                           <SppButton>업로드</SppButton>
@@ -903,7 +920,7 @@ function TmpTsProg() {
                                       <SppObjLabel label={`InputFile`} required={false} />
                                     </th>
                                     <td colSpan={1}>
-                                      <SppInputFile value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} />
+                                      <SppInputFile value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} downloadButtonRender />
                                     </td>
 
                                     <th colSpan={1}>

@@ -26,3 +26,15 @@
 }
 
 
+.m-extra-binds  {
+  &:where([role~="tabpanel"]:where(.m-tabs:first-child *) >:first-child)  {
+    position: absolute;
+    width: 100%;
+
+    >.m-binds  {
+      position: absolute; right: 0; bottom: 30px;
+    }
+  }
+}
+
+
