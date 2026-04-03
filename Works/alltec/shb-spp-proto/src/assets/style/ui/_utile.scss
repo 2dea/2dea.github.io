@@ -20,6 +20,9 @@
 .c-color-med  { color: $cl-status-50 !important; }
 .c-color-neg  { color: $cl-status-20 !important; }
 
+.c-color-footnote1  { color: var(--cl-key1-40) !important; }
+.c-color-footnote2  { color: var(--cl-point-orange) !important; }
+
 .c-color-error  { color: var(--cl-error) !important; }
 
 .c-color-day-weekend  { color: var(--cl-key1-70) !important; }
@@ -93,6 +96,14 @@
 
 
 
+/** 문단 객체 */
+.o-para  { --lh: var(--text-height-par); line-height: var(--lh); white-space: normal; }
+
+
+/** 에디터 출력 객체 */
+.o-rich-text  { --lh: var(--text-height-par); line-height: var(--lh); white-space: normal; }
+
+
 /** Bullet-Lists Module */
 .o-bullets  {
   // --fs-absint: var(--font-40-int);
@@ -125,6 +136,21 @@
 .o-bullets.type-hyphen  { --content: "-" var(--utf-nbsp); --wd-bullet: 28.656; }
 
 .o-bullets.type-asterisk  { --content: "*" var(--utf-nbsp); --wd-bullet: 30.969; }
+
+.o-bullets.type-symbol  {
+  >*  {
+    --width: 1em;
+    --wd-neg: calc(-1 * var(--width));
+
+    text-indent: var(--wd-neg);
+
+    .o-sym:first-child  { display: inline; }
+
+    &:where(.type-footnote >*)  {
+      --width: calc(1em + 4px);
+    }
+  }
+}
 
 .o-bullets.type-decimal  { counter-reset: NUM_orders; }
 .o-bullets.type-decimal >*  { --content-main: counter(NUM_orders); --content: var(--content-pre, "") var(--content-main, "") var(--content-suf, ".") var(--utf-nbsp); --wd-bullet: 71.578; counter-increment: NUM_orders; }
@@ -232,6 +258,12 @@
 .m-form .justify-end  { margin-inline-start: auto; }
 .m-form >.wd-auto:where(.m-field)  { flex: 1 1 auto; }
 .m-form >.wd-fill:where(.m-field)  { flex: 1 1 px(var(--wd-form-100)); }
+
+.m-caption-header  {
+  line-height: var(--lhp);
+  text-align: center;
+  white-space: normal;
+}
 
 
 
@@ -388,8 +420,8 @@
 
 /** 파일명 */
 .o-file { display: inline-flex; max-width: 100%; }
-.o-file >* { flex: none; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.o-file >.name { flex: 0 1 auto; }
+.o-file >* { flex: none; min-width: 0; overflow: hidden; white-space: nowrap; }
+.o-file >.name { flex: 0 1 auto; text-overflow: ellipsis; }
 .o-file >.ext { margin-left: -0.05em; }
 
 .o-file:is(a):hover { text-decoration: underline; }
@@ -404,13 +436,15 @@
 .o-limit >.data >:not(.value)  { color: var(--cl-text-20); }
 
 .o-limit:where(.type-file, .type-length)  { overflow: hidden; }
+.o-size:where(.type-file, .type-limit)  { overflow: hidden; }
 
 
 /** 파일명 + 파일크기 */
-.m-file  { display: flex; align-items: center; gap: $gap-element-30; }
+.m-file  { display: flex; align-items: center; gap: $gap-element-30; overflow: hidden; }
 .m-file >*  { flex: none; min-width: 0; }
-.m-file >.o-file  { flex: 0 1 auto; }
-.m-file >.o-limit  { @include font(30, 400); color: var(--cl-text-20); }
+.m-file >.o-file  { flex: 0 0 auto; }
+.m-file >.o-limit  { @include font(30, 400); flex: 1 0 auto; overflow: hidden; color: var(--cl-text-20); text-overflow: clip; white-space: nowrap; }
+.m-file >.o-size  { @include font(30, 400); color: var(--cl-text-20); }
 
 
 /** 파일 목록 */
@@ -442,7 +476,18 @@
 
 
 
+/** Images
+ --------- */
+
+/** 이미지 객체 (콘텐츠 이미지) */
+.o-figure  { display: flex; flex-direction: column; align-items: center; }
+.o-figure >.figure-container  { position: relative; }
+.o-figure >.figure-container img  { display: block; }
+
+
+
 .m-string-binds  { display: flex; flex-wrap: wrap; align-items: center; gap: $gap-element-30; column-gap: 0; }
+
 .m-string-binds >*  { flex: none; min-width: 0; }
 .m-string-binds >.string  { flex: 0 1 auto; padding-inline-end: $gap-element-50; }
 

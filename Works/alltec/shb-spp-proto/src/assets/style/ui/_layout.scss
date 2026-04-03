@@ -416,6 +416,25 @@ body  {
 
   >.prime  { flex: 0 1  auto; min-width: 0; margin-right: auto; }
 
+  .div-menu-search  {
+    .m-field  {
+      >.header  {
+        @include getGlobalHidden();
+      }
+    }
+
+    .d-form  {
+      --ant-color-border: #{rgba(#CBD5E1, 0.1)};
+      color: white;
+      background: rgba(255,255,255, 0.1);
+
+      ::placeholder,
+      .ant-select-placeholder  {
+        color: rgba(255,255,255, 0.4);
+      }
+    }
+  }
+
   .div-account  {
     display: flex;
     align-items: center;
@@ -423,7 +442,34 @@ body  {
     dl  {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: px(12);
+      position: relative;
+
+      >dt  {
+        @include getGlobalHidden();
+      }
+    }
+
+    .user  {
+      display: flex; align-items: center;
+
+      .pos  {
+        font-size: px(var(--font-30-int));
+
+        &::before  { content: var(--utf-nbsp); }
+      }
+    }
+
+    .branch  {
+      display: inline-flex;
+      align-items: center;
+
+      &:before  { content: ""; display: inline-block; width: $e10; height: calc(1em - 4px); margin-inline: 12px; background: currentColor; opacity: 0.4; }
+    }
+
+    .job  {
+      &:before  { content: "("; }
+      &:after  { content: ")"; }
     }
   }
 }
@@ -545,7 +591,7 @@ body  {
     flex: none;
     min-width: px(var(--wd-dom-nav));
     width: max-content;
-    max-width: calc(var(vi) * 50 - px(var(--wd-dom-nav, 0)));
+    max-width: calc(var(--vi) * 50 - px(var(--wd-dom-nav, 0)));
 
     +:where(.div-cascade)  {
       --pdis: calc(var(--wd-scrollbar) + #{px(12)} + 2px);

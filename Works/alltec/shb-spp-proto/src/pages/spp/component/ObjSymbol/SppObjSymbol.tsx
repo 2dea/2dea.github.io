@@ -4,6 +4,7 @@ import type { CSSProperties, ReactNode } from "react";
 export const resLabel = {
   arrowMdiBackward: 'keyboard_arrow_left',
   arrowMdiForward: 'keyboard_arrow_right',
+  checkStepDone: 'check',
   closeMdi: 'close_small',
   closeMdiTab: 'tab_close',
   closePopup: 'close',
@@ -12,6 +13,8 @@ export const resLabel = {
   excelUploadLabel: '',
   excelUploadSection: '',
   favoriteHeader: 'kid_star',
+  fileAttachedList: 'attach_file',
+  footnoteTableHeader: 'check_small',
   helpManual: 'help',
   homeMdi: 'home_app_logo',
   signoutHeader: 'exit_to_app',

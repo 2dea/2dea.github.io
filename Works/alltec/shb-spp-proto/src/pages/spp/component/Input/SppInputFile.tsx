@@ -73,6 +73,8 @@ const SppInputFile = (props: SppInputFileProps) => {
   };
 
   const formatFileSize = (bytes: number): string => {
+    if (isNaN(bytes)) return "";
+
     if (bytes <= 0) return "0KB";
 
     const KB = 1024;
@@ -139,7 +141,7 @@ const SppInputFile = (props: SppInputFileProps) => {
                 <CloseCircleFilled />
               </button>
             }
-            {fileSizeRender && hasFile && value &&
+            {fileSizeRender && fileSizeLabel && !/^NaN/g.test(fileSizeLabel) && hasFile && value &&
               <span className="string size" title="파일크기">{fileSizeLabel}</span>
             }
             {(downloadButtonRender || selectButtonRender) &&

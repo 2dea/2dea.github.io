@@ -33,6 +33,9 @@
 
     >.m-binds  {
       position: absolute; right: 0; bottom: 30px;
+      position: fixed; z-index: 100; top: px(124); right: px(var(--mgi-dom)); bottom: auto; margin-left: calc(px(var(--wd-dom-nav)) + px(var(--mgi-dom)));
+
+      >*  { flex: none; }
     }
   }
 }

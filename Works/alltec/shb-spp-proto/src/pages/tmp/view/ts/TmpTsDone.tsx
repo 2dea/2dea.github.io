@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState, } from "react";
 import type { CSSProperties, ReactNode } from "react";
 
+import SYS_IMAGE_PARTIAL from "@/pages/spp/resource/images";
+
 import RoleMainHeaderTitle from "@/layout/RoleMainHeaderTitle";
 import RoleMainHeaderFavorite from "@/layout/RoleMainHeaderFavorite";
 import RoleMainHeaderManual from "@/layout/RoleMainHeaderManual";
@@ -116,7 +118,7 @@ function TmpTsProg() {
     { title: 'Age', dataIndex: 'age' },
     { title: 'Address', dataIndex: 'address', className: 'g-start' },
 
-    { title: <SppObjLabel label="Column 8" required={false} />, dataIndex: 'address', key: '8' },
+    { title: <SppObjLabel label={<><SppObjSymbol label={resLabel.footnoteTableHeader} className="va-middle c-color-footnote2" />Column 8</>} required={false} />, dataIndex: 'address', key: '8' },
     { title: <SppObjLabel label="Column 9" required={true} />, dataIndex: 'address', key: '9' },
     { title: <SppObjLabel label="Column 10" required={false} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, dataIndex: 'address', key: '10' },
     { title: <SppObjLabel label="Column 11" required={true} append={<SppButton variant="text" color="default" size="small" icon={<SppObjSymbol label={`help`} className="style-fill" />} modelType="symbol sym-help" title="도움말"></SppButton>} />, dataIndex: 'address', key: '11' },
@@ -758,11 +760,11 @@ function TmpTsProg() {
                                               <SppCheckbox title="선택" />
 
                                               <div className="m-file">
-                                                <a href="javascript:" className="o-file" title="##파일명.ext##">
+                                                <a href="javascript:" className="o-file" title="##파일명.ext (99.9MB)##">
                                                   <span className="name">파일명</span>
                                                   <span className="ext">.ext</span>
                                                 </a>
-                                                <span className="o-limit type-file" title="파일크기">
+                                                <span className="o-limit type-file">
                                                   <span className="head">파일크기</span>
                                                   <span className="data">
                                                     <em className="value">(1,023KB)</em>
@@ -780,14 +782,14 @@ function TmpTsProg() {
 
                                           <li>
                                             <div className="card">
-                                              <SppObjSymbol label={`attach_file`} />
+                                              <SppObjSymbol label={resLabel.fileAttachedList} />
 
                                               <div className="m-file">
-                                                <a href="javascript:" className="o-file" title="##업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리.xlsx##">
+                                                <a href="javascript:" className="o-file" title="##업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리.xlsx (99.9MB)##">
                                                   <span className="name">업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리</span>
                                                   <span className="ext">.xlsx</span>
                                                 </a>
-                                                <span className="o-limit type-file" title="파일크기">
+                                                <span className="o-limit type-file">
                                                   <span className="head">파일크기</span>
                                                   <span className="data">
                                                     <em className="value">(99.9MB)</em>
@@ -803,14 +805,14 @@ function TmpTsProg() {
 
                                           <li>
                                             <div className="card">
-                                              <SppObjSymbol label={`attach_file`} />
+                                              <SppObjSymbol label={resLabel.fileAttachedList} />
 
                                               <div className="m-file">
-                                                <a href="javascript:" className="o-file" title="##파일명.ext##">
+                                                <a href="javascript:" className="o-file" title="##파일명.ext (99.9MB)##">
                                                   <span className="name">파일명</span>
                                                   <span className="ext">.ext</span>
                                                 </a>
-                                                <span className="o-limit type-file" title="파일크기">
+                                                <span className="o-limit type-file">
                                                   <span className="head">파일크기</span>
                                                   <span className="data">
                                                     <em className="value">(101MB)</em>
@@ -872,11 +874,11 @@ function TmpTsProg() {
                                     <td colSpan={1}>
                                       <div className="m-string-binds type-file">
                                         <span className="string m-file">
-                                          <span className="o-file" title="##업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리.xlsx##">
+                                          <span className="o-file" title="##업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리.xlsx (99.9MB)##">
                                             <span className="name">업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리업무분장관리</span>
                                             <span className="ext">.xlsx</span>
                                           </span>
-                                          <span className="o-limit type-file" title="파일크기">
+                                          <span className="o-limit type-file">
                                             <span className="head">파일크기</span>
                                             <span className="data">
                                               <em className="value">(1,023MB)</em>
@@ -1211,7 +1213,14 @@ function TmpTsProg() {
                                 <thead>
                                   <tr>
                                     <th colSpan={1} rowSpan={2}>항목</th>
-                                    <th colSpan={1} rowSpan={2}>전체</th>
+                                    <th colSpan={1} rowSpan={2}>
+                                      <SppObjLabel label={
+                                        <>
+                                          <SppObjSymbol label={resLabel.footnoteTableHeader} className="va-middle c-color-footnote1" />
+                                          전체
+                                        </>
+                                      } />
+                                    </th>
                                     <th colSpan={3} rowSpan={1}>연도별</th>
                                     <th colSpan={3} rowSpan={1}>월별</th>
                                     <th colSpan={3} rowSpan={1}>일별</th>
@@ -1260,6 +1269,13 @@ function TmpTsProg() {
                               </table>
                             </div>
                           </div>
+                        </div>
+
+                        <div className="m-footer">
+                          <ul className="o-bullets type-symbol type-footnote">
+                            <li><SppObjSymbol label={resLabel.footnoteTableHeader} className="va-middle c-color-footnote1" />블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라</li>
+                            <li><SppObjSymbol label={resLabel.footnoteTableHeader} className="va-middle c-color-footnote2" />블라블라블라</li>
+                          </ul>
                         </div>
                       </div>
 
@@ -1862,6 +1878,52 @@ function TmpTsProg() {
                             heightSectionBasis={ 2 * 41 + 3 * 41 }
                             // scroll={{ x: 4096 }}
                           />
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+
+                  <div className="m-grid _primary">
+                    <div className="column">
+
+                      <div className="m-section">
+                        <div className="m-header">
+                          <div className="prime">
+                            <h2 className="o-heading level2"><span className="label">클라우드 이용보고 개요 및 업무 흐름도</span></h2>
+                          </div>
+                        </div>
+
+                        <div className="main">
+                          <div className="o-board type-2">
+                            <div className="m-figcaption x-report-cloud-process">
+                              <div className="m-caption-header">
+                                <p className="o-para">
+                                  클라우드 이용보고는 클라우드를 사용하거나, 클라우드를 사용하는 서비스를 이용하는 경우,<br />
+                                  <em className="g-strong">계약시점 3개월 이내</em> 금융감독원에 보고해야합니다. (전자금융감독규정 제14조의2)<br />
+                                  <br />
+                                  해당 서비스가 클라우드 이용과 관련된 서비스인지 사전에 법률자문 등을 통해 충분한 검토가 필요합니다.
+                                </p>
+                              </div>
+
+                              <div className="o-board type-1">
+                                <div className="o-figure">
+                                  <div className="figure-container">
+                                    <img src={SYS_IMAGE_PARTIAL.SppCl0002M_0101} alt="" />
+                                  </div>
+                                </div>
+
+                                <div className="m-footer">
+                                  <ul className="o-bullets type-asterisk">
+                                    <li>정보보호위원회 개최 준비와 위수탁계약은 병렬로 준비가 필요합니다.</li>
+                                    <li><strong className="c-color-strong">클라우드 이용 계약 체결은 정보보호위원회 개최 후 가결 시 진행 가능합니다.</strong> (금융분야 클라우드 이용가이드 참고)</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
