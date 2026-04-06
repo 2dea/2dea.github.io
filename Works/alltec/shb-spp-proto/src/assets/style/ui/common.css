@@ -242,24 +242,24 @@
   --cl-ground-required:      var(--design-background2-yellow-40);
   --cl-ground-disabled:      var(--design-background-normal);
 
-  --cl-ground2-orange-40:    var(--design-background2-orange-40);
-  --cl-ground2-yellow-40:    var(--design-background2-yellow-40);
+  --cl-ground2-orange-50:    var(--design-background2-orange-40);
+  --cl-ground2-yellow-50:    var(--design-background2-yellow-40);
   --cl-ground2-skyblue-30:   var(--design-background2-skyblue-30);
-  --cl-ground2-skyblue-40:   var(--design-background2-skyblue-40);
+  --cl-ground2-skyblue-50:   var(--design-background2-skyblue-40);
   --cl-ground2-blue-30:      var(--design-background2-blue-30);
-  --cl-ground2-blue-40:      var(--design-background2-blue-40);
+  --cl-ground2-blue-50:      var(--design-background2-blue-40);
 
-  --cl-key1-40:              var(--design-primary-normal);
+  --cl-key1-50:              var(--design-primary-normal);
   --cl-key1-70:              var(--design-primary-strong);
   --cl-key1-90:              var(--design-primary-heavy);
 /*
-  --cl-key2-40:              var(--design-secondary-normal);
+  --cl-key2-50:              var(--design-secondary-normal);
   --cl-key2-70:              var(--design-secondary-strong);
   --cl-key2-90:              var(--design-primary-heavy);
  */
 
 /*
-  --cl-point-40:             var(--design-accent-normal);
+  --cl-point-50:             var(--design-accent-normal);
   --cl-point-70:             var(--design-accent-strong);
  */
   --cl-point-red:            var(--design-point-red);
@@ -276,7 +276,7 @@
   --cl-theme-key06:          var(--design-point-skyblue); */
 
   --cl-legend-theme-00:      var(--cl-ground-90);
-  --cl-legend-theme-01:      var(--cl-key1-40);
+  --cl-legend-theme-01:      var(--cl-key1-50);
 
   --cl-required:             var(--design-point-red);
   --cl-delete:               var(--design-point-red);
@@ -304,25 +304,25 @@
   --cl-icon-90:              var(--design-icon-heavy);
   --cl-icon-disabled:        var(--design-line-weak);
 
-  --cl-control-40:           var(--design-control-normal);
+  --cl-control-50:           var(--design-control-normal);
   --cl-control-70:           var(--design-control-strong);
 
-  --cl-link1-40:             var(--design-link1-normal);
+  --cl-link1-50:             var(--design-link1-normal);
   --cl-link1-70:             var(--design-link1-strong);
 
 /*
-  --cl-button-40:            var(--design-button-normal);
+  --cl-button-50:            var(--design-button-normal);
   --cl-button-70:            var(--design-button-strong);
  */
-  --cl-button1-40:           var(--design-button1-normal);
+  --cl-button1-50:           var(--design-button1-normal);
   --cl-button1-70:           var(--design-button1-strong);
 
   --cl-button2-30:           var(--design-button2-weak);
-  --cl-button2-40:           var(--design-button2-normal);
+  --cl-button2-50:           var(--design-button2-normal);
   --cl-button2-70:           var(--design-button2-strong);
 
   --cl-button3-30:           var(--design-button3-weak);
-  --cl-button3-40:           var(--design-button3-normal);
+  --cl-button3-50:           var(--design-button3-normal);
   --cl-button3-70:           var(--design-button3-strong);
 
   --cl-button-disabled:      var(--design-button-disabled);
@@ -349,7 +349,7 @@
   --accent:                     rgb(0,117,255);
 
 
-  --filter-control-40:          brightness(0) saturate(100%) invert(48%) sepia(43%) saturate(2529%) hue-rotate(203deg) brightness(99%) contrast(100%);
+  --filter-control-50:          brightness(0) saturate(100%) invert(48%) sepia(43%) saturate(2529%) hue-rotate(203deg) brightness(99%) contrast(100%);
   --filter-control-70:          brightness(0) saturate(100%) invert(26%) sepia(90%) saturate(3044%) hue-rotate(219deg) brightness(83%) contrast(101%);
 
 

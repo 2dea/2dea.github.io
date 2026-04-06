@@ -331,7 +331,7 @@ body  {
 .role-skip a strong:before  { content: "» "; }
 .role-skip a[id]  { text-align: center; font-weight: var(--bold-700, 700); font-size: 16px; font-family: 'Tahoma', 'Geneva', 'Dotum', 'AppleGothic', sans-serif; font-family: inherit; }
 .role-skip a[id]:focus,
-  .role-skip a[id]:active  { left: 0; top: 0; padding: 0.5em 0; width: 100%; height: auto; color: #ffffff; background: #404040; background-color: var(--cl-point-40, var(--cl-key1-40, #404040)); }
+  .role-skip a[id]:active  { left: 0; top: 0; padding: 0.5em 0; width: 100%; height: auto; color: #ffffff; background: #404040; background-color: var(--cl-point-50, var(--cl-key1-50, #404040)); }
 .role-skip .o-ogp *  { width: auto; }
 
 
