@@ -8,7 +8,7 @@ import RoleMainHeaderFavorite from "@/layout/RoleMainHeaderFavorite";
 import RoleMainHeaderManual from "@/layout/RoleMainHeaderManual";
 import SppBreadcrumb from "@/pages/spp/component/Breadcrumb/SppBreadcrumb";
 
-import { Badge, Tabs } from "antd";
+import { Badge, Tabs, Tag } from "antd";
 import type { ColumnsType, TableRowSelection } from "antd/es/table/interface";
 
 import SppAutoComplete from "@/pages/spp/component/AutoComplete/SppAutoComplete";
@@ -470,7 +470,7 @@ function TmpTsProg() {
                     items={[
                       {
                         key: '1',
-                        label: <><span className="label">미결재내역</span></>,
+                        label: <><SppObjSymbol label={resLabel.checkStepDone} className="c-color-key" /><span className="label">미결재내역</span></>,
                         children: (
                           <>
                             <div>탭패널 1</div>
@@ -915,14 +915,22 @@ function TmpTsProg() {
                                       <SppObjLabel label={`AutoComplete`} required={true} />
                                     </th>
                                     <td colSpan={1}>
-                                      <SppAutoComplete placeholder="" className="mode-required" />
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppAutoComplete placeholder="" className="mode-required" />
+                                        </div>
+                                      </div>
                                     </td>
 
                                     <th colSpan={1}>
-                                      <SppObjLabel label={`InputFile`} required={false} />
+                                      <SppObjLabel label={`InputFile`} required={true} />
                                     </th>
                                     <td colSpan={1}>
-                                      <SppInputFile value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} downloadButtonRender />
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppInputFile placeholder="허용확장자: ppt, pptx" className="mode-required" value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} downloadButtonRender />
+                                        </div>
+                                      </div>
                                     </td>
 
                                     <th colSpan={1}>
@@ -1003,6 +1011,325 @@ function TmpTsProg() {
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2060(true)}>통합단말 화면권한관리</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2070(true)}>캔버스 메뉴권한관리</SppButton>
                                           <SppButton variant="outlined" color="geekblue" specName="lined-2" onClick={(e) => setIsOpenTable2071(true)}>권한설정 추가인증</SppButton>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="m-section">
+                        <div className="m-header">
+                          <div className="prime">
+                            <h2 className="o-heading level2"><span className="label">데이터폼</span></h2>
+                          </div>
+
+                          <div className="extra">
+                            <div className="m-binds">
+                              <div className="group">
+                                <SppButton variant="solid" color="geekblue" specName="create">신규생성</SppButton>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="main">
+                          <div className="o-dataform">
+                            <div className="table-wrapper">
+                              <table className="table">
+                                <colgroup>
+                                  <col className="head" />
+                                  <col className="data" />
+                                  <col className="head" />
+                                  <col className="data" />
+                                  <col className="head" />
+                                  <col className="data" />
+                                </colgroup>
+
+                                <tbody>
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`부서`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      [0068] 정보보호본부
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`등록자`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      [000000] 김신한
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`등록일자`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      2026-04-19
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`교육·점검제목`} required={true} />
+                                    </th>
+                                    <td colSpan={3}>
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppInputText placeholder="" className="mode-required" />
+                                        </div>
+                                      </div>
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`교육일자`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppDatePicker placeholder="" className="mode-required" />
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`교육장소`} required={true} />
+                                    </th>
+                                    <td colSpan={3}>
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppInputText placeholder="" className="mode-required" />
+                                        </div>
+                                      </div>
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`교육인원`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-form">
+                                        <div className="m-field">
+                                          <SppObjLabel label={`참석 수`} wrapper="header" />
+                                          <div className="main">
+                                            <SppInputText placeholder="" width="30" align="end" className="mode-required" />
+                                          </div>
+                                        </div>
+                                        <span className="seps type-string _slash"><span className="string">/</span></span>
+                                        <div className="m-field">
+                                          <SppObjLabel label={`대상 수`} wrapper="header" />
+                                          <div className="main">
+                                            <SppInputText placeholder="" width="30" align="end" className="mode-required" />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`교육내용`} required={true} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppTextArea placeholder="내용을 입력해주세요" rows={3} className="mode-required" />
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`강사`} required={false} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppInputText placeholder="" width="50" />
+                                        </div>
+                                      </div>
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`파일첨부`} required={false} />
+                                    </th>
+                                    <td colSpan={3}>
+                                      <div className="m-field">
+                                        <div className="main">
+                                          <SppInputFile value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} />
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`대분류`} required={true} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-form">
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppSelect placeholder="선택" width="70" className="mode-required" />
+                                          </div>
+                                        </div>
+
+                                        <div className="m-checks">
+                                          <div className="item">
+                                            <SppCheckbox><span className="label">추가</span></SppCheckbox>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`중분류`} required={true} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-form">
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppSelect placeholder="선택" width="70" className="mode-required" disabled />
+                                          </div>
+                                        </div>
+
+                                        <div className="m-checks">
+                                          <div className="item">
+                                            <SppCheckbox defaultChecked>
+                                              <span className="label">추가</span>
+                                              <SppInputText placeholder="중분류 입력" width="60" className="mode-required" />
+                                            </SppCheckbox>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`소분류`} required={true} />
+                                    </th>
+                                    <td colSpan={1}>
+                                      <div className="m-form">
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppSelect placeholder="선택" width="70" className="mode-required" />
+                                          </div>
+                                        </div>
+
+                                        <div className="m-checks">
+                                          <div className="item">
+                                            <SppCheckbox><span className="label">추가</span></SppCheckbox>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`수집항목`} required={false} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-form">
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppAutoComplete placeholder="항목명 입력" width="90" />
+                                            <span className="binds">
+                                              <SppButton>추가</SppButton>
+                                            </span>
+                                          </div>
+                                        </div>
+
+                                        <div className="m-result wd-100p">
+                                          <div className="m-inline-binds style-wrap">
+                                            <Tag closeIcon variant="outlined">성명</Tag>
+                                            <Tag closeIcon variant="outlined">휴대전화번호</Tag>
+                                            <Tag closeIcon variant="outlined">계좌번호</Tag>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <th colSpan={1}>
+                                      <SppObjLabel label={`화면명`} required={false} />
+                                    </th>
+                                    <td colSpan={5}>
+                                      <div className="m-form">
+                                        <div className="m-binds wd-100p">
+                                          <div className="group align-start">
+                                            <SppButton>전체삭제</SppButton>
+                                            <SppButton>추가</SppButton>
+                                          </div>
+                                        </div>
+
+                                        {/* <div className="m-field wd-100p">
+                                          <div className="main">
+                                            <SppInputText placeholder="화면번호" width="40" />
+                                            <SppInputText placeholder="화면명" width="80" />
+                                            <span className="binds">
+                                              <SppButton>전체삭제</SppButton>
+                                              <SppButton>추가</SppButton>
+                                            </span>
+                                          </div>
+                                        </div> */}
+
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppInputText placeholder="화면번호" width="40" />
+                                            <SppInputText placeholder="화면명" width="80" />
+                                            <span className="binds">
+                                              {/* <SppButton disabled>삭제</SppButton> */}
+                                              <SppButton>삭제</SppButton>
+                                            </span>
+                                          </div>
+                                        </div>
+
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppInputText placeholder="화면번호" width="40" />
+                                            <SppInputText placeholder="화면명" width="80" />
+                                            <span className="binds">
+                                              <SppButton>삭제</SppButton>
+                                            </span>
+                                          </div>
+                                        </div>
+
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppInputText placeholder="화면번호" width="40" />
+                                            <SppInputText placeholder="화면명" width="80" />
+                                            <span className="binds">
+                                              <SppButton>삭제</SppButton>
+                                            </span>
+                                          </div>
+                                        </div>
+
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppInputText placeholder="화면번호" width="40" />
+                                            <SppInputText placeholder="화면명" width="80" />
+                                            <span className="binds">
+                                              <SppButton>삭제</SppButton>
+                                            </span>
+                                          </div>
+                                        </div>
+
+                                        <div className="m-field">
+                                          <div className="main">
+                                            <SppInputText placeholder="화면번호" width="40" />
+                                            <SppInputText placeholder="화면명" width="80" />
+                                            <span className="binds">
+                                              <SppButton>삭제</SppButton>
+                                            </span>
+                                          </div>
                                         </div>
                                       </div>
                                     </td>
@@ -1153,8 +1480,8 @@ function TmpTsProg() {
                                 <SppButton variant="outlined" color="default" specName="normal">취소</SppButton>
                               </div>
                               <div className="group">
-                                <SppButton variant="outlined" color="default" icon={<SppObjSymbol label={resLabel.excelUploadLabel} modelType="icon" specName="excel-upload-label" />} specName="normal">엑셀양식​업로드</SppButton>
-                                <SppButton variant="outlined" color="default" icon={<SppObjSymbol label={resLabel.excelDownloadLabel} modelType="icon" specName="excel-download-label" />} specName="normal">엑셀양식​다운로드</SppButton>
+                                <SppButton variant="outlined" color="default" icon={<SppObjSymbol label={resLabel.excelUploadLabel} modelType="icon" specName="excel-upload-label" />} specName="normal">엑셀양식​​업로드</SppButton>
+                                <SppButton variant="outlined" color="default" icon={<SppObjSymbol label={resLabel.excelDownloadLabel} modelType="icon" specName="excel-download-label" />} specName="normal">엑셀양식​​다운로드</SppButton>
                               </div>
                               <div className="group">
                                 <SppButton variant="text" color="default" icon={<SppObjSymbol label={resLabel.excelUploadSection} modelType="icon" specName="excel-upload" />} modelType="symbol" title="엑셀​업로드"></SppButton>
@@ -1166,6 +1493,7 @@ function TmpTsProg() {
 
                         <div className="main">
                           <SppTable<any>
+                            rowSelectedFlag
                             rowSelection={rowSelection}
                             columns={columns}
                             dataSource={dataSource}
@@ -1251,6 +1579,19 @@ function TmpTsProg() {
                                     <td>8</td>
                                     <td>8</td>
                                     <td>-2</td>
+                                  </tr>
+                                  <tr>
+                                    <th colSpan={1} rowSpan={1}>HEAD</th>
+                                    <td colSpan={1} rowSpan={1}><SppObjSymbol label={resLabel.gridInsertFlag} className="c-color-point c-color-gridflag" /></td>
+                                    <td colSpan={1} rowSpan={1}><SppObjSymbol label={resLabel.gridUpdateFlag} className="c-color-point c-color-gridflag" /></td>
+                                    <td colSpan={1} rowSpan={1}><SppObjSymbol label={resLabel.gridDeleteFlag} className="c-color-point c-color-gridflag" /></td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
+                                    <td colSpan={1} rowSpan={1}>DATA</td>
                                   </tr>
                                   <tr>
                                     <th colSpan={1} rowSpan={1}>HEAD</th>
@@ -1349,6 +1690,7 @@ function TmpTsProg() {
 
                         <div className="main">
                           <SppTable<any>
+                            rowSelectedFlag
                             // rowSelection={rowSelection}
                             columns={table2010Columns}
                             dataSource={table2010DataSource}
@@ -1384,6 +1726,7 @@ function TmpTsProg() {
 
                         <div className="main">
                           <SppTable<any>
+                            rowSelectedFlag
                             rowSelection={rowSelection}
                             columns={table2020Columns}
                             dataSource={table2020DataSource}
@@ -1504,6 +1847,7 @@ function TmpTsProg() {
 
                                   <div className="main">
                                     <SppTable<any>
+                                      rowSelectedFlag
                                       // rowSelection={rowSelection}
                                       columns={table2030Columns}
                                       dataSource={table2030DataSource}
@@ -1538,6 +1882,7 @@ function TmpTsProg() {
 
                                   <div className="main">
                                     <SppTable<any>
+                                      rowSelectedFlag
                                       rowSelection={rowSelection}
                                       columns={table2040Columns}
                                       dataSource={table2040DataSource}
@@ -1585,6 +1930,7 @@ function TmpTsProg() {
 
                                   <div className="main">
                                     <SppTable<any>
+                                      rowSelectedFlag
                                       rowSelection={rowSelection}
                                       columns={table2050Columns}
                                       dataSource={table2050DataSource}
@@ -1705,6 +2051,7 @@ function TmpTsProg() {
 
                         <div className="main">
                           <SppTable<any>
+                            rowSelectedFlag
                             // rowSelection={rowSelection}
                             columns={table2060Columns}
                             dataSource={table2060DataSource}
@@ -1869,6 +2216,7 @@ function TmpTsProg() {
 
                         <div className="main">
                           <SppTable<any>
+                            rowSelectedFlag
                             rowSelection={rowSelection}
                             columns={table2080Columns}
                             dataSource={table2080DataSource}
@@ -1879,6 +2227,80 @@ function TmpTsProg() {
                             // scroll={{ x: 4096 }}
                           />
                         </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+
+                  <div className="m-grid _primary">
+                    <div className="column">
+
+                      <div className="m-cardsection type-application">
+                        <ul className="lists">
+                          <li>
+                            <div className="card x-application-card">
+                              <div className="main">
+                                <div className="caption">
+                                  <em className="category">카테고리</em>
+                                  <div className="subject">
+                                    <strong>제목</strong>
+                                  </div>
+                                </div>
+
+                                <div className="summary">
+                                  본부부서의 고객정보 접근권한에대한 허용인원 및 본부부서에 필요한 통합단말화면/단위시스템에 대한 접근권한을 신청하는 양식입니다.
+                                </div>
+
+                                <div className="aside">
+                                  <div className="consult">
+                                    문의 : 김주영(5-8165), 김도연(5-8008)
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="footer">
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <SppButton variant="solid" color="purple" specName="solid-1">신청하기</SppButton>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div className="card x-application-card">
+                              <div className="main">
+                                <div className="caption">
+                                  <em className="category">카테고리</em>
+                                  <div className="subject">
+                                    <strong>제목</strong>
+                                  </div>
+                                </div>
+
+                                <div className="summary">
+                                  본부부서의 고객정보 접근권한에대한 허용인원 및 본부부서에 필요한 통합단말화면/단위시스템에 대한 접근권한을 신청하는 양식입니다.
+                                </div>
+
+                                <div className="aside">
+                                  <div className="consult">
+                                    문의 : 김주영(5-8165), 김도연(5-8008)
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="footer">
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <SppButton variant="solid" color="purple" specName="solid-1">신청하기</SppButton>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
 
                     </div>

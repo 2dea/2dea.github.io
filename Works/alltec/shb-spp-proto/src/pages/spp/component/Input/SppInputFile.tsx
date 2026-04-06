@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState, } from "react";
 import type { CSSProperties, ReactNode } from "react";
+import { formatFileSize } from "@/util/file.util";
 
 import { Input } from "antd";
 import { CloseCircleFilled } from "@ant-design/icons"
@@ -72,30 +73,30 @@ const SppInputFile = (props: SppInputFileProps) => {
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
-  const formatFileSize = (bytes: number): string => {
-    if (isNaN(bytes)) return "";
+  // const formatFileSize = (bytes: number): string => {
+  //   if (isNaN(bytes)) return "";
 
-    if (bytes <= 0) return "0KB";
+  //   if (bytes <= 0) return "0B";
 
-    const KB = 1024;
-    const MB = KB * 1024;
-    const GB = MB * 1024;
+  //   const KB = 1024;
+  //   const MB = KB * 1024;
+  //   const GB = MB * 1024;
 
-    if (bytes >= GB || Math.ceil(bytes / MB) >= 1024) {
-      const gbVal = bytes / GB;
-      const destVal = gbVal < 100 ? Math.ceil(gbVal * 10) / 10 : Math.ceil(gbVal);
-      return `${destVal.toLocaleString()}GB`;
-    }
+  //   if (bytes >= GB || Math.ceil(bytes / MB) >= 1024) {
+  //     const gbVal = bytes / GB;
+  //     const destVal = gbVal < 100 ? Math.ceil(gbVal * 10) / 10 : Math.ceil(gbVal);
+  //     return `${destVal.toLocaleString()}GB`;
+  //   }
 
-    if (bytes >= MB || Math.ceil(bytes / KB) >= 1024) {
-      const mbVal = bytes / MB;
-      const destVal = mbVal < 100 ? Math.ceil(mbVal * 10) / 10 : Math.ceil(mbVal);
-      return `${destVal.toLocaleString()}MB`;
-    }
+  //   if (bytes >= MB || Math.ceil(bytes / KB) >= 1024) {
+  //     const mbVal = bytes / MB;
+  //     const destVal = mbVal < 100 ? Math.ceil(mbVal * 10) / 10 : Math.ceil(mbVal);
+  //     return `${destVal.toLocaleString()}MB`;
+  //   }
 
-    const kbVal = Math.ceil(bytes / KB);
-    return `${kbVal.toLocaleString()}KB`;
-  };
+  //   const kbVal = Math.ceil(bytes / KB);
+  //   return `${kbVal.toLocaleString()}KB`;
+  // };
 
   const hasFile = useMemo(() => !!value || !!displayFileName, [value, displayFileName]);
   const fileName = useMemo(() => value?.name ?? displayFileName ?? '', [value, displayFileName]);
@@ -141,7 +142,7 @@ const SppInputFile = (props: SppInputFileProps) => {
                 <CloseCircleFilled />
               </button>
             }
-            {fileSizeRender && fileSizeLabel && !/^NaN/g.test(fileSizeLabel) && hasFile && value &&
+            {fileSizeRender && !!fileSizeLabel && !/^NaN/g.test(fileSizeLabel) && hasFile && value &&
               <span className="string size" title="파일크기">{fileSizeLabel}</span>
             }
             {(downloadButtonRender || selectButtonRender) &&

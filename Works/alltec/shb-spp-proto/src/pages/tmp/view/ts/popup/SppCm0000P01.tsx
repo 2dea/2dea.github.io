@@ -73,7 +73,7 @@ export const SppCm0000P01 = (props: SppCm0000P01Props) => {
                             <td colSpan={1}>
                               <div className="m-field">
                                 <div className="main">
-                                  <SppInputFile downloadButtonRender value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} />
+                                  <SppInputFile downloadButtonRender value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} className="mode-required" />
                                 </div>
                               </div>
                             </td>

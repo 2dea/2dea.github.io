@@ -229,7 +229,7 @@ table  {
   //   width: 100%;
   // }
 
-  &:where(.mode-required)  { background-color: var(--cl-ground-required); }
+  &:where(.mode-required:not([class*="-disabled"]))  { background-color: var(--cl-ground-required); }
 
   :where(.o-sym)  {
     &._pre-autocomp  { opacity: 0.3; }
@@ -1843,34 +1843,34 @@ table  {
 .o-image-check._menu-toggle >:checked ~i   { transform: rotateY(-540deg); }
 
 
-.o-approve  { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; min-height: px(118); text-align: center; }
-.o-approve:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
-.o-approve:before  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
-.o-approve:before  { content: "check"; font-size: px(18); display: flex; align-items: center; justify-content: center; width: px(24); max-width: none; height: px(24); margin-bottom: px(10); color: var(--cl-key1-40); background-color: var(--cl-ground2-blue-30); border-radius: 50%; animation: none; }
-.o-approve:where(:not([aria-label])):before  { display: none; }
-// .o-approve >*  { width: 100%; min-height: 0; margin-top: px(10); }
-.o-approve >*  { width: 100%; min-height: 0; }
+// .o-approve  { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; min-height: px(118); text-align: center; }
+// .o-approve:before  { direction: ltr; font: normal normal 100% /1 'wf-MaterialSymbolsRounded-Var', sans-serif; -moz-font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; text-transform: none; white-space: nowrap; word-wrap: normal; letter-spacing: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+// .o-approve:before  { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; max-width: 1em; overflow: hidden; text-transform: uppercase; }
+// .o-approve:before  { content: "check"; font-size: px(18); display: flex; align-items: center; justify-content: center; width: px(24); max-width: none; height: px(24); margin-bottom: px(10); color: var(--cl-key1-40); background-color: var(--cl-ground2-blue-30); border-radius: 50%; animation: none; }
+// .o-approve:where(:not([aria-label])):before  { display: none; }
+// // .o-approve >*  { width: 100%; min-height: 0; margin-top: px(10); }
+// .o-approve >*  { width: 100%; min-height: 0; }
 
-.o-approve .main >*  { display: block; }
-.o-approve .main >* >*  { display: block; }
-.o-approve .main >* >.position  { font-size: $font-40; line-height: $line-40; margin-top: $gap-whitespace-30; color: var(--cl-text-40); }
+// .o-approve .main >*  { display: block; }
+// .o-approve .main >* >*  { display: block; }
+// .o-approve .main >* >.position  { font-size: $font-40; line-height: $line-40; margin-top: $gap-whitespace-30; color: var(--cl-text-40); }
 
-.o-approve .aside  { position: relative; margin-top: $gap-element-30; }
-.o-approve .aside >.substitute  { font-size: $font-30; line-height: $line-30; position: absolute; left: 0; right: 0; color: var(--cl-key1-40); }
+// .o-approve .aside  { position: relative; margin-top: $gap-element-30; }
+// .o-approve .aside >.substitute  { font-size: $font-30; line-height: $line-30; position: absolute; left: 0; right: 0; color: var(--cl-key1-40); }
 
-.o-approve:is(.o-data-table.type-approve.case-choose *)  { cursor: pointer; }
-.o-approve.is-selected  { background-color: var(--cl-ground2-blue-40); }
+// .o-approve:is(.o-data-table.type-approve.case-choose *)  { cursor: pointer; }
+// .o-approve.is-selected  { background-color: var(--cl-ground2-blue-40); }
 
-.o-approve:where([aria-label="결재 대기"])  { background-color: var(--cl-ground2-blue-40);  animation: ANI-approveBlink 1s step-end 0s 60; }
-.o-approve:where([aria-label="결재 예정"], [aria-label="결재 대기"]):before  { color: var(--cl-icon-40); background-color: var(--cl-ground-50); }
+// .o-approve:where([aria-label="결재 대기"])  { background-color: var(--cl-ground2-blue-40);  animation: ANI-approveBlink 1s step-end 0s 60; }
+// .o-approve:where([aria-label="결재 예정"], [aria-label="결재 대기"]):before  { color: var(--cl-icon-40); background-color: var(--cl-ground-50); }
 
-.o-approve  { padding-top: px(34); }
-.o-approve:before  { content: ""; position: absolute; top: px(22); }
-.o-approve:after  { content: ""; font-size: px(18); display: flex; align-items: center; justify-content: center; width: px(24); max-width: none; height: px(24); margin-bottom: px(10); border-radius: 50%; animation: none; }
-.o-approve:after  { position: absolute; top: px(22); background: var(--obj-sym-checked) no-repeat 50% /1em; filter: var(--filter-control-40); }
-.o-approve:where([aria-label="결재 예정"], [aria-label="결재 대기"]):after  { filter: grayscale(1.0) opacity(0.2) brightness(0.9); }
+// .o-approve  { padding-top: px(34); }
+// .o-approve:before  { content: ""; position: absolute; top: px(22); }
+// .o-approve:after  { content: ""; font-size: px(18); display: flex; align-items: center; justify-content: center; width: px(24); max-width: none; height: px(24); margin-bottom: px(10); border-radius: 50%; animation: none; }
+// .o-approve:after  { position: absolute; top: px(22); background: var(--obj-sym-checked) no-repeat 50% /1em; filter: var(--filter-control-40); }
+// .o-approve:where([aria-label="결재 예정"], [aria-label="결재 대기"]):after  { filter: grayscale(1.0) opacity(0.2) brightness(0.9); }
 
-:has(.o-approve):is(.o-data-table.type-approve tr >*)  { padding: 0; }
+// :has(.o-approve):is(.o-data-table.type-approve tr >*)  { padding: 0; }
 
 
 /** Forms Type Selector */

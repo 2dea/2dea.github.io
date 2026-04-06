@@ -224,7 +224,8 @@
 
           &:not(:hover)  {
             border-block-color: Transparent;
-            background: Transparent;
+            // background: Transparent;
+            background-clip: padding-box;
           }
 
           &:hover  {

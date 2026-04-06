@@ -6,4 +6,57 @@
 
 // _parcial
 // .x-selector  {  }
+
+.x-app-header  {
+  text-align: center;
+
+  .primary  { @include font(70, 800); }
+
+  .secondary  { @include font(50, 700); }
+
+  .approve  {
+    display: flex;
+    gap: calc($mg-section-40 * 2);
+
+    &:where(* +*)  {
+      margin-block-start: $mg-section-70;
+    }
+
+    >.column  {
+      flex: 12;
+    }
+  }
+}
+
+.x-application-card  {
+  --bw: #{$e10};
+  --pdi: #{$gap-element-80};
+  --pdb: #{$gap-element-80};
+
+  line-height: var(--lhp);
+  padding-inline: calc(var(--pdi) - var(--bw));
+  padding-block: calc(var(--pdb) - var(--bw));
+  border: var(--bw) solid var(--cl-edge-50);
+  border-radius: $br-50;
+  white-space: normal;
+
+  >.main  {
+    .caption  {
+      .category  { @include font(40); color: var(--cl-key1-40); }
+    }
+  }
+
+  >.footer  {
+    .m-binds  {
+      >.group  {
+        justify-content: center;
+
+        >*  {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
 .x-report-cloud-process  { padding: $mg-section-40; }

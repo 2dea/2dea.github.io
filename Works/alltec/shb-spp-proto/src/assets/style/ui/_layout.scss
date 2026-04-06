@@ -453,23 +453,29 @@ body  {
     .user  {
       display: flex; align-items: center;
 
-      .pos  {
+      >*  {
+        &:where(:not(.pos, .job:where(.branch +*))):before  { content: ""; display: inline-block; width: $e10; height: calc(1em - 4px); margin-inline: 12px; background: currentColor; opacity: 0.4; }
+
+        &:where(:first-child):before  { content: none; }
+      }
+
+      .pos:where(.name +*)  {
         font-size: px(var(--font-30-int));
 
-        &::before  { content: var(--utf-nbsp); }
+        &:before  { content: var(--utf-nbsp); }
       }
-    }
 
-    .branch  {
-      display: inline-flex;
-      align-items: center;
+      .branch  {
+        display: inline-flex;
+        align-items: center;
+      }
 
-      &:before  { content: ""; display: inline-block; width: $e10; height: calc(1em - 4px); margin-inline: 12px; background: currentColor; opacity: 0.4; }
-    }
-
-    .job  {
-      &:before  { content: "("; }
-      &:after  { content: ")"; }
+      .job  {
+        &:where(.branch +*)  {
+          &:before  { content: "("; }
+          &:after  { content: ")"; }
+        }
+      }
     }
   }
 }

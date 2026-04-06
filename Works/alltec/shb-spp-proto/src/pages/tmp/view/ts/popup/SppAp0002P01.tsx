@@ -123,6 +123,122 @@ export const SppAp0002P01 = (props: SppAp0002P01Props) => {
           <div className="x-app-header">
             <em className="secondary">개인(신용)정보 조회권한신청</em>
             <h3 className="primary"><span className="label">타직원가족 조회用</span></h3>
+
+            <div className="approve">
+              <div className="column">
+                <div className="o-datatable">
+                  <div className="table-wrapper">
+                    <table className="table type-approve g-fixed-table">
+                      <colgroup span={6}></colgroup>
+
+                      <thead>
+                        <tr>
+                          <th colSpan={1} rowSpan={1}></th>
+                          <th colSpan={1} rowSpan={1}>팀원/요청자</th>
+                          <th colSpan={1} rowSpan={1}>팀장</th>
+                          <th colSpan={1} rowSpan={1}></th>
+                          <th colSpan={1} rowSpan={1}></th>
+                          <th colSpan={1} rowSpan={1}></th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr className="approve-trow name">
+                          <th colSpan={1} rowSpan={2}>기안​결재</th>
+                          <td colSpan={1} rowSpan={1}>
+                            {/* <div className="o-approve" aria-label="결재 대기">
+                              <div className="main">
+                                <span className="approval">
+                                  <span className="name">김준완</span>
+                                  <span className="position">팀원</span>
+                                </span>
+                              </div>
+                              <div className="aside">
+                                <em className="substitute">대직 홍길동</em>
+                              </div>
+                            </div> */}
+
+                            <div className="o-approve">
+                              <div className="main">
+                                <span className="approval">
+                                  <span className="name">김준완</span>
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                          <td colSpan={1} rowSpan={1}>
+                            <div className="o-approve">
+                              <div className="main">
+                                <span className="approval">
+                                  <span className="name">송상우</span>
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                        </tr>
+                        <tr className="approve-trow date">
+                          <td colSpan={1} rowSpan={1}>2026-04-19</td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div className="column">
+                <div className="o-datatable">
+                  <div className="table-wrapper">
+                    <table className="table type-approve g-fixed-table">
+                      <colgroup span={6}></colgroup>
+
+                      <thead>
+                        <tr>
+                          <th colSpan={1} rowSpan={1}></th>
+                          <th colSpan={1} rowSpan={1}>팀장</th>
+                          <th colSpan={1} rowSpan={1}></th>
+                          <th colSpan={1} rowSpan={1}></th>
+                          <th colSpan={1} rowSpan={1}></th>
+                          <th colSpan={1} rowSpan={1}></th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr className="approve-trow name">
+                          <th colSpan={1} rowSpan={2}>수신​결재</th>
+                          <td colSpan={1} rowSpan={1}>
+                            <div className="o-approve">
+                              <div className="main">
+                                <span className="approval">
+                                  <span className="name">김명규</span>
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                        </tr>
+                        <tr className="approve-trow date">
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                          <td colSpan={1} rowSpan={1}></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="m-grid _primary">
@@ -169,6 +285,81 @@ export const SppAp0002P01 = (props: SppAp0002P01Props) => {
                             </th>
                             <td colSpan={1}>
                               2026-04-19
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="m-section">
+                <div className="m-header">
+                  <div className="prime">
+                    <h4 className="o-heading level2"><span className="label">신청자정보</span></h4>
+                  </div>
+                </div>
+
+                <div className="main">
+                  <div className="o-dataform">
+                    <div className="table-wrapper">
+                      <table className="table">
+                        <colgroup>
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                          <col className="head" />
+                          <col className="data" />
+                        </colgroup>
+
+                        <tbody>
+                          <tr>
+                            <th colSpan={1}>
+                              <SppObjLabel label={`문서번호`} required={false} />
+                            </th>
+                            <td colSpan={5}>
+                              FORM_0008_2026_DOCU_001
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <th colSpan={1}>
+                              <SppObjLabel label={`부서`} required={false} />
+                            </th>
+                            <td colSpan={1}>
+                              [0000] Tech기획부
+                            </td>
+
+                            <th colSpan={1}>
+                              <SppObjLabel label={`직원`} required={false} />
+                            </th>
+                            <td colSpan={1}>
+                              [00000000] 홍길동
+                            </td>
+
+                            <th colSpan={1}>
+                              <SppObjLabel label={`직위`} required={false} />
+                            </th>
+                            <td colSpan={1}>
+                              팀장
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <th colSpan={1}>
+                              <SppObjLabel label={`등록일자`} required={false} />
+                            </th>
+                            <td colSpan={1}>
+                              2026-04-19
+                            </td>
+
+                            <th colSpan={1}>
+                              <SppObjLabel label={`결재상태`} required={false} />
+                            </th>
+                            <td colSpan={3}>
+                              결재요청
                             </td>
                           </tr>
                         </tbody>
@@ -261,6 +452,31 @@ export const SppAp0002P01 = (props: SppAp0002P01Props) => {
                                 <div className="main">
                                   <SppInputFile placeholder="허용확장자 : xls, xlsx" value={testValueFile1010} onChange={(e) => setTestValueFile1010(e)} />
                                 </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <th colSpan={1}>
+                              <SppObjLabel label={`파일첨부`} required={false} />
+                            </th>
+                            <td colSpan={5}>
+                              <div className="m-string-binds type-file">
+                                <span className="string m-file">
+                                  <span className="o-file" title="##업무분장관리.xlsx (99.9MB)##">
+                                    <span className="name">업무분장관리</span>
+                                    <span className="ext">.xlsx</span>
+                                  </span>
+                                  <span className="o-limit type-file">
+                                    <span className="head">파일크기</span>
+                                    <span className="data">
+                                      <em className="value">(1,023MB)</em>
+                                    </span>
+                                  </span>
+                                </span>
+                                <span className="binds justify-end">
+                                  <SppButton>다운로드</SppButton>
+                                </span>
                               </div>
                             </td>
                           </tr>
