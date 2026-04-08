@@ -218,6 +218,7 @@ table  {
   &:where(.wd-80 )  { --wd: #{px(var(--wd-form-80 ))}; }
   &:where(.wd-90 )  { --wd: #{px(var(--wd-form-90 ))}; }
   &:where(.wd-100)  { --wd: #{px(var(--wd-form-100))}; }
+  &:where(.wd-105)  { --wd: #{px(var(--wd-form-105))}; }
   &:where(.wd-110)  { --wd: #{px(var(--wd-form-110))}; }
   &:where(.wd-120)  { --wd: #{px(var(--wd-form-120))}; }
   &:where(.wd-130)  { --wd: #{px(var(--wd-form-130))}; }
@@ -476,9 +477,11 @@ table  {
 
 
 /** Defines Modules */
-.m-defines  { display: flex; flex-wrap: wrap; gap: $gap-element-80 $gap-element-90; white-space: normal; }
+.m-defines  { display: flex; flex-wrap: wrap; gap: $gap-element-80 calc($gap-element-80 * 2); white-space: normal; }
 .m-defines >.group  { display: flex; align-items: center; }
-.m-defines >.group >.head  { font-weight: $bold-700; margin-right: $gap-element-70; color: var(--cl-text-70); }
+// .m-defines >.group >.head  { font-weight: $bold-700; margin-right: $gap-element-70; color: var(--cl-text-70); }
+.m-defines >.group >.head  { @include font(40, 700); line-height: px(var(--text-height-int)); margin-right: $gap-element-70; color: var(--cl-key1-70); }
+.m-defines >.group >.data  { line-height: px(var(--text-height-int)); }
 .m-defines >.group >.data +*  { margin-left: $gap-element-70; }
 
 .m-defines:where(.o-board *) >.group >.head:not(:has(.o-heading))  { font-size: $font-40; line-height: $line-40; }

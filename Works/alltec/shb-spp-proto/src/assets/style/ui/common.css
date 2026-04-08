@@ -402,6 +402,7 @@
   --wd-form-80:             180;
   --wd-form-90:             210;
   --wd-form-100:            240;
+  --wd-form-105:            255;
   --wd-form-110:            270;
   --wd-form-120:            300;
   --wd-form-130:            330;
@@ -668,6 +669,8 @@
 .g-fixed-data  { max-width: 0; }
 .g-fixed-table  { table-layout: fixed; }
 .g-auto-table  { table-layout: auto; }
+.g-tl-fixed  { table-layout: fixed; }
+.g-tl-auto  { table-layout: auto; }
 
 .g-end  { text-align: right !important; text-align: end !important; }
 .g-center  { text-align: center !important; }
@@ -696,8 +699,8 @@
 .g-word-pred  { word-break: break-all; word-break: break-word; }
 .g-word-attr  { word-break: break-word; word-break: keep-all; }
 
-.g-nowrap,
-  .g-wbr  { white-space: nowrap; }
+.g-nowrap  { white-space: nowrap; }
+.g-wbr  { white-space: nowrap; /* white-space: break-spaces; */ }
 
 .g-cursor-auto  { cursor: auto; }
 .g-cursor-none  { cursor: none; }

@@ -20,7 +20,9 @@ export interface SppModalProps extends ModalProps {
   footerAppend1Button?: ReactNode;
   footerAppend2Button?: ReactNode;
   cancelButtonRender?: boolean;
+  cancelButtonDisabled?: boolean;
   okButtonRender?: boolean;
+  okButtonDisabled?: boolean;
 };
 
 export const SppModal = ({
@@ -56,10 +58,12 @@ export const SppModal = ({
   maskClosable=false,
   keyboard=true,
   cancelButtonRender=true,
-  cancelButtonProps={ variant: 'outlined', color: 'purple', className: 'd-button _cancel', },
+  cancelButtonDisabled,
+  cancelButtonProps={ variant: 'outlined', color: 'purple', className: 'd-button _cancel', disabled: cancelButtonDisabled, },
   cancelText="닫기",
   okButtonRender=true,
-  okButtonProps={ variant: 'solid', color: 'purple', className: 'd-button _solid-1', },
+  okButtonDisabled,
+  okButtonProps={ variant: 'solid', color: 'purple', className: 'd-button _solid-1', disabled: okButtonDisabled, },
   okText="확인",
   // open,
   ...props

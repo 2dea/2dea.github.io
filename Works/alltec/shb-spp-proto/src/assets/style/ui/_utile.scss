@@ -477,6 +477,25 @@
 
 
 
+.m-cardsection  {
+  white-space: normal;
+
+  >.lists  {
+    display: grid;
+    grid-template-columns: repeat(var(--size, auto-fit), minmax(var(--wd-min, px(320)), 1fr));
+    gap: $gap-element-80;
+
+    >*  {
+      min-width: 0;
+      min-height: 0;
+
+      >.card  { min-height: 100%; }
+    }
+  }
+}
+
+
+
 /** Images
  --------- */
 

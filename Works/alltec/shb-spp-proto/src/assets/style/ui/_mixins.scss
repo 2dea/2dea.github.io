@@ -57,10 +57,10 @@
 }
 
 
-@mixin font($fs: 40, $fw: null)  {
+@mixin font($fs: 40, $fw: null, $lh: 1)  {
   @if ($fw != null) { font-weight: var(--bold-#{$fw}); }
   font-size: fs($fs);
-  line-height: var(--lhr);
+  @if ($lh != 0) { line-height: var(--lhr); }
 }
 
 /** 글꼴 초기화 */

@@ -2239,7 +2239,7 @@ function TmpTsProg() {
 
                       <div className="m-cardsection type-application">
                         <ul className="lists">
-                          <li>
+                          {/* <li>
                             <div className="card x-application-card">
                               <div className="main">
                                 <div className="caption">
@@ -2255,7 +2255,40 @@ function TmpTsProg() {
 
                                 <div className="aside">
                                   <div className="consult">
-                                    문의 : 김주영(5-8165), 김도연(5-8008)
+                                    문의 : 김주영(5-8165)
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="footer">
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <SppButton variant="solid" color="purple" specName="solid-1">신청하기</SppButton>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li> */}
+
+                          <li>
+                            <div className="card x-application-card">
+                              <div className="main">
+                                <div className="caption">
+                                  <em className="category">개인(신용)정보 조회권한신청</em>
+                                  <div className="subject">
+                                    <strong>개인(신용)정보 조회권한 승인신청</strong>
+                                  </div>
+                                </div>
+
+                                <div className="summary">
+                                  <span className="g-wbr">본부부서의 고객정보 접근권한에 대한 허용인원 및 </span><wbr />
+                                  <span className="g-wbr">본부부서에 필요한 통합단말화면/단위시스템에 대한  </span><wbr />
+                                  <span className="g-wbr">접근권한을 신청하는 양식입니다. </span><wbr />
+                                </div>
+
+                                <div className="aside">
+                                  <div className="consult">
+                                    문의 : 김주영(5-8165)
                                   </div>
                                 </div>
                               </div>
@@ -2274,19 +2307,186 @@ function TmpTsProg() {
                             <div className="card x-application-card">
                               <div className="main">
                                 <div className="caption">
-                                  <em className="category">카테고리</em>
+                                  <em className="category">개인(신용)정보 조회권한신청</em>
                                   <div className="subject">
-                                    <strong>제목</strong>
+                                    <strong>타직원가족 조회用</strong>
                                   </div>
                                 </div>
 
                                 <div className="summary">
-                                  본부부서의 고객정보 접근권한에대한 허용인원 및 본부부서에 필요한 통합단말화면/단위시스템에 대한 접근권한을 신청하는 양식입니다.
+                                  <span className="g-wbr">본부부서 직원이 타직원 가족에 대한 </span><wbr />
+                                  <span className="g-wbr">개인(신용)정보 접근권한을 </span><wbr />
+                                  <span className="g-wbr">신청하는 양식입니다.</span><wbr />
                                 </div>
 
                                 <div className="aside">
                                   <div className="consult">
-                                    문의 : 김주영(5-8165), 김도연(5-8008)
+                                    문의 : 김주영(5-8165)
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="footer">
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <SppButton variant="solid" color="purple" specName="solid-1">신청하기</SppButton>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div className="card x-application-card">
+                              <div className="main">
+                                <div className="caption">
+                                  <em className="category">개인(신용)정보 조회권한신청</em>
+                                  <div className="subject">
+                                    <strong>타직원 조회用</strong>
+                                  </div>
+                                </div>
+
+                                <div className="summary">
+                                  <span className="g-wbr">본부부서 직원이 다른 직원에 대한 </span><wbr />
+                                  <span className="g-wbr">개인(신용)정보 접근권한을 </span><wbr />
+                                  <span className="g-wbr">신청하는 양식입니다. </span><wbr />
+                                </div>
+
+                                <div className="aside">
+                                  <div className="consult">
+                                    문의 : 김주영(5-8165)
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="footer">
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <SppButton variant="solid" color="purple" specName="solid-1">신청하기</SppButton>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div className="card x-application-card">
+                              <div className="main">
+                                <div className="caption">
+                                  <em className="category">개인(신용)정보 조회권한신청</em>
+                                  <div className="subject">
+                                    <strong>본인가족 조회用</strong>
+                                  </div>
+                                </div>
+
+                                <div className="summary">
+                                  <span className="g-wbr">영업점 및 본부부서 직원이 본인가족에 대한 </span><wbr />
+                                  <span className="g-wbr">개인(신용)정보 접근권한을 </span><wbr />
+                                  <span className="g-wbr">신청하는 양식입니다.</span><wbr />
+                                </div>
+
+                                <div className="aside">
+                                  <div className="consult">
+                                    문의 : 김주영(5-8165)
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="footer">
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <SppButton variant="solid" color="purple" specName="solid-1">신청하기</SppButton>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div className="card x-application-card">
+                              <div className="main">
+                                <div className="caption">
+                                  <em className="category">개인(신용)정보 조회권한신청</em>
+                                  <div className="subject">
+                                    <strong>본인 조회用</strong>
+                                  </div>
+                                </div>
+
+                                <div className="summary">
+                                  <span className="g-wbr">영업점 및 본부부서 직원이 본인에 대한 </span><wbr />
+                                  <span className="g-wbr">개인(신용)정보 접근권한을 </span><wbr />
+                                  <span className="g-wbr">신청하는 양식입니다. </span><wbr />
+                                </div>
+
+                                <div className="aside">
+                                  <div className="consult">
+                                    문의 : 김주영(5-8165)
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="footer">
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <SppButton variant="solid" color="purple" specName="solid-1">신청하기</SppButton>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div className="card x-application-card">
+                              <div className="main">
+                                <div className="caption">
+                                  <em className="category">개인(신용)정보 조회권한신청</em>
+                                  <div className="subject">
+                                    <strong>분리보관 고객정보 조회用</strong>
+                                  </div>
+                                </div>
+
+                                <div className="summary">
+                                  <span className="g-wbr">본부부서 직원이 분리되어 보관중인 고객에 대한 </span><wbr />
+                                  <span className="g-wbr">개인(신용)정보 접근 권한을 </span><wbr />
+                                  <span className="g-wbr">신청하는 양식입니다. </span><wbr />
+                                </div>
+
+                                <div className="aside">
+                                  <div className="consult">
+                                    문의 : 김도연(5-8008)
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="footer">
+                                <div className="m-binds">
+                                  <div className="group">
+                                    <SppButton variant="solid" color="purple" specName="solid-1">신청하기</SppButton>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div className="card x-application-card">
+                              <div className="main">
+                                <div className="caption">
+                                  <em className="category">개인정보수집동의 생략신청</em>
+                                  <div className="subject">
+                                    <strong>개인정보 수집동의 생략신청</strong>
+                                  </div>
+                                </div>
+
+                                <div className="summary">
+                                  <span className="g-wbr">통합단말 7057화면 內 </span><wbr />
+                                  <span className="g-wbr">[비여신 금융거래] 필수 개인정보 동의여부를 </span><wbr />
+                                  <span className="g-wbr">신청하는 양식입니다. </span><wbr />
+                                </div>
+
+                                <div className="aside">
+                                  <div className="consult">
+                                    문의 : 유재훈(5-8242)
                                   </div>
                                 </div>
                               </div>

@@ -203,7 +203,7 @@ html  {
 
   --filter-root-contrast:           0.96;
   --filter-root-brightness:         0.96;
-  --filter-root:                    contrast(var(--filter-root-contrast, 1)) brightness(var(--filter-root-brightness, 1));
+  // --filter-root:                    contrast(var(--filter-root-contrast, 1)) brightness(var(--filter-root-brightness, 1));
 
 
   --mgb-pop:                 20;
@@ -237,13 +237,13 @@ html  {
 /** Scrollbars
  ------------- */
 
-:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-resizer  { image-rendering: pixelated; background: var(--obj-sym-resizer-scrollable) 0 /100%; }
-:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar  { width: var(--wd-scrollbar, 12px); height: var(--wd-scrollbar, 12px); }
-:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-corner  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid var(--cl-scrollbar-corner-edge, rgba(255,255,255, 0.05)); border-radius: 2px; }
-:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid; border-color: var(--cl-scrollbar-track-edge, Transparent); border-radius: var(--br-scrollbar-track, 2px); will-change: background-color; }
-:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb  { min-width: 24px; min-height: 24px; border: var(--mg-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--cl-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--cl-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--mg-scrollbar, 3px)); border-radius: var(--wd-scrollbar, 12px); will-change: background-color, outline-color; }
-:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb:hover  { background-color: var(--cl-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
-:where(html, body, textarea, [role="listbox"], .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb:active  { background-color: var(--cl-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
+:where(html, body, textarea, [role="listbox"], [contenteditable]:not([contenteditable~="false"]), .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-resizer  { image-rendering: pixelated; background: var(--obj-sym-resizer-scrollable) 0 /100%; }
+:where(html, body, textarea, [role="listbox"], [contenteditable]:not([contenteditable~="false"]), .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar  { width: var(--wd-scrollbar, 12px); height: var(--wd-scrollbar, 12px); }
+:where(html, body, textarea, [role="listbox"], [contenteditable]:not([contenteditable~="false"]), .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-corner  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); outline: 1px solid var(--cl-scrollbar-corner-edge, rgba(255,255,255, 0.05)); border-radius: 2px; }
+:where(html, body, textarea, [role="listbox"], [contenteditable]:not([contenteditable~="false"]), .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-track  { background-color: var(--cl-scrollbar-track, rgba(0,0,0, 0.05)); border: 1px solid; border-color: var(--cl-scrollbar-track-edge, Transparent); border-radius: var(--br-scrollbar-track, 2px); will-change: background-color; }
+:where(html, body, textarea, [role="listbox"], [contenteditable]:not([contenteditable~="false"]), .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb  { min-width: 24px; min-height: 24px; border: var(--mg-scrollbar, 3px) solid Transparent; background-clip: padding-box; background-color: var(--cl-scrollbar-thumb, rgba(0,0,0, 0.3)); outline: 1px solid var(--cl-scrollbar-thumb-edge, rgba(255,255,255, 0.3)); outline-offset: calc(-1 * var(--mg-scrollbar, 3px)); border-radius: var(--wd-scrollbar, 12px); will-change: background-color, outline-color; }
+:where(html, body, textarea, [role="listbox"], [contenteditable]:not([contenteditable~="false"]), .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb:hover  { background-color: var(--cl-scrollbar-thumb-hover, rgba(0,0,0, 0.4)); outline-color: rgba(255,255,255, 0.4); }
+:where(html, body, textarea, [role="listbox"], [contenteditable]:not([contenteditable~="false"]), .c-scrollbar, .div-center, .role-localnav, .role-subnav .navbar, .m-mdiist .tab-wrapper >.lists, [class^="ant-table"])::-webkit-scrollbar-thumb:active  { background-color: var(--cl-scrollbar-thumb-active, rgba(0,0,0, 0.5)); outline-color: rgba(255,255,255, 0.5); }
 
 :where(.scroll-gutter-stable)  { transition: 0.8s; transition-property: --cl-scrollbar-hidden-track, --cl-scrollbar-hidden-thumb, --cl-scrollbar-hidden-thumb-edge; }
 :where(.scroll-gutter-stable):hover,
@@ -454,7 +454,7 @@ body  {
       display: flex; align-items: center;
 
       >*  {
-        &:where(:not(.pos, .job:where(.branch +*))):before  { content: ""; display: inline-block; width: $e10; height: calc(1em - 4px); margin-inline: 12px; background: currentColor; opacity: 0.4; }
+        &:where(:not(:empty, .pos, .job:where(.branch +*))):before  { content: ""; display: inline-block; width: $e10; height: calc(1em - 4px); margin-inline: 12px; background: currentColor; opacity: 0.4; }
 
         &:where(:first-child):before  { content: none; }
       }
@@ -462,7 +462,7 @@ body  {
       .pos:where(.name +*)  {
         font-size: px(var(--font-30-int));
 
-        &:before  { content: var(--utf-nbsp); }
+        &:where(:not(:empty)):before  { content: var(--utf-nbsp); }
       }
 
       .branch  {
@@ -472,8 +472,8 @@ body  {
 
       .job  {
         &:where(.branch +*)  {
-          &:before  { content: "("; }
-          &:after  { content: ")"; }
+          &:where(:not(:empty)):before  { content: "("; }
+          &:where(:not(:empty)):after  { content: ")"; }
         }
       }
     }
@@ -770,10 +770,12 @@ body  {
 
   &:where(.ant-modal-body >*)  {
     --pdi: #{px(var(--mgi-pop))};
+    --pdb: #{px(12)};
 
     overflow: visible;
     margin: 0 calc(-1 * var(--pdi));
     padding-inline: var(--pdi);
+    padding-block-start: px(4);
   }
 
   :where(.m-tabs._primary)  {
