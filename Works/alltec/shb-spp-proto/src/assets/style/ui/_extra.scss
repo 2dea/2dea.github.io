@@ -28,12 +28,46 @@
   }
 }
 
+.x-icon-card  {
+  @include font(70);
+
+  .o-tabular >* >.data  { text-align: right; text-align: end; }
+
+  .label  {
+    display: flex;
+    align-items: center;
+    gap: $gap-element-50;
+    color: var(--cl-key1-70);
+
+    .o-sym  { color: var(--cl-key1-50); }
+  }
+
+  .value  {
+    font-weight: $bold-700;
+    color: var(--cl-point-orange);
+  }
+
+  &:hover:where(.g-cursor-pointer)  {
+    border-color: var(--cl-key1-50);
+  }
+
+  &:where(.-selected)  {
+    background-color: var(--cl-key1-70);
+
+    .label  {
+      color: var(--cl-text-00);
+
+      .o-sym  { color: var(--cl-text-00); }
+    }
+  }
+}
+
 .x-application-card  {
   --bw: #{$e10};
   --pdi: #{$gap-element-80};
   --pdb: #{$gap-element-80};
 
-  line-height: var(--lhp);
+  line-height: calc(18 / 12);
   padding-inline: calc(var(--pdi) - var(--bw));
   padding-block: calc(var(--pdb) - var(--bw));
   border: var(--bw) solid var(--cl-edge-50);
@@ -55,11 +89,12 @@
     .caption  {
       margin-bottom: $gap-element-70;
 
-      .category  { @include font(40, $lh: 0); color: var(--cl-key1-50); }
-      .subject  { @include font(60, 700); font-family: var(--typo-header); color: var(--cl-text-70); }
+      .category  { @include font(50, $lh: 0); color: var(--cl-key1-50); }
+      .subject  { @include font(70, 700, 0); font-family: var(--typo-header); color: var(--cl-text-70); }
     }
 
     .summary  {
+      @include font(60, $lh: 0);
       flex: 1;
     }
 
@@ -83,6 +118,7 @@
 
         >*  {
           flex: 1;
+          height: px(var(--ht-form-70));
         }
       }
     }

@@ -491,6 +491,17 @@
 
       >.card  { min-height: 100%; }
     }
+
+    &:where(.type-iconcard >*)  {
+      --size: auto-fill;
+      --wd-min: #{px(388)};
+      gap: calc($gap-element-80 * 2);
+    }
+
+    &:where(.type-application >*)  {
+      --wd-min: #{px(396)};
+      gap: calc($gap-element-80 * 2);
+    }
   }
 }
 

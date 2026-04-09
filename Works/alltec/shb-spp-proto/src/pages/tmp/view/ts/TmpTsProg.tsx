@@ -2237,6 +2237,84 @@ function TmpTsProg() {
                   <div className="m-grid _primary">
                     <div className="column">
 
+                      <div className="o-board type-2">
+                        <div className="m-cardsection type-iconcard">
+                          <ul className="lists">
+                            <li>
+                              <div className="card o-board type-3 x-icon-card">
+                                <ul className="o-tabular">
+                                  <li>
+                                    <div className="head">
+                                      <strong className="label">
+                                        <SppObjSymbol label={`mail`} />
+                                        웹메일
+                                      </strong>
+                                    </div>
+                                    <div className="data">
+                                      <span className="value">9,999</span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="card o-board type-3 x-icon-card">
+                                <ul className="o-tabular">
+                                  <li>
+                                    <div className="head">
+                                      <strong className="label">
+                                        <SppObjSymbol label={`fax`} />
+                                        웹팩스
+                                      </strong>
+                                    </div>
+                                    <div className="data">
+                                      <span className="value">1</span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="card o-board type-3 x-icon-card">
+                                <ul className="o-tabular">
+                                  <li>
+                                    <div className="head">
+                                      <strong className="label">
+                                        <SppObjSymbol label={`print`} />
+                                        출력물
+                                      </strong>
+                                    </div>
+                                    <div className="data">
+                                      <span className="value">1</span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+
+                            <li>
+                              <div className="card o-board type-3 x-icon-card">
+                                <ul className="o-tabular">
+                                  <li>
+                                    <div className="head">
+                                      <strong className="label">
+                                        <SppObjSymbol label={`usb`} />
+                                        USB
+                                      </strong>
+                                    </div>
+                                    <div className="data">
+                                      <span className="value">1</span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
                       <div className="m-cardsection type-application">
                         <ul className="lists">
                           {/* <li>
