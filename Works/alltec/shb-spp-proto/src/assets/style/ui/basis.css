@@ -52,24 +52,28 @@
   --font-14px:          14;
   --font-16px:          16;
   --font-20px:          20;
+  --font-24px:          24;
 
   --line-12px:          16;
   --line-13px:          18;
   --line-14px:          18;
   --line-16px:          22;
   --line-20px:          26;
+  --line-24px:          32;
 
   --font-30-int:        var(--font-12px);
   --font-40-int:        var(--font-13px);
   --font-50-int:        var(--font-14px);
   --font-60-int:        var(--font-16px);
   --font-70-int:        var(--font-20px);
+  --font-80-int:        var(--font-24px);
 
   --line-30-int:        var(--line-12px);
   --line-40-int:        var(--line-13px);
   --line-50-int:        var(--line-14px);
   --line-60-int:        var(--line-16px);
   --line-70-int:        var(--line-20px);
+  --line-80-int:        var(--line-24px);
 
   /* --font-10:            calc(var(--rem) * var(--font-10-int));
   --font-30:            calc(var(--rem) * var(--font-30-int));

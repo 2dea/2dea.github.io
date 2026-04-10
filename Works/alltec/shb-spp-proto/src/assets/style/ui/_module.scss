@@ -17,6 +17,10 @@ table  {
 
 
 .m-scrolls  { overflow: auto; overscroll-behavior: contain; }
+.m-scrolls:where(.m-section._primary >.main *)  {
+  // --ht-basis: calc(var(--rem) * 144);
+  flex: 1 0 var(--ht-basis, px(144));
+}
 
 
 /** Icons
@@ -480,9 +484,10 @@ table  {
 .m-defines  { display: flex; flex-wrap: wrap; gap: $gap-element-80 calc($gap-element-80 * 2); white-space: normal; }
 .m-defines >.group  { display: flex; align-items: center; }
 // .m-defines >.group >.head  { font-weight: $bold-700; margin-right: $gap-element-70; color: var(--cl-text-70); }
-.m-defines >.group >.head  { @include font(40, 700); line-height: px(var(--text-height-int)); margin-right: $gap-element-70; color: var(--cl-key1-70); }
+.m-defines >.group >.head  { @include font(40, 700); line-height: px(var(--text-height-int)); margin-right: $gap-element-70; color: var(--cl-text-70); }
 .m-defines >.group >.data  { line-height: px(var(--text-height-int)); }
 .m-defines >.group >.data +*  { margin-left: $gap-element-70; }
+.m-defines >.group >.data:where(.head +*)  { font-weight: $bold-700; color: var(--cl-key1-50); }
 
 .m-defines:where(.o-board *) >.group >.head:not(:has(.o-heading))  { font-size: $font-40; line-height: $line-40; }
 

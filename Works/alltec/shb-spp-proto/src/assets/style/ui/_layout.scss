@@ -596,6 +596,7 @@ body  {
   .div-cascade  {
     flex: none;
     min-width: px(var(--wd-dom-nav));
+    min-width: px(278);
     width: max-content;
     max-width: calc(var(--vi) * 50 - px(var(--wd-dom-nav, 0)));
 
@@ -618,6 +619,10 @@ body  {
     //     width: max-content;
     //   }
     // }
+  }
+
+  .div-local  {
+    padding-block-end: $mg-section-50;
   }
 }
 
@@ -842,6 +847,11 @@ body  {
     &:where(* +*)  {
       flex: 12;
     }
+
+    &:where(
+      [style^="width:"], [style*="/width:"], [style*=";width:"], [style*=" width:"],
+      [class^="wd-"], [class*=" wd-"]
+    )  { flex: 0 1 auto; }
   }
 
   :where(.m-section._primary)  {

@@ -87,7 +87,7 @@
     >*  { min-height: 0; }
 
     .caption  {
-      margin-bottom: $gap-element-70;
+      margin-bottom: $gap-element-90;
 
       .category  { @include font(50, $lh: 0); color: var(--cl-key1-50); }
       .subject  { @include font(70, 700, 0); font-family: var(--typo-header); color: var(--cl-text-70); }
@@ -102,7 +102,7 @@
       color: var(--cl-text-40);
 
       &:where(* +*)  {
-        margin-top: $gap-element-70;
+        margin-top: $gap-element-90;
       }
     }
   }
